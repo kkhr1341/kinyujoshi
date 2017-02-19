@@ -1,0 +1,24 @@
+<footer class="singlepage-footer">
+  <img class="sp footer-icon" src="/images/new/footer-icon.png" class="footer-icon">
+  <div class="footer-logo">
+    <img src="/images/kinyu-logo01.png">
+  </div>
+  <div class="footer-menu">
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/company">運営会社</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/privacy">プライバシーポリシー</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/legal">特定商取引法に基づく表記</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/service">利用規約</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/contact">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="navi_kinyu-submenu-copy">©きんゆう女子。 All rights reserved. No reproduction or republication without written permission.　<br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</p>
+</footer>

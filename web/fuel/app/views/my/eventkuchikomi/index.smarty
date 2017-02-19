@@ -1,0 +1,78 @@
+
+<ol class="breadcrumb">
+  <li><a href="/">ホーム</a></li>
+  <li><a href="/my">マイページ</a></li>
+  <li class="active">イベントの管理</li>
+</ol>
+
+<div class='clearw'>
+  <a class="btn btn-primary float_right" href="/my/events/create" role="button">イベントを作る</a>
+</div>
+
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
+  <li><a href="#tab2" data-toggle="tab">下書き</a></li>
+</ul>
+<div class="tab-content">
+
+  <div class="tab-pane active" id="tab1">
+    {if sizeof($open_events) == 0}
+    <div class="alert alert-warning mt20" role="alert">公開中のイベントはありません</div>
+    {else}
+    <table class="table table-hover mt20">
+      <thead>
+        <tr>
+          <th>状態</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      {foreach from=$open_events item=events_item}
+      <tr class="events pointer" code="{$events_item.code}">
+
+        <!-- 状態 -->
+        <td>
+          {if $events_item.status == 1}公開{/if}
+          {if $events_item.status == 0}下書き{/if}
+        </td>
+        <td>{$events_item.message}</td>
+      </tr>
+      {/foreach}
+    </table>
+    {/if}
+  </div>
+
+  <div class="tab-pane" id="tab2">
+    {if sizeof($closed_events) == 0}
+    <div class="alert alert-warning mt20" role="alert">下書き状態のイベントはありません</div>
+    {else}
+    <table class="table table-hover mt20">
+      <thead>
+        <tr>
+          <th>状態</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      {foreach from=$closed_events item=events_item}
+      <tr class="events pointer" code="{$events_item.code}">
+        <td>
+          {if $events_item.status == 1}公開{/if}
+          {if $events_item.status == 0}下書き{/if}
+        </td>
+        <td>{$events_item.message}</td>
+      </tr>
+      {/foreach}
+    </table>
+    {/if}
+  </div>
+</div>
+
+
+<script>
+$(function(){
+  $('.events').click(function(){
+    var code = $(this).attr('code');
+    location.href = "/my/eventkuchikomi/edit/"+code;
+  });
+});
+</script>

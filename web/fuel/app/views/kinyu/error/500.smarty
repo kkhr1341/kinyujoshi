@@ -1,0 +1,56 @@
+<div class="error-block">
+  <div class="inner">
+    <h2 class="error-block-title">申し訳ございません。<br>このページは存在しません。</h2>
+    <p class="btn btn-primary"><a href="#" onClick="history.back(); return false;">前のページに戻る</a></p>
+  </div>
+</div>
+
+<style>
+
+.error-block {
+  height: 500px;
+  width: 100%;
+  display: table;
+}
+
+.error-block .inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.error-block-title {
+  font-size: 3.0rem;
+  line-height: 4.5rem;
+}
+
+.error-block .inner  a {
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+
+.error-block {
+  height: 400px;
+}
+
+.error-block-title {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+.error-block {
+  height: 500px;
+}
+
+.error-block-title {
+  font-size: 2.6rem;
+  line-height: 4.0rem;
+}
+
+}
+
+</style>

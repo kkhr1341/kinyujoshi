@@ -1,0 +1,18 @@
+<script>
+  var $url = location.href;
+  var $result = $url.replace( "/welcome" , "" );
+  // document.write('<a href="');
+  // document.write(result);
+  // document.write('">');
+  // document.write(result);
+  // document.write('</a>');
+  var urlcode = '<a class="skipp-link" href="%result">このページをスキップ</a>'.replace("%result", $result);
+  document.write(urlcode);
+</script>
+
+<style>
+  .skipp-link {
+    font-size: 2.0rem;
+  }
+
+</style>

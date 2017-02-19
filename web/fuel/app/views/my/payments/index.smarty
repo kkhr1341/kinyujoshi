@@ -1,0 +1,49 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/my">マイページ</a></li>
+	<li class="active">決済履歴の管理</li>
+</ol>
+
+{if sizeof($payments) == 0}
+<div class="alert alert-warning" role="alert">決済履歴はありません</div>
+{else}
+
+<table class="table table-hover mt20">
+	<thead>
+		<tr>
+			<th>決済日</th>
+			<th>商品名</th>
+			<th>金額</th>
+			<th>状態</th>
+		</tr>
+	</thead>
+	{foreach from=$payments item=payment}
+	<tr class="" id="{$payment.id}">
+		<td>
+			{$payment.created}
+		</td>
+		<td>
+			{$payment.description}
+		</td>
+		<td>
+			{$payment.amount|number_format}円
+		</td>
+		<td>
+			{if $payment.captured === true}完了{/if}
+			{if $payment.captured === false}予約{/if}
+		</td>
+	</tr>
+	{/foreach}
+</table>
+
+{/if}
+
+
+		
+<script>
+$(function(){
+
+	
+});
+</script>

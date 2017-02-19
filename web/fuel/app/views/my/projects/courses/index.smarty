@@ -1,0 +1,120 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/my">マイページ</a></li>
+	<li><a href="/my/projects">プロジェクトの管理</a></li>
+	<li class="active">コースの管理</li>
+</ol>
+<div class='clearw'>
+	<a class="btn btn-primary float_right" href="/my/projects/courses/create/{$projects.code}" role="button">コースを作る</a>
+</div>
+
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
+	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
+	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
+</ul>
+<div class="tab-content">
+	<div class="tab-pane active" id="tab1">
+		{if sizeof($open_courses) == 0}
+		<div class="alert alert-warning mt20" role="alert">公開中のコースはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>コースタイトル</th>
+					<th>コース金額</th>
+					<th>コース人数</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$open_courses item=courses_item}
+			<tr class="courses pointer" code="{$courses_item.code}">
+				<td>
+					{if $courses_item.status == 1 && strtotime($courses_item.open_date) < time()}公開{/if}
+					{if $courses_item.status == 1 && strtotime($courses_item.open_date) > time()}公開待ち{/if}
+					{if $courses_item.status == 0}下書き{/if}
+				</td>
+				<td>{$courses_item.title}</td>
+				<td>{$courses_item.price|number_format}</td>
+				<td>{$courses_item.num_of_supporters|number_format}/{$courses_item.limit|number_format}</td>
+				<td>{$courses_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+	<div class="tab-pane" id="tab2">
+		{if sizeof($closed_courses) == 0}
+		<div class="alert alert-warning mt20" role="alert">下書き状態のコースはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>コースタイトル</th>
+					<th>コース金額</th>
+					<th>コース人数</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$closed_courses item=courses_item}
+			<tr class="courses pointer" code="{$courses_item.code}">
+				<td>
+					{if $courses_item.status == 1 && strtotime($courses_item.open_date) < time()}公開{/if}
+					{if $courses_item.status == 1 && strtotime($courses_item.open_date) > time()}公開待ち{/if}
+					{if $courses_item.status == 0}下書き{/if}
+				</td>
+				<td>{$courses_item.price|number_format}円コース</td>
+				<td>{$courses_item.price|number_format}</td>
+				<td>{$courses_item.num_of_supporters|number_format}/{$courses_item.limit|number_format}</td>
+				<td>{$courses_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+	<div class="tab-pane" id="tab3">
+		{if sizeof($all_courses) == 0}
+		<div class="alert alert-warning mt20" role="alert">コースはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>コースタイトル</th>
+					<th>コース金額</th>
+					<th>コース人数</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$all_courses item=courses_item}
+			<tr class="courses pointer" code="{$courses_item.code}">
+				<td>
+					{if $courses_item.status == 1 && strtotime($courses_item.open_date) < time()}公開{/if}
+					{if $courses_item.status == 1 && strtotime($courses_item.open_date) > time()}公開待ち{/if}
+					{if $courses_item.status == 0}下書き{/if}
+				</td>
+				<td>{$courses_item.price|number_format}円コース</td>
+				<td>{$courses_item.price|number_format}</td>
+				<td>{$courses_item.num_of_supporters|number_format}/{$courses_item.limit|number_format}</td>
+				<td>{$courses_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+</div>
+
+
+<script>
+var project_code = "{$projects.code}";
+$(function(){
+	$('.courses').click(function(){
+		var code = $(this).attr('code');
+		location.href = "/my/projects/courses/edit/"+project_code+"/"+code;
+	});
+});
+</script>

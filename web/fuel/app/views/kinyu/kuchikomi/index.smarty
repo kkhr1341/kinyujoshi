@@ -1,0 +1,97 @@
+<div class="top-introduction request-introduction">
+  <img class="request-introduction-img" src="/images/request/request-logo.png" alt="きんゆう女子に勉強会をリクエストする">
+</div>
+
+
+<div class="singlepage-block center">
+  <h2 class="singlepage-block-title center">
+    <img src="/images/title/request/request-title02.png" alt="何について一番聞きたいですか？きんゆう女子では、みなさんのワカラナイリクエストに答えてイベントや女子会などを開催していきます。">
+  </h2>
+  <form>
+    <div class="singlepage-form-block">
+      <div class="form-group">
+        <label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス <!-- <span class="label label-danger">必須</span> --></label>
+        <input type="text" id="nickname" class="form-control" placeholder="">
+      </div>
+      <div class="form-group form-group02">
+        <label class="form-title"><span class="color-kinyu-color">◆</span> ワカラナイこと・気になること <!-- <span class="label label-danger">必須</span> --></label>
+        <textarea id="message" name="message" class='form-control' rows="10"></textarea>
+      </div>
+      <p class="pc request-sub"><span style="color:#f3626c;">※</span>リクエストされた内容は、きんゆう女子。編集部にて<br>開催の可否を決めさせていただきます。<br>
+      </p>
+      <p class="sp request-sub"><span style="color:#f3626c;">※</span>リクエストされた内容は、<br>きんゆう女子。編集部にて開催の可否を決めさせていただきます。
+      </p>
+      <div class="form-btn tx-center">
+        <button class="btn btn-primary fw-bold" type="button" id="save">送信する</button>
+      </div>
+    </div>
+  <form>
+
+  {*
+  <!-- きんゆう女子の先生一覧 -->
+  <h2 class="singlepage-block-title center">
+    <img src="/images/title/request/request-title.png">
+  </h2>
+  <p class="description">
+    きんゆう女子のお問い合わせフォームです。<br>お気軽に何でもお聞きください！
+  </p>
+
+  <div class="lecturer-list">
+    <ul> 
+      <li class="clear">
+        <div class="lecture-left">
+          <div class="lecturer-img" style="background: url(http://toetheline.jp/images/greeting-profile.jpg) center center / cover no-repeat;"></div>
+          <div class="lecturer-img-bg"></div>
+          <div class="lecture-detail">
+            <p class="lecture-name">鈴木 万梨子</p>
+          </div>
+        </div>
+        <div class="lecture-right">
+          <p class="lecture-title">テキストテキストテキストテキストテキスト<br>テキストテキストテキスト</p>
+          <p class="lecture-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  *}
+
+  <script>
+    {literal}
+    $(function(){
+      // var title_frame_height = $('#title_frame').height();
+      // var page_title_height = $('.page_title').height();
+      
+      // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+      // $('.page_title').css('padding-top', padding_top);
+      
+      $('#save').click(function(){
+        var url = "/api/kuchikomi/create";
+        var params = {};
+
+        params.nickname = $('#nickname').val();
+        params.message = $('#message').val();
+        
+        if (params.nickname == "") {
+          ts.error("メールアドレスを入力してください");
+          return false;
+        }
+        if (params.message == "") {
+          ts.error("ワカラナイこと・気になることを入力してください");
+          return false;
+        }
+
+        bootbox.confirm("勉強会をリクエストしますか？", function(result) {
+          if (result) {
+            ajax.post(url, params, function(data){
+              location.href = "/request/complete";
+            });
+          }
+          else {
+            ts.info("キャンセルしました");
+          }
+        });
+      });
+    });
+    {/literal}
+  </script>
+</div>

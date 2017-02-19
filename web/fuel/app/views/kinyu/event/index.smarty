@@ -1,0 +1,106 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+
+<div class="kinyu-main-single-block">
+  <div class="inner">
+
+    <div class="top-introduction event-introduction">
+      <img class="event-introduction-title" src="/images/joshikai-title.png" alt="おかねについて気軽に話せる、女子会の予定|きんゆう女子">
+      
+      <div class="singlepage-introduction-btn">
+        <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="https://docs.google.com/a/sundaylunch.jp/forms/d/e/1FAIpQLSdfLoYE_WXBwB8qY-9yzdfHCdrBB1eNENgTSggbBb8Hmnz7ig/viewform" target="_blank">女子会の参加手続きへ</a>
+      </div>
+
+    </div>
+
+    <div class="singlepage-block center">
+
+      <h2 class="singlepage-block-title schedule center">
+        <img src="/images/title/event/event-title02.png" alt="きんゆう女子。の女子会のスケジュール">
+      </h2>
+      <div class="carender-block tx-center">
+        <!-- <div class="event-gcarender-date">{$today}</div>
+        <p class="event-date02">ボタンを押すとテキストが変わります</p> -->
+        <!-- <iframe id="gcarender" src="/gcalendar/gcalendar-wrapper.php?showTitle=0&amp;showPrint=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sundaylunch.jp_ggel0081l90oqdp5643dortjno%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo" style="border-width:0" class="gcarender" frameborder="0" scrolling="no"> -->
+
+        <iframe id="gcarender" src="/gcalendar/gcalendar-wrapper.php?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sundaylunch.jp_ggel0081l90oqdp5643dortjno%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo" style="border-width:0" class="gcarender" frameborder="0" scrolling="no"></iframe>
+
+        </iframe>
+      </div>
+
+      <h2 class="singlepage-block-title center">
+        <img src="/images/title/event/event-title03.png" alt="きんゆう女子。の女子会のフォームはこちら">
+      </h2>
+      <p class="sp description">知識がなくても全然大丈夫♪<br>気軽にお越しください。</p>
+      <div style="position:relative">
+        <a class="singlepage-block-link btn-tiffany center" href="https://docs.google.com/a/sundaylunch.jp/forms/d/e/1FAIpQLSdfLoYE_WXBwB8qY-9yzdfHCdrBB1eNENgTSggbBb8Hmnz7ig/viewform" target="_blank">女子会の参加手続きへ</a>
+        <img src="/images/icon/balloon.png" class="pc balloon-kinyu-joshikai" alt="女子会は、知識がなくても全然大丈夫♪気軽にお越しください">
+      </div>
+      <p class="description kinyu-joshikai-description">
+        <span style="color:#f37979;">※</span>googleフォームが立ち上がります。
+      </p>
+
+      <h2 class="singlepage-block-title center">
+        <img src="/images/title/event/event-title01.png" alt="きんゆう女子。の女子会に参加するとどんな良いことがある？">
+      </h2>
+      <div class="singlepage-theree-cicle-list">
+        <ul class="clear">
+          <li>
+            <div class="inner">
+              <img src="/images/count/count-bottom1.png" class="count-event">
+              <p><span class="title">女子会に参加できます！</span>
+              フリードリンク・おやつ付！<br>参加費1,000円<br>勉強内容のレポート提出で<br>女子会が<span style="color:#f3626c;" class="fw-bold">無料</span>に</p>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="/images/count/count-bottom2.png" class="count-event">
+              <p><span class="title">安心・安全で楽しい！</span>
+              <span style="color:#f3626c;" class="fw-bold">事前に</span>先生やセミナーを<br>取材しているので<br>怪しい情報からメンバーを<br>精一杯守ります。</p>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="/images/count/count-bottom3.png" class="count-event">
+              <p><span class="title">必要なことを必要なだけ</span>
+              「難しい」情報が<br>ありふれているので、<br>必要なことを必要なだけ、<br><span style="color:#f3626c;" class="fw-bold">ゆるく</span>まとめます。</p>
+            </div>
+          </li>
+          <li style="margin-right: 0px;">
+            <div class="inner">
+              <img src="/images/count/count-bottom4.png" class="count-event">
+              <p><span class="title">きんゆう女子メンバーに♪</span>
+              きんゆう女子。のメンバー<br>になると、様々な嬉しい<br><span style="color:#f3626c;" class="fw-bold">特典</span>があります。詳細は、<br>女子会でご説明します。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  {$sp_footer}
+</div>
+
+<script>
+// var click_count = 0; 
+// var count = document.getElementById("gcarender").contentWindow.document.getElementById("navForward1");
+// $(function(){
+//   $(count).click(function(){
+//       //▼▼"#contents_sample_wrap .text_box"タグに書き込む
+//       console.log("クリックされました");
+//       //click_count++;
+//       //$(".event-date02").text("ボタンが" + click_count + "回クリックされました");
+//   });
+$(function(){
+    $('#gcarender').on('load', function(){
+        $('#gcarender').contents().find('#currentDate1').css('font-size','16px');
+        $('#gcarender').contents().find('#currentDate1').css('padding-left','0em');
+        $('#gcarender').contents().find('#currentDate1').css('padding','5px');
+        $('#gcarender').contents().find('#dateEditableBox1').css('display','block');
+    });
+});
+</script>
+
+
+
+
+

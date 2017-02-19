@@ -1,0 +1,333 @@
+<!---===== スマホのコンテンツアフター
+==================================================-->
+<div class="sp contents_after_area">
+
+  <div style="background-color: rgb(249, 249, 249);">
+    <div class="sp sp-only top-banner-area">
+      <ul class="clear">
+        <li>
+          <a href="/regist"><img src="/images/banner/regist-banner.jpg"></a>
+        </li>
+        <li>
+          <a href="/welcome/event"><img src="/images/banner/jyoshikai-banner.jpg"></a>
+        </li>
+        <li>
+          <a href="/request"><img src="/images/banner/request-banner.jpg"></a>
+        </li>
+        <li>
+        <a href="http://lyceeappartement.jp/" target="_blank">
+          <script>
+            var img = new Array();
+            img[0] = "/images/banner/lycee/lycee01.jpg";
+            img[1] = "/images/banner/lycee/lycee02.jpg";
+            img[2] = "/images/banner/lycee/lycee03.jpg";
+            img[3] = "/images/banner/lycee/lycee04.jpg";
+            n = Math.floor(Math.random()*img.length);
+            document.write("<img src='"+img[n]+"' border='0'>");
+          </script>
+        </a>
+      </li>
+      </ul>
+    </div>
+  </div>
+
+  <!---===== おすすめコンテンツピックアップ
+  ==================================================-->
+  <section class="article-list">
+    <h2 class="article-list-block-title">おすすめpick up!</h2>
+    <div class="article-list-bl">
+      <ul class="clear">
+        {foreach from=$top_blogs key="key" item=blog name=loopname}
+           <li>
+            <a href="/blog/{$blog.code}" class="tile-link">
+              <div class="article-list-el">
+                <div class="article-list-el-img">
+                  <span style="background: url({$blog.main_image}) center center / cover no-repeat;" class="article-list-el-img-span"></span>
+                </div>
+                <div class="article-list-el-right">
+                  <h3 class="article-list-el-title">{$blog.title}</h3>
+                  <div class="article-list-el-info clear">
+                    <p class="article-list-el-date">{$blog.section_name}</p>
+                    <!-- {if $blog.section_name != ""}
+                    <p class="article-list-el-category">{$blog.section_name}</p>
+                    {/if} -->
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        {/foreach}
+
+        <!-- インフィード枠 -->
+        <li class="urca-infeed" data-infeed-id="YhEjhO9lu2M" style="display:none;position:relative">
+          <a class="urca-landing-url tile-link">
+            <div class="article-list-el">
+              <div class="article-list-el-img">
+                <span class="urca-icon-img article-list-el-img-span"></span>
+              </div>
+              <div class="article-list-el-right">
+                <h3 class="article-list-el-title  urca-title"></h3>
+                <div class="article-list-el-info clear">
+                  <p class="article-list-el-date"><span class="urca-displayed-advertiser"></span></p>
+                  <p style="font-size: 1.1rem;position: absolute;bottom: 0;right:0;">(PR)</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  {*
+  <div class="kinyu-ads-area">
+    <div style="text-align: center;">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- きんゆう女子320×100 -->
+      <ins class="adsbygoogle"
+        style="display:inline-block;width:320px;height:100px"
+        data-ad-client="ca-pub-8160631291694218"
+        data-ad-slot="7512876688"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+  *}
+
+  <!---===== コラム
+  ==================================================-->
+  <section class="article-list">
+    <h2 class="article-list-block-title">コラム</h2>
+    <div class="top-tile-list">
+      <ul class="clear">
+        {foreach from=$specials02 item=blog name=foo}
+          <li>
+            <a href="/blog/{$blog.code}">
+              <div class="top-tile-list-el">
+                <div class="top-tile-list-img" style="background: url({$blog.main_image}) center center / cover no-repeat;"></div>
+                <div class="top-tile-list-el-info">
+                  <h3 class="top-tile-list-el-title">{$blog.title}</h3>
+                  <div class="clear">
+                    <p class="top-tile-list-el-date">{$blog.section_name}</p>
+                    <!-- {if $blog.section_name != ""}
+                      <p class="top-tile-list-el-category">{$blog.section_name}</p>
+                    {/if} -->
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        {/foreach}
+      </ul>
+    </div>
+  </section>
+
+  <div style="background-color: #F0F0F0;">
+    <!-- バナーエリア -->
+    <!-- <div class="sp sp-only top-banner-area">
+      <ul class="clear">
+        <li>
+          <a href="/kuchikomi"><img src="/images/tsubuyaki-banner04.jpg"></a>
+        </li>
+        <li>
+          <a href="/event"><img src="/images/jyoshi-kai-banner01.jpg"></a>
+        </li>
+      </ul>
+    </div> -->
+
+    <!---===== FB/バナー部分
+    ==================================================-->
+    <div class="kinyu_like_area" style="background: url(/images/back/bg-sns01.png) center center / cover no-repeat;">
+      <div class=""></div>
+      <div class="inner">
+        <img src="/images/title/social/social-title.png" style="display:block;width:72%;margin:0 auto;margin-bottom:16px;">
+        <div class="share-area">
+          <!-- <div class="fb-page" 
+            data-href="https://www.facebook.com/kinyujyoshi/" 
+            data-width="500" 
+            data-height="300" 
+            data-small-header="false" 
+            data-adapt-container-width="true" 
+            data-hide-cover="false" 
+            data-show-facepile="true" 
+            data-show-posts="false">
+            <div class="fb-xfbml-parse-ignore">
+              <blockquote cite="https://www.facebook.com/kinyujyoshi/"><a href="https://www.facebook.com/kinyujyoshi/">きんゆう女子</a></blockquote>
+            </div>
+          </div> -->
+
+          <!-- ソーシャルメディアのリスト -->
+          <div class="kinyu-follow-sns">
+            <ul class="clear">
+              <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/icon/social/insta.png"></a></li>
+              <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/icon/social/facebook.png"></a></li>
+              <li><a href="https://twitter.com/@kinyu_joshi" target="_blank"><img src="/images/icon/social/twitter.png"></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background-color: rgb(249, 249, 249);">
+    <div class="sp sp-only top-banner-area">
+      <ul class="clear">
+        <li>
+          <a href="http://kabuto-live.com/" target="_blank"><img src="/images/banner/kabuto-banner.jpg"></a>
+        </li>
+        <li>
+          <a href="http://cafe-salvador.com/" target="_blank"><img src="/images/banner/salvador-banner.jpg"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!---===== カテゴリー
+  ==================================================-->
+  <section class="category-list">
+    <h2 class="article-list-block-title">カテゴリー</h2>
+    <div class="top-category-list">
+      <ul class="clear">
+        <li class=""><a class="drawer-nav-icon icon-top drawer-menu-item" href="/">トップ</a></li>
+        <li><a class="drawer-nav-icon icon-money drawer-menu-item" href="/category/money">おかね</a></li>
+        <li><a class="drawer-nav-icon icon-job drawer-menu-item" href="/category/business">しごと</a></li>
+        <li><a class="drawer-nav-icon icon-life drawer-menu-item" href="/category/lifestyle">ライフスタイル</a></li>
+        <li><a class="drawer-nav-icon icon-invest drawer-menu-item" href="/category/investment">投資</a></li>
+        <li><a class="drawer-nav-icon icon-fintech drawer-menu-item" href="/category/fintech">フィンテック</a></li>
+        <li><a class="drawer-nav-icon icon-star drawer-menu-item" href="/category/special">コラム</a></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!---===== PCのコンテンツアフター
+==================================================-->
+<div class="pc">
+
+  
+  <div class="pick-up-news-block">
+    <a href="/conference">
+      <div class="inner">
+        第1回 週末投資宣言はこちら！
+      </div>
+    </a>
+  </div>
+  
+
+  <!---===== バナーエリア =====-->
+  <div class="pc-sidebar-block top-banner-area">
+    <ul class="clear">
+      <li>
+        <a href="/regist"><img src="/images/banner/regist-banner.jpg"></a>
+      </li>
+      <li>
+        <a href="/welcome/event"><img src="/images/banner/jyoshikai-banner.jpg"></a>
+      </li>
+      <li>
+        <a href="/request"><img src="/images/banner/request-banner.jpg"></a>
+      </li>
+      <li>
+        <a href="http://lyceeappartement.jp/" target="_blank" onclick="pageTracker._trackEvent('zip', 'Downloads', 'link1', 0, true);">
+          <script>
+            var img = new Array();
+            img[0] = "/images/banner/lycee/lycee01.jpg";
+            img[1] = "/images/banner/lycee/lycee02.jpg";
+            img[2] = "/images/banner/lycee/lycee03.jpg";
+            img[3] = "/images/banner/lycee/lycee04.jpg";
+            n = Math.floor(Math.random()*img.length);
+            document.write("<img src='"+img[n]+"' border='0'>");
+          </script>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!---===== おすすめコンテンツピックアップ =====-->
+  <div class="pc-sidebar-block pc-sidebar-pickup-list">
+    <h2 class="pc-contents-title">おすすめPick up!</h2>
+    <div class="pc-sidebar-pickup-bl">
+      <ul class="clear">
+        {foreach from=$top_blogs item=blog name=foo}
+           <li>
+            <a href="/blog/{$blog.code}" class="tile-link">
+              <div class="pc-sidebar-pickup-el">
+                <div class="pc-sidebar-pickup-el-img">
+                  <span style="background: url({$blog.main_image}) center center / cover no-repeat;" class="pc-sidebar-pickup-el-img-span"></span>
+                </div>
+                <div class="pc-sidebar-pickup-el-right">
+                  <h3 class="pc-sidebar-pickup-el-title">{$blog.title}</h3>
+                  <div class="pc-sidebar-pickup-el-info clear">
+                    <!-- <p class="pc-sidebar-pickup-el-date">{$blog.open_date|date_format:"Y.m.d"}</p> -->
+                    {if $blog.section_name != ""}
+                    <p class="pc-sidebar-pickup-el-category">{$blog.section_name}</p>
+                    {/if}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        {/foreach}
+      </ul>
+    </div>
+  </div>
+
+  <!---===== コラム =====-->
+  <div class="pc-sidebar-block article-list">
+    <h2 class="pc-contents-title">コラム</h2>
+    <div class="top-tile-list">
+      <ul class="clear">
+        {foreach from=$specials02 item=blog name=foo}
+          <li>
+            <a href="/blog/{$blog.code}">
+              <div class="top-tile-list-el">
+                <div class="top-tile-list-img" style="background: url({$blog.main_image}) center center / cover no-repeat;"></div>
+                <div class="top-tile-list-el-info">
+                  <h3 class="top-tile-list-el-title">{$blog.title}</h3>
+                  <div class="clear">
+                    <!-- <p class="top-tile-list-el-date">{$blog.open_date|date_format:"Y.m.d"}</p> -->
+                    {if $blog.section_name != ""}
+                      <p class="top-tile-list-el-category">{$blog.section_name}</p>
+                    {/if}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        {/foreach}
+      </ul>
+    </div>
+  </div>
+
+  <!---===== FB/バナー部分 =====-->
+  <div class="pc-sidebar-block">
+    <div class="fb-page" 
+      data-href="https://www.facebook.com/kinyujyoshi/" 
+      data-width="500" 
+      data-height="300" 
+      data-small-header="false" 
+      data-adapt-container-width="true" 
+      data-hide-cover="false" 
+      data-show-facepile="true" 
+      data-show-posts="false">
+      <div class="fb-xfbml-parse-ignore">
+        <blockquote cite="https://www.facebook.com/kinyujyoshi/"><a href="https://www.facebook.com/kinyujyoshi/">きんゆう女子</a></blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!---===== バナーエリア =====-->
+  <div class="pc-sidebar-block top-banner-area">
+    <ul class="clear">
+      <li>
+        <a href="http://kabuto-live.com/" target="_blank"><img src="/images/banner/kabuto-banner.jpg"></a>
+      </li>
+      <li>
+        <a href="http://cafe-salvador.com/" target="_blank"><img src="/images/banner/salvador-banner.jpg"></a>
+      </li>
+    </ul>
+  </div>
+
+</div>

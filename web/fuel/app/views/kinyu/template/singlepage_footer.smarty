@@ -1,0 +1,68 @@
+
+<div class="single-page-after">
+  <div class="kinyu-content-after">
+
+    <!-- 編集部へのコメント -->
+    <div class="kinyu-content-after-el report-detail-menu">
+      <h3 class="center-title"><p>きんゆう女子。のメニュー</p></h3>
+      <div class="report-detail-menu-list">
+        <ul>
+          <!-- 女子会 -->
+          <li style="background:url(/images/back/bg-joshikai.jpg) center center / cover no-repeat;">
+            <a href="/event">
+              <p>女子会に参加する</p>
+            </a>
+          </li>
+
+          <!-- メンバーになる -->
+          <li style="background:url(/images/regist/intro-bg.png) center center / cover no-repeat;">
+            <a href="/regist">
+              <p>メンバーになる</p>
+            </a>
+          </li>
+
+          <!-- 私立きんゆう女子。学院 -->
+          <li style="background:url(/images/content/teacher/gakuin-back-gus.jpg) center -50px / cover no-repeat;">
+            <a href="/school">
+              <p>私立きんゆう女子。学院</p>
+            </a>
+          </li>
+
+          <!-- きんゆう女子。カンファレンス -->
+          <li style="background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;">
+            <a href="/canference">
+              <p>きんゆう女子。カンファレンス</p>
+            </a>
+          </li>
+
+          <!-- サルバドル・兜LIVE! -->
+          <!-- <li>
+            <div class="tw-columns01" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/IMG_0867.jpg) center center / cover no-repeat;"></div>
+            <div class="tw-columns" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/IMG_0867.jpg) center center / cover no-repeat;"></div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-logo">
+        <img src="/images/kinyu-logo01.png">
+      </div>
+      <div class="footer-menu">
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="">運営会社</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="">プライバシーポリシー</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="">利用規約</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="">お問い合わせ</a>
+        </div>
+      </div>
+      <p class="navi_kinyu-submenu-copy">©きんゆう女子。 All rights reserved. No reproduction or republication without written permission.　<br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</p>
+    </footer>
+  </div>
+</div>

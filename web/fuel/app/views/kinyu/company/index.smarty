@@ -1,0 +1,63 @@
+<div class="kinyu-main-single-block">
+<div class="company-detail-header"><img class="logo" src="/images/kinyu-logo01.png"></div>
+
+<div class="company-info-title">
+  <h2>運営会社</h2>
+</div>
+
+<div class="company-details-block clear">
+  <div class="company-details-menu">
+    <ul>
+    	<li><a class="company-details-active">運営会社</a></li>
+      <li><a href="/service">利用規約</a></li>
+      <li><a href="/privacy">プライバシーポリシー</a></li>
+      <li><a href="/legal">特定商取引法に基づく表記</a></li>
+      <li><a href="/contact">お問い合わせ</a></li>
+    </ul>
+  </div>
+
+  <div class="company-details company-legal">
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会社名</h3>
+      <p class="description">株式会社TOE THE LINE</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 設立</h3>
+      <p class="description">2016年03月03日</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 事業内容</h3>
+      <p class="description">・観光プロモージョン事業<br>・メディア、コミュニティ運営<br>・WEB制作事業</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 所在地</h3>
+      <p class="description">〒107-0061 東京都港区北青山3-5-6 青朋ビル本館3F</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 代表取締役社長</h3>
+      <p class="description">鈴木 万梨子</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> URL</h3>
+      <p class="description"><a target="_blank" href="https://toetheline.jp/">https://toetheline.jp/</a></p>
+    </div>
+  </div>
+</div>
+{$sp_footer}
+</div>
+<script>
+{literal}
+$(function(){
+  var title_frame_height = $('#title_frame').height();
+  var page_title_height = $('.page_title').height();
+  
+  var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+  $('.page_title').css('padding-top', padding_top);
+});
+{/literal}
+</script>

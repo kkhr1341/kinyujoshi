@@ -1,0 +1,240 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+
+<div class="kinyu-main-single-block">
+  <div class="inner">
+    <div class="top-introduction regist-introduction">
+      <img class="regist-introduction-title" src="/images/regist/intro-title.png" alt="金融ワカラナイ女子のためのコミュニティ、きんゆう女子のメンバー登録フォーム">
+      <div class="singlepage-introduction-btn">
+        <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="#regist-form">登録フォームはこちら</a>
+        <!-- <img src="/images/icon/balloon.png" class="pc balloon-intro-kinyu-joshikai"> -->
+      </div>
+    </div>
+    <div class="singlepage-block center">
+
+      <h2 class="singlepage-block-title center">
+        <img src="/images/title/regist/regist-title03.png" alt="きんゆう女子。の女子会に参加するとどんな良いことがある？">
+      </h2>
+      <div class="singlepage-theree-cicle-list">
+        <ul class="clear">
+          <li>
+            <div class="inner">
+              <img src="/images/count/count-bottom1.png" class="count-event">
+              <p><span class="title">女子会に参加できます！</span>
+              フリードリンク・おやつ付！<br>参加費1,000円<br>勉強内容のレポート提出で<br>女子会が<span style="color:#f3626c;" class="fw-bold">無料</span>に</p>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="/images/count/count-bottom2.png" class="count-event">
+              <p><span class="title">勉強になる本が<br>借りられます！</span>
+              <span style="color:#f3626c;" class="fw-bold">※</span>女子会開催日のみ<span style="color:#f3626c;" class="fw-bold">貸出</span>します。<br><span style="color:#f3626c;" class="fw-bold">※</span>デポジット(3,000円)が<br>必要です。</p>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="/images/count/count-bottom3.png" class="count-event">
+              <p><span class="title">中立で新しい情報が<br>手に入る♪</span>
+              必要な<span style="color:#f3626c;" class="fw-bold">情報</span>を必要なだけ<br>何がワカラナイかが<br>分かります。</p>
+
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="/images/count/count-bottom4.png" class="count-event">
+              <p><span class="title">スタンプカード発行</span>
+              <span style="color:#f3626c;" class="fw-bold">5つ</span>たまるとCAFE SALVADORの<br>ビジネスサロン1時間無料<br>チケットと交換できます</p>
+            </div>
+          </li>
+          <li>
+            <div class="inner">
+              <img src="/images/count/count-bottom5.png" class="count-event">
+              <p><span class="title">メルマガの購読</span>
+              きんゆう女子のイベントや<br><span style="color:#f3626c;" class="fw-bold">最新情報</span>が届きます。<br><span style="color:#f3626c;" class="fw-bold">※</span>不定期配信</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="singlepage-block-title center">
+        <img src="/images/title/regist/regist-title01.png" alt="金融・おかねの知識を学び、ライフスタイルを一緒に見直しましょう！">
+      </h2>
+      <div class="regist-policy center">
+        <img class="regist-policy-title" src="/images/title/regist/regist-policy-title.png" alt="きんゆう女子のポリシー">
+        <p><span class="fw-bold" style="color:#f3626c;">1. </span>お金に関する課題や悩みを見つけ、受け止めよう。</p>
+        <p><span class="fw-bold" style="color:#f3626c;">2. </span>みんなのお金の悩みを解決するアイディアを考えよう。</p>
+        <p><span class="fw-bold" style="color:#f3626c;">3. </span>お金を清く美しく扱う、お作法を身につけよう。</p>
+        <p><span class="fw-bold" style="color:#f3626c;">4. </span>世代を超えてお金と、お金の流れに関する情報を共有しよう。</p>
+        <p><span class="fw-bold" style="color:#f3626c;">5. </span>お金の流れに関して知識を深め、夢を叶えよう。</p>
+      </div>
+
+      <h2 id="regist-form" class="singlepage-block-title center">
+        <img src="/images/title/regist/regist-title02.png" alt="きんゆう女子のメンバー登録フォームはこちら">
+      </h2>
+      <p class="description">
+        積極的にコミュニティに参加したい！<br>きんゆう女子のメンバー登録フォームです。
+      </p>
+      <!-- <div style="margin-bottom:20px;">
+        <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="https://docs.google.com/forms/d/e/1FAIpQLSfKuf0nrEh_hYz7Yg0DeUwzEKmMXPo6YMt0ylAQxPL2ixjqOQ/viewform" target="_blank">登録フォームはこちら</a>
+      </div> -->
+
+      
+      <form>
+        <div class="singlepage-form-block">
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> お名前 <span class="label label-danger">必須</span></label>
+            <input type="text" id="name" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> ご年齢 <span class="label label-danger">必須</span></label>
+            <input type="text" id="age" class="form-control" placeholder="">
+          </div>
+          <div class="form-group form-radio-block">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> きんゆうワカラナイ度 <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">あなたのきんゆう知識度を教えてください(^ ^)!</p>
+            <div class="radio_box clear">
+              <input type="radio" value="軽度" name="not_know" id="not_know1" class="form-radio" placeholder="">
+              <label for="not_know1" class="form-long">軽度</label>
+              <input type="radio" value="中度" name="not_know" id="not_know2" class="form-radio" placeholder="">
+              <label for="not_know2" class="form-long">中度</label>
+              <input type="radio" value="重度" name="not_know" id="not_know3" class="form-radio" placeholder="">
+              <label for="not_know3" class="form-long">重度</label>
+              <input type="radio" value="それすらワカラナイ" name="not_know" id="not_know4" class="form-radio" placeholder="">
+              <label for="not_know4">それすらワカラナイ</label>
+              <input type="radio" value="プロフェッショナル" name="not_know" id="not_know5" class="form-radio" placeholder="">
+              <label for="not_know5">プロフェッショナル</label>
+            </div>
+          </div>
+          <script>  
+          var treee = $("[name=not_know]:checked").val();
+          console.log(treee);
+          </script>
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> お金について知りたいこと・興味のあること <span class="label label-danger">必須</span></label>
+            <input type="text" id="interest" class="form-control" placeholder="(例)投資？個人事業主のこと？お年玉？">
+          </div>
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> きんゆう女子。でどんな出会いや発見がほしいですか？ <span class="label label-danger">必須</span></label>
+            <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間">
+          </div>
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">連絡がとりやすいアドレスを入力してください。</p>
+            <input type="text" id="email" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> 3年後の自分の年収をどのくらいにしたいですか？ <span class="label label-danger">必須</span></label>
+            <input type="text" id="income" class="form-control" placeholder="">
+          </div>
+          <div class="form-group form-radio-block">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> きんゆう女子。で情報発信したいですか？ <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
+            <div class="radio_box_02 clear">
+              <input type="radio" value="はい、ぜひしたいです。" name="transmission" id="transmission1" class="form-radio" placeholder="">
+              <label for="transmission1">はい、ぜひしたいです。</label>
+              <input type="radio" value="いいえ、したくないです。" name="transmission" id="transmission2" class="form-radio" placeholder="">
+              <label for="transmission2">いいえ、したくないです。</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> FacebookのURL <span class="label label-primary">任意</span></label>
+            <input type="text" id="facebook" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> その他SNS、ブログ <span class="label label-primary">任意</span></label>
+            <input type="text" id="other_sns" class="form-control" placeholder="">
+          </div>          
+          <div class="form-group form-group02">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> 簡単な自己紹介をお願いいたします。 <span class="label label-danger">必須</span></label>
+            <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
+          </div>
+          
+          <div class="form-btn tx-center">
+            <button class="btn btn-primary fw-bold" type="button" id="save">送信する</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  {$sp_footer}
+</div>
+
+
+<script>
+{literal}
+
+$(function(){
+  var title_frame_height = $('#title_frame').height();
+  var page_title_height = $('.page_title').height();
+  
+  var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+  $('.page_title').css('padding-top', padding_top);
+  
+  $('#save').click(function(){
+    var url = "/api/regist/create";
+    var params = {};
+    
+    params.name = $('#name').val();
+    params.age = $('#age').val();
+    params.not_know = $("[name=not_know]:checked").val();
+    params.interest = $('#interest').val();
+    params.ask = $('#ask').val();
+    params.income = $('#income').val();
+    params.transmission = $("[name=transmission]:checked").val();
+    params.email = $('#email').val();
+    params.facebook = $('#facebook').val();
+    params.other_sns = $('#other_sns').val();
+    params.introduction = $('#introduction').val();
+    
+    if (params.name == "") {
+      ts.error("お名前を入力してください");
+      return false;
+    }
+    if (params.age == "") {
+      ts.error("ご年齢を入力してください");
+      return false;
+    }
+    if (params.not_know == "") {
+      ts.error("きんゆうワカラナイ度を入力してください。");
+      return false;
+    }
+    if (params.interest == "") {
+      ts.error("「お金について知りたいこと・興味のあること」を入力してください");
+      return false;
+    }
+    if (params.ask == "") {
+      ts.error("「きんゆう女子。でどんな出会いや発見がほしいですか？」を入力してください");
+      return false;
+    }
+    if (params.transmission == "") {
+      ts.error("「きんゆう女子。で情報発信したいですか？」を入力してください。");
+      return false;
+    }
+    if (params.income == "") {
+      ts.error("「3年後の自分の年収をどのくらいにしたいですか？」を入力してください。");
+      return false;
+    }
+    if (params.email == "") {
+      ts.error("メールアドレスを入力してください。");
+      return false;
+    }
+    if (params.introduction == "") {
+      ts.error("自己紹介を入力してください。");
+      return false;
+    }
+
+    bootbox.confirm("入力内容を送信しますか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          location.href = "/regist/complete";
+        });
+      }
+      else {
+        ts.info("キャンセルしました");
+      }
+    });
+    
+  });
+});
+{/literal}
+</script>

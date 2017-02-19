@@ -1,0 +1,338 @@
+From do_not_reply@email.apple.com  Wed Oct  7 00:17:32 2015
+Return-Path: <do_not_reply@email.apple.com>
+X-Original-To: examiner_eJaB8dzIdU@creco.cards
+Delivered-To: examiner_eJaB8dzIdU@creco.cards
+Received: from nwk-txn-msbadger0803.apple.com (nwk-txn-msbadger0803.apple.com [17.151.1.88])
+	by ip-172-31-18-150.localdomain (Postfix) with ESMTP id C9EBC40ADE
+	for <examiner_eJaB8dzIdU@creco.cards>; Wed,  7 Oct 2015 00:17:31 +0900 (JST)
+DKIM-Signature: v=1; a=rsa-sha1; d=email.apple.com; s=emailapple2048; c=relaxed/relaxed;
+	q=dns/txt; i=@email.apple.com; t=1444144650;
+	h=From:Subject:Date:To:MIME-Version:Content-Type;
+	bh=KNgzJEtfB27YVbDVrv8aV2j8nss=;
+	b=oktxOc5VXLH7K1zJKxerNHebpEB/HEL0uHSnYyX91TU82zwbjjLHV07EOgrjZRSz
+	A/R7AflamMm+CNeg6Lehn8MB2ADZ8npFcjvh5D3D9mbdftgTTt2KHP5Q7ch0oKgr
+	aw7ZcQJ3w8EjFfb3ntmdntk3bWVwenFFD3XbB1Sa9H/yjDrOLN/MOodOj30nUqpP
+	mU0tFskcRylGsLUEMd/4NDqQcmv7DCTUs7GOY29e0DqhbB8ugtnhwUv4XtwN40R8
+	Om+9931hYiJBXQtPRCzGQ49HKrEm4b6G63E3P+Brp46jaZRX9Wo+KvaiBUnhLdcg
+	M/dRN+QnUsvLuBOA1+z1WQ==;
+Date: Tue, 6 Oct 2015 15:17:30 +0000 (GMT)
+From: iTunes Store <no_reply@email.apple.com>
+To: examiner_eJaB8dzIdU@creco.cards
+Message-ID: <1298056058.21102949.1444144650873.JavaMail.email@email.apple.com>
+Subject: TestFlight: You're invited to test CRECO
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_21102947_2084389159.1444144650872"
+X-EmailType-Id: 10631
+X-Sent-To: examiner_eJaB8dzIdU@creco.cards,2,k%2BmjWPCFEH1m5ry2zndhApTuWzZ%2FsWXmBYlTsHG5QWYxZxBDADlHJ0LpCMgLzUQ8%2FgqjiZLli%2FWJJraw8R7SaklMjVuUtzbKhDASTFsv3TeKwVKxJOX3sRLrj80n4RD5Xf3Ug16KUiGAUreyHhXm%2BTkxjGmQJWMEH1l2RTOmYpgjIDvS95fcy%2BQ4zLMCG6m0N2TwCbNIKHlm0yCSlIc2e4fxjeVPR%2F5onQXhrYRtYlassX2YAVvM%2BANrqFo%2B%2Bj0yWB8tjMsIPrRRUL%2BXvaqSkocPLIdcX1JZa49W5twf3qBLA61h8JLLBmkooIagJcuyXtapMoNqKuaAsf2SC0hRsC8ZDOSWc00%2Fn0QnFvxxY%2FUPCBLsLTh%2Fpqq8T30m3ivUAhGDBDWbHrMsTwr6xZ3CMw%3D%3D
+X-Attach-Flag: N
+X-TXN_ID: 17ADC440-B77F-4F31-9CE3-42B0CC8A83E6
+X-Business-Group: iTunes
+X-DKIM_SIGN_REQUIRED: YES
+
+------=_Part_21102947_2084389159.1444144650872
+Content-Type: text/plain; charset=ISO-2022-JP
+Content-Transfer-Encoding: QUOTED-PRINTABLE
+Content-Disposition: inline
+
+
+
+------=_Part_21102947_2084389159.1444144650872
+Content-Type: text/html; charset=ISO-2022-JP
+Content-Transfer-Encoding: QUOTED-PRINTABLE
+Content-Disposition: inline
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><!DOCTYPE HT=
+ML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>iTunes Connect</title>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-885=
+9-1">
+  <style type=3D"text/css">
+    A { text-decoration: none; }
+
+    A:link { color: #0088CC; text-decoration: none; }
+
+    A:visited { text-decoration: none; }
+
+    A:active { color: #696969; text-decoration: underline;}
+
+    A:hover { text-decoration: underline; }
+
+    BODY, TD, P, UL, OL,h1,h2,h3 {
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #666666;
+    text-align: justify;
+    font-weight: 300;
+    }
+
+    P {
+    margin-bottom: 1em;
+    }
+
+    H1 {
+    line-height:145%;
+    }
+
+    HR {
+    border: 0;
+    border-top: 1px solid #dddddd;
+    margin: 10px 0px 15px 0px;
+    }
+
+    @media only screen and (max-device-width: 481px) and (min-device-pixel-=
+ratio : 2), only screen and (min-device-width: 481px) and (-webkit-min-devi=
+ce-pixel-ratio : 2) {
+    *[id=3Dheader] { background:url('https://itc-mzstatic-origin.itunes.app=
+le.com/itc/images/email/email-itc-logo@2X.png') no-repeat 0 top; -webkit-ba=
+ckground-size: 173px 45px; }
+    *[id=3Dhr-fade] { background:url('https://itc-mzstatic-origin.itunes.ap=
+ple.com/itc/images/email/email-hr@2X.png') no-repeat 0 top; -webkit-backgro=
+und-size: 648px 18px; }
+    }
+
+    @media only screen and (max-device-width: 480px) {
+
+    table[class=3D"table"], td[class=3D"cell"] {
+    width: 100% !important;
+    }
+    table[class=3D"table3"], td[class=3D"cell3"] {
+    /*width: 270px !important;
+    text-align: left !important;*/
+    }
+    img[id=3D"header"] {
+    width: 135px !important;
+    height: 35px !important;
+    }
+    td[id=3D"header"] {
+    -webkit-background-size: 135px 35px;
+    }
+        table[class=3D"footer_table"] td[class=3D"backgroundcell"] {
+            width:100% !important;
+            background-size: 100% auto;
+        }
+    table[class=3D"footer_table"] {
+            width:100% !important;
+    }
+
+
+
+    }
+  </style>
+</head>
+<body style=3D"margin: 0px; padding: 0px; background-color: #ffffff" bgcolo=
+r=3D"#ffffff">
+    <table class=3D"table" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ align=3D"center" width=3D"700">
+        <tr align=3D"center">
+            <td class=3D"spacer" align=3D"left" valign=3D"top" bgcolor=3D"#=
+ffffff" width=3D"20">
+                <img src=3D"https://itc-mzstatic-origin.itunes.apple.com/it=
+c/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"20" height=3D"1">
+            </td>
+            <td align=3D"center">
+                       =20
+
+                               =20
+
+    <table cellspacing=3D"0" cellpadding=3D"0" style=3D"margin: auto;" bord=
+er=3D"0" width=3D"650px" class=3D"table">
+        <tr><td><img src=3D"https://itc-mzstatic-origin.itunes.apple.com/it=
+c/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"1" height=3D"40px=
+"/></td></tr>
+        <tr>
+            <td align=3D"center">
+               =20
+               =20
+               =20
+                    <p align=3D"center" style=3D"text-align:center;"><img s=
+rc=3D'http://a488.phobos.apple.com/us/r30/Newsstand6/v4/b1/ad/3d/b1ad3d55-3=
+a0c-fe5a-1c6f-913c2f11870d/Icon-60@2x.png.png' align=3D"center" style=3D"-w=
+ebkit-border-radius: 25%;-moz-border-radius:25%;border-radius: 25%;" /></p>
+               =20
+               =20
+            </td>
+        </tr>
+        <tr><td><img src=3D"https://itc-mzstatic-origin.itunes.apple.com/it=
+c/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"1" height=3D"20px=
+"/></td></tr>
+        <tr>
+            <td align=3D"center">
+                <h1 style=3D"font-size: 28px;margin-bottom:30px;margin-top:=
+0;padding:0;text-align:center;color:#4C4C4C;-webkit-text-size-adjust:none;f=
+ont-family: 'HelveticaNeue-Light','Helvetica Neue',Helvetica,Arial,sans-ser=
+if;">
+                    CRECO=20
+                </h1>
+               =20
+                <h2 style=3D"font-size:21px;line-height:26px;margin-bottom:=
+40px;margin-top:0;padding:0;text-align:center;color:#4C4C4C;-webkit-text-si=
+ze-adjust:none;font-family: 'HelveticaNeue-Light','Helvetica Neue',Helvetic=
+a,Arial,sans-serif;">
+                    IT Realize Co., Ltd. invited you to test CRECO for iOS.
+                </h2>
+
+                <h3 style=3D"font-size:17px;line-height:20px;margin:0;paddi=
+ng:0;text-align:center;color:#121212;-webkit-text-size-adjust:none;font-fam=
+ily: 'HelveticaNeue-Light','Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    To test this app, you must have <span style=3D"color:#0=
+088ff">TestFlight</span> installed on  iPhone or iPod touch using iOS 7.0 o=
+r later.
+                </h3>
+            </td>
+        </tr>
+        <tr><td><img src=3D"https://itc-mzstatic-origin.itunes.apple.com/it=
+c/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"1" height=3D"40px=
+"/></td></tr>
+       =20
+        <tr>
+            <td align=3D"center">
+                <p align=3D"center" style=3D"text-align:center;margin:0;pad=
+ding:0;"><a href=3D"https://beta.itunes.apple.com/v1/invite/f0173d955c9843a=
+8b99a7bdd022fda9e6e5abf838402411baa3c6cb13494922d3d1799c9?ct=3D778C5DKNBJ&p=
+t=3D2003"><img align=3D"center" src=3D"https://itc-mzstatic-origin.itunes.a=
+pple.com/itc/images/email/start_testing.png" width=3D"165" height=3D"50" />=
+</a></p>
+            </td>
+        </tr>
+       =20
+=09=09=09=09           =20
+=09=09=09=09            <tr><td><img src=3D"https://itc-mzstatic-origin.itu=
+nes.apple.com/itc/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"1=
+" height=3D"40px"/></td></tr>
+=09=09=09=09            <tr>
+=09               <td align=3D"left">
+=09                   <p style=3D"font-size:17px;margin:0;padding:0;text-al=
+ign:left;color:#121212;-webkit-text-size-adjust:none;font-family: 'Helvetic=
+aNeue-Medium', 'Helvetica Neue',Helvetica,Arial,sans-serif;">App Descriptio=
+n:</p>
+=09               </td>
+=09            </tr>
+=09            <tr><td><img src=3D"https://itc-mzstatic-origin.itunes.apple=
+.com/itc/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"1" height=
+=3D"20px"/></td></tr>
+=09            <tr>
+=09               <td align=3D"left">
+=09                   <pre style=3D"font-size:15px;margin:0;padding:0;text-=
+align:leftcolor:#121212;-webkit-text-size-adjust:none;font-family: 'Helveti=
+caNeue-Light','Helvetica Neue',Helvetica,Arial,sans-serif;">CRECO=1B$B$O%/%=
+l%8%C%H%+!<%I$NL@:Y$r0l854IM}$G$-$k%"%W%j$G$9!#=1B(B
+=1B$BIaCJ%/%l%8%C%H%+!<%I2q<R$N%&%'%V%5%$%H$G8+$F$$$kL@:Y$r%"%W%jFb$G8+$k$3=
+$H$,=3DPMh$^$9!#=1B(B
+=1B$B;H$$$9$.$K5$$E$/$3$H$,$G$-$?$j!"0-MQ$5$l$?>l9g$b$$$AAa$/5$$E$/$3$H$,=
+=3DPMh$^$9!#=1B(B</pre>
+=09               </td>
+=09            </tr>
+=09=09=09=09           =20
+=09=09=09=09       =20
+       =20
+       =20
+       =20
+       =20
+        <tr><td><img src=3D"https://itc-mzstatic-origin.itunes.apple.com/it=
+c/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"1" height=3D"40"/=
+></td></tr>
+        <tr>
+            <td align=3D"left">
+                <p style=3D"font-size: 13px;text-align:left;color:#666666;-=
+webkit-text-size-adjust:none;font-family: 'HelveticaNeue-Light','Helvetica =
+Neue',Helvetica,Arial,sans-serif;">In order to use CRECO, you agree that cr=
+ash data as well as statistics about how you use CRECO will be provided to =
+IT Realize Co., Ltd. and linked to your email address. IT Realize Co., Ltd.=
+ may contact you regarding this information. You should review the Terms an=
+d Conditions of the TestFlight program, as well as the terms, policies, and=
+ practices of IT Realize Co., Ltd.. Beta apps may crash or result in data l=
+oss.</p>
+            </td>
+        </tr> =20
+    </table>
+
+
+                       =20
+
+            </td>
+            <td class=3D"spacer" align=3D"right" valign=3D"top" bgcolor=3D"=
+#ffffff" width=3D"20">
+                <img src=3D"https://itc-mzstatic-origin.itunes.apple.com/it=
+c/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"20" height=3D"1">
+            </td>
+        </tr>
+    </table>
+    <table class=3D"footer_table" width=3D"736" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" align=3D"center" style=3D"margin-top:25px; margin-bot=
+tom:15px;">
+        <tr>
+            <td class=3D"backgroundcell" style=3D"background-image: url('ht=
+tps://itc-mzstatic-origin.itunes.apple.com/itc/images/email/footerBackgroun=
+d.png');background-position: top center;background-repeat:no-repeat;margin:=
+0px auto;width:736px;" align=3D"center" width=3D"736">
+                <table cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:=
+ auto;" border=3D"0" width=3D"100%">
+                    <tr>
+                        <td><img src=3D"https://itc-mzstatic-origin.itunes.=
+apple.com/itc/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"20" h=
+eight=3D"15"></td>
+                    </tr>
+                    <tr>
+                    <td align=3D"center">
+                        <p align=3D"center" style=3D"text-align:center;marg=
+in:0;padding:0;"><img src=3D"https://itc-mzstatic-origin.itunes.apple.com/i=
+tc/images/email/itunes_connect.jpg" width=3D"134" height=3D"15" align=3D"ce=
+nter" /></p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><img src=3D"https://itc-mzstatic-origin.itunes.appl=
+e.com/itc/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"20" heigh=
+t=3D"15"></td>
+                    </tr>
+                </table>
+                <table cellspacing=3D"0" cellpadding=3D"0" style=3D"margin:=
+ auto;" border=3D"0" width=3D"100%">
+                    <tr>
+                        <td><img src=3D"https://itc-mzstatic-origin.itunes.=
+apple.com/itc/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"20" h=
+eight=3D"15"></td>
+                        <td align=3D"center">
+                            <p style=3D"font-size:11px;line-height:14px;tex=
+t-align:center;color:#8f8f8f;-webkit-text-size-adjust:none;margin:0;padding=
+:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                                iTunes Connect is a service provided by App=
+le.
+                                <span style=3D"white-space:nowrap;"><a styl=
+e=3D"text-decoration:none;color:#3699d1;" target=3D"_blank" href=3D"http://=
+www.apple.com/support/itunes/legal/terms.html">Terms of Service</a> | <a st=
+yle=3D"text-decoration:none;color:#3699d1;" target=3D"_blank" href=3D"http:=
+//www.apple.com/legal/privacy/">Privacy Policy</a> | <a style=3D"text-decor=
+ation:none;color:#3699d1;" target=3D"_blank" href=3D'mailto:developer+bug@i=
+trealize.co.jp?Subject=3DUnsubscribe'>Unsubscribe</a></span>
+                                <br>
+                                <span style=3D"color:#8f8f8f;"><span style=
+=3D"white-space:nowrap;">Copyright &#169; 2014 Apple Inc.</span> <span styl=
+e=3D"white-space:nowrap;">1 Infinite Loop, Cupertino, CA 95014, United Stat=
+es.</span> <span style=3D"white-space:nowrap;">All rights reserved.</span><=
+/span>
+                            </p>
+                        </td>
+                        <td><img src=3D"https://itc-mzstatic-origin.itunes.=
+apple.com/itc/images/email/spacer.gif" border=3D"0" alt=3D"" width=3D"20" h=
+eight=3D"15"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+<img src=3D'http://outsideapple.apple.com/img/APPLE_EMAIL_LINK/spacer4.gif?=
+v=3D2&a=3Dk%2BmjWPCFEH1m5ry2zndhApTuWzZ%2FsWXmBYlTsHG5QWYxZxBDADlHJ0LpCMgLz=
+UQ8%2FgqjiZLli%2FWJJraw8R7SaklMjVuUtzbKhDASTFsv3TeKwVKxJOX3sRLrj80n4RD5Xf3U=
+g16KUiGAUreyHhXm%2BTkxjGmQJWMEH1l2RTOmYpgjIDvS95fcy%2BQ4zLMCG6m0N2TwCbNIKHl=
+m0yCSlIc2e4fxjeVPR%2F5onQXhrYRtYlassX2YAVvM%2BANrqFo%2B%2Bj0yWB8tjMsIPrRRUL=
+%2BXvaqSkocPLIdcX1JZa49W5twf3qBLA61h8JLLBmkooIagJcuyXtapMoNqKuaAsf2SC0hRsC8=
+ZDOSWc00%2Fn0QnFvxxY%2FUPCBLsLTh%2Fpqq8T30m3ivUAhGDBDWbHrMsTwr6xZ3CMw%3D%3D=
+'/>
+</html>
+------=_Part_21102947_2084389159.1444144650872--

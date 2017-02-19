@@ -1,0 +1,137 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/my">マイページ</a></li>
+	<li class="active">お知らせの管理</li>
+</ol>
+
+<div class='clearw'>
+	<a class="btn btn-primary float_right" href="/my/news/create" role="button">お知らせを書く</a>
+</div>
+
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
+	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
+	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
+</ul>
+<div class="tab-content">
+	<div class="tab-pane active" id="tab1">
+		{if sizeof($open_news) == 0}
+		<div class="alert alert-warning mt20" role="alert">公開中のお知らせはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$open_news item=news_item}
+			<tr class="news pointer" code="{$news_item.code}">
+				<td>
+					{if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
+					{if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
+					{if $news_item.status == 0}下書き{/if}
+				</td>
+				<td>
+					{if $news_item.section_code == ""}
+						未設定
+					{elseif $news_item.section_code == "top"}
+						TOP
+					{else}
+						{$sections[$news_item.section_code]['name']}
+					{/if}
+				</td>
+				<td>{$news_item.title}</td>
+				<td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+	<div class="tab-pane" id="tab2">
+		{if sizeof($closed_news) == 0}
+		<div class="alert alert-warning mt20" role="alert">下書き状態のお知らせはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$closed_news item=news_item}
+			<tr class="news pointer" code="{$news_item.code}">
+				<td>
+					{if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
+					{if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
+					{if $news_item.status == 0}下書き{/if}
+				</td>
+				<td>
+					{if $news_item.section_code == ""}
+						未設定
+					{elseif $news_item.section_code == "top"}
+						TOP
+					{else}
+						{$sections[$news_item.section_code]['name']}
+					{/if}
+				</td>
+				<td>{$news_item.title}</td>
+				<td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+	<div class="tab-pane" id="tab3">
+		{if sizeof($all_news) == 0}
+		<div class="alert alert-warning mt20" role="alert">お知らせはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$all_news item=news_item}
+			<tr class="news pointer" code="{$news_item.code}">
+				<td>
+					{if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
+					{if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
+					{if $news_item.status == 0}下書き{/if}
+				</td>
+				<td>
+					{if $news_item.section_code == ""}
+						未設定
+					{elseif $news_item.section_code == "top"}
+						TOP
+					{else}
+						{$sections[$news_item.section_code]['name']}
+					{/if}
+				</td>
+				<td>{$news_item.title}</td>
+				<td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+</div>
+
+
+<script>
+$(function(){
+	$('.news').click(function(){
+		var code = $(this).attr('code');
+		location.href = "/my/news/edit/"+code;
+	});
+});
+</script>

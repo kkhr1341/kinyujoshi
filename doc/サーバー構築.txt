@@ -1,0 +1,213 @@
+# yum update
+# yum install postfix -y
+# yum erase sendmail -y
+# yum remove httpd
+# yum install gcc gcc-c++ -y
+# yum install curl-devel libxml2 libxml2-deel libxslt libxslt-devel bzip2-devel libjpeg-devel libpng libpng-devel freetype freetype-devel libmcrypt libmcrypt-devel libtool libtool-ltdl libtool-ltdl-devel -y
+# yum install icu libicu libicu-devel -y
+# yum install mysql mysql51-devel postgresql ImageMagick -y
+
+<pcre インストール>
+# cd /usr/local/src
+# wget http://jaist.dl.sourceforge.net/project/pcre/pcre/8.37/pcre-8.37.tar.gz
+# tar xvzf pcre-8.37.tar.gz; cd pcre-8.37; ./configure; make; make install
+
+
+<apache インストール>
+# cd /usr/local/src
+# wget http://ftp.riken.jp/net/apache/httpd/httpd-2.4.17.tar.gz
+# wget http://ftp.riken.jp/net/apache/apr/apr-1.5.2.tar.gz
+# wget http://ftp.riken.jp/net/apache/apr/apr-util-1.5.4.tar.gz
+
+# ls -1 *.tar.gz | xargs -n1 tar -zxvf
+# apache_src=/usr/local/src/httpd-2.4.17
+# cp -pr /usr/local/src/apr-1.5.2 $apache_src/srclib/apr
+# cp -pr /usr/local/src/apr-util-1.5.4 $apache_src/srclib/apr-util
+# cd /usr/local/src/httpd-2.4.17/
+# yum -y install openssl-devel
+
+# ./configure \
+   --with-included-apr \
+   --with-pcre \
+   --with-ssl \
+   --enable-ssl \
+   --with-perl \
+   --with-php \
+   --with-mysql \
+   --with-libxml2 \
+   --enable-pdo \
+   --with-pdo-mysql \
+   --enable-modules=all \
+   ap_cv_void_ptr_lt_long=4
+
+# make && make install
+# cp -p ./support/apachectl /etc/init.d/httpd
+# chmod +x /etc/init.d/httpd
+# vi /etc/init.d/httpd
+!/bin/sh の下に
+# chkconfig: 345 85 15
+# description: Apache HTTP Server
+↑の2行を追加
+
+# chkconfig --add httpd
+# chkconfig httpd on
+
+<時計を合わせておく>
+# cp -p /usr/share/zoneinfo/Japan /etc/localtime
+
+<php のインストール>
+# yum remove mysql51-devel-5.1.73-3.69.amzn1.x86_64 -y
+# yum install -y libxml2-devel curl-devel libjpeg-devel libpng-devel mysql-devel libmcrypt-devel
+# cd /usr/local/src
+# wget http://jp2.php.net/distributions/php-5.6.15.tar.gz
+# tar zxvf php-5.6.15.tar.gz
+# cd php-5.6.15
+# ./configure '--enable-opcache' '--with-apxs2=/usr/local/apache2/bin/apxs' '--enable-bcmath' '--enable-mbregex' '--enable-mbstring' '--enable-zend-multibyte' '--with-mysql' '--with-libdir=lib64' '--enable-ftp' '--with-zlib' '--with-gd' '--enable-exif' '--with-freetype-dir=/usr/lib' '--with-jpeg-dir=/usr/lib64' '--enable-gd-native-ttf' '--enable-gd-jis-conv' '--with-openssl' '--with-mcrypt' '--with-curl' '--enable-zip' '--with-mysqli=/usr/bin/mysql_config' '--enable-intl' '--enable-pdo=shared' '--with-pdo-mysql=shared' '--with-pdo-sqlite=shared' '--with-sqlite=shared'  '--with-pear'
+# make; make install
+
+
+<apache ユーザーの作成>
+# useradd -d /home/apache -m apache
+
+<apache ドキュメントルートの作成>
+$ su - apache
+$ mkdir /home/apache/host
+$ exit
+
+
+<apache バーチャルホスト 設定>
+# vi /usr/local/apache2/conf/extra/httpd-vhosts.conf
+<VirtualHost *:80>
+        VirtualDocumentRoot /home/apache/host/sundaylunch/web/public
+        ServerName sundaylunch.jp
+        CustomLog "logs/access_log" combined
+        Options -Indexes +FollowSymLinks
+        SetEnv FUEL_ENV staging
+</VirtualHost>
+
+
+
+# vi /usr/local/apache2/conf/httpd.conf
+
+
+#LoadModule vhost_alias_module modules/mod_vhost_alias.so
+↓
+LoadModule vhost_alias_module modules/mod_vhost_alias.so
+
+#LoadModule rewrite_module modules/mod_rewrite.so
+↓
+LoadModule rewrite_module modules/mod_rewrite.so
+
+#LoadModule ssl_module modules/mod_ssl.so
+↓
+LoadModule ssl_module modules/mod_ssl.so
+
+User daemon
+Group daemon
+↓
+User apache
+Group apache
+
+<Directory />
+    AllowOverride none
+    Require all denied
+</Directory>
+↓
+<Directory />
+    AllowOverride All
+    #Require all denied
+    Order deny,allow
+</Directory>
+
+<IfModule dir_module>
+    DirectoryIndex index.html
+</IfModule>
+↓
+<IfModule dir_module>
+    DirectoryIndex index.php index.html
+</IfModule>
+
+#Include conf/extra/httpd-vhosts.conf
+↓
+Include conf/extra/httpd-vhosts.conf
+
+AddType application/x-httpd-php .php
+↑追加
+
+
+# service httpd -t
+# service httpd -k start
+
+
+<apache のパスワード設定>
+# passwd apache
+
+<秋元の鍵認証>
+# su - apache
+$ mkdir .ssh
+$ chmod 700 .ssh
+$ ls -ld .ssh
+$ cd .ssh/
+$ vi id_rsa_akimoto.pub
+クライアントの id_rsa.pub を書き込む
+$ cat id_rsa_akimoto.pub >> authorized_keys
+$ chmod 600 authorized_keys
+$ exit
+# service sshd restart
+
+# vi /etc/ssh/sshd_config
+PermitRootLogin yes
+RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys
+# service sshd restart
+
+<php.ini を編集>
+# cp -p /usr/local/src/php-5.6.15/php.ini-development /usr/local/lib/php.ini
+
+# vi /usr/local/lib/php.ini
+
+date.timezone = Asia/Tokyo
+max_input_time = 1200
+memory_limit = 1024M
+upload_max_filesize = 20M
+extension=pdo.so
+extension=pdo_mysql.so
+always_populate_raw_post_data = -1
+
+pdo_mysql.default_socket=/var/lib/mysql/mysql.sock
+
+<postfix の設定>
+# chkconfig postfix on
+
+# vi /etc/postfix/main.cf
+inet_interfaces = localhost
+↓
+inet_interfaces = all
+
+mydestination = $myhostname, localhost.$mydomain, localhost
+↓
+mydestination = $myhostname, localhost.$mydomain, localhost, appbird.jp
+
+# service postfix restart
+
+
+
+<git>
+# yum install git
+
+
+<deploy>
+# su - apache
+$ cd host/ 
+$ git clone https://gitlab.itrealize.tokyo/akimoto/appbird.git
+$ exit
+# service httpd -k restart
+
+# yum install mlocate -y
+# yum update
+
+# yum install mysql56-server -y
+
+<自動起動>
+# chkconfig mysqld on

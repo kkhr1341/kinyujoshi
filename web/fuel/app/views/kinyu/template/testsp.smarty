@@ -1,0 +1,123 @@
+<div class="sp kinyu-container">
+
+  <!---===== TOPページのスライドショー・コラム =====-->
+  <div class="swiper-container kinyu-top-main-slide">
+    <div class="swiper-wrapper">
+
+      {foreach from=$specials item=blog name=foo}
+      <div class="swiper-slide">
+        <a href="/blog/{$blog.code}">
+          <!-- <div class="swiper-slide-overlay"></div> -->
+          <div class="top-introdunction-thumnail" style="background: url({$blog.main_image}) center center / cover no-repeat;">
+            <h2 class="top-introdunction-title">{$blog.title}</h2>
+          </div>
+          <!-- <div class="top-introdunction-thumnail">
+          </div> -->
+        </a>
+      </div>
+      {/foreach}
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!---===== ニュース
+  ==================================================-->
+
+  <div class="block" id="scroll-point01">
+    <div class="top-news" id="news">
+      <h2 class="news-top-title"><img src="/images/title/news-05.png"　alt="きんゆう女子・ニュース"></h2>
+      <div class="news-content">
+        <ul>
+          {foreach from=$news item=blog name=foo}
+          <li>
+            <div class="news-left"><p>{$blog.open_date|date_format:"Y.m.d"}</p></div>
+            <div class="news-right"><p><a href="/news/{$blog.code}">{$blog.title}</a></p></div>
+          </li>
+          {/foreach}
+        </ul>
+        <p class="to-news-content"><a href="/news">＞＞ 過去のニュースはこちら</a></p>
+      </div>
+    </div>
+  </div>
+
+
+  <!---===== 新着コンテンツ一覧 =====-->
+  <div class="container center">
+    <section class="article-list">
+      <h2 class="article-list-block-title">記事一覧</h2>
+      <div class="article-list-bl">
+        <ul class="clear">
+
+          {foreach from=$blogs.datas key="key" item=blog name=loopname}
+
+
+            {if $smarty.foreach.loopname.index == 2}
+            <li class="urca-infeed" data-infeed-id="YhEiV1F-Fsc" style="display:none;position:relative">
+              <a class="urca-landing-url tile-link">
+                <div class="article-list-el">
+                  <div class="article-list-el-img">
+                    <span class="urca-icon-img article-list-el-img-span"></span>
+                  </div>
+                  <div class="article-list-el-right">
+                    <h3 class="article-list-el-title urca-title"></h3>
+                    <div class="article-list-el-info clear">
+                      <p class="article-list-el-date"><span class="urca-displayed-advertiser"></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            {/if}
+
+            <li>
+              <a href="/blog/{$blog.code}" class="tile-link">
+                <div class="article-list-el">
+                  <div class="article-list-el-img">
+                    <span style="background: url({$blog.main_image}) center center / cover no-repeat;" class="article-list-el-img-span"></span>
+                  </div>
+                  <div class="article-list-el-right">
+                    <h3 class="article-list-el-title">{$blog.title}
+                      <!-- timestamp -->
+                      {$timestamp = time()}
+                      {$timestamp02 = strtotime($blog.open_date|date_format:"Y/m/d h:i:s")}
+                      {if $timestamp - $timestamp02 le 120000}
+                        <span class="article-list-el-new">NEW</span>
+                      {/if}
+                    </h3>
+                    <div class="article-list-el-info clear">
+                      <p class="article-list-el-date">
+                        {$blog.section_name}
+                      </p>
+                      <!-- {if $blog.section_name != ""}
+                      <p class="article-list-el-category">{$blog.section_name}</p>
+                      {/if} -->
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          {/foreach}
+
+        </ul>
+      </div>
+      <div class="blog-pagenation tx-center">
+        {$pagination|nofilter}
+      </div>
+    </section>
+  </div>
+
+  <!-- template -->
+  <div class="contents_after_area">
+    {$contents_after_area}
+  </div>
+</div>
+
+<div class="pc">
+  {$pc_contents}
+</div>
+
+
+
+

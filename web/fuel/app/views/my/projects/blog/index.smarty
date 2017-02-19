@@ -1,0 +1,109 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/my">マイページ</a></li>
+	<li><a href="/my/projects">プロジェクトの管理</a></li>
+	<li><a href="/my/projects/edit/{$project.code}">{$project.title}</a></li>
+	<li class="active">報告書の管理</li>
+</ol>
+<div class='clearw'>
+	<a class="btn btn-primary float_right" href="/my/projects/blog/create/{$project.code}" role="button">報告書を書く</a>
+</div>
+
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
+	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
+	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
+</ul>
+<div class="tab-content">
+	<div class="tab-pane active" id="tab1">
+		{if sizeof($open_blogs) == 0}
+		<div class="alert alert-warning mt20" role="alert">公開中の報告書はありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$open_blogs item=blogs_item}
+			<tr class="blogs pointer" code="{$blogs_item.code}" project_code="{$blogs_item.project_code}">
+				<td>
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+					{if $blogs_item.status == 0}下書き{/if}
+				</td>
+				<td>{$blogs_item.title}</td>
+				<td>{$blogs_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+	<div class="tab-pane" id="tab2">
+		{if sizeof($closed_blogs) == 0}
+		<div class="alert alert-warning mt20" role="alert">下書き状態の報告書はありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$closed_blogs item=blogs_item}
+			<tr class="blogs pointer" code="{$blogs_item.code}" project_code="{$blogs_item.project_code}">
+				<td>
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+					{if $blogs_item.status == 0}下書き{/if}
+				</td>
+				<td>{$blogs_item.title}</td>
+				<td>{$blogs_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+	<div class="tab-pane" id="tab3">
+		{if sizeof($all_blogs) == 0}
+		<div class="alert alert-warning mt20" role="alert">報告書はありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$all_blogs item=blogs_item}
+			<tr class="blogs pointer" code="{$blogs_item.code}" project_code="{$blogs_item.project_code}">
+				<td>
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+					{if $blogs_item.status == 0}下書き{/if}
+				</td>
+				<td>{$blogs_item.title}</td>
+				<td>{$blogs_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+</div>
+
+
+<script>
+$(function(){
+	$('.blogs').click(function(){
+		var project_code = $(this).attr('project_code');
+		var code = $(this).attr('code');
+		location.href = "/my/projects/blog/edit/"+project_code + "/" + code;
+	});
+});
+</script>

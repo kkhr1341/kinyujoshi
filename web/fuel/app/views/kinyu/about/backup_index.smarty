@@ -1,0 +1,61 @@
+<div class="kinyu-about tx-center clear">
+
+  <div class="about-kinyu-top-img sp">
+    <img src="/images/bg14.jpg" class="about-kinyu-top-img-sp">
+    <img src="/images/bg17.jpg" class="about-kinyu-top-img-tablet">
+  </div>
+  <div class="about-kinyu-top-img back-about-kinyu pc"></div>
+
+  <div class="about-kinyu-block">
+
+    <div class="sp">
+      <h2 class="about-kinyu-title"><span>きんゆう女子。とは…？</span></h2>
+      <p class="about-kinyu-why">金融ワカラナイ一般女子と、金融業界で働く女子のための大人のコミュニティです。<br>
+      なかなか聞けない、お金の話。
+      先延ばしにしがちな、お金の計画。
+      私には無関係と思っている、金融の話。<br>
+      みんなのお金に関するあれこれをおしゃべりしましょう！</p>
+    </div>
+
+    <div class="pc">
+      <h2 class="about-kinyu-title"><span>きんゆう女子。とは…？</span></h2>
+      <p class="about-kinyu-p">金融ワカラナイ一般女子と、金融業界で働く女子のための大人のコミュニティです。<br>
+      なかなか聞けない、お金の話。
+      先延ばしにしがちな、お金の計画。
+      私には無関係と思っている、金融の話。<br>
+      みんなのお金に関するあれこれをおしゃべりしましょう！</p>
+    </div>
+    <div class="pc kuchikomi-blog-link top-blog-link" style="margin-top: 25px;">
+      <a href="/blog">きんゆう女子。記事一覧へ</a>
+    </div>
+  </div>
+
+<!--  <div class="block back03">
+    <h2 class="main-title tx-center"><img src="/images/title/why_01.png"></h2>
+    <p class="about-kinyu-why center">何故、「きんゆう女子」なのか。<br>日本は、国民の「おかね」の意識の低さに課題を感じています。<br>
+    特に働く女性が増え、お金に興味を持ち始めた今、同じ興味を持つ女性同士のつながり、きんゆう女子というコミュニティが必要になってきています。<br>
+    きんゆう女子というコミュニティを通して、「おかね」に関する知識を得る。<br>
+    そして、女性のライフスタイルをもっと充実させることが、きんゆう女子の目的であり、今、日本で求められていることなのです。</p>
+  </div> -->
+</div>
+
+<div class="sp kuchikomi-blog-link top-blog-link">
+  <a href="/blog">きんゆう女子。記事一覧へ</a>
+</div>
+
+{*
+<!---===== カテゴリー
+==================================================-->
+<section class="category-list">
+  <h2 class="article-list-block-title">About</h2>
+  <div class="top-category-list about-category-list">
+    <ul class="clear">
+      <li class=""><a class="drawer-nav-icon icon-top drawer-menu-item" href="/">お問い合わせ</a></li>
+      <li><a class="drawer-nav-icon icon-money drawer-menu-item" href="/category/money">プライバシーポリシー</a></li>
+      <li><a class="drawer-nav-icon icon-job drawer-menu-item" href="/category/business">特定商取引法に基づく表示</a></li>
+      <li><a class="drawer-nav-icon icon-life drawer-menu-item" href="/category/lifestyle">利用規約</a></li>
+      <li><a class="drawer-nav-icon icon-invest drawer-menu-item" href="/category/investment">運営会社</a></li>
+    </ul>
+  </div>
+</section>
+*}

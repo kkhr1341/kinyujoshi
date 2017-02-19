@@ -1,0 +1,16 @@
+
+
+<div class="back-login login-block">
+  <div class="inner center">
+    <h2 class="login-title">きんゆう女子。にログイン</h2>
+    <div class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></div>
+    {*<div class="fb-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></div>*}
+  </div>
+</div>
+
+
+
+<script>
+$(function(){
+});
+</script>

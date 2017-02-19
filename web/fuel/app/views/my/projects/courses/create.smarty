@@ -1,0 +1,130 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/my">マイページ</a></li>
+	<li><a href="/my/projects">プロジェクトの管理</a></li>
+	<li><a href="/my/projects/courses/{$projects.code}">コースの管理</a></li>
+	<li class="active">コースを作る</li>
+</ol>
+
+<form>
+	<fieldset>
+		
+		<div class="form-group">
+			<label>コースタイトル <span class="label label-danger">必須</span></label>
+			<input type="text" id="title" class="form-control" value="">
+		</div>
+		<div class="form-group">
+			<label>コース金額 <span class="label label-danger">必須</span></label>
+			<input type="text" id="price" class="form-control" placeholder="">
+		</div>
+		<div class="form-group">
+			<label>コース人数（在庫） <span class="label label-danger">必須</span></label>
+			<input type="text" id="limit" class="form-control" placeholder="">
+		</div>
+		<div class="form-group">
+			<label>本文 <span class="label label-danger">必須</span></label>
+			<textarea id="content" name="content"></textarea>
+		</div>
+		<div class="form-group">
+			<label>公開日時 <span class="label label-danger">必須</span></label>
+
+			<div class='input-group date datetimepicker'>
+				<input type='text' class="form-control" id="open_date" value="{date('Y/m/d H:i')}" />
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+				</span>
+			</div>
+		</div>
+		
+		<button class="btn btn-primary" type="button" id="save">公開する</button>
+		<button class="btn btn-default" type="button" id="save_closed">下書き保存する</button>
+	</fieldset>
+</form>
+<script>
+var project_code = "{$projects.code}";
+$(function(){
+	$('.datetimepicker').datetimepicker({
+		format : 'YYYY/MM/DD HH:mm'
+	});
+	
+	$('#save').click(function(){
+		var url = "/api/courses/create";
+		var params = {};
+		params.project_code = project_code;
+		params.title = $('#title').val();
+		params.price = $('#price').val();
+		params.limit = $('#limit').val();
+		params.content = $('#content').val();
+		params.open_date = $('#open_date').val();
+		params.price = $('#price').val();
+		params.status = 1;
+		
+		if (params.title == "") {
+			ts.error("コースタイトルを選択してください");
+			return false;
+		}
+		if (strip_tags(params.content) == "") {
+			ts.error("本文を入力してください");
+			return false;
+		}
+		if (params.open_date == "") {
+			ts.error("公開日時を入力してください");
+			return false;
+		}
+
+		if (!validate_intval(params.price) || params.price < 1000) {
+			ts.error("コース金額は、1,000円以上に設定してください");
+			return false;
+		}
+		
+		if (!validate_intval(params.limit) || params.limit < 1) {
+			ts.error("コース人数（在庫）は、1以上に設定してください");
+			return false;
+		}
+		
+		ajax.post(url, params, function(data){
+			ts.success("公開しました", function(){
+				location.href = "/my/projects/courses/"+project_code;
+			});
+		});
+	});
+
+	$('#save_closed').click(function(){
+		var url = "/api/courses/create";
+		var params = {};
+		params.project_code = project_code;
+		params.title = $('#title').val();
+		params.content = $('#content').val();
+		params.price = $('#price').val();
+		params.limit = $('#limit').val();
+		params.open_date = $('#open_date').val();
+		params.status = 0;
+		
+		ajax.post(url, params, function(data){
+			ts.success("下書き保存しました", function(){
+				location.href = "/my/projects/courses/"+project_code;
+			});
+		});
+	});
+	
+	$('#content').redactor({
+		focus: false,
+		lang: 'en',
+		plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
+		imageUpload: '/api/redactor/upload/image',
+		imageManagerJson: '/api/redactor/list/image',
+		fileUpload: '/api/redactor/upload/file',
+		fileManagerJson: '/api/redactor/list/file',
+		callbacks: {
+			fileUploadError: function(json) {
+				alert(json.message);
+			},
+			imageUploadError: function(json) {
+				alert(json.message);
+			},
+		}
+	});
+	
+});
+</script>

@@ -1,0 +1,34 @@
+<script>
+  var $url = location.href;
+  var $result = $url.replace( "/welcome" , "" );
+  var urlcode = '<a class="skipp-link" href="%result">女子会に参加の方はこちら ></a>'.replace("%result", $result);
+</script>
+<script type="text/javascript">
+jQuery(function() {
+  /* click tracking google ana */
+  jQuery("a").click(function(e) {
+    var ahref = jQuery(this).attr('href');
+    if (ahref.indexOf("http://lyceeappartement.jp/") != -1 || ahref.indexOf("http") == -1 ) {
+      _gaq.push(['_trackEvent', 'Inbound Links', 'Click', ahref]);
+    }
+    else {
+      _gaq.push(['_trackEvent', 'Outbound Links', 'Click', ahref]);
+    }
+  });
+});
+</script>
+
+<div class="welcome-container">
+  
+  <div class="welcome-block">
+    <div class="welcome-header">
+      <p class="welcome-header-p-l">(PR)</p>
+      <p class="welcome-header-p-r"><script>document.write(urlcode);</script></p>
+    </div>
+    <div class="welcome-detail-el">
+      <a href="http://lyceeappartement.jp/" target="_blank">
+        <img src="/images/banner/lycee/lycee-main-banner.jpg">
+      </a>
+    </div>
+  </div>
+</div>

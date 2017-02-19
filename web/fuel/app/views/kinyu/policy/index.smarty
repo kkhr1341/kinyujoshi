@@ -1,0 +1,24 @@
+<div id="title_frame" class="back07">
+	<div class="title_frame_inner">
+		<div class="row">
+			<div class="col-md-12 " style="text-align:center;">
+				<h2 class="single-page-title center"><img src="/images/title/policy.png"></h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script>
+{literal}
+$(function(){
+	var title_frame_height = $('#title_frame').height();
+	var page_title_height = $('.page_title').height();
+	
+	var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+	$('.page_title').css('padding-top', padding_top);
+});
+{/literal}
+</script>

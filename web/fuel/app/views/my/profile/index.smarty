@@ -1,0 +1,61 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/my">マイページ</a></li>
+	<li class="active">プロフィールの管理</li>
+</ol>
+
+
+<img src="{$profile.profile_image}" />
+					
+<table class="table table-bordered">
+	<tr>
+		<th class="active">ユーザー名</th>
+		<td>{$profile.code}</td>
+	</tr>
+	<tr>
+		<th class="active">ニックネーム</th>
+		<td>{$profile.nickname}</td>
+	</tr>
+	<tr>
+		<th class="active">メールアドレス</th>
+		<td>{$profile.email}</td>
+	</tr>
+	<tr>
+		<th class="active">URL</th>
+		<td>{$profile.url}</td>
+	</tr>
+	<tr>
+		<th class="active">FacebookのURL</th>
+		<td>{$profile.fburl}</td>
+	</tr>
+	<tr>
+		<th class="active">TwitterのURL</th>
+		<td>{$profile.twurl}</td>
+	</tr>
+	<tr>
+		<th class="active">instagramのURL</th>
+		<td>{$profile.instaurl}</td>
+	</tr>
+	<tr>
+		<th class="active">生年月日</th>
+		<td>{$profile.birthday}</td>
+	</tr>
+	<tr>
+		<th class="active">自己紹介</th>
+		<td>{$profile.profile|nofilter}</td>
+	</tr>
+</table>
+
+{foreach from=$special item=blog name=foo}
+	{$blog.id}
+{/foreach}
+<a href="/my/profile/edit" class='btn btn-primary'>編集する</a>
+
+		
+<script>
+$(function(){
+
+	
+});
+</script>

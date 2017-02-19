@@ -1,0 +1,354 @@
+<script>
+	var url = location.href;
+	console.log(url);
+</script>
+<div id="title_frame" class="back07">
+	<div class="title_frame_inner">
+		<div class="row">
+			<div class="col-md-12 " style="text-align:center;">
+				<h2 class="single-page-title center"><img src="/images/title/content_w02.png"></h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="white">
+	<div class="container center">
+		<section class="content-box clear center">
+
+			<div class="content_frame content-block">
+				<h1 class="title">{$blog.title}</h1>
+				<ul class="content_info">
+					<li>
+						<i class="fa fa-calendar"></i> {$blog.open_date|date_format:"Y.m.d H:i"}
+				</ul>
+				<div class="content blog-col">
+					{$blog.content|nofilter}
+
+					<!-- ワカラナイを口コミ -->
+					<!--<div class="sp kuchikomi-block">
+		    		<form>
+		      		<fieldset>
+		        		<div class="kuchikomi-el">
+
+		          		<input type="text" id="nickname" placeholder="ニックネーム">
+		        		</div>              
+		        		<div class="kuchikomi-el">
+
+		          		<textarea id="message" name="message" rows="10" placeholder="金融のワカラナイこと"></textarea>
+		        		</div>
+		        		<div class="kuchikomi-btn">
+		          		<button class="" type="button" id="save">つぶやく！</button>
+		        		</div>
+		      		</fieldset>
+		    		</form>
+		  		</div>
+
+		  		<div class="kuchikomi-open">
+
+		  		</div>
+
+		  		<script>
+					  {literal}
+					  $(function(){
+					    var title_frame_height = $('#title_frame').height();
+					    var page_title_height = $('.page_title').height();
+					    
+					    var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+					    $('.page_title').css('padding-top', padding_top);
+					    
+					    $('#save').click(function(){
+					      var url = "/api/kuchikomi/create";
+					      var params = {};
+
+					      params.nickname = $('#nickname').val();
+					      params.message = $('#message').val();
+					      
+					      if (params.nickname == "") {
+					        ts.error("ニックネームを入力してください");
+					        return false;
+					      }
+					      if (params.message == "") {
+					        ts.error("口コミ内容を入力してください");
+					        return false;
+					      }
+
+					      bootbox.confirm("口コミを投稿しますか？", function(result) {
+					        if (result) {
+					          ajax.post(url, params, function(data){
+					            //location.href = "/kuchikomi/complete";
+					            alert("口コミを投稿しました！");
+					          });
+					        }
+					        else {
+					          ts.info("キャンセルしました");
+					        }
+					      });
+					      
+					    });
+					  });
+					  {/literal}
+					</script>-->
+
+				</div>	
+				<div id="jumboShare" class="sp-share"></div>	
+				{*
+				<div class="writer-box clear">
+					<h2 class="writer-title">Written by</h2>
+				
+					<div class="writer-box-left">
+						<a href="{$blog.url}" target="_blank">
+							<p class="writer-img center" style="background: url({$blog.profile_image}) center center / cover no-repeat;"></p>
+						</a>
+						<p class="writer-name pc">{$blog.nickname}</p>
+					</div>
+
+					<div class="writer-box-right">
+						<p class="writer-name sp">{$blog.nickname}</p>
+						{if $blog.profile != ""}
+						<div class="writer-info">
+							<p>{$blog.profile}</p>
+						</div>
+						{/if}
+						<div class="writer-sns-box">
+							<ul>
+								{if $blog.fburl != ""}
+									<li>
+										<a href="{$blog.fburl}" target="_blank"><img src="/images/social/profiles_fb.png"></a>
+									</li>
+								{/if}
+
+								{if $blog.twurl != ""}
+									<li>
+										<a href="{$blog.twurl}" target="_blank"><img src="/images/social/profiles_tw.png"></a>
+									</li>
+								{/if}
+
+								{if $blog.instaurl != ""}
+									<li>
+										<a href="{$blog.instaurl}" target="_blank"><img src="/images/social/profiles_insta.png"></a>
+									</li>
+								{/if}
+							</ul>
+						</div>
+					</div>
+				</div>
+				*}
+				<!---===== FB/バナー部分
+				==================================================-->
+				<div class="banner-area pc tablet-only">
+				<div class="fb-page" 
+				  data-href="https://www.facebook.com/kinyujyoshi/" 
+				  data-width="500" 
+				  data-height="300" 
+				  data-small-header="false" 
+				  data-adapt-container-width="true" 
+				  data-hide-cover="false" 
+				  data-show-facepile="true" 
+				  data-show-posts="false">
+				  <div class="fb-xfbml-parse-ignore">
+				    <blockquote cite="https://www.facebook.com/kinyujyoshi/"><a href="https://www.facebook.com/kinyujyoshi/">きんゆう女子</a></blockquote>
+				  </div>
+				</div>
+				</div>
+			</div> 
+
+			<div class="content-sidebar">
+				<ul class="clear">
+					<li class="content-sidebar-li">
+						<h3 class="sidebar-title">最新記事</h3>
+						<div class="border-b-01"></div>
+						<ul class="right_list">
+							{foreach from=$blogs.datas item=blog}
+								<li>
+									<a href="/blog/{$blog.code}">
+									<div class="right_list_frame">
+										<div class="sidebar-sub clear">
+											<div class="col-md-3" style="background: url({$blog.main_image}) center center / cover no-repeat;"></div>
+											<div class="col-md-9">
+												<p>{$blog.title}</p>
+											</div>
+											<div class="col-md-9-sub"><p><i class="fa fa-calendar"></i> {$blog.open_date|date_format:"Y.m.d"}</p></div>
+										</div>
+									</div>
+									</a>
+								</li>
+							{/foreach}
+						</ul>
+					</li>
+
+					<!--
+					<li class="content-sidebar-li">
+						<h3 class="sidebar-title">カテゴリー</h3>
+						<div class="border-b-01"></div>
+							<ul class="right_list">
+								<li>
+									<a href="/category/special">特集</a>
+								</li>
+								<li>
+									<a href="/category/investment">投資。はじめました。</a>
+								</li>
+								<li>
+									<a href="/category/investment">投資。はじめました。</a>
+								</li>
+								<li>
+									<a href="/category/investment">投資。はじめました。</a>
+								</li>
+								<li>
+									<a href="/category/investment">投資。はじめました。</a>
+								</li>
+								<li>
+									<a href="/category/investment">投資。はじめました。</a>
+								</li>
+							</ul>
+					</li>
+					-->
+			</h3>
+		</section>
+	</div>
+</div>
+
+
+<div class="sp sp-only kuchikomi-bottom-box">
+	<img src="/images/kuchikomi-box05.png">
+</div>
+
+<div class="nyoki">
+	<div class="kuchikomi-modal-block">
+		<p class="kuchikomi-close-btn">×</p>
+		<!-- ワカラナイを口コミ -->
+
+		<div class="kuchikomi-intro">
+			<img src="/images/kushikomi-top-logo.png">
+		</div>
+
+		<div class="kuchikomi-block">
+  		<form>
+    		<fieldset>
+      		<div class="kuchikomi-el">
+        		<input type="text" id="nickname" placeholder="ニックネーム">
+      		</div>              
+      		<div class="kuchikomi-el">
+
+        		<textarea id="message" name="message" rows="10" placeholder="金融のワカラナイこと"></textarea>
+      		</div>
+      		<div class="kuchikomi-btn">
+        		<button class="" type="button" id="save">つぶやく！</button>
+      		</div>
+    		</fieldset>
+  		</form>
+		</div>
+
+		<p class="about-tsubuyaki"><a href="/kuchikomi">つぶやくってなに？</a></p>
+
+		<div class="kuchikomi-open"></div>
+		<script>
+		  {literal}
+		  $(function(){
+		    var title_frame_height = $('#title_frame').height();
+		    var page_title_height = $('.page_title').height();
+		    
+		    var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+		    $('.page_title').css('padding-top', padding_top);
+		    
+		    $('#save').click(function(){
+		      var url = "/api/kuchikomi/create";
+		      var params = {};
+
+		      params.nickname = $('#nickname').val();
+		      params.message = $('#message').val();
+		      
+		      if (params.nickname == "") {
+		        ts.error("ニックネームを入力してください");
+		        return false;
+		      }
+		      if (params.message == "") {
+		        ts.error("口コミ内容を入力してください");
+		        return false;
+		      }
+
+		      bootbox.confirm("口コミをつぶやきますか？", function(result) {
+		        if (result) {
+		          ajax.post(url, params, function(data){
+		          	//口コミ画面を閉じる
+		            $('.nyoki').delay(1000).slideUp(500);
+		            //口コミ完了画面の表示
+		            $('.kuchikomi-after-popup').delay(1500).fadeIn();
+		   	        //フォーム内容のリセット
+		            document.getElementById("nickname").value="";
+		            document.getElementById("message").value="";	
+		          });
+		        }
+		        else {
+		          ts.info("キャンセルしました");
+		        }
+		      });
+		    });
+		  });
+		  {/literal}
+		</script>
+	</div>
+</div>
+
+<div class="kuchikomi-after-popup">
+	<div class="inner">
+		<div class="t-cell">
+			<p class="kuchikomi-after-popup-title">つぶやき。<br>ありがとうございます！</p>
+			<p class="kuchikomi-after-popup-p">
+				きんゆう女子。みなさまのワカラナイつぶやきに関するコンテンツを作っていきます。今後ともよろしくお願いします(> <)!
+			</p>
+			<button class="kuchikomi-popup-close-btn">閉じる</button>
+		</div>
+	</div>
+</div>
+
+<!---===== FB/バナー部分
+==================================================-->
+<div class="banner-area sp sp-only">
+  <div class="fb-page" 
+    data-href="https://www.facebook.com/kinyujyoshi/" 
+    data-width="500" 
+    data-height="300" 
+    data-small-header="false" 
+    data-adapt-container-width="true" 
+    data-hide-cover="false" 
+    data-show-facepile="true" 
+    data-show-posts="false">
+    <div class="fb-xfbml-parse-ignore">
+      <blockquote cite="https://www.facebook.com/kinyujyoshi/"><a href="https://www.facebook.com/kinyujyoshi/">きんゆう女子</a></blockquote>
+    </div>
+  </div>
+</div>
+
+<script>
+{literal}
+$(function(){
+	$("#jumboShare").jumboShare({
+		url : location.href,
+		title : document.title,
+		position : 'append'
+	});
+	
+	var title_frame_height = $('#title_frame').height();
+	var page_title_height = $('.page_title').height();
+	
+	var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+	$('.page_title').css('padding-top', padding_top);
+});
+console.log();
+
+
+{/literal}
+</script>
+
+<!--
+<div style="width: 70%;height:50px;background-color:gray;position:fixed;bottom:0;left:0;z-index: 999"></div>
+-->
+
+<style>
+@media screen and (max-width: 480px) {
+	footer {
+		padding:24px 0px 50px 0px;
+	}
+}
+</style>

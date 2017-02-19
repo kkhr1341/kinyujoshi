@@ -1,0 +1,93 @@
+<div class="registel-container">
+<h2 class="registel-block-name" class="regist-block-detail">{$registel.name}</h2>
+
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>年齢</p>
+  <p class="regist-block-detail">{$registel.age}</p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>メールアドレス</p>
+  <p class="regist-block-detail">{$registel.email}</p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>きんゆうワカラナイ度</p>
+  <p class="regist-block-detail">{$registel.not_know}</p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>お金について知りたいこと・興味のあること</p>
+  <p class="regist-block-detail">{$registel.interest}</p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>きんゆう女子。でどんな出会いや発見がほしいですか？</p>
+  <p class="regist-block-detail">{$registel.ask}</p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>年収を教えてください</p>
+  <p class="regist-block-detail">{$registel.income}</p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>きんゆう女子。で情報発信したいですか？</p>
+  <p class="regist-block-detail">{$registel.transmission}</p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>Facebook</p>
+  <p class="regist-block-detail"><a target="_blank" href="{$registel.facebook}">{$registel.facebook}</a></p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>その他SNS、ブログ</p>
+  <p class="regist-block-detail"><a target="_blank" href="{$registel.other_sns}">{$registel.other_sns}</a></p>
+  </div>
+</div>
+<div class="registel-block">
+  <div class="inner">
+  <p class="registel-block-title"><span style="color:#7CDCCE;">◆</span>簡単な自己紹介をお願いいたします( ´ ▽ ` )ﾉ</p>
+  <p class="regist-block-detail">{$registel.introduction}</p>
+  </div>
+</div>
+</div>
+
+
+<style>
+.registel-container {
+  width: 700px;
+}
+.registel-block {
+  margin-bottom: 20px;
+}
+.registel-block .inner {
+  display: inline-block;
+}
+.registel-block-name {
+  font-size: 24px;
+  padding: 10px 20px 10px 10px;
+  margin-bottom: 30px;
+  border-left: 5px solid #7CDCCE;
+  display: inline-block;
+  background-color: #f5f5f5;
+}
+.regist-block-detail {
+  background-color: #fbfbfb;
+  padding: 10px;
+}
+.registel-block-title {
+
+}
+
+</style>

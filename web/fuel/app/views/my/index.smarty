@@ -1,0 +1,114 @@
+  <!-- 管理者用 -->
+  {if array_search('admin', $roles)}
+    <div class="my-top-cotainer">
+      <div class="message">
+        <p class="name">{$profile.nickname}さん</p>
+        <p></p>
+      </div>
+      
+      <div class="my-top-menu">
+        <p class="title">管理メニュー</p>
+        <ul class="clear">
+          <li><a href="/my/news">ニュースの追加</a></li>
+          <li><a href="/my/blogs">記事の追加</a></li>
+          <!-- <li><a href="/my/events">イベントレポートの追加</a></li> -->
+          <!-- <li><a href="/my/blogs">記事を追加</a></li> -->
+        </ul>
+      </div>
+    </div>
+  {else}
+
+    <!-- 会員向けページ -->
+    <div class="slidewrap">
+      <!-- <div class="left-pos"><img src="/images/content/teacher/slide-left01.png"></div>  
+      <div class="right-pos"><img src="/images/content/teacher/slide-right01.png"></div> -->
+      {$header}
+      <div class="g_member_container">
+        <div class="g_member_block">
+          <h2><img src="/images/content/teacher/community-title.png"></h2>
+          <div class="inner clear">
+            <div class="g_member_block-left">
+              <img src="{$profile.profile_image}" />
+            </div>
+            <div class="g_member_block-right">
+              <p class="greeting"><span>{$profile.nickname}</span>さん、<br>こんにちは！</p>
+              <p>きんゆう女子。で、<span class="strong">"未来"</span>のためのお勉強を一緒にしましょう！</p>
+              
+              <div class="g_member_block-el g_member_block-el-top">
+                <h3><span>▼</span>女子会に参加の方はこちら</h3>
+                <a href="/event"><img class="jyoshikai-banner" src="/images/banner/jyoshikai-banner.jpg"></a>
+              </div>
+              
+              <div class="g_member_block-el g_member_block-el-top">
+                
+                <div class="">
+                  <ul>
+                    {foreach from=$tsubuyaki item=blog name=foo}
+                      {$blog.message}
+                    {/foreach}
+                  </ul>  
+                </div>
+
+                <div class="form-group form-group02">
+                  <label id="tsubuyaki_title" name="tsubuyaki_title" value="あなたの夢は？" class="form-title">あなたの夢は？</label>
+                  <textarea id="message" name="message" class='form-control' rows="10"></textarea>
+                </div>
+                <div class="form-btn tx-center">
+                  <button class="btn btn-primary fw-bold" type="button" id="save">送信する</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {$footer}
+    </div>
+  {/if}
+
+<script>
+  {literal}
+  $(function(){
+    // var title_frame_height = $('#title_frame').height();
+    // var page_title_height = $('.page_title').height();
+    
+    // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+    // $('.page_title').css('padding-top', padding_top);
+    
+    $('#save').click(function(){
+      var url = "/api/tsubuyaki/create";
+      var params = {};
+
+      //params.nickname = $('#nickname').val();
+
+      //　つぶやきのタイトルの内容
+      params.tsubuyaki_title = "あなたの夢は？";
+      params.message = $('#message').val();
+      
+      // if (params.nickname == "") {
+      //   ts.error("お名前を入力してください");
+      //   return false;
+      // }
+
+      if (params.message == "") {
+        ts.error("あなたの夢は？を入力してください");
+        return false;
+      }
+
+      bootbox.confirm("◯◯を投稿しますか？", function(result) {
+        if (result) {
+          ajax.post(url, params, function(data){
+            //location.href = "/request/complete";
+
+            //フォーム内容のリセット
+            document.getElementById("message").value="";
+          });
+        }
+        else {
+          ts.info("キャンセルしました");
+        }
+      });
+    });
+  });
+  {/literal}
+  </script>

@@ -1,0 +1,20 @@
+<?php defined('COREPATH') or exit('No direct script access allowed'); ?>
+
+ERROR - 2017-01-21 06:52:05 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:42:13 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:42:38 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:42:38 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:43:44 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:43:45 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:44:33 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:44:34 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:45:26 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:45:27 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:49:06 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:49:07 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:49:18 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:49:18 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:49:30 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 14:49:30 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 15:02:34 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137
+ERROR - 2017-01-21 15:02:35 --> Notice - Undefined index: navi_contents in /Users/komokei/git/SL/kinyujyoshi/web/fuel/app/tmp/Smarty/templates_c/b96219b7aaa0c8ecfab2219df8e42644cbc968e3_0.file.main.smarty.php on line 137

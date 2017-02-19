@@ -1,0 +1,12 @@
+<!-- ヘッダー -->
+<headr class="kinyu-sp-header">
+  <div class="kinyu-main-icon-block">
+    <a href="/" class="kinyu-main-icon">き</a>
+  </div>
+  <div class="kinyu-sp-header-content">
+    <a href="/regist"><img src="/images/new/sp-header-content.png"></a>
+  </div>
+  <div class="kinyu-sp-header-menu">
+    <img class="menu-trigger" src="/images/new/sp-header-menu.png">
+  </div>
+</headr>

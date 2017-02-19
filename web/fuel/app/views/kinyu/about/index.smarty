@@ -1,0 +1,122 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+
+
+<div class="kinyu-main-single-block">
+
+  <!-- <div class="kinyu-main-single-title">
+    <div class="sp inner">
+      <h1>きんゆう女子。とは..?</h1>
+      <img style="width:100%;" src="/images/new/kinyu-border-line01.png">
+    </div>
+
+    <div class="pc inner">
+      <h1>きんゆう女子。とは..?</h1>
+      <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">
+    </div>
+  </div> -->
+
+  <div class="inner">
+    <div class="top-slider sp">
+      <ul class="bxslider">
+        <li class="back09">
+          <p class="slider-title-sp-b sp"><img src="/images/deco/top-deco02r.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+        <li class="back10">
+          <p class="slider-title-sp-b sp"><img src="/images/deco/top-deco03r.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+        <li class="back08">
+          <p class="slider-title-sp-b sp"><img src="/images/deco/top-deco07.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="top-slider pc">
+      <ul class="bxslider">
+        <li class="back09-pc">
+          <p class="slider-title-sp-b"><img src="/images/deco/top-deco-pc01r.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+        <li class="back10-pc">
+          <p class="slider-title-sp-b"><img src="/images/deco/top-deco-pc02r.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+        <li class="back08-pc">
+          <p class="slider-title-sp-b"><img src="/images/deco/top-deco-pc06.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="about-kinyujoshi-block">
+
+      <div class="about-kinyujoshi-intro center">
+        <h2 class="about-kinyujoshi-intro-title center"><img src="/images/title/about/about-title01.png"></h2>
+        <p class="pc about-kinyujoshi-intro-description center">
+          わたしたちは、金融ワカラナイ女子による、ワカラナイ女子のための、<br>
+          経済の流れである”金融”をゆる～く勉強するコミュニティです。<br><br>
+          わたしたちは、「おかね」に対する意識の低さに不安を感じています。<br>
+          よくワカラナイまま大人になってしまいました…。<br><br>
+          活発に働く女性が増え「おかね」が身近になった今こそ、<br>
+          ミライを支えるわたしたちが「おかね」について考えたいと思います。<br><br>
+          きんゆう女子。は、誰に聞いたらいいかワカラナイ、<br>
+          または、そもそも何を聞いたらいいかワカラナイ！<br>
+          色々と先延ばしにしてしまっている…。<br>
+          でも前向きな、そんな女性たちのかけ込み場所です。<br><br>
+          「金融」について知りたい理由はひとそれぞれです。<br>
+          キャリアアップ、結婚、起業、トラブル、病気…など<br><br>
+          様々なライフイベントを迎える準備として、<br>
+          「おかね」と「じぶん」にキチンと向き合って棚卸をして<br>
+          今後の人生を考えてみましょう。<br><br>
+          きんゆう女子。を卒業する頃には<br>
+          ありのままの「わたし」の生きる道が見つかりますように。<br>
+        </p>
+        <p class="sp about-kinyujoshi-intro-description center">
+          わたしたちは、金融ワカラナイ女子による、ワカラナイ女子のための、経済の流れである”金融”をゆる～く勉強するコミュニティです。<br><br>
+          わたしたちは、「おかね」に対する意識の低さに不安を感じています。よくワカラナイまま大人になってしまいました…。<br><br>
+          活発に働く女性が増え「おかね」が身近になった今こそ、ミライを支えるわたしたちだからこそ「おかね」について考えたいと思います。<br><br>
+          きんゆう女子。は、誰に聞いたらいいかワカラナイ、または、そもそも何を聞いたらいいかワカラナイ！色々と先延ばしにしてしまっている…。でも前向きな、そんな女性たちのかけ込み場所です。<br><br>
+          「金融」について知りたい理由はひとそれぞれです。キャリアアップ、結婚、起業、トラブル、病気…など<br><br>
+          様々なライフイベントを迎える準備として、「おかね」と「じぶん」にキチンと向き合って棚卸をして、今後の人生を考えてみましょう。<br><br>
+          きんゆう女子。を卒業する頃には、ありのままの「わたし」の生きる道が見つかりますように。<br>
+        </p>
+      </div>
+
+
+      <div class="about-kinyujoshi-service center">
+        <h2 class="about-kinyujoshi-intro-title center">
+          <img src="/images/title/about/about-title04.png">
+        </h2>
+        <ul class="clear">
+          <li>
+            <div class="about-kinyujoshi-service-el tx-center">
+              <h3 class="service-title center">
+                <img src="/images/title/about/about-title02.png">
+              </h3>
+              <div class="service-image center">
+                <img src="/images/icon/about-kinyu-service-01.png">
+              </div>
+              <p class="service-description">
+                ひとりよりも、みんなで集まれば<br>知恵も情報もシェアできます。<br>きんゆう女子。では、<br>みんなでおかねの情報を持ち寄って<br>一つのサイトを作っています。
+              </p>
+              <a class="btn-white service-link center" href="/blog">レポートを読む</a>
+            </div>
+          </li>
+
+          <li>
+            <div class="about-kinyujoshi-service-el tx-center">
+              <h3 class="service-title center">
+                <img src="/images/title/about/about-title03.png">
+              </h3>
+              <div class="service-image center">
+                <img src="/images/icon/about-kinyu-service-02.png">
+              </div>
+              <p class="service-description">
+                おかねについて気軽に話せる会を木曜夜と土曜日午後に行っています。同じ悩みをもったワカラナイ女子同士でお茶をしながら一緒に勉強をしています。金融業界の先生をゲストに迎えた勉強会もあります。
+              </p>
+              <a class="btn-tiffany service-link center" href="/event">女子会に参加する</a>
+              <p class="pc about-kinyujoshi-service-balloon01"><img src="/images/icon/balloon.png"></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {$sp_footer}
+</div>

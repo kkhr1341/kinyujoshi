@@ -1,0 +1,110 @@
+  <nav class="sp off hnavi-nav" role="navigation" id="hnave">
+    <p id="hnavi-close">× 閉じる</p>
+    <div class="hnavi-about-kinyu">
+      <p><a class="hnavi-menu-item" href="/welcome/event">女子会に参加する</a></p>
+      <img class="hnavi-about-kinyu-arrow" src="/images/icon/calender-menu.png">
+    </div>
+    <div class="hnavi-about-kinyu">
+      <p><a class="hnavi-menu-item" href="/regist">メンバーになる</a></p>
+      <img class="hnavi-about-kinyu-arrow" src="/images/icon/women-menu.png">
+    </div>
+    <div class="hnavi-about-kinyu">
+      <p><a class="hnavi-menu-item" href="/gallery">ギャラリー</a></p>
+      <img class="hnavi-about-kinyu-arrow" src="/images/icon/gallery-menu.png">
+    </div>
+    <div class="hnavi-menu">
+      <p style="color: #989898;">カテゴリー</p>
+      <ul class="category-menu">
+        <li class="hnavi-nav-icon icon-top"><a class="hnavi-menu-item" href="/">トップ</a></li>
+        <li class="hnavi-nav-icon icon-money"><a class="hnavi-menu-item" href="/category/money">おかね</a></li>
+        <li class="hnavi-nav-icon icon-job"><a class="hnavi-menu-item" href="/category/business">しごと</a></li>
+        <li class="hnavi-nav-icon icon-life"><a class="hnavi-menu-item" href="/category/lifestyle">ライフスタイル</a></li>
+        <li class="hnavi-nav-icon icon-invest"><a class="hnavi-menu-item" href="/category/investment">投資</a></li>
+        <li class="hnavi-nav-icon icon-fintech"><a class="hnavi-menu-item" href="/category/fintech">フィンテック</a></li>
+        <li class="hnavi-nav-icon icon-star"><a class="hnavi-menu-item" href="/category/special">コラム</a></li>
+      </ul>
+      <ul class="banner-menu">
+        <li>
+          <a href="/request"><img src="/images/banner/request-banner.jpg"></a>
+        </li>
+        <li>
+          <a href="http://kabuto-live.com/" target="_blank"><img src="/images/banner/kabuto-banner.jpg"></a>
+        </li>
+        <li>
+          <a href="http://cafe-salvador.com/" target="_blank"><img src="/images/banner/salvador-banner.jpg"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="hnavi-about-kinyu">
+      <p><a class="hnavi-menu-item" href="/about">きんゆう女子って？</a></p>
+      <img class="hnavi-about-kinyu-arrow" src="/images/icon/arrows.png">
+    </div>
+    <div class="hnavi-menu" style="background-color:#f9f9f9">
+      <ul class="sub-menu">
+        <li><a class="hnavi-menu-item" href="/company">運営会社</a></li>
+        <li><a class="hnavi-menu-item" href="/privacy">プライバシーポリシー</a></li>
+        <li><a class="hnavi-menu-item" href="/service">利用規約</a></li>
+        <li><a class="hnavi-menu-item" href="/inquiry">お問い合わせ</a></li>
+      </ul>
+    </div>
+    <div class="hnavi-footer">
+      <img src="/images/kinyu-logo-gray.png">
+    </div>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+
+
+  <!--==================================
+        ヘッダー
+  ================================== -->
+  <header id="header" class="clear">
+    <div class="sp header-logo">
+      <h1><a href="/"><img src="/images/kinyu-logo.png" alt="きんゆう女子"></a></h1>
+    </div>
+
+    <!-- ハンバーガーメニュー -->
+    <div class="header-menu clear">
+      <div class="pc menu-p">
+        <p>MENU</p>
+      </div>
+    </div>
+    {if $profile.nickname|default != ""}
+        <div class="admin-profile-block">
+          <a href="/my">
+            <div class="top_profile_image" style="background:url({$profile.profile_image}) center center / cover no-repeat;"></div>
+          </a>
+        </div>
+      {/if}
+
+    <!-- pc メニュー -->
+    <div class="pc-header pc clear center">
+      <div class="pc-logo">
+        <h1><a href="/"><img src="/images/kinyu-logo.png" alt="きんゆう女子"></a></h1>
+      </div>
+      {if $profile.nickname|default != ""}
+        <div class="admin-profile-block">
+          <a href="/my">
+            <div class="top_profile_image" style="background:url({$profile.profile_image}) center center / cover no-repeat;"></div>
+          </a>
+        </div>
+      {/if}
+      <div class="pcheader-about-kinyu">
+        <p><a class="drawer-menu-item" href="/about">きんゆう女子って？</a></p>
+        <img class="pcheader-about-kinyu-arrow" src="/images/icon/arrows.png">
+      </div>
+      <div class="pc-header-nav">
+        <ul class="clear">
+          <li><a href="/regist">メンバーになる</a></li>
+          <li><a href="/inquiry">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="sp header-menu-img" id="toggle">
+    <img src="/images/icon/header-menu-icon.png">
+  </div>
+
+  <!-- ヘッダー分の高さ -->
+  <div class="sp header-height" style="margin-top: 49px;"></div>
+

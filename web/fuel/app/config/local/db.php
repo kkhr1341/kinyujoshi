@@ -1,0 +1,18 @@
+<?php
+/**
+ * The test database settings. These get merged with the global settings.
+ *
+ * This environment is primarily used by unit tests, to run on a controlled environment.
+ */
+
+return array(
+	'default' => array(
+    'charset' => 'utf8',
+		'connection'  => array(
+			'dsn'        => 'mysql:host=localhost;dbname=sundaylunch',
+			'username'   => 'sundaylunch_user',
+			'password'   => 'L3bswhqJdw75Gxn',
+		),
+		'profiling' => true,
+	),
+);

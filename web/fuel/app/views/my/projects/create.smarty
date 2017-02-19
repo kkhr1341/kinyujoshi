@@ -1,0 +1,153 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/my">マイページ</a></li>
+	<li><a href="/my/projects">プロジェクトの管理</a></li>
+	<li class="active">プロジェクトを作る</li>
+</ol>
+
+<form>
+	<fieldset>
+		<div class="form-group mb50">
+			<label>カテゴリ <span class="label label-danger">必須</span></label>
+			<select id="section_code" class='form-control'>
+				<option value="">選択してください</option>
+				{foreach from=$sections item=section}
+				<option value="{$section.code}">{$section.name}</option>
+				{/foreach}
+			</select>
+		</div>
+		<div class="form-group">
+			<label>タイトル <span class="label label-danger">必須</span></label>
+			<input type="text" id="title" class="form-control" placeholder="">
+		</div>
+		<div class="form-group">
+			<label>目標金額 <span class="label label-danger">必須</span></label>
+			<input type="text" id="target_amount" class="form-control" placeholder="">
+		</div>
+		<div class="form-group">
+			<label>本文 <span class="label label-danger">必須</span></label>
+			<textarea id="content" name="content"></textarea>
+		</div>
+		<div class="form-group">
+			<label>公開日時 <span class="label label-danger">必須</span></label>
+
+			<div class='input-group date datetimepicker'>
+				<input type='text' class="form-control" id="open_date" value="{date('Y/m/d H:i')}" />
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+				</span>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label>終了日時 <span class="label label-danger">必須</span></label>
+
+			<div class='input-group date datetimepicker'>
+				<input type='text' class="form-control" id="close_date" value="{date('Y/m/d H:i', strtotime(date('Y/m/d H:i:s')) + (60*60*24*45))}" />
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+				</span>
+			</div>
+		</div>
+		
+		<button class="btn btn-primary" type="button" id="save">公開する</button>
+		<button class="btn btn-default" type="button" id="save_closed">下書き保存する</button>
+	</fieldset>
+</form>
+<script>
+$(function(){
+	$('.datetimepicker').datetimepicker({
+		format : 'YYYY/MM/DD HH:mm'
+	});
+	
+	$('#save').click(function(){
+		var url = "/api/projects/create";
+		var params = {};
+		params.section_code = $('#section_code').val();
+		params.title = $('#title').val();
+		params.content = $('#content').val();
+		params.open_date = $('#open_date').val();
+		params.close_date = $('#close_date').val();
+		params.target_amount = $('#target_amount').val();
+		params.status = 1;
+		
+		if (params.section_code == "") {
+			ts.error("カテゴリを選択してください");
+			return false;
+		}
+		if (params.title == "") {
+			ts.error("タイトルを入力してください");
+			return false;
+		}
+		if (strip_tags(params.content) == "") {
+			ts.error("本文を入力してください");
+			return false;
+		}
+		if (params.open_date == "") {
+			ts.error("公開日時を入力してください");
+			return false;
+		}
+		if (params.close_date == "") {
+			ts.error("終了日時を入力してください");
+			return false;
+		}
+		if (!validate_intval(params.target_amount) || params.target_amount <= 100000) {
+			ts.error("目標金額は、100,000円以上に設定してください");
+			return false;
+		}
+		
+		// 45日以上ならエラー
+		if ((strtotime(params.close_date) - strtotime(params.open_date))/(60*60*24) > 45) {
+			ts.error("終了日時は開始日時から45日以内を指定してください。");
+			return false;
+		}
+		
+		ajax.post(url, params, function(data){
+			ts.success("公開しました", function(){
+				location.href = "/my/projects";
+			});
+		});
+	});
+
+	$('#save_closed').click(function(){
+		var url = "/api/projects/create";
+		var params = {};
+		params.section_code = $('#section_code').val();
+		params.title = $('#title').val();
+		params.content = $('#content').val();
+		params.open_date = $('#open_date').val();
+		params.close_date = $('#close_date').val();
+		params.target_amount = $('#target_amount').val();
+		params.status = 0;
+		
+		if (params.title == "") {
+			params.title = "タイトル未設定";
+		}
+		ajax.post(url, params, function(data){
+			ts.success("下書き保存しました", function(){
+				location.href = "/my/projects";
+			});
+		});
+	});
+	
+	$('#content').redactor({
+		focus: false,
+		lang: 'en',
+		plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
+		imageUpload: '/api/redactor/upload/image',
+		imageManagerJson: '/api/redactor/list/image',
+		fileUpload: '/api/redactor/upload/file',
+		fileManagerJson: '/api/redactor/list/file',
+		callbacks: {
+			fileUploadError: function(json) {
+				alert(json.message);
+			},
+			imageUploadError: function(json) {
+				alert(json.message);
+			},
+		}
+	});
+
+});
+</script>

@@ -1,0 +1,135 @@
+<div id="title_frame" class="back07">
+	<div class="title_frame_inner">
+		<div class="row">
+			<div class="col-md-12 " style="text-align:center;">
+				<h2 class="single-page-title center"><img src="/images/title/news/news-title.png"></h2>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container center">
+	<div class="row">
+		<section>
+			<div class="news-index-block">
+				<ul class="news-index-list clear">
+					{foreach from=$news.datas item=blog}
+						<li>
+							<a href="/news/{$blog.code}">
+								<div class="list_news">
+									<div class="row">
+										<h2 class="news-index-title">
+											{$blog.title}
+										</h2>
+										<div class="news-index-date">
+	                		{$blog.open_date|date_format:"Y.m.d"}
+	                	</div>
+									</div>
+								</div>
+							</a>
+						</li>
+					{/foreach}
+				</ul>
+				<div class="news-pagination">
+					{$pagination|nofilter}
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<style>
+.news-index-block {
+	padding: 48px 0px;
+	width: 900px;
+	margin: 0 auto;
+}
+.news-index-title {
+  font-size: 1.8rem;
+  height: 50px;
+  line-height: 25px;
+  color: #000;
+}
+.news-index-date {
+	font-size: 1.3rem;
+	color: #000;
+	margin-top: 20px;
+}
+.news-index-list li {
+	width: 48%;
+	float: left;
+	box-sizing: border-box;
+	margin: 1%;
+	padding: 15px;
+	background-color: #F2F2F2;
+	position: relative;
+}
+.news-index-list li:hover{
+	opacity: 0.7;
+}
+.list_news:after {
+	content: "▶︎";
+	font-size: 1.5rem;
+	color: #7DDCCE;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.news-pagination {
+	margin-top: 20px;
+  text-align: center;
+}
+/* タブレットのスタイル
+-----------------------------------------------------------*/
+@media screen and (min-width: 481px) and (max-width:769px) {
+	.news-index-block {
+		padding: 30px 2%;
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+/* スマートフォンのスタイル
+------------------------------------*/
+@media screen and (max-width:480px) {
+	.news-index-block {
+		width: 100%;
+		padding: 24px 4%;
+		box-sizing: border-box;
+	}
+
+	.news-index-list li {
+		width: 100%;
+		float: none;
+		box-sizing: border-box;
+		padding: 15px;
+		margin: 0px 0px 16px 0px;
+	}
+	.news-index-list li:last-child {
+		margin: 0px;
+	}
+	.news-index-title {
+	  font-size: 1.4rem;
+	  height: 40px;
+	  line-height: 20px;
+	}
+	.news-index-date {
+		font-size: 1.2rem;
+		color: #000;
+		margin-top: 12px;
+	}
+}
+</style>
+
+
+
+		
+
+
+
+<script>
+$(function(){
+
+});
+</script>

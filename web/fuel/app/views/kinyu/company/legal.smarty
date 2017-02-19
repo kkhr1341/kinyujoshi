@@ -1,0 +1,84 @@
+<div class="kinyu-main-single-block">
+<div class="company-detail-header"><img class="logo" src="/images/kinyu-logo01.png"></div>
+
+<div class="company-info-title">
+  <h2>特定商取引法に基づく表記</h2>
+</div>
+
+<div class="company-details-block clear">
+  <div class="company-details-menu">
+    <ul>
+      <li><a href="/company">運営会社</a></li>
+      <li><a href="/service">利用規約</a></li>
+      <li><a href="/privacy">プライバシーポリシー</a></li>
+      <li><a class="company-details-active">特定商取引法に基づく表記</a></li>
+      <li><a href="/contact">お問い合わせ</a></li>
+    </ul>
+  </div>
+
+  <div class="company-details company-legal">
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 販売業者</h3>
+      <p class="description">株式会社TOE THE LINE</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 運営責任者</h3>
+      <p class="description">鈴木 万梨子</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 所在地</h3>
+      <p class="description">〒107-0061 東京都港区北青山3-5-6 青朋ビル本館3F</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 連絡先</h3>
+      <p class="description">お問い合わせはメールにて承ります。予めご了承下さい。<br>email : cs@kinyu-joshi.jp</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お申し込みの有効期限</h3>
+      <p class="description">イベント実施1日前まで</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 販売価格</h3>
+      <p class="description">各イベントごとに記載</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 返品・キャンセル</h3>
+      <p class="description">キャンセルは受け付けいたしますが。所定のキャンセル料をいただきます。</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払い方法</h3>
+      <p class="description">クレジットカードのみ</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 商品の受け渡し時期および方法</h3>
+      <p class="description">お支払い完了後、イベントに参加することができます。</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員情報変更・契約期間・解約について</h3>
+      <p class="description">会員情報変更・解約は、email : cs@kinyu-joshi.jpよりお問い合わせいただければいつでも行うことができます。変更したい内容を明記の上お問い合わせください。</p>
+    </div>
+  </div>
+</div>
+{$sp_footer}
+</div>
+
+<script>
+{literal}
+$(function(){
+  var title_frame_height = $('#title_frame').height();
+  var page_title_height = $('.page_title').height();
+  
+  var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+  $('.page_title').css('padding-top', padding_top);
+});
+{/literal}
+</script>

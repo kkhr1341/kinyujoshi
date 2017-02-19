@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- If you delete this tag, the sky will fall on your head -->
+<meta name="viewport" content="width=device-width" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>IRODORI FUND</title>
+
+
+<style type="text/css">
+<!--
+/* ------------------------------------- 
+    GLOBAL 
+------------------------------------- */
+* { 
+  margin:0;
+  padding:0;
+}
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+img { 
+  max-width: 100%; 
+}
+.collapse {
+  margin:0;
+  padding:0;
+}
+body {
+  -webkit-font-smoothing:antialiased; 
+  -webkit-text-size-adjust:none; 
+  width: 100%!important; 
+  height: 100%;
+}
+
+
+/* ------------------------------------- 
+    ELEMENTS 
+------------------------------------- */
+a { color: #2BA6CB;}
+
+.btn {
+  text-decoration:none;
+  color: #FFF;
+  background-color: #666;
+  padding:10px 16px;
+  font-weight:bold;
+  margin-right:10px;
+  text-align:center;
+  cursor:pointer;
+  display: inline-block;
+}
+
+p.callout {
+  padding:15px;
+  background-color:#ECF8FF;
+  margin-bottom: 15px;
+}
+.callout a {
+  font-weight:bold;
+  color: #2BA6CB;
+}
+
+table.social {
+/*  padding:15px; */
+  background-color: #ebebeb;
+  
+}
+.social .soc-btn {
+  padding: 3px 7px;
+  font-size:12px;
+  margin-bottom:10px;
+  text-decoration:none;
+  color: #FFF;font-weight:bold;
+  display:block;
+  text-align:center;
+}
+a.fb { background-color: #3B5998!important; }
+a.tw { background-color: #1daced!important; }
+a.gp { background-color: #DB4A39!important; }
+a.ms { background-color: #000!important; }
+
+.sidebar .soc-btn { 
+  display:block;
+  width:100%;
+}
+
+/* ------------------------------------- 
+    HEADER 
+------------------------------------- */
+table.head-wrap { width: 100%;}
+
+.header.container table td.logo { padding: 15px; }
+.header.container table td.label { padding: 15px; padding-left:0px;}
+
+
+/* ------------------------------------- 
+    BODY 
+------------------------------------- */
+table.body-wrap { width: 100%;}
+
+
+/* ------------------------------------- 
+    FOOTER 
+------------------------------------- */
+table.footer-wrap { width: 100%;  clear:both!important;
+}
+.footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+.footer-wrap .container td.content p {
+  font-size:10px;
+  font-weight: bold;
+  
+}
+
+
+/* ------------------------------------- 
+    TYPOGRAPHY 
+------------------------------------- */
+h1,h2,h3,h4,h5,h6 {
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-size: 60%; color: #6f6f6f; line-height: 0; text-transform: none; }
+
+h1 { font-weight:200; font-size: 44px;}
+h2 { font-weight:200; font-size: 37px;}
+h3 { font-weight:500; font-size: 27px;}
+h4 { font-weight:500; font-size: 23px;}
+h5 { font-weight:900; font-size: 17px;}
+h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+
+.collapse { margin:0!important;}
+
+p, ul { 
+  margin-bottom: 10px; 
+  font-weight: normal; 
+  font-size:14px; 
+  line-height:1.6;
+}
+p.lead { font-size:17px; }
+p.last { margin-bottom:0px;}
+
+ul li {
+  margin-left:5px;
+  list-style-position: inside;
+}
+
+/* ------------------------------------- 
+    SIDEBAR 
+------------------------------------- */
+ul.sidebar {
+  background:#ebebeb;
+  display:block;
+  list-style-type: none;
+}
+ul.sidebar li { display: block; margin:0;}
+ul.sidebar li a {
+  text-decoration:none;
+  color: #666;
+  padding:10px 16px;
+/*  font-weight:bold; */
+  margin-right:10px;
+/*  text-align:center; */
+  cursor:pointer;
+  border-bottom: 1px solid #777777;
+  border-top: 1px solid #FFFFFF;
+  display:block;
+  margin:0;
+}
+ul.sidebar li a.last { border-bottom-width:0px;}
+ul.sidebar li a h1,ul.sidebar li a h2,ul.sidebar li a h3,ul.sidebar li a h4,ul.sidebar li a h5,ul.sidebar li a h6,ul.sidebar li a p { margin-bottom:0!important;}
+
+
+
+/* --------------------------------------------------- 
+    RESPONSIVENESS
+    Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+  display:block!important;
+  max-width:600px!important;
+  margin:0 auto!important; /* makes it centered */
+  clear:both!important;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+  padding:15px;
+  max-width:600px;
+  margin:0 auto;
+  display:block; 
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table { width: 100%; }
+
+
+/* Odds and ends */
+.column {
+  width: 300px;
+  float:left;
+}
+.column tr td { padding: 15px; }
+.column-wrap { 
+  padding:0!important; 
+  margin:0 auto; 
+  max-width:600px!important;
+}
+.column table { width:100%;}
+.social .column {
+  width: 280px;
+  min-width: 279px;
+  float:left;
+}
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+.clear { display: block; clear: both; }
+
+
+/* ------------------------------------------- 
+    PHONE
+    For clients that support media queries.
+    Nothing fancy. 
+-------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  
+  a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+
+  div[class="column"] { width: auto!important; float:none!important;}
+  
+  table.social div[class="column"] {
+    width:auto!important;
+  }
+
+}
+-->
+</style>
+
+
+
+</head>
+ 
+<body bgcolor="#FFFFFF">
+
+<!-- HEADER -->
+<table class="head-wrap" bgcolor="#fff">
+  <tr>
+    <td></td>
+    <td class="header container">
+      
+        <div class="content">
+          <table bgcolor="#fff">
+          <tr>
+            <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAyCAYAAAAZUZThAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2MjJiZjcyNy0xYTJmLTQwMTYtYWRkMS04YTY5NzNlM2UxZDAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzIwQTAzRkVCNUU3MTFFNTg4MEZCMjM4QTIyRTQwMkMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzIwQTAzRkRCNUU3MTFFNTg4MEZCMjM4QTIyRTQwMkMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowZjNkMmZkYi1mZTU0LTQ1NDYtOTA1OS0xYmZjYmY0NDk3ZGYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NjIyYmY3MjctMWEyZi00MDE2LWFkZDEtOGE2OTczZTNlMWQw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" /></td>
+          </tr>
+        </table>
+        </div>
+        
+    </td>
+    <td></td>
+  </tr>
+</table><!-- /HEADER -->
+
+
+          {$contents}
+
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+  <tr>
+    <td></td>
+    <td class="container">
+      
+        <!-- content -->
+        <div class="content">
+        <table>
+        <tr>
+          <td align="center">
+            <p>
+              <a href="https://irodori.fund/">IRODORI FUND</a> |
+              <a href="https://irodori.fund/company">運営会社</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+        </div><!-- /content -->
+        
+    </td>
+    <td></td>
+  </tr>
+</table><!-- /FOOTER -->
+
+</body>
+</html>

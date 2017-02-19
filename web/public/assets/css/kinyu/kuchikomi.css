@@ -1,0 +1,327 @@
+.kuchikomi-block {
+  background-color: #fff;
+  padding: 4%;
+  box-sizing: border-box;
+  border: 2px solid #CECECE;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 4px;
+}
+.kuchikomi-el {
+}
+.kuchikomi-el label {
+  width: 100%;
+  font-size: 1.4rem;
+}
+.kuchikomi-el input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 1.3rem;
+  line-height: 1.42857143;
+  border-bottom: 2px dotted #C1C1C1;
+}
+.kuchikomi-el textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 1.3rem;
+  height: 120px;
+  padding: 10px;
+  font-size: 1.4rem;
+  resize: none;
+  line-height: 1.42857143;
+}
+.kuchikomi-el input:focus {
+  background-color: #F7F7F7;
+}
+.kuchikomi-el textarea:focus {
+  background-color: #F7F7F7;
+}
+.kuchikomi-btn {
+  font-size: 14px;
+  margin-top: 16px;
+}
+.kuchikomi-btn button {
+  display: block; 
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #7cdcce;
+  padding: 15px 25px;
+}
+.kuchikomi-bottom-box {
+  position:fixed;
+  width: 80%;
+  bottom: 0;
+  right: 50%;
+  margin-right: -40%;
+  line-height: 0;
+  z-index: 997;
+}
+.nyoki {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(218,218,218,0.95);
+  z-index: 1001;
+}
+.kuchikomi-modal-block {
+  /*margin-top: 58px;
+  padding-top: 12px;*/
+  margin-top: 16%;
+}
+.kuchikomi-close-btn {
+  font-size: 50px;
+  color: #fff;
+  text-align: right;
+  padding: 4px 10px 0px;
+  box-sizing: border-box;
+}
+.kuchikomi-intro {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.kuchikomi-after-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1000;
+}
+.kuchikomi-after-popup .inner {
+  height: 350px;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -175px;
+  margin-left: -45%;
+  background-color: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+  display: table;
+}
+.kuchikomi-after-popup-title {
+  font-size: 2.0rem;
+  text-align: center;
+  line-height: 3.0rem;
+}
+.kuchikomi-after-popup-p {
+  margin-top: 20px;
+}
+.kuchikomi-popup-close-btn {
+  display: block; 
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  background-color: #7cdcce;
+  padding: 15px 30px;
+  margin-top: 20px;
+}
+.kuchikomi-after-popup .inner .t-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* kuchikomi コンテンツページ
+---------------------------------------------------*/
+.kuchikomi-detail-block {
+  padding: 32px 4%;
+}
+.tsubuyaki-title {
+  text-align: center;
+}
+.tsubuyaki-title img{
+  width: 80%;
+}
+.tsubuyaki-p {
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 12px;
+}
+.tsubuyaki-p p {
+  font-size: 1.3rem;
+  line-height: 2.0rem;
+}
+.how-tsubuyaki {
+  margin-top: 32px;
+}
+.how-tsubuyaki-title {
+  text-align: center;
+}
+.how-tsubuyaki-title img{
+  width: 65%;
+}
+.how-tsubuyaki-p {
+  margin: 0 auto;
+  width: 90%;
+  padding-top: 12px;
+}
+.how-tsubuyaki-p p {
+  font-size: 1.3rem;
+  line-height: 2.0rem;
+}
+.tsubuyaki-sp-screen {
+  margin: 0 auto;
+  width: 95%;
+  padding-top: 12px;
+}
+.tsubuyaki-sp-screen .tsubuyaki-flow {
+  /*border: 2px solid #E3E3E3;*/
+}
+.tsubuyaki-flow {
+  line-height: 0;
+  position: relative;
+}
+.tsubuyaki-flow02 {
+  line-height: 0;
+  position: relative;
+  margin-top: 24px;
+}
+.tsubuyaki-flow-step {
+  position: relative; 
+  box-sizing: border-box;
+  margin: 0px 4px;
+  margin-bottom: 8px;
+  height: 40px;
+  width: 100%;
+  display: table;
+}
+.tsubuyaki-screen-img {
+  border: 1px solid #E2E2E2;
+}
+.step-title {
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+  padding-left: 40px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.step-count {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -15px;
+}
+.step-count img {
+  width: 30px;
+}
+.how-tsubuyaki-last {
+  margin-top: 32px;
+  text-align: center;
+}
+.how-tsubuyaki-last img {
+  width: 80%;
+}
+.arrow-bottom {
+  padding: 24px 0px;
+  text-align: center;
+}
+.arrow-bottom img {
+  width: 10%;
+}
+.kuchikomi-blog-link a {
+  display: block;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  padding: 20px 0px;
+  text-align: center;
+  background-color: #82D8CF;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.kuchikomi-blog-link a:after {
+    content: "〉";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -11px;
+}
+.about-tsubuyaki {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 12px;
+  font-size: 1.4rem;
+  text-align: right;
+  text-decoration: underline;
+}
+.about-tsubuyaki a {
+  color: #616161;
+}
+
+@media screen and (min-width: 480px) {
+  .kuchikomi-bottom-box {
+    width: 50%;
+    margin-right: -25%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .pc-kuchikomi-close-btn:hover {
+    cursor: pointer; 
+    opacity: .5;
+  }
+  .kuchikomi-detail-block {
+    width: 650px;
+    margin: 0 auto;
+    padding: 50px 4%;
+  }
+  .tsubuyaki-p {
+    padding-top: 24px;
+  }
+  .tsubuyaki-p p {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
+  .how-tsubuyaki {
+    margin-top: 50px;
+  }
+  .how-tsubuyaki-p {
+    padding-top: 24px;
+  }
+  .how-tsubuyaki-p p {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+  }
+  .tsubuyaki-sp-screen {
+    padding-top: 24px;
+  }
+  .step-title {
+    font-size: 1.8rem;
+  }
+  .how-tsubuyaki-last {
+    margin-top: 50px;
+  }
+  .kuchikomi-blog-link a {
+    font-size: 1.8rem;
+    width: 70%;
+    padding: 24px 0px;
+  }
+  .kuchikomi-blog-link a:hover {
+    opacity: 0.7;
+  }
+  .tsubuyaki-screen-img {
+    border: 2px solid #E2E2E2;
+  }
+  .kuchikomi-after-popup .inner {
+    width: 600px;
+    border-radius: 10px;
+    margin-left: -300px;
+  }
+  .kuchikomi-after-popup-title {
+    font-size: 3.5rem;
+    line-height: 4.0rem;
+  }
+}

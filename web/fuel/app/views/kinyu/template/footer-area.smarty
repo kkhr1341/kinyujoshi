@@ -1,0 +1,29 @@
+    <!-- フッター -->
+    <footer class="footer" style="background-color: rgb(249, 249, 249);">
+      <div class="inner center">
+        <div class="pc footer-logo">
+          <img src="/images/kinyu-logo.png" alt="きんゆう女子・フッターロゴ">
+        </div>
+        <div class="social-box tx-center">
+          <ul>
+            <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/facebook.png" width="40px" height="45px"></a></li>
+            <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/insta.png" width="40px" height="45px"></a></li>
+            <li><a href="https://twitter.com/@kinyu_joshi" target="_blank"><img src="/images/social/twitter.png" width="40px" height="45px"></a></li>
+          </ul>
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="/company">運営会社</a></li>
+            <li><a href="/privacy">プライバシーポリシー</a></li>
+            <li><a href="/service">利用規約</a></li>
+            <li><a href="/legal">特定商取引法に基づく表記</a></li>
+            <li><a href="/inquiry">お問い合わせ</a></li>
+            <!-- <li><a href="/policy">プライバリシーポリシー</a></li> -->
+          </ul> 
+        </div>
+      </div>
+      <div class="copylight tx-center center">
+        <p class="pc">© TOE THE LINE Inc. All rights reserved. No reproduction or republication without written permission.　<br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</p>
+        <p class="sp">© TOE THE LINE Inc. All rights reserved. No reproduction or republication without written permission.掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</p>
+      </div>
+    </footer>

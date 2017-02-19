@@ -1,0 +1,158 @@
+
+<div class="kinyu-introduction">
+  <ul class="sample">
+    <li style="background:url(/images/regist/intro-bg.png) center center / cover no-repeat;height:100%;"></li>
+    <li style="background:url(/images/content/teacher/gakuin-back-gus.jpg) center center / cover no-repeat;height:100%;"></li>
+    <li style="background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;height:100%;"></li>
+  </ul>
+  <img class="kinyu-introduction-logo" src="/images/kinyu-logo01.png">
+  <script>
+    $(function(){
+      $('.sample').slick({
+        autoplay:true,
+        autoplaySpeed:5000,
+        speed: 2000,
+        fade: true,
+        cssEase: 'linear',
+        arrows: false
+        //dots:true,
+        //pauseOnHover:true
+      });
+    }); 
+  </script>
+</div>
+
+
+<div class="kinyu-top-list-block ">
+  <div class="inner">
+    <div class="category-menu">
+      <!-- <ul class="clear">
+        <li class="this-active"><a href="">すべて</a></li>
+        <li><a href="">ライフスタイル</a></li>
+        <li><a href="">キャリア</a></li>
+        <li><a href="">どくりつ＆きぎょう</a></li>
+        <li><a href="">パラレル</a></li>
+      </ul> -->
+      <img class="pc-kinyu-logo" src="/images/kinyu-logo01.png">
+    </div>
+
+    <ul class="kinyu-top-introlist-block clear">
+      <!-- <li>
+        <div class="inner">
+          <h2><img class="main-intro-img" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
+          <p class="main-intro-description">金融に関する『知識』・『意識』・<br>『感覚』の共有によりお金に<br>囚われず、自由等身大に生きる。</p>
+          <a class="main-intro-link" href="/about">きんゆう女子。って</a>
+        </div>
+      </li>
+      <li>
+        <a href="">
+          <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
+          <h3 class="kinyu-top-list-title">テストテストテストテストテストテストテストテストテストテストテストテストテスト</h3>
+        </a>
+      </li> -->
+    </ul>
+
+    <ul class="kinyu-top-list clear">
+      {foreach from=$blogs.datas key="key" item=blog name=loopname}
+
+        <!-- {if $smarty.foreach.loopname.index == 0}
+          <li style="">
+            <a href="/event">
+            <div class="kinyu-top-list-kind"></div>
+            <h3 class="kinyu-top-list-title">女子会の予定</h3>
+            </a>
+          </li>
+        {/if}
+
+        {if $smarty.foreach.loopname.index == 4}
+          <li style="">
+            <a href="/event">
+            <div class="kinyu-top-list-kind"></div>
+            <h3 class="kinyu-top-list-title">リセアパルトマン</h3>
+            </a>
+          </li>
+        {/if}
+
+        {if $smarty.foreach.loopname.index == 4}
+          <li style="">
+            <a href="/event">
+            <div class="kinyu-top-list-kind"></div>
+            <h3 class="kinyu-top-list-title">他の情報</h3>
+            </a>
+          </li>
+        {/if} -->
+
+        <li style="background: url({$blog.main_image}) center center / cover no-repeat;">
+          <a href="/report/{$blog.code}">
+          <div class="kinyu-top-list-kind">
+            <!-- 種別 -->
+            {if $blog.kind == "女子会レポート"}
+              <img class="list-kind-img" src="/images/new/list-kind-img-joshikai.png">
+            {else if $blog.kind == "イベントレポート"}
+              <img class="list-kind-img" src="/images/new/list-kind-img-event.png">
+            {else if $blog.kind == "取材レポート"}
+              <img class="list-kind-img" src="/images/new/list-kind-img-report.png">
+            {else if $blog.kind == "コラム"}
+              <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
+            {/if}
+          </div>
+          <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+          </a>
+        </li>
+
+      {/foreach}    
+    </ul>
+    <div class="blog-pagenation tx-center">
+      {$pagination|nofilter}
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+          <img src="/images/kinyu-logo01.png">
+        </div>
+        <div class="footer-menu">
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="/company">運営会社</a>
+          </div>
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="/policy">プライバシーポリシー</a>
+          </div>
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="/legal">特定商取引法に基づく表記</a>
+          </div>
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="/service">利用規約</a>
+          </div>
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="/contact">お問い合わせ</a>
+          </div>
+        </div>
+        <p class="navi_kinyu-submenu-copy">©きんゆう女子。 All rights reserved. No reproduction or republication without written permission.　<br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</p>
+      </footer>
+
+
+    <script>
+      $(function() {
+
+        var hh = $(".kinyu-top-list li").innerWidth();
+        var mm = $(".kinyu-top-list").innerWidth();
+        var ss = $(".kinyu-top-introlist li").innerWidth();
+
+        $(window).load(function(){
+          var ww = $(".category-menu ul").height();
+          var zz = $(".category-menu").height();
+          console.log(ww);
+          console.log(zz);
+          $('.kinyu-top-introlist').css('margin-top',ww);
+        });
+
+        $('.kinyu-top-list li').height(hh);
+        $('.category-menu').width(mm);
+        $('.kinyu-top-introlist li').height(ss);
+      });
+    </script>
+
+
+
+  </div>
+</div>

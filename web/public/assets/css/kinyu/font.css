@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'utsukushi';
+  src: url('/font/utsukushi.otf') format('truetype');
+}
+@font-face {
+  font-family: 'erifont';
+  src: url('/font/erifont.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Oranienbaum';
+  src: url('/font/Oranienbaum.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Valentina';
+  src: url('/font/Valentina-Regular.otf') format('truetype');
+}

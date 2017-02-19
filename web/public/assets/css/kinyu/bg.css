@@ -1,0 +1,153 @@
+.bg02 {
+  background: url("/images/back/bg03.png") center center no-repeat;
+  background-size: cover;
+}
+
+.bg-tiffany {
+  background-color: #82D8CF;
+  background-color: #51DAD0;
+  background-color: #7CDCCE;
+}
+
+.bg-gray {
+  background-color: #F5F5F5; 
+}
+
+.bg-gray02 {
+  background-color: #E7E7E7;
+}
+.back01 {
+	background: url("/images/back/back01.jpg") center center no-repeat;
+  	background-size: cover;
+}
+
+.back02 {
+	background: url("/images/back/back02.jpg") center center no-repeat;
+  	background-size: cover;
+}
+
+.back03 {
+	background: url("/images/back/back03.jpg") center center no-repeat;
+  	background-size: cover;
+}
+
+.back05 {
+  background: url("/images/back/bg05.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.back06 {
+  background: url("/images/back/bg06.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.back07 {
+  background: url("/images/back/bg02.jpg") center center / cover no-repeat;
+  background-size: cover;
+}
+
+.back08 {
+  background: url("/images/back/bg08.jpg") center center / cover no-repeat;
+  background-size: cover;
+}
+
+.back09 {
+  background: url("/images/back/bg09.jpg") center center / cover no-repeat;
+  background-size: cover;
+}
+
+.back10 {
+  background: url("/images/back/bg10.jpg") center center / cover no-repeat;
+  background-size: cover;
+}
+
+.back08-pc {
+  background: url("/images/back/bg08-pc.jpg") center center / cover no-repeat;
+  background-size: cover;
+}
+
+.back09-pc {
+  background: url("/images/back/bg09-pc.jpg") center center / cover no-repeat;
+  background-size: cover;
+}
+
+.back10-pc {
+  background: url("/images/back/bg10-pc.jpg") center center / cover no-repeat;
+  background-size: cover;
+}
+
+.back-login {
+  background: url("/images/back/bg-login.png") center center / cover no-repeat;
+}
+
+.back-about-kinyu {
+  background: url("/images/bg16.jpg") center center / cover no-repeat;
+  background-size: cover;
+}
+
+.overlay-black {
+	background-color: rgba(0,0,0,0.3);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.top-owner01 {
+	background: url("/images/blog/owner01.jpg") center center no-repeat;
+  	background-size: cover;
+}
+
+.top-owner02 {
+	background: url("/images/blog/owner02.jpg") center center no-repeat;
+  	background-size: cover;
+}
+
+.top-owner03 {
+	background: url("/images/blog/owner03.jpg") center center no-repeat;
+  	background-size: cover;
+}
+
+.top-owner04 {
+  background: url("/images/blog/logo_sunder.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.swiper-button-prev01,.swiper-button-prev02 {
+	background: url("/images/arrow/arrow-left.png") center center no-repeat!important;
+  background: url("/images/arrow/arrows02_02.png") center center no-repeat!important;
+  background-size: cover!important;
+}
+
+.swiper-button-next01, .swiper-button-next02 {
+	background: url("/images/arrow/arrow-right.png") center center no-repeat!important;
+  background: url("/images/arrow/arrow02_01.png") center center no-repeat!important;
+  background-size: cover!important;
+}
+
+
+/* タイルコンテンツ */
+.tile-content-bg01 {
+  background: url("/images/blog-back.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.bg-white05 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,.5);
+}
+
+
+
+
+
+
+
+
+

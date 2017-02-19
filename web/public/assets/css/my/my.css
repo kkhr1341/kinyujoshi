@@ -1,0 +1,241 @@
+@charset "UTF-8";
+.my-form-container {
+  width: 100%;
+}
+.form-left {
+  width: 80%;
+  float: left;
+}
+.form-right {
+  width: 20%;
+  float: right;
+  position: relative;
+}
+.sub-description {
+  margin-left: 24px;
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+.edit-block-menu {
+  margin-left: 20px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  background-color: #dedede;
+  padding: 20px;
+  border-radius: 10px;
+}
+.edit-block-menu li {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.edit-block-menu li:last-child {
+  margin-bottom: 0px; 
+}
+.edit-block-menu li .preview-blog {
+  margin-bottom: 50px;
+}
+.edit-block-menu-btn {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px 0px;
+}
+.edit-block-menu li .release-btn {
+  color: #fff;
+  background-color: #346abb;
+}
+.edit-block-menu li .draft-btn {
+  background-color: #fff;
+}
+.edit-block-menu li .preview-btn {
+  color: #fff;
+  background-color: #43c15e;
+}
+.edit-block-menu li .delete-btn {
+  color: #fff;
+  background-color: #ce3b3b;
+}
+.container {
+  width: 100%;
+}
+.col-md-3 {
+  width: 18%;
+  float: left;
+}
+.my-content-block {
+  width: 82%;
+  float: right;
+  background-color: rgb(249, 249, 249);
+}
+.my-content-block-inner {
+  width: 920px;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 5px 0px #cccbcb;
+}
+
+/* ヘッダーメニュー */
+.my-header-menu {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5edce;
+  border-radius: 4px;
+}
+.my-header-menu>li {
+  display: inline-block;
+}
+.my-header-menu>li>a {
+  color: #444444;
+}
+.my-header-menu li.active {
+  font-weight: bold;
+}
+.my-header-menu>li+li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\00a0";
+}
+
+footer {
+	background-color:#1C1C1C;
+  position: relative;
+  z-index: 1001;
+}
+#footer_menu {
+
+}
+#footer_menu li {
+	list-style: none;
+	padding: 20px 0px 10px;
+}
+#footer_menu li a {
+	color: #fff;
+}
+#copyright .container {
+	padding: 10px 0px;
+}
+.nav-pills {
+	margin-top: 20px;
+}
+#copyright {
+	background-color:#000;
+	color:#595959;
+}
+#content_frame {
+	background-color:#FFF;
+}
+
+#content_frame section {
+	padding:80px 0px 80px 0px;
+}
+
+.colorful span:nth-child(1) { color: red; }
+.colorful span:nth-child(2) { color: blue; }
+.colorful span:nth-child(3) { color: green; }
+.colorful span:nth-child(4) { color: #daa520; }
+.colorful span:nth-child(5) { color: pink; }
+.colorful span:nth-child(6) { color: skyblue; }
+
+#top_back {
+	height:480px;
+	text-align:center;
+	padding:120px 0px;
+	background:#333333 url(/assets/img/mono/top_01.jpg) center center / cover no-repeat;
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 0px 0px 0 0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    padding: 10px 24px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 12px;
+    color: #444444;
+    text-align: center;
+}
+
+.form_ul {
+	margin-top:40px;
+}
+.form_ul li {
+	list-style:none;
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.form_ul .text {
+	width:70%;
+	padding:16px;
+	font-size:24px;
+	line-height:24px;
+	background-color:#f6f6f6;
+	border:1px solid #d2d2d2;
+	border-radius: 5px;        /* CSS3草案 */  
+	-webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+	-moz-border-radius: 5px;   /* Firefox用 */ 
+}
+.pointer {
+	cursor : pointer;
+}
+.float_right {
+	float:right;
+}
+.admin-profile-info {
+  text-align: center;
+  position: fixed;
+  padding-top: 30px;
+  height: 100%;
+  box-shadow: 0px 0px 5px 0px #cccbcb;
+  z-index: 999;
+}
+.admin-content-info {
+	float: right;
+}
+.admin-profile {
+	margin-top: 10px;
+  width: 150px;
+}
+.admin-logo {
+	width: 200px;
+}
+.clearw:after {
+	clear:both;
+	content: "";
+	height: 0;
+	display: block;
+	visibility: hidden;
+}
+.relative {
+	position:relative;
+}
+.block {
+	display:block!important;
+	width:100%!important;
+}
+
+.redactor-toolbar {
+    background: #111;
+    box-shadow: none;
+}
+.redactor-toolbar li a {
+    color: rgba(255, 255, 255, .55);
+}
+.redactor-toolbar li a:hover {
+    background: #d70a16;
+    color: #fff;
+}

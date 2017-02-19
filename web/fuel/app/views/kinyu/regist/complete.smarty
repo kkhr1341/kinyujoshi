@@ -1,0 +1,97 @@
+<!-- <div id="title_frame" class="back07">
+  <div class="title_frame_inner">
+    <div class="row">
+      <div class="col-md-12 " style="text-align:center;">
+        <h2 class="single-page-title center"><img src="/images/category/top_category_title_regist.png"></h2>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="white ">
+  <div class="container center">
+    <div class="row">
+      <section>
+
+        <div class="content_form static_content_frame">
+        
+          <div class="inquiry-complete-box">
+            <div class="alert center course_comp_text_frame inquiry-complete" role="alert">
+              <h2>メンバー登録登録<br>ありがとうございます!</h2>
+              <p>
+                入力いただきましたメールアドレス宛に<br>
+                自動返信メールをお送りしました(*^^*)！<br>
+                ご確認お願いします♪<br>
+              </p>
+            </div>
+            <div class="center tx-center">
+              <a href="/" class="btn btn-primary">トップページに戻る</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+{literal}
+$(function(){
+  var title_frame_height = $('#title_frame').height();
+  var page_title_height = $('.page_title').height();
+  
+  var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+  $('.page_title').css('padding-top', padding_top);
+  
+  $('#save').click(function(){
+    var url = "/api/inquiries/create";
+    var params = {};
+    
+    params.name = $('#name').val();
+    params.name_kana = $('#name_kana').val();
+    params.email = $('#email').val();
+    params.category_code = $('#category_code').val();
+    params.title = $('#title').val();
+    params.message = $('#message').val();
+    
+    if (params.name == "") {
+      ts.error("氏名を入力してください");
+      return false;
+    }
+    if (params.name_kana == "") {
+      ts.error("氏名カナを入力してください");
+      return false;
+    }
+    if (params.email == "") {
+      ts.error("メールアドレスを入力してください");
+      return false;
+    }
+    if (params.category_code == "") {
+      ts.error("お問合せ種別を選択してください");
+      return false;
+    }
+    if (params.title == "") {
+      ts.error("件名を入力してください");
+      return false;
+    }
+    if (params.message == "") {
+      ts.error("お問合せ内容を入力してください");
+      return false;
+    }
+
+    bootbox.confirm("お問合せを実行しますか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          location.href = "/inquiry/complete";
+        });
+      }
+      else {
+        ts.info("キャンセルしました");
+      }
+    });
+    
+  });
+});
+{/literal}
+</script>

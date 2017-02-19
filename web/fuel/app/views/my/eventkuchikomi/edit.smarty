@@ -1,0 +1,109 @@
+
+<ol class="breadcrumb">
+  <li><a href="/">ホーム</a></li>
+  <li><a href="/my">マイページ</a></li>
+  <li><a href="/my/eventkuchikomi">イベントの管理</a></li>
+  <li class="active">イベントを編集する</li>
+</ol>
+
+<form>
+  <fieldset>
+    
+    <div class="form-group">
+      <label>タイトル <span class="label label-danger">必須</span></label>
+      <input type="text" id="message" class="form-control" placeholder="" value="{$eventkuchikomi.message}">
+    </div>
+    
+    <button class="btn btn-primary" type="button" id="save">公開する</button>
+    <button class="btn btn-default" type="button" id="save_closed">下書き保存する</button>
+    <button class="btn btn-danger" type="button" id="delete" style="float:right;">削除する</button>
+    
+  </fieldset>
+</form>
+<script>
+
+var code = "{$eventkuchikomi.code}";
+var event_code = "{$eventkuchikomi.event_code}";
+$(function(){
+
+  $('.datetimepicker').datetimepicker({
+    format : 'YYYY/MM/DD HH:mm'
+  });
+
+
+  $('#save').click(function(){
+    var url = "/api/eventkuchikomi/save";   
+    var params = {};
+    params.code = code;
+    params.event_code = event_code;
+    params.message = $('#message').val();
+    params.status = 1;
+
+    if (params.message == "") {
+      ts.error("メッセージを入力してください。");
+        return false;
+    }
+
+    ajax.post(url, params, function(data){
+      ts.success("公開しました", function(){
+        location.href = "/my/eventkuchikomi";
+      });
+    });
+
+  });
+
+
+  $('#save_closed').click(function(){ 
+    var url = "/api/eventkuchikomi/save";   
+    var params = {};
+    //params.event_code = $resArray02;
+    params.code = code;
+    params.event_code = event_code;
+    params.message = $('#message').val();
+    params.status = 0;      
+    if (params.message == "") {
+      ts.error("メッセージを入力してください。");
+        return false;
+    }
+    ajax.post(url, params, function(data){
+      ts.success("下書き保存しました");
+    });
+  });
+
+  $('#delete').click(function(){
+    var url = "/api/eventkuchikomi/delete";
+    var params = {};
+    params.code = code;
+    bootbox.confirm("このイベントを削除しますか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          ts.success("削除しました", function(){
+            location.href = "/my/eventkuchikomi";
+          });
+        });
+      }
+      else {
+        ts.info("キャンセルしました");
+      }
+    });
+  });
+  
+  $('#content').redactor({
+    focus: false,
+    lang: 'en',
+    plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
+    imageUpload: '/api/redactor/upload/image',
+    imageManagerJson: '/api/redactor/list/image',
+    fileUpload: '/api/redactor/upload/file',
+    fileManagerJson: '/api/redactor/list/file',
+    callbacks: {
+      fileUploadError: function(json) {
+        alert(json.message);
+      },
+      imageUploadError: function(json) {
+        alert(json.message);
+      },
+    }
+  });
+});
+</script>

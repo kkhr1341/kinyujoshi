@@ -1,0 +1,135 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/my">マイページ</a></li>
+	<li><a href="/my/projects">プロジェクトの管理</a></li>
+	<li><a href="/my/projects/edit/{$project.code}">{$project.title}</a></li>
+	<li><a href="/my/projects/blog/{$project.code}">報告書の管理</a></li>
+	<li class="active">報告書を編集する</li>
+</ol>
+
+<form>
+	<fieldset>
+		<div class="form-group">
+			<label>タイトル <span class="label label-danger">必須</span></label>
+			<input type="text" id="title" class="form-control" placeholder="" value="{$blogs.title}">
+		</div>
+		
+		<div class="form-group">
+			<label>本文 <span class="label label-danger">必須</span></label>
+			<textarea id="content" name="content">{$blogs.content}</textarea>
+		</div>
+		
+		<div class="form-group">
+			<label>公開日時 <span class="label label-danger">必須</span></label>
+
+			<div class='input-group date datetimepicker'>
+				<input type='text' class="form-control" id="open_date" value="{$blogs.open_date|date_format:"%Y/%m/%d %H:%M"}" />
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+				</span>
+			</div>
+		</div>
+		
+		<button class="btn btn-primary" type="button" id="save">公開する</button>
+		<button class="btn btn-default" type="button" id="save_closed">下書き保存する</button>
+		<button class="btn btn-danger" type="button" id="delete" style="float:right;">削除する</button>
+		
+	</fieldset>
+</form>
+<script>
+
+var project_code = "{$blogs.project_code}";
+var code = "{$blogs.code}";
+$(function(){
+
+	$('.datetimepicker').datetimepicker({
+		format : 'YYYY/MM/DD HH:mm'
+	});
+	
+	$('#save').click(function(){
+		var url = "/api/blogs/save";
+		var params = {};
+		params.project_code = project_code;
+		params.code = code;
+		params.title = $('#title').val();
+		params.content = $('#content').val();
+		params.open_date = $('#open_date').val();
+		params.status = 1;
+		
+		if (params.section_code == "") {
+			ts.error("カテゴリを選択してください");
+			return false;
+		}
+		if (params.title == "") {
+			ts.error("タイトルを入力してください");
+			return false;
+		}
+		if (strip_tags(params.content) == "") {
+			ts.error("本文を入力してください");
+			return false;
+		}
+		
+		ajax.post(url, params, function(data){
+			ts.success("公開しました", function(){
+				location.href = "/my/projects/blog/"+project_code;
+			});
+		});
+	});
+
+	$('#save_closed').click(function(){
+		var url = "/api/blogs/save";
+		var params = {};
+		params.code = code;
+		params.project_code = project_code;
+		params.title = $('#title').val();
+		params.content = $('#content').val();
+		params.open_date = $('#open_date').val();
+		params.status = 0;
+		
+		if (params.title == "") {
+			params.title = "タイトル未設定";
+		}
+		
+		ajax.post(url, params, function(data){
+			ts.success("下書き保存しました");
+		});
+	});
+
+	$('#delete').click(function(){
+		var url = "/api/blogs/delete";
+		var params = {};
+		params.code = code;
+		bootbox.confirm("この報告書を削除しますか？", function(result) {
+			if (result) {
+				ajax.post(url, params, function(data){
+					ts.success("削除しました", function(){
+						location.href = "/my/projects/blog/"+project_code;
+					});
+				});
+			}
+			else {
+				ts.info("キャンセルしました");
+			}
+		});
+	});
+	
+	$('#content').redactor({
+		focus: false,
+		lang: 'en',
+		plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
+		imageUpload: '/api/redactor/upload/image',
+		imageManagerJson: '/api/redactor/list/image',
+		fileUpload: '/api/redactor/upload/file',
+		fileManagerJson: '/api/redactor/list/file',
+		callbacks: {
+			fileUploadError: function(json) {
+				alert(json.message);
+			},
+			imageUploadError: function(json) {
+				alert(json.message);
+			},
+		}
+	});
+});
+</script>

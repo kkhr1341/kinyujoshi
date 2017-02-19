@@ -1,0 +1,51 @@
+<!-- ナビゲーション -->
+<div class="kinyu-sp-navi">
+  <div class="kinyu-sp-header-menu kinyu-sp-header-close">
+    <img class="menu-trigger" src="/images/new/sp-header-close.png">
+  </div>
+  <div class="inner">
+    <div class="navi-icon">
+      <p>き</p>
+    </div>
+    <div class="content-list">
+      <ul class="clear">
+        <li>
+          <a href="/event"><img src="/images/new/sp/navi_joshikai_sp.png"></a>
+        </li>
+        <li>
+          <a href="/regist"><img src="/images/new/sp/navi_regist_sp.jpg"></a>
+        </li>
+        <li>
+          <a href="/report"><img src="/images/new/sp/nave_report_sp.jpg"></a>
+        </li>
+        <li>
+          <a href="/school"><img src="/images/new/sp/navi_school_sp.jpg"></a>
+        </li>
+        <li>
+          <a href="/conference"><img src="/images/new/sp/navi_conference_icon_sp.jpg"></a>
+        </li>
+        <li>
+          <a href=""><img src="/images/new/sp/navi_kabutolive-icon_sp.jpg"></a>
+        </li>
+        <li>
+          <a href=""><img src="/images/new/sp/navi_sarvador_sp.jpg"></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- <div class="share-content">
+      <p>きんゆう女子。を<br>だれかに教える</p>
+    </div> -->
+
+    <div class="content-sub-list">
+      <ul>
+        <li><a href="">運営会社</a></li>
+        <li><a href="">プライバシーポリシー</a></li>
+        <li><a href="">利用規約</a></li>
+        <li><a href="">特定商取引法に基づく表記</a></li>
+        <li><a href="">お問い合わせ</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>

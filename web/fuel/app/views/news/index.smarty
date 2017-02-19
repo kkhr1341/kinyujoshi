@@ -1,0 +1,14 @@
+<h1>お知らせ一覧</h1>
+
+<table>
+{foreach from=$news item=news_item}
+	<tr>
+		<td>{$news_item.open_date|date_format:"%Y.%m.%d %H:%M"}</td>
+		<td><a href="/news/{$news_item.code}">{$news_item.title}</a></td>
+	</tr>
+{/foreach}
+</table>
+<script>
+$(function(){
+});
+</script>
