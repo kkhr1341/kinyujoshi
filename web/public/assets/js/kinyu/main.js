@@ -80,17 +80,19 @@ $(function() {
       $(".menu-trigger").toggleClass("active");
       $(".navi_contents-block").slideToggle(500);
 
-      // if(state == false) {
-      //   scrollpos = $(window).scrollTop();
-      //   $('body').addClass('fixed').css({'top': -scrollpos});
-      //   $('.navi_contents-block').addClass('open');
-      //   state = true;
-      // } else {
-      //   $('body').removeClass('fixed').css({'top': 0});
-      //   window.scrollTo( 0 , scrollpos );
-      //   $('.navi_contents-block').removeClass('open');
-      //   state = false;
-      // }
+      setTimeout(function(){
+        if(state == false) {
+          scrollpos = $(window).scrollTop();
+          $('body').addClass('fixed').css({'top': -scrollpos});
+          $('.navi_contents-block').addClass('open');
+          state = true;
+        } else {
+          $('body').removeClass('fixed').css({'top': 0});
+          window.scrollTo( 0 , scrollpos );
+          $('.navi_contents-block').removeClass('open');
+          state = false;
+        }
+      },200);
     });
   }
 });
@@ -310,17 +312,6 @@ $(function() {
     } else if(now_scroll == 0) {
       $(".page-top").fadeOut();
     }
-
-    // スムーススクロールを起動する
-    smoothScroll.init({
-      selector: '[data-scroll]',        // スムーススクロールが有効なリンクに付ける属性
-      selectorHeader: '[data-scroll-header]',   // 固定ナビに付ける属性
-      speed: 1000,           // 到達するまでの総時間(ミリ秒)
-      easing: 'easeInOutQuad',     // スピードの種類
-      offset: 0,              // 到達場所からズラすピクセル数
-      updateURL: true,          // URLを[#〜]に変更するか？
-      callback: function () {}        // コールバック関数 (到達時に実行される関数)
-    }) ;
 
 	});
   // $('.drawer').drawer();

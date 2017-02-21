@@ -62,6 +62,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
 		//$this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->detail_content_after = View::forge('kinyu/common/detail_content_after.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);

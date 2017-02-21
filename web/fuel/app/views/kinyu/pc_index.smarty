@@ -31,7 +31,7 @@
         <li><a href="">どくりつ＆きぎょう</a></li>
         <li><a href="">パラレル</a></li>
       </ul>-->
-      <img class="pc-kinyu-logo" src="/images/kinyu-logo01.png">
+      <a href="/"><img class="pc-kinyu-logo" src="/images/kinyu-logo01.png"></a>
       <!--<div class="kinyu-sp-header-content">
         <a href="/regist"><img src="/images/new/sp-header-content.png"></a>
       </div> -->

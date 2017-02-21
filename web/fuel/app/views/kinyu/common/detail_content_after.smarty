@@ -1,0 +1,160 @@
+<div class="kinyu-content-after">
+
+  <!-- きんゆう女子。のコンテンツ -->
+  <div class="kinyu-content-after-el after-content">
+    <h3 class="center-title"><p>新着レポート</p></h3>
+    <ul class="clear">
+      <!-- 女子会 -->
+      {foreach from=$top_blogs key="key" item=blog name=loopname}
+
+      <li style="background: url({$blog.main_image}) center center / cover no-repeat;">
+        <a href="/blog/{$blog.code}">
+        <div class="kinyu-top-list-kind"></div>
+        <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+        </a>
+      </li>
+
+      {/foreach}
+      <!-- きんゆう女子。カンファレンス -->
+    </ul>
+  </div>
+
+  <!-- きんゆう女子。のコンテンツ -->
+  {*
+  <div class="kinyu-content-after-el after-category">
+    <h3 class="center-title"><p>カテゴリーから記事をえらぶ</p></h3>
+    <ul class="clear">
+      <li>
+        <a href="">すべて</a>
+      </li>
+      <li>
+        <a href="">ライフスタイル</a>
+      </li>
+      <li>
+        <a href="">キャリア</a>
+      </li>
+      <li>
+        <a href="">どくりつ＆きぎょう</a>
+      </li>
+      <li>
+        <a href="">パラレル</a>
+      </li>
+    </ul>
+  </div>
+  *}
+
+  <!-- 編集部へのコメント -->
+  <div class="kinyu-content-after-el report-detail-menu">
+    <h3 class="center-title"><p>きんゆう女子。のメニュー</p></h3>
+    <div class="report-detail-menu-list">
+      <ul>
+        <!-- 女子会 -->
+        <li style="background:url(/images/back/bg-joshikai.jpg) center center / cover no-repeat;">
+          <a href="/event">
+            <p>女子会に参加する</p>
+          </a>
+        </li>
+
+        <!-- メンバーになる -->
+        <li style="background:url(/images/regist/intro-bg.png) center center / cover no-repeat;">
+          <a href="/regist">
+            <p>メンバーになる</p>
+          </a>
+        </li>
+
+        <!-- 私立きんゆう女子。学院 -->
+        <li style="background:url(/images/content/teacher/gakuin-back-gus.jpg) center -50px / cover no-repeat;">
+          <a href="/school">
+            <p>私立きんゆう女子。学院</p>
+          </a>
+        </li>
+
+        <!-- きんゆう女子。カンファレンス -->
+        <li style="background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;">
+          <a href="/conference">
+            <p>第1回 週末投資宣言♪</p>
+          </a>
+        </li>
+
+        <!-- サルバドル・兜LIVE! -->
+        <!-- <li>
+          <div class="tw-columns01" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/IMG_0867.jpg) center center / cover no-repeat;"></div>
+          <div class="tw-columns" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/IMG_0867.jpg) center center / cover no-repeat;"></div>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- 編集部へのコメント -->
+  <div class="kinyu-content-after-el report-detail-comment">
+    <h3 class="center-title"><p>編集部へのコメント</p></h3>
+    <p>応援コメントや、ご指摘など何でもご連絡ください♪</p>
+    <form>
+      <textarea id="message" name="message" class='' rows="10"></textarea>
+      <button class="btn btn-kinyu" type="button" id="save">送信する</button>
+    </form>
+  </div>
+</div>
+
+
+{literal}
+<script>
+  $(function(){
+    // var title_frame_height = $('#title_frame').height();
+    // var page_title_height = $('.page_title').height();
+    
+    // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+    // $('.page_title').css('padding-top', padding_top);
+    
+    $('#save').click(function(){
+      var url = "/api/comment/create";
+      var params = {};
+
+      params.message = $('#message').val();
+      
+      if (params.message == "") {
+        ts.error("編集部へのコメントを記入してください。");
+        return false;
+      }
+
+      bootbox.confirm("編集部へのコメントを送信しますか？", function(result) {
+        if (result) {
+          ajax.post(url, params, function(data){
+            document.getElementById("message").value="";
+            $('.report-detail-comment-popup').fadeIn(800);          
+          });
+        }
+        else {
+          ts.info("キャンセルしました");
+        }
+      });
+    });
+    $(".report-detail-comment-popup-close").click(function() {
+      $(".report-detail-comment-popup").fadeOut(800);
+    });
+  });
+</script>
+{/literal}
+
+<div class="report-detail-comment-popup">
+  <div class="inner pc">
+    <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
+    <p class="main-message">きんゆう女子。編集部に<br>コメントしていただき、<br>誠にありがとうございます！</p>
+    <p>
+    みなさまからいただいたコメントを<br>参考に、「きんゆう女子。」をさらに<br>ブラッシュアップしてまいりますので、<br>今後ともよろしくお願いいたします♪
+    </p>
+    <p class="last-message">きんゆう女子。編集部より</p>
+  </div>
+
+  <div class="inner sp">
+    <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
+    <p class="main-message">きんゆう女子。編集部にコメントしていただき、誠にありがとうございます！</p>
+    <p>
+    みなさまからいただいたコメントを参考に、「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
+    </p>
+    <p class="last-message">きんゆう女子。編集部より</p>
+  </div>
+</div>
+
+
+

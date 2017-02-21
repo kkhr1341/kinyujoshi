@@ -84,62 +84,67 @@
 
   <!-- ナビコンテンツ -->
   <div class="navi_contents-block">
-    <ul class="navi_contents-block-menu">
-      <li class="item navi_menu">
-        <!-- <img src="/images/new/navi_menu_title.png"> -->
-        <div class="navi-icon">
-          <p>き</p>
-        </div>
-      </li>
-      <li class="item navi_kinyu-menu-li01">
-        <div class="navi_kinyu-menu-block clear">
-          <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_joshikai.png) center center / cover no-repeat;">
-            <a href="/event"><!-- <p>女子会に参加する</p> --></a>
+    <div class="inner">
+      <ul class="navi_contents-block-menu">
+        <li class="item navi_menu">
+          <div class="navi-icon">
+            <p>き</p>
           </div>
-          <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_regist.jpg) center center / cover no-repeat;">
-            <a href="/regist"><!-- <p>メンバーになる</p> --></a>
+        </li>
+        <li class="item navi_kinyu-menu-li01">
+          <img class="navi_kinyu-menu-title" src="/images/new/navi_menu_title.png">
+          <div class="navi_kinyu-menu-block clear">
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_joshikai.png) center center / cover no-repeat;">
+              <a href="/event"><!-- <p>女子会に参加する</p> --></a>
+            </div>
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_regist.jpg) center center / cover no-repeat;">
+              <a href="/regist"><!-- <p>メンバーになる</p> --></a>
+            </div>
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/nave_report.png) center center / cover no-repeat;">
+              <a href="/report"><!-- <p>レポートを読む</p> --></a>
+            </div>
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_school.png) center center / cover no-repeat;">
+              <a href="/school"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
+            </div>
           </div>
-          <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/nave_report.png) center center / cover no-repeat;">
-            <a href="/report"><!-- <p>レポートを読む</p> --></a>
+        </li>
+        <li class="item navi_kinyu-menu-li02">
+          <div class="navi_kinyu-menu-block clear">
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_conference_icon_pc.jpg) center center / cover no-repeat;">
+              <a href="/conference"><!-- <p>週末投資宣言!</p> --></a>
+            </div>
+            {*<div class="navi_kinyu-menu-block-el" style="background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;">
+              <a href="/myplan"><p>わたしらしさ計画</p></a>
+            </div>*}
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_kabutolive-icon.jpg) center center / cover no-repeat;">
+              <a href="http://kabuto-live.com/"><!-- <p>兜LIVE!</p> --></a>
+            </div>
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_sarvador.png) center center / cover no-repeat;">
+              <a href="http://cafe-salvador.com/"><!-- <p>カフェ・サルバドル</p> --></a>
+            </div>
           </div>
-          <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_school.png) center center / cover no-repeat;">
-            <a href="/school"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
+        </li>
+        <li class="item">
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="">運営会社</a>
           </div>
-        </div>
-      </li>
-      <li class="item navi_kinyu-menu-li02">
-        <div class="navi_kinyu-menu-block clear">
-          <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_conference_icon_pc.jpg) center center / cover no-repeat;">
-            <a href="/conference"><!-- <p>週末投資宣言!</p> --></a>
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="">プライバシーポリシー</a>
           </div>
-          {*<div class="navi_kinyu-menu-block-el" style="background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;">
-            <a href="/myplan"><p>わたしらしさ計画</p></a>
-          </div>*}
-          <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_kabutolive-icon.jpg) center center / cover no-repeat;">
-            <a href="http://kabuto-live.com/"><!-- <p>兜LIVE!</p> --></a>
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="">特定商取引法に基づく表記</a>
           </div>
-          <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_sarvador.png) center center / cover no-repeat;">
-            <a href="http://cafe-salvador.com/"><!-- <p>カフェ・サルバドル</p> --></a>
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="">利用規約</a>
           </div>
-        </div>
-      </li>
-      <li class="item">
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="">運営会社</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="">プライバシーポリシー</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="">特定商取引法に基づく表記</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="">利用規約</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="">お問い合わせ</a>
-        </div>
-      </li>
-    </ul>
+          <div class="navi_kinyu-submenu-el clear">
+            <a href="">お問い合わせ</a>
+          </div>
+        </li>
+        <li class="item">
+          <div class="menu-trigger menu-trigger-close"><img src="/images/new/sp-header-close.png"></div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
