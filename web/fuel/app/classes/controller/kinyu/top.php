@@ -31,6 +31,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
     //$this->template->pc_contents = View::forge('kinyu/pc_index.smarty', $this->data);
     $this->template->reload_animation = View::forge('kinyu/template/reload_animation.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);

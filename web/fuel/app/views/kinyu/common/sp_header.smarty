@@ -3,10 +3,41 @@
   <div class="kinyu-main-icon-block">
     <a href="/" class="kinyu-main-icon">き</a>
   </div>
-  <div class="kinyu-sp-header-content">
-    <a href="/regist"><img src="/images/new/sp-header-content.png"></a>
-  </div>
+  
+  <ul class="kinyu-sp-header-mainblock" data-show="1">
+    <li>
+      <div class="kinyu-sp-header-content">
+        <a href="/regist"><img src="/images/new/sp-header-content.png"></a>
+      </div>
+    </li>
+    <li>
+      <div class="kinyu-sp-header-content kinyu-sp-header-jyoshikai">
+        <a href="/event"><img src="/images/new/sp-header-jyoshikai.png"></a>
+      </div>
+    </li>
+  </ul>
+
   <div class="kinyu-sp-header-menu">
     <img class="menu-trigger" src="/images/new/sp-header-menu.png">
   </div>
 </headr>
+
+
+
+<script>
+$(function() {
+
+  var arr = [];
+  var showNum = $('.kinyu-sp-header-mainblock').data('show');
+  $('.kinyu-sp-header-mainblock li').each(function() {
+    arr.push($(this).html());
+  });
+  arr.sort(function() {
+    return Math.random() - Math.random();
+  });
+  $('.kinyu-sp-header-mainblock').empty();
+    for(i=0; i < showNum; i++) {
+      $('.kinyu-sp-header-mainblock').append('<li>' + arr[i] + '</li>');
+    }
+  });
+</script>

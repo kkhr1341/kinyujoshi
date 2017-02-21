@@ -10,7 +10,8 @@
 	<fieldset>
 		<div class="my-form-container clear">
 			<div class="form-left">
-				<div class="form-group mb50">
+
+				<!-- <div class="form-group mb50">
 					<label>カテゴリ <span class="label label-danger">必須</span></label>
 					<select id="section_code" class='form-control'>
 						<option value="">選択してください</option>
@@ -19,7 +20,8 @@
 						<option value="{$section.code}">{$section.name}</option>
 						{/foreach}
 					</select>
-				</div>
+				</div> -->
+			
 				<div class="form-group">
 					<label>タイトル <span class="label label-danger">必須</span></label>
 					<input type="text" id="title" class="form-control" placeholder="">
@@ -60,16 +62,12 @@ $(function(){
 	$('#save').click(function(){
 		var url = "/api/news/create";
 		var params = {};
-		params.section_code = $('#section_code').val();
+		params.section_code = "news";
 		params.title = $('#title').val();
 		params.content = $('#content').val();
 		params.open_date = $('#open_date').val();
 		params.status = 1;
 		
-		if (params.section_code == "") {
-			ts.error("カテゴリを選択してください");
-			return false;
-		}
 		if (params.title == "") {
 			ts.error("タイトルを入力してください");
 			return false;
@@ -88,7 +86,7 @@ $(function(){
 	$('#save_closed').click(function(){
 		var url = "/api/news/create";
 		var params = {};
-		params.section_code = $('#section_code').val();
+		params.section_code = "news";
 		params.title = $('#title').val();
 		params.content = $('#content').val();
 		params.open_date = $('#open_date').val();

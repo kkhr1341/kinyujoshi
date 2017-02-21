@@ -8,7 +8,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 
 	public function action_index($page=1) {
 		
-		$this->data['news'] = News::all('kinyu', 'kinyu/news/', $page, 3, 20);
+		$this->data['news'] = News::all('news', '/news/', $page, 2, 10);
 		$pagination = $this->data['news']['pagination'];
 		$this->template->title = 'ニュース｜きんゆう女子。';
 		$this->data['pagination'] = $pagination::instance('mypagination');
@@ -17,10 +17,18 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 		$this->data['top_blogs'] = Blogs::lists(1, 5, true);
     $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
     $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
-		$this->template->contents_after_area = View::forge('kinyu/template/contents-after.smarty', $this->data);
-		$this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
-    $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
+
+    $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
+    
+    if(Agent::is_mobiledevice()) {
+      $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    } else {
+      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+    }
 		$this->template->contents = View::forge('kinyu/news/index.smarty', $this->data);
+
 	}
 
 	public function action_detail($code) {

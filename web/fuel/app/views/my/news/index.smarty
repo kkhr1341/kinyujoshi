@@ -24,7 +24,6 @@
 			<thead>
 				<tr>
 					<th>状態</th>
-					<th>カテゴリ</th>
 					<th>タイトル</th>
 					<th>公開日時</th>
 				</tr>
@@ -35,15 +34,6 @@
 					{if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
 					{if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
 					{if $news_item.status == 0}下書き{/if}
-				</td>
-				<td>
-					{if $news_item.section_code == ""}
-						未設定
-					{elseif $news_item.section_code == "top"}
-						TOP
-					{else}
-						{$sections[$news_item.section_code]['name']}
-					{/if}
 				</td>
 				<td>{$news_item.title}</td>
 				<td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
@@ -60,7 +50,6 @@
 			<thead>
 				<tr>
 					<th>状態</th>
-					<th>カテゴリ</th>
 					<th>タイトル</th>
 					<th>公開日時</th>
 				</tr>
@@ -71,15 +60,6 @@
 					{if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
 					{if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
 					{if $news_item.status == 0}下書き{/if}
-				</td>
-				<td>
-					{if $news_item.section_code == ""}
-						未設定
-					{elseif $news_item.section_code == "top"}
-						TOP
-					{else}
-						{$sections[$news_item.section_code]['name']}
-					{/if}
 				</td>
 				<td>{$news_item.title}</td>
 				<td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
@@ -96,7 +76,6 @@
 			<thead>
 				<tr>
 					<th>状態</th>
-					<th>カテゴリ</th>
 					<th>タイトル</th>
 					<th>公開日時</th>
 				</tr>
@@ -107,15 +86,6 @@
 					{if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
 					{if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
 					{if $news_item.status == 0}下書き{/if}
-				</td>
-				<td>
-					{if $news_item.section_code == ""}
-						未設定
-					{elseif $news_item.section_code == "top"}
-						TOP
-					{else}
-						{$sections[$news_item.section_code]['name']}
-					{/if}
 				</td>
 				<td>{$news_item.title}</td>
 				<td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>

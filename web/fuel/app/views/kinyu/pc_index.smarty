@@ -1,25 +1,4 @@
-<div class="kinyu-introduction">
-  <ul class="sample">
-    <!-- <li style="background:url(/images/new/kinyu-introduction01.jpg) center center / cover no-repeat;height:100%;"></li> -->
-    <li style="background:url(/images/content/teacher/gakuin-back-gus.jpg) -600px center / cover no-repeat;height:100%;"></li>
-    <li style="background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;height:100%;"></li>
-  </ul>
-  <img class="kinyu-introduction-logo" src="/images/new/kinyu-logo-white.png">
-  <script>
-    $(function(){
-      $('.sample').slick({
-        autoplay:true,
-        autoplaySpeed:5000,
-        speed: 2000,
-        fade: true,
-        cssEase: 'linear',
-        arrows: false
-        //dots:true,
-        //pauseOnHover:true
-      });
-    }); 
-  </script>
-</div>
+{$pc_side}
 
 <div class="kinyu-top-list-block">
   <div class="inner">

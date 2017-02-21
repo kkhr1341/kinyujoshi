@@ -4,9 +4,7 @@ return array(
 	'_404_'   => '/error/404',    // The main 404 route
 	'_500_'   => '/error/500',    // The main 404 route
 	'my'   => 'my/top',
-	'news'   => 'news/top',
 	'page/(:any)'   => 'page/top/$1',
-	'news/(:any)'   => 'news/detail/index/$1',
 	'blogs'   => 'blogs/top',
 
 	//admin
@@ -55,6 +53,7 @@ return array(
 
 	//ニュース
 	'news'   => 'kinyu/news/index',
+	'news/1'   => 'kinyu/news/index',
 	'news/(:num)'   => 'kinyu/news/index/$1',
 	'news/(:any)'   => 'kinyu/news/detail/$1',
 	
