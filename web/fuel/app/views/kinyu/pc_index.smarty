@@ -130,7 +130,7 @@
 
         {if $smarty.foreach.loopname.index == 1}
           <li style="background-color:#fdc2c2;">
-            <a href="/event">
+            <a class="pc-top-intro" href="/event">
             <!-- <div class="kinyu-top-list-kind"></div>
             <h3 class="kinyu-top-list-title">女子会の予定</h3> -->
               <img src="/images/new/navi_joshikai.png" style="width:100%;"></a>
@@ -138,18 +138,9 @@
           </li>
         {/if}
 
-        <!-- {if $smarty.foreach.loopname.index == 4}
-          <li style="">
-            <a href="/event">
-            <div class="kinyu-top-list-kind"></div>
-            <h3 class="kinyu-top-list-title">リセアパルトマン</h3>
-            </a>
-          </li>
-        {/if} -->
-
         {if $smarty.foreach.loopname.index == 1}
           <li style="background-color:#7CDCCE;">
-            <a href="/regist">
+            <a class="pc-top-intro" href="/regist">
             <!-- <div class="kinyu-top-list-kind"></div>
             <h3 class="kinyu-top-list-title">他の情報</h3> -->
             <img src="/images/new/navi_regist.jpg" style="width:100%;"></a>

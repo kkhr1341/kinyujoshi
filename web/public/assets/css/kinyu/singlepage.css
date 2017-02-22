@@ -25,6 +25,7 @@
   font-weight: bold;
   width: 350px;
   text-align: center;
+  border-radius: 5px;
 }
 .top-introduction {
   height: 400px;
@@ -33,16 +34,17 @@
 }
 /* イベントイントロ・ボタン */
 .singlepage-introduction-btn {
-  width: 400px;
+  /*width: 400px;
   position: absolute;
   bottom: 50px;
   left: 50%;
-  margin-left: -200px;
+  margin-left: -200px;*/
 }
 /* フォーム関連のブロック */
 .singlepage-form-block {
   width: 780px;
   padding: 40px;
+  border-radius: 5px;
   margin: 0 auto;
   background-color: rgba(249, 249, 249, 0.58);
   box-sizing:border-box;
@@ -112,6 +114,9 @@
 .bxslider {
   height: 100%;
 }
+.kinyu-about-single .top-slider li {
+  border-radius:  10px;
+}
 .bxslider li {
   height: 100%;
 }
@@ -119,11 +124,11 @@
   width: 100%;
   position: absolute;
   bottom: 50px;
+  border-radius: 10px;
 }
 .top-slider .bx-controls {
   display: none;
 }
-
 .about-kinyujoshi-intro {
   width: 600px;
   margin-top: 70px;
@@ -138,13 +143,11 @@
   color: #626262;
   text-align: center;
 }
-
 .about-kinyujoshi-service {
   width: 800px;
   margin-top: 70px;
   padding-bottom: 70px;
 }
-
 .about-kinyujoshi-service li {
   width: 50%;
   margin: 20px 0px;
@@ -191,6 +194,7 @@
   border: 2px solid #7cdcce;
   color: #77C7BC;
   transition: 0.5s;
+  border-radius: 5px;
 }
 .about-kinyujoshi-service .btn-white:hover {
   background-color: #7cdcce;
@@ -201,6 +205,7 @@
   background-color: #7cdcce;
   color: #fff;
   transition: 0.5s;
+  border-radius: 5px;
 }
 .about-kinyujoshi-service .btn-tiffany:hover {
   background-color: #fff;
@@ -223,7 +228,7 @@
 }
 .event-introduction {
   height: 500px;
-  background: url(/images/back/bg-joshikai.jpg) center center / cover no-repeat;
+  background: url(/images/main/main-joshikai-img.png) center center / cover no-repeat;
 }
 .event-introduction-title {
   width: 480px;
@@ -244,6 +249,15 @@
   text-align: left;
   font-size: 2.2rem;
   margin-bottom: 16px;
+}
+.event-joshikai-link {
+  position: relative;
+}
+.event-joshikai-link:after {
+  content: "〉";
+  font-size: 18px;
+  position: absolute;
+  right: 0;
 }
 /*  */
 .singlepage-theree-cicle-list li .inner .count-event {
@@ -268,8 +282,8 @@
   会員登録ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .regist-introduction {
-  height: 420px;
-  background: url(/images/regist/intro-bg.png) center center / cover no-repeat;
+  height: 500px;
+  background: url(/images/main/main-regist-img.png) center center / cover no-repeat;
 }
 .regist-introduction-title {
   width: 500px;
@@ -283,6 +297,7 @@
   margin: 0 auto;
   text-align: left;
   padding: 40px;
+  border-radius: 5px;
   background-color: rgba(249, 249, 249, 0.58);
   margin-bottom: 10px;
   box-sizing: border-box;
@@ -309,11 +324,25 @@
 
 
 @media screen and (max-width: 769px) {
-
 .top-slider .bx-wrapper {
   height: 280px;
 }
-
+.regist-to-form-block {
+  width: 84%;
+  margin: 0 auto;
+  padding: 16px 0px 24px;
+  border-bottom: 1px dotted #e0dfdf;
+}
+.regist-to-form-block p {
+  text-align: center;
+  padding-top: 8px;
+}
+.jyoshikai-sub-title {
+  display: block;
+  width: 72%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   個別ページの設計
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -339,18 +368,25 @@
 .singlepage-block-link {
   padding: 16px 0px;
   font-size: 14px;
-  width: 72%;
+  width: 90%;
 }
 .top-introduction {
-  height: 400px;
+  width: 92%;
+  margin: 0 auto;
+  height: auto;
+  background:none;
+}
+.top-introduction img {
+  width: 100%;
+  border-radius: 10px;
 }
 /* イベントイントロ・ボタン */
 .singlepage-introduction-btn {
-  width: 100%;
+  /*width: 100%;
   position: absolute;
   bottom: 36px;
   left: 50%;
-  margin-left: -50%;
+  margin-left: -50%;*/
 }
 /* フォーム関連のブロック */
 .singlepage-form-block {
@@ -396,14 +432,19 @@
 .single-page-title {
   width: 100%;
 }
-
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  女子会
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.singlepage-block .gcarender {
+  width: 100%;
+}
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   会員登録ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .regist-introduction {
-  height: 300px;
+  /*height: 300px;
   background: url(/images/regist/sp-intro-bg.png) center center / cover no-repeat;
-}
+*/}
 .regist-introduction-title {
   width: 320px;
   margin-top: 20px;
@@ -439,6 +480,11 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   Aboutページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-about-single {
+  width: 92%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
 .about-kinyujoshi-intro {
   margin-top: 0px;
   padding: 30px 4% 0px 4%;

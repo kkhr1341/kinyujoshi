@@ -175,7 +175,6 @@
   padding: 0px!important;
   font-family: 'utsukushi';
 }
-
 .kinyu-sp-navi .share-content {
   background: #fff;
   border-radius: 5px;
@@ -186,7 +185,6 @@
   line-height: 24px;
   text-align: center;
 }
-
 .kinyu-sp-navi .content-list {
   padding: 24px 0px 16px;
   border-top: 1px solid #fff;
@@ -206,11 +204,6 @@
   width: 100%;
   border-radius: 5px;
 }
-
-/*  */
-.kinyu-sp-navi .content-sub-list {
-
-}
 .kinyu-sp-navi .content-sub-list li {
   border-top: 1px solid #fff;
 }
@@ -228,6 +221,12 @@
   position: absolute;
   font-size: 10px;
   right: 4px;
+}
+.navi_kinyu-menu-title {
+  display: block;
+  width: 84%;
+  margin: 0 auto; 
+  padding-bottom: 16px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -323,7 +322,6 @@
   color: #929191;
 }
 .news-sp-block .text-area .news-title {
-  font-family: 'utsukushi';
   margin-top: 4px;
   font-size: 14px;
   height: 30px;
@@ -357,8 +355,8 @@
   border-radius: 0px 0px 5px 5px;
 }
 .kinyu-top-list-title {
-  font-family: 'utsukushi';
   font-size: 16px;
+  line-height: 22px;
   text-align: left;
 }
 .list-kind-img {
@@ -377,6 +375,24 @@
   font-size: 16px;
   padding-top: 9px;
 }
+.kinyu-top-list-main li {
+  width: 100%;
+  height: auto!important;
+  margin-right: 0%;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+}
+.kinyu-top-list-main li a {
+  line-height: 0;
+}
+.kinyu-top-list-main li a {
+  line-height: 0;
+}
+.kinyu-top-list-main li img {
+  line-height: 0;
+}
+
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ニュース一覧
@@ -701,6 +717,7 @@
   padding-left: 0px;
   float: none;
   margin: 0 auto; 
+  border-left: none;
 }
 .company-details .first-description {
   padding-bottom: 0px;

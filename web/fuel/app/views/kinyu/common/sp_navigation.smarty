@@ -5,9 +5,10 @@
   </div>
   <div class="inner">
     <div class="navi-icon">
-      <p>き</p>
+      <a href="/"><p>き</p></a>
     </div>
     <div class="content-list">
+      <img class="navi_kinyu-menu-title" src="/images/new/navi_menu_title.png">
       <ul class="clear">
         <li>
           <a href="/event"><img src="/images/new/sp/navi_joshikai_sp.png"></a>
@@ -16,7 +17,10 @@
           <a href="/regist"><img src="/images/new/sp/navi_regist_sp.jpg"></a>
         </li>
         <li>
-          <a href="/report"><img src="/images/new/sp/nave_report_sp.jpg"></a>
+          <a href="/report"><img src="/images/new/sp/navi_report_sp.jpg"></a>
+        </li>
+        <li>
+          <a href="/news"><img src="/images/new/sp/navi_news_sp.png"></a>
         </li>
         <li>
           <a href="/school"><img src="/images/new/sp/navi_school_sp.jpg"></a>

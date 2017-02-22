@@ -13,6 +13,7 @@
   margin: 0 auto;
   position: relative;
   background: url(/images/content/teacher/gakuin-back.jpg) center top / cover no-repeat;
+  border-radius: 10px;
 }
 .kinyu-gakuin-introduction img {
   width: 500px;
@@ -469,7 +470,8 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (max-width: 480px) {
 .kinyu-gakuin-introduction {
-  width: 100%;
+  width: 92%;
+  border-radius: 10px;
   height: 350px;
   background: url(/images/content/teacher/gakuin-back.jpg) center top / cover no-repeat;
 }

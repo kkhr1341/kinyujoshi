@@ -6,10 +6,10 @@
 
 
 
-<div class="kinyu-main-block">
+<div class="kinyu-main-block kinyu-pc-details-block">
   <div class="inner">
     
-    <div class="report-detail-header"><img class="logo" src="/images/kinyu-logo01.png">
+    <div class="report-detail-header"><a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
     <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png"></div>
 
     <div class="report-detail-info">

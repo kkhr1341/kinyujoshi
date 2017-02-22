@@ -24,6 +24,8 @@
       </div>
       {/foreach}
     </div>
+    <div class="swiper-arrow swiper-button-next02"></div>
+    <div class="swiper-arrow swiper-button-prev02"></div>
     <div class="swiper-pagination swiper-pagination02"></div>
   </div>
 
@@ -58,6 +60,7 @@
     {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
       {if $smarty.foreach.loopname.index == 0}
+      <div class="kinyu-top-list-main">
         <li style="background: url() center center / cover no-repeat;">
             <a href="/event">
             <!-- <div class="kinyu-top-list-kind"></div>
@@ -67,12 +70,13 @@
           </li>
 
         <li style="background: url() center center / cover no-repeat;">
-            <a href="/event">
+            <a href="/regist">
             <!-- <div class="kinyu-top-list-kind"></div>
             <h3 class="kinyu-top-list-title">女子会の予定</h3> -->
               <img src="/images/new/sp/navi_regist_sp.jpg" style="width:100%;"></a>
             </a>
-          </li>
+        </li>
+      </div>
       {/if}
 
       <li style="background: url({$blog.main_image}) center center / cover no-repeat;">

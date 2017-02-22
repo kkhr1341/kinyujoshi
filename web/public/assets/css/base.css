@@ -296,6 +296,7 @@ p, a {
   line-height: inherit;
   padding: 16px 30px;
   font-weight: bold;
+  border-radius: 5px;
 }
 .form-group .form-sub-title {
   margin-bottom: 12px;

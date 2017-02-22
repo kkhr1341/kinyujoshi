@@ -624,7 +624,7 @@
   font-size: 22px;
   margin-bottom: 24px;
   position: relative;
-  z-index: 1004;
+  z-index: 999;
 }
 .conference-access .access-block li .conference-access-title {
   position: relative;
@@ -668,7 +668,7 @@
   height: 280px;
   border-radius: 50%;
   position: relative;
-  z-index: 1004;
+  z-index: 999;
 }
 .conference-access-description {
   padding: 0px 60px;

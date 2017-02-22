@@ -88,7 +88,7 @@
       <ul class="navi_contents-block-menu">
         <li class="item navi_menu">
           <div class="navi-icon">
-            <p>き</p>
+            <a href="/"><p>き</p></a>
           </div>
         </li>
         <li class="item navi_kinyu-menu-li01">
@@ -100,16 +100,19 @@
             <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_regist.jpg) center center / cover no-repeat;">
               <a href="/regist"><!-- <p>メンバーになる</p> --></a>
             </div>
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/nave_report.png) center center / cover no-repeat;">
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_report.png) center center / cover no-repeat;">
               <a href="/report"><!-- <p>レポートを読む</p> --></a>
             </div>
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_school.png) center center / cover no-repeat;">
-              <a href="/school"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_news.png) center center / cover no-repeat;">
+              <a href="/news"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
             </div>
           </div>
         </li>
         <li class="item navi_kinyu-menu-li02">
           <div class="navi_kinyu-menu-block clear">
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_school.png) center center / cover no-repeat;">
+              <a href="/school"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
+            </div>
             <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_conference_icon_pc.jpg) center center / cover no-repeat;">
               <a href="/conference"><!-- <p>週末投資宣言!</p> --></a>
             </div>

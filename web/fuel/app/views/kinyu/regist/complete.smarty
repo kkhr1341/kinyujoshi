@@ -1,39 +1,74 @@
-<!-- <div id="title_frame" class="back07">
-  <div class="title_frame_inner">
-    <div class="row">
-      <div class="col-md-12 " style="text-align:center;">
-        <h2 class="single-page-title center"><img src="/images/category/top_category_title_regist.png"></h2>
+<div class="kinyu-main-single-block">
+<div class="company-detail-header"><img class="logo" src="/images/kinyu-logo01.png"></div>
+
+  <div class="white ">
+    <div class="container center">
+      <div class="row">
+        <section>
+          <div class="content_form static_content_frame">
+            <div class="inquiry-complete-box">
+              <div class="alert center course_comp_text_frame inquiry-complete" role="alert">
+                <h2>メンバー登録<br>ありがとうございます！</h2>
+                <p>
+                  入力いただきましたメールアドレス宛に<br>自動返信メールをお送りしました(*^^*)！<br>ご確認お願いします♪
+                </p>
+              </div>
+              <div class="center tx-center">
+                <a href="/" class="btn btn-primary">トップページに戻る</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
       </div>
     </div>
   </div>
-</div> -->
-
-<div class="white ">
-  <div class="container center">
-    <div class="row">
-      <section>
-
-        <div class="content_form static_content_frame">
-        
-          <div class="inquiry-complete-box">
-            <div class="alert center course_comp_text_frame inquiry-complete" role="alert">
-              <h2>メンバー登録登録<br>ありがとうございます!</h2>
-              <p>
-                入力いただきましたメールアドレス宛に<br>
-                自動返信メールをお送りしました(*^^*)！<br>
-                ご確認お願いします♪<br>
-              </p>
-            </div>
-            <div class="center tx-center">
-              <a href="/" class="btn btn-primary">トップページに戻る</a>
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </div>
-  </div>
+  {$sp_footer}
 </div>
+
+<style>
+  .inquiry-complete-box {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .inquiry-complete-box h2 {
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'utsukushi';
+    margin-bottom: 36px;
+  }
+  .inquiry-complete {
+    width: 640px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 50px 0px;
+    text-align: center;
+    border: 1px solid #7CDCCE;
+  }
+  @media screen and (max-width: 767px) { 
+  .inquiry-complete-box {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+  .inquiry-complete-box h2 {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'utsukushi';
+    margin-bottom: 24px;
+  }
+  .inquiry-complete {
+    width: 84%;
+    margin-top: 50px;
+    margin-bottom: 36px;
+    padding: 60px 4%;
+  }
+
+  }
+
+
+</style>
 
 <script>
 {literal}

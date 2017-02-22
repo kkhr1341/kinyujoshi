@@ -3,12 +3,25 @@
 <div class="kinyu-main-single-block">
   <div class="inner">
     <div class="top-introduction regist-introduction">
-      <img class="regist-introduction-title" src="/images/regist/intro-title.png" alt="金融ワカラナイ女子のためのコミュニティ、きんゆう女子のメンバー登録フォーム">
-      <div class="singlepage-introduction-btn">
+      <!-- <div class="singlepage-introduction-btn">
         <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="#regist-form">登録フォームはこちら</a>
-        <!-- <img src="/images/icon/balloon.png" class="pc balloon-intro-kinyu-joshikai"> -->
+      </div> -->
+
+      <div class="sp">
+        <img src="/images/new/navi_regist.jpg">
       </div>
     </div>
+
+  <!-- お申し込み手続き -->
+    <div class="sp regist-to-form-block">
+      <div class="singlepage-introduction-btn">
+        <!-- <img class="jyoshikai-sub-title" src="/images/new/sp-jyoshikai-sub.png"> -->
+        <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="#regist-form" target="_blank">メンバー登録はこちら♪</a>
+      </div>
+      <!-- <p><span style="color:red;">＊</span>フォームが立ち上がります</p> -->
+    </div>
+
+
     <div class="singlepage-block center">
 
       <h2 class="singlepage-block-title center">

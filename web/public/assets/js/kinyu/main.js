@@ -186,7 +186,37 @@ jQuery(function($) {
     $clone.remove();
   });
 
+  var ua = navigator.userAgent.toUpperCase();
+  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
+  
+    // スマホ
+    $(".kinyu-top-list-title").each(function(){
+      var txt = $(this).text();
+      if(txt.length > 32){
+        txt = txt.substr(0, 32);
+        $(this).text(txt + "...");
+      }
+    });
 
+    } else {
+
+    $(".kinyu-top-introlist-pickup .kinyu-top-list-title").each(function(){
+      var txt = $(this).text();
+      if(txt.length > 50){
+        txt = txt.substr(0, 50);
+        $(this).text(txt + "...");
+      }
+    });
+  
+    $(".kinyu-top-list-title").each(function(){
+      var txt = $(this).text();
+      if(txt.length > 36){
+        txt = txt.substr(0, 36);
+        $(this).text(txt + "...");
+      }
+    });
+
+  }
 });
 // ページ読み込み時のアニメーション
 // $(document).ready(function(){

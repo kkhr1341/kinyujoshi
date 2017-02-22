@@ -1,5 +1,5 @@
   <div class="report-detail-header">
-    <img class="logo" src="/images/kinyu-logo01.png">
+    <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
     <img style="width:100%;" src="/images/new/kinyu-border-line01.png">
   </div>
 

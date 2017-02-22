@@ -4,13 +4,24 @@
   <div class="inner">
 
     <div class="top-introduction event-introduction">
-      <img class="event-introduction-title" src="/images/joshikai-title.png" alt="おかねについて気軽に話せる、女子会の予定|きんゆう女子">
       
-      <div class="singlepage-introduction-btn">
+      <!-- <div class="singlepage-introduction-btn">
         <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="https://docs.google.com/a/sundaylunch.jp/forms/d/e/1FAIpQLSdfLoYE_WXBwB8qY-9yzdfHCdrBB1eNENgTSggbBb8Hmnz7ig/viewform" target="_blank">女子会の参加手続きへ</a>
+      </div> -->
+      <div class="sp">
+        <img src="/images/new/navi_joshikai.png">
       </div>
-
     </div>
+
+    <!-- お申し込み手続き -->
+    <div class="sp regist-to-form-block">
+      <div class="singlepage-introduction-btn">
+        <img class="jyoshikai-sub-title" src="/images/new/sp-jyoshikai-sub.png">
+        <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="https://docs.google.com/a/sundaylunch.jp/forms/d/e/1FAIpQLSdfLoYE_WXBwB8qY-9yzdfHCdrBB1eNENgTSggbBb8Hmnz7ig/viewform" target="_blank">女子会のお手続きはこちら♪</a>
+      </div>
+      <p><span style="color:red;">＊</span>フォームが立ち上がります</p>
+    </div>
+
 
     <div class="singlepage-block center">
 
