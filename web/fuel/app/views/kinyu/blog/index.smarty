@@ -3,7 +3,7 @@
 <div class="kinyu-top-list-block">
   <div class="inner">
     <div class="pc category-menu">
-      <img class="pc-kinyu-logo" src="/images/kinyu-logo01.png">
+      <a href="/"><img class="pc-kinyu-logo" src="/images/kinyu-logo01.png"></a>
     </div>
     <div class="kinyu-report-list">
       <img class="kinyu-report-title" src="/images/new/kinyu_report_title.png">
