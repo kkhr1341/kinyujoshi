@@ -95,8 +95,8 @@
   <!-- 編集部へのコメント -->
   <div class="kinyu-content-after-el report-detail-comment">
     <h3 class="center-title"><p>編集部へのコメント</p></h3>
-    <p class="pc">応援コメントや、ご指摘など何でもご連絡ください♪</p>
-    <p class="sp">応援コメントや、ご指摘など<br>何でもご連絡ください♪</p>
+    <p class="pc">ワカラナイこと、知りたいことご連絡ください♪</p>
+    <p class="sp">ワカラナイこと、知りたいこと<br>ご連絡ください♪</p>
     <form>
       <textarea id="message" name="message" class='' rows="10"></textarea>
       <button class="btn btn-kinyu" type="button" id="save">送信する</button>
