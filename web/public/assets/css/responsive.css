@@ -87,14 +87,15 @@
   height: 100%;
 }
 .kinyu-main-icon-block {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: #fff;
-  border: 2px solid #7CDCCE;
   position: absolute;
-  top: 4px;
-  left: 5px;
+  top: 6px;
+  left: 8px;
+}
+.kinyu-main-icon-block img {
+  width: 100%;
 }
 .kinyu-main-icon {
   display: block;

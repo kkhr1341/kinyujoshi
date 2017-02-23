@@ -37,7 +37,7 @@
     <div class="kinyu-top-introlist-block clear">
       <div class="kinyu-top-introlist-left">
         <div class="kinyu-top-main-icon">
-          <p>き</p>
+          <img src="/images/icon/top-icon-kinyu.png">
         </div>
         <h2><img class="main-intro-img" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
         <p class="main-intro-description">正しい情報をシェアしよう。<br>経済に前向きに関わることで<br>おかねにとらわれず<br>自由に等身大に生きる。</p>

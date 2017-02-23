@@ -1,7 +1,7 @@
 <!-- ヘッダー -->
 <headr class="kinyu-sp-header">
   <div class="kinyu-main-icon-block">
-    <a href="/" class="kinyu-main-icon">き</a>
+    <img src="/images/icon/top-header-icon.png">
   </div>
   
   <ul class="kinyu-sp-header-mainblock" data-show="1">

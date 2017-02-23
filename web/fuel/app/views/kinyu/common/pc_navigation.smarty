@@ -54,8 +54,10 @@
         きんゆう女子。って？
       </div>
     </li> -->
-    <li class="about-link" style="border:2px solid #7CDCCE;">
-      <a class="kinyu-main-icon fs-kinyu-style" href="/about">き</a>
+    <li class="about-link">
+      <a class="kinyu-main-icon fs-kinyu-style" href="/about">
+        <img src="/images/icon/navi-about-kinyu.png">
+      </a>
       <div class="tool-chip">
         きんゆう女子。って？
       </div>
