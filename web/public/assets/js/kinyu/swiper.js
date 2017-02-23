@@ -17,6 +17,7 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
       pagination: '.swiper-pagination02',
       slidesPerView: 1,
       paginationClickable: true,
+      speed: 1000,
       nextButton: '.swiper-button-next02',
       prevButton: '.swiper-button-prev02',
       spaceBetween: 0

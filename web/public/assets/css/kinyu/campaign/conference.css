@@ -714,7 +714,10 @@
 /*.kinyu-conference-container {
   margin-top: 16px;
 }*/
-
+.kinyu-conference-container {
+  padding-top: 20px;
+  background: #fff;
+}
 /*-*-  共通  -*-*/
 .conference-container-inner {
   width: 100%;

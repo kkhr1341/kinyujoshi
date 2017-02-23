@@ -14,9 +14,16 @@
         </li>
 
         <!-- メンバーになる -->
-        <li style="background:url(/images/regist/intro-bg.png) center center / cover no-repeat;">
+        <li style="background:url(/images/back/bg-regist.jpg) center center / cover no-repeat;">
           <a href="/regist">
             <p>メンバーになる</p>
+          </a>
+        </li>
+
+        <!-- ニュースを見る -->
+        <li style="background:url(/images/back/bg-news.jpg) center center / cover no-repeat;">
+          <a href="/news">
+            <p>ニュースを見る</p>
           </a>
         </li>
 

@@ -120,10 +120,10 @@
               <a href="/myplan"><p>わたしらしさ計画</p></a>
             </div>*}
             <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_kabutolive-icon.jpg) center center / cover no-repeat;">
-              <a href="http://kabuto-live.com/"><!-- <p>兜LIVE!</p> --></a>
+              <a href="http://kabuto-live.com/" target="_blank"><!-- <p>兜LIVE!</p> --></a>
             </div>
             <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_sarvador.png) center center / cover no-repeat;">
-              <a href="http://cafe-salvador.com/"><!-- <p>カフェ・サルバドル</p> --></a>
+              <a href="http://cafe-salvador.com/" target="_blank"><!-- <p>カフェ・サルバドル</p> --></a>
             </div>
           </div>
         </li>
