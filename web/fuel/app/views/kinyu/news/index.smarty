@@ -17,7 +17,7 @@
 	
 						<div class="kinyu-news-list-el clear">
 							{if $blog.main_image == ""}
-							<div class="img-box" style="background: url({$blog.main_image}) center center / cover no-repeat;"></div>
+							<div class="img-box" style="background: url(/images/favicon.png) center center / cover no-repeat;"></div>
 							{else}
 							<div class="img-box" style="background: url({$blog.main_image}) center center / cover no-repeat;"></div>
 							{/if}

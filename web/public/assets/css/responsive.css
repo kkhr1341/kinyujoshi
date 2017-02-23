@@ -29,6 +29,19 @@
   display: none;
 }
 
+.kinyu-main-animation-inner {
+  width: 250px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  margin-left: -125px;
+}
+.kinyu-main-animation-inner img {
+  width: 100%;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　メイン
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -247,6 +260,13 @@
 .kinyu-top-introlist-pickup {
   width: 92%;
   margin-top: 20px;
+}
+.kinyu-top-introlist-pickup .list-kind-img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -471,14 +491,20 @@
 .report-detail-header .logo {
   margin-bottom: 24px;
 }
+.report-detail-info .list-kind-img {
+  width: 48px;
+  height: 48px;
+}
+
+
 .report-detail-category {
   width: 48px;
   height: 48px;
   margin-top: -24px;
 }
 .report-detail-title {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 26px;
   min-height: auto;
   padding-left: 22%;
   font-weight: bold;
@@ -501,9 +527,9 @@
   color: #696969;
 }
 .report-detail-main h2 {
-  font-size: 20px;
+  font-size: 18px;
   /* font-weight: bold; */
-  line-height: 28px;
+  line-height: 26px;
   padding: 5px 0px 5px 0px;
   border-bottom: 2px solid #7CDCCE;
   margin: 16px 0px;

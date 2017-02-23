@@ -30,28 +30,22 @@
   	</script>
 
     <!-- メインアニメーション -->
-    <!-- <div class="kinyu-main-animation">
+    <div class="kinyu-main-animation">
       <div class="kinyu-main-animation-inner">
         <img class="kinyu-main-animation-sub" src="/images/animation/animation-sub.png">
-          
-        </p>
         <img class="kinyu-main-animation-title" src="/images/animation/animation-title.png">
-          
-        </p>
       </div>
-    </div> -->
+    </div>
 
   	<!-- きんゆう女子。 -->
 
   	<div class="kinyu-container">
       <!-- ナビゲーション -->
-      {$navigation}
-      
+      {$navigation}  
   		<div class="kinyu-main">
         <div class="sp">{$sp_header}</div>
         {$contents}
   		</div>
-
   	</div>
 
   	<!-- 解析コード -->
@@ -77,6 +71,6 @@
   	</script>
   	<script src="/assets/js/kinyu/swiper.js"></script>
   	{/literal}
-
+  
 </body>
 </html>

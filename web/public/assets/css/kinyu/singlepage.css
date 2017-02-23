@@ -481,9 +481,12 @@
   Aboutページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-about-single {
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 10px;
+}
+.kinyu-about-single.kinyu-main-single-block .inner {
+  width: 92%;
 }
 .about-kinyujoshi-intro {
   margin-top: 0px;

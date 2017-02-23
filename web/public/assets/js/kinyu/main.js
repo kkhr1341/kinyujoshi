@@ -218,36 +218,39 @@ jQuery(function($) {
 
   }
 });
-// ページ読み込み時のアニメーション
-// $(document).ready(function(){
 
-//   var state = false;
-//   var scrollpos;
+//ページ読み込み時のアニメーション
+$(document).ready(function(){
 
-//   if(state == false) {
-//     scrollpos = $(window).scrollTop();
-//     $('body').addClass('fixed').css({'top': -scrollpos});
-//     state = true;
-//   } else {
-//     $('body').removeClass('fixed').css({'top': 0});
-//     window.scrollTo( 0 , scrollpos );
-//     state = false;
-//   }
+  var state = false;
+  var scrollpos;
 
-//   //アニメーションの処理
+  if(state == false) {
+    scrollpos = $(window).scrollTop();
+    $('body').addClass('fixed').css({'top': -scrollpos});
+    state = true;
+  } else {
+    $('body').removeClass('fixed').css({'top': 0});
+    window.scrollTo( 0 , scrollpos );
+    state = false;
+  }
 
+  //アニメーションの処理
+  $(".kinyu-main-animation-sub").fadeIn(800);
+  setTimeout(function(){
+    $(".kinyu-main-animation-title").fadeIn(800);
+  },500);
+  setTimeout(function(){
+    $(".kinyu-main-animation-inner").fadeOut(500);  
+  },1500);
+  setTimeout(function(){
+    $(".kinyu-main-animation").fadeOut(1000);
+    $('body').removeClass('fixed').css({'top': 0});
+    window.scrollTo( 0 , scrollpos );
+    state = false;
+  },2000);
 
-//   setTimeout(function(){
-//     $(".kinyu-main-animation-inner").fadeOut(500);
-//   },3000);
-//   setTimeout(function(){
-//     $(".kinyu-main-animation").fadeOut(1000);
-//     $('body').removeClass('fixed').css({'top': 0});
-//     window.scrollTo( 0 , scrollpos );
-//     state = false;
-//   },3500);
-
-// });
+});
 
 // // メニューの開閉ボタン
 // $(function() {//$(".header-menu").fadeIn(1000);
