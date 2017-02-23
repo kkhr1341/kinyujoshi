@@ -235,21 +235,39 @@ $(document).ready(function(){
     state = false;
   }
 
-  //アニメーションの処理
-  $(".kinyu-main-animation-sub").fadeIn(800);
-  setTimeout(function(){
-    $(".kinyu-main-animation-title").fadeIn(800);
-  },500);
-  setTimeout(function(){
-    $(".kinyu-main-animation-inner").fadeOut(500);  
-  },1500);
-  setTimeout(function(){
-    $(".kinyu-main-animation").fadeOut(1000);
-    $('body').removeClass('fixed').css({'top': 0});
-    window.scrollTo( 0 , scrollpos );
-    state = false;
-  },2000);
+  var ua = navigator.userAgent.toUpperCase();
+  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
 
+    //スマホ
+    $(".kinyu-main-animation-sub").fadeIn(1000);
+      $(".kinyu-main-animation-title").fadeIn(1000);
+    setTimeout(function(){
+      $(".kinyu-main-animation-inner").fadeOut(500);  
+    },2000);
+    setTimeout(function(){
+      $(".kinyu-main-animation").fadeOut(1000);
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      state = false;
+    },2500);
+
+  } else {
+
+    //pc
+    $(".kinyu-main-animation-sub").fadeIn(800);
+    setTimeout(function(){
+      $(".kinyu-main-animation-title").fadeIn(800);
+    },500);
+    setTimeout(function(){
+      $(".kinyu-main-animation-inner").fadeOut(500);  
+    },1500);
+    setTimeout(function(){
+      $(".kinyu-main-animation").fadeOut(1000);
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      state = false;
+    },2000);
+  }
 });
 
 // // メニューの開閉ボタン
