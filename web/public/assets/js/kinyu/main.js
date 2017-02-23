@@ -242,10 +242,10 @@ $(document).ready(function(){
     $(".kinyu-main-animation-sub").fadeIn(1000);
       $(".kinyu-main-animation-title").fadeIn(1000);
     setTimeout(function(){
-      $(".kinyu-main-animation-inner").fadeOut(500);  
+      $(".kinyu-main-animation-inner").fadeOut(800);  
     },2000);
     setTimeout(function(){
-      $(".kinyu-main-animation").fadeOut(1000);
+      $(".kinyu-main-animation").fadeOut(1500);
       $('body').removeClass('fixed').css({'top': 0});
       window.scrollTo( 0 , scrollpos );
       state = false;
