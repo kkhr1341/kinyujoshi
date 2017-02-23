@@ -7,7 +7,7 @@
 
       {foreach from=$blogs_pick item=blog name=foo}
 
-      <div class="swiper-slide">
+      <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
         <a href="/report/{$blog.code}">
           <!-- 種別 -->
           {if $blog.kind == "女子会レポート"}
