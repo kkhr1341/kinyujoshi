@@ -38,6 +38,8 @@ class Regist extends Base {
     $interest = $params['interest'];
     $ask = $params['ask'];
     $income = $params['income'];
+    $where_from = $params['where_from'];
+    $where_from_other = $params['where_from_other'];
     $transmission = $params['transmission'];
     $email = $params['email'];
     $facebook = $params['facebook'];
@@ -52,6 +54,8 @@ class Regist extends Base {
         'interest' => $interest,
         'ask' => $ask,
         'income' => $income,
+        'where_from' => $where_from,
+        'where_from_other' => $where_from_other,
         'transmission' => $transmission, 
         'email' => $email,
         'facebook' => $facebook,

@@ -68,6 +68,11 @@
               <?php echo $income; ?><br>
             </div>
             <div class="form-mail-p">
+              <p>◼︎どこできんゆう女子。を知りましたか？</p>
+              <?php echo $where_from; ?><br>
+              <?php echo $where_from_other; ?>
+            </div>
+            <div class="form-mail-p">
               <p>◼︎きんゆう女子。で情報発信したいですか？</p>
               <?php echo $transmission; ?><br>
             </div>

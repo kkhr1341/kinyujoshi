@@ -570,7 +570,7 @@
   margin-top: 20px;
 }
 .sponsor-block-title {
-  width: 180px;
+  width: 230px;
   margin: 0 auto;
   font-size: 18px;
   line-height: 18px;
@@ -900,7 +900,7 @@
   width: 100%;
 }
 .sponsor-block-title {
-  width: 120px;
+  width: 200px;
   font-size: 15px;
   line-height: 15px;
   margin-bottom: 16px;
@@ -911,7 +911,7 @@
   margin: 0 auto;
 }
 .sponsor-sponsorship li {
-  width: 48.5%;
+  width: 60%;
   margin-bottom: 3%;
   margin-right: 0%;
 }
@@ -919,7 +919,7 @@
   margin-right: 0%;
 }
 .sponsor-sponsorship li:nth-child(odd) {
-  margin-right: 3%;
+  margin-right: 0%;
 }
 .sponsor-sponsorship li img {
   width: 100%;

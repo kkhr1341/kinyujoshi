@@ -138,6 +138,38 @@
             <label class="form-title"><span class="color-kinyu-color">◆</span> 3年後の自分の年収をどのくらいにしたいですか？ <span class="label label-danger">必須</span></label>
             <input type="text" id="income" class="form-control" placeholder="">
           </div>
+
+          <div class="form-group form_where_from">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> どこで、きんゆう女子。を知りましたか？ <span class="label label-danger">必須</span></label>
+            <div class="radio_box clear">
+              
+              <input type="radio" value="ホームページを見て" name="where_from" id="where_from1" class="form-radio" placeholder="">
+              <label for="where_from1" class="form-long">ホームページを見て</label>
+              
+              <input type="radio" value="雑誌を見て" name="where_from" id="where_from2" class="form-radio" placeholder="">
+              <label for="where_from2" class="form-long">雑誌を見て</label>
+
+              <input type="radio" value="SNSを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
+              <label for="where_from3">SNSを見て</label>
+              
+              <input type="radio" value="友人のご紹介" name="where_from" id="where_from4" class="form-radio" placeholder="">
+              <label for="where_from4" class="form-long">友人のご紹介</label>
+              
+              <input type="radio" value="パンフレット・ポスターを見て" name="where_from" id="where_from5" class="form-radio" placeholder="">
+              <label for="where_from5">パンフレット・ポスターを見て</label>
+              
+              <input type="radio" value="他サイトで紹介されていた。" name="where_from" id="where_from6" class="form-radio" placeholder="">
+              <label for="where_from6">他サイトで紹介されていた。</label>
+
+              <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="">
+              <label for="where_from7">その他</label>
+              <div class="othet_input">
+                <input type="text" id="where_from_other" class="form-control" placeholder="その他の方はこちら">
+              </div>
+
+            </div>
+          </div>
+
           <div class="form-group form-radio-block">
             <label class="form-title"><span class="color-kinyu-color">◆</span> きんゆう女子。で情報発信したいですか？ <span class="label label-danger">必須</span></label>
             <p class="form-sub-title">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
@@ -193,6 +225,8 @@ $(function(){
     params.interest = $('#interest').val();
     params.ask = $('#ask').val();
     params.income = $('#income').val();
+    params.where_from = $("[name=where_from]:checked").val();
+    params.where_from_other = $('#where_from_other').val();
     params.transmission = $("[name=transmission]:checked").val();
     params.email = $('#email').val();
     params.facebook = $('#facebook').val();
@@ -217,6 +251,10 @@ $(function(){
     }
     if (params.ask == "") {
       ts.error("「きんゆう女子。でどんな出会いや発見がほしいですか？」を入力してください");
+      return false;
+    }
+    if (params.where_from == "") {
+      ts.error("「どこできんゆう女子。を知りましたか？」を入力してください。");
       return false;
     }
     if (params.transmission == "") {
