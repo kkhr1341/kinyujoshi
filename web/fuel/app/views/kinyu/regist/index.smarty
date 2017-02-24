@@ -117,10 +117,7 @@
               <label for="not_know5">プロフェッショナル</label>
             </div>
           </div>
-          <script>  
-          var treee = $("[name=not_know]:checked").val();
-          console.log(treee);
-          </script>
+
           <div class="form-group">
             <label class="form-title"><span class="color-kinyu-color">◆</span> お金について知りたいこと・興味のあること <span class="label label-danger">必須</span></label>
             <input type="text" id="interest" class="form-control" placeholder="(例)投資？個人事業主のこと？お年玉？">
@@ -141,7 +138,7 @@
 
           <div class="form-group form_where_from">
             <label class="form-title"><span class="color-kinyu-color">◆</span> どこで、きんゆう女子。を知りましたか？ <span class="label label-danger">必須</span></label>
-            <div class="radio_box clear">
+            <div class="radio_box_03 clear">
               
               <input type="radio" value="ホームページを見て" name="where_from" id="where_from1" class="form-radio" placeholder="">
               <label for="where_from1" class="form-long">ホームページを見て</label>
