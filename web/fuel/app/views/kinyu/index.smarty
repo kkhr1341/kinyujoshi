@@ -5,6 +5,13 @@
   <div class="swiper-container02 kinyu-top-introlist-pickup">
     <div class="swiper-wrapper">
 
+      <div class="swiper-slide" style="background: url(/images/og-conference.jpg) center center / cover no-repeat;">
+        <a href="/conference">
+          <!-- 種別 -->
+          <h3 class="kinyu-top-list-title"><イベント告知>3月3日〜3月5日きんゆう女子。の第1回週末投資宣言♪</h3>
+        </a>
+      </div>
+
       {foreach from=$blogs_pick item=blog name=foo}
 
       <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
