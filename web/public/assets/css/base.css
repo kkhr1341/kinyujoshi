@@ -28,7 +28,7 @@ html {
   line-height: 1;
 }
 body {  
-  font-family: "游ゴシック体","YuGothic",'mplus-1c-light','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+  font-family: "游ゴシック体","YuGothic",'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
   /*font-family: 'utsukushi';*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
