@@ -806,7 +806,7 @@ footer .footer-menu {
 }
 .footer-logo {
   width: 180px;
-  margin-bottom: 42px;
+  margin-bottom: 24px;
 }
 .navi_kinyu-submenu-copy {
   width: 70%;
@@ -819,6 +819,33 @@ footer .footer-menu {
 .navi_kinyu-submenu-el a {
   margin-right: 0px;
   background: #fff;
+}
+.navi-link-top {
+  display: block;
+  text-align: center;
+  width: 80px;
+  padding: 8px 24px;
+  margin: 0 auto;
+  margin-top: 24px;
+  border-radius: 20px;
+  transition: 0.8s;
+  font-size: 13px;
+  background: #69cebf;
+  color: #fff;
+}
+footer .navi-link-top {
+  display: block;
+  text-align: center;
+  width: 80px;
+  padding: 8px 24px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  margin-top: 0px;
+  border-radius: 20px;
+  transition: 0.8s;
+  font-size: 13px;
+  background: #7CDCCE;
+  color: #fff;
 }
 
 

@@ -773,9 +773,13 @@
   background: rgba(255,255,255,.1);
   position: relative;
   transition: .8s;
+  border-radius: 10px;
 }
 .kinyu-top-list li a:hover {
   background: rgba(255,255,255,.5);
+}
+.kinyu-top-list li a img {
+  border-radius: 10px;
 }
 .pc-top-intro:hover {
    /*background: rgba(255,255,255,.5); */
