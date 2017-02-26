@@ -47,11 +47,24 @@
             <?php echo $name; ?> さま<br><br>
             この度は、「きんゆう女子。」のメンバーにご登録いただきまして、誠にありがとうございます！<br>
             一緒にきんゆうを楽しく勉強していきましょう！(๑•̀ㅂ•́)و✧<br><br>
-            ぜひ、女子会へのご参加をお待ちしております。<br>
-            ▼女子会の参加フォームはこちら♪<a href="https://goo.gl/bqHY2R" target="_blank">https://goo.gl/bqHY2R</a><br><br>
+
+            きんゆう女子。では様々な女子会を開催しています^^<br>
+            HP上で、女子会の日程・内容をご案内しています。<br>
+            是非チェックしてみてください！<br>
+            <a href="https://kinyu-joshi.jp/event" target="_blank">https://kinyu-joshi.jp/event</a><br><br>
+
+            また、女子会の参加される場合は、フォームよりご登録くださいませ！<br>
+            <a href="https://goo.gl/bqHY2R" target="_blank">https://goo.gl/bqHY2R</a><br><br>
+
+            今後も編集部より、きんゆう女子。のイベント・活動について、不定期で、メールをお送りさせていただきます。楽しみにお待ちくださいませ。<br><br>
+
+            それでは◯◯ さまにお会いできる日を、きんゆう女子。編集部一同、とても楽しみにしております♪<br><br>
+
             みなさまにお会いできるのを、きんゆう女子。編集部一同楽しみにしております♪<br><br>
             <span style="color:#d9534f;">＊</span>きんゆう女子。編集部より <?php echo $name; ?> さま宛に、<br>
             別途、きんゆう女子。のご案内メールをお送りさせていただく場合がございます。<br><br>
+
+
             ▼SNSでも活動報告しています！<br>
             <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">https://www.facebook.com/kinyujyoshi/</a><br>
             <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">https://www.instagram.com/kinyu_joshi/</a><br>
