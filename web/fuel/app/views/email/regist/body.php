@@ -54,7 +54,7 @@
             <a href="https://kinyu-joshi.jp/event" target="_blank">https://kinyu-joshi.jp/event</a><br><br>
 
             また、女子会の参加される場合は、フォームよりご登録くださいませ！<br>
-            <a href="https://goo.gl/bqHY2R" target="_blank">https://goo.gl/bqHY2R</a><br><br>
+            <a href="https://goo.gl/Tdynf0" target="_blank">https://goo.gl/Tdynf0</a><br><br>
 
             今後も編集部より、きんゆう女子。のイベント・活動について、不定期で、メールをお送りさせていただきます。楽しみにお待ちくださいませ。<br><br>
 
