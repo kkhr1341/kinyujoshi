@@ -16,10 +16,14 @@
 					<a href="/news/{$blog.code}">
 	
 						<div class="kinyu-news-list-el clear">
+
+              {$fooo = $blog.main_image}
+              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
 							{if $blog.main_image == ""}
 							<div class="img-box" style="background: url(/images/favicon.png) center center / cover no-repeat;"></div>
 							{else}
-							<div class="img-box" style="background: url({$blog.main_image}) center center / cover no-repeat;"></div>
+							<div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
 							{/if}
 							<div class="text-box">
 								<p class="date">{$blog.open_date|date_format:"Y.m.d"}</p>

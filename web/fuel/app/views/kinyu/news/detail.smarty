@@ -29,7 +29,10 @@
       <p class="report-bottom">({$news.open_date|date_format:"Y.m.d"} up!)</p>
       <!-- シェア部分 -->
       <div class="report-detail-share clear">
-        <div class="report-detail-share-el report-detail-share-left" style="background:url({$news.main_image}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+
+        {$fooo = $news.main_image}
+        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+        <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
         <div class="report-detail-share-el report-detail-share-right">
           <h3>このニュースをみんなに教える。</h3>
           <img class="share-this-page" src="/images/social/social-this-page.png">
