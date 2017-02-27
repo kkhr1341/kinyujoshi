@@ -7,7 +7,10 @@
       <!-- 女子会 -->
       {foreach from=$top_blogs key="key" item=blog name=loopname}
 
-      <li style="background: url({$blog.main_image}) center center / cover no-repeat;">
+        {$fooo = $blog.main_image}
+        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+      <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
         <a href="/blog/{$blog.code}">
         <div class="kinyu-top-list-kind"></div>
         <h3 class="kinyu-top-list-title">{$blog.title}</h3>

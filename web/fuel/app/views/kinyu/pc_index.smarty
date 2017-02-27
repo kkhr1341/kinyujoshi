@@ -92,34 +92,6 @@
 
             {/foreach}
 
-            <!-- <div class="swiper-slide">
-              <a href="">
-                <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
-                <h3 class="kinyu-top-list-title">テストテストテストテストテストテストテストテストテストテストテストテストテスト</h3>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="">
-                <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
-                <h3 class="kinyu-top-list-title">テストテストテストテストテストテストテストテストテストテストテストテストテスト</h3>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="">
-                <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
-                <h3 class="kinyu-top-list-title">テストテストテストテストテストテストテストテストテストテストテストテストテスト</h3>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="">
-                <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
-                <h3 class="kinyu-top-list-title">テストテストテストテストテストテストテストテストテストテストテストテストテスト</h3>
-              </a>
-            </div> -->
-
           </div>
           <!-- <div class="swiper-arrow swiper-button-next02"></div>
           <div class="swiper-arrow swiper-button-prev02"></div> -->
@@ -134,6 +106,9 @@
 
     <ul class="kinyu-top-list clear">
       {foreach from=$blogs.datas key="key" item=blog name=loopname}
+
+        {$fooo = $blog.main_image}
+        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
         {if $smarty.foreach.loopname.index == 1}
           <li style="background-color:#fdc2c2;">
@@ -155,7 +130,7 @@
           </li>
         {/if}
 
-        <li style="background: url({$blog.main_image}) center center / cover no-repeat;">
+        <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
           <a href="/report/{$blog.code}">
           <div class="kinyu-top-list-kind">
             <!-- 種別 -->

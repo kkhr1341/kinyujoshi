@@ -1,5 +1,4 @@
 {$pc_side}
-
 <div class="kinyu-top-list-block">
   <div class="inner">
     <div class="pc category-menu">
@@ -10,7 +9,10 @@
       <ul class="kinyu-top-list clear">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
-          <li style="background: url({$blog.main_image}) center center / cover no-repeat;">
+          {$fooo = $blog.main_image}
+          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+          <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
             <a href="/report/{$blog.code}">
             <div class="kinyu-top-list-kind">
               <!-- 種別 -->
@@ -24,7 +26,7 @@
                 <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
               {/if}
             </div>
-            <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+            <h3 class="kinyu-top-list-title">か{$blog.title}</h3>
             </a>
           </li>
 

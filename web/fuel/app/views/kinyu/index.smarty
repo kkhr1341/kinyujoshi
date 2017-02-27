@@ -13,7 +13,6 @@
       </div>
 
       {foreach from=$blogs_pick item=blog name=foo}
-
       <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
         <a href="/report/{$blog.code}">
           <!-- 種別 -->
@@ -66,27 +65,26 @@
     <ul class="kinyu-top-list clear">
     {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
+      {$fooo = $blog.main_image}
+      {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
       {if $smarty.foreach.loopname.index == 0}
       <div class="kinyu-top-list-main">
         <li style="background: url() center center / cover no-repeat;">
-            <a href="/event">
-            <!-- <div class="kinyu-top-list-kind"></div>
-            <h3 class="kinyu-top-list-title">女子会の予定</h3> -->
-              <img src="/images/new/sp/navi_joshikai_sp.png" style="width:100%;"></a>
-            </a>
-          </li>
+          <a href="/event">
+            <img src="/images/new/sp/navi_joshikai_sp.png" style="width:100%;"></a>
+          </a>
+        </li>
 
         <li style="background: url() center center / cover no-repeat;">
-            <a href="/regist">
-            <!-- <div class="kinyu-top-list-kind"></div>
-            <h3 class="kinyu-top-list-title">女子会の予定</h3> -->
-              <img src="/images/new/sp/navi_regist_sp.jpg" style="width:100%;"></a>
-            </a>
+          <a href="/regist">
+            <img src="/images/new/sp/navi_regist_sp.jpg" style="width:100%;"></a>
+          </a>
         </li>
       </div>
       {/if}
 
-      <li style="background: url({$blog.main_image}) center center / cover no-repeat;">
+      <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
         <a href="/report/{$blog.code}">
         <div class="kinyu-top-list-kind">
           <!-- 種別 -->
