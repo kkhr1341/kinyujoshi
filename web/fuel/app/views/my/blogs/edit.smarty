@@ -186,7 +186,7 @@ $(function(){
 	});
 
 	$('#preview').click(function(){
-		window.open("/blog/"+code);
+		window.open("/report/"+code);
 	});
 
 	$('#save_closed').click(function(){
