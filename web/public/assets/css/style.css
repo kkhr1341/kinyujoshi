@@ -910,9 +910,9 @@
   max-width: 100%;
 }
 .report-detail-main h2 {
-  font-size: 24px;
-  /* font-weight: bold; */
-  line-height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
   padding: 5px 0px 5px 0px;
   background-color: #fff;
   border-radius: 0px;
@@ -920,8 +920,8 @@
   margin: 20px 0px;
 }
 .report-detail-main p {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 20px;
   color: #444444;
 }
 .report-detail-main a {
