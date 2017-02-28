@@ -26,7 +26,7 @@
                 <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
               {/if}
             </div>
-            <h3 class="kinyu-top-list-title">か{$blog.title}</h3>
+            <h3 class="kinyu-top-list-title">{$blog.title}</h3>
             </a>
           </li>
 
