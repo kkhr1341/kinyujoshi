@@ -192,8 +192,8 @@ jQuery(function($) {
     // スマホ
     $(".kinyu-top-list-title").each(function(){
       var txt = $(this).text();
-      if(txt.length > 32){
-        txt = txt.substr(0, 32);
+      if(txt.length > 40){
+        txt = txt.substr(0, 40);
         $(this).text(txt + "...");
       }
     });
