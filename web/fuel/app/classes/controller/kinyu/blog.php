@@ -47,6 +47,18 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
        Response::redirect('error/404');
     }
 
+    if ($this->data['blog']['status'] == 0) {
+      $iddate = $this->data['blog']['code'];
+      switch (true) {
+        case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+        case $_SERVER['PHP_AUTH_USER'] !==  'kinyu-admin':
+        case $_SERVER['PHP_AUTH_PW']   !== '1234567890':
+        header('WWW-Authenticate: Basic realm="Enter username and password."');
+        header('Content-Type: text/plain; charset=utf-8');
+        die('このページを見るにはログインが必要です');
+      }
+    }
+
 		$this->template->title = $this->data['blog']['title'];
 		$this->template->description = $this->data['blog']['description'];
 		$this->template->ogimg = $this->data['blog']['main_image'];

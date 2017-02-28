@@ -287,12 +287,12 @@ input:focus {
 
 /* スマートフォンのスタイル
 ---------------------------------------------------*/
-@media screen and (max-width:480px) {
+@media screen and (max-width: 767px) {
 
 p, a {
   font-size: 13px;
   line-height: 18px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   color: #444444;
 }
 
