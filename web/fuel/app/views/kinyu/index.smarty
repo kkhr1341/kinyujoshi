@@ -63,46 +63,49 @@
   <div class="kinyu-report-top-block">
 
     <ul class="kinyu-top-list clear">
-    {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
-      {$fooo = $blog.main_image}
-      {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
-      {if $smarty.foreach.loopname.index == 0}
       <div class="kinyu-top-list-main">
+        <h3 class="center-title"><p>女子会への参加はこちら</p></h3>
         <li style="background: url() center center / cover no-repeat;">
           <a href="/event">
-            <img src="/images/new/sp/navi_joshikai_sp.png" style="width:100%;"></a>
+            <img src="/images/new/sp/navi_joshikai_sp.png" style="width:100%;">
           </a>
         </li>
 
+        <h3 class="center-title"><p>きんゆう女子。のメンバーになる</p></h3>
         <li style="background: url() center center / cover no-repeat;">
           <a href="/regist">
-            <img src="/images/new/sp/navi_regist_sp.jpg" style="width:100%;"></a>
+            <img src="/images/new/sp/navi_regist_sp.jpg" style="width:100%;">
           </a>
         </li>
       </div>
-      {/if}
+      
+      <div class="kinyu-top-list-list">
+        <h3 class="center-title"><p>レポート一覧</p></h3>
+        {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
-      <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
-        <a href="/report/{$blog.code}">
-        <div class="kinyu-top-list-kind">
-          <!-- 種別 -->
-          {if $blog.kind == "女子会レポート"}
-            <img class="list-kind-img" src="/images/new/list-kind-img-joshikai.png">
-          {else if $blog.kind == "イベントレポート"}
-            <img class="list-kind-img" src="/images/new/list-kind-img-event.png">
-          {else if $blog.kind == "取材レポート"}
-            <img class="list-kind-img" src="/images/new/list-kind-img-report.png">
-          {else if $blog.kind == "コラム"}
-            <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
-          {/if}
-        </div>
-        <h3 class="kinyu-top-list-title">{$blog.title}</h3>
-        </a>
-      </li>
-
-    {/foreach}    
+        {$fooo = $blog.main_image}
+        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+        
+        <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
+          <a href="/report/{$blog.code}">
+          <div class="kinyu-top-list-kind">
+            <!-- 種別 -->
+            {if $blog.kind == "女子会レポート"}
+              <img class="list-kind-img" src="/images/new/list-kind-img-joshikai.png">
+            {else if $blog.kind == "イベントレポート"}
+              <img class="list-kind-img" src="/images/new/list-kind-img-event.png">
+            {else if $blog.kind == "取材レポート"}
+              <img class="list-kind-img" src="/images/new/list-kind-img-report.png">
+            {else if $blog.kind == "コラム"}
+              <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
+            {/if}
+          </div>
+          <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+          </a>
+        </li>
+        {/foreach}
+      </div>
     </ul>
     <div class="blog-pagenation tx-center">
       {$pagination|nofilter}

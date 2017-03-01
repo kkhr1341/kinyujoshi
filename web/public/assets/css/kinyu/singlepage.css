@@ -359,8 +359,8 @@
   width: 100%;
 }
 .singlepage-block .description {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 18px;
   width: 100%;
   padding-bottom: 20px;
 }
@@ -403,8 +403,8 @@
   text-align: center;
 }
 .singlepage-theree-cicle-list li {
-  width: 250px;
-  height: 250px;
+  width: 240px;
+  height: 240px;
   margin-right: 0px;
   margin-bottom: 20px;
 }
@@ -417,8 +417,8 @@
   width: 100%;
 }
 .singlepage-theree-cicle-list li .inner p {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 18px;
 }
 .singlepage-theree-cicle-list li .inner p .title {
   font-size: 16px;

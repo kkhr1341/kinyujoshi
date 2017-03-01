@@ -934,6 +934,9 @@
   border-bottom: 1px solid #f1f1f1;
   position: relative;
 }
+.kinyu-news-list .kinyu-news-list-li:first-child {
+  padding: 12px 8px 24px;
+}
 .kinyu-news-list .kinyu-news-title {
   width: 300px;
   padding-left: 8px;
@@ -988,12 +991,14 @@
   text-align: center;
   margin-top: 70px;
 }
-.kinyu-content-after-el  h3.center-title {
+.kinyu-main h3.center-title {
   display: inline-block;
   position: relative;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 998;
 }
-.kinyu-content-after-el  h3.center-title p {
+.kinyu-main h3.center-title p {
   font-family: 'utsukushi';
   font-size: 20px;
   padding: 0px 24px;
@@ -1381,7 +1386,14 @@
 .company-contact .description {
   text-align: center;
 }
-
+.kinyu-report-list h3.center-title p,
+.kinyu-news-list h3.center-title p {
+  line-height: 14px;
+  font-size: 22px;
+  padding: 0px 20px;
+  margin-left: 4px;
+  background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
+}
 
 @media screen and (max-width: 480px) {
   .company-info-title {
@@ -1401,7 +1413,6 @@
     font-size: 14px;
   }
 }
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　フッター
