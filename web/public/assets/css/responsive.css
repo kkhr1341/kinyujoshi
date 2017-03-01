@@ -18,9 +18,9 @@
   padding: 12px 0px 60px;
 }
 .sp_top_after-facebook {
-  background: #e4e4e4;
+  background: #f5f5f5;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .sp_top_after .kinyu-content-after-el:first-child {
   margin-top: 0px;
@@ -117,7 +117,7 @@
   right: 56px;
   background: #fff494;
   /*background: #ffc3c3;*/
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 3px 3px;
 }
 .kinyu-sp-header-content img {
   width: 84%;
@@ -136,7 +136,7 @@
   right: 0;
   top: 0;
   background: #7CDCCE;
-  border-radius: 0px 0px 0px 5px;
+  border-radius: 0px 0px 0px 3px;
   z-index: 9999;
 }
 .kinyu-sp-header-menu img {
@@ -165,7 +165,8 @@
   overflow-x: hidden;
   color: #fff;
   letter-spacing: -0.1rem;
-  background: #7CDCCE;
+  /*background: #7CDCCE;*/
+  background: #fff;
 }
 .kinyu-sp-navi .inner {
   width: 320px;
@@ -176,8 +177,8 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #69cebf;
-  border: 2px solid #69cebf;
+  background: #7CDCCE;
+  border: 2px solid #7CDCCE;
   margin: 0 auto;
   margin-bottom: 16px;
 }
@@ -186,7 +187,7 @@
   width: 100%;
   font-size: 30px;
   line-height: 46px!important;
-  color: #9cefe2;
+  color: #fff;
   text-align: center;
   padding: 0px!important;
   font-family: 'utsukushi';
@@ -203,7 +204,7 @@
 }
 .kinyu-sp-navi .content-list {
   padding: 24px 0px 16px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #7CDCCE;
 }
 .kinyu-sp-navi .content-list li {
   width: 100%;
@@ -211,6 +212,8 @@
   margin-bottom: 4%;
   float: left;
   overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #f7f7f7;
 }
 .kinyu-sp-navi .content-list li a {
   display: block;
@@ -221,15 +224,15 @@
   border-radius: 5px;
 }
 .kinyu-sp-navi .content-sub-list li {
-  border-top: 1px solid #fff;
+  border-top: 1px solid #7CDCCE;
 }
 .kinyu-sp-navi .content-sub-list li:last-child {
-  border-bottom: 1px solid #fff; 
+  border-bottom: 1px solid #7CDCCE; 
 }
 .kinyu-sp-navi .content-sub-list li a {
   display: block;
   padding: 12px 8px;
-  color: #fff;
+  color: #3b867b;
   position: relative;
 }
 .kinyu-sp-navi .content-sub-list li a:after {
@@ -274,7 +277,10 @@
 }
 .kinyu-top-introlist-pickup h3 {
   border-radius: 0px 0px 5px 5px;
+  padding: 12px 10px;
+  background: rgba(124, 220, 206, 0.8);
   height: auto;
+  color:#fff;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -319,7 +325,7 @@
   width: 100%;
   height: 68px;
   border: 1px solid #7CDCCE;
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 8px 0px;
   margin-top: 24px;
   box-sizing: border-box;
@@ -376,13 +382,14 @@
   margin-right: 0%;
   margin-bottom: 8%;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 3px;
+  overflow: inherit;
 }
 .kinyu-top-list li:nth-child(3n) {
   margin-right: auto;
 }
 .kinyu-top-list-title {
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 3px 3px;
   background: rgba(255,255,255,.9);
   font-weight: normal;
   text-shadow: none;
@@ -406,6 +413,7 @@
 .pagination > li {
   width: 42px;
   height: 42px;
+  margin-right: 8px;
 }
 .pagination > li > a, .pagination > li > span {
   font-size: 16px;
@@ -415,7 +423,7 @@
   width: 100%;
   height: auto!important;
   margin-right: 0%;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
   box-sizing: border-box;
 }
 .kinyu-top-list-main li a {
@@ -427,7 +435,9 @@
 .kinyu-top-list-main li img {
   line-height: 0;
 }
-
+.kinyu-content-after-el  h3.center-title:after {
+  content: none;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -603,10 +613,15 @@
 .kinyu-content-after-el {
   margin-top: 42px;
 }
+.kinyu-content-after-el  h3.center-title {
+  display: block;
+  text-align: left;
+}
 .kinyu-content-after-el h3.center-title p {
   font-size: 18px;
-  line-height: 24px;
-  padding: 0px 16px;
+  line-height: 12px;
+  padding-left: 6%;
+  background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
 }
 /* おすすめピックアップ */
 .kinyu-content-after .after-content li {
@@ -636,10 +651,10 @@
 }
 /* きんゆう女子。のメニュー */
 .report-detail-menu li {
-  height: 120px;
+  height: 140px;
 }
 .report-detail-menu li a {
-  line-height: 120px;
+  line-height: 140px;
 }
 .report-detail-menu li a p {
   font-size: 22px;
@@ -849,7 +864,7 @@ footer .footer-menu {
   border-radius: 20px;
   transition: 0.8s;
   font-size: 13px;
-  background: #69cebf;
+  background: #7CDCCE;
   color: #fff;
 }
 footer .navi-link-top {

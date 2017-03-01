@@ -22,10 +22,9 @@
   display: block;
   padding: 18px 0px;
   font-size: 16px;
-  font-weight: bold;
   width: 350px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .top-introduction {
   height: 400px;
@@ -378,7 +377,7 @@
 }
 .top-introduction img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 /* イベントイントロ・ボタン */
 .singlepage-introduction-btn {

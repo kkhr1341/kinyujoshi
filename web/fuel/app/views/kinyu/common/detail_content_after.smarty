@@ -73,7 +73,7 @@
         </li>
 
         <!-- 私立きんゆう女子。学院 -->
-        <li style="background:url(/images/content/teacher/gakuin-back-gus.jpg) center -50px / cover no-repeat;">
+        <li style="background:url(/images/content/teacher/gakuin-back-gus.jpg) center center / cover no-repeat;">
           <a href="/school">
             <p>私立きんゆう女子。学院</p>
           </a>
@@ -98,8 +98,7 @@
   <!-- 編集部へのコメント -->
   <div class="kinyu-content-after-el report-detail-comment">
     <h3 class="center-title"><p>編集部へのコメント</p></h3>
-    <p class="pc">ワカラナイこと、知りたいことご連絡ください♪</p>
-    <p class="sp">ワカラナイこと、知りたいこと<br>ご連絡ください♪</p>
+    <p>ワカラナイこと、知りたいことご連絡ください♪</p>
     <form>
       <textarea id="message" name="message" class='' rows="10"></textarea>
       <button class="btn btn-kinyu" type="button" id="save">送信する</button>
@@ -108,7 +107,7 @@
 
   <!-- Facebook -->
   <div class="kinyu-content-after-el report-detail-menu">
-    <h3 class="center-title"><p>きんゆう女子。<br>Facebookページ</p></h3>
+    <h3 class="center-title"><p>Facebookページ</p></h3>
     <div class="sp_top_after-facebook">
       <div class="fb-page" 
         data-href="https://www.facebook.com/kinyujyoshi/" 

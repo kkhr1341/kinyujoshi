@@ -196,6 +196,27 @@
         <!-- <div class="banner">
           <p class="regist-btn"><span style="color:#f9b6b6;">＊</span>現在準備中</p>
         </div> -->
+        <div class="finish-application">
+          <p><span style="color:#ef6666;">＊</span>お申し込みは締め切りました</p>
+          <style>
+            .finish-application p {
+              font-size: 30px;
+              line-height: 30px;
+              padding: 36px 0px;
+            }
+            @media screen and (max-width:767px) {
+              .finish-application p {
+                font-size: 18px;
+                line-height: 18px;
+                padding: 16px 0px;
+              }
+              .kinyu-conference-el .img-inner .balloon-member {
+                display: none;
+              }
+            }
+          </style>
+        </div>
+        {*
         <div class="conference-application clear">
           <div class="application-left">
             <p class="application-date">【3/3(金) 18:00〜21:30】</p>
@@ -212,7 +233,6 @@
             <p class="pc application-fee">1dayフリーパス：2,000<span>円</span><br>(100名限定)</p>
             <p class="sp application-fee">1dayフリーパス：<br>2,000<span>円</span><br>(100名限定)</p>
             <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/QiALhIkM">お申し込みはこちら</a>
-            <!--<p class="application-button" style="opacity: .25;">お申し込みはこちら</p>-->
           </div>
         </div>
 
@@ -225,23 +245,8 @@
             <p class="sp application-fee">参加チケット：<br>3,000<span>円</span><br>(30名限定)</p>
             <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/vUhQRFhJ">お申し込みはこちら</a>
           </div>
-          {*
-          <div class="application-right conference-application-all">
-            <!-- <p class="application-date">【3/4(土) 11:00〜19:00】</p>
-            <h3>今までの女子会総まとめ<br>〜おかねをふやすあれこれ〜</h3>
-            <div class="img-box" style="  background:url(/images/content/conference/15355695_1212387078827868_7936091575312601603_n.png) center center / cover no-repeat;"></div>
-            <p class="pc application-fee">1dayフリーパス：2,000<span>円</span></p>
-            <p class="sp application-fee">1dayフリーパス：<br>2,000<span>円</span></p>
-            <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/QiALhIkM">お申し込みはこちら</a> -->
-            <h3><span>3/3(金)〜3/5(日)</span><br>すべて参加の方はこちら</h3>
-            <img class="main-logo" src="/images/content/conference/main-logo.png">
-            <p class="pc application-fee">1dayフリーパス：2,000<span>円</span></p>
-            <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/vUhQRFhJ">お申し込みはこちら</a>
-          </div>
-          *}
         </div>
-        <!-- <a class="pc application-twin" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/TjewS3nq">両方ともお申し込みする場合はこちら</a>
-        <a class="sp application-twin" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/TjewS3nq">両方ともお申し込みする<br>場合はこちら</a> -->
+        *}
         <a class="conference-el-regist" href="/regist" target="_blank">メンバー登録の方はこちら</a>
       </div>
     </div>
@@ -373,7 +378,7 @@
             <a href="/contact">お問い合わせ</a>
           </div>
         </div>
-        <p class="navi_kinyu-submenu-copy">©きんゆう女子。 All rights reserved. No reproduction or republication without written permission.　<br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</p>
+        <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc. ALL RIGHTS RESERVED</p>
       </footer>
   </div>
 </div>
