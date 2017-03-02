@@ -3959,8 +3959,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   border-radius: 4px;
 }
 .pagination > li {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   /*background-color: #7CDCCE;
   border-color: #7CDCCE;*/
   box-sizing: border-box;
@@ -3983,13 +3983,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   height: 100%;
   border-radius: 50%;
   margin-left: -1px;
-  padding-top: 9px;
+  padding-top: 11px;
   line-height: 1.42857143;
   color: #7CDCCE;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #7CDCCE;
-  font-size: 1.3rem;
+  font-size: 15px;
   transition: .8s;
 }
 .pagination > li:first-child > a,

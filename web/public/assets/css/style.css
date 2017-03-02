@@ -841,12 +841,12 @@
   font-weight: bold;
 }
 .report-detail-keyword {
-  padding-bottom: 24px;
 }
 .report-detail-keyword p {
   color: #848282;
   font-size: 14px;
   line-height: 14px;
+  padding-bottom: 24px;
 }
 .report-detail-keyword p span {
   padding: 4px 16px;
