@@ -776,8 +776,8 @@
   height: 60px;
 }
 .kinyu-top-list-title {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 22px;
   padding: 10px;
   position: absolute;
   bottom: 0;
@@ -896,8 +896,8 @@
   margin: 20px 0px;
 }
 .report-detail-main p {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 22px;
   color: #444444;
 }
 .report-detail-main a {
@@ -911,7 +911,8 @@
   margin-top: 16px;
 }
 .report-detail-main blockquote {
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 16px;
   margin-top: 5px;
   border-left: 3px solid #d8d8d8;
   color: #a09f9f;

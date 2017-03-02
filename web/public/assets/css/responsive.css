@@ -571,7 +571,8 @@
   margin: 16px 0px;
 }
 .report-detail-main blockquote {
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 14px;
   margin-top: 5px;
   border-left: 3px solid #dcdcdc;
   color: #bbb9b9;
