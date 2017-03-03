@@ -11,7 +11,7 @@
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
       <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
-        <a href="/blog/{$blog.code}">
+        <a href="/report/{$blog.code}">
         <div class="kinyu-top-list-kind"></div>
         <h3 class="kinyu-top-list-title">{$blog.title}</h3>
         </a>
