@@ -177,9 +177,20 @@
           <div class="sub-title-border02"></div>
         </div>
         <h2>取引開始<span> まで...</span></h2>
-        <div class="timelimit-block">
+        <!-- <div class="timelimit-block">
           <div id='timerOlympic'></div>
-        </div>
+        </div> -->
+        <img class="finish-co" src="/images/content/conference/finish-co.png">
+        <style>
+          .finish-co {
+            margin-top:24px; 
+          }
+          @media screen and (max-width:767px) {
+            .finish-co {
+              width: 92%;
+            }
+          }
+        </style>
       </div>
       <script>
         $('#timerOlympic').yycountdown({
