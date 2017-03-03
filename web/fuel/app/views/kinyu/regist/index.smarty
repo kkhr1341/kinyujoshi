@@ -146,10 +146,10 @@
               <!-- <input type="radio" value="雑誌を見て" name="where_from" id="where_from2" class="form-radio" placeholder="">
               <label for="where_from2" class="form-long">雑誌を見て</label> -->
 
-              <input type="radio" value="SNSを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
+              <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
               <label for="where_from3">Facebookを見て</label>
 
-              <input type="radio" value="SNSを見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
+              <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
               <label for="where_from8">Instagramを見て</label>
               
               <input type="radio" value="友人のご紹介" name="where_from" id="where_from4" class="form-radio" placeholder="">
