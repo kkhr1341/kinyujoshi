@@ -4,14 +4,12 @@
   <thead>
     <tr>
       <!-- お名前 -->
+      <th>日にち</th>
       <th>お名前</th>
       <!-- メールアドレス -->
       <th>Email</th>
       <!-- 年齢 -->
       <th>ご年齢</th>
-      <!-- Facebook -->
-      <th>Facebook</th>
-      <!-- Facebook -->
       <th></th>
     </tr>
   </thead>
@@ -20,10 +18,10 @@
     {if $email.email eq '' || $email.email eq 'komori@sundaylunch.jp' || $email.email eq 'komori@toetheline.jp' || $email.email eq 'komokei0909@gmail.com' || $email.email eq 'akimoto@mk.team' || $email.email eq 'komori@sundaylunch,jp' || $email.email eq 'komori@sundaylunch.com'}
     {else}
       <tr>
+        <td>{$email.created_at|date_format:"Y.m.d"}</td>
         <td>{$email.name}</td>
         <td>{$email.email}</td>
         <td>{$email.age}</td>
-        <td><a target="_blank" href="{$email.facebook}"><img src="/images/icon/facebook.png" width="30px;"></a></td>
         <td><a class="admin-registlist-more" href="/my/registlist/{$email.code}">情報をもっと見る</a></td>
       </tr>
     {/if}

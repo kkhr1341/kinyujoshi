@@ -380,23 +380,6 @@ $(function() {
   });
 });
 
-// インスタグラム
-// $(document).ready(function() {
-//     var userFeed = new Instafeed({
-//         get: 'user', //ユーザーから取得
-//         userId: '3007140595', //ユーザーID(数字のみのもの)
-//         sortBy:'random', //並び順をランダムに
-//         links: true , //画像リンク取得
-//         limit: 20, //取得する画像数を設定
-//         resolution: 'standard_resolution', //画像サイズを設定
-//         template: '<li><a href="{{link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"></a></li>',
-//         //template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}"></a><span>{{caption}}</span><span>like:{{likes}},comments:{{comments}}</span></li>',
-//         accessToken: '3007140595.1e3d504.e017055f3cc649ddacf9758314e4628a' //アクセストークン(ローカル)
-//         //accessToken: '3138253426.c590f97.dbb4ca68d4c44bd0a2e811a5adbe5fea' //アクセストークン(サーバー)
-//     });
-//     userFeed.run();
-// });
-
 // ページ内スムーズスクロール
 $(function() {
   $('a[href^=#]').click(function() {
@@ -424,20 +407,3 @@ $(function() {
   img[3] = "images/banner/lycee/lycee04.jpg";
   n = Math.floor(Math.random()*img.length);
 });
-
-// $(document).ready(function() {
-//   var userFeed = new Instafeed({
-//       get: 'user', //ユーザーから取得
-//       userId: '3138253426', //ユーザーID(数字のみのもの)
-//       sortBy:'random', //並び順をランダムに
-//       links: true , //画像リンク取得
-//       limit: 12, //取得する画像数を設定
-//       resolution: 'standard_resolution', //画像サイズを設定
-//       template: '<li><a href="{{$link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"></a></li>',
-//       //template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}"></a><span>{{caption}}</span><span>like:{{likes}},comments:{{comments}}</span></li>',
-//       accessToken: '3138253426.ea4a5be.2781600d2d7248de979e3726c85658b5' //アクセストークン(ローカル)
-//       //accessToken: '3138253426.c590f97.dbb4ca68d4c44bd0a2e811a5adbe5fea' //アクセストークン(サーバー)
-//   });
-//   userFeed.run();
-// });
-
