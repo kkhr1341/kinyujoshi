@@ -49,7 +49,7 @@ $(function() {
 $(function() {
 
   var ua = navigator.userAgent.toUpperCase();
-  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
+  if(ua.indexOf('IPHONE') != -1 || ua.indexOf('IPAD') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
     // スマホ
     var state = false;
     var scrollpos;
@@ -187,7 +187,7 @@ jQuery(function($) {
   });
 
   var ua = navigator.userAgent.toUpperCase();
-  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
+  if(ua.indexOf('IPHONE') != -1 || ua.indexOf('IPAD') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
   
     // スマホ
     $(".kinyu-top-list-title").each(function(){
@@ -236,7 +236,7 @@ $(document).ready(function(){
   }
 
   var ua = navigator.userAgent.toUpperCase();
-  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
+  if(ua.indexOf('IPHONE') != -1 || ua.indexOf('IPAD') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
 
     //スマホ
     $(".kinyu-main-animation-sub").fadeIn(1000);
@@ -425,4 +425,19 @@ $(function() {
   n = Math.floor(Math.random()*img.length);
 });
 
+$(document).ready(function() {
+  var userFeed = new Instafeed({
+      get: 'user', //ユーザーから取得
+      userId: '3138253426', //ユーザーID(数字のみのもの)
+      sortBy:'random', //並び順をランダムに
+      links: true , //画像リンク取得
+      limit: 12, //取得する画像数を設定
+      resolution: 'standard_resolution', //画像サイズを設定
+      template: '<li><a href="{{$link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"></a></li>',
+      //template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}"></a><span>{{caption}}</span><span>like:{{likes}},comments:{{comments}}</span></li>',
+      accessToken: '3138253426.ea4a5be.2781600d2d7248de979e3726c85658b5' //アクセストークン(ローカル)
+      //accessToken: '3138253426.c590f97.dbb4ca68d4c44bd0a2e811a5adbe5fea' //アクセストークン(サーバー)
+  });
+  userFeed.run();
+});
 

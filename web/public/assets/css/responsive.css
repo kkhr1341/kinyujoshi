@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマホのみ
@@ -421,8 +421,8 @@
   margin-right: 8px;
 }
 .pagination > li > a, .pagination > li > span {
-  font-size: 16px;
-  padding-top: 9px;
+  font-size: 14px;
+  padding-top: 10px;
 }
 .kinyu-top-list-main li {
   width: 100%;
@@ -894,10 +894,5 @@ footer .navi-link-top {
   background: #7CDCCE;
   color: #fff;
 }
-
-
-
-
-
 
 }
