@@ -30,6 +30,71 @@
   </div>
 
   <div class="conference-container-inner">
+    <!-- レポ -->
+    <img class="finish-co" src="/images/content/conference/finish-co02.png">
+
+    <div class="kinyu-conference-el conference-report kinyu-conference-el2n">
+      <div class="inner">
+        <div class="conference-el-header">
+          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p class="sub-title">Report</p>
+          <div class="sub-title-border01"></div>
+          <div class="sub-title-border02"></div>
+        </div>
+        <h2>当日の様子</h2>
+        
+        <div class="conference-report-el report-list">
+          <h3>レポート一覧</h3>
+          <ul class="main-out-event-list clear">
+            
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/thumb_17105415_969134609889511_1638017480_n.jpg) center center / cover no-repeat;">
+              <a href="https://kinyu-joshi.jp/report/P50GdT">
+                <p class="title">『秘密の大女子会@東証Arrows』を開催しました！</p>
+              </a>
+            </li>
+
+            <li class="coming_soon" style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;">
+            </li>
+
+            <li class="coming_soon" style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;">
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="conference-report-el gallery-list">
+          <h3>ギャラリー(当日の写真)</h3>
+          <ul class="main-out-event-gallery-list">
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+          </ul>
+        </div>
+
+        <div class="conference-report-el report-download">
+          <p id="document-open">ビジネス向けレポートはこちら</p>
+        </div>
+
+        <script>
+          $("#document-open").click(function() {
+            $(".document-open").fadeIn(500);
+          });
+          $(".document-open-closebtn").click(function() {
+            $(".document-open").fadeOut(500);
+          });
+        </script>
+      
+      </div>
+    </div>
     <!-- カンファレンスについて -->
     <div class="kinyu-conference-el conference-description kinyu-conference-el1n">
       <div class="inner">
@@ -393,7 +458,60 @@
       </footer>
   </div>
 </div>
+
+
+<div class="conference-document-form">
+  <div class="inner">
+    <p class="title">『第1回 週末投資宣言♪』の資料はこちら</p>
+    <p id="document-open-closebtn">×</p>
+
+    <div class="form-group">
+      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> お名前</label>
+      <input type="text" id="name" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> 会社名</label>
+      <input type="text" id="company" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> メールアドレス</label>
+      <input type="text" id="email" class="form-control" placeholder="">
+    </div>
+
+    <div class="form-btn tx-center">
+      <button class="btn btn-kinyu" type="button" id="save">資料をダウンロードする</button>
+    </div>
+
+  </div>
+</div>
+
+<div id="conference-document-form-after">
+  <div class="inner">
+    <p id="document-form-after-closebtn">×</p>
+    <p class="subtitle">Thanks!</p>
+    <p class="title">ありがとうございます♪</p>
+    <div class="form-btn tx-center">
+      <p>▼レポートのダウンロードはこちらからお願いします</p>
+      <button class="btn btn-kinyu" type="button"><a href="/download/1.zip">レポートをダウンロードする</a></button>
+    </div>
+  </div>
+</div>
+
+
+
 <script>
+  $(function(){
+    $("#document-open").click(function() {
+      $(".conference-document-form").fadeIn(500);
+    });
+    $("#document-open-closebtn").click(function() {
+      $(".conference-document-form").fadeOut(500);
+    });
+    $("#document-form-after-closebtn").click(function() {
+      $("#conference-document-form-after").fadeOut(500);
+    });
+  });
+
   $(function(){
     var coordinate = new google.maps.LatLng(35.680676, 139.779354);/*座標の指定*/
     var coordinate1 = new google.maps.LatLng(35.6826631, 139.7787332);/*座標の指定*/
@@ -462,5 +580,55 @@
     /*アイコンを表示させる記述*/
     var marker = new google.maps.Marker(markerOptions);
     //var marker1 = new google.maps.Marker(markerOptions);
+  });
+
+
+  // 資料ダウンロード
+  $(function(){
+    var title_frame_height = $('#title_frame').height();
+    var page_title_height = $('.page_title').height();
+    
+    var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+    $('.page_title').css('padding-top', padding_top);
+    
+    $('#save').click(function(){
+      var url = "/api/regist/document";
+      var params = {};
+      
+      params.name = $('#name').val();
+      params.company = $('#company').val();
+      params.email = $('#email').val();
+      
+      if (params.name == "") {
+        ts.error("お名前を入力してください");
+        return false;
+      }
+      if (params.company == "") {
+        ts.error("会社名を入力してください");
+        return false;
+      }
+      if (params.email == "") {
+        ts.error("メールアドレスを入力してください。");
+        return false;
+      }
+
+      bootbox.confirm("入力内容を送信しますか？", function(result) {
+        if (result) {
+          ajax.post(url, params, function(data){
+            
+            $(".conference-document-form").fadeOut(500);
+            
+            setTimeout(function(){
+              $("#conference-document-form-after").fadeIn(500);
+            },1000);
+          
+          });
+        }
+        else {
+          ts.info("キャンセルしました");
+        }
+      });
+      
+    });
   });
 </script>

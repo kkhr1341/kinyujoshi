@@ -17,5 +17,9 @@ class Controller_Api_Regist extends Controller_Base
     $this->ok(Regist::create(\Input::all()));
   }
 
+  public function action_document() {
+    $this->ok(Regist::document(\Input::all()));
+  }
+
 
 }

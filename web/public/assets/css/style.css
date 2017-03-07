@@ -323,13 +323,13 @@
   position: relative;
 }
 .navi_contents-block .inner .menu-trigger-close {
-  background: #fff;
+  background: rgba(255,255,255,.8);
   position: fixed;
   right: 50px;
   top: 100px;
-  width: 70px;
-  height: 70px;
-  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
   transition: .3s;
 }
 .navi_contents-block .inner .menu-trigger-close img {

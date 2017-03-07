@@ -169,7 +169,7 @@
 
           <div class="form-group form-radio-block">
             <label class="form-title"><span class="color-kinyu-color">◆</span> きんゆう女子。で情報発信したいですか？ <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
+            <p class="form-sub-title">成長日記、記事寄稿、SNS、企業さんとコラボ(商品企画・モニター)など</p>
             <div class="radio_box_02 clear">
               <input type="radio" value="はい、ぜひしたいです。" name="transmission" id="transmission1" class="form-radio" placeholder="">
               <label for="transmission1">はい、ぜひしたいです。</label>

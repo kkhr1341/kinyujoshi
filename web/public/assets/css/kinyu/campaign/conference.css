@@ -36,6 +36,95 @@
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  イベント後のレポ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.conference-report {
+
+}
+
+.conference-report .conference-report-el {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.conference-report .conference-report-el.report-download {
+  padding-top: 20px; 
+}
+
+.conference-report .conference-report-el h3 {
+  font-size: 24px;
+  padding-bottom: 24px;
+}
+
+.conference-report .report-list {
+  
+}
+
+.conference-report .gallery-list {
+  
+}
+
+.conference-report .report-download {
+  
+}
+.main-out-event-list {
+  letter-spacing: -.40em; 
+}
+.main-out-event-list li { 
+  display: inline-block;
+  width: 31.333%;
+  height: 220px;
+  margin-right: 3%;
+  letter-spacing: normal;
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+}
+.main-out-event-list li.coming_soon {
+  border: 1px solid #f5f5f5;
+}
+.main-out-event-list li:nth-child(3n) {
+  margin-right: 0%;
+}
+.main-out-event-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.main-out-event-list li a p.title {
+  background: rgba(255,255,255,.9);
+  position: absolute;
+  bottom: 0px;
+  padding: 8px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.main-out-event-gallery-list {
+  letter-spacing: -.40em; 
+}
+.main-out-event-gallery-list li { 
+  display: inline-block;
+  width: 23.6%;
+  height: 220px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  letter-spacing: normal;
+  position: relative;
+  text-align: left;
+  box-sizing: border-box;
+}
+.main-out-event-gallery-list li:nth-child(4n) {
+  margin-right: 0%;
+}
+.main-out-event-gallery-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   イントロダクション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .conference-introduction {
@@ -706,6 +795,99 @@
   margin-top: 20px;
   box-sizing: border-box;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  オープン
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.conference-report-el #document-open {
+  display: inline-block;
+  padding: 16px 50px;
+  background: rgba(255, 242, 0, 0.3);
+  font-size: 16px;
+}
+.conference-document-form {
+  display: none;
+}
+#conference-document-form-after {
+  display: none;
+}
+.conference-document-form,
+#conference-document-form-after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  z-index: 1005;
+}
+.conference-document-form .inner,
+#conference-document-form-after .inner {
+  width: 800px;
+  height: 560px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 80px 100px 50px;
+  margin-top: -280px;
+  margin-left: -400px;
+}
+#conference-document-form-after .inner {
+  padding: 120px 100px 50px;
+}
+.conference-document-form .inner .form-group {
+  margin-bottom: 20px;
+}
+.conference-document-form .inner .form-group .form-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  margin: 0px 0px 8px 0px!important;
+}
+.conference-document-form .inner .title {
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  font-family: 'utsukushi';
+  margin-bottom: 24px;
+}
+#document-open-closebtn,
+ #document-form-after-closebtn {
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.conference-document-form .inner .form-btn {
+  padding-top: 10px;
+}
+.conference-document-form .inner .form-btn .btn-kinyu,
+#conference-document-form-after .inner .form-btn .btn-kinyu {
+  background: rgba(255, 242, 0, 0.3);
+  color: #444444;
+}
+
+#conference-document-form-after .inner .subtitle {
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 0.3rem;
+  font-style: italic;
+  font-family: 'Valentina';
+  text-align: center;
+  color: rgba(255, 242, 0, 0.3);
+}
+#conference-document-form-after .inner .title {
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  font-family: 'utsukushi';
+  margin-top: 8px;
+  margin-bottom: 60px;
+}
+#conference-document-form-after .inner .form-btn .btn-kinyu {
+  margin-top: 12px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマホ

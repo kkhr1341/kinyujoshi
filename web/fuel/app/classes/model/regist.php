@@ -88,4 +88,32 @@ class Regist extends Base {
   return $result;
   }
 
+  public static function document($params) {
+  
+    $code = self::getNewCode('document_company');
+    //$params['username'] = \Auth::get('username');
+    $params['code'] = $code;
+    $params['created_at'] = \DB::expr('now()');
+    //$params['user_agent'] = @$_SERVER['HTTP_USER_AGENT'];
+    \DB::insert('document_company')->set($params)->execute();
+    $email03 = \Email::forge('jis');
+    $email03->from("no-reply@kinyu-joshi.jp", ''); //送り元
+    $email03->subject("【きんゆう女子。】第1回 週末投資宣言♪の資料がDLされました。");
+    
+    $name = $params['name'];
+    $company = $params['company'];
+    $email = $params['email'];
+    
+    $email03->html_body(\View::forge('email/document/return', 
+      array(
+        'name' => $name,
+        'company' => $company,
+        'email' => $email
+      )));
+    $email03->to('cs@kinyu-joshi.jp'); //送り先
+    $email03->send();
+    
+    return $params;
+  }
+
 }
