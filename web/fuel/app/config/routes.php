@@ -30,19 +30,6 @@ return array(
 	'rsss'   => 'kinyu/rss/index',
 	'rss/(:num)'   => 'kinyu/rss/index/$1',
 	'rss/(:any)'   => 'kinyu/rss/detail/$1',
-	//きんゆう女子・カテゴリー
-	'category/investment'   => 'kinyu/investment/index',
-	'category/investment/(:num)'   => 'kinyu/investment/index/$1',
-	'category/special'   => 'kinyu/special/index',
-	'category/special/(:num)'   => 'kinyu/special/index/$1',
-	'category/money'   => 'kinyu/money/index',
-	'category/money/(:num)'   => 'kinyu/money/index/$1',
-	'category/lifestyle'   => 'kinyu/lifestyle/index',
-	'category/lifestyle/(:num)'   => 'kinyu/lifestyle/index/$1',
-	'category/fintech'   => 'kinyu/fintech/index',
-	'category/fintech/(:num)'   => 'kinyu/fintech/index/$1',
-	'category/business'   => 'kinyu/business/index',
-	'category/business/(:num)'   => 'kinyu/business/index/$1',
 
 	//イベント関連
 	'welcome/event'   => 'kinyu/event/welcome',
