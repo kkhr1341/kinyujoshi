@@ -47,7 +47,7 @@
           <h3>レポート一覧</h3>
           <ul class="main-out-event-list clear">
             
-            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/thumb_17105415_969134609889511_1638017480_n.jpg) center center / cover no-repeat;">
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/thumb_17105415_969134609889511_1638017480_n.jpg) center bottom / cover no-repeat;">
               <a href="https://kinyu-joshi.jp/report/P50GdT">
                 <p class="title">『秘密の大女子会@東証Arrows』を開催しました！</p>
               </a>
@@ -65,18 +65,30 @@
         <div class="conference-report-el gallery-list">
           <h3>ギャラリー(当日の写真)</h3>
           <ul class="main-out-event-gallery-list">
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
-            <li style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1697.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1685.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1708.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1683%202.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1695.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1696.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1706.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1692.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1689.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1702.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1684%202.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1699.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1707.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1687.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1686.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_17142257_10210683420895040_149996863_o%202.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1693.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1698.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1701.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_17198577_10210683420935041_990254035_n.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_17197982_10210683420735036_898227126_n.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_17155843_1284237404976168_4168362355505722825_n%202.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1690.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/thumb_IMG_1691.JPG) center center / cover no-repeat;"></li>
           </ul>
         </div>
 
@@ -492,7 +504,10 @@
     <p class="title">ありがとうございます♪</p>
     <div class="form-btn tx-center">
       <p>▼レポートのダウンロードはこちらからお願いします</p>
-      <button class="btn btn-kinyu" type="button"><a href="/download/1.zip">レポートをダウンロードする</a></button>
+      <button class="btn btn-kinyu" type="button">
+        <a class="pc" href="/download/1.zip">レポートをダウンロードする</a>
+        <a class="sp" href="/download/gakuin_curriculum_20161121.pdf">レポートをダウンロードする</a>
+      </button>
     </div>
   </div>
 </div>
