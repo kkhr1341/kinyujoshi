@@ -20,8 +20,6 @@ return array(
 	// きんゆう女子
 	'kinyu'   => 'kinyu/top',
 	'about' => 'kinyu/about/index',
-	'myplan' => 'kinyu/about/myplan',
-	'gallery' => 'kinyu/gallery/index',
 	'report'   => 'kinyu/blog/index',
 	'report/1'   => 'kinyu/top',
 	'report/(:num)'   => 'kinyu/blog/index/$1',
@@ -31,12 +29,16 @@ return array(
 	'rss/(:num)'   => 'kinyu/rss/index/$1',
 	'rss/(:any)'   => 'kinyu/rss/detail/$1',
 
+	//未公開
+	//'myplan' => 'kinyu/about/myplan',
+	'gallery' => 'kinyu/gallery/index',
+	//'event/schedule'   => 'kinyu/event/schedule',
+	//'event/(:num)'   => 'kinyu/event/index/$1',
+	//'event/(:any)'   => 'kinyu/event/detail/$1',
+	//'welcome/event'   => 'kinyu/event/welcome',
+
 	//イベント関連
-	'welcome/event'   => 'kinyu/event/welcome',
 	'event'   => 'kinyu/event/index',
-	'event/schedule'   => 'kinyu/event/schedule',
-	'event/(:num)'   => 'kinyu/event/index/$1',
-	'event/(:any)'   => 'kinyu/event/detail/$1',
 
 	//ニュース
 	'news'   => 'kinyu/news/index',
