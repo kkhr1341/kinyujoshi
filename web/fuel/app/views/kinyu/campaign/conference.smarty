@@ -515,6 +515,11 @@
 
 
 <script>
+  $(function() {
+    var hh = $(".main-out-event-gallery-list li").innerWidth();
+    $('.main-out-event-gallery-list li').height(hh);
+  });
+
   $(function(){
     $("#document-open").click(function() {
       $(".conference-document-form").fadeIn(500);
