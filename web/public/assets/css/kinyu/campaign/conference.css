@@ -780,6 +780,15 @@
 .conference-document-form {
   display: none;
 }
+.conference-document-form .coming_soon02 {
+  width: 400px;
+  height: 78px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -39px;
+  margin-left: -200px;
+}
 #conference-document-form-after {
   display: none;
 }
@@ -1312,6 +1321,15 @@
 }
 #conference-document-form-after .inner {
   padding: 28% 10% 10%;
+}
+.conference-document-form .coming_soon02 {
+  width: 280px;
+  height: 54px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -27px;
+  margin-left: -140px;
 }
 
 
