@@ -65,13 +65,15 @@
         <div class="swiper-container02 kinyu-top-introlist-pickup">
           <div class="swiper-wrapper">
 
-            <!-- <div class="swiper-slide" style="background: url(/images/og-conference.jpg) center center / cover no-repeat;">
-              <a href="/conference">
-                <h3 class="kinyu-top-list-title">第1回週末投資宣言♪〜おかねをふやそう〜</h3>
-              </a>
-            </div> -->
+            {foreach from=$blogs_pick item=blog name=loopname}
 
-            {foreach from=$blogs_pick item=blog name=foo}
+            {if $smarty.foreach.loopname.index == 1}
+              <div class="swiper-slide" style="background: url(/images/og-conference.jpg) center center / cover no-repeat;">
+                <a href="/conference">
+                  <h3 class="kinyu-top-list-title">第1回週末投資宣言♪〜おかねをふやそう〜</h3>
+                </a>
+            </div>
+            {/if}
 
             <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
               <a href="/report/{$blog.code}">
