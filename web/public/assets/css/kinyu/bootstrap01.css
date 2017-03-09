@@ -3959,8 +3959,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   border-radius: 4px;
 }
 .pagination > li {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   /*background-color: #7CDCCE;
   border-color: #7CDCCE;*/
   box-sizing: border-box;
@@ -3989,7 +3989,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #7CDCCE;
-  font-size: 15px;
+  font-size: 13px;
   transition: .8s;
 }
 .pagination > li:first-child > a,

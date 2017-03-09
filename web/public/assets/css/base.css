@@ -28,9 +28,8 @@ html {
   line-height: 1;
 }
 body {  
-  /*font-family: "游ゴシック体","YuGothic",'mplus-1c-light','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;*/
-  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  /*font-family: 'utsukushi';*/
+  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -69,9 +68,9 @@ button :hover {
   cursor: pointer!important;
 }
 p, a {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 22px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.2px;
   color: #444444;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {

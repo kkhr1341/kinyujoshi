@@ -1,13 +1,13 @@
   <div class="report-detail-header">
     <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
-    <img style="width:100%;" src="/images/new/kinyu-border-line01.png">
+    <!-- <img style="width:100%;" src="/images/new/kinyu-border-line01.png"> -->
   </div>
 
   <!-- コンテンツ -->
   <div class="report-sp-detail-block">
-
+    <div class="report-detail-thunb" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
     <div class="report-detail-info">
-      <div class="report-detail-category">
+      <!-- <div class="report-detail-category">
         {if $blog.kind == "女子会レポート"}
           <img class="list-kind-img" src="/images/new/list-kind-img-joshikai.png">
         {else if $blog.kind == "イベントレポート"}
@@ -19,12 +19,15 @@
         {else}
           <img class="list-kind-img" src="/images/new/list-kind-img-reportmain.png">
         {/if}
-      </div>
+      </div> -->
       <div class="report-detail-title">
         <h1>{$blog.title}</h1>
       </div>
+      <div class="report-detail-description">
+        <p>{$blog.description}</p>
+      </div>
     </div>
-    <div class="report-detail-keyword">
+    <!-- <div class="report-detail-keyword">
       {if $blog.keyword == "ためる"}
         <p>「おかね」のキーワード：　<span class="keyword01">ためる</span></p>
       {else if $blog.keyword == "つかう"}
@@ -36,7 +39,7 @@
       {else if $blog.keyword == "かせぐ"}
         <p>「おかね」のキーワード：　<span class="keyword05">かせぐ</span></p>
       {/if}
-    </div>
+    </div> -->
     <!-- 本文 -->
     <div class="report-detail-main">
       {$blog.content|nofilter}
@@ -45,7 +48,7 @@
       <div class="report-detail-share clear">
         <!-- <div class="report-detail-share-el report-detail-share-left" style="background:url({$blog.main_image}) center center / cover no-repeat;"><div class="bg-white05"></div></div> -->
         <div class="report-detail-share-el report-detail-share-right">
-          <h3>この記事をみんなに教える。</h3>
+          <h3>このレポートをみんなに教える。</h3>
           <img class="share-this-page" src="/images/social/social-this-page.png">
           <div class="social-list">
             <ul>

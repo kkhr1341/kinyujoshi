@@ -234,6 +234,7 @@
   padding: 12px 8px;
   color: #3b867b;
   position: relative;
+  font-size: 12px;
 }
 .kinyu-sp-navi .content-sub-list li a:after {
   content: "▶︎";
@@ -312,18 +313,10 @@
 .kinyu-sp-introduction .main-title {
   width: 70%;
 }
-.main-title-border {
-  width: 100px;
-  height: 2px;
-  background: #7CDCCE;
-  margin: 0 auto;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
 /* ニュース */
 .news-sp-block {
   width: 100%;
-  height: 68px;
+  height: 62px;
   border: 1px solid #7CDCCE;
   border-radius: 3px;
   padding: 8px 0px;
@@ -345,15 +338,15 @@
   text-align: left;
 }
 .news-sp-block .title-area p {
-  font-size: 13px;
-  height: 13px;
-  line-height: 13px;
-  color: #48a799;
-}
-.news-sp-block .text-area .news-date {
   font-size: 11px;
   height: 11px;
   line-height: 11px;
+  color: #48a799;
+}
+.news-sp-block .text-area .news-date {
+  font-size: 10px;
+  height: 10px;
+  line-height: 10px;
   color: #929191;
 }
 .news-sp-block .text-area .news-title {
@@ -401,10 +394,11 @@
   padding-top: 10%;
 }
 .kinyu-top-list-title {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   text-align: left;
   color: #595757;
+  padding: 10px 10px;
   /*color: #1a4c45;*/
 }
 .list-kind-img {
@@ -512,6 +506,7 @@
 /* 記事詳細 */
 .report-detail-main {
   padding-bottom: 20px;
+  padding-top: 10px;
 }
 .fixed {
   position: fixed;
@@ -528,6 +523,10 @@
 }
 .report-detail-header .logo {
   margin-bottom: 24px;
+  width: 150px;
+}
+.report-detail-info {
+  padding: 24px 0px 12px;
 }
 .report-detail-info .list-kind-img {
   width: 48px;
@@ -541,10 +540,9 @@
   margin-top: -24px;
 }
 .report-detail-title {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 15px;
+  line-height: 22px;
   min-height: auto;
-  padding-left: 22%;
   font-weight: bold;
 }
 .report-detail-keyword p {
@@ -558,14 +556,14 @@
   color: #444444;
 }
 .report-detail-main p {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 20px;
   color: #696969;
 }
 .report-detail-main h2 {
-  font-size: 16px;
+  font-size: 14px;
   /* font-weight: bold; */
-  line-height: 24px;
+  line-height: 22px;
   padding: 5px 0px 5px 0px;
   border-bottom: 2px solid #7CDCCE;
   margin: 16px 0px;
@@ -597,7 +595,7 @@
 }
 .report-detail-share-el h3 {
   margin-bottom: 4px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .report-detail-share .social-list li {
   display: inline-block;
@@ -612,12 +610,23 @@
 .report-detail-share-el .share-this-page {
   width: 80px;
 }
+.report-detail-description {
+  padding-bottom: 24px;
+  margin-top: 8px;
+}
+.report-detail-description p {
+  font-size: 11px;
+  line-height: 18px;
+}
+.report-detail-thunb {
+  height: 200px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-content-after .after-content .kinyu-top-list-title {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
 }
 .kinyu-content-after {
@@ -631,7 +640,7 @@
   text-align: left;
 }
 .kinyu-main h3.center-title p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 10px;
   padding-left: 6%;
   background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
