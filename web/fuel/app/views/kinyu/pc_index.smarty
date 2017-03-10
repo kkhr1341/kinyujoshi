@@ -78,16 +78,22 @@
 
             <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
               <a href="/report/{$blog.code}">
+                <div class="kinyu-top-list-kind">
                 <!-- 種別 -->
-                <!-- {if $blog.kind == "女子会レポート"}
-                  <img class="list-kind-img" src="/images/new/list-kind-img-joshikai.png">
-                {else if $blog.kind == "イベントレポート"}
-                  <img class="list-kind-img" src="/images/new/list-kind-img-event.png">
-                {else if $blog.kind == "取材レポート"}
-                  <img class="list-kind-img" src="/images/new/list-kind-img-report.png">
-                {else if $blog.kind == "コラム"}
-                  <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
-                {/if} -->
+                  {if $blog.kind == "女子会レポート"}
+                    <p>女子会レポート</p>
+                  {else if $blog.kind == "イベントレポート"}
+                    <p>イベントレポート</p>
+                  {else if $blog.kind == "取材レポート"}
+                    <p>取材レポート</p>
+                  {else if $blog.kind == "イベント告知"}
+                    <p>イベント告知</p>
+                  {else if $blog.kind == "コラム"}
+                    <p>コラム</p>
+                  {else}
+                    <p>レポート</p>
+                  {/if}
+                </div>
                 <h3 class="kinyu-top-list-title">{$blog.title}</h3>
               </a>
             </div>
@@ -135,16 +141,19 @@
         <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
           <a href="/report/{$blog.code}">
           <div class="kinyu-top-list-kind">
-            <!-- 種別 -->
-            <!-- {if $blog.kind == "女子会レポート"}
-              <img class="list-kind-img" src="/images/new/list-kind-img-joshikai.png">
-            {else if $blog.kind == "イベントレポート"}
-              <img class="list-kind-img" src="/images/new/list-kind-img-event.png">
-            {else if $blog.kind == "取材レポート"}
-              <img class="list-kind-img" src="/images/new/list-kind-img-report.png">
-            {else if $blog.kind == "コラム"}
-              <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
-            {/if} -->
+            {if $blog.kind == "女子会レポート"}
+                  <p>女子会レポート</p>
+                {else if $blog.kind == "イベントレポート"}
+                  <p>イベントレポート</p>
+                {else if $blog.kind == "取材レポート"}
+                  <p>取材レポート</p>
+                {else if $blog.kind == "イベント告知"}
+                  <p>イベント告知</p>
+                {else if $blog.kind == "コラム"}
+                  <p>コラム</p>
+                {else}
+                  <p>レポート</p>
+                {/if}
           </div>
           <h3 class="kinyu-top-list-title">{$blog.title}</h3>
           </a>

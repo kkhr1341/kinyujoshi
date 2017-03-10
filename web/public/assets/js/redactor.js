@@ -243,16 +243,16 @@
 				"lists": "Lists",
 				"link-insert": "Insert link",
 				"link-edit": "Edit link",
-				"link-in-new-tab": "Open link in new tab",
+				"link-in-new-tab": "新規タブで開く",
 				"unlink": "Unlink",
-				"cancel": "Cancel",
+				"cancel": "キャンセル",
 				"close": "Close",
 				"insert": "Insert",
-				"save": "Save",
-				"delete": "Delete",
+				"save": "保存",
+				"delete": "削除",
 				"text": "Text",
 				"edit": "Edit",
-				"title": "Title",
+				"title": "altタグ / Title",
 				"paragraph": "Normal text",
 				"quote": "Quote",
 				"code": "Code",
@@ -6912,10 +6912,10 @@
 									+ '<label>' + this.lang.get('title') + '</label>'
 									+ '<input type="text" id="redactor-image-title" />'
 								+ '</section>'
-								+ '<section>'
-									+ '<label>' + this.lang.get('caption') + '</label>'
-									+ '<input type="text" id="redactor-image-caption" aria-label="' + this.lang.get('caption') + '" />'
-								+ '</section>'
+								//+ '<section>'
+									//+ '<label>' + this.lang.get('caption') + '</label>'
+									//+ '<input type="text" id="redactor-image-caption" aria-label="' + this.lang.get('caption') + '" />'
+								//+ '</section>'
 								+ '<section>'
 									+ '<label>' + this.lang.get('link') + '</label>'
 									+ '<input type="text" id="redactor-image-link" aria-label="' + this.lang.get('link') + '" />'

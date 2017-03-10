@@ -1,15 +1,20 @@
 @charset "UTF-8";
 .my-form-container {
   width: 100%;
+  position: relative;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  font-size: 13px;
 }
 .form-left {
-  width: 80%;
+  width: 740px;
   float: left;
 }
 .form-right {
-  width: 20%;
+  width: 160px;
   float: right;
-  position: relative;
+  position: fixed;
+  right: 2%;
 }
 .sub-description {
   margin-left: 24px;
@@ -24,20 +29,28 @@
   padding: 20px;
   border-radius: 10px;
 }
+.breadcrumb > .active {
+  font-size: 13px;
+}
+.btn {
+  font-size: 14px;
+  line-height: inherit;
+  padding: 12px 30px;
+}
 .edit-block-menu li {
   display: block;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 .edit-block-menu li:last-child {
   margin-bottom: 0px; 
 }
 .edit-block-menu li .preview-blog {
-  margin-bottom: 50px;
+  margin-bottom: 36px;
 }
 .edit-block-menu-btn {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 12px;
   padding: 10px 0px;
 }
 .edit-block-menu li .release-btn {
@@ -59,11 +72,11 @@
   width: 100%;
 }
 .col-md-3 {
-  width: 18%;
+  width: 15%;
   float: left;
 }
 .my-content-block {
-  width: 82%;
+  width: 85%;
   float: right;
   background-color: rgb(249, 249, 249);
 }
@@ -76,6 +89,14 @@
   margin-top: 30px;
   margin-bottom: 30px;
   box-shadow: 0px 0px 5px 0px #cccbcb;
+  position: relative;
+}
+
+#redactor-image-link-blank {
+  -webkit-appearance: auto;
+  appearance: auto;
+  position: relative;
+  margin-left: 0px;
 }
 
 /* ヘッダーメニュー */
@@ -94,11 +115,18 @@
 }
 .my-header-menu li.active {
   font-weight: bold;
+  font-size: 13px;
 }
 .my-header-menu>li+li:before {
   padding: 0 5px;
   color: #ccc;
   content: "/\00a0";
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.form-group label {
+  font-size: 12px;
 }
 
 footer {
@@ -211,7 +239,7 @@ footer {
   width: 150px;
 }
 .admin-logo {
-	width: 200px;
+	width: 70%;
 }
 .clearw:after {
 	clear:both;

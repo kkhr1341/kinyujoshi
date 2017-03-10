@@ -2,7 +2,7 @@
 
   <!-- きんゆう女子。のコンテンツ -->
   <div class="kinyu-content-after-el after-content">
-    <h3 class="center-title"><p>新着レポート</p></h3>
+    <h3 class="center-title"><p>おすすめピックアップ！</p></h3>
     <ul class="clear">
       <!-- 女子会 -->
       {foreach from=$top_blogs key="key" item=blog name=loopname}

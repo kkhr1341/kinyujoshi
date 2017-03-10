@@ -13,7 +13,7 @@
 
 				<div class="form-group mb50">
 					
-					<label>カテゴリー</label>
+					<label>◆カテゴリー</label>
 					<div class="radio_box clear">
             <input type="radio" value="lifestyle" name="section_code" id="section_code1" class="form-radio" placeholder="" {if $blogs.section_code == "lifestyle"}checked{/if}>
             <label for="section_code1" class="form-long">ライフスタイル</label>
@@ -33,7 +33,7 @@
 
 				<div class="form-group mb50">
 
-					<label>レポートの種類</label>
+					<label>◆レポートの種類</label>
 					<div class="radio_box clear">
             <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="" {if $blogs.kind == "女子会レポート"}checked{/if}>
             <label for="kind1" class="form-long">女子会レポ</label>   
@@ -44,8 +44,11 @@
             <input type="radio" value="取材レポート" name="kind" id="kind3" class="form-radio" placeholder="" {if $blogs.kind == "取材レポート"}checked{/if}>
             <label for="kind3" class="form-long">取材レポ</label>
 
-            <input type="radio" value="コラム" name="kind" id="kind4" class="form-radio" placeholder="" {if $blogs.kind == "コラム"}checked{/if}>
-            <label for="kind4" class="form-long">コラム</label>
+            <input type="radio" value="イベント告知" name="kind" id="kind4" class="form-radio" placeholder="" {if $blogs.kind == "イベント告知"}checked{/if}>
+            <label for="kind4" class="form-long">イベント告知</label>
+
+            <input type="radio" value="コラム" name="kind" id="kind5" class="form-radio" placeholder="" {if $blogs.kind == "コラム"}checked{/if}>
+            <label for="kind5" class="form-long">コラム</label>
 
           </div>
 					
@@ -53,7 +56,7 @@
 
 
         <div class="form-group mb50">
-					<label>キーワード</label>
+					<label>◆キーワード</label>
 			
 					<div class="radio_box clear">
             <input type="radio" value="ためる" name="keyword" id="keyword01" class="form-radio" placeholder="" {if 'ためる' == $blogs.keyword}checked{/if}>
@@ -75,7 +78,7 @@
         </div>
 
         <div class="form-group mb50">
-					<label>Pick Up!</label>
+					<label>◆Pick Up!</label>
 					<div class="radio_box clear">
             <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="" {if $blogs.pickup == '1'}checked{/if}>
             <label for="pickup01" class="form-long">yes</label>
@@ -85,22 +88,22 @@
         </div>
 
 				<div class="form-group">
-					<label>タイトル</label>
+					<label>◆タイトル</label>
 					<input style="height: 40px;" type="text" id="title" class="form-control" placeholder="" value="{$blogs.title}">
 				</div>
 
 				<div class="form-group">
-					<label>説明文</label>
+					<label>◆説明文</label>
 					<textarea style="height: 120px;" type="text" id="description" class="form-control" placeholder="">{$blogs.description}</textarea>
 				</div>
 
 				<div class="form-group">
-					<label>本文</label>
+					<label>◆本文</label>
 					<textarea id="content" name="content">{$blogs.content}</textarea>
 				</div>
 				
 				<div class="form-group">
-					<label>公開日時</label>
+					<label>◆公開日時</label>
 
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="open_date" value="{$blogs.open_date|date_format:"%Y/%m/%d %H:%M"}" />

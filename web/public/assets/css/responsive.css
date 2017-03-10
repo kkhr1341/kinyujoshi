@@ -526,7 +526,7 @@
   width: 150px;
 }
 .report-detail-info {
-  padding: 24px 0px 12px;
+  padding: 16px 0px 12px;
 }
 .report-detail-info .list-kind-img {
   width: 48px;
@@ -534,15 +534,13 @@
 }
 
 
-.report-detail-category {
-  width: 48px;
-  height: 48px;
-  margin-top: -24px;
+.report-detail-category p {
+  font-size: 12px;
+  padding-bottom: 4px;
 }
 .report-detail-title {
   font-size: 15px;
   line-height: 22px;
-  min-height: auto;
   font-weight: bold;
 }
 .report-detail-keyword p {
@@ -734,6 +732,13 @@
 ************************************************* */
 .article-detail-intro-info {
   background-color: #F0F0F0;
+}
+.kinyu-top-list-kind {
+  background: rgba(255,255,255,.9);
+}
+.kinyu-top-list-kind p {
+  color: #46aa9c;
+  padding: 3px 12px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

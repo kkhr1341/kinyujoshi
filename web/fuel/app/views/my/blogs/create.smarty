@@ -23,7 +23,7 @@
 				</div>-->
 
 				<div class="form-group mb50">
-					<label>カテゴリー</label>
+					<label>◆カテゴリー</label>
 					<!-- <select id="section_code" class='form-control'>
 						<option value="">選択してください</option>
 						<option value="lifestyle">ライフスタイル</option>
@@ -51,7 +51,7 @@
 
 
 				<div class="form-group mb50">
-					<label>レポートの種類</label>
+					<label>◆レポートの種類</label>
 			
 					<div class="radio_box clear">
             <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="form-group mb50">
-					<label>キーワード</label>
+					<label>◆キーワード</label>
 			
 					<div class="radio_box clear">
             <input type="radio" value="ためる" name="keyword" id="keyword01" class="form-radio" placeholder="">
@@ -93,7 +93,7 @@
         </div>
 
          <div class="form-group mb50">
-					<label>Pick Up!</label>
+					<label>◆Pick Up!</label>
 			
 					<div class="radio_box clear">
             <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="">
@@ -106,19 +106,19 @@
         </div>
 
 				<div class="form-group">
-					<label>タイトル</label>
+					<label>◆タイトル</label>
 					<input type="text" id="title" class="form-control" placeholder="">
 				</div>
 				<div class="form-group">
-					<label>説明文</label>
+					<label>◆説明文</label>
 					<textarea style="height: 80px;" type="text" id="description" class="form-control" placeholder=""></textarea>
 				</div>
 				<div class="form-group">
-					<label>本文</label>
+					<label>◆本文</label>
 					<textarea id="content" name="content"></textarea>
 				</div>
 				<div class="form-group">
-					<label>公開日時</label>
+					<label>◆公開日時</label>
 
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="open_date" value="{date('YY/mm/dd HH:ii')}" />

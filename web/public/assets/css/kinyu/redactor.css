@@ -51,7 +51,7 @@ body .redactor-box-fullscreen {
   position: relative;
   overflow: auto;
   margin: 0;
-  padding: 24px 19px;
+  padding: 24px 20px;
   outline: none;
   white-space: normal;
   border: 1px solid rgba(0, 0, 0, 0.07);
@@ -947,17 +947,18 @@ body .redactor-box-fullscreen {
   line-height: 40px;
 }
 .redactor-editor h2 {
-  /*font-size: 24px;
-  line-height: 32px;*/
-  font-size: 2.0rem;
+  font-size: 16px;
   font-weight: bold;
-  line-height: 2.5rem;
+  line-height: 26px;
   padding: 5px 0px 5px 0px;
   background-color: #fff;
   border-radius: 0px;
-  /* color: #000; */
-  border-bottom: 3px solid #7CDCCE;
+  border-bottom: 2px solid #7CDCCE;
   margin: 20px 0px;
+}
+.redactor-editor h2:before {
+  content: "■ ";
+  color: #7CDCCE;
 }
 .redactor-editor h3 {
   font-size: 20px;
@@ -977,10 +978,10 @@ body .redactor-box-fullscreen {
   text-transform: uppercase;
 }
 .redactor-editor p {
-  font-size: 1.5rem;
+/*  font-size: 1.5rem;
   line-height: 2.2rem;
   word-wrap: break-word;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word;*/
 }
 
 

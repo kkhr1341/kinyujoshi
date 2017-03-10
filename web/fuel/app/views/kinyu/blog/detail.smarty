@@ -13,19 +13,21 @@
     <div class="report-detail-thunb" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
 
     <div class="report-detail-info">
-      <!-- <div class="report-detail-category">
+      <div class="report-detail-category">
         {if $blog.kind == "女子会レポート"}
-          <img class="list-kind-img" src="/images/new/list-kind-img-joshikai.png">
+          <p>女子会レポート</p>
         {else if $blog.kind == "イベントレポート"}
-          <img class="list-kind-img" src="/images/new/list-kind-img-event.png">
+          <p>イベントレポート</p>
         {else if $blog.kind == "取材レポート"}
-          <img class="list-kind-img" src="/images/new/list-kind-img-report.png">
+          <p>取材レポート</p>
+        {else if $blog.kind == "イベント告知"}
+          <p>イベント告知</p>
         {else if $blog.kind == "コラム"}
-          <img class="list-kind-img" src="/images/new/list-kind-img-co.png">
+          <p>コラム</p>
         {else}
-          <img class="list-kind-img" src="/images/new/list-kind-img-reportmain.png">
+          <p>レポート</p>
         {/if}
-      </div> -->
+      </div>
       <div class="report-detail-title">
         <h1>{$blog.title}</h1>
       </div>
