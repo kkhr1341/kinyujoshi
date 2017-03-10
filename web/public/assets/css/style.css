@@ -940,7 +940,7 @@
   margin-top: 16px;
 }
 .report-detail-main blockquote {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 16px;
   margin-top: 5px;
   border-left: 3px solid #d8d8d8;
@@ -948,8 +948,8 @@
   padding-left: 8px;
 }
 .report-detail-main blockquote a {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 16px;
   color: #a09f9f;
 }
 
