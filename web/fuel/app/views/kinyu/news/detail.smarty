@@ -10,14 +10,16 @@
   <div class="inner">
     
     <div class="report-detail-header"><a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
-    <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png"></div>
+    <div class="report-detail-thunb" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
 
     <div class="report-detail-info">
       <div class="report-detail-category">
-        <img class="list-kind-img" src="/images/new/list-kind-img-news.png">
+        <p>ニュース</p>
       </div>
       <div class="report-detail-title">
         <h1>{$news.title}</h1>
+      </div>
+      <div class="report-detail-description">
       </div>
     </div>
     <div class="report-detail-keyword">
