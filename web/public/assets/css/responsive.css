@@ -719,6 +719,7 @@
   border-radius: 50%;
 }
 .kinyu-social-list .kinyu-social-list-el:first-child {
+  width: 90%;
   border-right: none;
   padding: 0px 12px 24px;
 }
