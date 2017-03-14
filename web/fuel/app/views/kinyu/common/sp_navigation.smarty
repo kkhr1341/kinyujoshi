@@ -5,10 +5,10 @@
   </div>
   <div class="inner">
     <div class="navi-icon">
-      <a href="/"><p>き</p></a>
+      <a href="/"><img src="/images/icon/top-icon-kinyu.png"></a>
     </div>
     <div class="content-list">
-      <img class="navi_kinyu-menu-title" src="/images/new/navi_menu_title.png">
+      <p style="text-align: left;"><img class="navi_kinyu-menu-title" src="/images/main-title/kinyu-title-menu.png"></p>
       <ul class="clear">
         <li>
           <a href="/event"><img src="/images/new/sp/navi_joshikai_sp.png"></a>

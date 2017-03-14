@@ -1,4 +1,5 @@
 <!-- きんゆう女子。カンファレンス・独自 -->
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/font.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/conference.css">
 <script type="text/javascript" src="/assets/js/kinyu/countdown.js"></script>
 <script type="text/javascript" src="/assets/js/kinyu/campaign/conference.js"></script>

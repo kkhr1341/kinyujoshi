@@ -43,6 +43,12 @@
 .kinyu-main-animation-inner img {
   width: 100%;
 }
+.kinyu-main-title {
+  width: 74%;
+}
+.kinyu-main-title img {
+  width: 100%;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　メイン
@@ -107,7 +113,6 @@
   color: #7CDCCE;
   text-align: center;
   padding: 0px!important;
-  font-family: 'utsukushi';
 }
 .kinyu-sp-header-content {
   height: 46px;
@@ -190,14 +195,12 @@
   color: #fff;
   text-align: center;
   padding: 0px!important;
-  font-family: 'utsukushi';
 }
 .kinyu-sp-navi .share-content {
   background: #fff;
   border-radius: 5px;
 }
 .kinyu-sp-navi .share-content p {
-  font-family: 'utsukushi';
   font-size: 18px;
   line-height: 24px;
   text-align: center;
@@ -244,9 +247,8 @@
 }
 .navi_kinyu-menu-title {
   display: block;
-  width: 84%;
-  margin: 0 auto; 
-  padding-bottom: 16px;
+  width: 80%;
+  padding-bottom: 8px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -395,7 +397,7 @@
 }
 .kinyu-top-list-title {
   font-size: 13px;
-  line-height: 20px;
+  line-height: 18px;
   text-align: left;
   color: #595757;
   padding: 10px 10px;
@@ -437,9 +439,6 @@
 .kinyu-top-list-main li img {
   line-height: 0;
 }
-.kinyu-content-after-el  h3.center-title:after {
-  content: none;
-}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -454,11 +453,11 @@
   padding: 24px 2px;
 }
 .kinyu-news-list .kinyu-news-list-li:first-child {
-  padding: 0px 8px 24px;
+  padding: 0px 8px 24px 0px;
 }
 .kinyu-news-list-el .img-box {
   width: 30%;
-  height: 120px;
+  height: 90px;
 }
 .kinyu-news-list-el .text-box {
   width: 65%;
@@ -469,8 +468,8 @@
   margin-bottom: 4px;
 }
 .kinyu-news-list-el .text-box .title {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 18px;
 }
 .kinyu-news-list .kinyu-news-list-li:after {
   content: "";
@@ -482,6 +481,12 @@
 .kinyu-news-list .kinyu-news-list-li:last-child {
   border-bottom: none;
 }
+.prev-news-list {
+  margin-top: 0px;
+}
+.prev-news-list a {
+  font-size: 12px;
+} 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　レポート一覧
@@ -532,8 +537,6 @@
   width: 48px;
   height: 48px;
 }
-
-
 .report-detail-category p {
   font-size: 12px;
   padding-bottom: 4px;
@@ -587,13 +590,15 @@
   float: none;
   width: 100%;
   background: #f7f7f7;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 3px 3px 3px 3px;
   padding-top: 0px;
   padding: 24px 0px 16px;
 }
 .report-detail-share-el h3 {
   margin-bottom: 4px;
-  font-size: 16px;
+}
+.report-detail-share-el h3 img {
+  width: 90%;
 }
 .report-detail-share .social-list li {
   display: inline-block;
@@ -620,29 +625,23 @@
 .report-detail-thunb {
   height: 200px;
 }
+.report-detail-main blockquote a {
+  font-size: 10px;
+  line-height: 15px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-content-after .after-content .kinyu-top-list-title {
   font-size: 13px;
-  line-height: 20px;
+  line-height: 18px;
 }
 .kinyu-content-after {
   border-top: 0px;
 }
 .kinyu-content-after-el {
   margin-top: 42px;
-}
-.kinyu-main  h3.center-title {
-  display: block;
-  text-align: left;
-}
-.kinyu-main h3.center-title p {
-  font-size: 15px;
-  line-height: 10px;
-  padding-left: 6%;
-  background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
 }
 /* おすすめピックアップ */
 .kinyu-content-after .after-content li {
@@ -665,7 +664,6 @@
   font-size: 15px;
   background: #eafffb;
   border-radius: 20px;
-  font-family: 'utsukushi';
 }
 .kinyu-content-after .after-category li {
   padding: 3px 3px 12px 3px;
@@ -687,6 +685,60 @@
   width: 100%;
   margin-top: 16px;
 }
+/* ソーシャル */
+.kinyu-social-list {
+  width: 100%;
+  padding: 24px 0px;
+}
+.kinyu-social-list-el {
+  float: none;
+  width: 80%;
+  padding: 0px 16px;
+  margin: 0 auto;
+}
+.kinyu-social-list .kinyu-social-list-el:first-child {
+  width: 92%;
+}
+/* Twitter */
+.kinyu-social-list-el .twitter-block,
+.kinyu-social-list-el .instagram-block {
+  padding-top: 0px;
+}
+.kinyu-social-list-el .kinyu-social-link {
+  display: block;
+  color: #0693e3;
+  text-decoration: underline;
+  font-size: 14px;
+  padding: 8px 0px 16px;
+}
+.kinyu-social-list-el .img-box {
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+.kinyu-social-list-el .instagram-block .img-box {
+  border-radius: 50%;
+}
+.kinyu-social-list .kinyu-social-list-el:first-child {
+  border-right: none;
+  padding: 0px 12px 24px;
+}
+.kinyu-social-list .kinyu-social-list-el:nth-child(2n) {
+  border-top: 1px solid #7CDCCE;
+  padding: 24px 12px;
+}
+.kinyu-social-list .kinyu-social-list-el:last-child {
+  border-left: none;
+  border-top: 1px solid #7CDCCE;
+  padding: 24px 12px 0px;
+}
+
+
+
+
+
 /*ポップアップ*/
 .report-detail-comment-popup .inner {
   width: 92%;
@@ -717,8 +769,6 @@
   line-height: 16px;
   margin-top: 20px;
 }
-
-
 .kinyu-main-single-block {
   margin-right: 0px;
 }
@@ -739,6 +789,12 @@
 .kinyu-top-list-kind p {
   color: #46aa9c;
   padding: 3px 12px;
+  font-size: 11px;
+  line-height: 12px;
+}
+.kinyu-content-after .report-detail-comment p {
+  font-size: 12px;
+  line-height: 16px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

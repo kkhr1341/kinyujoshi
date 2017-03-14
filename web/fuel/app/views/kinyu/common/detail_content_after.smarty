@@ -2,7 +2,8 @@
 
   <!-- きんゆう女子。のコンテンツ -->
   <div class="kinyu-content-after-el after-content">
-    <h3 class="center-title"><p>おすすめピックアップ！</p></h3>
+    <!-- <h3 class="center-title"><p>おすすめピックアップ！</p></h3> -->
+    <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-pick.png" alt="おすすめピックアップ"></h3>
     <ul class="clear">
       <!-- 女子会 -->
       {foreach from=$top_blogs key="key" item=blog name=loopname}
@@ -48,7 +49,8 @@
 
   <!-- 編集部へのコメント -->
   <div class="kinyu-content-after-el report-detail-menu">
-    <h3 class="center-title"><p>きんゆう女子。のメニュー</p></h3>
+    <!-- <h3 class="center-title"><p>きんゆう女子。のメニュー</p></h3> -->
+    <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-menu.png" alt="きんゆう女子。へのメニュー"></h3>
     <div class="report-detail-menu-list">
       <ul>
         <!-- 女子会 -->
@@ -97,7 +99,8 @@
 
   <!-- 編集部へのコメント -->
   <div class="kinyu-content-after-el report-detail-comment">
-    <h3 class="center-title"><p>編集部へのコメント</p></h3>
+    <!-- <h3 class="center-title"><p>編集部へのコメント</p></h3> -->
+    <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-comment.png" alt="編集部へのコメント"></h3>
     <p>ワカラナイこと、知りたいことご連絡ください♪</p>
     <form>
       <textarea id="message" name="message" class='' rows="10"></textarea>
@@ -106,19 +109,49 @@
   </div>
 
   <!-- Facebook -->
-  <div class="kinyu-content-after-el report-detail-menu">
-    <h3 class="center-title"><p>Facebookページ</p></h3>
-    <div class="sp_top_after-facebook">
-      <div class="fb-page" 
-        data-href="https://www.facebook.com/kinyujyoshi/" 
-        data-width="500" 
-        data-height="300" 
-        data-small-header="false" 
-        data-adapt-container-width="true" 
-        data-hide-cover="false" 
-        data-show-facepile="true" 
-        data-show-posts="false">
+  <div class="kinyu-content-after-el report-detail-menu clear">
+    <!-- <h3 class="kinyu-main-title">
+      <img src="/images/main-title/kinyu-title-fb.png" alt="Facebookページ">
+    </h3> -->
+      
+    <!--ソーシャル関連-->
+    <div class="kinyu-social-list clear">
+      <div class="deco1"></div>
+      <div class="deco2"></div>
+
+      <!--fb-->
+      <div class="kinyu-social-list-el">
+        <div class="fb-page" 
+          data-href="https://www.facebook.com/kinyujyoshi/" 
+          data-width="500" 
+          data-height="" 
+          data-small-header="false" 
+          data-adapt-container-width="true" 
+          data-hide-cover="false" 
+          data-show-facepile="true" 
+          data-show-posts="false">
+        </div>
       </div>
+      <!--insta-->
+      <div class="kinyu-social-list-el">
+        <div class="instagram-block">
+          <p class="social-list-title"><img src="/images/main-title/insta-main-title.png"></p>
+          <div class="img-box" style="background:url(/images/favicon.png) center center / cover no-repeat;"></div>
+          <a target="_blank" class="kinyu-social-link" href="https://www.instagram.com/kinyu_joshi/">kinyu_joshi</a>
+          <a target="_blank" href="https://www.instagram.com/kinyu_joshi/" class="follow-link instagram">フォローする</a>
+        </div>
+      </div>
+
+      <!--twitter-->
+      <div class="kinyu-social-list-el">
+        <div class="twitter-block">
+          <p class="social-list-title">きんゆう女子。<br>Twitterアカウント</p>
+          <div class="img-box" style="background:url(/images/favicon.png) center center / cover no-repeat;"></div>
+          <a target="_blank" class="kinyu-social-link" href="https://twitter.com/kinyu_joshi">@kinyu_joshi</a>
+          <a target="_blank" href="https://twitter.com/kinyu_joshi" class="follow-link twitter">フォローする</a>
+        </div>
+      </div>
+
     </div>
   </div>
 

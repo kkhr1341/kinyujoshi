@@ -90,11 +90,12 @@
       <ul class="navi_contents-block-menu">
         <li class="item navi_menu">
           <div class="navi-icon">
-            <a href="/"><p>き</p></a>
+            <a href="/"><img src="/images/icon/top-icon-kinyu.png"></a>
           </div>
+
         </li>
         <li class="item navi_kinyu-menu-li01">
-          <img class="navi_kinyu-menu-title" src="/images/new/navi_menu_title.png">
+          <p style="text-align: left;"><img class="navi_kinyu-menu-title" src="/images/main-title/kinyu-title-menu.png"></p>
           <div class="navi_kinyu-menu-block clear">
             <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_joshikai.png) center center / cover no-repeat;">
               <a href="/event"><!-- <p>女子会に参加する</p> --></a>

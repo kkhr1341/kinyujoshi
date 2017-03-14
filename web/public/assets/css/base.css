@@ -211,7 +211,7 @@ input:focus {
   margin-bottom: 30px;
 }
 .form-group .form-title {
-  font-size: 18px;
+  font-size: 13px;
   margin-bottom: 16px;
   margin: 0px 0px 8px 0px!important;
 }
@@ -240,7 +240,7 @@ input:focus {
   /*border-right: 1px dotted #b3b3b3;*/
   background: #efefef;
   color: #555e64;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   line-height: 1;
   transition: .2s;
@@ -302,7 +302,7 @@ p, a {
   right: 10px;
 }
 .btn {
-  font-size: 14px;
+  font-size: 13px;
   line-height: inherit;
   padding: 16px 30px;
   font-weight: bold;
@@ -312,8 +312,8 @@ p, a {
   margin-bottom: 12px;
 }
 .form-group .form-title {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 20px;
   margin-bottom: 12px;
 }
 .form-btn {
@@ -322,6 +322,14 @@ p, a {
 /*.btn-primary {
   margin-top: 20px;
 }*/
+.form-group .form-sub-title {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+.form-control {
+  font-size: 11px;
+}
 
 }
 

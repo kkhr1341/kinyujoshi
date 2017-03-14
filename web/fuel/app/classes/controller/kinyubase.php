@@ -41,7 +41,7 @@ class Controller_Kinyubase extends Controller_Template
 		Asset::add_path('assets/css', 'css');
 		Asset::add_path('assets/js', 'js');
 		Asset::css(array(
-					'kinyu/font.css',
+					//'kinyu/font.css',
 					//'kinyu/animate.css',
 					'kinyu/redactor.css',
 					//'kinyu/font-awesome.min.css',

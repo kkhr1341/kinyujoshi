@@ -11,8 +11,8 @@
   padding-bottom: 30px;
 }
 .singlepage-block .description {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 20px;
   width: 600px;
   margin: 0 auto;
   text-align: center;
@@ -29,7 +29,7 @@
 .top-introduction {
   height: 400px;
   position: relative;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 /* イベントイントロ・ボタン */
 .singlepage-introduction-btn {
@@ -80,16 +80,15 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 20px;
   padding-top: 16px;
 }
 .singlepage-theree-cicle-list li .inner p .title {
-  font-weight: bold;
   font-size: 18px;
+  line-height: 24px;
   display: block;
-  margin-bottom: 5px;
-  font-family: 'utsukushi';
+  margin-bottom: 12px;
 }
 .singlepage-block-title.schedule {
   padding-bottom: 10px;
@@ -174,9 +173,9 @@
   border-right: 1px solid #ddd;
 }
 .about-kinyujoshi-service .service-description {
-  font-size: 15px;
-  line-height: 25px;
-  height: 150px;
+  font-size: 13px;
+  line-height: 20px;
+  height: 110px;
   color: #626262;
   padding: 15px 0px;
   width: 70%;
@@ -186,30 +185,30 @@
 .about-kinyujoshi-service .service-link {
   display: block;
   padding: 12px 0px;
-  font-size: 16px;
+  font-size: 14px;
   width: 60%;
 }
 .about-kinyujoshi-service .btn-white {
-  border: 2px solid #7cdcce;
+  border: 1px solid #7cdcce;
   color: #77C7BC;
   transition: 0.5s;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .about-kinyujoshi-service .btn-white:hover {
   background-color: #7cdcce;
   color: #fff;
 }
 .about-kinyujoshi-service .btn-tiffany {
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   background-color: #7cdcce;
   color: #fff;
   transition: 0.5s;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .about-kinyujoshi-service .btn-tiffany:hover {
   background-color: #fff;
   color: #77C7BC;
-  border: 2px solid #7cdcce;
+  border: 1px solid #7cdcce;
 }
 .about-kinyujoshi-service-balloon01 {
   width: 125px;
@@ -302,8 +301,8 @@
   box-sizing: border-box;
 }
 .regist-policy p {
-  font-size: 18px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 30px;
   position: relative;
   padding-left: 4%;
   margin-left: 8%;

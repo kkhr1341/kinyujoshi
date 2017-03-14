@@ -50,7 +50,7 @@
       <div class="report-detail-share clear">
         <!-- <div class="report-detail-share-el report-detail-share-left" style="background:url({$blog.main_image}) center center / cover no-repeat;"><div class="bg-white05"></div></div> -->
         <div class="report-detail-share-el report-detail-share-right">
-          <h3>このレポートをみんなに教える。</h3>
+          <h3><img src="/images/detail-title/kinyu-share-report.png"></h3>
           <img class="share-this-page" src="/images/social/social-this-page.png">
           <div class="social-list">
             <ul>

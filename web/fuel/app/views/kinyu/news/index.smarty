@@ -10,7 +10,7 @@
 
 		<div class="kinyu-news-list clear">
 			<!-- <img class="kinyu-news-title" src="/images/new/kinyu_news_title.png"> -->
-      <h3 class="center-title"><p>レポート一覧</p></h3>
+      <h2 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-news.png" alt="ニュース一覧"></h2>
 			<ul>
 			{foreach from=$news.datas item=blog}
 				<li class="kinyu-news-list-li">

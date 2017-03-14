@@ -36,7 +36,7 @@
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
         <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
         <div class="report-detail-share-el report-detail-share-right">
-          <h3>このニュースをみんなに教える。</h3>
+          <h3><img src="/images/detail-title/kinyu-share-news.png"></h3>
           <img class="share-this-page" src="/images/social/social-this-page.png">
           <div class="social-list">
             <ul>
@@ -47,10 +47,14 @@
           </div>
         </div>
       </div>
+      <div class="prev-news-list">
+        <a href="/news">過去のニュースはこちら</a>
+      </div>
     </div>
 
     <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">
     {$detail_content_after}    
+  </div>
   </div>
   <footer>
         <div class="footer-logo">
