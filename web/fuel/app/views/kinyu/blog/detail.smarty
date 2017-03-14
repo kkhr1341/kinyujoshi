@@ -6,27 +6,30 @@
 <div class="kinyu-main-block kinyu-pc-details-block">
   <div class="inner">
     
-    <div class="report-detail-header">
+    <!-- <div class="report-detail-header">
       <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
-      <!-- <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png"> -->
-    </div>
+    </div> -->
     <div class="report-detail-thunb" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
 
     <div class="report-detail-info">
-      <div class="report-detail-category">
-        {if $blog.kind == "女子会レポート"}
-          <p>女子会レポート</p>
-        {else if $blog.kind == "イベントレポート"}
-          <p>イベントレポート</p>
-        {else if $blog.kind == "取材レポート"}
-          <p>取材レポート</p>
-        {else if $blog.kind == "イベント告知"}
-          <p>イベント告知</p>
-        {else if $blog.kind == "コラム"}
-          <p>コラム</p>
-        {else}
-          <p>レポート</p>
-        {/if}
+      <div class="report-detail-category clear">
+        <div class="category-title">
+          <p>
+            {if $blog.kind == "女子会レポート"}
+              <span>女子会レポート</span>
+            {else if $blog.kind == "イベントレポート"}
+              <span>イベントレポート</span>
+            {else if $blog.kind == "取材レポート"}
+              <span>取材レポート</span>
+            {else if $blog.kind == "イベント告知"}
+              <span>イベント告知</span>
+            {else if $blog.kind == "コラム"}
+              <span>コラム</span>
+            {else}
+              <span>レポート</span>
+            {/if}
+          </p>
+        </div>
       </div>
       <div class="report-detail-title">
         <h1>{$blog.title}</h1>
@@ -47,12 +50,12 @@
     </div> -->
     <div class="report-detail-description">
       <p>{$blog.description}</p>
+      <p class="date">{$blog.open_date|date_format:"%Y/%-m/%-d"} up!</p>
     </div>
   
     <!-- 本文 -->
     <div class="report-detail-main">
       {$blog.content|nofilter}
-      <p class="report-bottom">({$blog.open_date|date_format:"Y.m.d"} up!)</p>
       <!-- シェア部分 -->
 
       {$fooo = $blog.main_image}

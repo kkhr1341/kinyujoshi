@@ -826,7 +826,7 @@
 .kinyu-main-block .inner {
   background: #fff;
   width: 860px;
-  padding: 0px 80px 80px 80px;
+  padding: 72px 80px 80px 80px;
   border-radius: 5px;
   margin: 0 auto;
 }
@@ -870,11 +870,20 @@
 .report-detail-description {
   padding-bottom: 36px;
   border-bottom: 2px solid #fcfcfc;
+  position: relative;
 }
 .report-detail-description p {
   font-size: 12px;
   line-height: 18px;
   color: #898989;
+}
+.report-detail-description .date {
+  font-size: 13px;
+  line-height: 13px;
+  color: #898989;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
 }
 .report-detail-title {
   font-size: 18px;
