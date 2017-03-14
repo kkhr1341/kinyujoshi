@@ -79,14 +79,14 @@
     <ul class="kinyu-top-list clear">
 
       <div class="kinyu-top-list-main">
-        <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-event.png" alt="女子会の参加はこちら"></h3>
+        <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-event-sp.png" alt="女子会の参加はこちら"></h3>
         <li style="background: url() center center / cover no-repeat;">
           <a href="/event">
             <img src="/images/new/sp/navi_joshikai_sp.png" style="width:100%;">
           </a>
         </li>
 
-        <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-regist.png" alt="きんゆう女子。のメンバ０になる"></h3>
+        <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-regist-sp.png" alt="きんゆう女子。のメンバ０になる"></h3>
         <li style="background: url() center center / cover no-repeat;">
           <a href="/regist">
             <img src="/images/new/sp/navi_regist_sp.jpg" style="width:100%;">
@@ -95,7 +95,7 @@
       </div>
       
       <div class="kinyu-top-list-list">
-        <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h3>
+        <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-report-sp.png" alt="レポート一覧"></h3>
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
         {$fooo = $blog.main_image}
