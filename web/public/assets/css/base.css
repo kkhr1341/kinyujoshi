@@ -72,6 +72,7 @@ p, a {
   line-height: 22px;
   letter-spacing: 0.2px;
   color: #444444;
+  word-wrap: break-word;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
@@ -305,7 +306,6 @@ p, a {
   font-size: 13px;
   line-height: inherit;
   padding: 16px 30px;
-  font-weight: bold;
   border-radius: 5px;
 }
 .form-group .form-sub-title {
