@@ -19,7 +19,7 @@
 }
 .kinyu-main-title {
   text-align: left;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -983,7 +983,7 @@
   position: relative;
 }
 .kinyu-news-list .kinyu-news-list-li:first-child {
-  padding: 12px 8px 24px 0px;
+  padding: 0px 8px 24px 0px;
 }
 .kinyu-news-list .kinyu-news-title {
   width: 300px;
