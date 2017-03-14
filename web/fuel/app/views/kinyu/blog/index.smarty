@@ -7,7 +7,8 @@
     <div class="kinyu-report-list">
       <!-- <img class="kinyu-report-title" src="/images/new/kinyu_report_title.png"> -->
       <!-- <h3 class="center-title"><p>レポート一覧</p></h3> -->
-      <h2 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h2>
+      <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h2>
+      <h2 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-report-sp.png" alt="レポート一覧"></h2>
       <ul class="kinyu-top-list clear">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
 

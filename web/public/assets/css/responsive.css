@@ -676,8 +676,8 @@
   line-height: 140px;
 }
 .report-detail-menu li a p {
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 18px;
 }
 /* 編集部へのコメント */
 .kinyu-content-after .report-detail-comment textarea {
