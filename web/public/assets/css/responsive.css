@@ -696,9 +696,6 @@
   padding: 0px 16px;
   margin: 0 auto;
 }
-.kinyu-social-list .kinyu-social-list-el:first-child {
-  width: 92%;
-}
 /* Twitter */
 .kinyu-social-list-el .twitter-block,
 .kinyu-social-list-el .instagram-block {
@@ -708,7 +705,7 @@
   display: block;
   color: #0693e3;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 13px;
   padding: 8px 0px 16px;
 }
 .kinyu-social-list-el .img-box {
@@ -729,12 +726,14 @@
   border-top: 1px solid #7CDCCE;
   padding: 24px 12px;
 }
-.kinyu-social-list .kinyu-social-list-el:last-child {
+.kinyu-social-list .kinyu-social-list-el:nth-child(3n) {
   border-left: none;
   border-top: 1px solid #7CDCCE;
   padding: 24px 12px 0px;
 }
-
+.kinyu-social-list-el .follow-link {
+  font-size: 12px;
+}
 
 
 

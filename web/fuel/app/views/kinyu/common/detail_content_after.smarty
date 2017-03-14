@@ -116,8 +116,6 @@
       
     <!--ソーシャル関連-->
     <div class="kinyu-social-list clear">
-      <div class="deco1"></div>
-      <div class="deco2"></div>
 
       <!--fb-->
       <div class="kinyu-social-list-el">
@@ -151,6 +149,9 @@
           <a target="_blank" href="https://twitter.com/kinyu_joshi" class="follow-link twitter">フォローする</a>
         </div>
       </div>
+
+      <div class="deco1"></div>
+      <div class="deco2"></div>
 
     </div>
   </div>

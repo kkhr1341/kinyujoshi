@@ -1247,7 +1247,7 @@
 .kinyu-social-list .kinyu-social-list-el:first-child {
   border-right: 1px solid #7CDCCE;
 }
-.kinyu-social-list .kinyu-social-list-el:last-child {
+.kinyu-social-list .kinyu-social-list-el:nth-child(3n) {
   border-left: 1px solid #7CDCCE;
 }
 .kinyu-social-list-el .follow-link {
