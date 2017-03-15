@@ -98,6 +98,20 @@
   position: relative;
   margin-left: 0px;
 }
+.redactor-editor blockquote {
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 5px;
+  border-left: 3px solid #d8d8d8;
+  color: #a09f9f;
+  padding-left: 8px;
+}
+.redactor-editor blockquote a {
+  font-size: 12px;
+  line-height: 16px;
+  color: #a09f9f;
+}
+
 
 /* ヘッダーメニュー */
 .my-header-menu {
