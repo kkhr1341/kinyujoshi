@@ -6,15 +6,7 @@
     <div class="swiper-wrapper">
       {foreach from=$blogs_pick item=blog name=loopname}
 
-      {if $smarty.foreach.loopname.index == 0}
-        <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/IMG_1612.jpg) center center / cover no-repeat;">
-          <a href="/report/mZCgSg">
-            <div class="kinyu-top-list-kind">
-              <p>取材レポート</p>
-            </div>
-            <h3 class="kinyu-top-list-title">[PR]きんゆう女子。の"お守り株"ヤマシンフィルタ(6240)さんにおじゃま！</h3>
-          </a>
-        </div>
+      {if $smarty.foreach.loopname.index == 1}
         <div class="swiper-slide" style="background: url(/images/og-conference.jpg) center center / cover no-repeat;">
           <a href="/conference">
             <h3 class="kinyu-top-list-title">第1回週末投資宣言♪〜おかねをふやそう〜</h3>
