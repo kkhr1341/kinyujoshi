@@ -62,7 +62,7 @@
               </div>
             {/if}
 
-            <div class="swiper-slide" style="background: url({$blog.main_image}) center top / cover no-repeat;">
+            <div class="swiper-slide" style="background: url({$blog.main_image}) center top -40px / cover no-repeat;">
               <a href="/report/{$blog.code}">
                 <div class="kinyu-top-list-kind">
                 <!-- 種別 -->
