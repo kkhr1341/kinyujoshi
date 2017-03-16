@@ -8,6 +8,9 @@
 
 <div class="kinyu-main-block kinyu-pc-details-block">
   <div class="inner">
+    <div class="report-detail-header">
+      <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
+    </div>
     <div class="report-detail-thunb" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
 
     <div class="report-detail-info">
