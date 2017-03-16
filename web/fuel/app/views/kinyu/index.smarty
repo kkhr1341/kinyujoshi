@@ -17,7 +17,7 @@
         </div>
         <div class="swiper-slide" style="background: url(/images/og-conference.jpg) center center / cover no-repeat;">
           <a href="/conference">
-            <h3 class="kinyu-top-list-title">第1回週末投資宣言♪〜おかねをふやそう〜</h3>
+            <h3 class="kinyu-top-list-title">【2017年3月3日〜5日】第1回週末投資宣言♪〜おかねをふやそう〜</h3>
           </a>
         </div>
       {/if}
