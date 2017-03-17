@@ -961,8 +961,11 @@ body .redactor-box-fullscreen {
   color: #7CDCCE;
 }
 .redactor-editor h3 {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 5px 0px 5px 0px;
+  margin: 0px;
 }
 .redactor-editor h4 {
   font-size: 18px;

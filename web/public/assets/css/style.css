@@ -951,11 +951,13 @@
   content: "■ ";
   color:#7CDCCE;
 }
-/*.report-detail-main p {
-  font-size: 15px;
-  line-height: 22px;
-  color: #444444;
-}*/
+.report-detail-main h3 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 5px 0px 5px 0px;
+  margin: 0px;
+}
 .report-detail-main p strong {
   font-weight: bold;
 }
