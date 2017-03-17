@@ -1,5 +1,13 @@
 <div class="kinyu-content-after">
 
+  <!-- きんゆう女子。のメンバー促進部分 -->
+  <div class="kinyu-content-after-el after-content-member">
+    <img class="pc" src="/images/new/content-after-member-pc.png">
+    <img class="sp" src="/images/new/content-after-member.png">
+
+    <a href="/regist#after-content-member-point">登録フォームはこちら</a>
+  </div>
+
   <!-- きんゆう女子。のコンテンツ -->
   <div class="kinyu-content-after-el after-content">
     <h3 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-pick.png" alt="おすすめピックアップ"></h3>

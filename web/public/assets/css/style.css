@@ -1042,6 +1042,25 @@
   text-align: center;
   margin-top: 70px;
 }
+/* メンバー促進 */
+.after-content-member {
+  text-align: center;
+}
+.after-content-member img {
+  display: block;
+  width: 540px;
+  margin: 0 auto;
+}
+.after-content-member a {
+  display: inline-block;
+  padding: 12px 80px;
+  background: #7CDCCE;
+  color: #fff;
+  border-radius: 3px;
+  margin-top: 24px;
+  transition: .3s;
+}
+
 /* ソーシャルのシェア部分 */
 .report-detail-share {
   width: 100%;
@@ -1624,6 +1643,9 @@ footer .footer-menu {
 .prev-news-list a:hover {
   background: #7CDCCE;
   color: #fff!important;
+}
+.after-content-member a:hover {
+  opacity: .5;
 }
 
 }

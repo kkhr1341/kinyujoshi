@@ -56,7 +56,6 @@
     <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">
     {$detail_content_after}    
   </div>
-  </div>
   <footer>
         <div class="footer-logo">
           <a href="/"><img src="/images/kinyu-logo01.png"></a>

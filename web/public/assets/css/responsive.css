@@ -649,6 +649,15 @@
 .kinyu-content-after-el {
   margin-top: 42px;
 }
+/* メンバー促進 */
+.after-content-member img {
+  width: 84%;
+}
+.after-content-member a {
+  padding: 12px 0px;
+  width: 80%;
+  margin-top: 24px;
+}
 /* おすすめピックアップ */
 .kinyu-content-after .after-content li {
   width: 100%;
