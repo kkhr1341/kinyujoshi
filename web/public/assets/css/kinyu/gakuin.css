@@ -442,7 +442,7 @@
   font-weight: bold;
   text-align: center;
   background: #7CDCCE;
-  font-size: 20px!important;
+  font-size: 20px;
   color: #fff;
 }
 .gakuin-fee .kinyu-gakuin-link {
@@ -508,6 +508,9 @@
   width: 82%;
   margin: 0 auto;
   margin-bottom: 20px;
+}
+.kinyu-gakuin-block h3 img {
+  width: 100%;
 }
 .about-kinyu-gakuin h3 img {
   width: 80%;
@@ -709,6 +712,9 @@
 }
 .sponsor-list li {
   width: 49%;
+}
+.sponsor-list li img {
+  width: 100%;
 }
 .sponsor-list li:nth-child(2n) {
   margin-right: 0%;
