@@ -471,7 +471,7 @@
 @media screen and (max-width: 480px) {
 .kinyu-gakuin-introduction {
   width: 92%;
-  border-radius: 10px;
+  border-radius: 3px;
   height: 350px;
   background: url(/images/content/teacher/gakuin-back.jpg) center top / cover no-repeat;
 }
