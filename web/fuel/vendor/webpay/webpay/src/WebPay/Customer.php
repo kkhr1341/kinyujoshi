@@ -49,7 +49,7 @@ class Customer
     }
 
     /**
-     * Update an existing customer with specified parameters
+     * Update an existing customer with specified parameters.
      *
      * @param  mixed                 $params a value convertible to CustomerRequestUpdate
      * @return CustomerRequestUpdate
@@ -63,7 +63,7 @@ class Customer
     }
 
     /**
-     * Delete an existing customer
+     * Delete an existing customer.
      *
      * @param  mixed             $params a value convertible to CustomerIdRequest
      * @return CustomerIdRequest
@@ -77,7 +77,7 @@ class Customer
     }
 
     /**
-     * List customers filtered by params
+     * List customers filtered by params.
      *
      * @param  mixed            $params a value convertible to BasicListRequest
      * @return BasicListRequest
@@ -91,7 +91,7 @@ class Customer
     }
 
     /**
-     * Delete a card data of a customer
+     * Delete a card data of a customer.
      *
      * @param  mixed             $params a value convertible to CustomerIdRequest
      * @return CustomerIdRequest

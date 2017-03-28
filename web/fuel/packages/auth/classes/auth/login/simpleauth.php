@@ -249,7 +249,7 @@ class Auth_Login_Simpleauth extends \Auth_Login_Driver
 		{
 			if (in_array(strtolower($email), array_map('strtolower', $same_users->current())))
 			{
-				throw new \SimpleUserUpdateException('このメールアドレスは既に登録されています', 2);
+				throw new \SimpleUserUpdateException('Email address already exists', 2);
 			}
 			else
 			{

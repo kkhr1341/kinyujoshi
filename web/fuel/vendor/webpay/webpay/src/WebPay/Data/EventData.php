@@ -15,20 +15,20 @@ class EventData extends AbstractData
     $params['object'] = $params['object'];
 } else {
     switch ($params['object']['object']) {
+        case 'account':
+            $params['object'] = new AccountResponse($params['object']);
+            break;
         case 'charge':
-            $params['object'] = new \WebPay\Data\ChargeResponse($params['object']);
+            $params['object'] = new ChargeResponse($params['object']);
             break;
         case 'customer':
-            $params['object'] = new \WebPay\Data\CustomerResponse($params['object']);
-            break;
-        case 'shop':
-            $params['object'] = new \WebPay\Data\ShopResponse($params['object']);
+            $params['object'] = new CustomerResponse($params['object']);
             break;
         case 'recursion':
-            $params['object'] = new \WebPay\Data\RecursionResponse($params['object']);
+            $params['object'] = new RecursionResponse($params['object']);
             break;
-        case 'account':
-            $params['object'] = new \WebPay\Data\AccountResponse($params['object']);
+        case 'shop':
+            $params['object'] = new ShopResponse($params['object']);
             break;
         default:
             $params['object'] = $params['object'];

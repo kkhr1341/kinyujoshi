@@ -2,8 +2,7 @@
 
 namespace WebPay;
 
-use Guzzle\Common\Event as GuzzleEvent;
-use Guzzle\Service\Client as GuzzleClient;
+use GuzzleHttp\Client as GuzzleClient;
 
 use WebPay\Data\EventResponse;
 use WebPay\ErrorResponse\InvalidRequestException as ERInvalidRequestException;
@@ -15,6 +14,7 @@ class WebPay
 {
     /** @var GuzzleClient */
     private $client;
+    private $acceptLanguage;
 
     /** @var Charge */
     private $charge;
@@ -37,19 +37,22 @@ class WebPay
     public function __construct($authToken, $options = array())
     {
         $apiBase = isset($options['api_base']) ? $options['api_base'] : 'https://api.webpay.jp/v1';
-        $this->client = new GuzzleClient($apiBase);
+        if (substr($apiBase, -1) != '/') {
+            $apiBase .= '/';
+        }
+        $this->acceptLanguage = 'en';
+        $config = ['base_uri' => $apiBase, 'headers' => []];
 
-        $this->client->setDefaultOption('headers/Authorization', 'Bearer ' . $authToken);
+        $config['headers']['Authorization'] = 'Bearer ' . $authToken;
 
-        $this->client->setDefaultOption('headers/Content-Type', "application/json");
+        $config['headers']['Content-Type'] = "application/json";
 
-        $this->client->setDefaultOption('headers/Accept', "application/json");
+        $config['headers']['Accept'] = "application/json";
 
-        $this->client->setDefaultOption('headers/User-Agent', "Apipa-webpay/2.2.2 php");
+        $config['headers']['User-Agent'] = "Apipa-webpay/2.3.2 php";
 
-        $this->client->setDefaultOption('headers/Accept-Language', "en");
-        $this->client->getEventDispatcher()->addListener('request.error', array($this, 'onRequestError'));
-        $this->client->getEventDispatcher()->addListener('request.exception', array($this, 'onRequestException'));
+        $config['headers']['Accept-Language'] = "en";
+        $this->client = new GuzzleClient($config);
 
         $this->charge = new Charge($this);
         $this->customer = new Customer($this);
@@ -62,7 +65,7 @@ class WebPay
 
     public function setAcceptLanguage($value)
     {
-        $this->client->setDefaultOption('headers/Accept-Language', $value);
+        $this->acceptLanguage = $value;
     }
 
     /**
@@ -107,67 +110,37 @@ class WebPay
      */
     public function request($method, $path, $paramData)
     {
-        $req = $this->client->createRequest($method, $path, array());
-        $query = $req->getQuery();
+        $options = [
+            'query' => [],
+            'headers' => ['Accept-Language' => $this->acceptLanguage],
+        ];
         foreach ($paramData->queryParams() as $k => $v) {
-            if ($v === null) continue;
-            $query->add($k, (is_bool($v)) ? ($v ? 'true' : 'false') : $v);
+            $options['query'][$k] = $v === false ? 'false' : ($v === true ? 'true' : $v);
         }
         if ($method !== 'get' && $method !== 'delete') {
             $body = $paramData->requestBody();
-            $json = empty($body) ? '{}' : json_encode($body);
-            $req->setBody($json, 'application/json');
+            $options['body'] = empty($body) ? '{}' : json_encode($body);
+            $optoins['headers']['Content-Type'] = 'application/json';
         }
         try {
-            $res = $req->send();
+            $response = $this->client->request($method, $path, $options);
+            $json = json_decode($response->getBody(), true);
+            if ($json === null) {
+                throw ApiConnectionException::invalidJson($e);
+            }
 
-            return $res->json();
-        } catch (\Guzzle\Common\Exception\RuntimeException $e) {
+            return $json;
+        } catch (\GuzzleHttp\Exception\BadResponseException $e) {
+            $this->throwErrorResponseException($e->getResponse());
+        } catch (\GuzzleHttp\Exception\GuzzleException $e) {
             throw ApiConnectionException::inRequest($e);
-        }
-    }
-
-    /**
-     * Add a guzzle plugin to the client.
-     * This is mainly for testing, but also useful for logging, validation, etc.
-     *
-     * @param mixed $plugin A guzzle plugin
-     */
-    public function addSubscriber($plugin)
-    {
-        $this->client->addSubscriber($plugin);
-    }
-
-    /**
-     * @param  GuzzleEvent     $event
-     * @throws WebPayException
-     */
-    public function onRequestError(GuzzleEvent $event)
-    {
-        $this->throwErrorResponseException($event['response']);
-    }
-
-    /**
-     * @param  GuzzleEvent     $event
-     * @throws WebPayException
-     */
-    public function onRequestException(GuzzleEvent $event)
-    {
-        $cause = $event['exception'];
-
-        if (isset($event['response'])) {
-            $this->throwErrorResponseException($event['response']);
-        } else {
-            throw ApiConnectionException::inRequest($cause);
         }
     }
 
     private function throwErrorResponseException($response)
     {
-        $data = null;
-        try {
-            $data = $response->json();
-        } catch (\Exception $e) {
+        $data = json_decode($response->getBody(), true);
+        if ($data === null) {
             throw ApiConnectionException::invalidJson($e);
         }
         $status = $response->getStatusCode();

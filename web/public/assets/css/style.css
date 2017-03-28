@@ -125,13 +125,6 @@
   border-radius: 3px;
   box-shadow: 1px 1px 2px whitesmoke;
 }
-.kinyu-main-menu li:hover > .tool-chip {
-  display: block;
-  -webkit-animation-name: fadein;
-  animation-name: fadein;
-  -webkit-animation-duration: .6s;
-  animation-duration: .6s;
-}
 @-webkit-keyframes fadein {
   0% {
     display: none;
@@ -236,9 +229,6 @@
   display: inline-block;
   transition: all .4s;
   box-sizing: border-box;
-}
-.menu-trigger:hover {
-  cursor: pointer;
 }
 .menu-trigger {
   position: relative;
@@ -1038,6 +1028,124 @@
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　女子会ページ - 女子会一覧
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.regist-to-form-block {
+  padding: 0px 0px 50px;
+  border-bottom: 1px dotted #e0dfdf;
+}
+/* 女子会参加の分岐 */
+.kinyu-regist-branch-block {
+  text-align: center;
+  margin-top: 50px;
+}
+.kinyu-regist-branch-block ul {
+  margin: 24px 0px;
+}
+.kinyu-regist-branch-block li {
+  display: inline-block;
+  margin: 0px 16px;
+}
+.kinyu-regist-branch-block li a {
+  border: 2px solid #7cdcce;
+  border-radius: 0px;
+}
+.kinyu-regist-branch-block li a span {
+  font-weight: bold;
+}
+.kinyu-regist-branch-block li:last-child a {
+  background: #fff;
+  color: #77C7BC;
+}
+.kinyu-regist-branch-block .caution {
+  font-size: 13px;
+}
+.kinyu-regist-branch-block .new-joshikai-flow {
+  display: inline-block;
+  background: #ebebeb;
+  margin-top: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 13px;
+  transition: .5s;
+}
+.kinyu-event-list {
+  margin-top: 24px;
+}
+.kinyu-event-list .kinyu-event-list-left {
+  height: 200px;
+}
+.kinyu-event-list .kinyu-event-list-right {
+  padding: 4%;
+}
+.kinyu-event-list ul {
+  letter-spacing: -0.5em;
+}
+.kinyu-event-list li {
+  display: inline-block;
+  width: 31.3333%;
+  letter-spacing: normal;
+  /*border: 1px solid #e9e9e9;*/
+  box-sizing: border-box;
+  margin-right: 3%;
+  margin-bottom: 3%;
+  box-shadow: 0px 0px 5px 0px #e0e0e0;
+  position: relative;
+  transition: .5s;
+}
+.kinyu-event-list li:nth-child(3n) {
+  margin-right: 0%;
+}
+.kinyu-event-list li .event-category {
+  display: inline-block;
+  background: rgba(255,255,255,.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 4px 8px;
+  color: #46aa9c;
+}
+.kinyu-event-list li p.event-main-date {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  vertical-align: bottom;
+  padding: 6px 8px;
+  border: 1px solid #7CDCCE;
+}
+.kinyu-event-list li p.event-main-date span {
+}
+.kinyu-event-list li p.event-main-date span.timezone,
+ .event-main-date span.day_of_the_week {
+  font-size: 12px;
+}
+.kinyu-event-list li .event-title {
+  font-size: 14px;
+  line-height: 20px;
+  height: 40px;
+  margin: 12px 0px;
+  padding: 0px 1px;
+}
+.kinyu-event-list li .event-fee {
+  border-top: 1px dotted #ededed;
+  padding: 12px 1px 0px 1px;
+  line-height: 13px;
+  line-height: 18px;
+}
+.kinyu-event-list li .event-fee span {
+  display: block;
+  background:url(/images/icon/yen.png) center left / contain no-repeat;
+  padding-left: 24px;
+  line-height: 18px;
+}
+
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-content-after-el {
@@ -1292,9 +1400,6 @@
   line-height: 18px;
   transition: .3s;
 }
-.kinyu-social-list-el .follow-link:hover {
-  opacity: .5;
-}
 .kinyu-social-list-el p {
   line-height: 18px;
 }
@@ -1423,9 +1528,9 @@
   border-bottom: 1px solid #f1f1f1;
 }
 .company-detail-header .logo {
-    width: 150px;
-    display: block;
-    margin: 0 auto;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
 }
 .single-page-after {
   width: 660px;
@@ -1433,13 +1538,6 @@
 }
 .single-page-after .kinyu-content-after {
   border-top: none;
-}
-/* タイトル */
-.kinyu-main-single-title {
-
-}
-.kinyu-main-single-title .inner {
-  
 }
 .kinyu-main-single-title h1 {
   font-size: 36px;
@@ -1649,6 +1747,29 @@ footer .footer-menu {
 }
 .after-content-member a:hover {
   opacity: .5;
+}
+.kinyu-event-list li:hover {
+  opacity: .5;
+}
+.kinyu-regist-branch-block li:last-child a:hover {
+  background: #7cdcce;
+  color: #fff;
+}
+.kinyu-regist-branch-block .new-joshikai-flow:hover {
+  background: #d9d9d9;
+}
+.kinyu-social-list-el .follow-link:hover {
+  opacity: .5;
+}
+.kinyu-main-menu li:hover > .tool-chip {
+  display: block;
+  -webkit-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+}
+.menu-trigger:hover {
+  cursor: pointer;
 }
 
 }

@@ -36,7 +36,7 @@ class Charge
     }
 
     /**
-     * Retrieve a existing charge object by charge id
+     * Retrieve a existing charge object by charge id.
      *
      * @param  mixed           $params a value convertible to ChargeIdRequest
      * @return ChargeIdRequest
@@ -65,7 +65,7 @@ class Charge
     }
 
     /**
-     * Capture a not captured charge specified by charge id
+     * Capture a not captured charge specified by charge id.
      *
      * @param  mixed                   $params a value convertible to ChargeRequestWithAmount
      * @return ChargeRequestWithAmount
@@ -79,7 +79,7 @@ class Charge
     }
 
     /**
-     * List charges filtered by params
+     * List charges filtered by params.
      *
      * @param  mixed             $params a value convertible to ChargeListRequest
      * @return ChargeListRequest

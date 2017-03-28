@@ -17,7 +17,7 @@ class Account
     }
 
     /**
-     * Retrieve information of the current user
+     * Retrieve information of the current user.
      *
      * @param  mixed        $params a value convertible to EmptyRequest
      * @return EmptyRequest
@@ -31,7 +31,7 @@ class Account
     }
 
     /**
-     * Delete all test data of this account
+     * Delete all test data of this account.
      *
      * @param  mixed        $params a value convertible to EmptyRequest
      * @return EmptyRequest

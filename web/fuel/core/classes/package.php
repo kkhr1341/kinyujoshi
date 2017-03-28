@@ -86,7 +86,6 @@ class Package
 
 		if ( ! is_dir($path))
 		{
-// 			echo $path;exit();
 			throw new \PackageNotFoundException("Package '$package' could not be found at '".\Fuel::clean_path($path)."'");
 		}
 

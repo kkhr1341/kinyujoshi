@@ -19,7 +19,7 @@
 .sub-description {
   margin-left: 24px;
   margin-top: 20px;
-  font-size: 1.4rem;
+  font-size: 12px;
 }
 .edit-block-menu {
   margin-left: 20px;
@@ -219,7 +219,6 @@ footer {
 	text-align:center;
 	margin-bottom:20px;
 }
-
 .form_ul .text {
 	width:70%;
 	padding:16px;
@@ -269,7 +268,6 @@ footer {
 	display:block!important;
 	width:100%!important;
 }
-
 .redactor-toolbar {
     background: #111;
     box-shadow: none;
@@ -281,3 +279,43 @@ footer {
     background: #d70a16;
     color: #fff;
 }
+
+.events-edit-block .redactor-toolbar li a:not(.re-image) {
+    display: none!important;
+}
+.events-edit-block .redactor-toolbar li .re-image {
+  color: #555;
+  background-color: #e0e0e0;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  padding: 15px 30px!important;
+  transition: .3s;
+}
+.events-edit-block .redactor-toolbar li .re-image:hover {
+  background: #7CDCCE;
+}
+.events-edit-block .redactor-toolbar {
+  background-color: #fff;
+}
+.events-edit-block .upload_image_box .redactor-editor {
+  height: auto!important;
+}
+.events-edit-block .form-group-event-label {
+  margin: 0px 0px 8px 0px;
+  font-size: 14px;
+  line-height: 14px;
+}
+.events-edit-block .form-group-event-label:before {
+  content: "◆ ";
+  color: #7CDCCE;
+}
+.events-edit-block .form-group p {
+  font-size: 12px;
+}
+.events-edit-block .form-control {
+  font-size: 12px;
+}
+
+
+

@@ -5,6 +5,10 @@
   width: 800px;
   padding-bottom: 80px;
 }
+.singlepage-block-920 {
+  width: 920px;
+  padding-bottom: 80px;
+}
 .singlepage-block-title {
   width: 540px;
   padding-top: 50px;
@@ -194,21 +198,12 @@
   transition: 0.5s;
   border-radius: 3px;
 }
-.about-kinyujoshi-service .btn-white:hover {
-  background-color: #7cdcce;
-  color: #fff;
-}
 .about-kinyujoshi-service .btn-tiffany {
   border: 1px solid #fff;
   background-color: #7cdcce;
   color: #fff;
   transition: 0.5s;
   border-radius: 3px;
-}
-.about-kinyujoshi-service .btn-tiffany:hover {
-  background-color: #fff;
-  color: #77C7BC;
-  border: 1px solid #7cdcce;
 }
 .about-kinyujoshi-service-balloon01 {
   width: 125px;
@@ -322,24 +317,12 @@
 
 
 @media screen and (max-width: 769px) {
+.singlepage-block-920 {
+  width: 100%;
+  padding-bottom: 0px;
+}
 .top-slider .bx-wrapper {
   height: 280px;
-}
-.regist-to-form-block {
-  width: 84%;
-  margin: 0 auto;
-  padding: 16px 0px 24px;
-  border-bottom: 1px dotted #e0dfdf;
-}
-.regist-to-form-block p {
-  text-align: center;
-  padding-top: 8px;
-}
-.jyoshikai-sub-title {
-  display: block;
-  width: 72%;
-  margin: 0 auto;
-  margin-bottom: 16px;
 }
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   個別ページの設計
@@ -365,7 +348,7 @@
 }
 .singlepage-block-link {
   padding: 16px 0px;
-  font-size: 14px;
+  font-size: 13px;
   width: 90%;
 }
 .top-introduction {
@@ -534,5 +517,24 @@
   width: 80%;
   height: auto;
 }
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+
+.about-kinyujoshi-service .btn-white:hover {
+  background-color: #7cdcce;
+  color: #fff;
+}
+.about-kinyujoshi-service .btn-tiffany:hover {
+  background-color: #fff;
+  color: #77C7BC;
+  border: 1px solid #7cdcce;
+}
+
+
 
 }

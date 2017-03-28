@@ -14,8 +14,8 @@ class ApiConnectionException extends ApiException
         return new ApiConnectionException("API request failed with " . $exception->getMessage(), $exception);
     }
 
-    public static function invalidJson($exception)
+    public static function invalidJson()
     {
-        return new ApiConnectionException("Server responded invalid JSON string", $exception);
+        return new ApiConnectionException("Server responded invalid JSON string");
     }
 }

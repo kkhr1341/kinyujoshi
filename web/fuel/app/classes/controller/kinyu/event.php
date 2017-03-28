@@ -16,16 +16,14 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 		// 	Response::redirect('/login');
 		// }
 		// else {
-			$this->data['events'] = Events::all('kinyu', '/event/', $page, 2, 8);
+			$this->data['events'] = Events::all('event', '/event/', $page, 2, 8);
 			$pagination = $this->data['events']['pagination'];
 			$this->data['pagination'] = $pagination::instance('mypagination');
+      //$this->data['events'] = Events::lists(1, 5, true);
 			$this->template->title = '女子会について｜きんゆう女子。';
 			$this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
 			$this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
 			$this->template->today = date("Y年n月");
-			//$this->template->navi_contents = View::forge('kinyu/template/navi_contents.smarty', $this->data);
-			//$this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
-    	//$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
     	$this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
 
     	if(Agent::is_mobiledevice()) {

@@ -642,6 +642,83 @@
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　女子会ページ - 女子会一覧
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.regist-to-form-block {
+  padding: 0px 0px 24px;
+  border-bottom: 1px dotted #e0dfdf;
+  width: 84%;
+  margin: 0 auto;
+}
+.regist-to-form-block p {
+  text-align: center;
+  padding-top: 8px;
+}
+.jyoshikai-sub-title {
+  display: block;
+  width: 72%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+.kinyu-regist-branch-block {
+  margin-top: 24px;
+}
+.jyoshikai-sub-title {
+  width: 82%;
+}
+.kinyu-regist-branch-block ul {
+  margin: 20px 0px;
+}
+.kinyu-regist-branch-block li {
+  display: block;
+  margin: 0px;
+}
+.kinyu-regist-branch-block .caution {
+  font-size: 12px;
+}
+.kinyu-regist-branch-block .new-joshikai-flow {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.kinyu-event-list {
+  width: 84%;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.kinyu-event-list li {
+  width: 100%;
+  margin-right: 0%;
+  margin-bottom: 24px;
+}
+.kinyu-event-list li:last-child {
+  margin-bottom: 0px;
+}
+.kinyu-event-list .kinyu-event-list-left {
+  height: 160px;
+}
+.kinyu-event-list li .event-category {
+  font-size: 11px;
+  line-height: 11px;
+}
+.kinyu-event-list li p.event-main-date {
+  font-size: 13px;
+  line-height: 13px;
+}
+.kinyu-event-list li p.event-main-date span.timezone, .event-main-date span.day_of_the_week {
+  font-size: 11px;
+}
+.kinyu-event-list li .event-title {
+  font-size: 13px;
+}
+.kinyu-event-list li .event-fee span {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-content-after .after-content .kinyu-top-list-title {

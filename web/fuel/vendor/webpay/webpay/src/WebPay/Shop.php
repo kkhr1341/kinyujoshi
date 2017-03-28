@@ -49,7 +49,7 @@ class Shop
     }
 
     /**
-     * Update an existing shop with specified parameters
+     * Update an existing shop with specified parameters.
      *
      * @param  mixed             $params a value convertible to ShopRequestUpdate
      * @return ShopRequestUpdate
@@ -63,7 +63,7 @@ class Shop
     }
 
     /**
-     * Alter the test shop's status to the specified one
+     * Alter the test shop's status to the specified one.
      *
      * @param  mixed                  $params a value convertible to ShopRequestAlterStatus
      * @return ShopRequestAlterStatus
@@ -77,7 +77,7 @@ class Shop
     }
 
     /**
-     * List shops filtered by params
+     * List shops filtered by params.
      *
      * @param  mixed            $params a value convertible to BasicListRequest
      * @return BasicListRequest

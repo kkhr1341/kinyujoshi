@@ -73,7 +73,6 @@ abstract class Controller_Rest extends \Controller
 
 	public function after($response)
 	{
-		$this->template = mb_convert_encoding($this->template, Config::get('mbstring.http_output'), Config::get('mbstring.internal_encoding'));
 		// If the response is an array
 		if (is_array($response))
 		{

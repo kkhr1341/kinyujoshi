@@ -32,7 +32,7 @@ class Event
     }
 
     /**
-     * List events filtered by params
+     * List events filtered by params.
      *
      * @param  mixed            $params a value convertible to EventListRequest
      * @return EventListRequest

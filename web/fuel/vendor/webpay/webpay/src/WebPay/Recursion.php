@@ -49,7 +49,7 @@ class Recursion
     }
 
     /**
-     * Resume a suspended recursion
+     * Resume a suspended recursion.
      *
      * @param  mixed                  $params a value convertible to RecursionRequestResume
      * @return RecursionRequestResume
@@ -63,7 +63,7 @@ class Recursion
     }
 
     /**
-     * Delete an existing recursion
+     * Delete an existing recursion.
      *
      * @param  mixed              $params a value convertible to RecursionIdRequest
      * @return RecursionIdRequest
@@ -77,7 +77,7 @@ class Recursion
     }
 
     /**
-     * List recursions filtered by params
+     * List recursions filtered by params.
      *
      * @param  mixed                $params a value convertible to RecursionListRequest
      * @return RecursionListRequest
