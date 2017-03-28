@@ -126,7 +126,7 @@ class Pagination
 		'per_page'                => 10,
 		'total_pages'             => 0,
 		'total_items'             => 0,
-		'num_links'               => 5,
+		'num_links'               => 3,
 		'uri_segment'             => 3,
 		'show_first'              => false,
 		'show_last'               => false,
