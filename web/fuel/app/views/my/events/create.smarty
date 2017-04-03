@@ -2,31 +2,96 @@
 <ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
 	<li><a href="/my">マイページ</a></li>
-	<li><a href="/my/events">イベントの管理</a></li>
-	<li class="active">イベント作成</li>
+	<li><a href="/my/events">女子会の管理</a></li>
+	<li class="active">女子会を追加</li>
 </ol>
 
 <form>
 	<fieldset class="events-edit-block">
 		<div class="my-form-container clear">
 			<div class="form-left">
+
+				<div class="form-group mb50">
+					<label class="form-group-event-label">カテゴリー</label>
+
+					<div class="radio_box clear">
+            <input type="radio" value="女子会" name="event_category" id="event1" class="form-radio" placeholder="">
+            <label for="event1" class="form-long">女子会</label>
+            
+            <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="">
+            <label for="event2" class="form-long">スペシャル</label>
+
+            <input type="radio" value="コラボ" name="event_category" id="event3" class="form-radio" placeholder="">
+            <label for="event3" class="form-long">コラボ</label>
+
+            <input type="radio" value="公立きん" name="event_category" id="event4" class="form-radio" placeholder="">
+            <label for="event4" class="form-long">公立きん...</label>
+
+            <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="">
+            <label for="event5" class="form-long">私立きん...</label>
+          </div>
+
+				</div>
+
 				<div class="form-group">
-					<label>タイトル</label>
+					<label class="form-group-event-label">女子会のタイトル</label>
 					<input type="text" id="title" class="form-control" placeholder="">
 				</div>
 
 				<div class="form-group">
-					<label>説明文 <span class="label label-danger">必須</span></label>
+					<label class="form-group-event-label">女子会の説明(120文字程度)</label>
 					<textarea style="height: 80px;" type="text" id="description" class="form-control" placeholder=""></textarea>
 				</div>
 
-				<div class="form-group">
-					<label>本文</label>
-					<textarea id="content" name="content"></textarea>
+				<div class="form-group upload_image_box">
+					<label class="form-group-event-label">サムネイル画像</label>
+					<p><span style="color:red;">＊</span>"画像投稿"をクリックしてファイルを選択してください。</p>
+					<textarea style="height: 40px;" id="content" name="content"></textarea>
 				</div>
-				
+
 				<div class="form-group">
-					<label>公開日時</label>
+					<label class="form-group-event-label">場所</label>
+					<input type="text" id="place" class="form-control" placeholder="(例)カフェサルバドル、フィンゲート">
+				</div>
+
+				<div class="form-group">
+					<label class="form-group-event-label">費用</label>
+					<input type="text" id="fee" class="form-control" placeholder="(例)2,000円、無料、etc">
+				</div>
+
+				<div class="form-group">
+					<label class="form-group-event-label">日付</label>
+					<div class='input-group date datetimepicker'>
+						<input type='text' class="form-control" id="event_date" value="" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-group-event-label">開始時刻</label>
+					<input type="text" id="event_start_datetime" class="form-control" placeholder="(例)19:30">
+				</div>
+
+				<div class="form-group">
+					<label class="form-group-event-label">終了時刻</label>
+					<input type="text" id="event_end_datetime" class="form-control" placeholder="(例)21:30">
+				</div>
+
+				<div class="form-group">
+					<label class="form-group-event-label">Any payの決済URL</label>
+					<input type="text" id="pay_url" class="form-control" placeholder="Any payの決済URLを入力してください。">
+				</div>
+				<div class="form-group">
+					<p><a style="color:#337ab7;" target="_blank" href="https://anypay.jp/users/sign_in">Anypayログインページへ</a></p>
+					<p>ID：cs@kinyu-joshi.jp</p>
+					<p>PASS：9hb3TktkwZN6</p>
+					<p></p>
+				</div>
+
+				<div class="form-group">
+					<label class="form-group-event-label">公開設定</label>
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="open_date" value="{date('YY/mm/dd HH:ii')}" />
 						<span class="input-group-addon">
@@ -34,6 +99,7 @@
 						</span>
 					</div>
 				</div>
+
 			</div>
 			<div class="form-right">
 				<div class="edit-block-menu">
@@ -56,52 +122,58 @@ $(function(){
 	$('#save').click(function(){
 		var url = "/api/events/create";
 		var params = {};
-		params.section_code = "report";
+		params.section_code = "event";
+		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
-		params.content = $('#content').val();
 		params.description = $('#description').val();
-		//params.place = $('#place').val();
-		//params.url = $('#url').val();
-		//params.limit = intval($('#limit').val());
-		params.open_date = $('#open_date').val();
-		//params.event_start_datetime = $('#event_start_datetime').val();
-		//params.event_end_datetime = $('#event_end_datetime').val();
+		params.content = $('#content').val();
+		params.place = $('#place').val();
+		params.fee = $('#fee').val();
+		params.event_date = $('#event_date').val();
+		params.event_start_datetime = $('#event_start_datetime').val();
+		params.event_end_datetime = $('#event_end_datetime').val();
+		params.pay_url = $('#pay_url').val();
+		params.event_date = $('#open_date').val();
 		params.status = 1;
 		
-		if (params.section_code == "") {
-			ts.error("カテゴリを選択してください");
+		if (params.event_category == "") {
+			ts.error("女子会のカテゴリーを選択してください");
 			return false;
 		}
 		if (params.title == "") {
-			ts.error("タイトルを入力してください");
+			ts.error("女子会のタイトルを入力してください");
 			return false;
 		}
 		if (params.description == "") {
-			ts.error("説明文を入力してください");
+			ts.error("女子会の説明文を入力してください");
 			return false;
 		}
-		// if (params.place == "") {
-		// 	ts.error("場所を入力してください");
-		// 	return false;
-		// }
-		if (strip_tags(params.content) == "") {
-			ts.error("本文を入力してください");
+		if (params.place == "") {
+			ts.error("場所を入力してください");
 			return false;
 		}
-		// if (params.limit == 0) {
-		// 	ts.error("定員を入力してください");
-		// 	return false;
-		// }
-		// if (params.event_start_datetime == "") {
-		// 	ts.error("日程を入力してください");
-		// 	return false;
-		// }
-		/*
+		if (params.fee == "") {
+			ts.error("費用を入力してください");
+			return false;
+		}
+		if (params.event_date == "") {
+			ts.error("日付を入力してください");
+			return false;
+		}
+		if (params.event_start_datetime == "") {
+			ts.error("開始時間を入力してください");
+			return false;
+		}
 		if (params.event_end_datetime == "") {
-			ts.error("終了日時を入力してください");
+			ts.error("終了時間を入力してください");
 			return false;
 		}
-		*/
+		if (params.pay_url == "") {
+			ts.error("Anypayの決済URLを入力してください");
+			return false;
+		}
+
+
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
 				location.href = "/my/events";
@@ -112,16 +184,18 @@ $(function(){
 	$('#save_closed').click(function(){
 		var url = "/api/events/create";
 		var params = {};
-		params.section_code = "report";
+		params.section_code = "event";
+		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
-		//params.place = $('#place').val();
-		//params.url = $('#url').val();
-		params.content = $('#content').val();
 		params.description = $('#description').val();
-		//params.limit = intval($('#limit').val());
-		params.open_date = $('#open_date').val();
-		//params.event_start_datetime = $('#event_start_datetime').val();
-		//params.event_end_datetime = $('#event_end_datetime').val();
+		params.content = $('#content').val();
+		params.place = $('#place').val();
+		params.fee = $('#fee').val();
+		params.event_date = $('#event_date').val();
+		params.event_start_datetime = $('#event_start_datetime').val();
+		params.event_end_datetime = $('#event_end_datetime').val();
+		params.pay_url = $('#pay_url').val();
+		params.event_date = $('#open_date').val();
 		params.status = 0;
 		
 		if (params.title == "") {

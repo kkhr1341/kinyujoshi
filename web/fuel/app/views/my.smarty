@@ -30,16 +30,16 @@
 
               <!-- {if array_search('admin', $roles)} -->
               <li>
-                <a href="/my/news">ニュースの作成</a>
+                <a href="/my/news">ニュースの管理</a>
               </li>
 
               <li>
-                <a href="/my/blogs">記事の作成</a>
+                <a href="/my/blogs">レポートの管理</a>
               </li>
 
-              <!-- <li>
-                <a href="/my/events">イベントレポートの作成</a>
-              </li> -->
+              <li>
+                <a href="/my/events">女子会の管理</a>
+              </li>
 
               <li>
                 <a href="/my/registlist">会員リスト一覧</a>
