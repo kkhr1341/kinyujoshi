@@ -60,7 +60,7 @@ class Events extends Base {
 		$username = \Auth::get('username');
 		$params['main_image'] = self::get_main_image($params);
 		
-		\DB::update('events')->set($params)->where('code', '=', $params['code'])->where('username', '=', $username)->execute();
+		\DB::update('events')->set($params)->where('code', '=', $params['code'])->execute();
 		
 		return $params;
 	}
@@ -68,7 +68,7 @@ class Events extends Base {
 	public static function delete($params) {
 
 		$username = \Auth::get('username');
-		\DB::update('events')->set(array('disable' => 1))->where('code', '=', $params['code'])->where('username', '=', $username)->execute();
+		\DB::update('events')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
 		
 		return $params;
 	}
