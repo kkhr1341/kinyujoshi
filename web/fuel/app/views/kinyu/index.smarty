@@ -1,3 +1,12 @@
+<script src="/assets/js/kinyu/topanimation.js"></script>
+<!-- メインアニメーション -->
+<div class="kinyu-main-animation">
+  <div class="kinyu-main-animation-inner">
+    <img class="kinyu-main-animation-sub" src="/images/animation/animation-sub.png">
+    <img class="kinyu-main-animation-title" src="/images/animation/animation-title.png">
+  </div>
+</div>
+
 <!-- イントロダクションエリア -->
 <div class="kinyu-sp-main-block">
 
