@@ -63,10 +63,6 @@ a img {
 a {
   text-decoration: none;
 }
-a :hover,
-button :hover {
-  cursor: pointer!important;
-}
 p, a {
   font-size: 13px;
   line-height: 22px;
@@ -179,11 +175,6 @@ input:focus {
   background-color: #7cdcce;
   color: #fff;
   transition: 0.5s;
-}
-.btn-tiffany:hover {
-  background-color: #fff;
-  color: #77C7BC;
-  border: 2px solid #7cdcce;
 }
 
 /* ===========================================
@@ -333,6 +324,17 @@ p, a {
 
 }
 
+@media screen and (min-width: 768px) {
+a :hover,
+button :hover {
+  cursor: pointer!important;
+}
+.btn-tiffany:hover {
+  background-color: #fff;
+  color: #77C7BC;
+  border: 2px solid #7cdcce;
+}
 
+}
 
 
