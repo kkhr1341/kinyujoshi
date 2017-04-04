@@ -644,6 +644,16 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会ページ - 女子会一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.news-new-event {
+  padding:8px 0px;
+  width: 100%;
+  margin-bottom:30px;
+}
+.news-new-event p,
+.news-new-event a {
+  font-size: 12px!important;
+  transition: .3s;
+}
 .regist-to-form-block {
   padding: 0px 0px 24px;
   border-bottom: 1px dotted #e0dfdf;
@@ -652,7 +662,7 @@
 }
 .regist-to-form-block p {
   text-align: center;
-  padding-top: 8px;
+  padding: 0px;
 }
 .jyoshikai-sub-title {
   display: block;
@@ -661,7 +671,7 @@
   margin-bottom: 16px;
 }
 .kinyu-regist-branch-block {
-  margin-top: 24px;
+  margin-top: 20px;
 }
 .jyoshikai-sub-title {
   width: 82%;

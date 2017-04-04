@@ -13,6 +13,10 @@
     <div class="regist-to-form-block">
       <div class="singlepage-introduction-btn">
         <div class="kinyu-regist-branch-block">
+          <div class="news-new-event">
+            <p class="caution"><span style="color:red;">＊</span>4月より女子会の参加方法が変わりました♪</p>
+            <a class="" style="border-bottom:1px solid #7cdcce;font-size: 12px;font-weight:bold;" target="_blank" href="/news/mSP6oQ">新しい女子会の参加方法はこちら</a>
+          </div>
           <img class="jyoshikai-sub-title" src="/images/new/sp-jyoshikai-sub.png">
           <ul>
             <li>
@@ -22,8 +26,6 @@
               <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="#kinyu-event-scroll-point"><span>4月</span>の女子会はこちら</a>
             </li> -->
           </ul>
-          <p class="caution"><span style="color:red;">＊</span>4月より女子会の参加方法が変わりました( ´ ▽ ` )ﾉ</p>
-          <a class="new-joshikai-flow" target="_blank" href="/news/mSP6oQ">新しい女子会の参加方法はこちら</a>
         </div>
       </div>
     </div>

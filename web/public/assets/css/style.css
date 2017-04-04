@@ -1030,6 +1030,18 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会ページ - 女子会一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.news-new-event {
+  border:1px solid #7cdcce;
+  padding:12px 0px;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom:40px;
+}
+.news-new-event p,
+.news-new-event a {
+  font-size: 14px!important;
+  transition: .3s;
+}
 .regist-to-form-block {
   padding: 0px 0px 50px;
   border-bottom: 1px dotted #e0dfdf;
@@ -1771,6 +1783,9 @@ footer .footer-menu {
 }
 .menu-trigger:hover {
   cursor: pointer;
+}
+.news-new-event a:hover {
+  opacity: .3;
 }
 
 }
