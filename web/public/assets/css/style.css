@@ -1049,14 +1049,15 @@
 .kinyu-regist-branch-block li a {
   border: 2px solid #7cdcce;
   border-radius: 0px;
+  width: 400px;
 }
 .kinyu-regist-branch-block li a span {
   font-weight: bold;
 }
-.kinyu-regist-branch-block li:last-child a {
+/*.kinyu-regist-branch-block li:last-child a {
   background: #fff;
   color: #77C7BC;
-}
+}*/
 .kinyu-regist-branch-block .caution {
   font-size: 13px;
 }
@@ -1751,10 +1752,10 @@ footer .footer-menu {
 .kinyu-event-list li:hover {
   opacity: .5;
 }
-.kinyu-regist-branch-block li:last-child a:hover {
+/*.kinyu-regist-branch-block li:last-child a:hover {
   background: #7cdcce;
   color: #fff;
-}
+}*/
 .kinyu-regist-branch-block .new-joshikai-flow:hover {
   background: #d9d9d9;
 }

@@ -2,11 +2,11 @@
 <ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
 	<li><a href="/my">マイページ</a></li>
-	<li class="active">イベントの管理</li>
+	<li class="active">女子会の管理</li>
 </ol>
 
 <div class='clearw'>
-	<a class="btn btn-primary float_right" href="/my/events/create" role="button">イベントを作る</a>
+	<a class="btn btn-primary float_right" href="/my/events/create" role="button">女子会を追加する</a>
 </div>
 
 
@@ -16,6 +16,8 @@
 	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
 </ul>
 <div class="tab-content">
+
+	<!-- 公開 -->
 	<div class="tab-pane active" id="tab1">
 		{if sizeof($open_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">公開中のイベントはありません</div>
@@ -23,29 +25,23 @@
 		<table class="table table-hover mt20">
 			<thead>
 				<tr>
-					<th>状態</th>
+					<th>日付</th>
 					<th>カテゴリ</th>
 					<th>タイトル</th>
-					<th>公開日時</th>
 				</tr>
 			</thead>
 			{foreach from=$open_events item=events_item}
 			<tr class="events pointer" code="{$events_item.code}">
-				<td>
-					{if $events_item.status == 1 && strtotime($events_item.open_date) < time()}公開{/if}
-					{if $events_item.status == 1 && strtotime($events_item.open_date) > time()}公開待ち{/if}
-					{if $events_item.status == 0}下書き{/if}
-				</td>
-				<td>
-					{$events_item.section_code}
-				</td>
+				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
+				<td>{$events_item.section_code}</td>
 				<td>{$events_item.title}</td>
-				<td>{$events_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
 			</tr>
 			{/foreach}
 		</table>
 		{/if}
 	</div>
+
+	<!-- 下書き -->
 	<div class="tab-pane" id="tab2">
 		{if sizeof($closed_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">下書き状態のイベントはありません</div>
@@ -53,29 +49,23 @@
 		<table class="table table-hover mt20">
 			<thead>
 				<tr>
-					<th>状態</th>
+					<th>日付</th>
 					<th>カテゴリ</th>
 					<th>タイトル</th>
-					<th>公開日時</th>
 				</tr>
 			</thead>
 			{foreach from=$closed_events item=events_item}
 			<tr class="events pointer" code="{$events_item.code}">
-				<td>
-					{if $events_item.status == 1 && strtotime($events_item.open_date) < time()}公開{/if}
-					{if $events_item.status == 1 && strtotime($events_item.open_date) > time()}公開待ち{/if}
-					{if $events_item.status == 0}下書き{/if}
-				</td>
-				<td>
-					{$events_item.section_code}
-				</td>
+				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
+				<td>{$events_item.section_code}</td>
 				<td>{$events_item.title}</td>
-				<td>{$events_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
 			</tr>
 			{/foreach}
 		</table>
 		{/if}
 	</div>
+
+	<!-- 全て -->
 	<div class="tab-pane" id="tab3">
 		{if sizeof($all_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">イベントはありません</div>
@@ -83,24 +73,16 @@
 		<table class="table table-hover mt20">
 			<thead>
 				<tr>
-					<th>状態</th>
+					<th>日付</th>
 					<th>カテゴリ</th>
 					<th>タイトル</th>
-					<th>公開日時</th>
 				</tr>
 			</thead>
 			{foreach from=$all_events item=events_item}
 			<tr class="events pointer" code="{$events_item.code}">
-				<td>
-					{if $events_item.status == 1 && strtotime($events_item.open_date) < time()}公開{/if}
-					{if $events_item.status == 1 && strtotime($events_item.open_date) > time()}公開待ち{/if}
-					{if $events_item.status == 0}下書き{/if}
-				</td>
-				<td>
-					{$events_item.section_code}
-				</td>
+				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
+				<td>{$events_item.section_code}</td>
 				<td>{$events_item.title}</td>
-				<td>{$events_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
 			</tr>
 			{/foreach}
 		</table>

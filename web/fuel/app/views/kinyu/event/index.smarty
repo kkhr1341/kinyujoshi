@@ -16,14 +16,14 @@
           <img class="jyoshikai-sub-title" src="/images/new/sp-jyoshikai-sub.png">
           <ul>
             <li>
-              <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="https://docs.google.com/a/sundaylunch.jp/forms/d/e/1FAIpQLSdfLoYE_WXBwB8qY-9yzdfHCdrBB1eNENgTSggbBb8Hmnz7ig/viewform" target="_blank"><span>3月</span>の女子会はこちら</a>
+              <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="#kinyu-event-scroll-point" target="_blank">女子会の参加はこちら</a>
             </li>
-            <li>
+            <!-- <li>
               <a class="singlepage-block-link event-joshikai-link btn-tiffany center" href="#kinyu-event-scroll-point"><span>4月</span>の女子会はこちら</a>
-            </li>
+            </li> -->
           </ul>
-          <p class="caution"><span style="color:red;">＊</span>4月より女子会の参加方法が変わります。</p>
-          <a class="new-joshikai-flow" href="">新しい女子会の参加方法はこちら</a>
+          <p class="caution"><span style="color:red;">＊</span>4月より女子会の参加方法が変わりました( ´ ▽ ` )ﾉ</p>
+          <a class="new-joshikai-flow" href="/news/mSP6oQ">新しい女子会の参加方法はこちら</a>
         </div>
       </div>
     </div>
@@ -33,8 +33,8 @@
       <h2 class="singlepage-block-title schedule center">
         <img src="/images/title/event/event-title-ticket02.png" alt="きんゆう女子。会のチケット一覧">
       </h2>
-      <p class="pc" style="text-align:center;"><span style="color:red;">＊</span>参加したい女子会をクリックすると、新規タブで決済画面が立ち上がります。</p>
-      <p class="sp" style="font-size:12px;text-align:center;"><span style="color:red;">＊</span>参加したい女子会をクリックすると、<br>新規タブで決済画面が立ち上がります。</p>
+      <p class="pc" style="text-align:center;"><span style="color:red;">＊</span>参加したい女子会をクリックすると、新規タブで決済画面が立ち上がります。<br>参加費の決済は、Anypay(エニーペイ)を使用しています。</p>
+      <p class="sp " style="font-size:12px;text-align:center;width:84%;margin:0 auto;"><span style="color:red;">＊</span>参加したい女子会をクリックすると、新規タブで決済画面が立ち上がります。また、参加費の決済はAnypay(エニーペイ)を使用しています。</p>
 
 
       <div class="kinyu-event-list">

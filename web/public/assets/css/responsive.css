@@ -673,6 +673,9 @@
   display: block;
   margin: 0px;
 }
+.kinyu-regist-branch-block li a {
+  width: 90%;
+}
 .kinyu-regist-branch-block .caution {
   font-size: 12px;
 }
