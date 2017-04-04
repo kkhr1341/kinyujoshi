@@ -126,13 +126,16 @@ class Events extends Base {
 		->where('status', '=', 1)
 		->where('open_date', '<', \DB::expr('NOW()'));
 
+
 		if ($section_code !== null) {
 			$datas['datas'] = $datas['datas']->where('section_code', '=', $section_code);
 		}
 		
 		$datas['datas'] = $datas['datas']->limit($pagination->per_page)
 					->offset($pagination->offset)
-					->order_by('open_date', 'desc')
+					//->order_by('open_date', 'desc')
+					->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'))
+					->order_by('event_date', 'asc')
 					->execute()
 					->as_array();
 	
