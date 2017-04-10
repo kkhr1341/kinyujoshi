@@ -718,6 +718,7 @@
 .kinyu-event-list li p.event-main-date {
   font-size: 13px;
   line-height: 13px;
+  font-weight: bold;
 }
 .kinyu-event-list li p.event-main-date span.timezone, .event-main-date span.day_of_the_week {
   font-size: 11px;
