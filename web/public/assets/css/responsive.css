@@ -12,7 +12,7 @@
 }
 /* トップページ・sp_top_after */
 .sp_top_after {
-  width: 84%;
+  width: 88%;
   margin: 0 auto;
   box-sizing: border-box;
   padding: 12px 0px 60px;
@@ -174,7 +174,7 @@
   background: #fff;
 }
 .kinyu-sp-navi .inner {
-  width: 320px;
+  width: 88%;
   margin: 0 auto;
   padding: 16px 0px 50px;
 }
@@ -267,9 +267,9 @@
   margin: 0 3px;
 }
 .kinyu-top-introlist-pickup {
-  width: 92%;
+  width: 100%;
   margin-top: 20px;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 .kinyu-top-introlist-pickup .list-kind-img {
   position: absolute;
@@ -279,7 +279,7 @@
   height: 50px;
 }
 .kinyu-top-introlist-pickup h3 {
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 0px 0px;
   padding: 12px 10px;
   background: rgba(124, 220, 206, 0.8);
   height: 44px;
@@ -492,7 +492,7 @@
   　レポート一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-report-top-block {
-  width: 84%;
+  width: 88%;
   margin: 0 auto;
 }
 .kinyu-report-list {
@@ -520,7 +520,7 @@
 }
 .report-sp-detail-block {
   padding-top: 0px;
-  width: 84%;
+  width: 88%;
   margin: 0 auto;
 }
 .report-detail-header {
