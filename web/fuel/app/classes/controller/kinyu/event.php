@@ -16,7 +16,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 		// 	Response::redirect('/login');
 		// }
 		// else {
-			$this->data['events'] = Events::all('event', '/event/', $page, 2, 8);
+			$this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
 			$pagination = $this->data['events']['pagination'];
 			$this->data['pagination'] = $pagination::instance('mypagination');
       //$this->data['events'] = Events::lists(1, 5, true);
