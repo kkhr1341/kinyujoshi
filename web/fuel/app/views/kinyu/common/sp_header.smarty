@@ -10,11 +10,11 @@
         <a href="/regist"><img src="/images/new/sp-header-content.png"></a>
       </div>
     </li>
-    <li>
+    <!-- <li>
       <div class="kinyu-sp-header-content kinyu-sp-header-jyoshikai">
         <a href="/event"><img src="/images/new/sp-header-jyoshikai.png"></a>
       </div>
-    </li>
+    </li> -->
   </ul>
 
   <div class="kinyu-sp-header-menu">
@@ -24,7 +24,7 @@
 
 
 
-<script>
+<!-- <script>
 $(function() {
 
   var arr = [];
@@ -40,4 +40,4 @@ $(function() {
       $('.kinyu-sp-header-mainblock').append('<li>' + arr[i] + '</li>');
     }
   });
-</script>
+</script> -->

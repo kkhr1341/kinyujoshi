@@ -54,7 +54,10 @@
               </a>
             </li>
 
-            <li class="coming_soon" style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;">
+            <li class="coming_soon" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/IMG_8702.JPG) center center / cover no-repeat;">
+              <a href="https://kinyu-joshi.jp/report/b9m16I">
+                <p class="title">海外旅行は一番おトクな為替レートで！</p>
+              </a>
             </li>
 
             <li class="coming_soon" style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;">
