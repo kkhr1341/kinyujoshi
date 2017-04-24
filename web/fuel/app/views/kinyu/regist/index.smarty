@@ -91,7 +91,7 @@
       </div> -->
 
       
-      <form>
+      <form name="form1">
         <div class="singlepage-form-block">
           <div class="form-group">
             <label class="form-title"><span class="color-kinyu-color">◆</span> お名前 <span class="label label-danger">必須</span></label>
@@ -207,7 +207,7 @@
 <script>
 {literal}
 
-$(function(){
+$(function(){ 
   var title_frame_height = $('#title_frame').height();
   var page_title_height = $('.page_title').height();
   
@@ -240,7 +240,7 @@ $(function(){
       ts.error("ご年齢を入力してください");
       return false;
     }
-    if (params.not_know == "") {
+    if ($("[name=not_know]:checked").val() == undefined) {
       ts.error("きんゆうワカラナイ度を入力してください。");
       return false;
     }
@@ -252,11 +252,11 @@ $(function(){
       ts.error("「きんゆう女子。でどんな出会いや発見がほしいですか？」を入力してください");
       return false;
     }
-    if (params.where_from == "") {
+    if ($("[name=where_from]:checked").val() == undefined) {
       ts.error("「どこできんゆう女子。を知りましたか？」を入力してください。");
       return false;
     }
-    if (params.transmission == "") {
+    if ($("[name=transmission]:checked").val() == undefined) {
       ts.error("「きんゆう女子。で情報発信したいですか？」を入力してください。");
       return false;
     }
