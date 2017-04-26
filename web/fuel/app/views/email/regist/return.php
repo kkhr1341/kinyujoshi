@@ -89,6 +89,10 @@
               <?php echo $other_sns; ?><br>
             </div>
             <div class="form-mail-p">
+              <p>◼︎金融機関の方ですか？</p>
+              <?php echo $job_kind; ?><br>
+            </div>
+            <div class="form-mail-p">
               <p>◼︎簡単な自己紹介</p>
               <?php echo $introduction; ?><br>
             </div>

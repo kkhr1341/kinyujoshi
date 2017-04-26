@@ -44,6 +44,7 @@ class Regist extends Base {
     $email = $params['email'];
     $facebook = $params['facebook'];
     $other_sns = $params['other_sns'];
+    $job_kind = $params['job_kind'];
     $introduction = $params['introduction'];
     
     $email02->html_body(\View::forge('email/regist/return', 
@@ -60,6 +61,7 @@ class Regist extends Base {
         'email' => $email,
         'facebook' => $facebook,
         'other_sns' => $other_sns,
+        'job_kind' => $job_kind,
         'introduction' => $introduction
       )));
     $email02->to('cs@kinyu-joshi.jp'); //送り先

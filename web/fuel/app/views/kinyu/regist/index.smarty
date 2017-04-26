@@ -184,7 +184,20 @@
           <div class="form-group">
             <label class="form-title"><span class="color-kinyu-color">◆</span> InstagramやブログなどのURL <span class="label label-primary">任意</span></label>
             <input type="text" id="other_sns" class="form-control" placeholder="">
-          </div>          
+          </div>
+
+          <div class="form-group form-radio-block">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> 金融機関で働いていますか？ <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">金融についてワカラナイ女性のためのコミュニティなのでご注意くださいませ( ´ ▽ ` )ﾉ</p>
+            <div class="radio_box clear">
+              <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
+              <label for="job_kind1" class="form-long">はい</label>
+              <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
+              <label for="job_kind2" class="form-long">いいえ</label>
+            </div>
+          </div>
+
+
           <div class="form-group form-group02">
             <label class="form-title"><span class="color-kinyu-color">◆</span> 簡単な自己紹介をお願いいたします。 <span class="label label-danger">必須</span></label>
             <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
@@ -230,6 +243,7 @@ $(function(){
     params.email = $('#email').val();
     params.facebook = $('#facebook').val();
     params.other_sns = $('#other_sns').val();
+    params.job_kind = $("[name=job_kind]:checked").val();
     params.introduction = $('#introduction').val();
     
     if (params.name == "") {
@@ -256,6 +270,10 @@ $(function(){
       ts.error("「どこできんゆう女子。を知りましたか？」を入力してください。");
       return false;
     }
+    if (params.email == "") {
+      ts.error("メールアドレスを入力してください。");
+      return false;
+    }
     if ($("[name=transmission]:checked").val() == undefined) {
       ts.error("「きんゆう女子。で情報発信したいですか？」を入力してください。");
       return false;
@@ -264,8 +282,8 @@ $(function(){
       ts.error("「3年後の自分の年収をどのくらいにしたいですか？」を入力してください。");
       return false;
     }
-    if (params.email == "") {
-      ts.error("メールアドレスを入力してください。");
+    if ($("[name=job_kind]:checked").val() == undefined) {
+      ts.error("「金融機関で働いていますか？」を入力してください。");
       return false;
     }
     if (params.introduction == "") {
