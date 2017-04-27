@@ -107,6 +107,50 @@ class Blogs extends Base {
 		return $datas;
 	}
 
+	public static function listspick($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null) {
+		
+		$datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
+		        ->join('profiles', 'left')
+                ->on('blogs.username', '=', 'profiles.username')
+                ->where('blogs.pickup', '=', 1)
+                ->where('blogs.disable', '=', 0);
+		
+		if ($mode === null) {
+		}
+		else {
+			$datas = $datas->where('status', '=', $mode);
+		}
+
+		if ($open === null) {
+		}
+		else {
+			$datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
+		}
+
+		if ($project_code === null) {
+		}
+		else {
+			$datas = $datas->where('project_code', '=', $project_code);
+		}
+		
+		if ($section_code === null) {
+		}
+		else {
+			$datas = $datas->where('section_code', '=', $section_code);
+		}
+		
+		$datas = $datas->order_by('blogs.id', 'desc');
+		
+		if ($limit === null) {
+		}
+		else {
+			$datas = $datas->limit($limit);
+		}
+		$datas = $datas->execute()
+				->as_array();
+		return $datas;
+	}
+
 	public static function lists_picks($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null) {
 		
 		$datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')

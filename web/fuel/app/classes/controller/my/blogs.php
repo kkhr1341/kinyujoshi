@@ -10,6 +10,7 @@ class Controller_My_Blogs extends Controller_Mybase
 
 		$this->data['sections'] = Sections::lists();
 		$this->data['all_blogs'] = Blogs::lists02();
+		$this->data['pick_blogs'] = Blogs::listspick();
 		$this->data['closed_blogs'] = Blogs::lists02(0);
 		$this->data['open_blogs'] = Blogs::lists02(1);
 		$this->template->contents = View::forge('my/blogs/index.smarty', $this->data);

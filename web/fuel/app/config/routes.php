@@ -72,6 +72,7 @@ return array(
 
 	//キャンペーン
 	'school' => 'kinyu/campaign/school',
+	'school_public' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
 
 

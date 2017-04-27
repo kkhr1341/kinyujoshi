@@ -103,7 +103,7 @@
           </div>
           <div class="form-group form-radio-block">
             <label class="form-title"><span class="color-kinyu-color">◆</span> きんゆうワカラナイ度 <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">あなたのきんゆう知識度を教えてください(^ ^)!</p>
+            <p class="form-sub-title">あなたのきんゆうワカラナイ度を教えてください(^ ^)!</p>
             <div class="radio_box clear">
               <input type="radio" value="軽度" name="not_know" id="not_know1" class="form-radio" placeholder="">
               <label for="not_know1" class="form-long">軽度</label>
@@ -180,10 +180,6 @@
           <div class="form-group">
             <label class="form-title"><span class="color-kinyu-color">◆</span> FacebookのURL <span class="label label-primary">任意</span></label>
             <input type="text" id="facebook" class="form-control" placeholder="">
-          </div>
-          <div class="form-group">
-            <label class="form-title"><span class="color-kinyu-color">◆</span> InstagramやブログなどのURL <span class="label label-primary">任意</span></label>
-            <input type="text" id="other_sns" class="form-control" placeholder="">
           </div>
 
           <div class="form-group form-radio-block">

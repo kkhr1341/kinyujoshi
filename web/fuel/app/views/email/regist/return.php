@@ -52,7 +52,7 @@
               <?php echo $age; ?><br>
             </div>
             <div class="form-mail-p">
-              <p>◼︎お問い合わせ内容</p>
+              <p>◼︎きんゆうワカラナイ度</p>
               <?php echo $not_know; ?><br>
             </div>
             <div class="form-mail-p">
