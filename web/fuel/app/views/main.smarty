@@ -29,7 +29,7 @@
     }(document, 'script', 'facebook-jssdk'));
   	</script>
 
-  	<!-- きんゆう女子。 -->
+  	<div>{$tablet_div}</div>
 
   	<div class="kinyu-container">
       <!-- ナビゲーション -->
@@ -63,6 +63,5 @@
   	</script>
   	<script src="/assets/js/kinyu/swiper.js"></script>
   	{/literal}
-  
 </body>
 </html>

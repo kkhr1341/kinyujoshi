@@ -25,6 +25,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 			$this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
 			$this->template->today = date("Y年n月");
     	$this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+      $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     	if(Agent::is_mobiledevice()) {
       	$this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -78,6 +79,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
     $this->template->contents_after_area = View::forge('kinyu/template/contents-after.smarty', $this->data);
 		$this->template->contents = View::forge('kinyu/event/detail.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 	}
 	public function action_schedule() {
 		//$this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
@@ -89,5 +91,6 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 		$this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
     $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
 		$this->template->contents = View::forge('kinyu/event/detail.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 	}
 }

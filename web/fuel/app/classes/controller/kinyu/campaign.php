@@ -25,6 +25,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -32,7 +33,6 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     } else {
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
     }
-
     $this->template->contents = View::forge('kinyu/campaign/school.smarty', $this->data);
   }
 
@@ -53,6 +53,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -84,6 +85,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);

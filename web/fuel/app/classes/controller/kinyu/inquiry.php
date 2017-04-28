@@ -17,6 +17,7 @@ class Controller_Kinyu_Inquiry extends Controller_Kinyubase
     //$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -36,6 +37,7 @@ class Controller_Kinyu_Inquiry extends Controller_Kinyubase
 		//$this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
     //$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
