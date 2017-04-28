@@ -518,8 +518,9 @@
   margin-bottom: 4px;
 }
 .kinyu-news-list-el .text-box .title {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
+  height: 54px;
 }
 .kinyu-news-list .kinyu-news-list-li:after {
   content: "";
