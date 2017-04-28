@@ -43,7 +43,6 @@ class Regist extends Base {
     $transmission = $params['transmission'];
     $email = $params['email'];
     $facebook = $params['facebook'];
-    $other_sns = $params['other_sns'];
     $job_kind = $params['job_kind'];
     $introduction = $params['introduction'];
     
@@ -60,7 +59,6 @@ class Regist extends Base {
         'transmission' => $transmission, 
         'email' => $email,
         'facebook' => $facebook,
-        'other_sns' => $other_sns,
         'job_kind' => $job_kind,
         'introduction' => $introduction
       )));
