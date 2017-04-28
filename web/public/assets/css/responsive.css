@@ -87,8 +87,8 @@
   width: 100%;
 }
 .kinyu-top-maincontent li p {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 16px;
   margin: 0 auto;
   padding: 12px 0px;
 }
@@ -340,8 +340,8 @@
 }
 .main-intro-link {
   margin-top: 12px;
-  font-size: 12px;
-  padding: 5px 20px;
+  font-size: 11px;
+  padding: 2px 20px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -354,10 +354,12 @@
   text-align: center; 
 }
 .kinyu-sp-introduction p {
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 16px;
 }
 .kinyu-sp-introduction .main-title {
-  width: 62%;
+  width: 100%;
+  margin-bottom: 16px;
 }
 /* ニュース */
 .news-sp-block {
@@ -397,7 +399,7 @@
 }
 .news-sp-block .text-area .news-title {
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 11px;
   height: 30px;
   line-height: 15px;
 }
@@ -606,7 +608,7 @@
 }
 .report-detail-main p {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 18px;
   color: #696969;
 }
 .report-detail-main h2 {
@@ -620,7 +622,7 @@
 .report-detail-main h3 {
   font-size: 14px;
   /* font-weight: bold; */
-  line-height: 22px;
+  line-height: 14px;
 }
 .report-detail-main blockquote {
   font-size: 10px;
@@ -645,13 +647,13 @@
   background: #f7f7f7;
   border-radius: 3px 3px 3px 3px;
   padding-top: 0px;
-  padding: 24px 0px 16px;
+  padding: 20px 0px 16px;
 }
 .report-detail-share-el h3 {
-  margin-bottom: 4px;
+  margin-bottom: 0px;
 }
 .report-detail-share-el h3 img {
-  width: 90%;
+  width: 82%;
 }
 .report-detail-share .social-list li {
   display: inline-block;
