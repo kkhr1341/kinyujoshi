@@ -85,10 +85,6 @@
               <?php echo $facebook; ?><br>
             </div>
             <div class="form-mail-p">
-              <p>◼︎その他SNS、ブログ</p>
-              <?php echo $other_sns; ?><br>
-            </div>
-            <div class="form-mail-p">
               <p>◼︎金融機関の方ですか？</p>
               <?php echo $job_kind; ?><br>
             </div>
