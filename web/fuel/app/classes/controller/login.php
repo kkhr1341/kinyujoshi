@@ -21,6 +21,7 @@ class Controller_Login extends Controller_KinyuBase
       $this->template->title = 'ログイン｜きんゆう女子。';
     	$this->template->description = 'ログイン｜きんゆう女子';
       $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+      $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
