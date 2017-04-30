@@ -160,7 +160,7 @@
         <div class="kinyu-gakuin-sub-teacher-list health-teacher">
           <p class="teacher-title">保健の先生</p>
           <div class="coming">
-            <img style="width:92%;" src="/images/content/school_public/comingsoon.png">
+            <img src="/images/content/school_public/comingsoon.png">
           </div>
           <!-- <ul class="clear">
             <li>
