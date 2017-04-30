@@ -19,13 +19,32 @@
   ABOUT
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .about-public_school .description-area {
-  width: 800px;
+  width: 700px;
   box-sizing: border-box;
   position: relative;
-  padding: 50px 0px 40px;
+  padding: 36px 0px 36px;
   margin: 0 auto;
   border: 1px solid #7CDCCE;
   margin-top: 36px;
+  text-align: center;
+}
+.about-public_school .description-area p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+.about-public_school .description-area p .bottom-border {
+  border-bottom: 1px solid #7CDCCE;
+  padding-bottom: 4px;
+}
+.about-public_school .description-area p .carrier-back {
+  background: #A7C4FC;
+}
+.about-public_school .description-area p .lifestyle-back {
+  background: #F7BCD1;
+}
+.about-public_school .description-area p .money-back {
+  background: #FCE19D;
 }
 
 
@@ -38,12 +57,12 @@
   margin: 0 auto;
   text-align: left;
   position: relative;
-  left: 20px;
+  left: 35px;
   margin-top: 36px;
 }
 .policy-public_school .description-area p {
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 30px;
   font-family: 'utsukushi';
   display: inline-block;
   background: url(/images/icon/dott.png) left center / 16px 16px no-repeat;
@@ -91,6 +110,10 @@
   line-height: 20px;
   margin-top: 4px;
 }
+.course-public_school .gakuin-session-inner .certificate-img {
+  margin-bottom: 40px;
+}
+
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -102,12 +125,36 @@
 .kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-teacher-list{
   margin-top: 36px;
 }
-
+.kinyu-school_public-el.gakuin-educational-teacher .teacher-description {
+  font-size: 12px;
+  line-height: 20px;
+}
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-teacher-list-last li {
+  height: 400px;  
+}
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-teacher-list .teacher-title,
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-sub-teacher-list .teacher-title {
+  font-size: 16px;
+  line-height: 16px;
+}
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-teacher-list .teacher-name {
+  font-size: 16px;
+}
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-sub-teacher-list .description {
+  font-size: 12px;
+  line-height: 20px;
+}
+.teacher-guest-list p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.coming {
+  padding: 40px 0px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   参加費
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-
 .kinyu-school_public-el.gakuin-fee .inner {
   text-align: center;
   margin-top: 36px;
@@ -126,18 +173,49 @@
 .kinyu-school_public-el.gakuin-fee .fee-about-report-main {
   font-size: 14px;
 }
+.fee-conditions-title {
+  font-size: 20px!important;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  display: inline-block;
+  border-bottom: 2px solid #7CDCCE;
+}
+.fee-conditions-details {
+  margin: 12px 0px;
+}
+.fee-conditions-details p {
+  font-style: italic;
+  font-size: 24px;
+  line-height: 32px;
+}
+.fee-conditions-details span {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 30px;
+}
+.gakuin-fee .gakuin-fee-inner-p {
+  margin-top: 2px;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   応援団リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.company-public_school {
+  margin-bottom: 50px;
+}
 .kinyu-school_public-el .sponsor-list {
   margin-top: 36px;
 }
-
-
-
-
+.sponsor-list ul {
+  text-align: center;
+  letter-spacing: -.40em; 
+}
+.sponsor-list li {
+  display: inline-block;
+  float: none;
+  letter-spacing: normal;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -145,32 +223,201 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (max-width: 480px) {
 
+.kinyu-school_public-el {
+  margin-top: 50px;
+}
 .kinyu-main-single-block .inner {
   width: 92%;
 }
-
 .kinyu-school_public-el h3 img {
   width: 100%;
 }
+.kinyu-school_public-el .kinyu-gakuin-link {
+  font-size: 13px;
+  width: 92%;
+}
+.course-public_school .kinyu-gakuin-link {
+  background: #f1f1f1;
+  color: #444444;
+  font-size: 12px;
+  padding: 12px 0px;
+  width: 76%;
+  font-weight: normal;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  ABOUT
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.about-public_school .description-area {
+  width: 92%;
+  padding: 16px 4%;
+  margin-top: 24px;
+}
+.about-public_school .description-area p {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   POLICY
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .policy-public_school .description-area {
-  width: 100%;
-  left: 0px;
+  width: 92%;
+  left: auto;
+  margin-left: 6%;
+  margin-top: 24px;
 }
 .policy-public_school .description-area p {
-  background: url(/images/icon/dott.png) left 7px / 20px 20px no-repeat
+  background: url(/images/icon/dott.png) left 4px / 12px 12px no-repeat;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 20px;
+  padding-left: 21px;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  授業内容
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.course-public_school .gakuin-session-inner {
+  margin-top: 24px;
+}
+.course-public_school .gakuin-session-inner .session-description {
+  font-size: 12px;
+  line-height: 18px;
+  width: 92%;
+  margin: 0 auto;
+}
+.course-public_school .gakuin-session-inner .class-title {
+  font-size: 16px;
+  padding-bottom: 2px;
+  margin-bottom: 4px;
+}
+.course-public_school .gakuin-session-inner .theme-title {
+  font-size: 16px;
+}
+.course-public_school .gakuin-session-inner .class-el p {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 8px;
+  text-align: center;
+}
+.course-public_school .gakuin-session-inner .theme-block {
+  width: 92%;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+.course-public_school .gakuin-session-inner .theme-el p {
+  font-size: 12px;
+  margin-top: 8px;
+}
+.course-public_school .gakuin-session-inner .certificate-img {
+  width: 92%;
+  margin-bottom: 24px;
+}
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  先生
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-teacher-list {
+  margin-top: 24px;
+}
+.kinyu-school_public-el.gakuin-educational-teacher .teacher-description {
+  font-size: 11px;
+  line-height: 18px;
+}
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-sub-teacher-list .description {
+  font-size: 11px;
+  line-height: 18px;
+}
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-teacher-list-last li {
+  height: auto;
+}
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-teacher-list .teacher-title, .kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-sub-teacher-list .teacher-title {
+  font-size: 14px;
+  line-height: 14px;
+}
+.kinyu-school_public-el.gakuin-educational-teacher .kinyu-gakuin-teacher-list .teacher-name {
+  font-size: 14px;
+}
+.coming {
+  padding: 24px 0px;
+}
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  参加部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-school_public-el .fee-about-report .theme-title {
+  font-size: 16px;
+}
+.kinyu-school_public-el.gakuin-fee .fee-about-report {
+  width: 98%;
+  box-sizing: border-box;
+  padding: 24px 8%;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+.kinyu-school_public-el.gakuin-fee .fee-about-report-main {
+  font-size: 12px;
+}
+.gakuin-fee .fee-about-report .gakuin-fee-inner-p {
+  font-size: 12px;
+}
+.fee-conditions-title {
+  font-size: 16px!important;
+}
+.fee-conditions-details p {
+  font-size: 20px;
+  line-height: 24px;
+}
+.gakuin-fee .gakuin-fee-inner-p {
+  font-size: 11px;
+  line-height: 14px;
+}
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  応援企業
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-school_public-el .sponsor-list {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 24px;
+}
 
+.fix-application {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #7CDCCE;
+}
+.fix-application a {
+  display: block;
+  padding: 4px 0px 8px;
+}
+.fix-application p {
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.fix-application p:after {
+  content: "〉";
+  position: absolute;
+  right: 0px;
+  font-size: 18px;
+  top: 50%;
+  margin-top: -7px;
 
+}
+.fix-application p span {
+  font-size: 11px;
+}
 
-
+footer {
+  padding: 50px 0px 70px;
+}
 
 
 }
