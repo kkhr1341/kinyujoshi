@@ -115,19 +115,21 @@
             <img class="course-place-main" src="/images/content/school_public/course-place.png">
             <ul>
               <li class="clear">
-                <div class="img-area" style="background: url(/images/content/conference/ticker.jpg)center top / cover no-repeat;"></div>
+                <div class="img-area" style="background: url(/images/content/conference/kinyu-cho.jpg)center top / cover no-repeat;"></div>
                 <div class="text-area">
-                  <p class="count"><img src="/images/content/school_public//course-place-count1.png"></p>
+                  <p class="count"><img src="/images/content/school_public/course-place-count1.png"></p>
                   <p class="title">金融庁さんでの授業！</p>
                   <p class="description">6月1日は、普段お邪魔する機会がない金融庁さんにおじゃましますよ！</p>
+                  <p class="access">住所：東京都千代田区霞が関3-2-1[<a target="_blank" href="https://goo.gl/5P0z6V">map</a>]<br>URL：<a target="_blank" href="http://www.fsa.go.jp/">http://www.fsa.go.jp/</a></p>
                 </div>
               </li>
               <li class="clear">
                 <div class="img-area" style="background: url(/images/content/conference/ticker.jpg)center top / cover no-repeat;"></div>
                 <div class="text-area">
-                  <p class="count"><img src="/images/content/school_public//course-place-count2.png"></p>
+                  <p class="count"><img src="/images/content/school_public/course-place-count2.png"></p>
                   <p class="title">卒業式は、東証Arrows♪</p>
                   <p class="description">チッカーの前で卒業証書授与式を行います！記念撮影しましょう。</p>
+                  <p class="access">住所：東京都中央区日本橋兜町2-1[<a target="_blank" href="https://goo.gl/xUFPbP">map</a>]<br>URL：<a target="_blank" href="http://www.jpx.co.jp/">http://www.jpx.co.jp/</a></p>
                 </div>
               </li>
             </ul>
@@ -242,14 +244,12 @@
       <div class="kinyu-school_public-el gakuin-fee">
         <h3><img src="/images/content/school_public/main-title-fee.png"></h3>
         <div class="inner">
-          <p class="fee-conditions-title"><参加条件></p>
-          
           <div class="fee-conditions-details">
-            <p>レポート提出<span>(各授業分)</span></p>
-            <p>＆<p>
-            <p><span>授業料：</span>3,000円</p>
+            <p style="border-bottom:3px solid #fdc2c2;">レポート提出<span>(各授業分)</span><br></p>
+            <p class="fee-conditions-details-g"> ＆ </p>
+            <p style="border-bottom:3px solid #FFF200;">3,000円<span>(謝恩会費用)</span></p>
           </div>
-          <p class="gakuin-fee-inner-p"><span style="color:red;">※</span>授業料は、最終回の謝恩会の交流会に使います。<br>最後まで頑張って勉強しましょう！</p>
+          <p class="gakuin-fee-inner-p"><span style="color:red;">※</span>3,000円は、最終日の謝恩会に使います。<br>最後まで頑張って勉強しましょう！</p>
           <div class="fee-about-report">
             <p class="theme-title"><レポートとは...？></p>
             <p class="pc fee-about-report-main">授業で書いたノートと勉強した感想文です。<br>金融ワカラナイ…でも勉強してどう思ったか？<br>そして何がワカラナイ原因なのか？<br>日々の生活で私たち普通の女の子はどんなことを考えているのか？<br>そういったワカラナイ女性の声を金融業界にお届けするレポートです。<br>私たちきんゆう女子。のレポートにより、<br>ミライの金融サービスが作られていくことにつながります。<br>みなさん、頑張りましょう(^ ^)！</p>
@@ -264,7 +264,7 @@
           <img class="pc certificate-img" src="/images/content/school_public/certificate-img.png">
           <img class="sp certificate-img" src="/images/content/school_public/certificate-img-sp.png">
           <!-- <p style="font-size: 15px;padding-bottom: 8px;"><span style="color:red;">※</span>お申し込みは終了いたしました。</p> -->
-          <a class="kinyu-gakuin-link" href="/">お申込みはこちら</a>
+          <a class="kinyu-gakuin-link" href="https://anypay.jp/shops/m5OWa84bzV/aXtOssrIpq" target="_blank">お申込みはこちら</a>
         </div>
       </div>
 
@@ -308,7 +308,7 @@
 
 
 <div class="sp fix-application">
-  <a href="">
+  <a href="https://anypay.jp/shops/m5OWa84bzV/aXtOssrIpq" target="_blank">
     <p><span>公立きんゆう女子。学院の</span><br>お申し込みはこちら</p>
   </a>
 </div>

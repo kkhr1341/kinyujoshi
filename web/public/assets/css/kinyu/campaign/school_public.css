@@ -126,7 +126,7 @@
 .course-place .text-area {
   width: 476px;
   margin-left: 24px;
-  margin-top: 24px;
+  margin-top: 16px;
   display: inline-block;
   text-align: left;
   vertical-align: top;
@@ -139,6 +139,18 @@
   padding: 8px 0px;
 }
 .course-place .text-area .description {
+  padding-bottom: 8px;
+}
+.course-place .text-area .access {
+  padding-top: 10px;
+  border-top: 1px dotted #cbcbcb;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 14px;
+}
+.course-place .text-area .access a {
+  color: #4C9BBF;
+  line-height: 14px;
 }
 .course-place .img-area {
   width: 200px;
@@ -216,17 +228,18 @@
   border-bottom: 2px solid #7CDCCE;
 }
 .fee-conditions-details {
-  margin: 12px 0px;
+  margin: 12px 0px 24px;
 }
 .fee-conditions-details p {
   font-style: italic;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 24px;
+  display: inline-block;
 }
 .fee-conditions-details span {
   font-style: italic;
-  font-size: 14px;
-  line-height: 30px;
+  font-size: 13px;
+  line-height: 24px;
 }
 .gakuin-fee .gakuin-fee-inner-p {
   margin-top: 2px;
@@ -362,6 +375,9 @@
 .course-place li {
   margin-top: 24px;
 }
+.course-place li:first-child {
+  margin-top: 16px;
+}
 .course-place .text-area {
   display: block;
   float: left;
@@ -371,8 +387,8 @@
   margin-top: 0px;
   padding-left: 4%;
 }
-.course-place .text-area .count img {
-  width: 110px;
+.course-place .text-area .count {
+  display: none;
 }
 .course-place .text-area .title {
   font-size: 16px;
@@ -383,12 +399,23 @@
   border-bottom: 1px solid #7CDCCE;
 }
 .course-place .text-area .description {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 11px;
+  line-height: 14px;
+}
+.course-place .text-area .access {
+  padding-top: 10px;
+  border-top: 1px dotted #cbcbcb;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 14px;
+}
+.course-place .text-area .access a {
+  font-size: 10px;
+  line-height: 14px;
 }
 .course-place .img-area {
   width: 23%;
-  height: 80px;
+  height: 75px;
   display: block;
   float: left;
 }
@@ -447,9 +474,17 @@
 .fee-conditions-title {
   font-size: 16px!important;
 }
+.fee-conditions-details {
+  margin: 0px 0px 16px;
+}
 .fee-conditions-details p {
   font-size: 20px;
   line-height: 24px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.fee-conditions-details-g {
+  display: none!important;
 }
 .gakuin-fee .gakuin-fee-inner-p {
   font-size: 11px;
@@ -459,6 +494,7 @@
   width: 100%;
   margin-bottom: 24px;
 }
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   応援企業
