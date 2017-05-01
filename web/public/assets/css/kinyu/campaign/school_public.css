@@ -74,7 +74,6 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   授業内容
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-
 .course-public_school .gakuin-session-inner {
   margin-top: 36px;
   text-align: center;
@@ -113,8 +112,41 @@
 .course-public_school .gakuin-session-inner .certificate-img {
   margin-bottom: 40px;
 }
-
-
+.course-place {
+  width: 700px;
+  margin: 0 auto;
+}
+.course-place li {
+  letter-spacing: -.40em;
+  margin-top: 36px;
+}
+.course-place li:first-child {
+  margin-top: 24px; 
+}
+.course-place .text-area {
+  width: 476px;
+  margin-left: 24px;
+  margin-top: 24px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+.course-place .text-area .count {
+  font-size: 20px;
+}
+.course-place .text-area .title {
+  font-size: 20px;
+  padding: 8px 0px;
+}
+.course-place .text-area .description {
+}
+.course-place .img-area {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  letter-spacing: normal;
+  border-radius: 50%;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   先生たち
@@ -162,6 +194,7 @@
 }
 .kinyu-school_public-el .fee-about-report .theme-title {
   font-size: 20px;
+  border-bottom: 2px solid #7CDCCE;
 }
 .kinyu-school_public-el.gakuin-fee .kinyu-gakuin-link {
   opacity: 1;
@@ -169,9 +202,11 @@
 .kinyu-school_public-el.gakuin-fee .fee-about-report {
   width: 600px;
   padding: 36px;
+  border:  1px solid #7CDCCE;
 }
 .kinyu-school_public-el.gakuin-fee .fee-about-report-main {
   font-size: 14px;
+  background: url(/images/content/teacher/line-34-kinyu.png);
 }
 .fee-conditions-title {
   font-size: 20px!important;
@@ -196,7 +231,10 @@
 .gakuin-fee .gakuin-fee-inner-p {
   margin-top: 2px;
 }
-
+.gakuin-fee .certificate-img {
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   応援団リスト
@@ -224,7 +262,7 @@
 @media screen and (max-width: 480px) {
 
 .kinyu-school_public-el {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .kinyu-main-single-block .inner {
   width: 92%;
@@ -313,9 +351,46 @@
   font-size: 12px;
   margin-top: 8px;
 }
-.course-public_school .gakuin-session-inner .certificate-img {
+.course-place {
   width: 92%;
-  margin-bottom: 24px;
+  padding-top: 10px;
+}
+.course-place-main {
+  width: 80%;
+  margin: 0 auto;
+}
+.course-place li {
+  margin-top: 24px;
+}
+.course-place .text-area {
+  display: block;
+  float: left;
+  width: 77%;
+  text-align: left;
+  margin-left: 0px;
+  margin-top: 0px;
+  padding-left: 4%;
+}
+.course-place .text-area .count img {
+  width: 110px;
+}
+.course-place .text-area .title {
+  font-size: 16px;
+  padding: 0px;
+  margin: 6px 0px;
+  display: inline-block;
+  padding: 0px 0px 2px 0px;
+  border-bottom: 1px solid #7CDCCE;
+}
+.course-place .text-area .description {
+  font-size: 12px;
+  line-height: 16px;
+}
+.course-place .img-area {
+  width: 23%;
+  height: 80px;
+  display: block;
+  float: left;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -364,6 +439,7 @@
 }
 .kinyu-school_public-el.gakuin-fee .fee-about-report-main {
   font-size: 12px;
+  background: url(/images/content/teacher/line-30-kinyu.png);
 }
 .gakuin-fee .fee-about-report .gakuin-fee-inner-p {
   font-size: 12px;
@@ -378,6 +454,10 @@
 .gakuin-fee .gakuin-fee-inner-p {
   font-size: 11px;
   line-height: 14px;
+}
+.gakuin-fee .certificate-img {
+  width: 100%;
+  margin-bottom: 24px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
