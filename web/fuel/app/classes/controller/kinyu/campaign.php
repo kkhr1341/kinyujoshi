@@ -47,9 +47,9 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
        die('このページを見るにはログインが必要です');
     }
 
-    $this->template->title = '公立きんゆう女子。学院｜きんゆう女子。';
-    $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-gakuin.jpg';
-    $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+    $this->template->title = 'きんゆう女子。学院｜きんゆう女子。';
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/school_public/og-school_public.png';
+    $this->template->description = 'きんゆう女子。学院は、私立きんゆう女子。学院の姉妹校です♪ きんゆう女子学院にも科目があります。きんゆう女子学院では、文系科目をメインにバランスよく多角的に金融の全体像から考え方、普段の生活に役立つことを学びます。';
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);

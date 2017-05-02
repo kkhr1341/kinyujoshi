@@ -1,19 +1,11 @@
 
-<!-- 私立きんゆう女子学院・独自CSS -->
+<!-- きんゆう女子学院・独自CSS -->
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/gakuin.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/school_public.css">
 <script type="text/javascript" src="/assets/js/kinyu/campaign/school_public.js"></script>
 
 <div class="kinyu-main-single-block">
   <div class="inner">
-  
-  <!-- ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
-    ◆サイトイメージ
-    ー ちょい固め。
-    ー しっかりしている。けど優しさも感じる
-    ー 
-  ＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊ -->
-
     <div class="kinyu-school_public-block">
       <div class="pc">
         <img src="/images/content/school_public/school_public_main.png">
@@ -27,7 +19,7 @@
       <div class="kinyu-school_public-el about-public_school">
         <h3><img src="/images/content/school_public/main-title-about.png"></h3>
         <div class="pc description-area">
-          <p><span class="bottom-border">公立きんゆう女子。学院は、<br>私立きんゆう女子。学院の姉妹校です♪</span></p>
+          <p><span class="bottom-border">きんゆう女子。学院は、<br>私立きんゆう女子。学院の姉妹校です♪</span></p>
           <p>普段のゆるい女子会は、意見交換やおしゃべりの場。<br>でも、きんゆう女子学院は、ゆるい一面もありつつ、<br>
           <span class="bottom-border">しっかりきちんと勉強する場です。</span></p>
           <p>学生時代に国語や算数があったように、<br>
@@ -42,6 +34,7 @@
           ついて相談することができます。</p>
         </div>
         <div class="sp description-area">
+          <p><span class="bottom-border">きんゆう女子。学院は、<br>私立きんゆう女子。学院の姉妹校です♪</span></p>
           <p>普段のゆるい女子会は、<br>
           意見交換やおしゃべりの場。<br>
           でも、きんゆう女子学院は、<br>
@@ -309,6 +302,6 @@
 
 <div class="sp fix-application">
   <a href="https://anypay.jp/shops/m5OWa84bzV/aXtOssrIpq" target="_blank">
-    <p><span>公立きんゆう女子。学院の</span><br>お申し込みはこちら</p>
+    <p><span>第1回！きんゆう女子。学院の</span><br>お申し込みはこちら</p>
   </a>
 </div>
