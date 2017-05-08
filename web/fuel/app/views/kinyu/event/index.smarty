@@ -52,7 +52,7 @@
                 {else if $event.event_category == "コラボ"}
                   <p class="event-category collabo-event">コラボ女子会</p>
                 {else if $event.event_category == "公立きん"}
-                  <p class="event-category koritsu-event">公立きんゆう女子。学院</p>
+                  <p class="event-category koritsu-event">きんゆう女子。学院</p>
                 {else if $event.event_category == "私立きん"}
                   <p class="event-category shiritu-event">私立きんゆう女子。学院</p>
                 {else}

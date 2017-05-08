@@ -26,10 +26,10 @@
             <label for="event3" class="form-long">コラボ</label>
 
             <input type="radio" value="公立きん" name="event_category" id="event4" class="form-radio" placeholder="" {if $events.event_category == "公立きん"}checked{/if}>
-            <label for="event4" class="form-long">公立きん...</label>
+            <label for="event4" class="form-long">きん学院</label>
 
             <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="" {if $events.event_category == "私立きん"}checked{/if}>
-            <label for="event5" class="form-long">私立きん...</label>
+            <label for="event5" class="form-long">私:きん学院</label>
           </div>
 
 				</div>
