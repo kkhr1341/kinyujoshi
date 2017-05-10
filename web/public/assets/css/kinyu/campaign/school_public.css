@@ -1,19 +1,23 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   公立きんゆう女子。学院・共通部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-
 .kinyu-school_public-el {
   margin-top: 100px;
 }
-
 .kinyu-school_public-el h3 {
   text-align: center;
 }
-
 .kinyu-school_public-el .kinyu-gakuin-link {
   font-size: 15px;
 }
-
+.kinyu-school_public-intro {
+  position: relative;
+}
+.jpx-img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ABOUT
@@ -281,6 +285,13 @@
   レスポンシブ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (max-width: 480px) {
+
+.jpx-img {
+  width: 32px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 
 .kinyu-school_public-el {
   margin-top: 60px;

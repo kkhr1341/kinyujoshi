@@ -7,10 +7,12 @@
 <div class="kinyu-main-single-block">
   <div class="inner">
     <div class="kinyu-school_public-block">
-      <div class="pc">
+      <div class="kinyu-school_public-intro pc">
+        <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
         <img src="/images/content/school_public/school_public_main.png">
       </div>
-      <div class="sp">
+      <div class="kinyu-school_public-intro sp">
+        <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
         <img style="width:100%;" src="/images/content/school_public/school_public_main2.png">
       </div>
  
