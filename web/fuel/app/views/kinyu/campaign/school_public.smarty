@@ -83,17 +83,18 @@
           <div class="class-block">
             <p class="class-title"><学院日程></p>
             <div class="pc class-el">
-              <p><span>5月25日(木)</span>：入学式＆授業　〜きんゆう全般〜</p>
-              <p><span>6月1日(木)</span>：授業　〜きんゆう全般〜積立NISA〜</p>
-              <p><span>6月15日(木)</span>：授業　〜悪い情報から自分の身を守る知識〜</p>
-              <p><span>7月22日(土)</span>：卒業式＠東証Arrows＆謝恩会　〜お金と向き合って人生を楽しもう〜</p>
+              <p><span>第1回：5月25日(木) 19:00〜21:00</span><br>入学式＆授業　〜きんゆう全般〜</p>
+              <p><span>第2回：6月1日(木) 19:00〜21:00</span><br>授業　〜きんゆう全般〜積立NISA〜</p>
+              <p><span>第3回：6月15日(木) 19:00〜21:00</span><br>授業　〜悪い情報から自分の身を守る知識〜</p>
+              <p><span>第4回：7月22日(土) 13:00〜17:00</span><br>卒業式＠東証Arrows＆謝恩会<br>〜お金と向き合って人生を楽しもう〜</p>
             </div>
             <div class="sp class-el">
-              <p><span>5月25日(木)</span>：<br>入学式＆授業 〜きんゆう全般〜</p>
-              <p><span>6月1日(木)</span>：<br>授業 〜きんゆう全般〜積立NISA〜</p>
-              <p><span>6月15日(木)</span>：<br>授業 〜悪い情報から自分の身を守る知識〜</p>
-              <p><span>7月22日(土)</span>：<br>卒業式＠東証Arrows＆謝恩会<br>〜お金と向き合って人生を楽しもう〜</p>
+              <p><span>第1回：5月25日(木) 19:00-21:00</span><br>入学式＆授業 〜きんゆう全般〜</p>
+              <p><span>第2回：6月1日(木) 19:00-21:00</span><br>授業 〜きんゆう全般〜積立NISA〜</p>
+              <p><span>第3回：6月15日(木) 19:00-21:00</span><br>授業 〜悪い情報から自分の身を守る知識〜</p>
+              <p><span>第4回：7月22日(土) 13:00-17:00</span><br>卒業式＠東証Arrows＆謝恩会<br>〜お金と向き合って人生を楽しもう〜</p>
             </div>
+            <p class="class-el-sub"><span style="color:red;">※</span>学院日程は変更になる場合がございます。<br>予めご了承ください。</p>
           </div>
           <div class="theme-block" id="document_first_day">
             <p class="theme-title"><主なテーマ></p>
@@ -141,7 +142,7 @@
           <ul class="clear">
             <li class="head-teacher">
               <p class="teacher-title">校長先生</p>
-              <div class="teacher-img" style="background: url(/images/content/school_public/ogp.jpg)center top / cover no-repeat;border: 2px solid #dedede;box-sizing: border-box;"></div>
+              <div class="teacher-img" style="background: url(/images/content/school_public/ogp.jpg)center top / cover no-repeat;border: 1px solid #dedede;box-sizing: border-box;"></div>
               <div class="teacher-text-box">
                 <p class="teacher-name">青沼 見和<span>先生</span></p>
                 <p class="teacher-description">日本取引所グループ 広報・IR部 調査役。<br>
@@ -150,7 +151,7 @@
             </li>
             <li class="official-teacher">
               <p class="teacher-title">教頭先生</p>
-              <div class="teacher-img" style="background: url(/images/content/school_public/arrows_icon.jpg)center top / cover no-repeat;border: 2px solid #dedede;box-sizing: border-box;"></div>
+              <div class="teacher-img" style="background: url(/images/content/school_public/arrows_icon.jpg)center top / cover no-repeat;border: 1px solid #dedede;box-sizing: border-box;"></div>
               <div class="teacher-text-box">
                 <p class="teacher-name">東証 あろーずくん</p>
                 <p class="pc teacher-description">
@@ -266,8 +267,8 @@
         <h3><img src="/images/content/school_public/main-title-support.png"></h3>
         <div class="sponsor-list">
           <ul class="clear">
-            <li><img src="/images/company/jpx.png"></li>
-            <li><img src="/images/company/heiwa.png"></li>
+            <li><img src="/images/content/school_public/company/jpx.jpg"></li>
+            <li><img src="/images/content/school_public/company/heiwa.jpg"></li>
           </ul>
         </div>
       </div>

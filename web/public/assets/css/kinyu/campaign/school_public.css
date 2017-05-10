@@ -107,7 +107,7 @@
 .course-public_school .gakuin-session-inner .class-el p {
   font-size: 14px;
   line-height: 20px;
-  margin-top: 4px;
+  margin-top: 12px;
 }
 .course-public_school .gakuin-session-inner .certificate-img {
   margin-bottom: 40px;
@@ -158,6 +158,14 @@
   display: inline-block;
   letter-spacing: normal;
   border-radius: 50%;
+}
+.gakuin-session-inner .class-el p span {
+  font-weight: bold;
+}
+.gakuin-session-inner .class-el-sub {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -326,6 +334,10 @@
   margin-bottom: 10px;
   line-height: 20px;
   padding-left: 21px;
+}
+.gakuin-session-inner .class-el-sub {
+  font-size: 11px;
+  line-height: 14px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
