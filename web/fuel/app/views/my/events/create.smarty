@@ -195,7 +195,7 @@ $(function(){
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.pay_url = $('#pay_url').val();
-		params.event_date = $('#open_date').val();
+		params.open_date = $('#open_date').val();
 		params.status = 0;
 		
 		if (params.title == "") {
