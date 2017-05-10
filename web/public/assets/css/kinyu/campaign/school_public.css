@@ -18,6 +18,19 @@
   top: 20px;
   left: 20px;
 }
+.application-img {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+}
+.application-img img {
+  transition: 0.5s;
+}
+.application-img img:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ABOUT
