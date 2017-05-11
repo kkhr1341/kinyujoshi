@@ -55,14 +55,6 @@
 
             {foreach from=$blogs_pick item=blog name=loopname}
 
-            {if $smarty.foreach.loopname.index == 1}
-              <div class="swiper-slide" style="background: url(/images/og-conference.jpg) center center / cover no-repeat;">
-                <a href="/conference">
-                  <h3 class="kinyu-top-list-title">【2017年3月3日〜5日】第1回週末投資宣言♪〜おかねをふやそう〜</h3>
-                </a>
-              </div>
-            {/if}
-
             <div class="swiper-slide" style="background: url({$blog.main_image}) center top -40px / cover no-repeat;">
               <a href="/report/{$blog.code}">
                 <div class="kinyu-top-list-kind">
