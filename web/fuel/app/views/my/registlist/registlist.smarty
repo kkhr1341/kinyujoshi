@@ -36,7 +36,7 @@
 
 <style>
 .sample_01{
-width: 100%;
+width: 860px;
 border-collapse: collapse;
 }
 .sample_01 tr {
