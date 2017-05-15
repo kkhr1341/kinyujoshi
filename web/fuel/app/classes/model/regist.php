@@ -70,12 +70,17 @@ class Regist extends Base {
 
   public static function lists() {
     \DB::set_charset('utf8');
-    $datas = \DB::select('*')->from('member_regist')->execute()->as_array();
-    header('Content-type: text/html; charset=UTF-8'); 
+    $datas = \DB::select('*')->from('member_regist');
     //var_dump($datas);
     //$result = \DB::query('show variables like \'character\_set\_%\';', \DB::SELECT)->execute()->as_array();
     //var_dump($result);
+
+    $datas = $datas->order_by('created_at', 'desc');
+    //$datas = $datas->array_unique($input);
+    $datas = $datas->execute()->as_array();
+    header('Content-type: text/html; charset=UTF-8'); 
     return $datas;
+
   }
 
   public static function getByCodeWithurl($code) {
