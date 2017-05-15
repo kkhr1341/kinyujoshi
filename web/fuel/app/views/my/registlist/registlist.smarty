@@ -41,6 +41,7 @@ border-collapse: collapse;
 }
 .sample_01 tr {
   font-size: 12px;
+  box-sizing: border-box;
 }
 .sample_01 th{
 text-align: center;
@@ -49,6 +50,7 @@ vertical-align: top;
 color: #333;
 background-color: #eee;
 border: 1px solid #b9b9b9;
+box-sizing: border-box;
 }
 .sample_01 td{
 text-align: center;
@@ -56,6 +58,7 @@ padding: 6px;
 line-height: 32px;
 background-color: #fff;
 border: 1px solid #b9b9b9;
+box-sizing: border-box;
 }
 .registlist-block-admin {
 
