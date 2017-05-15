@@ -12,7 +12,7 @@
       <th style="display: none;">Email</th>
       <!-- 年齢 -->
       <th>年齢</th>
-      <th>自己紹介</th>
+      <th style="width:400px;">自己紹介</th>
       <th>詳細</th>
     </tr>
   </thead>
@@ -38,6 +38,7 @@
 .sample_01{
 width: 860px;
 border-collapse: collapse;
+table-layout: fixed;
 }
 .sample_01 tr {
   font-size: 12px;
