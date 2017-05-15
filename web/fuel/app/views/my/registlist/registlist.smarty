@@ -25,7 +25,7 @@
         <td>{$email.name}</td>
         <td style="display: none;">{$email.email}</td>
         <td>{$email.age}</td>
-        <td>{$email.introduction}</td>
+        <td style="width:400px;">{$email.introduction}</td>
         <td><a class="admin-registlist-more" href="/my/registlist/{$email.code}">もっと見る</a></td>
       </tr>
     {/if}
