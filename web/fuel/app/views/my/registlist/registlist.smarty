@@ -51,7 +51,6 @@ vertical-align: top;
 color: #333;
 background-color: #eee;
 border: 1px solid #b9b9b9;
-word-break: break-all;
 }
 .sample_01 td{
 text-align: center;
@@ -60,7 +59,6 @@ padding: 6px;
 line-height: 32px;
 background-color: #fff;
 border: 1px solid #b9b9b9;
-word-break: break-all;
 }
 .registlist-block-admin td a {
   transition: 0.5s;
