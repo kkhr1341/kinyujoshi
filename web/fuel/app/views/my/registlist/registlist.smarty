@@ -56,7 +56,7 @@ border: 1px solid #b9b9b9;
 text-align: center;
 box-sizing: border-box;
 padding: 6px;
-line-height: 32px;
+line-height: 20px;
 background-color: #fff;
 border: 1px solid #b9b9b9;
 }
