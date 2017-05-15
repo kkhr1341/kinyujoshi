@@ -20,6 +20,8 @@ class Controller_Api_Redactor extends Controller_Base
 		$file_name = @$_FILES['file']['name'];
 		$size = $this->formatBytes(@$_FILES['file']['size']);
 		$username = Auth::get('username');
+		$update = date("Ymd");
+		$updatedev = date("YmdHis");
 		
 		try{
 			
@@ -49,7 +51,7 @@ class Controller_Api_Redactor extends Controller_Base
 			));
 			$res = $s3->putObject(array(
 					'Bucket'        =>   'sundaylunch',
-					'Key'           =>   "stock/{$username}/images/{$file_name}",
+					'Key'           =>   "stock/{$username}/images/{$update}/{$updatedev}{$file_name}",
 					'Body'          =>   fopen($_FILES['file']['tmp_name'], 'r'),
 					'ACL'           =>   'public-read',
 					'ContentType'   =>   $_FILES['file']['type'],
@@ -69,7 +71,7 @@ class Controller_Api_Redactor extends Controller_Base
 
 					$thumbres = $s3->putObject(array(
 							'Bucket'        =>   'sundaylunch',
-							'Key'           =>   "stock/{$username}/images/thumb_{$file_name}",
+							'Key'           =>   "stock/{$username}/images/{$update}/{$updatedev}thumb_{$file_name}",
 							'Body'          =>   fopen($tmp_file_path, 'r'),
 							'ACL'           =>   'public-read',
 							'ContentType'   =>   $_FILES['file']['type'],
