@@ -12,7 +12,7 @@
       <th style="display: none;">Email</th>
       <!-- 年齢 -->
       <th>年齢</th>
-      <th style="width:400px;">自己紹介</th>
+      <th>自己紹介</th>
       <th>詳細</th>
     </tr>
   </thead>
@@ -45,25 +45,22 @@ border-collapse: collapse;
 }
 .sample_01 th{
 text-align: center;
+box-sizing: border-box;
 padding: 6px;
 vertical-align: top;
 color: #333;
 background-color: #eee;
 border: 1px solid #b9b9b9;
-box-sizing: border-box;
-word-break: break-all; */
+word-break: break-all;
 }
 .sample_01 td{
 text-align: center;
+box-sizing: border-box;
 padding: 6px;
 line-height: 32px;
 background-color: #fff;
 border: 1px solid #b9b9b9;
-box-sizing: border-box;
-word-break: break-all; */
-}
-.registlist-block-admin {
-
+word-break: break-all;
 }
 .registlist-block-admin td a {
   transition: 0.5s;
