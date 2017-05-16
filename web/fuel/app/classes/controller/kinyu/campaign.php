@@ -38,15 +38,6 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
   public function action_school_public() {
 
-    switch (true) {
-       case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-       case $_SERVER['PHP_AUTH_USER'] !== 'kouritsu-gakuin':
-       case $_SERVER['PHP_AUTH_PW']   !== '1234567890':
-       header('WWW-Authenticate: Basic realm="Enter username and password."');
-       header('Content-Type: text/plain; charset=utf-8');
-       die('このページを見るにはログインが必要です');
-    }
-
     $this->template->title = 'きんゆう女子。学院｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/school_public/og-school_public.png';
     $this->template->description = 'きんゆう女子。学院は、私立きんゆう女子。学院の姉妹校です♪ きんゆう女子学院にも科目があります。きんゆう女子学院では、文系科目をメインにバランスよく多角的に金融の全体像から考え方、普段の生活に役立つことを学びます。';
