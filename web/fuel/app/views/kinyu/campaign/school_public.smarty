@@ -17,7 +17,7 @@
       </div>
  
 
-      <!-- 公立きんゆう女子。学院とは？ -->
+      <!-- きんゆう女子。学院とは？ -->
       <div class="kinyu-school_public-el about-public_school">
         <h3><img src="/images/content/school_public/main-title-about.png"></h3>
         <div class="pc description-area">
@@ -175,7 +175,7 @@
             </li>
           </ul>
         </div>
-
+        {*
         <div class="kinyu-gakuin-sub-teacher-list health-teacher">
           <p class="teacher-title">保健の先生</p>
           <div class="coming">
@@ -204,6 +204,7 @@
           <p class="pc description">ホームルームで、ライフイベントとお金についてお話いただくことがメインです。<br>結婚とお金、転職とお金、引越しとお金・・・・相談したいことがいっぱい！<br>(※保健の先生は全て女性です。)</p>
           <p class="sp description">ホームルームで、ライフイベントと<br>お金についてお話いただくことが<br>メインです。<br>結婚とお金、転職とお金、<br>引越しとお金・・・・<br>相談したいことがいっぱい！<br>(※保健の先生は全て女性です。)</p>
         </div>
+        *}
 
         <div class="kinyu-gakuin-teacher-list kinyu-gakuin-teacher-list-last">
           <ul class="clear">
@@ -229,10 +230,10 @@
             </li>
             *}
             <li class="pc">
-              <img class="illust-model01" src="/images/content/teacher/illust-model01.png">
+              <img class="illust-model01" src="/images/content/school_public/teacher_illust.png">
             </li>
           </ul>
-          <img class="sp illust-model01" src="/images/content/teacher/illust-model01.png">
+          <img class="sp illust-model01" src="/images/content/school_public/teacher_illust_sp.png">
         </div>
       </div>
 

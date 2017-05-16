@@ -486,6 +486,11 @@
 .coming img {
   width: 92%;
 }
+.kinyu-gakuin-teacher-list .illust-model01 {
+  width: 200px;
+  position: relative;
+  left: 4%;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   参加部分

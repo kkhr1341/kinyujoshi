@@ -112,7 +112,6 @@
   color: #a09f9f;
 }
 
-
 /* ヘッダーメニュー */
 .my-header-menu {
   padding: 8px 15px;
@@ -142,7 +141,6 @@
 .form-group label {
   font-size: 12px;
 }
-
 footer {
 	background-color:#1C1C1C;
   position: relative;
@@ -175,14 +173,12 @@ footer {
 #content_frame section {
 	padding:80px 0px 80px 0px;
 }
-
 .colorful span:nth-child(1) { color: red; }
 .colorful span:nth-child(2) { color: blue; }
 .colorful span:nth-child(3) { color: green; }
 .colorful span:nth-child(4) { color: #daa520; }
 .colorful span:nth-child(5) { color: pink; }
 .colorful span:nth-child(6) { color: skyblue; }
-
 #top_back {
 	height:480px;
 	text-align:center;
@@ -190,27 +186,26 @@ footer {
 	background:#333333 url(/assets/img/mono/top_01.jpg) center center / cover no-repeat;
 }
 .nav-tabs>li>a {
-    margin-right: 2px;
-    line-height: 1.42857143;
-    border: 1px solid transparent;
-    border-radius: 0px 0px 0 0;
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 0px 0px 0 0;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-    color: #555;
-    cursor: default;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-bottom-color: transparent;
-    padding: 10px 24px;
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  padding: 10px 24px;
 }
 .nav>li>a {
-    position: relative;
-    display: block;
-    padding: 10px 12px;
-    color: #444444;
-    text-align: center;
+  position: relative;
+  display: block;
+  padding: 10px 12px;
+  color: #444444;
+  text-align: center;
 }
-
 .form_ul {
 	margin-top:40px;
 }
@@ -269,19 +264,19 @@ footer {
 	width:100%!important;
 }
 .redactor-toolbar {
-    background: #111;
-    box-shadow: none;
+  background: #111;
+  box-shadow: none;
 }
 .redactor-toolbar li a {
-    color: rgba(255, 255, 255, .55);
+  color: rgba(255, 255, 255, .55);
 }
 .redactor-toolbar li a:hover {
-    background: #d70a16;
-    color: #fff;
+  background: #d70a16;
+  color: #fff;
 }
 
 .events-edit-block .redactor-toolbar li a:not(.re-image) {
-    display: none!important;
+  display: none!important;
 }
 .events-edit-block .redactor-toolbar li .re-image {
   color: #555;
