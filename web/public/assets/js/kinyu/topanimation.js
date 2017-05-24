@@ -19,7 +19,9 @@ $(document).ready(function(){
 
     //スマホ
     $(".kinyu-main-animation-sub").fadeIn(1000);
+    setTimeout(function(){
       $(".kinyu-main-animation-title").fadeIn(1000);
+    },500);
     setTimeout(function(){
       $(".kinyu-main-animation-inner").fadeOut(800);  
     },2000);
