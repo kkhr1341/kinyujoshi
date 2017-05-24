@@ -90,9 +90,10 @@
     width: 280px;
     height: 396px;
     position: absolute;
-    top: 50%;
+    top: auto;
     left: 50%;
-    margin-top: -168px;
+    /*margin-top: -168px;*/
+    bottom: 40px;
     margin-left: -140px;
   }
   .kabuto-map-block-swiper .swiper-slide .kabuto-map1{
