@@ -1,0 +1,115 @@
+<div class="kabuto-map-block">
+  
+  <div class="kabuto-map-block-inner">
+    <img id="okzoom" src="/images/map/kabuto-map2.jpg">
+  </div>
+  
+  <!-- pickup -->
+  <!-- <div class="sp swiper-container03 kabuto-map-block-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide clear">
+        <img class="kabuto-map kabuto-map1" src="/images/map/kabuto-map-sp1.jpg">
+        <p>右側へ</p>
+      </div>
+      <div class="swiper-slide clear">
+        <img class="kabuto-map kabuto-map2" src="/images/map/kabuto-map-sp2.jpg">
+        左側へ
+      </div>
+    </div>
+    <div class="swiper-arrow swiper-button-next03"></div>
+    <div class="swiper-arrow swiper-button-prev03"></div>
+    <div class="swiper-pagination swiper-pagination02"></div>
+  </div> -->
+
+</div>
+
+
+
+
+<style>
+.kabuto-map-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.kabuto-map-block-inner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#okzoom {
+  width: 1000px;
+  height: 706px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -353px;
+  margin-left: -500px;
+}
+@media screen and (max-width:640px) {
+  .kabuto-map-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1100;
+  }
+  .kabuto-map {
+    width: 92%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  } 
+  #okzoom {
+    transform: rotate(90deg);
+    width: 120%;
+    height: auto;
+    margin-top: -50%;
+    margin-left: -60%;
+  }
+  .kabuto-map-block-swiper .swiper-slide .kabuto-map1{
+    float: right;
+  }
+  .kabuto-map-block-swiper .swiper-slide .kabuto-map2{
+    float: left;
+  }
+}
+</style>
+
+<script src="/assets/js/kinyu/okzoom.js"></script>
+<script>
+$(function(){
+
+  var ua = navigator.userAgent.toUpperCase();
+  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
+    // スマホ
+    $('#okzoom').okzoom({
+      width: 200,  // ルーペの幅
+      height:200,  // ルーペの高さ
+      round:true,  // ルーペの形
+      border: "3px solid #7CDCCE", // ルーペのボーダー指定
+      shadow: "0 0 5px #7CDCCE"  // ルーペの影指定
+    });
+  } else {
+    $('#okzoom').okzoom({
+      width: 230,  // ルーペの幅
+      height:230,  // ルーペの高さ
+      round:true,  // ルーペの形
+      border: "3px solid #7CDCCE", // ルーペのボーダー指定
+      shadow: "0 0 5px #7CDCCE"  // ルーペの影指定
+    });
+  }
+});
+</script>
+
+<script>
+var swiper = new Swiper('.swiper-container03', {
+    pagination: '.swiper-pagination02',
+    slidesPerView: 1,
+    paginationClickable: true,
+    autoplay: 8000,
+    speed: 800,
+    nextButton: '.swiper-button-next03',
+    prevButton: '.swiper-button-prev03',
+    spaceBetween: 0
+  });
+</script>
