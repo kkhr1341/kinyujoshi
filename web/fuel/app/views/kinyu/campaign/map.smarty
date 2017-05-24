@@ -230,12 +230,12 @@ $(document).ready(function(){
     //スマホ
     setTimeout(function(){
       $(".kabuto-map-description").fadeIn(1000);
-    },4000);
+    },4500);
   } else {
     //pc
     setTimeout(function(){
       $(".kabuto-map-description").fadeIn(800);
-    },3500);
+    },4000);
   }
   $(".kabuto-map-description-close").click(function() {
     $(".kabuto-map-description").fadeOut(800);
