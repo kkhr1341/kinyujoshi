@@ -1,7 +1,8 @@
 <div class="kabuto-map-block">
   
   <div class="kabuto-map-block-inner">
-    <img id="okzoom" src="/images/map/kabuto-map2.jpg">
+    <img class="pc" id="okzoom" src="/images/map/kabuto-map2.jpg">
+    <img class="sp" id="okzoom2" src="/images/map/kabuto-map.jpg">
   </div>
   
   <!-- pickup -->
@@ -20,11 +21,7 @@
     <div class="swiper-arrow swiper-button-prev03"></div>
     <div class="swiper-pagination swiper-pagination02"></div>
   </div> -->
-
 </div>
-
-
-
 
 <style>
 .kabuto-map-block {
@@ -59,12 +56,14 @@
     margin-top: 10px;
     margin-bottom: 10px;
   } 
-  #okzoom {
-    transform: rotate(90deg);
-    width: 120%;
+  #okzoom2 {
+    width: 80%;
     height: auto;
-    margin-top: -50%;
-    margin-left: -60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -56%;
+    margin-left: -40%;
   }
   .kabuto-map-block-swiper .swiper-slide .kabuto-map1{
     float: right;
@@ -82,7 +81,7 @@ $(function(){
   var ua = navigator.userAgent.toUpperCase();
   if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
     // スマホ
-    $('#okzoom').okzoom({
+    $('#okzoom2').okzoom({
       width: 200,  // ルーペの幅
       height:200,  // ルーペの高さ
       round:true,  // ルーペの形
