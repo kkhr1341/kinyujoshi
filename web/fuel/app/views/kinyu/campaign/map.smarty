@@ -87,8 +87,8 @@
   }
   .to-top-link {
     left: auto;
-    right: 4%;
-    top: 3%;
+    right: 6%;
+    top: 4%;
     width: 30px;
   }
   .kabuto-map-block {
@@ -104,20 +104,30 @@
     margin-bottom: 10px;
   } 
   #okzoom2 {
-    width: 280px;
-    height: 396px;
+    width: 300px;
+    height: 424px;
     position: absolute;
     top: auto;
     right: 50%;
-    /*margin-top: -168px;*/
-    bottom: 40px;
-    margin-right: -140px;
+    bottom: 50%;
+    margin-bottom: -212px;
+    margin-right: -150px;
   }
   .kabuto-map-block-swiper .swiper-slide .kabuto-map1{
     float: right;
   }
   .kabuto-map-block-swiper .swiper-slide .kabuto-map2{
     float: left;
+  }
+}
+
+@media screen and (max-width:320px) {
+  #okzoom2 {
+    width: 280px;
+    height: 396px;
+    margin-bottom: -198px;
+    margin-right: -140px;
+    margin-bottom: -220px;
   }
 }
 </style>
