@@ -74,6 +74,8 @@ return array(
 	'school' => 'kinyu/campaign/school',
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
+	'map' => 'kinyu/campaign/map',
+
 
 
 	'blog/page/(:any)'   => 'kinyu/blog/page/index/$1',
