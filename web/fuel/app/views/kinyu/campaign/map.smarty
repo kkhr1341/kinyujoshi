@@ -112,7 +112,7 @@
     position: absolute;
     top: auto;
     right: 50%;
-    bottom: 40px;
+    bottom: 20px;
     margin-right: -145px;
   }
   .kabuto-map-block-swiper .swiper-slide .kabuto-map1{
