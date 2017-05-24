@@ -213,8 +213,8 @@ $(function(){
     });
   } else {
     $('#okzoom').okzoom({
-      width: 230,  // ルーペの幅
-      height:230,  // ルーペの高さ
+      width: 300,  // ルーペの幅
+      height:300,  // ルーペの高さ
       round:true,  // ルーペの形
       border: "3px solid #7CDCCE", // ルーペのボーダー指定
       shadow: "0 0 5px #7CDCCE"  // ルーペの影指定
