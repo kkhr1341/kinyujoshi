@@ -51,7 +51,7 @@ class Controller_Api_Redactor extends Controller_Base
 			));
 			$res = $s3->putObject(array(
 					'Bucket'        =>   'sundaylunch',
-					'Key'           =>   "stock/{$username}/images/{$update}/{$updatedev}{$file_name}",
+					'Key'           =>   "stock/{$username}/images/{$updatedev}{$file_name}",
 					'Body'          =>   fopen($_FILES['file']['tmp_name'], 'r'),
 					'ACL'           =>   'public-read',
 					'ContentType'   =>   $_FILES['file']['type'],
@@ -71,7 +71,7 @@ class Controller_Api_Redactor extends Controller_Base
 
 					$thumbres = $s3->putObject(array(
 							'Bucket'        =>   'sundaylunch',
-							'Key'           =>   "stock/{$username}/images/{$update}/{$updatedev}thumb_{$file_name}",
+							'Key'           =>   "stock/{$username}/images/thumb_{$updatedev}{$file_name}",
 							'Body'          =>   fopen($tmp_file_path, 'r'),
 							'ACL'           =>   'public-read',
 							'ContentType'   =>   $_FILES['file']['type'],
