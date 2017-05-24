@@ -229,13 +229,13 @@ $(document).ready(function(){
   if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
     //スマホ
     setTimeout(function(){
-      $(".kabuto-map-description").fadeIn(800);
-    },3500);
+      $(".kabuto-map-description").fadeIn(1000);
+    },4000);
   } else {
     //pc
     setTimeout(function(){
       $(".kabuto-map-description").fadeIn(800);
-    },3000);
+    },3500);
   }
   $(".kabuto-map-description-close").click(function() {
     $(".kabuto-map-description").fadeOut(800);
