@@ -20,7 +20,7 @@
     <div class="inner">
       <div class="kabuto-map-description-close">×</div>
       <p class="pc">マップにカーソルを合わせると、<br>拡大して見ることができます♪</p>
-      <p class="sp">マップをタップしながら<br>移動すると、<br>拡大して見ることができます♪</p>
+      <img class="sp map-description-text" src="/images/map/map-description-text-sp.png">
     </div>
   </div>
 </div>
@@ -169,17 +169,28 @@
     z-index: 1101;
   }
   .kabuto-map-description-inner {
-    width: 88%;
-    height: 300px;
-    margin-top: -150px;
-    margin-left: -44%;
+    width: 80%;
+    height: 350px;
+    margin-top: -175px;
+    margin-left: -40%;
     background: rgba(103, 198, 189, 0.8);
     padding: 3px;
+  }
+  .kabuto-map-description-inner .inner {
+    padding: 30px 0px;
   }
   .kabuto-map-description-inner .inner p {
     font-size: 20px;
     line-height: 32px;
-    margin-top: 100px;
+    margin-top: 0px;
+  }
+  .kabuto-map-description-inner .inner .kabuto-map-description-close {
+    top: auto;
+    bottom: 6px;
+  }
+  .kabuto-map-description-inner .inner .map-description-text {
+    height: 100%;
+    margin: 0 auto;
   }
 }
 

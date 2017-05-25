@@ -55,18 +55,25 @@
 
             {foreach from=$blogs_pick item=blog name=loopname}
 
-            {*
-            {if $smarty.foreach.loopname.index == 0}
+            {if $smarty.foreach.loopname.index == 1}
               <div class="swiper-slide" style="background: url(/images/content/school_public/og-school_public.png) top center / cover no-repeat;">
                 <a href="/school_jpx">
                   <div class="kinyu-top-list-kind">
                     <p>イベント告知</p>
                   </div>
-                  <h3 class="kinyu-top-list-title">『第1回 きんゆう女子。学院』申込み受付中！</h3>
+                  <h3 class="kinyu-top-list-title">＊残り5席『第1回 きんゆう女子。学院』申込み受付中！</h3>
+                </a>
+              </div>
+
+              <div class="swiper-slide" style="background: url(/images/map/map-thum.jpg) center center / cover no-repeat;">
+                <a href="/map">
+                  <div class="kinyu-top-list-kind">
+                    <p>特別企画！</p>
+                  </div>
+                  <h3 class="kinyu-top-list-title">かぶと町MAP公開中！</h3>
                 </a>
               </div>
             {/if}
-            *}
 
             <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
               <a href="/report/{$blog.code}">

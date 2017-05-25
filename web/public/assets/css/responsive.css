@@ -849,7 +849,8 @@
 }
 /* ソーシャル */
 .kinyu-social-list {
-  width: 100%;
+  width: 92%;
+  margin: 0 auto;
   padding: 24px 0px;
 }
 .kinyu-social-list-el {
