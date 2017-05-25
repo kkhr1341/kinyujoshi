@@ -26,6 +26,9 @@
 </div>
 
 <style>
+.kinyu-main {
+  height: 100vh;
+}
 .kinyu-main-animation-inner {
   width: 600px;
   height: 240px;
@@ -165,7 +168,7 @@
     float: left;
   }
   .kabuto-map-description {
-    height: 100vh;
+    height: 100%;
     z-index: 1101;
   }
   .kabuto-map-description-inner {
