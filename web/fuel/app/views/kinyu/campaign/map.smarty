@@ -171,7 +171,7 @@
   .kabuto-map-description-inner {
     width: 80%;
     height: 350px;
-    margin-top: -210px;
+    margin-top: -200px;
     margin-left: -40%;
     background: rgba(103, 198, 189, 0.8);
     padding: 3px;
