@@ -55,6 +55,7 @@
 
             {foreach from=$blogs_pick item=blog name=loopname}
 
+            {*
             {if $smarty.foreach.loopname.index == 0}
               <div class="swiper-slide" style="background: url(/images/content/school_public/og-school_public.png) top center / cover no-repeat;">
                 <a href="/school_jpx">
@@ -65,6 +66,7 @@
                 </a>
               </div>
             {/if}
+            *}
 
             <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
               <a href="/report/{$blog.code}">
