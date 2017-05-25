@@ -80,10 +80,9 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
   public function action_map() {
 
-    $this->template->title = 'きんゆう女子。学院｜きんゆう女子。';
-    $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/school_public/og-school_public.png';
+    $this->template->title = 'かぶと町マップ -金曜午後はかぶと町へエスケープ♪｜きんゆう女子。';
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/map/map-og.jpg';
     $this->template->description = 'きんゆう女子。学院は、私立きんゆう女子。学院の姉妹校です♪ きんゆう女子学院にも科目があります。きんゆう女子学院では、文系科目をメインにバランスよく多角的に金融の全体像から考え方、普段の生活に役立つことを学びます。';
-
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
