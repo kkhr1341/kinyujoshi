@@ -113,8 +113,8 @@
               <label for="not_know3" class="form-long">重度</label>
               <input type="radio" value="それすらワカラナイ" name="not_know" id="not_know4" class="form-radio" placeholder="">
               <label for="not_know4">それすらワカラナイ</label>
-              <input type="radio" value="プロフェッショナル" name="not_know" id="not_know5" class="form-radio" placeholder="">
-              <label for="not_know5">プロフェッショナル</label>
+              <!-- <input type="radio" value="プロフェッショナル" name="not_know" id="not_know5" class="form-radio" placeholder="">
+              <label for="not_know5">プロフェッショナル</label> -->
             </div>
           </div>
 
@@ -185,7 +185,7 @@
           <div class="form-group form-radio-block">
             <label class="form-title"><span class="color-kinyu-color">◆</span> 金融機関で働いていますか？ <span class="label label-danger">必須</span></label>
             <p class="form-sub-title">金融についてワカラナイ女性のためのコミュニティなのでご注意くださいませ( ´ ▽ ` )ﾉ</p>
-            <div class="radio_box clear">
+            <div class="radio_box_03 clear">
               <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
               <label for="job_kind1" class="form-long">はい</label>
               <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
