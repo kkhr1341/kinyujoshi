@@ -113,8 +113,8 @@
               <label for="not_know3" class="form-long">重度</label>
               <input type="radio" value="それすらワカラナイ" name="not_know" id="not_know4" class="form-radio" placeholder="">
               <label for="not_know4">それすらワカラナイ</label>
-              <!-- <input type="radio" value="プロフェッショナル" name="not_know" id="not_know5" class="form-radio" placeholder="">
-              <label for="not_know5">プロフェッショナル</label> -->
+              <input type="radio" value="プロフェッショナル" name="not_know" id="not_know5" class="form-radio" placeholder="">
+              <label for="not_know5">プロフェッショナル</label>
             </div>
           </div>
 
