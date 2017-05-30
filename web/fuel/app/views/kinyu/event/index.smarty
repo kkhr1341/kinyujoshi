@@ -76,6 +76,9 @@
           line-height: 18px;
           margin-top: 12px;
         }
+        .kinyu-event-list {
+          margin-top: 24px!important;
+        }
       }
       </style>
 
