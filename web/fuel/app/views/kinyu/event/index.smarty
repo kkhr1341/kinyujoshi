@@ -53,6 +53,9 @@
 
       <style>
       @media screen and (max-width: 769px) {
+      .singlepage-block {
+        width: 100%;
+      }
       .kinyu-event-notes {
           width: 84%;
           margin-top: 24px;
@@ -168,29 +171,36 @@
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom1.png" class="count-event">
-              <p><span class="title">女子会に参加できます！</span>
-              フリードリンク・おやつ付！<br>参加費1,000円〜<br>勉強内容のレポート提出で<br>女子会が<span style="color:#f3626c;" class="fw-bold">割引</span>に</p>
+              <p><span class="title">ゆる〜くおしゃべりする会</span>
+              調べるのも難しい！<br>誰にどう聞いたらいいか<br>ワカラナイ・・・<br>そんな女子が<span style="color:#f3626c;" class="fw-bold">かけこむ場所</span>。</p>
             </div>
           </li>
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom2.png" class="count-event">
-              <p><span class="title">安心・安全で楽しい！</span>
-              <span style="color:#f3626c;" class="fw-bold">事前に</span>先生やセミナーを<br>取材しているので<br>怪しい情報からメンバーを<br>精一杯守ります。</p>
+              <p><span class="title">独立した中立コミュニティ</span>
+              商品の押し売りや勧誘は<br>一切ありません。私たちは<br>協賛・協力企業様へ<span style="color:#f3626c;" class="fw-bold">逆コンサル</span><br>して運営ができています。</p>
             </div>
           </li>
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom3.png" class="count-event">
-              <p><span class="title">必要なことを必要なだけ</span>
-              「難しい」情報が<br>ありふれているので、<br>必要なことを必要なだけ、<br><span style="color:#f3626c;" class="fw-bold">ゆるく</span>まとめます。</p>
+              <p><span class="title">ゲストは編集部が面談済！</span>
+              メンバーのリクエストや<br>疑問を集約し来て欲しい方に<br>編集部から<br><span style="color:#f3626c;" class="fw-bold">オファー</span>します。</p>
             </div>
           </li>
-          <li style="margin-right: 0px;">
+          <li>
             <div class="inner">
               <img src="/images/count/count-bottom4.png" class="count-event">
-              <p><span class="title">きんゆう女子メンバーに♪</span>
-              きんゆう女子。のメンバー<br>になると、様々な嬉しい<br><span style="color:#f3626c;" class="fw-bold">特典</span>があります。詳細は、<br>女子会でご説明します。</p>
+              <p><span class="title">必要なことを必要なだけ</span>
+              「難しい」情報がありふれている<br>ので、必要なことを<br>必要なだけ、<span style="color:#f3626c;" class="fw-bold">必要なとき</span>に<br>ゆるくまとめます。</p>
+            </div>
+          </li>
+          <li style="margin-right:0px;">
+            <div class="inner">
+              <img src="/images/count/count-bottom5.png" class="count-event">
+              <p><span class="title">楽しく♪でも真面目に</span>
+              女子会やイベントは<br>エンターテイメント性を重視。<br>ただし<span style="color:#f3626c;" class="fw-bold">真面目に</span><br>企画をしています。</p>
             </div>
           </li>
         </ul>
