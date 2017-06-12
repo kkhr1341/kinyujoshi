@@ -51,7 +51,7 @@
         <a class="contact-link" href="https://kinyu-joshi.jp/contact">企業の方のお問合せはこちら</a></p>
       </div>
 
-      <!-- <style>
+      <style>
       @media screen and (max-width: 769px) {
       .kinyu-event-notes {
           width: 84%;
@@ -72,7 +72,17 @@
           text-align: left;
           margin-bottom: 8px;
         }
-        .kinyu-event-notes a {
+        .kinyu-event-notes .sub-description {
+          font-size: 11px;
+          line-height: 15px;
+          text-align: left;
+          margin-top: 12px;
+        }
+        .kinyu-event-notes .sub-description a {
+          font-size: 11px;
+          line-height: 15px;
+        }
+        .kinyu-event-notes .contact-link {
           font-size: 12px;
           line-height: 18px;
           margin-top: 12px;
@@ -81,7 +91,7 @@
           margin-top: 24px!important;
         }
       }
-      </style> -->
+      </style>
 
       <div class="kinyu-event-list">
         <ul class="clear">
