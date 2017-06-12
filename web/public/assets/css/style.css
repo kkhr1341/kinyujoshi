@@ -1070,22 +1070,22 @@
   font-weight: bold;
 }
 .kinyu-event-notes {
-  width: 700px;
+  width: 780px;
   border: 1px solid #7cdcce;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 36px;
   box-sizing: border-box;
-  padding: 24px 36px;
+  padding: 36px;
   text-align: center;
 }
 .kinyu-event-notes .title {
   font-size: 22px;
   line-height: 22px;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 .kinyu-event-notes li {
-  padding-left: 64px;
+  /*padding-left: 64px;*/
 }
 .kinyu-event-notes li p {
   font-size: 16px;
@@ -1093,13 +1093,23 @@
   text-align: left;
   margin-bottom: 8px;
 }
-.kinyu-event-notes a {
+.kinyu-event-notes .sub-description {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  margin-top: 12px;
+}
+.kinyu-event-notes .sub-description a {
+  font-size: 12px;
+  line-height: 18px;
+}
+.kinyu-event-notes .contact-link {
   display: block;
   width: 200px;
   background: #eeeeee;
   padding: 4px 0px;
   margin: 0 auto;
-  margin-top: 16px;
+  margin-top: 24px;
 }
 .kinyu-event-notes li:last-child p {
   margin-bottom: 0px;
@@ -1124,7 +1134,7 @@
   transition: .5s;
 }
 .kinyu-event-list {
-  margin-top: 36px;
+  margin-top: 42px;
 }
 .kinyu-event-list .kinyu-event-list-left {
   height: 200px;
@@ -1193,9 +1203,12 @@
   padding-left: 24px;
   line-height: 18px;
 }
-
-
-
+#event-form {
+  /*display: none;*/
+  width:860px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

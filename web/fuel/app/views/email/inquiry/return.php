@@ -52,6 +52,10 @@
               <?php echo $title; ?><br>
             </div>
             <div class="form-mail-p">
+              <p>◼︎お問い合わせ種別</p>
+              <?php echo $category_code; ?><br>
+            </div>
+            <div class="form-mail-p">
               <p>◼︎お問い合わせ内容</p>
               <?php echo $message; ?><br>
             </div>

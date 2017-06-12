@@ -9,7 +9,7 @@
   <div class="company-details-menu">
     <ul>
     	<li><a href="/company">運営会社</a></li>
-      <li><a href="/service">利用規約</a></li>
+      <li><a href="/service">会員規約</a></li>
       <li><a href="/privacy">プライバシーポリシー</a></li>
       <li><a href="/legal">特定商取引法に基づく表記</a></li>
       <li><a class="company-details-active">お問い合わせ</a></li>
@@ -44,11 +44,12 @@
 
 						<select id="category_code" class='form-control'>
 							<option value="">選択してください</option>
-							<option value="top">きんゆう女子について</option>
-							<option value="top">女子会について</option>
-							<option value="top">当WEBサイトについて</option>
-							<option value="top">運営会社について</option>
-							<option value="top">その他</option>
+							<option value="きんゆう女子について">きんゆう女子について</option>
+							<option value="女子会について">女子会について</option>
+							<option value="当WEBサイトについて">当WEBサイトについて</option>
+							<option value="運営会社について">運営会社について</option>
+							<option value="退会について">退会について</option>
+							<option value="その他">その他</option>
 							{foreach from=$categories item=category}
 							<option value="{$category.code}">{$category.name}</option>
 							{/foreach}

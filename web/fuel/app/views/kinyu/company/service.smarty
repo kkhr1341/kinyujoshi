@@ -2,14 +2,14 @@
 <div class="company-detail-header"><img class="logo" src="/images/kinyu-logo01.png"></div>
 
 <div class="company-info-title">
-  <h2>利用規約</h2>
+  <h2>会員規約</h2>
 </div>
 
 <div class="company-details-block clear">
   <div class="company-details-menu">
     <ul>
       <li><a href="/company">運営会社</a></li>
-      <li><a class="company-details-active" href="/service">利用規約</a></li>
+      <li><a class="company-details-active" href="/service">会員規約</a></li>
       <li><a href="/privacy">プライバシーポリシー</a></li>
       <li><a href="/legal">特定商取引法に基づく表記</a></li>
       <li><a href="/contact">お問い合わせ</a></li>
@@ -92,7 +92,7 @@
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 退会</h3>
-      <p class="description">会員が当サイト及び当コミュニティから退会する場合、会員本人が所定のフォームから退会手続を行うものとし、手続き完了後に退会となります。退会者の個人情報に関しては、「個人情報保護法」に基づき一定期間経過後に削除します。</p>
+      <p class="description">会員が当サイト及び当コミュニティから退会する場合、会員本人が<a style="color:#4C9BBF;" href="https://kinyu-joshi.jp/contact">所定のフォーム</a>から退会手続を行うものとし、手続き完了後に退会となります。退会者の個人情報に関しては、「個人情報保護法」に基づき一定期間経過後に削除します。</p>
     </div>
 
     <div class="company-details-el">
