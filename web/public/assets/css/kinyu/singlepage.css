@@ -295,12 +295,18 @@
   margin-bottom: 10px;
   box-sizing: border-box;
 }
+.regist-policy .main-description {
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 24px;
+}
 .regist-policy p {
   font-size: 16px;
   line-height: 30px;
   position: relative;
   padding-left: 4%;
-  margin-left: 8%;
+  margin-left: 16%;
 }
 .regist-policy p span {
   position: absolute;
@@ -437,6 +443,12 @@
   margin-bottom: 0px;
   background-color: rgba(249, 249, 249, 0.8);
   border-radius: 5px;
+}
+.regist-policy .main-description {
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 16px;
 }
 .regist-policy p {
   font-size: 14px;

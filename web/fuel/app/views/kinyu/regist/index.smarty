@@ -72,12 +72,14 @@
         <img src="/images/title/regist/regist-title01.png" alt="金融・おかねの知識を学び、ライフスタイルを一緒に見直しましょう！">
       </h2>
       <div class="regist-policy center">
+        <div class="pc main-description">わたしたちの扱う「きんゆう」は、個人の家計から世界経済や<br>企業活動など<span style="border-bottom:2px solid #7CDCCE;">広い意味の金融</span>をテーマにしています。</div>
+        <div class="sp main-description">わたしたちの扱う「きんゆう」は、個人の家計から世界経済や企業活動など<span style="border-bottom:2px solid #7CDCCE;">広い意味の金融</span>をテーマにしています。</div>
         <img class="regist-policy-title" src="/images/title/regist/regist-policy-title.png" alt="きんゆう女子のポリシー">
-        <p><span class="fw-bold" style="color:#f3626c;">1. </span>お金に関する課題や悩みを見つけ、受け止めよう。</p>
+        <p><span class="fw-bold" style="color:#f3626c;">1. </span>金融に関する課題や悩みを見つけ、受け止めよう。</p>
         <p><span class="fw-bold" style="color:#f3626c;">2. </span>みんなのお金の悩みを解決するアイディアを考えよう。</p>
-        <p><span class="fw-bold" style="color:#f3626c;">3. </span>お金を清く美しく扱う、お作法を身につけよう。</p>
-        <p><span class="fw-bold" style="color:#f3626c;">4. </span>世代を超えてお金と、お金の流れに関する情報を共有しよう。</p>
-        <p><span class="fw-bold" style="color:#f3626c;">5. </span>お金の流れに関して知識を深め、夢を叶えよう。</p>
+        <p><span class="fw-bold" style="color:#f3626c;">3. </span>お金を清く美しくわたしらしく扱うお作法を身につけよう。</p>
+        <p><span class="fw-bold" style="color:#f3626c;">4. </span>世代を超えてお金とお金の流れに関する正しい情報をシェアしよう。</p>
+        <p><span class="fw-bold" style="color:#f3626c;">5. </span>経済に関わることでお金にとらわれず自由で等身大に生きよう。</p>
       </div>
 
       <h2 id="regist-form" class="singlepage-block-title center">
