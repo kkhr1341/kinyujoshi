@@ -11,34 +11,70 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
 
 	public function action_index($page=1) {
-	
-		// if (!Auth::check()) {
-		// 	Response::redirect('/login');
-		// }
-		// else {
-			$this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
-			$pagination = $this->data['events']['pagination'];
-			$this->data['pagination'] = $pagination::instance('mypagination');
-      //$this->data['events'] = Events::lists(1, 5, true);
-			$this->template->title = '女子会について｜きんゆう女子。';
-			$this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
-			$this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
-			$this->template->today = date("Y年n月");
-    	$this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-      $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+		$this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
+		$pagination = $this->data['events']['pagination'];
+		$this->data['pagination'] = $pagination::instance('mypagination');
+    //$this->data['events'] = Events::lists(1, 5, true);
+		$this->template->title = '女子会について｜きんゆう女子。';
+		$this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
+		$this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
+		$this->template->today = date("Y年n月");
+  	$this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
-    	if(Agent::is_mobiledevice()) {
-      	$this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-      	$this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-    	} else {
-      	$this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
-      	$this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-    	}
-
-			$this->template->contents = View::forge('kinyu/event/index.smarty', $this->data);
-			//$this->template->sidebar01 = View::forge('kinyu/sidebar/sidebar01.smarty', $this->data);
-		//}
+  	if(Agent::is_mobiledevice()) {
+    	$this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+    	$this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+  	} else {
+    	$this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+    	$this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+  	}
+		$this->template->contents = View::forge('kinyu/event/index.smarty', $this->data);
 	}
+
+  public function action_choice($page=1) {
+    $this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
+    $pagination = $this->data['events']['pagination'];
+    $this->data['pagination'] = $pagination::instance('mypagination');
+    //$this->data['events'] = Events::lists(1, 5, true);
+    $this->template->title = '女子会について｜きんゆう女子。';
+    $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
+    $this->template->today = date("Y年n月");
+    $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+
+    if(Agent::is_mobiledevice()) {
+      $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    } else {
+      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    }
+    $this->template->contents = View::forge('kinyu/event/choice.smarty', $this->data);
+  }
+
+  public function action_special($page=1) {
+    $this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
+    $pagination = $this->data['events']['pagination'];
+    $this->data['pagination'] = $pagination::instance('mypagination');
+    //$this->data['events'] = Events::lists(1, 5, true);
+    $this->template->title = '女子会について｜きんゆう女子。';
+    $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
+    $this->template->today = date("Y年n月");
+    $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+
+    if(Agent::is_mobiledevice()) {
+      $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    } else {
+      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    }
+    $this->template->contents = View::forge('kinyu/event/special.smarty', $this->data);
+  }
 
 	public function action_welcome($page=1) {
 	

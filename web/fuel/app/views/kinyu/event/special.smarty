@@ -4,11 +4,10 @@
   <div class="inner">
 
     <div id="kinyu-event-scroll-point" class="singlepage-block-920 center">
-
       <h2 class="singlepage-block-title schedule center">
-        <img src="/images/title/event/event-title-ticket.png" alt="きんゆう女子。会のチケット一覧">
+        <img src="/images/title/event/event-title-ticket-special.png" alt="きんゆう女子。会のチケット一覧">
       </h2>
-      
+
       <div class="kinyu-event-notes">
         <p class="title"><span>＊</span>女子会やイベント参加についての注意点<span>＊</span></p>
         <ul>
@@ -22,15 +21,17 @@
         <a class="contact-link" href="https://kinyu-joshi.jp/contact">企業の方のお問合せはこちら</a></p>
       </div>
 
-      <div class="kinyu-event-list">
+      <div class="kinyu-specialevent-list">
         <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>参加したい女子会をクリックすると、イベント予約ページ(Peatix)に移動します。</p>
-        <ul>
+        <ul class="clear">
           {foreach from=$events.datas key="key" item=event name=loopname}
+
           {if $event.event_category == "女子会"}
+          {else}
           <li>
-            <a target="_blank" href="{$event.pay_url}">
+            <a class="clear" target="_blank" href="{$event.pay_url}">
               <div class="kinyu-event-list-left" style="background:url({$event.main_image}) center center / cover no-repeat">
-                {if $event.event_category == "女子会"}
+                <!-- {if $event.event_category == "女子会"}
                   <p class="event-category normal-event">女子会</p>
                 {else if $event.event_category == "スペシャル"}
                   <p class="event-category special-event">スペシャル女子会</p>
@@ -42,7 +43,7 @@
                   <p class="event-category shiritu-event">私立きんゆう女子。学院</p>
                 {else}
                   <p class="event-category normal-event">女子会</p>
-                {/if}
+                {/if} -->
               </div>
 
               <div class="kinyu-event-list-right">
@@ -52,42 +53,45 @@
                   <span class="timezone">{$event.event_start_datetime}〜{$event.event_end_datetime}</span>
                   </p>
                 <h3 class="event-title">{$event.title}</h3>
-                <p class="event-fee"><span>{$event.fee}</span></p>
+                <p class="event-fee"><span>￥{$event.fee}</span></p>
+                <p class="event-place"><span>{$event.place}</span></p>
               </div>
             </a>
           </li>
           {/if}
           {/foreach}
         </ul>
-        <div class="other-event"><a style="background: #efdd02;" href="/event_special">特別女子会はこちら</a></div>
+        <div class="other-event"><a style="background: #7CDCCE;" href="/event_main">いつもの女子会はこちら</a></div>
+      </div>
+    </div>
+
+    <div class="singlepage-block-920 center center">
+      <h2 class="singlepage-block-title center">
+        <img src="/images/title/event/event-title-list-special.png" alt="きんゆう女子。の女子会に参加するとどんな良いことがある？">
+      </h2>
+      <div class="past-specialevent-list">
+        <!-- <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>k</p> -->
+        <ul class="clear">
+          <li>
+            <a class="clear" target="_blank" href="/conference">
+              <div class="img-box" style="background:url(/images/event/past-special1.png) center center / cover no-repeat"></div>
+              <p class="title"><span style="color:rgba(255, 241, 78, 0.6);">■</span> 第1回 週末投資宣言♪</p>
+            </a>
+          </li>
+          <li>
+            <a class="clear" target="_blank" href="/school">
+              <div class="img-box" style="background:url(/images/event/past-special2.png) center center / cover no-repeat"></div>
+              <p class="title"><span style="color:rgba(255, 241, 78, 0.6);">■</span> 私立きんゆう女子。学院</p>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
 
     <div class="singlepage-block center">
-
-      <!-- <h2 class="singlepage-block-title schedule center">
-        <img src="/images/title/event/event-title02.png" alt="きんゆう女子。の女子会のスケジュール">
-      </h2>
-      <div class="carender-block tx-center">
-        <iframe id="gcarender" src="/gcalendar/gcalendar-wrapper.php?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sundaylunch.jp_ggel0081l90oqdp5643dortjno%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo" style="border-width:0" class="gcarender" frameborder="0" scrolling="no"></iframe>
-        </iframe>
-      </div> -->
-
-      <!-- <h2 class="singlepage-block-title center">
-        <img src="/images/title/event/event-title03.png" alt="きんゆう女子。の女子会のフォームはこちら">
-      </h2>
-      <p class="sp description">知識がなくても全然大丈夫♪<br>気軽にお越しください。</p>
-      <div style="position:relative">
-        <a class="singlepage-block-link btn-tiffany center" href="https://docs.google.com/a/sundaylunch.jp/forms/d/e/1FAIpQLSdfLoYE_WXBwB8qY-9yzdfHCdrBB1eNENgTSggbBb8Hmnz7ig/viewform" target="_blank">女子会の参加手続きへ</a>
-        <img src="/images/icon/balloon.png" class="pc balloon-kinyu-joshikai" alt="女子会は、知識がなくても全然大丈夫♪気軽にお越しください">
-      </div>
-      <p class="description kinyu-joshikai-description">
-        <span style="color:#f37979;">※</span>googleフォームが立ち上がります。
-      </p> -->
-
       <h2 class="singlepage-block-title center">
-        <img src="/images/title/event/event-title-about.png" alt="きんゆう女子。の女子会に参加するとどんな良いことがある？">
+        <img src="/images/title/event/event-title-about-special.png" alt="きんゆう女子。の女子会に参加するとどんな良いことがある？">
       </h2>
       <div class="singlepage-theree-cicle-list">
         <ul class="clear">
@@ -133,19 +137,3 @@
   </div>
   {$sp_footer}
 </div>
-
-<script>
-$(function(){
-    $('#gcarender').on('load', function(){
-        $('#gcarender').contents().find('#currentDate1').css('font-size','16px');
-        $('#gcarender').contents().find('#currentDate1').css('padding-left','0em');
-        $('#gcarender').contents().find('#currentDate1').css('padding','5px');
-        $('#gcarender').contents().find('#dateEditableBox1').css('display','block');
-    });
-});
-</script>
-
-
-
-
-

@@ -38,7 +38,9 @@ return array(
 	//'welcome/event'   => 'kinyu/event/welcome',
 
 	//イベント関連
-	'event'   => 'kinyu/event/index',
+	'event'   => 'kinyu/event/choice',
+	'event_main'   => 'kinyu/event/index',
+	'event_special'   => 'kinyu/event/special',
 
 	//ニュース
 	'news'   => 'kinyu/news/index',
@@ -69,6 +71,9 @@ return array(
 
 	//特定商取引法に基づく表記
 	'legal' => 'kinyu/company/legal',
+
+		//企業用ページ
+	'business' => 'kinyu/company/business',
 
 	//キャンペーン
 	'school' => 'kinyu/campaign/school',

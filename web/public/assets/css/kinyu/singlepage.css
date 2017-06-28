@@ -11,7 +11,7 @@
 }
 .singlepage-block-title {
   width: 540px;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 30px;
 }
 .singlepage-block .description {
@@ -35,14 +35,7 @@
   position: relative;
   border-radius: 3px;
 }
-/* イベントイントロ・ボタン */
-.singlepage-introduction-btn {
-  /*width: 400px;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  margin-left: -200px;*/
-}
+
 /* フォーム関連のブロック */
 .singlepage-form-block {
   width: 780px;
@@ -84,13 +77,14 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 18px;
   padding-top: 16px;
 }
 .singlepage-theree-cicle-list li .inner p .title {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
   display: block;
   margin-bottom: 12px;
 }
@@ -116,9 +110,9 @@
 .bxslider {
   height: 100%;
 }
-.kinyu-about-single .top-slider li {
+/*.kinyu-about-single .top-slider li {
   border-radius:  10px;
-}
+}*/
 .bxslider li {
   height: 100%;
 }
@@ -322,7 +316,7 @@
 }
 
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 640px) {
 .singlepage-block-920 {
   width: 100%;
   padding-bottom: 0px;
@@ -334,11 +328,11 @@
   個別ページの設計
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .singlepage-block {
-  width: 92%;
+  width: 100%;
   padding-bottom: 50px;
 }
 .singlepage-block-title {
-  width: 92%;
+  width: 88%;
   padding-top: 36px;
   padding-bottom: 12px;
   text-align: center;
@@ -358,14 +352,14 @@
   width: 90%;
 }
 .top-introduction {
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
   height: auto;
   background:none;
 }
 .top-introduction img {
   width: 100%;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 /* イベントイントロ・ボタン */
 .singlepage-introduction-btn {
@@ -377,10 +371,10 @@
 }
 /* フォーム関連のブロック */
 .singlepage-form-block {
-  width: 92%;
+  width: 88%;
   padding: 20px;
   background-color: rgba(249, 249, 249, 0.8);
-  border-radius: 5px;
+  border-radius: 0px;
 }
 .content_form {
   padding: 80px 0px;
@@ -407,6 +401,7 @@
 .singlepage-theree-cicle-list li .inner p {
   font-size: 13px;
   line-height: 18px;
+  padding-top: 40px;
 }
 .singlepage-theree-cicle-list li .inner p .title {
   font-size: 16px;
@@ -438,11 +433,11 @@
   margin-left: -160px;
 }
 .regist-policy {
-  width: 92%;
+  width: 88%;
   padding: 20px;
   margin-bottom: 0px;
   background-color: rgba(249, 249, 249, 0.8);
-  border-radius: 5px;
+  border-radius: 0px;
 }
 .regist-policy .main-description {
   text-align: center;
@@ -479,7 +474,7 @@
   border-radius: 10px;
 }
 .kinyu-about-single.kinyu-main-single-block .inner {
-  width: 92%;
+  width: 100%;
 }
 .about-kinyujoshi-intro {
   margin-top: 0px;
@@ -496,8 +491,8 @@
 }
 .about-kinyujoshi-intro-description {
   width: 88%;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 20px;
   text-align: left;
 }
 .about-kinyujoshi-service-el .service-title img {
@@ -523,17 +518,13 @@
   margin: 0px;
 }
 .about-kinyujoshi-service .service-description {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 20px;
   padding: 15px 0px;
   width: 80%;
   height: auto;
 }
-
 }
-
-
-
 
 @media screen and (min-width: 768px) {
 

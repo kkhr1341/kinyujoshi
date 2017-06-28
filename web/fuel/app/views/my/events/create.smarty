@@ -15,20 +15,21 @@
 					<label class="form-group-event-label">カテゴリー</label>
 
 					<div class="radio_box clear">
+						<p><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
             <input type="radio" value="女子会" name="event_category" id="event1" class="form-radio" placeholder="">
             <label for="event1" class="form-long">女子会</label>
             
             <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="">
-            <label for="event2" class="form-long">スペシャル</label>
+            <label for="event2" class="form-long">スペシャル女子会</label>
 
             <input type="radio" value="コラボ" name="event_category" id="event3" class="form-radio" placeholder="">
-            <label for="event3" class="form-long">コラボ</label>
+            <label for="event3" class="form-long">コラボ女子会</label>
 
             <input type="radio" value="公立きん" name="event_category" id="event4" class="form-radio" placeholder="">
             <label for="event4" class="form-long">きん学院</label>
 
             <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="">
-            <label for="event5" class="form-long">私:きん学院</label>
+            <label for="event5" class="form-long">私立きん学院</label>
           </div>
 
 				</div>
@@ -56,11 +57,11 @@
 
 				<div class="form-group">
 					<label class="form-group-event-label">費用</label>
-					<input type="text" id="fee" class="form-control" placeholder="(例)2,000円、無料、etc">
+					<input type="text" id="fee" class="form-control" placeholder="(例) 2,000、無料">
 				</div>
 
 				<div class="form-group">
-					<label class="form-group-event-label">日付</label>
+					<label class="form-group-event-label">女子会の日付</label>
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="event_date" value="" />
 						<span class="input-group-addon">
@@ -80,13 +81,13 @@
 				</div>
 
 				<div class="form-group">
-					<label class="form-group-event-label">Any payの決済URL</label>
+					<label class="form-group-event-label">PeatixのURL</label>
 					<input type="text" id="pay_url" class="form-control" placeholder="Any payの決済URLを入力してください。">
 				</div>
 				<div class="form-group">
-					<p><a style="color:#337ab7;" target="_blank" href="https://anypay.jp/users/sign_in">Anypayログインページへ</a></p>
-					<p>ID：cs@kinyu-joshi.jp</p>
-					<p>PASS：9hb3TktkwZN6</p>
+					<p><a style="color:#337ab7;" target="_blank" href="https://peatix.com/">Peatixログインページへ</a></p>
+					<p>ID：support@kinyu-joshi.jp</p>
+					<p>PASS：kinyukinyukinyu</p>
 					<p></p>
 				</div>
 

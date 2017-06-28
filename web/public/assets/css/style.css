@@ -164,26 +164,23 @@
 .kinyu-main-menu li.link-top .tool-chip:after {
   border-left-color: #7CDCCE;
 }
-
 .kinyu-main-menu li.picknews .tool-chip {
-  border: 1px solid #FFF200;
+  border: 1px solid #7cdcce;
 }
 .kinyu-main-menu li.picknews .tool-chip:after {
-  border-left-color: #FFF200;
+  border-left-color: #7cdcce;
 }
-
 .kinyu-main-menu li.jyoshikai .tool-chip {
-  border: 1px solid #fdc2c2;
+  border: 1px solid #ffef7d;
 }
 .kinyu-main-menu li.jyoshikai .tool-chip:after {
-  border-left-color: #fdc2c2;
+  border-left-color: #ffef7d;
 }
-
 .kinyu-main-menu li.member .tool-chip {
-  border: 1px solid #7CDCCE;
+  border: 1px solid #ffdacb;
 }
 .kinyu-main-menu li.member .tool-chip:after {
-  border-left-color: #7CDCCE;
+  border-left-color: #ffdacb;
 }
 .kinyu-main-menu li.menu-open .tool-chip { 
   border: 1px solid #7CDCCE;
@@ -1006,7 +1003,7 @@
   width: 20%;
   height: 150px;
   float: left;
-  border-radius: 5px;
+  border-radius: 1px;
   transition: 0.3s;
 }
 .kinyu-news-list-el .text-box {
@@ -1069,11 +1066,13 @@
 .kinyu-regist-branch-block li a span {
   font-weight: bold;
 }
+
+/* 女子会ページ：女子会やイベント参加についての注意点 */
 .kinyu-event-notes {
   width: 780px;
   border: 1px solid #7cdcce;
   margin: 0 auto;
-  margin-top: 36px;
+  margin-top: 12px;
   box-sizing: border-box;
   padding: 36px;
   text-align: center;
@@ -1083,9 +1082,6 @@
   line-height: 22px;
   font-weight: bold;
   margin-bottom: 24px;
-}
-.kinyu-event-notes li {
-  /*padding-left: 64px;*/
 }
 .kinyu-event-notes li p {
   font-size: 16px;
@@ -1121,6 +1117,8 @@
   color: #f16b6b;
   font-weight: bold;
 }
+
+
 .kinyu-regist-branch-block .caution {
   font-size: 13px;
 }
@@ -1133,8 +1131,135 @@
   line-height: 13px;
   transition: .5s;
 }
+
+/* 女子会選択部分の設計 */
+.event-choice-container {
+  position: relative;
+  padding-top: 10%;
+  background: url(/images/event/DSC_0423.jpg) center center / cover no-repeat;
+  height: 100vh;
+}
+.event-choice-container .bg-white {
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.event-choice-block {
+  width: 810px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+.event-choice-el-block {
+  width: 380px;
+  height: 380px;
+  float: right;
+  position: relative;
+}
+.event-choice-el-bg {
+  width: 100%;
+  height: 100%;
+  background: url(/images/event/222.png) center center / cover no-repeat;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+}
+.event-choice-el-block:first-child .event-choice-el-bg {
+  background: url(/images/event/111.png) center center / cover no-repeat;
+  left: auto;
+  right: -10px;
+}
+.event-choice-el {
+  width:100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid #7CDCCE;
+  background: #fff;
+  position: relative;
+  transition:  1s;
+  z-index: 999;
+}
+.event-choice-el-block .event-choice-el:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #7CDCCE;
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  z-index: 999;
+}
+.event-choice-el-block .event-choice-el:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #7CDCCE;
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  z-index: 999;
+}
+.event-choice-el-block:first-child .event-choice-el:before {
+  background: #f9e70f;
+}
+.event-choice-el-block:first-child .event-choice-el:after {
+  background: #f9e70f;
+}
+.event-choice-el-block:nth-child(2n) {
+  margin-right: 50px;
+}
+.event-choice-el-block:first-child .event-choice-el {
+  border: 2px solid #f9e70f;
+  background: #fff;
+}
+.event-choice-el a {
+  display: table;
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+}
+.event-choice-el-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+.event-choice-el-inner img {
+  transition: .3s;
+  width: 360px;
+}
+.illust-choice2 {
+  /*width: 240px;*/
+  position: absolute;
+  right: -172px;
+  bottom: -12px;
+  z-index: 1000;
+}
+.illust-choice1 {
+  position: absolute;
+  left: -179px;
+  bottom: -12px;
+  z-index: 1000;
+}
+.choice-title {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  position: relative;
+}
+.choice-title img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 女子会ページ：いつもの女子会のチケット一覧 */
 .kinyu-event-list {
   margin-top: 42px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #d1d1d1;
 }
 .kinyu-event-list .kinyu-event-list-left {
   height: 200px;
@@ -1203,11 +1328,114 @@
   padding-left: 24px;
   line-height: 18px;
 }
-#event-form {
-  /*display: none;*/
+
+/* 女子会ページ：すぺしゃる女子会のチケット一覧 */
+.kinyu-specialevent-list {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 42px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #d1d1d1;
+}
+.kinyu-specialevent-list li {
+  height: 220px;
+  margin-bottom: 24px;
+  box-shadow: 0px 0px 5px 0px #e0e0e0;
+  transition: .5s;
+}
+.kinyu-specialevent-list li .kinyu-event-list-left {
+  width: 32%;
+  height: 100%;
+  float: left;
+}
+.kinyu-specialevent-list li .kinyu-event-list-right {
+  width: 68%;
+  height: 100%;
+  float: right;
+  padding: 30px 24px 24px 24px;
+}
+.kinyu-specialevent-list li p.event-main-date {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  vertical-align: bottom;
+  padding: 6px 8px;
+  background: rgba(255, 241, 78, 0.6);
+}
+.kinyu-specialevent-list li .event-title {
+  font-size: 18px;
+  line-height:26px;
+  font-weight: bold;
+  height: 52px;
+  margin: 12px 0px;
+  padding: 0px 1px;
+}
+.kinyu-specialevent-list .event-fee span {
+  background: url(/images/icon/yen.png) center left / contain no-repeat;
+  padding-left: 20px;
+}
+.kinyu-specialevent-list .event-place span {
+  background: url(/images/icon/yen.png) center left / contain no-repeat;
+  padding-left: 20px;
+}
+
+/* その他女子会参加へのリンク */
+.other-event {
+  text-align: right;
+}
+.other-event a {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 16px 60px;
+  /*margin-top: 24px;*/
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+}
+.other-event a:after {
+  content: "〉";
+  position: absolute;
+  right: 0;
+}
+/*#event-form {
   width:860px;
   margin: 0 auto;
   margin-top: 16px;
+}*/
+.kinyu-event-list-subdescription {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* 過去のスペシャル女子会の設計 */
+.past-specialevent-list {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+.past-specialevent-list li {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  transition: .5s;
+}
+.past-specialevent-list li:nth-child(2n) {
+  margin-right: 0%;
+}
+.past-specialevent-list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.past-specialevent-list li .img-box {
+  height: 180px;
+}
+.past-specialevent-list li .title {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 4px;
 }
 
 
@@ -1585,7 +1813,7 @@
 .kinyu-main-single-block .inner {
   width: 1000px;
   margin: 0 auto;
-  padding-top: 36px;
+  padding-top: 20px;
 }
 .company-detail-header {
   width: 1000px;
@@ -1701,25 +1929,6 @@
   background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
 }
 
-@media screen and (max-width: 480px) {
-  .company-info-title {
-    text-align: center;
-    padding: 36px 0px 10px;
-  }
-  .company-info-title h2 {
-    font-size: 24px;
-  }
-  .company-details-service-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  .company-legal .company-details-el .description {
-    margin-top: 12px;
-    font-size: 14px;
-  }
-}
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　フッター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -1790,7 +1999,7 @@ footer .footer-menu {
 }
 
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 640px) {
 .btn-kinyu:hover {
   opacity: .5; 
 }
@@ -1857,13 +2066,10 @@ footer .footer-menu {
 .after-content-member a:hover {
   opacity: .5;
 }
-.kinyu-event-list li:hover {
+.kinyu-event-list li:hover,
+.kinyu-specialevent-list li:hover {
   opacity: .5;
 }
-/*.kinyu-regist-branch-block li:last-child a:hover {
-  background: #7cdcce;
-  color: #fff;
-}*/
 .kinyu-regist-branch-block .new-joshikai-flow:hover {
   background: #d9d9d9;
 }
@@ -1882,6 +2088,18 @@ footer .footer-menu {
 }
 .news-new-event a:hover {
   opacity: .3;
+}
+.event-choice-el:hover {
+  background: rgba(124, 220, 206, 0.7);
+}
+.event-choice-el-block:first-child .event-choice-el:hover {
+  background: rgba(249, 231, 15, 0.7);
+}
+/*.event-choice-el:hover .event-choice-el-inner img{
+  opacity: .4;
+}*/
+.past-specialevent-list li:hover {
+  opacity: .5;
 }
 
 }

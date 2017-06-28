@@ -1,43 +1,36 @@
 <!-- ヘッダー -->
-<headr class="kinyu-sp-header">
-  <div class="kinyu-main-icon-block">
+<header class="fix-header-sp">
+  <a href="/" class="header-sp-logo"><img src="/images/kinyu-logo-sp.png"></a>
+</header>
+
+
+
+<div class="kinyu-sp-header">
+  <!-- <div class="kinyu-main-icon-block">
     <a href="/"><img src="/images/icon/top-header-icon.png"></a>
   </div>
-  
   <ul class="kinyu-sp-header-mainblock" data-show="1">
     <li>
       <div class="kinyu-sp-header-content">
         <a href="/regist"><img src="/images/new/sp-header-content.png"></a>
       </div>
     </li>
-    <!-- <li>
+    <li>
       <div class="kinyu-sp-header-content kinyu-sp-header-jyoshikai">
         <a href="/event"><img src="/images/new/sp-header-jyoshikai.png"></a>
       </div>
-    </li> -->
-  </ul>
+    </li>
+  </ul> -->
+
+  <div class="kinyu-sp-menu-block">
+    <ul>
+      <li class="menu-block-el1"><a href="/about"><img src="/images/menu/sp-menu-about.png"></a></li>
+      <li class="menu-block-el2"><a href="/event"><img src="/images/menu/sp-menu-event.png"></a></li>
+      <li class="menu-block-el3"><a href="/regist"><img src="/images/menu/sp-menu-regist.png"></a></li>
+    </ul>
+  </div>
 
   <div class="kinyu-sp-header-menu">
     <img class="menu-trigger" src="/images/new/sp-header-menu.png">
   </div>
-</headr>
-
-
-
-<!-- <script>
-$(function() {
-
-  var arr = [];
-  var showNum = $('.kinyu-sp-header-mainblock').data('show');
-  $('.kinyu-sp-header-mainblock li').each(function() {
-    arr.push($(this).html());
-  });
-  arr.sort(function() {
-    return Math.random() - Math.random();
-  });
-  $('.kinyu-sp-header-mainblock').empty();
-    for(i=0; i < showNum; i++) {
-      $('.kinyu-sp-header-mainblock').append('<li>' + arr[i] + '</li>');
-    }
-  });
-</script> -->
+</div>

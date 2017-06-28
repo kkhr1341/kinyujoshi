@@ -5,18 +5,17 @@
 <script type="text/javascript" src="/assets/js/kinyu/campaign/school_public.js"></script>
 
 <div class="kinyu-main-single-block">
+  <div class="kinyu-school_public-intro sp">
+        <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
+        <img style="width:100%;" src="/images/content/school_public/school_public_main2.png">
+      </div>
   <div class="inner">
     <div class="kinyu-school_public-block">
+
       <div class="kinyu-school_public-intro pc">
         <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
         <img src="/images/content/school_public/school_public_main.png">
       </div>
-      <div class="kinyu-school_public-intro sp">
-        <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
-        <img style="width:100%;" src="/images/content/school_public/school_public_main2.png">
-      </div>
- 
-
       <!-- きんゆう女子。学院とは？ -->
       <div class="kinyu-school_public-el about-public_school">
         <h3><img src="/images/content/school_public/main-title-about.png"></h3>
@@ -281,7 +280,7 @@
 
     </div>
   </div>
-  <footer>
+  <footer class="pc">
     <div class="footer-logo">
       <img src="/images/kinyu-logo01.png">
     </div>
@@ -302,8 +301,11 @@
         <a href="/contact">お問い合わせ</a>
       </div>
     </div>
-    <p class="navi_kinyu-submenu-copy">©きんゆう女子。 All rights reserved. No reproduction or republication without written permission.　<br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</p>
+    <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc.</p>
   </footer>
+  <div class="sp">
+    {$sp_footer}
+  </div>
 </div>
 
 <!-- <div class="pc application-img">
