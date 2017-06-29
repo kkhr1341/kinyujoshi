@@ -864,8 +864,7 @@
   font-size: 13px;
 }
 .kinyu-event-list li .event-fee span {
-  font-size: 12px;
-  line-height: 15px;
+  padding-left: 20px;
 }
 .event-form iframe {
   width: 100%;
@@ -909,6 +908,7 @@
 .kinyu-specialevent-list .event-fee {
   font-size: 11px;
   line-height: 11px;
+  height: 11px;
   padding: 2px 0px;
 }
 .kinyu-specialevent-list .event-place {

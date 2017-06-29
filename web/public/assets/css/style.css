@@ -1272,7 +1272,7 @@
   height: 200px;
 }
 .kinyu-event-list .kinyu-event-list-right {
-  padding: 4%;
+  padding: 6% 4%;
 }
 .kinyu-event-list ul {
   letter-spacing: -0.5em;
@@ -1317,23 +1317,26 @@
   font-size: 12px;
 }
 .kinyu-event-list li .event-title {
-  font-size: 14px;
-  line-height: 20px;
-  height: 40px;
+  font-size: 13px;
+  line-height: 18px;
+  height: 36px;
   margin: 12px 0px;
   padding: 0px 1px;
+  font-weight: bold;
 }
 .kinyu-event-list li .event-fee {
   border-top: 1px dotted #ededed;
   padding: 12px 1px 0px 1px;
-  line-height: 13px;
-  line-height: 18px;
+  /*line-height: 13px;
+  line-height: 18px;*/
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
 }
 .kinyu-event-list li .event-fee span {
   display: block;
   background:url(/images/icon/yen.png) center left / contain no-repeat;
   padding-left: 24px;
-  line-height: 18px;
 }
 
 /* 女子会ページ：すぺしゃる女子会のチケット一覧 */
