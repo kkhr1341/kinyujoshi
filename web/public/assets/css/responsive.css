@@ -934,8 +934,13 @@
 }
 
 /* 女子会ページ：参加する女子会の選択 */
+.event-choice-container {
+  padding-top: 10%;
+  height: auto;
+}
 .event-choice-block {
   width: 80%;
+  padding-bottom: 16%;
 }
 .event-choice-el-block {
   width: 100%;
@@ -951,8 +956,10 @@
   margin-right: 0px;
 }
 .choice-title {
-  width: 100%;
-  margin-bottom: 8px;
+  width: 88%;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+  padding: 6px 6%;
 }
 .event-choice-el-block:first-child {
   margin-bottom: 30px;

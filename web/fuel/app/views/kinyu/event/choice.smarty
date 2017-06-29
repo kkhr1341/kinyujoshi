@@ -1,36 +1,72 @@
 <div class="event-choice-container">
 
-  <div class="bg-white"></div>
-  
-  <img class="choice-title" src="/images/event/choice-title.png">
+  <div class="bg-white"></div> 
+  <div class="inner pc">
+    <img class="choice-title" src="/images/event/choice-title.png">
+    <div class="event-choice-block clear">
 
-  <div class="event-choice-block clear">
-
-    <div class="event-choice-el-block">
-      <div class="event-choice-el">
-        <a href="event_special">
-          <div class="event-choice-el-inner">
-            <img src="/images/event/choice2-title.png">
-          </div>
-        </a>
-        <img class="pc illust-choice2" src="/images/event/choice2.png">
-        <img class="sp illust-choice2" src="/images/event/choice2_sp.png">
+      <div class="event-choice-el-block">
+        <div class="event-choice-el">
+          <a href="event_special">
+            <div class="event-choice-el-inner">
+              <img src="/images/event/choice2-title.png">
+            </div>
+          </a>
+          <img class="pc illust-choice2" src="/images/event/choice2.png">
+          <img class="sp illust-choice2" src="/images/event/choice2_sp.png">
+        </div>
+        <div class="event-choice-el-bg"></div>
       </div>
-      <div class="event-choice-el-bg"></div>
-    </div>
 
-    <div class="event-choice-el-block">
-      <div class="event-choice-el">
-        <a href="event_main">
-          <div class="event-choice-el-inner">
-            <!-- <p>通常女子会</p> -->
-            <img src="/images/event/choice1-title.png">
-          </div>
-        </a>
-        <img class="pc illust-choice1" src="/images/event/choice1.png">
-        <img class="sp illust-choice1" src="/images/event/choice1_sp.png">
+      <div class="event-choice-el-block">
+        <div class="event-choice-el">
+          <a href="event_main">
+            <div class="event-choice-el-inner">
+              <!-- <p>通常女子会</p> -->
+              <img src="/images/event/choice1-title.png">
+            </div>
+          </a>
+          <img class="pc illust-choice1" src="/images/event/choice1.png">
+          <img class="sp illust-choice1" src="/images/event/choice1_sp.png">
+        </div>
+        <div class="event-choice-el-bg"></div>
       </div>
-      <div class="event-choice-el-bg"></div>
     </div>
   </div>
+
+  <div class="sp">
+    <img class="choice-title" src="/images/event/choice-title.png">
+    <div class="event-choice-block clear">
+
+      <div class="event-choice-el-block">
+        <div class="event-choice-el">
+          <a href="event_special">
+            <div class="event-choice-el-inner">
+              <img src="/images/event/choice2-title.png">
+            </div>
+          </a>
+          <img class="pc illust-choice2" src="/images/event/choice2.png">
+          <img class="sp illust-choice2" src="/images/event/choice2_sp.png">
+        </div>
+        <div class="event-choice-el-bg"></div>
+      </div>
+
+      <div class="event-choice-el-block">
+        <div class="event-choice-el">
+          <a href="event_main">
+            <div class="event-choice-el-inner">
+              <!-- <p>通常女子会</p> -->
+              <img src="/images/event/choice1-title.png">
+            </div>
+          </a>
+          <img class="pc illust-choice1" src="/images/event/choice1.png">
+          <img class="sp illust-choice1" src="/images/event/choice1_sp.png">
+        </div>
+        <div class="event-choice-el-bg"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sp">
+  {$sp_footer}
 </div>

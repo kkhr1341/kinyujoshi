@@ -1135,14 +1135,22 @@
 /* 女子会選択部分の設計 */
 .event-choice-container {
   position: relative;
-  padding-top: 10%;
-  background: url(/images/event/DSC_0423.jpg) center center / cover no-repeat;
+  background: url(/images/event/L1070084.jpg) center center / cover no-repeat;
   height: 100vh;
+}
+.event-choice-container .inner {
+  height: 472px;
+  width: 810px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -405px;
+  margin-top: -246px;
 }
 .event-choice-container .bg-white {
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255,.5);
+  background: rgba(255,255,255,.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -1247,12 +1255,11 @@
 .choice-title {
   display: block;
   margin: 0 auto;
-  margin-bottom: 12px;
+  margin-bottom: 36px;
   position: relative;
-}
-.choice-title img {
-  display: block;
-  margin: 0 auto;
+  background: #ffdacb;
+  padding: 12px 60px;
+  box-shadow: 5px 5px rgba(255, 255, 255, 0.3);
 }
 
 /* 女子会ページ：いつもの女子会のチケット一覧 */
