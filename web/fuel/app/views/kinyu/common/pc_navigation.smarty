@@ -116,6 +116,9 @@
             <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_school.png) center center / cover no-repeat;">
               <a href="/school"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
             </div>
+            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_school2.jpg) center center / cover no-repeat;">
+              <a href="/school_jpx"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
+            </div>
             <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_conference_icon_pc.jpg) center center / cover no-repeat;">
               <a href="/conference"><!-- <p>週末投資宣言!</p> --></a>
             </div>
@@ -125,9 +128,9 @@
             <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_kabutolive-icon.jpg) center center / cover no-repeat;">
               <a href="http://kabuto-live.com/" target="_blank"><!-- <p>兜LIVE!</p> --></a>
             </div>
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_sarvador.png) center center / cover no-repeat;">
-              <a href="http://cafe-salvador.com/" target="_blank"><!-- <p>カフェ・サルバドル</p> --></a>
-            </div>
+            <!-- <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_sarvador.png) center center / cover no-repeat;">
+              <a href="http://cafe-salvador.com/" target="_blank"></a>
+            </div> -->
           </div>
         </li>
         <li class="item">

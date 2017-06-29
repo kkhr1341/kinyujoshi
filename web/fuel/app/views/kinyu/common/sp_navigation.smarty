@@ -31,9 +31,9 @@
         <li>
           <a href="http://kabuto-live.com/" target="_blank"><img src="/images/new/sp/navi_kabutolive-icon_sp.jpg"></a>
         </li>
-        <li>
+        <!-- <li>
           <a href="http://cafe-salvador.com/" target="_blank"><img src="/images/new/sp/navi_sarvador_sp.jpg"></a>
-        </li>
+        </li> -->
       </ul>
     </div>
 
@@ -48,10 +48,11 @@
         <li><a href="/service">会員規約</a></li>
         <li><a href="/legal">特定商取引法に基づく表記</a></li>
         <li><a href="/contact">お問い合わせ</a></li>
+        <li><a href="/">トップページへ</a></li>
       </ul>
     </div>
 
-    <a class="sp navi-link-top" href="/">トップへ</a>
+<!--     <a class="sp navi-link-top" href="/">トップへ</a> -->
 
   </div>
 </div>
