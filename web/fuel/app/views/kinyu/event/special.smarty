@@ -8,18 +8,7 @@
         <img src="/images/title/event/event-title-ticket-special.png" alt="きんゆう女子。会のチケット一覧">
       </h2>
 
-      <div class="kinyu-event-notes">
-        <p class="title"><span>＊</span>女子会やイベント参加についての注意点<span>＊</span></p>
-        <ul>
-          <li><p><span>1.</span> 個人のための女子会やイベントです。企業の見学・視察目的等はご遠慮ください。</p></li>
-          <li><p><span>2.</span> 2回目以降の女子会参加は、メンバー登録が必要です。メンバー限定のイベントもあります。</p></li>
-          <li><p><span>3.</span> ゲスト及び参加者同士でも営業や勧誘行為はしないでください。</p></li>
-          <li><p><span>4.</span> 見学やPR目的の場合は、事前に編集部にお問合わせください。</p></li>
-          <li><p><span>5.</span> 許可のない録音や写真撮影やSNSでの発信はご遠慮ください。</p></li>
-        </ul>
-        <p class="sub-description"><span style="color:#f16b6b;">＊</span>その他、<a style="color:#4C9BBF;" href="https://kinyu-joshi.jp/service">会員規約</a>に基づいて女子会・イベントにご参加いただけますと幸いです。スムーズで楽しいイベント運営のためご協力をよろしくお願いいたします。</p>
-        <a class="contact-link" href="https://kinyu-joshi.jp/contact">企業の方のお問合せはこちら</a></p>
-      </div>
+      {$kinyu_event_notes}
 
       <div class="kinyu-specialevent-list">
         <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>参加したい女子会をクリックすると、イベント予約ページ(Peatix)に移動します。</p>
@@ -98,36 +87,22 @@
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom1.png" class="count-event">
-              <p><span class="title">ゆる〜くおしゃべりする会</span>
-              調べるのも難しい！<br>誰にどう聞いたらいいか<br>ワカラナイ・・・<br>そんな女子が<span style="color:#f3626c;" class="fw-bold">かけこむ場所</span>。</p>
+              <p><span class="title">特別な場所で開催♪</span>
+              特別な場所での<br>女子会やイベントです。<br>普段なかなか行かない場所で<br><span style="color:#f3626c;" class="fw-bold">開催</span>されるかも!?</p>
             </div>
           </li>
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom2.png" class="count-event">
-              <p><span class="title">独立した中立コミュニティ</span>
-              商品の押し売りや勧誘は<br>一切ありません。私たちは<br>協賛・協力企業様へ<span style="color:#f3626c;" class="fw-bold">逆コンサル</span><br>して運営ができています。</p>
+              <p><span class="title">楽しいテーマの女子会！</span>
+              楽しく♪でも真面目に。<br>女子会やイベントは<br>テーマは金融ですが、<br><span style="color:#f3626c;" class="fw-bold">エンターテイメント性</span>を重視♪<br></p>
             </div>
           </li>
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom3.png" class="count-event">
-              <p><span class="title">ゲストは編集部が面談済！</span>
-              メンバーのリクエストや<br>疑問を集約し来て欲しい方に<br>編集部から<br><span style="color:#f3626c;" class="fw-bold">オファー</span>します。</p>
-            </div>
-          </li>
-          <li>
-            <div class="inner">
-              <img src="/images/count/count-bottom4.png" class="count-event">
-              <p><span class="title">必要なことを必要なだけ</span>
-              「難しい」情報がありふれている<br>ので、必要なことを<br>必要なだけ、<span style="color:#f3626c;" class="fw-bold">必要なとき</span>に<br>ゆるくまとめます。</p>
-            </div>
-          </li>
-          <li style="margin-right:0px;">
-            <div class="inner">
-              <img src="/images/count/count-bottom5.png" class="count-event">
-              <p><span class="title">楽しく♪でも真面目に</span>
-              女子会やイベントは<br>エンターテイメント性を重視。<br>ただし<span style="color:#f3626c;" class="fw-bold">真面目に</span><br>企画をしています。</p>
+              <p><span class="title">メンバー同士の交流も♪</span>
+              夢も年も職業も<br>金融ワカラナイ度も<br>さまざまな<span style="color:#f3626c;" class="fw-bold">メンバー同士</span>で<br>交流します。</p>
             </div>
           </li>
         </ul>

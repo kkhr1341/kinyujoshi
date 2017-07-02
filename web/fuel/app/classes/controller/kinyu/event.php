@@ -21,6 +21,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 		$this->template->today = date("Y年n月");
   	$this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->kinyu_event_notes = View::forge('kinyu/event/notes.smarty', $this->data);
 
   	if(Agent::is_mobiledevice()) {
     	$this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -64,6 +65,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
     $this->template->today = date("Y年n月");
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->kinyu_event_notes = View::forge('kinyu/event/notes.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
