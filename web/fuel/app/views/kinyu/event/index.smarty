@@ -41,8 +41,8 @@
                   <span class="day_of_the_week">{$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</span>
                   <span class="timezone">{$event.event_start_datetime}〜{$event.event_end_datetime}</span>
                   </p>
-                <h3 class="event-title">{$event.title}かきくけこかきくけこかきくけこかきくけこかきくけこかきくけこ</h3>
-                <p class="event-fee"><span>{$event.fee}かきくけこかきくけこかきくけこかきくけこ</span></p>
+                <h3 class="event-title">{$event.title}</h3>
+                <p class="event-fee"><span>{$event.fee}</span></p>
               </div>
             </a>
           </li>
