@@ -21,19 +21,6 @@
           <li>
             <a class="clear" target="_blank" href="{$event.pay_url}">
               <div class="kinyu-event-list-left" style="background:url({$event.main_image}) center center / cover no-repeat">
-                <!-- {if $event.event_category == "女子会"}
-                  <p class="event-category normal-event">女子会</p>
-                {else if $event.event_category == "スペシャル"}
-                  <p class="event-category special-event">スペシャル女子会</p>
-                {else if $event.event_category == "コラボ"}
-                  <p class="event-category collabo-event">コラボ女子会</p>
-                {else if $event.event_category == "公立きん"}
-                  <p class="event-category koritsu-event">きんゆう女子。学院</p>
-                {else if $event.event_category == "私立きん"}
-                  <p class="event-category shiritu-event">私立きんゆう女子。学院</p>
-                {else}
-                  <p class="event-category normal-event">女子会</p>
-                {/if} -->
               </div>
 
               <div class="kinyu-event-list-right">
@@ -88,22 +75,22 @@
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom1.png" class="count-event">
-              <p><span class="title">特別な場所で開催♪</span>
+              <p><span class="title">特別な場所で開催</span>
               特別な場所での<br>女子会やイベントです。<br>普段なかなか行かない場所で<br><span style="color:#f3626c;" class="fw-bold">開催</span>されるかも!?</p>
             </div>
           </li>
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom2.png" class="count-event">
-              <p><span class="title">楽しいテーマの女子会！</span>
-              楽しく♪でも真面目に。<br>女子会やイベントは<br>テーマは金融ですが、<br><span style="color:#f3626c;" class="fw-bold">エンターテイメント性</span>を重視♪<br></p>
+              <p><span class="title">楽しいテーマの女子会</span>
+              楽しくでも真面目に。<br>女子会やイベントは<br>テーマは金融ですが、<br><span style="color:#f3626c;" class="fw-bold">エンターテイメント性</span>を重視<br></p>
             </div>
           </li>
           <li>
             <div class="inner">
               <img src="/images/count/count-bottom3.png" class="count-event">
-              <p><span class="title">メンバー同士の交流も♪</span>
-              夢も年も職業も<br>金融ワカラナイ度も<br>さまざまな<span style="color:#f3626c;" class="fw-bold">メンバー同士</span>で<br>交流します。</p>
+              <p><span class="title">メンバー同士の交流も</span>
+              夢も年も職業も<br>金融ワカラナイ度も<br>さまざまな<span style="color:#f3626c;" class="fw-bold">メンバー同士</span>で<br>交流します</p>
             </div>
           </li>
         </ul>
