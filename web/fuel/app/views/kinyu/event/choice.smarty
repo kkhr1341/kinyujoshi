@@ -42,7 +42,7 @@
         <div class="event-choice-el">
           <a href="event_special">
             <div class="event-choice-el-inner">
-              <img src="/images/event/choice2-title.png">
+              <img src="/images/event/choice2-title-sp.png">
             </div>
           </a>
           <img class="pc illust-choice2" src="/images/event/choice2.png">
@@ -56,7 +56,7 @@
           <a href="event_main">
             <div class="event-choice-el-inner">
               <!-- <p>通常女子会</p> -->
-              <img src="/images/event/choice1-title.png">
+              <img src="/images/event/choice1-title-sp.png">
             </div>
           </a>
           <img class="pc illust-choice1" src="/images/event/choice1.png">
