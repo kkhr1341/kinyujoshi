@@ -1,6 +1,9 @@
 <!-- ヘッダー -->
 <header class="fix-header-sp">
   <a href="/" class="header-sp-logo"><img src="/images/kinyu-logo-sp.png"></a>
+  <div class="kinyu-sp-header-menu">
+    <img class="menu-trigger" src="/images/new/sp-header-menu.png">
+  </div>
 </header>
 
 
@@ -28,9 +31,5 @@
       <li class="menu-block-el2"><a href="/event"><img src="/images/menu/sp-menu-event.png"></a></li>
       <li class="menu-block-el3"><a href="/regist"><img src="/images/menu/sp-menu-regist.png"></a></li>
     </ul>
-  </div>
-
-  <div class="kinyu-sp-header-menu">
-    <img class="menu-trigger" src="/images/new/sp-header-menu.png">
   </div>
 </div>
