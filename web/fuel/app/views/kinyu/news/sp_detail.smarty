@@ -4,7 +4,13 @@
 
   <!-- コンテンツ -->
   <div class="report-sp-detail-block">
+    {if $news.main_image == ""}
+    <!--1-->
+    <div class="report-detail-thunb" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
+    {else}
+    <!--2-->
     <div class="report-detail-thunb" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+    {/if}
     <div class="report-detail-info">
       <div class="report-detail-category">
         <p>ニュース</p>
