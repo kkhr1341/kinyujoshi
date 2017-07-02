@@ -10,9 +10,10 @@
       </h2>
 
       {$kinyu_event_notes}
+      <p class="kinyu-eventbottom-arrow">▼</p>
 
       <div class="kinyu-event-list">
-        <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>参加したい女子会をクリックすると、イベント予約ページ(Peatix)に移動します。</p>
+        <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>7月6日(木)以降の女子会予約ページを「Peatix」に変更いたしました。</p>
         <ul>
           {foreach from=$events.datas key="key" item=event name=loopname}
           {if $event.event_category == "女子会"}

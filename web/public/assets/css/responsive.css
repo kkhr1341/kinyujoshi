@@ -300,7 +300,7 @@
   margin-bottom: 4%;
   float: left;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: inherit;
   border: 1px solid #f7f7f7;
 }
 .kinyu-sp-navi .content-list li a {
@@ -309,7 +309,7 @@
 }
 .kinyu-sp-navi .content-list li img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: inherit;
 }
 .kinyu-sp-navi .content-sub-list li {
   border-top: 1px solid #7CDCCE;
@@ -389,7 +389,7 @@
   　イントロダクション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-sp-introduction {
-  width: 84%;
+  width: 88%;
   margin: 0 auto;
   margin-top: 36px;
   text-align: center; 
@@ -446,7 +446,7 @@
 }
 .kinyu-sp-border-line {
   width: 100%;
-  margin: 32px 0px;
+  margin: 24px 0px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -464,7 +464,7 @@
   margin-right: 0%;
   margin-bottom: 8%;
   box-sizing: border-box;
-  border-radius: 3px;
+  border-radius: 2px;
   overflow: inherit;
   float: none;
 }
@@ -472,7 +472,7 @@
   margin-right: auto;
 }
 .kinyu-top-list-title {
-  border-radius: 0px 0px 3px 3px;
+  border-radius: 0px 0px 2px 2px;
   background: rgba(255,255,255,.9);
   font-weight: normal;
   text-shadow: none;
@@ -499,13 +499,14 @@
 }
 /* ページネーション */
 .pagination > li {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   margin-right: 8px;
 }
 .pagination > li > a, .pagination > li > span {
-  font-size: 14px;
-  padding-top: 10px;
+  font-size: 12px;
+  padding-top: 9px;
+  border-radius: inherit;
 }
 .kinyu-top-list-main li {
   width: 100%;
@@ -834,7 +835,7 @@
 .kinyu-event-list {
   width: 84%;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 20px;
   padding-bottom: 36px;
 }
 .kinyu-event-list li {
@@ -874,7 +875,7 @@
 .kinyu-specialevent-list {
   width: 88%;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 16px;
   padding-bottom: 36px;
 }
 .kinyu-specialevent-list li {
@@ -994,6 +995,12 @@
   padding: 12px 50px;
   font-weight: normal;
 }
+.kinyu-eventbottom-arrow {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 16px;
+  color:#7cdcce;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
@@ -1045,6 +1052,7 @@
 /* きんゆう女子。のメニュー */
 .report-detail-menu li {
   height: 140px;
+  border-radius: 2px;
 }
 .report-detail-menu li a {
   line-height: 140px;
@@ -1061,9 +1069,9 @@
 }
 /* ソーシャル */
 .kinyu-social-list {
-  width: 98%;
+  width: 92%;
   margin: 0 auto;
-  padding: 24px 0px;
+  padding: 20px 0px;
 }
 .kinyu-social-list-el {
   float: none;
@@ -1096,7 +1104,7 @@
 .kinyu-social-list .kinyu-social-list-el:first-child {
   width: 90%;
   border-right: none;
-  padding: 0px 12px 24px;
+  padding: 0px 4px 24px;
 }
 .kinyu-social-list .kinyu-social-list-el:nth-child(2n) {
   border-top: 1px solid #7CDCCE;
