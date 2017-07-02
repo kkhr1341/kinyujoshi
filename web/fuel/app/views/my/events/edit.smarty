@@ -16,6 +16,7 @@
 					<label class="form-group-event-label">カテゴリー</label>
 
 					<div class="radio_box clear">
+						<p><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
             <input type="radio" value="女子会" name="event_category" id="event1" class="form-radio" placeholder="" {if $events.event_category == "女子会"}checked{/if}>
             <label for="event1" class="form-long">女子会</label>
             
@@ -49,10 +50,10 @@
 					<textarea style="height: 120px;" type="text" id="description" class="form-control" placeholder="">{$events.description}</textarea>
 				</div> -->
 
-				<div class="form-group">
+				{*<div class="form-group">
 					<label class="form-group-event-label">女子会の説明(120文字程度)</label>
 					<textarea style="height: 80px;" type="text" id="description" class="form-control" placeholder="">{$events.description}</textarea>
-				</div>
+				</div>*}
 				
 <!-- 				<div class="form-group">
 					<label>本文 <span class="label label-danger">必須</span></label>
@@ -97,12 +98,12 @@
 
 				<div class="form-group">
 					<label class="form-group-event-label">Any payの決済URL</label>
-					<input type="text" id="pay_url" class="form-control" placeholder="Any payの決済URLを入力してください。" value="{$events.pay_url}">
+					<input type="text" id="pay_url" class="form-control" placeholder="PeatixのURLを入力" value="{$events.pay_url}">
 				</div>
 				<div class="form-group">
-					<p><a style="color:#337ab7;" target="_blank" href="https://anypay.jp/users/sign_in">Anypayログインページへ</a></p>
-					<p>ID：cs@kinyu-joshi.jp</p>
-					<p>PASS：9hb3TktkwZN6</p>
+					<p><a style="color:#337ab7;" target="_blank" href="https://peatix.com/">Peatixログインページへ</a></p>
+					<p>ID：support@kinyu-joshi.jp</p>
+					<p>PASS：kinyukinyukinyu</p>
 					<p></p>
 				</div>
 						

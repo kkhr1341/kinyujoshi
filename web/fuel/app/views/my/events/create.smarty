@@ -39,10 +39,10 @@
 					<input type="text" id="title" class="form-control" placeholder="">
 				</div>
 
-				<div class="form-group">
+				{*<div class="form-group">
 					<label class="form-group-event-label">女子会の説明(120文字程度)</label>
 					<textarea style="height: 80px;" type="text" id="description" class="form-control" placeholder=""></textarea>
-				</div>
+				</div>*}
 
 				<div class="form-group upload_image_box">
 					<label class="form-group-event-label">サムネイル画像</label>
@@ -82,7 +82,7 @@
 
 				<div class="form-group">
 					<label class="form-group-event-label">PeatixのURL</label>
-					<input type="text" id="pay_url" class="form-control" placeholder="Any payの決済URLを入力してください。">
+					<input type="text" id="pay_url" class="form-control" placeholder="PeatixのURLを入力">
 				</div>
 				<div class="form-group">
 					<p><a style="color:#337ab7;" target="_blank" href="https://peatix.com/">Peatixログインページへ</a></p>
@@ -93,6 +93,7 @@
 
 				<div class="form-group">
 					<label class="form-group-event-label">公開設定</label>
+					<p><span style="color:red;">＊</span>特に指定がなければそのままでOK!</p>
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="open_date" value="{date('YY/mm/dd HH:ii')}" />
 						<span class="input-group-addon">
