@@ -11,7 +11,12 @@
     <div class="report-detail-header">
       <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
     </div>
+
+    {if $news.main_image == ""}
+    <div class="report-detail-thunb" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
+    {else}
     <div class="report-detail-thunb" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+    {/if}
 
     <div class="report-detail-info">
       <div class="report-detail-category">
