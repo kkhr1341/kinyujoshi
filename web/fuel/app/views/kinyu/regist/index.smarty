@@ -97,7 +97,13 @@
         <div class="singlepage-form-block">
           <div class="form-group">
             <label class="form-title"><span class="color-kinyu-color">◆</span> お名前 <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">フルネームで入力してください。</p>
             <input type="text" id="name" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> ふりがな <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">お名前のふりがなを入力してください。</p>
+            <input type="text" id="name_kana" class="form-control" placeholder="">
           </div>
           <div class="form-group">
             <label class="form-title"><span class="color-kinyu-color">◆</span> ご年齢 <span class="label label-danger">必須</span></label>
@@ -229,6 +235,7 @@ $(function(){
     var params = {};
     
     params.name = $('#name').val();
+    params.name_kana = $('#name_kana').val();
     params.age = $('#age').val();
     params.not_know = $("[name=not_know]:checked").val();
     params.interest = $('#interest').val();

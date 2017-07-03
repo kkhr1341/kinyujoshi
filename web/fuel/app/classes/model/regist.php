@@ -33,6 +33,7 @@ class Regist extends Base {
     $email02->subject("【きんゆう女子。】メンバー登録がありました！");
 
     $name = $params['name'];
+    $name_kana = $params['name_kana'];
     $age = $params['age'];
     $not_know = $params['not_know'];
     $interest = $params['interest'];
@@ -49,6 +50,7 @@ class Regist extends Base {
     $email02->html_body(\View::forge('email/regist/return', 
       array(
         'name' => $name,
+        'name_kana' => $name_kana,
         'age' => $age,
         'not_know' => $not_know,
         'interest' => $interest,

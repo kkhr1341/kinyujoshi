@@ -46,6 +46,7 @@
             <div class="form-mail-p">
               <p>◼︎名前</p>
               <?php echo $name; ?><br>
+              (ふりがな)<?php echo $name_kana; ?><br>
             </div>
             <div class="form-mail-p">
               <p>◼︎年齢</p>
