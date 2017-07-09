@@ -217,11 +217,23 @@ $(function(){
       return false;
     }
 
-    ajax.post(url, params, function(data){
-      ts.success("下書き保存しました");
-      setTimeout(function(){
-        location.href = "/my/registlist";
-      },2000);
+    // ajax.post(url, params, function(data){
+    //   ts.success("下書き保存しました");
+    //   setTimeout(function(){
+    //     location.href = "/my/registlist";
+    //   },2000);
+    // });
+    bootbox.confirm("メンバー情報を編集しますか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          ts.success("編集完了しました", function(){
+            location.href = "/my/registlist";
+          });
+        });
+      }
+      else {
+        ts.info("キャンセルしました");
+      }
     });
   });
 
