@@ -204,20 +204,12 @@ $(function(){
       ts.error("「きんゆう女子。でどんな出会いや発見がほしいですか？」を入力してください");
       return false;
     }
-    if ($("[name=where_from]:checked").val() == undefined) {
-      ts.error("「どこできんゆう女子。を知りましたか？」を入力してください。");
-      return false;
-    }
     if (params.email == "") {
       ts.error("メールアドレスを入力してください。");
       return false;
     }
     if ($("[name=transmission]:checked").val() == undefined) {
       ts.error("「きんゆう女子。で情報発信したいですか？」を入力してください。");
-      return false;
-    }
-    if (params.income == "") {
-      ts.error("「3年後の自分の年収をどのくらいにしたいですか？」を入力してください。");
       return false;
     }
     if (params.introduction == "") {
