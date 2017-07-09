@@ -70,16 +70,18 @@ class Regist extends Base {
     return $params;
   }
 
+  public static function save($params) {
+    $username = \Auth::get('username');
+    \DB::update('member_regist')->set($params)->where('code', '=', $params['code'])->execute();
+    return $params;
+  }
+
   public static function lists() {
     \DB::set_charset('utf8');
     $datas = \DB::select('*')->from('member_regist');
-    //var_dump($datas);
-    //$result = \DB::query('show variables like \'character\_set\_%\';', \DB::SELECT)->execute()->as_array();
-    //var_dump($result);
-
     $datas = $datas->order_by('created_at', 'desc');
     //$datas = $datas->array_unique($input);
-    $datas = $datas->execute()->as_array();
+    $datas = $datas->where('member_regist.disable', '=', 1)->execute()->as_array();
     header('Content-type: text/html; charset=UTF-8'); 
     return $datas;
 
