@@ -359,14 +359,11 @@
   border: 1px solid #7CDCCE;
 }
 .swiper-container, .swiper-container02 {
-  overflow: visible;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .kinyu-top-introlist-pickup.swiper-container-horizontal>.swiper-pagination02 {
-  top: auto;
-  right: auto;
-  bottom: -20px;
-  width: 100%;
+  top: 8px;
+  right: 8px;
 }
 .kinyu-top-introlist-pickup {
   width: 100%;
