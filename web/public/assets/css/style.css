@@ -801,6 +801,14 @@
   transition: 0.8s;
 }
 
+/* トップページ・レポート一覧下のバナー */
+.report-list-banner {
+  width: 650px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  transition: .5s;
+}
 /* ページネーション */
 .kinyu-top-list-block .blog-pagenation {
   margin-top: 16px;
@@ -2118,5 +2126,10 @@ footer .footer-menu {
 .past-specialevent-list li:hover {
   opacity: .5;
 }
+.report-list-banner:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
 
 }

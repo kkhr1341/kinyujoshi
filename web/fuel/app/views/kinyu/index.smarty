@@ -15,17 +15,6 @@
     <div class="swiper-wrapper">
       {foreach from=$blogs_pick item=blog name=loopname}
 
-      {if $smarty.foreach.loopname.index == 0}
-      <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/742171292585845/images/201705251108411111.png) top center / cover no-repeat;">
-        <a href="https://jpx-moneyschool.com/" target="_blank">
-          <div class="kinyu-top-list-kind">
-            <p>イベント告知</p>
-          </div>
-          <h3 class="kinyu-top-list-title">[PR]JPX＊マネースクール - ロボアドとミライの資産形成</h3>
-        </a>
-      </div>
-      {/if}
-
       {if $smarty.foreach.loopname.index == 1}
       <div class="swiper-slide" style="background: url(/images/content/school_public/og-school_public.png) top center / cover no-repeat;">
         <a href="/school_jpx">
@@ -68,6 +57,7 @@
       </div>
       {/foreach}
     </div>
+    <img src="/images/banner/asahi_&w_pc.jpg">
     <div class="swiper-arrow swiper-button-next02"></div>
     <div class="swiper-arrow swiper-button-prev02"></div>
     <div class="swiper-pagination swiper-pagination02"></div>
@@ -153,6 +143,9 @@
       {/foreach}
       </ul>
     </div>
+    <a target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
+      <img class="report-list-banner" src="/images/banner/asahi_&w_sp.jpg">
+    </a>
     <div class="blog-pagenation tx-center">
       {$pagination|nofilter}
     </div>
