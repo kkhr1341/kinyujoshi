@@ -9,9 +9,9 @@ return array(
 	'default' => array(
     //'charset' => 'utf8',
 		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=sundaylunch',
-			'username'   => 'sundaylunch_user',
-			'password'   => 'L3bswhqJdw75Gxn',
+                        'dsn'        => 'mysql:host=dbsrv-sundaylunch-cluster-1.cluster-cqeoc0c4hmvu.ap-northeast-1.rds.amazonaws.com;dbname=kinyujoshi',
+                        'username'   => 'root',
+                        'password'   => ']8Dvung|',
 		),
 		'profiling' => true,
 	),

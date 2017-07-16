@@ -50,7 +50,7 @@ class Controller_Api_Redactor extends Controller_Base
 					'version' => '2006-03-01'
 			));
 			$res = $s3->putObject(array(
-					'Bucket'        =>   'sundaylunch',
+					'Bucket'        =>   'sunday-lunch',
 					'Key'           =>   "stock/{$username}/images/{$updatedev}{$file_name}",
 					'Body'          =>   fopen($_FILES['file']['tmp_name'], 'r'),
 					'ACL'           =>   'public-read',
