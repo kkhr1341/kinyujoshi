@@ -41,7 +41,7 @@ class Controller_Api_Redactor extends Controller_Base
 						break;
 				}
 			}
-			$credentials = new Credentials('AKIAJAMXYTXC27H3DURA', 'Wwet2PDfnVetzneybYi5CiRasV85GVNrxRrgXIEX');
+			$credentials = new Credentials('AKIAIWVMQDBTVCUOWPSQ', 's2QKCY4FwuB0Y4PSkESLmu4xsy1uDRg2xBm9wnYX');
 				
 			$s3 = S3Client::factory(array(
 					'signature' => 'v4',
@@ -70,7 +70,7 @@ class Controller_Api_Redactor extends Controller_Base
 					
 
 					$thumbres = $s3->putObject(array(
-							'Bucket'        =>   'sundaylunch',
+							'Bucket'        =>   'sunday-lunch',
 							'Key'           =>   "stock/{$username}/images/thumb_{$updatedev}{$file_name}",
 							'Body'          =>   fopen($tmp_file_path, 'r'),
 							'ACL'           =>   'public-read',
