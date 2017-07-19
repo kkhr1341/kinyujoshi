@@ -19,18 +19,15 @@
   </thead>
   <tbody>
     {foreach from=$registlist item=email name=loop}
-    {if $email.email eq '' || $email.email eq 'komori@sundaylunch.jp' || $email.email eq 'komori@toetheline.jp' || $email.email eq 'komokei0909@gmail.com' || $email.email eq 'akimoto@mk.team' || $email.email eq 'komori@sundaylunch,jp' || $email.email eq 'komori@sundaylunch.com'}
-    {else}
-      <tr>
-        <td>{$smarty.foreach.loop.iteration} </td>
-        <td>{$email.created_at|date_format:"Y.m.d"}</td>
-        <td>{$email.name}</td>
-        <td style="display: none;">{$email.email}</td>
-        <td>{$email.age}</td>
-        <td style="width:400px;">{$email.introduction}</td>
-        <td><a class="admin-registlist-more" href="/my/registlist/{$email.code}">編集</a></td>
-      </tr>
-    {/if}
+    <tr>
+      <td>{$smarty.foreach.loop.iteration} </td>
+      <td>{$email.created_at|date_format:"Y.m.d"}</td>
+      <td>{$email.name}</td>
+      <td style="display: none;">{$email.email}</td>
+      <td>{$email.age}</td>
+      <td style="width:400px;">{$email.introduction}</td>
+      <td><a class="admin-registlist-more" href="/my/registlist/{$email.code}">編集</a></td>
+    </tr>
     {/foreach}
   </tbody>
 </table>
