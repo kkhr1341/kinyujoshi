@@ -1,11 +1,17 @@
 <div class="pc kinyu-introduction">
   <ul class="sample">
-    <li style="background:url(/images/main/top_pc_slide07.jpg) center center / cover no-repeat;height:100%;"></li>
+    <!-- <li style="background:url(/images/main/top_pc_slide07.jpg) center center / cover no-repeat;height:100%;"></li>
     <li style="background:url(/images/main/top_pc_slide02.jpg) center center / cover no-repeat;height:100%;"></li>
     <li style="background:url(/images/main/top_pc_slide03.jpg) center center / cover no-repeat;height:100%;"></li>
     <li style="background:url(/images/main/top_pc_slide04.jpg) center center / cover no-repeat;height:100%;"></li>
     <li style="background:url(/images/main/top_pc_slide05.jpg) center center / cover no-repeat;height:100%;"></li>
-    <li style="background:url(/images/main/top_pc_slide06.jpg) center center / cover no-repeat;height:100%;"></li>
+    <li style="background:url(/images/main/top_pc_slide06.jpg) center center / cover no-repeat;height:100%;"></li> -->
+    <li style="background:url(/images/main/top_pc_slide_su1.jpg) center center / cover no-repeat;height:100%;"></li>
+    <li style="background:url(/images/main/top_pc_slide_su5.jpg) center center / cover no-repeat;height:100%;"></li>
+    <li style="background:url(/images/main/top_pc_slide_su3.jpg) center center / cover no-repeat;height:100%;"></li>
+    <li style="background:url(/images/main/top_pc_slide_su2.jpg) center center / cover no-repeat;height:100%;"></li>
+    <li style="background:url(/images/main/top_pc_slide_su4.jpg) center center / cover no-repeat;height:100%;"></li>
+    <li style="background:url(/images/main/top_pc_slide_su6.jpg) center center / cover no-repeat;height:100%;"></li>
   </ul>
   <img class="kinyu-introduction-logo" src="/images/new/kinyu-logo-white.png">
   <script>
