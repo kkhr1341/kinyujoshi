@@ -82,7 +82,7 @@ return array(
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
 	'map' => 'kinyu/campaign/map',
-	'ooedoonsen_joshikai' => 'kinyu/campaign/ooedoonsen_joshikai',
+	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 
 
 
