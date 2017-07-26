@@ -29,8 +29,10 @@ return array(
 	'rss/(:num)'   => 'kinyu/rss/index/$1',
 	'rss/(:any)'   => 'kinyu/rss/detail/$1',
 
+	//myplan
+	'myplan' => 'kinyu/myplan/index',
+
 	//未公開
-	//'myplan' => 'kinyu/about/myplan',
 	'gallery' => 'kinyu/gallery/index',
 	//'event/schedule'   => 'kinyu/event/schedule',
 	//'event/(:num)'   => 'kinyu/event/index/$1',
@@ -80,6 +82,7 @@ return array(
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
 	'map' => 'kinyu/campaign/map',
+	'ooedoonsen_joshikai' => 'kinyu/campaign/ooedoonsen_joshikai',
 
 
 

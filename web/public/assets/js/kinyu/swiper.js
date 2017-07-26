@@ -23,6 +23,16 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
       prevButton: '.swiper-button-prev02',
       spaceBetween: 0
   });
+  var swiper = new Swiper('.swiper-container03', {
+      pagination: '.swiper-pagination03',
+      slidesPerView: 3,
+      paginationClickable: true,
+      autoplay: 8000,
+      speed: 800,
+      nextButton: '.swiper-button-next03',
+      prevButton: '.swiper-button-prev03',
+      spaceBetween: 0
+  });
 } else {
 
   //　PC
@@ -48,14 +58,18 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
   });
 
   var swiper = new Swiper('.swiper-container03', {
-      pagination: '.swiper-pagination03',
-      slidesPerView: 1,
-      loop: true,
-      speed: 800,
-      paginationClickable: true,
-      nextButton: '.swiper-button-next03',
-      prevButton: '.swiper-button-prev03',
-      spaceBetween: 20
+    slidesPerView: 'auto',
+    autoplay: 5000,
+    speed: 1000,
+    loop: true,
+    pagination: '.swiper-pagination',
+
+    // ナビゲーションボタン
+    nextButton: '.swiper-button-next03',
+    prevButton: '.swiper-button-prev03',
+
+    // 1スライドごとの余白
+    spaceBetween: 0
   });
 
 }

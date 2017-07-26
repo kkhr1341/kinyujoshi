@@ -1,0 +1,225 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/ooedoonsen_joshikai.css">
+
+
+<div id="top" class="ooedo-joshikai-container">
+
+  <div class="ooedo-header">
+    <div class="ooedo-header-inner">
+      <a href="/"><img class="ooedo-kinyu-logo" src="/images/kinyu-logo-sp.png"></a>
+      <a href="http://oom-reit.com/" target="_blank"><img class="ooedo-logo" src="/images/content/ooedo_joshikai/ooedo_logo.png"></a>
+    </div>
+  </div>
+
+  <div class="ooedo-slide">
+    <div class="swiper-container03 ooedo-joshikai-slide-content">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) top center / cover no-repeat;">
+          <img class="ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo2.png">
+        </div>
+        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg2.jpg) top center / cover no-repeat;"></div>
+        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) top center / cover no-repeat;"></div>
+      </div>
+      <div class="swiper-arrow swiper-button-prev03">
+        <img src="/images/content/ooedo_joshikai/arrows_prev.png">
+      </div>
+      <div class="swiper-arrow swiper-button-next03">
+        <img src="/images/content/ooedo_joshikai/arrow_next.png">        
+      </div>
+    </div>
+  </div>
+
+  <div class="ooedo-joshikai-menu">
+    <ul>
+      <li><a href="#scroll-point01">REITってなあに？</a></li>
+      <li><a href="#scroll-point02">女子会の内容</a></li>
+      <li><a href="#scroll-point03">大江戸温泉アセットマネジメントさんって？</a></li>
+      <li><a href="#scroll-point04">お申込み</a></li>
+    </ul>
+    <img style="width: 100%;" class="bottom-img" src="/images/content/ooedo_joshikai/ooedo-joshikai-menu-bottom1.png">
+  </div>
+
+
+  <div class="ooedo-joshikai-container-inner">
+
+    <div class="ooedo-joshikai-container-el">
+      <div class="ooedo-joshikai-container-el-inner">
+        <h2><img src="/images/content/ooedo_joshikai/ooedo-joshikai-titke02.png" alt=""></h2>
+        <p class="description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+
+    <!-- REITってなあに？ -->
+    <div id="scroll-point01" class="ooedo-joshikai-container-el" style="background-color:#fff;">
+      <div class="ooedo-joshikai-container-el-inner">
+        <h2><img src="/images/content/ooedo_joshikai/ooedo-joshikai-titke03.png" alt=""></h2>
+        <p class="description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+      <img class="wave-bottom" src="/images/content/ooedo_joshikai/wave-bottom.png">
+    </div>
+
+    <!-- 背景画像？ -->
+    <div class="bg-main"></div>
+
+    <div id="scroll-point02" class="ooedo-joshikai-container-el" style="background: url(/images/content/ooedo_joshikai/bg_campaign2.png)">
+      <div class="joshikai-top-fix" style="background: url(/images/content/ooedo_joshikai/bg_campaign4.png) center center / contain repeat;"></div>
+      <div class="ooedo-joshikai-container-el-inner">
+        <h2><img src="/images/content/ooedo_joshikai/ooedo-joshikai-titke04.png"></h2>
+        <div class="joshikai-feature-list">
+          <img class="joshikai-future-title" src="/images/content/ooedo_joshikai/joshikai-future-title.png">
+          <ul>  
+            <li>
+              <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
+              <p class="joshikai-feature-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+            <li>
+              <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
+              <p class="joshikai-feature-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+            <li>
+              <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
+              <p class="joshikai-feature-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+            <li>
+              <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
+              <p class="joshikai-feature-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="joshikai-schedule-block">
+          <img class="joshikai-future-title" src="/images/content/ooedo_joshikai/joshikai-schedule-title.png">
+          <div class="ooedo-joshikai-frame joshikai-schedule">
+            
+            <!-- 女子会のスケジュール -->
+            <div class="frame-inner">
+
+              <!-- 1日目 -->
+              <div class="joshikai-schedule-el">
+                <h3>1st DAY - <span>8月24(木)</span></h3>
+              </div>
+
+              <!-- 2日目 -->
+              <div class="joshikai-schedule-el">
+                <h3>2nd DAY - <span>9月23(土)</span></h3>
+              </div>
+            </div>
+
+            <div class="ooedo-joshikai-frame-tri-lefttop"></div>
+            <div class="ooedo-joshikai-frame-tri-righttop"></div>
+            <div class="ooedo-joshikai-frame-tri-leftbottom"></div>
+            <div class="ooedo-joshikai-frame-tri-rightbottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="scroll-point03" class="ooedo-joshikai-container-el about-ooedo" style="background: #fff;">
+      <div class="ooedo-joshikai-container-el-inner">
+        <h3><img class="about-ooedo-title" src="/images/content/ooedo_joshikai/about-ooedo-title.png"></h3>
+        <div class="about-ooedo-detail">
+          <ul>
+            <li>
+              <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
+            </li>
+            <li>
+              <div class="text-box">
+                <p class="text-box-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <a class="about-ooedo-detail-link ff-normal" href="http://corporate.ooedoonsen.jp/am/" target="_blank">WEBサイトはこちら</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img class="wave-bottom" src="/images/content/ooedo_joshikai/wave-bottom.png">
+    </div>
+
+      <!-- <div class="ooedo-application">
+        <h2><img src="/images/content/ooedo_joshikai/ooedo-application-title.png" alt=""></h2>
+      </div> -->
+
+      <!-- <div class="ooedo-joshikai-container-el ooedo-application">
+        <h2><img src="/images/content/ooedo_joshikai/ooedo-application-title.png" alt=""></h2>
+        <p class="ooedo-application-text1 ff-normal">▼下のページよりご予約お願いいたします。</p>
+        <a class="ooedo-application-link ff-normal" href="" target="_blank">お申込みページへ</a>
+        <p class="ooedo-application-text1 ff-normal">※Peatixに移動します。</p>
+      </div> -->
+
+    <div id="scroll-point04" class="ooedo-joshikai-container-el ooedo-application">
+      <div class="ooedo-joshikai-container-el-inner">
+        <h2><img src="/images/content/ooedo_joshikai/ooedo-application-title.png" alt=""></h2>
+        <img class="joshikai-future-title" src="/images/content/ooedo_joshikai/joshikai-fee-title.png">
+        <div class="ooedo-joshikai-frame ooedo-joshikai-fee">
+          <div class="frame-inner">
+            <!-- 女子会title部分 -->
+            <div class="ooedo-joshikai-title-list">
+              <ul>
+                <li class="ff-normal"><span>1回目</span>：タイトルタイトルタイトルタイトルタイトル</li>
+                <li class="ff-normal"><span>2回目</span>：タイトルタイトルタイトルタイトルタイトルタイトル</li>
+              </ul>
+            </div>
+            <!-- 女子会fee部分 -->
+            <div class="ooedo-joshikai-fee-list">
+              <ul>
+                <li>
+                  <p class="ooedo-joshikai-fee-title ff-normal">1回目のみ参加</p>
+                  <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
+                  <p class="ooedo-joshikai-fee-detail ff-normal">1,000円</p>
+                </li>
+                <li>
+                  <p class="ooedo-joshikai-fee-title ff-normal">2回目のみ参加</p>
+                  <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
+                  <p class="ooedo-joshikai-fee-detail ff-normal">3,500円</p>
+                </li>
+                <li>
+                  <p class="ooedo-joshikai-fee-title ff-normal">両方とも参加</p>
+                  <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
+                  <p class="ooedo-joshikai-fee-detail ff-normal">4,000円</p>
+                </li>
+              </ul>
+            </div>
+            <a class="ooedo-application-link ff-normal" href="" target="_blank">お申込みはこちら♪</a>
+            <p class="ooedo-application-text1 ff-normal"><span style="color:red;">※</span>Peatixに移動します。</p>
+          </div>
+          <div class="ooedo-joshikai-frame-tri-lefttop"></div>
+          <div class="ooedo-joshikai-frame-tri-righttop"></div>
+          <div class="ooedo-joshikai-frame-tri-leftbottom"></div>
+          <div class="ooedo-joshikai-frame-tri-rightbottom"></div>
+        </div>
+
+        <div class="ooedo-joshikai-notes">
+          <img class="joshikai-future-title" src="/images/content/ooedo_joshikai/joshikai-notes-title.png">
+          <div class="joshikai-notes-list">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    
+    </div>
+
+
+
+  <footer>
+    <div class="joshikai-top-fix" style="background: url(/images/content/ooedo_joshikai/bg_campaign3.png) center center / contain repeat;"></div>
+    <div class="footer-inner ff-normal">
+      <div class="logo-list">
+        <a href="/"><img class="footer-kinyu-logo" src="/images/kinyu-logo-sp.png"></a>
+        <a href="http://oom-reit.com/" target="_blank"><img class="footer-ooedo-logo" src="/images/content/ooedo_joshikai/ooedo_logo.png"></a>
+      </div>
+      <ul>
+        <li><a href="#top">トップ</a></li>
+        <li><a href="#scroll-point01">REITってなあに？</a></li>
+        <li><a href="#scroll-point02">女子会の内容</a></li>
+        <li><a href="#scroll-point03">大江戸温泉アセットマネジメントさんって？</a></li>
+        <li><a href="#scroll-point04">お申込み</a></li>
+      </ul>
+      <p class="copyright">COPYRIGHT © 2017 TOE THE LINE, Inc. ALL RIGHTS RESERVED</p>
+    </div>
+  </footer>
+</div>

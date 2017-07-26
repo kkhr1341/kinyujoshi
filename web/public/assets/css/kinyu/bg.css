@@ -115,13 +115,13 @@
     background-size: cover;
 }
 
-.swiper-button-prev01,.swiper-button-prev02 {
+.swiper-button-prev01,.swiper-button-prev02, {
 	background: url("/images/arrow/arrow-left.png") center center no-repeat!important;
   background: url("/images/arrow/arrows02_02.png") center center no-repeat!important;
   background-size: cover!important;
 }
 
-.swiper-button-next01, .swiper-button-next02 {
+.swiper-button-next01,.swiper-button-next02, {
 	background: url("/images/arrow/arrow-right.png") center center no-repeat!important;
   background: url("/images/arrow/arrow02_01.png") center center no-repeat!important;
   background-size: cover!important;

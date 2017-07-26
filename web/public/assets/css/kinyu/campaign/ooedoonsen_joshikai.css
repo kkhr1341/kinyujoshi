@@ -1,0 +1,564 @@
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  大江戸温泉女子会
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  メイン 
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-joshikai-container {
+  font-family: "Sawarabi Mincho";
+  letter-spacing: 1px!important;
+  background: url(/images/content/ooedo_joshikai/bg_campaign1.png);
+  overflow: hidden;
+}
+.ooedo-joshikai-container .ff-normal {
+  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+.ooedo-joshikai-container p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.ooedo-joshikai-container-inner {
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  ヘッダー
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-header {
+  background: #fff;
+  height: 80px;
+}
+.ooedo-header-inner {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.ooedo-kinyu-logo {
+  width: 150px;
+  height: 34.5px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -17.25px;
+}
+.ooedo-logo {
+  width: 200px;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -14px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スライドショー
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-slide {
+  height: 560px; 
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+}
+.swiper-container03 {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  z-index: 1;
+}
+.ooedo-joshikai-slide-content {
+  height: 560px;
+  position: relative;
+}
+.ooedo-joshikai-slide-content .swiper-wrapper,
+.ooedo-joshikai-slide-content .swiper-slide {
+  height: 100%;
+}
+.ooedo-slide .swiper-slide {
+  position: relative;
+  pointer-events: none;
+  opacity: .5;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -ms-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+.ooedo-slide .swiper-slide-active {
+  pointer-events: auto;
+  opacity: 1;
+}
+.ooedo-joshikai-slide-content .swiper-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 1000;
+  width: 40px;
+  padding: 6px;
+  margin-top: -30px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  transition: 0.8s;
+}
+.ooedo-joshikai-slide-content .swiper-button-prev03 {
+  left: -20px;
+}
+.ooedo-joshikai-slide-content .swiper-button-next03 {
+  right: -20px;
+}
+.ooedo-joshikai-slide-content .swiper-arrow img {
+  max-width: 100%;
+}
+.swiper-button-next03.swiper-button-disabled,
+.swiper-button-prev03.swiper-button-disabled {
+  opacity: .1;
+  cursor: auto;
+  pointer-events: none;
+}
+
+/* 装飾 */
+/*.ooedo-joshikai-mainlogo {
+  display: block;
+  width: 460px;
+  height: 461px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -230px;
+  margin-left: -230.5px;
+}*/
+.ooedo-joshikai-mainlogo {
+  display: block;
+  width: 420px;
+  height: 464px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -232px;
+  margin-left: -210px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  ページのメニュー
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-joshikai-menu {
+  text-align: center;
+}
+.ooedo-joshikai-menu ul {
+  padding: 24px 0px;
+  background: #fff;
+  letter-spacing: -.4em;
+}
+.ooedo-joshikai-menu li {
+  display: inline-block;
+  padding: 0px 40px 0px 40px;
+  font-weight: bold;
+  border-right: 1px solid #cbcaca;
+  letter-spacing: normal;
+}
+.ooedo-joshikai-menu li a {
+  padding-left: 24px;
+  font-size: 15px;
+  background: url(/images/content/ooedo_joshikai/menu-icon.png) left center / contain no-repeat;
+}
+.ooedo-joshikai-menu .bottom-img {
+
+}
+.ooedo-joshikai-slide-content .swiper-arrow:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.3);
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  コンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/*.ooedo-joshikai-container-el {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+}*/
+.ooedo-joshikai-container-el {
+  width: 100%;
+  position: relative;
+}
+.ooedo-joshikai-container-el-inner {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0px;
+}
+
+.ooedo-joshikai-container-el h2 {
+  margin-bottom: 36px;
+}
+.ooedo-joshikai-container-el h2 img {
+  display: block;
+  margin: 0 auto;
+}
+.ooedo-joshikai-container-el .description {
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* フレーム部分 */
+.ooedo-joshikai-frame {
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 2px solid #CEAF56;
+  padding: 4px;
+  position: relative;
+}
+.ooedo-joshikai-frame .frame-inner {
+  box-sizing: border-box;
+  border: 1px solid #CEAF56;
+  padding: 36px 36px;
+}
+
+/* 三角形 */
+.ooedo-joshikai-frame-tri-lefttop {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 20px 0 0;
+  border-color: #CEAF56 transparent transparent transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.ooedo-joshikai-frame-tri-righttop {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 0;
+  border-color: transparent #CEAF56 transparent transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.ooedo-joshikai-frame-tri-leftbottom {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 0 20px;
+  border-color: transparent transparent transparent #CEAF56;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+}
+.ooedo-joshikai-frame-tri-rightbottom {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 20px 20px;
+  border-color: transparent transparent #CEAF56 transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  不動産リートって？
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.wave-bottom {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: -25px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  背景画像
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.bg-main {
+  height: 320px;
+  background: url(/images/content/ooedo_joshikai/ooedo-bg2.jpg) left center / cover no-repeat;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  女子会の内容
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.joshikai-top-fix {
+  height: 20px;
+}
+.joshikai-feature-list ul {
+  letter-spacing: -.4em;
+}
+.joshikai-feature-list li {
+  display: inline-block;
+  letter-spacing: normal;
+  width: 23.5%;
+  margin-right: 2%;
+}
+.joshikai-feature-list li:last-child {
+  margin-right: 0; 
+}
+.joshikai-feature-list li .img-box {
+  height: 150px;
+  width: 100%;
+}
+.joshikai-feature-list li .joshikai-feature-description {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0px 4px;
+}
+.joshikai-future-title {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+/* 女子会のスケジュール */
+.joshikai-schedule-block {
+  margin-top: 50px;
+}
+.joshikai-schedule {
+  width: 900px;
+}
+.joshikai-schedule-el {
+  position: relative; 
+}
+.joshikai-schedule-el:first-child h3 {
+  background: #ff6c6c;
+}
+.joshikai-schedule-el h3 {
+  font-size: 20px;
+  background: #7cdcce;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 16px;
+}
+.joshikai-schedule-el h3:after {
+  content: "";
+  position: absolute;
+  width: 540px;
+  height: 1px;
+  top: 18px;
+  right: 0;
+  background: #dedede;
+}
+.joshikai-schedule-el h3 span {
+  font-weight: bold;
+}
+
+/* 大江戸温泉アセットマネジメントさんってどんな会社？ */
+.about-ooedo .ooedo-joshikai-container-el-inner {
+  width: 800px;
+  padding: 80px 0px;
+}
+.about-ooedo-detail ul {
+  letter-spacing: -.4em;
+  height: 250px;
+}
+.about-ooedo-detail li {
+  width: 50%;
+  display: inline-block;
+  letter-spacing: normal;
+  vertical-align: top;
+  height: 100%;
+}
+.about-ooedo-detail .img-box {
+  height: 100%;
+}
+.about-ooedo-detail .text-box {
+  padding: 10px 0px 0px 24px;
+}
+.about-ooedo-detail-link {
+  width: 300px;
+  display: block;
+  background: #FF6C6C;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 12px;
+  font-size: 15px;
+  color: #fff;
+}
+.about-ooedo-title {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  お申込みページ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-application .ooedo-joshikai-container-el-inner {
+  width: 900px;
+  margin: 0 auto;
+  padding: 120px 0px 80px;
+}
+.ooedo-application .ooedo-joshikai-frame {
+  /*background: #fff;*/
+  border: 2px solid #FF5161;
+}
+.ooedo-application .frame-inner {
+  padding: 50px;
+  border: 1px solid #FF5161;
+}
+.ooedo-application-link:after {
+  content: "〉";
+  position: absolute;
+  right: 0;
+}
+/* 三角形 */
+.ooedo-application .ooedo-joshikai-frame-tri-lefttop {
+  border-color: #FF5161 transparent transparent transparent;
+}
+.ooedo-application .ooedo-joshikai-frame-tri-righttop {
+  border-color: transparent #FF5161 transparent transparent;
+}
+.ooedo-application .ooedo-joshikai-frame-tri-leftbottom {
+  border-color: transparent transparent transparent #FF5161;
+
+}
+.ooedo-application .ooedo-joshikai-frame-tri-rightbottom {
+  border-color: transparent transparent #FF5161 transparent;
+}
+
+/* 料金部分 */
+.ooedo-joshikai-fee {
+  margin-bottom: 36px;
+  width: 800px;
+}
+.ooedo-joshikai-title-list ul,
+.ooedo-joshikai-fee-list ul {
+  letter-spacing: -.4em;
+}
+
+/* 料金部分 - タイトル */
+.ooedo-joshikai-title-list {
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  padding: 16px 0px;
+}
+.ooedo-joshikai-title-list li {
+  letter-spacing: normal;
+  padding: 2px 0px;
+}
+.ooedo-joshikai-title-list li:first-child {
+  margin-bottom: 8px;
+}
+.ooedo-joshikai-title-list li span {
+  background: gray;
+  padding: 2px 4px;
+}
+
+/* 料金部分 - メイン */
+.ooedo-joshikai-fee-list {
+  margin: 36px 0px;
+}
+.ooedo-joshikai-fee-list li {
+  display: inline-block;
+  letter-spacing: normal;
+  width: 32%;
+  margin-right: 2%;
+  text-align: center;
+}
+.ooedo-joshikai-fee-list li:last-child {
+  margin-right: 0; 
+}
+.ooedo-joshikai-fee-list li .img-box {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.ooedo-application-link {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  background: #7cdcce;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 0px;
+  position: relative;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  color:#fff; 
+}
+.ooedo-application-text1 {
+  text-align: center;
+  font-size: 14px!important;
+  line-height: 14px!important;
+  margin-top: 8px;
+}
+.ooedo-application-text2 {
+  text-align: center;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  注意事項
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-joshikai-notes {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.joshikai-notes-list {
+  padding: 36px 0px;
+  border-top: 2px solid #CEAF56;
+  border-bottom: 2px solid #CEAF56;
+  background: rgba(255,255,255,.6);
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  フッター
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-joshikai-container footer {
+  position: relative;
+  background: #fff;
+}
+.ooedo-joshikai-container footer .joshikai-top-fix {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.ooedo-joshikai-container footer .footer-inner {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.ooedo-joshikai-container footer .footer-inner li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.ooedo-joshikai-container footer .footer-inner li a {
+  font-size: 14px;
+}
+.ooedo-joshikai-container footer .footer-inner li a:before {
+  content: "◆";
+  color: #FF6C6C;
+}
+.ooedo-joshikai-container footer .footer-inner .copyright {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 36px;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list {
+  margin-bottom: 50px;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list img {
+  display: inline-block;
+  padding: 0px 12px;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list .footer-kinyu-logo {
+  width: 150px;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list .footer-ooedo-logo {
+    width: 250px;
+}
+
+
+
+
+
+
