@@ -96,6 +96,15 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
   public function action_ooedoonsen_joshikai() {
 
+    switch (true) {
+      case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+      case $_SERVER['PHP_AUTH_USER'] !== 'kinyujoshi-ooedo':
+      case $_SERVER['PHP_AUTH_PW']   !== 'g9MZGeEC':
+      header('WWW-Authenticate: Basic realm="Enter username and password."');
+      header('Content-Type: text/plain; charset=utf-8');
+      die('このページを見るにはログインが必要です');
+    }
+
     $this->template->title = '大江戸温泉女子会';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/map/map-og.jpg';
     $this->template->description = '大江戸温泉';
