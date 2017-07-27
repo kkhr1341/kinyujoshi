@@ -160,14 +160,14 @@ $(function(){
 		params.open_date = $('#open_date').val();
 		params.status = 1;
 		
-		if (params.section_code == "") {
-			ts.error("カテゴリを選択してください");
-			return false;
-		}
-		if (params.kind == "") {
-			ts.error("種別");
-			return false;
-		}
+		// if (params.section_code == "") {
+		// 	ts.error("カテゴリを選択してください");
+		// 	return false;
+		// }
+		// if (params.kind == "") {
+		// 	ts.error("種別");
+		// 	return false;
+		// }
 		if (params.title == "") {
 			ts.error("タイトルを入力してください");
 			return false;
