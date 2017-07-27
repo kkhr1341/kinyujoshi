@@ -111,7 +111,7 @@
         {$fooo = $blog.main_image}
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-        {if $smarty.foreach.loopname.index == 1}
+        {if $smarty.foreach.loopname.index == 0}
           <li style="background-color:#fdc2c2;">
             <a class="pc-top-intro" href="/event">
             <!-- <div class="kinyu-top-list-kind"></div>

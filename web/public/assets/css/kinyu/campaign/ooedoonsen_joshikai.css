@@ -15,9 +15,10 @@
 .ooedo-joshikai-container .ff-normal {
   font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
 }
-.ooedo-joshikai-container p {
-  font-size: 16px;
-  line-height: 24px;
+.ooedo-joshikai-container p,
+.ooedo-joshikai-container a {
+  font-size: 14px;
+  line-height: 20px;
 }
 .ooedo-joshikai-container-inner {
 }
@@ -97,7 +98,7 @@
   width: 40px;
   padding: 6px;
   margin-top: -30px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.7);
   border-radius: 50%;
   transition: 0.8s;
 }
@@ -199,6 +200,8 @@
 .ooedo-joshikai-container-el .description {
   width: 700px;
   margin: 0 auto;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* フレーム部分 */
@@ -267,6 +270,7 @@
   width: 100%;
   position: absolute;
   bottom: -25px;
+  z-index: 1005;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -274,7 +278,18 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .bg-main {
   height: 320px;
-  background: url(/images/content/ooedo_joshikai/ooedo-bg2.jpg) left center / cover no-repeat;
+  position: relative;
+  background: url(/images/content/ooedo_joshikai/back/back1.jpg) center center / cover no-repeat;
+  z-index: 999;
+}
+.bg-main:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.2);
 }
 
 
@@ -317,32 +332,104 @@
   margin-top: 50px;
 }
 .joshikai-schedule {
-  width: 900px;
+  width: 860px;
+  background: rgba(255,255,255,.5);
 }
 .joshikai-schedule-el {
   position: relative; 
 }
 .joshikai-schedule-el:first-child h3 {
-  background: #ff6c6c;
+  /*background: #ff6c6c;*/
 }
 .joshikai-schedule-el h3 {
   font-size: 20px;
-  background: #7cdcce;
+  background: #8adfef;
   color: #fff;
   display: inline-block;
-  padding: 8px 16px;
+  padding: 8px 24px;
 }
-.joshikai-schedule-el h3:after {
-  content: "";
-  position: absolute;
-  width: 540px;
-  height: 1px;
-  top: 18px;
-  right: 0;
-  background: #dedede;
+.joshikai-schedule-div {
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
 }
 .joshikai-schedule-el h3 span {
   font-weight: bold;
+}
+.joshikai-schedule-el-block {
+  padding: 24px 8px 40px; 
+}
+.joshikai-schedule-el-block-last {
+  padding: 24px 8px 16px; 
+}
+.joshikai-schedule-el-block .intro {
+}
+.joshikai-schedule-el-block .intro .img-box {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  float: left;
+}
+.joshikai-schedule-el-block .intro .text-box {
+  padding-left: 210px;
+  padding-top: 16px;
+}
+.joshikai-schedule-title {
+  font-size: 16px!important;
+  line-height: 24px!important;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.joshikai-schedule-title span {
+  border-bottom: 2px solid #8adfef;
+  padding-bottom: 1px;
+}
+.joshikai-schedule-description {
+  font-size: 14px;
+  line-height: 20px;
+}
+.joshikai-schedule-el-main {
+  border-top: 1px solid #8adfef;
+  border-bottom: 1px solid #8adfef;
+  margin-top: 24px;
+}
+.joshikai-schedule-el-se h3 {
+  /*background: #FF6C6C;*/
+  background: #FBB79E;
+}
+.joshikai-schedule-el-se .joshikai-schedule-title span {
+  border-bottom: 2px solid #FBB79E;
+}
+.joshikai-schedule-el-se .joshikai-schedule-el-main {
+  border-top: 1px solid #FBB79E;
+  border-bottom: 1px solid #FBB79E;
+}
+.joshikai-schedule-el-main li {
+  letter-spacing: -.4em;
+  padding: 12px 0px;
+  border-bottom: 1px dotted #ededed;
+}
+.joshikai-schedule-el-main li:last-child {
+  border-bottom: none;
+}
+.joshikai-schedule-el-main li p {
+  display: inline-block;
+  letter-spacing: normal;
+  height: 100%;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.joshikai-schedule-el-main li .schedule-time {
+  /*width: 20%;*/
+  font-weight: bold;
+  padding: 0px 20px;
+}
+.joshikai-schedule-el-main li .schedule-detail {
+  /*width: 80%;*/
+  padding: 0px 20px;
 }
 
 /* 大江戸温泉アセットマネジメントさんってどんな会社？ */
@@ -382,6 +469,29 @@
   margin: 0 auto;
   margin-bottom: 24px;
 }
+.joshikai-schedule-info {
+  margin-top: 24px;
+}
+.joshikai-schedule-info li {
+  margin-bottom: 12px;
+}
+.joshikai-schedule-info li:last-child {
+  margin-bottom: 0px; 
+}
+.joshikai-schedule-info p,
+.joshikai-schedule-info a {
+  font-size: 13px;
+  line-height: 18px;
+}
+p.joshikai-schedule-info-main {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+p.joshikai-schedule-info-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申込みページ
@@ -392,8 +502,8 @@
   padding: 120px 0px 80px;
 }
 .ooedo-application .ooedo-joshikai-frame {
-  /*background: #fff;*/
   border: 2px solid #FF5161;
+  background: rgba(255,255,255,.5);
 }
 .ooedo-application .frame-inner {
   padding: 50px;
@@ -433,8 +543,8 @@
 .ooedo-joshikai-title-list {
   width: 90%;
   margin: 0 auto;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
+  border-top: 1px solid #dddcdc;
+  border-bottom: 1px solid #dddcdc;
   text-align: center;
   padding: 16px 0px;
 }
@@ -446,13 +556,18 @@
   margin-bottom: 8px;
 }
 .ooedo-joshikai-title-list li span {
-  background: gray;
-  padding: 2px 4px;
+  background: #FBB79E;
+  padding: 3px 6px;
+  color: #fff;
+  font-weight: bold;
+}
+.ooedo-joshikai-title-list li:first-child span {
+  background: #8adfef;
 }
 
 /* 料金部分 - メイン */
 .ooedo-joshikai-fee-list {
-  margin: 36px 0px;
+  margin: 24px 0px 24px;
 }
 .ooedo-joshikai-fee-list li {
   display: inline-block;
@@ -460,22 +575,37 @@
   width: 32%;
   margin-right: 2%;
   text-align: center;
+  padding: 20px 0px;
+  /*background: rgba(251, 183, 158, 0.3);*/
+  box-sizing: border-box;
 }
 .ooedo-joshikai-fee-list li:last-child {
   margin-right: 0; 
+  /*background: gray;*/
+}
+.ooedo-joshikai-fee-title {
+  font-size: 16px!important;
+  font-weight: bold;
 }
 .ooedo-joshikai-fee-list li .img-box {
-  height: 200px;
-  width: 200px;
+  height: 190px;
+  width: 190px;
   border-radius: 50%;
   margin: 0 auto;
+  box-shadow: 4px 4px rgba(251, 183, 158, 0.8);
+}
+.ooedo-joshikai-fee-list li:first-child .img-box {
+  box-shadow: 4px 4px rgba(138, 223, 239, 0.8);
+}
+.ooedo-joshikai-fee-list li:last-child .img-box {
+  box-shadow: 4px 4px rgba(255, 81, 97, 0.8);
 }
 .ooedo-application-link {
   width: 500px;
   display: block;
   margin: 0 auto;
-  background: #7cdcce;
-  font-size: 16px;
+  background: #5ecaba;
+  font-size: 16px!important;
   text-align: center;
   padding: 16px 0px;
   position: relative;
@@ -493,6 +623,11 @@
 .ooedo-application-text2 {
   text-align: center;
 }
+.ooedo-joshikai-fee-detail {
+  margin: 6px 0px 12px;
+  font-size: 14px!important;
+  line-height: 14px!important;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   注意事項
@@ -503,12 +638,29 @@
   margin-top: 60px;
 }
 .joshikai-notes-list {
-  padding: 36px 0px;
+  padding: 36px;
   border-top: 2px solid #CEAF56;
   border-bottom: 2px solid #CEAF56;
-  background: rgba(255,255,255,.6);
+  background: rgba(255,255,255,.5);
 }
-
+.joshikai-notes-list li {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 12px;
+  padding-left: 14px;
+  position: relative;
+}
+.joshikai-notes-list li:before {
+  content: "●";
+  color: #FF5161;
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+.joshikai-notes-list li:last-child {
+  margin-bottom: 0px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   フッター
@@ -556,6 +708,10 @@
 .ooedo-joshikai-container footer .footer-inner .logo-list .footer-ooedo-logo {
     width: 250px;
 }
+
+
+
+
 
 
 
