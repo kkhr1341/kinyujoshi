@@ -289,7 +289,11 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(255,255,255,0.2);
+  /*background: rgba(255,255,255,0.2);*/
+      background: -moz-linear-gradient(-20deg, rgba(138, 223, 239,.3) 0%,rgba(251, 183, 158,.8) 100%);/*古いFireFox向け*/
+  background: -webkit-linear-gradient(-20deg, rgba(138, 223, 239,.3) 0%,rgba(251, 183, 158,.8) 100%);/*古いSafari・Chrome向け*/
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(138, 223, 239,.5)', endColorstr='rgba(251, 183, 158,.8)',GradientType=0 );/*IE9以下への対応*/
+  background: linear-gradient(-20deg, rgba(138, 223, 239,.3) 0%, rgba(251, 183, 158,.8) 100%);/*正規のプロパティ*/
 }
 
 
