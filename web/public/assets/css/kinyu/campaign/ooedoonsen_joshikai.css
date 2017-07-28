@@ -379,7 +379,7 @@
   padding: 24px 8px 40px; 
 }
 .joshikai-schedule-el-block-last {
-  padding: 24px 8px 16px; 
+  padding: 24px 8px 40px; 
 }
 .joshikai-schedule-el-block .intro {
 }
@@ -471,6 +471,9 @@
 }
 .about-ooedo-detail .text-box {
   padding: 10px 0px 0px 24px;
+}
+.about-ooedo-detail .text-box-description {
+  font-size: 13px;
 }
 .about-ooedo-detail-link {
   width: 300px;
