@@ -86,12 +86,16 @@
   font-size: 13px;
   line-height: 18px;
 }
+.wave-bottom {
+  width: 150%;
+  bottom: -10px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   背景画像
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .bg-main {
-  height: 200px;
+  height: 140px;
   position: relative;
 }
 

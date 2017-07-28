@@ -14,10 +14,12 @@
   <div class="ooedo-slide">
     <div class="swiper-container03 ooedo-joshikai-slide-content">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) top center / cover no-repeat;">
-          <img class="ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo2.png">
+        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/back/top2.jpg) left center / cover no-repeat;">
+          <img class="ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo_pc.png">
         </div>
-        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/back/top2.jpg) left center / cover no-repeat;"></div>
+        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) top center / cover no-repeat;">
+          <!-- <img class="ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo2.png"> -->
+        </div>
         <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg2.jpg) top center / cover no-repeat;"></div>
       </div>
       <div class="swiper-arrow swiper-button-prev03">
@@ -48,7 +50,11 @@
           <img class="pc" src="/images/content/ooedo_joshikai/ooedo-joshikai-titke02.png" alt="">
           <img class="sp" src="/images/content/ooedo_joshikai/sp/ooedo-joshikai-title02_sp.png" alt="">
         </h2>
-        <p class="description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <p class="description ff-normal">
+        今回の特別女子会は、ついに実現！みんなで日帰り温泉で女子会♪<br>
+        テーマは、不動産の投資信託（REIT：りーと）についてです。<br>
+        よくワカラナイままにしていた、投資信託についてもふれます。まずは、単語からお勉強。<br>
+        2日間セットでの女子会になります、ぜひ2日間ご参加ください。</p>
       </div>
     </div>
 
@@ -59,7 +65,9 @@
           <img class="pc" src="/images/content/ooedo_joshikai/ooedo-joshikai-titke03.png" alt="">
           <img class="sp" src="/images/content/ooedo_joshikai/sp/ooedo-joshikai-title03_sp.png" alt="">
         </h2>
-        <p class="description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <p class="description ff-normal">REIT(りーと)とは、「Real Estate Investment Trust」の略で<br>アメリカで生まれた仕組みで、投資信託の仲間です。<br>
+投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が<br>含まれているのパッケージのことです♪<span style="display: block;height: 16px;"></span>
+<span style="font-weight:bold">〜きんゆう女子。Key Word〜</span><br>REIT(りーと)<br>#きんゆう類 #とうしん科 #おうち属</p>
       </div>
       <img class="wave-bottom" src="/images/content/ooedo_joshikai/wave-bottom.png">
     </div>
@@ -79,19 +87,19 @@
           <ul>  
             <li>
               <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
-              <p class="joshikai-feature-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="joshikai-feature-description ff-normal">バックヤードツアーで温泉施設を見学</p>
             </li>
             <li>
               <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
-              <p class="joshikai-feature-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="joshikai-feature-description ff-normal">20〜30代ワカラナイ女子のための内容</p>
             </li>
             <li>
               <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
-              <p class="joshikai-feature-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="joshikai-feature-description ff-normal">難しく感じる"単語"からお勉強</p>
             </li>
             <li>
               <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
-              <p class="joshikai-feature-description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="joshikai-feature-description ff-normal">アンケートやレポート提出でご優待</p>
             </li>
           </ul>
         </div>
@@ -105,12 +113,12 @@
 
               <!-- 1日目 -->
               <div class="joshikai-schedule-el">
-                <h3>1st DAY - <span>8月24(木)</span></h3>
+                <h3>1st DAY - <span>8月24(木) 19:00〜21:00頃</span></h3>
                 <div class="joshikai-schedule-el-block">     
                   <div class="intro clear">
                     <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/first_day_image.jpg) left center / cover no-repeat;"></div>
                     <div class="text-box ff-normal">
-                      <p class="joshikai-schedule-title"><span>1回目は、いつもの女子会の場所で、温泉と資産作りについて勉強します。について勉強します。</span></p>
+                      <p class="joshikai-schedule-title"><span>1回目は、いつもの女子会の場所で、温泉と資産作りについて勉強します。</span></p>
                       <p class="joshikai-schedule-description">キーワードは、不動産の投資信託(REIT：りーと)です。聞いたことあるかも？なんだそれ？と言う方、これを機会に少し勉強しましょう。<span style="display: block;height: 8px;"></span>スペシャルゲストとして、大江戸温泉リート投資法人の資産運用会社である大江戸温泉アセットマネジメントの今西社長にもお会いできるかも！？</p>
                     </div>
                   </div>
@@ -160,7 +168,7 @@
 
               <!-- 2日目 -->
               <div class="joshikai-schedule-el joshikai-schedule-el-se">
-                <h3>2nd DAY - <span>9月23(土)</span></h3>
+                <h3>2nd DAY - <span>9月23(土) 11:00〜15:00頃</span></h3>
                 <div class="joshikai-schedule-el-block joshikai-schedule-el-block-last">     
                   <div class="intro clear">
                     <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/second_day_image.jpg) center center / cover no-repeat;"></div>
@@ -188,8 +196,8 @@
                         <p class="schedule-detail">温泉Time、個別質問Time、自由に交流</p>
                       </li>
                       <li>
-                        <p class="schedule-time">〜15:00</p>
-                        <p class="schedule-detail">女子会終了、自由解散。もっと遊びたい方は残ってもOKです！</p>
+                        <p class="schedule-time">15:00頃</p>
+                        <p class="schedule-detail">女子会終了、自由解散。もっと遊びたい方は残ってもOKです！(自由解散)</p>
                       </li>
                     </ul>
                   </div>
@@ -272,8 +280,8 @@
             <!-- 女子会title部分 -->
             <div class="ooedo-joshikai-title-list">
               <ul>
-                <li class="ff-normal"><span>1回目</span>：湯る〜りとREITをお勉強。新しい温泉旅館と資産づくりについて。</li>
-                <li class="ff-normal"><span>2回目</span>：タイトルタイトルタイトルタイトルタイトルタイトル</li>
+                <li class="ff-normal"><span>1回目</span>：8月24日(木) ゆるりと勉強。温泉と資産づくり♨︎ ＠カフェ</li>
+                <li class="ff-normal"><span>2回目</span>：9月23日(土) なかなかは入れない温泉施設のバックヤードツアー♪ ＠お台場</li>
               </ul>
             </div>
             <!-- 女子会fee部分 -->
@@ -281,21 +289,21 @@
               <ul>
                 <li>
                   <div class="text-box">
-                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #8adfef;">1回のみ参加</span></p>
+                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #8adfef;">8月24日(木)のみ</span></p>
                     <p class="ooedo-joshikai-fee-detail ff-normal">(1,000円)</p>
                   </div>
                   <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/first_day_image.jpg) left center / cover no-repeat;"></div>
                 </li>
                 <li>
                   <div class="text-box">
-                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #FBB79E;">2回のみ参加</span></p>
+                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #FBB79E;">9月23日(土)のみ</span></p>
                     <p class="ooedo-joshikai-fee-detail ff-normal">(3,000円)</p>
                   </div>
                   <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/second_day_image.jpg) center center / cover no-repeat;"></div>
                 </li>
                 <li>
                   <div class="text-box">
-                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #FF5161;">2回セット♪</span></p>
+                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #FF5161;">2日間セット♪</span></p>
                     <p class="ooedo-joshikai-fee-detail ff-normal">(3,500円)</p>
                   </div>
                   <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/set_day_image.jpg) left center / cover no-repeat;"></div>
@@ -318,7 +326,7 @@
               <li>中立なポジションで、質の高いお金の情報を多角的にシェアできる場を提供します。必要なことを必要なだけまとめた情報を用意、シェアいたします。</li>
               <li>今回の女子会を通じて特定のREIT投資口の取得勧誘を行うものではありませんのでご安心ください。</li>
               <li>ご参加いただく方同士でも営業・勧誘はお断りさせていただいております。お困りのことがあれば編集部までお問い合わせください。(support@kinyu-joshi.jp)</li>
-              <li>きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。金融機関の視察・見学・調査目的でのご参加や金融にお詳しい方のご参加はご遠慮いただいております。マナー等守れない場合はご参加をご遠慮頂く可能性がございます。</li>
+              <li>きんゆう女子。は、20代〜30代からの「金融ワカラナイ女子のためのコミュニティ」です。金融機関の視察・見学・調査目的でのご参加や金融にお詳しい方のご参加はご遠慮いただいております。マナー等守れない場合はご参加をご遠慮頂く可能性がございます。</li>
               <li>スケジュールや内容は予告なく変更になる場合がございます。</li>
             </ul>
           </div>
