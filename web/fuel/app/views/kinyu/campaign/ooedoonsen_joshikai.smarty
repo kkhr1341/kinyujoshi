@@ -44,7 +44,10 @@
 
     <div class="ooedo-joshikai-container-el">
       <div class="ooedo-joshikai-container-el-inner">
-        <h2><img src="/images/content/ooedo_joshikai/ooedo-joshikai-titke02.png" alt=""></h2>
+        <h2>
+          <img class="pc" src="/images/content/ooedo_joshikai/ooedo-joshikai-titke02.png" alt="">
+          <img class="sp" src="/images/content/ooedo_joshikai/sp/ooedo-joshikai-title02_sp.png" alt="">
+        </h2>
         <p class="description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
       </div>
     </div>
@@ -52,7 +55,10 @@
     <!-- REITってなあに？ -->
     <div id="scroll-point01" class="ooedo-joshikai-container-el" style="background-color:#fff;">
       <div class="ooedo-joshikai-container-el-inner">
-        <h2><img src="/images/content/ooedo_joshikai/ooedo-joshikai-titke03.png" alt=""></h2>
+        <h2>
+          <img class="pc" src="/images/content/ooedo_joshikai/ooedo-joshikai-titke03.png" alt="">
+          <img class="sp" src="/images/content/ooedo_joshikai/sp/ooedo-joshikai-title03_sp.png" alt="">
+        </h2>
         <p class="description ff-normal">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
       </div>
       <img class="wave-bottom" src="/images/content/ooedo_joshikai/wave-bottom.png">
@@ -64,7 +70,10 @@
     <div id="scroll-point02" class="ooedo-joshikai-container-el" style="background: url(/images/content/ooedo_joshikai/bg_campaign2.png)">
       <div class="joshikai-top-fix" style="background: url(/images/content/ooedo_joshikai/bg_campaign4.png) center center / contain repeat;"></div>
       <div class="ooedo-joshikai-container-el-inner">
-        <h2><img src="/images/content/ooedo_joshikai/ooedo-joshikai-titke04.png"></h2>
+        <h2>
+          <img class="pc" src="/images/content/ooedo_joshikai/ooedo-joshikai-titke04.png">
+          <img class="sp" src="/images/content/ooedo_joshikai/sp/ooedo-joshikai-title04_sp.png" alt="">
+        </h2>
         <div class="joshikai-feature-list">
           <img class="joshikai-future-title" src="/images/content/ooedo_joshikai/joshikai-future-title.png">
           <ul>  
@@ -253,7 +262,10 @@
 
     <div id="scroll-point04" class="ooedo-joshikai-container-el ooedo-application">
       <div class="ooedo-joshikai-container-el-inner">
-        <h2><img src="/images/content/ooedo_joshikai/ooedo-application-title.png" alt=""></h2>
+        <h2>
+          <img class="pc" src="/images/content/ooedo_joshikai/ooedo-application-title.png" alt="">
+          <img class="sp" src="/images/content/ooedo_joshikai/sp/ooedo-joshikai-title05_sp.png" alt="">
+        </h2>
         <img class="joshikai-future-title" src="/images/content/ooedo_joshikai/joshikai-fee-title.png">
         <div class="ooedo-joshikai-frame ooedo-joshikai-fee">
           <div class="frame-inner">
@@ -268,18 +280,24 @@
             <div class="ooedo-joshikai-fee-list">
               <ul>
                 <li>
-                  <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #8adfef;">1回のみ参加</span></p>
-                  <p class="ooedo-joshikai-fee-detail ff-normal">(1,000円)</p>
+                  <div class="text-box">
+                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #8adfef;">1回のみ参加</span></p>
+                    <p class="ooedo-joshikai-fee-detail ff-normal">(1,000円)</p>
+                  </div>
                   <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/first_day_image.jpg) left center / cover no-repeat;"></div>
                 </li>
                 <li>
-                  <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #FBB79E;">2回のみ参加</span></p>
-                  <p class="ooedo-joshikai-fee-detail ff-normal">(3,000円)</p>
+                  <div class="text-box">
+                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #FBB79E;">2回のみ参加</span></p>
+                    <p class="ooedo-joshikai-fee-detail ff-normal">(3,000円)</p>
+                  </div>
                   <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/second_day_image.jpg) center center / cover no-repeat;"></div>
                 </li>
                 <li>
-                  <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #FF5161;">2回セット♪</span></p>
-                  <p class="ooedo-joshikai-fee-detail ff-normal">(3,500円)</p>
+                  <div class="text-box">
+                    <p class="ooedo-joshikai-fee-title ff-normal"><span style="border-bottom:2px solid #FF5161;">2回セット♪</span></p>
+                    <p class="ooedo-joshikai-fee-detail ff-normal">(3,500円)</p>
+                  </div>
                   <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/set_day_image.jpg) left center / cover no-repeat;"></div>
                 </li>
               </ul>

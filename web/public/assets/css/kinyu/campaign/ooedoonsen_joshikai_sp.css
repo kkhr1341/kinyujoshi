@@ -5,12 +5,29 @@
 
 @media screen and (max-width: 640px) {
 
+.ooedo-joshikai-container p, .ooedo-joshikai-container a {
+  font-size: 12px;
+  line-height: 18px;
+}
+.joshikai-schedule-info p, .joshikai-schedule-info a {
+  font-size: 12px;
+  line-height: 18px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ヘッダー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .ooedo-header-inner {
   width: 100%;
+}
+.ooedo-joshikai-menu li {
+  border-right: none;
+  display: block;
+  text-align: left;
+  padding: 12px 0px;
+}
+.ooedo-joshikai-menu li a {
+  font-size: 13px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -32,6 +49,26 @@
   margin-top: -138px;
   margin-left: -125px;
 }
+.ooedo-joshikai-slide-content .swiper-arrow {
+  display: none;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  ページのメニュー
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-joshikai-menu ul {
+  padding: 12px;
+}
+.ooedo-joshikai-menu li {
+  border-bottom: 1px solid gray;
+}
+.ooedo-joshikai-menu li:last-child {
+  border-bottom: none;
+}
+.ooedo-joshikai-menu li a {
+  display: block;
+  font-size: 13px;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -46,6 +83,8 @@
 }
 .ooedo-joshikai-container-el .description {
   width: 100%;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -67,16 +106,93 @@
   width: 100%;
 }
 
+/* 女子会の特徴 */
+.joshikai-feature-list li {
+  width: 100%;
+  margin-right: 0;
+  letter-spacing: -.4em;
+  margin-bottom: 16px;
+}
+.joshikai-feature-list li:last-child {
+  margin-bottom: 0px; 
+}
+.joshikai-feature-list li:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+.joshikai-feature-list li .img-box {
+  float: left;
+  box-sizing: border-box;
+  height: 80px;
+  width: 25%;
+}
+.joshikai-feature-list li .joshikai-feature-description {
+  width: 75%;
+  box-sizing: border-box;
+  float: right;
+  margin-top: 0px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px 8px;
+}
+
+
 /* スケジュール */
 .joshikai-schedule {
   width: 100%;
+}
+.ooedo-joshikai-frame .frame-inner {
+  padding: 24px;
+}
+.joshikai-schedule-el h3 {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.joshikai-schedule-el-block {
+  padding: 24px 0px 40px;
+}
+.joshikai-schedule-el-block .intro .img-box {
+  float: none;
+}
+.joshikai-schedule-el-block .intro .text-box {
+  padding-left: 0px;
+}
+.joshikai-schedule-title {
+  font-size: 14px!important;
+  line-height: 22px!important;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.joshikai-schedule-description {
+  font-size: 12px!important;
+  line-height: 18px!important;
+}
+.joshikai-schedule-el-main li p {
+  font-size: 12px;
+  line-height: 18px;
+  padding-left: 20px;
+}
+.joshikai-schedule-el-main li .schedule-time {
+  width: 20%;
+  padding: 0px 0px;
+}
+.joshikai-schedule-el-main li .schedule-detail {
+  width: 80%;
+}
+p.joshikai-schedule-info-title {
+  font-size: 13px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   大江戸温泉アセットマネジメントさんってどんな会社？
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .about-ooedo .ooedo-joshikai-container-el-inner {
-  width: 100%;
+  width: 88%;
+  padding: 50px 0px;
 }
 .about-ooedo-title {
   width: 100%;
@@ -84,22 +200,110 @@
 .about-ooedo-detail ul {
   height: auto;
 }
-
+.about-ooedo-detail li {
+  width: 100%;
+  display: inline-block;
+  letter-spacing: normal;
+  vertical-align: top;
+  height: 100%;
+}
+.about-ooedo-detail .img-box {
+  height: 120px;
+}
+.about-ooedo-detail .text-box {
+  padding: 10px 4px 0px;
+}
+.about-ooedo-detail-link {
+  margin: 0 auto;
+  margin-top: 12px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申込みページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .ooedo-application .ooedo-joshikai-container-el-inner {
-  width: 100%;
-  padding: 120px 0px 80px;
+  width: 88%;
+  padding: 50px 0px 50px;
 }
 .ooedo-joshikai-fee {
   width: 100%;
+}
+.ooedo-joshikai-title-list li {
+  font-size: 12px;
+  line-height: 20px;
+  text-align: left;
+}
+.ooedo-joshikai-title-list li span {
+  padding: 2px 4px;
+}
+.ooedo-joshikai-title-list {
+  width: 100%;
+  padding: 12px 0px;
+}
+.ooedo-joshikai-fee-list {
+  margin: 24px 0px 12px;
+}
+.ooedo-joshikai-fee-list li:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+.ooedo-joshikai-fee-list li .text-box {
+  /*float: right;*/
+  width: 95px;
+  height: 37px;
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  margin-top: -18.5px;
+}
+.ooedo-joshikai-fee-list li .img-box {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.ooedo-joshikai-fee-list li {
+  width: 100%;
+  margin-right: 0%;
+  padding: 0px 0px 0px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.ooedo-application-link {
+  width: 100%;
+  font-size: 14px!important;
+  padding: 12px 0px;
+}
+.ooedo-application-text1 {
+  font-size: 12px!important;
+  line-height: 12px!important;
+}
+.ooedo-joshikai-fee-detail {
+  margin: 6px 0px 0px;
+  font-size: 13px!important;
+  line-height: 13px!important;
 }
 
 /* 注意事項 */
 .ooedo-joshikai-notes {
   width: 100%;
+  margin-top: 0px;
+}
+.joshikai-notes-list {
+  padding: 24px 12px;
+}
+.joshikai-notes-list li {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 12px;
+  padding-left: 14px;
+  position: relative;
+}
+.joshikai-notes-list li:before {
+  top: 0px;
 }
 
 
@@ -111,6 +315,32 @@
 }
 .ooedo-joshikai-container footer .footer-inner {
   width: 100%;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list {
+  margin-bottom: 24px;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list a {
+  display: block;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list a:first-child {
+  margin-bottom: 4px;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list .footer-kinyu-logo {
+  width: 120px;
+}
+.ooedo-joshikai-container footer .footer-inner .logo-list .footer-ooedo-logo {
+  width: 200px;
+}
+.ooedo-joshikai-container footer .footer-inner li {
+  padding: 0px 6px;
+  margin-bottom: 4px;
+}
+.ooedo-joshikai-container footer .footer-inner li a {
+  font-size: 12px;
+}
+.ooedo-joshikai-container footer .footer-inner .copyright {
+  font-size: 10px;
+  line-height: 14px;
 }
 
 
