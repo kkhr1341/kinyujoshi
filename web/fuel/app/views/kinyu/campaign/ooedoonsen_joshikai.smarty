@@ -19,8 +19,11 @@
         </div>
         <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) top center / cover no-repeat;">
           <!-- <img class="ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo2.png"> -->
+          <img class="ooedo-joshikai-copy1" src="/images/content/ooedo_joshikai/top-slide02.png">
         </div>
-        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg2.jpg) top center / cover no-repeat;"></div>
+        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg2.jpg) top center / cover no-repeat;">
+          <img class="ooedo-joshikai-copy2" src="/images/content/ooedo_joshikai/top-slide03.png">
+        </div>
       </div>
       <div class="swiper-arrow swiper-button-prev03">
         <img src="/images/content/ooedo_joshikai/arrows_prev.png">
