@@ -212,7 +212,12 @@
   font-size: 13px;
   line-height: 20px;
   padding: 4px 8px 4px 12px;
+  height: 70px;
+  display: table;
+}
+.joshikai-feature-list li .joshikai-feature-description p {
   height: 100%;
+  display: table-cell;
   vertical-align: middle;
 }
 

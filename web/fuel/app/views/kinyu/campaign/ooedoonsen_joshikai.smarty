@@ -111,19 +111,19 @@
           <ul>  
             <li>
               <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
-              <p class="joshikai-feature-description ff-normal">バックヤードツアーで温泉施設を見学</p>
+              <div class="joshikai-feature-description ff-normal"><p>バックヤードツアーで温泉施設を見学</p></div>
             </li>
             <li>
               <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
-              <p class="joshikai-feature-description ff-normal">20〜30代ワカラナイ女子のための内容</p>
+              <div class="joshikai-feature-description ff-normal"><p>20〜30代ワカラナイ女子のための内容</p></div>
             </li>
             <li>
               <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
-              <p class="joshikai-feature-description ff-normal">難しく感じる"単語"からお勉強</p>
+              <div class="joshikai-feature-description ff-normal"><p>難しく感じる"単語"からお勉強</p></div>
             </li>
             <li>
               <div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) left center / cover no-repeat;"></div>
-              <p class="joshikai-feature-description ff-normal">アンケートやレポート提出でご優待</p>
+              <div class="joshikai-feature-description ff-normal"><p>アンケートやレポート提出でご優待</p></div>
             </li>
           </ul>
         </div>
@@ -299,7 +299,8 @@
             </li>
           </ul>
         </div>
-        <img class="about-ooedo-02" src="/images/content/ooedo_joshikai/about-ooedo-02.png">
+        <img class="pc about-ooedo-02" src="/images/content/ooedo_joshikai/about-ooedo-02.png">
+        <img class="sp about-ooedo-02" src="/images/content/ooedo_joshikai/about-ooedo-02-sp.png">
       </div>
       <!-- <img class="wave-bottom" src="/images/content/ooedo_joshikai/wave-bottom.png"> -->
     </div>
