@@ -232,7 +232,7 @@
   padding: 8px 16px;
 }
 .joshikai-schedule-el-block {
-  padding: 24px 0px 40px;
+  padding: 24px 0px 28px;
 }
 .joshikai-schedule-el-block .intro .img-box {
   float: none;
@@ -285,6 +285,9 @@ p.joshikai-schedule-info-title {
   width: 80px;
   left: -30px;
 }
+.joshikai-schedule-div {
+  margin-bottom: 28px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   大江戸温泉アセットマネジメントさんってどんな会社？
@@ -310,7 +313,7 @@ p.joshikai-schedule-info-title {
   height: 150px;
 }
 .about-ooedo-detail .text-box-description {
-  font-size: 12px;
+  font-size: 11px;
 }
 .about-ooedo-detail .text-box {
   padding: 10px 4px 0px;
@@ -382,17 +385,20 @@ p.joshikai-schedule-info-title {
 }
 .ooedo-application-link {
   width: 100%;
-  font-size: 14px!important;
+  font-size: 13px!important;
   padding: 12px 0px;
 }
 .ooedo-application-text1 {
-  font-size: 12px!important;
-  line-height: 12px!important;
+  font-size: 11px!important;
+  line-height: 11px!important;
 }
 .ooedo-joshikai-fee-detail {
   margin: 6px 0px 0px;
   font-size: 13px!important;
   line-height: 13px!important;
+}
+.ooedo-joshikai-fee-title {
+  font-size: 13px!important;
 }
 
 /* 注意事項 */
@@ -404,7 +410,7 @@ p.joshikai-schedule-info-title {
   padding: 24px 12px;
 }
 .joshikai-notes-list li {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 18px;
   margin-bottom: 12px;
   padding-left: 14px;
