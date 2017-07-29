@@ -344,10 +344,14 @@
 }
 .joshikai-feature-list li .joshikai-feature-description {
   margin-top: 8px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 22px;
-  padding: 0px 4px;
+  padding: 0px 2px;
   font-weight: bold;
+}
+.joshikai-feature-list li .joshikai-feature-description p {
+  font-size: 13px;
+  text-align: center;
 }
 .joshikai-future-title {
   display: block;
