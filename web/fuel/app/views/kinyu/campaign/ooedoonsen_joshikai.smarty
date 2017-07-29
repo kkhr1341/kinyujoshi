@@ -14,16 +14,19 @@
   <div class="ooedo-slide">
     <div class="swiper-container03 ooedo-joshikai-slide-content">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/back/top2.jpg) left center / cover no-repeat;">
+
+        <div class="swiper-slide slide01">
           <img class="ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo_pc.png">
         </div>
-        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) top center / cover no-repeat;">
-          <!-- <img class="ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo2.png"> -->
+        
+        <div class="swiper-slide slide02">
           <img class="ooedo-joshikai-copy1" src="/images/content/ooedo_joshikai/top-slide02.png">
         </div>
-        <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/ooedo-bg2.jpg) top center / cover no-repeat;">
+        
+        <div class="swiper-slide slide03">
           <img class="ooedo-joshikai-copy2" src="/images/content/ooedo_joshikai/top-slide03.png">
         </div>
+
       </div>
       <div class="swiper-arrow swiper-button-prev03">
         <img src="/images/content/ooedo_joshikai/arrows_prev.png">
@@ -32,16 +35,17 @@
         <img src="/images/content/ooedo_joshikai/arrow_next.png">        
       </div>
     </div>
+    <img class="sp slide-ooedo-img" src="/images/content/ooedo_joshikai/ooedo_logo2.png">
   </div>
 
   <div class="ooedo-joshikai-menu">
     <ul>
-      <li><a href="#scroll-point01">REITってなあに？</a></li>
-      <li><a href="#scroll-point02">女子会の内容</a></li>
+      <li><a href="#scroll-point02">女子会の内容へ</a></li>
       <li><a href="#scroll-point03">大江戸温泉アセットマネジメントさんって？</a></li>
-      <li><a href="#scroll-point04">お申込み</a></li>
+      <li><a href="#scroll-point04">女子会のお申込み</a></li>
     </ul>
-    <img style="width: 100%;" class="bottom-img" src="/images/content/ooedo_joshikai/ooedo-joshikai-menu-bottom1.png">
+    <img style="width: 100%;" class="pc bottom-img" src="/images/content/ooedo_joshikai/ooedo-joshikai-menu-bottom1.png">
+    <img style="width: 100%;" class="sp bottom-img" src="/images/content/ooedo_joshikai/ooedo-joshikai-menu-bottom-sp.png">
   </div>
 
 
@@ -53,11 +57,16 @@
           <img class="pc" src="/images/content/ooedo_joshikai/ooedo-joshikai-titke02.png" alt="">
           <img class="sp" src="/images/content/ooedo_joshikai/sp/ooedo-joshikai-title02_sp.png" alt="">
         </h2>
-        <p class="description ff-normal">
+        <p class="pc description ff-normal">
         今回の特別女子会は、ついに実現！みんなで日帰り温泉で女子会♪<br>
         テーマは、不動産の投資信託（REIT：りーと）についてです。<br>
         よくワカラナイままにしていた、投資信託についてもふれます。まずは、単語からお勉強。<br>
         2日間セットでの女子会になります、ぜひ2日間ご参加ください。</p>
+        <p class="sp description ff-normal">
+        今回の特別女子会は、ついに実現！<br>みんなで日帰り温泉で女子会♪<span style="display: block;height: 8px;"></span>
+        テーマは、不動産の投資信託(REIT：りーと)<br>についてです。<span style="display: block;height: 8px;"></span>
+        よくワカラナイままにしていた、<br>投資信託についてもふれます。<span style="display: block;height: 8px;"></span>
+        まずは、単語からお勉強。<br>2日間セットでの女子会になります、<br>ぜひ2日間ご参加ください。</p>
       </div>
     </div>
 
@@ -68,9 +77,20 @@
           <img class="pc" src="/images/content/ooedo_joshikai/ooedo-joshikai-titke03.png" alt="">
           <img class="sp" src="/images/content/ooedo_joshikai/sp/ooedo-joshikai-title03_sp.png" alt="">
         </h2>
-        <p class="description ff-normal">REIT(りーと)とは、「Real Estate Investment Trust」の略で<br>アメリカで生まれた仕組みで、投資信託の仲間です。<br>
-投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が<br>含まれているのパッケージのことです♪<span style="display: block;height: 16px;"></span>
-<span style="font-weight:bold">〜きんゆう女子。Key Word〜</span><br>REIT(りーと)<br>#きんゆう類 #とうしん科 #おうち属</p>
+        <p class="pc description ff-normal">
+        REIT(りーと)とは、「Real Estate Investment Trust」の略で<br>
+        アメリカで生まれた投資信託の仲間です。<br>
+        投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が<br>
+        含まれているのパッケージのことです♪<span style="display: block;height: 16px;"></span>
+        <span style="font-weight:bold">〜きんゆう女子。Key Word〜</span><br>
+        REIT(りーと)<br>
+        #きんゆう類 #とうしん科 #おうち属</p>
+        <p class="sp description ff-normal">
+        REIT(りーと)とは、「Real Estate Investment Trust」の略で、アメリカで生まれた投資信託の仲間です。<span style="display: block;height: 8px;"></span>
+        投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が含まれているのパッケージのことです♪<span style="display: block;height: 12px;"></span>
+        <span style="font-weight:bold">〜きんゆう女子。Key Word〜</span><br>
+        REIT(りーと)<br>
+        #きんゆう類 #とうしん科 #おうち属</p>
       </div>
       <img class="wave-bottom" src="/images/content/ooedo_joshikai/wave-bottom.png">
     </div>
@@ -145,12 +165,13 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="joshikai-schedule-info ff-normal">
+                  <div class="joshikai-schedule-info clear ff-normal">
                     <ul>
                       <li>
                         <p class="joshikai-schedule-info-title"><span style="color:#8adfef;">◆</span>開催場所</p>
-                        <p>CAFE SALVADOR BUSINESS SALON(カフェ・サルバドル)<br>
+                        <p>CAFE SALVADOR BUSINESS SALON<br>(カフェ サルバドル ビジネス サロン)<br>
                         URL：<a href="http://cafe-salvador.com/" target="_blank">http://cafe-salvador.com/</a><br>
+                        〜カフェスタッフにきんゆう女子。とお伝えください〜<br>
                         </p>
                       </li>
                       <li>
@@ -163,11 +184,17 @@
                         </p>
                       </li>
                     </ul>
+                    <div class="joshikai-schedule-deco">
+                      <div class="img-box" style="background: url(/images/content/ooedo_joshikai/back/joshikai-schedule-deco.jpg) left center / cover no-repeat;">
+                        <img class="deco1" src="/images/content/ooedo_joshikai/illust/deco1.png">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <img class="joshikai-schedule-div" src="/images/content/ooedo_joshikai/joshikai-schedule-div.png">
+              <img class="pc joshikai-schedule-div" src="/images/content/ooedo_joshikai/joshikai-schedule-div.png">
+              <img class="sp joshikai-schedule-div" src="/images/content/ooedo_joshikai/joshikai-schedule-div-sp.png">
 
               <!-- 2日目 -->
               <div class="joshikai-schedule-el joshikai-schedule-el-se">
@@ -204,7 +231,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="joshikai-schedule-info ff-normal">
+                  <div class="joshikai-schedule-info clear ff-normal">
                     <ul>
                       <li>
                         <p class="joshikai-schedule-info-title"><span style="color:#FBB79E;">◆</span>開催場所</p>
@@ -225,10 +252,18 @@
                         </p>
                       </li>
                     </ul>
+                    <div class="joshikai-schedule-deco">
+                      <div class="img-box" style="background: url(/images/content/ooedo_joshikai/back/joshikai-schedule-deco.jpg) left center / cover no-repeat;">
+                        <img class="deco2" src="/images/content/ooedo_joshikai/illust/deco2.png">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <img class="joshikai-schedule-div" src="/images/content/ooedo_joshikai/joshikai-schedule-div.png">
+
+              <img class="pc joshikai-schedule-div" src="/images/content/ooedo_joshikai/joshikai-schedule-div.png">
+              <img class="sp joshikai-schedule-div" src="/images/content/ooedo_joshikai/joshikai-schedule-div-sp.png">
+
               <div class="ff-normal">
                 <p><span style="font-weight:bold;">主催</span>：きんゆう女子。</p>
                 <p><span style="font-weight:bold;">協賛</span>：大江戸温泉アセットマネジメント株式会社</p>
@@ -256,13 +291,13 @@
             </li>
             <li>
               <div class="text-box">
-                <p class="text-box-description ff-normal">大江戸温泉アセットマネジメントさんは、全国で温泉旅館、ホテル、温浴施設、テーマパークの活性化事業を展開する大江戸温泉物語グループの一員で、温泉・温浴関連施設を投資の対象とする「大江戸温泉リート投資法人」の資産運用会社です♪<span style="display: block;height: 8px;"></span>
-                大江戸温泉物語グループは、「いつでも、気軽に、何度でも。たくさんの笑顔が溢れる、温泉の賑わいを。」をキャッチフレーズにしており、お客様にお手頃でお得感のある価格で高品質のサービスを提供することを可能にする「大江戸モデル」を拡大運営することにより、温泉業界を活性化させることを基本理念としています。</p>
+                <p class="text-box-description ff-normal">大江戸温泉アセットマネジメントさんは、全国で温泉旅館、ホテル、温浴施設、テーマパークの活性化事業を展開する大江戸温泉物語グループの一員で、温泉・温浴関連施設を投資の対象とする「大江戸温泉リート投資法人」の資産運用会社です♪</p>
                 <a class="about-ooedo-detail-link ff-normal" href="http://corporate.ooedoonsen.jp/am/" target="_blank">WEBサイトはこちら</a>
               </div>
             </li>
           </ul>
         </div>
+        <img class="about-ooedo-02" src="/images/content/ooedo_joshikai/about-ooedo-02.png">
       </div>
       <!-- <img class="wave-bottom" src="/images/content/ooedo_joshikai/wave-bottom.png"> -->
     </div>
@@ -321,7 +356,7 @@
               </ul>
             </div>
             <a class="ooedo-application-link ff-normal" href="http://peatix.com/event/287595/view" target="_blank">お申込みはこちら♪</a>
-            <p class="ooedo-application-text1 ff-normal"><span style="color:red;">※</span>Peatixに移動します。</p>
+            <p class="ooedo-application-text1 ff-normal"><span style="color:red;">※</span>Peatix(外部サイト)に移動します。</p>
           </div>
           <div class="ooedo-joshikai-frame-tri-lefttop"></div>
           <div class="ooedo-joshikai-frame-tri-righttop"></div>
@@ -341,10 +376,7 @@
             </ul>
           </div>
         </div>
-
-
       </div>
-    
     </div>
 
 
@@ -366,4 +398,8 @@
       <p class="copyright">COPYRIGHT © 2017 TOE THE LINE, Inc. ALL RIGHTS RESERVED</p>
     </div>
   </footer>
+
+  <a class="application-box-fix ff-normal">
+  特別女子会のお申込みへ♪<br><span>Peatix(外部サイト)に移動します。</span>
+  </a>
 </div>

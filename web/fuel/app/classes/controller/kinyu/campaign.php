@@ -106,7 +106,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     }
 
     $this->template->title = '大江戸温泉女子会';
-    $this->template->ogimg = 'https://kinyu-joshi.jp/images/map/map-og.jpg';
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/ooedo_joshikai/oom-reit-og.jpg';
     $this->template->description = '大江戸温泉';
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);

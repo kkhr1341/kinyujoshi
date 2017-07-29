@@ -56,6 +56,15 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スライドショー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.slide01 {
+  background: url(/images/content/ooedo_joshikai/back/top2.jpg) left center / cover no-repeat;
+}
+.slide02 {
+  background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) top center / cover no-repeat;
+}
+.slide03 {
+  background: url(/images/content/ooedo_joshikai/ooedo-bg2.jpg) top center / cover no-repeat;
+}
 .ooedo-slide {
   height: 560px; 
   position: relative;
@@ -283,7 +292,7 @@
   width: 100%;
   position: absolute;
   bottom: -25px;
-  z-index: 1005;
+  z-index: 1004;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -450,11 +459,61 @@
   /*width: 80%;*/
   padding: 0px 20px;
 }
+/* 女子会スケジュール・装飾部分 */
+.joshikai-schedule-deco .img-box {
+  width: 320px;
+  height: 180px;
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  box-shadow: 8px 8px #8adfef;
+}
+.joshikai-schedule-el-se .joshikai-schedule-deco .img-box {
+  box-shadow: 8px 8px #FBB79E;
+}
+/*イラスト*/
+.joshikai-schedule-deco .deco1 {
+  position: absolute;
+  bottom: -8px;
+  left: -57px;
+  z-index: 1004;
+  width: 95px;
+}
+.joshikai-schedule-deco .deco2 {
+  position: absolute;
+  bottom: -15px;
+  z-index: 1004;
+  width: 100px;
+  left: -57px;
+  transform: rotate(12deg);
+}
+
+.joshikai-schedule-info li {
+  margin-bottom: 12px;
+}
+.joshikai-schedule-info li:last-child {
+  margin-bottom: 0px; 
+}
+.joshikai-schedule-info p,
+.joshikai-schedule-info a {
+  font-size: 13px;
+  line-height: 18px;
+}
+p.joshikai-schedule-info-main {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+p.joshikai-schedule-info-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
 
 /* 大江戸温泉アセットマネジメントさんってどんな会社？ */
 .about-ooedo .ooedo-joshikai-container-el-inner {
   width: 800px;
   padding: 80px 0px;
+  position: relative;
 }
 .about-ooedo-detail ul {
   letter-spacing: -.4em;
@@ -492,26 +551,16 @@
 }
 .joshikai-schedule-info {
   margin-top: 24px;
+  position: relative;
 }
-.joshikai-schedule-info li {
-  margin-bottom: 12px;
+.joshikai-schedule-info ul {
+  width: 50%;
+  float: left;
 }
-.joshikai-schedule-info li:last-child {
-  margin-bottom: 0px; 
-}
-.joshikai-schedule-info p,
-.joshikai-schedule-info a {
-  font-size: 13px;
-  line-height: 18px;
-}
-p.joshikai-schedule-info-main {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-p.joshikai-schedule-info-title {
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 4px;
+.about-ooedo-02 {
+  position: absolute;
+  right: -200px;
+  bottom: 50px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
