@@ -60,12 +60,12 @@
         </h2>
         <p class="pc description ff-normal">
         今回の特別女子会は、ついに実現！みんなで日帰り温泉で女子会♪<br>
-        テーマは、不動産の投資信託（REIT：りーと）についてです。<br>
+        テーマは、不動産投資信託（REIT：りーと）についてです。<br>
         よくワカラナイままにしていた、投資信託についてもふれます。まずは、単語からお勉強。<br>
         2日間セットでの女子会になります、ぜひ2日間ご参加ください。</p>
         <p class="sp description ff-normal">
         今回の特別女子会は、ついに実現！<br>みんなで日帰り温泉で女子会♪<span style="display: block;height: 8px;"></span>
-        テーマは、不動産の投資信託(REIT：りーと)<br>についてです。<span style="display: block;height: 8px;"></span>
+        テーマは、不動産投資信託(REIT：りーと)<br>についてです。<span style="display: block;height: 8px;"></span>
         よくワカラナイままにしていた、<br>投資信託についてもふれます。<span style="display: block;height: 8px;"></span>
         まずは、単語からお勉強。<br>2日間セットでの女子会になります、<br>ぜひ2日間ご参加ください。</p>
       </div>
@@ -143,7 +143,7 @@
                     <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/first_day_image.jpg) left center / cover no-repeat;"></div>
                     <div class="text-box ff-normal">
                       <p class="joshikai-schedule-title"><span>1回目は、いつもの女子会の場所で、温泉と資産作りについて勉強します。</span></p>
-                      <p class="joshikai-schedule-description">キーワードは、不動産の投資信託(REIT：りーと)です。聞いたことあるかも？なんだそれ？と言う方、これを機会に少し勉強しましょう。<span style="display: block;height: 8px;"></span>スペシャルゲストとして、大江戸温泉リート投資法人の資産運用会社である大江戸温泉アセットマネジメントの今西社長にもお会いできるかも！？</p>
+                      <p class="joshikai-schedule-description">キーワードは、不動産投資信託(REIT：りーと)です。聞いたことあるかも？なんだそれ？と言う方、これを機会に少し勉強しましょう。<span style="display: block;height: 8px;"></span>スペシャルゲストとして、大江戸温泉リート投資法人の資産運用会社である大江戸温泉アセットマネジメントの今西社長にもお会いできるかも！？</p>
                     </div>
                   </div>
                   <div class="joshikai-schedule-el-main ff-normal">
@@ -248,8 +248,8 @@
                           財務部長　本多智裕さん<br>
                           財務部 マネージャー　廣田典子さん
                           <span style="display: block;height: 8px;"></span>
-                          東京お台場大江戸温泉物語<br>
-                          安田支配人
+                          <span class="joshikai-schedule-info-last">東京お台場大江戸温泉物語<br>
+                          未定</span>
                         </p>
                       </li>
                     </ul>
@@ -292,9 +292,13 @@
             </li>
             <li>
               <div class="text-box">
-                <p class="text-box-description ff-normal">大江戸温泉アセットマネジメントさんは、全国で温泉旅館、ホテル、温浴施設、テーマパークの活性化事業を展開する大江戸温泉物語グループの一員で、温泉・温浴関連施設を投資の対象とする「大江戸温泉リート投資法人」の資産運用会社です♪<span style="display: block;height: 12px;"></span>
-                大江戸温泉物語グループは、「いつでも、気軽に、何度でも。たくさんの笑顔が溢れる、温泉の賑わいを。」をキャッチフレーズにしており、お客様にお手頃でお得感のある価格で高品質のサービスを提供することを可能にする「大江戸モデル」を拡大運営することにより、温泉業界を活性化させることを基本理念としています。</p>
-                <a class="about-ooedo-detail-link ff-normal" href="http://corporate.ooedoonsen.jp/am/" target="_blank">WEBサイトはこちら</a>
+                <p class="text-box-description ff-normal">大江戸温泉アセットマネジメントさんは、全国で温泉施設の経営、および活性化事業を行う大江戸温泉物語グループの一員で、「大江戸温泉リート投資法人」の資産運用会社です♪
+                <span style="display: block;height: 12px;"></span>
+                大江戸温泉リートは、温泉・温浴関連施設を主な投資対象とする日本初のユニークな特化型リートとして、2016年8月に東京証券取引所に上場しました。
+                <span style="display: block;height: 12px;"></span>
+                お客様にお手頃でお得感のある価格で高品質なサービスを提供することを可能にする「大江戸モデル」が導入された温泉・温浴関連施設へ重点投資を行い、地域の活性化及び温泉関連産業の大衆化に貢献することを基本理念としています。</p>
+                <a class="about-ooedo-detail-link ff-normal" href="http://oom-reit.com/" target="_blank"><span style="color:#FBB79E">◆</span>投資法人WEBサイト</a>
+                <a class="about-ooedo-detail-link02  ff-normal" href="http://corporate.ooedoonsen.jp/am/" target="_blank"><span style="color:#5ecaba">◆</span>運用会社WEBサイト</a>
               </div>
             </li>
           </ul>

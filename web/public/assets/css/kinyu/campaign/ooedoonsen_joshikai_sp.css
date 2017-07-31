@@ -325,14 +325,35 @@ p.joshikai-schedule-info-title {
   padding: 10px 4px 0px;
 }
 .about-ooedo-detail-link {
-  margin-top: 12px;
   width: 180px;
+  font-size: 11px!important;
+  background: #FBB79E;
+  text-align: center;
+  padding: 8px 0px;
+  color: #fff;
+  margin-top: 16px;
+}
+.about-ooedo-detail-link02 {
+  width: 180px;
+  font-size: 11px!important;
+  background: #5ecaba;
+  text-align: center;
+  padding: 8px 0px;
+  color: #fff;
+  margin-top: 8px;
+}
+.about-ooedo-detail-link span,
+.about-ooedo-detail-link02 span {
+  display: none;
+}
+.joshikai-schedule-info-last {
+  display: none;
 }
 .about-ooedo-02 {
   position: absolute;
   width: 130px;
   right: -13px;
-  bottom: 33px;
+  bottom: 45px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

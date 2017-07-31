@@ -533,20 +533,25 @@ p.joshikai-schedule-info-title {
   height: 280px;
 }
 .about-ooedo-detail .text-box {
-  padding: 10px 0px 0px 24px;
+  padding: 4px 0px 0px 24px;
 }
 .about-ooedo-detail .text-box-description {
   font-size: 13px;
 }
 .about-ooedo-detail-link {
-  width: 300px;
   display: block;
-  background: #FF6C6C;
-  text-align: center;
-  padding: 10px 0px;
+  font-size: 13px!important;
+  line-height: 13px!important;
   margin-top: 12px;
-  font-size: 15px;
-  color: #fff;
+}
+.joshikai-schedule-info-last {
+  visibility: hidden;
+}
+.about-ooedo-detail-link02 {
+  display: block;
+  font-size: 13px!important;
+  line-height: 13px!important;
+  margin-top: 5px;
 }
 .about-ooedo-title {
   display: block;
@@ -791,6 +796,7 @@ p.joshikai-schedule-info-title {
 
 .ooedo-joshikai-menu li a,
 .about-ooedo-detail-link,
+.about-ooedo-detail-link02,
 .ooedo-application-link {
   transition: .5s;
 }
@@ -799,7 +805,8 @@ p.joshikai-schedule-info-title {
   opacity: .5;
 }
 .about-ooedo-detail-link:hover,
-.ooedo-application-link:hover {
+.ooedo-application-link:hover,
+.about-ooedo-detail-link02:hover {
   opacity: .5; 
 }
 
