@@ -139,6 +139,12 @@
   color: #626262;
   text-align: center;
 }
+.about-kinyujoshi-intro-description-sub { 
+  font-size: 13px;
+  line-height: 20px;
+  color: #626262;
+  text-align: center;
+}
 .about-kinyujoshi-service {
   width: 800px;
   margin-top: 70px;
@@ -525,6 +531,12 @@
   padding: 15px 0px;
   width: 80%;
   height: auto;
+}
+.about-kinyujoshi-intro-description-sub { 
+  width: 88%;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: left;
 }
 }
 

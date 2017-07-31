@@ -786,6 +786,26 @@ p.joshikai-schedule-info-title {
 
 
 
+/* ホバーイベント */
+@media screen and (min-width: 640px) {
+
+.ooedo-joshikai-menu li a,
+.about-ooedo-detail-link,
+.ooedo-application-link {
+  transition: .5s;
+}
+.ooedo-joshikai-menu li:hover a {
+  color: #FF5161;
+  opacity: .5;
+}
+.about-ooedo-detail-link:hover,
+.ooedo-application-link:hover {
+  opacity: .5; 
+}
+
+}
+
+
 
 
 
