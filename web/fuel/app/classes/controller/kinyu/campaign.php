@@ -96,9 +96,9 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
   public function action_ooedoonsen_joshikai() {
 
-    $this->template->title = '大江戸温泉女子会';
+    $this->template->title = '大江戸温泉できんゆう女子会。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/ooedo_joshikai/oom-reit-og.jpg';
-    $this->template->description = '今回の特別女子会は、ついに実現！みんなで日帰り温泉で女子会♪テーマは、不動産の投資信託（REIT：りーと）についてです。よくワカラナイままにしていた、投資信託についてもふれます。まずは、単語からお勉強しましょう！。';
+    $this->template->description = '今回の特別女子会は、ついに実現！みんなで日帰り温泉で女子会♪テーマは、不動産投資信託（REIT：りーと）についてです。よくワカラナイままにしていた、投資信託についてもふれます。まずは、単語からお勉強しましょう！。';
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
