@@ -116,8 +116,11 @@
   width: 150px;
   position: absolute;
   bottom: 8px;
-  right: 8px;
+  left: 8px;
   z-index: 1004;
+}
+.top-slide-onsen {
+  width:100px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

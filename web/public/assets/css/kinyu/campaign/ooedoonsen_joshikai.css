@@ -89,7 +89,7 @@
 .ooedo-slide .swiper-slide {
   position: relative;
   pointer-events: none;
-  opacity: .5;
+  opacity: .3;
   -webkit-transition: opacity .5s;
   -moz-transition: opacity .5s;
   -ms-transition: opacity .5s;
@@ -159,6 +159,11 @@
   position: absolute;
   top: 10%;
   left: 10%;
+}
+.top-slide-onsen {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

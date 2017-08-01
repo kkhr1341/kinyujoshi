@@ -18,6 +18,8 @@
         <div class="swiper-slide slide01">
           <img class="pc ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo_pc.png">
           <img class="sp ooedo-joshikai-mainlogo" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo2.png">
+          <img class="pc top-slide-onsen" src="/images/content/ooedo_joshikai/top-slide-onsen.png">
+          <img class="sp top-slide-onsen" src="/images/content/ooedo_joshikai/top-slide-onsen_sp.png">
         </div>
         
         <div class="swiper-slide slide02">
