@@ -50,7 +50,7 @@
             </div>
             <div class="form-mail-p">
               <p>◼︎生年月日</p>
-              <?php echo $age; ?><br>
+              <?php echo $agenew; ?><br>
             </div>
             <div class="form-mail-p">
               <p>◼︎きんゆうワカラナイ度</p>
