@@ -15,9 +15,9 @@
             <label class="form-title">ご年齢 <span class="label label-danger">必須</span></label>
             <!-- <input type="text" id="age" class="form-control" placeholder="" value="{$registel.age}"> -->
             {if $registel.age > 1000}
-              <td>{floor(($smarty.now|date_format:"Ymd"-$registel.age)/10000)}歳</td>
+              <p>{floor(($smarty.now|date_format:"Ymd"-$registel.age)/10000)}歳</p>
             {else}
-              <td>{$registel.age}</td>
+              <input type="text" id="age" class="form-control" placeholder="" value="{$registel.age}">
             {/if}
           </div>
           <div class="form-group form-radio-block">
