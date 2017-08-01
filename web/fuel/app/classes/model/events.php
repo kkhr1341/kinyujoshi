@@ -5,11 +5,11 @@ require_once(dirname(__FILE__)."/base.php");
 
 class Events extends Base {
 	
-	public static function lists($mode = null, $limit = null, $open = null, $section_code = null) {
+	public static function lists($mode = null, $limit = null, $open = null) {
 		
 		$datas = \DB::select(\DB::expr('*, events.code'))->from('events')
 		->join('profiles', 'left')
-        ->on('events.username', '=', 'profiles.username')
+    ->on('events.username', '=', 'profiles.username')
 		->where('events.disable', '=', 0);
 
 		if ($mode === null) {
@@ -24,13 +24,54 @@ class Events extends Base {
 			$datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
 		}
 		
-		if ($section_code === null) {
+		// if ($section_code === null) {
+		// }
+		// else {
+		// 	$datas = $datas->where('section_code', '=', $section_code);
+		// }
+		
+		//$datas = $datas->order_by('events.id', 'desc');
+		$datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+		$datas = $datas->order_by('event_date', 'asc');
+		
+		if ($limit === null) {
 		}
 		else {
-			$datas = $datas->where('section_code', '=', $section_code);
+			$datas = $datas->limit($limit);
+		}
+		$datas = $datas->execute()
+				->as_array();
+		return $datas;
+	}
+
+
+	public static function lists02($mode = null, $limit = null, $open = null, $section_code = null) {
+		
+		$datas = \DB::select(\DB::expr('*, events.code'))->from('events')
+		->join('profiles', 'left')
+    ->on('events.username', '=', 'profiles.username')
+		->where('events.disable', '=', 0);
+
+		if ($mode === null) {
+		}
+		else {
+			$datas = $datas->where('status', '=', $mode);
 		}
 		
-		$datas = $datas->order_by('events.id', 'desc');
+		if ($open === null) {
+		}
+		else {
+			$datas = $datas->where('event_date', '<', \DB::expr('NOW()'));
+		}
+		
+		// if ($section_code === null) {
+		// }
+		// else {
+		// 	$datas = $datas->where('section_code', '=', $section_code);
+		// }
+		
+		$datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+		$datas = $datas->order_by('event_date', 'asc');
 		
 		if ($limit === null) {
 		}

@@ -15,7 +15,7 @@ class Controller_My_Events extends Controller_Mybase
 		}
 
 		$this->data['sections'] = Sections::lists();
-		$this->data['all_events'] = Events::lists();
+		$this->data['all_events'] = Events::lists02();
 		$this->data['closed_events'] = Events::lists(0);
 		$this->data['open_events'] = Events::lists(1);
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';

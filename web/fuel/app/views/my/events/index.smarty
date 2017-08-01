@@ -13,7 +13,7 @@
 <ul class="nav nav-tabs">
 	<li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
 	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
-	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
+	<li><a href="#tab3" data-toggle="tab">過去の女子会</a></li>
 </ul>
 <div class="tab-content">
 
@@ -65,7 +65,7 @@
 		{/if}
 	</div>
 
-	<!-- 全て -->
+	<!-- 過去 -->
 	<div class="tab-pane" id="tab3">
 		{if sizeof($all_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">イベントはありません</div>
