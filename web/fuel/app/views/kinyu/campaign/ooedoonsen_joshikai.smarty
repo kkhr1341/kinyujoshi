@@ -199,6 +199,8 @@
 
               <!-- 2日目 -->
               <div class="joshikai-schedule-el joshikai-schedule-el-se">
+                <img class="pc baloon_lunch" src="/images/content/ooedo_joshikai/baloon_lunch.png">
+                <img class="sp baloon_lunch" src="/images/content/ooedo_joshikai/baloon_lunch_sp.png">
                 <h3>2nd DAY - <span>9月23(土) 10:00〜15:00頃</span></h3>
                 <div class="joshikai-schedule-el-block joshikai-schedule-el-block-last">     
                   <div class="intro clear">

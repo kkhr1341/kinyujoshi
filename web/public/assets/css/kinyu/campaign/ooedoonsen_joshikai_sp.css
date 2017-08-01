@@ -245,6 +245,7 @@
 }
 .joshikai-schedule-el-block .intro .text-box {
   padding-left: 0px;
+  position: relative;
 }
 .joshikai-schedule-title {
   font-size: 14px!important;
@@ -260,6 +261,11 @@
   font-size: 12px;
   line-height: 18px;
   padding-left: 20px;
+}
+.baloon_lunch {
+  width: 110px;
+  right: -43px;
+  top: -33px;
 }
 .joshikai-schedule-el-main li .schedule-time {
   width: 20%;
@@ -510,6 +516,11 @@ p.joshikai-schedule-info-title {
 }
 .ooedo-joshikai-frame .frame-inner {
   padding: 20px;
+}
+.baloon_lunch {
+  width: 90px;
+  right: -47px;
+  top: -33px;
 }
 
 

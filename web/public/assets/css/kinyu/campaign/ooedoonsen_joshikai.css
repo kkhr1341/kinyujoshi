@@ -358,6 +358,11 @@
   margin: 0 auto;
   margin-bottom: 12px;
 }
+.baloon_lunch {
+  position: absolute;
+  right: 0;
+  top: -42px;
+}
 
 /* 女子会のスケジュール */
 .joshikai-schedule-block {
