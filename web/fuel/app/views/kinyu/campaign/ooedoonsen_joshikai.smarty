@@ -362,8 +362,14 @@
                 </li>
               </ul>
             </div>
+            
+            <p class="pc ooedo-application-link-sub ff-normal"><span style="color:#FF5161">※</span>お申込みにはメンバー登録が必要です。<br>
+            お申込みページのパスワードは<span style="border-bottom:2px solid #FF5161;">メルマガにて</span>配信しております。</p>
+            <p class="sp ooedo-application-link-sub ff-normal"><span style="color:#FF5161">※</span>お申込みには、メンバー登録が必要です。<br>
+            お申込みページのパスワードは、<br><span style="border-bottom:1px solid #FF5161;">メルマガにて</span>配信しております。</p>
+            
             <a class="ooedo-application-link ff-normal" href="http://peatix.com/event/287595/view" target="_blank">お申込みはこちら♪</a>
-            <p class="ooedo-application-text1 ff-normal"><span style="color:red;">※</span>Peatix(外部サイト)に移動します。</p>
+            <p class="ooedo-application-text1 ff-normal">Peatix(外部サイト)に移動します。</p>
           </div>
           <div class="ooedo-joshikai-frame-tri-lefttop"></div>
           <div class="ooedo-joshikai-frame-tri-righttop"></div>
@@ -387,7 +393,6 @@
     </div>
 
 
-
   <footer>
     <div class="joshikai-top-fix" style="background: url(/images/content/ooedo_joshikai/bg_campaign3.png) center center / contain repeat;"></div>
     <div class="footer-inner ff-normal">
@@ -406,7 +411,7 @@
     </div>
   </footer>
 
-  <a class="sp application-box-fix ff-normal">
-  特別女子会のお申込みへ♪<br><span>Peatix(外部サイト)に移動します。</span>
+  <a href="http://peatix.com/event/287595/view" target="_blank" class="sp application-box-fix ff-normal">
+  特別女子会のお申込みへ♪<br><span>メンバー限定です。(パスワードはメルマガでチェック♪)</span>
   </a>
 </div>

@@ -96,15 +96,6 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
   public function action_ooedoonsen_joshikai() {
 
-    switch (true) {
-      case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-      case $_SERVER['PHP_AUTH_USER'] !== 'kinyujoshi-ooedo':
-      case $_SERVER['PHP_AUTH_PW']   !== 'g9MZGeEC':
-      header('WWW-Authenticate: Basic realm="Enter username and password."');
-      header('Content-Type: text/plain; charset=utf-8');
-      die('このページを見るにはログインが必要です');
-    }
-
     $this->template->title = '大江戸温泉女子会';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/ooedo_joshikai/oom-reit-og.jpg';
     $this->template->description = '今回の特別女子会は、ついに実現！みんなで日帰り温泉で女子会♪テーマは、不動産の投資信託（REIT：りーと）についてです。よくワカラナイままにしていた、投資信託についてもふれます。まずは、単語からお勉強しましょう！。';

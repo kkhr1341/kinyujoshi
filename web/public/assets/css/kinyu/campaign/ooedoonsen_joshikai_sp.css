@@ -29,14 +29,14 @@
   padding: 10px 0px 8px; 
   z-index: 1005;
 }
-.application-box-fix:after {
+/*.application-box-fix:after {
   content: "〉";
   position: absolute;
   right: 0;
   font-size: 20px;
   top: 50%;
   margin-top: -8px;
-}
+}*/
 .application-box-fix span {
   font-size: 11px!important;
   font-weight: normal;
@@ -379,7 +379,7 @@ p.joshikai-schedule-info-title {
   padding: 12px 0px;
 }
 .ooedo-joshikai-fee-list {
-  margin: 24px 0px 12px;
+  margin: 24px 0px 4px;
 }
 .ooedo-joshikai-fee-list li:after {
   content: ".";
@@ -504,6 +504,12 @@ p.joshikai-schedule-info-title {
 .ooedo-joshikai-fee-list li .img-box {
   width: 70px;
   height: 70px;
+}
+.ooedo-application-link-sub {
+  font-size: 11px!important;
+}
+.ooedo-joshikai-frame .frame-inner {
+  padding: 20px;
 }
 
 
