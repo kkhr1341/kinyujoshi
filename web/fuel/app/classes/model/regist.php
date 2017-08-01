@@ -32,13 +32,9 @@ class Regist extends Base {
     $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
     $email02->subject("【きんゆう女子。】メンバー登録がありました！");
 
-    $now = date("Ymd");
-    $birthday = $age;
-    $agenew = floor(($now-$birth)/10000);
-
     $name = $params['name'];
     $name_kana = $params['name_kana'];
-    $agenew = $params['agenew'];
+    $age = $params['age'];
     $not_know = $params['not_know'];
     $interest = $params['interest'];
     $ask = $params['ask'];
@@ -55,7 +51,7 @@ class Regist extends Base {
       array(
         'name' => $name,
         'name_kana' => $name_kana,
-        'agenew' => $agenew,
+        'age' => $age,
         'not_know' => $not_know,
         'interest' => $interest,
         'ask' => $ask,
