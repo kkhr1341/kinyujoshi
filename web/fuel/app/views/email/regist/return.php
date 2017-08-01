@@ -51,11 +51,7 @@
             <div class="form-mail-p">
               <p>◼︎生年月日</p>
               <?php echo $age; ?><br>
-              <?php　
-                $now = date("Ymd");
-                $birth = $age; 
-                echo floor(($now-$birth)/10000);
-              ?>
+              <?php $now = date("Ymd"); $birth = $age; echo floor(($now-$birth)/10000); ?>
             </div>
             <div class="form-mail-p">
               <p>◼︎きんゆうワカラナイ度</p>
