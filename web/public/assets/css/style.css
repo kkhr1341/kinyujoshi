@@ -1979,6 +1979,27 @@ footer .footer-menu {
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　メンバー登録ページ微調整
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.form-group .form-title {
+  width: 100%;
+}
+.select-area .regist-selectarea {
+  display: inline-block;
+}
+.select-area .regist-selectarea .form-control {
+  width: auto;
+  display: inline-block;
+  padding: 0px 8px;
+}
+.select-area .regist-selectarea p {
+  display: inline-block;
+}
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　タブレット
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (min-width: 640px) and (max-width: 768px) {

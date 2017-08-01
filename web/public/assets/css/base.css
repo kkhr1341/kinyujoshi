@@ -200,18 +200,26 @@ input:focus {
   border-color: #7CDCCE;
 }
 .form-group {
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 .form-group .form-title {
-  font-size: 13px;
-  margin-bottom: 16px;
-  margin: 0px 0px 8px 0px;
+  font-size: 14px;
+  margin: 0px 0px 12px 0px;
 }
 .form-group .form-sub-title {
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 18px;
   letter-spacing: 0.1rem;
   color: #a0a0a0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+}
+.form-group .form-sub-title02 {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: #a0a0a0;
+  margin-top: 10px;
+  margin-bottom: 2px;
 }
 .radio_box input[type="radio"],
 .radio_box_02 input[type="radio"],
@@ -232,7 +240,7 @@ input:focus {
   /*border-right: 1px dotted #b3b3b3;*/
   background: #efefef;
   color: #555e64;
-  font-size: 13px;
+  font-size: 12px;
   text-align: center;
   line-height: 1;
   transition: .2s;
@@ -240,7 +248,7 @@ input:focus {
   margin-bottom: 10px;
 }
 .radio_box .form-long {
-  padding: 15px 30px!important;
+  padding: 12px 24px!important;
 }
 .radio_box label:first-of-type,
 .radio_box_02 label:first-of-type,

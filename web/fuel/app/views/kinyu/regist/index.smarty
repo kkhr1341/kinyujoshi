@@ -105,10 +105,88 @@
             <p class="form-sub-title">お名前のふりがなを入力してください。</p>
             <input type="text" id="name_kana" class="form-control" placeholder="">
           </div>
-          <div class="form-group">
+
+          <!-- <div class="form-group">
             <label class="form-title"><span class="color-kinyu-color">◆</span> ご年齢 <span class="label label-danger">必須</span></label>
             <input type="text" id="age" class="form-control" placeholder="">
+          </div> -->
+
+
+          <!-- 生年月日 -->
+          <div class="form-group select-area">
+            <label class="form-title"><span class="color-kinyu-color">◆</span> 生年月日 <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">生年月日をご入力ください。</p>
+
+            <div class="regist-selectarea">
+              <select id="age1" class='form-control'>
+                <option>-</option>
+                {section name=i start=1952 loop=2018}
+                  <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
+                {/section}
+              </select>
+              <p>年</p>
+            </div>
+
+            <div class="regist-selectarea">
+              <select id="age2" class='form-control'>
+                <option>-</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <p>月</p>
+            </div>
+
+            <div class="regist-selectarea">
+              <select id="age3" class='form-control'>
+                <option>-</option>
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="23">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <p>日</p>
+            </div>
           </div>
+
+
+
           <div class="form-group form-radio-block">
             <label class="form-title"><span class="color-kinyu-color">◆</span> きんゆうワカラナイ度 <span class="label label-danger">必須</span></label>
             <p class="form-sub-title">あなたのきんゆうワカラナイ度を教えてください(^ ^)!</p>
@@ -138,7 +216,10 @@
             <label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス <span class="label label-danger">必須</span></label>
             <p class="form-sub-title">連絡がとりやすいアドレスを入力してください。</p>
             <input type="text" id="email" class="form-control" placeholder="">
+            <p class="form-sub-title02">メールアドレス(確認用)</p>
+            <input type="text" id="email_conf" class="form-control" placeholder="">
           </div>
+
           <div class="form-group">
             <label class="form-title"><span class="color-kinyu-color">◆</span> 3年後の自分の年収をどのくらいにしたいですか？ <span class="label label-danger">必須</span></label>
             <input type="text" id="income" class="form-control" placeholder="">
@@ -232,11 +313,41 @@ $(function(){
   
   $('#save').click(function(){
     var url = "/api/regist/create";
+
+
+    var age01 = $("#age1").val();
+    var age02 = $("#age2").val();
+    var age03 = $("#age3").val();
+    
+    if (age01 == "-") {
+      ts.error("生年月日の「年」を入力してください");
+      return false;
+    }
+    if (age02 == "-") {
+      ts.error("生年月日の「月」を入力してください");
+      return false;
+    }
+    if (age03 == "-") {
+      ts.error("生年月日の「日」を入力してください");
+      return false;
+    }
+
+    var email01 = $("#email").val();
+    var email02 = $("#email_conf").val();
+
+    if (email02 == "") {
+      ts.error("確認用のメールアドレスをご入力してください。");
+      return false;
+    } else if (email01 != email02) {
+      ts.error("確認用のメールアドレスが違うようです...。再度ご入力をお願いいたします。");
+      return false;
+    }
+
     var params = {};
     
     params.name = $('#name').val();
     params.name_kana = $('#name_kana').val();
-    params.age = $('#age').val();
+    params.age = (age01+age02+age03);
     params.not_know = $("[name=not_know]:checked").val();
     params.interest = $('#interest').val();
     params.ask = $('#ask').val();
