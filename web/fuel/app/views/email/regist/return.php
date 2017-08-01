@@ -51,7 +51,7 @@
             <div class="form-mail-p">
               <p>◼︎生年月日</p>
               <?php echo $age; ?><br>
-              ＊正確な年齢は、きん女。管理ページからご確認ください。
+              ＊正確な年齢は、<a href="https://kinyu-joshi.jp/my" target="_blank">管理ページ</a>からご確認ください。
             </div>
             <div class="form-mail-p">
               <p>◼︎きんゆうワカラナイ度</p>
