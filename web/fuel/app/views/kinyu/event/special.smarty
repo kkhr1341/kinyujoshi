@@ -50,6 +50,14 @@
         <!-- <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>k</p> -->
         <ul class="clear">
 
+          <!-- きんゆう女子。学院 -->
+          <li>
+            <a class="clear" target="_blank" href="/school_jpx">
+              <div class="img-box" style="background:url(/images/content/school_public/og-school_public.png) top center / cover no-repeat"></div>
+              <p class="title"><span style="color:rgba(255, 241, 78, 0.6);">■</span> きんゆう女子。学院</p>
+            </a>
+          </li>
+
           <!-- 第1回 週末投資宣言♪ -->
           <li>
             <a class="clear" target="_blank" href="/conference">
@@ -64,14 +72,14 @@
               <p class="title"><span style="color:rgba(255, 241, 78, 0.6);">■</span> 私立きんゆう女子。学院</p>
             </a>
           </li>
-          <!-- 第1回 週末投資宣言♪ -->
+          <!-- お金と私をアップデート -->
           <li>
             <a class="clear" target="_blank" href="http://ac.nikkeibp.co.jp/2017x0422finw/">
               <div class="img-box" style="background:url(/images/event/past-special3.png) center center / cover no-repeat"></div>
               <p class="title"><span style="color:rgba(255, 241, 78, 0.6);">■</span> お金と私をアップデート 2017spring</p>
             </a>
           </li>
-          <!-- 第1回 週末投資宣言♪ -->
+          <!-- JPX＊マネースクール -->
           <li>
             <a class="clear" target="_blank" href="https://jpx-moneyschool.com/">
               <div class="img-box" style="background:url(/images/event/past-special4.jpg) center center / cover no-repeat"></div>
