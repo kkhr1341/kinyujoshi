@@ -139,7 +139,7 @@
 
               <!-- 1日目 -->
               <div class="joshikai-schedule-el">
-                <h3>1st DAY - <span>8月24(木) 19:00〜21:00頃</span></h3>
+                <h3>1st DAY - <span>8月24日(木) 19:00〜21:00頃</span></h3>
                 <div class="joshikai-schedule-el-block">     
                   <div class="intro clear">
                     <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/first_day_image.jpg) left center / cover no-repeat;"></div>
@@ -203,7 +203,7 @@
               <div class="joshikai-schedule-el joshikai-schedule-el-se">
                 <img class="pc baloon_lunch" src="/images/content/ooedo_joshikai/baloon_lunch.png">
                 <img class="sp baloon_lunch" src="/images/content/ooedo_joshikai/baloon_lunch_sp.png">
-                <h3>2nd DAY - <span>9月23(土) 10:00〜15:00頃</span></h3>
+                <h3>2nd DAY - <span>9月23日(土) 10:00〜15:00頃</span></h3>
                 <div class="joshikai-schedule-el-block joshikai-schedule-el-block-last">     
                   <div class="intro clear">
                     <div class="img-box" style="background: url(/images/content/ooedo_joshikai/schedule/second_day_image.jpg) center center / cover no-repeat;"></div>
