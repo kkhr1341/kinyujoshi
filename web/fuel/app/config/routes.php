@@ -30,7 +30,7 @@ return array(
 	'rss/(:any)'   => 'kinyu/rss/detail/$1',
 
 	//myplan
-	'myplan' => 'kinyu/myplan/index',
+	'myway' => 'kinyu/myway/index',
 
 	//未公開
 	'gallery' => 'kinyu/gallery/index',

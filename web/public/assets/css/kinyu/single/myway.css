@@ -1,0 +1,450 @@
+@charset "UTF-8";
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　私らしさを知る - CSS
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  イントロダクション
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.myway-introduction {
+  overflow: hidden;
+}
+/* メイン部分 */
+.main-img-box-container {
+  height: 600px;
+  position: relative;
+}
+.main-logo {
+  /*width: 580px;
+  height: 140px;*/
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  margin-top: -60px;
+  z-index: 1001;
+}
+.kinyu-logo {
+  width: 260px;
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+.main-img-box {
+  width: 108%;
+  margin: 0 auto;
+  height: 600px;
+  transform: skewX(10deg);
+  overflow: hidden;
+  position: relative;
+  right: 54px;
+}
+.main-img-box-left {
+  width: 40%;
+  height: 100%;
+  float: left;
+  /*border-right: 8px solid #fff;*/
+}
+.main-img-box-right {
+  width: 60%;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  position: relative;
+}
+.main-img-box-right ul {
+  box-sizing: border-box;
+}
+.main-img-box-right li {
+  letter-spacing: normal;
+  width: 52%;
+  height: 300px;
+  float: left;
+  position: relative;
+}
+.main-img-box-right li:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  /*background: rgba(255,255,255,.9);*/
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-img-box-right .test-bg {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.main-img-box-right li.left-img {
+  width: 48%;
+}
+
+/* 説明箇所 */
+.myway-introduction .myway-description {
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 0px 80px;
+  position: relative;
+  /*background:url(/images/myway/bg-intro.png) center center / cover no-repeat;*/
+}
+.myway-introduction .myway-description .inner {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.myway-introduction .myway-description p {
+  font-size: 16px;
+  line-height: 28px;
+  width: 800px;
+  margin: 0 auto;
+}
+.intoduction-title {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 36px;
+  font-family: 'utsukushi';
+}
+.intoduction-title span {
+  border-bottom: 2px solid gray;
+  padding-bottom: 8px;
+}
+
+/* イントロダクション-画像 */
+/*スーツケース*/
+.myway-description .illust-01 {
+  position: absolute;
+  left: 8%;
+  top: 8%;
+  width: 150px;
+  opacity: .1;
+  transform: rotate(20deg);
+}
+/*ケーキ*/
+.myway-description .illust-02 {
+  position: absolute;
+  right: 8%;
+  bottom: 8%;
+  width: 130px;
+  opacity: .1;
+  transform: rotate(-10deg);
+}
+/*スマホ*/
+.myway-description .illust-03 {
+  position: absolute;
+  left: 12%;
+  bottom: 120px;
+  width: 140px;
+  opacity: .1;
+  transform: rotate(-30deg);
+}
+/*コスメ*/
+.myway-description .illust-04 {
+  position: absolute;
+  right: 12%;
+  top: 160px;
+  width: 140px;
+  opacity: .1;
+  transform: rotate(10deg);
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  メインコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.myway-content-list {
+  margin: 0 auto;
+}
+.myway-content-list-el .inner {
+  width: 88%;
+  margin: 0 auto;
+  padding: 80px 0px;
+  border-top: 1px solid;
+}
+.myway-content-list-el .img-box {
+  width: 50%;
+  height: 400px;
+  float: left;
+  overflow: hidden;
+}
+.myway-content-list-el .img-box video {
+  height: 400px;
+  background-size: cover;
+}
+.myway-content-list-el .text-box {
+  width: 50%;
+  float: right;
+  padding-left: 42px;
+  padding-top: 12px;
+}
+.myway-content-list-el-even .img-box {
+  float: right;
+}
+.myway-content-list-el-even .text-box {
+  float: left;
+  padding-left: 0px;
+  padding-right: 42px;
+}
+.myway-content-list-el .edition img {
+  display: block;
+  margin: 0 auto;
+}
+.myway-content-list-el .text-box .text-box-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 12px 0px;
+}
+.myway-content-list-el .text-box .description {
+  font-size: 14px;
+}
+.myway-content-list-el .text-box .myway-to-link {
+  font-size: 16px;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  background: gray;
+  text-align: center;
+  padding: 14px 0px;
+  margin-top: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 背景 */
+#myway-shoes {
+  background: #EBFAFF;
+}
+#myway-shoes .myway-to-link {
+  background: #a4d4e4;
+}
+#myway-shoes .inner {
+  border-top: 2px solid #a4d4e4;
+}
+#myway-cosmetics {
+  background: #FBECE4;
+}
+#myway-cosmetics .myway-to-link {
+  background: #ecb9ae;
+}
+#myway-cosmetics .inner {
+  border-top: 2px solid #ecb9ae;
+}
+
+/* coming-soon */
+.coming-soon {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.coming-soon li {
+  font-size: 32px;
+}
+.coming-soon img {
+  margin-top: 20px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  サブコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.myway-sub-content {
+  height: 24px;
+  background: url(/images/myway/line.png);
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スマートフォン
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 768px) {
+
+
+/*-*- イントロダクション -*-*/
+.main-img-box-container {
+  height: auto;
+  overflow: hidden;
+}
+.main-img-box {
+  width: 100%;
+  height: auto;
+  right: auto;
+  transform: skewY(0);
+  transform: skewX(0);
+  position: relative;
+}
+.main-img-box-left {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border-right: none;
+}
+.main-img-box-right {
+  width: 100%;
+  height: 300px;
+}
+.main-img-box-right li {
+  height: 150px;
+}
+/*イントロダクション - ロゴ*/
+/*.main-logo,
+.kinyu-logo {
+  display: none;
+}*/
+
+.main-logo {
+  width: auto;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  right: 16%;
+  margin-top: -29%;
+  z-index: 1001;
+}
+.myway-introduction .myway-description {
+  padding: 50px 0px 50px;
+}
+.myway-introduction .myway-description .inner {
+  width: 100%;
+}
+.intoduction-title {
+  font-size: 20px;
+  line-height: 36px;
+  margin-bottom: 20px;
+  font-family: 'utsukushi';
+} 
+.intoduction-title span {
+  border-bottom: 2px solid gray;
+  padding-bottom: 4px;
+}
+.myway-introduction .myway-description p {
+  width: 84%;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* イントロダクション-画像 */
+/*スーツケース*/
+.myway-description .illust-01 {
+  position: absolute;
+  left: 4%;
+  top: 4%;
+  width: 70px;
+  opacity: .2;
+  transform: rotate(20deg);
+}
+/*ケーキ*/
+.myway-description .illust-02 {
+  position: absolute;
+  right: 4%;
+  bottom: 8%;
+  width: 90px;
+  opacity: .2;
+  transform: rotate(-10deg);
+}
+/*スマホ*/
+.myway-description .illust-03 {
+  position: absolute;
+  left: 8%;
+  bottom: 150px;
+  width: 80px;
+  opacity: .2;
+  transform: rotate(-30deg);
+}
+/*コスメ*/
+.myway-description .illust-04 {
+  position: absolute;
+  right: 8%;
+  top: 160px;
+  width: 70px;
+  opacity: .2;
+  transform: rotate(10deg);
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  メインコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.myway-content-list-el .inner {
+  width: 88%;
+  margin: 0 auto;
+  padding: 50px 0px;
+  border-top: 1px solid;
+}
+.myway-content-list-el .img-box {
+  width: 100%;
+  height: 200px;
+  float: none;
+}
+.myway-content-list-el .text-box {
+  width: 100%;
+  float: none;
+  padding-left: 0px;
+  padding-top: 12px;
+}
+.myway-content-list-el-even .text-box {
+  padding-right: 0px;
+  padding-top: 8px;
+}
+.myway-content-list-el .edition img {
+  width: 84%;
+  margin-bottom: 16px;
+}
+.myway-content-list-el .text-box .myway-to-link {
+  width: 100%;
+  font-size: 13px;
+  padding: 12px 0px;
+  margin-top: 16px;
+  position: relative;
+}
+.myway-content-list-el .text-box .myway-to-link:after {
+  content: "〉";
+  position: absolute;
+  right: 0;
+}
+.myway-content-list-el .text-box .text-box-title {
+  font-size: 15px;
+  line-height: 22px;
+}
+.myway-content-list-el .text-box .description {
+  font-size: 13px;
+}
+/* 背景及び色 */
+#myway-shoes .inner {
+  border-top: 1px solid #a4d4e4;
+}
+#myway-cosmetics .inner {
+  border-top: 1px solid #ecb9ae;
+}
+
+/* coming-soon */
+.coming-soon {
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+.coming-soon li {
+  font-size: 24px;
+}
+.coming-soon img {
+  width: 64%;
+  margin-top: 10px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  サブコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.myway-sub-content {
+  display: none;
+}
+
+}
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  タブレットのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 641px) and (max-width: 768px) {
+}

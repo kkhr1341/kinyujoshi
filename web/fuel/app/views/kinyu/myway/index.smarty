@@ -1,0 +1,156 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
+<style>
+  @font-face {
+    font-family: 'utsukushi';
+    src: url('/font/utsukushi.otf') format('truetype');
+  }
+</style>
+
+<div class="myway-introduction">
+
+  <!-- <img class="main-logo" src="/images/myway/main-logo.png"> -->
+
+  <div class="main-img-box-container">
+    
+    <div class="pc main-img-box clear">
+      <div class="main-img-box-left" style="background:url(/images/myway/bg/main-bg.png) 65% 0px / cover no-repeat;"></div>
+      <div class="main-img-box-right">
+        <div class="test-bg"></div>
+        <ul class="clear">
+          <li class="left-img" style="background:url(/images/myway/bg/main-bg-el1.png) center center / cover no-repeat;"></li>
+          <li style="background:url(/images/myway/bg/main-bg-el2.png) center center / cover no-repeat;"></li>
+          <li class="left-img" style="background:url(/images/myway/bg/main-bg-el3.png) center center / cover no-repeat;"></li>
+          <li style="background:url(/images/myway/bg/main-bg-el4.png) right center / cover no-repeat;"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sp main-img-box">
+      <img style="width:100%;" src="/images/myway/bg/main-bg-sp.png">
+      <img class="main-logo" src="/images/myway/title/main-title-sp.png">
+    </div>
+
+    <img class="pc main-logo" src="/images/myway/title/main-title.png">
+  </div>
+
+  <div class="myway-description">
+    <div class="inner">
+      <h2 class="pc intoduction-title"><span>〜お金と向き合って決めた、わたしはこう生きる。〜</span></h2>
+      <h2 class="sp intoduction-title"><span>お金と向き合って決めた、<br>わたしはこう生きる。</span></h2>
+      <p class="pc">
+        きんゆう女子。が正式に発足して1年。
+        <span style="display: block;height: 12px;"></span>
+        日々のお金の使い方、キャリアアップの方法、初めての株式投資、<br>未来の年金のことまで幅広く勉強してきました。
+        <span style="display: block;height: 12px;"></span>
+        そうしていくうちに、きんゆう女子。編集部は気づきました。<br>
+        豊かに生きるための第一歩は「自分を知ること」。
+        <span style="display: block;height: 12px;"></span>
+        どんな風になりたい？<br>
+        どんな人生を送りたい？<br>
+        そして、私はどんな人なの？
+        <span style="display: block;height: 12px;"></span>
+        そこがわかってこそ、お金の使い方や増やし方も考えられるし選べる。<br>
+        そして無駄遣いもなくなるはず。
+        <span style="display: block;height: 12px;"></span>
+        そこで「わたしを知ること」をテーマにした記事を続々UPしていく予定です。
+      </p>
+      <p class="sp">
+        きんゆう女子。が正式に発足して1年。
+        <span style="display: block;height: 10px;"></span>
+        日々のお金の使い方、キャリアアップの方法、初めての株式投資、未来の年金のことまで幅広く勉強してきました。
+        <span style="display: block;height: 10px;"></span>
+        そうしていくうちに、きんゆう女子。編集部は気づきました。豊かに生きるための第一歩は「自分を知ること」。
+        <span style="display: block;height: 10px;"></span>
+        どんな風になりたい？<br>
+        どんな人生を送りたい？<br>
+        そして、私はどんな人なの？
+        <span style="display: block;height: 10px;"></span>
+        そこがわかってこそ、お金の使い方や増やし方も考えられるし選べる。そして無駄遣いもなくなるはず。
+        <span style="display: block;height: 10px;"></span>
+        そこで「わたしを知ること」をテーマにした記事を続々UPしていく予定です。
+      </p>
+    </div>
+    <!-- 画像 -->
+    <img class="illust-01" src="/images/myway/intro-illust/1_main.png">
+    <img class="illust-02" src="/images/myway/intro-illust/2_main.png">
+    <img class="illust-03" src="/images/myway/intro-illust/3_main.png">
+    <img class="illust-04" src="/images/myway/intro-illust/4_main.png">
+  </div>
+</div>
+
+<div class="myway-content-list">
+  
+  <!-- くつ -->
+  <div id="myway-shoes" class="myway-content-list-el clear">
+    <div class="inner clear">
+      <div class="sp edition"><img src="/images/myway/title/title-shoes.png"></div>
+      <div class="img-box" style="background: gray;">
+        <video src="/images/myway/IMG_5152.m4v" poster="" autoplay loop muted></video>
+      </div>
+      <div class="text-box">
+        <div class="pc edition"><img src="/images/myway/title/title-shoes.png"></div>
+        <p class="text-box-title">ここにキャッチコピーがはいりますここにキャッチコピーがはいります</p>
+        <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <a href="" class="myway-to-link">靴編のページはこちら</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- コスメ編 -->
+  <div id="myway-cosmetics" class="myway-content-list-el myway-content-list-el-even clear">
+    <div class="inner clear">
+      <div class="sp edition"><img src="/images/myway/title/title-cosmetics.png"></div>
+      <div class="img-box" style="background: gray;">
+        <video src="/images/myway/IMG_5181.m4v" poster="" autoplay loop muted></video>
+      </div>
+      <div class="text-box">
+        <div class="pc edition"><img src="/images/myway/title/title-cosmetics.png"></div>
+        <p class="text-box-title">ここにキャッチコピーがはいりますここにキャッチコピーがはいります</p>
+        <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <a href="" class="myway-to-link">コスメ編のページはこちら</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="coming-soon">
+    <ul>
+      <li>・</li>
+      <li>・</li>
+      <li>・</li>
+    </ul>
+    <img src="/images/myway/coming_soon.png">
+  </div>
+</div>
+
+<div class="myway-sub-content">
+  
+</div>
+
+<footer class="pc">
+  <div class="footer-logo">
+    <img src="/images/kinyu-logo01.png">
+  </div>
+  <div class="footer-menu">
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/company">運営会社</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/privacy">プライバシーポリシー</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/legal">特定商取引法に基づく表記</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/service">会員規約</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/contact">お問い合わせ</a>
+    </div>
+  </div>
+  <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc.</p>
+</footer>
+<div class="sp">
+  {$sp_footer}
+</div>
