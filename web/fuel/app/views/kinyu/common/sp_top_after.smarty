@@ -1,6 +1,7 @@
 <!-- トップ・アフター -->
 <div class="sp_top_after">
   
+  {*
   <!-- 編集部へのコメント -->
   <div class="kinyu-content-after-el report-detail-menu">
     <h3 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-menu.png" alt="きんゆう女子。へのメニュー"></h3>
@@ -50,6 +51,8 @@
       </ul>
     </div>
   </div>
+  *}
+  
   <!-- fb -->
 
   <div class="kinyu-content-after-el report-detail-menu clear">

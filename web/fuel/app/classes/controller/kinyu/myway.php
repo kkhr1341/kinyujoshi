@@ -19,7 +19,7 @@ class Controller_Kinyu_Myway extends Controller_Kinyubase
     //    header('Content-Type: text/plain; charset=utf-8');
     //    die('このページを見るにはログインが必要です');
     //  }
-    $this->template->title = '「わたし」を知る｜きんゆう女子。';
+    $this->template->title = '「わたし」を知る。｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/myway/og-myway.jpg';
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
 

@@ -27,34 +27,10 @@
       </li>
 
       {/foreach}
-      <!-- きんゆう女子。カンファレンス -->
     </ul>
   </div>
 
-  <!-- きんゆう女子。のコンテンツ -->
   {*
-  <div class="kinyu-content-after-el after-category">
-    <h3 class="center-title"><p>カテゴリーから記事をえらぶ</p></h3>
-    <ul class="clear">
-      <li>
-        <a href="">すべて</a>
-      </li>
-      <li>
-        <a href="">ライフスタイル</a>
-      </li>
-      <li>
-        <a href="">キャリア</a>
-      </li>
-      <li>
-        <a href="">どくりつ＆きぎょう</a>
-      </li>
-      <li>
-        <a href="">パラレル</a>
-      </li>
-    </ul>
-  </div>
-  *}
-
   <!-- 編集部へのコメント -->
   <div class="kinyu-content-after-el report-detail-menu">
     <!-- <h3 class="center-title"><p>きんゆう女子。のメニュー</p></h3> -->
@@ -105,6 +81,7 @@
       </ul>
     </div>
   </div>
+  *}
 
   <!-- 編集部へのコメント -->
   <div class="kinyu-content-after-el report-detail-comment">
