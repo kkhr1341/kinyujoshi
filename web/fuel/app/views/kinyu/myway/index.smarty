@@ -91,7 +91,8 @@
     <div class="inner clear">
       <div class="sp edition"><img src="/images/myway/title/sp/title-shoes.png"></div>
       <div class="img-box">
-        <video src="/images/myway/IMG_4553.mp4" poster="" autoplay loop muted></video>
+        <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" poster="" autoplay loop muted></video>
+        <div class="video-filter"></div>
       </div>
       <div class="text-box">
         <div class="pc edition"><img src="/images/myway/title/title-shoes.png"></div>

@@ -179,6 +179,14 @@
 #myway-shoes.myway-content-list-el .img-box video {
   right: -30%;
 }
+/*#myway-shoes.myway-content-list-el .img-box .video-filter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.3);
+}*/
 .myway-content-list-el .text-box {
   width: 50%;
   float: right;
