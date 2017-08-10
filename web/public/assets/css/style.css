@@ -912,6 +912,8 @@
   display: block;
   margin: 0 auto;
   transition: .5s;
+  margin-top: 36px;
+  border: 1px solid #e6e6e6;
 }
 /* トップページ・レポート一覧下のバナー */
 .report-list-banner {
