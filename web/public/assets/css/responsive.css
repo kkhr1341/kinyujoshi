@@ -277,77 +277,9 @@
 .pc-menu-trigger-close {
   display: none;
 }
-/*.kinyu-sp-navi .navi-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #7CDCCE;
-  border: 2px solid #7CDCCE;
-  margin: 0 auto;
-  margin-bottom: 16px;
+.navi_banner_area .navi_banner_area_el img {
+  border: 1px solid #f9f9f9;
 }
-.kinyu-sp-navi .navi-icon p {
-  display: block;
-  width: 100%;
-  font-size: 30px;
-  line-height: 46px!important;
-  color: #fff;
-  text-align: center;
-  padding: 0px!important;
-}
-.kinyu-sp-navi .share-content {
-  background: #fff;
-  border-radius: 5px;
-}
-.kinyu-sp-navi .share-content p {
-  font-size: 18px;
-  line-height: 24px;
-  text-align: center;
-}*/
-/*.kinyu-sp-navi .content-list {
-  padding: 24px 0px 16px;
-  border-top: 1px solid #7CDCCE;
-}
-.kinyu-sp-navi .content-list li {
-  width: 100%;
-  margin-bottom: 4%;
-  float: left;
-  overflow: hidden;
-  border-radius: inherit;
-  border: 1px solid #f7f7f7;
-}
-.kinyu-sp-navi .content-list li a {
-  display: block;
-  line-height: 0px;
-}
-.kinyu-sp-navi .content-list li img {
-  width: 100%;
-  border-radius: inherit;
-}
-.kinyu-sp-navi .content-sub-list li {
-  border-top: 1px solid #7CDCCE;
-}
-.kinyu-sp-navi .content-sub-list li:last-child {
-  border-bottom: 1px solid #7CDCCE; 
-}
-.kinyu-sp-navi .content-sub-list li a {
-  display: block;
-  padding: 12px 8px;
-  color: #3b867b;
-  position: relative;
-  font-size: 12px;
-}
-.kinyu-sp-navi .content-sub-list li a:after {
-  content: "▶︎";
-  position: absolute;
-  font-size: 10px;
-  right: 4px;
-}
-.navi_kinyu-menu-title {
-  display: block;
-  width: 80%;
-  padding-bottom: 8px;
-}*/
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ピックアップ
@@ -1172,9 +1104,6 @@
   font-size: 12px;
 }
 
-
-
-
 /*ポップアップ*/
 .report-detail-comment-popup .inner {
   width: 92%;
@@ -1410,19 +1339,6 @@ footer .footer-menu {
   content: "■";
   color: rgba(124, 220, 206, 0.7);
 }
-/*.navi-link-top {
-  display: block;
-  text-align: center;
-  width: 80px;
-  padding: 8px 24px;
-  margin: 0 auto;
-  margin-top: 24px;
-  border-radius: 20px;
-  transition: 0.8s;
-  font-size: 13px;
-  background: #7CDCCE;
-  color: #fff;
-}*/
 footer .navi-link-top {
   text-align: center;
   width: 100px;

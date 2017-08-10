@@ -108,6 +108,9 @@
         </li>
 
         <li class="item navi_banner_area navi_kinyu-menu-li02">
+          <a class="navi_banner_area_el" href="/myway">
+            <img src="/images/myway/og_myway.jpg">
+          </a>
           <a class="navi_banner_area_el" href="/oom-reit">
             <img src="/images/content/ooedo_joshikai/oom-reit-og.jpg">
           </a>

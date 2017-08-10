@@ -37,36 +37,43 @@
       <h2 class="pc intoduction-title"><span>お金と向き合って決めた、わたしはこう生きる。</span></h2>
       <h2 class="sp intoduction-title"><span>お金と向き合って決めた、<br>わたしはこう生きる。</span></h2>
       <p class="pc">
-        きんゆう女子。が正式に発足して1年。
+        きんゆう女子。が正式に発足して1年。<br>
+        日々のお金の使い方、キャリアアップの方法、初めての投資、<br>
+        未来の年金のことまで幅広く勉強してきました。
         <span style="display: block;height: 12px;"></span>
-        日々のお金の使い方、キャリアアップの方法、初めての株式投資、<br>未来の年金のことまで幅広く勉強してきました。
+        まだワカラナイこと、たくさん。<br>
+        もしかしたら、全部は知らなくてもいいのかも…。
         <span style="display: block;height: 12px;"></span>
-        そうしていくうちに、きんゆう女子。編集部は気づきました。<br>
+        でも、金融にむきあっていくうちに気づきました。<br>
         豊かに生きるための第一歩は「自分を知ること」。
         <span style="display: block;height: 12px;"></span>
         どんな風になりたい？<br>
         どんな人生を送りたい？<br>
-        そして、私はどんな人なの？
+        そして、わたしはどんな人なの？
         <span style="display: block;height: 12px;"></span>
-        そこがわかってこそ、お金の使い方や増やし方も考えられるし選べる。<br>
-        そして無駄遣いもなくなるはず。
+        そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。<br>
+        本当の意味で無駄遣いがなくなるはず。
         <span style="display: block;height: 12px;"></span>
-        そこで「わたしを知ること」をテーマにした記事を続々UPしていく予定です。
+        このページでは、「わたしを知ること」をテーマに情報を発信していきます。
       </p>
       <p class="sp">
-        きんゆう女子。が正式に発足して1年。
-        <span style="display: block;height: 10px;"></span>
-        日々のお金の使い方、キャリアアップの方法、初めての株式投資、未来の年金のことまで幅広く勉強してきました。
-        <span style="display: block;height: 10px;"></span>
-        そうしていくうちに、きんゆう女子。編集部は気づきました。豊かに生きるための第一歩は「自分を知ること」。
-        <span style="display: block;height: 10px;"></span>
+        きんゆう女子。が正式に発足して1年。<br>
+        日々のお金の使い方、キャリアアップの方法、初めての投資、未来の年金のことまで幅広く勉強してきました。
+        <span style="display: block;height: 12px;"></span>
+        まだワカラナイこと、たくさん。<br>
+        もしかしたら、全部は知らなくてもいいのかも…。
+        <span style="display: block;height: 12px;"></span>
+        でも、金融にむきあっていくうちに気づきました。
+        豊かに生きるための第一歩は「自分を知ること」。
+        <span style="display: block;height: 12px;"></span>
         どんな風になりたい？<br>
         どんな人生を送りたい？<br>
-        そして、私はどんな人なの？
-        <span style="display: block;height: 10px;"></span>
-        そこがわかってこそ、お金の使い方や増やし方も考えられるし選べる。そして無駄遣いもなくなるはず。
-        <span style="display: block;height: 10px;"></span>
-        そこで「わたしを知ること」をテーマにした記事を続々UPしていく予定です。
+        そして、わたしはどんな人なの？
+        <span style="display: block;height: 12px;"></span>
+        そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。
+        本当の意味で無駄遣いがなくなるはず。
+        <span style="display: block;height: 12px;"></span>
+        このページでは、「わたしを知ること」をテーマに情報を発信していきます。
       </p>
     </div>
     <!-- 画像 -->
@@ -82,15 +89,18 @@
   <!-- くつ -->
   <div id="myway-shoes" class="myway-content-list-el clear">
     <div class="inner clear">
-      <div class="sp edition"><img src="/images/myway/title/title-shoes.png"></div>
-      <div class="img-box" style="background: gray;">
-        <video src="/images/myway/IMG_5152.m4v" poster="" autoplay loop muted></video>
+      <div class="sp edition"><img src="/images/myway/title/sp/title-shoes.png"></div>
+      <div class="img-box">
+        <video src="/images/myway/IMG_4553.mp4" poster="" autoplay loop muted></video>
       </div>
       <div class="text-box">
         <div class="pc edition"><img src="/images/myway/title/title-shoes.png"></div>
-        <p class="text-box-title">ここにキャッチコピーがはいりますここにキャッチコピーがはいります</p>
-        <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <a href="" class="myway-to-link">靴編のページはこちら</a>
+        <p class="pc text-box-title">毎日を豊かにするために、ちゃんと"靴"を選んでる？</p>
+        <p class="sp text-box-title">毎日を豊かにするために、<br>ちゃんと"靴"を選んでる？</p>
+        <p class="description">朝、出かけるときにどんな靴を選びますか？ よく足元をみると、その人が分かると言われます。"靴"という細かい部分に気を配ることができているか、サイズはもちろん、時と所と場合に合わせて正しい靴を選んでいるか「きんゆう」の観点から考えてみました。また、今回そのヒントを探るべくお話を聞きに行ったのは「自分の足に合う靴がない」という女性の悩みを解決するオーダーメイドシューズブランド「KiBERA」の福谷社長です。</p>
+        {*<a href="" class="myway-to-link">靴編のページはこちら</a>*}
+        <p class="myway-to-link">靴編のページはこちら</p>
+        <p class="myway-to-link-coming">ー coming soon ー</p>
       </div>
     </div>
   </div>
@@ -98,21 +108,20 @@
   <!-- コスメ編 -->
   <div id="myway-cosmetics" class="myway-content-list-el myway-content-list-el-even clear">
     <div class="inner clear">
-      <div class="sp edition"><img src="/images/myway/title/title-cosmetics.png"></div>
+      <div class="sp edition"><img src="/images/myway/title/sp/title-cosmetics.png"></div>
       <div class="img-box" style="background: gray;">
         <video src="/images/myway/IMG_5181.m4v" poster="" autoplay loop muted></video>
       </div>
       <div class="text-box">
         <div class="pc edition"><img src="/images/myway/title/title-cosmetics.png"></div>
-        <p class="text-box-title">ここにキャッチコピーがはいりますここにキャッチコピーがはいります</p>
-        <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <a href="" class="myway-to-link">コスメ編のページはこちら</a>
+        <p class="text-box-title">今お持ちのメイクポーチや、<br>おうちのメイクBOXを開いてみて…。</p>
+        <p class="description">あんまり使っていない化粧品、どれぐらいお持ちですか？毎日、鏡で見て知ってるつもりの自分の顔。毎日、なんとなくやっているメイク方法。改めて「きちんと向き合う」機会をつくってみてはいかがでしょうか？わたしを知って「キレイになるためのお金」を上手に使いましょう。</p>
+        {*<a href="" class="myway-to-link">コスメ編のページはこちら</a>*}
+        <p class="myway-to-link">コスメ編のページはこちら</p>
+        <p class="myway-to-link-coming">ー coming soon ー</p>
       </div>
     </div>
   </div>
-
-
-
 
   <div class="coming-soon">
     <ul>
@@ -130,7 +139,7 @@
 
 <footer class="pc">
   <div class="footer-logo">
-    <img src="/images/kinyu-logo01.png">
+    <a href="/about"><img src="/images/kinyu-logo01.png"></a>
   </div>
   <div class="footer-menu">
     <div class="navi_kinyu-submenu-el clear">

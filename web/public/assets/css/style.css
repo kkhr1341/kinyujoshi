@@ -470,6 +470,8 @@
 }
 .navi_banner_area .navi_banner_area_el img {
   width: 100%;
+  border: 1px solid #f9f9f9;
+  box-sizing: border-box;
 }
 .navi_kinyu-submenu-el {
   display: inline-block;
@@ -652,7 +654,7 @@
   font-weight: bold;
 }
 .kinyu-top-introlist-block {
-  padding: 88px 1% 36px;
+  padding: 88px 1% 45px;
 }
 .kinyu-top-introlist-left {
   width: 31.333%;
@@ -851,7 +853,7 @@
   padding: 88px 1% 0px!important;
 }
 .kinyu-top-list {
-  padding: 36px 1% 0px;
+  padding: 45px 1% 0px;
   letter-spacing: -4em;
 }
 .kinyu-top-list li {
@@ -912,7 +914,7 @@
   display: block;
   margin: 0 auto;
   transition: .5s;
-  margin-top: 36px;
+  margin-top: 45px;
   border: 1px solid #e6e6e6;
 }
 /* トップページ・レポート一覧下のバナー */
@@ -920,7 +922,8 @@
   width: 650px;
   display: block;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-top: 12px;
+  margin-bottom: 42px;
   transition: .5s;
 }
 /* ページネーション */
