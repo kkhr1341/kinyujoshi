@@ -131,26 +131,27 @@
       {$fooo = $blog.main_image}
       {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
       
-      <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
-        <a href="/report/{$blog.code}">
-        <div class="kinyu-top-list-kind">
-          {if $blog.kind == "女子会レポート"}
-            <p>女子会レポート</p>
-          {else if $blog.kind == "イベントレポート"}
-            <p>イベントレポート</p>
-          {else if $blog.kind == "取材レポート"}
-            <p>取材レポート</p>
-          {else if $blog.kind == "イベント告知"}
-            <p>イベント告知</p>
-          {else if $blog.kind == "コラム"}
-            <p>コラム</p>
-          {else}
-            <p>レポート</p>
-          {/if}
-        </div>
-        <h3 class="kinyu-top-list-title">{$blog.title}</h3>
-        </a>
-      </li>
+      <li>
+          <a href="/report/{$blog.code}">
+          <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+          <div class="kinyu-top-list-kind">
+            {if $blog.kind == "女子会レポート"}
+              <p>女子会レポート</p>
+            {else if $blog.kind == "イベントレポート"}
+              <p>イベントレポート</p>
+            {else if $blog.kind == "取材レポート"}
+              <p>取材レポート</p>
+            {else if $blog.kind == "イベント告知"}
+              <p>イベント告知</p>
+            {else if $blog.kind == "コラム"}
+              <p>コラム</p>
+            {else}
+              <p>レポート</p>
+            {/if}
+          </div>
+          <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+          </a>
+        </li>
       {/foreach}
       </ul>
     </div>

@@ -12,26 +12,26 @@
       <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
     </div>
 
-    {if $news.main_image == ""}
-    <!--1-->
-    <div class="report-detail-thunb" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
-    {else}
-    <!--2-->
-    <div class="report-detail-thunb" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
-    {/if}
 
-    <div class="report-detail-info">
-      <div class="report-detail-category">
-        <p>ニュース</p>
+    <div class="report-detail-thunb-block clear">
+      {if $news.main_image == ""}
+      <div class="report-detail-thunb" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
+      {else}
+      <div class="report-detail-thunb" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+      {/if}
+      <div class="report-detail-info">
+        <div class="report-detail-category">
+          <div class="category-title">
+            <p>ニュース</p>
+          </div>
+        </div>
+        <div class="report-detail-title">
+          <h1>{$news.title}</h1>
+        </div>
+        <div class="report-detail-description">
+          <p class="date">{$news.open_date|date_format:"%Y/%-m/%-d"}</p>
+        </div>
       </div>
-      <div class="report-detail-title">
-        <h1>{$news.title}</h1>
-      </div>
-      <div class="report-detail-description">
-      <p class="date">{$news.open_date|date_format:"%Y/%-m/%-d"} up!</p>
-      </div>
-    </div>
-    <div class="report-detail-keyword">
     </div>
   
     <!-- 本文 -->
@@ -49,7 +49,6 @@
           <div class="social-list">
             <ul>
               {$social_share}
-              <!-- <li><a class="facebook" href=""><img class="social-logo" src="/images/social/facebook_white01.png"></a></li>
               <li><a class="twitter" href=""><img class="social-logo" src="/images/social/twitter_white01.png"></a></li> -->
             </ul>
           </div>

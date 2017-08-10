@@ -8,7 +8,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
 	public function action_index($page=1) {
 		
-	  $this->data['blogs'] = Blogs::all('kinyu'+'investment', '/report/', $page, 2, 15);
+	  $this->data['blogs'] = Blogs::all('kinyu'+'investment', '/report/', $page, 2, 30);
 		$pagination = $this->data['blogs']['pagination'];
 		$this->data['pagination'] = $pagination::instance('mypagination');
 		$this->template->title = '記事一覧｜きんゆう女子。';

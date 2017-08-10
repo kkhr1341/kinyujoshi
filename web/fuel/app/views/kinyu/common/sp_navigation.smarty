@@ -3,56 +3,71 @@
   <div class="kinyu-sp-header-menu kinyu-sp-header-close">
     <img class="menu-trigger" src="/images/new/sp-header-close_w.png">
   </div>
+
   <div class="inner">
-    <div class="navi-icon">
-      <a href="/"><img src="/images/icon/top-icon-kinyu.png"></a>
-    </div>
-    <div class="content-list">
-      <p style="text-align: left;"><img class="navi_kinyu-menu-title" src="/images/main-title/kinyu-title-menu-sp.png"></p>
-      <ul class="clear">
-        <li>
-          <a href="/event"><img src="/images/new/sp/navi_joshikai_sp.png"></a>
-        </li>
-        <li>
-          <a href="/regist"><img src="/images/new/sp/navi_regist_sp.jpg"></a>
-        </li>
-        <li>
-          <a href="/report"><img src="/images/new/sp/navi_report_sp.jpg"></a>
-        </li>
-        <li>
-          <a href="/news"><img src="/images/new/sp/navi_news_sp.png"></a>
-        </li>
-        <li>
-          <a href="/school"><img src="/images/new/sp/navi_school_sp.jpg"></a>
-        </li>
-        <li>
-          <a href="/conference"><img src="/images/new/sp/navi_conference_icon_sp.jpg"></a>
-        </li>
-        <li>
-          <a href="http://kabuto-live.com/" target="_blank"><img src="/images/new/sp/navi_kabutolive-icon_sp.jpg"></a>
-        </li>
-        <!-- <li>
-          <a href="http://cafe-salvador.com/" target="_blank"><img src="/images/new/sp/navi_sarvador_sp.jpg"></a>
-        </li> -->
-      </ul>
-    </div>
+    <p class="pc-menu-trigger-close"><img src="/images/new/sp-header-close.png"></p>
+    <ul class="navi_contents-block-menu">
+      <li class="item navi_menu">
+        <div class="navi-icon">
+          <a href="/"><img src="/images/icon/top-icon-kinyu.png"></a>
+        </div>
+      </li>
 
-    <!-- <div class="share-content">
-      <p>きんゆう女子。を<br>だれかに教える</p>
-    </div> -->
+      <li class="item navi_kinyu-menu-li01">
+        <div class="navi_kinyu-menu-block clear">
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/about">きんゆう女子。って？</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/event">女子会に参加する</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/regist">メンバーになる</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/report">レポート</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/news">ニュース</a>
+          </div>
+        </div>
+      </li>
 
-    <div class="content-sub-list">
-      <ul>
-        <li><a href="/company">運営会社</a></li>
-        <li><a href="/privacy">プライバシーポリシー</a></li>
-        <li><a href="/service">会員規約</a></li>
-        <li><a href="/legal">特定商取引法に基づく表記</a></li>
-        <li><a href="/contact">お問い合わせ</a></li>
-        <li><a href="/">トップページへ</a></li>
-      </ul>
-    </div>
+      <li class="item navi_banner_area navi_kinyu-menu-li02">
+        <a class="navi_banner_area_el" href="/oom-reit">
+          <img src="/images/content/ooedo_joshikai/oom-reit-og.jpg">
+        </a>
+        <a class="navi_banner_area_el" href="/school_jpx">
+          <img src="/images/content/school_public/og-school_public.png">
+        </a>
+        <a class="navi_banner_area_el" href="/conference">
+          <img src="/images/og-conference.jpg">
+        </a>
+        <a class="navi_banner_area_el" href="/school">
+          <img src="/images/og-gakuin.jpg">
+        </a>
+      </li>
 
-<!--     <a class="sp navi-link-top" href="/">トップへ</a> -->
+      <li class="item navi_kinyu-menu-li03">
+        <div class="navi_kinyu-menu-block clear">
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/company">運営会社</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/privacy">プライバシーポリシー</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/legal">特定商取引法に基づく表記</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/service">会員規約</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/contact">お問い合わせ</a>
+          </div>
+        </div>
+      </li>
+    </ul>
 
   </div>
 </div>

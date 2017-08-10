@@ -45,15 +45,6 @@
         きんゆう女子。の<br>メンバーになる♪
       </div>
     </li>
-
-    <!-- <li class="about" style="background:#e2e1e1;">
-      <a href="/about">
-        <img src="/images/icon/about-kinyu-white.png">
-      </a>
-      <div class="tool-chip">
-        きんゆう女子。って？
-      </div>
-    </li> -->
     <li class="about-link">
       <a class="kinyu-main-icon fs-kinyu-style" href="/about">
         <img src="/images/icon/navi-about-kinyu.png">
@@ -82,78 +73,76 @@
       </a>
     </li>
   </ul>
+</nav>
 
-
-  <!-- ナビコンテンツ -->
+<!-- ナビコンテンツ -->
   <div class="navi_contents-block">
     <div class="inner">
+      <p class="pc-menu-trigger-close"><img src="/images/new/sp-header-close.png"></p>
       <ul class="navi_contents-block-menu">
         <li class="item navi_menu">
           <div class="navi-icon">
             <a href="/"><img src="/images/icon/top-icon-kinyu.png"></a>
           </div>
+        </li>
 
-        </li>
         <li class="item navi_kinyu-menu-li01">
-          <p style="text-align: left;"><img class="navi_kinyu-menu-title" src="/images/main-title/kinyu-title-menu.png"></p>
+          <!-- <p style="text-align: left;"><img class="navi_kinyu-menu-title" src="/images/main-title/kinyu-title-menu.png"></p> -->
           <div class="navi_kinyu-menu-block clear">
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_joshikai.png) center center / cover no-repeat;">
-              <a href="/event"><!-- <p>女子会に参加する</p> --></a>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/about">きんゆう女子。って？</a>
             </div>
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_regist.jpg) center center / cover no-repeat;">
-              <a href="/regist"><!-- <p>メンバーになる</p> --></a>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/event">女子会に参加する</a>
             </div>
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_report.png) center center / cover no-repeat;">
-              <a href="/report"><!-- <p>レポートを読む</p> --></a>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/regist">メンバーになる</a>
             </div>
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_news.png) center center / cover no-repeat;">
-              <a href="/news"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/report">レポート</a>
+            </div>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/news">ニュース</a>
             </div>
           </div>
         </li>
-        <li class="item navi_kinyu-menu-li02">
+
+        <li class="item navi_banner_area navi_kinyu-menu-li02">
+          <a class="navi_banner_area_el" href="/oom-reit">
+            <img src="/images/content/ooedo_joshikai/oom-reit-og.jpg">
+          </a>
+          <a class="navi_banner_area_el" href="/school_jpx">
+            <img src="/images/content/school_public/og-school_public.png">
+          </a>
+          <a class="navi_banner_area_el" href="/conference">
+            <img src="/images/og-conference.jpg">
+          </a>
+          <a class="navi_banner_area_el" href="/school">
+            <img src="/images/og-gakuin.jpg">
+          </a>
+        </li>
+
+        <li class="item navi_kinyu-menu-li03">
           <div class="navi_kinyu-menu-block clear">
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_school.png) center center / cover no-repeat;">
-              <a href="/school"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/company">運営会社</a>
             </div>
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_school2.jpg) center center / cover no-repeat;">
-              <a href="/school_jpx"><!-- <p>私立<br>きんゆう女子。学院</p> --></a>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/privacy">プライバシーポリシー</a>
             </div>
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_conference_icon_pc.jpg) center center / cover no-repeat;">
-              <a href="/conference"><!-- <p>週末投資宣言!</p> --></a>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/legal">特定商取引法に基づく表記</a>
             </div>
-            {*<div class="navi_kinyu-menu-block-el" style="background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;">
-              <a href="/myplan"><p>わたしらしさ計画</p></a>
-            </div>*}
-            <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_kabutolive-icon.jpg) center center / cover no-repeat;">
-              <a href="http://kabuto-live.com/" target="_blank"><!-- <p>兜LIVE!</p> --></a>
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/service">会員規約</a>
             </div>
-            <!-- <div class="navi_kinyu-menu-block-el" style="background:url(/images/new/navi_sarvador.png) center center / cover no-repeat;">
-              <a href="http://cafe-salvador.com/" target="_blank"></a>
-            </div> -->
+            <div class="navi_kinyu-menu-block-el">
+              <a href="/contact">お問い合わせ</a>
+            </div>
           </div>
-        </li>
-        <li class="item">
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/company">運営会社</a>
-          </div>
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/policy">プライバシーポリシー</a>
-          </div>
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/legal">特定商取引法に基づく表記</a>
-          </div>
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/service">会員規約</a>
-          </div>
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/contact">お問い合わせ</a>
-          </div>
-        </li>
-        <li class="item">
-          <div class="menu-trigger menu-trigger-close"><img src="/images/new/sp-header-close.png"></div>
         </li>
       </ul>
     </div>
   </div>
-</nav>
+
+<div class="navi_contents-block-back"></div>

@@ -3959,8 +3959,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   border-radius: 4px;
 }
 .pagination > li {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   /*background-color: #7CDCCE;
   border-color: #7CDCCE;*/
   box-sizing: border-box;
@@ -3981,9 +3981,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   display: block;
   box-sizing: border-box;
   height: 100%;
-  border-radius: 50%;
   margin-left: -1px;
-  padding-top: 11px;
+  padding-top: 9px;
   line-height: 1.42857143;
   color: #7CDCCE;
   text-decoration: none;
