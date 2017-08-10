@@ -12,13 +12,6 @@
 <div class="kinyu-top-list-block">
   <div class="inner">
     <div class="category-menu">
-      <!-- <ul class="clear">
-        <li class="this-active"><a href="">すべて</a></li>
-        <li><a href="">ライフスタイル</a></li>
-        <li><a href="">キャリア</a></li>
-        <li><a href="">どくりつ＆きぎょう</a></li>
-        <li><a href="">パラレル</a></li>
-      </ul>-->
       <a href="/"><img class="pc-kinyu-logo" src="/images/kinyu-logo01.png"></a>
     </div>
     <div class="kinyu-top-introlist-block clear">

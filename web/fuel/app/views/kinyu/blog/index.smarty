@@ -4,10 +4,10 @@
     <div class="pc category-menu">
       <a href="/"><img class="pc-kinyu-logo" src="/images/kinyu-logo01.png"></a>
     </div>
-    <div class="kinyu-report-list">
+    <div class="kinyu-top-list kinyu-report-list">
       <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h2>
       <h2 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-report-sp.png" alt="レポート一覧"></h2>
-      <ul class="kinyu-top-list clear">
+      <ul class="clear">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
           {$fooo = $blog.main_image}
@@ -79,7 +79,7 @@
       $(function() {
 
         var hh = $(".kinyu-top-list li").innerWidth();
-        var mm = $(".kinyu-report-list").innerWidth();
+        var mm = $(".kinyu-top-list").innerWidth();
         var ss = $(".kinyu-top-introlist li").innerWidth();
 
         $(window).load(function(){

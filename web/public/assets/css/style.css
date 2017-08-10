@@ -848,7 +848,7 @@
 
 /*-- 記事一覧部分 --*/
 .kinyu-report-list {
-  padding: 88px 1% 0px;
+  padding: 88px 1% 0px!important;
 }
 .kinyu-top-list {
   padding: 36px 1% 0px;

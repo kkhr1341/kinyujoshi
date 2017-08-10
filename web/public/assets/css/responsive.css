@@ -624,7 +624,7 @@
 .kinyu-report-list {
   width: 88%;
   margin: 0 auto;
-  padding: 36px 0% 0px;
+  padding: 36px 0% 0px!important;
 }
 .kinyu-report-list .kinyu-report-title {
   width: 50%;
