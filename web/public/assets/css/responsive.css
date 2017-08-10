@@ -560,6 +560,10 @@
   margin-bottom: 0px;
 }
 
+/* トップページ・レポート一覧上のバナー */
+.report-list-banner-top {
+  width: 100%;
+}
 /* トップページ・レポート一覧下のバナー */
 .report-list-banner {
   width: 100%;

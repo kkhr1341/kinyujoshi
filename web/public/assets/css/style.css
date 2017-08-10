@@ -906,6 +906,13 @@
   transition: 0.8s;
 }
 
+/* トップページ・レポート一覧上のバナー */
+.report-list-banner-top {
+  width: 650px;
+  display: block;
+  margin: 0 auto;
+  transition: .5s;
+}
 /* トップページ・レポート一覧下のバナー */
 .report-list-banner {
   width: 650px;
@@ -2268,7 +2275,8 @@ footer .footer-menu {
 .past-specialevent-list li:hover {
   opacity: .5;
 }
-.report-list-banner:hover {
+.report-list-banner:hover,
+.report-list-banner-top:hover {
   opacity: .5;
   cursor: pointer;
 }

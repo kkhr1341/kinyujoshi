@@ -122,6 +122,10 @@
         </div>
       </li>
     </ul>
+
+    <a target="_blank" href="/myway">
+      <img class="report-list-banner-top" src="/images/banner/myway_sp.jpg">
+    </a>
       
     <div class="kinyu-top-list-list">
       <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-report-sp.png" alt="レポート一覧"></h3>
