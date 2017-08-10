@@ -334,6 +334,7 @@
 }
 .pc-menu-trigger-close img {
   width: 100%;
+  transition: .8s;
 }
 .navi_contents-block .inner .menu-trigger-close img {
   width: 100%;
@@ -711,7 +712,6 @@
 }
 .kinyu-top-introlist-pickup {
   height: 300px;
-  border-radius: 2px;
   position: relative;
 }
 .kinyu-top-introlist-right a {
@@ -793,7 +793,6 @@
   width: 100%;
   height: 48px;
   border: 1px solid #7CDCCE;
-  border-radius: 2px;
   padding: 4px 0px;
   box-sizing: border-box;
 }
@@ -1797,8 +1796,7 @@
   padding: 16px 36px;
   background: #7CDCCE;
   color: #fff;
-  border-radius: 5px;
-  transition: .3s;
+  transition: .8s;
 }
 
 /* ソーシャル関連 */
@@ -1845,7 +1843,6 @@
   padding: 8px 0px;
   text-align: center;
   color: #fff;
-  border-radius: 3px;
   line-height: 18px;
   transition: .3s;
 }
@@ -2290,6 +2287,10 @@ footer .footer-menu {
 }
 .kinyu-top-introlist-pickup .swiper-slide:hover {
   opacity: .5;
+}
+.pc-menu-trigger-close img:hover {
+  opacity: .5;
+  cursor: pointer;
 }
 
 
