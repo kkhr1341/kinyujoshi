@@ -697,8 +697,8 @@
   /*padding-top: 24px;
   padding-bottom: 24px;*/
   padding: 24px;
-  background: #e8e8e8;
-  border-bottom: 1px solid #5bada1;
+  background: #f4f4f4;
+  /*border-bottom: 1px solid #5bada1;*/
 }
 .report-detail-thunb-block {
   border-bottom: none;
