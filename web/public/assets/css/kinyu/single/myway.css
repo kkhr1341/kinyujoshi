@@ -424,6 +424,10 @@
   height: 110%;
   right: auto;
 }
+#myway-cosmetics.myway-content-list-el .img-box video {
+    height: 110%;
+    right: auto;
+}
 .myway-content-list-el .text-box {
   width: 100%;
   float: none;
