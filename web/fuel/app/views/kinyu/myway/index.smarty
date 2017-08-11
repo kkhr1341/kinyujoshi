@@ -110,8 +110,8 @@
   <div id="myway-cosmetics" class="myway-content-list-el myway-content-list-el-even clear">
     <div class="inner clear">
       <div class="sp edition"><img src="/images/myway/title/sp/title-cosmetics.png"></div>
-      <div class="img-box" style="background: gray;">
-        <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_518111.m4v" poster="" autoplay loop muted></video>
+      <div class="img-box">
+        <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4576.mp4" poster="" autoplay loop muted></video>
       </div>
       <div class="text-box">
         <div class="pc edition"><img src="/images/myway/title/title-cosmetics.png"></div>
