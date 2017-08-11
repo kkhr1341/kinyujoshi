@@ -1,10 +1,4 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
-<style>
-  @font-face {
-    font-family: 'utsukushi';
-    src: url('/font/utsukushi.otf') format('truetype');
-  }
-</style>
 
 <div class="myway-introduction">
 
@@ -111,7 +105,7 @@
     <div class="inner clear">
       <div class="sp edition"><img src="/images/myway/title/sp/title-cosmetics.png"></div>
       <div class="img-box">
-        <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4618.mp4" poster="" autoplay loop muted></video>
+        <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" poster="" autoplay loop muted></video>
       </div>
       <div class="text-box">
         <div class="pc edition"><img src="/images/myway/title/title-cosmetics.png"></div>
