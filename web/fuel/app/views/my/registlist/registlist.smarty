@@ -7,7 +7,7 @@
     <tr>
       <!-- お名前 -->
       <th></th>
-      <!-- <th>登録日</th> -->
+      <th>登録日</th>
       <th>名前</th>
       <!-- メールアドレス -->
       <th>Email</th>
@@ -22,6 +22,7 @@
     {foreach from=$registlist item=email name=loop}
     <tr>
       <td>{$smarty.foreach.loop.iteration} </td>
+      <td>{$email.created_at|date_format:"Y.m.d"}</td>
       <td>{$email.name}</td>
       <td>{$email.email}</td>
       <!-- <td>{$email.age}</td> -->
