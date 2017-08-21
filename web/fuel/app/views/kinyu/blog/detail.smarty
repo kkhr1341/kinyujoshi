@@ -18,6 +18,7 @@
       <h2><img src="/images/myway/title/main-title-report.png"></h2>
       
       {$reporturl = $smarty.server.REQUEST_URI}
+      <p>{$reporturl}</p>
       {if $reporturl = "/report/FxKhYh"}
       <!-- くつ編 -->
       <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;background: #FBECE4;">
