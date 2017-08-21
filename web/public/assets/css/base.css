@@ -256,12 +256,12 @@ input:focus {
 {
   border-radius: 3px 0 0 3px;
 }
-.radio_box label:last-of-type,
+/*.radio_box label:last-of-type,
 .radio_box_02 label:last-of-type,
 .radio_box_03 label:last-of-type {
   border-right: 0px;
   border-radius: 0 3px 3px 0;
-}
+}*/
 .form_where_from .radio_box {
   margin-top: 12px;
 }

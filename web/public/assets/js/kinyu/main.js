@@ -543,11 +543,27 @@ $(function() {
 
 
 // リセアパルトマン・画像ランダム表示
-$(function() {
-  var img = new Array();
-  img[0] = "images/banner/lycee/lycee01.jpg";
-  img[1] = "images/banner/lycee/lycee02.jpg";
-  img[2] = "images/banner/lycee/lycee03.jpg";
-  img[3] = "images/banner/lycee/lycee04.jpg";
-  n = Math.floor(Math.random()*img.length);
+// $(function() {
+//   var img = new Array();
+//   img[0] = "images/banner/lycee/lycee01.jpg";
+//   img[1] = "images/banner/lycee/lycee02.jpg";
+//   img[2] = "images/banner/lycee/lycee03.jpg";
+//   img[3] = "images/banner/lycee/lycee04.jpg";
+//   n = Math.floor(Math.random()*img.length);
+// });
+
+
+//インスタグラム - わたしを知る詳細ページ
+$(document).ready(function() {
+  var userFeed = new Instafeed({
+    get: 'user', //ユーザーから取得
+    userId: '3007140595', //ユーザーID(数字のみのもの)
+    sortBy:'random', //並び順をランダムに
+    links: true , //画像リンク取得
+    limit: 12, //取得する画像数を設定
+    resolution: 'standard_resolution', //画像サイズを設定
+    template: '<li><a href="{{link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"></a></li>',
+    accessToken: '3007140595.1e3d504.e017055f3cc649ddacf9758314e4628a' //アクセストークン(ローカル)
+  });
+  userFeed.run();
 });

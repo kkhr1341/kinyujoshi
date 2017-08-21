@@ -338,6 +338,7 @@
 .myway-report-content .inner {
   border-bottom: 1px solid gray;
   padding: 40px 0px;
+  position: relative;
 }
 .myway-report-content .myway-report-detail {
   width: 640px;
@@ -351,8 +352,47 @@
   width: 280px;
   float: right;
   margin-left: 40px;
-  height: 400px;
-  background: gray;
+}
+.myway-report-content .myway-content-after.test {
+  position: fixed;
+  top: 40px;
+}
+.myway-content-after-list {
+  
+}
+.myway-content-after-list ul {
+  margin-top: 16px;
+}
+.myway-content-after-list li {
+  margin-bottom: 16px;
+}
+.myway-content-after-list li a {
+  display: block;
+  text-align: center;
+  line-height: 0;
+  padding: 10px 0px 8px;
+}
+.myway-content-after-list li a img {
+  width: 60%;
+}
+.myway-report-content .report-detail-main h2 {
+  font-size: 18px;
+  line-height: 26px;
+  border-bottom: 2px solid #444;
+}
+.myway-report-content .report-detail-main h2:before {
+  color: #444;
+}
+.myway-report-content .report-list-banner-top {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+.myway-report-content .report-detail-share {
+  border: 1px solid #e1e1e1;
+  border-radius: 0px;
+}
+.myway-report-content .report-detail-share-right {
+  background: #fff;
 }
 
 /* 記事詳細 */
@@ -362,6 +402,12 @@
 .myway-header-content .report-detail-main h2:before {
   content: "■ ";
   color: #7CDCCE;
+}
+
+/* 記事アフターコンテンツ */
+.season-title {
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -558,6 +604,109 @@
   display: none;
 }
 
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  記事部分 
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.myway-report-content {
+  width: 100%;
+}
+.myway-header-content {
+  width: 88%;
+  margin: 0 auto;
+  padding-top: 36px;
+}
+.myway-header-content h2 {
+  width: 68%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.myway-header-content h2 img {
+  width: 100%;
+}
+.myway-header-content .main-tumb-block {
+  padding: 6%;
+}
+.myway-header-content .main-tumb-block .video-block {
+  width: 100%;
+  height: 160px;
+}
+.myway-header-content .main-tumb-block .video-block video {
+  height: 160px;
+}
+.myway-header-content .main-tumb-block .title-block {
+  position: relative;
+  top: auto;
+  right: auto;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.myway-header-content .main-tumb-block .title-block img {
+  width: 88%;
+}
+.myway-report-content .inner {
+  width: 88%;
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
+  padding: 36px 0px;
+}
+.myway-report-content .myway-report-detail {
+  width: 100%;
+  float: none;
+  padding-right: 0px;
+  padding-top: 0px;
+  border-right: none;
+  padding-bottom: 36px;
+  border-bottom: 1px solid gray;
+}
+.myway-report-content .myway-content-after {
+  width: 100%;
+  float: none;
+  margin-left: 0px;
+  margin-top: 36px;
+}
+.myway-report-content .report-list-banner-top {
+  width: 88%;
+  margin-top: 50px;
+}
+.myway-report-content .report-detail-share-right {
+  background: #fff;
+}
+
+/* 記事詳細 */
+.myway-header-content .report-detail-main h2 {
+  border-bottom: 2px solid #7CDCCE;
+}
+.myway-header-content .report-detail-main h2:before {
+  content: "■ ";
+  color: #7CDCCE;
+}
+.myway-report-content .report-detail-main h2 {
+  font-size: 15px;
+  line-height: 24px;
+  border-bottom: 1px solid #444;
+}
+
+/* 記事アフターコンテンツ */
+.season-title {
+  width: 100px;
+}
+.myway-content-after-list li:last-child {
+  margin-bottom: 0px;
+}
+/*.myway-content-after .instagram_block_li li {
+  width: 48%;
+}
+.myway-content-after .instagram_block_li li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}*/
+
+.myway-report-content footer {
+  padding: 50px 0px 80px;
+}
 }
 
 

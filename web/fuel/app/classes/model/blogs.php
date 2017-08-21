@@ -26,6 +26,7 @@ class Blogs extends Base {
 		$datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
 		        ->join('profiles', 'left')
                 ->on('blogs.username', '=', 'profiles.username')
+                ->where('blogs.kind', '!=', 'わたしを知る')
                 ->where('blogs.disable', '=', 0);
 		
 		if ($mode === null) {
@@ -279,6 +280,7 @@ class Blogs extends Base {
 
       ->join('profiles', 'left')
       ->on('blogs.username', '=', 'profiles.username')
+      ->where('blogs.kind', '!=', 'わたしを知る')
       ->where('blogs.status', '=', 1)
       ->where('blogs.open_date', '<', \DB::expr('NOW()'))
       ->where('blogs.disable', '=', 0);

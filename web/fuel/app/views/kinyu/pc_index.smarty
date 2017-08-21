@@ -156,7 +156,7 @@
           <h3 class="kinyu-top-list-title">{$blog.title}</h3>
           </a>
         </li>
-
+          
       {/foreach}    
       </ul>
     </div>

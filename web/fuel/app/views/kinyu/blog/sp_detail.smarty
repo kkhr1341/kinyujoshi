@@ -1,3 +1,113 @@
+{if $blog.kind == "わたしを知る"}
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
+
+  <div class="myway-report-content">
+
+    <div class="myway-header-content">
+      <h2><img src="/images/myway/title/main-title-report.png"></h2>
+      
+      <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;background: #FBECE4;">
+        <div class="title-block"><img src="/images/myway/title/title-shoes.png"></div>
+        <div class="video-block"><video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" poster="" muted autoplay playsinline loop></video></div>
+      </div>
+
+      <!-- <div class="main-tumb-block clear" style="border-top: 1px solid #a4d4e4;border-bottom: 1px solid #a4d4e4;background: #EBFAFF;">
+        <div class="title-block"><img src="/images/myway/title/title-cosmetics.png"></div>
+        <div class="video-block"><video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" poster="" muted autoplay playsinline loop></video></div>
+      </div> -->
+
+    </div>
+
+    <div class="inner clear">    
+      <!-- 本文 -->
+      <div class="report-detail-main myway-report-detail">
+        {$blog.content|nofilter}
+        {$fooo = $blog.main_image}
+        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+        <div class="report-detail-share clear">
+          <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+          <div class="report-detail-share-el report-detail-share-right">
+            <h3><img src="/images/detail-title/kinyu-share-report-myway.png"></h3>
+            <img class="share-this-page" src="/images/social/social-this-page.png">
+            <div class="social-list">
+              <ul>
+                {$social_share}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {*{$detail_content_after}*}
+      <div class="myway-content-after">
+
+        <!-- season1 -->
+        <div class="myway-content-after">
+          <div class="myway-content-after-list">
+            <img class="season-title" src="/images/myway/title/report-content-after-season1_sp.png">
+            <ul>
+              <li style="border: 1px solid #a4d4e4;background: #EBFAFF;">
+                <a href="/"><img src="/images/myway/title/title-cosmetics.png"></a>
+              </li>
+              <li style="border: 1px solid #ecb9ae;background: #FBECE4;">
+                <a href="/"><img src="/images/myway/title/title-shoes.png"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- インスタ -->
+      </div>
+
+    </div>
+
+    <a class="pc" href="/myway">
+      <img class="report-list-banner-top" src="/images/banner/myway_pc.jpg">
+    </a>
+
+    <a class="sp" href="/myway">
+      <img class="report-list-banner-top" src="/images/banner/myway_sp.jpg">
+    </a>
+
+
+    <footer>
+      <div class="footer-logo">
+        <a href="/about"><img src="/images/kinyu-logo01.png"></a>
+      </div>
+      <div class="footer-menu">
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/company">運営会社</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/privacy">プライバシーポリシー</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/legal">特定商取引法に基づく表記</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/service">会員規約</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/contact">お問い合わせ</a>
+        </div>
+      </div>
+      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc. ALL RIGHTS RESERVED</p>
+    </footer>
+  </div>
+
+  <script>
+    $(function() {
+      $(window).load(function(){
+        var wwwww = $(".myway-report-content .report-detail-share").height();
+        $('.report-detail-share-left').height(wwwww);
+      });
+    });
+  </script>
+
+
+{else}
+
   <div class="report-detail-header">
     <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
   </div>
@@ -67,5 +177,4 @@
   
   {$sp_footer}
 
-
-  
+{/if}
