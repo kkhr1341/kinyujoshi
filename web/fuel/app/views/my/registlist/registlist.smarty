@@ -67,6 +67,7 @@ padding: 6px;
 line-height: 20px;
 background-color: #fff;
 border: 1px solid #b9b9b9;
+word-break: break-word;
 }
 .registlist-block-admin td a {
   transition: 0.5s;
