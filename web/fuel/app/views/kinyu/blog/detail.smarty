@@ -1,7 +1,11 @@
+{literal}
 <script>
   var url = location.href;
-  console.log(url);
+  var url2 = url.split('/');
+  var url3 = url2[4];
+  var url3 = '{$url3}';
 </script>
+{/literal}
 
 
 {if $blog.kind == "わたしを知る"}
@@ -13,20 +17,27 @@
     <div class="myway-header-content">
       <h2><img src="/images/myway/title/main-title-report.png"></h2>
       
-      {if $blog.code == "FxKhYh"}
+      {$reporturl = $smarty.server.REQUEST_URI}
+      {if $reporturl = "/report/FxKhYh"}
       <!-- くつ編 -->
       <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;background: #FBECE4;">
         <div class="title-block"><img src="/images/myway/title/title-shoes.png"></div>
         <div class="video-block"><video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" poster="" muted autoplay playsinline loop></video></div>
       </div>
 
-      {else if $blog.code == "fMvmMk"}
+      {elseif $reporturl = "/report/fMvmMk"}
+
       <!-- コスメ編 -->
       <div class="main-tumb-block clear" style="border-top: 1px solid #a4d4e4;border-bottom: 1px solid #a4d4e4;background: #EBFAFF;">
         <div class="title-block"><img src="/images/myway/title/title-cosmetics.png"></div>
         <div class="video-block"><video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" poster="" muted autoplay playsinline loop></video></div>
       </div>
 
+      {else}
+      <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;background: #FBECE4;">
+        <div class="title-block"><img src="/images/myway/title/title-shoes.png"></div>
+        <div class="video-block"><video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" poster="" muted autoplay playsinline loop></video></div>
+      </div>
       {/if}
 
     </div>
@@ -116,13 +127,6 @@
         //var scroll_01 = $("#myway-content-after-point");
         var fix_point = $('.myway-report-content .inner').offset().top;
         var fix_point1 = $('.myway-report-content .inner').offset().left;
-        // var fix_point1 = (fix_point.top);
-        // var fix_point2 = (fix_point.left);
-        //var off1 = $('top: ' + off.top);
-        console.log(now_scroll);
-        console.log(all_scroll);
-        console.log(fix_point1);
-        // console.log(fix_point2);
 
         if(fix_point < now_scroll) {
           $("#myway-content-after-point").addClass('test');
@@ -138,7 +142,6 @@
 
 
 {else}
-
 
   <div class="kinyu-main-block kinyu-pc-details-block">
     <div class="inner">
