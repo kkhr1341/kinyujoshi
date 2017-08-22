@@ -1,13 +1,3 @@
-{literal}
-<script>
-  var url = location.href;
-  var url2 = url.split('/');
-  var url3 = url2[4];
-  var url3 = '{$url3}';
-</script>
-{/literal}
-
-
 {if $blog.kind == "わたしを知る"}
 
   <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
