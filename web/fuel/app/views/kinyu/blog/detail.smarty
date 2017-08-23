@@ -188,7 +188,7 @@
             <div class="social-list">
               <ul>
                 {$social_share}
-                <li><a class="twitter" href=""><img class="social-logo" src="/images/social/twitter_white01.png"></a></li> -->
+                <li><a class="twitter" href=""><img class="social-logo" src="/images/social/twitter_white01.png"></a></li>
               </ul>
             </div>
           </div>
