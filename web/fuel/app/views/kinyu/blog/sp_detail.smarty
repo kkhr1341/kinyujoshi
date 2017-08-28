@@ -61,11 +61,11 @@
           <div class="myway-content-after-list">
             <img class="season-title" src="/images/myway/title/report-content-after-season1_sp.png">
             <ul>
-              <li style="border: 1px solid #a4d4e4;background: #EBFAFF;">
-                <a href="/"><img src="/images/myway/title/title-cosmetics.png"></a>
-              </li>
               <li style="border: 1px solid #ecb9ae;background: #FBECE4;">
                 <a href="/"><img src="/images/myway/title/title-shoes.png"></a>
+              </li>
+              <li style="border: 1px solid #a4d4e4;background: #EBFAFF;">
+                <a href="/"><img src="/images/myway/title/title-cosmetics.png"></a>
               </li>
             </ul>
           </div>
