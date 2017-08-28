@@ -855,8 +855,10 @@
   letter-spacing: -4em;
 }
 .kinyu-top-list li {
-  display: inline-block;
-  letter-spacing: normal;
+  /*display: inline-block;
+  display: -webkit-inline-block;
+  letter-spacing: normal;*/
+  float: left;
   vertical-align: top;
   width: 30.8%;
   margin-right: 3.8%;
@@ -898,6 +900,7 @@
   font-size: 14px;
   line-height: 22px;
   padding: 0px 4px 10;
+  height: 44px;
   /*font-weight: bold;*/
   /*color: #fff;*/
   width: 100%;
@@ -2167,7 +2170,6 @@ footer .footer-menu {
 .tablet-div img {
   width: 100%;
   margin-top: 32px;
-}
 }
 
 
