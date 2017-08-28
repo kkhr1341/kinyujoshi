@@ -2131,7 +2131,7 @@ footer .footer-menu {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　タブレット
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-@media screen and (min-width: 640px) and (max-width: 768px) {
+/*@media screen and (min-width: 640px) and (max-width: 768px) {
 .tablet-div {
   display: block;
   width: 100%;
@@ -2171,7 +2171,7 @@ footer .footer-menu {
   width: 100%;
   margin-top: 32px;
 }
-
+}*/
 
 @media screen and (min-width: 640px) {
 .btn-kinyu:hover {
