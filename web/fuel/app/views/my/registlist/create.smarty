@@ -108,8 +108,7 @@
           </div>
 
           <div class="form-group">
-          <label>◆メンバー登録日</label>
-
+          <label class="form-title">メンバー登録日 <span class="label label-danger">必須</span></label>
             <div class='input-group date datetimepicker'>
               <input type='text' class="form-control" id="created_at" value="{date('YY/mm/dd HH:ii')}" />
               <span class="input-group-addon">
