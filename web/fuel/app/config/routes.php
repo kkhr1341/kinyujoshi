@@ -11,6 +11,7 @@ return array(
 
 	//会員登録情報
 	'my/registlist' => 'my/registlist/index',
+	'my/registlist/create' => 'my/registlist/create',
 	'my/registlist/(:any)'   => 'my/registlist/detail/$1',
 
 	//テスト環境

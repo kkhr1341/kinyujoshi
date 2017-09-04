@@ -12,6 +12,15 @@ class Registlist extends Base {
     ->as_array();
   }
 
+  public static function create($params) {
+    $code = self::getNewCode('member_regist');
+    $params['username'] = \Auth::get('username');
+    $params['code'] = $code;
+    $params['user_agent'] = @$_SERVER['HTTP_USER_AGENT'];
+    \DB::insert('member_regist')->set($params)->execute();
+    return $params;
+  }
+
   public static function save($params) {
     $username = \Auth::get('username');
     \DB::update('member_regist')->set($params)->where('code', '=', $params['code'])->execute();

@@ -11,6 +11,10 @@ use \Model\Registlist;
 class Controller_Api_Registlist extends Controller_Base
 {
 
+  public function action_create() {
+    $this->ok(Registlist::create(\Input::all()));
+  }
+
   public function action_save() {
     $this->ok(Registlist::save(\Input::all()));
   }
