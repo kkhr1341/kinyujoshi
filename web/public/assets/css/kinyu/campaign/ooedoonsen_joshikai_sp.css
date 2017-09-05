@@ -69,6 +69,23 @@
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  注意事項
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.ooedo-joshikai-top-notes {
+  width: 88%;
+  margin-top: 42px;
+  padding: 10px 20px;
+}
+.ooedo-joshikai-top-notes p {
+  font-size: 12px;
+  line-height: 18px;
+}
+.ooedo-joshikai-top-notes a {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スライドショー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .slide01 {
