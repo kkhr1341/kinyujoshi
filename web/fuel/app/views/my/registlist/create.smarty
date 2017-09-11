@@ -122,6 +122,11 @@
             <label class="form-title">簡単な自己紹介をお願いいたします。 <span class="label label-danger">必須</span></label>
             <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
           </div>
+
+          <div class="form-group form-group02">
+            <label class="form-title">編集部入力欄(備考)</label>
+            <textarea id="edit_inner" name="edit_inner" class='form-control' rows="10"></textarea>
+          </div>
           
           <div class="form-btn tx-center ">
             <div class="">
@@ -195,6 +200,7 @@ $(function(){
     params.job_kind = $("[name=job_kind]:checked").val();
     params.created_at = $('#created_at').val();
     params.introduction = $('#introduction').val();
+    params.edit_inner = $('#edit_inner').val();
     
     if (params.name == "") {
       ts.error("お名前を入力してください");
