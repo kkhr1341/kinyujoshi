@@ -1611,7 +1611,6 @@
   padding: 12px 80px;
   background: #7CDCCE;
   color: #fff;
-  border-radius: 3px;
   margin-top: 24px;
   transition: .3s;
 }
@@ -2126,52 +2125,55 @@ footer .footer-menu {
 }
 
 
-
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  　タブレット
+  　インスタグラムリスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-/*@media screen and (min-width: 640px) and (max-width: 768px) {
-.tablet-div {
+.insta-block {
+  padding: 45px 1% 0px;
+}
+.insta-block-inner {
+  border-bottom: 1px solid gray;
+  padding: 32px;
+  background: #f9f9f9;
+}
+.insta-block-inner:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+.insta-block-inner li {
+  display: block;
+  list-style: none;
+  float: left;
+  width: 23.5%;
+  height: 100px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: .5s;
+}
+.insta-block-inner li:nth-child(4n) {
+  margin-right: 0%;
+  margin-bottom: 2%;
+}
+.insta-block-inner li:nth-last-child(-n + 5) {
+  margin-bottom: 0%;
+}
+.insta-block-inner li:nth-child(9n) {
+  display: none;
+}
+.insta-block-inner li a {
   display: block;
   width: 100%;
   height: 100%;
-  position: fixed;
-  z-index: 999999;
-  top: 0;
-  left: 0;
-  background: rgba(255,255,255,.98);
 }
-.tablet-bg{
-  content: "";
-  position: absolute;
-  background-clip: content-box;
-  width: 100%;
-  height: 100%;
-  padding: 30px;
-  top: 0;
-  left: 0;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  filter: blur(5px);
-}
-.tablet-div h3 {
-  width: 600px;
-  height: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -200px;
-  margin-left: -300px;
-  border: 1px solid #7CDCCE;
-  box-sizing: border-box;
-  padding: 40px;
-}
-.tablet-div img {
-  width: 100%;
-  margin-top: 32px;
-}
-}*/
+
+
 
 @media screen and (min-width: 640px) {
 .btn-kinyu:hover {
