@@ -53,7 +53,7 @@
               <div class="swiper-slide" style="background: url(/images/oralcare.jpg) center center / cover no-repeat;">
                 <a target="_blank" href="https://www.oralcare.ne.jp/seminar/">
                   <div class="kinyu-top-list-kind">
-                    <p>特別女子会</p>
+                    <!-- <p>特別女子会</p> -->
                   </div>
                   <!-- <h3 class="kinyu-top-list-title">＜特別女子会＞ゆるりと勉強。温泉と資産作り♨︎</h3> -->
                 </a>
