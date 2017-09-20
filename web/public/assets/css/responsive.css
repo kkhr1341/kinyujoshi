@@ -544,6 +544,8 @@
   border-bottom: none;
 }
 .prev-news-list {
+  width: 88%;
+  margin: 0 auto;
   margin-top: 0px;
 }
 .prev-news-list a {
@@ -1355,6 +1357,21 @@ footer .navi-link-top {
   background: none;
   color: #444;
   border-bottom: 1px solid #7cdcce;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　インスタグラムリスト
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.insta-list-block {
+
+}
+.insta-list-block li {
+  
+}
+.insta-list-block li:nth-child(9n) {
+  display: block;
+}
+.insta-list-block li a {
 }
 
 }

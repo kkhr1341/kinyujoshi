@@ -51,7 +51,7 @@
   <img class="kinyu-sp-border-line" src="/images/new/kinyu-border-line01.png">
 
   <div class="sp_top_after">
-    {$detail_content_after}
+    {$detail_news_after}
   </div>
   
   {$sp_footer}
