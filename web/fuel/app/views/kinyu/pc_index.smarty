@@ -137,6 +137,16 @@
       <img class="report-list-banner-top" src="/images/banner/myway_pc.jpg">
     </a>
 
+    <div class="insta-block">
+      <div class="insta-block-inner">
+        <h3 class="kinyu-main-title" style="text-align: center;"><a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank"><img src="/images/main-title/hash-kinyujoshi-title.png" alt="レポート一覧"></a></h3>
+        <div class="insta-el" id="instafeed"></div>
+        <div class="insta-link-block">
+          <a class="insta-link" href="/">Instagramページへ</a>
+        </div>
+      </div>
+    </div>
+
     <div class="kinyu-top-list">
       <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h3>
       <ul class="clear">
@@ -208,6 +218,8 @@
         var hh = $(".kinyu-top-list li").innerWidth();
         var mm = $(".kinyu-top-list").innerWidth();
         var ss = $(".kinyu-top-introlist li").innerWidth();
+        var dd = $(".insta-block-inner li").innerWidth();
+        var ddd = $(".insta-block-inner li").width();
 
         $(window).load(function(){
           var ww = $(".category-menu ul").height();

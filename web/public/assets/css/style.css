@@ -2124,7 +2124,6 @@ footer .footer-menu {
   display: inline-block;
 }
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　インスタグラムリスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -2132,9 +2131,10 @@ footer .footer-menu {
   padding: 45px 1% 0px;
 }
 .insta-block-inner {
-  border-bottom: 1px solid gray;
   padding: 32px;
   background: #f9f9f9;
+  border-left: 1px solid #7CDCCE;
+  border-right: 1px solid #7CDCCE;
 }
 .insta-block-inner:after {
   content: ".";
@@ -2171,6 +2171,17 @@ footer .footer-menu {
   display: block;
   width: 100%;
   height: 100%;
+}
+.insta-link-block {
+  text-align: right;
+}
+.insta-link {
+  line-height: 13px;
+  display: inline-block;
+  border-bottom: 1px solid #6c6c6c;
+  padding-bottom: 2px;
+  margin-top: 10px;
+  color: #6c6c6c;
 }
 
 
@@ -2295,6 +2306,8 @@ footer .footer-menu {
   opacity: .5;
   cursor: pointer;
 }
-
+.insta-block-inner li:hover {
+  opacity: .5;
+}
 
 }

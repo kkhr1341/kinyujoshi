@@ -552,18 +552,25 @@ $(function() {
 //   n = Math.floor(Math.random()*img.length);
 // });
 
-
-//インスタグラム - わたしを知る詳細ページ
 $(document).ready(function() {
   var userFeed = new Instafeed({
     get: 'user', //ユーザーから取得
     userId: '3007140595', //ユーザーID(数字のみのもの)
-    sortBy:'random', //並び順をランダムに
+    //sortBy:'random', //並び順をランダムに
     links: true , //画像リンク取得
-    limit: 12, //取得する画像数を設定
+    limit: 9, //取得する画像数を設定
     resolution: 'standard_resolution', //画像サイズを設定
     template: '<li><a href="{{link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"></a></li>',
     accessToken: '3007140595.1e3d504.e017055f3cc649ddacf9758314e4628a' //アクセストークン(ローカル)
   });
   userFeed.run();
+});
+
+$(function() {
+  setTimeout(function(){
+    console.log("----");
+    var ddddd = $('.insta-block-inner li').innerWidth();
+    console.log(ddddd);
+    $('.insta-block-inner li').height(ddddd);
+  },1000);
 });

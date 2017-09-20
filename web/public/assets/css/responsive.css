@@ -1362,16 +1362,55 @@ footer .navi-link-top {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　インスタグラムリスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.insta-list-block {
-
+.insta-block {
+  padding: 40px 0% 0px;
 }
-.insta-list-block li {
-  
+.insta-block-inner {
+  padding: 0px;
+  background: none;
+  border-left: none;
+  border-right: none;
 }
-.insta-list-block li:nth-child(9n) {
+.insta-block-inner .kinyu-main-title {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+.insta-block-inner li {
+  display: block;
+  list-style: none;
+  float: left;
+  width: 32%;
+  height: 100px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition: .5s;
+}
+.insta-block-inner li:nth-child(3n) {
+  margin-right: 0%;
+  margin-bottom: 2%;
+}
+.insta-block-inner li:nth-child(4n) {
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+.insta-block-inner li:nth-last-child(-n + 5) {
+  margin-bottom: 2%;
+}
+.insta-block-inner li:nth-last-child(-n + 2) {
+  margin-bottom: 0%;
+}
+.insta-block-inner li:nth-child(9n) {
   display: block;
 }
-.insta-list-block li a {
+.insta-link {
+  line-height: 11px;
+  font-size: 11px;
+  margin-top: 8px;
 }
+
 
 }
