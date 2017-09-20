@@ -10,7 +10,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
 {
 	public function action_index($page=1) {
 	$this->data['projects'] = Projects::lists(1, 3, true, 'kinyu');
-	$this->data['news'] = News::lists(1, 0, 1, true);
+	$this->data['news'] = News::lists(1, 1, true);
   if(Agent::is_mobiledevice()) {
     $this->data['blogs'] = Blogs::all('kinyu'+'investment', '/report/', $page, 2, 20);
   } else {
