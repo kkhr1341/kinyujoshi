@@ -5,11 +5,11 @@ require_once(dirname(__FILE__)."/base.php");
 
 class News extends Base {
 	
-	public static function lists($mode = null, $offset = null, $limit = null, $open = null, $section_code = null) {
+	public static function lists($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null) {
 		
 		$datas = \DB::select(\DB::expr('*, news.code'))->from('news')
 		->join('profiles', 'left')
-        ->on('news.username', '=', 'profiles.username')
+    ->on('news.username', '=', 'profiles.username')
 		->where('news.disable', '=', 0);
 
 		if ($mode === null) {
@@ -30,13 +30,13 @@ class News extends Base {
 			$datas = $datas->where('section_code', '=', $section_code);
 		}
 		
-		$datas = $datas->order_by('news.id', 'desc');
+		$datas = $datas->order_by('open_date', 'desc');
 
-		if ($offset === null) {
-		}
-		else {
-			$datas = $datas->offset($offset);
-		}
+		// if ($offset === null) {
+		// }
+		// else {
+		// 	$datas = $datas->offset($offset);
+		// }
 		
 		if ($limit === null) {
 		}

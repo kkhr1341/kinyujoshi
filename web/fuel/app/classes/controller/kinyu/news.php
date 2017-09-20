@@ -45,6 +45,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 		$this->template->description = $this->data['news']['title'];
 		$this->template->ogimg = $this->data['news']['main_image'];
 	  $this->data['top_blogs'] = Blogs::lists(1, 3, true);
+    $this->data['top_news'] = News::lists(1, 3, true);
     $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
     $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
 		//$this->template->contents_after_area = View::forge('kinyu/template/contents-after.smarty', $this->data);
@@ -52,7 +53,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     //$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
-    $this->template->detail_content_after = View::forge('kinyu/common/detail_content_after.smarty', $this->data);
+    $this->template->detail_news_after = View::forge('kinyu/common/detail_news_after.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {

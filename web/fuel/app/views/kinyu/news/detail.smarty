@@ -49,7 +49,6 @@
           <div class="social-list">
             <ul>
               {$social_share}
-              <li><a class="twitter" href=""><img class="social-logo" src="/images/social/twitter_white01.png"></a></li> -->
             </ul>
           </div>
         </div>
@@ -60,7 +59,7 @@
     </div>
 
     <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">
-    {$detail_content_after}    
+    {$detail_news_after}    
   </div>
   <footer>
         <div class="footer-logo">
