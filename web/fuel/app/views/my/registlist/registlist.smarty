@@ -40,7 +40,7 @@
     </tr>
     {/foreach}
     <div class="now_member_block">
-      <p class="now_member">現在の会員数：<span>{$smarty.foreach.loop.total}</span>名！<br>(メンバー情報修正中です...。)</p>
+      <p class="now_member">現在の会員数：<span>{$smarty.foreach.loop.total}</span>名！</p>
     </div>
 
   </tbody>
