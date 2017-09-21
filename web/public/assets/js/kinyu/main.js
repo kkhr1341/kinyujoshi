@@ -560,7 +560,7 @@ $(document).ready(function() {
     links: true , //画像リンク取得
     limit: 9, //取得する画像数を設定
     resolution: 'standard_resolution', //画像サイズを設定
-    template: '<li><a href="{{link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"></a></li>',
+    template: '<li><a href="{{link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"><p><span>❤︎ {{likes}}</span></p></a></li>',
     accessToken: '3007140595.1e3d504.e017055f3cc649ddacf9758314e4628a' //アクセストークン(ローカル)
   });
   userFeed.run();
