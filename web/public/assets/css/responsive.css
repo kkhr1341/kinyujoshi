@@ -10,6 +10,9 @@
 .pc {
   display: none!important;
 }
+.tablet-div {
+  display: none;
+}
 /* トップページ・sp_top_after */
 .sp_top_after {
   width: 88%;
