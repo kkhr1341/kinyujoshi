@@ -52,8 +52,8 @@
   </div>
 
   <div class="ooedo-joshikai-top-notes">
-    <p class="pc ff-normal"><span style="color:#FF5161">＊</span>1回目は終了しました♪ 2回目は9/23(土)に開催します！<br>お申込は<a target="_blank" href="http://ptix.co/2uVS4Hs">こちら</a>からできます。</a></p>
-    <p class="sp ff-normal"><span style="color:#FF5161">＊</span>1回目は終了しました♪ 2回目は9/23(土)に開催します！ お申込は<a target="_blank" href="http://ptix.co/2uVS4Hs">こちら</a>からできます。</a></p>
+    <p class="pc ff-normal"><span style="color:#FF5161">＊</span>特別女子会は終了しました。<!--<br>当日のレポートは<a target="_blank" href="http://ptix.co/2uVS4Hs">こちら</a>から確認できます♪</a> --></p>
+    <p class="sp ff-normal"><span style="color:#FF5161">＊</span>特別女子会は終了しました。<!-- <a target="_blank" href="http://ptix.co/2uVS4Hs">こちら</a>から確認できます。</a> --></p>
   </div>
 
 
@@ -377,8 +377,8 @@
             <p class="sp ooedo-application-link-sub ff-normal"><span style="color:#FF5161">※</span>お申込みには、メンバー登録が必要です。<br>
             お申込みページのパスワードは、<br><span style="border-bottom:1px solid #FF5161;">メルマガにて</span>配信しております。</p>
             
-            <a class="ooedo-application-link ff-normal" href="http://ptix.co/2uVS4Hs" target="_blank">お申込みはこちら♪</a>
-            <p class="ooedo-application-text1 ff-normal">Peatix(外部サイト)に移動します。</p>
+            <p class="ooedo-application-link joshikai-finish ff-normal">お申込みはこちら♪</p>
+            <p class="ooedo-application-text1 ff-normal">＊特別女子会は終了しました。</p>
           </div>
           <div class="ooedo-joshikai-frame-tri-lefttop"></div>
           <div class="ooedo-joshikai-frame-tri-righttop"></div>
@@ -419,7 +419,9 @@
     </div>
   </footer>
 
+  {*
   <a href="http://ptix.co/2uVS4Hs" target="_blank" class="sp application-box-fix ff-normal">
   特別女子会のお申込みへ♪<br><span>メンバー限定です。(パスワードはメルマガでチェック♪)</span>
   </a>
+  *}
 </div>

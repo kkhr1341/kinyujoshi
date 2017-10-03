@@ -25,23 +25,6 @@
         </a>
       </div>
 
-      <div class="swiper-slide" style="background: url(/images/content/ooedo_joshikai/back/top2.jpg) center center / cover no-repeat;">
-        <img class="top-ooedo-img" src="/images/content/ooedo_joshikai/ooedo-joshikai-mainlogo2.png">
-        <style>
-          .top-ooedo-img {
-            width: 140px;
-            position: absolute;
-            top: 36px;
-            left: 10px;
-          }
-        </style>
-        <a href="/oom-reit">
-          <div class="kinyu-top-list-kind">
-            <p>特別女子会</p>
-          </div>
-          <h3 class="kinyu-top-list-title">＜特別女子会＞ゆるりと勉強。温泉と資産作り♨︎</h3>
-        </a>
-      </div>
       {/if}
 
       {if $smarty.foreach.loopname.index == 2}

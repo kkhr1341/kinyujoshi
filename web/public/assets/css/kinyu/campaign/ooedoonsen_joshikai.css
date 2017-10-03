@@ -826,7 +826,9 @@ p.joshikai-schedule-info-title {
     width: 250px;
 }
 
-
+.joshikai-finish {
+  opacity: .2;
+}
 
 
 /* ホバーイベント */
@@ -842,11 +844,11 @@ p.joshikai-schedule-info-title {
   color: #FF5161;
   opacity: .5;
 }
-.about-ooedo-detail-link:hover,
+/*.about-ooedo-detail-link:hover,
 .ooedo-application-link:hover,
 .about-ooedo-detail-link02:hover {
   opacity: .5; 
-}
+}*/
 
 }
 
