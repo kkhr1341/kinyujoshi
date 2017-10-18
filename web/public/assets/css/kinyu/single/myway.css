@@ -317,6 +317,7 @@
   position: relative;
 }
 .myway-header-content .main-tumb-block .video-block {
+  float: left;
   width: 620px;
   height: 340px;
   overflow: hidden;
@@ -328,12 +329,25 @@
   position: absolute;
 }
 .myway-header-content .main-tumb-block .title-block {
-  position: absolute;
-  top: 50%;
-  right: 2%;
-  margin-top: -61.5px;
+  float: right;
+  width: 380px;
+  padding: 0px 36px;
+  box-sizing: border-box;
+  display: table;
+  height: 340px;
+}
+.myway-header-content .main-tumb-block .title-block .title-block-inner {
+  display: table-cell; 
+  vertical-align: middle;
+  height: 100%;
+}
+.myway-header-content .main-tumb-block .title-block p {
+  font-size: 12px;
+  line-height: 20px;
 }
 .myway-header-content .main-tumb-block .title-block img {
+  width: 280px;
+  margin-bottom: 20px;
 }
 .myway-report-content .inner {
   border-bottom: 1px solid gray;
@@ -624,9 +638,9 @@
   padding-top: 36px;
 }
 .myway-header-content h2 {
-  width: 68%;
+  width: 60%;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 .myway-header-content h2 img {
   width: 100%;
@@ -637,20 +651,30 @@
 .myway-header-content .main-tumb-block .video-block {
   width: 100%;
   height: 150px;
+  float: none;
 }
 .myway-header-content .main-tumb-block .video-block video {
-  height: 160px;
+  height: 165px;
 }
 .myway-header-content .main-tumb-block .title-block {
+  width: 100%;
   position: relative;
   top: auto;
   right: auto;
   margin-top: 0px;
   margin-bottom: 8px;
   text-align: center;
+  height: auto;
+  float: none;
 }
 .myway-header-content .main-tumb-block .title-block img {
-  width: 88%;
+  width: 92%;
+  margin-bottom: 8px;
+}
+.myway-header-content .main-tumb-block .my-way-description {
+  font-size: 10px;
+  line-height: 17px;
+  margin-top: 16px;
 }
 .myway-report-content .inner {
   width: 88%;

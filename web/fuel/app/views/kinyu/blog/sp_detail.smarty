@@ -12,22 +12,32 @@
       {if $reporturl == "/report/FxKhYh"}
       <!-- くつ編 -->
       <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;background: #FBECE4;">
-        <div class="title-block"><img src="/images/myway/title/title-shoes.png"></div>
+        <div class="title-block">
+          <img src="/images/myway/title/title-shoes.png">
+        </div>
         <div class="video-block"><video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" poster="" muted autoplay playsinline loop></video></div>
+        <p class="my-way-description">{$blog.description}</p>
       </div>
 
       {elseif $reporturl == "/report/fMvmMk"}
-
+      
       <!-- コスメ編 -->
       <div class="main-tumb-block clear" style="border-top: 1px solid #a4d4e4;border-bottom: 1px solid #a4d4e4;background: #EBFAFF;">
-        <div class="title-block"><img src="/images/myway/title/title-cosmetics.png"></div>
+        <div class="title-block">
+          <img src="/images/myway/title/title-cosmetics.png">
+          <p>{$blog.description}</p>
+        </div>
         <div class="video-block"><video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" poster="" muted autoplay playsinline loop></video></div>
       </div>
 
       {else}
+      <!-- わたし③ -->
       <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;background: #FBECE4;">
-        <div class="title-block"><img src="/images/myway/title/title-shoes.png"></div>
+        <div class="title-block">
+          <img src="/images/myway/title/title-shoes.png">
+        </div>
         <div class="video-block"><video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" poster="" muted autoplay playsinline loop></video></div>
+        <p class="my-way-description">{$blog.description}</p>
       </div>
       {/if}
 
