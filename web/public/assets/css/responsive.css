@@ -673,6 +673,9 @@
   padding-top: 0px;
   padding: 16px 0px;
 }
+.myway-report-detail .report-detail-share-right {
+  width: 70%;
+}
 .report-detail-share-el h3 {
   margin-bottom: 0px;
 }
