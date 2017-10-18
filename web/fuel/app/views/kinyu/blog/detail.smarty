@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="video-block">
-          <video muted autoplay loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
+          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
           <p>{$blog.description}</p>
         </div>
         <div class="video-block">
-          <video muted autoplay loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" ></video>
+          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" ></video>
         </div>
       </div>
 
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="video-block">
-          <video muted autoplay loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
+          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
         </div>
       </div>
       {/if}
