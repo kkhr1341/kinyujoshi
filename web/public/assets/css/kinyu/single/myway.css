@@ -372,6 +372,13 @@
   line-height: 0;
   padding: 10px 0px 8px;
 }
+.myway-content-after-list li .comingimg {
+  display: block;
+  margin: 0 auto;
+  line-height: 0;
+  padding: 10px 0px 8px;
+  width: 60%;
+}
 .myway-content-after-list li a img {
   width: 60%;
 }
@@ -694,6 +701,16 @@
 }
 .myway-content-after-list li:last-child {
   margin-bottom: 0px;
+}
+.myway-report-detail .report-detail-share-right {
+  width: 70%;
+}
+.myway-content-after-list li .comingimg {
+  display: block;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 10px 0px 8px;
+  width: 60%;
 }
 /*.myway-content-after .instagram_block_li li {
   width: 48%;

@@ -65,7 +65,7 @@
                 <a href="/report/FxKhYh"><img src="/images/myway/title/title-shoes.png"></a>
               </li>
               <li style="border: 1px solid #a4d4e4;background: #EBFAFF;opacity: .2;">
-                <img src="/images/myway/title/title-cosmetics.png">
+                <img class="comingimg" src="/images/myway/title/title-cosmetics.png">
               </li>
             </ul>
           </div>
