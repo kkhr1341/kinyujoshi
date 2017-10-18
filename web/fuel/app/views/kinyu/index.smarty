@@ -16,12 +16,12 @@
       {foreach from=$blogs_pick item=blog name=loopname}
 
       {if $smarty.foreach.loopname.index == 0}
-      <div class="swiper-slide" style="background: url(/images/oralcare_sp.jpg) center center / cover no-repeat;">
+      <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/2017101813474520171016225807FullSizeRender.jpg) center center / cover no-repeat;">
         <a target="_blank" href="https://www.oralcare.ne.jp/seminar/">
           <div class="kinyu-top-list-kind">
-          <!-- <p>特別女子会</p> -->
+          <p>イベント告知</p>
           </div>
-        <!-- <h3 class="kinyu-top-list-title">＜特別女子会＞ゆるりと勉強。温泉と資産作り♨︎</h3> -->
+        <h3 class="kinyu-top-list-title">キャリア×お金 金融女子のリアルストーリー</h3>
         </a>
       </div>
 
