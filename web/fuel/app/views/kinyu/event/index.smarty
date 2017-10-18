@@ -17,9 +17,13 @@
         <ul>
           {foreach from=$events.datas key="key" item=event name=loopname}
           {if $event.event_category == "女子会"}
+
+          {$fooo = $event.main_image}
+          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+          
           <li>
             <a target="_blank" href="{$event.pay_url}">
-              <div class="kinyu-event-list-left" style="background:url({$event.main_image}) center center / cover no-repeat">
+              <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
                 {if $event.event_category == "女子会"}
                   <p class="event-category normal-event">女子会</p>
                 {else if $event.event_category == "スペシャル"}
