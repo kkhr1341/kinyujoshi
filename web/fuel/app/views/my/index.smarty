@@ -17,7 +17,6 @@
       </div>
     </div>
   {else}
-
     <!-- 会員向けページ -->
     <div class="slidewrap">
       <!-- <div class="left-pos"><img src="/images/content/teacher/slide-left01.png"></div>  
