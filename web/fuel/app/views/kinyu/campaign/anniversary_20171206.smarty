@@ -1,0 +1,133 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/anniversary.css">
+
+
+<div class="">
+
+  <div class="introduction" style="background: url(/images/content/anniversary/main-bg.jpg) center center / cover no-repeat;">
+
+    <!-- <img src="/images/content/anniversary/main-logo.jpg" style="width: 100%;"> -->
+    <div class="introduction-border-block">
+      <div class="introduction-border-block-el"></div>
+      <img class="introduction-border-block-img01" src="/images/content/anniversary/introduction-border01.png">
+      <img class="introduction-border-block-img02" src="/images/content/anniversary/introduction-border02.png">
+    </div>
+  </div>
+
+  <div class="sub-intro-block">
+    <div class="sub-intro-inner">
+      <img src="/images/content/anniversary/main-title.png" alt="">
+    </div>
+  </div>
+
+
+
+  <div class="anniversary1206-block">
+
+    <!-- -->
+    <!-- <div class="">
+      <img src="/images/content/anniversary/title.png" alt="">
+    </div> -->
+    
+    <!-- イベントコンセプト -->
+    <div class="anniversary1206-block-el">
+      <div class="anniversary1206-block-el-inner">
+        <h2><img src="/images/content/anniversary/title-concept.png" alt=""></h2>
+        <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+
+
+
+    <!-- イベント内容 -->
+    <div class="anniversary1206-block-el">
+      <div class="anniversary1206-block-el-inner">
+        <h2><img src="/images/content/anniversary/title-contents.png" alt=""></h2>
+        <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+
+
+    <!-- スケジュール -->
+    <div class="anniversary1206-block-el">
+      <div class="anniversary1206-block-el-inner">
+        <h2><img src="/images/content/anniversary/title-schedule.png" alt=""></h2>
+        <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+
+
+
+    <!-- スポンサー -->
+    <div class="anniversary1206-block-el">
+      <div class="anniversary1206-block-el-inner">
+        <h2><img src="/images/content/anniversary/title-sponsor.png" alt=""></h2>
+        <div class="sponsor-area-block">
+          <h3>協賛</h3>
+          <ul class="clear">
+            <li>
+              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <p>株式会社TOE THE LINE</p>
+            </li>
+            <li>
+              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <p>株式会社TOE THE LINE</p>
+            </li>
+            <li>
+              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <p>株式会社TOE THE LINE</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sponsor-area-block ponsor-area-block">
+          <h3>協力</h3>
+          <ul class="clear">
+            <li>
+              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <p>株式会社TOE THE LINE</p>
+            </li>
+            <li>
+              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <p>株式会社TOE THE LINE</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- アクセス -->
+    <div class="anniversary1206-block-el">
+      <div class="anniversary1206-block-el-inner">
+        <h2><img src="/images/content/anniversary/title-access.png" alt=""></h2>
+        <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </div>
+
+</div>
+
+<div class="anniversary1206-footer-block">
+  <footer class="pc">
+    <div class="footer-logo">
+      <img src="/images/kinyu-logo01.png">
+    </div>
+    <div class="footer-menu">
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/company">運営会社</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/privacy">プライバシーポリシー</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/legal">特定商取引法に基づく表記</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/service">会員規約</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/contact">お問い合わせ</a>
+      </div>
+    </div>
+    <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc.</p>
+  </footer>
+</div>

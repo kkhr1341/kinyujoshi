@@ -84,6 +84,7 @@ return array(
 	'conference' => 'kinyu/campaign/conference',
 	'map' => 'kinyu/campaign/map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
+	'anniversary' => 'kinyu/campaign/anniversary_20171206',
 
 
 

@@ -1,0 +1,134 @@
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  全体共通
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.anniversary1206-block {
+  
+}
+.anniversary1206-block-el {
+  padding: 80px 0px;
+  border-bottom: 1px solid gray;
+}
+.anniversary1206-block-el-inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.anniversary1206-block-el h2 {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.anniversary1206-block-el .main-description {
+  width: 720px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  イントロダクション
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.introduction {
+  width: 100%;
+  height: 750px;
+  position: relative;
+}
+.introduction-border-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 100px solid rgba(255,255,255,.9);
+  padding: 20px;
+}
+.introduction-border-block-el {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+}
+.introduction-border-block-img01 {
+  position: absolute;
+  top: -70px;
+  left: -40px;
+}
+.introduction-border-block-img02 {
+  position: absolute;
+  bottom: -70px;
+  right: -40px;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  サブイントロ文章
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.sub-intro-block {
+  background: gainsboro;
+}
+.sub-intro-inner {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 80px 0px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+
+
+
+
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スポンサー
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.sponsor-area-block {
+  width: 100%;
+}
+.sponsor-area-block:last-child {
+  margin-top: 36px;
+}
+.sponsor-area-block h3 {
+  width: 400px;
+  margin: 0 auto;
+  padding: 4px 0px;
+  border: 1px solid gray;
+  text-align: center;
+}
+.sponsor-area-block ul {
+  margin-top: 24px;
+  letter-spacing: -4em;
+}
+.sponsor-area-block li {
+  display: inline-block;
+  letter-spacing: normal;
+  width: 31.3333%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+}
+.sponsor-area-block li:nth-child(3n) {
+  margin-right: 0%;
+}
+.sponsor-area-block li img {
+  width: 100%;
+}
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  フッター
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.anniversary1206-footer-block {
+  background: #e4e4e4;
+}
+
+.anniversary1206-footer-block .navi_kinyu-submenu-el a {
+  background: none;
+}
