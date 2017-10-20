@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/anniversary.css">
+<script type="text/javascript" src="/assets/js/kinyu/campaign/conference.js"></script>
 
 
 <div class="">
@@ -32,7 +33,7 @@
     <div class="anniversary1206-block-el">
       <div class="anniversary1206-block-el-inner">
         <h2><img src="/images/content/anniversary/title-concept.png" alt=""></h2>
-        <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <p class="main-description"></p>
       </div>
     </div>
 
@@ -51,9 +52,58 @@
     <div class="anniversary1206-block-el">
       <div class="anniversary1206-block-el-inner">
         <h2><img src="/images/content/anniversary/title-schedule.png" alt=""></h2>
-        <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+
+        
+        
+        <table class="anniversary1206-schedule-table">
+          <tbody>
+            <tr>
+              <th>
+                <div class=""><span>12:30～13:25</span></div>
+              </th>
+              <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+            </tr>
+            <th>
+                <div class=""><span>12:30～13:25</span></div>
+              </th>
+              <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+            </tr>
+            <th>
+                <div class=""><span>12:30～13:25</span></div>
+              </th>
+              <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+            </tr>
+            <th>
+                <div class=""><span>12:30～13:25</span></div>
+              </th>
+              <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+
+    <script>
+      $(function() {
+
+        var ss = $(".anniversary1206-schedule-table tr td").height();
+        console.log(ss);
+
+        // $(window).load(function(){
+        //   var ww = $(".category-menu ul").height();
+        //   var zz = $(".category-menu").height();
+        //   //console.log(ww);
+        //   //console.log(zz);
+        //   $('.kinyu-top-introlist').css('margin-top',ww);
+        // });
+
+        //$('.kinyu-top-list li').height(hh);
+        // $('.category-menu').width(mm);
+        $('.anniversary1206-schedule-table th div').height(ss);
+
+      });
+    </script>
 
 
 
@@ -62,32 +112,32 @@
       <div class="anniversary1206-block-el-inner">
         <h2><img src="/images/content/anniversary/title-sponsor.png" alt=""></h2>
         <div class="sponsor-area-block">
-          <h3>協賛</h3>
+          <h3><p>協賛</p></h3>
           <ul class="clear">
             <li>
-              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
               <p>株式会社TOE THE LINE</p>
             </li>
             <li>
-              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
               <p>株式会社TOE THE LINE</p>
             </li>
             <li>
-              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
               <p>株式会社TOE THE LINE</p>
             </li>
           </ul>
         </div>
 
         <div class="sponsor-area-block ponsor-area-block">
-          <h3>協力</h3>
+          <h3><p>協力</p></h3>
           <ul class="clear">
             <li>
-              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
               <p>株式会社TOE THE LINE</p>
             </li>
             <li>
-              <div class=""><img src="/images/content/anniversary/main-title.png"></div>
+              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
               <p>株式会社TOE THE LINE</p>
             </li>
           </ul>
@@ -100,7 +150,12 @@
     <div class="anniversary1206-block-el">
       <div class="anniversary1206-block-el-inner">
         <h2><img src="/images/content/anniversary/title-access.png" alt=""></h2>
-        <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        
+        <div class="access-area-block">
+          <div class="text-area"></div>
+          <div class="map-block"><div id="area-google-map2"></div>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -131,3 +186,64 @@
     <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc.</p>
   </footer>
 </div>
+
+
+
+<script>
+
+$(function(){
+    var coordinate2 = new google.maps.LatLng(35.6708872, 139.7649584);/*座標の指定*/
+
+    /*マップの設定*/
+    var mapOptions2 = {
+      zoom: 16, /*Map表示時の拡大倍率を調整。*/
+      center: coordinate2, /*中心点をどこにするか。この場合は、目的地と同じ*/
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP/*地図の表示タイプの指定。*/
+    };
+
+    /*マップをID area-google-mapに埋め込む記述*/
+    var map2 = new google.maps.Map(document.getElementById('area-google-map2'), mapOptions2);
+
+    /*マップのデザインの指定*/
+    var styleOptions = [
+      {
+        "stylers":  [
+      { gamma: 0.99 },
+      { visibility: "on" },
+      { lightness: 30 },
+      { hue: "#D9D8CB" },
+      { saturation: -90 }
+    ]
+      }
+    ];
+
+    /*マップのデザインを適用させる記述*/
+    var styleType = new google.maps.StyledMapType(styleOptions);
+    map2.mapTypes.set('genius', styleType);
+    map2.setMapTypeId('genius');
+
+    /*アイコンの表示設定*/
+    var icon2 = new google.maps.MarkerImage('/images/content/conference/location_jpxarrows1.png',/*アイコンのパス*/
+      new google.maps.Size(50,50),/*アイコンのサイズ*/
+      new google.maps.Point(0, 0)/*座標からのアイコンの位置*/
+    );
+    
+    var markerOptions = {
+      position: coordinate2,/*表示場所と同じ位置に設置*/
+      map: map2,
+      icon: icon2,
+    };
+            //
+    // var marker2 = new google.maps.Marker({
+    //   position: coordinate1,   //マーカーの位置
+    //   map: map,   //表示する地図
+    //   icon: icon2
+    // });
+
+    /*アイコンを表示させる記述*/
+    var marker = new google.maps.Marker(markerOptions);
+    //var marker1 = new google.maps.Marker(markerOptions);
+  });
+
+</script>
