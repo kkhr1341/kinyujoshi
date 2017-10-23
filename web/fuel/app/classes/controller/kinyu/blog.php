@@ -56,8 +56,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
       $iddate = $this->data['blog']['code'];
       switch (true) {
         case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-        case $_SERVER['PHP_AUTH_USER'] !==  'kinyu-admin':
-        case $_SERVER['PHP_AUTH_PW']   !== '1234567890':
+        case $_SERVER['PHP_AUTH_USER'] !==  'kinyu-report':
+        case $_SERVER['PHP_AUTH_PW']   !== 'iYszQGhE':
         header('WWW-Authenticate: Basic realm="Enter username and password."');
         header('Content-Type: text/plain; charset=utf-8');
         die('このページを見るにはログインが必要です');
