@@ -4,19 +4,23 @@
 
 <div class="">
 
-  <div class="introduction" style="background: url(/images/content/anniversary/main-bg.jpg) center center / cover no-repeat;">
-
-    <!-- <img src="/images/content/anniversary/main-logo.jpg" style="width: 100%;"> -->
-    <div class="introduction-border-block">
+  <div class="introduction">
+    <div class="introduction-border-block pc">
       <div class="introduction-border-block-el"></div>
       <img class="introduction-border-block-img01" src="/images/content/anniversary/introduction-border01.png">
       <img class="introduction-border-block-img02" src="/images/content/anniversary/introduction-border02.png">
     </div>
+    <img class="introduction-logo pc" src="/images/content/anniversary/introduction-logo.png">
+    <img class="introduction-date pc" src="/images/content/anniversary/introduction-date.png">
+
+    <img class="introduction-main-sp sp" src="/images/content/anniversary/main-bg-sp.jpg">
+
   </div>
 
   <div class="sub-intro-block">
     <div class="sub-intro-inner">
       <img src="/images/content/anniversary/main-title.png" alt="">
+      <a class="anniversary1206-to-link" href="#application" target="_blank">お申し込みはこちら</a>
     </div>
   </div>
 
@@ -33,7 +37,24 @@
     <div class="anniversary1206-block-el">
       <div class="anniversary1206-block-el-inner">
         <h2><img src="/images/content/anniversary/title-concept.png" alt=""></h2>
-        <p class="main-description"></p>
+        <p class="pc main-description event-concept-description">
+          きんゆう女子。は、”ワカラナイ”からこそ一緒に学んでいきたい！という、<br>ポジティブなメンバーが集まり、ついに1000人達成します！<br>
+          それを記念し、スペシャルなパーティーを企画いたしました。<br><br>
+          これまでのきんゆう女子。のあゆみと、これからのきんゆう女子。についてお話しします。<br>
+          毎週木曜日にゲストで来ていただいた方々にもお越しいただき1年間のおさらいをしたいと思います。<br><br>
+          また、これを機会に、改めて「わたし自身」を知り、<br>これからについて考え、語り合う機会になれば幸いです。<br><br>
+          新たな一歩を踏み出すきんゆう女子。に相応しい、銀座のまんなかのお洒落なカフェで、<br>
+          美味しいご飯とワインとともに、きんゆう女子。のメンバー1,000人達成と、<br>これからの「私」に、乾杯しましょう！<br>
+          素敵な夢をシェアしてくださった方には、特別なプレゼントもご用意しています！<br><br>
+          きんゆう女子。編集部一同
+        </p>
+        <p class="sp main-description event-concept-description">
+          きんゆう女子。は、”ワカラナイ”からこそ一緒に学んでいきたい！という、ポジティブなメンバーが集まり、ついに1000人達成します！それを記念し、スペシャルなパーティーを企画いたしました。<br><br>
+          これまでのきんゆう女子。のあゆみと、これからのきんゆう女子。についてお話しします。毎週木曜日にゲストで来ていただいた方々にもお越しいただき1年間のおさらいをしたいと思います。<br><br>
+          また、これを機会に、改めて「わたし自身」を知り、これからについて考え、語り合う機会になれば幸いです。<br><br>
+          新たな一歩を踏み出すきんゆう女子。に相応しい、銀座のまんなかのお洒落なカフェで、美味しいご飯とワインとともに、きんゆう女子。のメンバー1,000人達成と、これからの「私」に、乾杯しましょう！素敵な夢をシェアしてくださった方には、特別なプレゼントもご用意しています！<br><br>
+          きんゆう女子。編集部一同
+        </p>
       </div>
     </div>
 
@@ -43,7 +64,47 @@
     <div class="anniversary1206-block-el">
       <div class="anniversary1206-block-el-inner">
         <h2><img src="/images/content/anniversary/title-contents.png" alt=""></h2>
-        <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+        <div class="anniversary1206-contents-block">
+          <div class="anniversary1206-contents-block-el clear">
+            <div class="contents-img" style="background: url(/images/content/anniversary/main-bg.jpg) center center / cover no-repeat;"></div>
+            <div class="contents-text">
+              <p class="title">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="anniversary1206-contents-block">
+          <div class="anniversary1206-contents-block-el clear">
+            <div class="contents-img" style="background: url(/images/content/anniversary/main-bg.jpg) center center / cover no-repeat;"></div>
+            <div class="contents-text">
+              <p class="title">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="anniversary1206-contents-block">
+          <div class="anniversary1206-contents-block-el clear">
+            <div class="contents-img" style="background: url(/images/content/anniversary/main-bg.jpg) center center / cover no-repeat;"></div>
+            <div class="contents-text">
+              <p class="title">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="anniversary1206-contents-block">
+          <div class="anniversary1206-contents-block-el clear">
+            <div class="contents-img" style="background: url(/images/content/anniversary/main-bg.jpg) center center / cover no-repeat;"></div>
+            <div class="contents-text">
+              <p class="title">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -53,34 +114,48 @@
       <div class="anniversary1206-block-el-inner">
         <h2><img src="/images/content/anniversary/title-schedule.png" alt=""></h2>
 
+        <div class="anniversary1206-schedule-mainblock">
+          <img class="main-date" src="/images/content/anniversary/maindate.png">
+          <p>◆1部：1000人達成イベント 11:00〜15:00</p>
+          <p>◆2部：パーティ 11:00〜15:00</p>
+        </div>
 
-        
-        
-        <table class="anniversary1206-schedule-table">
-          <tbody>
-            <tr>
-              <th>
-                <div class=""><span>12:30～13:25</span></div>
-              </th>
-              <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
-            </tr>
-            <th>
-                <div class=""><span>12:30～13:25</span></div>
-              </th>
-              <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
-            </tr>
-            <th>
-                <div class=""><span>12:30～13:25</span></div>
-              </th>
-              <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
-            </tr>
-            <th>
-                <div class=""><span>12:30～13:25</span></div>
-              </th>
-              <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="anniversary1206-schedule-table-block">
+          <p class="schedule-title">◆1部：1,000名達成イベント</p>
+          <!-- 1部 -->
+          <table class="anniversary1206-schedule-table">
+            <tbody>
+              <tr>
+                <th>
+                  <div class=""><span>12:30～13:25</span></div>
+                </th>
+                <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 2部 -->
+        <div class="anniversary1206-schedule-table-block">
+          <p class="schedule-title">◆2部：パーティ</p>
+          <table class="anniversary1206-schedule-table">
+            <tbody>
+              <tr>
+                <th><div class=""><span>12:30～13:25</span></div></th>
+                <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+              </tr>
+              <th><div class=""><span>12:30～13:25</span></div></th>
+                <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+              </tr>
+              <th><div class=""><span>12:30～13:25</span></div></th>
+                <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+              </tr>
+              <th><div class=""><span>12:30～13:25</span></div></th>
+                <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
 
@@ -105,6 +180,20 @@
       });
     </script>
 
+    <!-- お申し込みはこちら -->
+    <div id="application" class="anniversary1206-block-el application-block" style="background: url(https://assets.dentsu-ho.com/uploads/ckeditor/pictures/22137/content_0912-01_.jpg) center center / cover no-repeat;">
+      <div class="anniversary1206-block-el-inner">
+        <div class="application-el">
+          <h2><img src="/images/content/anniversary/title-application.png" alt=""></h2>
+          <div class="application-text">
+            <p class="main">スペシャル企画＆パーティ：<span>3,000円</span></p>
+            <p class="sub">（ソフトドリンクフリー、アルコールは別途実費、軽食、ダイエットドリンク・スイーツ試飲）</p>
+            <a href="" class="anniversary1206-to-link" target="_blank">お申し込みはこちら</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
 
     <!-- スポンサー -->
@@ -151,8 +240,17 @@
       <div class="anniversary1206-block-el-inner">
         <h2><img src="/images/content/anniversary/title-access.png" alt=""></h2>
         
-        <div class="access-area-block">
-          <div class="text-area"></div>
+        <div class="access-area-block clear">
+          <div class="text-area">
+            <div class="title-box">
+              <div class="title-box-inner">
+                <img src="/images/content/anniversary/ginza_place.png">
+                <p class="subtitle">− 銀座プレイス −</p>
+                <p class="access">東京都中央区銀座五丁目8番1号[<a href="https://goo.gl/gViivd" target="_blank">MAP</a>]<br>アクセス：東京メトロ「銀座駅」A4出口直結</p>
+                <a class="to-link" href="https://ginzaplace.jp/" target="_blank">WEBサイトへ</a>
+              </div>
+            </div>
+          </div>
           <div class="map-block"><div id="area-google-map2"></div>
         </div>
       </div>
