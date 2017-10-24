@@ -134,16 +134,25 @@
   padding-bottom: 30px;
 }
 .about-kinyujoshi-intro-description {
-  font-size: 15px;
-  line-height: 28px;
+  font-size: 14px;
+  line-height: 26px;
   color: #626262;
   text-align: center;
 }
 .about-kinyujoshi-intro-description-sub { 
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 24px;
   color: #626262;
   text-align: center;
+  border-top: 1px solid #e4e3e3;
+  padding-top: 24px;
+  width: 450px;
+}
+.about-kinyujoshi-management {
+  margin-top: 0px;
+  padding: 10px 4% 50px 4%;
+  width: 100%;
+  box-sizing: border-box;
 }
 .about-kinyujoshi-service {
   width: 800px;
@@ -178,8 +187,7 @@
 }
 .about-kinyujoshi-service .service-description {
   font-size: 13px;
-  line-height: 20px;
-  height: 110px;
+  line-height: 24px;
   color: #626262;
   padding: 15px 0px;
   width: 70%;
@@ -486,9 +494,15 @@
   width: 100%;
   box-sizing: border-box;
 }
+.about-kinyujoshi-management {
+  margin-top: 0px;
+  padding: 10px 4% 40px 4%;
+  width: 100%;
+  box-sizing: border-box;
+}
 .about-kinyujoshi-intro-title {
   width: 100%;
-  padding-bottom: 16px;
+  padding-bottom: 24px;
 }
 .about-kinyujoshi-intro-title img {
   width: 92%;
@@ -497,7 +511,7 @@
 }
 .about-kinyujoshi-intro-description {
   width: 88%;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 20px;
   text-align: left;
 }
@@ -506,7 +520,7 @@
 }
 .about-kinyujoshi-service {
   margin-top: 0px;
-  padding: 40px 0% 50px;
+  padding: 40px 0% 0px;
   width: 92%;
   box-sizing: border-box;
 }
@@ -524,7 +538,7 @@
   margin: 0px;
 }
 .about-kinyujoshi-service .service-description {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 20px;
   padding: 15px 0px;
   width: 80%;
@@ -532,9 +546,10 @@
 }
 .about-kinyujoshi-intro-description-sub { 
   width: 88%;
-  font-size: 11px;
-  line-height: 18px;
+  font-size: 10px;
+  line-height: 20px;
   text-align: left;
+  padding-top: 20px;
 }
 }
 
