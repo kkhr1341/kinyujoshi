@@ -110,9 +110,7 @@
         <p class="pc text-box-title">コスメポーチや、おうちのメイクBOXきれいになってる…？</p>
         <p class="sp text-box-title">コスメポーチや、<br>おうちのメイクBOXきれいになってる…？</p>
         <p class="description">鏡が曇っているシャドウやチーク、あんまり使っていない化粧品、どれぐらいお持ちですか？ 毎日、鏡で見て知ってるつもりの自分の顔。毎日、なんとなくやっているメイク方法。なりたい自分のイメージにあっていますか？改めてコスメやメイクを考える機会をつくってみませんか。このテーマでは、身近なコスメと「きんゆう」のつながりも探ってみたいと思います。きれいのお金、上手に使いましょう。</p>
-        {*<a href="" class="myway-to-link">コスメ編のページはこちら</a>*}
-        <p class="myway-to-link">コスメ編のページはこちら</p>
-        <p class="myway-to-link-coming">ー coming soon ー</p>
+        <a href="/report/fMvmMk" class="myway-to-link">コスメ編のページはこちら</a>
       </div>
     </div>
   </div>
