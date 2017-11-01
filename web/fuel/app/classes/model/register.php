@@ -3,7 +3,7 @@
 namespace Model;
 require_once(dirname(__FILE__)."/base.php");
 
-class Login extends Base {
+class Register extends Base {
 
 
     public static function validate()

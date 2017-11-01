@@ -11,20 +11,25 @@ use \Model\Register;
 
 class Controller_Api_Auth extends Controller_Base
 {
+    /**
+     * ログイン
+     */
 	public function action_login() {
         $val = Login::validate();
         if (!$val->run()) {
             $this->error('ログインに失敗しました');
         }
         $params = $val->validated();
-        $res = \Auth::login($params['email'], $params['password']);
-        if (!$res) {
+        if (!\Auth::login($params['email'], $params['password'])) {
             $this->error('ログインに失敗しました');
         }
         $this->ok('success');
 	}
 
-    public function action_regist() {
+    /**
+     * 会員登録
+     */
+    public function action_register() {
         $val = Register::validate();
         if (!$val->run()) {
             $this->error('登録に失敗しました');
@@ -37,7 +42,8 @@ class Controller_Api_Auth extends Controller_Base
                 $params['email']
             );
             Auth::login($params['email'], $params['password']);
-        } catch (Exception $e) {
+        } catch (SimpleUserUpdateException $e) {
+            Log::error('register error::'.$e->getMessage());
             $this->error('登録に失敗しました');
         }
         $this->ok('success');

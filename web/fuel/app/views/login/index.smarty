@@ -10,10 +10,16 @@
       <h2 class="login-title">きんゆう女子。にログイン</h2>
       <div class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></div>
       {*<div class="fb-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></div>*}
-      <form>
-        <div><input type="text" style="background-color: #fff; border: 1px solid #000;" placeholder="メールアドレス" value=""></div>
-        <div><input type="text" style="background-color: #fff; border: 1px solid #000;" placeholder="パスワード" value=""></div>
-		<button type="button" id="login">ログイン</button>
+      <form id="login-form">
+        <div><input type="text" name="email" style="background-color: #fff; border: 1px solid #000;" placeholder="メールアドレス" value=""></div>
+        <div><input type="password" name="password" style="background-color: #fff; border: 1px solid #000;" placeholder="パスワード" value=""></div>
+		<button type="button" class="login-btn">ログイン</button>
+      </form>
+
+      <form id="regist-form">
+        <div><input type="text" name="email" style="background-color: #fff; border: 1px solid #000;" placeholder="メールアドレス" value=""></div>
+        <div><input type="password" name="password" style="background-color: #fff; border: 1px solid #000;" placeholder="パスワード" value=""></div>
+        <button type="button" class="regist-btn">会員登録する</button>
       </form>
     </div>
   </div>
@@ -83,11 +89,12 @@
 <script>
 $(function(){
 
-	$('#login').click(function(){
+    var loginForm = $('#login-form');
+	loginForm.find('.login-btn').click(function(){
 		var url = "/api/auth/login";
 		var params = {};
-		params.email = $('#email').val();
-		params.password = $('#password').val();
+		params.email = loginForm.find('[name="email"]').val();
+		params.password = loginForm.find('[name="password"]').val();
 
 		if (params.email == "") {
 			ts.error("メールアドレスを正しく入力してください");
@@ -99,12 +106,33 @@ $(function(){
 		}
 
 		ajax.post(url, params, function(data){
-			ts.success("追加しました", function(){
-				location.href = "/my/addresses";
+			ts.success("ログインが完了しました", function(){
+				location.href = "/my";
 			});
 		});
 	});
 
+    var registForm = $('#regist-form');
+	registForm.find('.regist-btn').click(function(){
+		var url = "/api/auth/register";
+		var params = {};
+		params.email = registForm.find('[name="email"]').val();
+		params.password = registForm.find('[name="password"]').val();
 
+		if (params.email == "") {
+			ts.error("メールアドレスを正しく入力してください");
+			return false;
+		}
+		if (params.password == "") {
+			ts.error("パスワードを入力してください");
+			return false;
+		}
+
+		ajax.post(url, params, function(data){
+			ts.success("ログインが完了しました", function(){
+				location.href = "/my";
+			});
+		});
+	});
 });
 </script>
