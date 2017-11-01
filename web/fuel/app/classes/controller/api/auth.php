@@ -21,13 +21,13 @@ class Controller_Api_Auth extends Controller_Base
         if (!$res) {
             $this->error('ログインに失敗しました');
         }
-        return $this->ok('success');
+        $this->ok('success');
 	}
 
     public function action_regist() {
         $val = Register::validate();
         if (!$val->run()) {
-            return $this->error('登録に失敗しました');
+            $this->error('登録に失敗しました');
         }
         try {
             $params = $val->validated();
@@ -40,6 +40,6 @@ class Controller_Api_Auth extends Controller_Base
         } catch (Exception $e) {
             $this->error('登録に失敗しました');
         }
-        return $this->ok('success');
+        $this->ok('success');
     }
 }
