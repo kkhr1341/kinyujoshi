@@ -10,6 +10,11 @@
       <h2 class="login-title">きんゆう女子。にログイン</h2>
       <div class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></div>
       {*<div class="fb-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></div>*}
+      <form>
+        <div><input type="text" style="background-color: #fff; border: 1px solid #000;" placeholder="メールアドレス" value=""></div>
+        <div><input type="text" style="background-color: #fff; border: 1px solid #000;" placeholder="パスワード" value=""></div>
+		<button type="button" id="login">ログイン</button>
+      </form>
     </div>
   </div>
 </div>
@@ -75,4 +80,31 @@
 }
 </style>
 
+<script>
+$(function(){
 
+	$('#login').click(function(){
+		var url = "/api/auth/login";
+		var params = {};
+		params.email = $('#email').val();
+		params.password = $('#password').val();
+
+		if (params.email == "") {
+			ts.error("メールアドレスを正しく入力してください");
+			return false;
+		}
+		if (params.password == "") {
+			ts.error("パスワードを入力してください");
+			return false;
+		}
+
+		ajax.post(url, params, function(data){
+			ts.success("追加しました", function(){
+				location.href = "/my/addresses";
+			});
+		});
+	});
+
+
+});
+</script>
