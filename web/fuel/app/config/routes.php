@@ -9,6 +9,20 @@ return array(
 
 	//admin
 
+
+	//現在改修中！ --------->
+	
+	//◆女子会部分
+	'edit_joshikai'   => 'kinyu/event/edit_index',
+	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
+
+
+
+
+	//改修中！ここまで --------->
+
+
+
 	//会員登録情報
 	'my/registlist' => 'my/registlist/index',
 	'my/registlist/create' => 'my/registlist/create',

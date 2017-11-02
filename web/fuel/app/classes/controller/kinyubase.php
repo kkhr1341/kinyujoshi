@@ -64,7 +64,8 @@ class Controller_Kinyubase extends Controller_Template
 					'base.css',
 					'slick.css',
 					'kinyu/bg.css',
-					'style.css',
+					//'style.css',
+					'edit_style.css',
 					'tablet.css',
 					'responsive.css'
 				), array(), 'layout', false);
