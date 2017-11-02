@@ -57,10 +57,11 @@ if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('i
   // });
 
   var swiper = new Swiper('.swiper-container02', {
+      effect: 'fade',
       pagination: '.swiper-pagination02',
       slidesPerView: 1,
       autoplay: 6000,
-      speed: 800,
+      speed: 1000,
       paginationClickable: true,
       nextButton: '.swiper-button-next02',
       prevButton: '.swiper-button-prev02',

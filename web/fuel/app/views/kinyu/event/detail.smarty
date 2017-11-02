@@ -7,13 +7,6 @@ var $resArray02 = $resArray[1];
 </script>
 
 
-<div class="kinyu-joshikai-detail-intro" style="background-image:url({$event.main_image})">
-  <div class="detail-intro-bg"></div>
-  {if $event.event_category == "スペシャル"}
-  <img class="special_joshikai_title2" src="/images/event/specialjoshikai_title2.png">
-  {/if}
-</div>
-
 
 <div class="kinyu-joshikai-detail-block">  
   <div class="kinyu-joshikai-detail-inner">

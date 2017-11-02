@@ -8,17 +8,17 @@
 
   <div class="inner center">
     <div class="text-area">
-      <h2 class="login-title">きんゆう女子。にログイン</h2>
+      <h2 class="login-title">きんゆう女子。のメンバーに登録</h2>
       <p class="">すでにメンバー登録いただいている方はこちら</p>
       <form>
         <div><input type="text" placeholder="メールアドレスorID" value=""></div>
         <div><input type="text" placeholder="パスワード" value=""></div>
-        <button type="button" id="login">ログイン</button>
+        <button type="button" id="login">登録する</button>
       </form>
       <p class="">or</p>
-      <div class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></div>
-      <div class="fb-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></div>
-      <p>パスワードをお忘れの方はこちら</p>
+      <div class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookで登録する</a></div>
+      <div class="fb-login-bg"><a href="/auth/oauth/google">Googleで登録する</a></div>
+      <p>※メンバー登録をすると、利用規約、およびプライバシーポリシーに同意したことになります。</p>
     </div>
   </div>
 </div>

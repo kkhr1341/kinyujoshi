@@ -14,15 +14,54 @@
 .sp {
   display: none!important;
 }
-.kinyu-main {
+/*.kinyu-main {
   margin-right: 80px;
-}
+}*/
 .kinyu-main-title {
   text-align: left;
   margin-bottom: 8px;
 }
 .tablet-div {
   display: none;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+   ヘッダー
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-header-top {
+  margin-left: 360px;
+  height: 152px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1005;
+  text-align: center;
+}
+.kinyu-header-top .main-logo {
+  padding: 32px 0px 24px; 
+}
+.kinyu-header {
+  height: 152px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1005;
+  text-align: center;
+}
+.kinyu-header .main-logo {
+  padding: 32px 0px 24px; 
+}
+.kinyu-header-nav {
+  text-align: center;
+  padding-bottom: 16px;
+}
+.kinyu-header-nav li {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -613,54 +652,20 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-list-block {
   margin-left: 360px;
-  height: 300px;
-  padding: 30px 36px;
+  padding: 30px 42px;
+  position: relative;
 }
 .kinyu-top-list-block .inner {
   width: 100%;
   height: 100%;
   position: relative;
 }
-
-/*-- カテゴリーメニュー --*/
-.category-menu {
-  position: fixed;
-  top: 0;
-  padding-top: 24px;
-  background: #fff;
-  width: 100%;
-  z-index: 999;
-  border-bottom: 1px solid #f1f1f1;
-  overflow: hidden;
-}
-.category-menu ul {
-  overflow: hidden;
-}
-.category-menu li {
-  /*display: inline-block;*/
-  float: left;
-  margin-right: 20px;
-  padding: 4px 16px;
-  border-radius: 20px;
-  margin-bottom: 16px;
-  transition: 0.8s;
-}
-.category-menu li a {
-  font-size: 18px;
-}
-.category-menu li.this-active {
-  background: #CFFFF7;
-  background: #eafffb;
-  padding: 4px 16px;
-  font-weight: bold;
-}
 .kinyu-top-introlist-block {
-  padding: 88px 1% 45px;
+  padding: 155px 1% 50px;
 }
 .kinyu-top-introlist-left {
   width: 31.333%;
   margin-right: 3%;
-  margin-bottom: 3%;
   float: left;
   border-radius: 10px;
   text-align: center;
@@ -674,17 +679,17 @@
   width: 100%;
 }
 .kinyu-top-introlist-left .main-intro-description {
-  font-size: 11px;
-  line-height: 18px;
-  margin: 16px 0px;
+  font-size: 12px;
+  line-height: 22px;
+  margin: 24px 0px;
 }
 .main-intro-link {
   display: inline-block;
   padding: 1px 24px;
   transition: 0.8s;
-  border: 1px solid #7CDCCE;
   box-sizing: border-box;
   font-size: 12px;
+  background: #f9f9f9;
 }
 .kinyu-top-main-icon {
   width: 48px;
@@ -711,7 +716,7 @@
   margin-bottom: 24px;
 }
 .kinyu-top-introlist-pickup {
-  height: 300px;
+  height: 350px;
   position: relative;
 }
 .kinyu-top-introlist-right a {
@@ -789,7 +794,9 @@
 
 /* ニュース */
 .kinyu-top-introlist-news {
-  width: 100%;
+  width: 650px;
+  margin: 0 auto;
+  margin-bottom: 50px;
   height: 48px;
   border: 1px solid #7CDCCE;
   padding: 4px 0px;
@@ -848,7 +855,7 @@
 
 /*-- 記事一覧部分 --*/
 .kinyu-report-list {
-  padding: 88px 1% 0px!important;
+  padding: 155px 1% 0px!important;
 }
 .kinyu-top-list {
   padding: 45px 1% 0px;
@@ -915,7 +922,7 @@
   display: block;
   margin: 0 auto;
   transition: .5s;
-  margin-top: 45px;
+  margin-top: 50px;
   border: 1px solid #e6e6e6;
 }
 /* トップページ・レポート一覧下のバナー */
@@ -1268,7 +1275,7 @@
 
 /* 女子会メインタイトル */
 .joshikai-main-block {
-  padding-top: 80px;
+  padding-top: 155px;
 }
 .joshikai-main {
   text-align: center;
@@ -1279,6 +1286,8 @@
   border-bottom: 1px solid #5fb3a7;
   background: #fff;
   position: relative;
+  margin-top: 80px;
+  background: #f9f9f9;
 }
 .joshikai-illust1 {
   position: absolute;
@@ -1385,7 +1394,6 @@
   height: 44px;
   margin: 12px 0px 16px;
   padding: 0px 1px;
-  font-weight: bold;
 }
 .event-subbox {
   border-top: 1px dotted #ededed;
@@ -1398,16 +1406,7 @@
 
 
 /* 女子会ページの詳細 */
-.kinyu-joshikai-detail-intro {
-  height: 400px;
-  width: 100%;
-  position: relative;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  min-width: 1100px;
-}
+
 .kinyu-joshikai-detail-block {
   background: #fff;
 }
@@ -1415,22 +1414,6 @@
   width: 920px;
   margin: 0 auto;
   position: relative;
-}
-.detail-intro-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.3);
-  top: 0;
-  left: 0;
-  z-index: 1001;
-}
-.special_joshikai_title2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(-12deg);
-  z-index: 1002;
 }
 .kinyu-joshikai-detail-header {
   padding: 36px 12px;
@@ -1446,7 +1429,6 @@
 .kinyu-joshikai-detail-header .date-block .date-01 {
   font-size: 14px;
   line-height: 20px;
-  background: #7cdcce;
   color: #fff
 }
 .kinyu-joshikai-detail-header .date-block .date-02 {
@@ -2166,7 +2148,7 @@ footer .footer-menu {
   　インスタグラムリスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .insta-block {
-  padding: 45px 1% 0px;
+  padding: 50px 1% 0px;
 }
 .insta-block-inner {
   padding: 32px;
@@ -2243,6 +2225,62 @@ footer .footer-menu {
   color: #6c6c6c;
   transition: .5s;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　ログイン関連
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/* ログイン部分 */
+.login-block-video {
+  height: 100vh;
+}
+.login-block-video video {
+  position: absolute;
+  right:0;
+  bottom:0;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  z-index: 1000;
+}
+.login-block .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -250px;
+  border:1px solid rgba(255,255,255,.9);
+  z-index: 1002;
+  display: table;
+  background: rgba(255,255,255,.8);
+}
+.login-block .inner .text-area {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.login-block .inner .login-title {
+  font-size: 25px;
+}
+.login-block .inner .fb-login-bg {
+  display: inline-block;
+  color: gray;
+  background: rgba(255,255,255,.8);
+  width: 240px;
+  font-size: 18px;
+  padding: 8px 0px;
+  margin-top: 24px;
+}
+.login-block .inner .fb-login-bg a {
+  display: block;
+}
+
+
+
+
 
 
 

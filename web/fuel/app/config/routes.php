@@ -16,6 +16,9 @@ return array(
 	'edit_joshikai'   => 'kinyu/event/edit_index',
 	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
 
+	//◆メンバー登録部分
+	'login_regist'   => 'login/regist',
+	'regist_email'   => 'login/regist_email',
 
 
 
