@@ -123,8 +123,8 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     //    header('Content-Type: text/plain; charset=utf-8');
     //    die('このページを見るにはログインが必要です');
     //  }
-    $this->template->title = '1000人達成イベント｜きんゆう女子。';
-    $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-gakuin.jpg';
+    $this->template->title = 'kinjo1000!Anniversary｜きんゆう女子。';
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/anniversary/og-fb.jpg';
     $this->template->description = '';
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);

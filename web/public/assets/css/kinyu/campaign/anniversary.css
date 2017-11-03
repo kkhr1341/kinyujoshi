@@ -7,7 +7,7 @@
   
 }
 .anniversary1206-block-el {
-  padding: 80px 0px;
+  padding: 100px 0px;
   border-bottom: 1px solid #ddd3c0;
 }
 .anniversary1206-block-el-inner {
@@ -23,6 +23,9 @@
   margin: 0 auto;
   font-size: 14px;
   line-height: 24px;
+}
+.bg-anniversary1206 {
+  background: rgba(221, 211, 192, 0.2);
 }
 
 
@@ -79,7 +82,7 @@
   サブイントロ文章
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .sub-intro-block {
-  background: rgba(221, 211, 192, 0.5);
+  background: rgba(221, 211, 192, 0.2);
 }
 .sub-intro-inner {
   width: 1000px;
@@ -113,33 +116,35 @@
 .anniversary1206-contents-block-el {
   width: 100%;
 }
-.anniversary1206-contents-block-el .contents-img {
+.anniversary1206-contents-block .contents-img {
   width: 56%;
-  height: 320px;
+  height: 350px;
   float: left;
 }
-.anniversary1206-contents-block-el .contents-text {
+.anniversary1206-contents-block .contents-text {
   width: 40%;
   float: right;
   margin-left: 4%;
+  margin-top: 2%;
   border-top: 1px solid #5FB3A7;
 }
 .anniversary1206-contents-block-el .contents-text .title {
   font-size: 18px;
   line-height: 30px;
-  margin: 20px 0px 24px;
+  margin: 30px 0px 16px;
 }
 .anniversary1206-contents-block-el .contents-text .description {
 }
-.anniversary1206-contents-block:nth-child(2n) .contents-img {
+.anniversary1206-contents-block:nth-child(odd) .contents-img {
   width: 56%;
   float: right;
-  height: 350px;
+  height: 320px;
 }
-.anniversary1206-contents-block:nth-child(2n) .contents-text {
+.anniversary1206-contents-block:nth-child(odd) .contents-text {
   float: left;
   margin-left: 0%;
   margin-right: 4%;
+  border-top: 1px solid #ddd3c0;
 }
 
 
@@ -164,7 +169,7 @@
 .anniversary1206-schedule-mainblock .main-date {
   display: block;
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 .anniversary1206-schedule-mainblock p {
   font-size: 13px;
@@ -234,6 +239,15 @@
   padding-left: 8px;
   margin-bottom: 8px;
 }
+/* coming-soon */
+.anniversary1206-coming-soon {
+  width: 800px;
+  margin: 0 auto;
+  border-top: 1px solid #ddd2c0;
+  border-bottom: 1px solid #ddd2c0;
+  padding: 36px 0px;
+  text-align: center;
+}
 
 
 
@@ -241,6 +255,9 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申し込み
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.application-block .anniversary1206-block-el-inner {
+  width: 920px;
+}
 .application-block .anniversary1206-block-el-inner {
   background: rgba(255,255,255,.98);
   padding: 10px;
@@ -257,9 +274,9 @@
   text-align: center;
 }
 .application-text .main {
-  font-style: italic;
-  font-size: 20px;
-  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 12px;
 }
 .application-text .main span {
   border-bottom: 2px solid #FFEC00;
@@ -292,6 +309,13 @@
 .event-subcaution a {
   color: #4d96de;
 }
+.application-border {
+  width: 300px;
+  background: #ddd2c0;
+  height: 1px;
+  margin: 0 auto;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スポンサー
@@ -348,12 +372,12 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .map-block #area-google-map2 {
   width: 500px;
-  height: 300px;
+  height: 350px;
 }
 .access-area-block .text-area {
   width: 50%;
   float: left;
-  height: 300px;
+  height: 350px;
 }
 .access-area-block .text-area .title-box {
   text-align: center;
@@ -384,6 +408,19 @@
 .access-area-block .map-block {
   width: 50%;
   float: right;
+}
+.access-area-block .access-description {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.access-border {
+  width: 300px;
+  background: #ddd2c0;
+  height: 1px;
+  margin: 0 auto;
+}
+.access-area-block .access {
+  margin-top: 20px;
 }
 
 
@@ -417,8 +454,9 @@
   padding: 50px 0px;
 }
 .anniversary1206-block-el-inner {
-  width: 92%;
+  width: 88%;
   margin: 0 auto;
+  padding: 6px!important;
 }
 .anniversary1206-block-el h2 {
   text-align: center;
@@ -428,16 +466,16 @@
   width: 100%;
 }
 .anniversary1206-block-el .main-description {
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
   font-size: 12px;
   line-height: 20px;
 }
 .anniversary1206-to-link {
-  width: 72%;
+  width: 80%;
   padding: 10px 0px;
-  margin-top: 24px;
   font-weight: normal;
+  font-size: 13px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -462,19 +500,23 @@
 }
 .sub-intro-inner img {
   width: 100%;
+  margin-bottom: 24px;
+}
+.sub-intro-inner .anniversary1206-to-link {
+  width: 68%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スケジュール
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .anniversary1206-schedule-mainblock .main-date {
-  width: 80%;
+  width: 88%;
 }
 .anniversary1206-schedule-mainblock p {
   font-size: 12px;
 }
 .anniversary1206-schedule-table-block {
-  width: 96%;
+  width: 100%;
 }
 .anniversary1206-schedule-table th {
   width: 100px;
@@ -488,7 +530,7 @@
   line-height: 20px;
 }
 .anniversary1206-event-details {
-  width: 96%;
+  width: 100%;
 }
 .anniversary1206-schedule-table-block .schedule-title {
   font-size: 12px;
@@ -510,27 +552,91 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   イベント内容
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.anniversary1206-contents-block {
+  margin-bottom: 40px;
+}
 .anniversary1206-contents-block-el {
-  width: 96%;
+  width: 100%;
+  margin: 0 auto;
+}
+.anniversary1206-contents-block .contents-img {
+  width: 90%;
+  height: 200px;
+  float: left;
+}
+.anniversary1206-contents-block .contents-text {
+  width: 90%;
+  float: left;
+  border-top: 1px solid #5FB3A7;
+  margin-left: 0%;
+  margin-top: 20px;
+}
+.anniversary1206-contents-block:nth-child(odd) .contents-img {
+  width: 90%;
+  height: 200px;
+  float: right;
+}
+.anniversary1206-contents-block:nth-child(odd) .contents-text {
+  width: 90%;
+  float: right;
+  margin-right: 0%;
+}
+.anniversary1206-contents-block-el .contents-text .title {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 16px 0px 8px;
+}
+.anniversary1206-contents-block-el .contents-text .description {
+  font-size: 12px;
+  line-height: 20px;
+}
+.anniversary1206-contents-block:last-child {
+  margin-bottom: 0px;
+}
+.anniversary1206-coming-soon,
+.anniversary1206-coming-soon img {
+  width: 100%;
 }
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申し込み
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.application-block .anniversary1206-block-el-inner {
+  width: 88%;
+}
 .application-el {
   border: 1px solid #5FB3A7;
-  padding: 24px;
+  padding: 24px 20px;
 }
 .application-text .main {
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 16px;
 }
 .application-text .sub {
+  font-size: 11px;
+  line-height: 18px;
+  margin-bottom: 24px;
+}
+.application-border {
+  width: 50%;
+}
+.application-block .anniversary1206-block-el-inner .event-caution {
   font-size: 12px;
   line-height: 20px;
+  margin-top: 24px;
 }
+.event-subcaution {
+  position: relative;
+  font-size: 11px;
+  line-height: 18px;
+}
+.event-subcaution a {
+  font-size: 11px;
+  line-height: 18px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   アクセス
@@ -539,12 +645,13 @@
   width: 100%;
   float: none;
   height: auto;
-  margin-bottom: 36px;
+  margin-bottom: 4px;
 }
 .access-area-block .map-block {
   width: 96%;
   float: none;
   margin: 0 auto;
+  display: none;
 }
 .map-block #area-google-map2 {
   width: 100%;
@@ -554,7 +661,11 @@
   width: 70%;
 }
 .access-area-block .text-area .title-box-inner .subtitle, 
-.access-area-block .text-area .title-box-inner .access{
+.access-area-block .text-area .title-box-inner .access,
+.access-area-block .text-area .title-box-inner p{
+  font-size: 12px;
+}
+.access-area-block .text-area .title-box-inner p a {
   font-size: 12px;
 }
 .access-area-block .text-area .title-box-inner .to-link {
@@ -562,6 +673,17 @@
   margin-top: 24px;
   padding: 6px 0px;
   font-weight: normal;
+}
+.access-border {
+  width: 40%;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  フッター
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.anniversary1206-footer-block footer {
+  padding: 50px 0px 80px;
+  background: rgba(221, 211, 192, 0.5);
 }
 
 
