@@ -173,6 +173,11 @@
               <p class="description">銀座プレイス</p>
             </div>
 
+            <div class="anniversary1206-event-details-el">
+              <p class="main-title">協賛</p>
+              <p class="description">銀座プレイス</p>
+            </div>
+
 
           </div>
 
@@ -211,7 +216,10 @@
             <p class="pc main">スペシャル企画＆パーティ：<span>3,000円</span></p>
             <p class="sp main">スペシャル企画＆パーティ<span>3,000円</span></p>
             <p class="sub">（ソフトドリンクフリー、アルコールは別途実費、軽食、ダイエットドリンク・スイーツ試飲）</p>
-            <a href="" class="anniversary1206-to-link" target="_blank">お申し込みはこちら</a>
+            <div style="width: 300px;background:#ddd2c0;height:1px;margin: 0 auto;"></div>
+            <p class="event-caution"><span style="color:red;">＊</span>お申込みはメンバー限定のため、<span style="font-weight:bold;color:#f76363;">パスワード</span>を設定しております。<br>パスワードはメルマガにてお送りしております。<br>▼</p>
+            <a href="" class="anniversary1206-to-link" target="_blank">お申込みページ</a>
+            <p class="event-subcaution">メルマガが届いていない方は<a href="/contact" target="_blank">こちら</a>よりご連絡ください。</p>
           </div>
         </div>
 
