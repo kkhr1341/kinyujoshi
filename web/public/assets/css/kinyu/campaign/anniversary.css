@@ -8,7 +8,7 @@
 }
 .anniversary1206-block-el {
   padding: 80px 0px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #ddd3c0;
 }
 .anniversary1206-block-el-inner {
   width: 1000px;
@@ -86,7 +86,7 @@
   margin: 0 auto;
   padding: 80px 0px;
   text-align: center;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #ddd3c0;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -104,16 +104,19 @@
 .anniversary1206-contents-block {
   margin-bottom: 80px;
 }
+.anniversary1206-contents-block:last-child {
+  margin-bottom: 20px;
+}
 .anniversary1206-contents-block-el {
   width: 100%;
 }
 .anniversary1206-contents-block-el .contents-img {
-  width: 50%;
-  height: 300px;
+  width: 56%;
+  height: 320px;
   float: left;
 }
 .anniversary1206-contents-block-el .contents-text {
-  width: 46%;
+  width: 40%;
   float: right;
   margin-left: 4%;
   border-top: 1px solid #5FB3A7;
@@ -126,8 +129,9 @@
 .anniversary1206-contents-block-el .contents-text .description {
 }
 .anniversary1206-contents-block:nth-child(2n) .contents-img {
-  width: 50%;
+  width: 56%;
   float: right;
+  height: 350px;
 }
 .anniversary1206-contents-block:nth-child(2n) .contents-text {
   float: left;
@@ -183,18 +187,53 @@
   height: 100%;
   background: url(/images/content/anniversary/stripe3.png);
 }
-.anniversary1206-schedule-table th span {
+.anniversary1206-schedule-table th p {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
   height: 100%;
   padding: 10px 0;
-  font-size: 15px;
+  font-size: 13px;
+}
+.anniversary1206-schedule-table th p span {
+  background: #fff;
+  padding: 4px 8px;
 }
 .anniversary1206-schedule-table td {
   vertical-align: top;
   padding: 16px;
 }
+/* イベント詳細 */
+.anniversary1206-event-details {
+  width: 760px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 1px solid #ddd3c0;
+  padding: 20px;
+}
+.anniversary1206-event-details .detail-title {
+  color: #5FB3A7;
+  border-bottom: 1px solid #f6f0e5;
+  padding-bottom: 4px;
+}
+.anniversary1206-event-details-el-block {
+  padding-top: 20px;
+}
+.anniversary1206-event-details-el {
+  margin-bottom: 20px;
+}
+.anniversary1206-event-details-el:last-child {
+  margin-bottom: 0px;
+}
+.anniversary1206-event-details-el .main-title {
+  border-left: 2px solid #ddd3c0;
+  line-height: 13px;
+  padding-left: 8px;
+  margin-bottom: 8px;
+}
+
+
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申し込み
@@ -355,8 +394,7 @@
   
 }
 .anniversary1206-block-el {
-  padding: 60px 0px;
-  border-bottom: 1px solid gray;
+  padding: 50px 0px;
 }
 .anniversary1206-block-el-inner {
   width: 92%;
@@ -375,7 +413,12 @@
   font-size: 12px;
   line-height: 20px;
 }
-
+.anniversary1206-to-link {
+  width: 72%;
+  padding: 10px 0px;
+  margin-top: 24px;
+  font-weight: normal;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   イントロダクション
@@ -394,23 +437,114 @@
 .sub-intro-inner {
   width: 100%;
   margin: 0 auto;
-  padding: 80px 0px;
+  padding: 50px 0px;
   text-align: center;
-  border-bottom: 1px solid gray;
+}
+.sub-intro-inner img {
+  width: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スケジュール
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .anniversary1206-schedule-mainblock .main-date {
-  width: 90%;
+  width: 80%;
 }
 .anniversary1206-schedule-mainblock p {
   font-size: 12px;
 }
 .anniversary1206-schedule-table-block {
-  width: 100%;
+  width: 96%;
 }
 .anniversary1206-schedule-table th {
   width: 100px;
+}
+/* イベント詳細 */
+.anniversary1206-schedule-table th p {
+  font-size: 12px;
+}
+.anniversary1206-schedule-table td p {
+  font-size: 12px;
+  line-height: 20px;
+}
+.anniversary1206-event-details {
+  width: 96%;
+}
+.anniversary1206-schedule-table-block .schedule-title {
+  font-size: 12px;
+  line-height: 20px;
+}
+.anniversary1206-event-details .detail-title {
+  font-size: 12px;
+  line-height: 20px;
+}
+.anniversary1206-event-details-el .main-title {
+  font-size: 12px;
+  line-height: 12px;
+}
+.anniversary1206-event-details-el .description {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  イベント内容
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.anniversary1206-contents-block-el {
+  width: 96%;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  お申し込み
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.application-el {
+  border: 1px solid #5FB3A7;
+  padding: 24px;
+}
+.application-text .main {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+.application-text .sub {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  アクセス
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.access-area-block .text-area {
+  width: 100%;
+  float: none;
+  height: auto;
+  margin-bottom: 36px;
+}
+.access-area-block .map-block {
+  width: 96%;
+  float: none;
+  margin: 0 auto;
+}
+.map-block #area-google-map2 {
+  width: 100%;
+  height: 200px;
+}
+.access-area-block .text-area .title-box-inner img {
+  width: 70%;
+}
+.access-area-block .text-area .title-box-inner .subtitle, 
+.access-area-block .text-area .title-box-inner .access{
+  font-size: 12px;
+}
+.access-area-block .text-area .title-box-inner .to-link {
+  width: 72%;
+  margin-top: 24px;
+  padding: 6px 0px;
+  font-weight: normal;
+}
+
+
+
+
 }

@@ -121,13 +121,13 @@
         </div>
 
         <div class="anniversary1206-schedule-table-block">
-          <p class="schedule-title">◆1部：1,000名達成イベント</p>
+          <p class="schedule-title">◆ 1部：1,000名達成イベント</p>
           <!-- 1部 -->
           <table class="anniversary1206-schedule-table">
             <tbody>
               <tr>
                 <th>
-                  <div class=""><span>12:30～13:25</span></div>
+                  <div class=""><p><span>12:30～13:25</span></p></div>
                 </th>
                 <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
               </tr>
@@ -137,25 +137,47 @@
 
         <!-- 2部 -->
         <div class="anniversary1206-schedule-table-block">
-          <p class="schedule-title">◆2部：パーティ</p>
+          <p class="schedule-title">◆ 2部：パーティ</p>
           <table class="anniversary1206-schedule-table">
             <tbody>
               <tr>
-                <th><div class=""><span>12:30～13:25</span></div></th>
+                <th><div class=""><p><span>12:30～13:25</span></p></div></th>
                 <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
               </tr>
-              <th><div class=""><span>12:30～13:25</span></div></th>
+              <th><div class=""><p><span>12:30～13:25</span></p></div></th>
                 <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
               </tr>
-              <th><div class=""><span>12:30～13:25</span></div></th>
+              <th><div class=""><p><span>12:30～13:25</span></p></div></th>
                 <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
               </tr>
-              <th><div class=""><span>12:30～13:25</span></div></th>
+              <th><div class=""><p><span>12:30～13:25</span></p></div></th>
                 <td><p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p></td>
               </tr>
             </tbody>
           </table>
         </div>
+
+        <!-- 内要詳細 -->
+        <div class="anniversary1206-event-details">
+          <p class="detail-title">◆ イベント詳細</p>
+          
+          <div class="anniversary1206-event-details-el-block">
+
+            <div class="anniversary1206-event-details-el">
+              <p class="main-title">日時</p>
+              <p class="description">2017年12月6日（水）19:00〜22:00（18:30開場）</p>
+            </div>
+
+            <div class="anniversary1206-event-details-el">
+              <p class="main-title">場所</p>
+              <p class="description">銀座プレイス</p>
+            </div>
+
+
+          </div>
+
+        </div>
+
       </div>
     </div>
 
@@ -186,7 +208,8 @@
         <div class="application-el">
           <h2><img src="/images/content/anniversary/title-application.png" alt=""></h2>
           <div class="application-text">
-            <p class="main">スペシャル企画＆パーティ：<span>3,000円</span></p>
+            <p class="pc main">スペシャル企画＆パーティ：<span>3,000円</span></p>
+            <p class="sp main">スペシャル企画＆パーティ<span>3,000円</span></p>
             <p class="sub">（ソフトドリンクフリー、アルコールは別途実費、軽食、ダイエットドリンク・スイーツ試飲）</p>
             <a href="" class="anniversary1206-to-link" target="_blank">お申し込みはこちら</a>
           </div>
@@ -194,46 +217,6 @@
 
       </div>
     </div>
-
-
-    <!-- スポンサー -->
-    <div class="anniversary1206-block-el">
-      <div class="anniversary1206-block-el-inner">
-        <h2><img src="/images/content/anniversary/title-sponsor.png" alt=""></h2>
-        <div class="sponsor-area-block">
-          <h3><p>協賛</p></h3>
-          <ul class="clear">
-            <li>
-              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
-              <p>株式会社TOE THE LINE</p>
-            </li>
-            <li>
-              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
-              <p>株式会社TOE THE LINE</p>
-            </li>
-            <li>
-              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
-              <p>株式会社TOE THE LINE</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="sponsor-area-block ponsor-area-block">
-          <h3><p>協力</p></h3>
-          <ul class="clear">
-            <li>
-              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
-              <p>株式会社TOE THE LINE</p>
-            </li>
-            <li>
-              <div class="img-box"><img src="/images/content/anniversary/company/ttl_logo.png"></div>
-              <p>株式会社TOE THE LINE</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
     
     <!-- アクセス -->
     <div class="anniversary1206-block-el">
