@@ -113,7 +113,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     $this->template->contents = View::forge('kinyu/campaign/ooedoonsen_joshikai.smarty', $this->data);
   }
 
-  public function action_anniversary_20171206() {
+  public function action_celebration_20171206() {
 
     // switch (true) {
     //    case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
@@ -123,8 +123,8 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     //    header('Content-Type: text/plain; charset=utf-8');
     //    die('このページを見るにはログインが必要です');
     //  }
-    $this->template->title = 'kinjo1000!Anniversary｜きんゆう女子。';
-    $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/anniversary/og-fb.jpg';
+    $this->template->title = 'kinjo1000！Celebration｜きんゆう女子。';
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/celebration/og-fb.jpg';
     $this->template->description = '';
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
@@ -137,7 +137,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     } else {
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
     }
-    $this->template->contents = View::forge('kinyu/campaign/anniversary_20171206.smarty', $this->data);
+    $this->template->contents = View::forge('kinyu/campaign/celebration_20171206.smarty', $this->data);
   }
 
 }

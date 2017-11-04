@@ -3,28 +3,31 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   全体共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.anniversary1206-block {
+.celebration1206-block {
   
 }
-.anniversary1206-block-el {
+.celebration1206-block-el {
   padding: 100px 0px;
   border-bottom: 1px solid #ddd3c0;
 }
-.anniversary1206-block-el-inner {
+.celebration1206-block-el-inner {
   width: 1000px;
   margin: 0 auto;
 }
-.anniversary1206-block-el h2 {
+.celebration1206-block-el h2 {
   text-align: center;
   margin-bottom: 50px;
 }
-.anniversary1206-block-el .main-description {
+.celebration1206-block-el .main-description {
   width: 720px;
   margin: 0 auto;
   font-size: 14px;
   line-height: 24px;
 }
-.bg-anniversary1206 {
+.celebration1206-block-el h2 img {
+  margin: 0 auto;
+}
+.bg-celebration1206 {
   background: rgba(221, 211, 192, 0.2);
 }
 
@@ -36,7 +39,7 @@
   width: 100%;
   height: 750px;
   position: relative;
-  background: url(/images/content/anniversary/main-bg.jpg) center center / cover no-repeat;
+  background: url(/images/content/celebration/main-bg.jpg) center center / cover no-repeat;
 }
 .introduction-border-block {
   position: absolute;
@@ -61,7 +64,7 @@
 }
 .introduction-border-block-img02 {
   position: absolute;
-  bottom: -70px;
+  bottom: -50px;
   right: -40px;
 }
 .introduction-logo {
@@ -98,7 +101,7 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   イベントコンセプト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.anniversary1206-block-el .event-concept-description {
+.celebration1206-block-el .event-concept-description {
   text-align: center;
   font-size: 14px;
   line-height: 28px;
@@ -107,40 +110,40 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   イベント内容
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.anniversary1206-contents-block {
+.celebration1206-contents-block {
   margin-bottom: 80px;
 }
-.anniversary1206-contents-block:last-child {
+.celebration1206-contents-block:last-child {
   margin-bottom: 20px;
 }
-.anniversary1206-contents-block-el {
+.celebration1206-contents-block-el {
   width: 100%;
 }
-.anniversary1206-contents-block .contents-img {
+.celebration1206-contents-block .contents-img {
   width: 56%;
   height: 350px;
   float: left;
 }
-.anniversary1206-contents-block .contents-text {
+.celebration1206-contents-block .contents-text {
   width: 40%;
   float: right;
   margin-left: 4%;
   margin-top: 2%;
   border-top: 1px solid #5FB3A7;
 }
-.anniversary1206-contents-block-el .contents-text .title {
+.celebration1206-contents-block-el .contents-text .title {
   font-size: 18px;
   line-height: 30px;
   margin: 30px 0px 16px;
 }
-.anniversary1206-contents-block-el .contents-text .description {
+.celebration1206-contents-block-el .contents-text .description {
 }
-.anniversary1206-contents-block:nth-child(odd) .contents-img {
+.celebration1206-contents-block:nth-child(odd) .contents-img {
   width: 56%;
   float: right;
   height: 320px;
 }
-.anniversary1206-contents-block:nth-child(odd) .contents-text {
+.celebration1206-contents-block:nth-child(odd) .contents-text {
   float: left;
   margin-left: 0%;
   margin-right: 4%;
@@ -154,48 +157,48 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スケジュール
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.anniversary1206-schedule-table-block {
+.celebration1206-schedule-table-block {
   width: 800px;
   margin: 0 auto;
   margin-bottom:  24px;
 }
-.anniversary1206-schedule-table-block .schedule-title {
+.celebration1206-schedule-table-block .schedule-title {
   color:#5FB3A7;
 }
-.anniversary1206-schedule-mainblock {
+.celebration1206-schedule-mainblock {
   text-align: center;
   margin-bottom: 36px;
 }
-.anniversary1206-schedule-mainblock .main-date {
+.celebration1206-schedule-mainblock .main-date {
   display: block;
   margin: 0 auto;
   margin-bottom: 24px;
 }
-.anniversary1206-schedule-mainblock p {
+.celebration1206-schedule-mainblock p {
   font-size: 13px;
 }
-.anniversary1206-schedule-table {
+.celebration1206-schedule-table {
   width: 100%;
 }
-.anniversary1206-schedule-table tr {
+.celebration1206-schedule-table tr {
   border-bottom: 1px solid #e0e0e0;
 }
-.anniversary1206-schedule-table tr:first-child {
+.celebration1206-schedule-table tr:first-child {
   border-top: 1px solid #e0e0e0;
 }
-.anniversary1206-schedule-table th {
+.celebration1206-schedule-table th {
   width: 200px;
   height: 100%;
   font-size: 14px;
   padding: 12px 0px;
 }
-.anniversary1206-schedule-table th div {
+.celebration1206-schedule-table th div {
   display: table;
   width: 100%;
   height: 100%;
-  background: url(/images/content/anniversary/stripe3.png);
+  background: url(/images/content/celebration/stripe3.png);
 }
-.anniversary1206-schedule-table th p {
+.celebration1206-schedule-table th p {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -203,44 +206,44 @@
   padding: 10px 0;
   font-size: 13px;
 }
-.anniversary1206-schedule-table th p span {
+.celebration1206-schedule-table th p span {
   background: #fff;
   padding: 4px 8px;
 }
-.anniversary1206-schedule-table td {
+.celebration1206-schedule-table td {
   vertical-align: top;
   padding: 16px;
 }
 /* イベント詳細 */
-.anniversary1206-event-details {
+.celebration1206-event-details {
   width: 760px;
   margin: 0 auto;
   margin-top: 40px;
   border: 1px solid #ddd3c0;
   padding: 20px;
 }
-.anniversary1206-event-details .detail-title {
+.celebration1206-event-details .detail-title {
   color: #5FB3A7;
   border-bottom: 1px solid #f6f0e5;
   padding-bottom: 4px;
 }
-.anniversary1206-event-details-el-block {
+.celebration1206-event-details-el-block {
   padding-top: 20px;
 }
-.anniversary1206-event-details-el {
+.celebration1206-event-details-el {
   margin-bottom: 20px;
 }
-.anniversary1206-event-details-el:last-child {
+.celebration1206-event-details-el:last-child {
   margin-bottom: 0px;
 }
-.anniversary1206-event-details-el .main-title {
+.celebration1206-event-details-el .main-title {
   border-left: 2px solid #ddd3c0;
   line-height: 13px;
   padding-left: 8px;
   margin-bottom: 8px;
 }
 /* coming-soon */
-.anniversary1206-coming-soon {
+.celebration1206-coming-soon {
   width: 800px;
   margin: 0 auto;
   border-top: 1px solid #ddd2c0;
@@ -248,21 +251,24 @@
   padding: 36px 0px;
   text-align: center;
 }
-
+.celebration1206-notice {
+  text-align: center;
+  margin-top: 16px;
+}
 
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申し込み
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.application-block .anniversary1206-block-el-inner {
+.application-block .celebration1206-block-el-inner {
   width: 920px;
 }
-.application-block .anniversary1206-block-el-inner {
+.application-block .celebration1206-block-el-inner {
   background: rgba(255,255,255,.98);
   padding: 10px;
 }
-.application-block .anniversary1206-block-el-inner .event-caution {
+.application-block .celebration1206-block-el-inner .event-caution {
   margin-top: 30px;
 }
 .application-el {
@@ -285,7 +291,7 @@
 .application-text .sub {
   margin-bottom: 30px;
 }
-.anniversary1206-to-link {
+.celebration1206-to-link {
   display: block;
   width: 400px;
   font-size: 14px;
@@ -428,11 +434,11 @@
   フッター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 
-.anniversary1206-footer-block {
-  background: #e4e4e4;
+.celebration1206-footer-block {
+  background: rgba(221, 211, 192, 0.2);
 }
 
-.anniversary1206-footer-block .navi_kinyu-submenu-el a {
+.celebration1206-footer-block .navi_kinyu-submenu-el a {
   background: none;
 }
 
@@ -447,32 +453,32 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   全体共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.anniversary1206-block {
+.celebration1206-block {
   
 }
-.anniversary1206-block-el {
+.celebration1206-block-el {
   padding: 50px 0px;
 }
-.anniversary1206-block-el-inner {
+.celebration1206-block-el-inner {
   width: 88%;
   margin: 0 auto;
   padding: 6px!important;
 }
-.anniversary1206-block-el h2 {
+.celebration1206-block-el h2 {
   text-align: center;
   margin-bottom: 24px;
 }
-.anniversary1206-block-el h2 img{
+.celebration1206-block-el h2 img{
   width: 100%;
 }
-.anniversary1206-block-el .main-description {
+.celebration1206-block-el .main-description {
   width: 100%;
   margin: 0 auto;
   font-size: 12px;
   line-height: 20px;
 }
-.anniversary1206-to-link {
-  width: 80%;
+.celebration1206-to-link {
+  width: 90%;
   padding: 10px 0px;
   font-weight: normal;
   font-size: 13px;
@@ -502,99 +508,106 @@
   width: 100%;
   margin-bottom: 24px;
 }
-.sub-intro-inner .anniversary1206-to-link {
+.sub-intro-inner .celebration1206-to-link {
   width: 68%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スケジュール
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.anniversary1206-schedule-mainblock .main-date {
+.celebration1206-schedule-mainblock .main-date {
   width: 88%;
 }
-.anniversary1206-schedule-mainblock p {
+.celebration1206-schedule-mainblock p {
   font-size: 12px;
 }
-.anniversary1206-schedule-table-block {
+.celebration1206-schedule-table-block {
   width: 100%;
 }
-.anniversary1206-schedule-table th {
+.celebration1206-schedule-table th {
   width: 100px;
 }
 /* イベント詳細 */
-.anniversary1206-schedule-table th p {
+.celebration1206-schedule-table th p {
   font-size: 12px;
 }
-.anniversary1206-schedule-table td p {
+.celebration1206-schedule-table td p {
   font-size: 12px;
   line-height: 20px;
 }
-.anniversary1206-event-details {
+.celebration1206-event-details {
   width: 100%;
 }
-.anniversary1206-schedule-table-block .schedule-title {
+.celebration1206-schedule-table-block .schedule-title {
   font-size: 12px;
   line-height: 20px;
 }
-.anniversary1206-event-details .detail-title {
+.celebration1206-event-details .detail-title {
   font-size: 12px;
   line-height: 20px;
 }
-.anniversary1206-event-details-el .main-title {
+.celebration1206-event-details-el .main-title {
   font-size: 12px;
   line-height: 12px;
 }
-.anniversary1206-event-details-el .description {
+.celebration1206-event-details-el .description {
   font-size: 12px;
   line-height: 20px;
+}
+.celebration1206-notice {
+  font-size: 11px;
+  line-height: 18px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   イベント内容
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.anniversary1206-contents-block {
+.celebration1206-contents-block {
   margin-bottom: 40px;
 }
-.anniversary1206-contents-block-el {
+.celebration1206-contents-block-el {
   width: 100%;
   margin: 0 auto;
 }
-.anniversary1206-contents-block .contents-img {
+.celebration1206-contents-block .contents-img {
   width: 90%;
   height: 200px;
   float: left;
 }
-.anniversary1206-contents-block .contents-text {
+.celebration1206-contents-block .contents-text {
   width: 90%;
   float: left;
   border-top: 1px solid #5FB3A7;
   margin-left: 0%;
   margin-top: 20px;
 }
-.anniversary1206-contents-block:nth-child(odd) .contents-img {
+.celebration1206-contents-block:nth-child(odd) .contents-img {
   width: 90%;
   height: 200px;
   float: right;
 }
-.anniversary1206-contents-block:nth-child(odd) .contents-text {
+.celebration1206-contents-block:nth-child(odd) .contents-text {
   width: 90%;
   float: right;
   margin-right: 0%;
 }
-.anniversary1206-contents-block-el .contents-text .title {
+.celebration1206-contents-block-el .contents-text .title {
   font-size: 14px;
   line-height: 24px;
   margin: 16px 0px 8px;
 }
-.anniversary1206-contents-block-el .contents-text .description {
+.celebration1206-contents-block-el .contents-text .description {
   font-size: 12px;
   line-height: 20px;
 }
-.anniversary1206-contents-block:last-child {
+.celebration1206-contents-block:last-child {
   margin-bottom: 0px;
 }
-.anniversary1206-coming-soon,
-.anniversary1206-coming-soon img {
+.celebration1206-coming-soon {
+  width: 100%;
+  padding: 24px 0px;
+}
+.celebration1206-coming-soon img {
   width: 100%;
 }
 
@@ -602,7 +615,7 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申し込み
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.application-block .anniversary1206-block-el-inner {
+.application-block .celebration1206-block-el-inner {
   width: 88%;
 }
 .application-el {
@@ -622,7 +635,7 @@
 .application-border {
   width: 50%;
 }
-.application-block .anniversary1206-block-el-inner .event-caution {
+.application-block .celebration1206-block-el-inner .event-caution {
   font-size: 12px;
   line-height: 20px;
   margin-top: 24px;
@@ -631,6 +644,7 @@
   position: relative;
   font-size: 11px;
   line-height: 18px;
+  margin-top: 24px;
 }
 .event-subcaution a {
   font-size: 11px;
@@ -681,9 +695,9 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   フッター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.anniversary1206-footer-block footer {
+.celebration1206-footer-block footer {
   padding: 50px 0px 80px;
-  background: rgba(221, 211, 192, 0.5);
+  background: rgba(221, 211, 192, 0.2);
 }
 
 

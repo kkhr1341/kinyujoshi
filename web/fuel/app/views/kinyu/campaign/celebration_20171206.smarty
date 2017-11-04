@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/anniversary.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/celebration.css">
 <script type="text/javascript" src="/assets/js/kinyu/campaign/conference.js"></script>
 
 
@@ -7,36 +7,34 @@
   <div class="introduction">
     <div class="introduction-border-block pc">
       <div class="introduction-border-block-el"></div>
-      <img class="introduction-border-block-img01" src="/images/content/anniversary/introduction-border01.png">
-      <img class="introduction-border-block-img02" src="/images/content/anniversary/introduction-border02.png">
+      <img class="introduction-border-block-img01" src="/images/content/celebration/introduction-border01.png">
+      <img class="introduction-border-block-img02" src="/images/content/celebration/introduction-border02.png">
     </div>
-    <img class="introduction-logo pc" src="/images/content/anniversary/introduction-logo.png">
-    <img class="introduction-date pc" src="/images/content/anniversary/introduction-date.png">
+    <img class="introduction-logo pc" src="/images/content/celebration/introduction-logo.png">
+    <img class="introduction-date pc" src="/images/content/celebration/introduction-date.png">
 
-    <img class="introduction-main-sp sp" src="/images/content/anniversary/main-bg-sp.jpg">
+    <img class="introduction-main-sp sp" src="/images/content/celebration/main-bg-sp.jpg">
 
   </div>
 
   <div class="sub-intro-block">
     <div class="sub-intro-inner">
-      <img src="/images/content/anniversary/main-title.png" alt="">
-      <a class="anniversary1206-to-link" href="#application" target="_blank">お申し込みはこちら</a>
+      <img src="/images/content/celebration/main-title.png" alt="">
+      <a class="celebration1206-to-link" href="#application" target="_blank">お申込みはこちら</a>
     </div>
   </div>
 
 
 
-  <div class="anniversary1206-block">
-
-    <!-- -->
-    <!-- <div class="">
-      <img src="/images/content/anniversary/title.png" alt="">
-    </div> -->
+  <div class="celebration1206-block">
     
     <!-- イベントコンセプト -->
-    <div class="anniversary1206-block-el">
-      <div class="anniversary1206-block-el-inner">
-        <h2><img src="/images/content/anniversary/title-concept.png" alt=""></h2>
+    <div class="celebration1206-block-el">
+      <div class="celebration1206-block-el-inner">
+        <h2>
+          <img class="pc" src="/images/content/celebration/title-concept.png" alt="">
+          <img class="sp" src="/images/content/celebration/sp/title-concept-sp.png" alt="">
+        </h2>
         <p class="pc main-description event-concept-description">
           きんゆう女子。のこれから。「わたし」のこれから。<br>
           あなたと一緒に、より自由で、より明るい未来に向かって<br>
@@ -91,13 +89,16 @@
 
 
     <!-- イベント内容 -->
-    <div class="anniversary1206-block-el bg-anniversary1206">
-      <div class="anniversary1206-block-el-inner">
-        <h2><img src="/images/content/anniversary/title-contents.png" alt=""></h2>
+    <div class="celebration1206-block-el bg-celebration1206">
+      <div class="celebration1206-block-el-inner">
+        <h2>
+          <img class="pc" src="/images/content/celebration/title-contents.png" alt="">
+          <img class="sp" src="/images/content/celebration/sp/title-contents-sp.png" alt="">
+        </h2>
 
-        <div class="anniversary1206-contents-block">
-          <div class="anniversary1206-contents-block-el clear">
-            <div class="contents-img" style="background: url(/images/content/anniversary/contents01.jpg) center bottom / cover no-repeat;"></div>
+        <div class="celebration1206-contents-block">
+          <div class="celebration1206-contents-block-el clear">
+            <div class="contents-img" style="background: url(/images/content/celebration/contents01.jpg) center bottom / cover no-repeat;"></div>
             <div class="contents-text">
               <p class="title">STORY＆INSIGHT 私たちのこと、教えます。</p>
               <p class="description">始めたきっかけやコンセプト、ストーリーを振り返り、未来のきん女。についてもお話ししたいと思います。また、1000名のうち55%が情報発信をしたいメンバー。その中でもさらにコアな100名から「金融と私」について意見を集約。リアルなきん女。の思いを発表したいと思います。</p>
@@ -105,9 +106,9 @@
           </div>
         </div>
 
-        <div class="anniversary1206-contents-block">
-          <div class="anniversary1206-contents-block-el clear">
-            <div class="contents-img" style="background: url(/images/content/anniversary/contents02.jpg) center center / cover no-repeat;"></div>
+        <div class="celebration1206-contents-block">
+          <div class="celebration1206-contents-block-el clear">
+            <div class="contents-img" style="background: url(/images/content/celebration/contents02.jpg) center center / cover no-repeat;"></div>
             <div class="contents-text">
               <p class="title">リアルタイムQ＆A！即レス女子会</p>
               <p class="description">1000名記念イベントのSpecial女子会では、素敵なゲストをお迎えしその場でリアルタイムに参加メンバーのQ＆Aを行います。メンバーから事前に届いた、「お悩みや質問のお便り」にも即レスで答えていただきます。ここで行った匿名Q＆Aは、企業様へ提供し、わたしたちにとってより良いサービスや商品開発になるよう、お役立ていただきます。</p>
@@ -115,27 +116,28 @@
           </div>
         </div>
 
-        <div class="anniversary1206-contents-block">
-          <div class="anniversary1206-contents-block-el clear">
-            <div class="contents-img" style="background: url(/images/content/anniversary/contents03.jpg) center top / cover no-repeat;"></div>
+        <div class="celebration1206-contents-block">
+          <div class="celebration1206-contents-block-el clear">
+            <div class="contents-img" style="background: url(/images/content/celebration/contents03.jpg) center top / cover no-repeat;"></div>
             <div class="contents-text">
               <p class="title">素敵な夢をシェアして、実現しよう。</p>
               <p class="description">最後の企画は、みんなの夢をシェアするワーク。お金と向き合い、資産を作って将来達成したい目標を書き出しましょう。素敵な夢をシェアいただいたメンバーには、協力企業様から豪華プレゼントも！</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
 
-
     <!-- スケジュール -->
-    <div class="anniversary1206-block-el">
-      <div class="anniversary1206-block-el-inner">
-        <h2><img src="/images/content/anniversary/title-schedule.png" alt=""></h2>
+    <div class="celebration1206-block-el">
+      <div class="celebration1206-block-el-inner">
+        <h2>
+          <img class="pc" src="/images/content/celebration/title-schedule.png" alt="">
+          <img class="sp" src="/images/content/celebration/sp/title-schedule-sp.png" alt="">
+        </h2>
 
-        <div class="anniversary1206-schedule-mainblock">
-          <img class="main-date" src="/images/content/anniversary/maindate.png">
+        <div class="celebration1206-schedule-mainblock">
+          <img class="main-date" src="/images/content/celebration/maindate.png">
           <p class="pc">◆1部【メディア＆企業向け：17:00〜18:00】1,000名達成報告と今後の展開発表</p>
           <p class="pc">◆2部【メンバー＆企業向け：19:00〜21:00】1,000名達成記念パーティ</p>
           <p class="sp">◆1部【メディア＆企業向け：17:00〜18:00】<br>1,000名達成報告と今後の展開発表</p><br>
@@ -144,10 +146,10 @@
 
 
         {*
-        <div class="anniversary1206-schedule-table-block">
+        <div class="celebration1206-schedule-table-block">
           <p class="schedule-title">◆ 1部：1,000名達成イベント</p>
           <!-- 1部 -->
-          <table class="anniversary1206-schedule-table">
+          <table class="celebration1206-schedule-table">
             <tbody>
               <tr>
                 <th>
@@ -160,9 +162,9 @@
         </div>
 
         <!-- 2部 -->
-        <div class="anniversary1206-schedule-table-block">
+        <div class="celebration1206-schedule-table-block">
           <p class="schedule-title">◆ 2部：パーティ</p>
-          <table class="anniversary1206-schedule-table">
+          <table class="celebration1206-schedule-table">
             <tbody>
               <tr>
                 <th><div class=""><p><span>12:30～13:25</span></p></div></th>
@@ -182,22 +184,22 @@
         </div>
 
         <!-- 内要詳細 -->
-        <div class="anniversary1206-event-details">
+        <div class="celebration1206-event-details">
           <p class="detail-title">◆ イベント詳細</p>
           
-          <div class="anniversary1206-event-details-el-block">
+          <div class="celebration1206-event-details-el-block">
 
-            <div class="anniversary1206-event-details-el">
+            <div class="celebration1206-event-details-el">
               <p class="main-title">日時</p>
               <p class="description">2017年12月6日（水）19:00〜22:00（18:30開場）</p>
             </div>
 
-            <div class="anniversary1206-event-details-el">
+            <div class="celebration1206-event-details-el">
               <p class="main-title">場所</p>
               <p class="description">銀座プレイス</p>
             </div>
 
-            <div class="anniversary1206-event-details-el">
+            <div class="celebration1206-event-details-el">
               <p class="main-title">協賛</p>
               <p class="description">銀座プレイス</p>
             </div>
@@ -205,10 +207,11 @@
 
           *}
 
-          <div class="anniversary1206-coming-soon">
-            <img class="pc" src="/images/content/anniversary/coming_soon_pc.png" alt="">
-            <img class="sp" src="/images/content/anniversary/coming_soon.png" alt="">
+          <div class="celebration1206-coming-soon">
+            <img src="/images/content/celebration/coming_soon.png" alt="">
           </div>
+          <p class="pc celebration1206-notice"><span style="color:#f76363;">＊</span>イベントの内容は変更になる場合がございます。改めご了承ください。</p>
+          <p class="sp celebration1206-notice"><span style="color:#f76363;">＊</span>イベントの内容は変更になる場合がございます。<br>改めご了承ください。</p>
 
         </div>
 
@@ -218,7 +221,7 @@
     <script>
       $(function() {
 
-        var ss = $(".anniversary1206-schedule-table tr td").height();
+        var ss = $(".celebration1206-schedule-table tr td").height();
         console.log(ss);
 
         // $(window).load(function(){
@@ -231,16 +234,19 @@
 
         //$('.kinyu-top-list li').height(hh);
         // $('.category-menu').width(mm);
-        $('.anniversary1206-schedule-table th div').height(ss);
+        $('.celebration1206-schedule-table th div').height(ss);
 
       });
     </script>
 
     <!-- お申し込みはこちら -->
-    <div id="application" class="anniversary1206-block-el application-block" style="background: url(/images/content/anniversary/bg-application.jpg) center center / cover no-repeat;">
-      <div class="anniversary1206-block-el-inner">
+    <div id="application" class="celebration1206-block-el application-block" style="background: url(/images/content/celebration/bg-application.jpg) center center / cover no-repeat;">
+      <div class="celebration1206-block-el-inner">
         <div class="application-el">
-          <h2><img src="/images/content/anniversary/title-application.png" alt=""></h2>
+          <h2>
+            <img class="pc" src="/images/content/celebration/title-application.png" alt="">
+            <img class="sp" src="/images/content/celebration/sp/title-application-sp.png" alt="">
+          </h2>
           <div class="application-text">
             <!-- <p class="pc main">スペシャル企画＆パーティ：<span>3,000円</span></p>
             <p class="sp main">スペシャル企画＆パーティ<span>3,000円</span></p> -->
@@ -251,13 +257,13 @@
 
             <p class="sub">（軽食＋フルーツ盛り合わせ＋フリードリンク ＊アルコールは別途）</p>
             <div class="application-border"></div>
-            <p class="pc event-caution"><span style="color:red;">＊</span>参加には、<span style="font-weight:bold;color:#f76363;">パスワード</span>が必要です。パスワードはメルマガにてお送りしております。<br>メディア＆企業向けチケットは、ご招待をお送りさせていただきます。<br>▼</p>
+            <p class="pc event-caution"><span style="color:red;">＊</span>参加には、<span style="font-weight:bold;color:#f76363;">パスワード</span>が必要です。<br>パスワードはきんゆう女子。メンバーのみなさまだけにメルマガにてお送りしております。<br>メディア＆企業向けチケットは、別途ご招待をお送りさせていただきます。<br>▼</p>
 
-            <p class="sp event-caution"><span style="color:red;">＊</span>参加には、<span style="font-weight:bold;color:#f76363;">パスワード</span>が必要です。<br>パスワードはメルマガにてお送りしております。<br>メディア＆企業向けチケットは、<br>ご招待をお送りさせていただきます。<br>▼</p>
+            <p class="sp event-caution"><span style="color:red;">＊</span>参加には、<span style="font-weight:bold;color:#f76363;">パスワード</span>が必要です。<br>パスワードはきんゆう女子。メンバーのみなさまだけにメルマガにてお送りしております。<br>メディア・企業向けチケットは、<br>別途ご招待をお送りさせていただきます。<br>▼</p>
 
-            <a href="http://peatix.com/event/320857/" class="anniversary1206-to-link" target="_blank">お申込みページ</a>
-            <p class="pc event-subcaution">パスワードが届いていない方は、<a href="/contact" target="_blank">こちら</a>よりご連絡をお願いいたします。</p>
-            <p class="sp event-subcaution">パスワードが届いていない方は、、<br><a href="/contact" target="_blank">こちら</a>よりご連絡をお願いいたします。</p>
+            <a href="http://peatix.com/event/320857/" class="celebration1206-to-link" target="_blank">お申込みページへ</a>
+            <p class="pc event-subcaution">パスワードが届いていない方・取材ご希望のメディア様は、<a href="/contact" target="_blank">こちら</a>よりご連絡をお願いいたします。</p>
+            <p class="sp event-subcaution">パスワードが届いていない方は・取材ご希望のメディア様は、<a href="/contact" target="_blank">こちら</a>よりご連絡をお願いいたします。</p>
           </div>
         </div>
 
@@ -265,15 +271,18 @@
     </div>
     
     <!-- アクセス -->
-    <div class="anniversary1206-block-el">
-      <div class="anniversary1206-block-el-inner">
-        <h2><img src="/images/content/anniversary/title-access.png" alt=""></h2>
+    <div class="celebration1206-block-el">
+      <div class="celebration1206-block-el-inner">
+        <h2>
+          <img class="pc" src="/images/content/celebration/title-access.png" alt="">
+          <img class="sp" src="/images/content/celebration/sp/title-access-sp.png" alt="">
+        </h2>
         
         <div class="access-area-block clear">
           <div class="text-area">
             <div class="title-box">
               <div class="title-box-inner">
-                <img src="/images/content/anniversary/ginza_place.png">
+                <img src="/images/content/celebration/ginza_place.png">
                 <p class="subtitle">− 銀座プレイス −</p>
                 <p class="pc access-description">「銀座の街に行きかう人々が集い、つながり、交流することで、<br>新しい何かが始まり発信される場所にしたい」との思いを持つ、<br>この場所を兜町に続く活動拠点にしたいと思います。</p>
                 <p class="sp access-description">「銀座の街に行きかう人々が集い、つながり、交流することで、新しい何かが始まり発信される場所にしたい」との思いを持つ、この場所を兜町に続く活動拠点にしたいと思います。</p>
@@ -289,10 +298,9 @@
       </div>
       </div>
     </div>
-
 </div>
 
-<div class="anniversary1206-footer-block">
+<div class="celebration1206-footer-block">
   <footer>
     <div class="footer-logo">
       <img src="/images/kinyu-logo01.png">
