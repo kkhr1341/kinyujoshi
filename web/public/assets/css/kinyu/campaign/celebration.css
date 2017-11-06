@@ -1,11 +1,6 @@
-
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   全体共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.celebration1206-block {
-  
-}
 .celebration1206-block-el {
   padding: 100px 0px;
   border-bottom: 1px solid #ddd3c0;
@@ -30,7 +25,6 @@
 .bg-celebration1206 {
   background: rgba(221, 211, 192, 0.2);
 }
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   イントロダクション
@@ -79,7 +73,6 @@
   right: 20px;
   top: 20px;
 }
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   サブイントロ文章
@@ -149,10 +142,6 @@
   margin-right: 4%;
   border-top: 1px solid #ddd3c0;
 }
-
-
-
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スケジュール
@@ -256,8 +245,6 @@
   margin-top: 16px;
 }
 
-
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申し込み
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -322,7 +309,6 @@
   margin: 0 auto;
 }
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スポンサー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -372,7 +358,6 @@
   width: 100%;
 }
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   アクセス
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -402,14 +387,14 @@
   margin-bottom: 24px;
 }
 .access-area-block .text-area .title-box-inner .to-link {
-   display: block;
-   background: #DDD3C0;
-   width: 250px;
-   margin: 0 auto;
-   margin-top: 24px;
-   padding: 6px 0px;
-   color: #fff;
-   font-weight: bold;
+  display: block;
+  background: #DDD3C0;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 6px 0px;
+  color: #fff;
+  font-weight: bold;
 }
 .access-area-block .map-block {
   width: 50%;
@@ -429,19 +414,15 @@
   margin-top: 20px;
 }
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   フッター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-
 .celebration1206-footer-block {
   background: rgba(221, 211, 192, 0.2);
 }
-
 .celebration1206-footer-block .navi_kinyu-submenu-el a {
   background: none;
 }
-
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -449,13 +430,9 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (max-width: 768px) {
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   全体共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.celebration1206-block {
-  
-}
 .celebration1206-block-el {
   padding: 50px 0px;
 }
@@ -611,7 +588,6 @@
   width: 100%;
 }
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お申し込み
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -650,7 +626,6 @@
   font-size: 11px;
   line-height: 18px;
 }
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   アクセス
@@ -699,8 +674,6 @@
   padding: 50px 0px 80px;
   background: rgba(221, 211, 192, 0.2);
 }
-
-
 
 
 }
