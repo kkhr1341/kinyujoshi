@@ -22,15 +22,14 @@ class Controller_Login extends Controller_KinyuBase
     	$this->template->description = 'ログイン｜きんゆう女子';
       $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
       $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+
 
     if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
         $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        //$this->template->contents = View::forge('kinyu/index.smarty', $this->data);
       } else {
         $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
-        //$this->template->contents = View::forge('kinyu/pc_index.smarty', $this->data);
       }
       $this->template->contents = View::forge('login/index.smarty', $this->data);
 
@@ -60,11 +59,11 @@ class Controller_Login extends Controller_KinyuBase
       $this->template->description = 'ログイン｜きんゆう女子';
       $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
       $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
         $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         //$this->template->contents = View::forge('kinyu/index.smarty', $this->data);
       } else {
         $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
@@ -98,11 +97,11 @@ class Controller_Login extends Controller_KinyuBase
       $this->template->description = 'ログイン｜きんゆう女子';
       $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
       $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
         $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         //$this->template->contents = View::forge('kinyu/index.smarty', $this->data);
       } else {
         $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);

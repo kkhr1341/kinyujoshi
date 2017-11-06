@@ -13,11 +13,15 @@
   </nav>
 </header>
 
-<div class="joshikai-main-block">
+<div class="kinyu-single-block joshikai-main-block">
+
+
   <div class="joshikai-main">
-    <img src="/images/event/joshikai-title.png">
+    <!-- <img src="/images/event/joshikai-title.png">
     <img class="joshikai-illust1" src="/images/event/joshikai-illust1.png">
-    <img class="joshikai-illust2" src="/images/event/joshikai-illust2.png">
+    <img class="joshikai-illust2" src="/images/event/joshikai-illust2.png"> -->
+    <div class="joshikai-main-left"></div>
+    <div class="joshikai-main-right"></div>
   </div>
 
   <div class="kinyu-main-single-block">

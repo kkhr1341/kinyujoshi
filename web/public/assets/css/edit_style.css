@@ -24,6 +24,9 @@
 .tablet-div {
   display: none;
 }
+.kinyu-single-block {
+  padding-top: 155px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
    ヘッダー
@@ -1258,8 +1261,6 @@
   color: #f16b6b;
   font-weight: bold;
 }
-
-
 .kinyu-regist-branch-block .caution {
   font-size: 13px;
 }
@@ -1274,7 +1275,13 @@
 }
 
 /* 女子会メインタイトル */
-.joshikai-main-block {
+.joshikai-main {
+  width: 1000px;
+  height: 400px;
+  background: gray;
+  margin: 0 auto;
+}
+/*.joshikai-main-block {
   padding-top: 155px;
 }
 .joshikai-main {
@@ -1298,7 +1305,7 @@
   position: absolute;
   bottom: 0;
   right: -10px;
-}
+}*/
 
 /* 女子会ページ：いつもの女子会のチケット一覧 */
 .kinyu-event-list {
@@ -2231,57 +2238,213 @@ footer .footer-menu {
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 
 /* ログイン部分 */
-.login-block-video {
-  height: 100vh;
+.login-contents-block {
+  background: #f9f9f9;
+  padding: 80px 0px;
 }
-.login-block-video video {
-  position: absolute;
-  right:0;
-  bottom:0;
-  min-width:100%;
-  min-height:100%;
-  width:auto;
-  height:auto;
-  z-index: 1000;
-}
-.login-block .inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -250px;
-  border:1px solid rgba(255,255,255,.9);
-  z-index: 1002;
-  display: table;
-  background: rgba(255,255,255,.8);
-}
-.login-block .inner .text-area {
-  display: table-cell;
-  vertical-align: middle;
+.login-contents-intro {
+  margin-bottom: 50px;
   text-align: center;
 }
-.login-block .inner .login-title {
-  font-size: 25px;
+.login-contents-intro p {
+  font-size: 14px;
 }
-.login-block .inner .fb-login-bg {
+.login-contents-title {
   display: inline-block;
-  color: gray;
-  background: rgba(255,255,255,.8);
-  width: 240px;
-  font-size: 18px;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.login-contents-title span {
+  border-bottom: 1px solid #7CDCCE;
+  padding-bottom: 4px;
+}
+.login-contents-block-inner {
+  width: 800px;
+  margin: 0 auto;
+}
+.login-contents-sidearea {
+  box-sizing: content-box;  
+  width: 226px;
+  float: left;
+  margin-right: 36px;
+  padding: 4px 0px;
+}
+.login-contents-sidearea li {
+  margin-bottom: 12px;
+}
+.login-contents-sidearea li a {
+  display: block;
+  text-align: center;
   padding: 8px 0px;
+  opacity: .3;
+}
+.login-contents-sidearea li a.active {
+  background: #eaeaea;
+  opacity: 1;
+  font-weight: bold;
+}
+.login-contents-mainarea {
+  box-sizing: content-box;
+  width: 501px;
+  padding: 4px 0px 4px 36px;
+  float: right;
+  border-left: 1px solid #bfbebe;
+}
+.login-contents-form-area label {
+  font-size: 13px;
+  color: #5fb3a7;
+  margin-bottom: 12px;
+  font-weight: bold;
+  width: 100%;
+}
+.login-contents-form-area .email-form {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 16px;
+}
+.login-contents-form-area .email-form input {
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+.login-contents-form-area .email-form input::-webkit-input-placeholder {
+  color: #b0b0b0;
+}
+.login-contents-form-area .email-form p {
+  text-align: right;
+  margin-top: 12px;
+}
+.login-contents-form-area .login-btn {
+  display: block;
+  width: 200px;
+  background: gray;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 13px;
+  padding: 12px 0px;
+  background: #7CDCCE;
+  font-weight: bold;
+}
+.login-btn-list {
   margin-top: 24px;
 }
-.login-block .inner .fb-login-bg a {
-  display: block;
+.login-btn-list ul {
+  padding: 0px 4px;
 }
-
-
-
-
-
+.login-btn-list li {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.login-btn-list li a {
+  display: block;
+  text-align: center;
+  padding:10px 0px;
+  background: #fff;
+}
+.login-btn-list li.email-login-bg a {
+  background: #79cec1;
+  color: #fff;
+  font-weight: bold;
+}
+.login-btn-list li.email-login-bg p {
+  display: block;
+  text-align: center;
+  padding: 10px 0px;
+  background: #79cec1;
+  color: #fff;
+  font-weight: bold;
+}
+.login-btn-list li.fb-login-bg a {
+  background: #7093d2;
+  color: #fff;
+  font-weight: bold;
+}
+.login-btn-list li.google-login-bg a {
+  background: #e68787;
+  color: #fff;
+  font-weight: bold;
+}
+.regist-sub-description {
+  margin-top:20px;
+  text-align:center;
+  font-size: 12px;
+}
+.regist-sub-description a {
+  font-size: 12px;
+}
+/*メンバー登録部分のみ*/
+.login-contents-regist .login-btn-list {
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+.login-contents-regist .login-btn-list ul {
+  padding: 0px;
+}
+.login-contents-regist .email-form {
+  padding-top: 180px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: none;
+}
+#regist-email-form-block {
+  display: none;
+}
+.login-contents-regist .email-form p {
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: #a0a0a0;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+.login-contents-regist .regist-selectarea,
+.login-contents-regist .regist-selectarea p {
+  display: inline-block;
+}
+.login-contents-regist .regist-selectarea select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: inline-block;
+  padding: 0px 8px;
+  background: #fff;
+  height: 36px;
+  font-size: 13px;
+  background-image: url(/images/login/select-arrow.png);
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+}
+.login-contents-regist .regist-selectarea select#age1 {
+  width: 100px;
+}
+.login-contents-regist .regist-selectarea select#age2 {
+  width: 80px;
+}
+.login-contents-regist .regist-selectarea select#age3 {
+  width: 80px;
+}
+.login-contents-regist .regist-email-form-el label {
+  margin-bottom: 6px;
+}
+.login-contents-regist .email-form input {
+  margin-bottom: 0px;
+}
+.login-contents-regist .regist-email-form-el {
+  margin-bottom: 24px;
+}
+.login-contents-regist .regist-email-label {
+  color: #444;
+  border-left: 4px solid #79cec1;
+  padding: 2px 0px 2px 8px;
+  margin-bottom: 16px;
+}
 
 
 @media screen and (min-width: 640px) {
