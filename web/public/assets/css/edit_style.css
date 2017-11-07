@@ -66,6 +66,9 @@
   display: inline-block;
   padding: 0px 20px;
 }
+.kinyu-header-nav li a {
+  font-size: 12px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
@@ -1278,8 +1281,37 @@
 .joshikai-main {
   width: 1000px;
   height: 400px;
-  background: gray;
+  background: #f1f1f1;
   margin: 0 auto;
+}
+.joshikai-main-left {
+  float: left;
+  width: 500px;
+  height: 100%;
+}
+.joshikai-main-right {
+  float: right;
+  position: relative;
+  width: 500px;
+  height: 100%;
+  background: url(/images/event/L1070084.jpg) center center / cover no-repeat;
+}
+.white-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.3);
+}
+.joshikai-main-left .img-box {
+  height: 100%;
+  display: table;
+}
+.joshikai-main-left .img-box p {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
 }
 /*.joshikai-main-block {
   padding-top: 155px;
@@ -1418,25 +1450,32 @@
   background: #fff;
 }
 .kinyu-joshikai-detail-inner {
-  width: 920px;
+  width: 1000px;
   margin: 0 auto;
   position: relative;
 }
 .kinyu-joshikai-detail-header {
-  padding: 36px 12px;
+  padding: 36px 4px;
   border-bottom: 1px solid;
+  box-sizing: border-box;
+}
+.kinyu-joshikai-detail-header-inner {
+  display: table;
+  height: 88px;
 }
 .kinyu-joshikai-detail-header .date-block {
-  display: inline-block;
   text-align: center;
+  height: 100%;
   width: 88px;
   border: 1px solid #7cdcce;
-  float: left; 
+  display: table-cell;
+  vertical-align: top;
 }
 .kinyu-joshikai-detail-header .date-block .date-01 {
   font-size: 14px;
   line-height: 20px;
-  color: #fff
+  color: #fff;
+  background: #7cdcce;
 }
 .kinyu-joshikai-detail-header .date-block .date-02 {
   font-size: 14px;
@@ -1451,24 +1490,29 @@
   padding-bottom: 8px;
 }
 .kinyu-joshikai-detail-title {
-  float: left;
-  margin-left: 32px;
-  width: 808px;
+  padding-left: 32px;
+  display: table-cell;
+  vertical-align: middle;
 }
 .kinyu-joshikai-detail-title p {
   font-size: 22px;
   line-height: 34px;
 }
-
 .kinyu-joshikai-detail-el-block {
-  padding-top: 32px;
+  padding: 32px 0px 0px 0px;
 }
 .kinyu-joshikai-detail-el {
-  width: 547px;
+  width: 613px;
   float: left;
   padding-right: 36px;
-  border-right: 1px solid;
   box-sizing: content-box;
+  border-right: 1px solid;
+}
+.kinyu-joshikai-detail-el .info-title {
+  margin-bottom: 12px;
+}
+.kinyu-joshikai-detail-content figure img {
+  width: 100%;
 }
 .joshikai-detail-el-info li {
   border-top: 1px dotted #e8e8e8;
@@ -1480,8 +1524,8 @@
   padding-top: 0px;
 }
 .joshikai-detail-el-info li .info-title {
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 14px;
   color: #5FB3A7;
   font-weight: bold;
 }
@@ -1490,18 +1534,17 @@
   padding-top: 8px;
 }
 .joshikai-sidebar {
-  width: 300px;
+  width: 314px;
   float: right;
   margin-left: 36px;
 }
 .joshikai-detail-el-content-box {
-  border-top: 1px solid;
+
 }
 .joshikai-detail-el-content-box .info-title {
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 14px;
   color: #5FB3A7;
-  padding-top: 20px;
   font-weight: bold;
 }
 .joshikai-detail-el-content-box .info-detail {

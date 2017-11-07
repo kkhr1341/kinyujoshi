@@ -7,53 +7,71 @@ var $resArray02 = $resArray[1];
 </script>
 
 
+<header class="kinyu-header">
+  <h1 class="main-logo"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/edit_joshikai">女子会に参加</a></li>
+      <li><a href="/report">レポートを見る</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
 
-<div class="kinyu-joshikai-detail-block">  
+
+<div class="kinyu-single-block joshikai-main-block">
   <div class="kinyu-joshikai-detail-inner">
 
+    <div style="background: url({$event.main_image}) center center / cover no-repeat;height:300px;position: relative;"><div class="white-bg"></div></div>
+
     <div class="kinyu-joshikai-detail-header clear">
-      <div class="date-block">
-        <p class="date-01">{$event.open_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</p>
-        <p class="date-02">{$event.open_date|date_format:"m月"}</p>
-        <p class="date-03">{$event.open_date|date_format:"d"}</p>
-      </div>
-      <div class="kinyu-joshikai-detail-title">
-        <p>{$event.title}</p>
+      <div class="kinyu-joshikai-detail-header-inner">
+        <div class="date-block">
+          <p class="date-01">{$event.open_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</p>
+          <p class="date-02">{$event.open_date|date_format:"m月"}</p>
+          <p class="date-03">{$event.open_date|date_format:"d"}</p>
+        </div>
+        <div class="kinyu-joshikai-detail-title">
+          <p>{$event.title}</p>
+        </div>
       </div>
     </div>
+
 
     <div class="kinyu-joshikai-detail-el-block clear">
 
       <div class="kinyu-joshikai-detail-el">
-        <div class="joshikai-detail-el-info">
-          <ul>
-            <li>
-              <p class="info-title">・日時</p>
-              <p class="info-detail">テキストテキストテキストテキストテキスト</p>
-            </li>
-            <li>
-              <p class="info-title">・開催場所</p>
-              <p class="info-detail">テキストテキストテキストテキストテキスト</p>
-            </li>
-            <li>
-              <p class="info-title">・参加費</p>
-              <p class="info-detail">テキストテキストテキストテキストテキスト</p>
-            </li>
-            <li>
-              <p class="info-title">・お申し込み</p>
-              <p class="info-detail">テキストテキストテキストテキストテキスト</p>
-            </li>
-          </ul>
-        </div>
         <div class="joshikai-detail-el-content-box">
-          <p class="info-title">・女子会詳細</p>
-          <p class="info-detail">{$event.content}</p>
+          <p class="info-title">女子会詳細</p>
+          <div class="kinyu-joshikai-detail-content">{$event.content|nofilter}</div>
         </div>
 
       </div>
     
       <div class="joshikai-sidebar">
-        テスト
+        <div class="joshikai-detail-el-info">
+          <ul>
+            <li>
+              <p class="info-title">日時</p>
+              <p class="info-detail">{$event.open_date|date_format:"Y年m月d日"}（{$event.open_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+              <br>{$event.event_start_datetime}〜{$event.event_end_datetime}</p>
+            </li>
+            <li>
+              <p class="info-title">開催場所</p>
+              <p class="info-detail">{$event.place}</p>
+            </li>
+            <li>
+              <p class="info-title">参加費</p>
+              <p class="info-detail">{$event.fee}</p>
+            </li>
+            <li>
+              <p class="info-title">お申し込み</p>
+              <p class="info-detail">テキストテキストテキストテキストテキスト</p>
+            </li>
+          </ul>
+        </div>
       </div>
 
   </div>
