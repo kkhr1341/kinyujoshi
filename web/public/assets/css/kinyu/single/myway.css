@@ -13,8 +13,9 @@
 .main-img-box-container {
   height: 600px;
   position: relative;
+  margin-top: 155px;
 }
-.main-logo {
+.main-img-box-container .main-logo {
   position: absolute;
   top: 50%;
   right: 10%;

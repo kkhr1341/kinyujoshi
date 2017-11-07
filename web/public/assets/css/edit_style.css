@@ -55,7 +55,7 @@
   z-index: 1005;
   text-align: center;
 }
-.kinyu-header .main-logo {
+.kinyu-header h1.main-logo {
   padding: 32px 0px 24px; 
 }
 .kinyu-header-nav {
@@ -64,10 +64,15 @@
 }
 .kinyu-header-nav li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 16px;
 }
 .kinyu-header-nav li a {
   font-size: 12px;
+  transition: .8s;
+}
+.kinyu-header-nav li.active a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #7CDCCE;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -685,8 +690,8 @@
   width: 100%;
 }
 .kinyu-top-introlist-left .main-intro-description {
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 11px;
+  line-height: 20px;
   margin: 24px 0px;
 }
 .main-intro-link {
@@ -1345,7 +1350,7 @@
   padding-bottom: 80px;
   border-bottom: 1px solid #d1d1d1;
 }
-.bg-joshikai {
+/*.bg-joshikai {
   width: 100%;
   height: 100%;
   background: url(/images/event/joshikai_stripe.png);
@@ -1362,7 +1367,7 @@
   bottom: -10px;
   left: 10px;
   z-index: 1001;
-}
+}*/
 .special_joshikai_title {
   transform: rotate(-12deg);
   position: absolute;
@@ -1399,6 +1404,7 @@
   margin-bottom: 3.5%;
   position: relative;
   transition: .5s;
+  box-shadow: 1px 1px 2px #f3f0f0;
 }
 .kinyu-event-list li:nth-child(3n) {
   margin-right: 0%;
@@ -1658,7 +1664,6 @@
   margin-top: 24px;
   color:#7cdcce;
 }
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
@@ -1974,7 +1979,6 @@
   height: 36px;
 }
 
-
 /*ポップアップ*/
 .report-detail-comment-popup {
   display: none;
@@ -2061,6 +2065,89 @@
   text-align: center;
   margin-bottom: 24px;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　ABOUTページ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.about-kinyu-container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0px 50px;
+}
+.about-kinyu-header {
+  border-top: 1px solid #5FB3A7;
+  border-bottom: 1px solid #5FB3A7;
+  text-align: center;
+  padding:8px 0px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.about-kinyu-container-inner {
+  padding-top: 32px;
+}
+.about-kinyu-container-left {
+  float: left;
+  width: 150px;
+  margin-right: 30px;
+}
+.about-kinyu-container-left li {
+  text-align: right;
+  margin-bottom: 24px;
+}
+.about-kinyu-container-left li a {
+  font-size: 12px;
+  line-height: 12px;
+  opacity: 1;
+  transition: .5s;
+}
+.about-kinyu-container-left li.active a {
+  color: #5FB3A7;
+  font-weight: bold;
+  opacity: 1;
+}
+.about-kinyu-container-right {
+  float: right;
+  width: 789px;
+  padding-left: 30px;
+  border-left: 1px solid #e0dede;
+  box-sizing: content-box;
+}
+.about-kinyu-bgarea {
+  height: 200px;  
+}
+.about-kinyu-details-area {
+  text-align: center;
+  margin-top: 32px;
+}
+.about-kinyu-details-area h2 {
+  font-size: 24px;
+  font-family: 'Sterling SSm 7r','Sterling SSm A','Sterling SSm B',"Hiragino Mincho ProN","ヒラギノ明朝 Pro W3","MS PMincho","MS PMing",serif;
+  letter-spacing: .1em;
+  display: inline-block;
+  border-bottom: 1px solid #5FB3A7;
+  padding-bottom: 4px; 
+}
+.about-kinyu-description {
+  margin-top: 28px;
+}
+.about-kinyu-description .main-catchcopy {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.divide-kinyu-description {
+  height: 1px;
+  background: #e0dede;
+  width: 300px;
+  margin:0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.about-kinyujoshi-intro-description-sub {
+  font-size: 12px;
+  line-height: 22px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   会社関連の情報
@@ -2619,6 +2706,13 @@ footer .footer-menu {
 .insta-block-inner li a:hover > p {
   opacity: 1;
   cursor: pointer;
+}
+.kinyu-header-nav li:hover a {
+  opacity: .3;
+}
+.about-kinyu-container-left li a:hover {
+  color: #5FB3A7;
+  opacity: 1;
 }
 
 }
