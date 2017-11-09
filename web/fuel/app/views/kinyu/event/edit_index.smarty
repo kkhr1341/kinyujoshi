@@ -34,6 +34,8 @@
       <div id="kinyu-event-scroll-point" class="center">
         <div class="kinyu-event-list">
           <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>女子会の参加方法を12月5日より変更いたしました。参加方法はこちらより</p>
+
+          <p class="kinyu-event-info-title">女子会一覧</p>
           <ul>
             {foreach from=$events.datas key="key" item=event name=loopname}
             {$fooo = $event.main_image}
@@ -49,7 +51,7 @@
                 <div class="bg-joshikai"></div>
               {/if}
               <div class="kinyu-event-list-el">
-                <a target="_blank" href="/joshikai/{$event.code}">
+                <a href="/joshikai/{$event.code}">
                   <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
                     <!-- {if $event.event_category == "女子会"}
                       <p class="event-category normal-event">女子会</p>
@@ -89,11 +91,58 @@
             </li>
             {/foreach}
           </ul>
-          <!-- <div class="other-event"><a style="background: #efdd02;" href="/event_special">特別女子会はこちら</a></div> -->
         </div>
+
+        <div class="special-event-list">
+          <p class="kinyu-event-info-title">過去の特別女子会</p>
+          <ul class="clear">
+            <li>
+              <a href="/conference" target="_blank">
+                <div class="bg-area" style="background:url(/images/event/past-special1.png) center center / cover no-repeat"></div>
+                <div class="text-area"><p>第1回 週末投資宣言♪</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="/school_jpx" target="_blank">
+                <div class="bg-area" style="background:url(/images/event/past-special2.png) center center / cover no-repeat"></div>
+                <div class="text-area"><p>私立きんゆう女子。学院</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="http://ac.nikkeibp.co.jp/2017x0422finw/" target="_blank">
+                <div class="bg-area" style="background:url(/images/event/past-special3.png) center center / cover no-repeat"></div>
+                <div class="text-area"><p>お金と私をアップデート 2017 spring</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="https://jpx-moneyschool.com/" target="_blank">
+                <div class="bg-area" style="background:url(/images/event/past-special4.jpg) center center / cover no-repeat"></div>
+                <div class="text-area"><p>JPX＊マネースクール-ロボアドとミライの資産形成</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="/school_jpx" target="_blank">
+                <div class="bg-area" style="background:url(/images/content/school_public/og-school_public.png) top center / cover no-repeat"></div>
+                <div class="text-area"><p>きんゆう女子。学院</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="/oom-reit" target="_blank">
+                <div class="bg-area" style="background:url(/images/event/past-special5.jpg) center center / cover no-repeat"></div>
+                <div class="text-area"><p>大江戸温泉できんゆう女子会。</p></div>
+              </a>
+            </li>
+            <li>
+              <a href="http://ac.nikkeibp.co.jp/2017z1105finw/" target="_blank">
+                <div class="bg-area" style="background:url(/images/event/past-special7.jpg) left center / cover no-repeat"></div>
+                <div class="text-area"><p> お金と私をアップデート 2017 autumn</p></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
-    {$sp_footer}
   </div>
 </div>
 

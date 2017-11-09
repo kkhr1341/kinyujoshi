@@ -1,3 +1,18 @@
+<header class="kinyu-header">
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/edit_joshikai">女子会に参加</a></li>
+      <li class="active"><a href="/report">レポートを見る</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
+
+
 {if $blog.kind == "わたしを知る"}
 
   <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
@@ -151,15 +166,89 @@
     });
   </script>
 
-
 {else}
 
-  <div class="kinyu-main-block kinyu-pc-details-block">
-    <div class="inner">
+  <!-- 通常のレポートページの編集 -->
 
-      <div class="report-detail-header">
-        <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
+  <div class="kinyu-main-block kinyu-details-block">
+
+    <div class="kinyu-details-introdauction">
+      <div class="kinyu-details-introdauction-inner clear">
+        <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
+        <div class="text-box">
+          <div class="text-box-inner">
+            {if $blog.kind == "女子会レポート"}
+              <p class="category"><span>女子会レポート</span></p>
+            {else if $blog.kind == "イベントレポート"}
+              <p class="category"><span>イベントレポート</span></p>
+            {else if $blog.kind == "取材レポート"}
+              <p class="category"><span>取材レポート</span></p>
+            {else if $blog.kind == "イベント告知"}
+              <p class="category"><span>イベント告知</span></p>
+            {else if $blog.kind == "コラム"}
+              <p class="category"><span>コラム</span></p>
+            {else}
+              <p class="category"><span>レポート</span></p>
+            {/if}
+            <h2>{$blog.title}</h2>
+            <p class="description">{$blog.description}</p>
+            <p class="description-sub">{$blog.open_date|date_format:"%Y.%-m.%-d"}up!</p>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="inner clear">
+
+      <div class="report-detail-main">
+        {$blog.content|nofilter}
+
+        <!-- ソーシャルシェア -->
+        {$fooo = $blog.main_image}
+        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+        <div class="report-detail-share clear">
+          <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+          <div class="report-detail-share-el report-detail-share-right">
+            <h3><img src="/images/detail-title/kinyu-share-report.png"></h3>
+            <img class="share-this-page" src="/images/social/social-this-page.png">
+            <div class="social-list">
+              <ul>
+                {$social_share}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-detail-sidebar">
+        <div class="report-detail-sidebar-el">
+          <p class="report-detail-sidebar-el-title">直近の女子会</p>
+          <div class="report-sidebar-event-list">
+            <ul class="clear">
+              {foreach from=$top_events item=event name=loopname}
+
+              {if $smarty.foreach.loopname.index == 6}
+              </ul>
+                <div class="sidebar-more-link">
+                  <a href="/event">女子会をもっと見る</a>
+                </div>
+                {break}
+              {/if}
+
+              <li class="clear">
+                <div class="img-box" style="background:url({$event.main_image}) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="date">{$event.event_date|date_format:"%Y.%-m.%-d"}</p>
+                  <p class="title fs-mincho">{$event.title}</p>
+                </div>
+              </li>
+              {/foreach}
+            </ul>
+        </div>
+      </div>
+
+
+      {*
 
       <div class="report-detail-thunb-block clear">
         <div class="report-detail-thunb" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
@@ -188,7 +277,7 @@
           </div>
           <div class="report-detail-description">
             <p>{$blog.description}</p>
-            <p class="date">{$blog.open_date|date_format:"%Y/%-m/%-d"}</p>
+            <p class="date">{$blog.open_date|date_format:"%Y.%-m.%-d"}</p>
           </div>
         </div>
       </div>
@@ -217,32 +306,10 @@
 
       <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">   
       {$detail_content_after}
+
+      *}
     </div>
 
-
-    <footer>
-      <div class="footer-logo">
-        <a href="/about"><img src="/images/kinyu-logo01.png"></a>
-      </div>
-      <div class="footer-menu">
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/company">運営会社</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/privacy">プライバシーポリシー</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/legal">特定商取引法に基づく表記</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/service">会員規約</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/contact">お問い合わせ</a>
-        </div>
-      </div>
-      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc. ALL RIGHTS RESERVED</p>
-    </footer>
   </div>
 
 {/if}

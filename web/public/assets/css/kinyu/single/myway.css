@@ -13,7 +13,7 @@
 .main-img-box-container {
   height: 600px;
   position: relative;
-  margin-top: 155px;
+  margin-top: 142px;
 }
 .main-img-box-container .main-logo {
   position: absolute;
@@ -108,8 +108,9 @@
   margin-bottom: 36px;
 }
 .intoduction-title span {
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid gray;
   padding-bottom: 8px;
+  font-family: 'utsukushi';
 }
 
 /* イントロダクション-画像 */

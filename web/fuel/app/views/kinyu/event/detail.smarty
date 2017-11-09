@@ -8,13 +8,14 @@ var $resArray02 = $resArray[1];
 
 
 <header class="kinyu-header">
-  <h1 class="main-logo"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></h1>
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
       <li><a href="/about">きんゆう女子。って？</a></li>
-      <li><a href="/edit_joshikai">女子会に参加</a></li>
+      <li class="active"><a href="/edit_joshikai">女子会に参加</a></li>
       <li><a href="/report">レポートを見る</a></li>
       <li><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
       <li><a href="/login">メンバー登録 / ログイン</a></li>
     </ul>
   </nav>
@@ -79,4 +80,3 @@ var $resArray02 = $resArray[1];
 </div>
 
 <!-- {$event.content|nofilter} -->
-{$sp_footer}

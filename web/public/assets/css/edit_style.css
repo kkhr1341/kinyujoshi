@@ -1,4 +1,10 @@
 @charset "UTF-8";
+
+@font-face {
+  font-family: 'utsukushi';
+  src: url(/font/utsukushi.otf);
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -25,7 +31,10 @@
   display: none;
 }
 .kinyu-single-block {
-  padding-top: 155px;
+  padding-top: 142px;
+}
+.fs-mincho {
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -46,7 +55,7 @@
   padding: 32px 0px 24px; 
 }
 .kinyu-header {
-  height: 152px;
+  height: 136px;
   position: fixed;
   top: 0;
   left: 0;
@@ -56,7 +65,10 @@
   text-align: center;
 }
 .kinyu-header h1.main-logo {
-  padding: 32px 0px 24px; 
+  padding: 24px 0px 16px; 
+}
+.kinyu-header h1.main-logo a {
+  line-height: 0;
 }
 .kinyu-header-nav {
   text-align: center;
@@ -532,10 +544,8 @@
   display: block;
   padding: 2px 16px;
   margin-right: 8px;
-  border-radius: 20px;
   transition: 0.8s;
   font-size: 11px;
-  background: #ffffff;
 }
 .navi_contents-block .navi_kinyu-submenu-el a {
   background: #7CDCCE;
@@ -865,11 +875,20 @@
 }
 
 /*-- 記事一覧部分 --*/
-.kinyu-report-list {
-  padding: 155px 1% 0px!important;
+.kinyu-list-block {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 142px 0% 60px!important;
+}
+.kinyu-list-block-title {
+  font-size: 14px;
+  line-height: 14px;
+  color: #5FB3A7;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 .kinyu-top-list {
-  padding: 45px 1% 0px;
+  padding: 0px 0% 0px;
   letter-spacing: -4em;
 }
 .kinyu-top-list li {
@@ -919,12 +938,12 @@
   line-height: 22px;
   padding: 0px 4px 10;
   height: 44px;
-  /*font-weight: bold;*/
   /*color: #fff;*/
   width: 100%;
   box-sizing: border-box;
   /*text-shadow: 1px 1px 1px #3e3e3e;*/
   transition: 0.8s;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 /* トップページ・レポート一覧上のバナー */
@@ -953,47 +972,76 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　記事詳細部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.kinyu-pc-details-block {
-  background: #F2FBFA;
-  padding-top: 80px;
+.kinyu-details-block {
+  padding-top: 142px;
 }
 .kinyu-main-block .inner {
   background: #fff;
-  width: 860px;
-  padding: 72px 80px 80px 80px;
-  border-radius: 5px;
+  width: 1050px;
+  padding: 36px 0px 80px;
   margin: 0 auto;
 }
-/*.report-detail-header {
-  padding-top: 60px;
-} */
+/* 記事のイントロダクション */
+.kinyu-details-introdauction {
+  background: #f9f9f9;
+  width: 100%;
+  padding: 50px 0px;
+}
+.kinyu-details-introdauction-inner {
+  width: 1050px;
+  height: 250px;
+  margin: 0 auto;
+}
+/* 画像 */
+.kinyu-details-introdauction .img-box {
+  float: left;
+  width: 450px;
+  height: 100%;
+}
+/* タイトル */
+.kinyu-details-introdauction .text-box {
+  float: right;
+  width: 550px;
+  height: 100%;
+  display: table;
+}
+.kinyu-details-introdauction .text-box .text-box-inner {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.kinyu-details-introdauction .text-box .category {
+  color: #5FB3A7;
+}
+.kinyu-details-introdauction .text-box h2 {
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-size: 22px;
+  line-height: 32px;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.kinyu-details-introdauction .text-box .description {
+  font-size: 12px;
+  line-height: 22px;
+  padding: 16px 0px 12px;
+  border-top: 1px solid #e0dede;
+}
+.kinyu-details-introdauction .text-box .description-sub {
+  font-size: 12px;
+  line-height: 22px;
+}
 .report-detail-header .logo {
   width: 170px;
   display: block;
   margin: 0 auto;
   margin-bottom: 30px;
 }
-.report-detail-info {
-  padding: 6px 0px 0px;
-  position: relative;
-}
-.report-detail-category p {
-  color: #5ebfb1;
-}
-/* カテゴリー */
-.kinyu-top-list-kind {
-  display: inline-block;
-  background: rgba(255,255,255,.6);
-  /*position: absolute;
-  top: 0;
-  left: 0;*/
-}
 .kinyu-top-list-kind p {
   /*color: #5ebfb1;*/
   color: #46aa9c;
   font-size: 13px;
   line-height: 13px;
-  padding: 12px 0px 0px;
+  padding: 16px 0px 8px;
 }
 
 /* 記事詳細 - サムネイル画像 */
@@ -1069,12 +1117,71 @@
   background: rgba(94, 220, 139, 0.1);
 }
 
+/* サイドバー */
+.report-detail-sidebar {
+  float: right;
+  width: 300px;
+  margin-left: 36px;
+  height: 500px;
+}
+.report-detail-sidebar-el-title {
+  font-size: 14px;
+  line-height: 14px;
+  border-left: 2px solid #7CDCCE;
+  margin-bottom: 12px;
+  padding-left: 8px;
+}
+.report-sidebar-event-list li {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+  margin-top: 20px;
+}
+.report-sidebar-event-list li:first-child {
+  margin-top: 0px;
+}
+.report-sidebar-event-list li:nth-child(2) {
+  margin-top: 0px;
+}
+.report-sidebar-event-list li:nth-child(2n) {
+  margin-right: 0%;
+}
+.report-sidebar-event-list li .img-box {
+  width: 100%;
+  height: 90px;
+}
+.report-sidebar-event-list li .text-box {
+  padding: 8px 2px 0px;
+}
+.report-sidebar-event-list li .text-box .date {
+  font-size: 11px;
+  line-height: 11px;
+  color: #5FB3A7;
+  font-weight: bold;
+}
+.report-sidebar-event-list li .text-box .title {
+  font-size: 12px;
+  line-height: 20px;
+  height: 60px;
+  margin-top: 4px;
+}
+.sidebar-more-link {
+  text-align: right;
+}
+.sidebar-more-link a {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+
 /* 本文 */
 .report-detail-main {
-  padding-bottom: 0px;
-  padding-top: 36px;
+  float: left;
   position: relative;
-  padding-bottom: 70px;
+  width: 678px;
+  padding-right: 35px;
+  border-right: 1px solid #e0dede;
+  box-sizing: content-box;
 }
 .report-detail-main img {
   max-width: 100%;
@@ -1086,7 +1193,7 @@
   padding: 5px 0px 5px 0px;
   background-color: #fff;
   border-radius: 0px;
-  border-bottom: 2px solid #7CDCCE;
+  border-bottom: 1px solid #7CDCCE;
   margin: 20px 0px;
 }
 .report-detail-main h2:before {
@@ -1103,18 +1210,24 @@
 .report-detail-main p strong {
   font-weight: bold;
 }
+.report-detail-main p {
+  font-size: 13px;
+  line-height: 24px;
+}
 .report-detail-main a {
   color: #4C9BBF;
+  font-size: 12px;
+  line-height: 22px;
 }
 .report-detail-main .report-bottom {
   text-align: right;
   margin-top: 16px;
 }
 .report-detail-main blockquote {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 11px;
+  line-height: 18px;
   margin-top: 5px;
-  border-left: 3px solid #d8d8d8;
+  border-left: 2px solid #d8d8d8;
   color: #a09f9f;
   padding-left: 8px;
 }
@@ -1128,7 +1241,9 @@
   　ニュース一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-news-list {
-  padding: 88px 1% 0px;
+  padding: 16px 0% 0px;
+  width: 900px;
+  margin: 0 auto;
 }
 .kinyu-news-list .kinyu-news-list-li {
   padding: 24px 8px 24px 0px;
@@ -1284,20 +1399,20 @@
 
 /* 女子会メインタイトル */
 .joshikai-main {
-  width: 1000px;
+  width: 1050px;
   height: 400px;
-  background: #f1f1f1;
+  background: #f9f9f9;
   margin: 0 auto;
 }
 .joshikai-main-left {
   float: left;
-  width: 500px;
+  width: 525px;
   height: 100%;
 }
 .joshikai-main-right {
   float: right;
   position: relative;
-  width: 500px;
+  width: 525px;
   height: 100%;
   background: url(/images/event/L1070084.jpg) center center / cover no-repeat;
 }
@@ -1312,11 +1427,13 @@
 .joshikai-main-left .img-box {
   height: 100%;
   display: table;
+  width: 100%;
 }
 .joshikai-main-left .img-box p {
   height: 100%;
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
 }
 /*.joshikai-main-block {
   padding-top: 155px;
@@ -1346,28 +1463,8 @@
 
 /* 女子会ページ：いつもの女子会のチケット一覧 */
 .kinyu-event-list {
-  margin-top: 24px;
-  padding-bottom: 80px;
-  border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid #e5e5e5;
 }
-/*.bg-joshikai {
-  width: 100%;
-  height: 100%;
-  background: url(/images/event/joshikai_stripe.png);
-  position: absolute;
-  bottom: -10px;
-  left: 10px;
-  z-index: 1001;
-}
-.bg-special-joshikai {
-  width: 100%;
-  height: 100%;
-  background: url(/images/event/specialjoshikai_stripe.png);
-  position: absolute;
-  bottom: -10px;
-  left: 10px;
-  z-index: 1001;
-}*/
 .special_joshikai_title {
   transform: rotate(-12deg);
   position: absolute;
@@ -1382,7 +1479,7 @@
   z-index: 1002;
 }
 .kinyu-event-list .kinyu-event-list-left {
-  height: 180px;
+  height: 200px;
 }
 .kinyu-event-list .kinyu-event-list-right {
   padding: 16px;
@@ -1394,14 +1491,22 @@
 }
 .kinyu-event-list ul {
   letter-spacing: -0.5em;
+  padding-bottom: 20px;
+}
+.kinyu-event-info-title {
+  font-size: 14px;
+  line-height: 14px;
+  color: #5FB3A7;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 .kinyu-event-list li {
   display: inline-block;
-  width: 30.3333%;
+  width: 30.8%;
   letter-spacing: normal;
   box-sizing: border-box;
-  margin-right: 3.5%;
-  margin-bottom: 3.5%;
+  margin-right: 3.8%;
+  margin-bottom: 3.8%;
   position: relative;
   transition: .5s;
   box-shadow: 1px 1px 2px #f3f0f0;
@@ -1439,6 +1544,7 @@
   height: 44px;
   margin: 12px 0px 16px;
   padding: 0px 1px;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 .event-subbox {
   border-top: 1px dotted #ededed;
@@ -1449,9 +1555,35 @@
   line-height: 18px;
 }
 
+/* 過去の特別女子会 */
+.special-event-list {
+  padding: 50px 0px;
+}
+.special-event-list li {
+  float: left;
+  width: 48.1%;
+  margin-right: 3.8%;
+  margin-bottom: 2.5%;
+}
+.special-event-list li:nth-child(2n) {
+  margin-right: 0%;
+}
+.special-event-list .bg-area {
+  height: 200px;
+  background: gray;
+}
+.special-event-list .text-area {
+  margin-top: 12px;
+}
+.special-event-list .text-area p {
+  text-align: center;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+
 
 /* 女子会ページの詳細 */
-
 .kinyu-joshikai-detail-block {
   background: #fff;
 }
@@ -1459,6 +1591,7 @@
   width: 1000px;
   margin: 0 auto;
   position: relative;
+  padding-bottom: 80px;
 }
 .kinyu-joshikai-detail-header {
   padding: 36px 4px;
@@ -1693,7 +1826,6 @@
 /* ソーシャルのシェア部分 */
 .report-detail-share {
   width: 100%;
-  border-radius: 3px;
   height: 180px;
   margin-top: 36px;
 }
@@ -1704,18 +1836,15 @@
 .report-detail-share-el h3 {
   text-align: center;
   margin-bottom: 8px;
-  padding-left: 8px;
 }
 .report-detail-share-left {
   float: left;
   width: 40%;
-  border-radius: 3px 0px 0px 3px;
 }
 .report-detail-share-right {
   float: right;
   width: 60%;
   background: #f7f7f7;
-  border-radius: 0px 3px 3px 0px;
   padding-top: 20px;
 }
 .report-detail-share .social-list {
@@ -2038,12 +2167,12 @@
   　個別ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-main-single-block .inner {
-  width: 1000px;
+  width: 1050px;
   margin: 0 auto;
   padding-top: 20px;
 }
 .company-detail-header {
-  width: 1000px;
+  width: 1050px;
   margin: 0 auto;
   padding: 20px 0px;
   border-bottom: 1px solid #f1f1f1;
@@ -2072,7 +2201,7 @@
 .about-kinyu-container {
   width: 1000px;
   margin: 0 auto;
-  padding: 50px 0px 50px;
+  padding: 10px 0px 80px;
 }
 .about-kinyu-header {
   border-top: 1px solid #5FB3A7;
@@ -2119,8 +2248,9 @@
   margin-top: 32px;
 }
 .about-kinyu-details-area h2 {
-  font-size: 24px;
-  font-family: 'Sterling SSm 7r','Sterling SSm A','Sterling SSm B',"Hiragino Mincho ProN","ヒラギノ明朝 Pro W3","MS PMincho","MS PMing",serif;
+  font-size: 26px;
+  /*font-family: 'utsukushi';*/
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   letter-spacing: .1em;
   display: inline-block;
   border-bottom: 1px solid #5FB3A7;
@@ -2153,7 +2283,7 @@
   会社関連の情報
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .company-details-block {
-  width: 1000px;
+  width: 1050px;
   margin: 0 auto;
   padding: 60px 0px; 
 }
@@ -2250,9 +2380,10 @@ footer .footer-menu {
   margin-bottom: 24px;
 }
 .singlepage-footer {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
   padding: 80px 0px 36px;
+  background: #f9f9f9;
 }
 .footer-logo {
   width: 260px;
@@ -2601,7 +2732,7 @@ footer .footer-menu {
   background: #f5f5f5;
 }
 .navi_kinyu-submenu-el a:hover {
-  background: rgba(124, 220, 206, 0.4);
+  opacity: .5;
 }
 .category-menu li:hover  {
   background: #eafffb;

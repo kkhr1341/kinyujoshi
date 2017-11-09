@@ -31,13 +31,25 @@ return array(
 	'my/registlist/create' => 'my/registlist/create',
 	'my/registlist/(:any)'   => 'my/registlist/detail/$1',
 
+	//管理画面-女子会
+	'my/joshikailist' => 'my/events/joshikailist',
+	'my/joshikaidetail/(:any)' => 'my/events/joshikaidetail/$1',
+
 	//テスト環境
 	'testindex' => 'kinyu/top/testindex',
 	'testsp' => 'kinyu/top/testspindex',
 		
 	// きんゆう女子
 	'kinyu'   => 'kinyu/top',
+	
+	//aboutペーz
 	'about' => 'kinyu/about/index',
+	'about_contents' => 'kinyu/about/about_contents',
+	'about_story' => 'kinyu/about/about_story',
+	'about_policy' => 'kinyu/about/about_policy',
+	'about_design' => 'kinyu/about/about_design',
+	'about_hensyubu' => 'kinyu/about/about_hensyubu',
+
 	'report'   => 'kinyu/blog/index',
 	'report/1'   => 'kinyu/top',
 	'report/(:num)'   => 'kinyu/blog/index/$1',
@@ -102,8 +114,6 @@ return array(
 	'map' => 'kinyu/campaign/map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 	'celebration' => 'kinyu/campaign/celebration_20171206',
-
-
 
 	'blog/page/(:any)'   => 'kinyu/blog/page/index/$1',
 	'event/page/(:any)'   => 'kinyu/event/page/index/$1',
