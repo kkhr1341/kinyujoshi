@@ -1,10 +1,4 @@
 @charset "UTF-8";
-
-@font-face {
-  font-family: 'utsukushi';
-  src: url(/font/utsukushi.otf);
-}
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -2249,7 +2243,6 @@
 }
 .about-kinyu-details-area h2 {
   font-size: 26px;
-  /*font-family: 'utsukushi';*/
   font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
   letter-spacing: .1em;
   display: inline-block;
