@@ -213,8 +213,11 @@
         $('.kinyu-header-top').width(ggg);
       });
     </script>
-
-
-
   </div>
 </div>
+
+<style>
+footer {
+  margin-left: 360px!important;
+}
+</style>

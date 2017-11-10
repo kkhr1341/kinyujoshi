@@ -67,10 +67,12 @@
 .kinyu-header-nav {
   text-align: center;
   padding-bottom: 16px;
+  letter-spacing: -4em;
 }
 .kinyu-header-nav li {
   display: inline-block;
   padding: 0px 16px;
+  letter-spacing: normal;
 }
 .kinyu-header-nav li a {
   font-size: 12px;
@@ -600,13 +602,12 @@
   　トップ・女子会&メンバー部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-maincontent-block {
-  padding: 0px 1%;
 }
 .kinyu-top-maincontent {
-  border-left: 1px solid #7CDCCE;
-  border-right: 1px solid #7CDCCE;
+  /*border-left: 1px solid #7CDCCE;
+  border-right: 1px solid #7CDCCE;*/
   letter-spacing: -4em;
-  padding: 24px 5%;
+  padding: 36px;
   background: #f9f9f9;
 }
 .kinyu-top-maincontent h3 img {
@@ -629,7 +630,7 @@
   font-size: 12px;
   line-height: 20px;
   margin: 0 auto;
-  padding: 12px 0px;
+  padding: 12px 0px 0px;
 }
 .kinyu-top-maincontent li a {
   position: relative;
@@ -667,7 +668,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-list-block {
   margin-left: 360px;
-  padding: 30px 42px;
+  padding: 20px 42px 80px;
   position: relative;
 }
 .kinyu-top-list-block .inner {
@@ -676,7 +677,7 @@
   position: relative;
 }
 .kinyu-top-introlist-block {
-  padding: 155px 1% 50px;
+  padding: 155px 0% 50px;
 }
 .kinyu-top-introlist-left {
   width: 31.333%;
@@ -746,7 +747,7 @@
   position: absolute;
   bottom: 0;
   color:#fff;
-  background: rgba(124, 220, 206, 0.8);
+  background: rgba(124, 220, 206, 0.9);
 }
 .kinyu-top-introlist-pickup .swiper-wrapper,
 .kinyu-top-introlist-pickup .swiper-slide {
@@ -1015,10 +1016,11 @@
   font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 .kinyu-details-introdauction .text-box .description {
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 11px;
+  line-height: 18px;
   padding: 16px 0px 12px;
   border-top: 1px solid #e0dede;
+  color: gray;
 }
 .kinyu-details-introdauction .text-box .description-sub {
   font-size: 12px;
@@ -1114,17 +1116,21 @@
 /* サイドバー */
 .report-detail-sidebar {
   float: right;
-  width: 300px;
+  width: 320px;
   margin-left: 36px;
   height: 500px;
+}
+.report-detail-sidebar-el {
+  margin-bottom: 30px;
 }
 .report-detail-sidebar-el-title {
   font-size: 14px;
   line-height: 14px;
   border-left: 2px solid #7CDCCE;
-  margin-bottom: 12px;
-  padding-left: 8px;
+  margin-bottom: 16px;
+  padding: 0px 0px 0px 8px;
 }
+/* 直近の女子会 */
 .report-sidebar-event-list li {
   width: 48%;
   float: left;
@@ -1156,27 +1162,58 @@
 .report-sidebar-event-list li .text-box .title {
   font-size: 12px;
   line-height: 20px;
-  height: 60px;
+  height: 40px;
   margin-top: 4px;
 }
 .sidebar-more-link {
   text-align: right;
+  margin-top: 8px;
 }
 .sidebar-more-link a {
   font-size: 12px;
   line-height: 12px;
+  color: #5fb3a7;
 }
-/* サイドバー */
-
+/* 編集部のおすすめ記事 */
+.report-sidebar-report-list li {
+  width: 100%;
+  float: left;
+  margin-top: 20px;
+}
+.report-sidebar-report-list li:first-child {
+  margin-top: 0px;
+}
+.report-sidebar-report-list li .img-box {
+  width: 25%;
+  height: 80px;
+  float: left;
+}
+.report-sidebar-report-list li .text-box {
+  float: right;
+  width: 75%;
+  padding: 12px 0px 0px 12px;
+}
+.report-sidebar-report-list li .text-box .category {
+  font-size: 11px;
+  line-height: 11px;
+  color: #5FB3A7;
+  font-weight: bold;
+}
+.report-sidebar-report-list li .text-box .title {
+  font-size: 13px;
+  line-height: 20px;
+  height: 40px;
+  margin-top: 6px;
+}
 
 
 /* 本文 */
 .report-detail-main {
   float: left;
   position: relative;
-  width: 678px;
+  width: 658px;
   padding-right: 35px;
-  border-right: 1px solid #e0dede;
+  border-right: 1px solid #f9f9f9;
   box-sizing: content-box;
 }
 .report-detail-main img {
@@ -2375,7 +2412,6 @@ footer .footer-menu {
   margin-bottom: 24px;
 }
 .singlepage-footer {
-  width: 100%;
   margin: 0 auto;
   padding: 80px 0px 36px;
   background: #f9f9f9;
@@ -2411,13 +2447,13 @@ footer .footer-menu {
   　インスタグラムリスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .insta-block {
-  padding: 50px 1% 0px;
+  padding: 50px 0px 0px;
 }
 .insta-block-inner {
-  padding: 32px;
+  padding: 40px 60px;
   background: #f9f9f9;
-  border-left: 1px solid #7CDCCE;
-  border-right: 1px solid #7CDCCE;
+  /*border-left: 1px solid #7CDCCE;
+  border-right: 1px solid #7CDCCE;*/
 }
 .insta-block-inner:after {
   content: ".";
@@ -2431,24 +2467,18 @@ footer .footer-menu {
   display: block;
   list-style: none;
   float: left;
-  width: 23.5%;
+  width: 33%;
   height: 100px;
-  margin-right: 2%;
-  margin-bottom: 2%;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
   transition: .5s;
 }
-.insta-block-inner li:nth-child(4n) {
+.insta-block-inner li:nth-child(3n) {
   margin-right: 0%;
-  margin-bottom: 2%;
-}
-.insta-block-inner li:nth-last-child(-n + 5) {
-  margin-bottom: 0%;
-}
-.insta-block-inner li:nth-child(9n) {
-  display: none;
+  margin-bottom: 0.5%;
 }
 .insta-block-inner li a {
   display: block;
@@ -2700,6 +2730,16 @@ footer .footer-menu {
   border-left: 4px solid #79cec1;
   padding: 2px 0px 2px 8px;
   margin-bottom: 16px;
+}
+
+/* = Selected Text
+----------------------------------------------- */
+::selection {
+  background:#e4fffb; /* Safari */
+}
+
+::-moz-selection {
+  background:#e4fffb; /* Firefox */
 }
 
 

@@ -70,7 +70,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 		$this->template->description = $this->data['blog']['description'];
 		$this->template->ogimg = $this->data['blog']['main_image'];
 		//template
-    $this->data['top_blogs'] = Blogs::lists(1, 3, true);
+    $this->data['top_blogs'] = Blogs::lists(1, 6, true);
     $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
     $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
     //$this->template->contents_after_area = View::forge('kinyu/template/contents-after.smarty', $this->data);

@@ -231,7 +231,7 @@
               {if $smarty.foreach.loopname.index == 6}
               </ul>
                 <div class="sidebar-more-link">
-                  <a href="/event">女子会をもっと見る</a>
+                  <a href="/event">女子会をもっと見る ></a>
                 </div>
                 {break}
               {/if}
@@ -248,36 +248,45 @@
               </li>
               {/foreach}
             </ul>
+          </div>
         </div>
          
         <div class="report-detail-sidebar-el">
-          <p class="report-detail-sidebar-el-title">編集部のおすすめ</p>
-          <div class="report-sidebar-event-list">
+          <p class="report-detail-sidebar-el-title">編集部のおすすめレポート</p>
+          <div class="report-sidebar-report-list">
             <ul class="clear">
-              {foreach from=$top_events item=event name=loopname}
+              {foreach from=$top_blogs item=blog name=loopname}
 
-              {if $smarty.foreach.loopname.index == 6}
+              {if $smarty.foreach.loopname.index == 5}
               </ul>
                 <div class="sidebar-more-link">
-                  <a href="/event">女子会をもっと見る</a>
+                  <a href="/event">レポートをもっと見る >
+                  </a>
                 </div>
                 {break}
               {/if}
 
-              {$fooo = $event.main_image}
+              {$fooo = $blog.main_image}
               {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
               <li class="clear">
                 <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
                 <div class="text-box">
-                  <p class="date">{$event.event_date|date_format:"%Y.%-m.%-d"}</p>
-                  <p class="title fs-mincho">{$event.title}</p>
+                  <p class="category">コラム</p>
+                  <p class="title fs-mincho">{$blog.title}</p>
                 </div>
               </li>
               {/foreach}
             </ul>
+          </div>
         </div>
 
+        <div class="report-detail-sidebar-el">
+          <p class="report-detail-sidebar-el-title">編集部へのコメント</p>
+          <div class="report-sidebar-report-list">
+          
+          </div>
+        </div>
 
       </div>
 
