@@ -557,8 +557,8 @@
   padding: 0px 1%;
 }
 .kinyu-top-maincontent {
-  border-left: 1px solid #7CDCCE;
-  border-right: 1px solid #7CDCCE;
+  /*border-left: 1px solid #7CDCCE;
+  border-right: 1px solid #7CDCCE;*/
   letter-spacing: -4em;
   padding: 24px 5%;
   background: #f9f9f9;
@@ -2139,10 +2139,10 @@ footer .footer-menu {
   padding: 45px 1% 0px;
 }
 .insta-block-inner {
-  padding: 32px;
+  padding: 40px 60px;
   background: #f9f9f9;
-  border-left: 1px solid #7CDCCE;
-  border-right: 1px solid #7CDCCE;
+  /*border-left: 1px solid #7CDCCE;
+  border-right: 1px solid #7CDCCE;*/
 }
 .insta-block-inner:after {
   content: ".";
@@ -2156,25 +2156,22 @@ footer .footer-menu {
   display: block;
   list-style: none;
   float: left;
-  width: 23.5%;
+  width: 33%;
   height: 100px;
-  margin-right: 2%;
-  margin-bottom: 2%;
+  margin-right: 0.5%;
+  margin-bottom: 0.5%;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
   transition: .5s;
 }
-.insta-block-inner li:nth-child(4n) {
+.insta-block-inner li:nth-child(3n) {
   margin-right: 0%;
-  margin-bottom: 2%;
+  margin-bottom: 0.5%;
 }
-.insta-block-inner li:nth-last-child(-n + 5) {
+/*.insta-block-inner li:nth-last-child(-n + 5) {
   margin-bottom: 0%;
-}
-.insta-block-inner li:nth-child(9n) {
-  display: none;
-}
+}*/
 .insta-block-inner li a {
   display: block;
   width: 100%;
