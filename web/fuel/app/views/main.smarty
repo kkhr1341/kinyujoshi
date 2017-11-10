@@ -31,6 +31,8 @@
     }(document, 'script', 'facebook-jssdk'));
   	</script>
 
+    <canvas id="canvas"></canvas>
+
   	<div>{$tablet_div}</div>
 
   	<div class="kinyu-container">
@@ -41,8 +43,6 @@
         {$contents}
   		</div>
   	</div>
-
-    <canvas id="canvas"></canvas>
 
     <!-- 1000人達成イベントメッセージ -->
     <div class="celebration-message">
