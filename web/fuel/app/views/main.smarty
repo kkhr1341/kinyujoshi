@@ -71,7 +71,7 @@
           <div class="celebration-message-description">
             <img class="message03" src="/images/kinjo1000_message_pre.png">
           </div>
-          <a class="celebration1206-to-link" href="https://kinyu-joshi.jp/news/THGsvB">ニュースはこちら</a>
+          <a class="celebration1206-to-link-top" href="https://kinyu-joshi.jp/news/THGsvB">ニュースはこちら</a>
           <p id="celebration-message-close" class="close-btn"><img src="/images/close-btn.png"></p>
         </div>
       </div>
@@ -138,7 +138,7 @@
       .celebration-message .message03 {
         width: 70%;
       }
-      .celebration1206-to-link {
+      .celebration1206-to-link-top {
         display: block;
         width: 50%;
         font-size: 13px;
@@ -149,6 +149,9 @@
         color: #fff;
         font-weight: bold;
         transition: .8s;
+      }
+      .celebration1206-to-link-top;hover {
+        opacity: .5;
       }
       @media screen and (max-width: 640px) {
         .celebration-message .main-block {
@@ -179,7 +182,7 @@
           margin-top: 12px;
           margin-bottom: 24px;
         }
-        .celebration1206-to-link {
+        .celebration1206-to-link-top {
           display: block;
           width: 70%;
           font-size: 12px;
