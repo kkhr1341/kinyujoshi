@@ -83,8 +83,8 @@
             <li style="border: 1px solid #ecb9ae;background: #FBECE4;">
               <a href="/report/FxKhYh"><img src="/images/myway/title/title-shoes.png"></a>
             </li>
-            <li style="border: 1px solid #a4d4e4;background: #EBFAFF;opacity: .2;">
-              <img class="comingimg" src="/images/myway/title/title-cosmetics.png">
+            <li style="border: 1px solid #a4d4e4;background: #EBFAFF;">
+              <a href="/report/fMvmMk"><img class="comingimg" src="/images/myway/title/title-cosmetics.png"></a>
             </li>
           </ul>
         </div>

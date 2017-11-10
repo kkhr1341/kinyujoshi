@@ -721,6 +721,7 @@
 .kinyu-top-introlist-pickup {
   height: 300px;
   position: relative;
+  border: 1px solid #f9f9f9;
 }
 .kinyu-top-introlist-right a {
   height: 100%;
@@ -728,7 +729,6 @@
   position: relative;
 }
 .kinyu-top-introlist-pickup h3 {
-  border-radius: 0px 0px 2px 2px;
   height: auto;
   padding: 10px;
   position: absolute;
