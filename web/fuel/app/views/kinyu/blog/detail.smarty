@@ -221,6 +221,7 @@
       </div>
 
       <div class="report-detail-sidebar">
+        
         <div class="report-detail-sidebar-el">
           <p class="report-detail-sidebar-el-title">直近の女子会</p>
           <div class="report-sidebar-event-list">
@@ -235,8 +236,11 @@
                 {break}
               {/if}
 
+              {$fooo = $event.main_image}
+              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
               <li class="clear">
-                <div class="img-box" style="background:url({$event.main_image}) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="date">{$event.event_date|date_format:"%Y.%-m.%-d"}</p>
                   <p class="title fs-mincho">{$event.title}</p>
@@ -245,6 +249,36 @@
               {/foreach}
             </ul>
         </div>
+         
+        <div class="report-detail-sidebar-el">
+          <p class="report-detail-sidebar-el-title">編集部のおすすめ</p>
+          <div class="report-sidebar-event-list">
+            <ul class="clear">
+              {foreach from=$top_events item=event name=loopname}
+
+              {if $smarty.foreach.loopname.index == 6}
+              </ul>
+                <div class="sidebar-more-link">
+                  <a href="/event">女子会をもっと見る</a>
+                </div>
+                {break}
+              {/if}
+
+              {$fooo = $event.main_image}
+              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+              <li class="clear">
+                <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="date">{$event.event_date|date_format:"%Y.%-m.%-d"}</p>
+                  <p class="title fs-mincho">{$event.title}</p>
+                </div>
+              </li>
+              {/foreach}
+            </ul>
+        </div>
+
+
       </div>
 
 
