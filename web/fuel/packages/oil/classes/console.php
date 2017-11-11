@@ -5,10 +5,10 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -136,11 +136,11 @@ HELP;
 				}
 				elseif (is_string($ret))
 				{
-					echo addcslashes($ret, "\0..\37\177..\377");
+					echo addcslashes($ret, "\0..\11\13\14\16..\37\177..\377");
 				}
 				elseif ( ! is_null($ret))
 				{
-					var_export($ret);
+					print_r($ret);
 				}
 			}
 

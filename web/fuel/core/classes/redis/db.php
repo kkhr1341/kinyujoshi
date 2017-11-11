@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -36,6 +36,10 @@ class Redis_Db
 
 	/**
 	 * Get an instance of the Redis class
+	 *
+	 * @param   string  $name
+	 * @return  mixed
+	 * @throws  \RedisException
 	 */
 	public static function instance($name = 'default')
 	{
@@ -51,6 +55,11 @@ class Redis_Db
 
 	/**
 	 * create an instance of the Redis class
+	 *
+	 * @param   string  $name
+	 * @param   array   $config
+	 * @return  mixed
+	 * @throws  \RedisException
 	 */
 	public static function forge($name = 'default', $config = array())
 	{
@@ -88,6 +97,9 @@ class Redis_Db
 
 	/**
 	 * Create a new Redis instance using the configuration values supplied
+	 *
+	 * @param   array  $config
+	 * @throws  \RedisException
 	 */
 	public function  __construct(array $config = array())
 	{
@@ -144,7 +156,7 @@ class Redis_Db
 			for ($written = 0; $written < strlen($command); $written += $fwrite)
 			{
 				$fwrite = fwrite($this->connection, substr($command, $written));
-				if ($fwrite === false)
+				if ($fwrite === false || $fwrite <= 0)
 				{
 					throw new \RedisException('Failed to write entire command to stream');
 				}
@@ -176,10 +188,9 @@ class Redis_Db
 	 * Alias for the redis PSUBSCRIBE command. It allows you to listen, and
 	 * have the callback called for every response.
 	 *
-	 * @params  string    pattern to subscribe to
-	 * @params  callable  callback, to process the responses
-	 *
-	 * @throws  RedisException  if writing the command failed
+	 * @param   string    $pattern   pattern to subscribe to
+	 * @param   callable  $callback  callback, to process the responses
+	 * @throws  \RedisException  if writing the command failed
 	 */
     public function psubscribe($pattern, $callback)
     {
@@ -213,15 +224,20 @@ class Redis_Db
     }
 
 	/**
+	 * @param   $name
+	 * @param   $args
+	 * @return  $this|array
+	 * @throws  \RedisException
 	 */
 	public function __call($name, $args)
 	{
 		// build the Redis unified protocol command
 		array_unshift($args, strtoupper($name));
 
-		$command = sprintf('*%d%s%s%s', count($args), CRLF, implode(array_map(function($arg) {
-			return sprintf('$%d%s%s', strlen($arg), CRLF, $arg);
-		}, $args), CRLF), CRLF);
+		$command = '*' . count($args) . CRLF;
+		foreach ($args as $arg) {
+			$command .= '$' . strlen($arg) . CRLF . $arg . CRLF;
+		}
 
 		// add it to the pipeline queue
 		$this->queue[] = $command;

@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -50,6 +50,11 @@ class Migrate
 	protected static $rerun = false;
 
 	/**
+	 * @var  array  list of migrations executed
+	 */
+	protected static $executed = array();
+
+	/**
 	 * sets the properties by grabbing Cli options
 	 */
 	public function __construct()
@@ -62,12 +67,39 @@ class Migrate
 		$packages = \Cli::option('packages', \Cli::option('p'));
 		$default = \Cli::option('default');
 		$all = \Cli::option('all');
+		$installed = \Cli::option('installed');
+
+		if ($all and $installed)
+		{
+			\Cli::write('--all and --installed are mutually exclusive!', 'light_red');
+			exit;
+		}
 
 		if ($all)
 		{
+			$default = true;
 			$modules = true;
 			$packages = true;
+		}
+		elseif ($installed)
+		{
 			$default = true;
+
+			// fetch defined modules
+			$modules = explode(',', $modules);
+			foreach(\Config::get('always_load.modules', array()) as $module)
+			{
+				$modules[] = $module;
+			}
+			$modules = implode(',', array_unique($modules));
+
+			// fetch defined packages
+			$packages = explode(',', $packages);
+			foreach(\Config::get('always_load.packages', array()) as $name => $package)
+			{
+				$packages[] = is_numeric($name) ? $package : $name;
+			}
+			$packages = implode(',', array_unique($packages));
 		}
 
 		// if modules option set
@@ -155,6 +187,10 @@ class Migrate
 			// reset the rerun flag
 			static::$rerun = false;
 
+			// store and reset the current execution state
+			$state = static::$executed;
+			static::$executed = array();
+
 			// run app (default) migrations if default is true
 			if (static::$default)
 			{
@@ -187,6 +223,18 @@ class Migrate
 				else
 				{
 					static::$name($package, 'package');
+				}
+			}
+
+			// do we need to re-run?
+			if (static::$rerun)
+			{
+				// check for any progress on this run
+				if ($state == static::$executed)
+				{
+					// there wasn't any, bail out
+					static::$rerun = false;
+					\Cli::write('Migration loop detected! Check if there is a dependency that can\'t be fulfilled by the current selection!', 'light_red');
 				}
 			}
 		}
@@ -235,26 +283,10 @@ class Migrate
 			$migrations = \Migrate::latest($name, $type, \Cli::option('catchup', false));
 		}
 
-		// any migrations executed?
-		if ($migrations)
+		// were there any migrations at all?
+		if (empty($migrations))
 		{
-			\Cli::write('Performed migrations for '.$type.':'.$name.':', 'green');
-
-			foreach ($migrations as $migration)
-			{
-				\Cli::write($migration);
-			}
-		}
-		else
-		{
-			if ($migrations === false)
-			{
-				\Cli::write('Some migrations for '.$type.':'.$name.' are postponed due to dependencies.', 'cyan');
-
-				// set the rerun flag
-				static::$rerun = true;
-			}
-			elseif ($version !== '')
+			if ($version !== '')
 			{
 				\Cli::write('No migrations were found for '.$type.':'.$name.'.');
 			}
@@ -262,6 +294,33 @@ class Migrate
 			{
 				\Cli::write('Already on the latest migration for '.$type.':'.$name.'.');
 			}
+		}
+
+		// did we run all migrations?
+		elseif ($last = end($migrations))
+		{
+			\Cli::write('Performed migrations for '.$type.':'.$name.':', 'green');
+
+			foreach ($migrations as $migration)
+			{
+				\Cli::write($migration);
+			}
+
+			// flush all cache after running the migrations if needed
+			if (\Config::get('migrations.flush_cache', false))
+			{
+				\Cache::delete_all();
+			}
+		}
+		else
+		{
+			\Cli::write('Some migrations for '.$type.':'.$name.' are postponed due to dependencies.', 'cyan');
+
+			// store the ones we've executed
+			static::$executed[$type.'-'.$name] = $migrations;
+
+			// set the rerun flag
+			static::$rerun = true;
 		}
 	}
 
@@ -386,6 +445,9 @@ Fuel options:
     -v, [--version]  # Migrate to a specific version ( only 1 item at a time)
                      # If no version is given, it lists all installed migrations
     --catchup        # Use if you have out-of-sequence migrations that can be safely run
+    --installed      # shortcut for --modules=<list> --packages=<list> --default, it will use
+                       your applications' "always_load" configuration to determine what to migrate
+    --all            # shortcut for --modules --packages --default
 
     # The following disable default migrations unless you add --default to the command
     --default                               # re-enables default migration
@@ -393,7 +455,6 @@ Fuel options:
     --modules=item1,item2 -m=item1,item2    # Migrates specific modules
     --packages -p                           # Migrates all packages
     --packages=item1,item2 -p=item1,item2   # Migrates specific modules
-    --all                                   # shortcut for --modules --packages --default
 
 Description:
     The migrate task can run migrations. You can go up, down or by default go to the current migration marked in the config file.
@@ -408,6 +469,8 @@ Examples:
     php oil r migrate:up --modules=module1,module2 --packages=package1
     php oil r migrate --modules=module1 -v=3
     php oil r migrate --all
+    php oil r migrate --installed
+    php oil r migrate --installed --modules=extramodule --packages=extrapackage
     php oil r migrate --all -v
 
 HELP;

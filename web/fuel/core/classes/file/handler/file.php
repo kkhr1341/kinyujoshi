@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -60,7 +60,7 @@ class File_Handler_File
 	/**
 	 * Read file
 	 *
-	 * @param	bool	whether to use file_get_contents() or readfile()
+	 * @param	bool	$as_string	whether to use file_get_contents() or readfile()
 	 * @return	string|IO
 	 */
 	public function read($as_string = false)
@@ -71,8 +71,8 @@ class File_Handler_File
 	/**
 	 * Rename file, only within current directory
 	 *
-	 * @param	string			new filename
-	 * @param	string|false	new extension, false to keep current
+	 * @param	string			$new_name       new filename
+	 * @param	string|bool		$new_extension  new extension, false to keep current
 	 * @return	bool
 	 */
 	public function rename($new_name, $new_extension = false)
@@ -96,7 +96,7 @@ class File_Handler_File
 	/**
 	 * Move file to new directory
 	 *
-	 * @param	string	path to new directory, must be valid
+	 * @param	string	$new_path	path to new directory, must be valid
 	 * @return	bool
 	 */
 	public function move($new_path)
@@ -115,7 +115,7 @@ class File_Handler_File
 	/**
 	 * Copy file
 	 *
-	 * @param	string	path to target directory, must be valid
+	 * @param	string	$new_path	path to target directory, must be valid
 	 * @return	bool
 	 */
 	public function copy($new_path)
@@ -131,7 +131,7 @@ class File_Handler_File
 	/**
 	 * Update contents
 	 *
-	 * @param	mixed	new file contents
+	 * @param	mixed	$new_content	new file contents
 	 * @return	bool
 	 */
 	public function update($new_content)
@@ -185,8 +185,7 @@ class File_Handler_File
 	/**
 	 * Get the file's size.
 	 *
-	 * @param	string	$type	modified or created
-	 * @return	int		Unix Timestamp
+	 * @return	int		File size
 	 */
 	public function get_size()
 	{

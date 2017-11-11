@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -27,11 +27,6 @@ class Config
 	public static $items = array();
 
 	/**
-	 * @var    string    $default_check_value          random value used as a not-found check in get()
-	 */
-	public static $default_check_value;
-
-	/**
 	 * @var    array    $itemcache       the dot-notated item cache
 	 */
 	protected static $itemcache = array();
@@ -44,6 +39,7 @@ class Config
 	 * @param    bool     $reload       true to force a reload even if the file is already loaded
 	 * @param    bool     $overwrite    true for array_merge, false for \Arr::merge
 	 * @return   array                  the (loaded) config array
+	 * @throws  \FuelException
 	 */
 	public static function load($file, $group = null, $reload = false, $overwrite = false)
 	{
@@ -136,6 +132,7 @@ class Config
 	 * @param   string          $file      desired file name
 	 * @param   string|array    $config    master config array key or config array
 	 * @return  bool                       false when config is empty or invalid else \File::update result
+	 * @throws  \FuelException
 	 */
 	public static function save($file, $config)
 	{
@@ -182,50 +179,46 @@ class Config
 	 */
 	public static function get($item, $default = null)
 	{
-		is_null(static::$default_check_value) and static::$default_check_value = pack('H*', 'DEADBEEFCAFE');
-
-		if (isset(static::$items[$item]))
+		if (array_key_exists($item, static::$items))
 		{
 			return static::$items[$item];
 		}
-		elseif ( ! isset(static::$itemcache[$item]))
+		elseif ( ! array_key_exists($item, static::$itemcache))
 		{
-			$val = \Fuel::value(\Arr::get(static::$items, $item, static::$default_check_value));
+			// cook up something unique
+			$miss = new \stdClass();
 
-			if ($val === static::$default_check_value)
+			$val = \Arr::get(static::$items, $item, $miss);
+
+			// so we can detect a miss here...
+			if ($val === $miss)
 			{
 				return $default;
-			}
-
-			if ( ! is_scalar($val))
-			{
-				return $val;
 			}
 
 			static::$itemcache[$item] = $val;
 		}
 
-		return static::$itemcache[$item];
+		return \Fuel::value(static::$itemcache[$item]);
 	}
 
 	/**
 	 * Sets a (dot notated) config item
 	 *
-	 * @param    string    a (dot notated) config key
-	 * @param    mixed     the config value
-	 * @return   void      the \Arr::set result
+	 * @param    string   $item   a (dot notated) config key
+	 * @param    mixed    $value  the config value
 	 */
 	public static function set($item, $value)
 	{
 		strpos($item, '.') === false or static::$itemcache[$item] = $value;
-		return \Arr::set(static::$items, $item, \Fuel::value($value));
+		\Arr::set(static::$items, $item, $value);
 	}
 
 	/**
 	 * Deletes a (dot notated) config item
 	 *
-	 * @param    string       a (dot notated) config key
-	 * @return   array|bool   the \Arr::delete result, success boolean or array of success booleans
+	 * @param    string       $item  a (dot notated) config key
+	 * @return   array|bool          the \Arr::delete result, success boolean or array of success booleans
 	 */
 	public static function delete($item)
 	{

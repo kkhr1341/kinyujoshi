@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -32,6 +32,12 @@ class Str
 	 */
 	public static function truncate($string, $limit, $continuation = '...', $is_html = false)
 	{
+		static $self_closing_tags = array(
+			'area', 'base', 'br', 'col', 'command', 'embed'
+			, 'hr', 'img', 'input', 'keygen', 'link', 'meta'
+			, 'param', 'source', 'track', 'wbr'
+		);
+
 		$offset = 0;
 		$tags = array();
 		if ($is_html)
@@ -39,7 +45,7 @@ class Str
 			// Handle special characters.
 			preg_match_all('/&[a-z]+;/i', strip_tags($string), $matches, PREG_OFFSET_CAPTURE | PREG_SET_ORDER);
 			// fix preg_match_all broken multibyte support
-			if (strlen($string !== mb_strlen($string)))
+			if (MBSTRING and strlen($string !== mb_strlen($string)))
 			{
 				$correction = 0;
 				foreach ($matches as $index => $match)
@@ -60,7 +66,7 @@ class Str
 			// Handle all the html tags.
 			preg_match_all('/<[^>]+>([^<]*)/', $string, $matches, PREG_OFFSET_CAPTURE | PREG_SET_ORDER);
 			// fix preg_match_all broken multibyte support
-			if (strlen($string !== mb_strlen($string)))
+			if (MBSTRING and strlen($string !== mb_strlen($string)))
 			{
 				$correction = 0;
 				foreach ($matches as $index => $match)
@@ -70,16 +76,21 @@ class Str
 					$correction += (strlen($match[0][0]) - mb_strlen($match[0][0]));
 				}
 			}
+
 			foreach ($matches as $match)
 			{
 				if($match[0][1] - $offset >= $limit)
 				{
 					break;
 				}
+
 				$tag = static::sub(strtok($match[0][0], " \t\n\r\0\x0B>"), 1);
-				if($tag[0] != '/')
+				if ($tag[0] != '/')
 				{
-					$tags[] = $tag;
+					if ( ! in_array($tag, $self_closing_tags))
+					{
+						$tags[] = $tag;
+					}
 				}
 				elseif (end($tags) == static::sub($tag, 1))
 				{
@@ -88,6 +99,7 @@ class Str
 				$offset += $match[1][1] - $match[0][1];
 			}
 		}
+
 		$new_string = static::sub($string, 0, $limit = min(static::length($string),  $limit + $offset));
 		$new_string .= (static::length($string) > $limit ? $continuation : '');
 		$new_string .= (count($tags = array_reverse($tags)) ? '</'.implode('></', $tags).'>' : '');
@@ -149,9 +161,9 @@ class Str
 		$encoding or $encoding = \Fuel::$encoding;
 
 		// substr functions don't parse null correctly
-		$length = is_null($length) ? (function_exists('mb_substr') ? mb_strlen($str, $encoding) : strlen($str)) - $start : $length;
+		$length = is_null($length) ? (MBSTRING ? mb_strlen($str, $encoding) : strlen($str)) - $start : $length;
 
-		return function_exists('mb_substr')
+		return MBSTRING
 			? mb_substr($str, $start, $length, $encoding)
 			: substr($str, $start, $length);
 	}
@@ -167,7 +179,7 @@ class Str
 	{
 		$encoding or $encoding = \Fuel::$encoding;
 
-		return function_exists('mb_strlen')
+		return MBSTRING
 			? mb_strlen($str, $encoding)
 			: strlen($str);
 	}
@@ -183,7 +195,7 @@ class Str
 	{
 		$encoding or $encoding = \Fuel::$encoding;
 
-		return function_exists('mb_strtolower')
+		return MBSTRING
 			? mb_strtolower($str, $encoding)
 			: strtolower($str);
 	}
@@ -199,7 +211,7 @@ class Str
 	{
 		$encoding or $encoding = \Fuel::$encoding;
 
-		return function_exists('mb_strtoupper')
+		return MBSTRING
 			? mb_strtoupper($str, $encoding)
 			: strtoupper($str);
 	}
@@ -217,7 +229,7 @@ class Str
 	{
 		$encoding or $encoding = \Fuel::$encoding;
 
-		return function_exists('mb_strtolower')
+		return MBSTRING
 			? mb_strtolower(mb_substr($str, 0, 1, $encoding), $encoding).
 				mb_substr($str, 1, mb_strlen($str, $encoding), $encoding)
 			: lcfirst($str);
@@ -230,13 +242,13 @@ class Str
 	 *
 	 * @param   string $str       required
 	 * @param   string $encoding  default UTF-8
-	 * @return   string
+	 * @return  string
 	 */
 	public static function ucfirst($str, $encoding = null)
 	{
 		$encoding or $encoding = \Fuel::$encoding;
 
-		return function_exists('mb_strtoupper')
+		return MBSTRING
 			? mb_strtoupper(mb_substr($str, 0, 1, $encoding), $encoding).
 				mb_substr($str, 1, mb_strlen($str, $encoding), $encoding)
 			: ucfirst($str);
@@ -258,7 +270,7 @@ class Str
 	{
 		$encoding or $encoding = \Fuel::$encoding;
 
-		return function_exists('mb_convert_case')
+		return MBSTRING
 			? mb_convert_case($str, MB_CASE_TITLE, $encoding)
 			: ucwords(strtolower($str));
 	}
@@ -266,8 +278,8 @@ class Str
 	/**
 	  * Creates a random string of characters
 	  *
-	  * @param   string  the type of string
-	  * @param   int     the number of characters
+	  * @param   string  $type    the type of string
+	  * @param   int     $length  the number of characters
 	  * @return  string  the random string
 	  */
 	public static function random($type = 'alnum', $length = 16)
@@ -364,8 +376,8 @@ class Str
 	/**
 	 * Parse the params from a string using strtr()
 	 *
-	 * @param   string  string to parse
-	 * @param   array   params to str_replace
+	 * @param   string  $string  string to parse
+	 * @param   array   $array   params to str_replace
 	 * @return  string
 	 */
 	public static function tr($string, $array = array())
@@ -404,8 +416,9 @@ class Str
 	/**
 	 * Check if a string is a valid XML
 	 *
-	 * @param  string $string string to check
+	 * @param  string  $string  string to check
 	 * @return bool
+	 * @throws \FuelException
 	 */
 	public static function is_xml($string)
 	{
@@ -425,7 +438,7 @@ class Str
 	/**
 	 * Check if a string is serialized
 	 *
-	 * @param  string $string string to check
+	 * @param  string  $string  string to check
 	 * @return bool
 	 */
 	public static function is_serialized($string)

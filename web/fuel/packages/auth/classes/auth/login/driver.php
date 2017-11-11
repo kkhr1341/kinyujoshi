@@ -5,10 +5,10 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -62,11 +62,6 @@ abstract class Auth_Login_Driver extends \Auth_Driver
 	 * @var  array  config values
 	 */
 	protected $config = array();
-
-	/**
-	 * @var  object  PHPSecLib hash object
-	 */
-	private $hasher = null;
 
 	/**
 	 * Check for login
@@ -178,19 +173,7 @@ abstract class Auth_Login_Driver extends \Auth_Driver
 	 */
 	public function hash_password($password)
 	{
-		return base64_encode($this->hasher()->pbkdf2($password, \Config::get('auth.salt'), \Config::get('auth.iterations', 10000), 32));
-	}
-
-	/**
-	 * Returns the hash object and creates it if necessary
-	 *
-	 * @return  PHPSecLib\Crypt_Hash
-	 */
-	public function hasher()
-	{
-		is_null($this->hasher) and $this->hasher = new \PHPSecLib\Crypt_Hash();
-
-		return $this->hasher;
+		return base64_encode(hash_pbkdf2('sha256', $password, \Config::get('auth.salt'), \Config::get('auth.iterations', 10000), 32, true));
 	}
 
 	/**

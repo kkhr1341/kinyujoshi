@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -52,8 +52,10 @@ abstract class Controller_Hybrid extends \Controller_Rest
 	 * this router will call action methods for normal requests,
 	 * and REST methods for RESTful calls
 	 *
-	 * @param  string
-	 * @param  array
+	 * @param  string  $resource
+	 * @param  array   $arguments
+	 * @return mixed
+	 * @throws \HttpNotFoundException
 	 */
 	public function router($resource, $arguments)
 	{

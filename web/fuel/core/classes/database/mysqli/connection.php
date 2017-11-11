@@ -1,12 +1,14 @@
 <?php
 /**
- * MySQLi database connection.
+ * Part of the Fuel framework.
  *
- * @package    Fuel/Database
- * @category   Drivers
- * @author     Kohana Team
- * @copyright  (c) 2008-2009 Kohana Team
- * @license    http://kohanaphp.com/license
+ * @package    Fuel
+ * @version    1.8
+ * @author     Fuel Development Team
+ * @license    MIT License
+ * @copyright  2010 - 2016 Fuel Development Team
+ * @copyright  2008 - 2009 Kohana Team
+ * @link       http://fuelphp.com
  */
 
 namespace Fuel\Core;
@@ -236,7 +238,7 @@ class Database_MySQLi_Connection extends \Database_Connection
 			$this->connect();
 		}
 
-		if ( ! empty($this->_config['profiling']))
+		if (\Fuel::$profiling and ! empty($this->_config['profiling']))
 		{
 			// Get the paths defined in config
 			$paths = \Config::get('profiling_paths');

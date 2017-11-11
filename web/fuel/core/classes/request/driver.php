@@ -5,6 +5,14 @@ namespace Fuel\Core;
 class RequestException extends \HttpNotFoundException {}
 class RequestStatusException extends \RequestException {}
 
+/**
+ * Request_Driver Class
+ *
+ * base class for request classes
+ *
+ * @package   Fuel\Core
+ *
+ */
 abstract class Request_Driver
 {
 	/**
@@ -12,6 +20,7 @@ abstract class Request_Driver
 	 *
 	 * @param   string  $resource
 	 * @param   array   $options
+	 * @param   mixed   $method
 	 * @return  Request_Driver
 	 */
 	public static function forge($resource, array $options = array(), $method = null)
@@ -198,7 +207,7 @@ abstract class Request_Driver
 	 * set a request http header
 	 *
 	 * @param   string  $header
-	 * @param   string  $header
+	 * @param   string  $content
 	 * @return  Request_Driver
 	 */
 	public function set_header($header, $content = null)
@@ -264,7 +273,6 @@ abstract class Request_Driver
 	 * Executes the request upon the URL
 	 *
 	 * @param   array  $additional_params
-	 * @param   array  $query_string
 	 * @return  Response
 	 */
 	abstract public function execute(array $additional_params = array());
@@ -343,14 +351,17 @@ abstract class Request_Driver
 	 * @param   string  $accept_header
 	 * @return  Response
 	 *
-	 * @throws OutOfRangeException if an accept header was specified, but the mime type isn't in it
+	 * @throws  \OutOfRangeException if an accept header was specified, but the mime type isn't in it
 	 */
 	public function set_response($body, $status, $mime = null, $headers = array(), $accept_header = null)
 	{
+		// Strip attribs from mime type to avoid over-specific matching
+		$mime = strstr($mime, ';', true) ?: $mime;
+
 		// did we use an accept header? If so, validate the returned mimetype
 		if ( ! $this->mime_in_header($mime, $accept_header))
 		{
-			throw new \OutOfRangeException('The mimetype "'.$mime.'" of the returned response is not acceptable according to the accept header send.');
+			throw new \OutOfRangeException('The mimetype "'.$mime.'" of the returned response is not acceptable according to the accept header sent.');
 		}
 
 		// do we have auto formatting enabled and can we format this mime type?

@@ -5,10 +5,10 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -23,7 +23,17 @@ class View extends \Fuel\Core\View
 
 	public static function _init()
 	{
-		\Config::load('parser', true);
+		// get and normalize the config
+		$parser = \Config::load('parser', true);
+		foreach (\Config::get('parser.extensions', array()) as $extension => $config)
+		{
+			if (isset($config['extension']))
+			{
+				unset($parser['extensions'][$extension]);
+				$parser['extensions'][$config['extension']] = $config;
+			}
+		}
+		\Config::set('parser', $parser);
 
 		// Get class name
 		$class = \Inflector::denamespace(get_called_class());
@@ -53,25 +63,17 @@ class View extends \Fuel\Core\View
 	public static function forge($file = null, $data = null, $auto_encode = null)
 	{
 		$class = null;
-
 		$extension = 'php';
 
 		if ($file !== null)
 		{
 			$extension = pathinfo($file, PATHINFO_EXTENSION);
-
 			$class = \Config::get('parser.extensions.'.$extension, null);
 		}
 
 		if ($class === null)
 		{
 			$class = get_called_class();
-		}
-
-		// Only get rid of the extension if it is not an absolute file path
-		if ($file !== null and $file[0] !== '/' and $file[1] !== ':')
-		{
-			$file = $extension ? preg_replace('/\.'.preg_quote($extension).'$/i', '', $file) : $file;
 		}
 
 		// Class can be an array config
@@ -99,15 +101,6 @@ class View extends \Fuel\Core\View
 
 		$view = new $class(null, $data, $auto_encode);
 
-		if ($file !== null)
-		{
-			// Set extension when given
-			$extension and $view->extension = $extension;
-
-			// Load the view file
-			$view->set_filename($file);
-		}
-
-		return $view;
+		return $view->set_filename($file, true);
 	}
 }

@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -123,6 +123,9 @@ line 2","Value 3"',
 				),
 				'<?xml version="1.0" encoding="utf-8"?>
 <xml><item><field1>Value 1</field1><field2>35</field2><field3>1</field3><field4/></item></xml>
+',
+				'<?xml version="1.0" encoding="utf-8"?>
+<xml><item><field1>Value 1</field1><field2>35</field2><field3>1</field3><field4></field4></item></xml>
 ',
 				'<?xml version="1.0" encoding="utf-8"?>
 <xml><item><field1>Value 1</field1><field2>35</field2><field3>true</field3><field4>false</field4></item></xml>
@@ -408,10 +411,20 @@ line 2","Value 3"',
 	 * @test
 	 * @dataProvider array_provider5
 	 */
-	public function test_to_xml_boolean($array, $default, $true, $number)
+	public function test_to_xml_boolean($array, $default, $default_libxml277, $true, $number)
 	{
 		// default
-		$this->assertEquals($default, Format::forge($array)->to_xml());
+		if (LIBXML_VERSION >= 20708)
+		{
+			// libxml v2.7.8 and later
+			$this->assertEquals($default, Format::forge($array)->to_xml());
+		}
+		else
+		{
+			// libxml v2.7.7 and before
+			$this->assertEquals($default_libxml277, Format::forge($array)->to_xml());
+		}
+
 		// true/false
 		$this->assertEquals($true, Format::forge($array)->to_xml(null, null, null, null, true));
 		// 1/0

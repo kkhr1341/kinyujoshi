@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -27,10 +27,10 @@ abstract class Presenter
 	/**
 	 * Factory for fetching the Presenter
 	 *
-	 * @param   string  Presenter classname without View_ prefix or full classname
-	 * @param   string  Method to execute
-	 * @param   bool    Auto filter the view data
-	 * @param   string  View to associate with this persenter
+	 * @param   string  $presenter    Presenter classname without View_ prefix or full classname
+	 * @param   string  $method       Method to execute
+	 * @param   bool    $auto_filter  Auto filter the view data
+	 * @param   string  $view         View to associate with this presenter
 	 * @return  Presenter
 	 */
 	public static function forge($presenter, $method = 'view', $auto_filter = null, $view = null)
@@ -143,9 +143,21 @@ abstract class Presenter
 	/**
 	 * Construct the View object
 	 */
-	protected function set_view()
+	public function set_view($view = null)
 	{
-		$this->_view instanceOf View or $this->_view = \View::forge($this->_view);
+		// construct a view object if needed
+		if (is_null($view))
+		{
+			$view = $this->_view;
+			$this->_view = null;
+		}
+		if ( ! $view instanceOf View)
+		{
+			$view = \View::forge($view, $this->_view);
+		}
+
+		// store the constructed object
+		$this->_view = $view;
 	}
 
 	/**
@@ -177,6 +189,7 @@ abstract class Presenter
 	/**
 	 * Fetches an existing value from the template
 	 *
+	 * @param   mixed  $name
 	 * @return  mixed
 	 */
 	public function & __get($name)
@@ -187,7 +200,9 @@ abstract class Presenter
 	/**
 	 * Gets a variable from the template
 	 *
-	 * @param  string
+	 * @param   null  $key
+	 * @param   null  $default
+	 * @return  string
 	 */
 	public function & get($key = null, $default = null)
 	{
@@ -201,8 +216,9 @@ abstract class Presenter
 	/**
 	 * Sets and sanitizes a variable on the template
 	 *
-	 * @param  string
-	 * @param  mixed
+	 * @param   string  $key
+	 * @param   mixed   $value
+	 * @return  Presenter
 	 */
 	public function __set($key, $value)
 	{
@@ -212,15 +228,15 @@ abstract class Presenter
 	/**
 	 * Sets a variable on the template
 	 *
-	 * @param  string
-	 * @param  mixed
-	 * @param  bool|null
+	 * @param   string     $key
+	 * @param   mixed      $value
+	 * @param   bool|null  $filter
+	 * @return  $this
 	 */
 	public function set($key, $value = null, $filter = null)
 	{
 		is_null($filter) and $filter = $this->_auto_filter;
 		$this->_view->set($key, $value, $filter);
-
 		return $this;
 	}
 
@@ -230,8 +246,8 @@ abstract class Presenter
 	 *
 	 *     $view->set_safe('foo', 'bar');
 	 *
-	 * @param   string   variable name or an array of variables
-	 * @param   mixed    value
+	 * @param   string  $key    variable name or an array of variables
+	 * @param   mixed   $value  value
 	 * @return  $this
 	 */
 	public function set_safe($key, $value = null)
@@ -244,7 +260,7 @@ abstract class Presenter
 	 *
 	 *     isset($view->foo);
 	 *
-	 * @param   string  variable name
+	 * @param   string  $key	variable name
 	 * @return  boolean
 	 */
 	public function __isset($key)
@@ -257,7 +273,7 @@ abstract class Presenter
 	 *
 	 *     unset($view->foo);
 	 *
-	 * @param   string  variable name
+	 * @param   string  $key	variable name
 	 * @return  void
 	 */
 	public function __unset($key)
@@ -273,9 +289,9 @@ abstract class Presenter
 	 *
 	 *     $this->bind('ref', $bar);
 	 *
-	 * @param   string   variable name
-	 * @param   mixed    referenced variable
-	 * @param   bool     Whether to filter the var on output
+	 * @param   string   $key     variable name
+	 * @param   mixed    $value   referenced variable
+	 * @param   bool     $filter  Whether to filter the var on output
 	 * @return  $this
 	 */
 	public function bind($key, &$value, $filter = null)
@@ -337,7 +353,7 @@ abstract class Presenter
 		}
 		catch (\Exception $e)
 		{
-			\Error::exception_handler($e);
+			\Errorhandler::exception_handler($e);
 
 			return '';
 		}

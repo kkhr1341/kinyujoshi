@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -58,7 +58,7 @@ class File
 	/**
 	 * Instance
 	 *
-	 * @param   string|File_Area|null  file area name, object or null for base area
+	 * @param   string|File_Area|null  $area  file area name, object or null for base area
 	 * @return  File_Area
 	 */
 	public static function instance($area = null)
@@ -81,9 +81,9 @@ class File
 	/**
 	 * File & directory objects factory
 	 *
-	 * @param   string  path to the file or directory
-	 * @param   array   configuration items
-	 * @param   string|File_Area|null  file area name, object or null for base area
+	 * @param   string                 $path    path to the file or directory
+	 * @param   array                  $config  configuration items
+	 * @param   string|File_Area|null  $area    file area name, object or null for base area
 	 * @return  File_Handler_File
 	 */
 	public static function get($path, array $config = array(), $area = null)
@@ -94,7 +94,10 @@ class File
 	/**
 	 * Get the url.
 	 *
-	 * @return  bool
+	 * @param  string  $path
+	 * @param  array   $config
+	 * @param  null    $area
+	 * @return bool
 	 */
 	public static function get_url($path, array $config = array(), $area = null)
 	{
@@ -104,8 +107,8 @@ class File
 	/**
 	 * Check for file existence
 	 *
-	 * @param   string  path to file to check
-	 * @param   string|File_Area|null  file area name, object or null for base area
+	 * @param   string                 $path  path to file to check
+	 * @param   string|File_Area|null  $area  file area name, object or null for base area
 	 * @return  bool
 	 */
 	public static function exists($path, $area = null)
@@ -122,12 +125,16 @@ class File
 	}
 
 	/**
-	 * Create an empty file
+	 * Create a file
 	 *
-	 * @param   string  directory where to create file
-	 * @param   string  filename
-	 * @param   string|File_Area|null  file area name, object or null for base area
-	 * @return  bool
+	 * @param  string                 $basepath  directory where to create file
+	 * @param  string                 $name      filename
+	 * @param  null                   $contents  contents of file
+	 * @param  string|File_Area|null  $area      file area name, object or null for base area
+	 * @return bool
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function create($basepath, $name, $contents = null, $area = null)
 	{
@@ -153,11 +160,14 @@ class File
 	/**
 	 * Create an empty directory
 	 *
-	 * @param   string  directory where to create new dir
-	 * @param   string  dirname
-	 * @param   int     (octal) file permissions
-	 * @param   string|File_Area|null  file area name, object or null for non-specific
-	 * @return  bool
+	 * @param  string                 directory where to create new dir
+	 * @param  string                 dirname
+	 * @param  int                    (octal) file permissions
+	 * @param  string|File_Area|null  file area name, object or null for non-specific
+	 * @return bool
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function create_dir($basepath, $name, $chmod = null, $area = null)
 	{
@@ -175,27 +185,37 @@ class File
 		}
 
 		// unify the path separators, and get the part we need to add to the basepath
-		$new_dir = substr(str_replace(array('\\', '/'), DS, $new_dir), strpos($new_dir, $name));
+		$segments = explode(DS, str_replace(array('\\', '/'), DS, $new_dir));
 
 		// recursively create the directory. we can't use mkdir permissions or recursive
 		// due to the fact that mkdir is restricted by the current users umask
-		$basepath = rtrim($basepath, DS);
-		foreach (explode(DS, $new_dir) as $dir)
+		$path = array_shift($segments);
+		foreach ($segments as $dir)
 		{
-			$basepath .= DS.$dir;
-			if ( ! is_dir($basepath))
+			// some security checking
+			if ($dir == '.' or $dir == '..')
+			{
+				throw new \FileAccessException('Directory to be created contains illegal segments.');
+			}
+
+			$path .= DS.$dir;
+			if ( ! is_dir($path))
 			{
 				try
 				{
-					if ( ! mkdir($basepath))
+					if ( ! mkdir($path))
 					{
 						return false;
 					}
-					chmod($basepath, $chmod);
+					chmod($path, $chmod);
 				}
 				catch (\PHPErrorException $e)
 				{
-					return false;
+					if ( ! is_dir($path))
+					{
+						return false;
+					}
+					chmod($path, $chmod);
 				}
 			}
 		}
@@ -206,10 +226,13 @@ class File
 	/**
 	 * Read file
 	 *
-	 * @param   string  file to read
-	 * @param   bool    whether to use readfile() or file_get_contents()
-	 * @param   string|File_Area|null  file area name, object or null for base area
-	 * @return  IO|string  file contents
+	 * @param  string                 $path       file to read
+	 * @param  bool                   $as_string  whether to use readfile() or file_get_contents()
+	 * @param  string|File_Area|null  $area       file area name, object or null for base area
+	 * @return IO|string  file contents
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function read($path, $as_string = false, $area = null)
 	{
@@ -230,11 +253,14 @@ class File
 	/**
 	 * Read directory
 	 *
-	 * @param   string      directory to read
-	 * @param   int         depth to recurse directory, 1 is only current and 0 or smaller is unlimited
-	 * @param   Array|null  array of partial regexes or non-array for default
-	 * @param   string|File_Area|null  file area name, object or null for base area
-	 * @return  array  directory contents in an array
+	 * @param  string                 $path    directory to read
+	 * @param  int                    $depth   depth to recurse directory, 1 is only current and 0 or smaller is unlimited
+	 * @param  Array|null             $filter  array of partial regexps or non-array for default
+	 * @param  string|File_Area|null  $area    file area name, object or null for base area
+	 * @return array
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function read_dir($path, $depth = 0, $filter = null, $area = null)
 	{
@@ -346,10 +372,14 @@ class File
 	/**
 	 * Update a file
 	 *
-	 * @param   string  directory where to write the file
-	 * @param   string  filename
-	 * @param   string|File_Area|null  file area name, object or null for base area
+	 * @param   string                 $basepath  directory where to write the file
+	 * @param   string                 $name      filename
+	 * @param   string                 $contents  contents of file
+	 * @param   string|File_Area|null  $area      file area name, object or null for base area
 	 * @return  bool
+	 * @throws  \InvalidPathException
+	 * @throws  \FileAccessException
+	 * @throws  \OutsideAreaException
 	 */
 	public static function update($basepath, $name, $contents = null, $area = null)
 	{
@@ -375,10 +405,14 @@ class File
 	/**
 	 * Append to a file
 	 *
-	 * @param   string  directory where to write the file
-	 * @param   string  filename
-	 * @param   string|File_Area|null  file area name, object or null for base area
+	 * @param   string                 $basepath  directory where to write the file
+	 * @param   string                 $name      filename
+	 * @param   string                 $contents  contents of file
+	 * @param   string|File_Area|null  $area      file area name, object or null for base area
 	 * @return  bool
+	 * @throws  \InvalidPathException
+	 * @throws  \FileAccessException
+	 * @throws  \OutsideAreaException
 	 */
 	public static function append($basepath, $name, $contents = null, $area = null)
 	{
@@ -409,9 +443,12 @@ class File
 	/**
 	 * Get the octal permissions for a file or directory
 	 *
-	 * @param   string  path to the file or directory
-	 * @param   mixed   file area name, object or null for base area
-	 * $return  string  octal file permissions
+	 * @param   string                 $path  path to the file or directory
+	 * @param   string|File_Area|null  $area  file area name, object or null for base area
+	 * @return  string  octal file permissions
+	 * @throws  \FileAccessException
+	 * @throws  \InvalidPathException
+	 * @throws  \OutsideAreaException
 	 */
 	public static function get_permissions($path, $area = null)
 	{
@@ -429,10 +466,13 @@ class File
 	/**
 	 * Get a file's or directory's created or modified timestamp.
 	 *
-	 * @param   string  path to the file or directory
-	 * @param   string  modified or created
-	 * @param   mixed   file area name, object or null for base area
-	 * @return  int     Unix Timestamp
+	 * @param   string                 $path  path to the file or directory
+	 * @param   string                 $type  modified or created
+	 * @param   string|File_Area|null  $area  file area name, object or null for base area
+	 * @return  int  Unix Timestamp
+	 * @throws  \FileAccessException
+	 * @throws  \InvalidPathException
+	 * @throws  \OutsideAreaException
 	 */
 	public static function get_time($path, $type = 'modified', $area = null)
 	{
@@ -460,9 +500,12 @@ class File
 	/**
 	 * Get a file's size.
 	 *
-	 * @param   string  path to the file or directory
-	 * @param   mixed   file area name, object or null for base area
+	 * @param   string  $path  path to the file or directory
+	 * @param   mixed   $area  file area name, object or null for base area
 	 * @return  int     the file's size in bytes
+	 * @throws  \FileAccessException
+	 * @throws  \InvalidPathException
+	 * @throws  \OutsideAreaException
 	 */
 	public static function get_size($path, $area = null)
 	{
@@ -479,11 +522,13 @@ class File
 	/**
 	 * Rename directory or file
 	 *
-	 * @param   string  path to file or directory to rename
-	 * @param   string  new path (full path, can also cause move)
-	 * @param   string|File_Area|null  source path file area name, object or null for non-specific
-	 * @param   string|File_Area|null  target path file area name, object or null for non-specific. Defaults to source_area if not set.
+	 * @param   string                 $path         path to file or directory to rename
+	 * @param   string                 $new_path     new path (full path, can also cause move)
+	 * @param   string|File_Area|null  $source_area  source path file area name, object or null for non-specific
+	 * @param   string|File_Area|null  $target_area  target path file area name, object or null for non-specific. Defaults to source_area if not set.
 	 * @return  bool
+	 * @throws  \FileAccessException
+	 * @throws  \OutsideAreaException
 	 */
 	public static function rename($path, $new_path, $source_area = null, $target_area = null)
 	{
@@ -495,6 +540,14 @@ class File
 
 	/**
 	 * Alias for rename(), not needed but consistent with other methods
+	 *
+	 * @param string                $path         path to directory to rename
+	 * @param string                $new_path     new path (full path, can also cause move)
+	 * @param string|File_Area|null $source_area  source path file area name, object or null for non-specific
+	 * @param string|File_Area|null $target_area  target path file area name, object or null for non-specific. Defaults to source_area if not set.
+	 * @return bool
+	 * @throws  \FileAccessException
+	 * @throws  \OutsideAreaException
 	 */
 	public static function rename_dir($path, $new_path, $source_area = null, $target_area = null)
 	{
@@ -504,10 +557,13 @@ class File
 	/**
 	 * Copy file
 	 *
-	 * @param   string  path to file to copy
-	 * @param   string  new base directory (full path)
-	 * @param   string|File_Area|null  source path file area name, object or null for non-specific
-	 * @param   string|File_Area|null  target path file area name, object or null for non-specific. Defaults to source_area if not set.
+	 * @param   string                 path         path to file to copy
+	 * @param   string                 new_path     new base directory (full path)
+	 * @param   string|File_Area|null  source_area  source path file area name, object or null for non-specific
+	 * @param   string|File_Area|null  target_area  target path file area name, object or null for non-specific. Defaults to source_area if not set.
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 * @return  bool
 	 */
 	public static function copy($path, $new_path, $source_area = null, $target_area = null)
@@ -523,18 +579,25 @@ class File
 		{
 			throw new \FileAccessException('Cannot copy file: new path: "'.$new_path.'" already exists.');
 		}
-		return copy($path, $new_path);
+
+		if (copy($path, $new_path))
+		{
+			return chmod($new_path, fileperms($path));
+		}
+
+		return false;
 	}
 
 	/**
 	 * Copy directory
 	 *
-	 * @param   string  path to directory which contents will be copied
-	 * @param   string  new base directory (full path)
-	 * @param   string|File_Area|null  source path file area name, object or null for non-specific
-	 * @param   string|File_Area|null  target path file area name, object or null for non-specific. Defaults to source_area if not set.
-	 * @return  bool
-	 * @throws  FileAccessException  when something went wrong
+	 * @param  string                 $path         path to directory which contents will be copied
+	 * @param  string                 $new_path     new base directory (full path)
+	 * @param  string|File_Area|null  $source_area  source path file area name, object or null for non-specific
+	 * @param  string|File_Area|null  $target_area  target path file area name, object or null for non-specific. Defaults to source_area if not set.
+	 * @throws \FileAccessException   when something went wrong
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function copy_dir($path, $new_path, $source_area = null, $target_area = null)
 	{
@@ -577,11 +640,14 @@ class File
 	/**
 	 * Create a new symlink
 	 *
-	 * @param   string  target of symlink
-	 * @param   string  destination of symlink
-	 * @param   bool    true for file, false for directory
-	 * @param   string|File_Area|null  file area name, object or null for base area
+	 * @param   string                 $path       target of symlink
+	 * @param   string                 $link_path  destination of symlink
+	 * @param   bool                   $is_file    true for file, false for directory
+	 * @param   string|File_Area|null  $area       file area name, object or null for base area
 	 * @return  bool
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function symlink($path, $link_path, $is_file = true, $area = null)
 	{
@@ -607,9 +673,12 @@ class File
 	/**
 	 * Delete file
 	 *
-	 * @param   string  path to file to delete
-	 * @param   string|File_Area|null  file area name, object or null for base area
-	 * @return  bool
+	 * @param string                $path  path to file to delete
+	 * @param string|File_Area|null $area  file area name, object or null for base area
+	 * @return bool
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function delete($path, $area = null)
 	{
@@ -626,11 +695,14 @@ class File
 	/**
 	 * Delete directory
 	 *
-	 * @param   string  path to directory to delete
-	 * @param   bool    whether to also delete contents of subdirectories
-	 * @param   bool    whether to delete the parent dir itself when empty
-	 * @param   string|File_Area|null  file area name, object or null for base area
+	 * @param   string                 $path        path to directory to delete
+	 * @param   bool                   $recursive   whether to also delete contents of subdirectories
+	 * @param   bool                   $delete_top  whether to delete the parent dir itself when empty
+	 * @param   string|File_Area|null  $area        file area name, object or null for base area
 	 * @return  bool
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function delete_dir($path, $recursive = true, $delete_top = true, $area = null)
 	{
@@ -679,9 +751,12 @@ class File
 	/**
 	 * Open and lock file
 	 *
-	 * @param  resource|string  file resource or path
-	 * @param  constant  either valid lock constant or true=LOCK_EX / false=LOCK_UN
-	 * @param  string|File_Area|null  file area name, object or null for base area
+	 * @param  resource|string        $path  file resource or path
+	 * @param  constant|bool          $lock  either valid lock constant or true=LOCK_EX / false=LOCK_UN
+	 * @param  string|File_Area|null  $area  file area name, object or null for base area
+	 * @return bool|resource
+	 * @throws \FileAccessException
+	 * @throws \OutsideAreaException
 	 */
 	public static function open_file($path, $lock = true, $area = null)
 	{
@@ -726,8 +801,8 @@ class File
 	/**
 	 * Close file resource & unlock
 	 *
-	 * @param  resource  open file resource
-	 * @param  string|File_Area|null  file area name, object or null for base area
+	 * @param resource               $resource  open file resource
+	 * @param string|File_Area|null  $area      file area name, object or null for base area
 	 */
 	public static function close_file($resource, $area = null)
 	{
@@ -743,8 +818,12 @@ class File
 	/**
 	 * Get detailed information about a file
 	 *
-	 * @param  string  file path
-	 * @param  string|File_Area|null  file area name, object or null for base area
+	 * @param  string                 $path  file path
+	 * @param  string|File_Area|null  $area  file area name, object or null for base area
+	 * @return array
+	 * @throws \FileAccessException
+	 * @throws \InvalidPathException
+	 * @throws \OutsideAreaException
 	 */
 	public static function file_info($path, $area = null)
 	{
@@ -787,8 +866,8 @@ class File
 
 		$info['size'] = static::get_size($info['realpath'], $area);
 		$info['permissions'] = static::get_permissions($info['realpath'], $area);
-		$info['time_created'] = static::get_time($info['realpath'], $type = 'created', $area);
-		$info['time_modified'] = static::get_time($info['realpath'], $type = 'modified', $area);
+		$info['time_created'] = static::get_time($info['realpath'], 'created', $area);
+		$info['time_modified'] = static::get_time($info['realpath'], 'modified', $area);
 
 		return $info;
 	}
@@ -796,12 +875,12 @@ class File
 	/**
 	 * Download a file
 	 *
-	 * @param  string       file path
-	 * @param  string|null  custom name for the file to be downloaded
-	 * @param  string|null  custom mime type or null for file mime type
-	 * @param  string|File_Area|null  file area name, object or null for base area
-	 * @param  bool         delete the file after download when true
-	 * @param  string       disposition, must be 'attachment' or 'inline'
+	 * @param  string                 $path         file path
+	 * @param  string|null            $name         custom name for the file to be downloaded
+	 * @param  string|null            $mime         custom mime type or null for file mime type
+	 * @param  string|File_Area|null  $area         file area name, object or null for base area
+	 * @param  bool                   $delete       delete the file after download when true
+	 * @param  string                 $disposition  disposition, must be 'attachment' or 'inline'
 	 */
 	public static function download($path, $name = null, $mime = null, $area = null, $delete = false, $disposition = 'attachment')
 	{

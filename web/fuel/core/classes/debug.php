@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -154,10 +154,11 @@ JS;
 	/**
 	 * Formats the given $var's output in a nice looking, Foldable interface.
 	 *
-	 * @param	string	$name	the name of the var
-	 * @param	mixed	$var	the variable
-	 * @param	int		$level	the indentation level
+	 * @param	string	$name			the name of the var
+	 * @param	mixed	$var			the variable
+	 * @param	int		$level			the indentation level
 	 * @param	string	$indent_char	the indentation character
+	 * @param	string	$scope
 	 * @return	string	the formatted string.
 	 */
 	public static function format($name, $var, $level = 0, $indent_char = '&nbsp;&nbsp;&nbsp;&nbsp;', $scope = '')
@@ -232,7 +233,7 @@ JS;
 			ob_end_clean();
 
 			// process it based on the xdebug presence and configuration
-			if (extension_loaded('xdebug') and ini_get('xdebug.overload_var_dump') === '1')
+			if (extension_loaded('xdebug') and ini_get('xdebug.overload_var_dump'))
 			{
 				if (ini_get('html_errors'))
 				{
@@ -304,16 +305,16 @@ JS;
 	 * Returns the debug lines from the specified file
 	 *
 	 * @access	protected
-	 * @param	string		the file path
-	 * @param	int			the line number
-	 * @param	bool		whether to use syntax highlighting or not
-	 * @param	int			the amount of line padding
+	 * @param	string		$filepath	the file path
+	 * @param	int			$line_num	the line number
+	 * @param	bool		$highlight	whether to use syntax highlighting or not
+	 * @param	int			$padding	the amount of line padding
 	 * @return	array
 	 */
 	public static function file_lines($filepath, $line_num, $highlight = true, $padding = 5)
 	{
-		// deal with eval'd code
-		if (strpos($filepath, 'eval()\'d code') !== false)
+		// deal with eval'd code and runtime-created function
+		if (strpos($filepath, 'eval()\'d code') !== false or strpos($filepath, 'runtime-created function') !== false)
 		{
 			return '';
 		}
@@ -356,7 +357,7 @@ JS;
 	/**
 	 * Output the call stack from here, or the supplied one.
 	 *
-	 * @param	array		(optional) A backtrace to output
+	 * @param	array	$trace	(optional) A backtrace to output
 	 * @return  string		Formatted backtrace
 	 */
 	public static function backtrace($trace = null)
@@ -502,7 +503,10 @@ JS;
 	 * Benchmark anything that is callable
 	 *
 	 * @access public
+	 * @param	callable	$callable
+	 * @param	array		$params
 	 * @static
+	 * @return	array
 	 */
 	public static function benchmark($callable, array $params = array())
 	{

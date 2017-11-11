@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -50,9 +50,9 @@ class Request
 	 *
 	 *     Request::forge('hello/world');
 	 *
-	 * @param   string   The URI of the request
-	 * @param   mixed    Internal: whether to use the routes; external: driver type or array with settings (driver key must be set)
-	 * @param   string   request method
+	 * @param   string  $uri      The URI of the request
+	 * @param   mixed   $options  Internal: whether to use the routes; external: driver type or array with settings (driver key must be set)
+	 * @param   string  $method   request method
 	 * @return  Request  The new request object
 	 */
 	public static function forge($uri = null, $options = true, $method = null)
@@ -101,7 +101,7 @@ class Request
 	 *
 	 *     Request::active();
 	 *
-	 * @param   Request|null|false  overwrite current request before returning, false prevents overwrite
+	 * @param   Request|null|false  $request  overwrite current request before returning, false prevents overwrite
 	 * @return  Request
 	 */
 	public static function active($request = false)
@@ -173,6 +173,13 @@ class Request
 	 * @var  Route
 	 */
 	public $route = null;
+
+	/**
+	 * The Request's INPUT object.
+	 *
+	 * @var  Input_Instance
+	 */
+	protected $input = null;
 
 	/**
 	 * @var  string  $method  request method
@@ -257,15 +264,27 @@ class Request
 	 *
 	 *     $request = new Request('foo/bar');
 	 *
-	 * @param   string  the uri string
-	 * @param   bool    whether or not to route the URI
-	 * @param   string  request method
-	 * @return  void
+	 * @param   string  $uri     the uri string
+	 * @param   bool    $route   whether or not to route the URI
+	 * @param   string  $method  request method
+	 * @throws  \FuelException
 	 */
 	public function __construct($uri, $route = true, $method = null)
 	{
 		$this->uri = new \Uri($uri);
-		$this->method = $method ?: \Input::method();
+
+		if (static::$active)
+		{
+			// hmvc request, forge a new instance
+			$this->input = \Input::forge($this, static::$active->input());
+		}
+		else
+		{
+			// main request, get the global instance
+			$this->input = \Input::instance();
+		}
+
+		$this->method = $method ?: $this->input->method();
 
 		logger(\Fuel::L_INFO, 'Creating a new '.(static::$main==null ? 'main' : 'HMVC').' Request with URI = "'.$this->uri->get().'"', __METHOD__);
 
@@ -280,14 +299,22 @@ class Request
 				// load and add the module routes
 				$module_routes = \Fuel::load($module_path);
 
+				$reserve_routes = array(
+					'_root_' => $module,
+					'_403_'  => '_403_',
+					'_404_'  => '_404_',
+					'_500_'  => '_500_',
+					$module  => $module,
+				);
+
 				$prepped_routes = array();
 				foreach($module_routes as $name => $_route)
 				{
-					if ($name === '_root_')
+					if (isset($reserve_routes[$name]))
 					{
-						$name = $module;
+						$name = $reserve_routes[$name];
 					}
-					elseif (strpos($name, $module.'/') !== 0 and $name != $module and $name !== '_404_')
+					elseif (strpos($name, $module.'/') !== 0)
 					{
 						$name = $module.'/'.$name;
 					}
@@ -326,8 +353,11 @@ class Request
 	 *
 	 *     $request = Request::forge('hello/world')->execute();
 	 *
-	 * @param  array|null  $method_params  An array of parameters to pass to the method being executed
+	 * @param   array|null  $method_params  An array of parameters to pass to the method being executed
 	 * @return  Request  This request object
+	 * @throws  \Exception
+	 * @throws  \FuelException
+	 * @throws  \HttpNotFoundException
 	 */
 	public function execute($method_params = null)
 	{
@@ -533,6 +563,118 @@ class Request
 	public function parent()
 	{
 		return $this->parent;
+	}
+
+	/**
+	 * Returns this Requests Input object
+	 *
+	 * @return  Input
+	 */
+	public function input()
+	{
+		return $this->input;
+	}
+
+	/**
+	 * set additional GET input variables
+	 *
+	 * @return  Input
+	 */
+	public function set_get($var, $value)
+	{
+		if ( ! is_array($var))
+		{
+			$var = array($var => $value);
+		}
+
+		$this->input->_set('get', $var);
+
+		return $this;
+	}
+
+	/**
+	 * set additional POST input variables
+	 *
+	 * @return  Input
+	 */
+	public function set_post($var, $value)
+	{
+		if ( ! is_array($var))
+		{
+			$var = array($var => $value);
+		}
+
+		$this->input->_set('post', $var);
+
+		return $this;
+	}
+
+	/**
+	 * set additional JSON input variables
+	 *
+	 * @return  Input
+	 */
+	public function set_json($var, $value)
+	{
+		if ( ! is_array($var))
+		{
+			$var = array($var => $value);
+		}
+
+		$this->input->_set('json', $var);
+
+		return $this;
+	}
+
+	/**
+	 * set additional PUT input variables
+	 *
+	 * @return  Input
+	 */
+	public function set_put($var, $value)
+	{
+		if ( ! is_array($var))
+		{
+			$var = array($var => $value);
+		}
+
+		$this->input->_set('put', $var);
+
+		return $this;
+	}
+
+	/**
+	 * set additional PATCH input variables
+	 *
+	 * @return  Input
+	 */
+	public function set_patch($var, $value)
+	{
+		if ( ! is_array($var))
+		{
+			$var = array($var => $value);
+		}
+
+		$this->input->_set('patch', $var);
+
+		return $this;
+	}
+
+	/**
+	 * set additional DELETE input variables
+	 *
+	 * @return  Input
+	 */
+	public function set_delete($var, $value)
+	{
+		if ( ! is_array($var))
+		{
+			$var = array($var => $value);
+		}
+
+		$this->input->_set('delete', $var);
+
+		return $this;
 	}
 
 	/**

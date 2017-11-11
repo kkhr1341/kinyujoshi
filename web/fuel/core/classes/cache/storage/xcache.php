@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -105,7 +105,7 @@ class Cache_Storage_Xcache extends \Cache_Storage_Driver
 	/**
 	 * Purge all caches
 	 *
-	 * @param   limit purge to subsection
+	 * @param   string  $section  limit purge to subsection
 	 * @return  bool
 	 */
 	public function delete_all($section)
@@ -161,8 +161,8 @@ class Cache_Storage_Xcache extends \Cache_Storage_Driver
 	/**
 	 * Remove the prepended cache properties and save them in class properties
 	 *
-	 * @param   string
-	 * @throws  UnexpectedValueException
+	 * @param   string  $payload
+	 * @throws  \UnexpectedValueException
 	 */
 	protected function unprep_contents($payload)
 	{
@@ -241,8 +241,8 @@ class Cache_Storage_Xcache extends \Cache_Storage_Driver
 	/**
 	 * validate a driver config value
 	 *
-	 * @param   string  name of the config variable to validate
-	 * @param   mixed   value
+	 * @param   string  $name   name of the config variable to validate
+	 * @param   mixed   $value
 	 * @return  mixed
 	 */
 	private function _validate_config($name, $value)
@@ -273,7 +273,7 @@ class Cache_Storage_Xcache extends \Cache_Storage_Driver
 	/**
 	 * get's the xcache key belonging to the cache identifier
 	 *
-	 * @param   bool  if true, remove the key retrieved from the index
+	 * @param   bool  $remove  if true, remove the key retrieved from the index
 	 * @return  string
 	 */
 	protected function _get_key($remove = false)

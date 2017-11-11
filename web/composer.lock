@@ -4,24 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "412f4bbb2862a7cb691d03f514c035ac",
-    "content-hash": "155f3b875c1d2c24801efc6ba9663f12",
+    "hash": "8e9b820ffc8abf83acca6c81abefefb6",
+    "content-hash": "b75252b5c974e73be168b09b8da97379",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.24.8",
+            "version": "3.38.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "a7ce54bffdb1a759fb2f6f6e4bf2927148583c80"
+                "reference": "9f704274f4748d2039a16d45b3388ed8dde74e89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a7ce54bffdb1a759fb2f6f6e4bf2927148583c80",
-                "reference": "a7ce54bffdb1a759fb2f6f6e4bf2927148583c80",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9f704274f4748d2039a16d45b3388ed8dde74e89",
+                "reference": "9f704274f4748d2039a16d45b3388ed8dde74e89",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "ext-simplexml": "*",
+                "ext-spl": "*",
                 "guzzlehttp/guzzle": "^5.3.1|^6.2.1",
                 "guzzlehttp/promises": "~1.0",
                 "guzzlehttp/psr7": "^1.4.1",
@@ -34,13 +38,9 @@
                 "behat/behat": "~3.0",
                 "doctrine/cache": "~1.4",
                 "ext-dom": "*",
-                "ext-json": "*",
                 "ext-openssl": "*",
-                "ext-pcre": "*",
-                "ext-simplexml": "*",
-                "ext-spl": "*",
                 "nette/neon": "^2.3",
-                "phpunit/phpunit": "~4.0|~5.0",
+                "phpunit/phpunit": "^4.8.35|^5.4.0",
                 "psr/cache": "^1.0"
             },
             "suggest": {
@@ -85,20 +85,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-03-27 22:54:11"
+            "time": "2017-11-09 19:15:59"
         },
         {
             "name": "composer/installers",
-            "version": "v1.2.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
+                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
+                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
                 "shasum": ""
             },
             "require": {
@@ -140,12 +140,17 @@
             "keywords": [
                 "Craft",
                 "Dolibarr",
+                "Eliasis",
                 "Hurad",
                 "ImageCMS",
+                "Kanboard",
+                "Lan Management System",
                 "MODX Evo",
                 "Mautic",
+                "Maya",
                 "OXID",
                 "Plentymarkets",
+                "Porto",
                 "RadPHP",
                 "SMF",
                 "Thelia",
@@ -163,20 +168,24 @@
                 "croogo",
                 "dokuwiki",
                 "drupal",
+                "eZ Platform",
                 "elgg",
                 "expressionengine",
                 "fuelphp",
                 "grav",
                 "installer",
+                "itop",
                 "joomla",
                 "kohana",
                 "laravel",
+                "lavalite",
                 "lithium",
                 "magento",
                 "mako",
                 "mediawiki",
                 "modulework",
                 "moodle",
+                "osclass",
                 "phpbb",
                 "piwik",
                 "ppi",
@@ -185,6 +194,7 @@
                 "roundcube",
                 "shopware",
                 "silverstripe",
+                "sydes",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -192,20 +202,20 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13 20:53:52"
+            "time": "2017-08-09 07:53:48"
         },
         {
             "name": "fuel/auth",
-            "version": "dev-1.7/master",
+            "version": "dev-1.8/master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/auth.git",
-                "reference": "aa9bd2e5104026814ff516aacf03258f62a94a55"
+                "reference": "83969c3c932edc94d973ca40f1567459b84c4523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/auth/zipball/aa9bd2e5104026814ff516aacf03258f62a94a55",
-                "reference": "aa9bd2e5104026814ff516aacf03258f62a94a55",
+                "url": "https://api.github.com/repos/fuel/auth/zipball/83969c3c932edc94d973ca40f1567459b84c4523",
+                "reference": "83969c3c932edc94d973ca40f1567459b84c4523",
                 "shasum": ""
             },
             "require": {
@@ -224,27 +234,30 @@
             "description": "FuelPHP 1.x Auth Package",
             "homepage": "https://github.com/fuel/auth",
             "support": {
-                "source": "https://github.com/fuel/auth/tree/1.7/master",
+                "source": "https://github.com/fuel/auth/tree/1.8.0.4",
                 "issues": "https://github.com/fuel/auth/issues"
             },
-            "time": "2015-05-20 14:52:33"
+            "time": "2016-10-20 18:12:06"
         },
         {
             "name": "fuel/core",
-            "version": "dev-1.7/master",
+            "version": "dev-1.8/master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/core.git",
-                "reference": "f614b30e1f76389580c2d97991ab3f25c1533a29"
+                "reference": "cb83a0cc682307866000ef6b8b970f0893d01b66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/core/zipball/f614b30e1f76389580c2d97991ab3f25c1533a29",
-                "reference": "f614b30e1f76389580c2d97991ab3f25c1533a29",
+                "url": "https://api.github.com/repos/fuel/core/zipball/cb83a0cc682307866000ef6b8b970f0893d01b66",
+                "reference": "cb83a0cc682307866000ef6b8b970f0893d01b66",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "~1.0",
+                "michelf/php-markdown": "1.*",
+                "monolog/monolog": "1.18.*",
+                "phpseclib/phpseclib": "2.0.0"
             },
             "type": "fuel-package",
             "license": [
@@ -259,23 +272,23 @@
             "description": "FuelPHP 1.x Core",
             "homepage": "https://github.com/fuel/core",
             "support": {
-                "source": "https://github.com/fuel/core/tree/1.7/master",
+                "source": "https://github.com/fuel/core/tree/1.8.0.4",
                 "issues": "https://github.com/fuel/core/issues"
             },
-            "time": "2015-06-23 06:38:57"
+            "time": "2017-01-15 17:41:18"
         },
         {
             "name": "fuel/docs",
-            "version": "dev-1.7/master",
+            "version": "dev-1.8/master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/docs.git",
-                "reference": "473174da2cf503c60d4a9935b71acfc31f0906d0"
+                "reference": "df9e0c93f7277edfbf098b186669ebdf760cbbe9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/docs/zipball/473174da2cf503c60d4a9935b71acfc31f0906d0",
-                "reference": "473174da2cf503c60d4a9935b71acfc31f0906d0",
+                "url": "https://api.github.com/repos/fuel/docs/zipball/df9e0c93f7277edfbf098b186669ebdf760cbbe9",
+                "reference": "df9e0c93f7277edfbf098b186669ebdf760cbbe9",
                 "shasum": ""
             },
             "require": {
@@ -294,23 +307,23 @@
             "description": "FuelPHP 1.x Documenataion",
             "homepage": "https://github.com/fuel/docs",
             "support": {
-                "source": "https://github.com/fuel/docs/tree/1.7/master",
+                "source": "https://github.com/fuel/docs/tree/1.8/master",
                 "issues": "https://github.com/fuel/docs/issues"
             },
-            "time": "2015-05-23 17:33:30"
+            "time": "2017-10-24 15:46:45"
         },
         {
             "name": "fuel/email",
-            "version": "dev-1.7/master",
+            "version": "dev-1.8/master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/email.git",
-                "reference": "8fbf378d74bac170a96cad96ba0aed77e319a865"
+                "reference": "2eab3974e4c38b9fea0a7ebbad3d4e1f20076448"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/email/zipball/8fbf378d74bac170a96cad96ba0aed77e319a865",
-                "reference": "8fbf378d74bac170a96cad96ba0aed77e319a865",
+                "url": "https://api.github.com/repos/fuel/email/zipball/2eab3974e4c38b9fea0a7ebbad3d4e1f20076448",
+                "reference": "2eab3974e4c38b9fea0a7ebbad3d4e1f20076448",
                 "shasum": ""
             },
             "require": {
@@ -329,23 +342,23 @@
             "description": "FuelPHP 1.x Email Package",
             "homepage": "https://github.com/fuel/email",
             "support": {
-                "source": "https://github.com/fuel/email/tree/1.7/master",
+                "source": "https://github.com/fuel/email/tree/1.8.0.4",
                 "issues": "https://github.com/fuel/email/issues"
             },
-            "time": "2015-05-20 14:58:23"
+            "time": "2016-10-04 15:21:48"
         },
         {
             "name": "fuel/oil",
-            "version": "dev-1.7/master",
+            "version": "dev-1.8/master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/oil.git",
-                "reference": "ea37c3a7fe8675fb3327327213b2eca55303933a"
+                "reference": "84ea18b9e39c3c0d31681dd2cf92fbf81b6ed90f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/oil/zipball/ea37c3a7fe8675fb3327327213b2eca55303933a",
-                "reference": "ea37c3a7fe8675fb3327327213b2eca55303933a",
+                "url": "https://api.github.com/repos/fuel/oil/zipball/84ea18b9e39c3c0d31681dd2cf92fbf81b6ed90f",
+                "reference": "84ea18b9e39c3c0d31681dd2cf92fbf81b6ed90f",
                 "shasum": ""
             },
             "require": {
@@ -364,23 +377,23 @@
             "description": "FuelPHP 1.x Oil Package",
             "homepage": "https://github.com/fuel/oil",
             "support": {
-                "source": "https://github.com/fuel/oil/tree/1.7/master",
+                "source": "https://github.com/fuel/oil/tree/1.8.0.4",
                 "issues": "https://github.com/fuel/oil/issues"
             },
-            "time": "2015-05-20 15:04:46"
+            "time": "2016-10-05 13:32:41"
         },
         {
             "name": "fuel/orm",
-            "version": "dev-1.7/master",
+            "version": "dev-1.8/master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/orm.git",
-                "reference": "5e05c3068562548657fea69850a23b23f65a5545"
+                "reference": "2d9d078aba101134eae70ec1d910024186826b42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/orm/zipball/5e05c3068562548657fea69850a23b23f65a5545",
-                "reference": "5e05c3068562548657fea69850a23b23f65a5545",
+                "url": "https://api.github.com/repos/fuel/orm/zipball/2d9d078aba101134eae70ec1d910024186826b42",
+                "reference": "2d9d078aba101134eae70ec1d910024186826b42",
                 "shasum": ""
             },
             "require": {
@@ -399,23 +412,23 @@
             "description": "FuelPHP 1.x ORM Package",
             "homepage": "https://github.com/fuel/orm",
             "support": {
-                "source": "https://github.com/fuel/orm/tree/1.7/master",
+                "source": "https://github.com/fuel/orm/tree/1.8/master",
                 "issues": "https://github.com/fuel/orm/issues"
             },
-            "time": "2015-05-24 09:48:42"
+            "time": "2016-12-21 13:00:42"
         },
         {
             "name": "fuel/parser",
-            "version": "dev-1.7/master",
+            "version": "dev-1.8/master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fuel/parser.git",
-                "reference": "0cacd10d7b1b8f92a0eeddce75c6ba2c0c28112f"
+                "reference": "e647c56566ddc439801ae966821f37dc35a3c5bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fuel/parser/zipball/0cacd10d7b1b8f92a0eeddce75c6ba2c0c28112f",
-                "reference": "0cacd10d7b1b8f92a0eeddce75c6ba2c0c28112f",
+                "url": "https://api.github.com/repos/fuel/parser/zipball/e647c56566ddc439801ae966821f37dc35a3c5bb",
+                "reference": "e647c56566ddc439801ae966821f37dc35a3c5bb",
                 "shasum": ""
             },
             "require": {
@@ -434,10 +447,10 @@
             "description": "FuelPHP 1.x Parser Package",
             "homepage": "https://github.com/fuel/parser",
             "support": {
-                "source": "https://github.com/fuel/parser/tree/1.7/master",
+                "source": "https://github.com/fuel/parser/tree/1.8.0.4",
                 "issues": "https://github.com/fuel/parser/issues"
             },
-            "time": "2015-05-20 15:09:55"
+            "time": "2017-01-12 17:26:53"
         },
         {
             "name": "fuelphp/upload",
@@ -486,16 +499,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.2.3",
+            "version": "6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006"
+                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8d6c6cc55186db87b7dc5009827429ba4e9dc006",
-                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f4db5a78a5ea468d4831de7f0bf9d9415e348699",
+                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699",
                 "shasum": ""
             },
             "require": {
@@ -505,8 +518,11 @@
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.0",
+                "phpunit/phpunit": "^4.0 || ^5.0",
                 "psr/log": "^1.0"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
@@ -544,7 +560,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-02-28 22:50:30"
+            "time": "2017-06-22 18:50:49"
         },
         {
             "name": "guzzlehttp/promises",
@@ -715,43 +731,60 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.5.0",
+            "version": "1.18.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "583618d5cd2115a52101694aca87afb182b3e567"
+                "reference": "064b38c16790249488e7a8b987acf1c9d7383c09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/583618d5cd2115a52101694aca87afb182b3e567",
-                "reference": "583618d5cd2115a52101694aca87afb182b3e567",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/064b38c16790249488e7a8b987acf1c9d7383c09",
+                "reference": "064b38c16790249488e7a8b987acf1c9d7383c09",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "psr/log": "~1.0"
             },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
             "require-dev": {
-                "doctrine/couchdb": "dev-master",
-                "mlehner/gelf-php": "1.0.*",
-                "raven/raven": "0.3.*"
+                "aws/aws-sdk-php": "^2.4.9",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "raven/raven": "^0.13",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "swiftmailer/swiftmailer": "~5.3"
             },
             "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "raven/raven": "Allow sending log messages to a Sentry server"
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Monolog": "src/"
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -762,8 +795,7 @@
                 {
                     "name": "Jordi Boggiano",
                     "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be",
-                    "role": "Developer"
+                    "homepage": "http://seld.be"
                 }
             ],
             "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
@@ -773,7 +805,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-04-23 10:09:48"
+            "time": "2016-04-02 13:12:58"
         },
         {
             "name": "mtdowling/jmespath.php",
@@ -836,12 +868,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/TippingCanoe/facebook.git",
-                "reference": "da3a6d266629fcb615178e87e550f115efd8d851"
+                "reference": "5e9022ccf7c1ed099a7880c175853b24d0f911a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TippingCanoe/facebook/zipball/da3a6d266629fcb615178e87e550f115efd8d851",
-                "reference": "9655f13aa912bf01489c2b3c6888237a8ab9f583",
+                "url": "https://api.github.com/repos/TippingCanoe/facebook/zipball/5e9022ccf7c1ed099a7880c175853b24d0f911a6",
+                "reference": "5e9022ccf7c1ed099a7880c175853b24d0f911a6",
                 "shasum": ""
             },
             "require": {
@@ -872,7 +904,7 @@
                 "auth",
                 "facebook"
             ],
-            "time": "2017-03-28 04:27:19"
+            "time": "2017-04-04 09:06:40"
         },
         {
             "name": "opauth/github",
@@ -880,12 +912,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/opauth/github.git",
-                "reference": "9c4fe16dc6498b2c94f4c2a41ab93b0fe4b7fa73"
+                "reference": "2f936ddc413d84e114d0b5dc5543aa234ae266ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opauth/github/zipball/9c4fe16dc6498b2c94f4c2a41ab93b0fe4b7fa73",
-                "reference": "9c4fe16dc6498b2c94f4c2a41ab93b0fe4b7fa73",
+                "url": "https://api.github.com/repos/opauth/github/zipball/2f936ddc413d84e114d0b5dc5543aa234ae266ad",
+                "reference": "2f936ddc413d84e114d0b5dc5543aa234ae266ad",
                 "shasum": ""
             },
             "require": {
@@ -916,7 +948,7 @@
                 "auth",
                 "github"
             ],
-            "time": "2012-07-23 06:13:59"
+            "time": "2017-04-08 20:19:14"
         },
         {
             "name": "opauth/google",
@@ -924,12 +956,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/opauth/google.git",
-                "reference": "9f25018df675a15280fc02b54328895cbb153c77"
+                "reference": "502624d401c5fc96af34dd6f50e6060d97a5d278"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opauth/google/zipball/9f25018df675a15280fc02b54328895cbb153c77",
-                "reference": "9f25018df675a15280fc02b54328895cbb153c77",
+                "url": "https://api.github.com/repos/opauth/google/zipball/502624d401c5fc96af34dd6f50e6060d97a5d278",
+                "reference": "502624d401c5fc96af34dd6f50e6060d97a5d278",
                 "shasum": ""
             },
             "require": {
@@ -960,7 +992,7 @@
                 "auth",
                 "google"
             ],
-            "time": "2016-07-13 02:19:54"
+            "time": "2017-04-08 20:26:41"
         },
         {
             "name": "opauth/opauth",
@@ -1014,6 +1046,94 @@
                 "twitter"
             ],
             "time": "2013-05-10 09:01:52"
+        },
+        {
+            "name": "phpseclib/phpseclib",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpseclib/phpseclib.git",
+                "reference": "a74aa9efbe61430fcb60157c8e025a48ec8ff604"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/a74aa9efbe61430fcb60157c8e025a48ec8ff604",
+                "reference": "a74aa9efbe61430fcb60157c8e025a48ec8ff604",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phing/phing": "~2.7",
+                "phpunit/phpunit": "~4.0",
+                "sami/sami": "~2.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "suggest": {
+                "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
+                "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
+                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
+                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations.",
+                "pear-pear/PHP_Compat": "Install PHP_Compat to get phpseclib working on PHP < 5.0.0."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "phpseclib\\": "phpseclib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "phpseclib/"
+            ],
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Wigginton",
+                    "email": "terrafrost@php.net",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Patrick Monnerat",
+                    "email": "pm@datasphere.ch",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Andreas Fischer",
+                    "email": "bantu@phpbb.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Hans-Jürgen Petrich",
+                    "email": "petrich@tronic-media.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.",
+            "homepage": "http://phpseclib.sourceforge.net",
+            "keywords": [
+                "BigInteger",
+                "aes",
+                "asn.1",
+                "asn1",
+                "blowfish",
+                "crypto",
+                "cryptography",
+                "encryption",
+                "rsa",
+                "security",
+                "sftp",
+                "signature",
+                "signing",
+                "ssh",
+                "twofish",
+                "x.509",
+                "x509"
+            ],
+            "time": "2015-08-04 04:48:03"
         },
         {
             "name": "psr/http-message",
