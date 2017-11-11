@@ -5,10 +5,10 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -68,7 +68,7 @@ class Query_Temporal extends Query
 		return $join_result;
 	}
 
-	public function hydrate(&$row, $models, &$result, $model = null, $select = null, $primary_key = null)
+	public function hydrate(&$row, $models, \stdClass $result, $model = null, $select = null, $primary_key = null)
 	{
 		if( is_subclass_of($model, '\Orm\Model_Temporal'))
 		{

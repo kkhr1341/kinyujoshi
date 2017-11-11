@@ -1,12 +1,14 @@
 <?php
 /**
- * Database query builder for INSERT statements.
+ * Part of the Fuel framework.
  *
- * @package    Fuel/Database
- * @category   Query
- * @author     Kohana Team
- * @copyright  (c) 2008-2009 Kohana Team
- * @license    http://kohanaphp.com/license
+ * @package    Fuel
+ * @version    1.8
+ * @author     Fuel Development Team
+ * @license    MIT License
+ * @copyright  2010 - 2016 Fuel Development Team
+ * @copyright  2008 - 2009 Kohana Team
+ * @link       http://fuelphp.com
  */
 
 namespace Fuel\Core;
@@ -38,7 +40,7 @@ class Database_Query_Builder_Insert extends \Database_Query_Builder
 	{
 		if ($table)
 		{
-			// Set the inital table name
+			// Set the initial table name
 			$this->_table = $table;
 		}
 
@@ -81,8 +83,9 @@ class Database_Query_Builder_Insert extends \Database_Query_Builder
 	/**
 	 * Adds values. Multiple value sets can be added.
 	 *
-	 * @return  $this
 	 * @throws \FuelException
+	 * @param array $values
+	 * @return $this
 	 */
 	public function values(array $values)
 	{

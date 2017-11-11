@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -22,11 +22,10 @@
 return array(
 
 	/*
-	| Which version of the schema should be considered "current"
-	|
-	|	Default: 0
-	|
-	*/
+	 * Which version of the schema should be considered "current"
+	 *
+	 * Default: 0
+	 */
 	'version' => array(
 		'app' => array(
 			'default' => 0,
@@ -36,19 +35,24 @@ return array(
 	),
 
 	/*
-	| Folder name where migrations are stored relative to App, Module and Package Paths?
-	|
-	|	Default: 'migrations/'
-	|
-	*/
+	 * Folder name where migrations are stored relative to App, Module and Package Paths?
+	 *
+	 * Default: 'migrations/'
+	 */
 	'folder' => 'migrations/',
 
 	/*
-	| Table name
-	|
-	|	Default: 'migration'
-	|
-	*/
+	 * Table name
+	 *
+	 * Default: 'migration'
+	 */
 	'table' => 'migration',
+
+	/**
+	 * Flush all cache after running migrations
+	 *
+	 * Default: false
+	 */
+	 'flush_cache' => false,
 
 );

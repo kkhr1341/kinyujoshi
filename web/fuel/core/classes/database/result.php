@@ -1,13 +1,14 @@
 <?php
 /**
- * Database result wrapper.
+ * Part of the Fuel framework.
  *
- * @package    Fuel/Database
- * @category   Query/Result
- * @author     Kohana Team
- * @copyright  (c) 2008-2009 Kohana Team
- * @copyright  (c) 2010-2015 Fuel Development Team
- * @license    http://kohanaphp.com/license
+ * @package    Fuel
+ * @version    1.8
+ * @author     Fuel Development Team
+ * @license    MIT License
+ * @copyright  2010 - 2016 Fuel Development Team
+ * @copyright  2008 - 2009 Kohana Team
+ * @link       http://fuelphp.com
  */
 
 namespace Fuel\Core;
@@ -101,8 +102,8 @@ abstract class Database_Result implements \Countable, \Iterator, \SeekableIterat
 	 *     // Associative array of rows, "id" => "name"
 	 *     $rows = $result->as_array('id', 'name');
 	 *
-	 * @param   string  column for associative keys
-	 * @param   string  column for values
+	 * @param   string $key   column for associative keys
+	 * @param   string $value column for values
 	 * @return  array
 	 */
 	public function as_array($key = null, $value = null)

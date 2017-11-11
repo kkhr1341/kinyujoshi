@@ -5,10 +5,10 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -161,6 +161,12 @@ CONF;
 		// Uppercase each part of the class name and remove hyphens
 		$class_name = \Inflector::classify(str_replace(array('\\', '/'), '_', $name), false);
 
+		// Generate with test?
+		$with_test = \Cli::option('with-test');
+		if ($with_test) {
+			static::_create_test('Controller', $class_name, $base_path);
+		}
+
 		// Stick "blog" to the start of the array
 		array_unshift($args, $filename);
 
@@ -230,6 +236,12 @@ PRESENTER;
 			}
 		}
 
+		// Generate with test?
+		$with_test = \Cli::option('with-test');
+		if ($with_presenter and $with_test) {
+			static::_create_test('Presenter', $class_name, $base_path);
+		}
+
 		$build and static::build();
 	}
 
@@ -282,6 +294,12 @@ PRESENTER;
 		$properties = "\n\t\t" . $properties . ",";
 
 		$contents = '';
+
+		// Generate with test?
+		$with_test = \Cli::option('with-test');
+		if ($with_test) {
+			static::_create_test('Model', $class_name, $base_path);
+		}
 
 		if (\Cli::option('crud'))
 		{
@@ -831,6 +849,12 @@ MODEL;
 </ul>
 <p>{$view_title}</p>
 VIEW;
+
+			// Generate with test?
+ 			$with_test = \Cli::option('with-test');
+            		if ($with_test) {
+               			static::_create_test('View', $controller, $base_path, $nav_item);
+			}
 
 			// Create this view
 			static::create($view_dir.$action.'.php', $view, 'view');
@@ -1425,7 +1449,7 @@ class {$class_name}
 
 		if( ! class_exists(\$class, true))
 		{
-			throw new \FuelException('Could not find {$class_name} driver: ' . ucfirst(strtolower(\$config['driver']));
+			throw new \FuelException('Could not find {$class_name} driver: ' . ucfirst(strtolower(\$config['driver'])));
 		}
 
 		\$driver = new \$class(\$config);
@@ -1785,6 +1809,25 @@ CLASS;
 		$contents = preg_replace("#('version'[ \t]+=>)[ \t]+([0-9]+),#i", "$1 $version,", $contents);
 
 		static::create($app_path, $contents, 'config');
+	}
+
+	private static function _create_test($type, $class_name, $base_path, $nav_item = '')
+	{
+		$filepath = $base_path.strtolower('tests'.DS.$type.DS.ucwords($class_name));
+		if ( ! empty($nav_item) and $type === 'View')
+		{
+			$filepath = $filepath.DS.strtolower($nav_item);
+			$class_name = $class_name.'_'.ucwords($nav_item);
+		}
+		$output = <<<TEST
+<?php
+
+class Test_{$type}_{$class_name} extends TestCase
+{
+}
+TEST;
+
+		static::create($filepath.'.php', $output, 'test');
 	}
 }
 

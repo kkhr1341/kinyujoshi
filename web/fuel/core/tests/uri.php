@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -144,7 +144,7 @@ class Test_Uri extends TestCase
 		Config::set('base_url', 'http://example.com/test');
 		Config::set('index_file', null);
 		Config::set('url_suffix', '');
-		$_GET = array('one' => 1, 'two' => 2);
+		Input::instance()->_set('get', array('one' => 1, 'two' => 2));
 
 		$output = Uri::update_query_string(array('three' => 3));
 		$expected = 'http://example.com/test?one=1&two=2&three=3';

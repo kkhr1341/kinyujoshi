@@ -5,10 +5,10 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -161,7 +161,7 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 	}
 
 	/**
-	 * Sets the write connection to use for this model.
+	 * Sets the connection to use for this model.
 	 * @param string $connection
 	 */
 	public static function set_connection($connection)
@@ -170,7 +170,7 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 	}
 
 	/**
-	 * Sets the connection to use for this model.
+	 * Sets the write connection to use for this model.
 	 * @param string $connection
 	 */
 	public static function set_write_connection($connection)
@@ -260,7 +260,13 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 	}
 
 	/**
-	 * Implode the primary keys within the data into a string
+	 * Implode the primary keys within the data into a unique string for the runtime
+	 *
+	 * Note: as explained below, it is not possible to use the output to match an item after runtime
+	 *  - The format contains no reference to which value is destined for which key
+	 *  - The format does not encode the values
+	 *
+	 * @internal Designed for internal use only
 	 *
 	 * @param   array
 	 * @return  string
@@ -455,9 +461,22 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 		{
 			if (property_exists($class, '_'.$rel_name))
 			{
-				if (isset(static::${'_'.$rel_name}[$relation]))
+				foreach (static::${'_'.$rel_name} as $key => $value)
 				{
-					return static::${'_'.$rel_name}[$relation]['model_to'];
+					if (is_string($value))
+					{
+						if ($value === $relation)
+						{
+							return \Inflector::classify('model_'.$value);
+						}
+					}
+					else
+					{
+						if ($key === $relation)
+						{
+							return static::${'_'.$rel_name}[$relation]['model_to'];
+						}
+					}
 				}
 			}
 		}
@@ -657,6 +676,9 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 
 	public static function __callStatic($method, $args)
 	{
+		// storage for the type of find query
+		$find_type = false;
+
 		// Start with count_by? Get counting!
 		if (strpos($method, 'count_by') === 0)
 		{
@@ -679,8 +701,8 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 			}
 		}
 
-		// God knows, complain
-		else
+		// bail out if an invalid find type is detected
+		if ( ! $find_type)
 		{
 			throw new \FuelException('Invalid method call.  Method '.$method.' does not exist.', 0);
 		}
@@ -1348,6 +1370,7 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 			}
 			$this->unfreeze();
 
+			// update the original datastore and the related datastore
 			$this->_update_original();
 
 			$this->observe('after_save');
@@ -1401,6 +1424,7 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 
 		// update the original properties on creation and cache object for future retrieval in this request
 		$this->_is_new = false;
+
 		$this->_original = $this->_data;
 		static::$_cached_objects[get_class($this)][static::implode_pk($this)] = $this;
 
@@ -1431,18 +1455,30 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 		// Create the query and limit to primary key(s)
 		$query       = Query::forge(get_called_class(), static::connection(true));
 		$primary_key = static::primary_key();
-		$properties  = array_keys(static::properties());
+		$properties  = static::properties();
+		$properties_keys  = array_keys($properties);
 		//Add the primary keys to the where
 		$this->add_primary_keys_to_where($query);
 
 		// Set all current values
-		foreach ($properties as $p)
+		foreach ($properties_keys as $p)
 		{
 			if ( ! in_array($p, $primary_key) )
 			{
 				if (array_key_exists($p, $this->_original))
 				{
-					$this->{$p} !== $this->_original[$p] and $query->set($p, isset($this->_data[$p]) ? $this->_data[$p] : null);
+					if ((array_key_exists('type', $properties[$p]) and $properties[$p]['type'] == 'int') or
+						(array_key_exists('data_type', $properties[$p]) and $properties[$p]['data_type'] == 'int'))
+					{
+						if ($this->{$p} != $this->_original[$p])
+						{
+							$query->set($p, isset($this->_data[$p]) ? $this->_data[$p] : null);
+						}
+					}
+					elseif ($this->{$p} !== $this->_original[$p])
+					{
+						$query->set($p, isset($this->_data[$p]) ? $this->_data[$p] : null);
+					}
 				}
 				else
 				{
@@ -1456,6 +1492,9 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 		{
 			return false;
 		}
+
+		$this->_original = $this->_data;
+		static::$_cached_objects[get_class($this)][static::implode_pk($this)] = $this;
 
 		// update the original property on success
 		$this->observe('after_update');
@@ -1700,6 +1739,7 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 		$properties = static::properties();
 		$relations = static::relations();
 		$property = (array) $property ?: array_merge(array_keys($properties), array_keys($relations));
+		$simple_data_types = array('int','bool');
 
 		foreach ($property as $p)
 		{
@@ -1707,8 +1747,8 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 			{
 				if (array_key_exists($p, $this->_original))
 				{
-					if ((array_key_exists('type', $properties[$p]) and $properties[$p]['type'] == 'int') or
-						(array_key_exists('data_type', $properties[$p]) and $properties[$p]['data_type'] == 'int'))
+					if ((array_key_exists('type', $properties[$p]) and in_array($properties[$p]['type'], $simple_data_types)) or
+						(array_key_exists('data_type', $properties[$p]) and in_array($properties[$p]['data_type'], $simple_data_types)))
 					{
 						if ($this->{$p} != $this->_original[$p])
 						{
@@ -1797,12 +1837,13 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 			$rel = static::relations($key);
 			if ($rel->singular)
 			{
-				$new_pk = null;
+				$new_pk = empty($val) ? null : $val->implode_pk($val);
 				if (empty($this->_original_relations[$key]) !== empty($val)
 					or ( ! empty($this->_original_relations[$key]) and ! empty($val)
-						and $this->_original_relations[$key] !== $new_pk = $val->implode_pk($val)
+						and $this->_original_relations[$key] !== $new_pk
 					))
 				{
+
 					$diff[0][$key] = isset($this->_original_relations[$key]) ? $this->_original_relations[$key] : null;
 					$diff[1][$key] = isset($val) ? $new_pk : null;
 				}
@@ -2146,6 +2187,23 @@ class Model implements \ArrayAccess, \Iterator, \Sanitization
 			{
 				unset($array[$key]);
 			}
+		}
+
+		return $array;
+	}
+
+	/**
+	 * Provide the identifying details in the form of an array
+	 *
+	 * @return array
+	 */
+	public function get_pk_assoc()
+	{
+		$array = array_flip(static::primary_key());
+
+		foreach ($array as $key => &$value)
+		{
+			$value = $this->get($key);
 		}
 
 		return $array;

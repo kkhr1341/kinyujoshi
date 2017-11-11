@@ -5,10 +5,10 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -162,7 +162,7 @@ Usage:
     php oil [r|refine] <taskname>
 
 Description:
-    Tasks are classes that can be run through the the command line or set up as a cron job.
+    Tasks are classes that can be run through the command line or set up as a cron job.
 
 Available tasks:
 $output_available_tasks

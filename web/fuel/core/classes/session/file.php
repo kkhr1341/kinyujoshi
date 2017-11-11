@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -40,8 +40,7 @@ class Session_File extends \Session_Driver
 	/**
 	 * create a new session
 	 *
-	 * @access	public
-	 * @return	Fuel\Core\Session_File
+	 * @return	\Session_File
 	 */
 	public function create()
 	{
@@ -61,9 +60,8 @@ class Session_File extends \Session_Driver
 	/**
 	 * read the session
 	 *
-	 * @access	public
 	 * @param	boolean, set to true if we want to force a new session to be created
-	 * @return	Fuel\Core\Session_Driver
+	 * @return	\Session_Driver
 	 */
 	public function read($force = false)
 	{
@@ -148,8 +146,7 @@ class Session_File extends \Session_Driver
 	/**
 	 * write the session
 	 *
-	 * @access	public
-	 * @return	Fuel\Core\Session_File
+	 * @return	\Session_File
 	 */
 	public function write()
 	{
@@ -193,8 +190,7 @@ class Session_File extends \Session_Driver
 	/**
 	 * destroy the current session
 	 *
-	 * @access	public
-	 * @return	Fuel\Core\Session_File
+	 * @return	\Session_File
 	 */
 	public function destroy()
 	{
@@ -219,7 +215,6 @@ class Session_File extends \Session_Driver
 	/**
 	 * Garbage Collector
 	 *
-	 * @access	public
 	 * @return	bool
 	 */
 	public function gc()
@@ -253,8 +248,10 @@ class Session_File extends \Session_Driver
 	/**
 	 * Writes the session file
 	 *
-	 * @access	private
-	 * @return  boolean, true if it was an existing session, false if not
+	 * @param	$session_id
+	 * @param	$payload
+	 * @return	boolean, true if it was an existing session, false if not
+	 * @throws	\FuelException
 	 */
 	protected function _write_file($session_id, $payload)
 	{
@@ -265,7 +262,7 @@ class Session_File extends \Session_Driver
 		if ($handle)
 		{
 			// wait for a lock
-			while(!flock($handle, LOCK_EX));
+			while( ! flock($handle, LOCK_EX));
 
 			// erase existing contents
 			ftruncate($handle, 0);
@@ -273,7 +270,10 @@ class Session_File extends \Session_Driver
 			// write the session data
 			fwrite($handle, $payload);
 
-			//release the lock
+			// flush any pending output
+			fflush($handle);
+
+			// release the lock
 			flock($handle, LOCK_UN);
 
 			// close the file
@@ -292,27 +292,29 @@ class Session_File extends \Session_Driver
 	/**
 	 * Reads the session file
 	 *
-	 * @access	private
-	 * @return  mixed, the payload if the file exists, or false if not
+	 * @param	$session_id
+	 * @return	mixed, the payload if the file exists, or false if not
 	 */
 	protected function _read_file($session_id)
 	{
 		$payload = false;
 
 		$file = $this->config['path'].$this->config['cookie_name'].'_'.$session_id;
-		if (is_file($file))
+
+		// normalize the file
+		$file = realpath($file);
+
+		// make sure it exists and is in the config path
+		if (is_file($file) and strpos($file, $this->config['path']) === 0)
 		{
 			$handle = fopen($file, 'r');
 			if ($handle)
 			{
 				// wait for a lock
-				while(!flock($handle, LOCK_SH));
+				while( ! flock($handle, LOCK_SH));
 
 				// read the session data
-				if ($size = filesize($file))
-				{
-					$payload = fread($handle, $size);
-				}
+				$payload = file_get_contents($file);
 
 				//release the lock
 				flock($handle, LOCK_UN);
@@ -322,7 +324,9 @@ class Session_File extends \Session_Driver
 
 			}
 		}
-		return $payload;
+
+		// only return the payload if it looks like a serialized array
+		return strpos($payload, 'a:') === 0 ? $payload : false;
 	}
 
 	// --------------------------------------------------------------------
@@ -330,9 +334,9 @@ class Session_File extends \Session_Driver
 	/**
 	 * validate a driver config value
 	 *
-	 * @param	array	array with configuration values
-	 * @access	public
-	 * @return  array	validated and consolidated config
+	 * @param	array	$config		array with configuration values
+	 * @return	array	validated and consolidated config
+	 * @throws	\FuelException
 	 */
 	public function _validate_config($config)
 	{
@@ -346,7 +350,7 @@ class Session_File extends \Session_Driver
 				switch ($name)
 				{
 					case 'cookie_name':
-						if ( empty($item) OR ! is_string($item))
+						if ( empty($item) or ! is_string($item))
 						{
 							$item = 'fuelfid';
 						}
@@ -354,7 +358,7 @@ class Session_File extends \Session_Driver
 
 					case 'path':
 						// do we have a path?
-						if ( empty($item) OR ! is_dir($item))
+						if ( empty($item) or ! is_dir($item))
 						{
 							throw new \FuelException('You have specify a valid path to store the session data files.');
 						}
@@ -363,13 +367,13 @@ class Session_File extends \Session_Driver
 						{
 							throw new \FuelException('The webserver doesn\'t have write access to the path to store the session data files.');
 						}
-						// update the path, and add the trailing slash
-						$item = realpath($item).'/';
+						// update the path, unify the slashes, and add the trailing slash
+						$item = realpath(str_replace(array('/', '\\'), DS, $item)).DS;
 					break;
 
 					case 'gc_probability':
 						// do we have a path?
-						if ( ! is_numeric($item) OR $item < 0 OR $item > 100)
+						if ( ! is_numeric($item) or $item < 0 or $item > 100)
 						{
 							// default value: 5%
 							$item = 5;

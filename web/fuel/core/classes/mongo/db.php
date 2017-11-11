@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -99,11 +99,12 @@ class Mongo_Db
 	protected static $instances = array();
 
 	/**
-	 * Acts as a Multiton.  Will return the requested instance, or will create
-	 * a new one if it does not exist.
+	 *	Acts as a Multiton.  Will return the requested instance, or will create
+	 *	a new one if it does not exist.
 	 *
-	 * @param   string    $name  The instance name
-	 * @return  Mongo_Db
+	 *	@param	string	$name	The instance name
+	 *	@return	Mongo_Db
+	 *	@throws	\Mongo_DbException
 	 */
 	public static function instance($name = 'default')
 	{
@@ -133,6 +134,7 @@ class Mongo_Db
 	 *	Generate the connection string and establish a connection to the MongoDB.
 	 *
 	 *	@param	array	$config		an array of config values
+	 *	@throws	\Mongo_DbException
 	 */
 	public function __construct(array $config = array())
 	{
@@ -152,6 +154,11 @@ class Mongo_Db
 		if ( ! empty($config['replicaset']))
 		{
 			$options['replicaSet'] = $config['replicaset'];
+		}
+		
+		if ( ! empty($config['readPreference']))
+		{
+			$options['readPreference'] = $config['readPreference'];
 		}
 
 		$connection_string = "mongodb://";
@@ -204,6 +211,8 @@ class Mongo_Db
 	 *	Drop a Mongo database
 	 *
 	 *	@param	string	$database		the database name
+	 *	@return	bool
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->drop_db("foobar");
 	 */
 	public static function drop_db($database = null)
@@ -233,6 +242,8 @@ class Mongo_Db
 	 *
 	 *	@param	string	$db		the database name
 	 *	@param	string	$col		the collection name
+	 *	@return	bool
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->drop_collection('foo', 'bar');
 	 */
 	public static function drop_collection($db = '', $col = '')
@@ -269,6 +280,7 @@ class Mongo_Db
 	 *
 	 *	@param	array	$includes	which fields to include
 	 *	@param	array	$excludes	which fields to exclude
+	 *	@return	$this
 	 *	@usage	$mongodb->select(array('foo', 'bar'))->get('foobar');
 	 */
 	public function select($includes = array(), $excludes = array())
@@ -306,6 +318,7 @@ class Mongo_Db
 	 *	criteria.
 	 *
 	 *	@param	array	$wheres		an associative array with conditions, array(field => value)
+	 *	@return	$this
 	 *	@usage	$mongodb->where(array('foo' => 'bar'))->get('foobar');
 	 */
 	public function where($wheres = array())
@@ -321,6 +334,7 @@ class Mongo_Db
 	 *	Get the documents where the value of a $field may be something else
 	 *
 	 *	@param	array	$wheres		an associative array with conditions, array(field => value)
+	 *	@return	$this
 	 *	@usage	$mongodb->or_where(array( array('foo'=>'bar', 'bar'=>'foo' ))->get('foobar');
 	 */
 	public function or_where($wheres = array())
@@ -345,6 +359,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	array	$in			an array of values to compare to
+	 *	@return	$this
 	 *	@usage	$mongodb->where_in('foo', array('bar', 'zoo', 'blah'))->get('foobar');
 	 */
 	public function where_in($field = '', $in = array())
@@ -359,6 +374,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	array	$in			an array of values to compare to
+	 *	@return	$this
 	 *	@usage	$mongodb->where_in('foo', array('bar', 'zoo', 'blah'))->get('foobar');
 	 */
 	public function where_in_all($field = '', $in = array())
@@ -373,6 +389,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	array	$in			an array of values to compare to
+	 *	@return	$this
 	 *	@usage	$mongodb->where_not_in('foo', array('bar', 'zoo', 'blah'))->get('foobar');
 	 */
 	public function where_not_in($field = '', $in = array())
@@ -387,6 +404,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	mixed	$x			the value to compare to
+	 *	@return	$this
 	 *	@usage	$mongodb->where_gt('foo', 20);
 	 */
 	public function where_gt($field = '', $x)
@@ -401,6 +419,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	mixed	$x			the value to compare to
+	 *	@return	Mongo_Db
 	 *	@usage	$mongodb->where_gte('foo', 20);
 	 */
 	public function where_gte($field = '', $x)
@@ -415,6 +434,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	mixed	$x			the value to compare to
+	 *	@return	Mongo_Db
 	 *	@usage	$mongodb->where_lt('foo', 20);
 	 */
 	public function where_lt($field = '', $x)
@@ -429,6 +449,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	mixed	$x			the value to compare to
+	 *	@return	$this
 	 *	@usage	$mongodb->where_lte('foo', 20);
 	 */
 	public function where_lte($field = '', $x)
@@ -444,6 +465,7 @@ class Mongo_Db
 	 *	@param	string	$field		the field name
 	 *	@param	mixed	$x			the value to compare to
 	 *	@param	mixed	$y			the high value to compare to
+	 *	@return	$this
 	 *	@usage	$mongodb->where_between('foo', 20, 30);
 	 */
 	public function where_between($field = '', $x, $y)
@@ -460,6 +482,7 @@ class Mongo_Db
 	 *	@param	string	$field		the field name
 	 *	@param	mixed	$x			the low value to compare to
 	 *	@param	mixed	$y			the high value to compare to
+	 *	@return	$this
 	 *	@usage	$mongodb->where_between_ne('foo', 20, 30);
 	 */
 	public function where_between_ne($field = '', $x, $y)
@@ -475,6 +498,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	mixed	$x			the value to compare to
+	 *	@return	$this
 	 *	@usage	$mongodb->where_not_equal('foo', 1)->get('foobar');
 	 */
 	public function where_ne($field = '', $x)
@@ -489,6 +513,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$field		the field name
 	 *	@param	array	$co			array of 2 coordinates
+	 *	@return	$this
 	 *	@usage	$mongodb->where_near('foo', array('50','50'))->get('foobar');
 	 */
 	public function where_near($field = '', $co = array())
@@ -506,7 +531,9 @@ class Mongo_Db
 	 *	Get the documents where the (string) value of a $field is like a value. The defaults
 	 *	allow for a case-insensitive search.
 	 *
-	 *	@param $flags
+	 *	@param	string	$field
+	 *	@param	string	$value
+	 *	@param	string	$flags
 	 *	Allows for the typical regular expression flags:
 	 *		i = case insensitive
 	 *		m = multiline
@@ -515,16 +542,17 @@ class Mongo_Db
 	 *		s = dotall, "." matches everything, including newlines
 	 *		u = match unicode
 	 *
-	 *	@param $disable_start_wildcard
+	 *	@param	bool	$disable_start_wildcard
 	 *	If this value evaluates to false, no starting line character "^" will be prepended
 	 *	to the search value, representing only searching for a value at the start of
 	 *	a new line.
 	 *
-	 *	@param $disable_end_wildcard
+	 *	@param	bool	$disable_end_wildcard
 	 *	If this value evaluates to false, no ending line character "$" will be appended
 	 *	to the search value, representing only searching for a value at the end of
 	 *	a line.
 	 *
+	 *	@return	$this
 	 *	@usage	$mongodb->like('foo', 'bar', 'im', false, true);
 	 */
 	public function like($field = '', $value = '', $flags = 'i', $disable_start_wildcard = false, $disable_end_wildcard = false)
@@ -550,6 +578,7 @@ class Mongo_Db
 	 *	set to 1 (ASC).
 	 *
 	 *	@param	array	$fields		an associative array, array(field => direction)
+	 *	@return	$this
 	 *	@usage	$mongodb->where_between('foo', 20, 30);
 	 */
 	public function order_by($fields = array())
@@ -571,7 +600,8 @@ class Mongo_Db
 	/**
 	 *	Limit the result set to $x number of documents
 	 *
-	 *	@param	number	$x			the max amount of documents to fetch
+	 *	@param	integer	$x			the max amount of documents to fetch
+	 *	@return	$this
 	 *	@usage	$mongodb->limit($x);
 	 */
 	public function limit($x = 99999)
@@ -590,7 +620,8 @@ class Mongo_Db
 	 *
 	 *	Offset the result set to skip $x number of documents
 	 *
-	 *	@param	number	$x			the number of documents to skip
+	 *	@param	integer	$x			the number of documents to skip
+	 *	@return	$this
 	 *	@usage	$mongodb->offset($x);
 	 */
 	public function offset($x = 0)
@@ -607,7 +638,8 @@ class Mongo_Db
 	 *
 	 *	@param	string	$collection		the collection name
 	 *	@param	array	$where			an array of conditions, array(field => value)
-	 *	@param	number	$limit			the max amount of documents to fetch
+	 *	@param	integer	$limit			the max amount of documents to fetch
+	 *	@return	array
 	 *	@usage	$mongodb->get_where('foo', array('bar' => 'something'));
 	 */
 	public function get_where($collection = '', $where = array(), $limit = 99999)
@@ -620,6 +652,7 @@ class Mongo_Db
 	 *
 	 *	@param	string	$collection		the collection name
 	 *	@usage	$mongodb->get_cursor('foo', array('bar' => 'something'));
+	 *	@throws	\Mongo_DbException
 	 */
 	public function get_cursor($collection = "")
 	{
@@ -640,6 +673,8 @@ class Mongo_Db
 	 *
 	 *	@param	string	$collection		the collection name
 	 *	@usage	$mongodb->get('foo', array('bar' => 'something'));
+	 *	@return	array
+	 *	@throws	\Mongo_DbException
 	 */
 	public function get($collection = "")
 	{
@@ -682,6 +717,8 @@ class Mongo_Db
 	 * Get one document based upon the passed parameters
 	 *
 	 *	@param	string	$collection		the collection name
+	 *	@return	mixed
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->get_one('foo');
 	 */
 	public function get_one($collection = "")
@@ -720,9 +757,10 @@ class Mongo_Db
 	 *
 	 *	@param	string	$collection		the collection name
 	 *	@param	boolean	$foundonly		send cursor limit and skip information to the count function, if applicable.
+	 *	@return	mixed
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->count('foo');
 	 */
-
 	public function count($collection = '', $foundonly = false)
 	{
 		if (empty($collection))
@@ -763,6 +801,8 @@ class Mongo_Db
 	 *
 	 *	@param	string	$collection		the collection name
 	 *	@param	array	$insert			an array of values to insert, array(field => value)
+	 *	@return	bool
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->insert('foo', $data = array());
 	 */
 	public function insert($collection = '', $insert = array())
@@ -818,6 +858,9 @@ class Mongo_Db
 	 *	@param	string	$collection		the collection name
 	 *	@param	array	$data			an associative array of values, array(field => value)
 	 *	@param	array	$options		an associative array of options
+	 *	@param	bool	$literal
+	 *	@return	bool
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->update('foo', $data = array());
 	 */
 	public function update($collection = '', $data = array(), $options = array(), $literal = false)
@@ -870,6 +913,9 @@ class Mongo_Db
 	 *
 	 *	@param	string	$collection		the collection name
 	 *	@param	array	$data			an associative array of values, array(field => value)
+	 *	@param	bool	$literal
+	 *	@return	bool
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->update_all('foo', $data = array());
 	 */
 	public function update_all($collection = "", $data = array(), $literal = false)
@@ -919,6 +965,8 @@ class Mongo_Db
 	 *	Delete a document from the passed collection based upon certain criteria
 	 *
 	 *	@param	string	$collection		the collection name
+	 *	@return	bool
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->delete('foo');
 	 */
 	public function delete($collection = '')
@@ -961,6 +1009,8 @@ class Mongo_Db
 	 *	Delete all documents from the passed collection based upon certain criteria.
 	 *
 	 *	@param	string	$collection		the collection name
+	 *	@return	bool
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->delete_all('foo');
 	 */
 	public function delete_all($collection = '')
@@ -1004,6 +1054,8 @@ class Mongo_Db
 	 *	http://dochub.mongodb.org/core/commands
 	 *
 	 *	@param	array	$query	a query array
+	 *	@return	mixed
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->command(array('geoNear'=>'buildings', 'near'=>array(53.228482, -0.547847), 'num' => 10, 'nearSphere'=>TRUE));
 	 */
 	public function command($query = array())
@@ -1028,6 +1080,8 @@ class Mongo_Db
 	 *	@param	string	$collection		the collection name
 	 *	@param	array	$keys			an associative array of keys, array(field => direction)
 	 *	@param	array	$options		an associative array of options
+	 *	@return	$this
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->add_index($collection, array('first_name' => 'ASC', 'last_name' => -1), array('unique' => TRUE));
 	 */
 	public function add_index($collection = '', $keys = array(), $options = array())
@@ -1061,7 +1115,7 @@ class Mongo_Db
 		}
 		else
 		{
-			throw new \Mongo_DbException("An error occured when trying to add an index to MongoDB Collection");
+			throw new \Mongo_DbException("An error occurred when trying to add an index to MongoDB Collection");
 		}
 	}
 
@@ -1072,6 +1126,8 @@ class Mongo_Db
 	 *
 	 *	@param	string	$collection		the collection name
 	 *	@param	array	$keys			an associative array of keys, array(field => direction)
+	 *	@return	$this
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->remove_index($collection, array('first_name' => 'ASC', 'last_name' => -1));
 	 */
 	public function remove_index($collection = '', $keys = array())
@@ -1093,7 +1149,7 @@ class Mongo_Db
 		}
 		else
 		{
-			throw new \Mongo_DbException("An error occured when trying to remove an index from MongoDB Collection");
+			throw new \Mongo_DbException("An error occurred when trying to remove an index from MongoDB Collection");
 		}
 	}
 
@@ -1101,6 +1157,8 @@ class Mongo_Db
 	 *	Remove all indexes from a collection.
 	 *
 	 *	@param	string	$collection		the collection name
+	 *	@return	$this
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->remove_all_index($collection);
 	 */
 	public function remove_all_indexes($collection = '')
@@ -1118,6 +1176,8 @@ class Mongo_Db
 	 *	Lists all indexes in a collection.
 	 *
 	 *	@param	string	$collection		the collection name
+	 *	@return	mixed
+	 *	@throws	\Mongo_DbException
 	 *	@usage	$mongodb->list_indexes($collection);
 	 */
 	public function list_indexes($collection = '')
@@ -1150,6 +1210,76 @@ class Mongo_Db
 	public function list_collections($system_collections = false)
 	{
 		return ($this->db->listCollections($system_collections));
+	}
+
+	/**
+	 * Dump database or collection
+	 *
+	 * @param mixed  $collection_name  The collection name
+	 * @param string $path             Path to write the dump do
+	 *
+	 * @usage $mongodb->dump();
+	 * @usage $mongodb->dump(test, APPPATH . "tmp");
+	 * @usage $mongodb->dump(["test", "test2"], APPPATH . "tmp");
+	 *
+	 * @return bool
+	 */
+	public function dump($collection_name = null, $path = null)
+	{
+		// set the default dump path if none given
+		if (empty($path))
+		{
+			$path = APPPATH.'tmp'.DS.'mongo-'.date("/Y/m/d");
+		}
+
+		// backup full database
+		if ($collection_name == null)
+		{
+			//get all collection in current database
+			$mongo_collections = $this->list_collections();
+			foreach ($mongo_collections as $mongo_collection)
+			{
+				$this->_write_dump($path, $mongo_collection);
+			}
+		}
+		// Backup given collection`s
+		else
+		{
+			$collection_name = (array) $collection_name;
+			foreach ($collection_name as $name)
+			{
+				$mongo_collection = $this->get_collection($name);
+				$this->_write_dump($path, $mongo_collection);
+			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Collect and write dump
+	 *
+	 * @param  string          $path
+	 * @param  MongoCollection $mongo_collection
+	 */
+	protected function _write_dump($path, $mongo_collection)
+	{
+		if ( ! is_dir($path))
+		{
+			\Config::load('file', true);
+			mkdir($path, \Config::get('file.chmod.folders', 0777), true);
+		}
+
+		$collection_name = $mongo_collection->getName();
+
+		// get all documents in current collection
+		$documents = $mongo_collection->find();
+
+		// collect data
+		$array_data = iterator_to_array($documents);
+		$json_data = \Format::forge($array_data)->to_json();
+
+		return \File::update($path, $collection_name, $json_data);
 	}
 
 	/**

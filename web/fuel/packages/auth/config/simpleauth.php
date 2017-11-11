@@ -5,10 +5,10 @@
  * Fuel is a fast, lightweight, community driven PHP5 framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -39,10 +39,11 @@ return array(
 	'table_name' => 'users',
 
 	/**
-	 * Choose which columns are selected, must include: username, password, email, last_login,
+	 * Array, choose which columns from the users table are selected.
+	 *  must include: username, password, email, last_login,
 	 * login_hash, group & profile_fields
 	 */
-	'table_columns' => array('*'),
+	'table_columns' => null,
 
 	/**
 	 * This will allow you to use the group & acl driver for non-logged in users

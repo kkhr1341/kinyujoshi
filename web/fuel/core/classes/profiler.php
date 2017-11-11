@@ -5,9 +5,6 @@ namespace Fuel\Core;
 import('phpquickprofiler/console', 'vendor');
 import('phpquickprofiler/phpquickprofiler', 'vendor');
 
-use \Console;
-use \PhpQuickProfiler;
-
 class Profiler
 {
 	protected static $profiler = null;
@@ -16,7 +13,7 @@ class Profiler
 
 	public static function init()
 	{
-		if ( ! \Fuel::$is_cli and ! \Input::is_ajax() and ! static::$profiler)
+		if ( ! static::$profiler)
 		{
 			static::$profiler = new \PhpQuickProfiler(FUEL_START_TIME);
 			static::$profiler->queries = array();
@@ -28,22 +25,22 @@ class Profiler
 
 	public static function mark($label)
 	{
-		static::$profiler and Console::logSpeed($label);
+		static::$profiler and \Console::logSpeed($label);
 	}
 
 	public static function mark_memory($var = false, $name = 'PHP')
 	{
-		static::$profiler and Console::logMemory($var, $name);
+		static::$profiler and \Console::logMemory($var, $name);
 	}
 
 	public static function console($text)
 	{
-		static::$profiler and Console::log($text);
+		static::$profiler and \Console::log($text);
 	}
 
-	public static function output()
+	public static function output($return = false)
 	{
-		return static::$profiler ? static::$profiler->display(static::$profiler) : '';
+		return static::$profiler ? static::$profiler->display(static::$profiler, $return) : '';
 	}
 
 	public static function start($dbname, $sql, $stacktrace = array())

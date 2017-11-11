@@ -3,10 +3,10 @@
  * Part of the Fuel framework.
  *
  * @package    Fuel
- * @version    1.7
+ * @version    1.8
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2015 Fuel Development Team
+ * @copyright  2010 - 2016 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -35,10 +35,10 @@ class Module
 	 * Loads the given module.  If a path is not given, then 'module_paths' is used.
 	 * It also accepts an array of modules as the first parameter.
 	 *
-	 * @param   string|array  $package  The module name or array of modules.
-	 * @param   string|null   $path     The path to the module
-	 * @return  bool  True on success
-	 * @throws  ModuleNotFoundException
+	 * @param   string|array  $module  The module name or array of modules.
+	 * @param   string|null   $path    The path to the module
+	 * @return  bool  True on success, False on fail or already loaded.
+	 * @throws  \ModuleNotFoundException
 	 */
 	public static function load($module, $path = null)
 	{
@@ -59,7 +59,7 @@ class Module
 
 		if (static::loaded($module))
 		{
-			return;
+			return false;
 		}
 
 		// if no path is given, try to locate the module
