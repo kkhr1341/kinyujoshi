@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   db:
     build: ./mysql
@@ -9,14 +9,20 @@ services:
       MYSQL_ROOT_PASSWORD: pass
   #  volumes:
   #    - db:/var/lib/mysql
-  php:
+  web:
     build: ./php
     ports:
       - '80:80'
     volumes:
       - ./web:/var/www/html
-      - ./config/apache2/sites-available:/etc/apache2/sites-available      
+      - ./config/apache2/sites-available:/etc/apache2/sites-available
     depends_on:
       - db
+  composer:
+      image: composer/composer:php5
+      volumes:
+        - ./web:/app
+        - ./php/php.ini:/usr/local/etc/php/php.ini
+      working_dir: /app
 # volumes:
 #   db:
