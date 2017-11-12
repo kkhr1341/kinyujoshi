@@ -3,7 +3,7 @@
   <nav>
     <ul class="kinyu-header-nav">
       <li><a href="/about">きんゆう女子。って？</a></li>
-      <li><a href="/edit_joshikai">女子会に参加</a></li>
+      <li><a href="/event">女子会に参加</a></li>
       <li class="active"><a href="/report">レポートを見る</a></li>
       <li><a href="/news">ニュース</a></li>
       <li><a href="/myway">「わたし」を知る。</a></li>

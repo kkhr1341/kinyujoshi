@@ -12,15 +12,9 @@ return array(
 
 	//現在改修中！ --------->
 	
-	//◆女子会部分
-	'edit_joshikai'   => 'kinyu/event/edit_index',
-	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
-
 	//◆メンバー登録部分
 	'login_regist'   => 'login/regist',
 	'regist_email'   => 'login/regist_email',
-
-
 
 	//改修中！ここまで --------->
 
@@ -70,7 +64,8 @@ return array(
 	//'welcome/event'   => 'kinyu/event/welcome',
 
 	//イベント関連
-	'event'   => 'kinyu/event/choice',
+	'event'   => 'kinyu/event/index',
+	'event/(:any)'   => 'kinyu/event/detail/$1',
 	'event_main'   => 'kinyu/event/index',
 	'event_special'   => 'kinyu/event/special',
 
