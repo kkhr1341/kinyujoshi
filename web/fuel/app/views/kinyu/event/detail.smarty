@@ -69,7 +69,8 @@ var $resArray02 = $resArray[1];
             </li>
             <li>
               <p class="info-title">お申し込み</p>
-              <p class="info-detail">テキストテキストテキストテキストテキスト</p>
+              <a href="" class="info-link">クレジットカードでお支払い</a>
+              <a href="" class="info-link">当日現金でお払い</a>
             </li>
           </ul>
         </div>

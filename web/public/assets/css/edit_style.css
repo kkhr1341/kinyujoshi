@@ -1628,7 +1628,7 @@
 }
 .kinyu-joshikai-detail-header {
   padding: 36px 4px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #e3e3e3;
   box-sizing: border-box;
 }
 .kinyu-joshikai-detail-header-inner {
@@ -1665,6 +1665,7 @@
   padding-left: 32px;
   display: table-cell;
   vertical-align: middle;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 .kinyu-joshikai-detail-title p {
   font-size: 22px;
@@ -1678,7 +1679,7 @@
   float: left;
   padding-right: 36px;
   box-sizing: content-box;
-  border-right: 1px solid;
+  border-right: 1px solid #e3e3e3;
 }
 .kinyu-joshikai-detail-el .info-title {
   margin-bottom: 12px;
@@ -1704,6 +1705,14 @@
 .joshikai-detail-el-info li .info-detail {
   font-size: 14px;
   padding-top: 8px;
+}
+.joshikai-detail-el-info li .info-link {
+  display: block;
+  width: 100%;
+  background: gray;
+  margin-top: 12px;
+  text-align: center;
+  padding: 10px 0px;
 }
 .joshikai-sidebar {
   width: 314px;
