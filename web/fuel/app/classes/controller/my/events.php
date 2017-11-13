@@ -51,4 +51,37 @@ class Controller_My_Events extends Controller_Mybase
 		$this->template->description = 'マイページ・イベント';
 		$this->template->contents = View::forge('my/events/edit.smarty', $this->data);
 	}
+
+	public function action_joshikailist() {
+	
+		if (!Auth::has_access('events.admin')) {
+			\Auth::logout();
+			Response::redirect('/');
+			exit();
+		}
+	
+		$this->data['sections'] = Sections::lists();
+		$this->data['all_events'] = Events::lists02();
+		$this->data['closed_events'] = Events::lists(0);
+		$this->data['open_events'] = Events::lists(1);
+		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+		$this->template->description = '女子会リスト';
+		$this->template->contents = View::forge('my/events/joshikailist.smarty', $this->data);
+	}
+
+	public function action_joshikaidetail($code) {
+	
+		if (!Auth::has_access('events.admin')) {
+			\Auth::logout();
+			Response::redirect('/');
+			exit();
+		}
+	
+		$this->data['events'] = Events::getByCode('events', $code);
+		$this->data['sections'] = Sections::lists();
+		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+		$this->template->description = '女子会リスト';
+		$this->template->contents = View::forge('my/events/joshikaidetail.smarty', $this->data);
+	}
+
 }

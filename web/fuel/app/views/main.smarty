@@ -37,7 +37,7 @@
 
   	<div class="kinyu-container">
       <!-- ナビゲーション -->
-      {$navigation}  
+      {*{$navigation}*}
   		<div class="kinyu-main">
         <div class="sp">{$sp_header}</div>
         {$contents}
@@ -175,6 +175,8 @@
         }
       }
     </style>
+
+    {$sp_footer}
 
   	<!-- 解析コード -->
   	{literal}

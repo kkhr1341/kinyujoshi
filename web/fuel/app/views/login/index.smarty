@@ -1,78 +1,58 @@
-<div class="login-block">
+<header class="kinyu-header">
+  <h1 class="main-logo"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/edit_joshikai">女子会に参加</a></li>
+      <li><a href="/report">レポートを見る</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- video ブロック -->
-  <div class="login-block-video">
-    <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_518111.m4v" poster="" autoplay loop muted></video>
-    <div class="video-filter"></div>
-  </div>
-  <div class="inner center">
-    <div class="text-area">
-      <h2 class="login-title">きんゆう女子。にログイン</h2>
-      <div class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></div>
-      {*<div class="fb-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></div>*}
+<div class="kinyu-single-block">
+
+  <div class="kinyu-main-single-block">
+    <div class="login-contents-block">
+
+      <div class="login-contents-intro">
+        <h2 class="login-contents-title"><span>きんゆう女子。にログインする</span></h2>
+        <p><span style="color: red;">＊</span>ログイン機能ができる前にメンバー登録をいただいている方はこちら</p>
+      </div>
+
+      <div class="login-contents-block-inner clear">
+
+        <div class="login-contents-sidearea">
+          <ul>
+            <li><a href="/login_regist">新規メンバー登録</a></li>
+            <li><a class="active" href="/login">マイページにログイン</a></li>
+            <li><a href="">パスワード再発行</a></li>
+          </ul>
+        </div>
+
+        <div class="login-contents-mainarea">
+          <div class="login-contents-form-area">
+            <form class="email-form">
+              <label>メールアドレスでログイン</label>
+              <input type="text" placeholder="メールアドレスを入力してください" value="">
+              <input type="text" placeholder="パスワードを入力してください" value="">
+              <button class="login-btn" type="button" id="login">ログイン</button>
+              <p>パスワードをお忘れの方はこちら</p>
+            </form>
+            <div class="login-btn-list">
+              <label>ソーシャルアカウントでログイン</label>
+              <ul>
+                <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></li>
+                <li class="google-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
     </div>
+
   </div>
 </div>
-
-
-
-<style>
-.login-block-video {
-  height: 100vh;
-}
-.login-block-video video {
-  position: absolute;
-  right:0;
-  bottom:0;
-  min-width:100%;
-  min-height:100%;
-  width:auto;
-  height:auto;
-  z-index: 1000;
-}
-/*.video-filter {
-  position: absolute;
-  top: 0;
-  height: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.5);
-  z-index: 1001;
-}*/
-.login-block .inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 400px;
-  margin-top: -200px;
-  margin-left: -250px;
-  border:1px solid rgba(255,255,255,.9);
-  z-index: 1002;
-  display: table;
-  background: rgba(255,255,255,.1);
-}
-.login-block .inner .text-area {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-.login-block .inner .login-title {
-  font-size: 25px;
-  color: #fff;
-}
-.login-block .inner .fb-login-bg {
-  display: inline-block;
-  color: gray;
-  background: rgba(255,255,255,.8);
-  width: 240px;
-  font-size: 18px;
-  padding: 8px 0px;
-  margin-top: 24px;
-}
-.login-block .inner .fb-login-bg a {
-  display: block;
-}
-</style>
-
-
