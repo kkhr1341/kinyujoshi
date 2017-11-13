@@ -60,7 +60,6 @@
   width: 100%;
   margin-right: 0px;
   opacity: 1;
-  background: #fff;
   transition-duration: 800ms;
   -moz-transition-duration: 800ms;
   -webkit-transition-duration: 800ms;
@@ -92,7 +91,7 @@
   border-bottom: 1px solid #7CDCCE;
   letter-spacing: -4em;
   padding: 24px 20px;
-  background: #f9f9f9;
+  background: none;
 }
 .kinyu-top-maincontent li {
   width: 100%;
@@ -581,6 +580,7 @@
   padding-top: 24px;
   width: 88%;
   margin: 0 auto;
+  background: #fff;
 }
 .fixed {
   position: fixed;
@@ -1383,31 +1383,11 @@ footer .navi-link-top {
   display: block;
   list-style: none;
   float: left;
-  width: 32%;
   height: 100px;
-  margin-right: 2%;
-  margin-bottom: 2%;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
   transition: .5s;
-}
-.insta-block-inner li:nth-child(3n) {
-  margin-right: 0%;
-  margin-bottom: 2%;
-}
-.insta-block-inner li:nth-child(4n) {
-  margin-right: 2%;
-  margin-bottom: 2%;
-}
-.insta-block-inner li:nth-last-child(-n + 5) {
-  margin-bottom: 2%;
-}
-.insta-block-inner li:nth-last-child(-n + 2) {
-  margin-bottom: 0%;
-}
-.insta-block-inner li:nth-child(9n) {
-  display: block;
 }
 .insta-link {
   line-height: 11px;
