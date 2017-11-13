@@ -21,6 +21,7 @@ services:
   composer:
       image: composer/composer:php5
       volumes:
+        - ~/.composer/auth.json:/root/composer/auth.json
         - ./web:/app
         - ./php/php.ini:/usr/local/etc/php/php.ini
       working_dir: /app
