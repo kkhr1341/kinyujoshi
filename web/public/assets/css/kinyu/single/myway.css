@@ -681,7 +681,7 @@
 .myway-report-content .inner {
   width: 88%;
   margin: 0 auto;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #e3e3e3;
   padding: 36px 0px;
 }
 .myway-report-content .myway-report-detail {
@@ -691,7 +691,7 @@
   padding-top: 0px;
   border-right: none;
   padding-bottom: 36px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #e3e3e3;
 }
 .myway-report-content .myway-content-after {
   width: 100%;
@@ -701,7 +701,7 @@
 }
 .myway-report-content .report-list-banner-top {
   width: 88%;
-  margin-top: 50px;
+  margin-top: 32px;
 }
 .myway-report-content .report-detail-share-right {
   background: #fff;

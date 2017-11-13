@@ -289,6 +289,10 @@
   color: #fff;
   font-weight: bold;
 }
+.celebration1206-to-link-sub {
+  font-size: 12px;
+  margin-top: 4px;
+}
 .event-caution {
   margin-bottom: 12px;
 }
@@ -395,6 +399,7 @@
   padding: 6px 0px;
   color: #fff;
   font-weight: bold;
+  transition: .8s;
 }
 .access-area-block .map-block {
   width: 50%;
@@ -459,6 +464,11 @@
   padding: 10px 0px;
   font-weight: normal;
   font-size: 13px;
+  transition: .8s;
+}
+.celebration1206-to-link-sub {
+  font-size: 11px;
+  margin-top: 4px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
