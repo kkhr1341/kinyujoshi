@@ -1,12 +1,22 @@
-{$pc_side}
-<div class="kinyu-top-list-block">
+<header class="kinyu-header">
+  <h1 class="main-logo"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/event">女子会に参加</a></li>
+      <li class="active"><a href="/report">レポートを見る</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="kinyu-list-block">
   <div class="inner">
-    <div class="pc category-menu">
-      <a href="/"><img class="pc-kinyu-logo" src="/images/kinyu-logo01.png"></a>
-    </div>
     <div class="kinyu-top-list kinyu-report-list">
-      <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h2>
-      <h2 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-report-sp.png" alt="レポート一覧"></h2>
+      <!-- <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h2>
+      <h2 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-report-sp.png" alt="レポート一覧"></h2> -->
       <ul class="clear">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
@@ -50,37 +60,13 @@
     </div>
 
 
-    <footer class="pc">
-      <div class="footer-logo">
-        <a href="/"><img src="/images/kinyu-logo01.png"></a>
-      </div>
-      <div class="footer-menu">
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/company">運営会社</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/privacy">プライバシーポリシー</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/legal">特定商取引法に基づく表記</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/service">会員規約</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/contact">お問い合わせ</a>
-        </div>
-      </div>
-      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc.</p>
-    </footer>
-
-
     <script>
       $(function() {
 
         var hh = $(".kinyu-top-list li").innerWidth();
         var mm = $(".kinyu-top-list").innerWidth();
         var ss = $(".kinyu-top-introlist li").innerWidth();
+        var ggg = $(".kinyu-top-list-block").innerWidth();
 
         $(window).load(function(){
           var ww = $(".category-menu ul").height();
@@ -93,6 +79,7 @@
         //$('.kinyu-top-list li').height(hh);
         $('.category-menu').width(mm);
         $('.kinyu-top-introlist li').height(ss);
+        $('.kinyu-header-top').width(ggg);
       });
     </script>
 

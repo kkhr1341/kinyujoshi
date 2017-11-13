@@ -23,10 +23,10 @@
       
       <div class="about-kinyu-container-left">
         <ul>
-          <li class="active"><a href="/about">きんゆう女子。について</a></li>
+          <li><a href="/about">きんゆう女子。について</a></li>
           <li><a href="/about_contents">できること</a></li>
           <li><a href="/about_story">生まれたストーリー</a></li>
-          <li><a href="/about_policy">運営ポリシー</a></li>
+          <li class="active"><a href="/about_policy">運営ポリシー</a></li>
           <li><a href="/about_design">デザインについて</a></li>
           <li><a href="/about_hensyubu">きんゆう女子。編集部</a></li>
         </ul>
@@ -36,7 +36,7 @@
 
         <div class="about-kinyu-bgarea" style="background:url(/images/og-top.png) top center / cover no-repeat;"></div>
         <div class="about-kinyu-details-area">
-          <h2>きんゆう女子。について</h2>
+          <h2>運営ポリシー</h2>
 
           <div class="about-kinyu-description">
 

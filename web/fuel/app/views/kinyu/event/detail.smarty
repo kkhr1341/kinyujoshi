@@ -7,169 +7,76 @@ var $resArray02 = $resArray[1];
 </script>
 
 
-<!---===== 記事コンテンツ・イントロダクション
-==================================================-->
-<div class="sp article-detail-intro">
-  <div class="article-detail-intro-img" style="background: url({$event.main_image}) center center / cover no-repeat;height:200px;"></div>
-  <div class="article-detail-intro-info">
-    <p class="date">
-      {$event.open_date|date_format:"Y.m.d"}
-    </p>
-    <h1 class="title">{$event.title}</h1>
-    <p class="description">
-      ここに説明文
-    </p>
-  </div>
-</div>
+<header class="kinyu-header">
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li class="active"><a href="/event">女子会に参加</a></li>
+      <li><a href="/report">レポートを見る</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
 
-<div class="pc pankuzu-list">
-  <ul>
-    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">きんゆう女子トップ</span></a></li>
-    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/category/{$event.section_code}" itemprop="url">
-      <span itemprop="title">セクション</span></a></li>
-    <li class="pankuzu-blog-title">{$event.title}</a></li>
-  </ul>
-</div>
 
-<div class="pc article-detail-intro">
-  <div class="inner clear">
-    <div class="article-detail-intro-img" style="background: url({$event.main_image}) center center / cover no-repeat;"></div>
-    <div class="article-detail-intro-info">
-      <h1 class="title">{$event.title}</h1>
-      <p class="description">
-        ここに説明文
-      </p>
-      <p class="date">
-        レポート
-      </p>
-    </div>
-  </div>
-</div>
+<div class="kinyu-single-block joshikai-main-block">
+  <div class="kinyu-joshikai-detail-inner">
 
-<div class="article-single-detail-block clear center">
- 
-  <section class="article-single-detail">
-    <div class="content_frame content-block">
-      <div class="content article-content-block">
-        {$event.content|nofilter}
-      </div>  
+    <div style="background: url({$event.main_image}) center center / cover no-repeat;height:300px;position: relative;"><div class="white-bg"></div></div>
 
-      <div class="article-content-block event-kuchikomi-block">
-
-        <div class="event-kuchikomi-area">
-          <p class="kuchikomi-title">口コミをみる。</p>
-
-          <div class="kuchikomi-list">
-          <ul class="clear">
-            {foreach from=$eventkuchikomi key="key" item=blog name=loopname}
-            {if ($smarty.foreach.loopname.index %2 ) == 1 }
-              <!-- 1 -->
-              <li class="clear">
-                <img class="event-kuchikomi-balloon" src="/images/icon/event-kuchikomi-balloon-right.png">
-                <div class="kuchikomi-el-title">
-                  <p>"{$blog.message}"</p>
-                </div>
-                <img class="event-profile-img" src="{$event.profile_image}">
-              </li>
-            {else}
-              <!-- 2 -->
-              <li class="clear">
-                <img class="event-kuchikomi-balloon" src="/images/icon/event-kuchikomi-balloon-left.png">
-                <div class="kuchikomi-el-title">
-                  <p>"{$blog.message}"</p>
-                </div>
-                <img class="event-profile-img" src="{$event.profile_image}">
-              </li>
-            {/if}
-            {foreachelse}
-              <p>口コミがまだありません..(；∀；)</p>
-            {/foreach}
-          </ul>
-          </div>
+    <div class="kinyu-joshikai-detail-header clear">
+      <div class="kinyu-joshikai-detail-header-inner">
+        <div class="date-block">
+          <p class="date-01">{$event.open_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</p>
+          <p class="date-02">{$event.open_date|date_format:"m月"}</p>
+          <p class="date-03">{$event.open_date|date_format:"d"}</p>
         </div>
-
-        <a class="event-kuchikomi-btn event-kuchikomi-open">口コミしてみる。</a>
-
-        <div class="event-kuchikomi-form" style="display:none;">
-          <div class="form-group form-group02">
-            <label id="tsubuyaki_title" name="tsubuyaki_title" value="あなたの夢は？" class="form-title">あなたの夢は？</label>
-            <textarea id="message" name="message" class='form-control' rows="10"></textarea>
-          </div>
-          <div class="form-btn tx-center">
-            <button class="btn btn-primary fw-bold" type="button" id="save_closed">送信する</button>
-          </div>
+        <div class="kinyu-joshikai-detail-title">
+          <p>{$event.title}</p>
         </div>
-      </div>
-
-      <div id="jumboShare" class="sp-share">
-        <!-- <div class="sp jumboShare_share_p">
-          <p>シェアはここ♪</p>
-        </div> -->
-        {$social_share}
       </div>
     </div>
 
-  </section>
 
-  <div class="sp contents_after_area">
-    {$contents_after_area}
-  </div>
-  <!-- サイドバーwidth:300px; -->
-  <div class="pc pc-sidebar">
-    {$contents_after_area}
-  </div>
-</div>
+    <div class="kinyu-joshikai-detail-el-block clear">
 
-<script>
-{literal}
-  $(function(){
-    $(".event-kuchikomi-open").click(function() {
-      $(".event-kuchikomi-form").slideToggle();
-    });
-  });
-  $(function(){
+      <div class="kinyu-joshikai-detail-el">
+        <div class="joshikai-detail-el-content-box">
+          <p class="info-title">女子会詳細</p>
+          <div class="kinyu-joshikai-detail-content">{$event.content|nofilter}</div>
+        </div>
+
+      </div>
     
-    // 口コミの承認
-    $('#save_closed').click(function(){
-      var url = "/api/eventkuchikomi/create";
-      var params = {};
+      <div class="joshikai-sidebar">
+        <div class="joshikai-detail-el-info">
+          <ul>
+            <li>
+              <p class="info-title">日時</p>
+              <p class="info-detail">{$event.open_date|date_format:"Y年m月d日"}（{$event.open_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+              <br>{$event.event_start_datetime}〜{$event.event_end_datetime}</p>
+            </li>
+            <li>
+              <p class="info-title">開催場所</p>
+              <p class="info-detail">{$event.place}</p>
+            </li>
+            <li>
+              <p class="info-title">参加費</p>
+              <p class="info-detail">{$event.fee}</p>
+            </li>
+            <li>
+              <p class="info-title">お申し込み</p>
+              <p class="info-detail">テキストテキストテキストテキストテキスト</p>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-      params.event_code = $resArray02;
-      params.message = $('#message').val();
-      params.status = 0;
-      
-      if (params.message == "") {
-        ts.error("メッセージを入力してください。");
-        return false;
-      }
-      bootbox.confirm("◯◯を投稿しますか？", function(result) {
-        if (result) {
-          ajax.post(url, params, function(data){
-            //location.href = "/request/complete";
+  </div>
 
-            //フォーム内容のリセット
-            document.getElementById("message").value="";
-          });
-        }
-        else {
-          ts.info("キャンセルしました");
-        }
-      });
-    });
-  });
+</div>
 
-  $(function(){
-    $("#jumboShare").jumboShare({
-      url : location.href,
-      title : document.title,
-      position : 'append'
-    });
-  
-    var title_frame_height = $('#title_frame').height();
-    var page_title_height = $('.page_title').height();
-    var padding_top = (title_frame_height / 2) - (page_title_height / 2);
-    $('.page_title').css('padding-top', padding_top);
-  });
-  console.log($url);
-{/literal}
-</script>
+<!-- {$event.content|nofilter} -->
