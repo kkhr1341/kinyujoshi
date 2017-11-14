@@ -9,8 +9,8 @@ install:
 	git submodule init
 	#git submodule update
 	#git submodule foreach 'git pull'
-	docker-compose run composer install
 	git submodule update --init --recursive
+	docker-compose run composer install
 .PHONY: install
 
 clean:

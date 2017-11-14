@@ -43,7 +43,7 @@
 	</tr>
 	<tr>
 		<th class="active">自己紹介</th>
-		<td>{$profile.profile|nofilter}</td>
+		<td>{$profile.profile}</td>
 	</tr>
 </table>
 

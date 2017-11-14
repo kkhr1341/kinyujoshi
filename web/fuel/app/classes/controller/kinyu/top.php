@@ -88,7 +88,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         $this->data['projects'] = Projects::lists(1, 3, true, 'kinyu');
         $this->data['news'] = News::lists(1, 3, true, 'kinyu');
         $this->data['blogs'] = Blogs::all('kinyu'+'investment', '/blog/', $page, 2, 10);
-        $pagination = $this->data['blogs']['pagination'];
+//        $pagination = $this->data['blogs']['pagination'];
 //    $this->data['pagination'] = $pagination::instance('mypagination');
         $this->data['events'] = Events::lists(1, 5, true, 'kinyu');
         $this->template->title = 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ';

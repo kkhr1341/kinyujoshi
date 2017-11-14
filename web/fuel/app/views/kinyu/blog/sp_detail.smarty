@@ -52,7 +52,7 @@
     <div class="inner clear">    
       <!-- 本文 -->
       <div class="report-detail-main myway-report-detail">
-        {$blog.content|nofilter}
+        {$blog.content}
         {$fooo = $blog.main_image}
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
         <div class="report-detail-share clear">
@@ -181,7 +181,7 @@
 
     <!-- 本文 -->
     <div class="report-detail-main">
-      {$blog.content|nofilter}
+      {$blog.content}
       <p class="report-bottom">({$blog.open_date|date_format:"Y.m.d"} up!)</p>
       <!-- シェア部分 -->
       <div class="report-detail-share clear">

@@ -11,7 +11,7 @@
       <description>{$blog.description}</description><br>
       <enclosure url="{$blog.main_image}" /><br>
       <category>{$blog.section_name}</category><br>
-      <content:encoded>{$blog.content|nofilter}</content:encoded>
+      <content:encoded>{$blog.content}</content:encoded>
       <pubdate>{$blog.open_date|date_format:"Y.m.d"}</pubdate><br>
     </item>
   </channel>

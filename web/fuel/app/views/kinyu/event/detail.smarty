@@ -46,7 +46,7 @@ var $resArray02 = $resArray[1];
       <div class="kinyu-joshikai-detail-el">
         <div class="joshikai-detail-el-content-box">
           <p class="info-title">女子会詳細</p>
-          <div class="kinyu-joshikai-detail-content">{$event.content|nofilter}</div>
+          <div class="kinyu-joshikai-detail-content">{$event.content}</div>
         </div>
 
       </div>
@@ -79,4 +79,4 @@ var $resArray02 = $resArray[1];
 
 </div>
 
-<!-- {$event.content|nofilter} -->
+<!-- {$event.content} -->

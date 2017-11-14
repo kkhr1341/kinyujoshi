@@ -29,7 +29,7 @@
 
     <!-- 本文 -->
     <div class="report-detail-main">
-      {$news.content|nofilter}
+      {$news.content}
       <!-- シェア部分 -->
       <div class="report-detail-share clear">
         <div class="report-detail-share-el report-detail-share-right">
