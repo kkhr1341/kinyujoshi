@@ -30,6 +30,14 @@
 .fs-mincho {
   font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
+#canvas {
+  position:fixed;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  opacity: 0.5;
+  z-index: -1;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
    ヘッダー
@@ -1434,7 +1442,7 @@
 .joshikai-main {
   width: 1050px;
   height: 400px;
-  background: #f9f9f9;
+  background: #dedede29;
   margin: 0 auto;
 }
 .joshikai-main-left {
@@ -1712,15 +1720,22 @@
   background: gray;
   margin-top: 12px;
   text-align: center;
-  padding: 10px 0px;
+  padding: 14px 0px;
+  font-size: 13px;
+}
+.joshikai-detail-el-info li .fee-card {
+  background: #ffdacb;
+  border: 1px solid #ffdacb;
+  color: #444;
+}
+.joshikai-detail-el-info li .fee-cash {
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
 }
 .joshikai-sidebar {
   width: 314px;
   float: right;
   margin-left: 36px;
-}
-.joshikai-detail-el-content-box {
-
 }
 .joshikai-detail-el-content-box .info-title {
   font-size: 14px;
@@ -1731,6 +1746,98 @@
 .joshikai-detail-el-content-box .info-detail {
   font-size: 14px;
   padding-top: 8px;
+}
+/* 当日現金払い-モダルウィンドウ */
+#day-cash-open {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #97d8cfc7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+.day-cash-close {
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px;
+}
+#day-cash-open .inner {
+  width: 450px;
+  height: 550px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -225px;
+  display: table;
+  padding: 36px;
+}
+#day-cash-open .inner form {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
+}
+#day-cash-open .inner form .main-title {
+  font-size: 22px;
+  padding-bottom: 2px;
+  display: inline-block;
+  border-bottom: 1px solid #5fb3a7;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#day-cash-open .inner form label {
+  font-size: 12px;
+  color: #5fb3a7;
+  margin-bottom: 8px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+#day-cash-open .inner form .day-cash-open-form-el p {
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: #a0a0a0;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+#day-cash-open .inner form .description {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #727070;
+  margin-bottom: 16px;
+}
+#day-cash-open .inner form input {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+.login-btn-list li.email-login-bg a {
+  background: #79cec1;
+  color: #fff;
+  font-weight: bold;
+}
+.day-cash-submit {
+  background: #5fb3a7;
+  font-size: 13px;
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 12px 0px;
+  color: #fff;
+  margin: 0 auto;
 }
 
 /* 女子会ページ：すぺしゃる女子会のチケット一覧 */
@@ -2534,20 +2641,25 @@ footer .footer-menu {
 
 /* ログイン部分 */
 .login-contents-block {
-  background: #f9f9f9;
+  background: #dedede29;
   padding: 80px 0px;
 }
 .login-contents-intro {
   margin-bottom: 50px;
   text-align: center;
 }
-.login-contents-intro p {
-  font-size: 14px;
+.login-contents-intro .caution {
+  font-size: 12px;
+  display: inline-block;
+  margin: 0 auto;
+  border: 1px solid #f9aaa0; 
+  padding: 2px 24px;
+  transition: .8s;
 }
 .login-contents-title {
   display: inline-block;
-  font-size: 24px;
-  margin-bottom: 24px;
+  font-size: 26px;
+  margin-bottom: 32px;
 }
 .login-contents-title span {
   border-bottom: 1px solid #7CDCCE;
@@ -2574,7 +2686,7 @@ footer .footer-menu {
   opacity: .3;
 }
 .login-contents-sidearea li a.active {
-  background: #eaeaea;
+  background: #f0eeee;
   opacity: 1;
   font-weight: bold;
 }
@@ -2631,6 +2743,7 @@ footer .footer-menu {
 .login-btn-list li {
   width: 100%;
   margin-bottom: 12px;
+  transition: .8s;
 }
 .login-btn-list li a {
   display: block;
@@ -2661,6 +2774,88 @@ footer .footer-menu {
   color: #fff;
   font-weight: bold;
 }
+/* pass再発行 */
+#pass-reissue-btn {
+  color: #4eaedc;
+}
+#pass-reissue-open {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #97d8cfc7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+#pass-reissue-close {
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px;
+}
+#pass-reissue-open .inner {
+  width: 600px;
+  height: 300px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -300px;
+  display: table;
+  padding: 36px;
+}
+#pass-reissue-open .inner form {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+#pass-reissue-open .main-title {
+  font-size: 22px;
+  padding-bottom: 2px;
+  display: inline-block;
+  border-bottom: 1px solid #5fb3a7;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#pass-reissue-open .description {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #727070;
+    margin-bottom: 16px;
+}
+#pass-reissue-open .pass-reissue-form-el label {
+  font-size: 12px;
+  color: #5fb3a7;
+  margin-bottom: 8px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+#pass-reissue-open .pass-reissue-form-el input {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.pass-reissue-submit {
+  background: #7dd1c5;
+  font-size: 13px;
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 12px 0px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+
 .regist-sub-description {
   margin-top:20px;
   text-align:center;
@@ -2888,6 +3083,14 @@ footer .footer-menu {
 .about-kinyu-container-left li a:hover {
   color: #5FB3A7;
   opacity: 1;
+}
+.login-contents-intro .caution:hover {
+  background: #f9aaa0;
+  color: #fff;
+  font-weight: bold;
+}
+.login-btn-list li:hover {
+  opacity: .5;
 }
 
 }

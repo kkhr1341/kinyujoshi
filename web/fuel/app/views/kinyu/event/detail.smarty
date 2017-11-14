@@ -69,8 +69,10 @@ var $resArray02 = $resArray[1];
             </li>
             <li>
               <p class="info-title">お申し込み</p>
-              <a href="" class="info-link">クレジットカードでお支払い</a>
-              <a href="" class="info-link">当日現金でお払い</a>
+              <div class="fee-block">
+                <input type="button" class="info-link fee-card" value="カードでお支払い">
+                <input id="day-cash-btn" type="button" class="info-link fee-cash" value="当日現金でお払い">
+              </div>
             </li>
           </ul>
         </div>
@@ -79,5 +81,49 @@ var $resArray02 = $resArray[1];
   </div>
 
 </div>
+
+<div id="day-cash-open">
+  <div class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">
+    
+    <form>
+      <p class="main-title">当日現金支払いで参加</p>
+      <p class="description">女子会当日に現金でお支払いください。</p>
+      <div class="day-cash-open-form-el">
+        <label>お名前（フルネーム）</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <div class="day-cash-open-form-el">
+        <label>ふりがな</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <div class="day-cash-open-form-el">
+        <label>メールアドレス</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <div class="day-cash-open-form-el">
+        <label>メールアドレス（確認用）</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
+      <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
+    </form>
+
+  </div>
+</div>
+
+
+<script>
+  $(function() {
+    $("#day-cash-btn").click(function() {
+      $("#day-cash-open").fadeIn(500);
+    });
+    $(".day-cash-close").click(function() {
+      $("#day-cash-open").fadeOut(500);
+    });
+  });
+</script>
+
+
 
 <!-- {$event.content|nofilter} -->
