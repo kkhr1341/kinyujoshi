@@ -9,7 +9,7 @@
         <title>{$blog.title}</title>
         <link>https://kinyu-joshi.jp/blog/{$blog.code}</link>
         <description>{$blog.description}</description>
-        <content:encoded> <![CDATA[{$blog.content}]]></content:encoded>
+        <content:encoded> <![CDATA[{$blog.content|nofilter}]]></content:encoded>
         <pubdate>{$blog.open_date|date_format:"%a, %-m %b %G %T"}</pubdate>
         <enclosure url="{$blog.main_image}" />
       </item>

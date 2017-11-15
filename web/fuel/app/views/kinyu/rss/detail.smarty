@@ -55,7 +55,7 @@
   <section class="article-single-detail">
     <div class="content_frame content-block">
       <div class="content article-content-block">
-        {$blog.content}
+        {$blog.content|nofilter}
       </div>  
       <div id="jumboShare" class="sp-share">
       </div>  
