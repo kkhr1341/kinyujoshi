@@ -5,10 +5,12 @@ up:
 	docker-compose up -d
 .PHONY: up
 
+migrate:
+	docker-compose run --rm web php oil refine migrate
+.PHONY: migrate
+
 install:
 	git submodule init
-	#git submodule update
-	#git submodule foreach 'git pull'
 	docker-compose run composer install
 	git submodule update --init --recursive
 .PHONY: install
