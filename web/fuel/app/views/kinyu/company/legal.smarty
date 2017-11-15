@@ -34,7 +34,7 @@
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 連絡先</h3>
-      <p class="description">お問い合わせはメールにて承ります。予めご了承ください。なお、弊社電話番号が必要なお客様は、メールにてお申し出ください。メール確認後、遅滞なくご通知いたします。<br>email : cs@kinyu-joshi.jp</p>
+      <p class="description">email : support@kinyu-joshi.jp<br>電話番号 : 03-6427-2641<br><span style="color:red;">＊</span>お問い合わせはメールにて承ります。予めご了承ください。</p>
     </div>
 
     <div class="company-details-el">
@@ -49,22 +49,23 @@
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 返品・キャンセル</h3>
-      <p class="description">キャンセルは受け付けいたしますが、所定のキャンセル料をいただきます。</p>
+      <p class="description">キャンセルは受け付けいたしますが、所定のキャンセル料をいただきます。<br>イベント実施3日前までのキャンセルは無料、それ以降のキャンセルは全額返金不可となります。また、イベントによっては申込と同時にキャンセル料が発生する場合がございます。<br>
+      弊社都合でイベントが実施できない場合は、全額返金させていただきます。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払い方法</h3>
-      <p class="description">クレジットカードのみ</p>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払い方法及び、お支払い時期</h3>
+      <p class="description">・クレジットカード<br>お支払い時期は、各カード会社の引き落とし日になります。<br><span style="display:block;height:8px;"></span>・代金引換<br>お支払い時期は、商品受け取り時に現金でのお支払いになります。</p>
     </div>
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 商品の受け渡し時期および方法</h3>
-      <p class="description">お支払い完了後、イベントに参加することができます。</p>
+      <p class="description">お申込みのイベント開催日に、イベント開催をもって引渡しといたします。</p>
     </div>
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員情報変更・契約期間・解約について</h3>
-      <p class="description">会員情報変更・解約は、email : cs@kinyu-joshi.jpよりお問い合わせいただければいつでも行うことができます。変更したい内容を明記の上お問い合わせください。</p>
+      <p class="description">会員情報変更・解約は、email : support@kinyu-joshi.jpよりお問い合わせいただければいつでも行うことができます。変更したい内容を明記の上お問い合わせください。</p>
     </div>
   </div>
 </div>
