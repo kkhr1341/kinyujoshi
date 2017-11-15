@@ -7,10 +7,11 @@
 
 return array(
 	'default' => array(
-		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=sundaylunch',
-			'username'   => 'sundaylunch_user',
-			'password'   => 'L3bswhqJdw75Gxn',
+        'connection'  => array(
+            'dsn'        => 'mysql:host=test-db;dbname=kinyujoshi_test',
+            'username'   => 'root',
+            'password'   => 'pass',
+            'port'       => '3307',
 		),
 		'charset' => 'utf8',
 		'profiling' => true,
