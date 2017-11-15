@@ -6,7 +6,6 @@ var $resArray = $result02.split("/");
 var $resArray02 = $resArray[1];
 </script>
 
-
 <header class="kinyu-header">
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
@@ -20,7 +19,6 @@ var $resArray02 = $resArray[1];
     </ul>
   </nav>
 </header>
-
 
 <div class="kinyu-single-block joshikai-main-block">
   <div class="kinyu-joshikai-detail-inner">
@@ -40,7 +38,6 @@ var $resArray02 = $resArray[1];
       </div>
     </div>
 
-
     <div class="kinyu-joshikai-detail-el-block clear">
 
       <div class="kinyu-joshikai-detail-el">
@@ -48,7 +45,6 @@ var $resArray02 = $resArray[1];
           <p class="info-title">女子会詳細</p>
           <div class="kinyu-joshikai-detail-content">{$event.content|nofilter}</div>
         </div>
-
       </div>
     
       <div class="joshikai-sidebar">
@@ -70,22 +66,51 @@ var $resArray02 = $resArray[1];
             <li>
               <p class="info-title">お申し込み</p>
               <div class="fee-block">
-                <input type="button" class="info-link fee-card" value="カードでお支払い">
-                <input id="day-cash-btn" type="button" class="info-link fee-cash" value="当日現金でお払い">
+
+                <!-- ログインユーザー -->
+                {if array_search('admin', $roles)}
+                  <input type="button" class="info-link fee-card" value="カードでお支払い">
+                  <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+                {else}
+                  <div class="no-login-area">
+                    <div class="no-menber-fee-el">
+                      <p class="description">女子会の参加にはメンバー登録が必要です。</p>
+                      <a class="no-menber-fee-el-btn login-member" href="/login">メンバー登録/ログイン</a>
+                    </div>
+                    <div class="no-menber-fee-el">
+                      <p class="description">まずは雰囲気を見たい...という方</p>
+                      <p class="no-menber-fee-el-btn no-member">メンバー登録をせずに参加（初回のみ）</p>
+                    </div>
+                    <div class="loader-block"><div class="loader loader-1"></div></div>
+                  </div>
+                  <div class="no-login-area-joinbtn">
+                    <input type="button" class="info-link fee-card" value="カードでお支払い">
+                    <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+                  </div>
+                {/if}
+                
               </div>
             </li>
           </ul>
         </div>
       </div>
-
+    </div>
   </div>
 
 </div>
 
+
+<!-- カード払いのモーダル -->
+<div id="day-card-open">
+
+
+
+</div>
+
+<!-- 当日現金払いのモーダル -->
 <div id="day-cash-open">
   <div class="day-cash-close"><img src="/images/close-btn.png"></div>
-  <div class="inner">
-    
+  <div class="inner">  
     <form>
       <p class="main-title">当日現金支払いで参加</p>
       <p class="description">女子会当日に現金でお支払いください。</p>
@@ -108,18 +133,32 @@ var $resArray02 = $resArray[1];
       <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
       <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
     </form>
-
   </div>
 </div>
 
+<!-- メンバー登録なしのモーダル -->
+<div id="no-day-cash-open"></div>
 
 <script>
   $(function() {
-    $("#day-cash-btn").click(function() {
+    $(".day-cash-btn").click(function() {
       $("#day-cash-open").fadeIn(500);
     });
     $(".day-cash-close").click(function() {
       $("#day-cash-open").fadeOut(500);
+    });
+
+    $(".no-menber-fee-el-btn").click(function() {
+      $(".loader-block").fadeIn(500);
+      setTimeout(function(){
+        $(".loader-block").fadeOut(800);
+      },1500);
+      setTimeout(function(){
+        $(".no-login-area").fadeOut(500);
+      },2000);
+      setTimeout(function(){
+        $(".no-login-area-joinbtn").fadeIn(800);
+      },2500);
     });
   });
 </script>

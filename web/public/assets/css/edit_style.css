@@ -14,9 +14,9 @@
 .sp {
   display: none!important;
 }
-/*.kinyu-main {
-  margin-right: 80px;
-}*/
+.kinyu-main {
+  position: relative;
+}
 .kinyu-main-title {
   text-align: left;
   margin-bottom: 8px;
@@ -1839,6 +1839,82 @@
   color: #fff;
   margin: 0 auto;
 }
+/* 未登録メンバーの決済ページ */
+.joshikai-detail-el-info .no-login-area {
+  position: relative;
+}
+.joshikai-detail-el-info .no-menber-fee-el {
+  margin-top: 12px;
+}
+.joshikai-detail-el-info .no-menber-fee-el .description {
+  font-size: 12px;
+  text-align: center;
+}
+.joshikai-detail-el-info .no-menber-fee-el .no-menber-fee-el-btn {
+  display: block;
+  margin-top: 4px;
+  text-align: center;
+  background: gray;
+  padding: 10px 0px;
+}
+.joshikai-detail-el-info .no-menber-fee-el .login-member {
+  background: #8adacd;
+}
+.joshikai-detail-el-info .no-menber-fee-el .no-member {
+  background: #f8c2b5;
+}
+/* メンバー登録なし・参加部分 */
+.no-login-area-joinbtn {
+  display: none;
+}
+/* リロード部分 */
+.joshikai-detail-el-info .loader-block {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.joshikai-detail-el-info .loader {
+  position: absolute;
+  display: inline-block;
+  margin: 0 12.5% 100px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #5FB3A7;
+  border-radius: 50%;
+  animation: spin 0.75s infinite linear;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+}
+.joshikai-detail-el-info .loader::before,
+.joshikai-detail-el-info .loader::after {
+  left: -1px;
+  top: -1px;
+  display: none;
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+}
+.joshikai-detail-el-info .loader-1 {
+  border-top-width: 0;
+}
+@keyframes spin {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
+}
+
 
 /* 女子会ページ：すぺしゃる女子会のチケット一覧 */
 /*.kinyu-specialevent-list {
@@ -2683,7 +2759,7 @@ footer .footer-menu {
   display: block;
   text-align: center;
   padding: 8px 0px;
-  opacity: .3;
+  opacity: .5;
 }
 .login-contents-sidearea li a.active {
   background: #f0eeee;
