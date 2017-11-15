@@ -11,7 +11,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 		$this->data['news'] = News::all('news', '/news/', $page, 2, 10);
 		$pagination = $this->data['news']['pagination'];
 		$this->template->title = 'ニュース｜きんゆう女子。';
-//		$this->data['pagination'] = $pagination::instance('mypagination');
+		$this->data['pagination'] = $pagination::instance('mypagination');
 		$this->template->description = "きんゆう女子。のニュースでは、きんゆう女子。に関する様々なニュースを配信しています。";
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -29,8 +29,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     } else {
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
     }
-		$this->template->contents = View::forge('kinyu/news/index.smarty', $this->data)
-            ->set_safe('pagination', $pagination);
+		$this->template->contents = View::forge('kinyu/news/index.smarty', $this->data);
 
 	}
 

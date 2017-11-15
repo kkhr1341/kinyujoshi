@@ -187,7 +187,7 @@
       <img class="report-list-banner" src="/images/banner/asahi_&w_sp.jpg">
     </a>
     <div class="blog-pagenation tx-center">
-      {$pagination}
+      {$pagination|nofilter}
     </div>
   </div>
 

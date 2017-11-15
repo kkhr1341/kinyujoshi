@@ -49,7 +49,7 @@
       </ul>
     </div>
     <div class="blog-pagenation tx-center">
-      {$pagination}
+      {$pagination|nofilter}
     </div>
 
     <div class="sp">

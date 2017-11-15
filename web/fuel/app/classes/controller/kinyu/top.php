@@ -115,5 +115,4 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
         //カテゴリーの部分
     }
-
 }

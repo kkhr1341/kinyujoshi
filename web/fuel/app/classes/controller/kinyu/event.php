@@ -13,7 +13,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 	public function action_index($page=1) {
 		$this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
 		$pagination = $this->data['events']['pagination'];
-//		$this->data['pagination'] = $pagination::instance('mypagination');
+		$this->data['pagination'] = $pagination::instance('mypagination');
     //$this->data['events'] = Events::lists(1, 5, true);
 		$this->template->title = 'いつもの女子会。｜きんゆう女子。';
 		$this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
@@ -30,14 +30,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     	$this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
     	$this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
   	}
-		$this->template->contents = View::forge('kinyu/event/index.smarty', $this->data)
-            ->set_safe('pagination', $pagination);
+		$this->template->contents = View::forge('kinyu/event/index.smarty', $this->data);
 	}
 
   public function action_choice($page=1) {
     $this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
     $pagination = $this->data['events']['pagination'];
-//    $this->data['pagination'] = $pagination::instance('mypagination');
+    $this->data['pagination'] = $pagination::instance('mypagination');
     //$this->data['events'] = Events::lists(1, 5, true);
     $this->template->title = '女子会の選択｜きんゆう女子。';
     $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
@@ -53,14 +52,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     }
-    $this->template->contents = View::forge('kinyu/event/choice.smarty', $this->data)
-        ->set_safe('pagination', $pagination);
+    $this->template->contents = View::forge('kinyu/event/choice.smarty', $this->data);
   }
 
   public function action_special($page=1) {
     $this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
     $pagination = $this->data['events']['pagination'];
-//    $this->data['pagination'] = $pagination::instance('mypagination');
+    $this->data['pagination'] = $pagination::instance('mypagination');
     //$this->data['events'] = Events::lists(1, 5, true);
     $this->template->title = '特別女子会。｜きんゆう女子。';
     $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
@@ -77,8 +75,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     }
-    $this->template->contents = View::forge('kinyu/event/special.smarty', $this->data)
-        ->set_safe('pagination', $pagination);
+    $this->template->contents = View::forge('kinyu/event/special.smarty', $this->data);
   }
 
 	public function action_welcome($page=1) {
@@ -89,15 +86,14 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 		// else {
 			$this->data['events'] = Events::all('kinyu', '/event/', $page, 2, 8);
 			$pagination = $this->data['events']['pagination'];
-//			$this->data['pagination'] = $pagination::instance('mypagination');
+			$this->data['pagination'] = $pagination::instance('mypagination');
 			$this->template->title = '女子会について｜きんゆう女子。';
 			$this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
 			$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 			$this->template->today = date("Y年n月"); 
 			$this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
     	$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
-			$this->template->contents = View::forge('kinyu/event/welcome.smarty', $this->data)
-                ->set_safe('pagination', $pagination);
+			$this->template->contents = View::forge('kinyu/event/welcome.smarty', $this->data);
 			$this->template->sidebar01 = View::forge('kinyu/sidebar/sidebar01.smarty', $this->data);
 		//}
 	}

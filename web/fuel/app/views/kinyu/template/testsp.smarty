@@ -103,7 +103,7 @@
         </ul>
       </div>
       <div class="blog-pagenation tx-center">
-        {$pagination}
+        {$pagination|nofilter}
       </div>
     </section>
   </div>
