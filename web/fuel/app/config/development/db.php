@@ -10,7 +10,7 @@ return array(
 	'default' => array(
     'charset' => 'utf8',
 		'connection'  => array(
-                        'dsn'        => 'mysql:host=db;dbname=kinyujoshi',
+                        'dsn'        => 'mysql:host=db;dbname=kinyujoshi_development',
                         'username'   => 'root',
                         'password'   => 'pass',
 		),
