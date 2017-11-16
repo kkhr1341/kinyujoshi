@@ -69,7 +69,7 @@ var $resArray02 = $resArray[1];
 
                 <!-- ログインユーザー -->
                 {if array_search('admin', $roles)}
-                  <input type="button" class="info-link fee-card" value="カードでお支払い">
+                  <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
                   <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
                 {else}
                   <div class="no-login-area">
@@ -84,7 +84,7 @@ var $resArray02 = $resArray[1];
                     <div class="loader-block"><div class="loader loader-1"></div></div>
                   </div>
                   <div class="no-login-area-joinbtn">
-                    <input type="button" class="info-link fee-card" value="カードでお支払い">
+                    <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
                     <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
                   </div>
                 {/if}
@@ -100,24 +100,18 @@ var $resArray02 = $resArray[1];
 </div>
 
 
-<!-- カード払いのモーダル -->
-<div id="day-card-open">
-
-
-
-</div>
-
 <!-- 当日現金払いのモーダル -->
-<div id="day-cash-open">
+<div id="day-cash-open" class="fee-open">
   <div class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form>
-      <p class="main-title">当日現金支払いで参加</p>
+      <p class="main-title">現金でのお支払いで参加</p>
       <p class="description">女子会当日に現金でお支払いください。</p>
       <div class="day-cash-open-form-el">
         <label>お名前（フルネーム）</label>
         <input type="text" id="name" class="" placeholder="">
       </div>
+
       <div class="day-cash-open-form-el">
         <label>ふりがな</label>
         <input type="text" id="name" class="" placeholder="">
@@ -136,16 +130,93 @@ var $resArray02 = $resArray[1];
   </div>
 </div>
 
-<!-- メンバー登録なしのモーダル -->
-<div id="no-day-cash-open"></div>
+<!-- カード払いのモーダル -->
+<div class="day-card-open fee-open">
+  <div id="day-card-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form method="POST" action="/pay" id="charge-form">
+      <span class="charge-errors"></span>
+      <p class="main-title">カードでのお支払いで参加</p>
+      <p class="description">カード情報を入力してご決済をお願いします。</p>
+      <label>カード番号</label>
+      <input type="text" class="number" name="number" maxlength="16" placeholder="カード番号">
+
+      <label>CVC</label>
+      <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
+
+      <label>有効期限</label>
+
+      <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
+      <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+
+      <button class="day-cash-submit" type="submit">送信</button>
+    </form>
+  </div>
+</div>
+
+<!-- カード払い（メンバー登録なしのモーダル） -->
+<div id="no-day-card-open" class="day-card-open fee-open">
+  <div id="no-day-card-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form method="POST" action="/pay" id="charge-form">
+      <span class="charge-errors"></span>
+      <p class="main-title">カードでのお支払いで参加</p>
+      <p class="description">カード情報を入力してご決済をお願いします。</p>
+
+      <div class="day-cash-open-form-el">
+        <label>お名前（フルネーム）</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>メールアドレス</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>カード番号</label>
+        <input type="text" class="number" name="number" maxlength="16" placeholder="カード番号">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>CVC</label>
+        <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>有効期限</label>
+
+        <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
+        <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+      </div>
+
+      <button class="day-cash-submit" type="submit">送信</button>
+    </form>
+  </div>
+</div>
 
 <script>
   $(function() {
+    
+    $(".day-card-btn").click(function() {
+      $(".day-card-open").fadeIn(500);
+    });
+    $("#day-card-close").click(function() {
+      $(".day-card-open").fadeOut(500);
+    });
+
     $(".day-cash-btn").click(function() {
       $("#day-cash-open").fadeIn(500);
     });
     $(".day-cash-close").click(function() {
       $("#day-cash-open").fadeOut(500);
+    });
+
+    $(".no-day-card-btn").click(function() {
+      $("#no-day-card-open").fadeIn(500);
+    });
+    $("#no-day-card-close").click(function() {
+      $("#no-day-card-open").fadeOut(500);
     });
 
     $(".no-menber-fee-el-btn").click(function() {

@@ -1748,15 +1748,19 @@
   padding-top: 8px;
 }
 /* 当日現金払い-モダルウィンドウ */
-#day-cash-open {
+.fee-open {
   display: none;
   width: 100%;
   height: 100%;
-  background: #97d8cfc7;
+  /*background: #92dbd1e0;*/
+  background: #ededede0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1006;
+}
+.day-card-open {
+  background: #92dbd1e0;
 }
 .day-cash-close {
   background: #fff;
@@ -1765,7 +1769,7 @@
   right: 20px;
   padding: 12px;
 }
-#day-cash-open .inner {
+.fee-open .inner {
   width: 450px;
   height: 550px;
   background: #fff;
@@ -1777,13 +1781,13 @@
   display: table;
   padding: 36px;
 }
-#day-cash-open .inner form {
+.fee-open .inner form {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
   text-align: center;
 }
-#day-cash-open .inner form .main-title {
+.fee-open .inner form .main-title {
   font-size: 22px;
   padding-bottom: 2px;
   display: inline-block;
@@ -1792,7 +1796,7 @@
   margin-bottom: 12px;
   font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
-#day-cash-open .inner form label {
+.fee-open .inner form label {
   font-size: 12px;
   color: #5fb3a7;
   margin-bottom: 8px;
@@ -1800,7 +1804,7 @@
   width: 100%;
   text-align: left;
 }
-#day-cash-open .inner form .day-cash-open-form-el p {
+.fee-open .inner form .day-cash-open-form-el p {
   text-align: left;
   font-size: 12px;
   line-height: 18px;
@@ -1809,14 +1813,14 @@
   margin-top: 0px;
   margin-bottom: 6px;
 }
-#day-cash-open .inner form .description {
+.fee-open .inner form .description {
   font-size: 12px;
   line-height: 18px;
   text-align: center;
   color: #727070;
   margin-bottom: 16px;
 }
-#day-cash-open .inner form input {
+.fee-open .inner form input {
   width: 100%;
   background: #f9f9f9;
   padding: 10px;
@@ -1839,6 +1843,10 @@
   color: #fff;
   margin: 0 auto;
 }
+.day-card-open .day-cash-submit {
+  margin-top: 12px;
+}
+
 /* 未登録メンバーの決済ページ */
 .joshikai-detail-el-info .no-login-area {
   position: relative;
