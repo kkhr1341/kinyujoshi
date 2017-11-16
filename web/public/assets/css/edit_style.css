@@ -76,6 +76,7 @@
   text-align: center;
   padding-bottom: 16px;
   letter-spacing: -4em;
+  font-size: 0px;
 }
 .kinyu-header-nav li {
   display: inline-block;
@@ -1846,6 +1847,22 @@
 .day-card-open .day-cash-submit {
   margin-top: 12px;
 }
+/* カード払い */
+.day-card-open .exp-date-block {
+  font-size: 0px;
+  display: inline-block;
+  letter-spacing: -40em;
+  width: 100%;
+}
+.day-card-open .exp-date-block input {
+  width: 48%!important;
+  display: inline-block;
+  letter-spacing: normal;
+}
+.day-card-open .exp-date-block input:first-child {
+  margin-right: 4%;
+}
+
 
 /* 未登録メンバーの決済ページ */
 .joshikai-detail-el-info .no-login-area {

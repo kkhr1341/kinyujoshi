@@ -84,6 +84,18 @@
 					<label class="form-group-event-label">PeatixのURL</label>
 					<input type="text" id="pay_url" class="form-control" placeholder="PeatixのURLを入力">
 				</div>
+
+				<div class="form-group mb50">
+					<label class="form-group-event-label">決済方法</label>
+					<p><span style="color:red;">＊</span>クレジットカード払いのみか、現金払いもOKか選んでください。</p>
+					<div class="radio_box clear">
+            <input type="radio" value="1" name="creditch" id="creditch01" class="form-radio" placeholder="">
+            <label for="creditch01" class="form-long">クレジットカード払い＆当日現金払い</label>
+            <input type="radio" value="0" name="creditch" id="creditch02" class="form-radio" placeholder="">
+            <label for="creditch02" class="form-long">クレジットカードのみ</label>
+         	</div>
+        </div>
+
 				<div class="form-group">
 					<p><a style="color:#337ab7;" target="_blank" href="https://peatix.com/">Peatixログインページへ</a></p>
 					<p>ID：support@kinyu-joshi.jp</p>
@@ -196,6 +208,7 @@ $(function(){
 		params.event_date = $('#event_date').val();
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
+		params.creditch = $("[name=creditch]:checked").val();
 		params.pay_url = $('#pay_url').val();
 		params.open_date = $('#open_date').val();
 		params.status = 0;

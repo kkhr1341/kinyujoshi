@@ -69,8 +69,17 @@ var $resArray02 = $resArray[1];
 
                 <!-- ログインユーザー -->
                 {if array_search('admin', $roles)}
-                  <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
-                  <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+
+                  {if $event.creditch = 1}
+                    <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
+                    <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+                  {else if $event.creditch = 0}
+                    <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
+                  {else}
+                    <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
+                    <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+                  {/if}
+
                 {else}
                   <div class="no-login-area">
                     <div class="no-menber-fee-el">
@@ -84,8 +93,18 @@ var $resArray02 = $resArray[1];
                     <div class="loader-block"><div class="loader loader-1"></div></div>
                   </div>
                   <div class="no-login-area-joinbtn">
-                    <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
-                    <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+
+                    <!-- 非ログインユーザー -->
+                    {if $event.creditch = 1}
+                      <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
+                      <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお払い">
+                    {else if $event.creditch = 0}
+                      <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
+                    {else}
+                      <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
+                      <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお払い">
+                    {/if}
+
                   </div>
                 {/if}
                 
@@ -100,38 +119,8 @@ var $resArray02 = $resArray[1];
 </div>
 
 
-<!-- 当日現金払いのモーダル -->
-<div id="day-cash-open" class="fee-open">
-  <div class="day-cash-close"><img src="/images/close-btn.png"></div>
-  <div class="inner">  
-    <form>
-      <p class="main-title">現金でのお支払いで参加</p>
-      <p class="description">女子会当日に現金でお支払いください。</p>
-      <div class="day-cash-open-form-el">
-        <label>お名前（フルネーム）</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
-
-      <div class="day-cash-open-form-el">
-        <label>ふりがな</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
-      <div class="day-cash-open-form-el">
-        <label>メールアドレス</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
-      <div class="day-cash-open-form-el">
-        <label>メールアドレス（確認用）</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
-      <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
-      <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
-    </form>
-  </div>
-</div>
-
 <!-- カード払いのモーダル -->
-<div class="day-card-open fee-open">
+<div id="day-card-open" class="day-card-open fee-open">
   <div id="day-card-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form method="POST" action="/pay" id="charge-form">
@@ -145,10 +134,10 @@ var $resArray02 = $resArray[1];
       <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
 
       <label>有効期限</label>
-
-      <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
-      <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
-
+      <div class="exp-date-block">
+        <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
+        <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+      </div>
       <button class="day-cash-submit" type="submit">送信</button>
     </form>
   </div>
@@ -185,12 +174,56 @@ var $resArray02 = $resArray[1];
 
       <div class="day-cash-open-form-el">
         <label>有効期限</label>
-
-        <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
-        <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+        <div class="exp-date-block">
+          <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
+          <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+        </div>
       </div>
 
       <button class="day-cash-submit" type="submit">送信</button>
+    </form>
+  </div>
+</div>
+
+<!-- 当日現金払いのモーダル -->
+<div id="day-cash-open" class="fee-open">
+  <div id="day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form>
+      <p class="main-title">現金でのお支払いで参加</p>
+      <p class="description">女子会当日に現金でお支払いください。</p>
+      <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
+      <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
+    </form>
+  </div>
+</div>
+
+<!-- 当日現金払いのモーダル（メンバー登録なしのモーダル）  -->
+<div id="no-day-cash-open" class="fee-open">
+  <div id="no-day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form>
+      <p class="main-title">現金でのお支払いで参加</p>
+      <p class="description">女子会当日に現金でお支払いください。</p>
+      <div class="day-cash-open-form-el">
+        <label>お名前（フルネーム）</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>ふりがな</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <div class="day-cash-open-form-el">
+        <label>メールアドレス</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <div class="day-cash-open-form-el">
+        <label>メールアドレス（確認用）</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
+      <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
     </form>
   </div>
 </div>
@@ -199,17 +232,10 @@ var $resArray02 = $resArray[1];
   $(function() {
     
     $(".day-card-btn").click(function() {
-      $(".day-card-open").fadeIn(500);
+      $("#day-card-open").fadeIn(500);
     });
     $("#day-card-close").click(function() {
-      $(".day-card-open").fadeOut(500);
-    });
-
-    $(".day-cash-btn").click(function() {
-      $("#day-cash-open").fadeIn(500);
-    });
-    $(".day-cash-close").click(function() {
-      $("#day-cash-open").fadeOut(500);
+      $("#day-card-open").fadeOut(500);
     });
 
     $(".no-day-card-btn").click(function() {
@@ -217,6 +243,20 @@ var $resArray02 = $resArray[1];
     });
     $("#no-day-card-close").click(function() {
       $("#no-day-card-open").fadeOut(500);
+    });
+
+    $(".day-cash-btn").click(function() {
+      $("#day-cash-open").fadeIn(500);
+    });
+    $("#day-cash-close").click(function() {
+      $("#day-cash-open").fadeOut(500);
+    });
+
+    $(".no-day-cash-btn").click(function() {
+      $("#no-day-cash-open").fadeIn(500);
+    });
+    $("#no-day-cash-close").click(function() {
+      $("#no-day-cash-open").fadeOut(500);
     });
 
     $(".no-menber-fee-el-btn").click(function() {
