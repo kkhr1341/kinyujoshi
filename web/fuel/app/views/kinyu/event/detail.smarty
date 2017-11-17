@@ -209,11 +209,6 @@ var $resArray02 = $resArray[1];
         <label>お名前（フルネーム）</label>
         <input type="text" id="name" class="" placeholder="">
       </div>
-
-      <div class="day-cash-open-form-el">
-        <label>ふりがな</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
       <div class="day-cash-open-form-el">
         <label>メールアドレス</label>
         <input type="text" id="name" class="" placeholder="">
