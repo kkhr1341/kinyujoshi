@@ -129,7 +129,9 @@
   line-height: 30px;
   margin: 30px 0px 16px;
 }
-.celebration1206-contents-block-el .contents-text .description {
+.celebration1206-contents-block-el .contents-text .to-link {
+  display: block;
+  margin-top: 16px;
 }
 .celebration1206-contents-block:nth-child(odd) .contents-img {
   width: 56%;
@@ -598,6 +600,11 @@
   margin: 14px 0px 8px;
 }
 .celebration1206-contents-block-el .contents-text .description {
+  font-size: 11px;
+  line-height: 20px;
+}
+.celebration1206-contents-block-el .contents-text .to-link {
+  margin-top: 12px;
   font-size: 11px;
   line-height: 20px;
 }
