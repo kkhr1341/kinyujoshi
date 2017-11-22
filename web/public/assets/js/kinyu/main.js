@@ -634,13 +634,3 @@ $(function() {
     $('.insta-block-inner li').height(ddddd);
   },1000);
 });
-
-// ログイン部分
-$(function() {
-  $("#regist-email-link").click(function () {
-    $("#regist-email-form-block").slideToggle();
-    setTimeout(function() {
-      $("html,body").animate({scrollTop:$("#regist-email-form-block").offset().top});
-    },300);
-  });
-});

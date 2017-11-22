@@ -17,6 +17,8 @@
   <div class="kinyu-main-single-block">
     <div class="login-contents-block">
 
+      <a class="login-another-btn" href="/login_regist">メンバー登録</a>
+
       <div class="login-contents-intro">
         <h2 class="login-contents-title fs-mincho"><span>きんゆう女子。にログインする</span></h2><br>
         <a class="caution" href=""><span style="color: red;">＊</span>ログイン機能ができる前にメンバー登録をいただいている方はこちら</a>
@@ -24,24 +26,20 @@
 
       <div class="login-contents-block-inner clear">
 
-        <div class="login-contents-sidearea">
-          <ul>
-            <li><a href="/login_regist">新規メンバー登録</a></li>
-            <li><a class="active" href="/login">マイページにログイン</a></li>
-          </ul>
-        </div>
-
         <div class="login-contents-mainarea">
           <div class="login-contents-form-area">
-            <form class="email-form">
-              <label>メールアドレスでログイン</label>
-              <input type="text" placeholder="メールアドレスを入力してください" value="">
-              <input type="text" placeholder="パスワードを入力してください" value="">
-              <button class="login-btn" type="button" id="login">ログイン</button>
-              <p>パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
-            </form>
+
+            <div class="login-email-container">
+              <label class="title">メールアドレスでログイン</label>
+              <form class="email-form">
+                <input type="text" placeholder="メールアドレスを入力してください" value="">
+                <input type="text" placeholder="パスワードを入力してください" value="">
+                <button class="login-btn" type="button" id="login">ログイン</button>
+                <p>パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
+              </form>
+            </div>
             <div class="login-btn-list">
-              <label>ソーシャルアカウントでログイン</label>
+              <label class="title">ソーシャルアカウントでログイン</label>
               <ul>
                 <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></li>
                 <li class="google-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></li>

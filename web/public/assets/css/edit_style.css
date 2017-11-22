@@ -2744,6 +2744,7 @@ footer .footer-menu {
 .login-contents-block {
   background: #dedede29;
   padding: 80px 0px;
+  position: relative;
 }
 .login-contents-intro {
   margin-bottom: 50px;
@@ -2767,7 +2768,7 @@ footer .footer-menu {
   padding-bottom: 4px;
 }
 .login-contents-block-inner {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
 }
 .login-contents-sidearea {
@@ -2792,21 +2793,26 @@ footer .footer-menu {
   font-weight: bold;
 }
 .login-contents-mainarea {
-  box-sizing: content-box;
-  width: 501px;
-  padding: 4px 0px 4px 36px;
-  float: right;
-  border-left: 1px solid #bfbebe;
+  width: 100%;
+}
+.login-contents-form-area label.title {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #5fb3a7;
+  font-weight: normal;
 }
 .login-contents-form-area label {
   font-size: 13px;
   color: #5fb3a7;
   margin-bottom: 12px;
-  font-weight: bold;
   width: 100%;
+  font-weight: bold;
 }
 .login-contents-form-area .email-form {
-  border-bottom: 1px solid #e6e6e6;
   padding-bottom: 16px;
 }
 .login-contents-form-area .email-form input {
@@ -2814,7 +2820,7 @@ footer .footer-menu {
   background: #fff;
   padding: 10px;
   font-size: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   box-sizing: border-box;
 }
 .login-contents-form-area .email-form input::-webkit-input-placeholder {
@@ -2833,10 +2839,20 @@ footer .footer-menu {
   font-size: 13px;
   padding: 12px 0px;
   background: #7CDCCE;
-  font-weight: bold;
 }
+
+/* メールアドレスの登録/ログイン部分 */
+.login-email-container {
+  width: 50%;
+  float: left;
+  padding-right: 4%;
+  border-right: 1px solid #e6e6e6;
+}
+
+/* ソーシャルアカウントでの登録/ログイン部分 */
 .login-btn-list {
-  margin-top: 24px;
+  width: 46%;
+  float: right;
 }
 .login-btn-list ul {
   padding: 0px 4px;
@@ -2868,12 +2884,10 @@ footer .footer-menu {
 .login-btn-list li.fb-login-bg a {
   background: #7093d2;
   color: #fff;
-  font-weight: bold;
 }
 .login-btn-list li.google-login-bg a {
   background: #e68787;
   color: #fff;
-  font-weight: bold;
 }
 /* pass再発行 */
 #pass-reissue-btn {
@@ -2955,8 +2969,6 @@ footer .footer-menu {
   color: #fff;
   margin: 0 auto;
 }
-
-
 .regist-sub-description {
   margin-top:20px;
   text-align:center;
@@ -2974,12 +2986,7 @@ footer .footer-menu {
   padding: 0px;
 }
 .login-contents-regist .email-form {
-  padding-top: 180px;
-  border-top: 1px solid #e6e6e6;
   border-bottom: none;
-}
-#regist-email-form-block {
-  display: none;
 }
 .login-contents-regist .email-form p {
   text-align: left;
@@ -3035,6 +3042,16 @@ footer .footer-menu {
   border-left: 4px solid #79cec1;
   padding: 2px 0px 2px 8px;
   margin-bottom: 16px;
+}
+
+/* 別のボタン */
+.login-another-btn {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #e0e0e0;
+  padding: 10px 24px;
 }
 
 /* = Selected Text
