@@ -11,7 +11,11 @@
     </ul>
   </nav>
 </header>
+<!--
 
+わたしを知るの記事
+
+-->
 
 {if $blog.kind == "わたしを知る"}
 
@@ -166,9 +170,17 @@
     });
   </script>
 
+
+
 {else}
 
-  <!-- 通常のレポートページの編集 -->
+
+
+<!--
+
+通常のレポートページの部分
+
+-->
 
   <div class="kinyu-main-block kinyu-details-block">
 
@@ -209,7 +221,7 @@
         <div class="report-detail-share clear">
           <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
           <div class="report-detail-share-el report-detail-share-right">
-            <h3><img src="/images/detail-title/kinyu-share-report.png"></h3>
+            <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
             <img class="share-this-page" src="/images/social/social-this-page.png">
             <div class="social-list">
               <ul>
@@ -221,138 +233,11 @@
       </div>
 
       <div class="report-detail-sidebar">
-        
-        <div class="report-detail-sidebar-el">
-          <p class="report-detail-sidebar-el-title">直近の女子会</p>
-          <div class="report-sidebar-event-list">
-            <ul class="clear">
-              {foreach from=$top_events item=event name=loopname}
-
-              {if $smarty.foreach.loopname.index == 6}
-              </ul>
-                <div class="sidebar-more-link">
-                  <a href="/event">女子会をもっと見る ></a>
-                </div>
-                {break}
-              {/if}
-
-              {$fooo = $event.main_image}
-              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
-              <li class="clear">
-                <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
-                <div class="text-box">
-                  <p class="date">{$event.event_date|date_format:"%Y.%-m.%-d"}</p>
-                  <p class="title fs-mincho">{$event.title}</p>
-                </div>
-              </li>
-              {/foreach}
-            </ul>
-          </div>
-        </div>
-         
-        <div class="report-detail-sidebar-el">
-          <p class="report-detail-sidebar-el-title">編集部のおすすめレポート</p>
-          <div class="report-sidebar-report-list">
-            <ul class="clear">
-              {foreach from=$top_blogs item=blog name=loopname}
-
-              {if $smarty.foreach.loopname.index == 5}
-              </ul>
-                <div class="sidebar-more-link">
-                  <a href="/event">レポートをもっと見る >
-                  </a>
-                </div>
-                {break}
-              {/if}
-
-              {$fooo = $blog.main_image}
-              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
-              <li class="clear">
-                <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
-                <div class="text-box">
-                  <p class="category">コラム</p>
-                  <p class="title fs-mincho">{$blog.title}</p>
-                </div>
-              </li>
-              {/foreach}
-            </ul>
-          </div>
-        </div>
-
-        <div class="report-detail-sidebar-el">
-          <p class="report-detail-sidebar-el-title">編集部へのコメント</p>
-          <div class="report-sidebar-report-list">
-          
-          </div>
-        </div>
-
+        {$detail_report_after}
       </div>
 
 
-      {*
-
-      <div class="report-detail-thunb-block clear">
-        <div class="report-detail-thunb" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
-        <div class="report-detail-info">
-          <div class="report-detail-category">
-            <div class="category-title">
-              <p>
-                {if $blog.kind == "女子会レポート"}
-                  <span>女子会レポート</span>
-                {else if $blog.kind == "イベントレポート"}
-                  <span>イベントレポート</span>
-                {else if $blog.kind == "取材レポート"}
-                  <span>取材レポート</span>
-                {else if $blog.kind == "イベント告知"}
-                  <span>イベント告知</span>
-                {else if $blog.kind == "コラム"}
-                  <span>コラム</span>
-                {else}
-                  <span>レポート</span>
-                {/if}
-              </p>
-            </div>
-          </div>
-          <div class="report-detail-title">
-            <h1>{$blog.title}</h1>
-          </div>
-          <div class="report-detail-description">
-            <p>{$blog.description}</p>
-            <p class="date">{$blog.open_date|date_format:"%Y.%-m.%-d"}</p>
-          </div>
-        </div>
-      </div>
-    
-      <!-- 本文 -->
-      <div class="report-detail-main">
-        {$blog.content|nofilter}
-        <!-- シェア部分 -->
-
-        {$fooo = $blog.main_image}
-        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-        <div class="report-detail-share clear">
-          <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
-          <div class="report-detail-share-el report-detail-share-right">
-            <h3><img src="/images/detail-title/kinyu-share-report.png"></h3>
-            <img class="share-this-page" src="/images/social/social-this-page.png">
-            <div class="social-list">
-              <ul>
-                {$social_share}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">   
-      {$detail_content_after}
-
-      *}
     </div>
-
   </div>
 
 {/if}
