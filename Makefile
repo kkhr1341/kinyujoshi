@@ -6,7 +6,7 @@ up:
 .PHONY: up
 
 migrate:
-	docker-compose run --rm web php oil refine migrate:current
+	docker-compose run --rm web php oil refine migrate
 	docker-compose run --rm -e FUEL_ENV=test web php oil refine migrate
 .PHONY: migrate
 
