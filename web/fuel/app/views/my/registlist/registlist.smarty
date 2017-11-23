@@ -38,6 +38,10 @@
       <!-- <td>{$email.age}</td> -->
       {if $email.age > 1000}
         <td>{floor(($smarty.now|date_format:"Ymd"-$email.age)/10000)}</td>
+      {else if $email.age < 1000}
+        <td>{$email.age}</td>
+      {else if $email.age = ""}
+        <td></td>
       {else}
         <td>{$email.age}</td>
       {/if}
