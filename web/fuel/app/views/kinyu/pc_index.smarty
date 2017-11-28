@@ -48,19 +48,6 @@
 
             {foreach from=$blogs_pick item=blog name=loopname}
 
-            {if $smarty.foreach.loopname.index == 0}
-
-              <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/2017101813474520171016225807FullSizeRender.jpg) center center / cover no-repeat;">
-                <a target="_blank" href="http://peatix.com/event/314650/view">
-                  <div class="kinyu-top-list-kind">
-                    <!-- <p>イベント告知</p> -->
-                  </div>
-                  <h3 class="kinyu-top-list-title">【イベント告知】キャリア×お金 金融女子のリアルストーリー</h3>
-                </a>
-              </div>
-
-            {/if}
-
             {if $smarty.foreach.loopname.index == 1}
 
               <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/20170824173126shutterstock_535300789.jpg) center center / cover no-repeat;">
