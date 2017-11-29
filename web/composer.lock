@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.40.0",
+            "version": "3.41.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "04a19849652687e8c535217d0af4de6203107979"
+                "reference": "ff9d3bcdceec26067ae86eb621cb5899e7cb39af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/04a19849652687e8c535217d0af4de6203107979",
-                "reference": "04a19849652687e8c535217d0af4de6203107979",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ff9d3bcdceec26067ae86eb621cb5899e7cb39af",
+                "reference": "ff9d3bcdceec26067ae86eb621cb5899e7cb39af",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-11-27 09:20:45"
+            "time": "2017-11-29 05:42:28"
         },
         {
             "name": "composer/installers",
