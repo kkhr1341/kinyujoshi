@@ -35,8 +35,8 @@
           <div class="login-contents-form-area">
             <form class="email-form">
               <label>メールアドレスでログイン</label>
-              <input type="text" placeholder="メールアドレスを入力してください" value="">
-              <input type="text" placeholder="パスワードを入力してください" value="">
+              <input type="text" name="email" placeholder="メールアドレスを入力してください" value="">
+              <input type="password" name="password" placeholder="パスワードを入力してください" value="">
               <button class="login-btn" type="button" id="login">ログイン</button>
               <p>パスワードをお忘れの方はこちら</p>
             </form>
@@ -56,3 +56,54 @@
 
   </div>
 </div>
+
+<script>
+$(function(){
+
+    var loginForm = $('.email-form');
+	loginForm.find('#login').click(function(){
+		var url = "/api/auth/login";
+		var params = {};
+		params.email = loginForm.find('[name="email"]').val();
+		params.password = loginForm.find('[name="password"]').val();
+
+		if (params.email == "") {
+			ts.error("メールアドレスを正しく入力してください");
+			return false;
+		}
+		if (params.password == "") {
+			ts.error("パスワードを入力してください");
+			return false;
+		}
+
+		ajax.post(url, params, function(data){
+			ts.success("ログインが完了しました", function(){
+				location.href = "/my";
+			});
+		});
+	});
+
+    var registForm = $('#regist-form');
+	registForm.find('.regist-btn').click(function(){
+		var url = "/api/auth/register";
+		var params = {};
+		params.email = registForm.find('[name="email"]').val();
+		params.password = registForm.find('[name="password"]').val();
+
+		if (params.email == "") {
+			ts.error("メールアドレスを正しく入力してください");
+			return false;
+		}
+		if (params.password == "") {
+			ts.error("パスワードを入力してください");
+			return false;
+		}
+
+		ajax.post(url, params, function(data){
+			ts.success("ログインが完了しました", function(){
+				location.href = "/my";
+			});
+		});
+	});
+});
+</script>
