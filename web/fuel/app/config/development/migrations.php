@@ -37,6 +37,7 @@ return array(
         28 => '029_create_users_scopes',
         29 => '030_create_users_sessions',
         30 => '031_create_users_sessionscopes',
+        31 => '032_create_news',
       ),
     ),
     'module' => 
