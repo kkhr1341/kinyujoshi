@@ -11,6 +11,8 @@ services:
     environment:
       MYSQL_DATABASE: kinyujoshi_development
       MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - '3307:3306'
     volumes:
       - db-data:/var/lib/mysql
   test-db:
@@ -18,6 +20,8 @@ services:
     environment:
       MYSQL_DATABASE: kinyujoshi_test
       MYSQL_ROOT_PASSWORD: pass
+    ports:
+      - '3308:3306'
     volumes:
       - test-db-data:/var/lib/mysql
   web:
