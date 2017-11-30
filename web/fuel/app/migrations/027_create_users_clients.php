@@ -18,6 +18,9 @@ class Create_users_clients
 			'suspended' => array('type' => 'tinyint'),
 			'notes' => array('type' => 'tinytext'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

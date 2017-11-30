@@ -21,6 +21,9 @@ class Create_courses
 			'open_date' => array('type' => 'datetime'),
 			'disable' => array('type' => 'tinyint'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

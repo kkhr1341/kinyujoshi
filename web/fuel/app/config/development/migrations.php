@@ -36,6 +36,8 @@ return array(
         27 => '030_create_users_sessions',
         28 => '031_create_users_sessionscopes',
         29 => '032_create_news',
+        30 => '033_add_name_to_profiles',
+        31 => '034_add_name_kana_to_profiles',
       ),
     ),
     'module' => 

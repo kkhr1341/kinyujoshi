@@ -11,6 +11,9 @@ class Create_privacies
 			'content' => array('type' => 'text'),
 			'disable' => array('type' => 'tinyint'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

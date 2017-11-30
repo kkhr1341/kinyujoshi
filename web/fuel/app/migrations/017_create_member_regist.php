@@ -25,9 +25,14 @@ class Create_member_regist
 			'where_from' => array('constraint' => 50, 'type' => 'varchar'),
 			'where_from_other' => array('constraint' => 200, 'type' => 'varchar'),
 			'job_kind' => array('constraint' => 50, 'type' => 'varchar'),
-			'name_kana' => array('constraint' => 50, 'type' => 'varchar'),
+			'id_name' => array('constraint' => 50, 'type' => 'varchar'),
 			'disable' => array('type' => 'tinyint'),
 			'edit_inner' => array('type' => 'text'),
+			'industry' => array('constraint' => 200, 'type' => 'varchar'),
+			'industry_other' => array('constraint' => 200, 'type' => 'varchar'),
+
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
 
 		), array('id'));
 	}

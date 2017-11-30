@@ -11,6 +11,9 @@ class Create_kuchikomi
 			'message' => array('type' => 'text'),
 			'nickname' => array('constraint' => 20, 'type' => 'varchar'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

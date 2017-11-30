@@ -14,6 +14,9 @@ class Create_applications
 			'cancel' => array('type' => 'tinyint'),
 			'disable' => array('type' => 'tinyint'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

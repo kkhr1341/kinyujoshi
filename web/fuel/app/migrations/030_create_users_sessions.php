@@ -19,6 +19,9 @@ class Create_users_sessions
 			'last_updated' => array('constraint' => 11, 'type' => 'int'),
 			'limited_access' => array('type' => 'tinyint'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

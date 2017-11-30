@@ -26,6 +26,9 @@ class Create_blogs
 			'where_from' => array('constraint' => 50, 'type' => 'varchar'),
 			'where_from_other' => array('constraint' => 200, 'type' => 'varchar'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 
