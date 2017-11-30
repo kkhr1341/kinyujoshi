@@ -12,6 +12,9 @@ class Create_tsubuyaki
 			'nickname' => array('constraint' => 50, 'type' => 'varchar'),
 			'message' => array('type' => 'text'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

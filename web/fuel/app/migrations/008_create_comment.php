@@ -10,6 +10,8 @@ class Create_comment
 			'id' => array('constraint' => 11, 'type' => 'int'),
 			'message' => array('type' => 'text'),
 
+            'created_at' => array('type' => 'datetime'),
+
 		), array('id'));
 	}
 

@@ -17,6 +17,9 @@ class Create_users_providers
 			'refresh_token' => array('constraint' => 255, 'type' => 'varchar'),
 			'user_id' => array('constraint' => 11, 'type' => 'int'),
 
+            'created_at' => array('type' => 'int'),
+            'updated_at' => array('type' => 'int'),
+
 		), array('id'));
 	}
 

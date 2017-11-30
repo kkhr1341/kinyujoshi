@@ -13,6 +13,8 @@ class Create_document_company
 			'company' => array('constraint' => 50, 'type' => 'varchar'),
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 
+            'created_at' => array('type' => 'datetime'),
+
 		), array('id'));
 	}
 

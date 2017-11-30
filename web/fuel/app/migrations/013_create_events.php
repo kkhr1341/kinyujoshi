@@ -29,6 +29,9 @@ class Create_events
 			'event_date' => array('type' => 'datetime'),
 			'description' => array('type' => 'text'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

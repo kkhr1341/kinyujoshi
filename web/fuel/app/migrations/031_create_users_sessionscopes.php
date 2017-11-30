@@ -12,6 +12,9 @@ class Create_users_sessionscopes
 			'access_token' => array('constraint' => 50, 'type' => 'varchar'),
 			'scope' => array('constraint' => 64, 'type' => 'varchar'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

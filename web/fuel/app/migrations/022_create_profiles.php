@@ -24,6 +24,9 @@ class Create_profiles
 			'fburl' => array('type' => 'text'),
 			'instaurl' => array('type' => 'text'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

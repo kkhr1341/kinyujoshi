@@ -17,6 +17,9 @@ class Create_addresses
 			'tel' => array('constraint' => 50, 'type' => 'varchar'),
 			'disable' => array('type' => 'tinyint'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 

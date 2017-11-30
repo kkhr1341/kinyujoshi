@@ -16,6 +16,9 @@ class Create_users
             'login_hash' => array('constraint' => 255, 'type' => 'varchar'),
             'profile_fields' => array('type' => 'text'),
 
+            'created_at' => array('type' => 'int'),
+            'updated_at' => array('type' => 'int'),
+
         ), array('id'));
 	}
 
