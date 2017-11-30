@@ -19,14 +19,14 @@
         きんゆう女子。の<br>メニュー
       </div>
     </li>
-    <li class="picknews" style="background:#7cdcce;">
+    <!-- <li class="picknews" style="background:#7cdcce;">
       <a href="https://www.oralcare.ne.jp/seminar/" target="_blank">
         <img src="/images/icon/light-white.png">
       </a>
       <div class="tool-chip">
         オーラルケアとジュエリーと<br>お金を学ぶ女子会
       </div>
-    </li>
+    </li> -->
 
     <li class="jyoshikai" style="background:#ffef7d;">
       <a href="/event">
