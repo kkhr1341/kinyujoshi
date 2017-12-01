@@ -11,8 +11,8 @@ class Create_customers
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
 			'customer_id' => array('constraint' => 50, 'type' => 'varchar'),
 			'description' => array('constraint' => 50, 'type' => 'varchar'),
-			'email' => array('constraint' => 255, 'type' => 'varchar'),
-			'disable' => array('type' => 'tinyint'),
+			'email' => array('constraint' => 255, 'type' => 'varchar', 'null' => true),
+			'disable' => array('type' => 'tinyint', 'default' => '0'),
 
             'created_at' => array('type' => 'datetime'),
             'updated_at' => array('type' => 'timestamp'),

@@ -9,7 +9,7 @@ class Create_tsubuyaki
 		\DBUtil::create_table('tsubuyaki', array(
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
-			'nickname' => array('constraint' => 50, 'type' => 'varchar'),
+			'nickname' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'message' => array('type' => 'text'),
 
             'created_at' => array('type' => 'datetime'),

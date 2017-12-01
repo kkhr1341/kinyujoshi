@@ -11,7 +11,7 @@ class Create_categories
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'sort' => array('type' => 'float'),
 			'name' => array('constraint' => 200, 'type' => 'varchar'),
-			'disable' => array('type' => 'tinyint'),
+			'disable' => array('type' => 'tinyint', 'default' => '0'),
 
             'created_at' => array('type' => 'datetime'),
             'updated_at' => array('type' => 'timestamp'),

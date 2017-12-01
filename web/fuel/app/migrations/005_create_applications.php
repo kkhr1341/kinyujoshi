@@ -12,7 +12,7 @@ class Create_applications
 			'event_code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
 			'cancel' => array('type' => 'tinyint'),
-			'disable' => array('type' => 'tinyint'),
+			'disable' => array('type' => 'tinyint', 'default' => '0'),
 
             'created_at' => array('type' => 'datetime'),
             'updated_at' => array('type' => 'timestamp'),

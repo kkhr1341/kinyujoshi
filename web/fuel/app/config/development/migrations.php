@@ -35,9 +35,10 @@ return array(
         26 => '029_create_users_scopes',
         27 => '030_create_users_sessions',
         28 => '031_create_users_sessionscopes',
-        29 => '032_create_news',
-        30 => '033_add_name_to_profiles',
-        31 => '034_add_name_kana_to_profiles',
+        29 => '032_add_creditch_to_events',
+        30 => '033_create_news',
+        31 => '034_add_name_to_profiles',
+        32 => '035_add_name_kana_to_profiles',
       ),
     ),
     'module' => 

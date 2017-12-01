@@ -10,7 +10,7 @@ class Create_document_company
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'name' => array('constraint' => 50, 'type' => 'varchar'),
 			'email' => array('constraint' => 50, 'type' => 'varchar'),
-			'company' => array('constraint' => 50, 'type' => 'varchar'),
+			'company' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 
             'created_at' => array('type' => 'datetime'),
