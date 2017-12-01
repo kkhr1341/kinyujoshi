@@ -15,8 +15,8 @@ class Create_news
 			'open_date' => array('type' => 'datetime'),
 			'title' => array('constraint' => 200, 'type' => 'varchar'),
 			'content' => array('type' => 'blob'),
-			'main_image' => array('constraint' => 200, 'type' => 'varchar'),
-			'disable' => array('type' => 'tinyint'),
+			'main_image' => array('constraint' => 200, 'type' => 'varchar', 'null' => true),
+			'disable' => array('type' => 'tinyint', 'default' => '0'),
 
 		), array('id'));
 	}

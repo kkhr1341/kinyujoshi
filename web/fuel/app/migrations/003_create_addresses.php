@@ -15,7 +15,7 @@ class Create_addresses
 			'name' => array('constraint' => 50, 'type' => 'varchar'),
 			'kana' => array('constraint' => 50, 'type' => 'varchar'),
 			'tel' => array('constraint' => 50, 'type' => 'varchar'),
-			'disable' => array('type' => 'tinyint'),
+			'disable' => array('type' => 'tinyint', 'default' => '0'),
 
             'created_at' => array('type' => 'datetime'),
             'updated_at' => array('type' => 'timestamp'),
