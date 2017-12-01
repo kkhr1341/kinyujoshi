@@ -7,7 +7,7 @@ class Create_users_scopes
 	public function up()
 	{
 		\DBUtil::create_table('users_scopes', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'scope' => array('constraint' => 64, 'type' => 'varchar'),
 			'name' => array('constraint' => 64, 'type' => 'varchar'),
 			'description' => array('constraint' => 255, 'type' => 'varchar'),

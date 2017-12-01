@@ -7,7 +7,7 @@ class Create_users_providers
 	public function up()
 	{
 		\DBUtil::create_table('users_providers', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'parent_id' => array('constraint' => 11, 'type' => 'int'),
 			'provider' => array('constraint' => 50, 'type' => 'varchar'),
 			'uid' => array('constraint' => 255, 'type' => 'varchar'),

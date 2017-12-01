@@ -7,7 +7,7 @@ class Create_document_company
 	public function up()
 	{
 		\DBUtil::create_table('document_company', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'name' => array('constraint' => 50, 'type' => 'varchar'),
 			'email' => array('constraint' => 50, 'type' => 'varchar'),
 			'company' => array('constraint' => 50, 'type' => 'varchar'),

@@ -7,7 +7,7 @@ class Create_companies
 	public function up()
 	{
 		\DBUtil::create_table('companies', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'name' => array('constraint' => 100, 'type' => 'varchar'),
 			'foundation_date' => array('type' => 'date'),
 			'capital' => array('constraint' => 11, 'type' => 'int'),

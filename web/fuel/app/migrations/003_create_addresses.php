@@ -7,7 +7,7 @@ class Create_addresses
 	public function up()
 	{
 		\DBUtil::create_table('addresses', array(
-			'id' => array('type' => 'bigint'),
+			'id' => array('type' => 'bigint', 'auto_increment' => true, 'unsigned' => true),
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
 			'zip' => array('constraint' => 10, 'type' => 'varchar'),

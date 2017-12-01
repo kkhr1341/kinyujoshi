@@ -9,9 +9,6 @@ class Add_creditch_to_events
 		\DBUtil::add_fields('events', array(
 			'creditch' => array('constraint' => 1, 'type' => 'tinyint'),
 
-            'created_at' => array('type' => 'datetime'),
-            'updated_at' => array('type' => 'timestamp'),
-
 		));
 	}
 

@@ -7,7 +7,7 @@ class Create_users_sessions
 	public function up()
 	{
 		\DBUtil::create_table('users_sessions', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'client_id' => array('constraint' => 32, 'type' => 'varchar'),
 			'redirect_uri' => array('constraint' => 255, 'type' => 'varchar'),
 			'type_id' => array('constraint' => 64, 'type' => 'varchar'),
