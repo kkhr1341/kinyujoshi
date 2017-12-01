@@ -7,7 +7,7 @@ class Create_sections
 	public function up()
 	{
 		\DBUtil::create_table('sections', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'sort' => array('type' => 'float'),
 			'name' => array('constraint' => 200, 'type' => 'varchar'),

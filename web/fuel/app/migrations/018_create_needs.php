@@ -7,7 +7,7 @@ class Create_needs
 	public function up()
 	{
 		\DBUtil::create_table('needs', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
 			'status' => array('type' => 'tinyint'),

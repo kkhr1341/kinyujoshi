@@ -7,7 +7,7 @@ class Create_files
 	public function up()
 	{
 		\DBUtil::create_table('files', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
 			'mode' => array('constraint' => 10, 'type' => 'varchar'),
 			'name' => array('constraint' => 100, 'type' => 'varchar'),
