@@ -228,9 +228,12 @@
               <p class="description"><a style="color:#458699;" href="https://ginzaplace.jp/commonginza/" target="_blank">common ginza</a>（銀座プレイス3F）</p>
             </div>
 
+            <div class="celebration1206-event-details-el">
+              <p class="main-title">協力</p>
+              <p class="description">株式会社東京スター銀行、株式会社日本取引所グループ/株式会社東京証券取引所、株式会社ポーラ・オルビスホールディングス、株式会社マネーフォワード</p>
+            </div>
+
           </div>
-
-
           {*
           <div class="celebration1206-coming-soon">
             <img src="/images/content/celebration/coming_soon.png" alt="">

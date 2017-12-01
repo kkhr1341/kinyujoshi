@@ -43,7 +43,7 @@
   height: 100%;
   border: 100px solid rgba(255,255,255,.9);
   padding: 20px;
-  z-index: 1001;
+  z-index: 999;
 }
 .introduction-border-block-el {
   width: 100%;
