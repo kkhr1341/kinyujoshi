@@ -81,7 +81,7 @@ class Controller_Auth extends Controller {
 						'last_login' => \Date::time()->get_timestamp(),
 						'login_hash' => md5(time()),
 					];
-					
+
 					// ログインしてみる
 					if (!Auth::login($opauth->get('auth.uid', '?'), $opauth->get('auth.uid', '?'))) {
 						// ログイン失敗したので、会員登録
@@ -102,6 +102,8 @@ class Controller_Auth extends Controller {
 						$profile = [
 								'code' => $profile_code,
 								'username' => $userdata['username'],
+								'name' => $userdata['name'],
+								'name_kana' => '',
 								'nickname' => $userdata['name'],
 								'profile_image' => $profile_image,
 								'email' => $userdata['email'],
@@ -110,9 +112,9 @@ class Controller_Auth extends Controller {
 						
 						Profiles::create($profile);
 						
-						// webpay登録
-						$wp = new Wp();
-						$wp->create_user($userdata['name'], $userdata['username']);
+//						// webpay登録
+//						$wp = new Wp();
+//						$wp->create_user($userdata['name'], $userdata['username']);
 						
 					}
 					
