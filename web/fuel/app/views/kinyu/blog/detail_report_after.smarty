@@ -1,3 +1,15 @@
+<div class="report-detail-sidebar-el">
+  <div class="myway-list">
+    <ul>
+      <li><a href="/myway"><img src="/images/report/myway-main.png"></a></li>
+      <li><a href="https://kinyu-joshi.jp/report/FxKhYh"><img src="/images/report/myway-shoes.png"></a></li>
+      <li><a href="https://kinyu-joshi.jp/report/fMvmMk"><img src="/images/report/myway-cosmetics.png"></a></li>
+    </ul>
+  </div>
+</div>
+
+
+
 <!-- 直近の女子会 -->
 <div class="report-detail-sidebar-el">
   <p class="report-detail-sidebar-el-title">直近の女子会</p>
@@ -70,42 +82,59 @@
   </div>
 </div>
 
+<!-- 編集部へのコメント -->
+<div class="report-detail-sidebar-el">
+  <p class="report-detail-sidebar-el-title">インスタグラム</p>
+  <p class="insta-hash-title fs-mincho">〜 #きんゆう女子 〜</p>
+  <div class="insta-el clear" id="instafeed"></div>
+  <div class="sidebar-more-link">
+    <a href="/event">もっと見る ></a>
+  </div>
+</div>
+
 {literal}
 <script>
-  $(function(){
-    // var title_frame_height = $('#title_frame').height();
-    // var page_title_height = $('.page_title').height();
-    
-    // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
-    // $('.page_title').css('padding-top', padding_top);
-    
-    $('#save').click(function(){
-      var url = "/api/comment/create";
-      var params = {};
 
-      params.message = $('#message').val();
-      
-      if (params.message == "") {
-        ts.error("編集部へのコメントを記入してください。");
-        return false;
+$(window).load(function(){
+  var ddddd = $(".f-instagram-block .f-instagram-el li a").innerWidth();
+  console.log(ddddd);
+  $(".f-instagram-block .f-instagram-el li a").height(ddddd);
+});
+
+$(function(){
+  // var title_frame_height = $('#title_frame').height();
+  // var page_title_height = $('.page_title').height();
+  
+  // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+  // $('.page_title').css('padding-top', padding_top);
+  
+  $('#save').click(function(){
+    var url = "/api/comment/create";
+    var params = {};
+
+    params.message = $('#message').val();
+    
+    if (params.message == "") {
+      ts.error("編集部へのコメントを記入してください。");
+      return false;
+    }
+
+    bootbox.confirm("編集部へのコメントを送信しますか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          document.getElementById("message").value="";
+          $('.report-detail-comment-popup').fadeIn(800);          
+        });
       }
-
-      bootbox.confirm("編集部へのコメントを送信しますか？", function(result) {
-        if (result) {
-          ajax.post(url, params, function(data){
-            document.getElementById("message").value="";
-            $('.report-detail-comment-popup').fadeIn(800);          
-          });
-        }
-        else {
-          ts.info("キャンセルしました");
-        }
-      });
-    });
-    $(".report-detail-comment-popup-close").click(function() {
-      $(".report-detail-comment-popup").fadeOut(800);
+      else {
+        ts.info("キャンセルしました");
+      }
     });
   });
+  $(".report-detail-comment-popup-close").click(function() {
+    $(".report-detail-comment-popup").fadeOut(800);
+  });
+});
 </script>
 {/literal}
 

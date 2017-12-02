@@ -762,7 +762,7 @@
 .kinyu-main-block .inner {
   background: #fff;
   width: 1050px;
-  padding: 36px 0px 80px;
+  padding: 42px 0px 80px;
   margin: 0 auto;
 }
 /* 記事のイントロダクション */
@@ -838,14 +838,31 @@
   height: 500px;
 }
 .report-detail-sidebar-el {
-  margin-bottom: 30px;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.report-detail-sidebar-el textarea {
+  width: 100%;
+  background: #f9f9f9;
+  resize: none;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+.report-detail-sidebar-el button {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 13px;
+  padding:12px 0px;
+  font-weight: bold; 
 }
 .report-detail-sidebar-el-title {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 13px;
+  line-height: 13px;
   border-left: 2px solid #7CDCCE;
   margin-bottom: 16px;
-  padding: 0px 0px 0px 8px;
+  padding: 2px 0px 2px 8px;
 }
 /* 直近の女子会 */
 .report-sidebar-event-list li {
@@ -877,6 +894,7 @@
   font-weight: bold;
 }
 .report-sidebar-event-list li .text-box .title {
+  width: 100%;
   font-size: 12px;
   line-height: 20px;
   height: 40px;
@@ -895,7 +913,7 @@
 .report-sidebar-report-list li {
   width: 100%;
   float: left;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 .report-sidebar-report-list li:first-child {
   margin-top: 0px;
@@ -908,7 +926,7 @@
 .report-sidebar-report-list li .text-box {
   float: right;
   width: 75%;
-  padding: 12px 0px 0px 12px;
+  padding: 8px 0px 0px 12px;
 }
 .report-sidebar-report-list li .text-box .category {
   font-size: 11px;
@@ -922,7 +940,39 @@
   height: 40px;
   margin-top: 6px;
 }
-
+/* INSTAGRAM */
+.report-detail-sidebar-el .insta-el li {
+  width: 106px;
+  height: 106px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  float: left;
+}
+.report-detail-sidebar-el .insta-hash-title {
+  text-align: center;
+  color: #489a8f;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.report-detail-sidebar-el .insta-el li:nth-child(3n) {
+  margin-right: 0px;
+}
+.report-detail-sidebar-el .insta-el li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* myway */
+.report-detail-sidebar-el .myway-list li {
+  margin-bottom: 8px;
+}
+.report-detail-sidebar-el .myway-list li:last-child {
+  margin-bottom: 0px;
+}
+.report-detail-sidebar-el .myway-list li a {
+  line-height: 0;
+  display: block;
+}
 
 /* 本文 */
 .report-detail-main {
@@ -1382,7 +1432,6 @@
   padding-left: 32px;
   display: table-cell;
   vertical-align: middle;
-  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 .kinyu-joshikai-detail-title p {
   font-size: 22px;
@@ -1390,6 +1439,29 @@
 }
 .kinyu-joshikai-detail-el-block {
   padding: 32px 0px 0px 0px;
+}
+/* 女子会内文章 */
+.joshikai-detail-el-content-box h2 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 5px 0px 5px 0px;
+  background-color: #fff;
+  border-radius: 0px;
+  border-bottom: 1px solid #7CDCCE;
+  margin: 20px 0px;
+}
+.joshikai-detail-el-content-box p {
+  font-size: 13px;
+  line-height: 24px;
+}
+.joshikai-detail-el-content-box blockquote {
+  font-size: 11px;
+  line-height: 18px;
+  margin-top: 5px;
+  border-left: 2px solid #d8d8d8;
+  color: #a09f9f;
+  padding-left: 8px;
 }
 .kinyu-joshikai-detail-el {
   width: 613px;
@@ -1433,9 +1505,10 @@
   font-size: 13px;
 }
 .joshikai-detail-el-info li .fee-card {
-  background: #ffdacb;
-  border: 1px solid #ffdacb;
-  color: #444;
+  background: #7cdcce;
+  border: 1px solid #7cdcce;
+  color: #fff;
+  font-weight: bold;
 }
 .joshikai-detail-el-info li .fee-cash {
   background: #f1f1f1;
@@ -1581,7 +1654,7 @@
 }
 .joshikai-detail-el-info .no-menber-fee-el .description {
   font-size: 12px;
-  text-align: center;
+  padding-left: 1px;
 }
 .joshikai-detail-el-info .no-menber-fee-el .no-menber-fee-el-btn {
   display: block;
@@ -1591,10 +1664,12 @@
   padding: 10px 0px;
 }
 .joshikai-detail-el-info .no-menber-fee-el .login-member {
-  background: #8adacd;
+  background: #81ccc1;
+  color: #fff;
+  font-weight: bold;
 }
 .joshikai-detail-el-info .no-menber-fee-el .no-member {
-  background: #f8c2b5;
+  background: #f1f1f1;
 }
 /* メンバー登録なし・参加部分 */
 .no-login-area-joinbtn {

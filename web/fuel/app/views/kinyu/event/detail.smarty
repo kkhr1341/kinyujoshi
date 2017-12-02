@@ -28,11 +28,11 @@ var $resArray02 = $resArray[1];
     <div class="kinyu-joshikai-detail-header clear">
       <div class="kinyu-joshikai-detail-header-inner">
         <div class="date-block">
-          <p class="date-01">{$event.open_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</p>
-          <p class="date-02">{$event.open_date|date_format:"m月"}</p>
-          <p class="date-03">{$event.open_date|date_format:"d"}</p>
+          <p class="date-01">{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</p>
+          <p class="date-02">{$event.event_date|date_format:"m月"}</p>
+          <p class="date-03">{$event.event_date|date_format:"d"}</p>
         </div>
-        <div class="kinyu-joshikai-detail-title">
+        <div class="fs-mincho kinyu-joshikai-detail-title">
           <p>{$event.title}</p>
         </div>
       </div>
@@ -52,7 +52,7 @@ var $resArray02 = $resArray[1];
           <ul>
             <li>
               <p class="info-title">日時</p>
-              <p class="info-detail">{$event.open_date|date_format:"Y年m月d日"}（{$event.open_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+              <p class="info-detail">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
               <br>{$event.event_start_datetime}〜{$event.event_end_datetime}</p>
             </li>
             <li>
@@ -70,10 +70,10 @@ var $resArray02 = $resArray[1];
                 <!-- ログインユーザー -->
                 {if array_search('admin', $roles)}
 
-                  {if $event.creditch = 1}
+                  {if $event.creditch == 1}
                     <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
                     <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
-                  {else if $event.creditch = 0}
+                  {else if $event.creditch == 0}
                     <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
                   {else}
                     <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
@@ -95,10 +95,10 @@ var $resArray02 = $resArray[1];
                   <div class="no-login-area-joinbtn">
 
                     <!-- 非ログインユーザー -->
-                    {if $event.creditch = 1}
+                    {if $event.creditch == 1}
                       <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
                       <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお払い">
-                    {else if $event.creditch = 0}
+                    {else if $event.creditch == 0}
                       <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
                     {else}
                       <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
@@ -115,7 +115,6 @@ var $resArray02 = $resArray[1];
       </div>
     </div>
   </div>
-
 </div>
 
 
@@ -254,7 +253,7 @@ var $resArray02 = $resArray[1];
       $("#no-day-cash-open").fadeOut(500);
     });
 
-    $(".no-menber-fee-el-btn").click(function() {
+    $(".no-menber-fee-el-btn.no-member").click(function() {
       $(".loader-block").fadeIn(500);
       setTimeout(function(){
         $(".loader-block").fadeOut(800);
@@ -268,7 +267,3 @@ var $resArray02 = $resArray[1];
     });
   });
 </script>
-
-
-
-<!-- {$event.content|nofilter} -->
