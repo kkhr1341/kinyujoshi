@@ -7,7 +7,7 @@ class Add_creditch_to_events
 	public function up()
 	{
 		\DBUtil::add_fields('events', array(
-			'creditch' => array('constraint' => 1, 'type' => 'tinyint'),
+			'creditch' => array('constraint' => 1, 'type' => 'tinyint', 'default' => '0'),
 
 		));
 	}
