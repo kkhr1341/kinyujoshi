@@ -82,14 +82,14 @@ return array(
 			'scope' => 'email'
 		),
 
-//		'Google' => array(
-//      'client_id' => '672413732514-85gg5ji4np1gqd2eftg813q4nn2s67ck.apps.googleusercontent.com',
-//      'client_secret' => 'NLdR8jm7AS-8NkwP9Gdm29oY',
-//      //'redirect_uri' => 'http://local.kinyu-joshi.jp/',
-//      //'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
-//     	'scope' => 'email'
-//     ),
-//
+		'Google' => array(
+            'client_id' => '371288807745-kmb54rvtb5eta8e05b8ntimpga1kvi31.apps.googleusercontent.com',
+            'client_secret' => 'Q3vXsXDLuLWwAMkeYjYJd-Sp',
+//            'redirect_uri' => 'http://localhost/',
+            //'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
+     	    'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/user.birthday.read'
+        ),
+	
 
 	 ),
 );

@@ -12,12 +12,8 @@
   	<meta name="apple-mobile-web-app-title" content="きんゆう女子。">
   	<meta name="google-site-verification" content="String_we_ask_for">
   	<meta property="og:image" content="{$ogimg}">
-    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
-
   	{Asset::render('layout')}
     <script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyAFVmKPPwT4ziVB36CPISDQEQR-7c8lBoE"></script>
-    <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
-    <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
     <meta name="google-site-verification" content="bt-Z1O8HWo_rQ3TlPedxm8q3q1xV9ky7hWlxAqisA2w" />
 	</head>
 
@@ -33,148 +29,16 @@
     }(document, 'script', 'facebook-jssdk'));
   	</script>
 
-    <canvas id="canvas"></canvas>
-
   	<div>{$tablet_div}</div>
 
   	<div class="kinyu-container">
       <!-- ナビゲーション -->
-      {*{$navigation}*}
+      {$navigation}  
   		<div class="kinyu-main">
         <div class="sp">{$sp_header}</div>
         {$contents}
   		</div>
   	</div>
-
-    <!-- 1000人達成イベントメッセージ -->
-    <div class="celebration-message">
-      <div class="main-block">
-        <div class="main-block-inner">
-          <img class="message01" src="/images/kinjo1000_message.png">
-          <div class="celebration-message-description">
-            <img class="message03" src="/images/kinjo1000_message_pre.png">
-          </div>
-          <a class="celebration1206-to-link-top" href="/celebration">記念イベントはこちら</a>
-          <p id="celebration-message-close" class="close-btn"><img src="/images/close-btn.png"></p>
-        </div>
-      </div>
-    </div>
-
-    <style>
-      .celebration-message {
-        display: none;
-        width: 100%;
-        height: 100%;
-        background: rgba(238, 233, 223, 0.8);
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1010;
-      }
-      .celebration-message .main-block {
-        width: 600px;
-        height: 550px;
-        background: #fff;
-        padding: 6px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -275px;
-        margin-left: -300px;
-        display: table;
-      }
-      .celebration-message .main-block-inner {
-        display: table-cell;
-        vertical-align: middle;
-        border: 1px solid #5FB3A7;
-        height: 100%;
-        width: 100%;
-        padding: 24px;
-        text-align: center;
-        background: rgba(255,255,255,1);
-        position: relative;
-      }
-      .celebration-message .close-btn {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-      }
-      .celebration-message .message01 {
-        display: block;
-        width: 80%;
-        margin: 0 auto;
-        margin-bottom: 36px;
-      }
-      .celebration-message .message02 {
-        width: 50%;
-      }
-      .celebration-message-description {
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px 0px;
-        border-top: 1px solid #ddd2c0;
-        border-bottom: 1px solid #ddd2c0;
-        margin-top: 12px;
-        margin-bottom: 36px;
-        background: rgba(248, 246, 242, 0.5);
-      }
-      .celebration-message .message03 {
-        width: 70%;
-      }
-      .celebration1206-to-link-top {
-        display: block;
-        width: 50%;
-        font-size: 13px;
-        padding: 10px 0px;
-        text-align: center;
-        margin: 0 auto;
-        background: #5FB3A7;
-        color: #fff;
-        font-weight: bold;
-        transition: .8s;
-      }
-      .celebration1206-to-link-top;hover {
-        opacity: .5;
-      }
-      @media screen and (max-width: 640px) {
-        .celebration-message .main-block {
-          width: 92%;
-          height: 380px;
-          padding: 4px;
-          margin-top: -190px;
-          margin-left: -46%;
-          display: table;
-        }
-        .celebration-message .close-btn {
-          right: 10px;
-          top: 10px;
-        }
-        .celebration-message .close-btn img {
-          width: 20px;
-        }
-        .celebration-message .message01 {
-          width: 88%;
-          margin-bottom: 24px;
-        }
-        .celebration-message .message02 {
-          width: 72%;
-        }
-        .celebration-message-description {
-          width: 98%;
-          padding: 12px 0px;
-          margin-top: 12px;
-          margin-bottom: 24px;
-        }
-        .celebration1206-to-link-top {
-          display: block;
-          width: 70%;
-          font-size: 12px;
-          padding: 8px 0px;
-        }
-      }
-    </style>
-
-    {$sp_footer}
 
   	<!-- 解析コード -->
   	{literal}
@@ -196,25 +60,7 @@
     		controls: false,
     		captions: true
   		});
-      $(function() {
-        $("#celebration-message-close").click(function() {
-          $(".celebration-message").fadeOut(500);
-        });
-      });
   	</script>
-    <script type="text/javascript">
-      $(function(){
-        if($.cookie("access")){
-        }else{
-          setTimeout(function(){
-            $('.celebration-message').fadeIn(1000);
-          },4000);
-        }
-        $(window).load(function(){
-          $.cookie("access","foo", { expires: 2 });
-        })
-      });
-    </script>
   	<script src="/assets/js/kinyu/swiper.js"></script>
   	{/literal}
 </body>

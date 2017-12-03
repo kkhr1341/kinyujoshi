@@ -18,6 +18,9 @@ class Create_news
 			'main_image' => array('constraint' => 200, 'type' => 'varchar', 'null' => true),
 			'disable' => array('type' => 'tinyint', 'default' => '0'),
 
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
+
 		), array('id'));
 	}
 
