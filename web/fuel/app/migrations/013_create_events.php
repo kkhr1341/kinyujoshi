@@ -14,7 +14,7 @@ class Create_events
 			'status' => array('type' => 'tinyint'),
 			'open_date' => array('type' => 'datetime', 'null' => true),
 			'limit' => array('constraint' => 11, 'type' => 'int', 'null' => true),
-			'application_num' => array('constraint' => 11, 'type' => 'int'),
+			'application_num' => array('constraint' => 11, 'type' => 'int', 'default' => 0),
 			'title' => array('constraint' => 200, 'type' => 'varchar', 'null' => true),
 			'content' => array('type' => 'blob'),
 			'main_image' => array('constraint' => 200, 'type' => 'varchar', 'null' => true),
@@ -27,7 +27,7 @@ class Create_events
 			'fee' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'pay_url' => array('constraint' => 200, 'type' => 'varchar', 'null' => true),
 			'event_date' => array('type' => 'datetime', 'null' => true),
-			'description' => array('type' => 'text'),
+			'description' => array('type' => 'text', 'null' => true),
 
             'created_at' => array('type' => 'datetime'),
             'updated_at' => array('type' => 'timestamp'),
