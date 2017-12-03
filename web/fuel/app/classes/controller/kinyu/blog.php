@@ -15,7 +15,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
       $this->data['blogs'] = Blogs::all('kinyu'+'investment', '/report/', $page, 2, 60);
     }
 		$pagination = $this->data['blogs']['pagination'];
-		$this->data['pagination'] = $pagination::instance('mypagination');
+//		$this->data['pagination'] = $pagination::instance('mypagination');
 		$this->template->title = '記事一覧｜きんゆう女子。';
 		$this->template->description = 'きんゆう女子。は、なかなか聞けないお金の話。 先延ばしにしがちなお金の計画。 私には無関係と思っている金融の話など、お金に関する様々な情報を配信しています。';
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
@@ -37,7 +37,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
       //$this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
     }
-    $this->template->contents = View::forge('kinyu/blog/index.smarty', $this->data);
+    $this->template->contents = View::forge('kinyu/blog/index.smarty', $this->data)
+        ->set_safe('pagination', $pagination);
 		//$this->template->sidebar01 = View::forge('kinyu/sidebar/sidebar01.smarty', $this->data);
 	}
 
