@@ -26,3 +26,6 @@
 	path = web/docs
 	url = git://github.com/fuel/docs.git
 	branch = 1.8/master
+[submodule "web/fuel/packages/s3"]
+	path = web/fuel/packages/s3
+	url = git@github.com:danharper/fuel-s3.git
