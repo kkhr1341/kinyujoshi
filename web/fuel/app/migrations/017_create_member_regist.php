@@ -7,7 +7,7 @@ class Create_member_regist
 	public function up()
 	{
 		\DBUtil::create_table('member_regist', array(
-			'id' => array('constraint' => 11, 'type' => 'int', 'null' => true),
+            'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'name' => array('constraint' => 100, 'type' => 'varchar'),
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
@@ -34,7 +34,7 @@ class Create_member_regist
             'created_at' => array('type' => 'datetime', 'null' => true),
             'updated_at' => array('type' => 'timestamp'),
 
-		), array('id'));
+		));
 	}
 
 	public function down()
