@@ -13,7 +13,8 @@ migrate:
 install:
 	git submodule init
 	docker-compose run composer update
-	git submodule update --init --recursive
+	git submodule init
+	git submodule update
 .PHONY: install
 
 test:
