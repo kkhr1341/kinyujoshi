@@ -77,18 +77,18 @@ return array(
 
 	
 		'Facebook' => array(
-			'app_id' => '831295686992946',
-			'app_secret' => '72bb81535e1c4b2c94fb50c18e6aabfb',
-			'scope' => 'email'
+			'app_id' => '238238496713735',
+			'app_secret' => 'b0775d7ccffaaa6a7d657a777587e4ad',
+			'scope' => 'email,user_birthday'
 		),
 
 		'Google' => array(
-            'client_id' => '371288807745-kmb54rvtb5eta8e05b8ntimpga1kvi31.apps.googleusercontent.com',
-            'client_secret' => 'Q3vXsXDLuLWwAMkeYjYJd-Sp',
+			'client_id' => '371288807745-kmb54rvtb5eta8e05b8ntimpga1kvi31.apps.googleusercontent.com',
+			'client_secret' => 'Q3vXsXDLuLWwAMkeYjYJd-Sp',
 //            'redirect_uri' => 'http://localhost/',
             //'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
-     	    'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/user.birthday.read'
-        ),
+			'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/user.birthday.read'
+		),
 	
 
 	 ),
