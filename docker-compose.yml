@@ -36,6 +36,8 @@ services:
       - ./web:/var/www/html
       - ./config/apache2/sites-available:/etc/apache2/sites-available
     working_dir: /var/www/html
+    environment:
+      FUEL_ENV: development
     depends_on:
       - db
 #      - test-db

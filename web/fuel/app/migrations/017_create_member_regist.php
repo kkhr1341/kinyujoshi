@@ -34,7 +34,7 @@ class Create_member_regist
             'created_at' => array('type' => 'datetime', 'null' => true),
             'updated_at' => array('type' => 'timestamp'),
 
-		));
+		), array('id'));
 	}
 
 	public function down()
