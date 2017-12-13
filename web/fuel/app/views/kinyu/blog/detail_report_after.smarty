@@ -1,0 +1,161 @@
+<div class="report-detail-sidebar-el">
+  <div class="myway-list">
+    <ul>
+      <li><a href="/myway"><img src="/images/report/myway-main.png"></a></li>
+      <li><a href="https://kinyu-joshi.jp/report/FxKhYh"><img src="/images/report/myway-shoes.png"></a></li>
+      <li><a href="https://kinyu-joshi.jp/report/fMvmMk"><img src="/images/report/myway-cosmetics.png"></a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+<!-- 直近の女子会 -->
+<div class="report-detail-sidebar-el">
+  <p class="report-detail-sidebar-el-title">直近の女子会</p>
+  <div class="report-sidebar-event-list">
+    <ul class="clear">
+      {foreach from=$top_events item=event name=loopname}
+
+      {if $smarty.foreach.loopname.index == 6}
+      </ul>
+        <div class="sidebar-more-link">
+          <a href="/event">女子会をもっと見る ></a>
+        </div>
+        {break}
+      {/if}
+
+      {$fooo = $event.main_image}
+      {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+      <li class="clear">
+        <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+        <div class="text-box">
+          <p class="date">{$event.event_date|date_format:"%Y.%-m.%-d"}</p>
+          <p class="title fs-mincho">{$event.title}</p>
+        </div>
+      </li>
+      {/foreach}
+    </ul>
+  </div>
+</div>
+
+<!-- 編集部のおすすめレポート -->
+<div class="report-detail-sidebar-el">
+  <p class="report-detail-sidebar-el-title">編集部のおすすめレポート</p>
+  <div class="report-sidebar-report-list">
+    <ul class="clear">
+      {foreach from=$top_blogs item=blog name=loopname}
+
+      {if $smarty.foreach.loopname.index == 5}
+      </ul>
+        <div class="sidebar-more-link">
+          <a href="/event">レポートをもっと見る >
+          </a>
+        </div>
+        {break}
+      {/if}
+
+      {$fooo = $blog.main_image}
+      {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+      <li class="clear">
+        <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+        <div class="text-box">
+          <p class="category">コラム</p>
+          <p class="title fs-mincho">{$blog.title}</p>
+        </div>
+      </li>
+      {/foreach}
+    </ul>
+  </div>
+</div>
+
+<!-- 編集部へのコメント -->
+<div class="report-detail-sidebar-el">
+  <p class="report-detail-sidebar-el-title">編集部へひとこと</p>
+  <div class="">
+    <form>
+      <textarea id="message" name="message" class='' rows="10"></textarea>
+      <button class="btn btn-kinyu" type="button" id="save">送信する</button>
+    </form>
+  </div>
+</div>
+
+<!-- 編集部へのコメント -->
+<div class="report-detail-sidebar-el">
+  <p class="report-detail-sidebar-el-title">インスタグラム</p>
+  <p class="insta-hash-title fs-mincho">〜 #きんゆう女子 〜</p>
+  <div class="insta-el clear" id="instafeed"></div>
+  <div class="sidebar-more-link">
+    <a href="/event">もっと見る ></a>
+  </div>
+</div>
+
+{literal}
+<script>
+
+$(window).load(function(){
+  var ddddd = $(".f-instagram-block .f-instagram-el li a").innerWidth();
+  console.log(ddddd);
+  $(".f-instagram-block .f-instagram-el li a").height(ddddd);
+});
+
+$(function(){
+  // var title_frame_height = $('#title_frame').height();
+  // var page_title_height = $('.page_title').height();
+  
+  // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+  // $('.page_title').css('padding-top', padding_top);
+  
+  $('#save').click(function(){
+    var url = "/api/comment/create";
+    var params = {};
+
+    params.message = $('#message').val();
+    
+    if (params.message == "") {
+      ts.error("編集部へのコメントを記入してください。");
+      return false;
+    }
+
+    bootbox.confirm("編集部へのコメントを送信しますか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          document.getElementById("message").value="";
+          $('.report-detail-comment-popup').fadeIn(800);          
+        });
+      }
+      else {
+        ts.info("キャンセルしました");
+      }
+    });
+  });
+  $(".report-detail-comment-popup-close").click(function() {
+    $(".report-detail-comment-popup").fadeOut(800);
+  });
+});
+</script>
+{/literal}
+
+<!-- コメント -->
+<div class="report-detail-comment-popup">
+  <div class="inner pc">
+    <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
+    <p class="main-message">きんゆう女子。編集部に<br>コメントしていただき、<br>誠にありがとうございます！</p>
+    <p>
+    みなさまからいただいたコメントを<br>参考に、「きんゆう女子。」をさらに<br>ブラッシュアップしてまいりますので、<br>今後ともよろしくお願いいたします♪
+    </p>
+    <p class="last-message">きんゆう女子。編集部より</p>
+  </div>
+
+  <div class="inner sp">
+    <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
+    <p class="main-message">きんゆう女子。編集部にコメントしていただき、誠にありがとうございます！</p>
+    <p>
+    みなさまからいただいたコメントを参考に、「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
+    </p>
+    <p class="last-message">きんゆう女子。編集部より</p>
+  </div>
+</div>
+

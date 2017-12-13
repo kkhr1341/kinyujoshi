@@ -97,20 +97,20 @@
   text-align: center;
 }
 .myway-introduction .myway-description p {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 13px;
+  line-height: 26px;
   width: 800px;
   margin: 0 auto;
 }
 .intoduction-title {
-  font-size: 26px;
+  font-size: 24px;
   line-height: 36px;
   margin-bottom: 36px;
 }
 .intoduction-title span {
   border-bottom: 1px solid gray;
-  padding-bottom: 8px;
-  font-family: 'utsukushi';
+  padding-bottom: 4px;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 /* イントロダクション-画像 */
@@ -213,12 +213,14 @@
   font-weight: bold;
   padding: 12px 0px;
   text-align: center;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 .myway-content-list-el .text-box .description {
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 24px;
 }
 .myway-content-list-el .text-box .myway-to-link {
-  font-size: 15px;
+  font-size: 13px;
   width: 360px;
   display: block;
   margin: 0 auto;

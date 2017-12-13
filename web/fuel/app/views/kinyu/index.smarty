@@ -16,15 +16,14 @@
       {foreach from=$blogs_pick item=blog name=loopname}
 
       {if $smarty.foreach.loopname.index == 0}
-      <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/2017101813474520171016225807FullSizeRender.jpg) center center / cover no-repeat;">
-        <a target="_blank" href="http://peatix.com/event/314650/view">
-          <div class="kinyu-top-list-kind">
-          <p>イベント告知</p>
-          </div>
-        <h3 class="kinyu-top-list-title">キャリア×お金 金融女子のリアルストーリー</h3>
-        </a>
-      </div>
-
+        <div class="swiper-slide" style="background: url(/images/content/celebration/main-bg.jpg) center center / cover no-repeat;">
+          <a target="_blank" href="/celebration">
+            <div class="kinyu-top-list-kind">
+              <!-- <p>イベント告知</p> -->
+            </div>
+            <h3 class="kinyu-top-list-title">メンバー1,000人達成記念イベント</h3>
+          </a>
+        </div>
       {/if}
 
       {if $smarty.foreach.loopname.index == 1}
@@ -187,7 +186,7 @@
       <img class="report-list-banner" src="/images/banner/asahi_&w_sp.jpg">
     </a>
     <div class="blog-pagenation tx-center">
-      {$pagination|nofilter}
+      {$pagination}
     </div>
   </div>
 

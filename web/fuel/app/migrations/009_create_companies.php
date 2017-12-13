@@ -7,18 +7,21 @@ class Create_companies
 	public function up()
 	{
 		\DBUtil::create_table('companies', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
-			'name' => array('constraint' => 100, 'type' => 'varchar'),
-			'foundation_date' => array('type' => 'date'),
-			'capital' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
+			'name' => array('constraint' => 100, 'type' => 'varchar', 'null' => true),
+			'foundation_date' => array('type' => 'date', 'null' => true),
+			'capital' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'business' => array('type' => 'text'),
-			'zip' => array('constraint' => 10, 'type' => 'varchar'),
-			'address' => array('constraint' => 300, 'type' => 'varchar'),
-			'tel' => array('constraint' => 50, 'type' => 'varchar'),
-			'fax' => array('constraint' => 50, 'type' => 'varchar'),
-			'email' => array('constraint' => 50, 'type' => 'varchar'),
-			'president' => array('constraint' => 100, 'type' => 'varchar'),
-			'disable' => array('type' => 'tinyint'),
+			'zip' => array('constraint' => 10, 'type' => 'varchar', 'null' => true),
+			'address' => array('constraint' => 300, 'type' => 'varchar', 'null' => true),
+			'tel' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+			'fax' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+			'email' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+			'president' => array('constraint' => 100, 'type' => 'varchar', 'null' => true),
+			'disable' => array('type' => 'tinyint', 'default' => '0'),
+
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
 
 		), array('id'));
 	}

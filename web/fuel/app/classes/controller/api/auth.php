@@ -8,6 +8,7 @@
 
 use \Model\Login;
 use \Model\Register;
+use \Model\Profiles;
 
 class Controller_Api_Auth extends Controller_Base
 {
@@ -32,17 +33,41 @@ class Controller_Api_Auth extends Controller_Base
     public function action_register() {
         $val = Register::validate();
         if (!$val->run()) {
-            $this->error('登録に失敗しました');
+            $error_messages = $val->error_message();
+            $message = reset($error_messages);
+            $this->error($message);
         }
+        $db = Database_Connection::instance();
+        $db->start_transaction();
         try {
             $params = $val->validated();
+
+            $username = Str::random('alnum', 16);
+
             Auth::create_user(
-                Str::random('alnum', 16),
+                $username,
                 $params['password'],
                 $params['email']
             );
+            $profile_code = Profiles::getNewCode('profiles', 6);
+            $profile = [
+                'code' => $profile_code,
+                'username' => $username,
+                'name' => $params['name'],
+                'name_kana' => $params['name_kana'],
+                'nickname' => $params['name'],
+                'profile_image' => '',
+                'email' => $params['email'],
+            ];
+
+            Profiles::create($profile);
+
+            $db->commit_transaction();
+
             Auth::login($params['email'], $params['password']);
+
         } catch (SimpleUserUpdateException $e) {
+            $db->rollback_transaction();
             Log::error('register error::'.$e->getMessage());
             $this->error('登録に失敗しました');
         }

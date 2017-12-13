@@ -14,9 +14,9 @@
 .sp {
   display: none!important;
 }
-/*.kinyu-main {
-  margin-right: 80px;
-}*/
+.kinyu-main {
+  position: relative;
+}
 .kinyu-main-title {
   text-align: left;
   margin-bottom: 8px;
@@ -29,6 +29,14 @@
 }
 .fs-mincho {
   font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#canvas {
+  position:fixed;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  opacity: 0.5;
+  z-index: -1;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -68,6 +76,7 @@
   text-align: center;
   padding-bottom: 16px;
   letter-spacing: -4em;
+  font-size: 0px;
 }
 .kinyu-header-nav li {
   display: inline-block;
@@ -213,130 +222,6 @@
     display: block;
     opacity: 1;
   }
-}
-/*  */
-.kinyu-main-menu li.link-top .tool-chip {
-  border: 1px solid #f3f3f3;
-}
-.kinyu-main-menu li.link-top .tool-chip:after {
-  border-left-color: #7CDCCE;
-}
-.kinyu-main-menu li.picknews .tool-chip {
-  border: 1px solid #7cdcce;
-}
-.kinyu-main-menu li.picknews .tool-chip:after {
-  border-left-color: #7cdcce;
-}
-.kinyu-main-menu li.jyoshikai .tool-chip {
-  border: 1px solid #ffef7d;
-}
-.kinyu-main-menu li.jyoshikai .tool-chip:after {
-  border-left-color: #ffef7d;
-}
-.kinyu-main-menu li.member .tool-chip {
-  border: 1px solid #ffdacb;
-}
-.kinyu-main-menu li.member .tool-chip:after {
-  border-left-color: #ffdacb;
-}
-.kinyu-main-menu li.menu-open .tool-chip { 
-  border: 1px solid #7CDCCE;
-}
-.kinyu-main-menu li.about-link .tool-chip { 
-  border: 2px solid #7CDCCE;
-  background: #7CDCCE;
-  color: #fff;
-  font-weight: bold;
-}
-.kinyu-main-menu li.about .tool-chip {
-  border: 1px solid #e2e1e1;
-}
-.kinyu-main-menu li.about .tool-chip:after {
-  border-left-color: #e2e1e1;
-}
-.social-menu {
-  position: absolute;
-  bottom: 16px;
-  left: 25px;
-}
-/* メニュー部分 */
-.social-menu li {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-bottom: 8px;
-  box-sizing: border-box;
-  transition: .3s;
-}
-.social-menu li a {
-  display: block;
-  line-height: 0;
-  padding: 0px;
-}
-.social-menu li a img {
-  width: 100%;
-}
-
-/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-   ナビゲーション・ボタン
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.menu-trigger,
-.menu-trigger span {
-  display: inline-block;
-  transition: all .4s;
-  box-sizing: border-box;
-}
-.menu-trigger {
-  position: relative;
-  display: block;
-  width: 90%;
-  height: 20px;
-  margin: 0 auto;
-}
-.menu-trigger span {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #7CDCCE;
-  border-radius: 4px;
-}
-.menu-trigger span:nth-of-type(1) {
-  top: 0;
-}
-.menu-trigger span:nth-of-type(2) {
-  top: 9px;
-}
-.menu-trigger span:nth-of-type(3) {
-  bottom: 0;
-}
-.menu-trigger.active span:nth-of-type(1) {
-  -webkit-transform: translateY(10px) rotate(-45deg);
-  transform: translateY(10px) rotate(-45deg);
-  background-color: #fff;
-}
-.menu-trigger.active span:nth-of-type(2) {
-  /*left: 50%;*/
-  /*opacity: 0;*/
-  background: #7CDCCE;
-  /*-webkit-animation: active-menu-bar02 .8s forwards;
-  animation: active-menu-bar02 .8s forwards;*/
-}
-@-webkit-keyframes active-menu-bar02 {
-  100% {
-    height: 0;
-  }
-}
-@keyframes active-menu-bar02 {
-  100% {
-    height: 0;
-  }
-}
-.menu-trigger.active span:nth-of-type(3) {
-  -webkit-transform: translateY(-8px) rotate(45deg);
-  transform: translateY(-8px) rotate(45deg);
-  background-color: #fff;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -598,87 +483,10 @@
   margin-bottom: 16px;
 }
 
-/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  　トップ・女子会&メンバー部分
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.kinyu-top-maincontent-block {
-}
-.kinyu-top-maincontent {
-  /*border-left: 1px solid #7CDCCE;
-  border-right: 1px solid #7CDCCE;*/
-  letter-spacing: -4em;
-  padding: 36px;
-  background: #f9f9f9;
-}
-.kinyu-top-maincontent h3 img {
-  width: 270px;
-}
-.kinyu-top-maincontent li {
-  width: 47%;
-  display: inline-block;
-  letter-spacing: normal;
-  margin-left: 3%;
-}
-.kinyu-top-maincontent li:first-child {
-  margin-right: 3%;
-  margin-left: 0;
-}
-.kinyu-top-maincontent li .main-img{
-  width: 100%;
-}
-.kinyu-top-maincontent li p {
-  font-size: 12px;
-  line-height: 20px;
-  margin: 0 auto;
-  padding: 12px 0px 0px;
-}
-.kinyu-top-maincontent li a {
-  position: relative;
-  /*font-size: 12px;*/
-  display: block;
-  /*margin: 0 auto;
-  width: 92%;
-  border: 1px solid #ffdacb;
-  padding: 8px 0px;
-  background: #ffdacb;
-  box-sizing: border-box;
-  text-align: center;*/
-  /*color:#fff;*/
-  transition: .5s;
-}
-/*.kinyu-top-maincontent li:first-child a {
-  border: 1px solid rgba(255, 239, 125, 0.5)!important;
-  background: rgba(255, 239, 125, 0.5)!important;
-  color:#444;
-}*/
-/*.kinyu-top-maincontent li a:after {
-  content: "〉";
-  font-size: 14px;
-  position: absolute;
-  right: 0;
-}*/
-/*.kinyu-top-maincontent li a
-.kinyu-top-maincontent li:last-child a {
-  background: #e8e8e8;
-}*/
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  　トップページ・記事リスト
+  　トップページ・メインコンセプト部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.kinyu-top-list-block {
-  margin-left: 360px;
-  padding: 20px 42px 80px;
-  position: relative;
-}
-.kinyu-top-list-block .inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.kinyu-top-introlist-block {
-  padding: 155px 0% 50px;
-}
 .kinyu-top-introlist-left {
   width: 31.333%;
   margin-right: 3%;
@@ -722,7 +530,6 @@
   line-height: 45px;
   color: #fff;
 }
-
 .kinyu-top-introlist-right {
   width: 65.667%;
   float: left;
@@ -802,11 +609,6 @@
     opacity: 1;
     background: #7CDCCE;
 }
-.kinyu-report-list .kinyu-report-title {
-  width: 180px;
-  margin-bottom: 24px;
-  padding-left: 8px;
-}
 
 /* ニュース */
 .kinyu-top-introlist-news {
@@ -852,21 +654,26 @@
   line-height: 13px;
   transition: .3s;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　トップページ・記事リスト
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-top-list-block {
+  margin-left: 360px;
+  padding: 20px 42px 80px;
+  position: relative;
+}
+.kinyu-top-list-block .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.kinyu-top-introlist-block {
+  padding: 155px 0% 50px;
+}
 .kinyu-sp-border-line {
   width: 100%;
   margin: 24px 0px;
-}
-.prev-news-list {
-  text-align: right;
-  margin-top: 24px;
-}
-.prev-news-list a {
-  font-size: 14px;
-  padding: 8px 24px;
-  display: inline-block;
-  border: 1px solid #7CDCCE;
-  color: #4da99c!important;
-  transition: .3s;
 }
 
 /*-- 記事一覧部分 --*/
@@ -875,27 +682,15 @@
   margin: 0 auto;
   padding: 142px 0% 60px!important;
 }
-.kinyu-list-block-title {
-  font-size: 14px;
-  line-height: 14px;
-  color: #5FB3A7;
-  font-weight: bold;
-  margin-bottom: 12px;
-}
 .kinyu-top-list {
   padding: 0px 0% 0px;
-  letter-spacing: -4em;
 }
 .kinyu-top-list li {
-  /*display: inline-block;
-  display: -webkit-inline-block;
-  letter-spacing: normal;*/
   float: left;
   vertical-align: top;
   width: 30.8%;
   margin-right: 3.8%;
   margin-bottom: 3.8%;
-  /*float: left;*/
   box-sizing: border-box;
   box-shadow: 0px 0px 0px 0px #e0e0e0;
   position: relative;
@@ -909,7 +704,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  /*color: #fff;*/
   background: rgba(255,255,255,.1);
   position: relative;
   transition: .8s;
@@ -918,9 +712,6 @@
 .kinyu-top-list .img-box {
   width: 100%;
   height: 200px;
-}
-.kinyu-top-list li a img {
-  border-radius: 3px;
 }
 .list-kind-img {
   position: absolute;
@@ -933,10 +724,8 @@
   line-height: 22px;
   padding: 0px 4px 10;
   height: 44px;
-  /*color: #fff;*/
   width: 100%;
   box-sizing: border-box;
-  /*text-shadow: 1px 1px 1px #3e3e3e;*/
   transition: 0.8s;
   font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
@@ -973,7 +762,7 @@
 .kinyu-main-block .inner {
   background: #fff;
   width: 1050px;
-  padding: 36px 0px 80px;
+  padding: 42px 0px 80px;
   margin: 0 auto;
 }
 /* 記事のイントロダクション */
@@ -1033,87 +822,15 @@
   margin-bottom: 30px;
 }
 .kinyu-top-list-kind p {
-  /*color: #5ebfb1;*/
   color: #46aa9c;
   font-size: 13px;
   line-height: 13px;
   padding: 16px 0px 8px;
 }
 
-/* 記事詳細 - サムネイル画像 */
-.report-detail-thunb-block {
-  padding-bottom: 36px;
-  border-bottom: 1px solid #92b8b4; 
-}
-.report-detail-thunb {
-  width: 150px;
-  height: 150px;
-  opacity: .8;
-  float: left;
-}
-
-.report-detail-info {
-  padding-left: 180px;
-}
-
-/* 記事詳細 - 説明文 */
-.report-detail-description {
-}
-.report-detail-description p {
-  font-size: 12px;
-  line-height: 18px;
-  color: #555555;
-}
-.report-detail-description .date {
-  font-size: 12px;
-  line-height: 12px;
-  color: #898989;
-  padding-top: 12px;
-}
-.report-detail-title {
-  font-size: 18px;
-  line-height: 28px;
-  /*padding-left: 90px;*/
-  font-weight: bold;
-  padding: 8px 0px;
-}
-.report-detail-keyword {
-}
-.report-detail-keyword p {
-  color: #848282;
-  font-size: 14px;
-  line-height: 14px;
-  padding-bottom: 24px;
-}
-.report-detail-keyword p span {
-  padding: 4px 16px;
-  border-radius: 20px;
-  box-sizing: border-box;
-  font-size: 15px;
-  color: #444444;
-}
-.report-detail-keyword span.keyword01 {
-  border: 1px solid #f7b3b3;
-  background: rgba(247, 179, 179, 0.1);
-}
-.report-detail-keyword span.keyword02 {
-  border: 1px solid #64a6de; 
-  background: rgba(100, 166, 222, 0.1);
-}
-.report-detail-keyword span.keyword03 {
-  border: 1px solid #eca5f5;
-  background: rgba(236, 165, 245, 0.1);
-}
-.report-detail-keyword span.keyword04 {
-  border: 1px solid #ffb66c;
-  background: rgba(255, 182, 108, 0.1);
-}
-.report-detail-keyword span.keyword05 {
-  border: 1px solid #5edc8b;
-  background: rgba(94, 220, 139, 0.1);
-}
-
-/* サイドバー */
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　記事・サイドバー
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .report-detail-sidebar {
   float: right;
   width: 320px;
@@ -1121,14 +838,31 @@
   height: 500px;
 }
 .report-detail-sidebar-el {
-  margin-bottom: 30px;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.report-detail-sidebar-el textarea {
+  width: 100%;
+  background: #f9f9f9;
+  resize: none;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+.report-detail-sidebar-el button {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 13px;
+  padding:12px 0px;
+  font-weight: bold; 
 }
 .report-detail-sidebar-el-title {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 13px;
+  line-height: 13px;
   border-left: 2px solid #7CDCCE;
   margin-bottom: 16px;
-  padding: 0px 0px 0px 8px;
+  padding: 2px 0px 2px 8px;
 }
 /* 直近の女子会 */
 .report-sidebar-event-list li {
@@ -1160,6 +894,7 @@
   font-weight: bold;
 }
 .report-sidebar-event-list li .text-box .title {
+  width: 100%;
   font-size: 12px;
   line-height: 20px;
   height: 40px;
@@ -1178,7 +913,7 @@
 .report-sidebar-report-list li {
   width: 100%;
   float: left;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 .report-sidebar-report-list li:first-child {
   margin-top: 0px;
@@ -1191,7 +926,7 @@
 .report-sidebar-report-list li .text-box {
   float: right;
   width: 75%;
-  padding: 12px 0px 0px 12px;
+  padding: 8px 0px 0px 12px;
 }
 .report-sidebar-report-list li .text-box .category {
   font-size: 11px;
@@ -1205,7 +940,39 @@
   height: 40px;
   margin-top: 6px;
 }
-
+/* INSTAGRAM */
+.report-detail-sidebar-el .insta-el li {
+  width: 106px;
+  height: 106px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  float: left;
+}
+.report-detail-sidebar-el .insta-hash-title {
+  text-align: center;
+  color: #489a8f;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.report-detail-sidebar-el .insta-el li:nth-child(3n) {
+  margin-right: 0px;
+}
+.report-detail-sidebar-el .insta-el li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* myway */
+.report-detail-sidebar-el .myway-list li {
+  margin-bottom: 8px;
+}
+.report-detail-sidebar-el .myway-list li:last-child {
+  margin-bottom: 0px;
+}
+.report-detail-sidebar-el .myway-list li a {
+  line-height: 0;
+  display: block;
+}
 
 /* 本文 */
 .report-detail-main {
@@ -1213,7 +980,7 @@
   position: relative;
   width: 658px;
   padding-right: 35px;
-  border-right: 1px solid #f9f9f9;
+  border-right: 1px solid #e1dede;
   box-sizing: content-box;
 }
 .report-detail-main img {
@@ -1434,7 +1201,7 @@
 .joshikai-main {
   width: 1050px;
   height: 400px;
-  background: #f9f9f9;
+  background: #dedede29;
   margin: 0 auto;
 }
 .joshikai-main-left {
@@ -1628,7 +1395,7 @@
 }
 .kinyu-joshikai-detail-header {
   padding: 36px 4px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #e3e3e3;
   box-sizing: border-box;
 }
 .kinyu-joshikai-detail-header-inner {
@@ -1673,12 +1440,35 @@
 .kinyu-joshikai-detail-el-block {
   padding: 32px 0px 0px 0px;
 }
+/* 女子会内文章 */
+.joshikai-detail-el-content-box h2 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 26px;
+  padding: 5px 0px 5px 0px;
+  background-color: #fff;
+  border-radius: 0px;
+  border-bottom: 1px solid #7CDCCE;
+  margin: 20px 0px;
+}
+.joshikai-detail-el-content-box p {
+  font-size: 13px;
+  line-height: 24px;
+}
+.joshikai-detail-el-content-box blockquote {
+  font-size: 11px;
+  line-height: 18px;
+  margin-top: 5px;
+  border-left: 2px solid #d8d8d8;
+  color: #a09f9f;
+  padding-left: 8px;
+}
 .kinyu-joshikai-detail-el {
   width: 613px;
   float: left;
   padding-right: 36px;
   box-sizing: content-box;
-  border-right: 1px solid;
+  border-right: 1px solid #e3e3e3;
 }
 .kinyu-joshikai-detail-el .info-title {
   margin-bottom: 12px;
@@ -1705,13 +1495,29 @@
   font-size: 14px;
   padding-top: 8px;
 }
+.joshikai-detail-el-info li .info-link {
+  display: block;
+  width: 100%;
+  background: gray;
+  margin-top: 12px;
+  text-align: center;
+  padding: 14px 0px;
+  font-size: 13px;
+}
+.joshikai-detail-el-info li .fee-card {
+  background: #7cdcce;
+  border: 1px solid #7cdcce;
+  color: #fff;
+  font-weight: bold;
+}
+.joshikai-detail-el-info li .fee-cash {
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
 .joshikai-sidebar {
   width: 314px;
   float: right;
   margin-left: 36px;
-}
-.joshikai-detail-el-content-box {
-
 }
 .joshikai-detail-el-content-box .info-title {
   font-size: 14px;
@@ -1723,6 +1529,200 @@
   font-size: 14px;
   padding-top: 8px;
 }
+/* 当日現金払い-モダルウィンドウ */
+.fee-open {
+  display: none;
+  width: 100%;
+  height: 100%;
+  /*background: #92dbd1e0;*/
+  background: #ededede0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+.day-card-open {
+  background: #92dbd1e0;
+}
+.day-cash-close {
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px;
+}
+.fee-open .inner {
+  width: 450px;
+  height: 550px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -225px;
+  display: table;
+  padding: 36px;
+}
+.fee-open .inner form {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
+}
+.fee-open .inner form .main-title {
+  font-size: 22px;
+  padding-bottom: 2px;
+  display: inline-block;
+  border-bottom: 1px solid #5fb3a7;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+.fee-open .inner form label {
+  font-size: 12px;
+  color: #5fb3a7;
+  margin-bottom: 8px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+.fee-open .inner form .day-cash-open-form-el p {
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: #a0a0a0;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+.fee-open .inner form .description {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #727070;
+  margin-bottom: 16px;
+}
+.fee-open .inner form input {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+.login-btn-list li.email-login-bg a {
+  background: #79cec1;
+  color: #fff;
+  font-weight: bold;
+}
+.day-cash-submit {
+  background: #5fb3a7;
+  font-size: 13px;
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 12px 0px;
+  color: #fff;
+  margin: 0 auto;
+}
+.day-card-open .day-cash-submit {
+  margin-top: 12px;
+}
+/* カード払い */
+.day-card-open .exp-date-block {
+  font-size: 0px;
+  display: inline-block;
+  letter-spacing: -40em;
+  width: 100%;
+}
+.day-card-open .exp-date-block input {
+  width: 48%!important;
+  display: inline-block;
+  letter-spacing: normal;
+}
+.day-card-open .exp-date-block input:first-child {
+  margin-right: 4%;
+}
+
+
+/* 未登録メンバーの決済ページ */
+.joshikai-detail-el-info .no-login-area {
+  position: relative;
+}
+.joshikai-detail-el-info .no-menber-fee-el {
+  margin-top: 12px;
+}
+.joshikai-detail-el-info .no-menber-fee-el .description {
+  font-size: 12px;
+  padding-left: 1px;
+}
+.joshikai-detail-el-info .no-menber-fee-el .no-menber-fee-el-btn {
+  display: block;
+  margin-top: 4px;
+  text-align: center;
+  background: gray;
+  padding: 10px 0px;
+}
+.joshikai-detail-el-info .no-menber-fee-el .login-member {
+  background: #81ccc1;
+  color: #fff;
+  font-weight: bold;
+}
+.joshikai-detail-el-info .no-menber-fee-el .no-member {
+  background: #f1f1f1;
+}
+/* メンバー登録なし・参加部分 */
+.no-login-area-joinbtn {
+  display: none;
+}
+/* リロード部分 */
+.joshikai-detail-el-info .loader-block {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.joshikai-detail-el-info .loader {
+  position: absolute;
+  display: inline-block;
+  margin: 0 12.5% 100px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #5FB3A7;
+  border-radius: 50%;
+  animation: spin 0.75s infinite linear;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+}
+.joshikai-detail-el-info .loader::before,
+.joshikai-detail-el-info .loader::after {
+  left: -1px;
+  top: -1px;
+  display: none;
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+}
+.joshikai-detail-el-info .loader-1 {
+  border-top-width: 0;
+}
+@keyframes spin {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
+}
+
 
 /* 女子会ページ：すぺしゃる女子会のチケット一覧 */
 /*.kinyu-specialevent-list {
@@ -1878,7 +1878,7 @@
   float: right;
   width: 60%;
   background: #f7f7f7;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 .report-detail-share .social-list {
   text-align: center;
@@ -1886,13 +1886,18 @@
 }
 .report-detail-share .social-list li {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   margin-right: 12px;
   transition: .3s;
 }
 .report-detail-share .social-list li:last-child {
   margin-right: 0px;
+}
+.share-this-title {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
 }
 .share-this-page {
   display: block;
@@ -1902,11 +1907,10 @@
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
 }
 .report-detail-share .social-list li a .social-logo {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   box-sizing: border-box;
 }
 .report-detail-share .social-list li .facebook {
@@ -2525,27 +2529,33 @@ footer .footer-menu {
 
 /* ログイン部分 */
 .login-contents-block {
-  background: #f9f9f9;
+  background: #dedede29;
   padding: 80px 0px;
+  position: relative;
 }
 .login-contents-intro {
   margin-bottom: 50px;
   text-align: center;
 }
-.login-contents-intro p {
-  font-size: 14px;
+.login-contents-intro .caution {
+  font-size: 12px;
+  display: inline-block;
+  margin: 0 auto;
+  border: 1px solid #f9aaa0; 
+  padding: 2px 24px;
+  transition: .8s;
 }
 .login-contents-title {
   display: inline-block;
-  font-size: 24px;
-  margin-bottom: 24px;
+  font-size: 26px;
+  margin-bottom: 32px;
 }
 .login-contents-title span {
   border-bottom: 1px solid #7CDCCE;
   padding-bottom: 4px;
 }
 .login-contents-block-inner {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
 }
 .login-contents-sidearea {
@@ -2562,29 +2572,34 @@ footer .footer-menu {
   display: block;
   text-align: center;
   padding: 8px 0px;
-  opacity: .3;
+  opacity: .5;
 }
 .login-contents-sidearea li a.active {
-  background: #eaeaea;
+  background: #f0eeee;
   opacity: 1;
   font-weight: bold;
 }
 .login-contents-mainarea {
-  box-sizing: content-box;
-  width: 501px;
-  padding: 4px 0px 4px 36px;
-  float: right;
-  border-left: 1px solid #bfbebe;
+  width: 100%;
+}
+.login-contents-form-area label.title {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #5fb3a7;
+  font-weight: normal;
 }
 .login-contents-form-area label {
   font-size: 13px;
   color: #5fb3a7;
   margin-bottom: 12px;
-  font-weight: bold;
   width: 100%;
+  font-weight: bold;
 }
 .login-contents-form-area .email-form {
-  border-bottom: 1px solid #e6e6e6;
   padding-bottom: 16px;
 }
 .login-contents-form-area .email-form input {
@@ -2592,7 +2607,7 @@ footer .footer-menu {
   background: #fff;
   padding: 10px;
   font-size: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   box-sizing: border-box;
 }
 .login-contents-form-area .email-form input::-webkit-input-placeholder {
@@ -2611,10 +2626,20 @@ footer .footer-menu {
   font-size: 13px;
   padding: 12px 0px;
   background: #7CDCCE;
-  font-weight: bold;
 }
+
+/* メールアドレスの登録/ログイン部分 */
+.login-email-container {
+  width: 50%;
+  float: left;
+  padding-right: 4%;
+  border-right: 1px solid #e6e6e6;
+}
+
+/* ソーシャルアカウントでの登録/ログイン部分 */
 .login-btn-list {
-  margin-top: 24px;
+  width: 46%;
+  float: right;
 }
 .login-btn-list ul {
   padding: 0px 4px;
@@ -2622,6 +2647,7 @@ footer .footer-menu {
 .login-btn-list li {
   width: 100%;
   margin-bottom: 12px;
+  transition: .8s;
 }
 .login-btn-list li a {
   display: block;
@@ -2645,12 +2671,90 @@ footer .footer-menu {
 .login-btn-list li.fb-login-bg a {
   background: #7093d2;
   color: #fff;
-  font-weight: bold;
 }
 .login-btn-list li.google-login-bg a {
   background: #e68787;
   color: #fff;
+}
+/* pass再発行 */
+#pass-reissue-btn {
+  color: #4eaedc;
+}
+#pass-reissue-open {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #97d8cfc7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+#pass-reissue-close {
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px;
+}
+#pass-reissue-open .inner {
+  width: 600px;
+  height: 300px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -300px;
+  display: table;
+  padding: 36px;
+}
+#pass-reissue-open .inner form {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+#pass-reissue-open .main-title {
+  font-size: 22px;
+  padding-bottom: 2px;
+  display: inline-block;
+  border-bottom: 1px solid #5fb3a7;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#pass-reissue-open .description {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #727070;
+    margin-bottom: 16px;
+}
+#pass-reissue-open .pass-reissue-form-el label {
+  font-size: 12px;
+  color: #5fb3a7;
+  margin-bottom: 8px;
   font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+#pass-reissue-open .pass-reissue-form-el input {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.pass-reissue-submit {
+  background: #7dd1c5;
+  font-size: 13px;
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 12px 0px;
+  color: #fff;
+  margin: 0 auto;
 }
 .regist-sub-description {
   margin-top:20px;
@@ -2669,12 +2773,7 @@ footer .footer-menu {
   padding: 0px;
 }
 .login-contents-regist .email-form {
-  padding-top: 180px;
-  border-top: 1px solid #e6e6e6;
   border-bottom: none;
-}
-#regist-email-form-block {
-  display: none;
 }
 .login-contents-regist .email-form p {
   text-align: left;
@@ -2730,6 +2829,16 @@ footer .footer-menu {
   border-left: 4px solid #79cec1;
   padding: 2px 0px 2px 8px;
   margin-bottom: 16px;
+}
+
+/* 別のボタン */
+.login-another-btn {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #e0e0e0;
+  padding: 10px 24px;
 }
 
 /* = Selected Text
@@ -2879,6 +2988,14 @@ footer .footer-menu {
 .about-kinyu-container-left li a:hover {
   color: #5FB3A7;
   opacity: 1;
+}
+.login-contents-intro .caution:hover {
+  background: #f9aaa0;
+  color: #fff;
+  font-weight: bold;
+}
+.login-btn-list li:hover {
+  opacity: .5;
 }
 
 }

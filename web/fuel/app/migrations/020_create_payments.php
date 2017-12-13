@@ -7,12 +7,12 @@ class Create_payments
 	public function up()
 	{
 		\DBUtil::create_table('payments', array(
-			'id' => array('constraint' => 11, 'type' => 'int'),
+			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
-			'project_code' => array('constraint' => 50, 'type' => 'varchar'),
-			'course_code' => array('constraint' => 50, 'type' => 'varchar'),
-			'address_code' => array('constraint' => 50, 'type' => 'varchar'),
+			'project_code' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+			'course_code' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+			'address_code' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'webpay_id' => array('constraint' => 50, 'type' => 'varchar'),
 			'livemode' => array('type' => 'tinyint'),
 			'amount' => array('constraint' => 11, 'type' => 'int'),
@@ -32,12 +32,15 @@ class Create_payments
 			'description' => array('constraint' => 300, 'type' => 'varchar'),
 			'failure_message' => array('type' => 'text'),
 			'expire_time' => array('type' => 'datetime'),
-			'zip' => array('constraint' => 10, 'type' => 'varchar'),
-			'address' => array('constraint' => 300, 'type' => 'varchar'),
-			'name' => array('constraint' => 50, 'type' => 'varchar'),
-			'kana' => array('constraint' => 50, 'type' => 'varchar'),
-			'tel' => array('constraint' => 50, 'type' => 'varchar'),
-			'disable' => array('type' => 'tinyint'),
+			'zip' => array('constraint' => 10, 'type' => 'varchar', 'null' => true),
+			'address' => array('constraint' => 300, 'type' => 'varchar', 'null' => true),
+			'name' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+			'kana' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+			'tel' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+			'disable' => array('type' => 'tinyint', 'default' => '0'),
+
+            'created_at' => array('type' => 'datetime'),
+            'updated_at' => array('type' => 'timestamp'),
 
 		), array('id'));
 	}

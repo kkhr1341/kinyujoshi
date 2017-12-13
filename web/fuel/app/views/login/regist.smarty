@@ -33,13 +33,6 @@
 
         <div class="login-contents-mainarea login-contents-regist">
           <div class="login-contents-form-area">
-            <!-- <form class="email-form">
-              <label>メールアドレスでログイン</label>
-              <input type="text" placeholder="メールアドレスを入力してください" value="">
-              <input type="text" placeholder="パスワードを入力してください" value="">
-              <button class="login-btn" type="button" id="login">ログイン</button>
-              <p>パスワードをお忘れの方はこちら</p>
-            </form> -->
             <div class="login-btn-list">
               <label>新規メンバー登録</label>
               <ul>
@@ -59,21 +52,21 @@
                 <div class="regist-email-form-el">
                   <label class="">お名前</label>
                   <p class="">フルネームで入力してください。</p>
-                  <input type="text" id="name" class="" placeholder="">
+                  <input type="text" name="name" id="name" class="" placeholder="">
                 </div>
 
                 <!-- ふりがな -->
                 <div class="regist-email-form-el">
                   <label class="">ふりがな</label>
                   <p class="">お名前のふりがなを入力してください。</p>
-                  <input type="text" id="name_kana" class="" placeholder="">
+                  <input type="text" name="name_kana" id="name_kana" class="" placeholder="">
                 </div>
 
                 <!-- 生年月日 -->
                 <div class="regist-email-form-el">
                   <label class="">生年月日</label>
                   <div class="regist-selectarea">
-                    <select id="age1" class=''>
+                    <select name="birthday_year" id="age1" class=''>
                       <option></option>
                       {section name=i start=1952 loop=2018}
                         <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
@@ -82,58 +75,21 @@
                     <p>年</p>
                   </div>
                   <div class="regist-selectarea">
-                    <select id="age2" class=''>
+                    <select name="birthday_month" id="age2" class=''>
                       <option></option>
-                      <option value="01">1</option>
-                      <option value="02">2</option>
-                      <option value="03">3</option>
-                      <option value="04">4</option>
-                      <option value="05">5</option>
-                      <option value="06">6</option>
-                      <option value="07">7</option>
-                      <option value="08">8</option>
-                      <option value="09">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
+                      {section name=i start=1 loop=12}
+                      <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
+                      {/section}
                     </select>
                     <p>月</p>
                   </div>
 
                   <div class="regist-selectarea">
-                    <select id="age3" class=''>
+                    <select name="birthday_day" id="age3" class=''>
                       <option></option>
-                      <option value="01">1</option>
-                      <option value="02">2</option>
-                      <option value="03">3</option>
-                      <option value="04">4</option>
-                      <option value="05">5</option>
-                      <option value="06">6</option>
-                      <option value="07">7</option>
-                      <option value="08">8</option>
-                      <option value="09">9</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="23">22</option>
-                      <option value="23">23</option>
-                      <option value="24">24</option>
-                      <option value="25">25</option>
-                      <option value="26">26</option>
-                      <option value="27">27</option>
-                      <option value="28">28</option>
-                      <option value="29">29</option>
-                      <option value="30">30</option>
-                      <option value="31">31</option>
+                        {section name=i start=1 loop=31}
+                        <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
+                        {/section}
                     </select>
                     <p>日</p>
                   </div>
@@ -143,21 +99,20 @@
                 <div class="regist-email-form-el">
                   <label class="">メールアドレス</label>
                   <p class="">連絡がとりやすいアドレスを入力してください。</p>
-                  <input type="text" id="email" class="" placeholder="">
+                  <input type="text" name="email" id="email" class="" placeholder="">
                 </div>
 
                 <!-- パスワード -->
                 <div class="regist-email-form-el">
                   <label class="">パスワード</label>
-                  <input type="text" id="password" class="" placeholder="">
+                  <input type="password" name="password" id="password" class="" placeholder="">
                 </div>
 
                 <!-- パスワード -->
                 <div class="regist-email-form-el">
                   <label class="">パスワード（確認用）</label>
-                  <input type="text" id="password_conf" class="" placeholder="">
+                  <input type="password" name="confirm_password" id="password_conf" class="" placeholder="">
                 </div>
-
 
               </div>
 
@@ -170,3 +125,30 @@
     </div>
 
   </div>
+
+<script>
+$(function(){
+
+    var registForm = $('#regist-email-form-block');
+	registForm.find('.login-btn').click(function(){
+		var url = "/api/auth/register";
+		var params = {};
+        var birthday_year = registForm.find('[name="birthday_year"]').val();
+        var birthday_month = registForm.find('[name="birthday_month"]').val();
+        var birthday_day = registForm.find('[name="birthday_day"]').val();
+
+		params.name = registForm.find('[name="name"]').val();
+		params.name_kana = registForm.find('[name="name_kana"]').val();
+		params.email = registForm.find('[name="email"]').val();
+		params.birthday = birthday_year + '-' + birthday_month + '-' + birthday_day;
+		params.password = registForm.find('[name="password"]').val();
+		params.confirm_password = registForm.find('[name="confirm_password"]').val();
+
+		ajax.post(url, params, function(data){
+			ts.success("ログインが完了しました", function(){
+				location.href = "/my";
+			});
+		});
+	});
+});
+</script>

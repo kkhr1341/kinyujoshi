@@ -1,5 +1,5 @@
 <header class="kinyu-header">
-  <h1 class="main-logo"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></h1>
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
       <li><a href="/about">きんゆう女子。って？</a></li>
@@ -49,7 +49,7 @@
       </ul>
     </div>
     <div class="blog-pagenation tx-center">
-      {$pagination|nofilter}
+      {$pagination}
     </div>
 
     <div class="sp">
