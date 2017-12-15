@@ -39,6 +39,7 @@ return array(
         30 => '033_create_news',
         31 => '034_add_name_to_profiles',
         32 => '035_add_name_kana_to_profiles',
+        33 => '036_create_application_credit_payments',
       ),
     ),
     'module' => 
