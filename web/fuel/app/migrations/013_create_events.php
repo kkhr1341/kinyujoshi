@@ -11,7 +11,7 @@ class Create_events
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
 			'section_code' => array('constraint' => 50, 'type' => 'varchar'),
-			'status' => array('type' => 'tinyint'),
+			'status' => array('type' => 'tinyint', 'default' => '0'),
 			'open_date' => array('type' => 'datetime', 'null' => true),
 			'limit' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'application_num' => array('constraint' => 11, 'type' => 'int', 'default' => 0),

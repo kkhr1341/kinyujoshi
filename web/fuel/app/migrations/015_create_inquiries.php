@@ -17,7 +17,7 @@ class Create_inquiries
 			'email' => array('constraint' => 200, 'type' => 'varchar'),
 			'title' => array('constraint' => 200, 'type' => 'varchar'),
 			'message' => array('type' => 'text'),
-			'status' => array('type' => 'tinyint'),
+			'status' => array('type' => 'tinyint', 'default' => '0'),
 			'user_agent' => array('constraint' => 300, 'type' => 'varchar', 'null' => true),
 			'disable' => array('type' => 'tinyint', 'default' => '0'),
 

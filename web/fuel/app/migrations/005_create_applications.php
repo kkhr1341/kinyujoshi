@@ -11,7 +11,7 @@ class Create_applications
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'event_code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
-			'cancel' => array('type' => 'tinyint'),
+			'cancel' => array('type' => 'tinyint', 'default' => '0'),
 			'disable' => array('type' => 'tinyint', 'default' => '0'),
 
             'created_at' => array('type' => 'datetime'),

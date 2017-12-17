@@ -11,7 +11,7 @@ class Create_news
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
 			'section_code' => array('constraint' => 50, 'type' => 'varchar'),
-			'status' => array('type' => 'tinyint'),
+			'status' => array('type' => 'tinyint', 'default' => '0'),
 			'open_date' => array('type' => 'datetime'),
 			'title' => array('constraint' => 200, 'type' => 'varchar'),
 			'content' => array('type' => 'blob'),

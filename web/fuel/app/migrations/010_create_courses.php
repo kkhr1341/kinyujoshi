@@ -11,7 +11,7 @@ class Create_courses
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar'),
 			'project_code' => array('constraint' => 50, 'type' => 'varchar'),
-			'status' => array('type' => 'tinyint'),
+			'status' => array('type' => 'tinyint', 'default' => '0'),
 			'title' => array('constraint' => 200, 'type' => 'varchar', 'null' => true),
 			'content' => array('type' => 'blob'),
 			'price' => array('constraint' => 11, 'type' => 'int', 'null' => true),

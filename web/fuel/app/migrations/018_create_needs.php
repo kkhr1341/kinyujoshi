@@ -10,7 +10,7 @@ class Create_needs
 			'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
 			'code' => array('constraint' => 50, 'type' => 'varchar'),
 			'username' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
-			'status' => array('type' => 'tinyint'),
+			'status' => array('type' => 'tinyint', 'default' => '0'),
 			'name' => array('constraint' => 100, 'type' => 'varchar'),
 			'name_kana' => array('constraint' => 100, 'type' => 'varchar'),
 			'email' => array('constraint' => 200, 'type' => 'varchar'),

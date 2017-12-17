@@ -14,7 +14,7 @@ class Create_payments
 			'course_code' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'address_code' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'webpay_id' => array('constraint' => 50, 'type' => 'varchar'),
-			'livemode' => array('type' => 'tinyint'),
+			'livemode' => array('type' => 'tinyint', 'default' => '0'),
 			'amount' => array('constraint' => 11, 'type' => 'int'),
 			'card_exp_year' => array('constraint' => 11, 'type' => 'int'),
 			'card_exp_month' => array('constraint' => 11, 'type' => 'int'),
