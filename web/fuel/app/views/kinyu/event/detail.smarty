@@ -123,6 +123,7 @@ var $resArray02 = $resArray[1];
   <div id="day-card-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form method="POST" action="/pay" id="charge-form">
+      <input type="hidden" name="event_code" value="{$event.code}" />
       <span class="charge-errors"></span>
       <p class="main-title">カードでのお支払いで参加</p>
       <p class="description">カード情報を入力してご決済をお願いします。</p>
@@ -146,7 +147,8 @@ var $resArray02 = $resArray[1];
 <div id="no-day-card-open" class="day-card-open fee-open">
   <div id="no-day-card-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
-    <form method="POST" action="/pay" id="charge-form">
+    <form method="POST" action="/pay" id="no-member-charge-form">
+      <input type="hidden" name="event_code" value="{$event.code}" />
       <span class="charge-errors"></span>
       <p class="main-title">カードでのお支払いで参加</p>
       <p class="description">カード情報を入力してご決済をお願いします。</p>
@@ -189,6 +191,7 @@ var $resArray02 = $resArray[1];
   <div id="day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form>
+      <input type="hidden" name="event_code" value="{$event.code}" />
       <p class="main-title">現金でのお支払いで参加</p>
       <p class="description">女子会当日に現金でお支払いください。</p>
       <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
@@ -202,6 +205,7 @@ var $resArray02 = $resArray[1];
   <div id="no-day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form>
+      <input type="hidden" name="event_code" value="{$event.code}" />
       <p class="main-title">現金でのお支払いで参加</p>
       <p class="description">女子会当日に現金でお支払いください。</p>
       <div class="day-cash-open-form-el">
@@ -222,6 +226,8 @@ var $resArray02 = $resArray[1];
   </div>
 </div>
 
+<script type="text/javascript" src="https://js.pay.jp/"></script>
+<script type="text/javascript">Payjp.setPublicKey('{$payjp_public_key}');</script>
 <script>
   $(function() {
     
@@ -266,4 +272,52 @@ var $resArray02 = $resArray[1];
       },2500);
     });
   });
+  (function() {
+      var form = $("#charge-form"),
+          number = form.find('input[name="number"]'),
+          cvc = form.find('input[name="cvc"]'),
+          exp_month = form.find('input[name="exp_month"]'),
+          exp_year = form.find('input[name="exp_year"]'),
+          event_code = form.find('input[name="event_code"]');
+
+      $("#charge-form").submit(function(e) {
+          e.preventDefault();
+
+          form.find("button[type=submit]").prop("disabled", true);
+
+          var card = {
+              number: number.val(),
+              cvc: cvc.val(),
+              exp_month: exp_month.val(),
+              exp_year: exp_year.val()
+          };
+          Payjp.createToken(card, function(s, response) {
+              if (response.error) {
+                  form.find('.payment-errors').text(response.error.message);
+//                  form.find('button').prop('disabled', false);
+              }
+              else {
+//                  $(".number").removeAttr("name");
+//                  $(".cvc").removeAttr("name");
+//                  $(".exp_month").removeAttr("name");
+//                  $(".exp_year").removeAttr("name");
+
+                  var token = response.id;
+                  var url = "/api/events/application";
+                  var params = {};
+
+                  console.log(event_code.val());
+
+                  params.event_code = event_code.val();
+                  params.token = token;
+
+                  ajax.post(url, params, function(data){
+                      location.href = "/event/complete";
+                  });
+//                  form.append($('<input type="hidden" name="payjpToken" />').val(token));
+//                  form.get(0).submit();
+              }
+          });
+      });
+  })();
 </script>

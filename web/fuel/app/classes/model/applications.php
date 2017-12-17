@@ -1,6 +1,11 @@
 <?php
 
 namespace Model;
+use Oil\Exception;
+
+use Payjp\Payjp;
+use Payjp\Charge;
+
 require_once(dirname(__FILE__)."/base.php");
 
 class Applications extends Base {
@@ -122,20 +127,52 @@ class Applications extends Base {
 			return "既に参加申し込みずみです";
 		}
 
-		$params['code'] = self::getNewCode('applications');
-		$params['username'] = $username;
-		$params['created_at'] = \DB::expr('now()');
-		
-		\DB::insert('applications')->set($params)->execute();
-		
-		// 人数を追加する
-		\DB::update('events')->set(array(
-			'application_num' => \DB::expr('application_num+1')
-		))
-		->where('code', '=', $params['event_code'])
-		->execute();
-		
-		return true;
+        $db = \Database_Connection::instance();
+        $db->start_transaction();
+        try {
+            $application_code = self::getNewCode('applications');
+
+            // TODO:: 金額フィールド追加？
+            \DB::insert('applications')->set(array(
+                'code' => $application_code,
+                'event_code' => $params['event_code'],
+                'username' => $username,
+                'created_at' => \DB::expr('now()'),
+            ))->execute();
+
+            if ($params['token']) {
+
+                \DB::insert('application_credit_payments')->set(array(
+                    'application_code' => $application_code,
+                    'token' => $params['token'],
+                    'created_at' => \DB::expr('now()'),
+                ))->execute();
+
+                // 与信
+                \Config::load('payjp', true);
+                Payjp::setApiKey(\Config::get('payjp.private_key'));
+                Charge::create(array(
+                    'amount' => $event['fee'],
+                    'currency' => 'jpy',
+                    'capture' => false,
+                    'card' => $params['token'],
+                ));
+            }
+
+            // 人数を追加する
+            \DB::update('events')->set(array(
+                'application_num' => \DB::expr('application_num+1')
+            ))
+            ->where('code', '=', $params['event_code'])
+            ->execute();
+
+            $db->commit_transaction();
+
+            return true;
+        } catch (\Exception $e) {
+            $db->rollback_transaction();
+            return $e;
+        }
 	}
 	
 }

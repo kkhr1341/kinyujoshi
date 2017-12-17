@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "16bbbfc1adef496b42c5f99d4b61823d",
-    "content-hash": "e825016530a4d5868968cfbff90d3646",
+    "hash": "93e19b897113a4a322b17ef2bf5fc119",
+    "content-hash": "e9f3910e87b43d2480104502a7699726",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.46.0",
+            "version": "3.48.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "097abac2676b99ed38af986c3d8d8f3528a5788b"
+                "reference": "f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/097abac2676b99ed38af986c3d8d8f3528a5788b",
-                "reference": "097abac2676b99ed38af986c3d8d8f3528a5788b",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3",
+                "reference": "f5aef5671cd7f6e3b9ede0a3ff17c131cc05f4d3",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-12-11 22:12:17"
+            "time": "2017-12-15 19:49:31"
         },
         {
             "name": "composer/installers",
@@ -800,6 +800,61 @@
             "time": "2013-05-10 09:01:52"
         },
         {
+            "name": "payjp/payjp-php",
+            "version": "0.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/payjp/payjp-php.git",
+                "reference": "9455d38e8f88ae4e41c082380276e237db17b564"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/payjp/payjp-php/zipball/9455d38e8f88ae4e41c082380276e237db17b564",
+                "reference": "9455d38e8f88ae4e41c082380276e237db17b564",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.*-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Payjp\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Payjp and contributors",
+                    "homepage": "https://github.com/payjp/payjp-php/graphs/contributors"
+                }
+            ],
+            "description": "Payjp PHP Library",
+            "homepage": "https://pay.jp/",
+            "keywords": [
+                "api",
+                "payjp",
+                "payment processing"
+            ],
+            "time": "2017-03-29 09:26:56"
+        },
+        {
             "name": "phpseclib/phpseclib",
             "version": "2.0.0",
             "source": {
@@ -1036,48 +1091,6 @@
                 "templating"
             ],
             "time": "2016-12-14 21:57:25"
-        },
-        {
-            "name": "webpay/webpay",
-            "version": "2.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webpay/webpay-php.git",
-                "reference": "9cc1d36956cb1f441da1e950edb5353a8c23db2c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webpay/webpay-php/zipball/9cc1d36956cb1f441da1e950edb5353a8c23db2c",
-                "reference": "9cc1d36956cb1f441da1e950edb5353a8c23db2c",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "6.*",
-                "php": ">= 5.6.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "WebPay\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "webpay",
-                    "email": "administrators@webpay.jp"
-                },
-                {
-                    "name": "tomykaira",
-                    "email": "tomykaira@webpay.jp"
-                }
-            ],
-            "description": "Bindings of WebPay API",
-            "homepage": "https://webpay.jp/docs/api/php",
-            "time": "2016-09-23 09:47:53"
         }
     ],
     "packages-dev": [
@@ -2294,16 +2307,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "f6a99b95b338799645fe9f7880d7d4ca1bf79cc1"
+                "reference": "afe0cd38486505c9703707707d91450cfc1bd536"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/f6a99b95b338799645fe9f7880d7d4ca1bf79cc1",
-                "reference": "f6a99b95b338799645fe9f7880d7d4ca1bf79cc1",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/afe0cd38486505c9703707707d91450cfc1bd536",
+                "reference": "afe0cd38486505c9703707707d91450cfc1bd536",
                 "shasum": ""
             },
             "require": {
@@ -2348,7 +2361,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-12-04 18:15:22"
+            "time": "2017-12-11 20:38:23"
         },
         {
             "name": "webmozart/assert",
