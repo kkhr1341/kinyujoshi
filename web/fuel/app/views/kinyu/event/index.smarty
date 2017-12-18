@@ -5,8 +5,8 @@
   <nav>
     <ul class="kinyu-header-nav">
       <li><a href="/about">きんゆう女子。って？</a></li>
-      <li class="active"><a href="/event">女子会に参加</a></li>
-      <li><a href="/report">レポートを見る</a></li>
+      <li class="active"><a href="/joshikai">女子会</a></li>
+      <li><a href="/report">レポート</a></li>
       <li><a href="/news">ニュース</a></li>
       <li><a href="/myway">「わたし」を知る。</a></li>
       <li><a href="/login">メンバー登録 / ログイン</a></li>
@@ -20,7 +20,10 @@
   <div class="joshikai-main clear">
     <div class="joshikai-main-left">
       <div class="img-box">
-        <p><img src="/images/event/joshikai-title.png"></p>
+        <div class="img-box-inner">
+          <img src="/images/event/joshikai-title.png">
+          <a class="about-joshikai-link" href="#about-joshikai">きんゆう女子。会って？</a>
+        </div>
       </div>
     </div>
     <div class="joshikai-main-right">
@@ -51,7 +54,7 @@
                 <div class="bg-joshikai"></div>
               {/if}
               <div class="kinyu-event-list-el">
-                <a href="/event/{$event.code}">
+                <a href="/joshikai/{$event.code}">
                   <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
                     <!-- {if $event.event_category == "女子会"}
                       <p class="event-category normal-event">女子会</p>
@@ -91,6 +94,10 @@
             </li>
             {/foreach}
           </ul>
+        </div>
+
+        <div id="about-joshikai" class="about-joshikai">
+          <p class="kinyu-event-info-title">きんゆう女子。会って？</p>
         </div>
 
         <div class="special-event-list">

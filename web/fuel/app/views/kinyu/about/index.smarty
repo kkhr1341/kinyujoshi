@@ -1,83 +1,49 @@
-<header class="kinyu-header">
-  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
-  <nav>
-    <ul class="kinyu-header-nav">
-      <li class="active"><a href="/about">きんゆう女子。って？</a></li>
-      <li><a href="/event">女子会に参加</a></li>
-      <li><a href="/report">レポートを見る</a></li>
-      <li><a href="/news">ニュース</a></li>
-      <li><a href="/myway">「わたし」を知る。</a></li>
-      <li><a href="/login">メンバー登録 / ログイン</a></li>
-    </ul>
-  </nav>
-</header>
+{$about_header}
 
 <div class="kinyu-single-block">
   <div class="about-kinyu-container">
 
-    <div class="about-kinyu-header">
-      <img src="/images/about/main-title.png">
-    </div>
-    
-    <div class="about-kinyu-container-inner clear">
-      
-      <div class="about-kinyu-container-left">
-        <ul>
-          <li class="active"><a href="/about">きんゆう女子。について</a></li>
-          <li><a href="/about_contents">できること</a></li>
-          <li><a href="/about_story">生まれたストーリー</a></li>
-          <li><a href="/about_policy">運営ポリシー</a></li>
-          <li><a href="/about_design">デザインについて</a></li>
-          <li><a href="/about_hensyubu">きんゆう女子。編集部</a></li>
-        </ul>
+    <div class="about-kinyu-top-container">
+      <div class="about-kinyu-header-contetns">
+        
       </div>
+      <div class="about-kinyu-header-contetns-list">
 
-      <div class="about-kinyu-container-right">
+        <div class="about-kinyu-header-contetns-list-el">
+          <a class="clear" href="/about_main">
+            <div class="img-box" style="background:url(/images/about/about-index.jpg) top center / cover no-repeat;"></div>
+            <div class="title-box">
+              <div class="title-box-inner">
+                <p><img src="/images/about/pc_title_about.png"></p>
+              </div>
+            </div>
+          </a>
+        </div>
 
-        <div class="about-kinyu-bgarea" style="background:url(/images/og-top.png) top center / cover no-repeat;"></div>
-        <div class="about-kinyu-details-area">
-          <h2>きんゆう女子。について</h2>
+        <div class="about-kinyu-header-contetns-list-el">
+          <a class="clear" href="/about_story">
+            <div class="img-box" style="background:url(/images/about/about-story.jpg) top center / cover no-repeat;"></div>
+            <div class="title-box">
+              <div class="title-box-inner">
+                <p><img src="/images/about/pc_title_story.png"></p>
+              </div>
+            </div>
+          </a>
+        </div>
 
-          <div class="about-kinyu-description">
-
-            <p class="main-catchcopy">正しい情報をシェアしよう。経済に前向きに関わることで、<br>お金にとらわれず自由で等身大に生きる。</p>
-            
-            <p class="pc about-kinyujoshi-intro-description center">
-            わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、<br>
-            ワカラナイ女子のための金融コミュニティです。<span style="display: block;height: 16px;"></span>
-            毎週木曜日夜、お金についてざっくばらんにおしゃべり。<br>
-            女子会スタイルで”金融”の基本をゆる～くたのしく勉強しています。<span style="display: block;height: 16px;"></span>
-            わたしたちは、「おかね」に対する意識の低さに不安を感じています。<br>
-            よくワカラナイまま大人になってしまいました…。<span style="display: block;height: 16px;"></span>
-            誰に聞いたらいいかワカラナイ、そもそも何を聞いたらいいかワカラナイ！<br>
-            でもそうは言っていられない。現実を見る必要もある。<span style="display: block;height: 16px;"></span>
-            就職、結婚、転職、独立…。<br>
-            前向きに未来を考えるライフイベント前の女子たちへ。<span style="display: block;height: 16px;"></span>
-            地に足をつけて「おかね」と「じぶん」に向き合ってみませんか？<span style="display: block;height: 16px;"></span>
-            きんゆう女子。の活動を通じて情報を自ら取りに行き、<br>
-            ありのままの「わたし」の生きる道が見つかりますように。
-            </p>
-
-            <div class="divide-kinyu-description"></div>
-
-            <p class="pc about-kinyujoshi-intro-description-sub center">
-              <span style="color:#e33f3f;">＊</span>残念ながらわたしたちはすぐに儲けられる術を教えたり、<br>
-              目先のお金のピンチを救って差し上げることはできません。(ゴメンナサイ！)<br>
-              ただ、ひとつ言えること。<br>
-              豊かなオトナの女性になるため、人生の選択肢を増やすため<br>
-              また将来の不安を少しでも軽減するためにはきっと役立てられると思うのです。<br>大人の女性になるため、人生の選択肢を増やすため、<br>
-              そしてライフイベントを迎える準備として。<br>
-              1人でも多くの素敵な女子たちが<br>
-              仲間になってくださることを楽しみにしています。
-            </p>
-          </div>
-
+        <div class="about-kinyu-header-contetns-list-el">
+          <a class="clear" href="/about_design">
+            <div class="img-box" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
+            <div class="title-box">
+              <div class="title-box-inner">
+                <p><img src="/images/about/pc_title_design.png"></p>
+              </div>
+            </div>
+          </a>
         </div>
 
 
       </div>
-      
-
     </div>
   </div>
 </div>

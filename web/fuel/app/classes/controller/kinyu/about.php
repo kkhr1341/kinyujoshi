@@ -13,11 +13,12 @@ class Controller_Kinyu_About extends Controller_Kinyubase
 		
 		$this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
 		$this->data['events'] = Events::lists(1, 100, true, 'kinyu');
-    $this->template->title = 'きんゆう女子。って？｜きんゆう女子。';
+    $this->template->title = 'きんゆう女子。ストーリー｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -26,12 +27,33 @@ class Controller_Kinyu_About extends Controller_Kinyubase
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     }
-		$this->template->contents = View::forge('kinyu/about/index.smarty', $this->data);
+
+    $this->template->contents = View::forge('kinyu/about/index.smarty', $this->data);
 	}
+
+  //きんゆう女子。って？
+  public function action_about_main() {
+    $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
+    $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+    $this->template->title = 'きんゆう女子。って？｜きんゆう女子。';
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+    $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+    $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
+
+    if(Agent::is_mobiledevice()) {
+      $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    } else {
+      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    }
+    $this->template->contents = View::forge('kinyu/about/about_main.smarty', $this->data);
+  }
 
   //できること
   public function action_about_contents() {
-    
     $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
     $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
     $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
@@ -39,6 +61,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -52,7 +75,6 @@ class Controller_Kinyu_About extends Controller_Kinyubase
 
   //生まれたストーリー
   public function action_about_story() {
-    
     $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
     $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
     $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
@@ -60,6 +82,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -81,6 +104,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -102,6 +126,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -123,6 +148,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -144,6 +170,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -157,8 +184,6 @@ class Controller_Kinyu_About extends Controller_Kinyubase
 
   public function action_myplan() {
     
-    // $this->data['news'] = News::lists(1, 5, true, 'irodori');
-    // $this->data['top_blogs'] = Blogs::lists(1, 3, true, 'kinyu');
     $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
     $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
     $this->template->title = 'きんゆう女子。とは...？｜きんゆう女子。';
@@ -169,6 +194,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     //$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->about_header = View::forge('kinyu/about/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);

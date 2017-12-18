@@ -110,7 +110,6 @@
 .intoduction-title span {
   border-bottom: 1px solid gray;
   padding-bottom: 4px;
-  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 
 /* イントロダクション-画像 */
@@ -213,7 +212,6 @@
   font-weight: bold;
   padding: 12px 0px;
   text-align: center;
-  font-family: "Karma", "游明朝", YuMincho, "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 }
 .myway-content-list-el .text-box .description {
   font-size: 13px;
