@@ -1,83 +1,76 @@
-<header class="kinyu-header">
-  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
-  <nav>
-    <ul class="kinyu-header-nav">
-      <li class="active"><a href="/about">きんゆう女子。って？</a></li>
-      <li><a href="/event">女子会に参加</a></li>
-      <li><a href="/report">レポートを見る</a></li>
-      <li><a href="/news">ニュース</a></li>
-      <li><a href="/myway">「わたし」を知る。</a></li>
-      <li><a href="/login">メンバー登録 / ログイン</a></li>
-    </ul>
-  </nav>
-</header>
+{$about_header}
 
 <div class="kinyu-single-block">
   <div class="about-kinyu-container">
-
-    <div class="about-kinyu-header">
-      <img src="/images/about/main-title.png">
-    </div>
     
     <div class="about-kinyu-container-inner clear">
       
       <div class="about-kinyu-container-left">
         <ul>
-          <li><a href="/about">きんゆう女子。について</a></li>
-          <li><a href="/about_contents">できること</a></li>
+          <li><a href="/about_main">きんゆう女子。って？</a></li>
           <li class="active"><a href="/about_story">生まれたストーリー</a></li>
-          <li><a href="/about_policy">運営ポリシー</a></li>
           <li><a href="/about_design">デザインについて</a></li>
-          <li><a href="/about_hensyubu">きんゆう女子。編集部</a></li>
         </ul>
       </div>
 
       <div class="about-kinyu-container-right">
 
-        <div class="about-kinyu-bgarea" style="background:url(/images/og-top.png) top center / cover no-repeat;"></div>
+        <div class="about-kinyu-bgarea" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
         <div class="about-kinyu-details-area">
-          <h2>生まれたストーリー</h2>
+          <h2>きんゆう女子。が<br>生まれたストーリー</h2>
 
           <div class="about-kinyu-description">
 
-            <p class="main-catchcopy">正しい情報をシェアしよう。経済に前向きに関わることで、<br>お金にとらわれず自由で等身大に生きる。</p>
-            
-            <p class="pc about-kinyujoshi-intro-description center">
-            わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、<br>
-            ワカラナイ女子のための金融コミュニティです。<span style="display: block;height: 16px;"></span>
-            毎週木曜日夜、お金についてざっくばらんにおしゃべり。<br>
-            女子会スタイルで”金融”の基本をゆる～くたのしく勉強しています。<span style="display: block;height: 16px;"></span>
-            わたしたちは、「おかね」に対する意識の低さに不安を感じています。<br>
-            よくワカラナイまま大人になってしまいました…。<span style="display: block;height: 16px;"></span>
-            誰に聞いたらいいかワカラナイ、そもそも何を聞いたらいいかワカラナイ！<br>
-            でもそうは言っていられない。現実を見る必要もある。<span style="display: block;height: 16px;"></span>
-            就職、結婚、転職、独立…。<br>
-            前向きに未来を考えるライフイベント前の女子たちへ。<span style="display: block;height: 16px;"></span>
-            地に足をつけて「おかね」と「じぶん」に向き合ってみませんか？<span style="display: block;height: 16px;"></span>
-            きんゆう女子。の活動を通じて情報を自ら取りに行き、<br>
-            ありのままの「わたし」の生きる道が見つかりますように。
+            <p class="main-description story-description">
+              「きんゆう女子。」を最初に思いついたのは、2015年の秋頃。青山の小料理屋を出て、その日3つ目の会食に顔を出すため赤坂に向かうタクシーの中でした。<br><br>
+
+              その時の私は、FinTechベンチャーのマーケティング・企画・広報の執行役員。金融のことは全く分からないけれどとにかく目の前にあったベンチャーでの責任ある仕事にチャレンジしたい一心で日々過ごしていました。<br><br>
+
+              私のキャリアは、旅行会社で始まっています。6年半、法人営業をしてオーダーメイドの海外旅行をメインに作って営業、添乗をしていました。経営者の方とお会いする度「起業したい！」という野心が生まれ、2015年1月に退社。夢は大きかったけれど、20代は全く金融と関わるどころかお金のことは無頓着でした。お金を稼ぐことや仕事の楽しさは、たくさん知ることができたけれど、不安も疑問も感じることもなくあっという間の20代でした。<br><br>
+
+              退社してから2ヶ月間、独立するために経験を積もうと、友達のビジネスを手伝ったり、経営者に話を聞きに行ったり……。とにかく沢山の人に会っていました。<br><br>
+
+              そこで出会った、FinTechベンチャーでの責任ある仕事。これが、私の金融との初めての関わりでした。将来（個人事業でも株式会社でも）独立したいなら、まずは新規事業立ち上げに関わったら？というその会社の代表からの一言で飛び込みました。<br><br>
+
+              責任ある仕事を任されたのだから、頑張ろう！と、金融の本やインターネットで調べたり、セミナーにいったり。でも、難しくて単語が頭に入ってこない。周りは、詳しそうな人たちばかりで質問もしにくい雰囲気。金融に加えて、IT業界でもあったのでインターネット用語も分からないので心が折れてしまいそうでした。<br><br>
+
+              そんな中、一番楽しく勉強になったのは、業界の方々とランチしたり、飲みに行ったり、なんでもひざを突き合わせて話を聞くことでした。「金融ワカラナイ。でも分からないなりに、勉強を始めました！」そんな自分のことをSNSや出会う人に発信して、得た知識や自分の考えを女子会でも共有したりするうちに、自らの金融リテラシーを上げるための活動「きんゆう女子。」が始まりました。<br><br>
+
+              一方で、勤めていたFinTechベンチャーでは、新しいアプリを公開。チームで心を込めて作ったアプリだったのに、なかなか女性には広がりません。マーケティング・企画・広報としてはなんとかしなければ。という思いとともに、私の中で「女性の金融やITリテラシーが低いから、金融は自分とは関係ないと感じて、サービスの価値も分からないのでは？」という仮説が生まれました。<br><br>
+
+              そんな中、歴史ある金融街「兜町（かぶとちょう）」に出会いました。FinTechベンチャーから大企業、官公庁、取材も含め約120名の方々が参加するイベントに参加したのです。<br><br>
+
+              その時に東京証券取引所の大家さんである平和不動産さんと出会い、こんな話を聞いたのです。<br><br>
+
+              「20年位前までは、金融街として賑わっていたけれど金融業界もネットが主流になり、街の活気が足りない。もっと女性にも集まってほしい、金融に関わらない人も街に来てほしい。沢山の方が集う投資と成長が生まれる街にしたい。」<br><br>
+
+              それを聞いて、旅行会社での経験を活かして金融業界ではない私にもできることがあるかもしれないと思いました。<br><br>
+
+              この街で、金融に前向きに関わる女性が集まったら日本経済や街が華やかになるのでは？旅行会社時代、ニューヨークやロンドンなどの金融街をわざわざ見に行きたいという団体旅行のお客様のツアーを作ったこともあり、金融は街の魅力の一つになるのでは？と、直感が働いたのです。<br><br>
+
+              すぐに「きんゆう女子。」の企画書を作り、提案。トライアルとして2015年12月に、平和不動産さんの持ち物である東京証券会館で第一回目のきんゆう女子。会を行い、翌年3月には新しくオープンしたコミュニティカフェ：CAFE SALVADOR BUSINESS SALONでの活動がスタート。女性向けの兜町・茅場町エリアの観光マップを作ったり、女子会で会場をお借りしたり、一緒に街を盛り上げるお手伝いをはじめました。<br><br>
+
+              プライベート活動からはじまった「きんゆう女子。」は、今では毎週木曜夜に10〜15名の女性たちが自然と集まるようになり、コミュニケーションを通じて、等身大の自分の人生について考えるようになりました。参加者の意見を集約し、金融関連企業にイベント企画やウェブサイトやコミュニティのプロデュースを行うことも増えてきました。<br><br>
+
+              女性の金融知識の向上が、個人の人生を豊かにするだけでなく経済を底上げすると考え、これからはもっと自由に、関わる皆様と一緒に「きんゆう女子。」の未来を創っていきたいと思います。
+
             </p>
 
-            <div class="divide-kinyu-description"></div>
+            <div class="profile">
+              <p class="profile-text">ー Profile ー</p>
+              <div class="profile-block clear">
+                <div class="img-box story-img-box" style="background:url(/images/about/profile/mariko_suzuki.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="name-text">鈴木万梨子 （すずき・まりこ）</p>
+                  <p class="position-text">株式会社TOE THE LINE 代表取締役<br>きんゆう女子。代表 / 編集長</p>
+                  <p class="detail-text">H.I.S.に入社し、法人営業としてオーダーメイドの団体旅行の企画・営業・手配・添乗を担当。旅行サービス立ち上げを目的に起業を目指し、2015年、金融系ベンチャーに転職。金融業界で自身の金融知識のなさと一般女性と業界との隔たりに衝撃を受け、女性は誰でも正しい金融知識が必要だと感じる。同じように悩む女性に対し金融・経済情報を等身大で中立にシェアする場：「きんゆう女子。」を立ち上げる。2016年3月、TOE THE LINE起業。</p>
+                </div>
+              </div>
+            </div>
 
-            <p class="pc about-kinyujoshi-intro-description-sub center">
-              <span style="color:#e33f3f;">＊</span>残念ながらわたしたちはすぐに儲けられる術を教えたり、<br>
-              目先のお金のピンチを救って差し上げることはできません。(ゴメンナサイ！)<br>
-              ただ、ひとつ言えること。<br>
-              豊かなオトナの女性になるため、人生の選択肢を増やすため<br>
-              また将来の不安を少しでも軽減するためにはきっと役立てられると思うのです。<br>大人の女性になるため、人生の選択肢を増やすため、<br>
-              そしてライフイベントを迎える準備として。<br>
-              1人でも多くの素敵な女子たちが<br>
-              仲間になってくださることを楽しみにしています。
-            </p>
           </div>
-
         </div>
-
-
       </div>
-      
-
     </div>
   </div>
 </div>

@@ -36,8 +36,9 @@ return array(
 	// きんゆう女子
 	'kinyu'   => 'kinyu/top',
 	
-	//aboutペーz
+	//aboutページ
 	'about' => 'kinyu/about/index',
+	'about_main' => 'kinyu/about/about_main',
 	'about_contents' => 'kinyu/about/about_contents',
 	'about_story' => 'kinyu/about/about_story',
 	'about_policy' => 'kinyu/about/about_policy',
@@ -64,10 +65,9 @@ return array(
 	//'welcome/event'   => 'kinyu/event/welcome',
 
 	//イベント関連
-	'event'   => 'kinyu/event/index',
-	'event/(:any)'   => 'kinyu/event/detail/$1',
-	'event_main'   => 'kinyu/event/index',
-	'event_special'   => 'kinyu/event/special',
+	'joshikai'   => 'kinyu/event/index',
+	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
+	'joshikai_tickets/(:any)'   => 'kinyu/event/tickets/$1',
 
 	//ニュース
 	'news'   => 'kinyu/news/index',

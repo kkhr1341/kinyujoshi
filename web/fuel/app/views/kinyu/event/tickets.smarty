@@ -1,0 +1,227 @@
+<script>
+var $url = location.href;
+var $result = $url.replace( "https://" , "" );
+var $result02 = $result.replace( "/event" , "" );
+var $resArray = $result02.split("/");
+var $resArray02 = $resArray[1];
+</script>
+
+<header class="kinyu-header">
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li class="active"><a href="/joshikai">女子会</a></li>
+      <li><a href="/report">レポート</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="kinyu-single-block joshikai-main-block">
+  <div class="kinyu-joshikai-detail-inner">
+
+    <div class="kinyu-joshikai-tickets-block">
+      
+      <div class="kinyu-joshikai-tickets-main">
+        <div class="kinyu-joshikai-tickets-main-inner">
+          <div class="tickets-img" style="background:url({$event.main_image}) center center / cover no-repeat;"></div>
+          <h2>{$event.title}</h2>
+        </div>
+      </div>
+      
+      <div class="kinyu-joshikai-tickets-fee">
+        <p><span>参加費</span>：{$event.fee}円</p>
+      </div>
+
+      <div class="kinyu-joshikai-tickets-payment">
+
+        <p class="ticket-title">お支払い方法</p>
+
+        <div class="kinyu-joshikai-tickets-payment-list">
+
+        <!-- ログインチェック -->
+        {if array_search('admin', $roles)}
+          <!-- ログインユーザー -->
+          {if $event.creditch == 1}
+            <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
+            <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+          {else if $event.creditch == 0}
+            <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
+            <p>＊◆◆のため、クレジットカードのみとなります。</p>
+          {else}
+            <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
+            <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+          {/if}
+        {else}
+          <!-- ログインしていないユーザー -->
+          {if $event.creditch == 1}
+            <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
+            <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお払い">
+          {else if $event.creditch == 0}
+            <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
+            <p>＊◆◆のため、クレジットカードのみとなります。</p>
+          {else}
+            <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
+            <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお払い">
+          {/if}
+        {/if}
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+                
+<!-- カード払い -->
+<div id="day-card-open" class="day-card-open fee-open">
+  <div id="day-card-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form method="POST" action="/pay" id="charge-form">
+      <span class="charge-errors"></span>
+      <p class="main-title">カードでのお支払いで参加</p>
+      <p class="description">カード情報を入力してご決済をお願いします。</p>
+      <label>カード番号</label>
+      <input type="text" class="number" name="number" maxlength="16" placeholder="">
+
+      <label>セキュリティコード</label>
+      <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="">
+
+      <label>有効期限</label>
+      <div class="exp-date-block">
+        <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
+        <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+      </div>
+      <button class="day-cash-submit" type="submit">送信</button>
+    </form>
+  </div>
+</div>
+
+<!-- カード払い（メンバー登録なしのモーダル） -->
+<div id="no-day-card-open" class="day-card-open fee-open">
+  <div id="no-day-card-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form method="POST" action="/pay" id="charge-form">
+      <span class="charge-errors"></span>
+      <p class="main-title">カードでのお支払いで参加</p>
+      <p class="description">カード情報を入力してご決済をお願いします。</p>
+
+      <div class="day-cash-open-form-el">
+        <label>お名前（フルネーム）</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>メールアドレス</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>カード番号</label>
+        <input type="text" class="number" name="number" maxlength="16" placeholder="カード番号">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>セキュリティコード</label>
+        <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
+      </div>
+
+      <div class="day-cash-open-form-el">
+        <label>有効期限</label>
+        <div class="exp-date-block">
+          <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
+          <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+        </div>
+      </div>
+
+      <button class="day-cash-submit" type="submit">送信</button>
+    </form>
+  </div>
+</div>
+
+<!-- 当日現金払い -->
+<div id="day-cash-open" class="fee-open">
+  <div id="day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form>
+      <p class="main-title">当日現金払いで参加</p>
+      <p class="description">女子会当日に現金でお支払いください。</p>
+      <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
+      <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
+    </form>
+  </div>
+</div>
+
+<!-- 当日現金払い（メンバー登録なしのモーダル）  -->
+<div id="no-day-cash-open" class="fee-open">
+  <div id="no-day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form>
+      <p class="main-title">当日現金払いで参加</p>
+      <p class="description">女子会当日に現金でお支払いください。</p>
+      <div class="day-cash-open-form-el">
+        <label>お名前（フルネーム）</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <div class="day-cash-open-form-el">
+        <label>メールアドレス</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <div class="day-cash-open-form-el">
+        <label>メールアドレス（確認用）</label>
+        <input type="text" id="name" class="" placeholder="">
+      </div>
+      <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
+      <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    
+    $(".day-card-btn").click(function() {
+      $("#day-card-open").fadeIn(500);
+    });
+    $("#day-card-close").click(function() {
+      $("#day-card-open").fadeOut(500);
+    });
+
+    $(".no-day-card-btn").click(function() {
+      $("#no-day-card-open").fadeIn(500);
+    });
+    $("#no-day-card-close").click(function() {
+      $("#no-day-card-open").fadeOut(500);
+    });
+
+    $(".day-cash-btn").click(function() {
+      $("#day-cash-open").fadeIn(500);
+    });
+    $("#day-cash-close").click(function() {
+      $("#day-cash-open").fadeOut(500);
+    });
+
+    $(".no-day-cash-btn").click(function() {
+      $("#no-day-cash-open").fadeIn(500);
+    });
+    $("#no-day-cash-close").click(function() {
+      $("#no-day-cash-open").fadeOut(500);
+    });
+
+    $(".no-menber-fee-el-btn.no-member").click(function() {
+      $(".loader-block").fadeIn(500);
+      setTimeout(function(){
+        $(".loader-block").fadeOut(800);
+      },1500);
+      setTimeout(function(){
+        $(".no-login-area").fadeOut(500);
+      },2000);
+      setTimeout(function(){
+        $(".no-login-area-joinbtn").fadeIn(800);
+      },2500);
+    });
+  });
+</script>
