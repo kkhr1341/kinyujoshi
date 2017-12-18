@@ -40,6 +40,10 @@ return array(
         31 => '034_add_name_to_profiles',
         32 => '035_add_name_kana_to_profiles',
         33 => '036_create_application_credit_payments',
+        34 => '037_add_name_to_applications',
+        35 => '038_add_email_to_applications',
+        36 => '039_add_amount_to_applications',
+        37 => '040_add_payment_method_to_applications',
       ),
     ),
     'module' => 

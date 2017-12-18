@@ -2,21 +2,21 @@
 
 namespace Fuel\Migrations;
 
-class Add_creditch_to_events
+class Add_email_to_applications
 {
-	public function up()
-	{
-		\DBUtil::add_fields('events', array(
-			'creditch' => array('constraint' => 1, 'type' => 'tinyint', 'default' => '0'),
+    public function up()
+    {
+        \DBUtil::add_fields('applications', array(
+            'email' => array('constraint' => 255, 'type' => 'varchar', 'after' => 'name'),
 
-		));
-	}
+        ));
+    }
 
-	public function down()
-	{
-		\DBUtil::drop_fields('events', array(
-			'creditch'
+    public function down()
+    {
+        \DBUtil::drop_fields('applications', array(
+            'email'
 
-		));
-	}
+        ));
+    }
 }
