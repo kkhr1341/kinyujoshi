@@ -100,6 +100,8 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 	
 	public function action_detail($code) {
 
+        \Config::load('payjp', true);
+        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
 		// 最新を取得
 		$this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
 		$this->data['event'] = Events::getByCodeWithProfile($code);
