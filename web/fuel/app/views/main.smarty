@@ -40,7 +40,7 @@
 
   	<div class="kinyu-container">
       <!-- ナビゲーション -->
-      {*{$navigation}*}
+      {$sp_navigation}
   		<div class="kinyu-main">
         <div class="sp">{$sp_header}</div>
         {$contents}

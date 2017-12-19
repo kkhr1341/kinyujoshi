@@ -829,17 +829,11 @@
 }
 /* 本文 */
 .report-detail-main {
-  /*float: right;
-  position: relative;
-  width: 748px;
-  padding-left: 45px;
-  border-left: 1px solid #e1dede;
-  box-sizing: content-box;*/
   width: 1000px;
   margin: 0 auto;
   border-left: 1px solid #f9f9f9;
   border-right: 1px solid #f9f9f9;
-  padding: 0px 100px;
+  padding: 0px 120px;
 }
 .report-detail-main img {
   max-width: 100%;
@@ -1042,16 +1036,20 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-news-list {
   padding: 16px 0% 0px;
-  width: 900px;
+  width: 1000px;
   margin: 0 auto;
 }
 .kinyu-news-list .kinyu-news-list-li {
-  padding: 24px 8px 24px 0px;
   border-bottom: 1px solid #f1f1f1;
   position: relative;
+  width: 49%;
+  background: #f9f9f9;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
-.kinyu-news-list .kinyu-news-list-li:first-child {
-  padding: 0px 8px 24px 0px;
+.kinyu-news-list .kinyu-news-list-li:nth-child(2n) {
+  margin-right: 0%; 
 }
 .kinyu-news-list .kinyu-news-title {
   width: 300px;
@@ -1068,7 +1066,7 @@
 }
 .kinyu-news-list-el .img-box {
   width: 20%;
-  height: 150px;
+  height: 120px;
   float: left;
   border-radius: 1px;
   transition: 0.3s;
@@ -1076,17 +1074,16 @@
 .kinyu-news-list-el .text-box {
   width: 76%;
   float: right;
-  padding: 8px 40px 0px 0px;
+  padding: 12px 50px 0px 0px;
 }
 .kinyu-news-list-el .text-box .date {
-  font-size: 16px;
+  font-size: 13px;
   margin-bottom: 4px;
-  font-style: italic;
   color: #3b867b;
 }
 .kinyu-news-list-el .text-box .title {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 22px;
   transition: 0.3s;
 }
 .news-pagination {
@@ -1704,15 +1701,12 @@ to {
   margin-bottom: 12px;
 }
 .kinyu-joshikai-tickets-fee span {
-  font-size: 14px;
-  line-height: 14px;
   color: #5FB3A7;
   font-weight: bold;
   margin-bottom: 12px;
 }
 .kinyu-joshikai-tickets-fee p {
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 14px;
   text-align: center;
 }
 .kinyu-joshikai-tickets-main {
@@ -1848,7 +1842,8 @@ to {
   font-weight: bold;
 }
 .day-cash-submit {
-  background: #5fb3a7;
+  background: #8ddcd1;
+  font-weight: bold;
   font-size: 13px;
   display: block;
   width: 150px;

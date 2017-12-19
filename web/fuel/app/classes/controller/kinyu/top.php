@@ -27,16 +27,15 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
     $this->data['blogs_pick'] = Blogs::lists_picks(1, 5, true);
     $this->template->reload_animation = View::forge('kinyu/template/reload_animation.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
     $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
-      $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
       $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
       $this->template->contents = View::forge('kinyu/index.smarty', $this->data);
     } else {
-      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
       $this->template->contents = View::forge('kinyu/pc_index.smarty', $this->data);
     }
 

@@ -22,25 +22,26 @@
 		<div class="kinyu-news-list clear">
       <!-- <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-news.png" alt="ニュース一覧"></h2>
       <h2 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-news-sp.png" alt="ニュース一覧"></h2> -->
-			<ul>
+			<ul class="clear">
 			{foreach from=$news.datas item=blog}
 				<li class="kinyu-news-list-li">
 					<a href="/news/{$blog.code}">
 	
 						<div class="kinyu-news-list-el clear">
 
-              {$fooo = $blog.main_image}
-              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+                {$fooo = $blog.main_image}
+                {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
 							{if $blog.main_image == ""}
-							<div class="img-box" style="background: url(/images/submain.png) center center / cover no-repeat;"></div>
-							{else}
+							 <div class="img-box" style="background: url(/images/submain.png) center center / cover no-repeat;"></div>
+							 {else}
 							<div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
-							{/if}
-							<div class="text-box">
-								<p class="date">{$blog.open_date|date_format:"%Y/%-m/%-d"}</p>
-								<h3 class="title">{$blog.title}</h3>
-							</div>
+							 {/if}
+							 <div class="text-box">
+							   <p class="date">{$blog.open_date|date_format:"%Y/%-m/%-d"}</p>
+							   <h3 class="title">{$blog.title}</h3>
+							 </div>
+
 						</div>
 
 					</a>
