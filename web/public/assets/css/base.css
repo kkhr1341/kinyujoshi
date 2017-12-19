@@ -28,8 +28,10 @@ html {
   line-height: 1;
 }
 body {  
-  font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
+  /*font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;*/
+  /*font-family: "Noto Sans Japanese";*/
+  font-family: YuGothic,'Yu Gothic',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -38,7 +40,7 @@ body {
 div, nav, section {
   box-sizing: border-box;
 }
-ol, ul {
+ol, ul, li {
   list-style: none;
 }
 table {
@@ -66,7 +68,7 @@ a {
 p, a {
   font-size: 13px;
   line-height: 22px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.5px;
   color: #444444;
   word-wrap: break-word;
 }

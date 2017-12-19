@@ -1,7 +1,21 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
 
-<div class="myway-introduction">
+<header class="kinyu-header">
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/joshikai">女子会</a></li>
+      <li><a href="/report">レポート</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li class="active"><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
 
+<div class="myway-introduction">
+  
   <!-- <img class="main-logo" src="/images/myway/main-logo.png"> -->
 
   <div class="main-img-box-container">
@@ -34,20 +48,20 @@
         きんゆう女子。が正式に発足して1年。<br>
         日々のお金の使い方、キャリアアップの方法、初めての投資、<br>
         未来の年金のことまで幅広く勉強してきました。
-        <span style="display: block;height: 12px;"></span>
+        <span style="display: block;height: 16px;"></span>
         まだワカラナイこと、たくさん。<br>
         もしかしたら、全部は知らなくてもいいのかも…。
-        <span style="display: block;height: 12px;"></span>
+        <span style="display: block;height: 16px;"></span>
         でも、金融にむきあっていくうちに気づきました。<br>
         豊かに生きるための第一歩は「自分を知ること」。
-        <span style="display: block;height: 12px;"></span>
+        <span style="display: block;height: 16px;"></span>
         どんな風になりたい？<br>
         どんな人生を送りたい？<br>
         そして、わたしはどんな人なの？
-        <span style="display: block;height: 12px;"></span>
+        <span style="display: block;height: 16px;"></span>
         そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。<br>
         本当の意味で無駄遣いがなくなるはず。
-        <span style="display: block;height: 12px;"></span>
+        <span style="display: block;height: 16px;"></span>
         このページでは、「わたしを知ること」をテーマに情報を発信していきます。
       </p>
       <p class="sp">
@@ -107,7 +121,7 @@
       </div>
       <div class="text-box">
         <div class="pc edition"><img src="/images/myway/title/title-cosmetics.png"></div>
-        <p class="pc text-box-title">コスメポーチや、おうちのメイクBOXきれいになってる…？</p>
+        <p class="pc text-box-title">コスメポーチや、おうちのメイクBOX<br>きれいになってる…？</p>
         <p class="sp text-box-title">コスメポーチや、<br>おうちのメイクBOXきれいになってる…？</p>
         <p class="description">鏡が曇っているシャドウやチーク、あんまり使っていない化粧品、どれぐらいお持ちですか？ 毎日、鏡で見て知ってるつもりの自分の顔。毎日、なんとなくやっているメイク方法。なりたい自分のイメージにあっていますか？改めてコスメやメイクを考える機会をつくってみませんか。このテーマでは、身近なコスメと「きんゆう」のつながりも探ってみたいと思います。きれいのお金、上手に使いましょう。</p>
         <a href="/report/fMvmMk" class="myway-to-link">コスメ編のページはこちら</a>
@@ -123,35 +137,4 @@
     </ul>
     <img src="/images/myway/coming_soon.png">
   </div>
-</div>
-
-<div class="myway-sub-content">
-  
-</div>
-
-<footer class="pc">
-  <div class="footer-logo">
-    <a href="/about"><img src="/images/kinyu-logo01.png"></a>
-  </div>
-  <div class="footer-menu">
-    <div class="navi_kinyu-submenu-el clear">
-      <a href="/company">運営会社</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a href="/privacy">プライバシーポリシー</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a href="/legal">特定商取引法に基づく表記</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a href="/service">会員規約</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a href="/contact">お問い合わせ</a>
-    </div>
-  </div>
-  <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc.</p>
-</footer>
-<div class="sp">
-  {$sp_footer}
 </div>

@@ -13,8 +13,9 @@
 .main-img-box-container {
   height: 600px;
   position: relative;
+  margin-top: 142px;
 }
-.main-logo {
+.main-img-box-container .main-logo {
   position: absolute;
   top: 50%;
   right: 10%;
@@ -96,19 +97,19 @@
   text-align: center;
 }
 .myway-introduction .myway-description p {
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 13px;
+  line-height: 26px;
   width: 800px;
   margin: 0 auto;
 }
 .intoduction-title {
-  font-size: 26px;
+  font-size: 24px;
   line-height: 36px;
   margin-bottom: 36px;
 }
 .intoduction-title span {
-  border-bottom: 2px solid gray;
-  padding-bottom: 8px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 4px;
 }
 
 /* イントロダクション-画像 */
@@ -213,10 +214,11 @@
   text-align: center;
 }
 .myway-content-list-el .text-box .description {
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 24px;
 }
 .myway-content-list-el .text-box .myway-to-link {
-  font-size: 15px;
+  font-size: 13px;
   width: 360px;
   display: block;
   margin: 0 auto;

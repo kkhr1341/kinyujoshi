@@ -1,35 +1,47 @@
-{$pc_side}
+<header class="kinyu-header">
+  <h1 class="main-logo"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/joshikai">女子会</a></li>
+      <li><a href="/report">レポート</a></li>
+      <li class="active"><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
 
 
-
-<div class="kinyu-top-list-block">
+<div class="kinyu-list-block">
   <div class="inner">
-    <div class="pc category-menu">
+    <!-- <div class="pc category-menu">
       <a href="/"><img class="pc-kinyu-logo" src="/images/kinyu-logo01.png"></a>
-    </div>
+    </div> -->
 
 		<div class="kinyu-news-list clear">
-      <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-news.png" alt="ニュース一覧"></h2>
-      <h2 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-news-sp.png" alt="ニュース一覧"></h2>
-			<ul>
+      <!-- <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-news.png" alt="ニュース一覧"></h2>
+      <h2 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-news-sp.png" alt="ニュース一覧"></h2> -->
+			<ul class="clear">
 			{foreach from=$news.datas item=blog}
 				<li class="kinyu-news-list-li">
 					<a href="/news/{$blog.code}">
 	
 						<div class="kinyu-news-list-el clear">
 
-              {$fooo = $blog.main_image}
-              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+                {$fooo = $blog.main_image}
+                {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
 							{if $blog.main_image == ""}
-							<div class="img-box" style="background: url(/images/submain.png) center center / cover no-repeat;"></div>
-							{else}
+							 <div class="img-box" style="background: url(/images/submain.png) center center / cover no-repeat;"></div>
+							 {else}
 							<div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
-							{/if}
-							<div class="text-box">
-								<p class="date">{$blog.open_date|date_format:"%Y/%-m/%-d"}</p>
-								<h3 class="title">{$blog.title}</h3>
-							</div>
+							 {/if}
+							 <div class="text-box">
+							   <p class="date">{$blog.open_date|date_format:"%Y/%-m/%-d"}</p>
+							   <h3 class="title">{$blog.title}</h3>
+							 </div>
+
 						</div>
 
 					</a>
@@ -47,31 +59,6 @@
       {$sp_top_after}
       {$sp_footer}
     </div>
-
-		<footer class="pc">
-      <div class="footer-logo">
-        <a href="/"><img src="/images/kinyu-logo01.png"></a>
-      </div>
-      <div class="footer-menu">
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/company">運営会社</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/policy">プライバシーポリシー</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/legal">特定商取引法に基づく表記</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/service">会員規約</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/contact">お問い合わせ</a>
-        </div>
-      </div>
-      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc.</p>
-    </footer>
-
 
     <script>
       $(function() {

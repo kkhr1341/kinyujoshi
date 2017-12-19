@@ -32,38 +32,16 @@
             <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="" {if $events.event_category == "私立きん"}checked{/if}>
             <label for="event5" class="form-long">私:きん学院</label>
           </div>
-
 				</div>
 				
-				<!-- <div class="form-group">
-					<label>タイトル <span class="label label-danger">必須</span></label>
-					<input type="text" id="title" class="form-control" placeholder="" value="{$events.title}">
-				</div> -->
-
 				<div class="form-group">
 					<label class="form-group-event-label">女子会のタイトル</label>
 					<input type="text" id="title" class="form-control" placeholder="" value="{$events.title}">
 				</div>
 
-				<!-- <div class="form-group">
-					<label>説明文</label>
-					<textarea style="height: 120px;" type="text" id="description" class="form-control" placeholder="">{$events.description}</textarea>
-				</div> -->
-
-				{*<div class="form-group">
-					<label class="form-group-event-label">女子会の説明(120文字程度)</label>
-					<textarea style="height: 80px;" type="text" id="description" class="form-control" placeholder="">{$events.description}</textarea>
-				</div>*}
-				
-<!-- 				<div class="form-group">
-					<label>本文 <span class="label label-danger">必須</span></label>
-					<textarea id="content" name="content">{$events.content}</textarea>
-				</div> -->
-
 				<div class="form-group upload_image_box">
 					<label class="form-group-event-label">サムネイル画像</label>
-					<p><span style="color:red;">＊</span>"画像投稿"をクリックしてファイルを選択してください。</p>
-					<textarea style="height: 40px;" id="content" name="content">{$events.content}</textarea>
+					<textarea id="content" name="content">{$events.content}</textarea>
 				</div>
 
 				<div class="form-group">
@@ -96,16 +74,16 @@
 					<input type="text" id="event_end_datetime" class="form-control" placeholder="(例)21:30" value="{$events.event_end_datetime}">
 				</div>
 
-				<div class="form-group">
-					<label class="form-group-event-label">Any payの決済URL</label>
-					<input type="text" id="pay_url" class="form-control" placeholder="PeatixのURLを入力" value="{$events.pay_url}">
-				</div>
-				<div class="form-group">
-					<p><a style="color:#337ab7;" target="_blank" href="https://peatix.com/">Peatixログインページへ</a></p>
-					<p>ID：support@kinyu-joshi.jp</p>
-					<p>PASS：kinyukinyukinyu</p>
-					<p></p>
-				</div>
+				<div class="form-group mb50">
+					<label class="form-group-event-label">決済方法</label>
+					<p><span style="color:red;">＊</span>クレジットカード払いのみか、現金払いもOKか選んでください。</p>
+					<div class="radio_box clear">
+            <input type="radio" value="1" name="creditch" id="creditch01" class="form-radio" placeholder="" {if $events.creditch == 1}checked{/if}>
+            <label for="creditch01" class="form-long">クレジットカード払い＆当日現金払い</label>
+            <input type="radio" value="0" name="creditch" id="creditch02" class="form-radio" placeholder="" {if $events.creditch == 0}checked{/if}>
+            <label for="creditch02" class="form-long">クレジットカードのみ</label>
+         	</div>
+        </div>
 						
 				<div class="form-group">
 					<label>公開設定 <span class="label label-danger">必須</span></label>
@@ -154,7 +132,7 @@ $(function(){
 		params.event_date = $('#event_date').val();
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
-		params.pay_url = $('#pay_url').val();
+		params.creditch = $("[name=creditch]:checked").val();
 		params.open_date = $('#open_date').val();
 		params.status = 1;
 		
@@ -190,8 +168,8 @@ $(function(){
 			ts.error("終了時間を入力してください");
 			return false;
 		}
-		if (params.pay_url == "") {
-			ts.error("Anypayの決済URLを入力してください");
+		if (params.creditch == "") {
+			ts.error("決済を選択してください");
 			return false;
 		}
 
@@ -220,7 +198,7 @@ $(function(){
 		params.event_date = $('#event_date').val();
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
-		params.pay_url = $('#pay_url').val();
+		params.creditch = $("[name=creditch]:checked").val();
 		params.open_date = $('#open_date').val();
 		params.status = 0;
 		
@@ -256,8 +234,8 @@ $(function(){
 			ts.error("終了時間を入力してください");
 			return false;
 		}
-		if (params.pay_url == "") {
-			ts.error("Anypayの決済URLを入力してください");
+		if (params.creditch == "") {
+			ts.error("決済方法を選択してください");
 			return false;
 		}
 		

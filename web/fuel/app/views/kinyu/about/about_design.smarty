@@ -1,0 +1,59 @@
+{$about_header}
+
+<div class="kinyu-single-block">
+  <div class="about-kinyu-container">
+    
+    <div class="about-kinyu-container-inner clear">
+      
+      <div class="about-kinyu-container-left">
+        <ul>
+          <li><a href="/about_main">きんゆう女子。って？</a></li>
+          <li><a href="/about_story">生まれたストーリー</a></li>
+          <li class="active"><a href="/about_design">デザインについて</a></li>
+        </ul>
+      </div>
+
+      <div class="about-kinyu-container-right">
+
+        <div class="about-kinyu-bgarea" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
+        <div class="about-kinyu-details-area">
+          <h2>きんゆう女子。のデザイン</h2>
+
+          <div class="about-kinyu-description">
+
+            <p class="main-catchcopy">
+              「控えめでシンプル、でも彩（いろ）を放つ。」
+            </p>
+
+            <p class="main-description">
+              私たちが常日頃から考えている"デザイン"とは、<br>
+              表面上の美しさだけではありません。<br><br>
+              どのようにすれば、私たちの生活はより良くなるのか。<br>
+              どのようにすれば、私たちは前向きな自分らしい生活を送ることができるのか。<br>
+              どのようにすれば、私たちの生活に、金融が溶け込んでいくのか。<br><br>
+              そういった金融に関わるより良い"ライフスタイル"そのものを追求し続け、<br>そして、実現していくプロセスを考えることが<br>本当の意味での"デザイン"だと、私たちは信じています。<br><br>
+              一言で表現すると、表面上のデザインをつくるのではなく、<br>
+              より良いライフスタイルそのものをつくっていくことが、<br>
+              「きんゆう女子。」の考える”デザイン”です。<br><br>
+              「きんゆう女子。」が、多くの女性に寄り添い、<br>
+              日常生活のパートナーのような存在になっていくように....
+            </p>
+
+            <div class="profile">
+              <p class="profile-text">ー Profile ー</p>
+              <div class="profile-block clear">
+                <div class="img-box story-img-box" style="background:url(/images/about/profile/keita_komori.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="name-text">小守啓太 （こもり・けいた）</p>
+                  <p class="position-text">株式会社TOE THE LINE<br>クリエイティブディレクター / デザイナー</p>
+                  <p class="detail-text">大学2年の時、ITべンチャー企業にインターンとして入ったことがきっかけで、WEBに興味を持ち、独学でプログラミングやWEBデザイン・グラフィックデザインを学ぶ。卒業後、フリーランス期間を挟んで、株式会社TOE THE LINEに入社。「きんゆう女子。」のWEBサイトの制作やデザインを行う。尊敬するデザイナーは「ディーター・ラムス」、「深澤直人」。「控えめでシンプル、でも彩（いろ）を放つ」をコンセプトに存在感あるデザインを目指している。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

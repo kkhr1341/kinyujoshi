@@ -1,3 +1,22 @@
+<header class="kinyu-header">
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/joshikai">女子会</a></li>
+      <li class="active"><a href="/report">レポート</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
+<!--
+
+わたしを知るの記事
+
+-->
+
 {if $blog.kind == "わたしを知る"}
 
   <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
@@ -152,58 +171,57 @@
   </script>
 
 
+
 {else}
 
-  <div class="kinyu-main-block kinyu-pc-details-block">
-    <div class="inner">
 
-      <div class="report-detail-header">
-        <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
-      </div>
 
-      <div class="report-detail-thunb-block clear">
-        <div class="report-detail-thunb" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
-        <div class="report-detail-info">
-          <div class="report-detail-category">
-            <div class="category-title">
-              <p>
-                {if $blog.kind == "女子会レポート"}
-                  <span>女子会レポート</span>
-                {else if $blog.kind == "イベントレポート"}
-                  <span>イベントレポート</span>
-                {else if $blog.kind == "取材レポート"}
-                  <span>取材レポート</span>
-                {else if $blog.kind == "イベント告知"}
-                  <span>イベント告知</span>
-                {else if $blog.kind == "コラム"}
-                  <span>コラム</span>
-                {else}
-                  <span>レポート</span>
-                {/if}
-              </p>
-            </div>
-          </div>
-          <div class="report-detail-title">
-            <h1>{$blog.title}</h1>
-          </div>
-          <div class="report-detail-description">
-            <p>{$blog.description}</p>
-            <p class="date">{$blog.open_date|date_format:"%Y/%-m/%-d"}</p>
+<!--
+
+通常のレポートページの部分
+
+-->
+
+  <div class="kinyu-main-block kinyu-details-block">
+
+    <div class="kinyu-details-introdauction">
+      <div class="kinyu-details-introdauction-inner clear">
+        <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
+        <div class="text-box">
+          <div class="text-box-inner">
+            {if $blog.kind == "女子会レポート"}
+              <p class="category"><span>女子会レポート</span></p>
+            {else if $blog.kind == "イベントレポート"}
+              <p class="category"><span>イベントレポート</span></p>
+            {else if $blog.kind == "取材レポート"}
+              <p class="category"><span>取材レポート</span></p>
+            {else if $blog.kind == "イベント告知"}
+              <p class="category"><span>イベント告知</span></p>
+            {else if $blog.kind == "コラム"}
+              <p class="category"><span>コラム</span></p>
+            {else}
+              <p class="category"><span>レポート</span></p>
+            {/if}
+            <h2>{$blog.title}</h2>
+            <p class="description">{$blog.description}</p>
+            <p class="description-sub">{$blog.open_date|date_format:"%Y.%-m.%-d"}up!</p>
           </div>
         </div>
       </div>
-    
-      <!-- 本文 -->
+    </div>
+
+    <div class="inner clear">
+
       <div class="report-detail-main">
         {$blog.content|nofilter}
-        <!-- シェア部分 -->
 
+        <!-- ソーシャルシェア -->
         {$fooo = $blog.main_image}
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
         <div class="report-detail-share clear">
           <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
           <div class="report-detail-share-el report-detail-share-right">
-            <h3><img src="/images/detail-title/kinyu-share-report.png"></h3>
+            <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
             <img class="share-this-page" src="/images/social/social-this-page.png">
             <div class="social-list">
               <ul>
@@ -212,37 +230,14 @@
             </div>
           </div>
         </div>
-
       </div>
 
-      <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">   
-      {$detail_content_after}
+      <div class="report-detail-sidebar">
+        {$detail_report_after}
+      </div>
+
+
     </div>
-
-
-    <footer>
-      <div class="footer-logo">
-        <a href="/about"><img src="/images/kinyu-logo01.png"></a>
-      </div>
-      <div class="footer-menu">
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/company">運営会社</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/privacy">プライバシーポリシー</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/legal">特定商取引法に基づく表記</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/service">会員規約</a>
-        </div>
-        <div class="navi_kinyu-submenu-el clear">
-          <a href="/contact">お問い合わせ</a>
-        </div>
-      </div>
-      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2017 TOE THE LINE, Inc. ALL RIGHTS RESERVED</p>
-    </footer>
   </div>
 
 {/if}

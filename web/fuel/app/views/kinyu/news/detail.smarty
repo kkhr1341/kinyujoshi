@@ -1,50 +1,44 @@
-<script>
-  var url = location.href;
-  console.log(url);
-</script>
+<header class="kinyu-header">
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/joshikai">女子会</a></li>
+      <li><a href="/report">レポート</a></li>
+      <li class="active"><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
 
 
+<div class="kinyu-main-block kinyu-details-block">
 
-
-<div class="kinyu-main-block kinyu-pc-details-block">
-  <div class="inner">
-    <div class="report-detail-header">
-      <a href="/"><img class="logo" src="/images/kinyu-logo01.png"></a>
-    </div>
-
-
-    <div class="report-detail-thunb-block clear">
-      {if $news.main_image == ""}
-      <div class="report-detail-thunb" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
-      {else}
-      <div class="report-detail-thunb" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
-      {/if}
-      <div class="report-detail-info">
-        <div class="report-detail-category">
-          <div class="category-title">
-            <p>ニュース</p>
-          </div>
-        </div>
-        <div class="report-detail-title">
-          <h1>{$news.title}</h1>
-        </div>
-        <div class="report-detail-description">
-          <p class="date">{$news.open_date|date_format:"%Y/%-m/%-d"}</p>
+  <div class="kinyu-details-introdauction">
+    <div class="kinyu-details-introdauction-inner clear">
+      <div class="img-box" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+      <div class="text-box">
+        <div class="text-box-inner">
+          <h2>{$news.title}</h2>
+          <p class="description-sub">{$news.open_date|date_format:"%Y.%-m.%-d"}up!</p>
         </div>
       </div>
     </div>
-  
-    <!-- 本文 -->
+  </div>
+
+  <div class="inner clear">
+
     <div class="report-detail-main">
       {$news.content|nofilter}
-      <!-- シェア部分 -->
-      <div class="report-detail-share clear">
 
-        {$fooo = $news.main_image}
-        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+      <!-- ソーシャルシェア -->
+      {$fooo = $news.main_image}
+      {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+      <div class="report-detail-share clear">
         <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
         <div class="report-detail-share-el report-detail-share-right">
-          <h3><img src="/images/detail-title/kinyu-share-news.png"></h3>
+          <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
           <img class="share-this-page" src="/images/social/social-this-page.png">
           <div class="social-list">
             <ul>
@@ -53,35 +47,12 @@
           </div>
         </div>
       </div>
-      <div class="prev-news-list">
-        <a href="/news">過去のニュースはこちら</a>
-      </div>
     </div>
 
-    <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">
-    {$detail_news_after}    
+    <div class="report-detail-sidebar">
+      {$detail_report_after}
+    </div>
+
+
   </div>
-  <footer>
-        <div class="footer-logo">
-          <a href="/about"><img src="/images/kinyu-logo01.png"></a>
-        </div>
-        <div class="footer-menu">
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/company">運営会社</a>
-          </div>
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/privacy">プライバシーポリシー</a>
-          </div>
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/legal">特定商取引法に基づく表記</a>
-          </div>
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/service">会員規約</a>
-          </div>
-          <div class="navi_kinyu-submenu-el clear">
-            <a href="/contact">お問い合わせ</a>
-          </div>
-        </div>
-        <p class="navi_kinyu-submenu-copy">©きんゆう女子。 All rights reserved. No reproduction or republication without written permission.　<br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</p>
-      </footer>
 </div>
