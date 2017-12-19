@@ -50,7 +50,7 @@
                   <div class="kinyu-top-list-kind">
                     <!-- <p>イベント告知</p> -->
                   </div>
-                  <h3 class="kinyu-top-list-title">メンバー1,000人達成記念イベント</h3>
+                  <h3 class="kinyu-top-list-title">きんゆう女子。メンバー1,000人達成！</h3>
                 </a>
               </div>
             {/if}
@@ -206,7 +206,7 @@
       <img class="report-list-banner" src="/images/banner/asahi_&w_pc.jpg">
     </a>
     <div class="blog-pagenation tx-center">
-      {$pagination}
+      {$pagination|nofilter}
     </div>
     <script>
       $(function() {

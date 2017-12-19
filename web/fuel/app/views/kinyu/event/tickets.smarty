@@ -33,6 +33,7 @@ var $resArray02 = $resArray[1];
       </div>
       
       <div class="kinyu-joshikai-tickets-fee">
+        <p class="info-detail"><span>日時</span>：{$event.event_date|date_format:"m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）{$event.event_start_datetime}〜{$event.event_end_datetime}</p>
         <p><span>参加費</span>：{$event.fee}円</p>
       </div>
 
@@ -47,25 +48,25 @@ var $resArray02 = $resArray[1];
           <!-- ログインユーザー -->
           {if $event.creditch == 1}
             <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
-            <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+            <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお支払い">
           {else if $event.creditch == 0}
             <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
             <p>＊◆◆のため、クレジットカードのみとなります。</p>
           {else}
             <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
-            <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお払い">
+            <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお支払い">
           {/if}
         {else}
           <!-- ログインしていないユーザー -->
           {if $event.creditch == 1}
             <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
-            <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお払い">
+            <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお支払い">
           {else if $event.creditch == 0}
             <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
             <p>＊◆◆のため、クレジットカードのみとなります。</p>
           {else}
             <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
-            <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお払い">
+            <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお支払い">
           {/if}
         {/if}
 

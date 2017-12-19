@@ -2,6 +2,7 @@
 
 use \Model\News;
 use \Model\Blogs;
+use \Model\Events;
 
 class Controller_Kinyu_News extends Controller_Kinyubase
 {
@@ -23,6 +24,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -38,6 +40,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 		
     //$this->data['news'] = News::getByCode('news', $code);
     $this->data['news'] = News::getByCodeWithProfile($code);
+    $this->data['top_events'] = Events::lists(1, 7, true);
 
     if ($this->data['news'] === false) {
        Response::redirect('error/404');
@@ -49,22 +52,19 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     $this->data['top_news'] = News::lists(1, 3, true);
     $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
     $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
-		//$this->template->contents_after_area = View::forge('kinyu/template/contents-after.smarty', $this->data);
-		//$this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
-    //$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
-    $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
-    $this->template->detail_news_after = View::forge('kinyu/common/detail_news_after.smarty', $this->data);
+    $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_after.smarty', $this->data);
+    $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->contents = View::forge('kinyu/news/detail.smarty', $this->data);
+    $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-      $this->template->contents = View::forge('kinyu/news/sp_detail.smarty', $this->data);
     } else {
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
-      //$this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
-      $this->template->contents = View::forge('kinyu/news/detail.smarty', $this->data);
     }
 
 

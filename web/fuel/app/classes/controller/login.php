@@ -23,7 +23,7 @@ class Controller_Login extends Controller_KinyuBase
       $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
       $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-
+      $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -60,6 +60,7 @@ class Controller_Login extends Controller_KinyuBase
       $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
       $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+      $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -98,7 +99,8 @@ class Controller_Login extends Controller_KinyuBase
       $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
       $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-
+      $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      
     if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
         $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
