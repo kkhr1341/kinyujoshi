@@ -95,24 +95,32 @@ class Applications extends Base {
 	public static function create($params) {
 
 		$username = \Auth::get('username');
-		
-		
-		// 定員オーバーチェック
-		$event = self::getByCode('events', $params['event_code']);
+
+        $event = self::getByCode('events', $params['event_code']);
+
+		// 申し込み人数
+        $result = \DB::select(\DB::expr('COUNT(*) as count'))
+            ->from('applications')
+            ->where('event_code', '=', $params['event_code'])
+            ->where('cancel', '=', 0)
+            ->where('disable', '=', 0)
+            ->execute();
+        $result_arr = $result->current();
+        $application_num = $result_arr['count'];
 
 		// 下書き
 		if (empty($event) || $event['status'] != 1) {
 			return "イベントが見つかりませんでした";
 		}
 		
-		if (intval($event['limit']) <= intval($event['application_num'])) {
+		if (intval($event['limit']) <= intval($application_num)) {
 			return "このイベントは満席です";
 		}
 		
-		// 終了チェック
-		if ($event['event_start_datetime'] < date('Y-m-d H:i:s')) {
-			return "このイベントは終了しています";
-		}
+//		// 終了チェック
+//		if ($event['event_start_datetime'] < date('Y-m-d H:i:s')) {
+//			return "このイベントは終了しています";
+//		}
 		
 		// 既存のデータがないか確認
 		$data = \DB::select('*')->from('applications')
@@ -122,7 +130,7 @@ class Applications extends Base {
 					->where('disable', '=', 0)
 					->execute()
 					->current();
-		
+
 		if (!empty($data)) {
 			return "既に参加申し込みずみです";
 		}
@@ -132,11 +140,12 @@ class Applications extends Base {
         try {
             $application_code = self::getNewCode('applications');
 
-            // TODO:: 金額フィールド追加？
             \DB::insert('applications')->set(array(
                 'code' => $application_code,
                 'event_code' => $params['event_code'],
                 'username' => $username,
+                'amount' => $event['fee'],
+                'payment_method' => 1,
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
@@ -158,13 +167,6 @@ class Applications extends Base {
                     'card' => $params['token'],
                 ));
             }
-
-            // 人数を追加する
-            \DB::update('events')->set(array(
-                'application_num' => \DB::expr('application_num+1')
-            ))
-            ->where('code', '=', $params['event_code'])
-            ->execute();
 
             $db->commit_transaction();
 

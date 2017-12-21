@@ -7,7 +7,7 @@ class Add_email_to_applications
     public function up()
     {
         \DBUtil::add_fields('applications', array(
-            'email' => array('constraint' => 255, 'type' => 'varchar', 'after' => 'name'),
+            'email' => array('constraint' => 255, 'type' => 'varchar', 'after' => 'name', 'null' => true),
 
         ));
     }
