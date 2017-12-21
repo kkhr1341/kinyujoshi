@@ -68,12 +68,14 @@ class Controller_Mybase extends Controller_Template
 							'base.css',
 							'slick.css',
 							'kinyu/bg.css',
-							'style.css',
+							//'style.css',
 							'kinyu/swiper.min.css',
 							'kinyu/jumboShare.css',
 							'kinyu/drawer.css',
+							'edit_style.css',
+							'tablet.css',
+							'responsive.css',
 							'my/my.css',
-							//'my/layout.css',
 							'my/responsive.css'
 		), array(), 'layout', false);
 		

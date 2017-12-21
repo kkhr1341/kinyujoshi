@@ -1,0 +1,76 @@
+<header class="kinyu-header">
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/joshikai">女子会</a></li>
+      <li><a href="/report">レポート</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li><a href="/myway">「わたし」を知る。</a></li>
+      <li class="active"><a href="/my">マイページ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="admin-normal-container">
+
+  <div class="admin-normal-inner clear">
+
+
+    <div class="admin-normal-side">
+      <ul>
+        <li><a href="">マイページ編集</a></li>
+        <li><a href="">参加女子会</a></li>
+        <!-- <li><a href=""></a></li> -->
+      </ul>
+    </div>
+
+    <div class="admin-normal-main">
+
+      <div class="admin-normal-profile">
+        <div class="img-box-block">
+          <div class="img-box" style="background:url(https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20170523%2F71%2F7860081%2F13%2F713x656xd5cbf1649139bd6cb60a3943.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r) center center / cover no-repeat;">
+          </div>
+        </div>
+        <p class="profile-name">石原さとみ</p>
+        <p class="profile-catchcopy">私らしく生きる。そしてマイハウス購入する！</p>
+      </div>
+
+      <div class="admin-normal-joshikai">
+        <p>◆◆さんの参加予定の女子会</p>
+        <ul class="clear">
+
+          <!-- 参加女子会 -->
+          <li>
+            <a href="" class="clear">
+              <div class="img-box" style="background:url(/images/content/celebration/main-bg.jpg) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+              <div class="text-box">
+                <div class="text-box-inner">
+                  <p class="date-text">2017.05.11（金）</p>
+                  <p class="title-text">日経WOMEN×日経FinTechお金と私をアップデート♪</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          
+          <!-- 女子会の予定 -->
+          <li>
+            <p class="joshikai-no">参加予定の女子会はありません..。</p>
+            <a href="/joshikai" class="to-link-joshikai">女子会の予定へ</a>
+          </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{$sp_footer}
+
+
+<style>
+  footer {
+    background-color: #dfdfdf!important;
+  }
+</style>

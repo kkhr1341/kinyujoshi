@@ -33,7 +33,9 @@ console.log($resArray02);
         </div>
         <div class="joshikai-detail-el-content-box">
           <p class="info-title">女子会詳細</p>
-          <div class="kinyu-joshikai-detail-content">{$event.content|nofilter}</div>
+          <div class="kinyu-joshikai-detail-content img_area">
+            {$event.content|nofilter}
+          </div>
         </div>
       </div>
     

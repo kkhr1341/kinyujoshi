@@ -1,0 +1,137 @@
+<header class="kinyu-header">
+  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
+  <nav>
+    <ul class="kinyu-header-nav">
+      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/joshikai">女子会</a></li>
+      <li><a href="/report">レポート</a></li>
+      <li><a href="/news">ニュース</a></li>
+      <li class="active"><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/login">メンバー登録 / ログイン</a></li>
+    </ul>
+  </nav>
+</header>
+
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
+
+<div class="myway-report-content">
+
+  <h2 class="myway-report-content-title"><img src="/images/myway/title/main-title-border.png"></h2>
+
+  {$reporturl = $smarty.server.REQUEST_URI}
+
+  {if $reporturl == "/report/FxKhYh"}
+    
+    <!-- くつ編 -->
+    <div class="myway-header-content" style="background: #FBECE4;">
+      <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
+      <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;">
+        <div class="title-block">
+          <div class="title-block-inner">
+            <img src="/images/myway/title/title-shoes.png">
+            <p>{$blog.description}</p>
+          </div>
+        </div>
+        <div class="video-block">
+          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
+        </div>
+      </div>
+    </div>
+
+  {elseif $reporturl == "/report/fMvmMk"}
+
+    <!-- コスメ編 -->
+    <div class="myway-header-content" style="background: #EBFAFF;">
+      <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
+      <div class="main-tumb-block clear">
+        <div class="title-block">
+          <div class="title-block-inner">
+            <img src="/images/myway/title/title-cosmetics.png">
+            <p>{$blog.description}</p>
+          </div>
+        </div>
+        <div class="video-block">
+          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" ></video>
+        </div>
+      </div>
+    </div>
+
+  {else}
+
+    <!-- その他 -->
+    <div class="myway-header-content" style="background: #FBECE4;">
+      <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
+      <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;">
+        <div class="title-block">
+          <div class="title-block-inner">
+            <img src="/images/myway/title/title-shoes.png">
+            <p>{$blog.description}</p>
+          </div>
+        </div>
+        <div class="video-block">
+          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
+        </div>
+      </div>
+    </div>
+  {/if}
+
+  <div class="inner clear">
+
+    <div class="report-detail-main">
+      {$blog.content|nofilter}
+
+      <!-- ソーシャルシェア -->
+      {$fooo = $blog.main_image}
+      {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+      <div class="report-detail-share clear">
+        <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+        <div class="report-detail-share-el report-detail-share-right">
+          <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
+          <img class="share-this-page" src="/images/social/social-this-page.png">
+          <div class="social-list">
+            <ul>
+              {$social_share}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="myway-list-block">
+    <img class="myway-list-title" src="/images/myway/title/main-title-border.png">
+    <div class="myway-list">
+      <ul>
+        <li class="myway-list-shoes"><a href="/report/FxKhYh"><img src="/images/myway/title/title-shoes.png"></a></li>
+        <li class="myway-list-cosmetics"><a href="/report/fMvmMk"><img src="/images/myway/title/title-cosmetics.png"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="report-detail-sidebar">
+    {$detail_report_after}
+  </div>
+</div>
+
+
+<script>
+  $(function() {
+    var hhhhh = $('.myway-report-content .inner').scrollTop();
+    console.log(hhhhh);
+
+    $(window).scroll(function() {
+      var now_scroll = jQuery(this).scrollTop();
+      var all_scroll = window.innerHeight;
+      //var scroll_01 = $("#myway-content-after-point");
+      var fix_point = $('.myway-report-content .inner').offset().top;
+      var fix_point1 = $('.myway-report-content .inner').offset().left;
+
+      if(fix_point < now_scroll) {
+        $("#myway-content-after-point").addClass('test');
+        $("#myway-content-after-point").css("right", fix_point1+80 + 'px');
+      } else if (fix_point > now_scroll) {
+        $("#myway-content-after-point").removeClass('test');
+        $("#myway-content-after-point").css("right", "auto");
+      }
+
+    });
+  });
+</script>

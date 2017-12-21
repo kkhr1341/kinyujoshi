@@ -77,14 +77,21 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_after.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
-    $this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+    if ($this->data['blog']['kind'] == "わたしを知る") {
+      $this->template->contents = View::forge('kinyu/blog/detail_myway.smarty', $this->data);
+    } else {
+      $this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
+    }
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
     } else {
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
     }
+
+
 
 	}
 

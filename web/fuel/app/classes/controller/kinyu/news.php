@@ -45,16 +45,16 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     if ($this->data['news'] === false) {
        Response::redirect('error/404');
     }
-		$this->template->title = $this->data['news']['title'];
-		$this->template->description = $this->data['news']['title'];
-		$this->template->ogimg = $this->data['news']['main_image'];
-	  $this->data['top_blogs'] = Blogs::lists(1, 3, true);
-    $this->data['top_news'] = News::lists(1, 3, true);
+    
+	$this->template->title = $this->data['news']['title'];
+	$this->template->description = $this->data['news']['title'];
+	$this->template->ogimg = $this->data['news']['main_image'];
+    $this->data['top_news'] = News::lists(1, 5, true);
     $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
     $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
     $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-    $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_after.smarty', $this->data);
+    $this->template->detail_news_after = View::forge('kinyu/news/detail_news_after.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);

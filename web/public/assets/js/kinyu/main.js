@@ -586,7 +586,11 @@ $(function() {
 
 // ページ内スムーズスクロール
 $(function() {
-  $('a[href^=#]').click(function() {
+
+  var ua = navigator.userAgent.toUpperCase();
+  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
+    // スマホ
+    $('a[href^=#]').click(function() {
       // スクロールの速度
       var speed = 800; // ミリ秒
       // アンカーの値取得
@@ -594,11 +598,27 @@ $(function() {
       // 移動先を取得
       var target = $(href == "#" || href == "" ? 'html' : href);
       // 移動先を数値で取得
-      var position = target.offset().top;
+      var position = target.offset().top-46;
       // スムーススクロール
       $('body,html').animate({scrollTop:position}, speed, 'swing');
       return false;
-   });
+    });
+  } else {
+    // スマホ
+    $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 800; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top-130;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+    });
+  }
 });
 
 

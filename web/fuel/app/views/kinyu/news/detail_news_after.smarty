@@ -2,28 +2,28 @@
 
   <!-- 編集部のおすすめレポート -->
   <div class="report-detail-sidebar-el">
-    <p class="report-detail-sidebar-el-title">編集部のおすすめレポート</p>
+    <p class="report-detail-sidebar-el-title">最新ニュース</p>
     <div class="report-sidebar-report-list">
       <ul class="clear">
-        {foreach from=$top_blogs item=blog name=loopname}
+        {foreach from=$top_news item=news name=loopname}
 
         {if $smarty.foreach.loopname.index == 3}
         </ul>
           <div class="sidebar-more-link">
-            <a href="/event">レポートをもっと見る >
+            <a href="/news">ニュースをもっと見る >
             </a>
           </div>
           {break}
         {/if}
 
-        {$fooo = $blog.main_image}
+        {$fooo = $news.main_image}
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
         <li class="clear">
-          <a href="/report/{$blog.code}">
+          <a href="/report/{$news.code}">
             <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
             <div class="text-box">
-              <p class="title">{$blog.title}</p>
+              <p class="title">{$news.title}</p>
             </div>
           </a>
         </li>

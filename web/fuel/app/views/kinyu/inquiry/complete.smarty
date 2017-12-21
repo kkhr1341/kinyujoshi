@@ -1,7 +1,8 @@
-<div class="kinyu-main-single-block">
-<div class="company-detail-header"><img class="logo" src="/images/kinyu-logo01.png"></div>
+{$company_header}
 
-  <div class="white ">
+<div class="kinyu-main-single-block">
+
+  <div class="white">
   	<div class="container center">
   		<div class="row">
   			<section>

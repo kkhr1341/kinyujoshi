@@ -303,18 +303,19 @@
   記事部分 
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-report-content {
-  width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  padding-top: 130px;
 }
 .myway-header-content {
-  padding-top: 50px;
 }
-.myway-header-content h2 {
+.myway-report-content-title {
   text-align: center;
-  margin-bottom: 24px;
+  padding: 24px 0px 40px;
 }
 .myway-header-content .main-tumb-block {
-  padding: 36px 0px;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0px;
   box-sizing: border-box;
   position: relative;
 }
@@ -352,9 +353,11 @@
   margin-bottom: 20px;
 }
 .myway-report-content .inner {
-  border-bottom: 1px solid gray;
-  padding: 40px 0px;
   position: relative;
+  background: #fff;
+  width: 1000px;
+  padding: 80px 0px;
+  margin: 0 auto;
 }
 .myway-report-content .myway-report-detail {
   width: 640px;
@@ -401,7 +404,7 @@
 .myway-report-content .report-detail-main h2 {
   font-size: 18px;
   line-height: 26px;
-  border-bottom: 2px solid #444;
+  border-bottom: 1px solid #444;
 }
 .myway-report-content .report-detail-main h2:before {
   color: #444;
@@ -431,6 +434,46 @@
 .season-title {
   display: block;
   margin: 0 auto;
+}
+.myway-list-block {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.myway-list {
+  margin-top: 24px;
+}
+.myway-list-title {
+  display: block;
+  margin: 0 auto;
+}
+.myway-list-block ul {
+  letter-spacing: -40px;
+  text-align: center;
+}
+.myway-list-block li {
+  width: 32%;
+  display: inline-block;
+  letter-spacing: normal;
+  margin-right: 2%;
+}
+.myway-list-block li:last-child {
+  margin-right: 0%;
+}
+.myway-list-block li a {
+  display: block;
+  line-height: 0px;
+  text-align: center;
+  padding: 10px 0px;
+}
+.myway-list-block li a img {
+  width: 60%;
+}
+.myway-list-block .myway-list-shoes {
+  background: #FBECE4;
+}
+.myway-list-block .myway-list-cosmetics {
+  background: #EBFAFF;
 }
 
 

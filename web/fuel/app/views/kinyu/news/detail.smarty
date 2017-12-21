@@ -48,11 +48,8 @@
         </div>
       </div>
     </div>
-
-    <div class="report-detail-sidebar">
-      {$detail_report_after}
-    </div>
-
-
+  </div>
+  <div class="report-detail-sidebar">
+    {$detail_news_after}
   </div>
 </div>

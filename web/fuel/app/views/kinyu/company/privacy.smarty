@@ -1,5 +1,6 @@
+{$company_header}
+
 <div class="kinyu-main-single-block">
-<div class="company-detail-header"><img class="logo" src="/images/kinyu-logo01.png"></div>
 
 <div class="company-info-title">
   <h2>プライバシーポリシー</h2>
@@ -21,32 +22,32 @@
     株式会社TOE THE LINE（以下「当社」とします）は、当社の運営するwebサイト「きんゆう女子。」（以下「当サイト」とします）において、以下のとおり個人情報保護方針を定め、個人情報の適切な取扱いおよび管理に努めます。
     </p>
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 個人情報の管理</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 個人情報の管理</h3>
       <p class="description">当社は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するために必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 個人情報の利用目的</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 個人情報の利用目的</h3>
       <p class="description">お客さまからお預かりした個人情報は、以下の目的のために利用いたします。<br>・当サイトの更新情報やイベント情報等の当社からのご連絡のため<br>・商品、サービスの提供、お問い合わせへの回答<br>・商品、サービスの企画及び利用に関する調査、アンケート等のお願い及びその後の連絡<br>・マーケティング、統計資料等の作成</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 個人情報の第三者への開示・提供の禁止</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 個人情報の第三者への開示・提供の禁止</h3>
       <p class="description">当社は、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。<br>・お客さまの同意がある場合<br>・お客さまが希望されるサービスを行なうために当社が業務を委託する業者に対して開示する場合<br>・法令に基づき開示することが必要である場合</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 個人情報の安全対策</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 個人情報の安全対策</h3>
       <p class="description">当社は、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> ご本人の照会</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> ご本人の照会</h3>
       <p class="description">お客さまがご自身の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 法令、規範の遵守と見直し</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 法令、規範の遵守と見直し</h3>
       <p class="description">当社は、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。</p>
     </div>
 

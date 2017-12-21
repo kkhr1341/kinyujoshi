@@ -11,7 +11,7 @@
 
         <div class="about-kinyu-header-contetns-list-el">
           <a class="clear" href="/about_main">
-            <div class="img-box" style="background:url(/images/about/about-index.jpg) top center / cover no-repeat;"></div>
+            <div class="img-box" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
             <div class="title-box">
               <div class="title-box-inner">
                 <p><img src="/images/about/pc_title_about.png"></p>
@@ -22,7 +22,7 @@
 
         <div class="about-kinyu-header-contetns-list-el">
           <a class="clear" href="/about_story">
-            <div class="img-box" style="background:url(/images/about/about-story.jpg) top center / cover no-repeat;"></div>
+            <div class="img-box" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
             <div class="title-box">
               <div class="title-box-inner">
                 <p><img src="/images/about/pc_title_story.png"></p>

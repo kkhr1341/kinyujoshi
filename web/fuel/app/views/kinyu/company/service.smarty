@@ -1,5 +1,6 @@
+{$company_header}
+
 <div class="kinyu-main-single-block">
-<div class="company-detail-header"><img class="logo" src="/images/kinyu-logo01.png"></div>
 
 <div class="company-info-title">
   <h2>会員規約</h2>
@@ -17,14 +18,14 @@
   </div>
 
   <div class="company-details">
-    <p class="company-details-service-title"><span style="color: #7CDCCE;">◆</span> きんゆう女子。会員規約</p>
+    <p class="company-details-service-title"><span style="color: #8ddcd1;">◆</span> きんゆう女子。会員規約</p>
     <p class="first-description">
     本規約は株式会社TOE THE LINE（以下「当社」といいます）が提供するWEBサイト及びコミュニティ（以下「当サイト」及び「当コミュニティ」といいます）において、当社が提供する会員向け各種サービス（以下「サービス」といいます)を利用するきんゆう女子。会員（以下「会員」といいます）と当社との間に適用される条件を定めるものです。<br><br>
     当該サービスを登録ユーザとしてご利用になる方は、本規約に同意する前に、必ず全文をお読み下さいますようお願い致します。
     </p>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 会員</h3>
       <p class="description">
       １．当サイト及び当コミュニティの定める会員とは本規約を承認の上、規定の入会手続きを完了後、当社で承認した方とします。<br><br>
       ２．会員は、当サイト及び当コミュニティが提供するサービスを無料で受けることができます。但し、一部有料サービスについてはこの限りではありません。また、サービスを受ける際に発生するメール受信やウェブサイト閲覧等に必要な通信費用の一切は会員が負担するものとします。<br><br>
@@ -35,7 +36,7 @@
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> アカウント</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> アカウント</h3>
       <p class="description">
       １．会員は、自らの責任において、登録したメールアドレス及びパスワード（以下「アカウント」といいます）を使用し、管理するものとします。<br><br>
       ２．会員は、アカウントの譲渡売買、貸与等の行為は一切できません。<br><br>
@@ -46,7 +47,7 @@
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 登録情報、プライバシー</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 登録情報、プライバシー</h3>
       <p class="description">
       １．会員登録、サービスの利用等に伴い当社が取得する会員に関する情報（アカウントを含み、以下「会員情報」といいます）は当社が所有するものとし、当社が定める「プライバシーポリシー」に従い、取り扱うものとします。<br><br>
       ２．入会の際に会員の申告する登録情報のすべての項目に関して、いかなる虚偽の申告も認めないものとします。<br><br>
@@ -56,7 +57,7 @@
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 禁止事項・遵守事項</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 禁止事項・遵守事項</h3>
       <p class="description">
       １．会員は営利の目的で当サイトから得た情報を他に転用、流用することはできません。<br><br>
       ２．会員は自己の責任においてサービスを利用するものとし、他の会員および第三者に対し迷惑を及ぼさないものとします。<br><br>
@@ -79,7 +80,7 @@
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員資格の抹消</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 会員資格の抹消</h3>
       <p class="description">
       １．以下の項目に該当する場合、当社は、当該会員への事前通知、承諾なしに会員資格を抹消することができるものとします。<br>
       (1) 入会時及びその後のアンケートによる会員の申告情報が故意による虚偽の申告と当社が判断した場合<br>
@@ -91,17 +92,17 @@
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 退会</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 退会</h3>
       <p class="description">会員が当サイト及び当コミュニティから退会する場合、会員本人が<a style="color:#4C9BBF;" href="https://kinyu-joshi.jp/contact">所定のフォーム</a>から退会手続を行うものとし、手続き完了後に退会となります。退会者の個人情報に関しては、「個人情報保護法」に基づき一定期間経過後に削除します。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 規約の変更</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 規約の変更</h3>
       <p class="description">当社が必要と判断した場合には、会員にあらかじめ通知することなくいつでも本利用規約を変更することができるものとします。この場合、会員は改定後の規約に従うものとします。ただし、会員に大きな影響を与える場合には、あらかじめ合理的な事前告知期間を設けるものとします。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 免責</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 免責</h3>
       <p class="description">１．当社は、次の各号に該当する場合、会員の承諾なしに、サービスの全部又は一部を一時中断、停止する場合があります。この場合において、会員や第三者に損害や不利益が発生しても、当社はその賠償や不利益を一切負担しないものとします。<br>
       a．当サイトのネットワークシステム定期保守、更新ならびに緊急事態発生の場合<br>
       b．火災、停電、天災等の不可抗力により、サービス提供が困難な場合<br>
@@ -118,17 +119,17 @@
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 合意管轄</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 合意管轄</h3>
       <p class="description">当サイト及び当コミュニティの利用に関して、当社と会員との間で本規約につき、訴訟の必要性が生じた場合は、東京地方裁判所を専属的合意管轄裁判所とすることを合意するものとします。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 準拠法</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 準拠法</h3>
       <p class="description">本規約の成立、効力、履行および解釈に関しては日本法が適用されるものとします。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 附則</h3>
+      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 附則</h3>
       <p class="description">この規約は、2016年11月7日から実施します。同日以降に会員登録及びきんゆう女子。のサービスを使用した人は本規約に服することを承認したものとみなします。<br><br>以上</p>
     </div>
 
