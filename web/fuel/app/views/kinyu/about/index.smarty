@@ -30,7 +30,7 @@
       </ul>
     </div>
 
-    <div class="top-slider pc">
+    {*<div class="top-slider pc">
       <ul class="bxslider">
         <li class="back09-pc">
           <p class="slider-title-sp-b"><img src="/images/deco/top-deco-pc01r.png" alt="金融,きんゆう女子,Fintech"></p>
@@ -43,6 +43,7 @@
         </li>
       </ul>
     </div>
+    *}
 
     <div class="about-kinyujoshi-block">
 
