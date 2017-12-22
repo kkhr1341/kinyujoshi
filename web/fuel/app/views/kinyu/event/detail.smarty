@@ -147,8 +147,6 @@ console.log($resArray02);
   </div>
 </div>
 
-<script type="text/javascript" src="https://js.pay.jp/"></script>
-<script type="text/javascript">Payjp.setPublicKey('{$payjp_public_key}');</script>
 <script>
   $(function() {
     
@@ -160,52 +158,4 @@ console.log($resArray02);
     });
 
   });
-  (function() {
-      var form = $("#charge-form"),
-          number = form.find('input[name="number"]'),
-          cvc = form.find('input[name="cvc"]'),
-          exp_month = form.find('input[name="exp_month"]'),
-          exp_year = form.find('input[name="exp_year"]'),
-          event_code = form.find('input[name="event_code"]');
-
-      $("#charge-form").submit(function(e) {
-          e.preventDefault();
-
-          form.find("button[type=submit]").prop("disabled", true);
-
-          var card = {
-              number: number.val(),
-              cvc: cvc.val(),
-              exp_month: exp_month.val(),
-              exp_year: exp_year.val()
-          };
-          Payjp.createToken(card, function(s, response) {
-              if (response.error) {
-                  form.find('.payment-errors').text(response.error.message);
-//                  form.find('button').prop('disabled', false);
-              }
-              else {
-//                  $(".number").removeAttr("name");
-//                  $(".cvc").removeAttr("name");
-//                  $(".exp_month").removeAttr("name");
-//                  $(".exp_year").removeAttr("name");
-
-                  var token = response.id;
-                  var url = "/api/events/application";
-                  var params = {};
-
-                  console.log(event_code.val());
-
-                  params.event_code = event_code.val();
-                  params.token = token;
-
-                  ajax.post(url, params, function(data){
-                      location.href = "/event/complete";
-                  });
-//                  form.append($('<input type="hidden" name="payjpToken" />').val(token));
-//                  form.get(0).submit();
-              }
-          });
-      });
-  })();
 </script>
