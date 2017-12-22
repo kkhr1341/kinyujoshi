@@ -31,6 +31,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+    $this->template->pickup_top = View::forge('kinyu/common/pickup_top.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);

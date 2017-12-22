@@ -12,8 +12,6 @@
   	<meta name="apple-mobile-web-app-title" content="きんゆう女子。">
   	<meta name="google-site-verification" content="String_we_ask_for">
   	<meta property="og:image" content="{$ogimg}">
-    <!-- <link href="https://fonts.googleapis.com/earlyaccess/sawarabigothic.css" rel="stylesheet" /> -->
-    <!-- <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" /> -->
 
   	{Asset::render('layout')}
     <script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyAFVmKPPwT4ziVB36CPISDQEQR-7c8lBoE"></script>
@@ -33,8 +31,6 @@
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   	</script> -->
-
-    <canvas id="canvas"></canvas>
 
   	<div>{$tablet_div}</div>
 

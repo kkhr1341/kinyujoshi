@@ -46,9 +46,9 @@ class Profiles extends Base {
     
     $datas = \DB::select(\DB::expr('*, profiles.code'))
     ->from('profiles')
-    //->join('profiles', 'left')
-    //->on('events.username', '=', 'profiles.username')
-    ->where('profiles.release_profile', '=', 1);
+    ->join('profiles', 'left')
+    ->on('events.username', '=', 'profiles.username')
+    ->where('profiles.disable', '=', 0);
 
     // if ($mode === null) {
     // }

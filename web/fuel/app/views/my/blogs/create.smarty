@@ -1,5 +1,5 @@
 
-<ol class="my-header-menu">
+<ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
 	<li><a href="/my">マイページ</a></li>
 	<li><a href="/my/blogs">記事の管理</a></li>
@@ -22,8 +22,9 @@
 					</select>
 				</div>-->
 
+        {*
 				<div class="form-group mb50">
-					<label>◆カテゴリー</label>
+					<label class="form-group-event-label">カテゴリー</label>
 					<div class="radio_box clear">
             <input type="radio" value="lifestyle" name="section_code" id="section_code1" class="form-radio" placeholder="">
             <label for="section_code1" class="form-long">ライフスタイル</label>
@@ -35,10 +36,11 @@
             <label for="section_code4" class="form-long">パラレル</label>
           </div>
 				</div>
+        *}
 
 
 				<div class="form-group mb50">
-					<label>◆レポートの種類</label>
+					<label class="form-group-event-label">レポートの種類</label>
 			
 					<div class="radio_box clear">
             <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="">
@@ -65,7 +67,7 @@
 
         {*
         <div class="form-group mb50">
-					<label>◆キーワード</label>
+					<label class="form-group-event-label">キーワード</label>
 			
 					<div class="radio_box clear">
             <input type="radio" value="ためる" name="keyword" id="keyword01" class="form-radio" placeholder="">
@@ -88,7 +90,7 @@
         *}
 
          <div class="form-group mb50">
-					<label>◆ピックアップ</label>
+					<label class="form-group-event-label">ピックアップ</label>
 			
 					<div class="radio_box clear">
             <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="">
@@ -101,19 +103,24 @@
         </div>
 
 				<div class="form-group">
-					<label>◆タイトル</label>
+					<label class="form-group-event-label">タイトル</label>
+          <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
 					<input type="text" id="title" class="form-control" placeholder="">
 				</div>
+
 				<div class="form-group">
-					<label>◆説明文</label>
+					<label class="form-group-event-label">説明文</label>
+          <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
 					<textarea style="height: 80px;" type="text" id="description" class="form-control" placeholder=""></textarea>
 				</div>
+
 				<div class="form-group">
-					<label>◆本文</label>
+					<label class="form-group-event-label">本文</label>
 					<textarea id="content" name="content"></textarea>
 				</div>
+
 				<div class="form-group">
-					<label>◆公開日時</label>
+					<label class="form-group-event-label">公開日時</label>
 
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="open_date" value="{date('YY/mm/dd HH:ii')}" />
