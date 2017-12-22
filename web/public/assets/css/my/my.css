@@ -33,7 +33,7 @@
   font-size: 13px;
 }
 .btn {
-  font-size: 14px;
+  font-size: 13px;
   line-height: inherit;
   padding: 12px 30px;
 }
@@ -136,11 +136,52 @@
   content: "/\00a0";
 }
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
-.form-group label {
+.form-group .form-control {
+  border: 1px solid #d9d8d8;
+}
+.form-group .form-group-sub {
   font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 12px;
 }
+.form-group .form-group-event-label {
+  color: #5FB3A7;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  padding-left: 5px;
+  border-left: 2px solid #5FB3A7;
+  margin: 0px 0px 12px 2px;
+}
+.form-group .radio_box label,
+.form-group .radio_box_02 label,
+.form-group .radio_box_03 label {
+    background: #efefef;
+    padding: 12px 20px;
+    font-size: 12px;
+}
+
+/* イベントの部分 */
+.event-datetime input {
+  display: inline-block;
+  width: auto;
+}
+.thumbnail-img-block {
+  display: block;
+  background: #dddddd;
+  width: 250px;
+  text-align: center;
+  padding: 8px 0px;
+}
+.thumbnail-img {
+  width: 500px;
+  height: 300px;
+  margin-top: 12px;
+} 
+
 footer {
 	background-color:#1C1C1C;
   position: relative;
@@ -281,7 +322,8 @@ footer {
 .admin-normal-container {
   padding-top: 130px;
   border-bottom: 1px solid #c2c2c2;
-  background: #f1f1f1;
+  /*background: #e9fbf9;*/
+  background: #c5e9e4;
 }
 .admin-normal-container .admin-normal-inner {
   width: 1000px;
@@ -291,41 +333,120 @@ footer {
 .admin-normal-side {
   width: 200px;
   float: left;
+  padding-right: 20px;
+}
+.admin-normal-side li {
+  text-align: center;
+  padding: 8px 0px;
+  margin-bottom: 8px;
+}
+.admin-normal-side li.active {
+  background: #8ddcd1;
+}
+.admin-normal-side li.active a {
+  color: #fff;
+  font-weight: bold;
 }
 .admin-normal-main {
   width: 800px;
   float: right;
   padding: 0px 80px;
-  border-left: 1px solid gray;
+  border-left: 1px solid #fff;
 }
 .admin-normal-profile {
   text-align: center;
+  padding-bottom: 50px;
 }
 .admin-normal-profile .img-box-block {
   width: 150px;
   height: 150px;
   margin: 0 auto;
+  position: relative;
 }
 .admin-normal-profile .img-box {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  position: relative;
+  z-index: 1000;
+}
+.edit-profile-img .edit-profile-img2 {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1002;
+  background: #8ddcd1;
+  transition: .5s;
+  display: table;
+}
+.edit-profile-img .edit-profile-img2 p {
+  height: 100%;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0px 20px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 18px;
+
+}
+.admin-normal-profile .img-box-block:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #8ddcd1;
+  z-index: 999;
 }
 .admin-normal-profile .profile-name {
   font-size: 16px;
   line-height: 16px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: #5FB3A7;
 }
 .admin-normal-profile .profile-catchcopy {
   font-size: 14px;
   line-height: 22px;
+  width: 80%;
+  margin: 0 auto;
+}
+.admin-normal-profile-btn {
+  margin-top: 12px;
+  text-align: right;
+}
+.admin-normal-profile-btn a {
+  border: none;
+  background-color: #fff;
+  color: #5FB3A7;
+  font-weight: normal;
 }
 
-/* 参加する女子会の一覧 */
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  女子会部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-joshikai {
-  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid #fff;
+}
+.joshikailist-main {
+  padding-top: 0px;
+  border-top: none;
 }
 .admin-normal-joshikai li {
   width: 100%;
+  margin-bottom: 12px;
+}
+.admin-normal-joshikai li:last-child {
+  margin-bottom: 0px;
 }
 .admin-normal-joshikai li a {
   display: block;
@@ -352,11 +473,11 @@ footer {
   color: #5FB3A7;
   font-size: 14px;
   line-height: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .admin-normal-joshikai li .text-box .title-text {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .admin-normal-joshikai li .joshikai-no {
   font-size: 14px;
@@ -375,13 +496,199 @@ footer {
   color: #fff;
   font-weight: bold;
 }
+.admin-normal-joshikai-title {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* 女子会詳細 */
+.admin-joshikai-detail-el-header {
+}
+.admin-joshikai-detail-el-header .main-image {
+  height: 300px;
+}
+.admin-joshikai-detail-el-header h2 {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 20px 0px 24px;
+}
+.admin-normal-joshikai-el {
+  padding: 24px 0px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.admin-normal-joshikai-el mark, .admin-normal-joshikai-el .mark{
+  background-color: rgba(255,255,255,0.5)!important;
+}
+.admin-normal-joshikai-el h2 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+  padding: 5px 0px 5px 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid #444;
+  margin: 20px 0px;
+}
+.admin-normal-joshikai-el blockquote {
+  font-size: 11px;
+  line-height: 15px;
+  margin-top: 5px;
+  border-left: 1px solid #444;
+  padding-left: 8px;
+}
+.admin-normal-joshikai-el li {
+  margin-bottom: 20px;
+}
+.admin-normal-joshikai-el .info-title {
+  color: #5FB3A7;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.admin-normal-joshikai-el .info-detail {
+  font-size: 15px;
+  line-height: 20px;
+}
+.joshikai-detail-open {
+  text-align: center;
+  background: #8ddcd1;
+  padding: 8px 0px;
+  color: #fff;
+  font-weight: bold;
+}
+.joshikai-cancel-open {
+  width: 220px;
+  text-align: center;
+  padding: 8px 0px;
+  background: #efb1b1;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: bold;
+  margin-top: 24px;
+}
+#admin-joshikai-detail {
+  display: none;
+  margin-top: 20px;
+}
+.joshikai-cancel-submit {
+  background: #efb1b1;
+  font-weight: bold;
+  font-size: 13px;
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 12px 0px;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 24px;
+}
 
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  プロフィール修正部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.admin-profile-edit-el {
+  margin-bottom: 32px;
+}
+.admin-profile-edit-title {
+  font-size: 14px;
+  color: #5fb3a7;
+  margin-bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  padding-left: 8px;
+  margin-left: 2px;
+  border-left: 2px solid #5fb3a7;
+}
+.admin-profile-edit-title2 {
+  font-size: 14px;
+  color: #5fb3a7;
+  margin-bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  padding-left: 8px;
+  margin-left: 2px;
+  margin-top: 24px;
+}
+.admin-profile-edit-subtitle {
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: #6d6d6d;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.admin-profile-edit-el select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: inline-block;
+  padding: 0px 8px;
+  background: #fff;
+  height: 36px;
+  font-size: 13px;
+  background-image: url(/images/login/select-arrow.png);
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+}
+.admin-profile-edit-el select#age1 {
+  width: 150px;
+}
+.admin-profile-edit-el select#age2 {
+  width: 100px;
+}
+.admin-profile-edit-el select#age3 {
+  width: 100px;
+}
+.admin-profile-edit-el .regist-selectarea p {
+  display: inline-block;
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: gray;
+  margin-top: 0px;
+  margin-right: 6px;
+  vertical-align: bottom;
+}
+.radio_box label, .radio_box_02 label, .radio_box_03 label {
+  background: #fff;
+  padding: 12px 20px;
+  font-size: 11px;
+}
+.admin-profile-table {
+  display: block;
+  padding: 24px 0px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.admin-profile-table tr {
+  margin-bottom: 12px;
+  display: block;
+}
+.admin-profile-table tr:last-child {
+  margin-bottom: 0px;
+}
+.admin-profile-table th {
+  background-color: #8ddcd1!important;
+  color: #fff;
+  border: none!important;
+  width: 160px;
+  font-weight: bold;
+}
+.admin-profile-table td {
+  border: none!important;
+}
 
-
-
-
-
-
-
-
+.edit-profile-img .img-box:hover {
+}
+.edit-profile-img .edit-profile-img2:hover {
+  opacity: 0.9;
+}

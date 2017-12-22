@@ -17,10 +17,6 @@
 .kinyu-main {
   position: relative;
 }
-.kinyu-main-title {
-  text-align: left;
-  margin-bottom: 8px;
-}
 .tablet-div {
   display: none;
 }
@@ -48,7 +44,7 @@
 .kinyu-header-top {
   /*margin-left: 360px;*/
   margin-left: 24%;
-  height: 152px;
+  height: 130px;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +54,7 @@
   text-align: center;
 }
 .kinyu-header-top .main-logo {
-  padding: 32px 0px 24px; 
+  padding: 28px 0px 16px;
 }
 .kinyu-header {
   background-color: #fff;
@@ -490,6 +486,15 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・メインコンセプト部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-top-intro {
+  padding: 30px 50px 60px;
+}
+.kinyu-top-maincontent-block {
+}
+.kinyu-top-maincontent-block-el {
+  padding: 60px 50px;
+  background: #f9f9f9;
+}
 .kinyu-top-introlist-left {
   width: 31.333%;
   margin-right: 3%;
@@ -506,8 +511,8 @@
   width: 100%;
 }
 .kinyu-top-introlist-left .main-intro-description {
-  font-size: 11px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 22px;
   margin: 24px 0px;
 }
 .main-intro-link {
@@ -615,13 +620,13 @@
 
 /* ニュース */
 .kinyu-top-introlist-news {
-  width: 650px;
+  width: 700px;
   margin: 0 auto;
-  margin-bottom: 50px;
   height: 48px;
   border: 1px solid #7CDCCE;
   padding: 4px 0px;
   box-sizing: border-box;
+  margin-top: 32px;
 }
 .kinyu-top-introlist-news .title-area {
   float: left;
@@ -663,7 +668,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-list-block {
   margin-left: 24%;
-  padding: 20px 42px 80px;
+  padding: 130px 0px 80px;
   position: relative;
 }
 .kinyu-top-list-block .inner {
@@ -672,7 +677,6 @@
   position: relative;
 }
 .kinyu-top-introlist-block {
-  padding: 155px 0% 50px;
 }
 .kinyu-sp-border-line {
   width: 100%;
@@ -687,6 +691,18 @@
 }
 .kinyu-top-list {
   padding: 0px 0% 0px;
+}
+.kinyu-top-list .kinyu-main-title {
+  font-size: 20px;
+  line-height: 20px;
+  color: #5FB3A7;
+  font-weight: normal;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.kinyu-top-list .kinyu-main-sub {
+  margin-bottom: 24px;
+  text-align: center;
 }
 .kinyu-top-list li {
   float: left;
@@ -2216,6 +2232,7 @@ to {
   padding: 16px 36px;
   background: #8ddcd1;
   color: #fff;
+  font-weight: bold;
   transition: .8s;
 }
 

@@ -1,0 +1,75 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+    <div class="admin-normal-side">
+      <ul>
+        <li><a href="/my">マイページ・トップ</a></li>
+        <li><a href="/my/profile">プロフィール編集</a></li>
+        <li class="active"><a href="/my/joshikai">参加女子会</a></li>
+      </ul>
+    </div>
+    
+    <div class="admin-normal-main">
+
+
+      <div class="admin-joshikai-detail-el">
+        <div class="admin-joshikai-detail-el-header clear">
+          <div class="main-image" style="background: url({$event.main_image}) center center / cover no-repeat;"></div>
+          <h2 class="">{$event.title}</h2>
+        </div>
+      </div>
+    
+      <div class="admin-normal-joshikai-el">
+        <div class="admin-normal-joshikai-el-inner">
+          <ul>
+            <li>
+              <p class="info-title">日時</p>
+              <p class="info-detail">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）{$event.event_start_datetime}〜{$event.event_end_datetime}</p>
+            </li>
+            <li>
+              <p class="info-title">開催場所</p>
+              <p class="info-detail">{$event.place}</p>
+            </li>
+          </ul>  
+          <p class="joshikai-detail-open" id="joshikai-detail-open">女子会の詳細を見る</p>
+
+          <div id="admin-joshikai-detail" class="kinyu-joshikai-detail-content img_area">
+            {$event.content|nofilter}
+          </div>
+        </div>
+      </div>
+
+      <p class="joshikai-cancel-open" id="joshikai-cancel-open">女子会をキャンセルする</p>
+
+    </div>
+  </div>
+</div>
+
+<!-- 当日現金払い -->
+<div id="joshikai-cancel-block" class="fee-open">
+  <div id="day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">  
+    <form>
+      <p class="main-title">女子会をキャンセルしますか？</p>
+      <!-- <p class="description">女子会当日に現金でお支払いください。</p> -->
+      <p class="description">＊もし、キャンセルされる場合、再度お申し込みいただくことができなくなってしまいますので、ご注意くださいませ。</p>
+      <button class="joshikai-cancel-submit" type="button" id="submit">キャンセルする</button>
+    </form>
+  </div>
+</div>
+
+<script>
+$(function() {
+  
+  $("#joshikai-detail-open").click(function() {
+    $("#admin-joshikai-detail").slideToggle(500);
+  });
+  
+  $("#joshikai-cancel-open").click(function() {
+    $("#joshikai-cancel-block").fadeIn(500);
+  });
+  $("#day-cash-close").click(function() {
+    $("#joshikai-cancel-block").fadeOut(500);
+  });
+
+});
+</script>

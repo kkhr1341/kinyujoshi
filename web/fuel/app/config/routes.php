@@ -6,28 +6,20 @@ return array(
 	'my'   => 'my/top',
 	'page/(:any)'   => 'page/top/$1',
 	'blogs'   => 'blogs/top',
-
-	//admin
-
-
-	//現在改修中！ --------->
 	
 	//◆メンバー登録部分
 	'login_regist'   => 'login/regist',
 	'regist_email'   => 'login/regist_email',
-
-	//改修中！ここまで --------->
-
-
 
 	//会員登録情報
 	'my/registlist' => 'my/registlist/index',
 	'my/registlist/create' => 'my/registlist/create',
 	'my/registlist/(:any)'   => 'my/registlist/detail/$1',
 
-	//管理画面-女子会
-	'my/joshikailist' => 'my/events/joshikailist',
-	'my/joshikaidetail/(:any)' => 'my/events/joshikaidetail/$1',
+	//マイページ
+	'my/profile'   => 'my/profile/index',
+	'my/joshikai' => 'my/events/joshikailist',
+	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
 
 	//テスト環境
 	'testindex' => 'kinyu/top/testindex',

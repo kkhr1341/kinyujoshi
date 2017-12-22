@@ -54,12 +54,14 @@ class Controller_My_Events extends Controller_Mybase
 
 	public function action_joshikailist() {
 	
-		if (!Auth::has_access('events.admin')) {
-			\Auth::logout();
-			Response::redirect('/');
-			exit();
-		}
-	
+		// if (!Auth::has_access('events.admin')) {
+		// 	\Auth::logout();
+		// 	Response::redirect('/');
+		// 	exit();
+		// }
+
+		$this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+		$this->data['events'] = Events::lists(1, 50, true);
 		$this->data['sections'] = Sections::lists();
 		$this->data['all_events'] = Events::lists02();
 		$this->data['closed_events'] = Events::lists(0);
@@ -71,12 +73,17 @@ class Controller_My_Events extends Controller_Mybase
 
 	public function action_joshikaidetail($code) {
 	
-		if (!Auth::has_access('events.admin')) {
-			\Auth::logout();
-			Response::redirect('/');
-			exit();
-		}
-	
+		// if (!Auth::has_access('events.admin')) {
+		// 	\Auth::logout();
+		// 	Response::redirect('/');
+		// 	exit();
+		// }
+
+		$this->data['event'] = Events::getByCodeWithProfile($code);
+		$this->data['event_row'] = Events::getByCode('events', $code);
+		$this->template->urlcode = $this->data['event_row']['code'];
+
+		$this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
 		$this->data['events'] = Events::getByCode('events', $code);
 		$this->data['sections'] = Sections::lists();
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';

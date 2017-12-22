@@ -25,113 +25,48 @@
 
 <div class="kinyu-top-list-block">
   <div class="inner">
-    <div class="kinyu-top-introlist-block clear">
-      <div class="kinyu-top-introlist-left">
-        <!-- <div class="kinyu-top-main-icon">
-          <img src="/images/icon/top-icon-kinyu.png">
-        </div> -->
-        <h2><img class="main-intro-img" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
-        <div class="main-title-border"></div>
-        <p class="main-intro-description">正しい情報をシェアしよう。<br>経済に前向きに関わることで<br>おかねにとらわれず<br>自由で等身大に生きる。</p>
-        <a class="main-intro-link" href="/about">きんゆう女子。って？</a>
-      </div>
-      
-      <div class="kinyu-top-introlist-right">  
-        
-        <!-- pickup -->
-        <div class="swiper-container02 kinyu-top-introlist-pickup">
-          <div class="swiper-wrapper">
 
-            {foreach from=$blogs_pick item=blog name=loopname}
-
-            {if $smarty.foreach.loopname.index == 0}
-              <div class="swiper-slide" style="background: url(/images/content/celebration/main-bg.jpg) center center / cover no-repeat;">
-                <a target="_blank" href="/celebration">
-                  <div class="kinyu-top-list-kind">
-                    <!-- <p>イベント告知</p> -->
-                  </div>
-                  <h3 class="kinyu-top-list-title">きんゆう女子。メンバー1,000人達成！</h3>
-                </a>
-              </div>
-            {/if}
-
-            {if $smarty.foreach.loopname.index == 1}
-
-              <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/20170824173126shutterstock_535300789.jpg) center center / cover no-repeat;">
-                <a target="_blank" href="https://kinyu-joshi.jp/report/fMvmMk">
-                  <div class="kinyu-top-list-kind">
-                    <!-- <p>イベント告知</p> -->
-                  </div>
-                  <h3 class="kinyu-top-list-title">「わたし」を知る。コスメ編</h3>
-                </a>
-              </div>
-
-              <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/2017111020263320171016234352IMG_5570.JPG) center center / cover no-repeat;">
-                <a target="_blank" href="https://kinyu-joshi.jp/report/FxKhYh">
-                  <div class="kinyu-top-list-kind">
-                    <!-- <p>イベント告知</p> -->
-                  </div>
-                  <h3 class="kinyu-top-list-title">「わたし」を知る。靴編</h3>
-                </a>
-              </div>
-
-            {/if}
-
-            {if $smarty.foreach.loopname.index == 2}
-              <div class="swiper-slide" style="background: url(/images/map/map-thum.jpg) center center / cover no-repeat;">
-                <a href="/map">
-                  <div class="kinyu-top-list-kind">
-                    <!-- <p>特別企画！</p> -->
-                  </div>
-                </a>
-              </div>
-            {/if}
-
-            <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
-              <a href="/report/{$blog.code}">
-                <!-- <div class="kinyu-top-list-kind">
-                  {if $blog.kind == "女子会レポート"}
-                    <p>女子会レポート</p>
-                  {else if $blog.kind == "イベントレポート"}
-                    <p>イベントレポート</p>
-                  {else if $blog.kind == "取材レポート"}
-                    <p>取材レポート</p>
-                  {else if $blog.kind == "イベント告知"}
-                    <p>イベント告知</p>
-                  {else if $blog.kind == "コラム"}
-                    <p>コラム</p>
-                  {else}
-                    <p>レポート</p>
-                  {/if}
-                </div> -->
-                <h3 class="kinyu-top-list-title">{$blog.title}</h3>
-              </a>
-            </div>
-
-            {/foreach}
-
-          </div>
-          <div class="swiper-pagination swiper-pagination02"></div>
+    <div class="kinyu-top-intro">
+      <div class="kinyu-top-introlist-block clear">
+        <div class="kinyu-top-introlist-left">
+          <!-- <div class="kinyu-top-main-icon">
+            <img src="/images/icon/top-icon-kinyu.png">
+          </div> -->
+          <h2><img class="main-intro-img" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
+          <div class="main-title-border"></div>
+          <p class="main-intro-description">正しい情報をシェアしよう。<br>経済に前向きに関わることで<br>おかねにとらわれず<br>自由で等身大に生きる。</p>
+          <a class="main-intro-link" href="/about">きんゆう女子。って？</a>
         </div>
+        
+        <div class="kinyu-top-introlist-right">  
+          
+          <!-- pickup -->
+          <div class="swiper-container02 kinyu-top-introlist-pickup">
+            <div class="swiper-wrapper">
+              {$pickup_top}
+            </div>
+            <div class="swiper-pagination swiper-pagination02"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- news -->
+      <div class="kinyu-top-introlist-news clear">
+        {foreach from=$news item=new name=foo}
+        <a href="/news/{$new.code}">
+          <div class="title-area">
+            <p>NEWS</p>
+          </div>
+          <div class="text-area">
+            <p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
+            <p class="news-title">{$new.title}</p>
+          </div>
+        </a>
+        {/foreach}
       </div>
     </div>
 
-    <!-- news -->
-        <div class="kinyu-top-introlist-news clear">
-          {foreach from=$news item=new name=foo}
-          <a href="/news/{$new.code}">
-            <div class="title-area">
-              <p>NEWS</p>
-            </div>
-            <div class="text-area">
-              <p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
-              <p class="news-title">{$new.title}</p>
-            </div>
-          </a>
-          {/foreach}
-        </div>
-
-    <div class="kinyu-top-maincontent-block">
+    <!-- <div class="kinyu-top-maincontent-block">
       <ul class="kinyu-top-maincontent clear">
         <li>
           <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-event.png" alt="女子会の参加はこちら"></h3>
@@ -157,83 +92,130 @@
 
     <a href="/myway">
       <img class="report-list-banner-top" src="/images/banner/myway_pc.jpg">
-    </a>
+    </a> -->
 
-    <div class="insta-block">
-      <div class="insta-block-inner">
-        <h3 class="kinyu-main-title" style="text-align: center;"><a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank"><img src="/images/main-title/hash-kinyujoshi-title.png" alt="レポート一覧"></a></h3>
-        <div class="insta-el" id="instafeed"></div>
-        <div class="insta-link-block">
-          <a class="insta-link" href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ</a>
+    <div class="kinyu-top-maincontent-block">
+
+      <!-- <div class="insta-block">
+        <div class="insta-block-inner">
+          <h3 class="kinyu-main-title" style="text-align: center;"><a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank"><img src="/images/main-title/hash-kinyujoshi-title.png" alt="レポート一覧"></a></h3>
+          <div class="insta-el" id="instafeed"></div>
+          <div class="insta-link-block">
+            <a class="insta-link" href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ</a>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="kinyu-top-maincontent-block-el">
+
+        <div class="kinyu-top-list">
+          <h3 class="kinyu-main-title">きんゆう女子会。</h3>
+          <p class="kinyu-main-sub">テキストテキストテキストテキストテキストテキストテキスト</p>
+          <ul class="clear">
+          {foreach from=$blogs.datas key="key" item=blog name=loopname}
+
+            {$fooo = $blog.main_image}
+            {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+            <li>
+              <a href="/report/{$blog.code}">
+              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+              <div class="kinyu-top-list-kind">
+                {if $blog.kind == "女子会レポート"}
+                  <p>女子会レポート</p>
+                {else if $blog.kind == "イベントレポート"}
+                  <p>イベントレポート</p>
+                {else if $blog.kind == "取材レポート"}
+                  <p>取材レポート</p>
+                {else if $blog.kind == "イベント告知"}
+                  <p>イベント告知</p>
+                {else if $blog.kind == "コラム"}
+                  <p>コラム</p>
+                {else}
+                  <p>レポート</p>
+                {/if}
+              </div>
+              <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+              </a>
+            </li>
+              
+          {/foreach}    
+          </ul>
         </div>
       </div>
+
+      <div class="kinyu-top-maincontent-block-el">
+
+        <div class="kinyu-top-list">
+          <h3 class="kinyu-main-title">レポート一覧</h3>
+          <ul class="clear">
+          {foreach from=$blogs.datas key="key" item=blog name=loopname}
+
+            {$fooo = $blog.main_image}
+            {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+            <li>
+              <a href="/report/{$blog.code}">
+              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+              <div class="kinyu-top-list-kind">
+                {if $blog.kind == "女子会レポート"}
+                  <p>女子会レポート</p>
+                {else if $blog.kind == "イベントレポート"}
+                  <p>イベントレポート</p>
+                {else if $blog.kind == "取材レポート"}
+                  <p>取材レポート</p>
+                {else if $blog.kind == "イベント告知"}
+                  <p>イベント告知</p>
+                {else if $blog.kind == "コラム"}
+                  <p>コラム</p>
+                {else}
+                  <p>レポート</p>
+                {/if}
+              </div>
+              <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+              </a>
+            </li>
+              
+          {/foreach}    
+          </ul>
+        </div>
+      </div>
+
+      <a target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
+        <img class="report-list-banner" src="/images/banner/asahi_&w_pc.jpg">
+      </a>
+      <div class="blog-pagenation tx-center">
+        {$pagination|nofilter}
+      </div>
     </div>
-
-    <div class="kinyu-top-list">
-      <h3 class="kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h3>
-      <ul class="clear">
-      {foreach from=$blogs.datas key="key" item=blog name=loopname}
-
-        {$fooo = $blog.main_image}
-        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
-        <li>
-          <a href="/report/{$blog.code}">
-          <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
-          <div class="kinyu-top-list-kind">
-            {if $blog.kind == "女子会レポート"}
-              <p>女子会レポート</p>
-            {else if $blog.kind == "イベントレポート"}
-              <p>イベントレポート</p>
-            {else if $blog.kind == "取材レポート"}
-              <p>取材レポート</p>
-            {else if $blog.kind == "イベント告知"}
-              <p>イベント告知</p>
-            {else if $blog.kind == "コラム"}
-              <p>コラム</p>
-            {else}
-              <p>レポート</p>
-            {/if}
-          </div>
-          <h3 class="kinyu-top-list-title">{$blog.title}</h3>
-          </a>
-        </li>
-          
-      {/foreach}    
-      </ul>
-    </div>
-    <a target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
-      <img class="report-list-banner" src="/images/banner/asahi_&w_pc.jpg">
-    </a>
-    <div class="blog-pagenation tx-center">
-      {$pagination|nofilter}
-    </div>
-    <script>
-      $(function() {
-
-        var hh = $(".kinyu-top-list li").innerWidth();
-        var mm = $(".kinyu-top-list").innerWidth();
-        var ss = $(".kinyu-top-introlist li").innerWidth();
-        var dd = $(".insta-block-inner li").innerWidth();
-        var ddd = $(".insta-block-inner li").width();
-        var ggg = $(".kinyu-top-list-block").innerWidth();
-
-        $(window).load(function(){
-          var ww = $(".category-menu ul").height();
-          var zz = $(".category-menu").height();
-          //console.log(ww);
-          //console.log(zz);
-          $('.kinyu-top-introlist').css('margin-top',ww);
-        });
-
-        //$('.kinyu-top-list li').height(hh);
-        $('.category-menu').width(mm);
-        $('.kinyu-top-introlist li').height(ss);
-        $('.kinyu-header-top').width(ggg);
-      });
-    </script>
   </div>
 </div>
+
+
+<script>
+$(function() {
+
+  var hh = $(".kinyu-top-list li").innerWidth();
+  var mm = $(".kinyu-top-list").innerWidth();
+  var ss = $(".kinyu-top-introlist li").innerWidth();
+  var dd = $(".insta-block-inner li").innerWidth();
+  var ddd = $(".insta-block-inner li").width();
+  var ggg = $(".kinyu-top-list-block").innerWidth();
+
+  $(window).load(function(){
+    var ww = $(".category-menu ul").height();
+    var zz = $(".category-menu").height();
+    //console.log(ww);
+    //console.log(zz);
+    $('.kinyu-top-introlist').css('margin-top',ww);
+  });
+
+  //$('.kinyu-top-list li').height(hh);
+  $('.category-menu').width(mm);
+  $('.kinyu-top-introlist li').height(ss);
+  $('.kinyu-header-top').width(ggg);
+});
+</script>
 
 <style>
 footer {

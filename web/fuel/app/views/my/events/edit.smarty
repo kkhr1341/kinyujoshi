@@ -16,9 +16,9 @@
 					<label class="form-group-event-label">カテゴリー</label>
 
 					<div class="radio_box clear">
-						<p><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
-            <input type="radio" value="女子会" name="event_category" id="event1" class="form-radio" placeholder="" {if $events.event_category == "女子会"}checked{/if}>
-            <label for="event1" class="form-long">女子会</label>
+						<p class="form-group-sub"><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
+            <input type="radio" value="いつもの女子会" name="event_category" id="event1" class="form-radio" placeholder="" {if $events.event_category == "いつもの女子会"}checked{/if}>
+            <label for="event1" class="form-long">いつもの女子会</label>
             
             <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="" {if $events.event_category == "スペシャル"}checked{/if}>
             <label for="event2" class="form-long">スペシャル</label>
@@ -39,25 +39,23 @@
 					<input type="text" id="title" class="form-control" placeholder="" value="{$events.title}">
 				</div>
 
-				<div class="form-group upload_image_box">
+				<div class="form-group">
 					<label class="form-group-event-label">サムネイル画像</label>
+					<a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+
+					<!-- サムネイル画像を投稿するとここに表示される！ -->
+					<div class="thumbnail-img" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/201707062104170V9C6213.JPG) center center / cover no-repeat;"></div>
+				</div>
+
+				<div class="form-group upload_image_box">
+					<label class="form-group-event-label">女子会の詳細</label>
 					<textarea id="content" name="content">{$events.content}</textarea>
-				</div>
-
-				<div class="form-group">
-					<label class="form-group-event-label">場所</label>
-					<input type="text" id="place" class="form-control" placeholder="(例)カフェサルバドル、フィンゲート" value="{$events.place}">
-				</div>
-
-				<div class="form-group">
-					<label class="form-group-event-label">費用</label>
-					<input type="text" id="fee" class="form-control" placeholder="(例)2,000円、無料、etc" value="{$events.fee}">
 				</div>
 
 				<div class="form-group">
 					<label class="form-group-event-label">日付</label>
 					<div class='input-group date datetimepicker'>
-						<input type='text' class="form-control" id="event_date" value="{$events.event_date|date_format:"%Y/%m/%d %H:%M"}" />
+						<input type='text' class="form-control" id="event_date" value="{$events.event_date|date_format:"%Y/%m/%d"}" />
 						<span class="input-group-addon">
 							<span class="glyphicon glyphicon-calendar"></span>
 						</span>
@@ -65,29 +63,58 @@
 				</div>
 
 				<div class="form-group">
-					<label class="form-group-event-label">開始時刻</label>
-					<input type="text" id="event_start_datetime" class="form-control" placeholder="(例)19:30" value="{$events.event_start_datetime}">
+					<label class="form-group-event-label">開催時間</label>
+					<div class="event-datetime">
+						<input type="text" id="event_start_datetime" class="form-control" placeholder="(例)19:30" value="{$events.event_start_datetime}">
+						〜
+						<input type="text" id="event_end_datetime" class="form-control" placeholder="(例)21:30" value="{$events.event_end_datetime}">
+					</div>
 				</div>
 
 				<div class="form-group">
-					<label class="form-group-event-label">終了時刻</label>
-					<input type="text" id="event_end_datetime" class="form-control" placeholder="(例)21:30" value="{$events.event_end_datetime}">
+					<label class="form-group-event-label">場所</label>
+					<input type="text" id="place" class="form-control" placeholder="(例)カフェサルバドル、フィンゲート" value="{$events.place}">
+					<input type="text" id="place_url" class="form-control" placeholder="場所のURL" value="">
+				</div>
+
+				<div class="form-group">
+					<label class="form-group-event-label">費用</label>
+					<p class="form-group-sub"><span style="color:red;">＊</span>"円"や、","はなしでお願いします。
+					</p>
+					<input type="text" id="fee" class="form-control" placeholder="(例)1000、2000、15000" value="{$events.fee}">
+				</div>
+
+				<div class="form-group">
+					<label class="form-group-event-label">定員</label>
+					<p class="form-group-sub"><span style="color:red;">＊</span>"人"や"名"の表記はなしでお願いします。</p>
+					<input type="text" id="limit" class="form-control" placeholder="(例)20、15、10、etc..." value="{$events.limit}">
 				</div>
 
 				<div class="form-group mb50">
 					<label class="form-group-event-label">決済方法</label>
-					<p><span style="color:red;">＊</span>クレジットカード払いのみか、現金払いもOKか選んでください。</p>
+					<p class="form-group-sub"><span style="color:red;">＊</span>クレジットカード払いのみか、現金払いもOKか選んでください。</p>
 					<div class="radio_box clear">
-            <input type="radio" value="1" name="creditch" id="creditch01" class="form-radio" placeholder="" {if $events.creditch == 1}checked{/if}>
-            <label for="creditch01" class="form-long">クレジットカード払い＆当日現金払い</label>
-            <input type="radio" value="0" name="creditch" id="creditch02" class="form-radio" placeholder="" {if $events.creditch == 0}checked{/if}>
-            <label for="creditch02" class="form-long">クレジットカードのみ</label>
+						<input type="radio" value="0" name="creditch" id="creditch02" class="form-radio" placeholder="" {if $events.creditch == 0}checked{/if}>
+						<label for="creditch02" class="form-long">クレジットカードのみ</label>
+						<input type="radio" value="1" name="creditch" id="creditch01" class="form-radio" placeholder="" {if $events.creditch == 1}checked{/if}>
+						<label for="creditch01" class="form-long">クレジットカード払い＆当日現金払い</label>
          	</div>
         </div>
+
+        <div class="form-group">
+					<label class="form-group-event-label">キャンセル料金発生日</label>
+					<p class="form-group-sub"><span style="color:red;">＊</span>基本的には3日前。それ以外の場合は記入をお願いします。</p>
+					<div class='input-group date datetimepicker'>
+						<input type='text' class="form-control" id="open_date" value="" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>
 						
 				<div class="form-group">
-					<label>公開設定 <span class="label label-danger">必須</span></label>
-					<p><span style="color:red;">＊</span>特に指定がなければそのままでOK!</p>
+					<label class="form-group-event-label">公開設定</label>
+					<p class="form-group-sub"><span style="color:red;">＊</span>特に指定がなければそのままでOK!</p>
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="open_date" value="{$events.open_date|date_format:"%Y/%m/%d %H:%M"}" />
 						<span class="input-group-addon">
