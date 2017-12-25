@@ -429,6 +429,9 @@ footer {
   color: #5FB3A7;
   font-weight: normal;
 }
+.admin-profile-table th {
+  width: 150px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   女子会部分
@@ -584,108 +587,6 @@ footer {
   margin-top: 24px;
 }
 
-
-/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  プロフィール修正部分
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.admin-profile-edit-el {
-  margin-bottom: 32px;
-}
-.admin-profile-edit-title {
-  font-size: 14px;
-  color: #5fb3a7;
-  margin-bottom: 10px;
-  width: 100%;
-  font-weight: bold;
-  padding-left: 8px;
-  margin-left: 2px;
-  border-left: 2px solid #5fb3a7;
-}
-.admin-profile-edit-title2 {
-  font-size: 14px;
-  color: #5fb3a7;
-  margin-bottom: 10px;
-  width: 100%;
-  font-weight: bold;
-  padding-left: 8px;
-  margin-left: 2px;
-  margin-top: 24px;
-}
-.admin-profile-edit-subtitle {
-  text-align: left;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.1rem;
-  color: #6d6d6d;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.admin-profile-edit-el select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  display: inline-block;
-  padding: 0px 8px;
-  background: #fff;
-  height: 36px;
-  font-size: 13px;
-  background-image: url(/images/login/select-arrow.png);
-  background-position: right 8px center;
-  background-repeat: no-repeat;
-}
-.admin-profile-edit-el select#age1 {
-  width: 150px;
-}
-.admin-profile-edit-el select#age2 {
-  width: 100px;
-}
-.admin-profile-edit-el select#age3 {
-  width: 100px;
-}
-.admin-profile-edit-el .regist-selectarea p {
-  display: inline-block;
-  text-align: left;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.1rem;
-  color: gray;
-  margin-top: 0px;
-  margin-right: 6px;
-  vertical-align: bottom;
-}
-.radio_box label, .radio_box_02 label, .radio_box_03 label {
-  background: #fff;
-  padding: 12px 20px;
-  font-size: 11px;
-}
-.admin-profile-table {
-  display: block;
-  padding: 24px 0px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-}
-.admin-profile-table tr {
-  margin-bottom: 12px;
-  display: block;
-}
-.admin-profile-table tr:last-child {
-  margin-bottom: 0px;
-}
-.admin-profile-table th {
-  background-color: #8ddcd1!important;
-  color: #fff;
-  border: none!important;
-  width: 160px;
-  font-weight: bold;
-}
-.admin-profile-table td {
-  border: none!important;
-}
 
 .edit-profile-img .img-box:hover {
 }

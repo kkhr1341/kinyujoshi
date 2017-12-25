@@ -2,7 +2,7 @@
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
-      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/about">きんゆう女子。について</a></li>
       <li><a href="/joshikai">女子会</a></li>
       <li><a href="/report">レポート</a></li>
       <li><a href="/news">ニュース</a></li>
@@ -34,21 +34,20 @@
               <label class="regist-email-label">メールアドレスで登録</label>
               <div class="regist-email-form">
                 <!-- 名前 -->
-                <div class="regist-email-form-el">
+                <!-- <div class="regist-email-form-el">
                   <label class="">お名前</label>
-                  <p class="">フルネームで入力してください。</p>
+                  <p class="">漢字フルネームでお願いします。</p>
                   <input type="text" name="name" id="name" class="" placeholder="">
-                </div>
+                </div> -->
 
-                <!-- ふりがな -->
-                <div class="regist-email-form-el">
+                <!-- <div class="regist-email-form-el">
                   <label class="">ふりがな</label>
                   <p class="">お名前のふりがなを入力してください。</p>
                   <input type="text" name="name_kana" id="name_kana" class="" placeholder="">
-                </div>
+                </div> -->
 
                 <!-- 生年月日 -->
-                <div class="regist-email-form-el">
+                <!-- <div class="regist-email-form-el">
                   <label class="">生年月日</label>
                   <div class="regist-selectarea">
                     <select name="birthday_year" id="age1" class=''>
@@ -78,12 +77,11 @@
                     </select>
                     <p>日</p>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- メールアドレス -->
                 <div class="regist-email-form-el">
                   <label class="">メールアドレス</label>
-                  <p class="">連絡がとりやすいアドレスを入力してください。</p>
                   <input type="text" name="email" id="email" class="" placeholder="">
                 </div>
 
@@ -94,19 +92,19 @@
                 </div>
 
                 <!-- パスワード -->
-                <div class="regist-email-form-el">
+                <!-- <div class="regist-email-form-el">
                   <label class="">パスワード（確認用）</label>
                   <input type="password" name="confirm_password" id="password_conf" class="" placeholder="">
-                </div>
+                </div> -->
               </div>
-              <button class="login-btn" type="button" id="login">メンバー登録</button>
+              <button class="login-btn" type="button" id="login">登録に進む</button>
             </form>
           </div>
           <div class="login-btn-list">
             <label class="title">ソーシャルアカウントで登録</label>
             <ul>
-              <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録する</a></li>
-              <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録する</a></li>
+              <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
+              <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
             </ul>
             <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
           </div>

@@ -4,7 +4,7 @@
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
-      <li><a href="/about">きんゆう女子。って？</a></li>
+      <li><a href="/about">きんゆう女子。について</a></li>
       <li class="active"><a href="/joshikai">女子会</a></li>
       <li><a href="/report">レポート</a></li>
       <li><a href="/news">ニュース</a></li>
@@ -115,7 +115,7 @@
             </a>
           </li>
           <li>
-            <a href="/school_jpx" target="_blank">
+            <a href="/school" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special2.png) center center / cover no-repeat"></div>
               <div class="text-area"><p>私立きんゆう女子。学院</p></div>
             </a>

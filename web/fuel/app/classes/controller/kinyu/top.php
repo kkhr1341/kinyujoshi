@@ -18,12 +18,13 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
   }
     $pagination = $this->data['blogs']['pagination'];
     $this->data['pagination'] = $pagination::instance('mypagination');
-	  $this->data['events'] = Events::lists(1, 5, true, 'kinyu');
+	  $this->data['events'] = Events::lists(1, 10, true, 'kinyu');
     $this->template->title = 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ';
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
     //template
-    $this->data['top_blogs'] = Blogs::lists(1, 5, true);
+    $this->data['top_blogs'] = Blogs::lists(1, 9, true);
+    $this->data['top_blogs2'] = Blogs::lists02(1, 12, true);
     $this->data['blogs_pick'] = Blogs::lists_picks(1, 5, true);
     $this->template->reload_animation = View::forge('kinyu/template/reload_animation.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);

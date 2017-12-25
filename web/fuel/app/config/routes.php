@@ -7,9 +7,10 @@ return array(
 	'page/(:any)'   => 'page/top/$1',
 	'blogs'   => 'blogs/top',
 	
-	//◆メンバー登録部分
+	//◆メンバー登録/ログイン部分
 	'login_regist'   => 'login/regist',
 	'regist_email'   => 'login/regist_email',
+	'regist_sns'   => 'login/regist_sns',
 
 	//会員登録情報
 	'my/registlist' => 'my/registlist/index',

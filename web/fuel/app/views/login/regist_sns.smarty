@@ -15,8 +15,8 @@
 <div class="kinyu-single-block">
   <div class="login-add-contents-block">
 
-    
-    <p class="main-title">メンバー登録<span>（メールアドレスで）</span></p>
+    <!-- Googleアカウントの場合は（Googleアカウントで）に変更 -->
+    <p class="main-title">メンバー登録<span>（Facebookアカウントで）</span></p>
     <p class="message">みなさまの「きんゆう」のこと教えてください♪</p>
 
     <form name="form1">
@@ -25,13 +25,6 @@
         <div class="regist-add-form-edit-el">
           <label class="regist-add-form-edit-title">メールアドレス</label>
           <input type="text" name="email" id="email" class="form-control" placeholder="">
-        </div>
-
-        <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">パスワード</label>
-          <p class="regist-add-form-edit-subtitle">半角英数字でのご入力をお願いします。</p>
-          <input type="password" name="password" id="password" class="form-control" placeholder="">
-          <input type="password" name="confirm_password" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
         </div>
 
         <div class="regist-add-form-edit-el">
@@ -217,8 +210,10 @@
         
       </div>
     </form>
+
   </div>
 </div>
+
 
 
 <script>
@@ -234,30 +229,11 @@ $(function(){
   $('#save').click(function(){
     var url = "/api/regist/create";
 
-
     // メールアドレス正規表現
     var email01 = $("#email").val();
     if(email01.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
     } else {
       ts.error("メールアドレスに表記ミスがあるようです。再度ご確認をお願いいたします。");
-      return false;
-    }
-
-    // パスワード入力チェック
-    var password = $("#password").val();
-    var password_conf = $("#password_conf").val();
-    if (password_conf == "") {
-      ts.error("確認用のパスワードをご入力してください。");
-      return false;
-    } else if (password != password_conf) {
-      ts.error("確認用のパスワードが違うようです...。再度ご入力をお願いいたします。");
-      return false;
-    }
-
-    // パスワード正規表現 - 半角英数字のみ
-    if(password.match(/[^A-Za-z0-9]+/)) {
-    } else {
-      ts.error("パスワードは半角英数字のみで入力してください。");
       return false;
     }
 
@@ -283,7 +259,6 @@ $(function(){
 
     //新規
     params.email = $('#email').val(); //メールアドレス
-    params.password = $('#password').val(); //パスワード
     params.name = $('#name').val(); //お名前
     params.name_kana = $('#name_kana').val(); //ふりがな
     params.age = (age01+age02+age03); //生年月日
