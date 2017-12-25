@@ -27,285 +27,44 @@
               </div>
             </div>
             <p class="profile-catchcopy">
-              <label class="admin-profile-edit-title2">ひとことキャッピコピー</label>
+              <label class="regist-add-form-edit-title2">ひとことキャッピコピー</label>
               <input type="text" id="name" class="form-control" placeholder="" value="私らしく生きる。そしてマイハウス購入する！">
             </p>
           </div>
 
-          <div class="admin-profile-edit-el">
-            <label class="admin-profile-edit-title">お名前</label>
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">表示名</label>
             <input type="text" id="name" class="form-control" placeholder="" value="{$profile.nickname}">
           </div>
 
-          <!--  【ふりがな】入力していない場合、表示させる -->
-          <div class="admin-profile-edit-el">
-            <label class="admin-profile-edit-title">ふりがな（お名前）</label>
-            <input type="text" id="name_kana" class="form-control" placeholder="">
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">お名前</label>
+            <input type="text" id="name" class="form-control" placeholder="" value="{$profile.nickname}">
           </div>
 
-          <!--  【生年月日】入力していない場合、表示させる -->
-          <div class="admin-profile-edit-el select-area">
-            <label class="admin-profile-edit-title">生年月日</label>
-
-            <div class="regist-selectarea">
-              <select id="age1" class='form-control'>
-                <option>-</option>
-                {section name=i start=1952 loop=2018}
-                  <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
-                {/section}
-              </select>
-              <p>年</p>
-            </div>
-
-
-            <div class="regist-selectarea">
-              <select id="age2" class='form-control'>
-                <option>-</option>
-                <option value="01">1</option>
-                <option value="02">2</option>
-                <option value="03">3</option>
-                <option value="04">4</option>
-                <option value="05">5</option>
-                <option value="06">6</option>
-                <option value="07">7</option>
-                <option value="08">8</option>
-                <option value="09">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-              </select>
-              <p>月</p>
-            </div>
-
-            <div class="regist-selectarea">
-              <select id="age3" class='form-control'>
-                <option>-</option>
-                <option value="01">1</option>
-                <option value="02">2</option>
-                <option value="03">3</option>
-                <option value="04">4</option>
-                <option value="05">5</option>
-                <option value="06">6</option>
-                <option value="07">7</option>
-                <option value="08">8</option>
-                <option value="09">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="23">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-              </select>
-              <p>日</p>
-            </div>
-          </div>
-          <!--  //【生年月日】 -->
-
-
-          <div class="admin-profile-edit-el">
-            <label class="admin-profile-edit-title">メールアドレス</label>
-            <p class="admin-profile-edit-subtitle">連絡がとりやすいアドレスを入力してください。</p>
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">メールアドレス</label>
+            <p class="regist-add-form-edit-subtitle">きんゆう女子。からお知らせをお届けするメールアドレスになります。</p>
             <input type="text" id="email" class="form-control" placeholder="" value="{$profile.email}">
           </div>
 
-          <div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">きんゆうワカラナイ度</label>
-            <p class="admin-profile-edit-subtitle">あなたのきんゆうワカラナイ度を教えてください(^ ^)!</p>
-            <div class="radio_box clear">
-              <input type="radio" value="軽度" name="not_know" id="not_know1" class="form-radio" placeholder="">
-              <label for="not_know1">軽度</label>
-              <input type="radio" value="中度" name="not_know" id="not_know2" class="form-radio" placeholder="">
-              <label for="not_know2">中度</label>
-              <input type="radio" value="重度" name="not_know" id="not_know3" class="form-radio" placeholder="">
-              <label for="not_know3">重度</label>
-              <input type="radio" value="それすらワカラナイ" name="not_know" id="not_know4" class="form-radio" placeholder="">
-              <label for="not_know4">それすらワカラナイ</label>
-              <!-- <input type="radio" value="プロフェッショナル" name="not_know" id="not_know5" class="form-radio" placeholder="">
-              <label for="not_know5">プロフェッショナル</label> -->
-            </div>
-          </div>
-
-          <div class="admin-profile-edit-el">
-            <label class="admin-profile-edit-title">
-            お金について知りたいこと・興味のあること</label>
-            <input type="text" id="interest" class="form-control" placeholder="(例)投資？個人事業主のこと？お年玉？">
-          </div>
-
-          <!--  【きんゆう女子。でどんな出会いや発見がほしいですか？】入力していない場合、表示させる -->
-          <div class="admin-profile-edit-el">
-            <label class="admin-profile-edit-title">きんゆう女子。でどんな出会いや発見がほしいですか？</label>
-            <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間">
-          </div>
-          <!--  //【きんゆう女子。でどんな出会いや発見がほしいですか？】 -->
-
-          <div class="admin-profile-edit-el">
-            <label class="admin-profile-edit-title">3年後の自分の年収をどのくらいにしたいですか？</label>
-            <input type="text" id="income" class="form-control" placeholder="">
-          </div>
-
-          <!--  【どこで、きんゆう女子。を知りましたか？】入力していない場合、表示させる -->
-          <div class="admin-profile-edit-el form_where_from">
-            <label class="admin-profile-edit-title">どこで、きんゆう女子。を知りましたか？</label>
-            <div class="radio_box_03 clear">
-              
-              <input type="radio" value="ホームページを見て" name="where_from" id="where_from1" class="form-radio" placeholder="">
-              <label for="where_from1">検索して</label>
-              
-              <!-- <input type="radio" value="雑誌を見て" name="where_from" id="where_from2" class="form-radio" placeholder="">
-              <label for="where_from2">雑誌を見て</label> -->
-
-              <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
-              <label for="where_from3">Facebookを見て</label>
-
-              <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
-              <label for="where_from8">Instagramを見て</label>
-              
-              <input type="radio" value="友人のご紹介" name="where_from" id="where_from4" class="form-radio" placeholder="">
-              <label for="where_from4">友人のご紹介</label>
-              
-              <input type="radio" value="他サイトで紹介されていた。" name="where_from" id="where_from6" class="form-radio" placeholder="">
-              <label for="where_from6">他サイトで紹介されていた。</label>
-
-              <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="">
-              <label for="where_from7">その他</label>
-              <div class="othet_input">
-                <input type="text" id="where_from_other" class="form-control" placeholder="その他の方はこちら">
-              </div>
-            </div>
-          </div>
-          <!--  //【どこで、きんゆう女子。を知りましたか？】 -->
-
-          <div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">きんゆう女子。で情報発信したいですか？</label>
-            <p class="admin-profile-edit-subtitle">成長日記、記事寄稿、SNS、企業さんとコラボ(商品企画・モニター)など</p>
-            <div class="radio_box_02 clear">
-              <input type="radio" value="はい、ぜひしたいです。" name="transmission" id="transmission1" class="form-radio" placeholder="">
-              <label for="transmission1">はい、ぜひしたいです。</label>
-              <input type="radio" value="いいえ、したくないです。" name="transmission" id="transmission2" class="form-radio" placeholder="">
-              <label for="transmission2">いいえ、したくないです。</label>
-            </div>
-          </div>
-          <div class="admin-profile-edit-el">
-            <label class="admin-profile-edit-title">個人で発信しているブログなど</label>
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">個人で発信しているブログなど</label>
             <input type="text" id="url" class="form-control" placeholder="">
           </div>
 
-          <div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">金融機関で働いていますか？</label>
-            <p class="admin-profile-edit-subtitle">金融についてワカラナイ女性のためのコミュニティなのでご注意くださいませ( ´ ▽ ` )ﾉ</p>
-            <div class="radio_box_03 clear">
-              <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
-              <label for="job_kind1">はい</label>
-              <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
-              <label for="job_kind2">いいえ</label>
-            </div>
-          </div>
 
-
-          <div class="admin-profile-edit-el admin-profile-edit-el02">
-            <label class="admin-profile-edit-title">簡単な自己紹介をお願いいたします。</label>
+          <div class="regist-add-form-edit-el regist-add-form-edit-el02">
+            <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。</label>
             <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
           </div>
           
           <div class="form-btn tx-center">
             <button class="btn btn-kinyu" type="button" id="save">保存する</button>
           </div>
-          {*
-          <p class="pc" style="margin-top:20px;text-align:center;"><span style="color:#f3626c;">※</span>新規会員登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
-          <p class="sp" style="font-size:12px;margin-top:20px;text-align:center;"><span style="color:#f3626c;">※</span>新規会員登録をすると、<a style="font-size:12px;color:#4C9BBF;" href="/service">利用規約</a>、<br>および<a style="font-size:12px;color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に<br>同意したことになります。</p>
-          *}
+
         </div>
       </form>
-
-
-
-
-
-
-
-
-
-
-
-
-<!--       <form>
-      	<fieldset>
-
-      		<div class="admin-profile-edit-el" style="display:none;">
-      			<label>ユーザー名</label>
-      			<input type="text" id="code" class="form-control" value="{$profile.code}">
-      		</div>
-
-
-      		<div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">ニックネーム</label>
-            <p class="admin-profile-edit-subtitle">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
-      			<input type="text" id="nickname" class="form-control" value="{$profile.nickname}">
-      		</div>
-
-      		<div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">メールアドレス</label>
-            <p class="admin-profile-edit-subtitle">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
-      			<input type="text" id="email" class="form-control" value="{$profile.email}">
-      		</div>
-
-      		<div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">ポートフォリオURLなど</label>
-            <p class="admin-profile-edit-subtitle">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
-      			<input type="text" id="url" class="form-control" value="{$profile.url}">
-      		</div>
-
-      		<div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">Facebook <span class="label label-info">任意</span></label>
-            <p class="admin-profile-edit-subtitle">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
-      			<input type="text" id="fburl" class="form-control" value="{$profile.fburl}">
-      		</div>
-
-      		<div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">Twitter <span class="label label-info">任意</span></label>
-            <p class="admin-profile-edit-subtitle">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
-      			<input type="text" id="twurl" class="form-control" value="{$profile.twurl}">
-      		</div>
-
-      		<div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">Instagram <span class="label label-info">任意</span></label>
-            <p class="admin-profile-edit-subtitle">成長日記、記事寄稿、SNS、企業さんとコラボなど</p>
-      			<input type="text" id="instaurl" class="form-control" value="{$profile.instaurl}">
-      		</div>
-
-      		<div class="admin-profile-edit-el form-radio-block">
-            <label class="admin-profile-edit-title">プロフィール情報を公開しますか？</label>
-            <div class="radio_box_02 clear">
-
-              <input type="radio" value="はい、ぜひしたいです。" name="release_profile" id="release_profile01" class="form-radio" placeholder="">
-              <label for="release_profile01">公開します。</label>
-            
-              <input type="radio" value="いいえ、したくないです。" name="release_profile" id="release_profile02" class="form-radio" placeholder="">
-              <label for="release_profile02">いいえ、したくないです。</label>
-            
-            </div>
-          </div>
-      		
-      		<button class="btn btn-primary" type="button" id="save">保存する</button>
-      		
-      	</fieldset>
-      </form> -->
     </div>
   </div>
 </div>

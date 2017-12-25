@@ -183,7 +183,7 @@ input:focus {
   フォーム
 =========================================== */
 .btn {
-  font-size: 17px;
+  font-size: 14px;
   line-height: inherit;
   padding: 15px 30px;
 }
@@ -241,7 +241,7 @@ input:focus {
   margin: 0;
   padding: 15px 20px;
   /*border-right: 1px dotted #b3b3b3;*/
-  background: #efefef;
+  background: #f0f0f0;
   color: #555e64;
   font-size: 12px;
   text-align: center;

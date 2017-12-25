@@ -11,14 +11,6 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
   public function action_school() {
 
-    // switch (true) {
-    //    case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-    //    case $_SERVER['PHP_AUTH_USER'] !== 'kinyu-gakuin':
-    //    case $_SERVER['PHP_AUTH_PW']   !== '1234567890':
-    //    header('WWW-Authenticate: Basic realm="Enter username and password."');
-    //    header('Content-Type: text/plain; charset=utf-8');
-    //    die('このページを見るにはログインが必要です');
-    //  }
     $this->template->title = '私立きんゆう女子。学院｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-gakuin.jpg';
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -120,14 +112,6 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
   public function action_celebration_20171206() {
 
-    // switch (true) {
-    //    case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-    //    case $_SERVER['PHP_AUTH_USER'] !== 'kinyu-anniversary':
-    //    case $_SERVER['PHP_AUTH_PW']   !== '1234567890':
-    //    header('WWW-Authenticate: Basic realm="Enter username and password."');
-    //    header('Content-Type: text/plain; charset=utf-8');
-    //    die('このページを見るにはログインが必要です');
-    //  }
     $this->template->title = 'kinjo1000！Celebration｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/celebration/og-fb.jpg';
     $this->template->description = '';

@@ -59,5 +59,25 @@
         </div>
       </div>
     </div>
+    <div class="about-kinyu-detail-list">
+      <!-- <p>ABOUT きんゆう女子。</p> -->
+      <ul>
+        <li>
+          <a href="/about_main">
+            <img src="/images/about/pc_title_about.png">
+          </a>
+        </li>
+        <li>
+          <a href="/about_story">
+            <img src="/images/about/pc_title_story.png">
+          </a>
+        </li>
+        <li>
+          <a href="/about_design">
+            <img src="/images/about/pc_title_design.png">
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

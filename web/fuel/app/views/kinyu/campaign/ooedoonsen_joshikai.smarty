@@ -409,13 +409,12 @@
         <a href="/"><img class="footer-kinyu-logo" src="/images/kinyu-logo-sp.png"></a>
         <a href="http://oom-reit.com/" target="_blank"><img class="footer-ooedo-logo" src="/images/content/ooedo_joshikai/ooedo_logo.png"></a>
       </div>
-      <ul>
+      <!-- <ul>
         <li><a href="#top">トップ</a></li>
         <li><a href="#scroll-point02">女子会の内容へ</a></li>
         <li><a href="#scroll-point03">大江戸温泉アセットマネジメントさんって？</a></li>
         <li><a href="#scroll-point04">女子会のお申込み</a></li>
-      </ul>
-      <p class="copyright">COPYRIGHT © 2017 TOE THE LINE, Inc. ALL RIGHTS RESERVED</p>
+      </ul> -->
     </div>
   </footer>
 
