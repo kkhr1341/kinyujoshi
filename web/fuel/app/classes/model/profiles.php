@@ -25,17 +25,17 @@ class Profiles extends Base {
 
 		$username = \Auth::get('username');
 		
-		// コードが既に使用されていないか確認
-		$proile = \DB::select('*')->from('profiles')
-						->where('disable', '=', '0')
-						->where('code', '=', $params['code'])
-						->where('username', '!=', $username)
-						->execute()
-						->current();
-		
-		if (!empty($proile)) {
-			return "このユーザー名は既に使用されています";
-		}
+//		// コードが既に使用されていないか確認
+//		$proile = \DB::select('*')->from('profiles')
+//						->where('disable', '=', '0')
+//						->where('code', '=', $params['code'])
+//						->where('username', '!=', $username)
+//						->execute()
+//						->current();
+//
+//		if (!empty($proile)) {
+//			return "このユーザー名は既に使用されています";
+//		}
 		
 		\DB::update('profiles')->set($params)->where('username', '=', $username)->execute();
 		

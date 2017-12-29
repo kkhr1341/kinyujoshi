@@ -25,6 +25,7 @@
                 >
                 <div class="edit-profile-img2"><p>プロフィール画像を変更する</p></div>
               </div>
+              <input type="hidden" id="profile_image" value="">
             </div>
             <p class="profile-catchcopy">
               <label class="regist-add-form-edit-title2">ひとことキャッピコピー</label>
@@ -82,37 +83,46 @@ $(function(){
 		var url = "/api/profiles/save";
 		var params = {};
 		params.code = $('#code').val();
-		params.nickname = $('#nickname').val();
-		params.email = $('#email').val();
-		params.url = $('#url').val();
-		params.fburl = $('#fburl').val();
-		params.twurl = $('#twurl').val();
-		params.instaurl = $('#instaurl').val();
+//		params.nickname = $('#nickname').val();
+//		params.email = $('#email').val();
+//		params.url = $('#url').val();
+//		params.fburl = $('#fburl').val();
+//		params.twurl = $('#twurl').val();
+//		params.instaurl = $('#instaurl').val();
 
-		if ($('input[name=release_profile]:checked').val() === 'はい、ぜひしたいです。') {
-			params.release_profile = 1;
-		} else if ($('input[name=release_profile]:checked').val() === 'いいえ、したくないです。') {
-			params.release_profile = 0;
-		}
+		if ($('#profile_image').val()) {
+            params.profile_image = $('#profile_image').val();
+        }
+
+//		if ($('input[name=release_profile]:checked').val() === 'はい、ぜひしたいです。') {
+//			params.release_profile = 1;
+//		} else if ($('input[name=release_profile]:checked').val() === 'いいえ、したくないです。') {
+//			params.release_profile = 0;
+//		}
 		
-		if (params.code == "") {
-			ts.error("ユーザー名を入力してください");
-			return false;
-		}
-		if (params.nickname == "") {
-			ts.error("ニックネームを入力してください");
-			return false;
-		}
-		if (params.email == "") {
-			ts.error("メールアドレス名を入力してください");
-			return false;
-		}
-		
+//		if (params.code == "") {
+//			ts.error("ユーザー名を入力してください");
+//			return false;
+//		}
+//		if (params.nickname == "") {
+//			ts.error("ニックネームを入力してください");
+//			return false;
+//		}
+//		if (params.email == "") {
+//			ts.error("メールアドレス名を入力してください");
+//			return false;
+//		}
 		ajax.post(url, params, function(data){
 			ts.success("保存しました");
 		});
 	});
-
+    $('.edit-profile-img')
+        .uploader('/api/redactor/upload/file')
+        .then(function(data) {
+            var url = data.url;
+            $('#profile_image').val(url);
+            $('.edit-profile-img .img-box').css('background-image', 'url(' + url + ')');
+        })
 	
 });
 </script>

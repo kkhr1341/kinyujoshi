@@ -101,6 +101,7 @@ class Controller_Mybase extends Controller_Template
 							'bootstrap-select.min.js',
 							'ja.js',
 							'tool.js',
+							'uploader.js',
 							'kinyu/drawer.min.js',
 							// 'kinyu/main.js',
 							'my/main.js'
