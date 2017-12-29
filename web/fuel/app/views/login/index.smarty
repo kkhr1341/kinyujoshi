@@ -15,7 +15,7 @@
 
 <div class="kinyu-single-block">
   <div class="login-contents-block">
-    <a class="login-another-btn" href="/login_regist">メンバー登録</a>
+    <a class="login-another-btn" href="/login_regist">メンバー登録へ</a>
     <div class="login-contents-intro">
       <h2 class="login-contents-title"><span>きんゆう女子。にログインする</span></h2><br>
       <a class="caution" href=""><span style="color: red;">＊</span>ログイン機能ができる前にメンバー登録をいただいている方はこちら</a>

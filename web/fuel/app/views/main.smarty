@@ -32,14 +32,13 @@
     }(document, 'script', 'facebook-jssdk'));
   	</script> -->
 
-  	<div>{$tablet_div}</div>
-
   	<div class="kinyu-container">
       <!-- ナビゲーション -->
       {$sp_navigation}
+      <div class="sp">{$sp_header}</div>
   		<div class="kinyu-main">
-        <div class="sp">{$sp_header}</div>
         {$contents}
+        {$sp_footer}
   		</div>
   	</div>
 
@@ -170,8 +169,6 @@
         }
       }
     </style> -->
-
-    {$sp_footer}
 
   	<!-- 解析コード -->
   	{literal}

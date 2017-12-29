@@ -64,7 +64,7 @@
         </a>
         {/foreach}
         <div class="sidebar-more-link">
-          <a href="/joshikai">ニュースをもっと見る ></a>
+          <a href="/news">ニュースをもっと見る ></a>
         </div>
       </div>
 
@@ -136,7 +136,7 @@
           <ul class="clear">
           {foreach from=$events key="key" item=event name=loopname}
 
-            {if $smarty.foreach.loopname.index == 6}
+            {if $smarty.foreach.loopname.index == 9}
             </ul>
               <div class="sidebar-more-link">
                 <a href="/joshikai">女子会をもっと見る ></a>

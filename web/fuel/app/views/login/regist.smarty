@@ -15,10 +15,10 @@
 
 <div class="kinyu-single-block">
 
-  <div class="login-contents-block">
+  <div class="login-contents-block login-regist-block">
 
     <!-- ログイン部分 -->
-    <a class="login-another-btn" href="/login">ログイン</a>
+    <a class="login-another-btn" href="/login">ログインへ</a>
 
     <div class="login-contents-intro">
       <h2 class="login-contents-title"><span>きんゆう女子。にメンバー登録♪</span></h2><br>
@@ -81,14 +81,12 @@
 
                 <!-- メールアドレス -->
                 <div class="regist-email-form-el">
-                  <label class="">メールアドレス</label>
-                  <input type="text" name="email" id="email" class="" placeholder="">
+                  <input type="text" name="email" id="email" class="" placeholder="メールアドレス">
                 </div>
 
                 <!-- パスワード -->
                 <div class="regist-email-form-el">
-                  <label class="">パスワード</label>
-                  <input type="password" name="password" id="password" class="" placeholder="">
+                  <input type="password" name="password" id="password" class="" placeholder="パスワード">
                 </div>
 
                 <!-- パスワード -->

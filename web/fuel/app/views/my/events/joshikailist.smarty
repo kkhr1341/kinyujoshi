@@ -12,7 +12,7 @@
 
 
       <div class="admin-normal-joshikai joshikailist-main">
-        <p>{$profile.nickname}さんの参加予定の女子会</p>
+        <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
         <ul class="clear">
 
           {foreach from=$events item=event name=loopname}

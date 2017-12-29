@@ -79,7 +79,7 @@
 
   {else}
 
-    <header class="kinyu-header">
+    <header class="pc kinyu-header">
     <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
     <nav>
       <ul class="kinyu-header-nav">
@@ -92,6 +92,32 @@
       </ul>
     </nav>
     </header>
+
+    <header class="sp admin-normal-header">
+      <a class="link-to-top" href="/">〈 TOPへ</a>
+      <a href="/"><img class="admin-normal-circle-logo" src="/images/top-circle-logo.png"></a>
+    </header>
+
+    <div class="sp admin-normal-menu-block">
+      <div class="admin-normal-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="admin-normal-navigation">
+      <ul>
+        <li class="item navi_kinyu-menu-li01"><p>マイページ・メニュー</p></li>
+        <li class="item navi_kinyu-menu-li01"><a href="/my/profile">マイページ</a></li>
+        <li class="item navi_kinyu-menu-li02"><a href="/my/profile/edit">プロフィール編集</a></li>
+        <li class="item navi_kinyu-menu-li03"><a href="/my/joshikai">参加予定の女子会</a></li>
+        <li class="item navi_kinyu-menu-li04 kinyu-top"><a href="/">きんゆう女子。トップ</a></li>
+        <!-- <li class="active"><a href="/my">トップ</a></li>
+        <li><a href="/my/profile">プロフィール編集</a></li>
+        <li><a href="/my/joshikai">参加予定の女子会</a></li> -->
+      </ul>
+    </div>
 	
     {$contents}
 
@@ -101,6 +127,10 @@
 	{/if}
 <script>
 $(function(){
+  $(".admin-normal-menu-block").click(function() {
+    $(".admin-normal-menu").toggleClass("active");
+    $(".admin-normal-navigation").fadeToggle();
+  });
 });
 </script>
 </body>

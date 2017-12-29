@@ -5,7 +5,6 @@ return array(
 	'_500_'   => '/error/500',    // The main 404 route
 	'my'   => 'my/top',
 	'page/(:any)'   => 'page/top/$1',
-	'blogs'   => 'blogs/top',
 	
 	//◆メンバー登録/ログイン部分
 	'login_regist'   => 'login/regist',
@@ -39,7 +38,6 @@ return array(
 	'about_hensyubu' => 'kinyu/about/about_hensyubu',
 
 	'report'   => 'kinyu/blog/index',
-	'report/1'   => 'kinyu/top',
 	'report/(:num)'   => 'kinyu/blog/index/$1',
 	'report/(:any)'   => 'kinyu/blog/detail/$1',
 	'welcome/blog/(:any)'   => 'kinyu/blog/welcome/$1',

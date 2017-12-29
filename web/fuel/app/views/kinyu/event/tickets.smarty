@@ -85,7 +85,7 @@ var $resArray02 = $resArray[1];
       <input type="hidden" name="event_code" value="{$event.code}" />
       <span class="charge-errors"></span>
       <p class="main-title">カードでのお支払いで参加</p>
-      <p class="description">カード情報を入力してご決済をお願いします。</p>
+      <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
       <label>カード番号</label>
       <input type="text" class="number" name="number" maxlength="16" placeholder="">
 
@@ -110,7 +110,7 @@ var $resArray02 = $resArray[1];
       <input type="hidden" name="event_code" value="{$event.code}" />
       <span class="charge-errors"></span>
       <p class="main-title">カードでのお支払いで参加</p>
-      <p class="description">カード情報を入力してご決済をお願いします。</p>
+      <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
 
       <div class="day-cash-open-form-el">
         <label>お名前（フルネーム）</label>
@@ -146,12 +146,12 @@ var $resArray02 = $resArray[1];
 </div>
 
 <!-- 当日現金払い -->
-<div id="day-cash-open" class="fee-open">
+<div id="day-cash-open" class="day-cash-open fee-open">
   <div id="day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form>
       <p class="main-title">当日現金払いで参加</p>
-      <p class="description">女子会当日に現金でお支払いください。</p>
+      <!-- <p class="description">女子会当日に現金でお支払いください。</p> -->
       <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
       <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
     </form>
@@ -159,12 +159,12 @@ var $resArray02 = $resArray[1];
 </div>
 
 <!-- 当日現金払い（メンバー登録なしのモーダル）  -->
-<div id="no-day-cash-open" class="fee-open">
+<div id="no-day-cash-open" class="day-cash-open fee-open">
   <div id="no-day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form>
       <p class="main-title">当日現金払いで参加</p>
-      <p class="description">女子会当日に現金でお支払いください。</p>
+      <!-- <p class="description">女子会当日に現金でお支払いください。</p> -->
       <div class="day-cash-open-form-el">
         <label>お名前（フルネーム）</label>
         <input type="text" id="name" class="" placeholder="">

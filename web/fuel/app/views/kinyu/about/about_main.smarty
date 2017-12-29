@@ -21,11 +21,11 @@
 
           <div class="about-kinyu-description">
 
-            <p class="main-catchcopy">
+            <p class="pc main-catchcopy">
               「おかね」に対する意識の低さに不安を感じています。<br>
               よくワカラナイまま大人になってしまいました…。
             </p>
-            <p class="main-description">
+            <p class="pc main-description">
               わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、<br>
               ワカラナイ女子のための金融コミュニティです。<br><br>
               身近な家計管理から世界経済まで、広い意味での<br>「金融」をテーマに勉強する女子会を開催しています。<br>
@@ -50,6 +50,31 @@
               ゲストを呼んだり特別な場所でも開催したりしています。<br>また、コミュニティ活動を通じて、まちづくりやスペースの有効活用にも貢献しています。
             </p>
 
+            <p class="sp main-catchcopy">
+              「おかね」に対する意識の低さに不安を感じています。
+              よくワカラナイまま大人になってしまいました…。
+            </p>
+            <p class="sp main-description">
+              わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、
+              ワカラナイ女子のための金融コミュニティです。<br><br>
+              身近な家計管理から世界経済まで、広い意味での「金融」をテーマに勉強する女子会を開催しています。
+              女子会は、基本少人数制。同世代や同じ目線の方々が、安心して話せる場所になるよう工夫しています。<br><br>
+
+              お金の世界に絶対はありません。いろんな見方もあるので、答えもないもの。
+              だからこそ、ゲストから教えてもらうだけではなく、メンバー同士で疑問や感想をシェアすることで
+              「自分なりの判断基準」を見つけていくお手伝いをしています。<br><br>
+
+              メンバーになると、女子会を通じてお金について話せる仲間が見つかり、イベントに参加することができます。
+              さらに、アンバサダーになるとサービスをいち早く体験したり、取材したりと意欲的に活動することもできます。<br><br>
+
+              また、わたしたちはどの金融機関にも属さず、誰に対しても対等なポジションです。
+              特定の金融商品やサービスに紐付かせる、または加担することが目的の広告や取引を行わないポリシーです。<br><br>
+
+              女子会の1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、
+              4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。<br><br>
+              ゲストを呼んだり特別な場所でも開催したりしています。また、コミュニティ活動を通じて、まちづくりやスペースの有効活用にも貢献しています。
+            </p>
+
             <p class="afterword">
               <span class="afterword-text">ー あとがき ー</span>
               <span style="color:red;">＊</span>残念ながらわたしたちはすぐに儲けられる術を教えたり、目先のお金のピンチを救って差し上げることはできません。(ゴメンナサイ！) ただ、ひとつ言えること。豊かなオトナの女性になるため、人生の選択肢を増やすため、ライフイベントを迎える準備として、そして将来の不安を少しでも軽減するために。きっと役立つコミュニティの一つになれると思うのです。1人でも多くの素敵な女子たちが仲間になってくださることを楽しみにしています。
@@ -64,17 +89,17 @@
       <ul>
         <li>
           <a href="/about_main">
-            <img src="/images/about/pc_title_about.png">
+            <img class="pc" src="/images/about/pc_title_about.png"><img class="sp" src="/images/about/title_about.png">
           </a>
         </li>
         <li>
           <a href="/about_story">
-            <img src="/images/about/pc_title_story.png">
+            <img class="pc" src="/images/about/pc_title_story.png"><img class="sp" src="/images/about/title_story.png">
           </a>
         </li>
         <li>
           <a href="/about_design">
-            <img src="/images/about/pc_title_design.png">
+            <img class="pc" src="/images/about/pc_title_design.png"><img class="sp" src="/images/about/title_design.png">
           </a>
         </li>
       </ul>

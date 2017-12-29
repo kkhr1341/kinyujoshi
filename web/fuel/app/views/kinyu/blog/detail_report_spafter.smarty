@@ -1,32 +1,52 @@
 <div class="report-detail-sidebar-inner">
 
-  <!-- ニュース -->
+  <!-- 編集部のおすすめレポート -->
   <div class="report-detail-sidebar-el">
-    <p class="report-detail-sidebar-el-title">最新ニュース</p>
+    <p class="report-detail-sidebar-el-title">編集部のおすすめレポート</p>
     <div class="kinyu-top-list kinyu-top-report-list">
       <ul class="clear">
-        {foreach from=$top_news item=news name=loopname}
+        {foreach from=$top_blogs item=blog name=loopname}
 
         {if $smarty.foreach.loopname.index == 3}
         </ul>
           <div class="sidebar-more-link">
-            <a href="/news">ニュースをもっと見る >
+            <a href="/event">レポートをもっと見る >
             </a>
           </div>
           {break}
         {/if}
 
-        {$fooo = $news.main_image}
+        {$fooo = $blog.main_image}
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-        <li class="clear">
-          <a href="/news/{$news.code}">
+        <!-- <li class="clear">
+          <a href="/report/{$blog.code}">
             <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
             <div class="text-box">
+              <p class="title">{$blog.title}</p>
+            </div>
+          </a>
+        </li> -->
+        <li>
+          <a href="/report/{$blog.code}">
+            <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+            <div class="text-box">
               <div class="kinyu-top-list-kind">
-                <p>{$news.open_date|date_format:"%Y.%-m.%-d"}</p>
+                {if $blog.kind == "女子会レポート"}
+                  <p>女子会レポート</p>
+                {else if $blog.kind == "イベントレポート"}
+                  <p>イベントレポート</p>
+                {else if $blog.kind == "取材レポート"}
+                  <p>取材レポート</p>
+                {else if $blog.kind == "イベント告知"}
+                  <p>イベント告知</p>
+                {else if $blog.kind == "コラム"}
+                  <p>コラム</p>
+                {else}
+                  <p>レポート</p>
+                {/if}
               </div>
-              <h3 class="kinyu-top-list-title">{$news.title}</h3>
+              <h3 class="kinyu-top-list-title">{$blog.title}</h3>
             </div>
           </a>
         </li>
@@ -116,11 +136,6 @@ $(window).load(function(){
 });
 
 $(function(){
-  // var title_frame_height = $('#title_frame').height();
-  // var page_title_height = $('.page_title').height();
-  
-  // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
-  // $('.page_title').css('padding-top', padding_top);
   
   $('#save').click(function(){
     var url = "/api/comment/create";
@@ -172,4 +187,3 @@ $(function(){
     <p class="last-message">きんゆう女子。編集部より</p>
   </div>
 </div>
-

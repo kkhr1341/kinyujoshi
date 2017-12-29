@@ -25,7 +25,7 @@
               「控えめでシンプル、でも彩（いろ）を放つ。」
             </p>
 
-            <p class="main-description">
+            <p class="pc main-description">
               私たちが常日頃から考えている"デザイン"とは、<br>
               表面上の美しさだけではありません。<br><br>
               どのようにすれば、私たちの生活はより良くなるのか。<br>
@@ -37,6 +37,17 @@
               「きんゆう女子。」の考える”デザイン”です。<br><br>
               「きんゆう女子。」が、多くの女性に寄り添い、<br>
               日常生活のパートナーのような存在になっていくように....
+            </p>
+
+            <p class="sp main-description">
+              私たちが常日頃から考えている"デザイン"とは、<br>
+              表面上の美しさだけではありません。<br><br>
+              どのようにすれば、私たちの生活はより良くなるのか。<br>
+              どのようにすれば、私たちは前向きな自分らしい生活を送ることができるのか。<br>
+              どのようにすれば、私たちの生活に、金融が溶け込んでいくのか。<br><br>
+              そういった金融に関わるより良い"ライフスタイル"そのものを追求し続け、そして、実現していくプロセスを考えることが本当の意味での"デザイン"だと、私たちは信じています。<br><br>
+              一言で表現すると、表面上のデザインをつくるのではなく、より良いライフスタイルそのものをつくっていくことが「きんゆう女子。」の考える”デザイン”です。<br><br>
+              「きんゆう女子。」が、多くの女性に寄り添い、日常生活のパートナーのような存在になっていくように....
             </p>
 
             <div class="profile">
@@ -61,17 +72,17 @@
       <ul>
         <li>
           <a href="/about_main">
-            <img src="/images/about/pc_title_about.png">
+            <img class="pc" src="/images/about/pc_title_about.png"><img class="sp" src="/images/about/title_about.png">
           </a>
         </li>
         <li>
           <a href="/about_story">
-            <img src="/images/about/pc_title_story.png">
+            <img class="pc" src="/images/about/pc_title_story.png"><img class="sp" src="/images/about/title_story.png">
           </a>
         </li>
         <li>
           <a href="/about_design">
-            <img src="/images/about/pc_title_design.png">
+            <img class="pc" src="/images/about/pc_title_design.png"><img class="sp" src="/images/about/title_design.png">
           </a>
         </li>
       </ul>

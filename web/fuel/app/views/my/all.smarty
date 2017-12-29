@@ -9,55 +9,57 @@
     </div>
     
     <div class="admin-normal-main">
-
-    <div class="admin-normal-profile">
-      <div class="img-box-block">
-        <div class="img-box"
-          {if $profile.profile_image == ''}
-            style="background-color: red;"
-          {else}
-            style="background:url({$profile.profile_image}) center center / cover no-repeat;"
-          }
-          {/if}
-          >
+      <div class="admin-normal-profile">
+        <div class="img-box-block">
+          <div class="img-box"
+            {if $profile.profile_image == ''}
+              style="background-color: red;"
+            {else}
+              style="background:url({$profile.profile_image}) center center / cover no-repeat;"
+            }
+            {/if}
+            >
+          </div>
         </div>
+        <p class="profile-name">{$profile.nickname}</p>
+        <p class="profile-catchcopy">私らしく生きる。そしてマイハウス購入する！</p>
       </div>
-      <p class="profile-name">{$profile.nickname}</p>
-      <p class="profile-catchcopy">私らしく生きる。そしてマイハウス購入する！</p>
-    </div>
 
-    <div class="admin-normal-joshikai">
-      <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
-      <ul class="clear">
+      <div class="admin-normal-joshikai">
+        <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
+        <ul class="clear">
 
-        {foreach from=$events item=event name=loopname}
+          {foreach from=$events item=event name=loopname}
 
-          {$fooo = $event.main_image}
-          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-          
-          <!-- 女子会 -->
-          <!-- 現状、全ての女子会を表示 -->
-          <li>  
-            <a href="/my/joshikai/{$event.code}" class="clear">
-              <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
-              <div class="text-box">
-                <div class="text-box-inner">
-                  <p class="date-text">{$event.event_date|date_format:"Y.m.d"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</p>
-                  <p class="title-text">{$event.title}</p>
+            {$fooo = $event.main_image}
+            {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+            
+            <!-- 女子会 -->
+            <!-- 現状、全ての女子会を表示 -->
+            <li>  
+              <a href="/my/joshikai/{$event.code}" class="clear">
+                <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <div class="text-box-inner">
+                    <p class="date-text">{$event.event_date|date_format:"Y.m.d"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</p>
+                    <p class="title-text">{$event.title}</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </li>
+              </a>
+            </li>
 
-        {foreachelse}
-          <!-- 参加女子会がない場合 -->
-          <li>
-            <p class="joshikai-no">参加予定の女子会はありません..。</p>
-            <a href="/joshikai" class="to-link-joshikai">女子会の予定へ</a>
-          </li>
-        {/foreach}
+          {foreachelse}
+            <!-- 参加女子会がない場合 -->
+            <li>
+              <p class="joshikai-no">参加予定の女子会はありません..。</p>
+              <a href="/joshikai" class="to-link-joshikai">女子会の予定へ</a>
+            </li>
+          {/foreach}
 
-      </ul>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+
+

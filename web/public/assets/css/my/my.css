@@ -321,8 +321,6 @@ footer {
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container {
   padding-top: 130px;
-  border-bottom: 1px solid #c2c2c2;
-  /*background: #e9fbf9;*/
   background: #c5e9e4;
 }
 .admin-normal-container .admin-normal-inner {
@@ -517,8 +515,8 @@ footer {
 }
 .admin-normal-joshikai-el {
   padding: 24px 0px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid #8ddcd1;
+  border-bottom: 1px solid #8ddcd1;
 }
 .admin-normal-joshikai-el mark, .admin-normal-joshikai-el .mark{
   background-color: rgba(255,255,255,0.5)!important;
@@ -529,8 +527,16 @@ footer {
   line-height: 32px;
   padding: 5px 0px 5px 0px;
   border-radius: 0px;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #8ddcd1;
   margin: 20px 0px;
+}
+.admin-normal-joshikai-el h3 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 32px;
+  padding: 5px 0px 5px 0px;
+  border-radius: 0px;
+  margin: 12px 0px;
 }
 .admin-normal-joshikai-el blockquote {
   font-size: 11px;
@@ -586,8 +592,6 @@ footer {
   margin: 0 auto;
   margin-top: 24px;
 }
-
-
 .edit-profile-img .img-box:hover {
 }
 .edit-profile-img .edit-profile-img2:hover {

@@ -10,7 +10,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 	public function action_index($page=1) {
 		
     if(Agent::is_mobiledevice()) {
-      $this->data['blogs'] = Blogs::all('kinyu'+'investment', '/report/', $page, 2, 20);
+      $this->data['blogs'] = Blogs::all('kinyu'+'investment', '/report/', $page, 2, 30);
     } else {
       $this->data['blogs'] = Blogs::all('kinyu'+'investment', '/report/', $page, 2, 60);
     }
@@ -74,7 +74,6 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
     $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-    $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_after.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -87,8 +86,10 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_spafter.smarty', $this->data);
     } else {
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+      $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_after.smarty', $this->data);
     }
 
 

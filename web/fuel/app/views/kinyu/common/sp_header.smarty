@@ -9,27 +9,12 @@
 
 
 <div class="kinyu-sp-header">
-  <!-- <div class="kinyu-main-icon-block">
-    <a href="/"><img src="/images/icon/top-header-icon.png"></a>
-  </div>
-  <ul class="kinyu-sp-header-mainblock" data-show="1">
-    <li>
-      <div class="kinyu-sp-header-content">
-        <a href="/regist"><img src="/images/new/sp-header-content.png"></a>
-      </div>
-    </li>
-    <li>
-      <div class="kinyu-sp-header-content kinyu-sp-header-jyoshikai">
-        <a href="/event"><img src="/images/new/sp-header-jyoshikai.png"></a>
-      </div>
-    </li>
-  </ul> -->
-
   <div class="kinyu-sp-menu-block">
     <ul>
-      <li class="menu-block-el1"><a href="/about"><img src="/images/menu/sp-menu-about.png"></a></li>
-      <li class="menu-block-el2"><a href="/event"><img src="/images/menu/sp-menu-event.png"></a></li>
-      <li class="menu-block-el3"><a href="/regist"><img src="/images/menu/sp-menu-regist.png"></a></li>
+      <li class="menu-block-el1"><a href="/about"><img src="/images/menu/fix-navi-about.png"></a></li>
+      <li class="menu-block-el2"><a href="/joshikai"><img src="/images/menu/fix-navi-joshikai.png"></a></li>
+      <li class="menu-block-el2"><a href="/report"><img src="/images/menu/fix-navi-report.png"></a></li>
+      <li class="menu-block-el3"><a href="/login"><img src="/images/menu/fix-navi-member.png"></a></li>
     </ul>
   </div>
 </div>

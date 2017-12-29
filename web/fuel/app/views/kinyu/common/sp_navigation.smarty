@@ -9,23 +9,23 @@
     <ul class="navi_contents-block-menu">
       <li class="item navi_menu">
         <div class="navi-icon">
-          <a href="/"><img src="/images/icon/top-icon-kinyu.png"></a>
+          <a href="/"><img class="top-circle-logo" src="/images/top-circle-logo.png"></a>
         </div>
       </li>
 
       <li class="item navi_kinyu-menu-li01">
         <div class="navi_kinyu-menu-block clear">
           <div class="navi_kinyu-menu-block-el">
-            <a href="/about">きんゆう女子。って？</a>
+            <a href="/about">きんゆう女子。について</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/login_regist">メンバー登録/ログイン</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a href="/event">女子会に参加する</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/regist">メンバーになる</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/report">レポート</a>
+            <a href="/report">レポートを見る</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a href="/news">ニュース</a>
@@ -36,18 +36,6 @@
       <li class="item navi_banner_area navi_kinyu-menu-li02">
         <a class="navi_banner_area_el" href="/myway">
           <img src="/images/myway/og_myway.jpg">
-        </a>
-        <a class="navi_banner_area_el" href="/oom-reit">
-          <img src="/images/content/ooedo_joshikai/oom-reit-og.jpg">
-        </a>
-        <a class="navi_banner_area_el" href="/school_jpx">
-          <img src="/images/content/school_public/og-school_public.png">
-        </a>
-        <a class="navi_banner_area_el" href="/conference">
-          <img src="/images/og-conference.jpg">
-        </a>
-        <a class="navi_banner_area_el" href="/school">
-          <img src="/images/og-gakuin.jpg">
         </a>
       </li>
 

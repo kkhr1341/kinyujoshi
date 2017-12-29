@@ -31,7 +31,7 @@ console.log($resArray02);
           <div class="main-image" style="background: url({$event.main_image}) center center / cover no-repeat;"></div>
           <h2 class="">{$event.title}</h2>
         </div>
-        <div class="joshikai-detail-el-content-box">
+        <div class="pc joshikai-detail-el-content-box">
           <p class="info-title">女子会詳細</p>
           <div class="kinyu-joshikai-detail-content img_area">
             {$event.content|nofilter}
@@ -67,32 +67,16 @@ console.log($resArray02);
           </div>       
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- カード払いのモーダル -->
-<div id="day-card-open" class="day-card-open fee-open">
-  <div id="day-card-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
-  <div class="inner">  
-    <form method="POST" action="/pay" id="charge-form">
-      <input type="hidden" name="event_code" value="{$event.code}" />
-      <span class="charge-errors"></span>
-      <p class="main-title">カードでのお支払いで参加</p>
-      <p class="description">カード情報を入力してご決済をお願いします。</p>
-      <label>カード番号</label>
-      <input type="text" class="number" name="number" maxlength="16" placeholder="カード番号">
-
-      <label>CVC</label>
-      <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
-
-      <label>有効期限</label>
-      <div class="exp-date-block">
-        <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
-        <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+      <!-- sp -->
+      <div class="sp joshikai-detail-el-content-box">
+        <p class="info-title">女子会詳細</p>
+        <div class="kinyu-joshikai-detail-content img_area">
+          {$event.content|nofilter}
+        </div>
       </div>
-      <button class="day-cash-submit" type="submit">送信</button>
-    </form>
+
+    </div>
   </div>
 </div>
 
@@ -115,37 +99,10 @@ console.log($resArray02);
         <p>まずは、雰囲気を見たい...という方へ</p>
         <a href="/joshikai_tickets/{$urlcode}">メンバー登録をせずに参加（初回のみ）</a>
       </div>
-
-      <button class="day-cash-submit" type="submit">送信</button>
     </form>
   </div>
 </div>
 
-<!-- 当日現金払いのモーダル（メンバー登録なしのモーダル）  -->
-<div id="no-day-cash-open" class="fee-open">
-  <div id="no-day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
-  <div class="inner">  
-    <form>
-      <input type="hidden" name="event_code" value="{$event.code}" />
-      <p class="main-title">現金でのお支払いで参加</p>
-      <p class="description">女子会当日に現金でお支払いください。</p>
-      <div class="day-cash-open-form-el">
-        <label>お名前（フルネーム）</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
-      <div class="day-cash-open-form-el">
-        <label>メールアドレス</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
-      <div class="day-cash-open-form-el">
-        <label>メールアドレス（確認用）</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
-      <p class="description">＊場所代がかかっています。もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
-      <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
-    </form>
-  </div>
-</div>
 
 <script>
   $(function() {

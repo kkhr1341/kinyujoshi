@@ -213,7 +213,7 @@ jQuery(function($) {
     $clone.remove();
   });
 
-  $('.kinyu-top-introlist-pickup .kinyu-top-list-title').each(function() {
+  $('.kinyu-top-list-title').each(function() {
     var $target = $(this);
     // オリジナルの文章を取得する
     var html = $target.html();

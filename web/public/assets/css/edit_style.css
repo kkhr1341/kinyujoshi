@@ -39,7 +39,6 @@
    ヘッダー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-header-top {
-  /*margin-left: 360px;*/
   margin-left: 24%;
   height: 130px;
   position: fixed;
@@ -512,7 +511,7 @@
   transition: 0.5s;
   box-sizing: border-box;
   font-size: 12px;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: bold;
   margin-top: 16px;
 }
@@ -698,7 +697,7 @@
   display: table-cell;
   vertical-align: middle;
   position: relative;
-  color: #5FB3A7;
+  color: #77bfb5;
 }
 .introduction-list li p span {
   background-color: rgba(255,255,255,1);
@@ -797,7 +796,7 @@
 .kinyu-top-main-title {
   font-size: 20px;
   line-height: 20px;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: normal;
   margin-bottom: 12px;
   text-align: center;
@@ -922,7 +921,7 @@
   vertical-align: middle;
 }
 .kinyu-details-introdauction .text-box .category {
-  color: #5FB3A7;
+  color: #77bfb5;
 }
 .kinyu-details-introdauction .text-box h2 {
   margin-top: 6px;
@@ -948,7 +947,7 @@
   margin-bottom: 30px;
 }
 .kinyu-top-list-kind p {
-  color: #5FB3A7;
+  color: #77bfb5;
   font-size: 13px;
   line-height: 13px;
   padding: 16px 0px 8px;
@@ -1089,7 +1088,7 @@
 .report-sidebar-event-list li .text-box .date {
   font-size: 13px;
   line-height: 13px;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: bold;
 }
 .report-sidebar-event-list li .text-box .title {
@@ -1106,7 +1105,7 @@
 .sidebar-more-link a {
   font-size: 13px;
   line-height: 13px;
-  color: #5fb3a7;
+  color: #77bfb5;
 }
 /* 編集部のおすすめ記事 */
 .report-sidebar-report-list li {
@@ -1128,7 +1127,7 @@
 /*.report-sidebar-report-list li .text-box .category {
   font-size: 11px;
   line-height: 11px;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: bold;
 }*/
 .report-sidebar-report-list li .text-box .title {
@@ -1146,7 +1145,7 @@
 }
 .report-detail-sidebar-el .insta-hash-title {
   text-align: center;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-size: 17px;
   margin-bottom: 12px;
 }
@@ -1245,7 +1244,7 @@
 .kinyu-news-list-el .text-box .date {
   font-size: 13px;
   margin-bottom: 4px;
-  color: #5FB3A7;
+  color: #77bfb5;
 }
 .kinyu-news-list-el .text-box .title {
   font-size: 14px;
@@ -1461,7 +1460,7 @@
 .kinyu-event-info-title {
   font-size: 20px;
   line-height: 20px;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: normal;
   margin-bottom: 24px;
   text-align: center;
@@ -1500,7 +1499,7 @@
   vertical-align: bottom;
 }
 .kinyu-event-list li p.event-main-date span {
-  color: #5FB3A7;
+  color: #77bfb5;
 }
 .kinyu-event-list li p.event-main-date span.timezone,
  .event-main-date span.day_of_the_week {
@@ -1689,7 +1688,7 @@
 .joshikai-detail-el-info li .info-title {
   font-size: 14px;
   line-height: 14px;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: bold;
 }
 .joshikai-detail-el-info li .info-detail {
@@ -1721,7 +1720,7 @@
 .joshikai-detail-el-content-box .info-title {
   font-size: 14px;
   line-height: 14px;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: bold;
 }
 
@@ -1771,7 +1770,7 @@
   margin: 0 12.5% 100px;
   width: 50px;
   height: 50px;
-  border: 1px solid #5FB3A7;
+  border: 1px solid #77bfb5;
   border-radius: 50%;
   animation: spin 0.75s infinite linear;
   top: 50%;
@@ -1857,12 +1856,12 @@ to {
 .kinyu-joshikai-tickets-block .ticket-title {
   font-size: 14px;
   line-height: 14px;
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: bold;
   margin-bottom: 12px;
 }
 .kinyu-joshikai-tickets-fee span {
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: bold;
   margin-bottom: 12px;
 }
@@ -1930,7 +1929,7 @@ to {
   z-index: 1006;
 }
 .day-card-open {
-  background: #92dbd1e0;
+  background: rgba(146, 219, 209, 0.87);
 }
 .day-cash-close {
   background: #fff;
@@ -1961,13 +1960,13 @@ to {
   font-size: 22px;
   padding-bottom: 2px;
   display: inline-block;
-  border-bottom: 1px solid #5fb3a7;
+  border-bottom: 1px solid #77bfb5;
   margin: 0 auto;
   margin-bottom: 12px;
 }
 .fee-open .inner form label {
   font-size: 12px;
-  color: #5fb3a7;
+  color: #77bfb5;
   margin-bottom: 8px;
   font-weight: bold;
   width: 100%;
@@ -2065,7 +2064,7 @@ to {
 }
 .first-login-block {
   padding: 28px 0px 0px 0px;
-  border-top: 1px solid gray;
+  border-top: 1px solid #e5e5e5;
   width: 80%;
   margin: 0 auto;
 }
@@ -2413,7 +2412,6 @@ to {
   margin-left: -300px;
   border: 1px solid #8ddcd1;
   background: rgba(255,255,255,.95);
-  border-radius: 5px;
   padding: 50px 60px;
 }
 .report-detail-comment-popup-close {
@@ -2556,8 +2554,8 @@ to {
   padding-bottom: 50px;
 }
 .about-kinyu-header {
-  border-top: 1px solid #5FB3A7;
-  border-bottom: 1px solid #5FB3A7;
+  border-top: 1px solid #77bfb5;
+  border-bottom: 1px solid #77bfb5;
   text-align: center;
   padding:8px 0px;
   background: rgba(255, 255, 255, 0.5);
@@ -2585,7 +2583,7 @@ to {
   padding-right: 12px;
 }
 .about-kinyu-container-left li.active a {
-  color: #5FB3A7;
+  color: #77bfb5;
   font-weight: bold;
   opacity: 1;
   border-right: 3px solid #8ddcd1;
@@ -2606,9 +2604,9 @@ to {
 .about-kinyu-details-area h2 {
   font-size: 26px;
   line-height: 34px;
-  letter-spacing: .1em;
+  letter-spacing: .05em;
   display: inline-block;
-  border-bottom: 1px solid #5FB3A7;
+  border-bottom: 1px solid #8ddcd1;
   padding-bottom: 4px; 
 }
 .about-kinyu-description {
@@ -2641,7 +2639,7 @@ to {
   display: block;
   font-size: 16px;
   margin-bottom: 8px;
-  color: #5FB3A7;
+  color: #77bfb5;
 }
 /* プロフィール部分 */
 .about-kinyu-description .profile {
@@ -2654,7 +2652,7 @@ to {
   display: block;
   font-size: 16px;
   margin-bottom: 16px;
-  color: #5FB3A7;
+  color: #77bfb5;
 }
 .about-kinyu-description .profile .img-box {
   width: 20%;
@@ -2728,7 +2726,7 @@ to {
   text-align: center;
   font-size: 16px;
   margin-bottom: 24px;
-  color: #5FB3A7;
+  color: #77bfb5;
 }
 
 
@@ -2952,9 +2950,12 @@ footer .footer-menu {
 
 /* ログイン部分 */
 .login-contents-block {
-  background: #dedede29;
   padding: 80px 0px;
   position: relative;
+  background: #d7f2ef;
+}
+.login-regist-block {
+  background: #dedede29;
 }
 .login-contents-intro {
   margin-bottom: 50px;
@@ -3017,10 +3018,9 @@ footer .footer-menu {
 }
 .login-contents-form-area label {
   font-size: 13px;
-  color: #5fb3a7;
-  margin-bottom: 12px;
+  color: #77bfb5;
+  margin-bottom: 20px;
   width: 100%;
-  font-weight: bold;
 }
 .login-contents-form-area .email-form {
   padding-bottom: 16px;
@@ -3141,7 +3141,7 @@ footer .footer-menu {
   font-size: 22px;
   padding-bottom: 2px;
   display: inline-block;
-  border-bottom: 1px solid #5fb3a7;
+  border-bottom: 1px solid #77bfb5;
   margin: 0 auto;
   margin-bottom: 12px;
 }
@@ -3154,7 +3154,7 @@ footer .footer-menu {
 }
 #pass-reissue-open .pass-reissue-form-el label {
   font-size: 12px;
-  color: #5fb3a7;
+  color: #77bfb5;
   margin-bottom: 8px;
   font-weight: bold;
   width: 100%;
@@ -3169,7 +3169,7 @@ footer .footer-menu {
   box-sizing: border-box;
 }
 .pass-reissue-submit {
-  background: #7dd1c5;
+  background: #8ddcd1;
   font-size: 13px;
   display: block;
   width: 150px;
@@ -3244,13 +3244,14 @@ footer .footer-menu {
   margin-bottom: 0px;
 }
 .login-contents-regist .regist-email-form-el {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .login-contents-regist .regist-email-label {
   color: #444;
-  border-left: 2px solid #79cec1;
-  padding: 2px 0px 2px 8px;
-  margin-bottom: 16px;
+  border-left: 2px solid #8ddcd1;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
 
 /* 別のボタン */
@@ -3276,7 +3277,7 @@ footer .footer-menu {
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 16px;
-  color: #5fb3a7;
+  color: #77bfb5;
   font-weight: bold;
 }
 .login-add-contents-block .main-title span {
@@ -3297,7 +3298,7 @@ footer .footer-menu {
 }
 .regist-add-form-edit-title {
   font-size: 14px;
-  color: #5fb3a7;
+  color: #77bfb5;
   margin-bottom: 10px;
   width: 100%;
   font-weight: bold;
@@ -3307,7 +3308,7 @@ footer .footer-menu {
 }
 .regist-add-form-edit-title2 {
   font-size: 14px;
-  color: #5fb3a7;
+  color: #77bfb5;
   margin-bottom: 10px;
   width: 100%;
   font-weight: bold;
@@ -3534,7 +3535,7 @@ footer .footer-menu {
   opacity: .3;
 }
 .about-kinyu-container-left li a:hover {
-  color: #5FB3A7;
+  color: #77bfb5;
   opacity: 1;
 }
 .login-contents-intro .caution:hover {
