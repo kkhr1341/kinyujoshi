@@ -311,8 +311,8 @@
   overflow: hidden;
 }
 .kinyu-top-introlist-pickup.swiper-container-horizontal>.swiper-pagination02 {
-  top: 8px;
-  right: 8px;
+  top: 6px;
+  right: 6px;
 }
 .kinyu-top-introlist-pickup {
   width: 100%;
@@ -326,7 +326,7 @@
   width: 50px;
   height: 50px;
 }
-.kinyu-top-introlist-title {
+/*.kinyu-top-introlist-title {
   background: rgba(124, 220, 206, 0.8);
   padding: 8px 10px;
   border-radius: 0px 0px 0px 0px;
@@ -338,6 +338,15 @@
 .kinyu-top-introlist-pickup h3 {
   height: 36px;
   color:#fff;
+}*/
+.kinyu-top-introlist-title {
+  padding: 12px;
+}
+.kinyu-top-introlist-pickup h3 {
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
+  padding: 0px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -372,17 +381,17 @@
 .kinyu-sp-introduction {
   width: 88%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 36px;
   margin-bottom: 50px;
   text-align: center; 
 }
 .kinyu-sp-introduction p {
   font-size: 11px;
-  line-height: 16px;
+  line-height: 18px;
 }
 .kinyu-sp-introduction .main-title {
-  width: 62%;
-  margin-bottom: 16px;
+  width: 54%;
+  margin-bottom: 20px;
 }
 /* ニュース */
 .news-sp-block {

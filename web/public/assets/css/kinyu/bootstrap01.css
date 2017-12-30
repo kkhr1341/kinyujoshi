@@ -1593,7 +1593,8 @@ th {
   padding: 15px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #ddd;
+  /*border-top: 1px solid #ddd;*/
+  border-top: 2px solid #c5e9e4;
   word-break: break-all;
 }
 .table > thead > tr > th {

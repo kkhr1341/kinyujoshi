@@ -429,6 +429,9 @@ footer {
 }
 .admin-profile-table th {
   width: 150px;
+  background-color: #8ddcd1!important;
+  color: #fff;
+  font-weight: bold;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
