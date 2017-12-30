@@ -78,65 +78,17 @@ class Controller_Auth extends Controller {
 						'timezone' => $opauth->get('auth.info.timezone', '?'),
 						'email' => $opauth->get('auth.info.email', '?'),
 						'image' => $opauth->get('auth.info.image', '?'),
-						'last_login' => \Date::time()->get_timestamp(),
-						'login_hash' => md5(time()),
+//						'last_login' => \Date::time()->get_timestamp(),
+//						'login_hash' => md5(time()),
+
+                        'access_token' => $opauth->get('auth.credentials.token', null),
+                        'secret' => $opauth->get('auth.credentials.secret', null),
+                        'expires' => $opauth->get('auth.credentials.expires', null),
+                        'refresh_token' => $opauth->get('auth.credentials.refresh_token', null),
 					];
+                    \Session::set_flash('userdata', $userdata);
 
-					// ログインしてみる
-					if (!Auth::login($opauth->get('auth.uid', '?'), $opauth->get('auth.uid', '?'))) {
-                        // ログイン失敗したので、会員登録
-                        $db = Database_Connection::instance();
-                        $db->start_transaction();
-                        try {
-                            $user_id = Auth::create_user(
-                                $opauth->get('auth.uid', '?'),
-                                $opauth->get('auth.uid', '?'),
-                                $opauth->get('auth.info.email', '?'),
-                                1,
-                                $userdata
-                            );
-
-                            // プロフィール登録
-                            $profile_code = Profiles::getNewCode('profiles', 6);
-                            $profile_image = "https://graph.facebook.com/{$userdata['fbid']}/picture?type=large";
-
-                            $profile = [
-                                'code' => $profile_code,
-                                'username' => $userdata['username'],
-                                'name' => $userdata['name'],
-                                'name_kana' => '',
-                                'nickname' => $userdata['name'],
-                                'profile_image' => $profile_image,
-                                'email' => $userdata['email'],
-                                'gender' => $userdata['gender']
-                            ];
-
-                            Profiles::create($profile);
-
-                            // call Opauth to link the provider login with the local user
-                            $opauth->link_provider(array(
-                                'parent_id' => $user_id,
-                                'provider' => $provider,
-                                'uid' => $opauth->get('auth.uid'),
-                                'access_token' => $opauth->get('auth.credentials.token', null),
-                                'secret' => $opauth->get('auth.credentials.secret', null),
-                                'expires' => $opauth->get('auth.credentials.expires', null),
-                                'refresh_token' => $opauth->get('auth.credentials.refresh_token', null),
-                                'created_at' => time()
-                            ));
-
-                            $db->commit_transaction();
-
-                            // ログイン
-                            \Auth::instance()->force_login((int)$user_id);
-                        } catch (Exception $e) {
-                            $db->rollback_transaction();
-                            \Log::error('register error::'.$e->getMessage());
-                            throw $e;
-                        }
-					}
-					
-					$url = '/my';
+                    $url = '/regist#regist-form';
 					break;
 	
 					// we didn't know this provider login, but enough info was returned to auto-register the user

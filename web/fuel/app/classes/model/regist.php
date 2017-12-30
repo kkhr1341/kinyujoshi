@@ -7,14 +7,84 @@ class Regist extends Base {
 
 
   public static function create($params) {
-  
-    $code = self::getNewCode('member_regist');
-    $params['username'] = \Auth::get('username');
-    $params['code'] = $code;
-    $params['created_at'] = \DB::expr('now()');
-    $params['user_agent'] = @$_SERVER['HTTP_USER_AGENT'];
-    \DB::insert('member_regist')->set($params)->execute();
-  
+
+      $db = \Database_Connection::instance();
+      $db->start_transaction();
+      try {
+          $user_id = \Auth::create_user(
+              $params["username"],
+              $params["password"],
+              $params["email"],
+              1
+          );
+
+          // プロフィール登録
+          $profile_code = Profiles::getNewCode('profiles', 6);
+          $profile_image = $params["profile_image"];
+
+          $profile = [
+              'code' => $profile_code,
+              'username' => $params['username'],
+              'name' => $params['name'],
+              'name_kana' => $params['name_kana'],
+              'nickname' => '',
+              'profile_image' => $profile_image,
+              'email' => $params['email'],
+              'birthday' => $params['birthday'],
+//              'gender' => $params['gender']
+          ];
+
+          Profiles::create($profile);
+
+          // call Opauth to link the provider login with the local user
+          if ($params['provider']) {
+              $opauth = \Auth_Opauth::forge(false);
+              $opauth->link_provider(array(
+                  'parent_id' => $user_id,
+                  'provider' => $params['provider'],
+                  'uid' => $params['username'],
+                  'access_token' => $params['provider'],
+//              'secret' => $params['provider'],
+                  'expires' => $params['provider'],
+//              'refresh_token' => $params['provider'],
+                  'created_at' => time()
+              ));
+          }
+
+          $code = self::getNewCode('member_regist');
+          \DB::insert('member_regist')->set(array(
+              'code' => $code,
+              'username' => $params['username'],
+              'name' => $params['name'],
+              'not_know' => $params['not_know'],
+              'interest' => $params['interest'],
+              'ask' => $params['ask'],
+              'email' => $params['email'],
+              'income' => $params['income'],
+              'where_from' => $params['where_from'],
+              'where_from_other' => $params['where_from_other'],
+              'transmission' => $params['transmission'],
+              'facebook' => $params['facebook'],
+              'job_kind' => $params['job_kind'],
+              'introduction' => $params['introduction'],
+              'age' => $params['birthday'],
+              'edit_inner' => '',
+              'industry' => '',
+              'industry_other' => '',
+              'created_at' => \DB::expr('now()'),
+              'user_agent' => @$_SERVER['HTTP_USER_AGENT'],
+          ))->execute();
+
+          $db->commit_transaction();
+
+          // ログイン
+          \Auth::instance()->force_login((int)$user_id);
+      } catch (Exception $e) {
+          $db->rollback_transaction();
+          \Log::error('register error::'.$e->getMessage());
+          throw $e;
+      }
+
     $email = \Email::forge('jis');
     $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
     $email->subject("【きんゆう女子。】メンバー登録ありがとうございます(*^^*)");
