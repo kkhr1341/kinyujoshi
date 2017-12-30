@@ -6,7 +6,9 @@
         <div class="kinyu-top-list-kind">
           <!-- <p>イベント告知</p> -->
         </div>
-        <h3 class="kinyu-top-list-title">きんゆう女子。メンバー1,000人達成！</h3>
+        <div class="kinyu-top-introlist-title">
+          <h3 class="kinyu-top-list-title">きんゆう女子。メンバー1,000人達成！</h3>
+        </div>
       </a>
     </div>
   {/if}
@@ -18,7 +20,9 @@
         <div class="kinyu-top-list-kind">
           <!-- <p>イベント告知</p> -->
         </div>
-        <h3 class="kinyu-top-list-title">「わたし」を知る。コスメ編</h3>
+        <div class="kinyu-top-introlist-title">
+          <h3 class="kinyu-top-list-title">「わたし」を知る。コスメ編</h3>
+        </div>
       </a>
     </div>
 
@@ -27,7 +31,9 @@
         <div class="kinyu-top-list-kind">
           <!-- <p>イベント告知</p> -->
         </div>
-        <h3 class="kinyu-top-list-title">「わたし」を知る。靴編</h3>
+        <div class="kinyu-top-introlist-title">
+          <h3 class="kinyu-top-list-title">「わたし」を知る。靴編</h3>
+        </div>
       </a>
     </div>
 
@@ -44,7 +50,9 @@
 
   <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
     <a href="/report/{$blog.code}">
-      <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+      <div class="kinyu-top-introlist-title">
+        <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+      </div>
     </a>
   </div>
 

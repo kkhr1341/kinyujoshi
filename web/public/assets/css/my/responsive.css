@@ -123,8 +123,9 @@
   padding: 50px 24px 0px; 
 }
 .admin-normal-navigation p {
-  font-size: 18px;
+  font-size: 16px;
   color: #77bfb5;
+  font-weight: bold;
 }
 .admin-normal-navigation li {
   text-align: left;
@@ -246,13 +247,9 @@
   font-size: 12px;
   line-height: 20px;
   padding: 10px;
-  border-top: 2px solid #c5e9e4;
 }
 .admin-profile-table th {
   width: 80px;
-  background-color: #8ddcd1!important;
-  color: #fff;
-  font-weight: bold;
 }
 .admin-normal-profile-btn {
   margin-top: 20px;
