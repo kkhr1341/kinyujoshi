@@ -80,13 +80,12 @@ return array(
 
 	//キャンペーン
 	'school' => 'kinyu/campaign/school',
+	'school_jpx02' => 'kinyu/campaign/school_02',
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
 	'map' => 'kinyu/campaign/map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 	'celebration' => 'kinyu/campaign/celebration_20171206',
-
-
 
 	'blog/page/(:any)'   => 'kinyu/blog/page/index/$1',
 	'event/page/(:any)'   => 'kinyu/event/page/index/$1',

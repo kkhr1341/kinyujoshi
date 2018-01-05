@@ -19,10 +19,9 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     //    header('Content-Type: text/plain; charset=utf-8');
     //    die('このページを見るにはログインが必要です');
     //  }
-    $this->template->title = '私立きんゆう女子。学院｜きんゆう女子。';
+    $this->template->title = '私立きんゆう女子学院。｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-gakuin.jpg';
     $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
-
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
@@ -36,11 +35,38 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     $this->template->contents = View::forge('kinyu/campaign/school.smarty', $this->data);
   }
 
+  public function action_school_02() {
+
+    switch (true) {
+       case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+       case $_SERVER['PHP_AUTH_USER'] !== 'kinyu-gakuin':
+       case $_SERVER['PHP_AUTH_PW']   !== '1234567890':
+       header('WWW-Authenticate: Basic realm="Enter username and password."');
+       header('Content-Type: text/plain; charset=utf-8');
+       die('このページを見るにはログインが必要です');
+     }
+     
+    $this->template->title = '第2回 きんゆう女子。学院｜きんゆう女子。';
+    $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/school_public/og-school_public02.jpg';
+    $this->template->description = 'きんゆう女子。学院は、私立きんゆう女子。学院の姉妹校です♪ きんゆう女子。学院にも科目があります。きんゆう女子。学院では、文系科目をメインにバランスよく多角的に金融の全体像から考え方、普段の生活に役立つことを学びます。';
+    $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+
+    if(Agent::is_mobiledevice()) {
+      $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+    } else {
+      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+    }
+    $this->template->contents = View::forge('kinyu/campaign/school_02.smarty', $this->data);
+  }
+
   public function action_school_public() {
 
     $this->template->title = 'きんゆう女子。学院｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/school_public/og-school_public.png';
-    $this->template->description = 'きんゆう女子。学院は、私立きんゆう女子。学院の姉妹校です♪ きんゆう女子学院にも科目があります。きんゆう女子学院では、文系科目をメインにバランスよく多角的に金融の全体像から考え方、普段の生活に役立つことを学びます。';
+    $this->template->description = 'きんゆう女子。学院は、私立きんゆう女子学院。の姉妹校です♪ きんゆう女子。学院にも科目があります。きんゆう女子。学院では、文系科目をメインにバランスよく多角的に金融の全体像から考え方、普段の生活に役立つことを学びます。';
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);

@@ -6,22 +6,22 @@
 
 <div class="kinyu-main-single-block">
   <div class="kinyu-school_public-intro sp">
-        <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
-        <img style="width:100%;" src="/images/content/school_public/school_public_main2.png">
-      </div>
+    <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
+    <img style="width:100%;" src="/images/content/school_public/school_public_main2.jpg">
+  </div>
   <div class="inner">
     <div class="kinyu-school_public-block">
 
       <div class="kinyu-school_public-intro pc">
         <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
-        <img src="/images/content/school_public/school_public_main.png">
+        <img src="/images/content/school_public/school_public02_main.jpg">
       </div>
       <!-- きんゆう女子。学院とは？ -->
       <div class="kinyu-school_public-el about-public_school">
         <h3><img src="/images/content/school_public/main-title-about.png"></h3>
         <div class="pc description-area">
           <p><span class="bottom-border">きんゆう女子。学院は、<br>私立きんゆう女子。学院の姉妹校です♪</span></p>
-          <p>普段のゆるい女子会は、意見交換やおしゃべりの場。<br>でも、きんゆう女子。学院は、ゆるい一面もありつつ、<br>
+          <p>普段のゆるい女子会は、意見交換やおしゃべりの場。<br>でも、きんゆう女子学院は、ゆるい一面もありつつ、<br>
           <span class="bottom-border">しっかりきちんと勉強する場です。</span></p>
           <p>学生時代に国語や算数があったように、<br>
           きんゆう女子。学院にも科目があります。</p>
@@ -42,7 +42,7 @@
           ゆるい一面もありつつ、<br>
           <span class="bottom-border">しっかりきちんと勉強する場です。</span></p>
           <p>学生時代に国語や算数があったように、<br>
-          きんゆう女子。学院にも科目があります。</p>
+          きんゆう女子学院にも科目があります。</p>
           <p>きんゆう女子。学院では、<br>
           文系科目をメインに、<br>
           バランスよく多角的に<br>
@@ -79,23 +79,25 @@
       <div class="kinyu-school_public-el course-public_school">
         <h3><img src="/images/content/school_public/main-title-course.png"></h3>
         <div class="gakuin-session-inner">
-          <p class="pc session-description">きんゆう女子として未来のために<br>必要なお金のことを4回の授業で学びます。<br>4回受けたら卒業。ありふれた情報の中から自分に必要な正しい情報を<br>キャッチできることを目標にしています。</p>
-          <p class="sp session-description">きんゆう女子として未来のために必要なお金のことを4回の授業で学びます。4回受けたら卒業。ありふれた情報の中から自分に必要な正しい情報をキャッチできることを目標にしています。</p>
+          <p class="pc session-description">きんゆう女子。として未来のために<br>必要なお金のことを4回の授業で学びます。<br>4回受けたら卒業。ありふれた情報の中から自分に必要な正しい情報を<br>キャッチできることを目標にしています。</p>
+          <p class="sp session-description">きんゆう女子。として未来のために必要なお金のことを4回の授業で学びます。4回受けたら卒業。ありふれた情報の中から自分に必要な正しい情報をキャッチできることを目標にしています。</p>
           <div class="class-block">
             <p class="class-title"><学院日程></p>
             <div class="pc class-el">
-              <p><span>第1回：5月25日(木) 19:00〜21:00</span><br>入学式＆授業　〜きんゆう全般〜</p>
-              <p><span>第2回：6月1日(木) 19:00〜21:00</span><br>授業　〜きんゆう全般〜積立NISA〜</p>
-              <p><span>第3回：6月15日(木) 19:00〜21:00</span><br>授業　〜悪い情報から自分の身を守る知識〜</p>
-              <p><span>第4回：7月22日(土) 13:00〜17:00</span><br>卒業式＠東証Arrows＆謝恩会<br>〜お金と向き合って人生を楽しもう〜</p>
+              <p><span>第1回：1月25日(木) 18:00〜20:00頃</span><br>入学式＆授業＠東証会議室<br>～きんゆうとは？のお金の話、投資シミュレーション～</p>
+              <p><span>第2回：2月＊(未定)日 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル<br>～つみたてNISAのお話、投資信託について～</p>
+              <p><span>第3回：2月＊(未定)日 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル<br>～情報の取り方、悪い情報から身を守る方法～</p>
+              <p><span>第4回：3月1日(木) 17:00〜22:00</span><br>卒業テスト、卒業式＠東証<br>～お金と向き合って人生を楽しもう～</p>
+              <p><span>謝恩会：3月17日(土) 11:30〜13:30</span></p>
             </div>
             <div class="sp class-el">
-              <p><span>第1回：5月25日(木) 19:00-21:00</span><br>入学式＆授業 〜きんゆう全般〜</p>
-              <p><span>第2回：6月1日(木) 19:00-21:00</span><br>授業 〜きんゆう全般〜積立NISA〜</p>
-              <p><span>第3回：6月15日(木) 19:00-21:00</span><br>授業 〜悪い情報から自分の身を守る知識〜</p>
-              <p><span>第4回：7月22日(土) 13:00-17:00</span><br>卒業式＠東証Arrows＆謝恩会<br>〜お金と向き合って人生を楽しもう〜</p>
+              <p><span>第1回：1月25日(木) 18:00〜20:00頃</span><br>入学式＆授業＠東証会議室　～きんゆうとは？のお金の話、投資シミュレーション～</p>
+              <p><span>第2回：2月＊(未定)日 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル　～つみたてNISAのお話、投資信託について～</p>
+              <p><span>第3回：2月＊(未定)日 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル　～情報の取り方、悪い情報から身を守る方法～</p>
+              <p><span>第4回：3月1日(木) 17:00〜22:00</span><br>卒業テスト、卒業式＠東証　～お金と向き合って人生を楽しもう～</p>
+              <p><span>謝恩会：3月17日(土) 11:30〜13:30</span></p>
             </div>
-            <p class="class-el-sub"><span style="color:red;">※</span>学院日程は変更になる場合がございます。<br>予めご了承ください。</p>
+            <p class="class-el-sub"><span style="color:red;">※</span>※学院日程は変更になる場合がございます。<br>あらかじめご了承ください。</p>
           </div>
           <div class="theme-block" id="document_first_day">
             <p class="theme-title"><主なテーマ></p>
@@ -107,24 +109,24 @@
             </div>
           </div>
           <div class="course-place">
-            <img class="course-place-main" src="/images/content/school_public/course-place.png">
+            <!-- <img class="course-place-main" src="/images/content/school_public/course-place.png"> -->
             <ul>
               <li class="clear">
-                <div class="img-area" style="background: url(/images/content/conference/kinyu-cho.jpg)center top / cover no-repeat;"></div>
+                <div class="img-area" style="background: url(/images/content/school_public/about_schoolpublic02_01.jpg)center center / cover no-repeat;"></div>
                 <div class="text-area">
                   <p class="count"><img src="/images/content/school_public/course-place-count1.png"></p>
-                  <p class="title">金融庁さんでの授業！</p>
-                  <p class="description">6月1日は、普段行く機会がない金融庁さんにおじゃましますよ！</p>
-                  <p class="access">住所：東京都千代田区霞が関3-2-1[<a target="_blank" href="https://goo.gl/5P0z6V">map</a>]<br>URL：<a target="_blank" href="http://www.fsa.go.jp/">http://www.fsa.go.jp/</a></p>
+                  <p class="title">入学式・卒業式は東京証券取引所内のチッカー（電光掲示版）の前で行います！</p>
+                  <!-- <p class="description">6月1日は、普段行く機会がない金融庁さんにおじゃましますよ！</p> -->
+                  <!-- <p class="access">住所：東京都千代田区霞が関3-2-1[<a target="_blank" href="https://goo.gl/5P0z6V">map</a>]<br>URL：<a target="_blank" href="http://www.fsa.go.jp/">http://www.fsa.go.jp/</a></p> -->
                 </div>
               </li>
               <li class="clear">
-                <div class="img-area" style="background: url(/images/content/conference/ticker.jpg)center top / cover no-repeat;"></div>
+                <div class="img-area" style="background: url(/images/content/school_public/about_schoolpublic02_02.jpg)center center / cover no-repeat;"></div>
                 <div class="text-area">
                   <p class="count"><img src="/images/content/school_public/course-place-count2.png"></p>
-                  <p class="title">卒業式は、東証Arrows♪</p>
-                  <p class="description">チッカーの前で卒業証書授与式を行います！記念撮影しましょう。</p>
-                  <p class="access">住所：東京都中央区日本橋兜町2-1[<a target="_blank" href="https://goo.gl/xUFPbP">map</a>]<br>URL：<a target="_blank" href="http://www.jpx.co.jp/">http://www.jpx.co.jp/</a></p>
+                  <p class="title">卒業式には、マントと角帽をかぶって♪また、MVSを発表もあります。</p>
+                  <!-- <p class="description">チッカーの前で卒業証書授与式を行います！記念撮影しましょう。</p> -->
+                  <!-- <p class="access">住所：東京都中央区日本橋兜町2-1[<a target="_blank" href="https://goo.gl/xUFPbP">map</a>]<br>URL：<a target="_blank" href="http://www.jpx.co.jp/">http://www.jpx.co.jp/</a></p> -->
                 </div>
               </li>
             </ul>
@@ -246,6 +248,7 @@
             <p style="border-bottom:3px solid #FFF200;">3,000円<span>(謝恩会費用)</span></p>
           </div>
           <p class="gakuin-fee-inner-p"><span style="color:red;">※</span>3,000円は、最終日の謝恩会に使います。<br>最後まで頑張って勉強しましょう！</p>
+          <p class="gakuin-fee-inner-p"><span style="color:red;">※</span>レポートは、必ずご提出をお願いします♪</p>
           <div class="fee-about-report">
             <p class="theme-title"><レポートとは...？></p>
             <p class="pc fee-about-report-main">授業で書いたノートと勉強した感想文です。<br>金融ワカラナイ…でも勉強してどう思ったか？<br>そして何がワカラナイ原因なのか？<br>日々の生活で私たち普通の女の子はどんなことを考えているのか？<br>そういったワカラナイ女性の声を金融業界にお届けするレポートです。<br>私たちきんゆう女子。のレポートにより、<br>ミライの金融サービスが作られていくことにつながります。<br>みなさん、頑張りましょう(^ ^)！</p>
@@ -260,10 +263,10 @@
           <img class="pc certificate-img" src="/images/content/school_public/certificate-img.png">
           <img class="sp certificate-img" src="/images/content/school_public/certificate-img-sp.png">
           <!-- <p style="font-size: 15px;padding-bottom: 8px;"><span style="color:red;">※</span>お申し込みは終了いたしました。</p> -->
-          <!-- <a class="kinyu-gakuin-link" href="https://anypay.jp/shops/m5OWa84bzV/aXtOssrIpq" target="_blank">お申込みはこちら</a>
-          <p style="margin-top: 6px;font-size:12px;"><span style="color:red;">※</span>お支払い画面が立ち上がります。</p> -->
-          <p style="font-size: 15px;padding-bottom: 8px;"><span style="color:red;">※</span>お申し込みは終了いたしました。</p>
-          <p style="opacity:.2;" class="kinyu-gakuin-link">お申込みはこちら</p>
+          <a class="kinyu-gakuin-link" href="https://peatix.com/event/332524/" target="_blank">お申込みはこちら</a>
+          <p style="margin-top: 6px;font-size:12px;"><span style="color:red;">※</span>お支払い画面が立ち上がります。</p>
+          <!-- <p style="font-size: 15px;padding-bottom: 8px;"><span style="color:red;">※</span>お申し込みは終了いたしました。</p>
+          <p style="opacity:.2;" class="kinyu-gakuin-link">お申込みはこちら</p> -->
         </div>
       </div>
 
@@ -306,16 +309,37 @@
   <div class="sp">
     {$sp_footer}
   </div>
+
+  <div class="pc application-img">
+    <a href="https://peatix.com/event/332524/" target="_blank">
+      <img src="/images/content/school_public/application-img.png">
+    </a>
+  </div>
+
+  <div class="sp fix-application">
+    <a href="https://peatix.com/event/332524/" target="_blank">
+      <p><span>第2回！きんゆう女子。学院の</span><br>お申し込みはこちら</p>
+    </a>
+  </div>
 </div>
 
-<!-- <div class="pc application-img">
-  <a href="https://anypay.jp/shops/m5OWa84bzV/aXtOssrIpq" target="_blank">
-    <img src="/images/content/school_public/application-img.png">
-  </a>
-</div>
+<style>
 
-<div class="sp fix-application">
-  <a href="https://anypay.jp/shops/m5OWa84bzV/aXtOssrIpq" target="_blank">
-    <p><span>第1回！きんゆう女子。学院の</span><br>お申し込みはこちら</p>
-  </a>
-</div> -->
+.jpx-img {
+  position: absolute;
+  top: 20px;
+  left: auto;
+  right: 20px;
+}
+@media screen and (max-width: 480px) {
+  .jpx-img {
+    top: 10px;
+    right: 10px;
+  }
+  .course-place .text-area .title {
+    font-size: 13px;
+    line-height: 20px;
+    border-bottom: none;
+  }
+}
+</style>
