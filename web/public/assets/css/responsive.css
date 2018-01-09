@@ -71,7 +71,7 @@
   -webkit-transform: translate3d(-100%, 0, 0);
 }
 .kinyu-main {
-  padding-top: 46px;
+  padding-top: 50px;
 }
 .kinyu-top-list-block {
   margin-left: 0px;
@@ -156,7 +156,7 @@
   line-height: 0;
 }
 .fix-header-sp {
-  height: 46px;
+  height: 50px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -233,16 +233,16 @@
 }
 .kinyu-sp-header-menu {
   position: fixed;
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   right: 0;
   top: 0;
   border-radius: 0px 0px 0px 0px;
   z-index: 9999;
 }
 .kinyu-sp-header-menu img {
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
 }
 .kinyu-sp-header-close {
   background: #8ddcd1;
@@ -308,7 +308,8 @@
   border: 1px solid #8ddcd1;
 }
 .swiper-container, .swiper-container02 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible!important;
 }
 .kinyu-top-introlist-pickup.swiper-container-horizontal>.swiper-pagination02 {
   top: 6px;
@@ -1297,7 +1298,7 @@
 .fee-open .inner {
   width: 92%;
   height: auto;
-  top: 50px;
+  top: 60px;
   margin-left: -46%;
   display: table;
   padding: 32px 0px 20px;
@@ -1467,6 +1468,19 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ログイン・メンバー登録の部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/* 登録部分 */
+.regist-btn-list {
+  width: 100%;
+}
+.regist-btn-list li {
+  margin-bottom: 12px;
+}
+.regist-btn-list li a {
+  padding: 10px 0px;
+  font-size: 12px;
+}
+
 .login-contents-block {
   padding: 80px 0px 50px;
 }
@@ -1708,7 +1722,7 @@ footer .footer-menu {
 .singlepage-footer {
   width: 100%;
   margin: 0 auto;
-  padding: 60px 0px 80px;
+  padding: 60px 0px 32px;
 }
 .footer-logo {
   width: 170px;

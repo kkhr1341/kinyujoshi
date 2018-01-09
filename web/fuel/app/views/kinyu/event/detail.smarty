@@ -29,7 +29,7 @@ console.log($resArray02);
       <div class="kinyu-joshikai-detail-el">
         <div class="kinyu-joshikai-detail-el-header">
           <div class="main-image" style="background: url({$event.main_image}) center center / cover no-repeat;"></div>
-          <h2 class="">{$event.title}</h2>
+          <!-- <h2 class="">{$event.title}</h2> -->
         </div>
         <div class="pc joshikai-detail-el-content-box">
           <p class="info-title">女子会詳細</p>
@@ -43,6 +43,9 @@ console.log($resArray02);
         <div class="joshikai-detail-el-info">
           <ul>
             <li>
+              <h2 class="event-title">{$event.title}</h2>
+            </li>
+            <li class="date">
               <p class="info-title">日時</p>
               <p class="info-detail">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
               <br>{$event.event_start_datetime}〜{$event.event_end_datetime}</p>

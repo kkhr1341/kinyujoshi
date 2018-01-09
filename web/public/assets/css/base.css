@@ -28,14 +28,14 @@ html {
   line-height: 1;
 }
 body {  
-  /*font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;*/
-  /*font-family: "Noto Sans Japanese";*/
-  font-family: YuGothic,'Yu Gothic',sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
   color: #444444;
+  /*font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;*/
+  /*font-family: "Noto Sans Japanese";*/
+  font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
+  /*font-family: "Mplus 1p";*/
+  font-weight: 300;
+  position: relative;
 }
 div, nav, section {
   box-sizing: border-box;

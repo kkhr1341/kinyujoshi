@@ -7,7 +7,7 @@
 </header>
 
 
-
+{*
 <div class="kinyu-sp-header">
   <div class="kinyu-sp-menu-block">
     <ul>
@@ -18,3 +18,4 @@
     </ul>
   </div>
 </div>
+*}

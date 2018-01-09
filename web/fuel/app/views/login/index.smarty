@@ -23,7 +23,7 @@
     <div class="login-contents-block-inner clear">
       <div class="login-contents-mainarea">
         <div class="login-contents-form-area">
-          <div class="login-email-container">
+          <div class="login-contents login-email-container">
             <label class="title">メールアドレスでログイン</label>
             <form class="email-form">
               <input type="text" name="email" placeholder="メールアドレス" value="">
@@ -32,7 +32,7 @@
               <p>パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
             </form>
           </div>
-          <div class="login-btn-list">
+          <div class="login-contents login-btn-list">
             <label class="title">ソーシャルアカウントでログイン</label>
             <ul>
               <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></li>
@@ -44,15 +44,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 <div id="pass-reissue-open">

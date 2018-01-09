@@ -28,84 +28,31 @@
     <div class="login-contents-block-inner clear">
       <div class="login-contents-mainarea login-contents-regist">
         <div class="login-contents-form-area clear">
-          <div class="login-email-container">
 
-            <form id="regist-email-form-block" class="email-form">
-              <label class="regist-email-label">メールアドレスで登録</label>
-              <div class="regist-email-form">
-                <!-- 名前 -->
-                <!-- <div class="regist-email-form-el">
-                  <label class="">お名前</label>
-                  <p class="">漢字フルネームでお願いします。</p>
-                  <input type="text" name="name" id="name" class="" placeholder="">
-                </div> -->
-
-                <!-- <div class="regist-email-form-el">
-                  <label class="">ふりがな</label>
-                  <p class="">お名前のふりがなを入力してください。</p>
-                  <input type="text" name="name_kana" id="name_kana" class="" placeholder="">
-                </div> -->
-
-                <!-- 生年月日 -->
-                <!-- <div class="regist-email-form-el">
-                  <label class="">生年月日</label>
-                  <div class="regist-selectarea">
-                    <select name="birthday_year" id="age1" class=''>
-                      <option></option>
-                      {section name=i start=1952 loop=2018}
-                        <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
-                      {/section}
-                    </select>
-                    <p>年</p>
-                  </div>
-                  <div class="regist-selectarea">
-                    <select name="birthday_month" id="age2" class=''>
-                      <option></option>
-                      {section name=i start=1 loop=12}
-                      <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
-                      {/section}
-                    </select>
-                    <p>月</p>
-                  </div>
-
-                  <div class="regist-selectarea">
-                    <select name="birthday_day" id="age3" class=''>
-                      <option></option>
-                        {section name=i start=1 loop=31}
-                        <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
-                        {/section}
-                    </select>
-                    <p>日</p>
-                  </div>
-                </div> -->
-
-                <!-- メールアドレス -->
-                <div class="regist-email-form-el">
-                  <input type="text" name="email" id="email" class="" placeholder="メールアドレス">
-                </div>
-
-                <!-- パスワード -->
-                <div class="regist-email-form-el">
-                  <input type="password" name="password" id="password" class="" placeholder="パスワード">
-                </div>
-
-                <!-- パスワード -->
-                <!-- <div class="regist-email-form-el">
-                  <label class="">パスワード（確認用）</label>
-                  <input type="password" name="confirm_password" id="password_conf" class="" placeholder="">
-                </div> -->
-              </div>
-              <button class="login-btn" type="button" id="login">登録に進む</button>
-            </form>
+          <div class="regist-btn-list">
+            <ul>
+              <li class="email-login-bg"><a href="/regist_email">メールアドレスで登録に進む</a></li>
+              <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
+              <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
+            </ul>
           </div>
-          <div class="login-btn-list">
+
+          <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
+
+          <!-- <div class="login-contents login-email-container">
+            <label class="title">ソーシャルアカウントで登録</label>
+            <ul>
+              <li class="email-login-bg"><a href="/">メールアドレスで登録に進む</a></li>
+            </ul>
+          </div>
+          <div class="login-contents login-btn-list">
             <label class="title">ソーシャルアカウントで登録</label>
             <ul>
               <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
               <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
             </ul>
             <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
-          </div>
+          </div> -->
         </div>
       </div>    
     </div>

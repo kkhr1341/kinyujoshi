@@ -17,7 +17,7 @@
 
     
     <p class="main-title">メンバー登録<span>（メールアドレスで）</span></p>
-    <p class="message">みなさまの「きんゆう」のこと教えてください♪</p>
+    <p class="message">以下項目のご入力をお願いします♪</p>
 
     <form name="form1">
       <div class="singlepage-form-block">

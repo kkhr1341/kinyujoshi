@@ -4,7 +4,6 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-container {
   position: relative;
-  background: grayscale;
 }
 .fs-kinyu-style {
 }
@@ -361,25 +360,25 @@
   display: inline-block;
   letter-spacing: normal;
   position: relative;
-  border-top: 1px solid #e3e3e3;
+  /*border-top: 1px solid #e3e3e3;*/
 }
 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:first-child {
   border-top: 1px solid #8ddcd1;
-}
-.navi_kinyu-menu-block .navi_kinyu-menu-block-el:last-child {
-  margin-right: 0px;
-  border-bottom: 1px solid #8ddcd1;
+  padding-top: 16px;
 }
 .navi_kinyu-menu-block .navi_kinyu-menu-block-el a {
   display: block;
-  padding: 12px 0px 12px 12px;
   width: 100%;
   height: 100%;
   transition: 0.5s;
   text-align: left;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 20px;
+  margin-bottom: 12px;
+}
+.navi_kinyu-menu-block .navi_kinyu-menu-block-el:last-child a {
+  margin-bottom: 0px;
 }
 .navi_kinyu-menu-block .navi_kinyu-menu-block-el p {
   display: block;
@@ -392,7 +391,7 @@
 }
 /* ナビ・バナー部分 */
 .navi_banner_area {
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
 }
 .navi_banner_area .navi_banner_area_el {
@@ -479,7 +478,7 @@
   　トップページ・メインコンセプト部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-intro {
-  padding: 42px 6% 72px;
+  padding: 24px 6% 72px;
 }
 .kinyu-top-maincontent-block {
 }
@@ -511,7 +510,7 @@
   transition: 0.5s;
   box-sizing: border-box;
   font-size: 12px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
   margin-top: 16px;
 }
@@ -702,7 +701,7 @@
   display: table-cell;
   vertical-align: middle;
   position: relative;
-  color: #77bfb5;
+  color: #77cbc0;
 }
 .introduction-list li p span {
   background-color: rgba(255,255,255,1);
@@ -801,7 +800,7 @@
 .kinyu-top-main-title {
   font-size: 20px;
   line-height: 20px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: normal;
   margin-bottom: 12px;
   text-align: center;
@@ -813,13 +812,12 @@
 .kinyu-top-list li {
   float: left;
   vertical-align: top;
-  width: 30.8%;
-  margin-right: 3.8%;
-  margin-bottom: 3.8%;
+  width: 31%;
+  margin-right: 3.5%;
+  margin-bottom: 3.5%;
   box-sizing: border-box;
   box-shadow: 0px 0px 0px 0px #e0e0e0;
   position: relative;
-  overflow: hidden;
   transition: .5s;
 }
 .kinyu-top-list li:nth-child(3n) {
@@ -850,7 +848,7 @@
 .kinyu-top-list-title {
   font-size: 13px;
   line-height: 20px;
-  padding: 0px 4px 10;
+  /*padding: 0px 4px 10px;*/
   height: 40px;
   width: 100%;
   box-sizing: border-box;
@@ -926,7 +924,7 @@
   vertical-align: middle;
 }
 .kinyu-details-introdauction .text-box .category {
-  color: #77bfb5;
+  color: #77cbc0;
 }
 .kinyu-details-introdauction .text-box h2 {
   margin-top: 6px;
@@ -952,7 +950,7 @@
   margin-bottom: 30px;
 }
 .kinyu-top-list-kind p {
-  color: #77bfb5;
+  color: #77cbc0;
   font-size: 13px;
   line-height: 13px;
   padding: 16px 0px 8px;
@@ -1093,7 +1091,7 @@
 .report-sidebar-event-list li .text-box .date {
   font-size: 13px;
   line-height: 13px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
 }
 .report-sidebar-event-list li .text-box .title {
@@ -1105,12 +1103,12 @@
 }
 .sidebar-more-link {
   text-align: right;
-  margin-top: 16px;
+  /*margin-top: 16px;*/
 }
 .sidebar-more-link a {
   font-size: 13px;
   line-height: 13px;
-  color: #77bfb5;
+  color: #77cbc0;
 }
 /* 編集部のおすすめ記事 */
 .report-sidebar-report-list li {
@@ -1132,7 +1130,7 @@
 /*.report-sidebar-report-list li .text-box .category {
   font-size: 11px;
   line-height: 11px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
 }*/
 .report-sidebar-report-list li .text-box .title {
@@ -1150,7 +1148,7 @@
 }
 .report-detail-sidebar-el .insta-hash-title {
   text-align: center;
-  color: #77bfb5;
+  color: #77cbc0;
   font-size: 17px;
   margin-bottom: 12px;
 }
@@ -1249,7 +1247,7 @@
 .kinyu-news-list-el .text-box .date {
   font-size: 13px;
   margin-bottom: 4px;
-  color: #77bfb5;
+  color: #77cbc0;
 }
 .kinyu-news-list-el .text-box .title {
   font-size: 14px;
@@ -1465,7 +1463,7 @@
 .kinyu-event-info-title {
   font-size: 20px;
   line-height: 20px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: normal;
   margin-bottom: 24px;
   text-align: center;
@@ -1504,7 +1502,7 @@
   vertical-align: bottom;
 }
 .kinyu-event-list li p.event-main-date span {
-  color: #77bfb5;
+  color: #77cbc0;
 }
 .kinyu-event-list li p.event-main-date span.timezone,
  .event-main-date span.day_of_the_week {
@@ -1664,13 +1662,13 @@
 .kinyu-joshikai-detail-el .info-title {
   margin-bottom: 12px;
 }
-.kinyu-joshikai-detail-el h2 {
+/*.kinyu-joshikai-detail-el h2 {
   font-size: 20px;
   line-height: 30px;
   margin-top: 16px;
   padding-bottom: 24px;
   border-bottom: 1px solid #e5e5e5;
-}
+}*/
 .joshikai-detail-el-content-box {
   padding-top: 24px;
 }
@@ -1682,18 +1680,24 @@
   padding-top: 8px;
   padding-left: 20px;
 }
-.joshikai-detail-el-info li:first-child {
+.joshikai-detail-el-info li .event-title {
+  font-size: 16px;
+  line-height: 26px;
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 20px;
+}
+.joshikai-detail-el-info li.date {
   border-top: none;
   padding-top: 0px;
   border-left: 4px solid #8ddcd1;
 }
-.joshikai-detail-el-info li:first-child .info-detail {
+.joshikai-detail-el-info li.date .info-detail {
   font-weight: bold;
 }
 .joshikai-detail-el-info li .info-title {
   font-size: 14px;
   line-height: 14px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
 }
 .joshikai-detail-el-info li .info-detail {
@@ -1720,12 +1724,12 @@
 .joshikai-sidebar {
   width: 320px;
   float: right;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 .joshikai-detail-el-content-box .info-title {
   font-size: 14px;
   line-height: 14px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
 }
 
@@ -1758,53 +1762,6 @@
 /* メンバー登録なし・参加部分 */
 .no-login-area-joinbtn {
   display: none;
-}
-/* リロード部分 */
-.joshikai-detail-el-info .loader-block {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.8);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.joshikai-detail-el-info .loader {
-  position: absolute;
-  display: inline-block;
-  margin: 0 12.5% 100px;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #77bfb5;
-  border-radius: 50%;
-  animation: spin 0.75s infinite linear;
-  top: 50%;
-  left: 50%;
-  margin-top: -25px;
-  margin-left: -25px;
-}
-.joshikai-detail-el-info .loader::before,
-.joshikai-detail-el-info .loader::after {
-  left: -1px;
-  top: -1px;
-  display: none;
-  position: absolute;
-  content: '';
-  width: inherit;
-  height: inherit;
-  border: inherit;
-  border-radius: inherit;
-}
-.joshikai-detail-el-info .loader-1 {
-  border-top-width: 0;
-}
-@keyframes spin {
-from {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(360deg);
-}
 }
 
 
@@ -1861,12 +1818,12 @@ to {
 .kinyu-joshikai-tickets-block .ticket-title {
   font-size: 14px;
   line-height: 14px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
   margin-bottom: 12px;
 }
 .kinyu-joshikai-tickets-fee span {
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
   margin-bottom: 12px;
 }
@@ -1927,7 +1884,7 @@ to {
   display: none;
   width: 100%;
   height: 100%;
-  background: #ededede0;
+  background: rgba(237, 237, 237, 0.9);
   position: fixed;
   top: 0;
   left: 0;
@@ -1965,13 +1922,13 @@ to {
   font-size: 22px;
   padding-bottom: 2px;
   display: inline-block;
-  border-bottom: 1px solid #77bfb5;
+  border-bottom: 1px solid #77cbc0;
   margin: 0 auto;
   margin-bottom: 12px;
 }
 .fee-open .inner form label {
   font-size: 12px;
-  color: #77bfb5;
+  color: #77cbc0;
   margin-bottom: 8px;
   font-weight: bold;
   width: 100%;
@@ -2559,8 +2516,8 @@ to {
   padding-bottom: 50px;
 }
 .about-kinyu-header {
-  border-top: 1px solid #77bfb5;
-  border-bottom: 1px solid #77bfb5;
+  border-top: 1px solid #77cbc0;
+  border-bottom: 1px solid #77cbc0;
   text-align: center;
   padding:8px 0px;
   background: rgba(255, 255, 255, 0.5);
@@ -2588,7 +2545,7 @@ to {
   padding-right: 12px;
 }
 .about-kinyu-container-left li.active a {
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
   opacity: 1;
   border-right: 3px solid #8ddcd1;
@@ -2644,7 +2601,7 @@ to {
   display: block;
   font-size: 16px;
   margin-bottom: 8px;
-  color: #77bfb5;
+  color: #77cbc0;
 }
 /* プロフィール部分 */
 .about-kinyu-description .profile {
@@ -2657,7 +2614,7 @@ to {
   display: block;
   font-size: 16px;
   margin-bottom: 16px;
-  color: #77bfb5;
+  color: #77cbc0;
 }
 .about-kinyu-description .profile .img-box {
   width: 20%;
@@ -2731,7 +2688,7 @@ to {
   text-align: center;
   font-size: 16px;
   margin-bottom: 24px;
-  color: #77bfb5;
+  color: #77cbc0;
 }
 
 
@@ -2960,7 +2917,7 @@ footer .footer-menu {
   background: #d7f2ef;
 }
 .login-regist-block {
-  background: #dedede29;
+  background: rgba(222, 222, 222, 0.2);
 }
 .login-contents-intro {
   margin-bottom: 50px;
@@ -3023,7 +2980,7 @@ footer .footer-menu {
 }
 .login-contents-form-area label {
   font-size: 13px;
-  color: #77bfb5;
+  color: #77cbc0;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -3056,6 +3013,22 @@ footer .footer-menu {
   font-weight: bold;
 }
 
+/* 登録部分 */
+.regist-btn-list {
+  width: 620px;
+  margin: 0 auto;
+}
+.regist-btn-list li {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.regist-btn-list li a {
+  display: block;
+  padding: 12px 0px;
+  font-size: 14px;
+  text-align: center;
+}
+
 /* メールアドレスの登録/ログイン部分 */
 .login-email-container {
   width: 50%;
@@ -3069,26 +3042,25 @@ footer .footer-menu {
   width: 46%;
   float: right;
 }
-.login-btn-list ul {
+.login-contents ul {
   padding: 0px 4px;
 }
-.login-btn-list li {
+.login-contents li {
   width: 100%;
   margin-bottom: 12px;
   transition: .5s;
 }
-.login-btn-list li a {
+.login-contents li a {
   display: block;
   text-align: center;
   padding:10px 0px;
-  background: #fff;
 }
-.login-btn-list li.email-login-bg a {
+.login-contents li.email-login-bg a {
   background: #79cec1;
   color: #fff;
   font-weight: bold;
 }
-.login-btn-list li.email-login-bg p {
+.login-contents li.email-login-bg p {
   display: block;
   text-align: center;
   padding: 10px 0px;
@@ -3096,11 +3068,15 @@ footer .footer-menu {
   color: #fff;
   font-weight: bold;
 }
-.login-btn-list li.fb-login-bg a {
+.email-login-bg a {
+  background: #8ddcd1;
+  color: #fff;
+}
+.fb-login-bg a {
   background: #7093d2;
   color: #fff;
 }
-.login-btn-list li.google-login-bg a {
+.google-login-bg a {
   background: #e68787;
   color: #fff;
 }
@@ -3112,7 +3088,7 @@ footer .footer-menu {
   display: none;
   width: 100%;
   height: 100%;
-  background: #97d8cfc7;
+  background: rgba(151, 216, 207, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -3146,7 +3122,7 @@ footer .footer-menu {
   font-size: 22px;
   padding-bottom: 2px;
   display: inline-block;
-  border-bottom: 1px solid #77bfb5;
+  border-bottom: 1px solid #77cbc0;
   margin: 0 auto;
   margin-bottom: 12px;
 }
@@ -3159,7 +3135,7 @@ footer .footer-menu {
 }
 #pass-reissue-open .pass-reissue-form-el label {
   font-size: 12px;
-  color: #77bfb5;
+  color: #77cbc0;
   margin-bottom: 8px;
   font-weight: bold;
   width: 100%;
@@ -3258,7 +3234,6 @@ footer .footer-menu {
   margin-bottom: 20px;
   font-size: 14px;
 }
-
 /* 別のボタン */
 .login-another-btn {
   display: inline-block;
@@ -3282,7 +3257,7 @@ footer .footer-menu {
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 16px;
-  color: #77bfb5;
+  color: #77cbc0;
   font-weight: bold;
 }
 .login-add-contents-block .main-title span {
@@ -3303,7 +3278,7 @@ footer .footer-menu {
 }
 .regist-add-form-edit-title {
   font-size: 14px;
-  color: #77bfb5;
+  color: #77cbc0;
   margin-bottom: 10px;
   width: 100%;
   font-weight: bold;
@@ -3313,7 +3288,7 @@ footer .footer-menu {
 }
 .regist-add-form-edit-title2 {
   font-size: 14px;
-  color: #77bfb5;
+  color: #77cbc0;
   margin-bottom: 10px;
   width: 100%;
   font-weight: bold;
@@ -3397,19 +3372,74 @@ footer .footer-menu {
 }
 
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  ローディングアニメーション
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 
-/* = Selected Text
------------------------------------------------ */
-::selection {
-  background:#e4fffb; /* Safari */
+/* リロード部分 */
+.loader-block {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1005;
 }
-
-::-moz-selection {
-  background:#e4fffb; /* Firefox */
+.loader-block-inner {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -100px;
+  text-align: center;
+  display: table;
+}
+.loader-el {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.loader {
+  display: inline-block;
+  margin-bottom: 4px;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #8ddcd1;
+  border-radius: 50%;
+  animation: spin 0.75s infinite linear;
+}
+.loader::before,
+.loader::after {
+  left: -1px;
+  top: -1px;
+  display: none;
+  position: absolute;
+  content: '';
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+}
+.loader-1 {
+  border-top-width: 0;
+}
+@keyframes spin {
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
 }
 
 
 @media screen and (min-width: 640px) {
+
 .btn-kinyu:hover {
   opacity: .5; 
 }
@@ -3440,15 +3470,13 @@ footer .footer-menu {
 .pc-top-intro:hover {
    opacity: .5;
 }
-.kinyu-news-list .kinyu-news-list-li:hover
-.kinyu-news-list-el .img-box {
+.kinyu-news-list .kinyu-news-list-li:hover .kinyu-news-list-el .img-box {
   opacity: .5;
 }
 .navi_banner_area .navi_banner_area_el:hover {
   opacity: .5;
 }
-.kinyu-news-list .kinyu-news-list-li:hover
-.kinyu-news-list-el .text-box .title {
+.kinyu-news-list .kinyu-news-list-li:hover .kinyu-news-list-el .text-box .title {
   color: #fdc2c2;
 }
 .kinyu-top-introlist-news .text-area .news-title:hover {
@@ -3504,9 +3532,6 @@ footer .footer-menu {
 .event-choice-el-block:first-child .event-choice-el:hover {
   background: rgba(249, 231, 15, 0.7);
 }
-/*.event-choice-el:hover .event-choice-el-inner img{
-  opacity: .4;
-}*/
 .past-specialevent-list li:hover {
   opacity: .5;
 }
@@ -3525,9 +3550,6 @@ footer .footer-menu {
   opacity: .5;
   cursor: pointer;
 }
-/*.insta-block-inner li:hover {
-  opacity: .5;
-}*/
 .insta-link:hover {
   opacity: .5;
 }
@@ -3539,7 +3561,7 @@ footer .footer-menu {
   opacity: .3;
 }
 .about-kinyu-container-left li a:hover {
-  color: #77bfb5;
+  color: #77cbc0;
   opacity: 1;
 }
 .login-contents-intro .caution:hover {
