@@ -30,10 +30,7 @@ html {
 body {  
   -webkit-font-smoothing: antialiased;
   color: #444444;
-  /*font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;*/
-  /*font-family: "Noto Sans Japanese";*/
   font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
-  /*font-family: "Mplus 1p";*/
   font-weight: 300;
   position: relative;
 }

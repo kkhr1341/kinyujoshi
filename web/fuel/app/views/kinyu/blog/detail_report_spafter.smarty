@@ -10,7 +10,7 @@
         {if $smarty.foreach.loopname.index == 3}
         </ul>
           <div class="sidebar-more-link">
-            <a href="/event">レポートをもっと見る >
+            <a href="/report">レポートをもっと見る >
             </a>
           </div>
           {break}

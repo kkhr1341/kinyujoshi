@@ -30,59 +30,6 @@
     </ul>
   </div>
 
-  {*
-  <!-- 編集部へのコメント -->
-  <div class="kinyu-content-after-el report-detail-menu">
-    <!-- <h3 class="center-title"><p>きんゆう女子。のメニュー</p></h3> -->
-    <h3 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-menu.png" alt="きんゆう女子。へのメニュー"></h3>
-    <h3 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-menu-sp.png" alt="きんゆう女子。へのメニュー"></h3>
-    <div class="report-detail-menu-list">
-      <ul>
-        <!-- 女子会 -->
-        <li style="background:url(/images/back/bg-joshikai.jpg) center center / cover no-repeat;">
-          <a href="/event">
-            <p>女子会に参加する</p>
-          </a>
-        </li>
-
-        <!-- メンバーになる -->
-        <li style="background:url(/images/back/bg-regist.jpg) center center / cover no-repeat;">
-          <a href="/regist">
-            <p>メンバーになる</p>
-          </a>
-        </li>
-
-        <!-- ニュースを見る -->
-        <li style="background:url(/images/back/bg-news.jpg) center center / cover no-repeat;">
-          <a href="/news">
-            <p>ニュースを見る</p>
-          </a>
-        </li>
-
-        <!-- 私立きんゆう女子。学院 -->
-        <li style="background:url(/images/content/teacher/gakuin-back-gus.jpg) center center / cover no-repeat;">
-          <a href="/school">
-            <p>私立きんゆう女子。学院</p>
-          </a>
-        </li>
-
-        <!-- きんゆう女子。カンファレンス -->
-        <li style="background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;">
-          <a href="/conference">
-            <p>第1回 週末投資宣言♪</p>
-          </a>
-        </li>
-
-        <!-- サルバドル・兜LIVE! -->
-        <!-- <li>
-          <div class="tw-columns01" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/IMG_0867.jpg) center center / cover no-repeat;"></div>
-          <div class="tw-columns" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sundaylunch/stock/10207192197536638/images/IMG_0867.jpg) center center / cover no-repeat;"></div>
-        </li> -->
-      </ul>
-    </div>
-  </div>
-  *}
-
   <!-- 編集部へのコメント -->
   <div class="kinyu-content-after-el report-detail-comment">
     <h3 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-comment.png" alt="編集部へのコメント"></h3>

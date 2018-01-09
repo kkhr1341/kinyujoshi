@@ -136,7 +136,7 @@
           <ul class="clear">
           {foreach from=$events key="key" item=event name=loopname}
 
-            {if $smarty.foreach.loopname.index == 9}
+            {if $smarty.foreach.loopname.index == 6}
             </ul>
               <div class="sidebar-more-link">
                 <a href="/joshikai">女子会をもっと見る ></a>
@@ -153,7 +153,7 @@
                 <div class="text-box">
                   <div class="kinyu-top-list-kind">
                     <p>
-                    <span>{$event.event_date|date_format:"%Y.%-m.%-e"}</span>
+                    <span>{$event.event_date|date_format:"%-m.%-e"}</span>
                     {$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"} {$event.event_start_datetime}〜{$event.event_end_datetime}</p>
                   </div>
                   <h3 class="kinyu-top-list-title">{$event.title}</h3>
@@ -254,9 +254,12 @@
         <div class="insta-block">
         <div class="insta-block-inner">
           <h3 class="kinyu-main-title" style="text-align: center;"><a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank"><img src="/images/main-title/hash-kinyujoshi-title.png" alt="レポート一覧"></a></h3>
-          <div class="insta-el" id="instafeed"></div>
-          <div class="insta-link-block">
+          <div class="insta-el clear" id="instafeed"></div>
+          <!-- <div class="insta-link-block">
             <a class="insta-link" href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ</a>
+          </div> -->
+          <div class="sidebar-more-link">
+            <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ ></a>
           </div>
         </div>
         </div>

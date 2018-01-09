@@ -51,6 +51,10 @@
 .kinyu-main-title img {
   width: 100%;
 }
+.btn-kinyu {
+  font-size: 12px;
+  padding: 10px 50px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　メイン
@@ -371,9 +375,12 @@
   padding: 24px 0% 50px!important;
 }
 .kinyu-top-main-title {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   margin-bottom: 8px;
+}
+.kinyu-top-main-sub {
+  font-size: 11px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -459,6 +466,9 @@
 .introduction-list li:nth-child(3) {
   display: none;
 }
+.introduction-list li p {
+  font-size: 12px;
+}
 .introduction-list li p span {
   padding: 5px 20px;
 }
@@ -498,7 +508,7 @@
   font-size: 12px;
   line-height: 18px;
   height: 36px;
-  padding: 6px 0px 10px;
+  padding: 10px 0px 4px;
   box-sizing: content-box;
 }
 .list-kind-img {
@@ -560,6 +570,9 @@
 .kinyu-top-list ul li:last-child {
   margin-bottom: 0%;
 }
+.kinyu-top-joshikai-list li .text-box {
+  padding: 6px 6% 16px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップ - 記事リスト
@@ -599,13 +612,17 @@
   margin-top: 28px;
 }
 .kinyu-top-member-list .text-box .main-title {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 22px;
   margin: 24px 0px 10px;
+}
+.kinyu-top-member-list .text-box .link-to {
+  font-size: 11px;
 }
 .kinyu-top-member-list .text-box .description {
   line-height: 20px;
   margin-bottom: 20px;
+  font-size: 11px;
 }
 
 
@@ -782,10 +799,10 @@
   padding: 4px 4px 4px 4px;
 }
 .kinyu-top-list-kind p {
-  color: #46aa9c;
+  color: #77cbc0;
   font-size: 11px;
   line-height: 12px;
-  padding: 10px 0px 0px;
+  padding: 16px 0px 0px;
 }
 .kinyu-content-after .report-detail-comment p {
   font-size: 12px;
@@ -1477,7 +1494,7 @@
   margin-bottom: 12px;
 }
 .regist-btn-list li a {
-  padding: 10px 0px;
+  padding: 12px 0px;
   font-size: 12px;
 }
 
@@ -1495,7 +1512,7 @@
   width: 88%;
 }
 .login-contents-intro .caution {
-  font-size: 11px;
+  font-size: 10px;
   line-height: 16px;
   padding: 4px 12px;
   width: 72%;
@@ -1550,11 +1567,12 @@
 .login-another-btn {
   right: 12px;
   top: 12px;
-  padding: 8px 24px;
+  padding: 6px 24px;
   background: #f9f9f9;
 }
 .login-regist-block .login-another-btn {
   background: #e0e0e0;
+  font-size: 11px;
 }
 .login-btn-list ul {
   padding: 0px;
@@ -1615,6 +1633,32 @@
   padding: 10px 0px;
 }
 
+/* メンバー登録部分 */
+.login-add-contents-block {
+  width: 92%;
+}
+.regist-add-form-edit-title {
+  font-size: 12px;
+}
+.login-add-contents-block .main-title {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 4px;
+}
+.login-add-contents-block .message {
+  text-align: center;
+  font-size: 11px;
+  line-height: 18px;
+  margin-bottom: 24px;
+}
+.regist-add-form-edit-subtitle {
+  font-size: 10px;
+  line-height: 16px;
+}
+.radio_box label, .radio_box_02 label, .radio_box_03 label {
+  padding: 10px 24px;
+  font-size: 11px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   会社関連の情報
@@ -1707,6 +1751,9 @@ footer {
 footer .footer-menu {
   text-align: center;
   margin-bottom: 24px;
+  width: 88%;
+  margin: 0 auto;
+  margin-bottom: 24px;
 }
 .footer-icon {
   display: block;
@@ -1740,7 +1787,7 @@ footer .footer-menu {
   margin-right: 0px;
   background: none;
   padding: 2px 8px;
-  font-size: 11px;
+  font-size: 10px;
 }
 .navi_kinyu-submenu-el a:before {
   content: "■";
