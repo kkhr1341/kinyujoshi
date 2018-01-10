@@ -137,7 +137,7 @@
               <select id="age2" class='form-control'>
                 <option>-</option>
                 {section name=i start=1 loop=12}
-                <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
+                  <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
                 {/section}
               </select>
               <p>月</p>
@@ -147,7 +147,7 @@
               <select id="age3" class='form-control'>
                 <option>-</option>
                 {section name=i start=1 loop=31}
-                <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
+                  <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
                 {/section}
               </select>
               <p>日</p>
