@@ -11,8 +11,9 @@ class Regist extends Base {
       $db = \Database_Connection::instance();
       $db->start_transaction();
       try {
+          $username = \Str::random('alnum', 16);
           $user_id = \Auth::create_user(
-              $params["username"],
+              $username,
               $params["password"],
               $params["email"],
               1
@@ -20,29 +21,33 @@ class Regist extends Base {
 
           // プロフィール登録
           $profile_code = Profiles::getNewCode('profiles', 6);
-          $profile_image = $params["profile_image"];
 
           $profile = [
               'code' => $profile_code,
-              'username' => $params['username'],
+              'username' => $username,
               'name' => $params['name'],
               'name_kana' => $params['name_kana'],
               'nickname' => '',
-              'profile_image' => $profile_image,
               'email' => $params['email'],
               'birthday' => $params['birthday'],
 //              'gender' => $params['gender']
           ];
 
+          if (isset($params["profile_image"]) && $params["profile_image"]) {
+              $profile["profile_image"] = $params["profile_image"];
+          } else {
+              $profile["profile_image"] = '';
+          }
+
           Profiles::create($profile);
 
           // call Opauth to link the provider login with the local user
-          if ($params['provider']) {
+          if (isset($params['provider']) && $params['provider']) {
               $opauth = \Auth_Opauth::forge(false);
               $opauth->link_provider(array(
                   'parent_id' => $user_id,
                   'provider' => $params['provider'],
-                  'uid' => $params['username'],
+                  'uid' => $params['uid'],
                   'access_token' => $params['provider'],
 //              'secret' => $params['provider'],
                   'expires' => $params['provider'],
@@ -54,7 +59,7 @@ class Regist extends Base {
           $code = self::getNewCode('member_regist');
           \DB::insert('member_regist')->set(array(
               'code' => $code,
-              'username' => $params['username'],
+              'username' => $username,
               'name' => $params['name'],
               'not_know' => $params['not_know'],
               'interest' => $params['interest'],
@@ -64,7 +69,7 @@ class Regist extends Base {
               'where_from' => $params['where_from'],
               'where_from_other' => $params['where_from_other'],
               'transmission' => $params['transmission'],
-              'facebook' => $params['facebook'],
+//              'facebook' => $params['facebook'],
               'job_kind' => $params['job_kind'],
               'introduction' => $params['introduction'],
               'age' => $params['birthday'],

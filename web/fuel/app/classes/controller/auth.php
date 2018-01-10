@@ -64,8 +64,7 @@ class Controller_Auth extends Controller {
 					
 					$userdata = [
 						'group' => 1,
-						'username' => $opauth->get('auth.uid', '?'),
-						'password' => $opauth->get('auth.uid', '?'),
+						'uid' => $opauth->get('auth.uid', '?'),
 						'provider' => $opauth->get('auth.provider', '?'),
 						'fbid'     => $opauth->get('auth.uid', '?'),
 						'name'     => $opauth->get('auth.info.name', '?'),
@@ -88,7 +87,7 @@ class Controller_Auth extends Controller {
 					];
                     \Session::set_flash('userdata', $userdata);
 
-                    $url = '/regist#regist-form';
+                    $url = '/regist_sns';
 					break;
 	
 					// we didn't know this provider login, but enough info was returned to auto-register the user

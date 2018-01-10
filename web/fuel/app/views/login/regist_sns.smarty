@@ -20,17 +20,23 @@
     <p class="message">みなさまの「きんゆう」のこと教えてください♪</p>
 
     <form name="form1">
+      <input type="hidden" id="uid" value="{$userdata.uid}">
+      <input type="hidden" id="password" value="{$userdata.uid}">
+      <input type="hidden" id="profile_image" value="{$userdata.image}">
+      <input type="hidden" id="provider" value="{$userdata.provider}">
+      <input type="hidden" id="access_token" value="{$userdata.access_token}">
+      <input type="hidden" id="expires" value="{$userdata.expires}">
       <div class="singlepage-form-block">
 
         <div class="regist-add-form-edit-el">
           <label class="regist-add-form-edit-title">メールアドレス</label>
-          <input type="text" name="email" id="email" class="form-control" placeholder="">
+          <input type="text" name="email" id="email" value="{$userdata.email}" class="form-control" placeholder="">
         </div>
 
         <div class="regist-add-form-edit-el">
           <label class="regist-add-form-edit-title">お名前</label>
           <p class="regist-add-form-edit-subtitle">漢字フルネームでのご入力をお願いします。</p>
-          <input type="text" id="name" class="form-control" placeholder="" value="">
+          <input type="text" id="name" value="{$userdata.name}" class="form-control" placeholder="" value="">
         </div>
 
         <div class="regist-add-form-edit-el">
@@ -54,18 +60,9 @@
           <div class="regist-selectarea">
             <select id="age2" class='form-control'>
               <option>-</option>
-              <option value="01">1</option>
-              <option value="02">2</option>
-              <option value="03">3</option>
-              <option value="04">4</option>
-              <option value="05">5</option>
-              <option value="06">6</option>
-              <option value="07">7</option>
-              <option value="08">8</option>
-              <option value="09">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
+                {section name=i start=1 loop=12}
+                  <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
+                {/section}
             </select>
             <p>月</p>
           </div>
@@ -73,42 +70,13 @@
           <div class="regist-selectarea">
             <select id="age3" class='form-control'>
               <option>-</option>
-              <option value="01">1</option>
-              <option value="02">2</option>
-              <option value="03">3</option>
-              <option value="04">4</option>
-              <option value="05">5</option>
-              <option value="06">6</option>
-              <option value="07">7</option>
-              <option value="08">8</option>
-              <option value="09">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="23">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30">30</option>
-              <option value="31">31</option>
+                {section name=i start=1 loop=31}
+                  <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
+                {/section}
             </select>
             <p>日</p>
           </div>
         </div>
-
 
         <div class="regist-add-form-edit-el form-radio-block">
           <label class="regist-add-form-edit-title">きんゆうワカラナイ度</label>
@@ -241,27 +209,15 @@ $(function(){
     var age01 = $("#age1").val();
     var age02 = $("#age2").val();
     var age03 = $("#age3").val();
-    
-    if (age01 == "-") {
-      ts.error("生年月日の「年」を入力してください");
-      return false;
-    }
-    if (age02 == "-") {
-      ts.error("生年月日の「月」を入力してください");
-      return false;
-    }
-    if (age03 == "-") {
-      ts.error("生年月日の「日」を入力してください");
-      return false;
-    }
 
     var params = {};
 
     //新規
     params.email = $('#email').val(); //メールアドレス
+    params.password = $('#password').val(); //パスワード
     params.name = $('#name').val(); //お名前
     params.name_kana = $('#name_kana').val(); //ふりがな
-    params.age = (age01+age02+age03); //生年月日
+    params.birthday = (age01+age02+age03); //生年月日
     params.not_know = $("[name=not_know]:checked").val(); //金融ワカラナイ度
     params.interest = $('#interest').val();
     params.ask = $('#ask').val();
@@ -289,10 +245,20 @@ $(function(){
       ts.error("お名前（ふりがな）を入力してください");
       return false;
     }
-    if (params.age == "") {
-      ts.error("生年月日を入力してください");
-      return false;
+
+    if (age01 == "-") {
+        ts.error("生年月日の「年」を入力してください");
+        return false;
     }
+    if (age02 == "-") {
+        ts.error("生年月日の「月」を入力してください");
+        return false;
+    }
+    if (age03 == "-") {
+        ts.error("生年月日の「日」を入力してください");
+        return false;
+    }
+
     if ($("[name=not_know]:checked").val() == undefined) {
       ts.error("きんゆうワカラナイ度を入力してください。");
       return false;
