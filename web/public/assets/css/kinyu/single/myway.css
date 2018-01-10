@@ -193,6 +193,9 @@
   padding-left: 52px;
   padding-top: 12px;
 }
+.myway-content-list-el .text-box img {
+  width: 56%;
+}
 .myway-content-list-el-even .img-box {
   float: right;
 }
@@ -212,9 +215,6 @@
   padding: 12px 0px;
   text-align: center;
 }
-.myway-content-list-el .text-box .description {
-  font-size: 14px;
-}
 .myway-content-list-el .text-box .myway-to-link {
   font-size: 15px;
   width: 360px;
@@ -227,9 +227,7 @@
   color: #fff;
   font-weight: bold;
 }
-.myway-content-list-el .text-box p.myway-to-link {
-  opacity: .4;
-}
+
 .myway-to-link-coming {
   text-align: center;
   font-size: 13px;
@@ -237,25 +235,18 @@
   margin-top: 4px;
 }
 
-/* 背景 */
-/*#myway-shoes {
-  background: #EBFAFF;
+/* 非公開の場合 */
+.myway-content-list-el .text-box p.myway-to-link {
+  opacity: .3;
 }
-#myway-shoes .myway-to-link {
-  background: #a4d4e4;
+.not-open-span {
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  margin-top: 6px;
 }
-#myway-shoes .inner {
-  border-top: 2px solid #a4d4e4;
-}
-#myway-cosmetics {
-  background: #FBECE4;
-}
-#myway-cosmetics .myway-to-link {
-  background: #ecb9ae;
-}
-#myway-cosmetics .inner {
-  border-top: 2px solid #ecb9ae;
-}*/
+
+/* くつ編 */
 #myway-shoes {
   background: #FBECE4;
 }
@@ -265,6 +256,7 @@
 #myway-shoes .inner {
   border-top: 1px solid #ecb9ae;
 }
+/* コスメ編 */
 #myway-cosmetics {
   background: #EBFAFF;
 }
@@ -273,6 +265,16 @@
 }
 #myway-cosmetics .inner {
   border-top: 1px solid #a4d4e4;
+}
+/* ジュエリー編 */
+#myway-jewelry {
+  background: #ebf9f0;
+}
+#myway-jewelry .myway-to-link {
+  background: #aad8bb;
+}
+#myway-jewelry .inner {
+  border-top: 1px solid #aad8bb;
 }
 
 /* coming-soon */
@@ -554,14 +556,18 @@
   height: 200px;
   float: none;
 }
-/* くつ */
+/* 動画タグ */
 #myway-shoes.myway-content-list-el .img-box video {
   height: 110%;
   right: auto;
 }
 #myway-cosmetics.myway-content-list-el .img-box video {
-    height: 110%;
-    right: auto;
+  height: 110%;
+  right: auto;
+}
+#myway-jewelry.myway-content-list-el .img-box video {
+  height: 110%;
+  right: auto;
 }
 .myway-content-list-el .text-box {
   width: 100%;
@@ -574,13 +580,13 @@
   padding-top: 8px;
 }
 .myway-content-list-el .edition img {
-  width: 84%;
+  width: 80%;
   margin-bottom: 8px;
 }
 .myway-content-list-el .text-box .myway-to-link {
   width: 84%;
-  font-size: 13px;
-  padding: 12px 0px;
+  font-size: 12px;
+  padding: 10px 0px;
   margin-top: 20px;
   position: relative;
 }
