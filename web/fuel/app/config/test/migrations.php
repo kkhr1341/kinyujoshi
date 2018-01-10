@@ -40,6 +40,12 @@ return array(
         31 => '034_add_name_to_profiles',
         32 => '035_add_name_kana_to_profiles',
         33 => '036_create_application_credit_payments',
+        34 => '037_add_name_to_applications',
+        35 => '038_add_email_to_applications',
+        36 => '039_add_amount_to_applications',
+        37 => '040_add_payment_method_to_applications',
+        38 => '041_add_incur_cancellation_fee_date_to_events',
+        39 => '042_add_place_url_to_events',
       ),
     ),
     'module' => 

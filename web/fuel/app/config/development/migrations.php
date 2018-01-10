@@ -44,6 +44,8 @@ return array(
         35 => '038_add_email_to_applications',
         36 => '039_add_amount_to_applications',
         37 => '040_add_payment_method_to_applications',
+        38 => '041_add_incur_cancellation_fee_date_to_events',
+        39 => '042_add_place_url_to_events',
       ),
     ),
     'module' => 

@@ -58,7 +58,8 @@
 
         var self = this;
         return new Promise(function(resolve, reject){
-            self.click(function() {
+            self.click(function(e) {
+                e.preventDefault();
                 Uploader.select()
                     .then(function(data) {
                         return Uploader.upload(url, 'file', data)

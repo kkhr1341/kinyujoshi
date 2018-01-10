@@ -96,7 +96,7 @@ class Regist extends Base {
               'username' => $username,
               'name' => $params['name'],
               'name_kana' => $params['name_kana'],
-              'nickname' => '',
+              'nickname' => $params['name'],
               'email' => $params['email'],
               'birthday' => $params['birthday'],
 //              'gender' => $params['gender']

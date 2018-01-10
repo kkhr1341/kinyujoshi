@@ -87,7 +87,7 @@ class Events extends Base
         $params['username'] = \Auth::get('username');
         $params['code'] = $code;
         $params['created_at'] = \DB::expr('now()');
-        $params['main_image'] = self::get_main_image($params);
+//        $params['main_image'] = self::get_main_image($params);
         \DB::insert('events')->set($params)->execute();
 
         return $params;
@@ -98,7 +98,7 @@ class Events extends Base
     {
 
         $username = \Auth::get('username');
-        $params['main_image'] = self::get_main_image($params);
+//        $params['main_image'] = self::get_main_image($params);
 
         \DB::update('events')->set($params)->where('code', '=', $params['code'])->execute();
 

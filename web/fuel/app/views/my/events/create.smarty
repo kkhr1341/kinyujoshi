@@ -42,9 +42,11 @@
 				<div class="form-group">
 					<label class="form-group-event-label">サムネイル画像</label>
 					<a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+					<input type="hidden" id="main_image">
 
 					<!-- サムネイル画像を投稿するとここに表示される！ -->
-					<div class="thumbnail-img" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/201707062104170V9C6213.JPG) center center / cover no-repeat;"></div>
+					<div class="thumbnail-img"></div>
+                    {*<div class="thumbnail-img" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/201707062104170V9C6213.JPG) center center / cover no-repeat;"></div>*}
 				</div>
 
 				<div class="form-group upload_image_box">
@@ -104,7 +106,7 @@
 					<label class="form-group-event-label">キャンセル料金発生日</label>
 					<p class="form-group-sub"><span style="color:red;">＊</span>基本的には3日前。それ以外の場合は記入をお願いします。</p>
 					<div class='input-group date datetimepicker'>
-						<input type='text' class="form-control" id="open_date" value="" />
+						<input type='text' class="form-control" id="incur_cancellation_fee_date" value="" />
 						<span class="input-group-addon">
 							<span class="glyphicon glyphicon-calendar"></span>
 						</span>
@@ -137,6 +139,14 @@
 </form>
 <script>
 $(function(){
+    $('.thumbnail-img-block')
+        .uploader('/api/redactor/upload/file')
+        .then(function(data) {
+            var url = data.url;
+            $('#main_image').val(url);
+            $('.thumbnail-img').css('background-image', 'url(' + url + ')');
+        })
+
 	$('.datetimepicker').datetimepicker({
 		format : 'YYYY/MM/DD HH:mm'
 	});
@@ -148,14 +158,18 @@ $(function(){
 		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
 		params.description = $('#description').val();
+		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.place = $('#place').val();
+		params.place_url = $('#place_url').val();
 		params.fee = $('#fee').val();
 		params.event_date = $('#event_date').val();
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
-		params.event_date = $('#open_date').val();
+        params.limit = $("#limit").val();
+		params.open_date = $('#open_date').val();
+		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 1;
 		
 		if (params.event_category == "") {
@@ -210,14 +224,18 @@ $(function(){
 		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
 		params.description = $('#description').val();
+		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.place = $('#place').val();
+		params.place_url = $('#place_url').val();
 		params.fee = $('#fee').val();
 		params.event_date = $('#event_date').val();
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
+        params.limit = $("#limit").val();
 		params.open_date = $('#open_date').val();
+        params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;
 		
 		if (params.title == "") {
