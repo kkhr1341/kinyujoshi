@@ -63,8 +63,16 @@
 .kinyu-header h1.main-logo {
   padding: 28px 0px 16px; 
 }
-.kinyu-header h1.main-logo a {
+.kinyu-header h1.main-logo a,
+.kinyu-header-top .main-logo a {
   line-height: 0;
+  display: block;
+  width: 190px;
+  margin: 0 auto;
+}
+.kinyu-header h1.main-logo a img,
+.kinyu-header-top .main-logo a img {
+  width: 100%; 
 }
 .kinyu-header-nav {
   text-align: center;
@@ -85,6 +93,34 @@
   padding-bottom: 2px;
   border-bottom: 1px solid #8ddcd1;
 }
+/* ソーシャルリスト */
+.kinyu-header-social-list {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1005;
+}
+.kinyu-header-social-list ul {
+  letter-spacing: -40px;
+}
+.kinyu-header-social-list li {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  letter-spacing: normal;
+  margin: 0px 2px;
+}
+.kinyu-header-social-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.kinyu-header-social-list li a img {
+  width: 100%;
+}
+
+
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
@@ -216,220 +252,6 @@
     display: block;
     opacity: 1;
   }
-}
-
-/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-   ナビゲーション・オープンメニュー
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.navi_contents-block {
-  position: fixed;
-  top: 0;
-  width: 340px;
-  /*right: 0;*/
-  right: -400px;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  color: #fff;
-  letter-spacing: -0.1rem;
-  background: rgba(255,255,255,1);
-  z-index: 1010;
-}
-.navi_contents-block-back {
-  display: none;
-  background: rgba(124, 220, 206, 0.9);
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1005;
-}
-.navi_contents-block .inner {
-  width: 100%;
-  margin: 0 auto;
-  padding: 24px;
-  position: relative;
-}
-.navi_contents-block .inner .menu-trigger-close {
-  display: none;
-  background: rgba(255,255,255,.8);
-  position: fixed;
-  right: 50px;
-  top: 100px;
-  width: 60px;
-  height: 60px;
-  border-radius: 5px;
-  transition: .5s;
-}
-.pc-menu-trigger-close {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-}
-.pc-menu-trigger-close img {
-  width: 100%;
-  transition: .5s;
-}
-.navi_contents-block .inner .menu-trigger-close img {
-  width: 100%;
-}
-.navi_contents-block .navi-icon p {
-  display: block;
-  width: 100%;
-  font-size: 35px;
-  line-height: 55px!important;
-  color: #9cefe2;
-  text-align: center;
-  padding: 0px!important;
-}
-.navi_kinyu-menu-title {
-  padding-bottom: 8px;
-}
-.item{
-  opacity: 0;
-  text-align: center;
-  color: gray;
-  position: relative;
-}
-/*.navi_kinyu-menu-li01 {
-  margin-top: 0px;
-}*/
-.navi_kinyu-menu-li01-top {
-  width: 100px;
-  height: 5px;
-  background: gray;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.item:nth-child(1) {
-  -webkit-animation: example 0.5s ease 0.5s 1 forwards;
-  animation: example 0.5s ease 0.3s 1 forwards;
-}
-.item:nth-child(2) {
-  -webkit-animation: example 0.5s ease 0.6s 1 forwards;
-  animation: example 0.5s ease 0.4s 1 forwards;
-}
-.item:nth-child(3) {
-  -webkit-animation: example 0.5s ease 0.7s 1 forwards;
-  animation: example 0.5s ease 0.5s 1 forwards;
-}
-.item:nth-child(4) {
-  -webkit-animation: example 0.5s ease 0.8s 1 forwards;
-  animation: example 0.5s ease 0.7s 1 forwards;
-}
-.item:nth-child(5) {
-  -webkit-animation: example 0.5s ease 0.9s 1 forwards;
-  animation: example 0.5s ease 0.8s 1 forwards;
-  position: absolute;
-}
-.item:nth-child(6) {
-  -webkit-animation: example 0.5s ease 1.0s 1 forwards;
-  animation: example 0.5s ease 0.9s 1 forwards;
-}
-@-webkit-keyframes example {
-  100% {
-    opacity: 1;
-    margin-top: 20px;
-  }
-}
-@keyframes example {
-  100% {
-    opacity: 1;
-    margin-top: 20px;
-  }
-}
-.navi_contents-block-menu {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-.navi_menu {
-  
-}
-.navi_kinyu-menu-block {
-  width: 100%;
-  letter-spacing: -0.5em;
-}
-.navi_kinyu-menu-block-el {
-  width: 100%;
-  display: inline-block;
-  letter-spacing: normal;
-  position: relative;
-  /*border-top: 1px solid #e3e3e3;*/
-}
-.navi_kinyu-menu-block .navi_kinyu-menu-block-el:first-child {
-  border-top: 1px solid #8ddcd1;
-  padding-top: 16px;
-}
-.navi_kinyu-menu-block .navi_kinyu-menu-block-el a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  text-align: left;
-  box-sizing: border-box;
-  font-size: 13px;
-  line-height: 20px;
-  margin-bottom: 12px;
-}
-.navi_kinyu-menu-block .navi_kinyu-menu-block-el:last-child a {
-  margin-bottom: 0px;
-}
-.navi_kinyu-menu-block .navi_kinyu-menu-block-el p {
-  display: block;
-  font-size: 16px;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  text-align: left;
-}
-/* ナビ・バナー部分 */
-.navi_banner_area {
-  width: 100%;
-  margin: 0 auto;
-}
-.navi_banner_area .navi_banner_area_el {
-  display: block;
-  line-height: 0;
-  margin-bottom: 12px;
-  transition: .5s;
-}
-.navi_banner_area .navi_banner_area_el:last-child {
-  margin-bottom: 0px;
-}
-.navi_banner_area .navi_banner_area_el img {
-  width: 100%;
-  border: 1px solid #f9f9f9;
-  box-sizing: border-box;
-}
-.navi_kinyu-submenu-el {
-  display: inline-block;
-  margin-right: 8px;
-}
-.navi_kinyu-submenu-el a {
-  display: block;
-  padding: 2px 16px;
-  margin-right: 8px;
-  transition: 0.5s;
-  font-size: 11px;
-}
-.navi_contents-block .navi_kinyu-submenu-el a {
-  background: #8ddcd1;
-  color: #fff;
-}
-.navi_kinyu-submenu-el:last-child {
-  margin-right: 0px;
-}
-.navi_kinyu-submenu-copy {
-  font-size: 10px;
-  line-height: 14px;
-  text-align: center;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1118,7 +940,6 @@
   font-size: 12px;
   line-height: 12px;
   color: #77cbc0;
-  font-weight: bold;
 }
 /* 編集部のおすすめ記事 */
 .report-sidebar-report-list li {
@@ -2535,9 +2356,8 @@
 }
 .about-kinyu-container-left {
   float: left;
-  width: 145px;
+  width: 155px;
   padding-top: 24px;
-  border-right: 1px solid #e0dede;
   height: 400px;
 }
 .about-kinyu-container-left li {
@@ -2563,8 +2383,9 @@
 }
 .about-kinyu-container-right {
   float: right;
-  width: 824px;
+  width: 814px;
   padding-left: 30px;
+  border-left: 1px solid #e0dede;
   box-sizing: content-box;
 }
 .about-kinyu-bgarea {
@@ -2584,6 +2405,7 @@
 }
 .about-kinyu-description {
   margin-top: 28px;
+  padding-bottom: 36px;
 }
 .about-kinyu-description .main-catchcopy {
   font-size: 15px;
@@ -2822,6 +2644,22 @@ footer .footer-menu {
 }
 .footer-logo img {
   width: 100%;
+}
+footer .navi_kinyu-submenu-el {
+  display: inline-block;
+  margin-right: 8px;
+}
+footer .navi_kinyu-submenu-el a {
+  display: block;
+  padding: 2px 16px;
+  margin-right: 8px;
+  transition: 0.5s;
+  font-size: 11px;
+}
+footer .navi_kinyu-submenu-copy {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

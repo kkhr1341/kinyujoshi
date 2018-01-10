@@ -63,9 +63,9 @@ console.log($resArray02);
           <!-- ログインユーザー -->
           <div class="joinus-block">
           {if array_search('admin', $roles)}
-            <a href="/joshikai_tickets/{$urlcode}">お申し込みはこちら</a>
+            <a href="/joshikai_tickets/{$urlcode}">女子会の参加はこちら</a>
           {else}
-            <p id="joinus-open">お申し込みはこちら</p>
+            <p id="joinus-open">女子会の参加はこちら</p>
           {/if}
           </div>       
         </div>
@@ -119,3 +119,10 @@ console.log($resArray02);
 
   });
 </script>
+
+
+<!-- <style>
+  footer {
+    margin-left: 24%!important;
+  }
+</style> -->

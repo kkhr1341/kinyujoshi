@@ -47,82 +47,105 @@ $(function() {
 });
 
 $(function() {
+  var state = false;
+  var scrollpos;
+  $(".kinyu-sp-header-menu").click(function() {
+    $(".kinyu-sp-header-menu").toggleClass("active");
+    $(".kinyu-main").toggleClass("sssss");
+    $(".kinyu-sp-navi").fadeToggle(800);
+    $(".navi_contents-block").slideToggle(500);
 
-  var ua = navigator.userAgent.toUpperCase();
-  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
-    // スマホ
-    var state = false;
-    var scrollpos;
-    $(".kinyu-sp-header-menu").click(function() {
-      $(".kinyu-sp-header-menu").toggleClass("active");
-      $(".kinyu-main").toggleClass("sssss");
-      $(".kinyu-sp-navi").fadeToggle(800);
-      $(".navi_contents-block").slideToggle(500);
-
-      if(state == false) {
-        scrollpos = $(window).scrollTop();
-        $('body').addClass('fixed').css({'top': -scrollpos});
-        $('.kinyu-sp-navi').addClass('open');
-        state = true;
-      } else {
-        $('body').removeClass('fixed').css({'top': 0});
-        window.scrollTo( 0 , scrollpos );
-        $('.kinyu-sp-navi').removeClass('open');
-        state = false;
-      }
-    });
-
-  } else {
-    //PC
-    var state = false;
-    var scrollpos;
-    $(".menu-trigger").click(function() {
-      //$(".menu-trigger").toggleClass("active");
-      //$(".navi_contents-block").slideToggle(500);
-      $('.navi_contents-block-back').fadeIn(500);
-      setTimeout(function(){
-        // $('.menu-trigger-close').fadeIn(500);
-        $('.navi_contents-block').animate({'marginRight':'400px'},500);
-      },500);
-
-      setTimeout(function(){
-        if(state == false) {
-          scrollpos = $(window).scrollTop();
-          $('body').addClass('fixed').css({'top': -scrollpos});
-          $('.navi_contents-block').addClass('open');
-          state = true;
-        } else {
-          $('body').removeClass('fixed').css({'top': 0});
-          window.scrollTo( 0 , scrollpos );
-          $('.navi_contents-block').removeClass('open');
-          state = false;
-        }
-      },500);
-    });
-
-    $(".pc-menu-trigger-close").click(function() {
-      // $('.menu-trigger-close').fadeOut(300);
-      $('.navi_contents-block').animate({'marginRight':'0'},500);
-      setTimeout(function(){
-        $('.navi_contents-block-back').fadeOut(500);
-      },500);
-
-      setTimeout(function(){
-        if(state == false) {
-          scrollpos = $(window).scrollTop();
-          $('body').addClass('fixed').css({'top': -scrollpos});
-          $('.navi_contents-block').addClass('open');
-          state = true;
-        } else {
-          $('body').removeClass('fixed').css({'top': 0});
-          window.scrollTo( 0 , scrollpos );
-          $('.navi_contents-block').removeClass('open');
-          state = false;
-        }
-      },500);
-    });
-  }
+    if(state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('fixed').css({'top': -scrollpos});
+      $('.kinyu-sp-navi').addClass('open');
+      state = true;
+    } else {
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      $('.kinyu-sp-navi').removeClass('open');
+      state = false;
+    }
+  });
 });
+
+// $(function() {
+
+//   var ua = navigator.userAgent.toUpperCase();
+//   if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
+//     // スマホ
+//     var state = false;
+//     var scrollpos;
+//     $(".kinyu-sp-header-menu").click(function() {
+//       $(".kinyu-sp-header-menu").toggleClass("active");
+//       $(".kinyu-main").toggleClass("sssss");
+//       $(".kinyu-sp-navi").fadeToggle(800);
+//       $(".navi_contents-block").slideToggle(500);
+
+//       if(state == false) {
+//         scrollpos = $(window).scrollTop();
+//         $('body').addClass('fixed').css({'top': -scrollpos});
+//         $('.kinyu-sp-navi').addClass('open');
+//         state = true;
+//       } else {
+//         $('body').removeClass('fixed').css({'top': 0});
+//         window.scrollTo( 0 , scrollpos );
+//         $('.kinyu-sp-navi').removeClass('open');
+//         state = false;
+//       }
+//     });
+
+//   } else {
+//     //PC
+//     var state = false;
+//     var scrollpos;
+//     $(".menu-trigger").click(function() {
+//       //$(".menu-trigger").toggleClass("active");
+//       //$(".navi_contents-block").slideToggle(500);
+//       $('.navi_contents-block-back').fadeIn(500);
+//       setTimeout(function(){
+//         // $('.menu-trigger-close').fadeIn(500);
+//         $('.navi_contents-block').animate({'marginRight':'400px'},500);
+//       },500);
+
+//       setTimeout(function(){
+//         if(state == false) {
+//           scrollpos = $(window).scrollTop();
+//           $('body').addClass('fixed').css({'top': -scrollpos});
+//           $('.navi_contents-block').addClass('open');
+//           state = true;
+//         } else {
+//           $('body').removeClass('fixed').css({'top': 0});
+//           window.scrollTo( 0 , scrollpos );
+//           $('.navi_contents-block').removeClass('open');
+//           state = false;
+//         }
+//       },500);
+//     });
+
+//     $(".pc-menu-trigger-close").click(function() {
+//       // $('.menu-trigger-close').fadeOut(300);
+//       $('.navi_contents-block').animate({'marginRight':'0'},500);
+//       setTimeout(function(){
+//         $('.navi_contents-block-back').fadeOut(500);
+//       },500);
+
+//       setTimeout(function(){
+//         if(state == false) {
+//           scrollpos = $(window).scrollTop();
+//           $('body').addClass('fixed').css({'top': -scrollpos});
+//           $('.navi_contents-block').addClass('open');
+//           state = true;
+//         } else {
+//           $('body').removeClass('fixed').css({'top': 0});
+//           window.scrollTo( 0 , scrollpos );
+//           $('.navi_contents-block').removeClass('open');
+//           state = false;
+//         }
+//       },500);
+//     });
+//   }
+// });
 
 //テキスト関連
 jQuery(function($) {

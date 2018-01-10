@@ -274,9 +274,26 @@
   background: #fff;
 }
 .kinyu-sp-navi .inner {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  padding: 16px 0px 50px;
+  padding: 16px 0px 0px;
+}
+.kinyu-sp-navi .inner li {
+  width: 82%;
+  margin: 0 auto;
+}
+.navi_kinyu-menu-li01 {
+  border-top: 1px solid #8ddcd1;
+  border-bottom: 1px solid #8ddcd1;
+}
+.kinyu-sp-navi .inner li.navi_kinyu-menu-li03 {
+  padding-bottom: 16px;
+}
+.kinyu-sp-navi .inner li.navi_kinyu-menu-li04 {
+  width: 100%;
+  border-top: 1px dotted #e5e5e5;
+  padding-top: 24px;
+  background: #f9f9f9;
 }
 .kinyu-sp-navi .top-circle-logo {
   width: 47px;
@@ -287,6 +304,156 @@
 }
 .navi_banner_area .navi_banner_area_el img {
   border: 1px solid #f9f9f9;
+}
+.item{
+  opacity: 0;
+  text-align: center;
+  color: gray;
+  position: relative;
+}
+.item:nth-child(1) {
+  -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+  animation: example 0.5s ease 0.3s 1 forwards;
+}
+.item:nth-child(2) {
+  -webkit-animation: example 0.5s ease 0.6s 1 forwards;
+  animation: example 0.5s ease 0.4s 1 forwards;
+}
+.item:nth-child(3) {
+  -webkit-animation: example 0.5s ease 0.7s 1 forwards;
+  animation: example 0.5s ease 0.5s 1 forwards;
+}
+.item:nth-child(4) {
+  -webkit-animation: example 0.5s ease 0.8s 1 forwards;
+  animation: example 0.5s ease 0.7s 1 forwards;
+}
+.item:nth-child(5) {
+  -webkit-animation: example 0.5s ease 0.9s 1 forwards;
+  animation: example 0.5s ease 0.8s 1 forwards;
+}
+.item:nth-child(6) {
+  -webkit-animation: example 0.5s ease 1.0s 1 forwards;
+  animation: example 0.5s ease 0.9s 1 forwards;
+}
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+    margin-top: 20px;
+  }
+}
+@keyframes example {
+  100% {
+    opacity: 1;
+    margin-top: 20px;
+  }
+}
+.navi_contents-block-menu {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.navi_kinyu-menu-block {
+  width: 100%;
+  letter-spacing: -0.5em;
+}
+.navi_kinyu-menu-block-el {
+  width: 100%;
+  display: inline-block;
+  letter-spacing: normal;
+  position: relative;
+  border-top: 1px solid #e3e3e3;
+}
+.navi_kinyu-menu-block .navi_kinyu-menu-block-el:first-child {
+  border-top: none;
+}
+.navi_kinyu-menu-block .navi_kinyu-menu-block-el a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  text-align: left;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 14px 0px 14px 4px;
+  transition: .5s;
+}
+.navi_kinyu-menu-block .navi_kinyu-menu-block-el a:hover {
+  background-color: #8ddcd1;
+}
+.navi_kinyu-menu-block .navi_kinyu-menu-block-el:last-child a {
+  margin-bottom: 0px;
+}
+.navi_kinyu-menu-block .navi_kinyu-menu-block-el p {
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: left;
+}
+/* ソーシャルリスト部分 */
+.navi-social-area {
+  text-align: center;
+}
+.navi-social-area .navi-social-area-el {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin: 0px 4px;
+}
+.navi-social-area .navi-social-area-el a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.navi-social-area .navi-social-area-el img {
+  width: 100%;
+}
+
+/* ナビ・バナー部分 */
+.navi_banner_area {
+  width: 100%;
+  margin: 0 auto;
+}
+.navi_banner_area .navi_banner_area_el {
+  display: block;
+  line-height: 0;
+  margin-bottom: 12px;
+  transition: .5s;
+}
+.navi_banner_area .navi_banner_area_el:last-child {
+  margin-bottom: 0px;
+}
+.navi_banner_area .navi_banner_area_el img {
+  width: 100%;
+  border: 1px solid #f9f9f9;
+  box-sizing: border-box;
+}
+.navi_kinyu-submenu-el {
+  display: inline-block;
+  margin-right: 8px;
+}
+.navi_kinyu-submenu-el a {
+  display: block;
+  padding: 2px 16px;
+  margin-right: 8px;
+  transition: 0.5s;
+  font-size: 11px;
+}
+.navi_contents-block .navi_kinyu-submenu-el a {
+  background: #8ddcd1;
+  color: #fff;
+}
+.navi_kinyu-submenu-el:last-child {
+  margin-right: 0px;
+}
+.navi_kinyu-submenu-copy {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -366,6 +533,7 @@
   margin-top: 12px;
   font-size: 12px;
   border: none;
+  font-weight: normal;
 }
 .kinyu-top-maincontent-block-el {
   padding: 42px 6%;
@@ -467,13 +635,11 @@
   display: none;
 }
 .introduction-list li p {
-  font-size: 12px;
+  font-size: 13px;
 }
 .introduction-list li p span {
   padding: 5px 20px;
 }
-
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップ・リスト部分
@@ -571,7 +737,7 @@
   margin-bottom: 0%;
 }
 .kinyu-top-joshikai-list li .text-box {
-  padding: 6px 6% 16px;
+  padding: 2px 6% 16px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -590,8 +756,14 @@
   float: right;
   width: 70%;
   height: 100%;
-  padding: 4px 4% 0px;
+  padding: 16px 4% 0px;
   box-sizing: border-box;
+}
+.kinyu-top-report-list .kinyu-top-list-kind p {
+  padding: 0px;
+}
+.kinyu-top-report-list .kinyu-top-list-title {
+  padding: 4px 0px 4px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -744,7 +916,7 @@
 /* 記事文章 */
 .kinyu-main-block .inner {
   width: 88%;
-  padding: 50px 0px;
+  padding: 36px 0px 50px;
 }
 .report-detail-main {
   padding-bottom: 20px;
@@ -939,6 +1111,10 @@
 .sidebar-more-link a {
   font-size: 11px;
   line-height: 11px;
+}
+.report-detail-sidebar-el button {
+  width: 130px;
+  font-size: 12px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1194,9 +1370,14 @@
   width: 88%;
   float: none;
   margin: 0 auto;
-  padding: 32px 0px;
+  padding: 12px 0px 32px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+}
+.joshikai-detail-el-info li .event-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
 }
 .kinyu-joshikai-detail-el-header .main-image {
   height: 200px;
@@ -1218,22 +1399,25 @@
   padding-left: 12px;
 }
 .joshikai-detail-el-info li:first-child {
+  padding-left: 0px;
+}
+.joshikai-detail-el-info li.date {
   border-left: 2px solid #8ddcd1;
 }
 .joshikai-detail-el-info li:last-child {
   margin-bottom: 0px;
 }
 .joshikai-detail-el-info li .info-title {
-  font-size: 13px;
-  line-height: 13px;
+  font-size: 12px;
+  line-height: 12px;
 }
 .joshikai-detail-el-info li .info-detail {
-  font-size: 13px;
+  font-size: 12px;
   padding-top: 8px;
 }
 .joshikai-detail-el-content-box .info-title {
-  font-size: 13px;
-  line-height: 13px;
+  font-size: 12px;
+  line-height: 12px;
   margin-bottom: 12px;
 }
 .joshikai-detail-el-content-box h2 {
@@ -1244,14 +1428,14 @@
   margin: 16px 0px;
 }
 .joshikai-detail-el-content-box h3 {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 22px;
   padding: 5px 0px 5px 0px;
   margin: 16px 0px;
 }
 .joshikai-detail-el-content-box p {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 22px;
 }
 
 /* お申し込みボタン */
@@ -1259,11 +1443,20 @@
   border-top: none;
   padding-top: 0px;
   position: fixed;
-  width: 96%;
-  bottom: 65px;
-  left: 50%;
-  margin-left: -48%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
   z-index: 1004;
+  margin-left: 0px;
+}
+.joshikai-detail-el-info .joinus-block a, .joshikai-detail-el-info .joinus-block p {
+  padding: 14px 0px;
+  font-size: 12px;
+}
+.joshikai-detail-el-info .joinus-block p:after {
+  content: "〉";
+  position: absolute;
+  right: 0px;
 }
 
 /* 決済ページ */
@@ -1397,7 +1590,7 @@
   height: 80px;
 }
 .kinyu-news-list-el .text-box {
-  padding: 10px 32px 0px 0px;
+  padding: 10px 26px 0px 0px;
 }
 .kinyu-news-list .kinyu-news-list-li:after {
   right: -5px;
@@ -1721,6 +1914,7 @@
   font-size: 11px;
   line-height: 16px;
 }
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ウェルカムページの部分

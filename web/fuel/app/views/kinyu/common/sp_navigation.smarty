@@ -22,7 +22,7 @@
             <a href="/login_regist">メンバー登録/ログイン</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/event">女子会に参加する</a>
+            <a href="/joshikai">女子会に参加する</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a href="/report">レポートを見る</a>
@@ -33,14 +33,25 @@
         </div>
       </li>
 
-      <li class="item navi_banner_area navi_kinyu-menu-li02">
+      <li class="item navi_kinyu-menu-li02">
+        <div class="navi-social-area">
+          <div class="navi-social-area-el">
+            <a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/instagram_icon.png"></a>
+          </div>
+          <div class="navi-social-area-el">
+            <a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="item navi_banner_area navi_kinyu-menu-li03">
         <a class="navi_banner_area_el" href="/myway">
           <img src="/images/myway/og_myway.jpg">
         </a>
       </li>
 
-      <li class="item navi_kinyu-menu-li03">
-        <div class="navi_kinyu-menu-block clear">
+      <li class="item navi_kinyu-menu-li04">
+        <!-- <div class="navi_kinyu-menu-block clear">
           <div class="navi_kinyu-menu-block-el">
             <a href="/company">運営会社</a>
           </div>
@@ -56,7 +67,8 @@
           <div class="navi_kinyu-menu-block-el">
             <a href="/contact">お問い合わせ</a>
           </div>
-        </div>
+        </div> -->
+        <img src="/images/menu/menu-footer-illust.png" width="100%;">
       </li>
     </ul>
 
