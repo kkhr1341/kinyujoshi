@@ -115,8 +115,10 @@ class Controller_Login extends Controller_KinyuBase
       $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
       $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-      
-    if(Agent::is_mobiledevice()) {
+
+      $this->data['userdata'] = \Session::get_flash('userdata');
+
+      if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
         $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
         //$this->template->contents = View::forge('kinyu/index.smarty', $this->data);
