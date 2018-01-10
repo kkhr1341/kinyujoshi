@@ -106,8 +106,15 @@ class Controller_Login extends Controller_KinyuBase
   }
 
   public function action_regist_sns() {
-    
+
     if (!Auth::check()) {
+      // SNS経由で取得したUIDがSESSIONにあるか確認
+      $userdata = \Session::get_flash('userdata');
+      if (!$userdata['uid']) {
+        Response::redirect('/login');
+      }
+      $this->data['userdata'] = $userdata;
+
       $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
       $this->template->title = 'ログイン｜きんゆう女子。';
       $this->template->description = 'ログイン｜きんゆう女子';
@@ -116,7 +123,6 @@ class Controller_Login extends Controller_KinyuBase
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
       $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
-      $this->data['userdata'] = \Session::get_flash('userdata');
 
       if(Agent::is_mobiledevice()) {
         $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);

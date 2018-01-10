@@ -5,8 +5,77 @@ require_once(dirname(__FILE__)."/base.php");
 
 class Regist extends Base {
 
+    public static function validate()
+    {
+        $val = \Validation::forge();
+        $val->add_callable('myvalidation');
 
-  public static function create($params) {
+        $val->add('email', 'メールアドレス')
+            ->add_rule('required')
+            ->add_rule('unique', array(
+                'table' => 'users',
+                'field' => 'email',
+            ));
+
+        $val->add('name', 'お名前')
+            ->add_rule('required');
+
+        $val->add('name_kana', 'ふりがな')
+            ->add_rule('required');
+
+        $val->add('birthday', '生年月日')
+            ->add_rule('mb_convert_kana', 'a', 'utf-8')
+            ->add_rule('valid_date');
+
+        $val->add('profile_image', 'プロフィール画像');
+
+        $val->add('provider');
+        $val->add('uid');
+
+        $val->add('password', 'パスワード')
+            ->add_rule('trim')
+            ->add_rule('required')
+            ->add_rule('max_length', 255)
+            ->add_rule('alphanum');
+
+
+        $val->add('not_know', 'きんゆうワカラナイ度')
+            ->add_rule('required');
+
+        $val->add('interest', '「お金について知りたいこと・興味のあること」')
+            ->add_rule('required');
+
+        $val->add('ask', '「きんゆう女子。でどんな出会いや発見がほしいですか？」')
+            ->add_rule('required');
+
+        $val->add('income', '「3年後の自分の年収をどのくらいにしたいですか？」')
+            ->add_rule('required');
+
+        $val->add('where_from', '「どこできんゆう女子。を知りましたか？」')
+            ->add_rule('required');
+
+        $val->add('where_from_other', '「どこできんゆう女子。を知りましたか？その他」');
+
+        $val->add('transmission', '「きんゆう女子。で情報発信したいですか？」')
+            ->add_rule('required');
+
+        $val->add('url', '「個人で発信しているブログなど」');
+
+        $val->add('job_kind', '「金融機関で働いていますか？」')
+            ->add_rule('required');
+
+        $val->add('introduction', '自己紹介')
+            ->add_rule('required');
+
+//        $val->add('confirm_password', 'パスワード（確認用）')
+//            ->add_rule('trim')
+//            ->add_rule('match_validated_field', 'password')
+//            ->set_error_message('match_validated_field', 'パスワード（確認用）は、パスワードと異なっています');
+
+        return $val;
+    }
+
+    public static function create($params) {
 
       $db = \Database_Connection::instance();
       $db->start_transaction();

@@ -213,6 +213,8 @@ $(function(){
     var params = {};
 
     //新規
+    params.uid = $('#uid').val();
+    params.provider = $('#provider').val();
     params.email = $('#email').val(); //メールアドレス
     params.password = $('#password').val(); //パスワード
     params.name = $('#name').val(); //お名前
@@ -228,7 +230,12 @@ $(function(){
     params.url = $('#url').val(); //個人で発信しているブログなど
     params.job_kind = $("[name=job_kind]:checked").val();
     params.introduction = $('#introduction').val();
-    
+
+    if (params.uid == "" || params.provider == "") {
+      ts.error("システムに不具合が発生しました。お手数ですが、最初からやり直してください。");
+      location.href = '/login';
+      return false;
+    }
     if (params.email == "") {
       ts.error("メールアドレスを入力してください。");
       return false;
