@@ -265,7 +265,6 @@ $(function(){
       return false;
     }
 
-
     if (age01 == "-") {
         ts.error("生年月日の「年」を入力してください");
         return false;
@@ -279,10 +278,6 @@ $(function(){
         return false;
     }
 
-    if (params.age == "") {
-      ts.error("生年月日を入力してください");
-      return false;
-    }
     if ($("[name=not_know]:checked").val() == undefined) {
       ts.error("きんゆうワカラナイ度を入力してください。");
       return false;
