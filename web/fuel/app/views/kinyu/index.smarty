@@ -14,7 +14,6 @@
     <div class="swiper-wrapper">
       {$pickup_top}
     </div>
-    <img src="/images/banner/asahi_&w_pc.jpg">
     <div class="swiper-arrow swiper-button-next02"></div>
     <div class="swiper-arrow swiper-button-prev02"></div>
     <div class="swiper-pagination swiper-pagination02"></div>
@@ -176,9 +175,9 @@
           <div class="insta-block">
           <div class="insta-block-inner">
             <h3 class="kinyu-main-title" style="text-align: center;"><a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank"><img src="/images/main-title/hash-kinyujoshi-title.png" alt="レポート一覧"></a></h3>
-            <div class="insta-el" id="instafeed"></div>
-            <div class="insta-link-block">
-              <a class="insta-link" href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ</a>
+            <div class="insta-el clear" id="instafeed"></div>
+            <div class="sidebar-more-link">
+              <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ ></a>
             </div>
           </div>
           </div>

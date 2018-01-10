@@ -41,6 +41,15 @@
       </div>
     </div>
 
+    <div class="pc">
+      <div class="kinyu-header-social-list">
+        <ul>
+          <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/instagram_icon.png"></a></li>
+          <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a></li>
+        </ul>
+      </div>
+    </div>
+
   	<!-- 解析コード -->
   	{literal}
   	<script type="text/javascript">
