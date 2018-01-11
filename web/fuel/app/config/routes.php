@@ -59,6 +59,7 @@ return array(
 	'joshikai'   => 'kinyu/event/index',
 	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
 	'joshikai_tickets/(:any)'   => 'kinyu/event/tickets/$1',
+	'joshikai_complete'   => 'kinyu/event/complete',
 
 	//ニュース
 	'news'   => 'kinyu/news/index',
