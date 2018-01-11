@@ -51,7 +51,7 @@ var $resArray02 = $resArray[1];
             <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお支払い">
           {else if $event.creditch == 0}
             <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
-            <p>＊◆◆のため、クレジットカードのみとなります。</p>
+            <p>＊お席の予約が必要なため、<br>クレジットカードのみとなります。</p>
           {else}
             <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
             <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお支払い">
@@ -63,7 +63,7 @@ var $resArray02 = $resArray[1];
             <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお支払い">
           {else if $event.creditch == 0}
             <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
-            <p>＊◆◆のため、クレジットカードのみとなります。</p>
+            <p>＊お席の予約が必要なため、<br>クレジットカードのみとなります。</p>
           {else}
             <input type="button" class="info-link fee-card no-day-card-btn" value="カードでお支払い">
             <input type="button" class="info-link fee-cash no-day-cash-btn" value="当日現金でお支払い">
@@ -268,7 +268,23 @@ var $resArray02 = $resArray[1];
                     params.token = token;
 
                     ajax.post(url, params, function(data){
-                        location.href = "/event/complete";
+
+                        //location.href = "/event/complete";
+
+                        //ローディングアニメーション
+                        $(".fee-open").fadeOut(500);
+                        $(".loading-block").fadeIn(500);
+
+                        setTimeout(function(){
+                          $(".loading-block").fadeOut(500);
+                        },2500);
+
+                        setTimeout(function(){
+                          location.href = "/event/complete";
+                        },3000);
+
+
+
                     });
 //                  form.append($('<input type="hidden" name="payjpToken" />').val(token));
 //                  form.get(0).submit();

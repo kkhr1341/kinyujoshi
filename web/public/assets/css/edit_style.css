@@ -86,7 +86,7 @@
   letter-spacing: normal;
 }
 .kinyu-header-nav li a {
-  font-size: 12px;
+  font-size: 11px;
   transition: .5s;
 }
 .kinyu-header-nav li.active a {
