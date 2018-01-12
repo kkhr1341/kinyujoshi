@@ -64,11 +64,20 @@
                 {else}
                   <div class="kinyu-event-list-right">
                 {/if}
-                  <p class="event-main-date">
+                  <!-- <p class="event-main-date">
                     <span class="fw-bold">{$event.event_date|date_format:"%-m/%-e"}</span>
                     <span class="fw-bold day_of_the_week">{$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</span>
                     <span class="timezone">{$event.event_start_datetime}〜{$event.event_end_datetime}</span>
-                    </p>
+                    </p> -->
+                    <div class="kinyu-top-list-kind kinyu-top-event-kind">
+                      <p>
+                        <span class="date-box">
+                        <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
+                        {$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
+                        </span>
+                        {$event.event_start_datetime}〜{$event.event_end_datetime}
+                      </p>
+                    </div>
                   <h3 class="event-title">{$event.title}</h3>
                   <div class="event-subbox">
                     <p class="event-subbox-el">参加費：{$event.fee}円</p>

@@ -132,20 +132,11 @@
 {/literal}
 
 <div class="report-detail-comment-popup">
-  <div class="inner pc">
-    <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
-    <p class="main-message">きんゆう女子。編集部に<br>コメントしていただき、<br>誠にありがとうございます！</p>
-    <p>
-    みなさまからいただいたコメントを<br>参考に、「きんゆう女子。」をさらに<br>ブラッシュアップしてまいりますので、<br>今後ともよろしくお願いいたします♪
-    </p>
-    <p class="last-message">きんゆう女子。編集部より</p>
-  </div>
-
-  <div class="inner sp">
+  <div class="inner">
     <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
     <p class="main-message">きんゆう女子。編集部にコメントしていただき、誠にありがとうございます！</p>
     <p>
-    みなさまからいただいたコメントを参考に、「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
+    みなさまからいただいたコメントを参考に「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
     </p>
     <p class="last-message">きんゆう女子。編集部より</p>
   </div>

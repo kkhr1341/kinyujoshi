@@ -266,7 +266,7 @@
   right: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
   color: #fff;
   letter-spacing: -0.1rem;
@@ -745,7 +745,7 @@
   　トップ - 記事リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-report-list li {
-  height: 80px;
+  height: 88px;
   background-color: #f9f9f9;
 }
 .kinyu-top-report-list .img-box {
@@ -764,7 +764,7 @@
   padding: 0px;
 }
 .kinyu-top-report-list .kinyu-top-list-title {
-  padding: 4px 0px 4px;
+  padding: 8px 0px 4px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -977,6 +977,20 @@
   line-height: 12px;
   padding: 16px 0px 0px;
 }
+
+/* イベント部分のみ */
+.kinyu-top-event-kind p {
+  padding: 20px 0px 4px;
+}
+.kinyu-top-event-kind p .date-box {
+  padding: 4px 2px 4px 4px;
+}
+.kinyu-top-event-kind p .date {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bold;
+}
+
 .kinyu-content-after .report-detail-comment p {
   font-size: 12px;
   line-height: 16px;
@@ -1090,6 +1104,9 @@
   background-color: #fff;
   padding: 16px 4% 16px;
 }
+.report-sidebar-event-list li .text-box .kinyu-top-event-kind p {
+  padding: 10px 0px 8px;
+}
 .report-detail-sidebar-el .insta-el li {
   height: 50px;
 }
@@ -1141,7 +1158,7 @@
   height: 120px;
 }
 .about-kinyu-header-contetns-list-el .title-box img {
-  width: 90%;
+  width: 100%;
 }
 /* ABOUT詳細 */
 .about-kinyu-container-left {
@@ -1151,6 +1168,7 @@
   width: 100%;
   padding-left: 0px;
   float: none;
+  border-left: none;
 }
 .about-kinyu-bgarea {
   height: 200px;
@@ -1159,6 +1177,9 @@
   font-size: 18px;
   line-height: 24px;
   padding-bottom: 4px;
+}
+.about-kinyu-description {
+  padding-bottom: 0px;
 }
 .about-kinyu-description .main-catchcopy {
   font-size: 13px;
@@ -1218,6 +1239,12 @@
 }
 .about-kinyu-detail-list {
   padding-top: 20px;
+}
+.about-kinyu-header-contetns-list-el .img-box {
+  width: 58%;
+}
+.about-kinyu-header-contetns-list-el .title-box {
+  width: 42%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1567,6 +1594,25 @@
   padding: 32px 24px;
 }
 
+/* 女子会予約後のメッセージ */
+.joshikai-complete-message {
+  padding: 36px 0px 60px;
+  width: 92%;
+  margin: 0 auto;
+}
+.joshikai-complete-message h2 {
+  font-size: 18px;
+}
+.joshikai-complete-message p {
+  margin-top: 16px;
+}
+.joshikai-complete-message .message-top {
+  margin-top: 8px;
+  font-size: 12px;
+  padding: 8px 0px;
+  margin-top: 24px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ニュース部分
@@ -1602,7 +1648,7 @@
   height: 36px;
 }
 .kinyu-news-list-el .text-box .date {
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 4px;
   font-weight: bold;
 }
@@ -1627,19 +1673,19 @@
   top: 0;
 }
 .report-detail-comment-popup .inner p.main-message {
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 28px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .report-detail-comment-popup .inner p {
-  font-size: 18px;
+  font-size: 12px;
   line-height: 20px;
 }
 .report-detail-comment-popup .inner p.last-message {
   text-align: right;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 12px;
   margin-top: 20px;
 }
 .kinyu-main-single-block {

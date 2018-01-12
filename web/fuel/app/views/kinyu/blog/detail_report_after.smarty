@@ -53,7 +53,16 @@
           <a href="/joshikai/{$event.code}">
             <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
             <div class="text-box">
-              <p class="date">{$event.event_date|date_format:"Y.m.d"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</p>
+              <!-- <p class="date">{$event.event_date|date_format:"Y.m.d"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</p> -->
+              <div class="kinyu-top-list-kind kinyu-top-event-kind">
+                <p>
+                  <span class="date-box">
+                  <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
+                  {$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
+                  </span>
+                  {$event.event_start_datetime}〜{$event.event_end_datetime}
+                </p>
+              </div>
               <p class="title">{$event.title}</p>
             </div>
           </a>
@@ -152,22 +161,15 @@ $(function(){
 
 <!-- コメント -->
 <div class="report-detail-comment-popup">
-  <div class="inner pc">
-    <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
-    <p class="main-message">きんゆう女子。編集部に<br>コメントしていただき、<br>誠にありがとうございます！</p>
-    <p>
-    みなさまからいただいたコメントを<br>参考に、「きんゆう女子。」をさらに<br>ブラッシュアップしてまいりますので、<br>今後ともよろしくお願いいたします♪
-    </p>
-    <p class="last-message">きんゆう女子。編集部より</p>
-  </div>
-
-  <div class="inner sp">
+  <div class="inner">
     <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
     <p class="main-message">きんゆう女子。編集部にコメントしていただき、誠にありがとうございます！</p>
     <p>
-    みなさまからいただいたコメントを参考に、「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
+    みなさまからいただいたコメントを参考に「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
     </p>
     <p class="last-message">きんゆう女子。編集部より</p>
   </div>
 </div>
+
+
 

@@ -15,9 +15,8 @@
 
 <div class="kinyu-list-block">
   <div class="inner">
-    <!-- <div class="pc category-menu">
-      <a href="/"><img class="pc-kinyu-logo" src="/images/kinyu-logo01.png"></a>
-    </div> -->
+    <h2 class="kinyu-top-main-title">ニュース</h2>
+    <p class="kinyu-top-main-sub">きんゆう女子。の最新情報</p>
 
 		<div class="kinyu-news-list clear">
       <!-- <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-news.png" alt="ニュース一覧"></h2>

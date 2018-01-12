@@ -47,6 +47,7 @@
   background: #fff;
   z-index: 1005;
   text-align: center;
+  box-shadow: 0px 0px 2px #d5d3d3;
 }
 .kinyu-header-top .main-logo {
   padding: 28px 0px 16px;
@@ -59,6 +60,7 @@
   position: fixed;
   /*top: 0;*/
   text-align: center;
+  box-shadow: 0px 0px 2px #d5d3d3;
 }
 .kinyu-header h1.main-logo {
   padding: 28px 0px 16px; 
@@ -86,7 +88,7 @@
   letter-spacing: normal;
 }
 .kinyu-header-nav li a {
-  font-size: 11px;
+  font-size: 12px;
   transition: .5s;
 }
 .kinyu-header-nav li.active a {
@@ -300,7 +302,7 @@
   　トップページ・メインコンセプト部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-intro {
-  padding: 24px 6% 72px;
+  padding: 40px 6% 72px;
 }
 .kinyu-top-maincontent-block {
 }
@@ -616,7 +618,7 @@
 .kinyu-list-block {
   width: 1050px;
   margin: 0 auto;
-  padding: 142px 0% 60px!important;
+  padding: 172px 0% 60px!important;
 }
 .kinyu-top-list {
   padding: 0px 0% 0px;
@@ -710,7 +712,7 @@
   　記事詳細部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-details-block {
-  padding-top: 142px;
+  padding-top: 130px;
 }
 .kinyu-main-block .inner {
   background: #fff;
@@ -788,6 +790,26 @@
   line-height: 13px;
   font-weight: bold;
 }
+
+/* イベント部分のみ */
+.kinyu-top-event-kind p {
+  line-height: 20px;
+  padding: 16px 0px 10px;
+}
+.kinyu-top-event-kind p .date-box {
+  border: 1px solid #8ddcd1;
+  padding: 6px 4px 6px 6px;
+  margin-right: 6px;
+  background-color: #8ddcd1;
+  color: #fff;
+}
+.kinyu-top-event-kind p .date {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: bold;
+}
+
+
 /* 本文 */
 .report-detail-main {
   width: 1000px;
@@ -883,6 +905,7 @@
   padding: 16px;
   box-sizing: border-box;
   font-size: 12px;
+  line-height: 18px;
 }
 .report-detail-sidebar-el button {
   display: block;
@@ -914,14 +937,17 @@
   height: 160px;
 }
 .report-sidebar-event-list li .text-box {
-  padding: 16px 2px 0px;
+  padding: 8px 2px 0px;
 }
-.report-sidebar-event-list li .text-box .date {
+.report-sidebar-event-list li .text-box .kinyu-top-event-kind p {
+  padding: 12px 0px 6px;
+}
+/*.report-sidebar-event-list li .text-box .date {
   font-size: 12px;
   line-height: 12px;
   color: #77cbc0;
   font-weight: bold;
-}
+}*/
 .report-sidebar-event-list li .text-box .title {
   width: 100%;
   font-size: 13px;
@@ -1034,7 +1060,7 @@
   　ニュース一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-news-list {
-  padding: 16px 0% 0px;
+  padding: 0px 0% 0px;
   width: 1000px;
   margin: 0 auto;
 }
@@ -1203,7 +1229,7 @@
   height: 400px;
   background: #f9f9f9;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 .joshikai-main-left {
   float: left;
@@ -1286,6 +1312,9 @@
   padding: 16px;
   background: #fff;
   background: #f9f9f9;
+}
+.kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind p {
+  padding: 8px 0px 2px;
 }
 .kinyu-event-list ul {
   letter-spacing: -0.5em;
@@ -1406,11 +1435,6 @@
   font-size: 12px;
 }
 
-
-
-
-
-
 /* 過去の特別女子会 */
 .special-event-list li {
   float: left;
@@ -1434,8 +1458,6 @@
   line-height: 12px;
 }
 
-
-
 /* 女子会ページの詳細 */
 .kinyu-joshikai-detail-block {
   background: #fff;
@@ -1456,8 +1478,9 @@
   line-height: 34px;
 }
 .kinyu-joshikai-detail-el-block {
-  padding: 12px 0px 0px 0px;
+  padding: 40px 0px 0px 0px;
 }
+
 /* 女子会内文章 */
 .joshikai-detail-el-content-box h2 {
   font-size: 16px;
@@ -1494,13 +1517,6 @@
 .kinyu-joshikai-detail-el .info-title {
   margin-bottom: 12px;
 }
-/*.kinyu-joshikai-detail-el h2 {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 16px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e5e5e5;
-}*/
 .joshikai-detail-el-content-box {
   padding-top: 24px;
 }
@@ -1591,11 +1607,11 @@
 .joshikai-detail-el-info .no-menber-fee-el .no-member {
   background: #f1f1f1;
 }
+
 /* メンバー登録なし・参加部分 */
 .no-login-area-joinbtn {
   display: none;
 }
-
 
 .kinyu-event-list-subdescription {
   text-align: center;
@@ -1636,6 +1652,33 @@
   font-size: 20px;
   margin-top: 24px;
   color:#8ddcd1;
+}
+
+/* 女子会予約後のメッセージ */
+.joshikai-complete-message {
+  padding: 36px 0px 80px;
+  text-align: center;
+}
+.joshikai-complete-message h2 {
+  font-size: 22px;
+  color: #77cbc0;
+  font-weight: bold;
+}
+.joshikai-complete-message p {
+  margin-top: 20px;
+}
+.joshikai-complete-message .message-top {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 8px;
+  font-size: 13px;
+  padding: 8px 0px;
+  font-weight: bold;
+  text-align: center;
+  background: #8ddcd1;
+  color: #fff;
+  margin-top: 36px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2197,13 +2240,13 @@
   z-index: 1005;
 }
 .report-detail-comment-popup .inner {
-  width: 600px;
+  width: 500px;
   height: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -250px;
-  margin-left: -300px;
+  margin-left: -250px;
   border: 1px solid #8ddcd1;
   background: rgba(255,255,255,.95);
   padding: 50px 60px;
@@ -2219,23 +2262,22 @@
   width: 100%;
 }
 .report-detail-comment-popup .inner p {
-  font-family: 'erifont';
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 13px;
+  line-height: 24px;
   text-align: center;
 }
 .report-detail-comment-popup .inner p.main-message {
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 20px;
+  line-height: 32px;
   font-weight: bold;
   margin-top: 50px;
   margin-bottom: 20px;
-  color: #3b867b;
+  color: #77cbc0;
 }
 .report-detail-comment-popup .inner p.last-message {
-  text-align: right;
-  font-size: 22px;
-  line-height: 22px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
   margin-top: 24px;
 }
 
@@ -2289,7 +2331,7 @@
 }
 .about-kinyu-header-contetns-list-el:first-child {
   border-top: none; 
-  padding: 10px 0px 24px;
+  padding: 0px 0px 24px;
 }
 .about-kinyu-header-contetns-list-el a {
   display: block;
@@ -2342,7 +2384,7 @@
 .about-kinyu-container {
   width: 1000px;
   margin: 0 auto;
-  padding: 10px 0px 80px;
+  padding: 40px 0px 80px;
 }
 .about-kinyu-container-inner {
   padding-bottom: 50px;
@@ -2497,7 +2539,7 @@
   border-top: 1px solid #e0dede;
 }
 .about-kinyu-detail-list ul {
-  display: inline-block;
+  font-size: 0;
   letter-spacing: -40px;
 }
 .about-kinyu-detail-list li {
@@ -2506,6 +2548,7 @@
   width: 33.3333%;
   border-right: 1px solid #f0f0f0;
   transition: .5s;
+  box-sizing: border-box;
 }
 .about-kinyu-detail-list li a {
   display: block;
@@ -3102,7 +3145,7 @@ footer .navi_kinyu-submenu-copy {
 .login-add-contents-block {
   width: 800px;
   margin: 0 auto;
-  padding: 36px 0px 80px;
+  padding: 40px 0px 80px;
 }
 .login-add-contents-block .main-title {
   text-align: center;
