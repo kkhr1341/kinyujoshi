@@ -67,7 +67,10 @@ p, a {
   line-height: 22px;
   letter-spacing: 0.5px;
   color: #444444;
-  word-wrap: break-word;
+  word-break: normal;
+}
+h1,h2,h3,h4 {
+  word-break: normal;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
