@@ -92,7 +92,7 @@
       <div class="kinyu-top-maincontent-block-el">
 
         <div class="kinyu-top-list kinyu-top-joshikai-list">
-          <h3 class="kinyu-top-main-title">きんゆう女子会。に参加</h3>
+          <h3 class="kinyu-top-main-title">直近のきんゆう女子。会</h3>
           <p class="kinyu-top-main-sub">「おかね」について楽しくお勉強♪<br>毎週木曜日19:00〜開催中！</p>
           <ul class="clear">
           {foreach from=$events key="key" item=event name=loopname}
@@ -144,7 +144,7 @@
               <div class="border-top"></div>
               <p class="main-title">わたしたち、きんゆう女子。と「おかね」について楽しく一緒に勉強しませんか？</p>
               <p class="description">女子会やイベントに参加できたり、新しいサービスをいち早く体験できたりします。中立で正しい情報を私たち自ら取りに行き、みんなでシェアしましょう！お金について語れるお友だちができるかも！</p>
-              <a class="link-to" href="">メンバー登録 / ログイン</a>
+              <a class="link-to" href="/login_regist">メンバー登録はこちら</a>
             </div>
           </div>
         </div>

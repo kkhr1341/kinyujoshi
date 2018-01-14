@@ -48,15 +48,15 @@
         <li style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;">
           <a href=""><p><span>はじめての方へ</span></p></a>
         </li>
-        <li style="background: url(/images/event/about-joshikai4.jpg) top center / cover no-repeat;">
-          <a href="/joshikai"><p><span>女子会の案内</span></p></a>
-        </li>
-        <li style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/2017112210242723846709_10212850110380923_1669592387_o.jpg) center center / cover no-repeat;">
-          <a href="/report"><p><span>レポートを見る</span></p></a>
-        </li>
         <li style="background: url(/images/about/about-story.jpg) center center / cover no-repeat;">
           <a href="/about"><p><span>きんゆう女子。について</span></p></a>
         </li>
+        <li style="background: url(/images/event/about-joshikai4.jpg) top center / cover no-repeat;">
+          <a href="/joshikai"><p><span>女子会の案内</span></p></a>
+        </li>
+        <!-- <li style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/2017112210242723846709_10212850110380923_1669592387_o.jpg) center center / cover no-repeat;">
+          <a href="/report"><p><span>レポートを見る</span></p></a>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -69,7 +69,7 @@
         <!-- きんゆう女子。会 -->
         <div class="kinyu-top-maincontent-block-el">
           <div class="kinyu-top-list kinyu-top-joshikai-list">
-            <h3 class="kinyu-top-main-title">きんゆう女子会。に参加</h3>
+            <h3 class="kinyu-top-main-title">直近のきんゆう女子。会</h3>
             <p class="kinyu-top-main-sub">「おかね」について楽しくお勉強♪<br>毎週木曜日19:00〜開催中！</p>
             <ul class="clear">
             {foreach from=$events key="key" item=event name=loopname}
@@ -127,7 +127,7 @@
                 <div class="border-top"></div>
                 <p class="main-title">わたしたち、きんゆう女子。と「おかね」について楽しく一緒に勉強しませんか？</p>
                 <p class="description">女子会やイベントに参加できたり、新しいサービスをいち早く体験できたりします。中立で正しい情報を私たち自ら取りに行き、みんなでシェアしましょう！お金について語れるお友だちができるかも！</p>
-                <a class="link-to" href="">メンバー登録 / ログイン</a>
+                <a class="link-to" href="/login_regist">メンバー登録はこちら</a>
               </div>
             </div>
           </div>

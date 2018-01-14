@@ -2,33 +2,37 @@
 <div class="kinyu-sp-navi">
   <div class="kinyu-sp-header-menu kinyu-sp-header-close">
     <img class="menu-trigger" src="/images/new/sp-header-close_w.png">
+    <a href="/" class="navi-icon"><img class="top-circle-logo" src="/images/top-circle-logo.png"></a>
   </div>
 
   <div class="inner">
     <p class="pc-menu-trigger-close"><img src="/images/new/sp-header-close.png"></p>
     <ul class="navi_contents-block-menu">
-      <li class="item navi_menu">
+      <!-- <li class="item navi_menu">
         <div class="navi-icon">
           <a href="/"><img class="top-circle-logo" src="/images/top-circle-logo.png"></a>
         </div>
-      </li>
+      </li> -->
 
       <li class="item navi_kinyu-menu-li01">
         <div class="navi_kinyu-menu-block clear">
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/about">きんゆう女子。について</a>
+          <div class="navi_kinyu-menu-block-el navi-el-at">
+            <a class="fc-kinyu" href="/about">きんゆう女子。について</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/login_regist">メンバー登録/ログイン</a>
+            <a href="/login_regist"><!-- <span style="color:#8ddcd1;">◆</span>  -->メンバー登録</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/joshikai">女子会に参加する</a>
+            <a href="/my"><!-- <span style="color:#8ddcd1;">◆</span>  -->マイページ</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/report">レポートを見る</a>
+            <a href="/joshikai"><!-- <span style="color:#8ddcd1;">◆</span>  -->女子会に参加する</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/news">ニュース</a>
+            <a href="/report"><!-- <span style="color:#8ddcd1;">◆</span>  -->レポートを見る</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/news"><!-- <span style="color:#8ddcd1;">◆</span>  -->ニュースを見る</a>
           </div>
         </div>
       </li>

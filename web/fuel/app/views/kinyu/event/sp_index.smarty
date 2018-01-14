@@ -35,7 +35,7 @@
 
       <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>女子会の参加方法を12月5日より変更いたしました。参加方法はこちらより</p>
 
-      <div class="kinyu-event-list joshikai-main-el">
+      <div id="joshikai-list" class="kinyu-event-list joshikai-main-el">
 
         <p class="kinyu-event-info-title">女子会一覧</p>
         <ul>
@@ -111,6 +111,7 @@
             <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai3.jpg) center center / cover no-repeat"></div>
             <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai4.jpg) center center / cover no-repeat"></div>
           </div>
+          <a class="sp link-to" href="#joshikai-list">直近の女子会はこちら</a>
         </div>
       </div>
 

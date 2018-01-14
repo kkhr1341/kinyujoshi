@@ -276,10 +276,10 @@
 .kinyu-sp-navi .inner {
   width: 100%;
   margin: 0 auto;
-  padding: 16px 0px 0px;
+  padding: 60px 0px 0px;
 }
 .kinyu-sp-navi .inner li {
-  width: 82%;
+  width: 96%;
   margin: 0 auto;
 }
 .navi_kinyu-menu-li01 {
@@ -295,9 +295,18 @@
   padding-top: 24px;
   background: #f9f9f9;
 }
+.kinyu-sp-navi .navi-icon {
+  width: 42px;
+  height: 42px;
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  margin-left: -21px;
+}
+
 .kinyu-sp-navi .top-circle-logo {
-  width: 47px;
-  height: 47px;
+  width: 100%;
+  height: 100%;
 }
 .pc-menu-trigger-close {
   display: none;
@@ -364,6 +373,13 @@
   position: relative;
   border-top: 1px solid #e3e3e3;
 }
+.navi_kinyu-menu-block-el.navi-el-at {
+  background-color: #f5f5f5;
+}
+.navi_kinyu-menu-block-el.navi-el-at .fc-kinyu {
+  color: #77cbc0;
+  font-weight: bold;
+}
 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:first-child {
   border-top: none;
 }
@@ -376,7 +392,7 @@
   box-sizing: border-box;
   font-size: 12px;
   line-height: 20px;
-  padding: 14px 0px 14px 4px;
+  padding: 16px 12px;
   transition: .5s;
 }
 .navi_kinyu-menu-block .navi_kinyu-menu-block-el a:hover {
@@ -423,6 +439,8 @@
   line-height: 0;
   margin-bottom: 12px;
   transition: .5s;
+  width: 82%;
+  margin: 0 auto;
 }
 .navi_banner_area .navi_banner_area_el:last-child {
   margin-bottom: 0px;
@@ -546,6 +564,7 @@
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 8px;
+  font-weight: bold;
 }
 .kinyu-top-main-sub {
   font-size: 11px;
@@ -628,12 +647,12 @@
 .introduction-list li:last-child {
   margin-bottom: 0px;
 }
-.introduction-list li:nth-child(2) {
+/*.introduction-list li:nth-child(2) {
   display: none;
 }
 .introduction-list li:nth-child(3) {
   display: none;
-}
+}*/
 .introduction-list li p {
   font-size: 13px;
 }
@@ -1092,6 +1111,11 @@
   font-size: 12px;
   line-height: 18px;
 }
+.report-detail-sidebar-el-title {
+  font-size: 13px;
+  line-height: 13px;
+  margin-bottom: 12px;
+}
 .report-sidebar-event-list li {
   width: 100%;
   margin-right: 2%;
@@ -1306,19 +1330,32 @@
   padding-left: 0px;
 }
 .about-joshikai .text-box .main-title {
-  font-size: 15px;
-  line-height: 24px;
-  margin: 24px 0px 10px;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 16px 0px 10px;
 }
 .about-joshikai .text-box .description {
   line-height: 20px;
+  font-size: 11px;
 }
 .about-joshikai .img-box-el-three-el {
   height: 80px;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 .about-joshikai .text-box-inner {
   margin-top: 28px;
+}
+.about-joshikai-inner .link-to {
+  display: block;
+  background: #8ddcd1;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  padding: 8px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 11px;
 }
 
 /* 女子会リスト */
@@ -1478,7 +1515,7 @@
   margin-left: 0px;
 }
 .joshikai-detail-el-info .joinus-block a, .joshikai-detail-el-info .joinus-block p {
-  padding: 14px 0px;
+  padding: 18px 0px;
   font-size: 12px;
 }
 .joshikai-detail-el-info .joinus-block p:after {
@@ -2045,6 +2082,10 @@ footer .navi-link-top {
   background: none;
   color: #444;
   border-bottom: 1px solid #8ddcd1;
+}
+footer .navi_kinyu-submenu-el a {
+  padding: 0px!important;
+  font-size: 10px;
 }
 
 
