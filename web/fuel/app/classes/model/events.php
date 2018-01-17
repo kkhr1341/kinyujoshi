@@ -87,6 +87,8 @@ class Events extends Base
         $params['username'] = \Auth::get('username');
         $params['code'] = $code;
         $params['created_at'] = \DB::expr('now()');
+        $params['application_num'] = 0;
+        $params['description'] = '';
 //        $params['main_image'] = self::get_main_image($params);
         \DB::insert('events')->set($params)->execute();
 
