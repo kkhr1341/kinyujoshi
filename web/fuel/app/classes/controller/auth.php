@@ -61,7 +61,28 @@ class Controller_Auth extends Controller {
 					$raw = $opauth->get('auth.raw', '?');
 					$age_range_min = @$raw['age_range']['min'];
 					$age_range_max = @$raw['age_range']['max'];
-					
+
+                    // goro's システムでsns関連テーブルへのインサートが行われていなかったので、goro'sシステムでSNSログインをしていた人は関連テーブルへのインサートを行う
+                    if (\Auth::login($opauth->get('auth.uid', '?'), $opauth->get('auth.uid', '?'))) {
+                        $user_id = \Auth::get_user_id();
+                        // call Opauth to link the provider login with the local user
+                        $opauth->link_provider(array(
+                            'parent_id' => (int)$user_id[1],
+                            'provider' => $provider,
+                            'uid' => $opauth->get('auth.uid'),
+                            'access_token' => $opauth->get('auth.credentials.token', null),
+                            'secret' => $opauth->get('auth.credentials.secret', null),
+                            'expires' => $opauth->get('auth.credentials.expires', null),
+                            'refresh_token' => $opauth->get('auth.credentials.refresh_token', null),
+                            'created_at' => time()
+                        ));
+
+                        // ログイン
+                        \Auth::instance()->force_login((int)$user_id[1]);
+                        $url = '/my';
+                        break;
+                    }
+
 					$userdata = [
 						'group' => 1,
 						'uid' => $opauth->get('auth.uid', '?'),
