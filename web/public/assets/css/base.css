@@ -75,7 +75,7 @@ h1,h2,h3,h4 {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
-input,textarea,button {
+input,textarea,button,select {
   background: none;
   border: none;
   border-radius: 0;

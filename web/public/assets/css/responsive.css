@@ -153,6 +153,8 @@
   left: 0;
   z-index: 1005;
   box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;
 }
 .kinyu-sp-header a {
   display: block;
@@ -208,26 +210,25 @@
 /* メニュー */
 .kinyu-sp-menu-block {
   height: 100%;
-  /*margin-right: 54px;*/
 }
 .kinyu-sp-menu-block ul {
-  height: 100%;
-  display:flex;
-  width: 100%;
   padding: 6px;
   box-sizing: border-box;
+  text-align: center;
 }
 .kinyu-sp-menu-block li {
   display: inline-block;
-  width: 25%;
+  max-width: 95px;
   text-align: center;
   box-sizing: border-box;
-  padding: 0px 6px;
+  margin: auto 2%;
   box-sizing: border-box;
-  /*border-right: 1px solid #ccfcf5;*/
+}
+.kinyu-sp-menu-block li:first-child {
+  margin-left: 0;
 }
 .kinyu-sp-menu-block li:last-child {
-  border-right: none;
+  margin-right: 0;
 }
 .kinyu-sp-menu-block li img {
   width: 100%;
@@ -1422,6 +1423,8 @@
 /* 女子会詳細ページ */
 .kinyu-joshikai-detail-inner {
   width: 100%;
+  padding-top: 0px;
+  padding-bottom: 60px;
 }
 .kinyu-joshikai-detail-el-block {
   padding: 0px 0px;
@@ -1526,14 +1529,15 @@
 
 /* 決済ページ */
 .kinyu-joshikai-tickets-block {
-  width: 88%;
+  width: 92%;
   margin: 0 auto;
   margin-top: 32px;
-  border: 1px solid #8ddcd1;
-  padding: 24px;
+  border: none;
+  padding: 0px;
 }
 .kinyu-joshikai-tickets-main-inner {
   height: auto;
+  width: 100%;
 }
 .kinyu-joshikai-tickets-main .tickets-img {
   width: 100%;
@@ -1558,9 +1562,9 @@
   line-height: 12px;
   margin-bottom: 8px;
 }
-.kinyu-joshikai-tickets-payment input {
+.kinyu-joshikai-tickets-payment a {
   margin-bottom: 10px;
-  padding: 12px 0px;
+  padding: 10px 0px;
   font-size: 12px;
 }
 .kinyu-joshikai-tickets-payment-list p {
@@ -1569,20 +1573,41 @@
   text-align: center;
 }
 
+.joinus-open-block .inner {
+  width: 96%;
+  height: 380px;
+  background-color: #fff;
+  position: absolute;
+  top: auto;
+  left: 50%;
+  margin-top: 72px;
+  margin-left: -48%;
+}
+.joinus-open-block .inner form .main-title {
+  font-size: 18px;
+  line-height: 26px;
+}
+
 /* 決済関連フォーム */
+.joshikai-payment-block {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.fee-open {
+  padding-top: 0px;
+}
 .fee-open .inner {
-  width: 92%;
-  height: auto;
-  top: 60px;
-  margin-left: -46%;
-  display: table;
-  padding: 32px 0px 20px;
-  margin-top: 0px;
+  width: 88%;
+}
+.fee-open .inner form {
+  display: block;
 }
 .fee-open .inner form .main-title {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 16px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #77cbc0;
 }
 .joinus-open-block .login-block {
   padding: 0px 0px 24px 0px;
@@ -1605,16 +1630,33 @@
   width: 100%;
 }
 .fee-open .inner form input {
-  padding: 8px;
+  padding: 10px;
+  font-size: 12px;
+}
+.fee-open .inner form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 12px;
+}
+.fee-open .inner form .select-before-title {
+  font-size: 11px;
+}
+.fee-open .inner form .newcards {
+  margin-top: 16px;
+}
+.fee-open .inner form .newcards p {
+  color: #77cbc0;
+  font-weight: bold;
 }
 .day-cash-submit {
   font-size: 12px;
-  width: 150px;
-  padding: 10px 0px;
+  width: 200px;
+  padding: 12px 0px;
+  margin-top: 0px!important;
 }
 .fee-open .inner form label {
-  margin-bottom: 4px;
-  font-size: 11px;
+  margin-bottom: 6px;
+  font-size: 12px;
 }
 .fee-open .inner form .description {
   margin-bottom: 12px;
@@ -1623,7 +1665,7 @@
 
 /* 決済関連フォーム - クレジットカード */
 .day-card-open .inner {
-  padding: 32px 24px;
+  /*padding: 32px 24px;*/
 }
 
 /* 決済関連フォーム - クレジットカード */
@@ -1649,6 +1691,38 @@
   padding: 8px 0px;
   margin-top: 24px;
 }
+
+/* 対応カードの部分 */
+.kinyu-credit-list-block {
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+.kinyu-credit-list {
+  letter-spacing: -40px;
+}
+.kinyu-credit-list-block p {
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 8px;
+  color: #77cbc0;
+  font-weight: bold;
+}
+.kinyu-credit-list li {
+  background: none;
+  width: 20%;
+  padding: 0px;
+  box-sizing: border-box;
+  margin-right: 0px;
+  display: inline-block;
+  letter-spacing: normal;
+}
+.kinyu-credit-list li img {
+  width: 100%;
+}
+
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1777,6 +1851,7 @@
 
 .login-contents-block {
   padding: 80px 0px 50px;
+  font-size: 12px;
 }
 .login-regist-block {
 }
@@ -2047,7 +2122,7 @@ footer .footer-menu {
 .singlepage-footer {
   width: 100%;
   margin: 0 auto;
-  padding: 60px 0px 32px;
+  padding: 60px 0px 80px;
 }
 .footer-logo {
   width: 170px;

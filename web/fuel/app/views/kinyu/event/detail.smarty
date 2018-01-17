@@ -11,7 +11,7 @@ console.log($resArray02);
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
-      <li><a href="/about">きんゆう女子。について</a></li>
+      <li><a href="/about">きん女。ストーリー</a></li>
       <li class="active"><a href="/joshikai">女子会</a></li>
       <li><a href="/report">レポート</a></li>
       <li><a href="/news">ニュース</a></li>
@@ -62,10 +62,10 @@ console.log($resArray02);
 
           <!-- ログインユーザー -->
           <div class="joinus-block">
-          {if array_search('admin', $roles)}
-            <a href="/joshikai_tickets/{$urlcode}">女子会の参加はこちら</a>
+          {if array_search('user', $roles)}
+            <a href="/joshikai_tickets/{$urlcode}">女子会のお申込みはこちら</a>
           {else}
-            <p id="joinus-open">女子会の参加はこちら</p>
+            <p id="joinus-open">女子会のお申込みはこちら</p>
           {/if}
           </div>       
         </div>
@@ -84,7 +84,7 @@ console.log($resArray02);
 </div>
 
 <!-- カード払い（メンバー登録なしのモーダル） -->
-<div id="joinus-open-block" class="joinus-open-block fee-open">
+<div id="joinus-open-block" class="joinus-open-block">
   <div id="joinus-open-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form method="POST" action="/pay" id="no-member-charge-form">
@@ -95,7 +95,7 @@ console.log($resArray02);
 
       <div class="login-block">
         <a class="login" href="/login">ログインして参加</a>
-        <a class="login_regist" href="/login_regist">メンバー登録ページへ</a>
+        <a class="login_regist" href="/login_regist">メンバー登録をして参加</a>
       </div>
 
       <div class="first-login-block">

@@ -1466,6 +1466,7 @@
   width: 1000px;
   margin: 0 auto;
   position: relative;
+  padding-top: 36px;
   padding-bottom: 80px;
 }
 .kinyu-joshikai-detail-title {
@@ -1567,7 +1568,7 @@
   background: #8ddcd1;
   color: #fff;
   text-align: center;
-  padding: 12px 0px;
+  padding: 14px 0px;
 }
 .joshikai-sidebar {
   width: 320px;
@@ -1681,6 +1682,81 @@
   margin-top: 36px;
 }
 
+/* 女子会チケット前の画面 */
+.joinus-open-block {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.95);
+  z-index: 1006;
+}
+.joinus-open-block .inner {
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+.joinus-open-block .inner form .main-title {
+  font-size: 22px;
+  line-height: 32px;
+  border-bottom: none;
+  margin-bottom: 24px;
+  padding-top: 42px;
+  text-align: center;
+}
+.joinus-open-block .login-block {
+  padding: 0px 0px 28px 0px;
+  width: 80%;
+  margin: 0 auto;
+}
+.joinus-open-block .login-block a {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0px;
+  margin-bottom: 12px;
+}
+.joinus-open-block .login-block a.login {
+  background: #8ddcd1;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.joinus-open-block .login-block a.login_regist {
+  background: #f1f1f1;
+}
+.joinus-open-block .login-block a:last-child {
+  margin-bottom: 0px;
+  text-align: center;
+}
+.first-login-block {
+  padding: 28px 0px 0px 0px;
+  border-top: 1px solid #e5e5e5;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.joinus-open-block .first-login-block a {
+  display: block;
+  background: #f9f0ca;
+  margin: 0 auto;
+  padding: 10px 0px;
+  margin-bottom: 12px; 
+}
+#joinus-open-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 12px;
+  background: #fff;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会決済ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -1733,14 +1809,15 @@
   padding-top: 24px;
   border-top: 1px solid #e9e9e9;
 }
-.kinyu-joshikai-tickets-payment input {
+.kinyu-joshikai-tickets-payment a {
   width: 100%;
   display: block;
   margin-bottom: 10px;
   padding: 12px 0px;
   font-size: 14px;
+  text-align: center;
 }
-.kinyu-joshikai-tickets-payment input:nth-child(2) {
+.kinyu-joshikai-tickets-payment a:nth-child(2) {
   margin-bottom: 0px;
 }
 .kinyu-joshikai-tickets-payment .fee-card {
@@ -1755,83 +1832,84 @@
 }
 
 /* 決済画面 */
+.joshikai-payment-block {
+  padding-top: 130px;
+  padding-bottom: 80px;
+}
 .fee-open {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(237, 237, 237, 0.9);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1006;
+  padding-top: 50px;
 }
 .day-card-open {
-  background: rgba(146, 219, 209, 0.87);
-}
-.day-cash-close {
-  background: #fff;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 12px;
 }
 .fee-open .inner {
-  width: 450px;
-  height: 550px;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -275px;
-  margin-left: -225px;
-  display: table;
-  padding: 36px;
+  width: 720px;
+  margin: 0 auto;
 }
 .fee-open .inner form {
-  display: table-cell;
-  vertical-align: middle;
   width: 100%;
   text-align: center;
 }
 .fee-open .inner form .main-title {
   font-size: 22px;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   display: inline-block;
-  border-bottom: 1px solid #77cbc0;
+  border-bottom: 2px solid #77cbc0;
   margin: 0 auto;
   margin-bottom: 12px;
 }
 .fee-open .inner form label {
-  font-size: 12px;
+  font-size: 13px;
   color: #77cbc0;
+  border-left: 2px solid #77cbc0;
   margin-bottom: 8px;
+  margin-left: 1px;
+  padding-left: 6px;
   font-weight: bold;
   width: 100%;
   text-align: left;
 }
 .fee-open .inner form .day-cash-open-form-el p {
   text-align: left;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 20px;
   letter-spacing: 0.1rem;
   color: #a0a0a0;
   margin-top: 0px;
   margin-bottom: 6px;
 }
 .fee-open .inner form .description {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 20px;
   text-align: center;
   color: #727070;
   margin-bottom: 16px;
 }
+.fee-open .fee-open-el {
+  margin-bottom: 24px;
+}
 .fee-open .inner form input {
   width: 100%;
-  background: #f9f9f9;
-  padding: 10px;
-  font-size: 12px;
-  margin-bottom: 12px;
+  background: #f5f5f5;
+  padding: 12px;
+  font-size: 13px;
   box-sizing: border-box;
+}
+.fee-open .inner form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 13px;
+  background: #f5f5f5;
+}
+.fee-open .inner form .select-before-title {
+  text-align: left;
+  font-size: 12px;
+}
+.fee-open .inner form .newcards {
+  margin-top: 16px;
+}
+.fee-open .inner form .newcards p {
+  color: #77cbc0;
+  font-weight: bold;
 }
 .login-btn-list li.email-login-bg a {
   background: #79cec1;
@@ -1843,15 +1921,20 @@
   font-weight: bold;
   font-size: 13px;
   display: block;
-  width: 150px;
+  width: 250px;
   text-align: center;
-  padding: 12px 0px;
+  padding: 16px 0px;
   color: #fff;
   margin: 0 auto;
 }
 .day-card-open .day-cash-submit {
   margin-top: 12px;
 }
+.kinyu-joshikai-tickets-payment-list p {
+  font-size: 12px;
+  text-align: center;
+}
+
 /* カード払い */
 .day-card-open .exp-date-block {
   font-size: 0px;
@@ -1868,49 +1951,37 @@
   margin-right: 4%;
 }
 
-/* 女子会詳細ページ・お申し込み部分 */
-.joinus-open-block {
-}
-.joinus-open-block .inner form .main-title {
-  font-size: 22px;
-  line-height: 32px;
-  border-bottom: none;
-  margin-bottom: 24px;
-}
-.joinus-open-block .login-block {
-  padding: 0px 0px 28px 0px;
-  width: 80%;
+/* 対応カードの部分 */
+.kinyu-credit-list-block {
+  width: 100%;
   margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  background-color: rgba(141, 220, 209, 0.5);
+  padding: 24px;
 }
-.joinus-open-block .login-block a {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 0px;
-  margin-bottom: 12px;
+.kinyu-credit-list {
+  letter-spacing: -40px;
 }
-.joinus-open-block .login-block a.login {
-  background: #8ddcd1;
-  color: #fff;
-  font-weight: bold;
+.kinyu-credit-list-block p {
+  font-size: 13px;
+  line-height: 13px;
+  margin-bottom: 8px;
+  /*color: #77cbc0;*/
+  /*font-weight: bold;*/
 }
-.joinus-open-block .login-block a.login_regist {
-  background: #f1f1f1;
+.kinyu-credit-list li {
+  width: 18.4%;
+  padding: 0px 2%;
+  box-sizing: border-box;
+  margin-right: 2%;
+  display: inline-block;
+  letter-spacing: normal;
+  background-color: #fff;
 }
-.joinus-open-block .login-block a:last-child {
-  margin-bottom: 0px; 
-}
-.first-login-block {
-  padding: 28px 0px 0px 0px;
-  border-top: 1px solid #e5e5e5;
-  width: 80%;
-  margin: 0 auto;
-}
-.joinus-open-block .first-login-block a {
-  display: block;
-  background: #f9f0ca;
-  margin: 0 auto;
-  padding: 10px 0px;
-  margin-bottom: 12px; 
+.kinyu-credit-list li img {
+  width: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2458,7 +2529,7 @@
 .about-kinyu-description .main-description {
   width: 80%;
   margin: 0 auto;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 24px;
 }
 /* story */

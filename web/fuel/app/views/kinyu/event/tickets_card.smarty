@@ -1,11 +1,3 @@
-<script>
-var $url = location.href;
-var $result = $url.replace( "https://" , "" );
-var $result02 = $result.replace( "/event" , "" );
-var $resArray = $result02.split("/");
-var $resArray02 = $resArray[1];
-</script>
-
 <header class="kinyu-header">
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
@@ -20,65 +12,95 @@ var $resArray02 = $resArray[1];
   </nav>
 </header>
 
-<div class="kinyu-single-block joshikai-main-block">
-  <div class="kinyu-joshikai-detail-inner">
+<div class="joshikai-payment-block">
+  <div class="day-card-open fee-open">
+    <div class="inner">
+      <form method="POST" action="/pay" id="charge-form">
+        <input type="hidden" name="event_code" value="{$event.code}" />
+        <span class="charge-errors"></span>
 
-    <div class="kinyu-joshikai-tickets-block">
-      
-      <div class="kinyu-joshikai-tickets-main">
-        <div class="kinyu-joshikai-tickets-main-inner">
-          <div class="tickets-img" style="background:url({$event.main_image}) center center / cover no-repeat;"></div>
-          <h2>{$event.title}</h2>
+        <h2 class="main-title">カードでのお支払いで参加</h2>
+
+        <div class="kinyu-credit-list-block">
+          <p>- 対応カード -</p>
+          <ul class="kinyu-credit-list clear">
+            <li><img src="/images/event/credit/kinyu-credit-visa.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-master.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-jcb.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-amex.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-diners.png"></li>
+          </ul>
         </div>
-      </div>
-      
-      <div class="kinyu-joshikai-tickets-fee">
-        <p class="info-detail"><span>日時</span>：{$event.event_date|date_format:"m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）{$event.event_start_datetime}〜{$event.event_end_datetime}</p>
-        <p><span>参加費</span>：{$event.fee}円</p>
-      </div>
 
-      <div class="kinyu-joshikai-tickets-payment">
+        {$foo="222"}
 
-        <p class="ticket-title">お支払い方法</p>
+        <div class="fee-open-el">
+          <label>カード番号</label>
 
-        <div class="kinyu-joshikai-tickets-payment-list">
+          {if $foo == "111"}
+            <input type="text" class="number" name="number" maxlength="16" placeholder="カード番号">
+          {else}
+            <p class="select-before-title">・利用可能なクレジットカード</p>
+            <select id="cardselect" name="cardselect">
+              <option value="01">下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</option>
+              <option value="02">下3桁 311 (MARIKO SUZUKI) 有効期限 20/12</option>
+              <option value="newcard">新しいカードで決済する</option>
+            </select>
+          {/if}
+          <div class="newcards" style="display: none;">
+            <p class="select-before-title">・新しいカード番号を入力してください</p>
+            <input type="text" class="number" name="number" maxlength="16" placeholder="新しいカード番号">
+          </div>
+        </div>
 
-        <!-- ログインチェック -->
+        <script>
+          $('#cardselect').on('change', function(){
+            var cat = $(this).val(); //選択された項目のvalueを取得
+            console.log(cat);
+            if(cat=="newcard") {
+              $(".newcards").slideDown(500);
+            } else {
+              $(".newcards").slideUp(500);
+            }
+          });
+        </script>
+
+        <div class="fee-open-el">
+          <label>セキュリティコード</label>
+          <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
+        </div>
+
+        <div class="fee-open-el">
+          <label>有効期限</label>
+          <div class="exp-date-block">
+            <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
+            <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+          </div>
+        </div>
+
+        <!-- ログインしていない場合 -->
         {if array_search('user', $roles)}
-          <!-- ログインユーザー -->
-          {if $event.creditch == 1}
-            <!-- <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">
-            <input type="button" class="info-link fee-cash day-cash-btn" value="当日現金でお支払い"> -->
-            <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-            <a href="/joshikai_payment_cash/{$urlcode}" class="info-link fee-cash day-cash-btn">当日でお支払い</a>
-          {else if $event.creditch == 0}
-            <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-            <p>＊お席の予約が必要なため、クレジットカードのみとなります。</p>
-          {else}
-            <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-            <a href="/joshikai_payment_cash/{$urlcode}" class="info-link fee-cash day-cash-btn">当日でお支払い</a>
-          {/if}
         {else}
-          <!-- ログインしていないユーザー -->
-          {if $event.creditch == 1}
-            <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-            <a href="/joshikai_payment_cash/{$urlcode}" class="info-link fee-cash day-cash-btn">当日でお支払い</a>
-          {else if $event.creditch == 0}
-            <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-            <p>＊お席の予約が必要なため、クレジットカードのみとなります。</p>
-          {else}
-            <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-            <a href="/joshikai_payment_cash/{$urlcode}" class="info-link fee-cash day-cash-btn">当日でお支払い</a>
-          {/if}
+
+          <div class="fee-open-el">
+            <label>お名前（フルネーム）</label>
+            <input type="text" id="name" class="" placeholder="">
+          </div>
+
+          <div class="fee-open-el">
+            <label>メールアドレス</label>
+            <input type="text" id="name" class="" placeholder="">
+          </div>
+
         {/if}
 
-        </div>
-
-      </div>
+        <button class="day-cash-submit" type="submit">女子会に参加する</button>
+      </form>
     </div>
   </div>
+
 </div>
-              
+
 <script type="text/javascript" src="https://js.pay.jp/"></script>
 <script type="text/javascript">Payjp.setPublicKey('{$payjp_public_key}');</script>
 <script>

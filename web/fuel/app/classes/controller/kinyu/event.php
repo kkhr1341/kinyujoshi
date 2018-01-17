@@ -80,6 +80,41 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['event'] = Events::getByCode('events', $code);
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code);
+        $this->data['event_row'] = Events::getByCode('events', $code);
+        //$this->data['event'] = Events::getByCode('events', $code);
+        $this->template->ogimg = $this->data['event']['main_image'];
+        $this->data['top_blogs'] = Blogs::lists(1, 5, true);
+        $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
+        $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
+        $this->template->description = $this->data['event']['title'];
+        $this->template->urlcode = $this->data['event_row']['code'];
+
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->kinyu_event_notes = View::forge('kinyu/event/notes.smarty', $this->data);
+        $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+        $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        } else {
+            $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        }
+        $this->template->contents = View::forge('kinyu/event/tickets.smarty', $this->data);
+    }
+
+    public function action_tickets_card($code)
+    {
+
+        \Config::load('payjp', true);
+        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
+        // 最新を取得
+        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
+        $this->data['event'] = Events::getByCode('events', $code);
+        $this->template->title = 'イベント詳細｜きんゆう女子。';
+        $this->data['join_status'] = Applications::join_status($code);
         //$this->data['event'] = Events::getByCode('events', $code);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -101,7 +136,43 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
             $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
             $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         }
-        $this->template->contents = View::forge('kinyu/event/tickets.smarty', $this->data);
+        $this->template->contents = View::forge('kinyu/event/tickets_card.smarty', $this->data);
+    }
+
+    public function action_tickets_cash($code)
+    {
+
+        \Config::load('payjp', true);
+        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
+        // 最新を取得
+        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
+        $this->data['event'] = Events::getByCode('events', $code);
+        $this->template->title = 'イベント詳細｜きんゆう女子。';
+        $this->data['join_status'] = Applications::join_status($code);
+        //$this->data['event'] = Events::getByCode('events', $code);
+        $this->data['event_row'] = Events::getByCode('events', $code);
+        $this->template->ogimg = $this->data['event']['main_image'];
+        $this->data['top_blogs'] = Blogs::lists(1, 5, true);
+        $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
+        $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
+        $this->template->description = $this->data['event']['title'];
+        $this->template->urlcode = $this->data['event_row']['code'];
+
+
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->kinyu_event_notes = View::forge('kinyu/event/notes.smarty', $this->data);
+        $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+        $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        } else {
+            $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        }
+        $this->template->contents = View::forge('kinyu/event/tickets_cash.smarty', $this->data);
     }
 
     public function action_complete()

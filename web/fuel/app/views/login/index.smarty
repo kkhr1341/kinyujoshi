@@ -2,7 +2,7 @@
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
-      <li><a href="/about">きんゆう女子。について</a></li>
+      <li><a href="/about">きん女。ストーリー</a></li>
       <li><a href="/joshikai">女子会</a></li>
       <li><a href="/report">レポート</a></li>
       <li><a href="/news">ニュース</a></li>
@@ -17,7 +17,7 @@
   <div class="login-contents-block">
     <a class="login-another-btn" href="/login_regist">メンバー登録へ</a>
     <div class="login-contents-intro">
-      <h2 class="login-contents-title"><span>きんゆう女子。にログインする</span></h2><br>
+      <h2 class="login-contents-title"><span>マイページにログインする</span></h2><br>
       <a class="caution" href=""><span style="color: red;">＊</span>ログイン機能ができる前にメンバー登録をいただいている方はこちら</a>
     </div>
     <div class="login-contents-block-inner clear">
