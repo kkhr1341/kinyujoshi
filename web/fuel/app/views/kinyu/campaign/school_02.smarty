@@ -280,7 +280,7 @@
         <div class="sponsor-list">
           <ul class="clear">
             <li><img src="/images/content/school_public/company/jpx2.jpg"></li>
-            <li><img src="/images/content/school_public/company/heiwa.jpg"></li>
+            <!-- <li><img src="/images/content/school_public/company/heiwa.jpg"></li> -->
           </ul>
         </div>
       </div>
