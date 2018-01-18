@@ -101,7 +101,7 @@
               <p><span>第4回：3月1日(木) 17:00〜22:00</span><br>卒業テスト、卒業式＠東証<br>お金と向き合って人生を楽しもう</p>
               <p><span>謝恩会：3月17日(土) 11:30〜13:30</span></p>
             </div>
-            <p class="class-el-sub"><span style="color:red;">※</span>※学院日程は変更になる場合がございます。<br>あらかじめご了承ください。</p>
+            <p class="class-el-sub"><span style="color:red;">※</span>学院日程は変更になる場合がございます。<br>あらかじめご了承ください。</p>
           </div>
           <div class="theme-block" id="document_first_day">
             <p class="theme-title"><主なテーマ></p>
@@ -134,6 +134,7 @@
                 </div>
               </li>
             </ul>
+            <p class="p-sub"><span style="color:red;">※</span>スケジュールの内容や、会場が予告なく変更になる場合がございます。あらかじめご了承ください。</p>
           </div>
 
           <!-- <a class="kinyu-gakuin-link" href="/download/gakuin_curriculum_20161121.pdf" target="_blank">授業カリキュラムはこちら</a>
@@ -335,6 +336,10 @@
   left: auto;
   right: 20px;
 }
+.course-place .p-sub {
+  margin-top:36px;
+  text-align:center;
+}
 @media screen and (max-width: 480px) {
   .jpx-img {
     top: 10px;
@@ -344,6 +349,10 @@
     font-size: 13px;
     line-height: 20px;
     border-bottom: none;
+  }
+  .course-place .p-sub {
+    margin-top:16px;
+    font-size: 11px;
   }
 }
 </style>
