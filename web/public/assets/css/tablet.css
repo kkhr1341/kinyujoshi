@@ -1,0 +1,49 @@
+/* ----------------------------------
+    タブレットのみ（ipad&ipadpro）
+---------------------------------- */
+@media screen and (min-width: 480px) and (max-width:1024px) {
+
+
+
+
+
+
+
+/* ----------------------------------
+    ヘッダー
+---------------------------------- */
+.fix-header-sp {
+  height: 60px;
+}
+.header-sp-logo {
+  width: 150px;
+  margin-top: 12px;
+}
+.kinyu-sp-menu-block li {
+  max-width: 120px;
+}
+
+/* ナビゲーションブロック */
+.kinyu-sp-header-menu {
+  width: 60px;
+  height: 60px;
+}
+.kinyu-sp-header-menu img {
+  width: 60px;
+  height: 60px;
+}
+
+
+/* ----------------------------------
+    ナビゲーション
+---------------------------------- */
+.kinyu-sp-navi .inner li.navi_kinyu-menu-li04 img {
+  width: 60%;
+}
+.navi_banner_area .navi_banner_area_el {
+  width: 50%;
+}
+
+
+
+}

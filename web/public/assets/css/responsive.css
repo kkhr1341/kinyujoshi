@@ -1,7 +1,7 @@
 /* ----------------------------------
     スマートフォン＆タブレット
 ---------------------------------- */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマホのみ
@@ -568,7 +568,8 @@
   font-weight: bold;
 }
 .kinyu-top-main-sub {
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 16px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1314,9 +1315,10 @@
   font-size: 12px;
 }
 .kinyu-event-info-title {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   margin-bottom: 16px;
+  font-weight: bold;
 }
 .about-joshikai .img-box {
   width: 100%;
@@ -1356,7 +1358,7 @@
   padding: 8px 20px;
   color: #fff;
   font-weight: bold;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /* 女子会リスト */
@@ -1395,7 +1397,7 @@
   font-size: 11px;
 }
 .kinyu-event-list li .event-title {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 20px;
   margin: 12px 0px;
 }
@@ -1511,14 +1513,14 @@
   border-top: none;
   padding-top: 0px;
   position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
+  width: 96%;
+  bottom: 64px;
+  left: 50%;
+  margin-left: -48%;
   z-index: 1004;
-  margin-left: 0px;
 }
 .joshikai-detail-el-info .joinus-block a, .joshikai-detail-el-info .joinus-block p {
-  padding: 18px 0px;
+  padding: 12px 0px;
   font-size: 12px;
 }
 .joshikai-detail-el-info .joinus-block p:after {
@@ -1896,7 +1898,7 @@
 }
 .login-contents-form-area label.title {
   margin-bottom: 12px;
-  font-size: 13px;
+  font-size: 12px;
 }
 .login-contents-regist .regist-email-label {
   padding: 0px 0px 0px 8px;
@@ -2037,6 +2039,7 @@
 .company-details .first-description {
   padding-bottom: 0px;
   font-size: 11px;
+  line-height: 20px;
 }
 .company-details-el {
   margin: 24px 0px;
@@ -2061,7 +2064,7 @@
   font-size: 18px;
 }
 .company-details-service-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 10px;
 }

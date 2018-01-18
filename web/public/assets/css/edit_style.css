@@ -326,8 +326,8 @@
   width: 100%;
 }
 .kinyu-top-introlist-left .main-intro-description {
-  font-size: 11px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 22px;
 }
 .main-intro-link {
   display: inline-block;
@@ -2727,6 +2727,15 @@
   padding: 0px 20px;
   margin-left: 8px;
   background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
+}
+.company-contact .form-control {
+  border: 1px solid #e5e5e5;
+  font-size: 12px;
+}
+.company-contact .form-group .form-title {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 8px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

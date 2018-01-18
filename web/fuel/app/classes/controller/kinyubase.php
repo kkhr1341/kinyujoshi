@@ -66,8 +66,8 @@ class Controller_Kinyubase extends Controller_Template
 					'kinyu/bg.css',
 					//'style.css',
 					'edit_style.css',
-					'tablet.css',
-					'responsive.css'
+					'responsive.css',
+					'tablet.css'
 				), array(), 'layout', false);
 		
 		Asset::js(array(

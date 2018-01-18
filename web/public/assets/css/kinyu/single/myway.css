@@ -488,6 +488,7 @@
 .main-img-box-container {
   height: auto;
   overflow: hidden;
+  margin-top: 0px;
 }
 .main-img-box {
   width: 100%;
@@ -532,7 +533,7 @@
   width: 100%;
 }
 .intoduction-title {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 32px;
   margin-bottom: 20px;
 } 
@@ -542,8 +543,8 @@
 }
 .myway-introduction .myway-description p {
   width: 84%;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 20px;
 }
 
 /* イントロダクション-画像 */
@@ -624,7 +625,7 @@
 }
 .myway-content-list-el .text-box .myway-to-link {
   width: 84%;
-  font-size: 13px;
+  font-size: 12px;
   padding: 12px 0px;
   margin-top: 20px;
   position: relative;
@@ -641,6 +642,7 @@
 }
 .myway-content-list-el .text-box .description {
   font-size: 11px;
+  line-height: 18px;
 }
 
 /* coming-soon */
