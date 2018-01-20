@@ -5,6 +5,7 @@ use \Model\Blogs;
 use \Model\Profiles;
 use \Model\Eventkuchikomi;
 use \Model\Applications;
+use \Model\UserCreditCard;
 
 class Controller_Kinyu_Event extends Controller_Kinyubase
 {
@@ -122,6 +123,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->template->description = $this->data['event']['title'];
 
+        // 登録カード取得
+        $cards = array();
+        $username = \Auth::get('username');
+        if ($username) {
+            $cards = UserCreditCard::lists($username);
+        }
+        $this->data['cards'] = $cards;
 
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->kinyu_event_notes = View::forge('kinyu/event/notes.smarty', $this->data);

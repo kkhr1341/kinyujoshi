@@ -4,7 +4,7 @@ namespace Model;
 use Oil\Exception;
 
 use Payjp\Payjp;
-use Payjp\Charge;
+//use Payjp\Charge;
 
 require_once(dirname(__FILE__)."/base.php");
 
@@ -85,7 +85,32 @@ class Applications extends Base {
 		
 		return true;
 	}
-	
+
+	private static function getCustomerOfPayjp($username) {
+	    try {
+            return \Payjp\Customer::retrieve($username);
+        } catch (\Payjp\Error\InvalidRequest $e) {
+	        return false;
+        }
+    }
+    private static function createCustomerOfPayjp($username) {
+        try {
+            return \Payjp\Customer::create(array(
+                'id' => $username,
+            ));
+        } catch (\Payjp\Error\InvalidRequest $e) {
+            throw new \Exception("顧客情報の登録に失敗しました。");
+        }
+    }
+    private static function createCardOfPayjp(\Payjp\Customer $customer, $token) {
+	    try {
+            return $customer->cards->create(array(
+                'card' => $token
+            ));
+        } catch (\Payjp\Error\InvalidRequest $e) {
+	        throw new \Exception("既にご登録のあるカードです。");
+        }
+    }
 	
 	/**
 	 * 参加申し込み
@@ -94,50 +119,50 @@ class Applications extends Base {
 	 */
 	public static function create($params) {
 
-		$username = \Auth::get('username');
-
-        $event = self::getByCode('events', $params['event_code']);
-
-		// 申し込み人数
-        $result = \DB::select(\DB::expr('COUNT(*) as count'))
-            ->from('applications')
-            ->where('event_code', '=', $params['event_code'])
-            ->where('cancel', '=', 0)
-            ->where('disable', '=', 0)
-            ->execute();
-        $result_arr = $result->current();
-        $application_num = $result_arr['count'];
-
-		// 下書き
-		if (empty($event) || $event['status'] != 1) {
-			return "イベントが見つかりませんでした";
-		}
-		
-		if (intval($event['limit']) <= intval($application_num)) {
-			return "このイベントは満席です";
-		}
-		
-//		// 終了チェック
-//		if ($event['event_start_datetime'] < date('Y-m-d H:i:s')) {
-//			return "このイベントは終了しています";
-//		}
-		
-		// 既存のデータがないか確認
-		$data = \DB::select('*')->from('applications')
-					->where('event_code', '=', $params['event_code'])
-					->where('username', '=', $username)
-					->where('cancel', '=', 0)
-					->where('disable', '=', 0)
-					->execute()
-					->current();
-
-		if (!empty($data)) {
-			return "既に参加申し込みずみです";
-		}
-
         $db = \Database_Connection::instance();
         $db->start_transaction();
         try {
+            $username = \Auth::get('username');
+
+            $event = self::getByCode('events', $params['event_code']);
+
+            // 申し込み人数
+            $result = \DB::select(\DB::expr('COUNT(*) as count'))
+                ->from('applications')
+                ->where('event_code', '=', $params['event_code'])
+                ->where('cancel', '=', 0)
+                ->where('disable', '=', 0)
+                ->execute();
+            $result_arr = $result->current();
+            $application_num = $result_arr['count'];
+
+            // 下書き
+            if (empty($event) || $event['status'] != 1) {
+                return "イベントが見つかりませんでした";
+            }
+
+            if (intval($event['limit']) <= intval($application_num)) {
+                return "このイベントは満席です";
+            }
+
+    //		// 終了チェック
+    //		if ($event['event_start_datetime'] < date('Y-m-d H:i:s')) {
+    //			return "このイベントは終了しています";
+    //		}
+
+            // 既存のデータがないか確認
+            $data = \DB::select('*')->from('applications')
+                        ->where('event_code', '=', $params['event_code'])
+                        ->where('username', '=', $username)
+                        ->where('cancel', '=', 0)
+                        ->where('disable', '=', 0)
+                        ->execute()
+                        ->current();
+
+            if (!empty($data)) {
+                return "既に参加申し込みずみです";
+            }
+
             $application_code = self::getNewCode('applications');
 
             \DB::insert('applications')->set(array(
@@ -149,31 +174,77 @@ class Applications extends Base {
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
-            if ($params['token']) {
+            // 与信
+            \Config::load('payjp', true);
+            Payjp::setApiKey(\Config::get('payjp.private_key'));
 
-                \DB::insert('application_credit_payments')->set(array(
-                    'application_code' => $application_code,
-                    'token' => $params['token'],
+            // Payjpに顧客情報登録 or 取得
+            if (!$customer = self::getCustomerOfPayjp($username)) {
+                $customer = self::createCustomerOfPayjp($username);
+                // トランザクション失敗時の登録取り消し用
+                $new_customer = $customer;
+            }
+
+            if ($params['cardselect'] === '0') {
+
+                // 新しいカードで決済
+                $new_card = self::createCardOfPayjp($customer, $params['token']);
+
+                // 登録カードリソースデータ作成（二回目にカードを使う用）
+                \DB::insert('user_credit_cards')->set(array(
+                    'username' => $username,
+                    'card_id' => $new_card->id,
                     'created_at' => \DB::expr('now()'),
                 ))->execute();
 
-                // 与信
-                \Config::load('payjp', true);
-                Payjp::setApiKey(\Config::get('payjp.private_key'));
-                Charge::create(array(
+                $result = \Payjp\Charge::create(array(
                     'amount' => $event['fee'],
                     'currency' => 'jpy',
                     'capture' => false,
-                    'card' => $params['token'],
+                    'customer' => $customer,
+                    'card' => $new_card,
+                    'metadata' => array(
+                        'application_code' => $application_code
+                    )
+                ));
+            } else {
+                // 登録カードで決済
+                $result = \Payjp\Charge::create(array(
+                    'amount' => $event['fee'],
+                    'currency' => 'jpy',
+                    'capture' => false,
+                    'customer' => $customer,
+                    'card' => $params['cardselect'],
+                    'metadata' => array(
+                        'name' => $params['name'],
+                        'email' => $params['email'],
+                        'application_code' => $application_code
+                    )
                 ));
             }
+            // クレジット決済イベントデータ作成
+            \DB::insert('application_credit_payments')->set(array(
+                'application_code' => $application_code,
+                'charge_id' => $result->id,
+                'created_at' => \DB::expr('now()'),
+            ))->execute();
 
             $db->commit_transaction();
 
             return true;
         } catch (\Exception $e) {
+
             $db->rollback_transaction();
-            return $e;
+
+            if (isset($new_customer)) {
+                $new_customer->delete();
+            }
+
+            if (isset($new_card)) {
+                $new_card->delete();
+            }
+
+            throw $e;
         }
 	}
 	

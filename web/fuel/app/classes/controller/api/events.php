@@ -47,12 +47,15 @@ class Controller_Api_Events extends Controller_Base
 			\Session::set('referrer', \Input::referrer());
 			$this->ok('login');
 		}
-		
-		$res = Applications::create(\Input::all());
-		if (is_string($res)) {
-			$this->error($res);
-		}
-		$this->ok($res);
+		try {
+            $res = Applications::create(\Input::all());
+            if (is_string($res)) {
+                $this->error($res);
+            }
+            $this->ok($res);
+        } catch (Exception $e) {
+            $this->error($e->getMessage());
+        }
 	}
 
 
