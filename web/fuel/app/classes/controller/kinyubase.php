@@ -82,6 +82,7 @@ class Controller_Kinyubase extends Controller_Template
 					'loader.js',
 					'ajax.js',
 					'redactor.js',
+					'payment.js',
 					//'video.js',
 					'imagemanager.js',
 					//'inlinestyle.js',

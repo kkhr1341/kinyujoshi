@@ -5,6 +5,7 @@ use Oil\Exception;
 
 use Payjp\Payjp;
 //use Payjp\Charge;
+use \Model\Payment;
 
 require_once(dirname(__FILE__)."/base.php");
 
@@ -52,7 +53,6 @@ class Applications extends Base {
 		
 		return true;
 	}
-
 
 	public static function cancel($params) {
 
@@ -163,8 +163,10 @@ class Applications extends Base {
                 return "既に参加申し込みずみです";
             }
 
+            // 申し込みイベンドコード生成
             $application_code = self::getNewCode('applications');
 
+            // 申し込みイベントデータ作成
             \DB::insert('applications')->set(array(
                 'code' => $application_code,
                 'event_code' => $params['event_code'],
@@ -176,56 +178,55 @@ class Applications extends Base {
 
             // 与信
             \Config::load('payjp', true);
-            Payjp::setApiKey(\Config::get('payjp.private_key'));
 
-            // Payjpに顧客情報登録 or 取得
-            if (!$customer = self::getCustomerOfPayjp($username)) {
-                $customer = self::createCustomerOfPayjp($username);
-                // トランザクション失敗時の登録取り消し用
-                $new_customer = $customer;
-            }
+            $payment = new Payment(\Config::get('payjp.private_key'));
 
-            if ($params['cardselect'] === '0') {
+            if ($username) {
+                // 会員登録して申し込み
 
-                // 新しいカードで決済
-                $new_card = self::createCardOfPayjp($customer, $params['token']);
+                // Payjpに顧客情報登録 or 取得
+                if (!$customer = $payment->getCustomer($username)) {
+                    $customer = $payment->createCustomer($username);
+                    // トランザクション失敗時の登録取り消し用
+                    $new_customer = $customer;
+                }
 
-                // 登録カードリソースデータ作成（二回目にカードを使う用）
-                \DB::insert('user_credit_cards')->set(array(
-                    'username' => $username,
-                    'card_id' => $new_card->id,
-                    'created_at' => \DB::expr('now()'),
-                ))->execute();
-
-                $result = \Payjp\Charge::create(array(
-                    'amount' => $event['fee'],
-                    'currency' => 'jpy',
-                    'capture' => false,
-                    'customer' => $customer,
-                    'card' => $new_card,
-                    'metadata' => array(
-                        'application_code' => $application_code
-                    )
-                ));
+                if ($params['cardselect'] === '0') {
+                    // 新しいカードで決済
+                    $new_card = $payment->createCard($customer, $params['token']);
+                    // 登録カードリソースデータ作成（二回目にカードを使う用）
+                    \DB::insert('user_credit_cards')->set(array(
+                        'username' => $username,
+                        'card_id' => $new_card->id,
+                        'created_at' => \DB::expr('now()'),
+                    ))->execute();
+                    $charge = $payment->chargeByNewCard($event['fee'], $customer, $new_card, $application_code);
+                } else {
+                    // 登録カードで決済
+                    $charge = $payment->chargeByRegistCard(
+                        $event['fee'],
+                        $customer,
+                        $params['cardselect'],
+                        $application_code
+                    );
+                }
             } else {
+                // 会員登録せずに申し込み
+
                 // 登録カードで決済
-                $result = \Payjp\Charge::create(array(
-                    'amount' => $event['fee'],
-                    'currency' => 'jpy',
-                    'capture' => false,
-                    'customer' => $customer,
-                    'card' => $params['cardselect'],
-                    'metadata' => array(
-                        'name' => $params['name'],
-                        'email' => $params['email'],
-                        'application_code' => $application_code
-                    )
-                ));
+                $charge = $payment->chargeByToken(
+                    $event['fee'],
+                    $params['token'],
+                    $application_code,
+                    $params['name'],
+                    $params['email']
+                );
             }
+
             // クレジット決済イベントデータ作成
             \DB::insert('application_credit_payments')->set(array(
                 'application_code' => $application_code,
-                'charge_id' => $result->id,
+                'charge_id' => $charge->id,
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
@@ -247,5 +248,4 @@ class Applications extends Base {
             throw $e;
         }
 	}
-	
 }

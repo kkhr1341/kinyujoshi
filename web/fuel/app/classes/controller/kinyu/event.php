@@ -40,7 +40,6 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_detail($code)
     {
-
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
         $this->data['event'] = Events::getByCode('events', $code);

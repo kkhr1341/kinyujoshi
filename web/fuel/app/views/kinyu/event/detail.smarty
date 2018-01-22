@@ -62,7 +62,7 @@ console.log($resArray02);
 
           <!-- ログインユーザー -->
           <div class="joinus-block">
-          {if array_search('user', $roles)}
+          {if array_search('user', $roles) || array_search('admin', $roles)}
             <a href="/joshikai_tickets/{$urlcode}">女子会のお申込みはこちら</a>
           {else}
             <p id="joinus-open">女子会のお申込みはこちら</p>
