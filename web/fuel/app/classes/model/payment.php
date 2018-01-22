@@ -24,7 +24,8 @@ class Payment extends Base {
             'customer' => $customer,
             'card' => $card,
             'metadata' => array(
-                'application_code' => $application_code
+                'application_code' => $application_code,
+                'username' => $customer->id,
             )
         ));
     }
@@ -37,7 +38,8 @@ class Payment extends Base {
             'customer' => $customer,
             'card' => $card,
             'metadata' => array(
-                'application_code' => $application_code
+                'application_code' => $application_code,
+                'username' => $customer->id,
             )
         ));
     }
@@ -49,9 +51,10 @@ class Payment extends Base {
             'capture' => false,
             'card' => $token,
             'metadata' => array(
+                'application_code' => $application_code,
+                'username' => 'guest',
                 'name' => $name,
                 'email' => $email,
-                'application_code' => $application_code
             )
         ));
     }

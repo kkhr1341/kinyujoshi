@@ -111,7 +111,38 @@ class Applications extends Base {
 	        throw new \Exception("既にご登録のあるカードです。");
         }
     }
-	
+
+    /**
+     * 参加申し込み確認
+     */
+    private static function completed($event_code, $username, $email='') {
+
+        if ($username == 'guest') {
+            // 既存のデータがないか確認
+            $data = \DB::select('*')->from('applications')
+                ->where('event_code', '=', $event_code)
+                ->where('username', '=', $username)
+                ->where('email', '=', $email)
+                ->where('cancel', '=', 0)
+                ->where('disable', '=', 0)
+                ->execute()
+                ->current();
+        } else {
+            // 既存のデータがないか確認
+            $data = \DB::select('*')->from('applications')
+                ->where('event_code', '=', $event_code)
+                ->where('username', '=', $username)
+                ->where('cancel', '=', 0)
+                ->where('disable', '=', 0)
+                ->execute()
+                ->current();
+        }
+        if (empty($data)) {
+            return false;
+        }
+        return true;
+    }
+
 	/**
 	 * 参加申し込み
 	 * @param unknown $params
@@ -125,6 +156,20 @@ class Applications extends Base {
             $username = \Auth::get('username');
 
             $event = self::getByCode('events', $params['event_code']);
+
+            $name = isset($params['name']) && $params['name']? $params['name']: '';
+
+            $email = isset($params['email']) && $params['email']? $params['email']: '';
+
+            // 会員登録をせずに申し込む場合は名前とメールアドレスは必須
+            if ($params['cardselect'] === '0' && (!$username || $username == 'guest')) {
+                if (empty($name)) {
+                    return "お名前（フルネーム）を入力してください";
+                }
+                if (empty($email)) {
+                    return "メールアドレスを入力してください";
+                }
+            }
 
             // 申し込み人数
             $result = \DB::select(\DB::expr('COUNT(*) as count'))
@@ -150,16 +195,7 @@ class Applications extends Base {
     //			return "このイベントは終了しています";
     //		}
 
-            // 既存のデータがないか確認
-            $data = \DB::select('*')->from('applications')
-                        ->where('event_code', '=', $params['event_code'])
-                        ->where('username', '=', $username)
-                        ->where('cancel', '=', 0)
-                        ->where('disable', '=', 0)
-                        ->execute()
-                        ->current();
-
-            if (!empty($data)) {
+            if (self::completed($params['event_code'], $username, $email)) {
                 return "既に参加申し込みずみです";
             }
 
@@ -173,6 +209,8 @@ class Applications extends Base {
                 'username' => $username,
                 'amount' => $event['fee'],
                 'payment_method' => 1,
+                'name' => $name,
+                'email' => $email,
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
@@ -181,7 +219,18 @@ class Applications extends Base {
 
             $payment = new Payment(\Config::get('payjp.private_key'));
 
-            if ($username) {
+            if (!$username || $username == 'guest') {
+                // 会員登録せずに申し込み
+
+                // 登録カードで決済
+                $charge = $payment->chargeByToken(
+                    $event['fee'],
+                    $params['token'],
+                    $application_code,
+                    $params['name'],
+                    $params['email']
+                );
+            } else {
                 // 会員登録して申し込み
 
                 // Payjpに顧客情報登録 or 取得
@@ -210,17 +259,6 @@ class Applications extends Base {
                         $application_code
                     );
                 }
-            } else {
-                // 会員登録せずに申し込み
-
-                // 登録カードで決済
-                $charge = $payment->chargeByToken(
-                    $event['fee'],
-                    $params['token'],
-                    $application_code,
-                    $params['name'],
-                    $params['email']
-                );
             }
 
             // クレジット決済イベントデータ作成

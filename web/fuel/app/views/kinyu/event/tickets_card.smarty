@@ -32,39 +32,25 @@
           </ul>
         </div>
 
-        {$foo="222"}
-
         <div class="fee-open-el">
           <label>カード番号</label>
-
-          {if $foo == "111"}
-            <input type="text" class="number" name="number" maxlength="16" placeholder="カード番号">
-          {else}
+          {if array_search('user', $roles) || array_search('admin', $roles)}
             <p class="select-before-title">・利用可能なクレジットカード</p>
             <select id="cardselect" name="cardselect">
-              {foreach from=$cards key="key" item=card name=loopname}
-              <option value="{$card.card_id}">下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</option>
-              {/foreach}
+                {foreach from=$cards key="key" item=card name=loopname}
+                  <option value="{$card.card_id}">下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</option>
+                {/foreach}
               <option value="0">新しいカードで決済する</option>
             </select>
+            <div class="newcards" style="display: none;">
+              <p class="select-before-title">・新しいカード番号を入力してください</p>
+              <input type="text" class="number" name="number" maxlength="16" placeholder="新しいカード番号">
+            </div>
+          {else}
+            <input type="hidden" id="cardselect" name="cardselect" value="0">
+            <input type="text" class="number" name="number" maxlength="16" placeholder="カード番号">
           {/if}
-          <div class="newcards" style="display: none;">
-            <p class="select-before-title">・新しいカード番号を入力してください</p>
-            <input type="text" class="number" name="number" maxlength="16" placeholder="新しいカード番号">
-          </div>
         </div>
-
-        <script>
-          $('#cardselect').on('change', function(){
-            var cat = $(this).val(); //選択された項目のvalueを取得
-            console.log(cat);
-            if(cat=="0") {
-              $(".newcards").slideDown(500);
-            } else {
-              $(".newcards").slideUp(500);
-            }
-          });
-        </script>
 
         <div class="fee-open-el">
           <label>セキュリティコード</label>
@@ -80,9 +66,7 @@
         </div>
 
         <!-- ログインしていない場合 -->
-        {if array_search('user', $roles)}
-        {else}
-
+        {if !array_search('user', $roles) && !array_search('admin', $roles)}
           <div class="fee-open-el">
             <label>お名前（フルネーム）</label>
             <input type="text" id="name" name="name" class="" placeholder="">
@@ -92,7 +76,6 @@
             <label>メールアドレス</label>
             <input type="text" id="email" name="email" class="" placeholder="">
           </div>
-
         {/if}
 
         <button class="day-cash-submit" type="submit">女子会に参加する</button>
@@ -151,28 +134,86 @@
 </script>
 <script>
     (function() {
+        // 新しいクレジットカード番号入力の表示・非表示切り替え
+        function toggleNewCardNumber(cat) {
+            if(cat=="0") {
+                $(".newcards").slideDown(500);
+            } else {
+                $(".newcards").slideUp(500);
+            }
+        }
+        $('#cardselect').on('change', function(){
+            var cat = $(this).val(); //選択された項目のvalueを取得
+            toggleNewCardNumber(cat);
+        });
+        var cat = $('#cardselect').val(); //選択された項目のvalueを取得
+        toggleNewCardNumber(cat);
+
         var form = $("#charge-form"),
-            number = form.find('input[name="number"]'),
-            cardselect = form.find('select[name="cardselect"]'),
-            cvc = form.find('input[name="cvc"]'),
-            exp_month = form.find('input[name="exp_month"]'),
-            exp_year = form.find('input[name="exp_year"]'),
-            event_code = form.find('input[name="event_code"]'),
-            name = form.find('input[name="name"]'),
-            email = form.find('input[name="email"]');
+            number = form.find('[name="number"]'),
+            cardselect = form.find('[name="cardselect"]'),
+            cvc = form.find('[name="cvc"]'),
+            exp_month = form.find('[name="exp_month"]'),
+            exp_year = form.find('[name="exp_year"]'),
+            event_code = form.find('[name="event_code"]'),
+            name = form.find('[name="name"]'),
+            email = form.find('[name="email"]');
 
         form.submit(function(e) {
             e.preventDefault();
             var promise;
+            var card = {
+                number: number.val(),
+                cvc: cvc.val(),
+                exp_month: exp_month.val(),
+                exp_year: exp_year.val()
+            };
+
             if (cardselect.val() === '0') {
-                var card = {
-                    number: number.val(),
-                    cvc: cvc.val(),
-                    exp_month: exp_month.val(),
-                    exp_year: exp_year.val()
-                };
+                if (!card.number) {
+                    ts.error("カード番号を入力してください");
+                    return false;
+                }
+                if (!card.cvc) {
+                    ts.error("セキュリティコードを入力してください");
+                    return false;
+                }
+                if (!card.exp_month) {
+                    ts.error("有効期限（月）を入力してください");
+                    return false;
+                }
+                if (!card.exp_year) {
+                    ts.error("有効期限（年）を入力してください");
+                    return false;
+                }
+                if (!name.val()) {
+                    ts.error("お名前（フルネーム）を入力してください");
+                    return false;
+                }
+                if (!email.val()) {
+                    ts.error("メールアドレスを入力してください");
+                    return false;
+                }
                 promise = chargeByNewCard(card, event_code.val(), name.val(), email.val())
             } else {
+                if (cardselect.val() === '0') {
+                    if (!card.number) {
+                        ts.error("カード番号を入力してください");
+                        return false;
+                    }
+                    if (!card.cvc) {
+                        ts.error("セキュリティコードを入力してください");
+                        return false;
+                    }
+                    if (!card.exp_month) {
+                        ts.error("有効期限（月）を入力してください");
+                        return false;
+                    }
+                    if (!card.exp_year) {
+                        ts.error("有効期限（年）を入力してください");
+                        return false;
+                    }
+                }
                 promise = chargeByRegisterCard(event_code.val(), name.val(), email.val(), cardselect.val())
             }
             promise

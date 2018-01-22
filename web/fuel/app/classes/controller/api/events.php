@@ -6,7 +6,6 @@ use \Model\Applications;
 class Controller_Api_Events extends Controller_Base
 {
 
-
 	public function action_create() {
 		if (!Auth::has_access('events.admin')) {
 			exit();
@@ -42,11 +41,6 @@ class Controller_Api_Events extends Controller_Base
 	}
 	
 	public function action_application() {
-		
-		if (!Auth::check()) {
-			\Session::set('referrer', \Input::referrer());
-			$this->ok('login');
-		}
 		try {
             $res = Applications::create(\Input::all());
             if (is_string($res)) {
