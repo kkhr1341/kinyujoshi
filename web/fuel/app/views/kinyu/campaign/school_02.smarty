@@ -35,11 +35,6 @@
           <span class="bottom-border">自らアクションできる女性</span>になることを目標としています。
           </p>
 
-          <!-- 学生同士の友情を深め、そして在学中は、<br>
-          より学生に近い担任の先生に、<br>
-          <span class="money-back">お金</span>と<span class="lifestyle-back">ライフスタイル</span>や、<span class="carrier-back">進路(キャリア)</span>に<br>ついて相談することができます。</p> -->
-
-
         </div>
 
         <div class="sp description-area">
@@ -67,7 +62,6 @@
         </div>
       </div>
 
-
       <!-- 教育方針 -->
       <div class="kinyu-school_public-el policy-public_school">
         <h3><img src="/images/content/school_public/main-title-policy.png"></h3>
@@ -85,7 +79,6 @@
         </div>
       </div>
 
-
       <!-- 授業内容 -->
       <div class="kinyu-school_public-el course-public_school">
         <h3><img src="/images/content/school_public/main-title-course.png"></h3>
@@ -95,13 +88,14 @@
           <div class="class-block">
             <p class="class-title"><学院日程></p>
             <div class="class-el">
-              <p><span>第1回：1月25日(木) 18:00〜20:00頃</span><br>入学式＆授業＠東証会議室<br>きんゆうとは？のお金の話、投資シミュレーション</p>
-              <p><span>第2回：2月＊(未定)日 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル<br>つみたてNISAのお話、投資信託について</p>
-              <p><span>第3回：2月＊(未定)日 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル<br>地域連携で地域経済を活性化<br>悪い情報から身を守る方法</p>
-              <p><span>第4回：3月1日(木) 17:00〜22:00</span><br>卒業テスト、卒業式＠東証<br>お金と向き合って人生を楽しもう</p>
+              <p><span>第1回：1月25日(木) 18:00〜20:00頃</span><br>入学式＆授業＠東証会議室<br>きんゆうとは？人生に必要なお金の話<br><span style="background:none;color:red;">※</span>18:30より株式投資体験を行います。</p>
+              <p><span>第2回：2月8日(木) 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル・ビジネスサロン<br>資産づくりを始める前に、つみたてNISAのお話</p>
+              <p><span>第3回：2月15日(木) 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル・ビジネスサロン<br>投資信託、ETFについて<br>地域連携で地域経済を活性化、悪い情報から身を守る方法</p>
+              <p><span>第4回：3月1日(木) 17:00〜22:00</span><br>授業、卒業テスト、卒業式＠東証会議室＆オープンプラットフォーム<br>株式投資について、お金と向き合って人生を楽しもう<br><span style="background:none;color:red;">※</span>東証秘密の大女子会と併催予定</p></p>
               <p><span>謝恩会：3月17日(土) 11:30〜13:30</span></p>
             </div>
-            <p class="class-el-sub"><span style="color:red;">※</span>学院日程は変更になる場合がございます。<br>あらかじめご了承ください。</p>
+            <p class="class-el-sub"><span style="color:red;">※</span>時間や内容は、予告なく変更になる場合がございます。あらかじめご了承ください。<br><span style="color:red;">※</span>集合時間や場所など、詳しい内容については、参加者にのみメルマガもしくはメールにてご案内いたします。
+            </p>
           </div>
           <div class="theme-block" id="document_first_day">
             <p class="theme-title"><主なテーマ></p>
@@ -113,33 +107,24 @@
             </div>
           </div>
           <div class="course-place">
-            <!-- <img class="course-place-main" src="/images/content/school_public/course-place.png"> -->
             <ul>
               <li class="clear">
                 <div class="img-area" style="background: url(/images/content/school_public/about_schoolpublic02_01.jpg)center center / cover no-repeat;"></div>
                 <div class="text-area">
                   <p class="count"><img src="/images/content/school_public/course-place-count1.png"></p>
                   <p class="title">卒業式は東京証券取引所内のチッカー（電光掲示版）の前で行います！</p>
-                  <!-- <p class="description">6月1日は、普段行く機会がない金融庁さんにおじゃましますよ！</p> -->
-                  <!-- <p class="access">住所：東京都千代田区霞が関3-2-1[<a target="_blank" href="https://goo.gl/5P0z6V">map</a>]<br>URL：<a target="_blank" href="http://www.fsa.go.jp/">http://www.fsa.go.jp/</a></p> -->
                 </div>
               </li>
               <li class="clear">
                 <div class="img-area" style="background: url(/images/content/school_public/about_schoolpublic02_02.jpg)center center / cover no-repeat;"></div>
                 <div class="text-area">
                   <p class="count"><img src="/images/content/school_public/course-place-count2.png"></p>
-                  <p class="title">卒業式には、マントと角帽をかぶって♪また、MVSを発表もあります。</p>
-                  <!-- <p class="description">チッカーの前で卒業証書授与式を行います！記念撮影しましょう。</p> -->
-                  <!-- <p class="access">住所：東京都中央区日本橋兜町2-1[<a target="_blank" href="https://goo.gl/xUFPbP">map</a>]<br>URL：<a target="_blank" href="http://www.jpx.co.jp/">http://www.jpx.co.jp/</a></p> -->
+                  <p class="title">卒業式には、マントと角帽をかぶって♪また、MVSの発表もあります。</p>
                 </div>
               </li>
             </ul>
             <p class="p-sub"><span style="color:red;">※</span>スケジュールの内容や、会場が予告なく変更になる場合がございます。あらかじめご了承ください。</p>
           </div>
-
-          <!-- <a class="kinyu-gakuin-link" href="/download/gakuin_curriculum_20161121.pdf" target="_blank">授業カリキュラムはこちら</a>
-          <div class="document-block"> -->
-            <!-- <p><span>初日</span>の授業の資料は<a href="/download/document_first_day.pdf" target="_blank">こちら</a></p> -->
           </div>
         </div>
       </div>
