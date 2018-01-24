@@ -5,7 +5,7 @@
   <div class="myway-report-content">
 
     <div class="myway-header-content">
-      <h2><img src="/images/myway/title/main-title-report.png"></h2>
+      <h2><a href="/myway"><img src="/images/myway/title/main-title-report.png"></a></h2>
       
       {$reporturl = $smarty.server.REQUEST_URI}
 
