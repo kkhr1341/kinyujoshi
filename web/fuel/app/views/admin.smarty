@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>きんゆう女子|admin</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjapanese.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700,900,300,100">
+  {Asset::render('layout')}
+</head>
+<body class="drawer drawer--left">
+
+    {if array_search('admin', $roles)}
+    <div id="content_frame">
+
+      <div class="container">
+        <div class="row relative">
+          <div class="col-md-3 admin-profile-info">
+              <a href="/my" id="logo" class='colorful'>
+                <img src="/images/kinyu-logo.png" class="admin-logo">
+              </a>
+            <img src="{$profile.profile_image}" class="admin-profile"/>
+            <ul class="nav nav-pills nav-stacked">
+              <li>
+                <a href="/admin">マイページ</a>
+              </li>
+
+              <!-- {if array_search('admin', $roles)} -->
+              <li>
+                <a href="/admin/news">ニュースの管理</a>
+              </li>
+
+              <li>
+                <a href="/admin/report">レポートの管理</a>
+              </li>
+
+              <li>
+                <a href="/admin/joshikai">女子会の管理</a>
+              </li>
+
+              <li>
+                <a href="/admin/registlist">会員リスト一覧</a>
+              </li>
+
+              <!-- {/if} -->
+              <!-- <li>
+                <a href="/my/profile">プロフィールの修正</a>
+              </li> -->
+
+            </ul>
+          </div>
+          <div class="my-content-block admin-content-info">
+            <div class="my-content-block-inner" style="min-height: 650px;">
+              {$contents}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="row relative">
+          <ul id='footer_menu'>
+            <li>
+              <a href="/" target="_blank">トップページへ</a>
+          </ul>
+        </div>
+      </div>
+      <div id='r'>
+        <div class="container">
+          &copy; 2018 TOE THE LINE Inc.
+        </div>
+      </div>
+    </footer>
+  {/if}
+<script>
+$(function(){
+  $(".admin-normal-menu-block").click(function() {
+    $(".admin-normal-menu").toggleClass("active");
+    $(".admin-normal-navigation").fadeToggle();
+  });
+});
+</script>
+</body>
+</html>

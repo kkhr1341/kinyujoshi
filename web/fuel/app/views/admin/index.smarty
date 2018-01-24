@@ -1,0 +1,17 @@
+<!-- 管理者用 -->
+{if array_search('admin', $roles)}
+  <div class="my-top-cotainer">
+    <div class="message">
+      <p class="name">{$profile.nickname}さん</p>
+      <p></p>
+    </div>
+    
+    <div class="my-top-menu">
+      <p class="title">管理メニュー</p>
+      <ul class="clear">
+        <li><a href="/admin/news">ニュースの追加</a></li>
+        <li><a href="/admin/report">記事の追加</a></li>
+      </ul>
+    </div>
+  </div>
+{/if}

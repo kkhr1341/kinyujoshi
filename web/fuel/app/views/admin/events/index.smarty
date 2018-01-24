@@ -1,0 +1,101 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li class="active">女子会の管理</li>
+</ol>
+
+<div class='clearw'>
+	<a class="btn btn-primary float_right" href="/admin/joshikai/create" role="button">女子会を追加する</a>
+</div>
+
+
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
+	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
+	<li><a href="#tab3" data-toggle="tab">過去の女子会</a></li>
+</ul>
+<div class="tab-content">
+
+	<!-- 公開 -->
+	<div class="tab-pane active" id="tab1">
+		{if sizeof($open_events) == 0}
+		<div class="alert alert-warning mt20" role="alert">公開中のイベントはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>日付</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+				</tr>
+			</thead>
+			{foreach from=$open_events item=events_item}
+			<tr class="events pointer" code="{$events_item.code}">
+				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
+				<td>{$events_item.section_code}</td>
+				<td>{$events_item.title}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+
+	<!-- 下書き -->
+	<div class="tab-pane" id="tab2">
+		{if sizeof($closed_events) == 0}
+		<div class="alert alert-warning mt20" role="alert">下書き状態のイベントはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>日付</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+				</tr>
+			</thead>
+			{foreach from=$closed_events item=events_item}
+			<tr class="events pointer" code="{$events_item.code}">
+				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
+				<td>{$events_item.section_code}</td>
+				<td>{$events_item.title}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+
+	<!-- 過去 -->
+	<div class="tab-pane" id="tab3">
+		{if sizeof($all_events) == 0}
+		<div class="alert alert-warning mt20" role="alert">イベントはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>日付</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+				</tr>
+			</thead>
+			{foreach from=$all_events item=events_item}
+			<tr class="events pointer" code="{$events_item.code}">
+				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
+				<td>{$events_item.section_code}</td>
+				<td>{$events_item.title}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+</div>
+
+
+<script>
+$(function(){
+	$('.events').click(function(){
+		var code = $(this).attr('code');
+		location.href = "/admin/joshikai/edit/"+code;
+	});
+});
+</script>

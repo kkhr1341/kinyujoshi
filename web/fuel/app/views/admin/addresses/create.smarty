@@ -1,0 +1,82 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li><a href="/admin/addresses">住所・お届け先の管理</a></li>
+	<li class="active">住所・お届け先を追加する</li>
+</ol>
+
+<form>
+	<fieldset>
+		<div class="form-group">
+			<label>郵便番号 <span class="label label-danger">必須</span></label>
+			<input type="text" style="width:150px;" maxlength="7" id="zip" class="form-control" placeholder="1500002">
+			<p class="help-block">ハイフンなし、半角英数7文字</p>
+		</div>
+		<div class="form-group">
+			<label>住所 <span class="label label-danger">必須</span></label>
+			<input type="text" style="" maxlength="" id="address" class="form-control" placeholder="東京都渋谷区渋谷1-2-3">
+		</div>
+		<div class="form-group">
+			<label>氏名 <span class="label label-danger">必須</span></label>
+			<input type="text" style="width:200px;" maxlength="" id="name" class="form-control" placeholder="山出井花子">
+		</div>
+		<div class="form-group">
+			<label>氏名カナ <span class="label label-danger">必須</span></label>
+			<input type="text" style="width:200px;" maxlength="" id="kana" class="form-control" placeholder="サンデイハナコ">
+		</div>
+		<div class="form-group">
+			<label>電話番号 <span class="label label-danger">必須</span></label>
+			<input type="text" style="width:200px;" maxlength="" id="tel" class="form-control" placeholder="09012345678">
+			<p class="help-block">ハイフンなし、半角英数</p>
+		</div>
+		
+		<button class="btn btn-primary" type="button" id="save">住所・お届け先を追加する</button>
+	</fieldset>
+</form>
+<script>
+$(function(){
+	
+	convertToHankaku('#zip');
+	convertToHankaku('#tel');
+	
+	$('#save').click(function(){
+		var url = "/api/addresses/create";
+		var params = {};
+		params.zip = $('#zip').val();
+		params.address = $('#address').val();
+		params.name = $('#name').val();
+		params.kana = $('#kana').val();
+		params.tel = $('#tel').val();
+		
+		if (params.zip == "" || strlen(params.zip) != 7) {
+			ts.error("郵便番号を正しく入力してください");
+			return false;
+		}
+		if (params.address == "") {
+			ts.error("住所を入力してください");
+			return false;
+		}
+		if (params.name == "") {
+			ts.error("氏名を入力してください");
+			return false;
+		}
+		if (params.kana == "") {
+			ts.error("氏名カナを入力してください");
+			return false;
+		}
+		if (params.tel == "") {
+			ts.error("電話番号を入力してください");
+			return false;
+		}
+
+		ajax.post(url, params, function(data){
+			ts.success("追加しました", function(){
+				location.href = "/my/addresses";
+			});
+		});
+	});
+	
+	
+});
+</script>

@@ -3,23 +3,12 @@ return array(
 	'_root_'  => 'kinyu/top',  // The default route
 	'_404_'   => '/error/404',    // The main 404 route
 	'_500_'   => '/error/500',    // The main 404 route
-	'my'   => 'my/top',
 	'page/(:any)'   => 'page/top/$1',
 	
 	//◆メンバー登録/ログイン部分
 	'login_regist'   => 'login/regist',
 	'regist_email'   => 'login/regist_email',
 	'regist_sns'   => 'login/regist_sns',
-
-	//会員登録情報
-	'my/registlist' => 'my/registlist/index',
-	'my/registlist/create' => 'my/registlist/create',
-	'my/registlist/(:any)'   => 'my/registlist/detail/$1',
-
-	//マイページ
-	'my/profile'   => 'my/profile/index',
-	'my/joshikai' => 'my/events/joshikailist',
-	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
 
 	//テスト環境
 	'testindex' => 'kinyu/top/testindex',
@@ -109,8 +98,33 @@ return array(
 	'project'   => 'kinyu/project/index',
 	'project/(:num)'   => 'kinyu/project/index/$1',
 	'project/(:any)'   => 'kinyu/project/detail/$1',
-	
-	// admin
+
+
+	//マイページ - トップ
+	'my'   => 'my/top',
+	//マイページ - プロフィール、女子会リスト
+	'my/profile'   => 'my/profile/index',
+	'my/joshikai' => 'my/events/joshikailist',
+	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
+
+	'admin'   => 'admin/top',
+	//管理画面admin - 会員リスト
+	'admin/registlist' => 'admin/registlist/index',
+	'admin/registlist/create' => 'admin/registlist/create',
+	'admin/registlist/(:any)'   => 'admin/registlist/detail/$1',
+	//管理画面admin - 女子会
+	'admin/report' => 'admin/blogs/index',
+	'admin/report/create' => 'admin/blogs/create',
+	'admin/report/edit/(:any)' => 'admin/blogs/edit/$1',
+	//管理画面admin - 女子会
+	'admin/joshikai' => 'admin/events/index',
+	'admin/joshikai/create' => 'admin/events/create',
+	'admin/joshikai/edit/(:any)' => 'admin/events/edit/$1',
+	//管理画面admin - ニュース
+	'admin/news' => 'admin/news/index',
+	'admin/news/create' => 'admin/news/create',
+	'admin/news/edit/(:any)' => 'admin/news/edit/$1',
+	//管理画面admin - 会員リスト
 	'my/projects/courses/create/(:any)'   => 'my/projects/courses_create/$1',
 	'my/projects/courses/edit/(:any)'   => 'my/projects/courses_edit/$1',
 	'my/projects/blog/create/(:any)'   => 'my/projects/blog_create/$1',

@@ -1,0 +1,83 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li class="active">参加申込イベント</li>
+</ol>
+
+
+		{if sizeof($applications) == 0}
+		<div class="alert alert-warning mt20" role="alert">参加申込したイベントはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>イベント名</th>
+					<th>日程</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			{foreach from=$applications item=application}
+			<tr class="blogs" code="{$application.code}">
+				<td>
+					{if $application.cancel == 0}
+						申込完了
+					{else}
+						キャンセル
+					{/if}
+				</td>
+				<td>
+					{if $application.section_code == ""}
+						未設定
+					{elseif $application.section_code == "top"}
+						TOP
+					{else}
+						{$sections[$application.section_code]['name']}
+					{/if}
+				</td>
+				<td>{$application.title}</td>
+				<td>{$application.event_start_datetime|date_format:"%Y/%m/%d %H:%M"}</td>
+				<td>
+					<a href="/mono/event/{$application.code}">詳細</a>
+				</td>
+				<td>
+					{if $application.cancel == 0}
+					<a href="#" onclick="javascript:retun false;" class="cancel" code="{$application.application_code}">キャンセル</a>
+					{/if}
+				</td>
+				
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+		
+		
+		
+<script>
+$(function(){
+
+	$('.cancel').click(function(){
+	
+		var url = "/api/events/cancel";
+		var params = {};
+		params.code = $(this).attr('code');
+		
+		bootbox.confirm("このイベント参加をキャンセルしますか？", function(result) {
+			if (result) {
+				ajax.post(url, params, function(data){
+					ts.success("参加をキャンセルしました", function(){
+						location.reload();
+					});
+				});
+			}
+			else {
+				//ts.info("キャンセルしました");
+			}
+		});
+	});
+	
+});
+</script>

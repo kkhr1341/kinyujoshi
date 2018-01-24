@@ -13,72 +13,6 @@
 </head>
 <body class="drawer drawer--left">
 
-	  {if array_search('admin', $roles)}
-    <div id="content_frame">
-
-      <div class="container">
-        <div class="row relative">
-          <div class="col-md-3 admin-profile-info">
-              <a href="/my" id="logo" class='colorful'>
-                <img src="/images/kinyu-logo.png" class="admin-logo">
-              </a>
-            <img src="{$profile.profile_image}" class="admin-profile"/>
-            <ul class="nav nav-pills nav-stacked">
-              <li>
-                <a href="/my">マイページ</a>
-              </li>
-
-              <!-- {if array_search('admin', $roles)} -->
-              <li>
-                <a href="/my/news">ニュースの管理</a>
-              </li>
-
-              <li>
-                <a href="/my/blogs">レポートの管理</a>
-              </li>
-
-              <li>
-                <a href="/my/events">女子会の管理</a>
-              </li>
-
-              <li>
-                <a href="/my/registlist">会員リスト一覧</a>
-              </li>
-
-              <!-- {/if} -->
-              <!-- <li>
-                <a href="/my/profile">プロフィールの修正</a>
-              </li> -->
-
-            </ul>
-          </div>
-          <div class="my-content-block admin-content-info">
-            <div class="my-content-block-inner" style="min-height: 650px;">
-              {$contents}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <div class="container">
-        <div class="row relative">
-          <ul id='footer_menu'>
-            <li>
-              <a href="/" target="_blank">トップページへ</a>
-          </ul>
-        </div>
-      </div>
-      <div id='r'>
-        <div class="container">
-          &copy; 2015 TOE THE LINE Inc.
-        </div>
-      </div>
-    </footer>
-
-  {else}
-
     <header class="pc kinyu-header">
     <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
     <nav>
@@ -122,11 +56,8 @@
     </div>
 	
     {$contents}
-
     {$sp_footer}
 
-
-	{/if}
 <script>
 $(function(){
   $(".admin-normal-menu-block").click(function() {

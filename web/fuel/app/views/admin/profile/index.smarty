@@ -1,0 +1,64 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+    <div class="admin-normal-side">
+      <ul>
+        <li><a href="/my">マイページ・トップ</a></li>
+        <li class="active"><a href="/my/profile">プロフィール編集</a></li>
+        <li><a href="/my/joshikai">参加女子会</a></li>
+      </ul>
+    </div>
+    
+    <div class="admin-normal-main">
+
+			<div class="admin-normal-profile">
+	      <div class="img-box-block">
+	        <div class="img-box"
+	          {if $profile.profile_image == ''}
+	            style="background-color: red;"
+	          {else}
+	            style="background:url({$profile.profile_image}) center center / cover no-repeat;"
+	          }
+	          {/if}
+	          >
+	        </div>
+	      </div>
+	      <p class="profile-name">みくりん</p>
+	      <p class="profile-catchcopy">私らしく生きる。そしてマイハウス購入する！</p>
+    	</div>
+
+			<!--<img src="{$profile.profile_image}" />-->
+								
+			<table class="table admin-profile-table">
+				<tr>
+					<th class="active">表示名</th>
+					<td>みくりん</td>
+				</tr>
+				<tr>
+					<th class="active">お名前</th>
+					<td>{$profile.nickname}</td>
+				</tr>
+				<tr>
+					<th class="active">メールアドレス</th>
+					<td>{$profile.email}</td>
+				</tr>
+				<tr>
+					<th class="active">自己紹介</th>
+					<td>金融機関の商品企画部門で働いています。しかし、仕事で話題に上がるのはとしているのは富裕層や高齢者のみでありどこか遠くの話に聞こえてしまします。
+また、同世代女子のお金に関する話をプライベートですることはないため、ほかの人はどれくらい収入がありどれくらい貯めているのか気になったため入りたいと思いました。</td>
+				</tr>
+			</table>
+
+			<div class="admin-normal-profile-btn">
+				<a href="/my/profile/edit" class='btn btn-primary'>プロフィールを編集する</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+		
+<script>
+$(function(){
+
+	
+});
+</script>

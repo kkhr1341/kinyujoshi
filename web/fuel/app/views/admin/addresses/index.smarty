@@ -1,0 +1,37 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li class="active">住所・お届け先の管理</li>
+</ol>
+
+<div class='clearw'>
+	<a class="btn btn-primary float_right" href="/my/addresses/create" role="button">住所・お届け先を追加する</a>
+</div>
+
+
+		{if sizeof($addresses) == 0}
+		<div class="alert alert-warning mt20" role="alert">住所・お届け先はありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			{foreach from=$addresses item=address}
+			<tr class="news pointer" code="{$address.code}">
+				<td>
+					{$address.zip} {$address.address} {$address.name} {$address.tel}
+				</td>
+				<td>
+				</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+
+
+<script>
+$(function(){
+	$('.news').click(function(){
+		var code = $(this).attr('code');
+		location.href = "/my/addresses/edit/"+code;
+	});
+});
+</script>

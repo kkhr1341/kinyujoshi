@@ -1,0 +1,128 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+    <div class="admin-normal-side">
+      <ul>
+        <li><a href="/my">マイページ・トップ</a></li>
+        <li class="active"><a href="/my/profile">プロフィール編集</a></li>
+        <li><a href="/my/joshikai">参加女子会</a></li>
+      </ul>
+    </div>
+    
+    <div class="admin-normal-main">
+
+      <form name="form1">
+        <div class="singlepage-form-block">
+
+          <div class="admin-normal-profile">
+            <div class="edit-profile-img img-box-block">
+              <div class="img-box"
+                {if $profile.profile_image == ''}
+                  style="background-color: red;"
+                {else}
+                  style="background:url({$profile.profile_image}) center center / cover no-repeat;"
+                }
+                {/if}
+                >
+                <div class="edit-profile-img2"><p>プロフィール画像を変更する</p></div>
+              </div>
+              <input type="hidden" id="profile_image" value="">
+            </div>
+            <p class="profile-catchcopy">
+              <label class="regist-add-form-edit-title2">ひとことキャッピコピー</label>
+              <input type="text" id="name" class="form-control" placeholder="" value="私らしく生きる。そしてマイハウス購入する！">
+            </p>
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">表示名</label>
+            <input type="text" id="name" class="form-control" placeholder="" value="{$profile.nickname}">
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">お名前</label>
+            <input type="text" id="name" class="form-control" placeholder="" value="{$profile.nickname}">
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">メールアドレス</label>
+            <p class="regist-add-form-edit-subtitle">きんゆう女子。からお知らせをお届けするメールアドレスになります。</p>
+            <input type="text" id="email" class="form-control" placeholder="" value="{$profile.email}">
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">個人で発信しているブログなど</label>
+            <input type="text" id="url" class="form-control" placeholder="">
+          </div>
+
+
+          <div class="regist-add-form-edit-el regist-add-form-edit-el02">
+            <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。</label>
+            <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
+          </div>
+          
+          <div class="form-btn tx-center">
+            <button class="btn btn-kinyu" type="button" id="save">保存する</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+		
+<script>
+$(function(){
+
+	$('.birthday').datetimepicker({
+		format : 'YYYY/MM/DD'
+	});
+	
+	$('#save').click(function(){
+		
+		var url = "/api/profiles/save";
+		var params = {};
+		params.code = $('#code').val();
+//		params.nickname = $('#nickname').val();
+//		params.email = $('#email').val();
+//		params.url = $('#url').val();
+//		params.fburl = $('#fburl').val();
+//		params.twurl = $('#twurl').val();
+//		params.instaurl = $('#instaurl').val();
+
+		if ($('#profile_image').val()) {
+            params.profile_image = $('#profile_image').val();
+        }
+
+//		if ($('input[name=release_profile]:checked').val() === 'はい、ぜひしたいです。') {
+//			params.release_profile = 1;
+//		} else if ($('input[name=release_profile]:checked').val() === 'いいえ、したくないです。') {
+//			params.release_profile = 0;
+//		}
+		
+//		if (params.code == "") {
+//			ts.error("ユーザー名を入力してください");
+//			return false;
+//		}
+//		if (params.nickname == "") {
+//			ts.error("ニックネームを入力してください");
+//			return false;
+//		}
+//		if (params.email == "") {
+//			ts.error("メールアドレス名を入力してください");
+//			return false;
+//		}
+		ajax.post(url, params, function(data){
+			ts.success("保存しました");
+		});
+	});
+    $('.edit-profile-img')
+        .uploader('/api/redactor/upload/file')
+        .then(function(data) {
+            var url = data.url;
+            $('#profile_image').val(url);
+            $('.edit-profile-img .img-box').css('background-image', 'url(' + url + ')');
+        })
+	
+});
+</script>
