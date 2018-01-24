@@ -21,6 +21,7 @@ class Controller_My_Top extends Controller_Mybase
       $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
       $this->template->title = 'マイページ｜きんゆう女子。';
       $this->template->description = 'マイページ・トップ';
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
 
   	} else {
 

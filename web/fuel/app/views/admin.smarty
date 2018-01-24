@@ -76,6 +76,8 @@
         </div>
       </div>
     </footer>
+  {else}
+    ユーザー権限では閲覧できません。
   {/if}
 <script>
 $(function(){

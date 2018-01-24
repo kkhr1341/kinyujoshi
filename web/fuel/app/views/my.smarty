@@ -13,6 +13,10 @@
 </head>
 <body class="drawer drawer--left">
 
+  {if array_search('admin', $roles)}
+    管理者権限では閲覧できません。
+  {else}
+
     <header class="pc kinyu-header">
     <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
     <nav>
@@ -57,6 +61,8 @@
 	
     {$contents}
     {$sp_footer}
+
+  {/if}
 
 <script>
 $(function(){
