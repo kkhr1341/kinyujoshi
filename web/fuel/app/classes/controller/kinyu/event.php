@@ -6,6 +6,7 @@ use \Model\Profiles;
 use \Model\Eventkuchikomi;
 use \Model\Applications;
 use \Model\UserCreditCard;
+use \Model\Payment;
 
 class Controller_Kinyu_Event extends Controller_Kinyubase
 {
@@ -107,7 +108,6 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_tickets_card($code)
     {
-
         \Config::load('payjp', true);
         $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
         // 最新を取得
@@ -123,12 +123,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->template->description = $this->data['event']['title'];
 
         // 登録カード取得
-        $cards = array();
-        $username = \Auth::get('username');
-        if ($username) {
-            $cards = UserCreditCard::lists($username);
-        }
-        $this->data['cards'] = $cards;
+        $this->data['cards'] = $this->get_credit_cards(\Config::get('payjp.private_key'));
 
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->kinyu_event_notes = View::forge('kinyu/event/notes.smarty', $this->data);
@@ -148,7 +143,6 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_tickets_cash($code)
     {
-
         \Config::load('payjp', true);
         $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
         // 最新を取得
@@ -209,5 +203,26 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/event/complete.smarty', $this->data);
     }
 
-
+    /**
+     * 登録カード取得
+     */
+    private function get_credit_cards($private_key)
+    {
+        if (!$username = \Auth::get('username')) {
+            return array();
+        }
+        if (!$cardIds = UserCreditCard::lists($username)) {
+        }
+        $payment = new Payment($private_key);
+        if(!$customer = $payment->getCustomer($username)) {
+            return array();
+        }
+        $cards = array();
+        foreach ($cardIds as $cardId) {
+            if ($card = $payment->getCard($customer, $cardId)) {
+                $cards[] = $card;
+            }
+        }
+        return $cards;
+    }
 }

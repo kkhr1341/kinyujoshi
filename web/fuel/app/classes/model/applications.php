@@ -161,8 +161,8 @@ class Applications extends Base {
 
             $email = isset($params['email']) && $params['email']? $params['email']: '';
 
-            // 会員登録をせずに申し込む場合は名前とメールアドレスは必須
-            if ($params['cardselect'] === '0' && (!$username || $username == 'guest')) {
+            // 新規カード登録 or 会員登録をせずに申し込みの場合は以下必須
+            if ($params['cardselect'] === '0') {
                 if (empty($name)) {
                     return "お名前（フルネーム）を入力してください";
                 }
@@ -242,14 +242,21 @@ class Applications extends Base {
 
                 if ($params['cardselect'] === '0') {
                     // 新しいカードで決済
-                    $new_card = $payment->createCard($customer, $params['token']);
+                    $new_card = $payment->createCard($customer, $params['token'], $name, $email);
                     // 登録カードリソースデータ作成（二回目にカードを使う用）
                     \DB::insert('user_credit_cards')->set(array(
                         'username' => $username,
                         'card_id' => $new_card->id,
                         'created_at' => \DB::expr('now()'),
                     ))->execute();
-                    $charge = $payment->chargeByNewCard($event['fee'], $customer, $new_card, $application_code);
+                    $charge = $payment->chargeByNewCard(
+                        $event['fee'],
+                        $customer,
+                        $new_card,
+                        $application_code,
+                        $name,
+                        $email
+                    );
                 } else {
                     // 登録カードで決済
                     $charge = $payment->chargeByRegistCard(

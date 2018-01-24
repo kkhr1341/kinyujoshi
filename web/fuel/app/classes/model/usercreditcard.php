@@ -27,9 +27,14 @@ class Usercreditcard extends Base
 //	protected static $_table_name = 'user_credit_cards';
 
     public static function lists($username) {
-        return \DB::select("*")->from('user_credit_cards')
+        $rows = \DB::select("card_id")->from('user_credit_cards')
             ->where('user_credit_cards.username', '=', $username)
             ->execute()
             ->as_array();
+        $ary = array();
+        foreach ($rows as $row) {
+            $ary[] = $row['card_id'];
+        }
+        return $ary;
     }
 }

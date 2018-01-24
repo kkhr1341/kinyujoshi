@@ -38,7 +38,7 @@
             <p class="select-before-title">・利用可能なクレジットカード</p>
             <select id="cardselect" name="cardselect">
                 {foreach from=$cards key="key" item=card name=loopname}
-                  <option value="{$card.card_id}">下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</option>
+                  <option value="{$card.id}">{$card.label}</option>
                 {/foreach}
               <option value="0">新しいカードで決済する</option>
             </select>
@@ -52,21 +52,20 @@
           {/if}
         </div>
 
-        <div class="fee-open-el">
-          <label>セキュリティコード</label>
-          <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
-        </div>
-
-        <div class="fee-open-el">
-          <label>有効期限</label>
-          <div class="exp-date-block">
-            <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
-            <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+        <div class="no-regist-el">
+          <div class="fee-open-el">
+            <label>セキュリティコード</label>
+            <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
           </div>
-        </div>
 
-        <!-- ログインしていない場合 -->
-        {if !array_search('user', $roles) && !array_search('admin', $roles)}
+          <div class="fee-open-el">
+            <label>有効期限</label>
+            <div class="exp-date-block">
+              <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
+              <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+            </div>
+          </div>
+
           <div class="fee-open-el">
             <label>お名前（フルネーム）</label>
             <input type="text" id="name" name="name" class="" placeholder="">
@@ -76,7 +75,7 @@
             <label>メールアドレス</label>
             <input type="text" id="email" name="email" class="" placeholder="">
           </div>
-        {/if}
+        </div>
 
         <button class="day-cash-submit" type="submit">女子会に参加する</button>
       </form>
@@ -137,9 +136,9 @@
         // 新しいクレジットカード番号入力の表示・非表示切り替え
         function toggleNewCardNumber(cat) {
             if(cat=="0") {
-                $(".newcards").slideDown(500);
+                $(".no-regist-el").slideDown(500);
             } else {
-                $(".newcards").slideUp(500);
+                $(".no-regist-el").hide();
             }
         }
         $('#cardselect').on('change', function(){
@@ -166,7 +165,8 @@
                 number: number.val(),
                 cvc: cvc.val(),
                 exp_month: exp_month.val(),
-                exp_year: exp_year.val()
+                exp_year: exp_year.val(),
+                name: name.val()
             };
 
             if (cardselect.val() === '0') {
@@ -196,25 +196,7 @@
                 }
                 promise = chargeByNewCard(card, event_code.val(), name.val(), email.val())
             } else {
-                if (cardselect.val() === '0') {
-                    if (!card.number) {
-                        ts.error("カード番号を入力してください");
-                        return false;
-                    }
-                    if (!card.cvc) {
-                        ts.error("セキュリティコードを入力してください");
-                        return false;
-                    }
-                    if (!card.exp_month) {
-                        ts.error("有効期限（月）を入力してください");
-                        return false;
-                    }
-                    if (!card.exp_year) {
-                        ts.error("有効期限（年）を入力してください");
-                        return false;
-                    }
-                }
-                promise = chargeByRegisterCard(event_code.val(), name.val(), email.val(), cardselect.val())
+                promise = chargeByRegisterCard(event_code.val(), cardselect.val())
             }
             promise
                 .then(function() {

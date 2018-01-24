@@ -16,7 +16,16 @@ class Payment extends Base {
         \Payjp\Payjp::setApiKey($apiKey);
     }
 
-    public function chargeByNewCard($fee, \Payjp\Customer $customer, \Payjp\Card $card, $application_code) {
+    /**
+     * @param $fee
+     * @param \Payjp\Customer $customer
+     * @param \Payjp\Card $card
+     * @param $application_code
+     * @param $name
+     * @param $email
+     * @return \Payjp\Charge
+     */
+    public function chargeByNewCard($fee, \Payjp\Customer $customer, \Payjp\Card $card, $application_code, $name, $email) {
         return \Payjp\Charge::create(array(
             'amount' => $fee,
             'currency' => 'jpy',
@@ -26,10 +35,21 @@ class Payment extends Base {
             'metadata' => array(
                 'application_code' => $application_code,
                 'username' => $customer->id,
+                'name' => $name,
+                'email' => $email,
             )
         ));
     }
 
+    /**
+     * @param $fee
+     * @param \Payjp\Customer $customer
+     * @param $card
+     * @param $application_code
+     * @param $name
+     * @param $email
+     * @return \Payjp\Charge
+     */
     public function chargeByRegistCard($fee, \Payjp\Customer $customer, $card, $application_code) {
         return \Payjp\Charge::create(array(
             'amount' => $fee,
@@ -44,6 +64,14 @@ class Payment extends Base {
         ));
     }
 
+    /**
+     * @param $fee
+     * @param $token
+     * @param $application_code
+     * @param $name
+     * @param $email
+     * @return \Payjp\Charge
+     */
     public function chargeByToken($fee, $token, $application_code, $name, $email) {
         return \Payjp\Charge::create(array(
             'amount' => $fee,
@@ -59,6 +87,10 @@ class Payment extends Base {
         ));
     }
 
+    /**
+     * @param $username
+     * @return bool|\Payjp\Customer
+     */
     public function getCustomer($username) {
         try {
             return \Payjp\Customer::retrieve($username);
@@ -66,6 +98,12 @@ class Payment extends Base {
             return false;
         }
     }
+
+    /**
+     * @param $username
+     * @return \Payjp\Customer
+     * @throws \Exception
+     */
     public function createCustomer($username) {
         try {
             return \Payjp\Customer::create(array(
@@ -75,13 +113,42 @@ class Payment extends Base {
             throw new \Exception("顧客情報の登録に失敗しました。");
         }
     }
+
+    /**
+     * @param \Payjp\Customer $customer
+     * @param $token
+     * @param $name
+     * @param $email
+     * @return mixed
+     * @throws \Exception
+     */
     public function createCard(\Payjp\Customer $customer, $token) {
         try {
             return $customer->cards->create(array(
-                'card' => $token
+                'card' => $token,
             ));
         } catch (\Payjp\Error\InvalidRequest $e) {
             throw new \Exception("既にご登録のあるカードです。");
+        }
+    }
+
+    /**
+     * @param \Payjp\Customer $customer
+     * @param $card_id
+     * @return mixed
+     * @throws \Exception
+     */
+    public function getCard(\Payjp\Customer $customer, $card_id) {
+        try {
+            $card = $customer->cards->retrieve($card_id);
+            // 下3桁 311 (MARIKO SUZUKI) 有効期限 20/11
+            $format = '下4桁 %d (%s) 有効期限 %d/%d';
+            return array(
+                "id" => $card_id,
+                "label" =>sprintf($format, $card->last4, $card->name, $card->exp_month, $card->exp_year),
+            );
+        } catch (\Payjp\Error\InvalidRequest $e) {
+            return false;
         }
     }
 }
