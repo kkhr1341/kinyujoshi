@@ -9,7 +9,7 @@ return array(
 	'default' => array(
     'charset' => 'utf8',
 		'connection'  => array(
-                        'dsn'        => 'mysql:host=dbsrv-sundaylunch-cluster-1.cluster-cqeoc0c4hmvu.ap-northeast-1.rds.amazonaws.com;dbname=kinyujoshi',
+                        'dsn'        => 'mysql:host=dbsrv-sundaylunch-cluster-1.cluster-cqeoc0c4hmvu.ap-northeast-1.rds.amazonaws.com;dbname=dev_kinyujoshi',
                         'username'   => 'root',
                         'password'   => ']8Dvung|',
 		),
