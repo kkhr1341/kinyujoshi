@@ -137,8 +137,10 @@
         function toggleNewCardNumber(cat) {
             if(cat=="0") {
                 $(".no-regist-el").slideDown(500);
+                $(".newcards").show();
             } else {
                 $(".no-regist-el").hide();
+                $(".newcards").hide();
             }
         }
         $('#cardselect').on('change', function(){
