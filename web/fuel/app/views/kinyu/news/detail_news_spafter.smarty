@@ -7,7 +7,7 @@
       <ul class="clear">
         {foreach from=$top_news item=news name=loopname}
 
-        {if $smarty.foreach.loopname.index == 3}
+        {if $smarty.foreach.loopname.index == 4}
         </ul>
           <div class="sidebar-more-link">
             <a href="/news">ニュースをもっと見る >
@@ -21,7 +21,12 @@
 
         <li class="clear">
           <a href="/news/{$news.code}">
-            <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+
+            {if $fooo == ""}
+              <div class="img-box" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
+            {else}
+              <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+            {/if}
             <div class="text-box">
               <div class="kinyu-top-list-kind">
                 <p>{$news.open_date|date_format:"%Y.%-m.%-d"}</p>
@@ -41,7 +46,7 @@
     <div class="report-sidebar-event-list">
       <ul class="clear">
         {foreach from=$top_events item=event name=loopname}
-        {if $smarty.foreach.loopname.index == 3}
+        {if $smarty.foreach.loopname.index == 4}
         </ul>
           <div class="sidebar-more-link">
             <a href="/joshikai">女子会をもっと見る ></a>
@@ -103,12 +108,12 @@
       <ul class="banner-list clear">
         <li>
           <a href="/myway">
-            <img src="/images/banner/myway_pc.jpg">
+            <img src="/images/banner/myway_sp.jpg">
           </a>
         </li>
         <li>
           <a href="/myway">
-            <img src="/images/banner/asahi_&w_pc.jpg">
+            <img src="/images/banner/asahi_&w_sp.jpg">
           </a>
         </li>
       </ul>

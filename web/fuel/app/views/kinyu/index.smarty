@@ -141,7 +141,7 @@
             <ul class="clear">
             {foreach from=$top_blogs2 key="key" item=blog name=loopname}
 
-              {if $smarty.foreach.loopname.index == 9}
+              {if $smarty.foreach.loopname.index == 10}
               </ul>
                 <div class="sidebar-more-link">
                   <a href="/report">レポートをもっと見る ></a>
@@ -194,7 +194,7 @@
 
         <div class="kinyu-top-maincontent-block-el">     
           <div class="kinyu-top-banner-area">
-            <ul>
+            <ul class="clear">
               <li>
                 <a target="_blank" href="/myway">
                   <img class="" src="/images/banner/myway_sp.jpg">

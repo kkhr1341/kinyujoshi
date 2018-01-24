@@ -7,7 +7,7 @@
       <ul class="clear">
         {foreach from=$top_blogs item=blog name=loopname}
 
-        {if $smarty.foreach.loopname.index == 3}
+        {if $smarty.foreach.loopname.index == 4}
         </ul>
           <div class="sidebar-more-link">
             <a href="/report">レポートをもっと見る >
@@ -19,14 +19,6 @@
         {$fooo = $blog.main_image}
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-        <!-- <li class="clear">
-          <a href="/report/{$blog.code}">
-            <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
-            <div class="text-box">
-              <p class="title">{$blog.title}</p>
-            </div>
-          </a>
-        </li> -->
         <li>
           <a href="/report/{$blog.code}">
             <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
@@ -59,9 +51,10 @@
   <div class="report-detail-sidebar-el">
     <p class="report-detail-sidebar-el-title">直近の女子会</p>
     <div class="report-sidebar-event-list">
+
       <ul class="clear">
         {foreach from=$top_events item=event name=loopname}
-        {if $smarty.foreach.loopname.index == 3}
+        {if $smarty.foreach.loopname.index == 4}
         </ul>
           <div class="sidebar-more-link">
             <a href="/joshikai">女子会をもっと見る ></a>
@@ -92,6 +85,7 @@
         </li>
         {/foreach}
       </ul>
+
     </div>
   </div>
 
@@ -120,7 +114,7 @@
       </div>
     </div>
     <div class="report-detail-sidebar-el">
-      <ul class="banner-list">
+      <ul class="banner-list clear">
         <li>
           <a href="/myway">
             <img src="/images/banner/myway_sp.jpg">

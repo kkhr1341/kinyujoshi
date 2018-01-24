@@ -121,9 +121,6 @@
   width: 100%;
 }
 
-
-
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -942,12 +939,6 @@
 .report-sidebar-event-list li .text-box .kinyu-top-event-kind p {
   padding: 12px 0px 6px;
 }
-/*.report-sidebar-event-list li .text-box .date {
-  font-size: 12px;
-  line-height: 12px;
-  color: #77cbc0;
-  font-weight: bold;
-}*/
 .report-sidebar-event-list li .text-box .title {
   width: 100%;
   font-size: 13px;
@@ -957,7 +948,6 @@
 }
 .sidebar-more-link {
   text-align: right;
-  /*margin-top: 16px;*/
 }
 .report-detail-sidebar .sidebar-more-link {
   margin-top: 16px;
@@ -967,6 +957,7 @@
   line-height: 12px;
   color: #77cbc0;
 }
+
 /* 編集部のおすすめ記事 */
 .report-sidebar-report-list li {
   width: 32%;
@@ -984,17 +975,35 @@
   width: 100%;
   padding: 12px 2px 0px;
 }
-/*.report-sidebar-report-list li .text-box .category {
-  font-size: 11px;
-  line-height: 11px;
-  color: #77cbc0;
-  font-weight: bold;
-}*/
 .report-sidebar-report-list li .text-box .title {
   font-size: 13px;
   line-height: 20px;
   height: 40px;
 }
+
+/* 最新ニュース記事 */
+.kinyu-sidebar-news-list li {
+  width: 32%;
+  float: left;
+  margin-right: 2%;
+}
+.kinyu-sidebar-news-list li:last-child {
+  margin-right: 0%;
+}
+.kinyu-sidebar-news-list li .img-box {
+  width: 100%;
+  height: 160px;
+}
+.kinyu-sidebar-news-list li .text-box {
+  width: 100%;
+  padding: 0px 4px 0px;
+}
+.kinyu-sidebar-news-list li .text-box .title {
+  font-size: 13px;
+  line-height: 20px;
+  height: 40px;
+}
+
 /* INSTAGRAM */
 .report-detail-sidebar-el .insta-el li {
   width: 33%;
@@ -1479,7 +1488,6 @@
   line-height: 34px;
 }
 .kinyu-joshikai-detail-el-block {
-  padding: 40px 0px 0px 0px;
 }
 
 /* 女子会内文章 */
@@ -1953,7 +1961,7 @@
 
 /* 対応カードの部分 */
 .kinyu-credit-list-block {
-  width: 100%;
+  width: 92%;
   margin: 0 auto;
   text-align: center;
   margin-top: 20px;
@@ -2638,7 +2646,6 @@
   color: #77cbc0;
 }
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   会社関連の情報
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -3233,7 +3240,6 @@ footer .navi_kinyu-submenu-copy {
   line-height: 22px;
   margin-bottom: 16px;
   color: #77cbc0;
-  font-weight: bold;
 }
 .login-add-contents-block .main-title span {
   font-size: 15px;

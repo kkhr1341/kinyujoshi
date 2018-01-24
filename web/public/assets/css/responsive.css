@@ -565,7 +565,6 @@
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 8px;
-  font-weight: bold;
 }
 .kinyu-top-main-sub {
   font-size: 10px;
@@ -712,8 +711,8 @@
   margin-right: 8px;
 }
 .pagination > li > a, .pagination > li > span {
-  font-size: 12px;
-  padding-top: 6px;
+  font-size: 11px;
+  padding-top: 7px;
   border-radius: inherit;
 }
 .kinyu-top-list-main li {
@@ -753,7 +752,7 @@
   　トップ - 女子会リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-list ul li:nth-last-child(-n+3) {
-  margin-bottom: 6%;
+  margin-bottom: 4%;
 }
 .kinyu-top-list ul li:last-child {
   margin-bottom: 0%;
@@ -1161,6 +1160,38 @@
   font-size: 12px;
 }
 
+/* ニュース部分 */
+.kinyu-sidebar-news-list li {
+  height: 88px;
+  background-color: #f9f9f9;
+  float: none;
+  width: 100%;
+  margin-right: 0%;
+  margin-bottom: 4%;
+}
+.kinyu-sidebar-news-list li:last-child {
+  margin-bottom: 0%;
+}
+.kinyu-sidebar-news-list .img-box {
+  float: left;
+  width: 30%!important;
+  height: 100%!important;
+}
+.kinyu-sidebar-news-list li .text-box {
+  float: right;
+  width: 70%;
+  height: 100%;
+  padding: 16px 4% 0px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.kinyu-sidebar-news-list .kinyu-top-list-kind p {
+  padding: 0px;
+}
+.kinyu-sidebar-news-list .kinyu-top-list-title {
+  padding: 8px 0px 4px;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ABOUTページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -1318,7 +1349,6 @@
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 16px;
-  font-weight: bold;
 }
 .about-joshikai .img-box {
   width: 100%;
@@ -1921,7 +1951,7 @@
 .login-another-btn {
   right: 12px;
   top: 12px;
-  padding: 6px 24px;
+  padding: 8px 24px;
   background: #f9f9f9;
 }
 .login-regist-block .login-another-btn {
@@ -2166,5 +2196,31 @@ footer .navi_kinyu-submenu-el a {
   font-size: 10px;
 }
 
-
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  フォーム関連ポップアップ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.toast-message {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  font-size: 12px;
+  line-height: 20px;
+}
+#toast-container > div {
+  padding: 8px 8px 8px 42px;
+}
+#toast-container > .toast-error,
+#toast-container > .toast-success,
+#toast-container > .toast-info,
+#toast-container > .toast-warning {
+  background-size:16px 16px;
+  -moz-background-size:16px 16px;
+  -webkit-background-size:16px 16px;
+  -o-background-size:16px 16px;
+  -ms-background-size:16px 16px;
+}
+.modal-body {
+  font-size: 13px;
+}
+.modal-footer button {
+  padding: 12px 30px;
 }

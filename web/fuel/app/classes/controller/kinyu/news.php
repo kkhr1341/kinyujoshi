@@ -45,6 +45,18 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     if ($this->data['news'] === false) {
        Response::redirect('error/404');
     }
+
+    if ($this->data['news']['status'] == 0) {
+      $iddate = $this->data['blog']['code'];
+      switch (true) {
+        case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+        case $_SERVER['PHP_AUTH_USER'] !==  'kinyu-news':
+        case $_SERVER['PHP_AUTH_PW']   !== 'iYszQGhE':
+        header('WWW-Authenticate: Basic realm="Enter username and password."');
+        header('Content-Type: text/plain; charset=utf-8');
+        die('このページを見るにはログインが必要です');
+      }
+    }
     
 	$this->template->title = $this->data['news']['title'];
 	$this->template->description = $this->data['news']['title'];
@@ -63,8 +75,10 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      $this->template->detail_news_after = View::forge('kinyu/news/detail_news_spafter.smarty', $this->data);
     } else {
       $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
+      $this->template->detail_news_after = View::forge('kinyu/news/detail_news_after.smarty', $this->data);
     }
 
 

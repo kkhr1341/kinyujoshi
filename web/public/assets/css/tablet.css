@@ -3,11 +3,9 @@
 ---------------------------------- */
 @media screen and (min-width: 480px) and (max-width:1024px) {
 
-
-
-
-
-
+.kinyu-main {
+  padding-top: 60px;
+}
 
 /* ----------------------------------
     ヘッダー
@@ -33,6 +31,12 @@
   height: 60px;
 }
 
+.kinyu-main-animation-inner {
+  width: 350px;
+  height: 78px;
+  margin-top: -39px;
+  margin-left: -175px;
+}
 
 /* ----------------------------------
     ナビゲーション
@@ -43,7 +47,600 @@
 .navi_banner_area .navi_banner_area_el {
   width: 50%;
 }
+.navi_kinyu-menu-block .navi_kinyu-menu-block-el a {
+  font-size: 14px;
+  padding: 20px 12px;
+}
+.kinyu-sp-navi .navi-icon {
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  top: 24px;
+}
+.kinyu-sp-navi .inner {
+  padding: 80px 0px 0px;
+}
 
+/* ----------------------------------
+    トップページイントロダクション
+---------------------------------- */
+.kinyu-top-introlist-pickup {
+  height: 450px;
+}
+.kinyu-top-introlist-title {
+  padding: 16px;
+}
+.kinyu-top-introlist-pickup h3 {
+  font-size: 15px;
+  line-height: 15px;
+  height: 15px;
+}
+
+
+/* ----------------------------------
+    トップページ
+---------------------------------- */
+.kinyu-top-maincontent-block-el {
+  padding: 50px 6%;
+}
+.kinyu-sp-introduction .main-title {
+  width: 40%;
+  margin-bottom: 30px;
+}
+.kinyu-sp-introduction p {
+  font-size: 14px;
+  line-height: 28px;
+}
+.main-intro-link {
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+/* ニュース部分 */
+.kinyu-top-introlist-news {
+
+}
+.kinyu-top-introlist-news .title-area p {
+  font-size: 13px;
+  line-height: 13px;
+}
+.kinyu-top-introlist-news .text-area .news-date {
+  font-size: 12px;
+  height: 12px;
+  line-height: 12px;
+}
+.kinyu-top-introlist-news .text-area .news-title {
+  font-size: 13px;
+  height: 13px;
+  line-height: 13px;
+  margin-top: 8px;
+}
+.kinyu-top-introlist-news .kinyu-top-introlist-news-link {
+  height: 46px;
+}
+.sidebar-more-link a {
+  font-size: 13px;
+  line-height: 13px;
+}
+
+/* はじめての方へ部分 */
+.introduction-list li {
+  width: 32%;
+  margin-right: 2%;
+}
+.introduction-list li:last-child {
+  margin-right: 0%;
+}
+
+/* トップタイトル部分 */
+.kinyu-top-main-title {
+  font-size: 18px;
+  line-height: 28px;
+}
+.kinyu-top-main-sub {
+  font-size: 11px;
+  line-height: 18px;
+}
+
+/* 女子会リスト部分 */
+.kinyu-top-list li {
+  float: left;
+  width: 48%;
+  margin-bottom: 4%;
+  margin-right: 4%;
+}
+.kinyu-top-list li:nth-child(even) {
+  margin-right: 0%;
+}
+.kinyu-top-list li:nth-child(3n) {
+  margin-right: 4%; 
+}
+.kinyu-top-list li:nth-child(6n) {
+  margin-right: 0%; 
+}
+.sidebar-more-link {
+  margin-top: 0px;
+}
+.kinyu-top-list ul li:nth-last-child(-n+3) {
+  margin-bottom: 4%;
+}
+
+/* メンバーになる */
+.kinyu-top-member-list .img-box {
+  float: left;
+  width: 45%;
+  height: 240px;
+}
+.kinyu-top-member-list .text-box {
+  float: right;
+  width: 55%;
+  padding-left: 30px;
+  margin-top: 16px;
+}
+.kinyu-top-member-list .text-box .main-title {
+  font-size: 15px;
+  line-height: 24px;
+  margin: 20px 0px 8px;
+}
+.kinyu-top-member-list .text-box .description {
+  font-size: 12px;
+}
+.kinyu-top-list-title {
+  font-size: 13px;
+  line-height: 20px;
+  height: 40px;
+}
+
+/* インスタグラム */
+.insta-block-inner .kinyu-main-title {
+  width: 42%;
+}
+
+/* バナー */
+.kinyu-top-banner-area li {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+.kinyu-top-banner-area li:nth-child(2n) {
+  margin-right: 0%;  
+}
+
+/* ----------------------------------
+    きん女。ストーリー
+---------------------------------- */
+.about-kinyu-container {
+  width: 88%;
+  padding: 36px 0px 60px;
+}
+.about-kinyu-header-contetns-list-el a {
+  height: 200px;
+}
+.about-kinyu-header-contetns-list-el .title-box img {
+  width: 80%;
+}
+.about-kinyu-container-right {
+  width: 92%;
+  margin: 0 auto;
+}
+.about-kinyu-details-area {
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+.about-kinyu-description .profile .img-box {
+  height: 130px;
+}
+.about-kinyu-detail-list li img {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ----------------------------------
+    女子会部分
+---------------------------------- */
+.joshikai-main-right {
+  float: left;
+  width: 50%;
+  height: 230px;
+}
+.joshikai-main-left {
+  float: right;
+  width: 50%;
+  height: 230px;
+}
+.kinyu-event-info-title {
+  font-size: 18px;
+  line-height: 26px;
+}
+.kinyu-event-list li {
+  float: left;
+  width: 48%;
+  margin-bottom: 4%;
+  margin-right: 4%;
+}
+.kinyu-event-list li:nth-child(even) {
+  margin-right: 0%;
+}
+.kinyu-event-list li:nth-child(3n) {
+  margin-right: 4%; 
+}
+.kinyu-event-list li:nth-child(6n) {
+  margin-right: 0%; 
+}
+.sidebar-more-link {
+  margin-top: 0px;
+}
+.kinyu-event-list ul li:nth-last-child(-n+3) {
+  margin-bottom: 4%;
+}
+.kinyu-event-list li .event-title {
+  font-size: 13px;
+  line-height: 22px;
+}
+.event-subbox .event-subbox-el {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+/* きんゆう女子会。って？ */
+.joshikai-main-el {
+  padding: 50px 0px;
+}
+.about-joshikai .text-box {
+  width: 80%;
+}
+.about-joshikai .text-box-inner {
+  margin-top: 36px;
+}
+.about-joshikai .img-box-el-three-el {
+  height: 130px;
+}
+.about-joshikai .text-box .main-title {
+  font-size: 16px;
+  line-height: 28px;
+}
+.about-joshikai .text-box .description {
+  font-size: 12px;
+}
+.about-joshikai .img-box-el-three {
+  margin-top: 20px;
+}
+.about-joshikai-inner .link-to {
+  margin-top: 28px;
+  font-size: 13px;
+}
+
+/* 過去の特別女子会 */
+.special-event-list li {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+  margin-bottom: 4%;
+}
+.special-event-list li:nth-child(2n) {
+  margin-right: 0%;
+}
+
+/* ----------------------------------
+    女子会詳細部分（決済部分も含む）
+---------------------------------- */
+.kinyu-joshikai-detail-el-header .main-image {
+  height: 400px;
+}
+.joshikai-detail-el-info li .event-title {
+  font-size: 18px;
+  line-height: 28px;
+}
+.joshikai-detail-el-info li .info-title {
+  font-size: 14px;
+  line-height: 14px;
+}
+.joshikai-detail-el-info li .info-detail {
+  font-size: 14px;
+  padding-top: 8px;
+}
+.joshikai-detail-el-content-box .info-title {
+  font-size: 14px;
+  line-height: 14px;
+  margin-bottom: 16px;
+}
+
+/* 女子会詳細文章 */
+.joshikai-detail-el-content-box h2 {
+  font-size: 16px;
+  line-height: 26px;
+}
+.joshikai-detail-el-content-box h3 {
+  font-size: 15px;
+  line-height: 24px;
+}
+.joshikai-detail-el-content-box p {
+  font-size: 13px;
+  line-height: 24px;
+}
+.joshikai-detail-el-info .joinus-block {
+  width: 98%;
+  bottom: 80px;
+  margin-left: -49%;
+}
+.joshikai-detail-el-info .joinus-block a, .joshikai-detail-el-info .joinus-block p {
+  padding: 16px 0px;
+  font-size: 14px;
+}
+.joinus-open-block .inner {
+  width: 72%;
+  margin-left: -36%;
+}
+
+/* チケット部分 */
+.kinyu-joshikai-tickets-block {
+  border: 1px solid #8ddcd1;
+  width: 80%;
+  padding: 36px;
+}
+.kinyu-joshikai-tickets-main .tickets-img {
+  height: 200px;
+}
+.kinyu-joshikai-tickets-main h2 {
+  font-size: 16px;
+  line-height: 26px;
+}
+.kinyu-joshikai-tickets-fee p {
+  font-size: 13px;
+  line-height: 24px;
+}
+.kinyu-joshikai-tickets-block .ticket-title {
+  font-size: 13px;
+  line-height: 13px;
+}
+.kinyu-joshikai-tickets-payment a {
+  font-size: 13px;
+}
+.kinyu-joshikai-tickets-payment-list p {
+  font-size: 12px;
+}
+
+/* 決済部分 */
+.fee-open .inner {
+  width: 80%;
+}
+.fee-open .inner form .main-title {
+  font-size: 18px;
+  line-height: 28px;
+}
+.kinyu-credit-list-block {
+  width: 80%;
+}
+.fee-open .inner form label {
+  font-size: 13px;
+}
+.fee-open .inner form select {
+  font-size: 13px;
+  padding: 12px;
+}
+.fee-open .inner form input {
+  font-size: 13px;
+  padding: 12px;
+}
+.day-cash-submit {
+  font-size: 13px;
+  padding: 15px 0px;
+}
+
+.report-detail-sidebar .sidebar-more-link {
+  margin-top: 0px;
+}
+
+/* ----------------------------------
+    レポート関連
+---------------------------------- */
+.kinyu-details-introdauction .img-box {
+  float: left;
+  width: 35%;
+}
+.kinyu-details-introdauction .text-box {
+  float: right;
+  width: 65%;
+  padding-left: 24px;
+}
+.kinyu-details-introdauction .text-box h2 {
+  font-size: 18px;
+  line-height: 28px;
+}
+.kinyu-details-introdauction .text-box .text-box-inner {
+  padding-top: 12px;  
+}
+.report-detail-main p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.report-detail-main h2 {
+  font-size: 17px;
+  line-height: 26px;
+}
+.report-detail-main blockquote {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* ----------------------------------
+    レポート詳細・ニュース詳細下
+---------------------------------- */
+.report-detail-sidebar-el-title {
+  font-size: 14px;
+  line-height: 14px;
+}
+.report-detail-share {
+  height: 150px;
+}
+.report-detail-share-left {
+  width: 50%;
+}
+.report-detail-share-right {
+  width: 50%;
+  padding-top: 36px;
+}
+.report-detail-share-el .share-this-title {
+  width: 80%;
+}
+
+/* 女子会部分 */
+.report-sidebar-event-list li {
+  float: left;
+  width: 48%;
+  margin-bottom: 4%;
+  margin-right: 4%;
+}
+.report-sidebar-event-list li:nth-child(even) {
+  margin-right: 0%;
+}
+.report-sidebar-event-list li:nth-child(3n) {
+  margin-right: 4%; 
+}
+.report-sidebar-event-list li:nth-child(6n) {
+  margin-right: 0%; 
+}
+.sidebar-more-link {
+  margin-top: 0px;
+}
+.report-sidebar-event-list ul li:nth-last-child(-n+3) {
+  margin-bottom: 4%;
+}
+
+/* ニュース部分 */
+.kinyu-sidebar-news-list li {
+  float: left;
+  width: 48%;
+  margin-bottom: 4%;
+  margin-right: 4%;
+}
+.kinyu-sidebar-news-list li:nth-child(2n) {
+  margin-right: 0%;
+}
+.kinyu-sidebar-news-list li:last-child {
+  margin-bottom: 4%;
+}
+.kinyu-sidebar-news-list .img-box {
+  float: left;
+  width: 30%!important;
+  height: 100%!important;
+}
+.kinyu-sidebar-news-list li .text-box {
+  float: right;
+  width: 70%;
+  height: 100%;
+  padding: 16px 4% 0px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.kinyu-sidebar-news-list .kinyu-top-list-kind p {
+  padding: 0px;
+}
+.kinyu-sidebar-news-list .kinyu-top-list-title {
+  padding: 8px 0px 4px;
+}
+
+/* 編集部へのひとこと */
+.report-detail-sidebar-el button {
+  font-size: 13px;
+  width: 180px;
+}
+
+/* バナー */
+.report-detail-sidebar-el .banner-list li {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+.report-detail-sidebar-el .banner-list li:nth-child(2n) {
+  margin-right: 0%;  
+}
+
+/* ----------------------------------
+    ニュース関連
+---------------------------------- */
+.kinyu-news-list-el .img-box {
+  height: 100px;
+}
+.kinyu-news-list-el .text-box .date {
+  font-size: 13px;
+  line-height: 13px;
+}
+.kinyu-news-list-el .text-box .title {
+  font-size: 14px;
+  line-height: 24px;
+  height: 48px;
+}
+.kinyu-news-list-el .text-box {
+  padding: 20px 26px 0px 0px;
+}
+
+/* ----------------------------------
+    ログイン/メンバー登録部分
+---------------------------------- */
+.login-contents-intro {
+  width: 80%;
+  margin-bottom: 36px;
+}
+.login-contents-block-inner {
+  width: 80%;
+}
+.login-contents-title {
+  font-size: 20px;
+  line-height: 28px;
+}
+.login-contents-form-area label.title {
+  font-size: 14px;
+  line-height: 14px;
+}
+.login-contents-form-area .login-btn {
+  width: 200px;
+  font-size: 13px;
+  padding: 12px 0px;
+}
+.login-contents-form-area .email-form p {
+  font-size: 12px;
+}
+.login-contents-intro .caution {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 8px 12px;
+}
+.login-another-btn {
+  font-size: 13px;
+  line-height: 13px;
+  padding: 12px 24px;
+}
+.login-regist-block .login-another-btn {
+  font-size: 13px;
+  line-height: 13px;
+  padding: 12px 24px;
+}
+.regist-btn-list li a {
+  padding: 12px 0px;
+  font-size: 13px;
+}
+.login-btn-list li a {
+  padding: 12px 0px;
+  font-size: 13px;
+}
+.login-contents-form-area .email-form input {
+  padding: 12px;
+  font-size: 13px;
+}
+.regist-sub-description {
+  font-size: 12px;
+}
+
+
+
+/* ----------------------------------
+    フッター
+---------------------------------- */
+.singlepage-footer {
+  padding: 60px 0px 100px;
+}
 
 
 }
