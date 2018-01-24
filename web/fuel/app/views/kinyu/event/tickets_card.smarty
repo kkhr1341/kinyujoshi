@@ -42,7 +42,7 @@
                 {/foreach}
               <option value="0">新しいカードで決済する</option>
             </select>
-            <div class="newcards" style="display: none;">
+            <div class="newcards">
               <p class="select-before-title">・新しいカード番号を入力してください</p>
               <input type="text" class="number" name="number" maxlength="16" placeholder="新しいカード番号">
             </div>
