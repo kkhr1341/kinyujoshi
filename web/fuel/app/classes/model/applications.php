@@ -86,62 +86,36 @@ class Applications extends Base {
 		return true;
 	}
 
-	private static function getCustomerOfPayjp($username) {
-	    try {
-            return \Payjp\Customer::retrieve($username);
-        } catch (\Payjp\Error\InvalidRequest $e) {
-	        return false;
-        }
-    }
-    private static function createCustomerOfPayjp($username) {
-        try {
-            return \Payjp\Customer::create(array(
-                'id' => $username,
-            ));
-        } catch (\Payjp\Error\InvalidRequest $e) {
-            throw new \Exception("顧客情報の登録に失敗しました。");
-        }
-    }
-    private static function createCardOfPayjp(\Payjp\Customer $customer, $token) {
-	    try {
-            return $customer->cards->create(array(
-                'card' => $token
-            ));
-        } catch (\Payjp\Error\InvalidRequest $e) {
-	        throw new \Exception("既にご登録のあるカードです。");
-        }
-    }
+        /**
+         * 参加申し込み確認
+         */
+        private static function completed($event_code, $username, $email='') {
 
-    /**
-     * 参加申し込み確認
-     */
-    private static function completed($event_code, $username, $email='') {
-
-        if ($username == 'guest') {
-            // 既存のデータがないか確認
-            $data = \DB::select('*')->from('applications')
-                ->where('event_code', '=', $event_code)
-                ->where('username', '=', $username)
-                ->where('email', '=', $email)
-                ->where('cancel', '=', 0)
-                ->where('disable', '=', 0)
-                ->execute()
-                ->current();
-        } else {
-            // 既存のデータがないか確認
-            $data = \DB::select('*')->from('applications')
-                ->where('event_code', '=', $event_code)
-                ->where('username', '=', $username)
-                ->where('cancel', '=', 0)
-                ->where('disable', '=', 0)
-                ->execute()
-                ->current();
+            if ($username == 'guest') {
+                // 既存のデータがないか確認
+                $data = \DB::select('*')->from('applications')
+                    ->where('event_code', '=', $event_code)
+                    ->where('username', '=', $username)
+                    ->where('email', '=', $email)
+                    ->where('cancel', '=', 0)
+                    ->where('disable', '=', 0)
+                    ->execute()
+                    ->current();
+            } else {
+                // 既存のデータがないか確認
+                $data = \DB::select('*')->from('applications')
+                    ->where('event_code', '=', $event_code)
+                    ->where('username', '=', $username)
+                    ->where('cancel', '=', 0)
+                    ->where('disable', '=', 0)
+                    ->execute()
+                    ->current();
+            }
+            if (empty($data)) {
+                return false;
+            }
+            return true;
         }
-        if (empty($data)) {
-            return false;
-        }
-        return true;
-    }
 
 	/**
 	 * 参加申し込み
@@ -232,8 +206,8 @@ class Applications extends Base {
                 );
             } else {
                 // 会員登録して申し込み
-
                 // Payjpに顧客情報登録 or 取得
+
                 if (!$customer = $payment->getCustomer($username)) {
                     $customer = $payment->createCustomer($username);
                     // トランザクション失敗時の登録取り消し用
@@ -279,7 +253,6 @@ class Applications extends Base {
 
             return true;
         } catch (\Exception $e) {
-
             $db->rollback_transaction();
 
             if (isset($new_customer)) {
