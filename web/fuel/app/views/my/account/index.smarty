@@ -1,0 +1,89 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+    <div class="admin-normal-side">
+      <ul>
+        <li><a href="/my">マイページ・トップ</a></li>
+        <li><a href="/my/profile">プロフィール編集</a></li>
+        <li><a href="/my/joshikai">参加予定の女子会</a></li>
+        <li class="active"><a href="/my/account">アカウント情報</a></li>
+      </ul>
+    </div>
+    
+    <div class="admin-normal-main">
+
+      <div class="admin-account-el">
+        <p class="admin-account-title admin-account-title1">使用したクレジットカードの管理</p>
+        <div class="admin-account-el-open admin-account-el-open1 credit-list-area" style="display: none;">
+          <ul>
+
+            <li class="clear">
+              <div class="main-area"><p>下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</p></div>
+              <div class="button-area">
+                <button class="delete">情報を削除する</button>
+              </div>
+            </li>
+
+            <li class="clear">
+              <div class="main-area"><p>下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</p></div>
+              <div class="button-area">
+                <button class="delete">情報を削除する</button>
+              </div>
+            </li>
+
+            <li class="clear">
+              <div class="main-area"><p>下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</p></div>
+              <div class="button-area">
+                <button class="delete">情報を削除する</button>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+        
+      </div>
+
+      <div class="admin-account-el">
+        <p class="admin-account-title admin-account-title2">メンバー退会について</p>
+        <div class="admin-account-el-open admin-account-el-open2 resign-area" style="display: none;">
+          <p>メンバーの退会手続きについては、<a href="/contact" style="color:#4C9BBF;">お問い合わせフォーム</a>からのみ受け付けております。
+          <span style="display: block;height: 8px;"></span>
+          また、一度退会されると、同じお名前やメールアドレスは使用できなくなります。あらかじめご了承のほどよろしくお願いいたします。</p>
+        </div>    
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+    
+<script>
+$(function(){
+
+  $(".admin-account-title1").click(function() {
+    $(".admin-account-title1").toggleClass("active");
+    $(".admin-account-el-open1").slideToggle();
+  });
+
+  $(".admin-account-title2").click(function() {
+    $(".admin-account-title2").toggleClass("active");
+    $(".admin-account-el-open2").slideToggle();
+  });
+
+  $('.delete').click(function(){
+
+    bootbox.confirm("クレジットカードの情報を削除しますか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          ts.success("削除しました", function(){
+            location.href = "/my/registlist";
+          });
+        });
+      }
+      else {
+        ts.info("キャンセルしました");
+      }
+    });
+  });
+  
+});
+</script>
