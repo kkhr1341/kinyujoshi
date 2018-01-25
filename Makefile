@@ -24,3 +24,13 @@ test:
 clean:
 	docker-compose down
 .PHONY: clean
+
+uninstall:
+	docker-compose down
+	docker volume rm kinyujoshi_db-data
+	docker volume rm kinyujoshi_test-db-data
+.PHONY: uninstall
+
+mysql:
+	docker-compose exec db mysql -uroot -ppass
+.PHONY: mysql
