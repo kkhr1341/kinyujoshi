@@ -104,6 +104,7 @@ return array(
 	'my'   => 'my/top',
 	//マイページ - プロフィール、女子会リスト
 	'my/profile'   => 'my/profile/index',
+	'my/account'   => 'my/account/index',
 	'my/joshikai' => 'my/events/joshikailist',
 	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
 

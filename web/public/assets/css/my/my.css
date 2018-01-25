@@ -339,17 +339,16 @@ footer {
   margin-bottom: 8px;
 }
 .admin-normal-side li.active {
-  background: #8ddcd1;
+  background: #a6e9d9;
 }
 .admin-normal-side li.active a {
-  color: #fff;
-  font-weight: bold;
 }
 .admin-normal-main {
   width: 800px;
   float: right;
   padding: 0px 80px;
   border-left: 1px solid #fff;
+  min-height: 200px;
 }
 .admin-normal-profile {
   text-align: center;
@@ -600,3 +599,65 @@ footer {
 .edit-profile-img .edit-profile-img2:hover {
   opacity: 0.9;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  アカウント詳細部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.admin-account-el {
+  margin-bottom: 16px;
+}
+.admin-account-el .admin-account-title {
+  font-size: 13px;
+  background-color: #8ddcd1;
+  color: #fff;
+  padding: 16px;
+  font-weight: bold;
+  position: relative;
+}
+.admin-account-title.active:after {
+  content: "×";
+  font-size: 16px;
+  position: absolute;
+  right: 16px;
+}
+.admin-account-el-open {
+  background-color: #fff;
+  margin: 12px 0px 36px;
+}
+.credit-list-area li {
+  padding: 16px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.credit-list-area li:last-child {
+  border-bottom: 1px solid none;
+}
+.credit-list-area li .main-area {
+  width: 80%;
+  float: left;
+}
+.credit-list-area li .button-area {
+  width: 20%;
+  float: right;
+  text-align: center;
+}
+.credit-list-area li .button-area button {
+  font-size: 12px;
+  line-height: 22px;
+  padding: 0px 8px;
+  letter-spacing: 0.5px;
+  background-color: rgb(255, 141, 124);
+  color: #fff;
+}
+.resign-area {
+  padding: 16px;
+}
+
+
+
+
+
+
+
+
+
+

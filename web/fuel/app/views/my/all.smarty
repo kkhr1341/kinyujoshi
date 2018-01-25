@@ -4,7 +4,7 @@
       <ul>
         <li class="active"><a href="/my">マイページ・トップ</a></li>
         <li><a href="/my/profile">プロフィール編集</a></li>
-        <li><a href="/my/joshikai">参加女子会</a></li>
+        <li><a href="/my/joshikai">参加予定の女子会</a></li>
       </ul>
     </div>
     
