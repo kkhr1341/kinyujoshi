@@ -83,15 +83,15 @@
 				</div>
 
 				<div class="form-group">
-					<label class="form-group-event-label">費用</label>
-					<p class="form-group-sub"><span style="color:red;">＊</span>"円"や、","はなしでお願いします。
+					<label class="form-group-event-label">女子会参加費</label>
+					<p class="form-group-sub"><span style="color:red;">＊</span>半角英数字のみでお願いします。"円"や、","はなしでお願いします。
 					</p>
 					<input type="text" id="fee" class="form-control" placeholder="(例)1000、2000、15000" value="{$events.fee}">
 				</div>
 
 				<div class="form-group">
 					<label class="form-group-event-label">定員</label>
-					<p class="form-group-sub"><span style="color:red;">＊</span>"人"や"名"の表記はなしでお願いします。</p>
+					<p class="form-group-sub"><span style="color:red;">＊</span>半角英数字のみでお願いします。</p>
 					<input type="text" id="limit" class="form-control" placeholder="(例)20、15、10、etc..." value="{$events.limit}">
 				</div>
 
@@ -107,7 +107,7 @@
         </div>
 
         <div class="form-group">
-					<label class="form-group-event-label">キャンセル料金発生日</label>
+					<label class="form-group-event-label">キャンセル料金発生日<span class="label label-danger">必須</span></label>
 					<p class="form-group-sub"><span style="color:red;">＊</span>基本的には3日前。それ以外の場合は記入をお願いします。</p>
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="incur_cancellation_fee_date" value="{$events.incur_cancellation_fee_date|date_format:"%Y/%m/%d %H:%M"}" />
@@ -196,7 +196,7 @@ $(function(){
 			return false;
 		}
 		if (params.fee == "") {
-			ts.error("費用を入力してください");
+			ts.error("参加費を入力してください");
 			return false;
 		}
 		if (params.event_date == "") {
@@ -235,7 +235,7 @@ $(function(){
 		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
 		params.description = $('#description').val();
-        params.main_image = $('#main_image').val();
+    params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.place = $('#place').val();
 		params.place_url = $('#place_url').val();
@@ -244,7 +244,7 @@ $(function(){
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
-        params.limit = $("#limit").val();
+    params.limit = $("#limit").val();
 		params.open_date = $('#open_date').val();
 		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;
@@ -266,7 +266,7 @@ $(function(){
 			return false;
 		}
 		if (params.fee == "") {
-			ts.error("費用を入力してください");
+			ts.error("参加費を入力してください");
 			return false;
 		}
 		if (params.event_date == "") {

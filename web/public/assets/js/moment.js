@@ -634,12 +634,12 @@
 
     // LOCALES
 
-    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
+    var defaultLocaleMonths = '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_');
     function localeMonths (m) {
         return this._months[m.month()];
     }
 
-    var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
+    var defaultLocaleMonthsShort = '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_');
     function localeMonthsShort (m) {
         return this._monthsShort[m.month()];
     }
@@ -2282,7 +2282,7 @@
         return this._weekdaysShort[m.day()];
     }
 
-    var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
+    var defaultLocaleWeekdaysMin = '日_月_火_水_木_金_土'.split('_');
     function localeWeekdaysMin (m) {
         return this._weekdaysMin[m.day()];
     }
