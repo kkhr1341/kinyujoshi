@@ -155,7 +155,16 @@ $(function(){
       if (result) {
         ajax.post(url, params, function(data){
           document.getElementById("message").value="";
-          $('.report-detail-comment-popup').fadeIn(800);          
+
+          $(".loader-block").fadeIn(500);
+
+          setTimeout(function(){
+            $(".loader-block").fadeOut(500);
+          },2500);
+
+          setTimeout(function(){
+            $('.report-detail-comment-popup').fadeIn(800);  
+          },3000);     
         });
       }
       else {
