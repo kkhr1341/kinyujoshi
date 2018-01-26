@@ -353,9 +353,85 @@ footer {
   height: 80px;
 }
 
-
-
-
+/* 詳細部分 */
+.joshikai-attend-detail-header {
+  height: 180px;
+}
+.joshikai-attend-detail-header .img-box {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+.joshikai-attend-detail-header .text-box {
+  width: 70%;
+  height: 100%;
+  float: right;
+  display: table;
+  padding-left: 36px;
+}
+.joshikai-attend-detail-header .text-box-inner {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.joshikai-attend-detail-header .text-box-inner .date-title {
+  font-size: 14px;
+  line-height: 14px;
+  color: #77cbc0;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.joshikai-attend-detail-header .text-box-inner .main-title {
+  font-size: 18px;
+  line-height: 26px;
+}
+.joshikai-attend-el-block {
+  margin-top: 24px;
+}
+.joshikai-attend-detail-table > thead > tr > th, 
+.joshikai-attend-detail-table > tbody > tr > th, 
+.joshikai-attend-detail-table > tfoot > tr > th, 
+.joshikai-attend-detail-table > thead > tr > td, 
+.joshikai-attend-detail-table > tbody > tr > td, 
+.joshikai-attend-detail-table > tfoot > tr > td {
+  padding: 12px!important;
+  line-height: 18px;
+}
+.joshikai-attend-detail-table tr {
+  border-bottom: 1px solid #f1f1f1;
+}
+.joshikai-attend-detail-table td {
+  vertical-align: middle!important;
+}
+.joshikai-attend-detail-table .main-img {
+  width: 150px;
+}
+.joshikai-attend-detail-table .member-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.joshikai-attend-detail-table .link-area {
+  width: 150px;
+}
+.joshikai-attend-detail-table .link-area a {
+  width: 100%;
+  display: inline-block;
+  padding: 4px;
+  background-color: gray;
+  text-align: center;
+  font-size: 12px;
+}
+.joshikai-attend-detail-table .link-area a.email-link {
+  margin-bottom: 8px;
+  background-color: #8ddcd1;
+  color: #fff;
+  font-weight: bold;
+}
+.joshikai-attend-detail-table .link-area a.profile-link {
+  background-color: #f1f1f1;
+} 
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
