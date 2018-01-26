@@ -94,8 +94,8 @@ console.log($resArray02);
       <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
 
       <div class="login-block">
-        <a class="login" href="/login">ログインして参加</a>
-        <a class="login_regist" href="/login_regist">メンバー登録をして参加</a>
+        <a class="login" href="/login?after_login_url=/joshikai_tickets/{$urlcode}">ログインして参加</a>
+        <a class="login_regist" href="/login_regist?after_login_url=/joshikai_tickets/{$urlcode}">メンバー登録をして参加</a>
       </div>
 
       <div class="first-login-block">

@@ -37,7 +37,12 @@ class Controller_Kinyubase extends Controller_Template
 		$group = Auth::group();
 		$this->data['roles'] = $group->get_roles();
 		$this->template->roles = $this->data['roles'];
-		
+
+        // ログイン後のリダイレクトURL
+        if ($after_login_url = Input::get("after_login_url")) {
+            \Session::set('after_login_url', $after_login_url);
+        }
+
 		Asset::add_path('assets/css', 'css');
 		Asset::add_path('assets/js', 'js');
 		Asset::css(array(

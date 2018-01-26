@@ -26,6 +26,7 @@
       <input type="hidden" id="provider" value="{$userdata.provider}">
       <input type="hidden" id="access_token" value="{$userdata.access_token}">
       <input type="hidden" id="expires" value="{$userdata.expires}">
+      <input type="hidden" id="after_login_url" value="{$after_login_url}">
       <div class="singlepage-form-block">
 
         <div class="regist-add-form-edit-el">
@@ -312,7 +313,12 @@ $(function(){
           },2500);
 
           setTimeout(function(){
-            location.href = "/regist/complete";
+            var after_login_url = $("#after_login_url").val();
+            if (after_login_url) {
+              location.href = after_login_url;
+            } else {
+              location.href = "/regist/complete";
+            }
           },3000);
 
         });

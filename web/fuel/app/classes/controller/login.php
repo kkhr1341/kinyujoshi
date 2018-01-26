@@ -89,6 +89,11 @@ class Controller_Login extends Controller_KinyuBase
     {
 
         if (!Auth::check()) {
+            // ログイン後URL
+            if ($after_login_url = \Session::get('after_login_url')) {
+                \Session::set('after_login_url', '');
+            }
+            $this->template->after_login_url = $after_login_url;
 
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
             $this->template->title = 'ログイン｜きんゆう女子。';
@@ -123,6 +128,11 @@ class Controller_Login extends Controller_KinyuBase
             }
             $this->data['userdata'] = $userdata;
 
+            // ログイン後URL
+            if ($after_login_url = \Session::get('after_login_url')) {
+                \Session::set('after_login_url', '');
+            }
+            $this->template->after_login_url = $after_login_url;
 
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
             $this->template->title = 'ログイン｜きんゆう女子。';

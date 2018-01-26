@@ -42,7 +42,7 @@ class Controller_Auth extends Controller {
 					// and set the redirect url for this status
 // 					$uid = $opauth->get('auth.uid', '?');
 // 					$profile = 
-					$url = '/my';
+					$url = $this->get_redirect_url();
 					break;
 	
 					// the provider was known and linked, the linked account as logged-in
@@ -50,7 +50,7 @@ class Controller_Auth extends Controller {
 					// inform the user the login using the provider was succesful
 					//\Messages::success(sprintf(__('login.logged_in_using_provider'), ucfirst($provider)));
 					// and set the redirect url for this status
-					$url = '/my';
+                    $url = $this->get_redirect_url();
 					break;
 	
 					// we don't know this provider login, ask the user to create a local account first
@@ -79,7 +79,7 @@ class Controller_Auth extends Controller {
 
                         // ログイン
                         \Auth::instance()->force_login((int)$user_id[1]);
-                        $url = '/my';
+                        $url = $this->get_redirect_url();
                         break;
                     }
 
@@ -116,21 +116,13 @@ class Controller_Auth extends Controller {
 					// inform the user the login using the provider was succesful, and we created a local account
 					//\Messages::success(__('login.auto-registered'));
 					// and set the redirect url for this status
-					$url = '/my';
+                    $url = $this->get_redirect_url();
 					break;
 	
 				default:
 					throw new \FuelException('Auth_Opauth::login_or_register() has come up with a result that we dont know how to handle.');
 			}
-
-			$referrer = \Session::get('referrer');
-			if ($referrer != "") {
-				\Session::set('referrer', '');
-				\Response::redirect($referrer);
-			}
-			else {
-				\Response::redirect($url);
-			}
+            \Response::redirect($url);
 		}
 	
 		// deal with Opauth exceptions
@@ -151,5 +143,24 @@ class Controller_Auth extends Controller {
 		}
 	
 	}
-	
+
+    /**
+     * ログイン・会員登録後のリダイレクト先URL取得
+     * @return string
+     */
+	private function get_redirect_url()
+    {
+        if ($after_login_url = \Session::get('after_login_url')) {
+            $url = $after_login_url;
+        }
+        else if ($referrer = \Session::get('referrer')) {
+            $url = $referrer;
+        } else {
+            $url = '/my';
+        }
+        \Session::set('after_login_url', '');
+        \Session::set('referrer', '');
+
+        return $url;
+    }
 }
