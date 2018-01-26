@@ -83,7 +83,7 @@ $(function(){
 		
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
-				//location.href = "/my/news";
+				//location.href = "/admin/news";
 			});
 		});
 	});
@@ -119,7 +119,7 @@ $(function(){
 			if (result) {
 				ajax.post(url, params, function(data){
 					ts.success("削除しました", function(){
-						location.href = "/my/news";
+						location.href = "/admin/news";
 					});
 				});
 			}

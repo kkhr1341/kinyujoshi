@@ -1,11 +1,11 @@
 
 <ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
-	<li><a href="/my">マイページ</a></li>
+	<li><a href="/admin">マイページ</a></li>
 	<li class="active">プロジェクトの管理</li>
 </ol>
 <div class='clearw'>
-	<a class="btn btn-primary float_right" href="/my/projects/create" role="button">プロジェクトを作る</a>
+	<a class="btn btn-primary float_right" href="/admin/projects/create" role="button">プロジェクトを作る</a>
 </div>
 
 
@@ -52,8 +52,8 @@
 				<td>{$projects_item.archive_amount|number_format}/{$projects_item.target_amount|number_format}</td>
 				<td>{$projects_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
 				<td>{$projects_item.close_date|date_format:"%Y/%m/%d %H:%M"}</td>
-				<td><a href="/my/projects/courses/{$projects_item.code}">コース ({$projects_item.num_of_courses})</a></td>
-				<td><a href="/my/projects/blog/{$projects_item.code}">報告</a></td>
+				<td><a href="/admin/projects/courses/{$projects_item.code}">コース ({$projects_item.num_of_courses})</a></td>
+				<td><a href="/admin/projects/blog/{$projects_item.code}">報告</a></td>
 			</tr>
 			{/foreach}
 		</table>
@@ -96,7 +96,7 @@
 				<td>{$projects_item.title}</td>
 				<td>{$projects_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
 				<td>{$projects_item.close_date|date_format:"%Y/%m/%d %H:%M"}</td>
-				<td><a href="/my/projects/courses/{$projects_item.code}">コース ({$projects_item.num_of_courses})</a></td>
+				<td><a href="/admin/projects/courses/{$projects_item.code}">コース ({$projects_item.num_of_courses})</a></td>
 			</tr>
 			{/foreach}
 		</table>
@@ -139,7 +139,7 @@
 				<td>{$projects_item.title}</td>
 				<td>{$projects_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
 				<td>{$projects_item.close_date|date_format:"%Y/%m/%d %H:%M"}</td>
-				<td><a href="/my/projects/courses/{$projects_item.code}">コース ({$projects_item.num_of_courses})</a></td>
+				<td><a href="/admin/projects/courses/{$projects_item.code}">コース ({$projects_item.num_of_courses})</a></td>
 			</tr>
 			{/foreach}
 		</table>
@@ -152,7 +152,7 @@
 $(function(){
 	$('.projects').click(function(){
 		var code = $(this).attr('code');
-		location.href = "/my/projects/edit/"+code;
+		location.href = "/admin/projects/edit/"+code;
 	});
 });
 </script>

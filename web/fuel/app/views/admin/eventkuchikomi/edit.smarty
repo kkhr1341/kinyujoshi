@@ -1,8 +1,8 @@
 
 <ol class="breadcrumb">
   <li><a href="/">ホーム</a></li>
-  <li><a href="/my">マイページ</a></li>
-  <li><a href="/my/eventkuchikomi">イベントの管理</a></li>
+  <li><a href="/admin">マイページ</a></li>
+  <li><a href="/admin/eventkuchikomi">イベントの管理</a></li>
   <li class="active">イベントを編集する</li>
 </ol>
 
@@ -46,7 +46,7 @@ $(function(){
 
     ajax.post(url, params, function(data){
       ts.success("公開しました", function(){
-        location.href = "/my/eventkuchikomi";
+        location.href = "/admin/eventkuchikomi";
       });
     });
 
@@ -78,7 +78,7 @@ $(function(){
       if (result) {
         ajax.post(url, params, function(data){
           ts.success("削除しました", function(){
-            location.href = "/my/eventkuchikomi";
+            location.href = "/admin/eventkuchikomi";
           });
         });
       }

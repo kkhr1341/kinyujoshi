@@ -1,11 +1,11 @@
 
 <ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
-	<li><a href="/my">マイページ</a></li>
+	<li><a href="/admin">マイページ</a></li>
 	<li class="active">ページの管理</li>
 </ol>
 <div class='clearw'>
-	<a class="btn btn-primary float_right" href="/my/pages/create" role="button">ページを作る</a>
+	<a class="btn btn-primary float_right" href="/admin/pages/create" role="button">ページを作る</a>
 </div>
 
 
@@ -130,7 +130,7 @@
 $(function(){
 	$('.pages').click(function(){
 		var code = $(this).attr('code');
-		location.href = "/my/pages/edit/"+code;
+		location.href = "/admin/pages/edit/"+code;
 	});
 });
 </script>

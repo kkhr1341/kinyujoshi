@@ -183,7 +183,7 @@ $(function(){
 		}
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
-				location.href = "/my/blogs";
+				location.href = "/admin/blogs";
 			});
 		});
 	});
@@ -206,7 +206,7 @@ $(function(){
 		}
 		ajax.post(url, params, function(data){
 			ts.success("下書き保存しました", function(){
-				location.href = "/my/blogs";
+				location.href = "/admin/blogs";
 			});
 		});
 	});

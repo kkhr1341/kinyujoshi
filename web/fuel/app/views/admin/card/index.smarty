@@ -28,7 +28,7 @@
 </table>
 {/if}
 
-<form action="/my/card" method="post">
+<form action="/admin/card" method="post">
 	<script src="https://checkout.webpay.jp/v3/" class="webpay-button" data-token-name="wptoken" data-submit-text="クレジットカードを登録する" data-key="test_public_cwcfCu1wVcY77uIdAN0BPfXL" data-text="新しいクレジットカードを登録する" data-lang="ja"></script>
 </form>
 

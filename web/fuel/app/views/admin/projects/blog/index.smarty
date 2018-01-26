@@ -1,13 +1,13 @@
 
 <ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
-	<li><a href="/my">マイページ</a></li>
-	<li><a href="/my/projects">プロジェクトの管理</a></li>
-	<li><a href="/my/projects/edit/{$project.code}">{$project.title}</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li><a href="/admin/projects">プロジェクトの管理</a></li>
+	<li><a href="/admin/projects/edit/{$project.code}">{$project.title}</a></li>
 	<li class="active">報告書の管理</li>
 </ol>
 <div class='clearw'>
-	<a class="btn btn-primary float_right" href="/my/projects/blog/create/{$project.code}" role="button">報告書を書く</a>
+	<a class="btn btn-primary float_right" href="/admin/projects/blog/create/{$project.code}" role="button">報告書を書く</a>
 </div>
 
 
@@ -103,7 +103,7 @@ $(function(){
 	$('.blogs').click(function(){
 		var project_code = $(this).attr('project_code');
 		var code = $(this).attr('code');
-		location.href = "/my/projects/blog/edit/"+project_code + "/" + code;
+		location.href = "/admin/projects/blog/edit/"+project_code + "/" + code;
 	});
 });
 </script>

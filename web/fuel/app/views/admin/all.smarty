@@ -2,9 +2,9 @@
   <div class="admin-normal-inner clear">
     <div class="admin-normal-side">
       <ul>
-        <li class="active"><a href="/my">マイページ・トップ</a></li>
-        <li><a href="/my/profile">プロフィール編集</a></li>
-        <li><a href="/my/joshikai">参加女子会</a></li>
+        <li class="active"><a href="/admin">マイページ・トップ</a></li>
+        <li><a href="/admin/profile">プロフィール編集</a></li>
+        <li><a href="/admin/joshikai">参加女子会</a></li>
       </ul>
     </div>
     
@@ -37,7 +37,7 @@
             <!-- 女子会 -->
             <!-- 現状、全ての女子会を表示 -->
             <li>  
-              <a href="/my/joshikai/{$event.code}" class="clear">
+              <a href="/admin/joshikai/{$event.code}" class="clear">
                 <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <div class="text-box-inner">

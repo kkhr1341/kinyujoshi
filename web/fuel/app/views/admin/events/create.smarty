@@ -211,7 +211,7 @@ $(function(){
 
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
-				location.href = "/my/events";
+				location.href = "/admin/events";
 			});
 		});
 	});
@@ -242,7 +242,7 @@ $(function(){
 		}
 		ajax.post(url, params, function(data){
 			ts.success("下書き保存しました", function(){
-				location.href = "/my/events";
+				location.href = "/admin/events";
 			});
 		});
 	});

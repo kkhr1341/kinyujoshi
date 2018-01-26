@@ -237,14 +237,14 @@ $(function(){
     // ajax.post(url, params, function(data){
     //   ts.success("下書き保存しました");
     //   setTimeout(function(){
-    //     location.href = "/my/registlist";
+    //     location.href = "/admin/registlist";
     //   },2000);
     // });
     bootbox.confirm("メンバー情報を編集しますか？", function(result) {
       if (result) {
         ajax.post(url, params, function(data){
           ts.success("編集完了しました", function(){
-            location.href = "/my/registlist";
+            location.href = "/admin/registlist";
           });
         });
       }
@@ -268,7 +268,7 @@ $(function(){
       if (result) {
         ajax.post(url, params, function(data){
           ts.success("削除しました", function(){
-            location.href = "/my/registlist";
+            location.href = "/admin/registlist";
           });
         });
       }

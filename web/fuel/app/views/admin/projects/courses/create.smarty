@@ -1,9 +1,9 @@
 
 <ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
-	<li><a href="/my">マイページ</a></li>
-	<li><a href="/my/projects">プロジェクトの管理</a></li>
-	<li><a href="/my/projects/courses/{$projects.code}">コースの管理</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li><a href="/admin/projects">プロジェクトの管理</a></li>
+	<li><a href="/admin/projects/courses/{$projects.code}">コースの管理</a></li>
 	<li class="active">コースを作る</li>
 </ol>
 
@@ -85,7 +85,7 @@ $(function(){
 		
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
-				location.href = "/my/projects/courses/"+project_code;
+				location.href = "/admin/projects/courses/"+project_code;
 			});
 		});
 	});
@@ -103,7 +103,7 @@ $(function(){
 		
 		ajax.post(url, params, function(data){
 			ts.success("下書き保存しました", function(){
-				location.href = "/my/projects/courses/"+project_code;
+				location.href = "/admin/projects/courses/"+project_code;
 			});
 		});
 	});

@@ -1,10 +1,10 @@
 
 <ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
-	<li><a href="/my">マイページ</a></li>
-	<li><a href="/my/projects">プロジェクトの管理</a></li>
-	<li><a href="/my/projects/edit/{$project.code}">{$project.title}</a></li>
-	<li><a href="/my/projects/blog/{$project.code}">報告書の管理</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li><a href="/admin/projects">プロジェクトの管理</a></li>
+	<li><a href="/admin/projects/edit/{$project.code}">{$project.title}</a></li>
+	<li><a href="/admin/projects/blog/{$project.code}">報告書の管理</a></li>
 	<li class="active">報告書を書く</li>
 </ol>
 
@@ -63,7 +63,7 @@ $(function(){
 		}
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
-				location.href = "/my/projects/blog/"+project_code;
+				location.href = "/admin/projects/blog/"+project_code;
 			});
 		});
 	});
@@ -82,7 +82,7 @@ $(function(){
 		}
 		ajax.post(url, params, function(data){
 			ts.success("下書き保存しました", function(){
-				location.href = "/my/projects/blog/"+project_code;
+				location.href = "/admin/projects/blog/"+project_code;
 			});
 		});
 	});

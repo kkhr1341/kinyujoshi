@@ -1,12 +1,12 @@
 
 <ol class="breadcrumb">
 	<li><a href="/">ホーム</a></li>
-	<li><a href="/my">マイページ</a></li>
-	<li><a href="/my/projects">プロジェクトの管理</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li><a href="/admin/projects">プロジェクトの管理</a></li>
 	<li class="active">コースの管理</li>
 </ol>
 <div class='clearw'>
-	<a class="btn btn-primary float_right" href="/my/projects/courses/create/{$projects.code}" role="button">コースを作る</a>
+	<a class="btn btn-primary float_right" href="/admin/projects/courses/create/{$projects.code}" role="button">コースを作る</a>
 </div>
 
 
@@ -114,7 +114,7 @@ var project_code = "{$projects.code}";
 $(function(){
 	$('.courses').click(function(){
 		var code = $(this).attr('code');
-		location.href = "/my/projects/courses/edit/"+project_code+"/"+code;
+		location.href = "/admin/projects/courses/edit/"+project_code+"/"+code;
 	});
 });
 </script>

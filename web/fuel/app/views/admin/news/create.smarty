@@ -78,7 +78,7 @@ $(function(){
 		}
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
-				location.href = "/my/news";
+				location.href = "/admin/news";
 			});
 		});
 	});
@@ -97,7 +97,7 @@ $(function(){
 		}
 		ajax.post(url, params, function(data){
 			ts.success("下書き保存しました", function(){
-				location.href = "/my/news";
+				location.href = "/admin/news";
 			});
 		});
 	});

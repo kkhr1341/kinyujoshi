@@ -75,7 +75,7 @@ $(function(){
 		
 		ajax.post(url, params, function(data){
 			ts.success("保存しました", function(){
-				location.href = "/my/addresses";
+				location.href = "/admin/addresses";
 			});
 		});
 	});
@@ -88,7 +88,7 @@ $(function(){
 			if (result) {
 				ajax.post(url, params, function(data){
 					ts.success("削除しました", function(){
-						location.href = "/my/addresses";
+						location.href = "/admin/addresses";
 					});
 				});
 			}

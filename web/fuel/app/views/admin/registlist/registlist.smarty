@@ -1,6 +1,6 @@
 <p class="regist-list">会員登録リスト</p>
 <div style="text-align: right;">
-  <a href="/my/registlist/create" id="create">メンバー追加</a>
+  <a href="/admin/registlist/create" id="create">メンバー追加</a>
   <a href="#" id="download">CSVダウンロード</a>
 </div>
 <table id="tbl" class="sample_01 registlist-block-admin">

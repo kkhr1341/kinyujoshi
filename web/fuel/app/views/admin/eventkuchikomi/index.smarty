@@ -1,12 +1,12 @@
 
 <ol class="breadcrumb">
   <li><a href="/">ホーム</a></li>
-  <li><a href="/my">マイページ</a></li>
+  <li><a href="/admin">マイページ</a></li>
   <li class="active">イベントの管理</li>
 </ol>
 
 <div class='clearw'>
-  <a class="btn btn-primary float_right" href="/my/events/create" role="button">イベントを作る</a>
+  <a class="btn btn-primary float_right" href="/admin/events/create" role="button">イベントを作る</a>
 </div>
 
 
@@ -72,7 +72,7 @@
 $(function(){
   $('.events').click(function(){
     var code = $(this).attr('code');
-    location.href = "/my/eventkuchikomi/edit/"+code;
+    location.href = "/admin/eventkuchikomi/edit/"+code;
   });
 });
 </script>

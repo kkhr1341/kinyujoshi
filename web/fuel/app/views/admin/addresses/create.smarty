@@ -72,7 +72,7 @@ $(function(){
 
 		ajax.post(url, params, function(data){
 			ts.success("追加しました", function(){
-				location.href = "/my/addresses";
+				location.href = "/admin/addresses";
 			});
 		});
 	});

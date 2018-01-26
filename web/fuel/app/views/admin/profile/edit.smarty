@@ -2,9 +2,9 @@
   <div class="admin-normal-inner clear">
     <div class="admin-normal-side">
       <ul>
-        <li><a href="/my">マイページ・トップ</a></li>
-        <li class="active"><a href="/my/profile">プロフィール編集</a></li>
-        <li><a href="/my/joshikai">参加女子会</a></li>
+        <li><a href="/admin">マイページ・トップ</a></li>
+        <li class="active"><a href="/admin/profile">プロフィール編集</a></li>
+        <li><a href="/admin/joshikai">参加女子会</a></li>
       </ul>
     </div>
     
