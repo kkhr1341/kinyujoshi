@@ -21,13 +21,18 @@ function chargeByNewCard(card, event_code, name, email) {
                     token: token,
                     cardselect: 0
                 };
-                ajax.post(url, params, function (data) {
-                    if (data.api_status === 'error') {
-                        reject(data.message);
-                    } else {
-                        resolve(data);
-                    }
-                })
+                // $.postが独自カスタマイズされているためコールバック関数orエラーハンドリングが特殊なかたちに。。。
+                return ajax.post(url, params, function(data) {
+	                resolve(data);
+                    })
+                    .done(function(data) {
+                        if(data.api_status === 'error') {
+	                    reject(data.message);
+	                }
+	            })
+                    .fail(function(error) {
+		        reject(error);
+	            })
             }
         })
     })
@@ -46,12 +51,16 @@ function chargeByRegisterCard(event_code, cardselect) {
             event_code: event_code,
             cardselect: cardselect
         };
-        ajax.post(url, params, function (data) {
-            if (data.api_status === 'error') {
-                reject(data.message);
-            } else {
+        return ajax.post(url, params, function(data) {
                 resolve(data);
-            }
-        })
+            })
+            .done(function(data) {
+                if(data.api_status === 'error') {
+	            reject(data.message);
+	        }
+	    })
+            .fail(function(error) {
+                reject(error);
+	    })
     })
 }
