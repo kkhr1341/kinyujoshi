@@ -44,7 +44,7 @@ var $resArray02 = $resArray[1];
         <div class="kinyu-joshikai-tickets-payment-list">
 
         <!-- ログインチェック -->
-        {if array_search('user', $roles)}
+        {if in_array('user', $roles) || in_array('admin', $roles)}
           <!-- ログインユーザー -->
           {if $event.creditch == 1}
             <!-- <input type="button" class="info-link fee-card day-card-btn" value="カードでお支払い">

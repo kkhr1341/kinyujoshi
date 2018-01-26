@@ -34,7 +34,7 @@
 
         <div class="fee-open-el">
           <label>カード番号</label>
-          {if array_search('user', $roles) || array_search('admin', $roles)}
+          {if in_array('user', $roles) || in_array('admin', $roles)}
             <p class="select-before-title">・利用可能なクレジットカード</p>
             <select id="cardselect" name="cardselect">
                 {foreach from=$cards key="key" item=card name=loopname}

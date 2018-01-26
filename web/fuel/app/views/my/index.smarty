@@ -1,5 +1,5 @@
 <!-- 管理者用 -->
-{if array_search('admin', $roles)}
+{if in_array('admin', $roles)}
   <div class="my-top-cotainer">
     <div class="message">
       <p class="name">{$profile.nickname}さん</p>

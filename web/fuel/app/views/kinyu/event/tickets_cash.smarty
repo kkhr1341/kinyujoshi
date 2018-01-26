@@ -23,7 +23,7 @@
         <p class="description">女子会当日に現金でお支払いください。</p>
 
         <!-- ログインしていない場合 -->
-        {if array_search('user', $roles)}
+        {if in_array('user', $roles) || in_array('admin', $roles)}
           <p class="description">＊もしご参加できない場合は前日までにご連絡いただけますと嬉しいです。</p>
           <button class="day-cash-submit" type="button" id="submit">女子会に参加</button>
         {else}

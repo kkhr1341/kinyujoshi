@@ -13,7 +13,7 @@
 </head>
 <body class="drawer drawer--left">
 
-    {if array_search('admin', $roles)}
+    {if in_array('admin', $roles)}
     <div id="content_frame">
 
       <div class="container">
@@ -28,7 +28,7 @@
                 <a href="/admin">マイページ</a>
               </li>
 
-              <!-- {if array_search('admin', $roles)} -->
+              <!-- {if in_array('admin', $roles)} -->
               <li>
                 <a href="/admin/news">ニュースの管理</a>
               </li>
