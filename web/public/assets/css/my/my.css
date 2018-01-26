@@ -317,6 +317,48 @@ footer {
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  管理画面 - 女子会参加者管理部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.joshikai-attend-table {
+
+}
+.joshikai-attend-table td {
+  vertical-align: middle!important;
+}
+.joshikai-attend-table .main-img{
+  padding: 24px;
+  width: 120px;
+}
+.joshikai-attend-table .main-title{
+  max-width: 300px;
+}
+.joshikai-attend-table .count-title{
+  color: #d36464;
+  font-size: 18px;
+}
+.joshikai-attend-table .count-title span{
+  font-size: 13px;
+}
+.joshikai-attend-table > thead > tr > th, 
+.joshikai-attend-table > tbody > tr > th, 
+.joshikai-attend-table > tfoot > tr > th, 
+.joshikai-attend-table > thead > tr > td, 
+.joshikai-attend-table > tbody > tr > td, 
+.joshikai-attend-table > tfoot > tr > td {
+  padding: 24px;
+  line-height: 20px;
+}
+.joshikai-attend-table .main-img-inner {
+  width: 120px;
+  height: 80px;
+}
+
+
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   一般ユーザー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container {
@@ -601,7 +643,7 @@ footer {
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  アカウント詳細部分
+  マイページ - アカウント詳細部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-account-el {
   margin-bottom: 16px;

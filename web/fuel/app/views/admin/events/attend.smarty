@@ -1,0 +1,81 @@
+
+<ol class="breadcrumb">
+  <li><a href="/">ホーム</a></li>
+  <li><a href="/admin">マイページ</a></li>
+  <li class="active">女子会の管理</li>
+</ol>
+
+<div class='clearw'>
+  <a class="btn btn-primary float_right" href="/admin/joshikai/create" role="button">女子会を追加する</a>
+</div>
+
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
+  <li><a href="#tab3" data-toggle="tab">過去の女子会</a></li>
+</ul>
+<div class="tab-content">
+
+  <!-- 公開 -->
+  <div class="tab-pane active" id="tab1">
+    {if sizeof($open_events) == 0}
+    <div class="alert alert-warning mt20" role="alert">公開中のイベントはありません</div>
+    {else}
+    <table class="table table-hover mt20 joshikai-attend-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>開催日</th>
+          <th>女子会名</th>
+          <th>参加者</th>
+        </tr>
+      </thead>
+      {foreach from=$open_events item=events_item}
+      <tr class="events pointer" code="{$events_item.code}">
+        <td class="main-img"><div class="main-img-inner" style="background:url({$events_item.main_image}) center center / cover no-repeat"></div></td>
+        <td>{$events_item.event_date|date_format:"%Y.%m.%d"}</td>
+        <td class="main-title">{$events_item.title}</td>
+        <td class="count-title">5<span>名</span></td>
+      </tr>
+      {/foreach}
+    </table>
+    {/if}
+  </div>
+
+  <!-- 過去 -->
+  <div class="tab-pane" id="tab3">
+    {if sizeof($all_events) == 0}
+    <div class="alert alert-warning mt20" role="alert">イベントはありません</div>
+    {else}
+
+    <table class="table table-hover mt20 joshikai-attend-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>開催日</th>
+          <th>女子会名</th>
+          <th>参加者</th>
+        </tr>
+      </thead>
+      {foreach from=$all_events item=events_item}
+      <tr class="events pointer" code="{$events_item.code}">
+        <td class="main-img"><div class="main-img-inner" style="background:url({$events_item.main_image}) center center / cover no-repeat"></div></td>
+        <td>{$events_item.event_date|date_format:"%Y.%m.%d"}</td>
+        <td class="main-title">{$events_item.title}</td>
+        <td class="count-title">5<span>名</span></td>
+      </tr>
+      {/foreach}
+    </table>
+    {/if}
+  </div>
+</div>
+
+
+<script>
+$(function(){
+  $('.events').click(function(){
+    var code = $(this).attr('code');
+    location.href = "/admin/joshikai/attend/"+code;
+  });
+});
+</script>

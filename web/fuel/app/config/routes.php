@@ -121,6 +121,8 @@ return array(
 	'admin/joshikai' => 'admin/events/index',
 	'admin/joshikai/create' => 'admin/events/create',
 	'admin/joshikai/edit/(:any)' => 'admin/events/edit/$1',
+	'admin/joshikai/attend' => 'admin/events/attend',
+	'admin/joshikai/attend/(:any)' => 'admin/events/attend_detail/$1',
 	//管理画面admin - ニュース
 	'admin/news' => 'admin/news/index',
 	'admin/news/create' => 'admin/news/create',
