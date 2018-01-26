@@ -87,51 +87,6 @@
 <script type="text/javascript" src="https://js.pay.jp/"></script>
 <script type="text/javascript">Payjp.setPublicKey('{$payjp_public_key}');</script>
 <script>
-  $(function() {
-    
-    $(".day-card-btn").click(function() {
-      $("#day-card-open").fadeIn(500);
-    });
-    $("#day-card-close").click(function() {
-      $("#day-card-open").fadeOut(500);
-    });
-
-    $(".no-day-card-btn").click(function() {
-      $("#no-day-card-open").fadeIn(500);
-    });
-    $("#no-day-card-close").click(function() {
-      $("#no-day-card-open").fadeOut(500);
-    });
-
-    $(".day-cash-btn").click(function() {
-      $("#day-cash-open").fadeIn(500);
-    });
-    $("#day-cash-close").click(function() {
-      $("#day-cash-open").fadeOut(500);
-    });
-
-    $(".no-day-cash-btn").click(function() {
-      $("#no-day-cash-open").fadeIn(500);
-    });
-    $("#no-day-cash-close").click(function() {
-      $("#no-day-cash-open").fadeOut(500);
-    });
-
-    $(".no-menber-fee-el-btn.no-member").click(function() {
-      $(".loader-block").fadeIn(500);
-      setTimeout(function(){
-        $(".loader-block").fadeOut(800);
-      },1500);
-      setTimeout(function(){
-        $(".no-login-area").fadeOut(500);
-      },2000);
-      setTimeout(function(){
-        $(".no-login-area-joinbtn").fadeIn(800);
-      },2500);
-    });
-  });
-</script>
-<script>
     (function() {
         // 新しいクレジットカード番号入力の表示・非表示切り替え
         function toggleNewCardNumber(cat) {
@@ -203,11 +158,10 @@
             promise
                 .then(function() {
                     //ローディングアニメーション
-                    $(".fee-open").fadeOut(500);
-                    $(".loading-block").fadeIn(500);
+                    $(".loader-block").fadeIn(200);
 
                     setTimeout(function(){
-                        $(".loading-block").fadeOut(500);
+                        $(".loader-block").fadeOut(500);
                     },2500);
 
                     setTimeout(function(){

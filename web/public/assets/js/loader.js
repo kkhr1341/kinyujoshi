@@ -19,11 +19,11 @@
 
 new function() {
 	loader = {
-			background_color: '#0b0b0b',
-			opacity: 0.6,
-			gif: '',
-			gif_width:24,
-			gif_height:24,
+			//background_color: '#0b0b0b',
+			//opacity: 0.6,
+			//gif: '',
+			//gif_width:24,
+			//gif_height:24,
 			overlay: null,
 			show: function(parent) {
 				
@@ -65,7 +65,7 @@ new function() {
 				$(loader.overlay).find('div').css('position', 'relative');
 				$(loader.overlay).find('div').width(110);
 				$(loader.overlay).find('div').height(110);
-				$(loader.overlay).find('div').css('background-color', loader.background_color);
+				//$(loader.overlay).find('div').css('background-color', loader.background_color);
 				$(loader.overlay).find('div').css('filter', 'alpha(opacity='+(loader.opacity*100)+')');
 				$(loader.overlay).find('div').css('-moz-opacity', loader.opacity);
 				$(loader.overlay).find('div').css('opacity', loader.opacity);
@@ -76,7 +76,7 @@ new function() {
 				$(loader.overlay).find('div').css('margin-top', '-55px');
 				$(loader.overlay).find('div').css('margin-left', '-55px');
 
-				$(loader.overlay).find('img').attr('src', '/assets/img/712.GIF');
+				//$(loader.overlay).find('img').attr('src', '/assets/img/712.GIF');
 				$(loader.overlay).find('img').css('position', 'relative');
 				$(loader.overlay).find('img').css('left', '50%');
 				$(loader.overlay).find('img').css('top', '50%');
