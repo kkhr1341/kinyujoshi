@@ -40,6 +40,9 @@
               <li>
                 <a href="/admin/joshikai">女子会の管理</a>
               </li>
+              <li>
+                <a href="/admin/joshikai/attend">女子会参加者の管理</a>
+              </li>
 
               <li>
                 <a href="/admin/registlist">会員リスト一覧</a>
