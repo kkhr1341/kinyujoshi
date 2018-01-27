@@ -127,8 +127,19 @@ $(function(){
 		bootbox.confirm("お問合せを送信しますか？", function(result) {
 			if (result) {
 				ajax.post(url, params, function(data){
-					location.href = "/contact/complete";
-				});
+
+          //ローディングアニメーション
+          $(".loader-block").fadeIn(500);
+
+          setTimeout(function(){
+            $(".loader-block").fadeOut(500);
+          },2500);
+
+          setTimeout(function(){
+            location.href = "/contact/complete";
+          },3000);
+        });
+
 			}
 			else {
 				ts.info("キャンセルしました");
