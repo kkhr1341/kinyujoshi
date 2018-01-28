@@ -59,3 +59,8 @@ make
 ```
 make migrate
 ```
+
+## 送信メールの確認方法
+```
+http://localhost:1080/
+```
