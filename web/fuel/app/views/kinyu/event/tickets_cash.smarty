@@ -143,11 +143,10 @@
                         //location.href = "/event/complete";
 
                         //ローディングアニメーション
-                        $(".fee-open").fadeOut(500);
-                        $(".loading-block").fadeIn(500);
+                        $(".loader-block").fadeIn(500);
 
                         setTimeout(function(){
-                          $(".loading-block").fadeOut(500);
+                          $(".loader-block").fadeOut(500);
                         },2500);
 
                         setTimeout(function(){

@@ -1,7 +1,61 @@
+<div class="joshikai-attend-detail-block">
 
+  <div class="joshikai-attend-detail-header clear">
+    <div class="img-box" style="background:url({$events.main_image}) center center / cover no-repeat"></div>
+    <div class="text-box">
+      <div class="text-box-inner">
+        <p class="date-title">{$events.event_date|date_format:"%Y.%m.%d"}</p>
+        <p class="main-title">{$events.title}</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="joshikai-attend-el-block">
+    <p>参加者一覧</p>
+    <table class="table joshikai-attend-detail-table">
 
+      <!-- 参加者のループ -->
+      <tr>
+        <td class="main-img"><div class="member-img" style="background-color:gray;"></div></td>
+        <td>石原さとみ</td>
+        <td>32歳</td>
+        <td class="link-area">
+          <a class="email-link" target="_blank" href="mailto:komori@sundaylunch.jp">個別メールを送る</a>
+          <a class="profile-link" target="_blank" href="mailto:komori@sundaylunch.jp">メンバー情報の詳細</a>
+        </td>
+      </tr>
 
+      <tr>
+        <td class="main-img"><div class="member-img" style="background-color:gray;"></div></td>
+        <td>石原さとみ</td>
+        <td>32歳</td>
+        <td class="link-area">
+          <a class="email-link" target="_blank" href="mailto:komori@sundaylunch.jp">個別メールを送る</a>
+          <a class="profile-link" target="_blank" href="mailto:komori@sundaylunch.jp">メンバー情報の詳細</a>
+        </td>
+      </tr>
 
+      <tr>
+        <td class="main-img"><div class="member-img" style="background-color:gray;"></div></td>
+        <td>石原さとみ</td>
+        <td>32歳</td>
+        <td class="link-area">
+          <a class="email-link" target="_blank" href="mailto:komori@sundaylunch.jp">個別メールを送る</a>
+          <a class="profile-link" target="_blank" href="mailto:komori@sundaylunch.jp">メンバー情報の詳細</a>
+        </td>
+      </tr>
 
-{$events.title}
+      <tr>
+        <td class="main-img"><div class="member-img" style="background-color:gray;"></div></td>
+        <td>石原さとみ</td>
+        <td>32歳</td>
+        <td class="link-area">
+          <a class="email-link" target="_blank" href="mailto:komori@sundaylunch.jp">個別メールを送る</a>
+          <a class="profile-link" target="_blank" href="mailto:komori@sundaylunch.jp">メンバー情報の詳細</a>
+        </td>
+      </tr>
+      <!-- 参加者のループ終了 -->
+
+    </table>
+  </div>
+</div>
