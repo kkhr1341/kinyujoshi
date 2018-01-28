@@ -46,7 +46,7 @@
 </div>
 
 <!-- 当日現金払い -->
-<div id="joshikai-cancel-block" class="fee-open">
+<div id="joshikai-cancel-block" class="joshikai-cancel-block fee-open" style="display: none;">
   <div id="day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form>

@@ -696,6 +696,44 @@ footer {
   font-weight: bold;
   margin-top: 24px;
 }
+.joshikai-cancel-block {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.95);
+  z-index: 1006;
+}
+.joshikai-cancel-block .inner {
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  display: table;
+  padding: 24px;
+}
+.joshikai-cancel-block .inner form {
+  display: table-cell;
+  vertical-align: middle;
+}
+.joshikai-cancel-block .description {
+  padding: 0px 20px;
+  margin-top: 16px;
+  margin-bottom: 0px!important;
+}
+.joshikai-cancel-block .day-cash-close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 12px;
+  background: #fff;
+}
 #admin-joshikai-detail {
   display: none;
   margin-top: 20px;
