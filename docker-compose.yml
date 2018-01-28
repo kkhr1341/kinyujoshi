@@ -40,7 +40,15 @@ services:
       FUEL_ENV: development
     depends_on:
       - db
+      - smtp
 #      - test-db
+  smtp:
+    image: schickling/mailcatcher
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+    environment:
+      - TZ=Asia/Tokyo
   composer:
     image: composer/composer:php5
     environment:

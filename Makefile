@@ -11,6 +11,7 @@ migrate:
 .PHONY: migrate
 
 install:
+	docker-compose build
 	git submodule init
 	docker-compose run composer update
 	git submodule init
@@ -25,11 +26,12 @@ clean:
 	docker-compose down
 .PHONY: clean
 
-uninstall:
+reset:
 	docker-compose down
 	docker volume rm kinyujoshi_db-data
 	docker volume rm kinyujoshi_test-db-data
-.PHONY: uninstall
+	docker-compose up -d
+.PHONY: reset
 
 mysql:
 	docker-compose exec db mysql -uroot -ppass
