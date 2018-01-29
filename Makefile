@@ -11,7 +11,7 @@ migrate:
 .PHONY: migrate
 
 install:
-	docker-compose build
+	docker-compose build --no-cache
 	git submodule init
 	docker-compose run composer update
 	git submodule init
