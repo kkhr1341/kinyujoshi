@@ -1,25 +1,5 @@
 # Installation
 
-## composer token登録
-
-### githubでtoken生成
-
-[github Personal access tokens](https://github.com/settings/tokens)
-
-### 生成したトークンを以下ファイルに設定
-
-~/.composer/.auth.json
-
-```~/.composer/.auth.json
-{  
-  "config": {
-    "github-oauth": {
-      "github.com": "<TOKEN>"
-      }
-    }
-}
-```
-
 ## githubに公開鍵登録
 
 ### 公開鍵生成（無い方の場合のみ）
@@ -60,7 +40,17 @@ make
 make migrate
 ```
 
-## 送信メールの確認方法
+# xdebug
+```php/php.ini
+xdebug.remote_host = 10.0.75.1
+```
+
+# 送信メールの確認方法
 ```
 http://localhost:1080/
+```
+
+# ローカルS3の確認
+```
+http://localhost:9000/
 ```
