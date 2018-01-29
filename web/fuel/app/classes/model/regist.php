@@ -178,7 +178,7 @@ class Regist extends Base {
 
     $name = $params['name'];
     $name_kana = $params['name_kana'];
-    $age = $params['age'];
+    $age = $params['birthday'];
     $not_know = $params['not_know'];
     $interest = $params['interest'];
     $ask = $params['ask'];
@@ -187,7 +187,7 @@ class Regist extends Base {
     $where_from_other = $params['where_from_other'];
     $transmission = $params['transmission'];
     $email = $params['email'];
-    $facebook = $params['facebook'];
+    $facebook = "";
     $job_kind = $params['job_kind'];
     $introduction = $params['introduction'];
     
