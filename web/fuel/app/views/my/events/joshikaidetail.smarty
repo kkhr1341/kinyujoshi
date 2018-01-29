@@ -38,9 +38,9 @@
           </div>
         </div>
       </div>
-
+      {if $event.incur_cancellation_fee_date|strtotime > $smarty.now}
       <p class="joshikai-cancel-open" id="joshikai-cancel-open">女子会をキャンセルする</p>
-
+      {/if}
     </div>
   </div>
 </div>
