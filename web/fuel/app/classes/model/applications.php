@@ -21,10 +21,11 @@ class Applications extends Base {
 		$username = \Auth::get('username');
 		
 		$datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, events.*'))->from('applications')
-			->join('events', 'left')
+			->join('events')
 			->on('applications.event_code', '=', 'events.code')
 			->where('applications.username', '=', $username)
 			->where('applications.disable', '=', 0)
+			->where('applications.cancel', '=', 0)
 			->execute()
 			->as_array();
 		

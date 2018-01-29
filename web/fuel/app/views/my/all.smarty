@@ -29,20 +29,20 @@
         <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
         <ul class="clear">
 
-          {foreach from=$events item=event name=loopname}
+          {foreach from=$applications item=application name=loopname}
 
-            {$fooo = $event.main_image}
+            {$fooo = $application.main_image}
             {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
             
             <!-- 女子会 -->
             <!-- 現状、全ての女子会を表示 -->
             <li>  
-              <a href="/my/joshikai/{$event.code}" class="clear">
+              <a href="/my/joshikai/{$application.application_code}" class="clear">
                 <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <div class="text-box-inner">
-                    <p class="date-text">{$event.event_date|date_format:"Y.m.d"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</p>
-                    <p class="title-text">{$event.title}</p>
+                    <p class="date-text">{$application.event_date|date_format:"Y.m.d"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</p>
+                    <p class="title-text">{$application.title}</p>
                   </div>
                 </div>
               </a>

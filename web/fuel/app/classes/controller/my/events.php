@@ -80,8 +80,9 @@ class Controller_My_Events extends Controller_Mybase
 		// 	exit();
 		// }
 
-	        $application = Applications::getByCode("applications", $application_code);	
-		$code = $application['code'];
+        $application = Applications::getByCode("applications", $application_code);
+		$this->data['application_code'] = $application_code;
+        $code = $application['event_code']; // event code
 		$this->data['event'] = Events::getByCodeWithProfile($code);
 		$this->data['event_row'] = Events::getByCode('events', $code);
 		$this->template->urlcode = $this->data['event_row']['code'];

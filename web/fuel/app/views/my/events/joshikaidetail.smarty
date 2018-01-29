@@ -53,24 +53,40 @@
       <p class="main-title">女子会をキャンセルしますか？</p>
       <!-- <p class="description">女子会当日に現金でお支払いください。</p> -->
       <p class="description">＊もし、キャンセルされる場合、再度お申し込みいただくことができなくなってしまいますので、ご注意くださいませ。</p>
-      <button class="joshikai-cancel-submit" type="button" id="submit">キャンセルする</button>
+      <button class="joshikai-cancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
     </form>
   </div>
 </div>
 
 <script>
 $(function() {
-  
+
   $("#joshikai-detail-open").click(function() {
     $("#admin-joshikai-detail").slideToggle(500);
   });
-  
+
   $("#joshikai-cancel-open").click(function() {
     $("#joshikai-cancel-block").fadeIn(500);
   });
   $("#day-cash-close").click(function() {
     $("#joshikai-cancel-block").fadeOut(500);
   });
+  var form = $('#joshikai-cancel-block form')
 
+  form.find('.joshikai-cancel-submit').click(function(e){
+      e.preventDefault();
+      var code = $(this).data('code');
+      var url = "/api/events/cancel";
+      var params = {
+          code: code
+      };
+      ajax.post(url, params, function(data){
+          $("#joshikai-cancel-block").hide();
+          ts.success("参加をキャンセルしました");
+          setTimeout(function(){
+              location.href = '/my/joshikai';
+          }, 1000);
+      });
+  });
 });
 </script>
