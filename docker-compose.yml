@@ -59,8 +59,33 @@ services:
       - ./php/php.ini:/usr/local/etc/php/php.ini
     working_dir: /app
 
+  minio:
+    image: minio/minio
+    volumes:
+      - s3-data:/data
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    command: server /data 
+
+  createbuckets:
+    image: minio/mc
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc config host add myminio http://minio:9000 minio minio123;
+      /usr/bin/mc mb myminio/sunday-lunch;
+      /usr/bin/mc policy public myminio/sunday-lunch;
+      exit 0;
+      "
+
 volumes:
   db-data:
+    driver: local
+  s3-data:
     driver: local
   test-db-data:
     driver: local

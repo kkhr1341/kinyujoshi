@@ -16,6 +16,8 @@ class Controller_Api_Redactor extends Controller_Base
 	}
 
 	private function upload($mode) {
+                
+		\Config::load('s3', true);
 
 		$file_name = @$_FILES['file']['name'];
 		$size = $this->formatBytes(@$_FILES['file']['size']);
@@ -41,16 +43,20 @@ class Controller_Api_Redactor extends Controller_Base
 						break;
 				}
 			}
-			$credentials = new Credentials('AKIAIWVMQDBTVCUOWPSQ', 's2QKCY4FwuB0Y4PSkESLmu4xsy1uDRg2xBm9wnYX');
+			// $credentials = new Credentials('AKIAIWVMQDBTVCUOWPSQ', 's2QKCY4FwuB0Y4PSkESLmu4xsy1uDRg2xBm9wnYX');
+			$credentials = new Credentials(\Config::get('s3.access_key'), \Config::get('s3.secret_key'));
 				
 			$s3 = S3Client::factory(array(
 					'signature' => 'v4',
 					'credentials'  => $credentials,
 					'region' => 'ap-northeast-1',
-					'version' => '2006-03-01'
+					'endpoint' => \Config::get('s3.endpoint'),
+					'version'     => "latest",
+					'use_path_style_endpoint' => true,
+					//'version' => '2006-03-01'
 			));
 			$res = $s3->putObject(array(
-					'Bucket'        =>   'sunday-lunch',
+					'Bucket'        =>   \Config::get('s3.bucket'),
 					'Key'           =>   "stock/{$username}/images/{$updatedev}{$file_name}",
 					'Body'          =>   fopen($_FILES['file']['tmp_name'], 'r'),
 					'ACL'           =>   'public-read',
@@ -70,7 +76,7 @@ class Controller_Api_Redactor extends Controller_Base
 					
 
 					$thumbres = $s3->putObject(array(
-							'Bucket'        =>   'sunday-lunch',
+							'Bucket'        =>   \Config::get('s3.bucket'),
 							'Key'           =>   "stock/{$username}/images/thumb_{$updatedev}{$file_name}",
 							'Body'          =>   fopen($tmp_file_path, 'r'),
 							'ACL'           =>   'public-read',
@@ -85,6 +91,10 @@ class Controller_Api_Redactor extends Controller_Base
 					break;
 			}
 			$url = $res->get('ObjectURL');
+			if(\Config::get('s3.asset_path')) {
+				$url = preg_replace("/^http:\/\/(.+?)\/(.+)/", \Config::get('s3.asset_path') . "/$2",$url);
+			}
+
 			$etag = $res->get('ETag');
 			$etag = str_replace("\"", "", $etag);
 			$title = "";

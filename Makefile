@@ -16,6 +16,7 @@ install:
 	docker-compose run composer update
 	git submodule init
 	git submodule update
+	docker-compose run --rm createbuckets
 .PHONY: install
 
 test:
