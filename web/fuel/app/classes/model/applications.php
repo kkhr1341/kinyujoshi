@@ -6,6 +6,7 @@ use Oil\Exception;
 use Payjp\Payjp;
 //use Payjp\Charge;
 use \Model\Payment;
+use \Model\ApplicationCreditPayment;
 
 require_once(dirname(__FILE__)."/base.php");
 
@@ -56,6 +57,9 @@ class Applications extends Base {
 
 	public static function cancel($params) {
 
+        // 与信
+        \Config::load('payjp', true);
+
 		$username = \Auth::get('username');
 		
 		// 参加状態取得
@@ -82,7 +86,13 @@ class Applications extends Base {
 		\DB::update('events')->set(array(
 			'application_num' => \DB::expr('application_num-1')
 		))->where('code', '=', $application['event_code'])->execute();
-		
+
+		// クレジット決済の場合決済取り消し
+        if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($params['code'])) {
+            $payment = new Payment(\Config::get('payjp.private_key'));
+            $payment->cancel($charge_id);
+        }
+
 		return true;
 	}
 

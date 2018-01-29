@@ -88,6 +88,15 @@ class Payment extends Base {
     }
 
     /**
+     * 決済取り消し
+     * @param $charge_id 決済ID
+     */
+    public function cancel($charge_id) {
+        $charge = \Payjp\Charge::retrieve($charge_id);
+        $charge->refund();
+    }
+
+    /**
      * @param $username
      * @return bool|\Payjp\Customer
      */
