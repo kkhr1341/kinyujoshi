@@ -266,6 +266,17 @@ class Applications extends Base {
 
             $db->commit_transaction();
 
+            // サンクスメール
+            $mail = \Email::forge('jis');
+            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $mail->subject("きんゆう女子。】女子会のお申込みありがとうございます。");
+            $mail->html_body(\View::forge('email/joshikai/body',
+                array(
+                    'name' => $name
+                )));
+            $mail->to($email); //送り先
+            $mail->send();
+
             return true;
         } catch (\Exception $e) {
             $db->rollback_transaction();
