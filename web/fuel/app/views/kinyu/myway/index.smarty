@@ -1,19 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/myway.css">
 
-<header class="kinyu-header">
-  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
-  <nav>
-    <ul class="kinyu-header-nav">
-      <li><a href="/about">きん女。ストーリー</a></li>
-      <li><a href="/joshikai">女子会</a></li>
-      <li><a href="/report">レポート</a></li>
-      <li><a href="/news">ニュース</a></li>
-      <li class="active"><a href="/myway">「わたし」を知る。</a></li>
-      <li><a href="/login">メンバー登録 / ログイン</a></li>
-    </ul>
-  </nav>
-</header>
-
 <div class="myway-introduction">
   
   <!-- <img class="main-logo" src="/images/myway/main-logo.png"> -->

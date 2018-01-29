@@ -4,6 +4,12 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/school_public.css">
 <script type="text/javascript" src="/assets/js/kinyu/campaign/school_public.js"></script>
 
+<style>
+.kinyu-header-top {
+  display:none;
+}
+</style>
+
 <div class="kinyu-main-single-block">
   <div class="kinyu-school_public-intro sp">
         <img class="jpx-img" src="/images/content/school_public/jpx-img.png">

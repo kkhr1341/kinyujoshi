@@ -1,6 +1,11 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/ooedoonsen_joshikai.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/ooedoonsen_joshikai_sp.css">
 
+<style>
+.kinyu-header-top {
+  display:none;
+}
+</style>
 
 <div id="top" class="ooedo-joshikai-container">
 

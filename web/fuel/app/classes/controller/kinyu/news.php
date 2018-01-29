@@ -20,16 +20,15 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
     $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
     } else {
-      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
     }
 		$this->template->contents = View::forge('kinyu/news/index.smarty', $this->data)
             ->set_safe('pagination', $pagination);
@@ -66,10 +65,9 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
     $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->detail_news_after = View::forge('kinyu/news/detail_news_after.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
-    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
     $this->template->contents = View::forge('kinyu/news/detail.smarty', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
@@ -77,7 +75,6 @@ class Controller_Kinyu_News extends Controller_Kinyubase
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
       $this->template->detail_news_after = View::forge('kinyu/news/detail_news_spafter.smarty', $this->data);
     } else {
-      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
       $this->template->detail_news_after = View::forge('kinyu/news/detail_news_after.smarty', $this->data);
     }
 

@@ -13,19 +13,7 @@
 </head>
 <body class="drawer drawer--left">
 
-<header class="pc kinyu-header">
-    <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
-    <nav>
-        <ul class="kinyu-header-nav">
-            <li><a href="/about">きんゆう女子。について</a></li>
-            <li><a href="/joshikai">女子会</a></li>
-            <li><a href="/report">レポート</a></li>
-            <li><a href="/news">ニュース</a></li>
-            <li><a href="/myway">「わたし」を知る。</a></li>
-            <li class="active"><a href="/my">マイページ</a></li>
-        </ul>
-    </nav>
-</header>
+{$pc_header}
 
 <header class="sp admin-normal-header">
     <a class="link-to-top" href="/">〈 TOPへ</a>

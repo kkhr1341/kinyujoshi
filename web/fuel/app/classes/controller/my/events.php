@@ -21,6 +21,7 @@ class Controller_My_Events extends Controller_Mybase
 		$this->data['open_events'] = Events::lists(1);
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->template->description = 'マイページ・イベント';
+		$this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
 		$this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
 		$this->template->contents = View::forge('my/events/index.smarty', $this->data);
 	}
@@ -36,6 +37,7 @@ class Controller_My_Events extends Controller_Mybase
 		$this->data['sections'] = Sections::lists();
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->template->description = 'マイページ・イベント';
+		$this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
 		$this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
 		$this->template->contents = View::forge('my/events/create.smarty', $this->data);
 	}
@@ -52,6 +54,7 @@ class Controller_My_Events extends Controller_Mybase
 		$this->data['sections'] = Sections::lists();
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->template->description = 'マイページ・イベント';
+		$this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
 		$this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
 		$this->template->contents = View::forge('my/events/edit.smarty', $this->data);
 	}
@@ -72,6 +75,7 @@ class Controller_My_Events extends Controller_Mybase
 		$this->data['applications'] = Applications::get_applications();
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->template->description = '女子会リスト';
+		$this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
 		$this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
 		$this->template->contents = View::forge('my/events/joshikailist.smarty', $this->data);
 	}
@@ -96,6 +100,7 @@ class Controller_My_Events extends Controller_Mybase
 		$this->data['sections'] = Sections::lists();
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->template->description = '女子会リスト';
+		$this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
 		$this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
 		$this->template->contents = View::forge('my/events/joshikaidetail.smarty', $this->data);
 	}

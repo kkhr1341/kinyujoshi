@@ -17,15 +17,13 @@ class Controller_Kinyu_Inquiry extends Controller_Kinyubase
     //$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-    $this->template->company_header = View::forge('kinyu/company/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     } else {
-      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     }
 		$this->template->contents = View::forge('kinyu/inquiry/index.smarty', $this->data);
@@ -39,15 +37,13 @@ class Controller_Kinyu_Inquiry extends Controller_Kinyubase
 		//$this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
     //$this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
+    $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-    $this->template->company_header = View::forge('kinyu/company/header.smarty', $this->data);
 
     if(Agent::is_mobiledevice()) {
       $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     } else {
-      $this->template->navigation = View::forge('kinyu/common/pc_navigation.smarty', $this->data);
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     }
     

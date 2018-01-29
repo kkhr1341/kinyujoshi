@@ -15,6 +15,7 @@ class Controller_My_Blogs extends Controller_Mybase
 		$this->data['open_blogs'] = Blogs::lists02(1);
 		$this->template->contents = View::forge('my/blogs/index.smarty', $this->data);
 		$this->template->description = 'マイページ・ブログ';
+		$this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 	}
 
@@ -22,6 +23,7 @@ class Controller_My_Blogs extends Controller_Mybase
 		$this->data['sections'] = Sections::lists();
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->template->description = 'マイページ・ブログ';
+		$this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
 		$this->template->contents = View::forge('my/blogs/create.smarty', $this->data);
 	}
 
@@ -31,6 +33,7 @@ class Controller_My_Blogs extends Controller_Mybase
 		$this->data['sections'] = Sections::lists();
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->template->description = 'マイページ・ブログ';
+		$this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
 		$this->template->contents = View::forge('my/blogs/edit.smarty', $this->data);
 	}
 }

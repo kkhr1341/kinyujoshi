@@ -1,6 +1,11 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/celebration.css">
 <script type="text/javascript" src="/assets/js/kinyu/campaign/conference.js"></script>
 
+<style>
+.kinyu-header-top {
+  display:none;
+}
+</style>
 
 <div class="">
 

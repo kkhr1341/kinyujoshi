@@ -1,18 +1,3 @@
-<header class="kinyu-header">
-  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
-  <nav>
-    <ul class="kinyu-header-nav">
-      <li><a href="/about">きん女。ストーリー</a></li>
-      <li><a href="/joshikai">女子会</a></li>
-      <li><a href="/report">レポート</a></li>
-      <li><a href="/news">ニュース</a></li>
-      <li><a href="/myway">「わたし」を知る。</a></li>
-      <li class="active"><a href="/login">メンバー登録 / ログイン</a></li>
-    </ul>
-  </nav>
-</header>
-
-
 <div class="kinyu-single-block">
   <div class="login-contents-block">
     <a class="login-another-btn" href="/login_regist">メンバー登録へ</a>

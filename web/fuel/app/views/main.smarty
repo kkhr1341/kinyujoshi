@@ -21,6 +21,8 @@
 
 	<body class="drawer drawer--left">
 
+    {$pc_header}
+
   	<div class="kinyu-container">
   		<div class="kinyu-main">
         {$contents}
@@ -38,15 +40,6 @@
           <div class="loader loader-1"></div>
           <p>送信中です...。</p>
         </div>
-      </div>
-    </div>
-
-    <div class="pc">
-      <div class="kinyu-header-social-list">
-        <ul>
-          <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/instagram_icon.png"></a></li>
-          <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a></li>
-        </ul>
       </div>
     </div>
 

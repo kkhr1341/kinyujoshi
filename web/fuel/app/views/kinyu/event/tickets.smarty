@@ -6,20 +6,6 @@ var $resArray = $result02.split("/");
 var $resArray02 = $resArray[1];
 </script>
 
-<header class="kinyu-header">
-  <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
-  <nav>
-    <ul class="kinyu-header-nav">
-      <li><a href="/about">きん女。ストーリー</a></li>
-      <li class="active"><a href="/joshikai">女子会</a></li>
-      <li><a href="/report">レポート</a></li>
-      <li><a href="/news">ニュース</a></li>
-      <li><a href="/myway">「わたし」を知る。</a></li>
-      <li><a href="/login">メンバー登録 / ログイン</a></li>
-    </ul>
-  </nav>
-</header>
-
 <div class="kinyu-single-block joshikai-main-block">
   <div class="kinyu-joshikai-detail-inner">
 

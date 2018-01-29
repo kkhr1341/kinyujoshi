@@ -1,4 +1,11 @@
 <script src="/assets/js/kinyu/topanimation.js"></script>
+
+<style>
+.kinyu-header-top {
+  display:none;
+}
+</style>
+
 <!-- メインアニメーション -->
 <div class="kinyu-main-animation">
   <div class="kinyu-main-animation-inner">

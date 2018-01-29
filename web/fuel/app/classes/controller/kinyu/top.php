@@ -28,9 +28,9 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
     $this->data['blogs_pick'] = Blogs::lists_picks(1, 5, true);
     $this->template->reload_animation = View::forge('kinyu/template/reload_animation.smarty', $this->data);
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+    $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-    $this->template->tablet_div = View::forge('kinyu/common/tablet_div.smarty', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
     $this->template->pickup_top = View::forge('kinyu/common/pickup_top.smarty', $this->data);
 
