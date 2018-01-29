@@ -1,5 +1,5 @@
 ;(function($) {
-    $.fn.uploader = function(url) {
+    $.fn.uploader = function(url, callback) {
         var Uploader, defaults;
         defaults = {
             width: 600,
@@ -17,6 +17,7 @@
             $file.on('change', function() {
                 var fileData;
                 fileData = $(this)[0].files[0];
+                $file.off('change');
                 d.resolve(fileData);
             });
             $file.trigger('click');
@@ -56,20 +57,16 @@
             return d.promise();
         };
 
-        var self = this;
-        return new Promise(function(resolve, reject){
-            self.click(function(e) {
-                e.preventDefault();
-                Uploader.select()
-                    .then(function(data) {
-                        return Uploader.upload(url, 'file', data)
-                    })
-                    .then(function(response) {
-                        resolve(response);
-                    })
-            })
-        });
-
+        this.click(function(e) {
+            e.preventDefault();
+            Uploader.select()
+                .then(function(data) {
+                    return Uploader.upload(url, 'file', data)
+                })
+                .then(function(response) {
+                    callback(response);
+                })
+        })
     };
 })(jQuery);
 

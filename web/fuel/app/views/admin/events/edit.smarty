@@ -145,13 +145,11 @@
 
 var code = "{$events.code}";
 $(function(){
-    $('.thumbnail-img-block')
-        .uploader('/api/redactor/upload/file')
-        .then(function(data) {
-            var url = data.url;
-            $('#main_image').val(url);
-            $('.thumbnail-img').css('background-image', 'url(' + url + ')');
-        })
+    $('.thumbnail-img-block').uploader('/api/redactor/upload/file', function(data) {
+        var url = data.url;
+        $('#main_image').val(url);
+        $('.thumbnail-img').css('background-image', 'url(' + url + ')');
+    });
 
 	$('.datetimepicker').datetimepicker({
 		format : 'YYYY/MM/DD HH:mm'
