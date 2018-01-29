@@ -50,7 +50,7 @@ class Payment extends Base {
      * @param $email
      * @return \Payjp\Charge
      */
-    public function chargeByRegistCard($fee, \Payjp\Customer $customer, $card, $application_code) {
+    public function chargeByRegistCard($fee, \Payjp\Customer $customer, $card, $application_code, $name, $email) {
         return \Payjp\Charge::create(array(
             'amount' => $fee,
             'currency' => 'jpy',
@@ -60,6 +60,8 @@ class Payment extends Base {
             'metadata' => array(
                 'application_code' => $application_code,
                 'username' => $customer->id,
+                'name' => $name,
+                'email' => $email,
             )
         ));
     }
@@ -113,11 +115,30 @@ class Payment extends Base {
      * @return \Payjp\Customer
      * @throws \Exception
      */
-    public function createCustomer($username) {
+    public function createCustomer($username, $name, $email) {
         try {
             return \Payjp\Customer::create(array(
                 'id' => $username,
+                'email' => $email,
+                'metadata' => array(
+                    'name' => $name,
+                )
             ));
+        } catch (\Payjp\Error\InvalidRequest $e) {
+            throw new \Exception("顧客情報の登録に失敗しました。");
+        }
+    }
+
+    /**
+     * @param $username
+     * @return \Payjp\Customer
+     * @throws \Exception
+     */
+    public function updateCustomer($customer, $name, $email) {
+        try {
+            $customer->email = $email;
+            $customer->metadata->name = $name;
+            $customer->save();
         } catch (\Payjp\Error\InvalidRequest $e) {
             throw new \Exception("顧客情報の登録に失敗しました。");
         }
@@ -131,7 +152,7 @@ class Payment extends Base {
      * @return mixed
      * @throws \Exception
      */
-    public function createCard(\Payjp\Customer $customer, $token) {
+    public function createCard(\Payjp\Customer $customer, $token, $name) {
         try {
             return $customer->cards->create(array(
                 'card' => $token,

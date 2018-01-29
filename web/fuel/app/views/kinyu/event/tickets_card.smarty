@@ -65,15 +65,13 @@
               <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
             </div>
           </div>
-
           <div class="fee-open-el">
             <label>お名前（フルネーム）</label>
-            <input type="text" id="name" name="name" class="" placeholder="">
+            <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
           </div>
-
           <div class="fee-open-el">
             <label>メールアドレス</label>
-            <input type="text" id="email" name="email" class="" placeholder="">
+            <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
           </div>
         </div>
 

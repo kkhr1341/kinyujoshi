@@ -123,6 +123,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->template->description = $this->data['event']['title'];
 
         // 登録カード取得
+        if ($username = \Auth::get('username')) {
+            $profile = Profiles::get($username);
+            $this->data['user'] = array(
+                'name' => $profile['name'],
+                'email' => \Auth::get('email'),
+            );
+        }
         $this->data['cards'] = $this->get_credit_cards(\Config::get('payjp.private_key'));
 
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
