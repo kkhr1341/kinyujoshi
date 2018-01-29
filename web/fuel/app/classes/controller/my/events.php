@@ -2,6 +2,7 @@
 
 use \Model\Events;
 use \Model\Sections;
+use \Model\Applications;
 
 class Controller_My_Events extends Controller_Mybase
 {
@@ -59,19 +60,19 @@ class Controller_My_Events extends Controller_Mybase
 		// 	Response::redirect('/');
 		// 	exit();
 		// }
-
 		$this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
 		$this->data['events'] = Events::lists(1, 50, true);
 		$this->data['sections'] = Sections::lists();
 		$this->data['all_events'] = Events::lists02();
 		$this->data['closed_events'] = Events::lists(0);
 		$this->data['open_events'] = Events::lists(1);
+		$this->data['applications'] = Applications::get_applications();
 		$this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 		$this->template->description = '女子会リスト';
 		$this->template->contents = View::forge('my/events/joshikailist.smarty', $this->data);
 	}
 
-	public function action_joshikaidetail($code) {
+	public function action_joshikaidetail($application_code) {
 	
 		// if (!Auth::has_access('events.admin')) {
 		// 	\Auth::logout();
@@ -79,6 +80,8 @@ class Controller_My_Events extends Controller_Mybase
 		// 	exit();
 		// }
 
+	        $application = Applications::getByCode("applications", $application_code);	
+		$code = $application['code'];
 		$this->data['event'] = Events::getByCodeWithProfile($code);
 		$this->data['event_row'] = Events::getByCode('events', $code);
 		$this->template->urlcode = $this->data['event_row']['code'];

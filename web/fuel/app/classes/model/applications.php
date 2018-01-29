@@ -103,13 +103,7 @@ class Applications extends Base {
                     ->current();
             } else {
                 // 既存のデータがないか確認
-                $data = \DB::select('*')->from('applications')
-                    ->where('event_code', '=', $event_code)
-                    ->where('username', '=', $username)
-                    ->where('cancel', '=', 0)
-                    ->where('disable', '=', 0)
-                    ->execute()
-                    ->current();
+                $data = self::join_status($event_code);
             }
             if (empty($data)) {
                 return false;
