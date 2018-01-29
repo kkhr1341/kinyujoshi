@@ -66,15 +66,20 @@
             </div>
           </div>
 
+          {if in_array('user', $roles) || in_array('admin', $roles)}
+          {else}
+
           <div class="fee-open-el">
             <label>お名前（フルネーム）</label>
-            <input type="text" id="name" name="name" class="" placeholder="">
+            <input type="text" id="name" name="name" class="" placeholder=""> 
           </div>
 
           <div class="fee-open-el">
             <label>メールアドレス</label>
             <input type="text" id="email" name="email" class="" placeholder="">
           </div>
+
+          {/if}
         </div>
 
         <button class="day-cash-submit" type="submit">女子会に参加する</button>
