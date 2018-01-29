@@ -10,7 +10,7 @@ class Create_kuchikomi
 			'message' => array('type' => 'text'),
 			'nickname' => array('constraint' => 20, 'type' => 'varchar', 'null' => true),
 
-		));
+		), null, true, 'InnoDB', null);
 	}
 
 	public function down()

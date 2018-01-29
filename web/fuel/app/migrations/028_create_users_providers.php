@@ -20,7 +20,7 @@ class Create_users_providers
             'created_at' => array('type' => 'int', 'default' => '0'),
             'updated_at' => array('type' => 'int', 'default' => '0'),
 
-		), array('id'));
+		), array('id'), true, 'InnoDB', null);
 	}
 
 	public function down()

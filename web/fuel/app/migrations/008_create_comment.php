@@ -12,7 +12,7 @@ class Create_comment
 
             'created_at' => array('type' => 'datetime'),
 
-		), array('id'));
+		), array('id'), true, 'InnoDB', null);
 	}
 
 	public function down()

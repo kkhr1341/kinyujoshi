@@ -17,7 +17,7 @@ class Create_mybbs
 			'created_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 			'updated_at' => array('constraint' => 11, 'type' => 'int', 'null' => true),
 
-		), array('id'));
+		), array('id'), true, 'InnoDB', null);
 	}
 
 	public function down()

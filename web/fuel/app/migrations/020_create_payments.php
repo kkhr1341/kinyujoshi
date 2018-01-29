@@ -42,7 +42,7 @@ class Create_payments
             'created_at' => array('type' => 'datetime'),
             'updated_at' => array('type' => 'timestamp'),
 
-		), array('id'));
+		), array('id'), true, 'InnoDB', null);
 	}
 
 	public function down()

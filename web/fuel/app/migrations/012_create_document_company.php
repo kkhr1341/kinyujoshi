@@ -15,7 +15,7 @@ class Create_document_company
 
             'created_at' => array('type' => 'datetime'),
 
-		), array('id'));
+		), array('id'), true, 'InnoDB', null);
 	}
 
 	public function down()
