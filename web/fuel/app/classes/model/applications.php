@@ -7,6 +7,7 @@ use Payjp\Payjp;
 //use Payjp\Charge;
 use \Model\Payment;
 use \Model\ApplicationCreditPayment;
+use \Model\Profiles;
 
 require_once(dirname(__FILE__)."/base.php");
 
@@ -136,9 +137,14 @@ class Applications extends Base {
 
             $event = self::getByCode('events', $params['event_code']);
 
-            $name = isset($params['name']) && $params['name']? $params['name']: '';
-
-            $email = isset($params['email']) && $params['email']? $params['email']: '';
+            if ($username) {
+                $profile = Profiles::get($username);
+                $name = $profile['name'];
+                $email = \Auth::get('email');
+            } else {
+                $name = isset($params['name']) && $params['name']? $params['name']: '';
+                $email = isset($params['email']) && $params['email']? $params['email']: '';
+            }
 
             // 新規カード登録 or 会員登録をせずに申し込みの場合は以下必須
             if ($params['cardselect'] === '0') {
@@ -206,22 +212,24 @@ class Applications extends Base {
                     $event['fee'],
                     $params['token'],
                     $application_code,
-                    $params['name'],
-                    $params['email']
+                    $name,
+                    $email
                 );
             } else {
                 // 会員登録して申し込み
                 // Payjpに顧客情報登録 or 取得
 
                 if (!$customer = $payment->getCustomer($username)) {
-                    $customer = $payment->createCustomer($username);
+                    $customer = $payment->createCustomer($username, $name, $email);
                     // トランザクション失敗時の登録取り消し用
                     $new_customer = $customer;
+                } else {
+                    $payment->updateCustomer($customer, $name, $email);
                 }
 
                 if ($params['cardselect'] === '0') {
                     // 新しいカードで決済
-                    $new_card = $payment->createCard($customer, $params['token'], $name, $email);
+                    $new_card = $payment->createCard($customer, $params['token'], $name);
                     // 登録カードリソースデータ作成（二回目にカードを使う用）
                     \DB::insert('user_credit_cards')->set(array(
                         'username' => $username,
@@ -242,7 +250,9 @@ class Applications extends Base {
                         $event['fee'],
                         $customer,
                         $params['cardselect'],
-                        $application_code
+                        $application_code,
+                        $name,
+                        $email
                     );
                 }
             }
