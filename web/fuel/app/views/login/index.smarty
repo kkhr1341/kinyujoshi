@@ -1,113 +1,132 @@
 <div class="kinyu-single-block">
-  <div class="login-contents-block">
-    <a class="login-another-btn" href="/login_regist">メンバー登録へ</a>
-    <div class="login-contents-intro">
-      <h2 class="login-contents-title"><span>マイページにログインする</span></h2><br>
-      <a class="caution" href=""><span style="color: red;">＊</span>ログイン機能ができる前にメンバー登録をいただいている方はこちら</a>
-    </div>
-    <div class="login-contents-block-inner clear">
-      <div class="login-contents-mainarea">
-        <div class="login-contents-form-area">
-          <div class="login-contents login-email-container">
-            <label class="title">メールアドレスでログイン</label>
-            <form class="email-form">
-              <input type="text" name="email" placeholder="メールアドレス" value="">
-              <input type="password" name="password" placeholder="パスワード" value="">
-              <button class="login-btn" type="button" id="login">ログイン</button>
-              <p>パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
-            </form>
-          </div>
-          <div class="login-contents login-btn-list">
-            <label class="title">ソーシャルアカウントでログイン</label>
-            <ul>
-              <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></li>
-              <li class="google-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></li>
-            </ul>
-          </div>
+    <div class="login-contents-block">
+        <a class="login-another-btn" href="/login_regist">メンバー登録へ</a>
+        <div class="login-contents-intro">
+            <h2 class="login-contents-title"><span>マイページにログインする</span></h2><br>
+            <a class="caution" href=""><span style="color: red;">＊</span>ログイン機能ができる前にメンバー登録をいただいている方はこちら</a>
         </div>
-      </div>
+        <div class="login-contents-block-inner clear">
+            <div class="login-contents-mainarea">
+                <div class="login-contents-form-area">
+                    <div class="login-contents login-email-container">
+                        <label class="title">メールアドレスでログイン</label>
+                        <form class="email-form">
+                            <input type="text" name="email" placeholder="メールアドレス" value="">
+                            <input type="password" name="password" placeholder="パスワード" value="">
+                            <button class="login-btn" type="button" id="login">ログイン</button>
+                            <p>パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
+                        </form>
+                    </div>
+                    <div class="login-contents login-btn-list">
+                        <label class="title">ソーシャルアカウントでログイン</label>
+                        <ul>
+                            <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></li>
+                            <li class="google-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
 <div id="pass-reissue-open">
-  <div id="pass-reissue-close"><img src="/images/close-btn.png"></div>
-  <div class="inner">
-    <form>
-      <p class="main-title">パスワード再発行</p>
-      <p class="description">再発行のお手続きメールをお送りいたします。</p>
-      <div class="pass-reissue-form-el">
-        <label>登録しているメールアドレス</label>
-        <input type="text" id="name" class="" placeholder="">
-      </div>
-      <button class="pass-reissue-submit" type="button" id="submit">再発行</button>
-    </form>
-  </div>
+    <div id="pass-reissue-close"><img src="/images/close-btn.png"></div>
+    <div class="inner">
+        <form class="reminder-form">
+            <p class="main-title">パスワード再発行</p>
+            <p class="description">再発行のお手続きメールをお送りいたします。</p>
+            <div class="pass-reissue-form-el">
+                <label>登録しているメールアドレス</label>
+                <input type="text" id="email" name="email" placeholder="">
+            </div>
+            <button class="pass-reissue-submit" type="button" id="submit">再発行</button>
+        </form>
+    </div>
 </div>
 
 
 <script>
-$(function(){
+    $(function () {
 
-  var loginForm = $('.email-form');
-	loginForm.find('#login').click(function(){
-		var url = "/api/auth/login";
-		var params = {};
-		params.email = loginForm.find('[name="email"]').val();
-		params.password = loginForm.find('[name="password"]').val();
+        var reminderForm = $('.reminder-form');
+        reminderForm.find('.pass-reissue-submit').click(function(e){
+            e.preventDefault();
+            var url = "/api/reminder/create";
+            var params = {};
+            params.email = reminderForm.find('[name="email"]').val();
 
-		if (params.email == "") {
-			ts.error("メールアドレスを正しく入力してください");
-			return false;
-		}
-		if (params.password == "") {
-			ts.error("パスワードを入力してください");
-			return false;
-		}
+            if (params.email == "") {
+                ts.error("メールアドレスを正しく入力してください");
+                return false;
+            }
 
-		ajax.post(url, params, function(data){
-			ts.success("ログインが完了しました", function(){
-				location.href = "/my";
-			});
-		});
-	});
+            ajax.post(url, params, function (data) {
+                ts.success("パスワード再設定用メールを送信しました", function () {
+                    $("#pass-reissue-open").fadeOut(500);
+                });
+            });
+        });
 
-  var registForm = $('#regist-form');
-	registForm.find('.regist-btn').click(function(){
-		var url = "/api/auth/register";
-		var params = {};
-		params.email = registForm.find('[name="email"]').val();
-		params.password = registForm.find('[name="password"]').val();
+        var loginForm = $('.email-form');
+        loginForm.find('#login').click(function () {
+            var url = "/api/auth/login";
+            var params = {};
+            params.email = loginForm.find('[name="email"]').val();
+            params.password = loginForm.find('[name="password"]').val();
 
-		if (params.email == "") {
-			ts.error("メールアドレスを正しく入力してください");
-			return false;
-		}
-		if (params.password == "") {
-			ts.error("パスワードを入力してください");
-			return false;
-		}
+            if (params.email == "") {
+                ts.error("メールアドレスを正しく入力してください");
+                return false;
+            }
+            if (params.password == "") {
+                ts.error("パスワードを入力してください");
+                return false;
+            }
 
-		ajax.post(url, params, function(data){
-			ts.success("ログインが完了しました", function(){
-				location.href = "/my";
-			});
-		});
-	});
-});
-$(function() {
-  $("#pass-reissue-btn").click(function() {
-    $("#pass-reissue-open").fadeIn(500);
-  });
-  $("#pass-reissue-close").click(function() {
-    $("#pass-reissue-open").fadeOut(500);
-  });
-});
+            ajax.post(url, params, function (data) {
+                ts.success("ログインが完了しました", function () {
+                    location.href = "/my";
+                });
+            });
+        });
+
+        var registForm = $('#regist-form');
+        registForm.find('.regist-btn').click(function () {
+            var url = "/api/auth/register";
+            var params = {};
+            params.email = registForm.find('[name="email"]').val();
+            params.password = registForm.find('[name="password"]').val();
+
+            if (params.email == "") {
+                ts.error("メールアドレスを正しく入力してください");
+                return false;
+            }
+            if (params.password == "") {
+                ts.error("パスワードを入力してください");
+                return false;
+            }
+
+            ajax.post(url, params, function (data) {
+                ts.success("ログインが完了しました", function () {
+                    location.href = "/my";
+                });
+            });
+        });
+    });
+    $(function () {
+        $("#pass-reissue-btn").click(function () {
+            $("#pass-reissue-open").fadeIn(500);
+        });
+        $("#pass-reissue-close").click(function () {
+            $("#pass-reissue-open").fadeOut(500);
+        });
+    });
 </script>
 
 <style>
-  .singlepage-footer {
-    background: #fff;
-  }
+    .singlepage-footer {
+        background: #fff;
+    }
 </style>
