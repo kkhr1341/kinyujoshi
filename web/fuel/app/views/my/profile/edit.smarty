@@ -117,7 +117,7 @@ $(function(){
 			ts.success("保存しました");
 		});
 	});
-    $('.edit-profile-img').uploader('/api/redactor/upload/file', function(data) {
+    $('.edit-profile-img').uploader('/api/redactor/upload/image', function(data) {
         var url = data.url;
         $('#profile_image').val(url);
         $('.edit-profile-img .img-box').css({

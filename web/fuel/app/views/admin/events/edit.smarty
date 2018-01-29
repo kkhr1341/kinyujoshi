@@ -145,7 +145,7 @@
 
 var code = "{$events.code}";
 $(function(){
-    $('.thumbnail-img-block').uploader('/api/redactor/upload/file', function(data) {
+    $('.thumbnail-img-block').uploader('/api/redactor/upload/image', function(data) {
         var url = data.url;
         $('#main_image').val(url);
         $('.thumbnail-img').css('background-image', 'url(' + url + ')');
