@@ -141,7 +141,8 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ヘッダー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.kinyu-header {
+.kinyu-header,
+.kinyu-header-top {
   display: none;
 }
 .kinyu-sp-header {

@@ -107,8 +107,10 @@ console.log($resArray02);
 </script>
 
 
-<!-- <style>
-  footer {
-    margin-left: 24%!important;
+<style>
+@media screen and (max-width: 1024px) {
+  .singlepage-footer {
+    padding: 60px 0px 120px;
   }
-</style> -->
+}
+</style>

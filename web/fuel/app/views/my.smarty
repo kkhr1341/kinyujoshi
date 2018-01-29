@@ -21,26 +21,28 @@
 </header>
 
 <div class="sp admin-normal-menu-block">
-    <div class="admin-normal-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+  <div class="admin-normal-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
 
 <div class="sp">
-    <div class="admin-normal-navigation">
-        <ul>
-            <li class="item navi_kinyu-menu-li01"><p>マイページ・メニュー</p></li>
-            <li class="item navi_kinyu-menu-li01"><a href="/my/profile">マイページ</a></li>
-            <li class="item navi_kinyu-menu-li02"><a href="/my/profile/edit">プロフィール編集</a></li>
-            <li class="item navi_kinyu-menu-li03"><a href="/my/joshikai">参加予定の女子会</a></li>
-            <li class="item navi_kinyu-menu-li04 kinyu-top"><a href="/">きんゆう女子。トップ</a></li>
-            <!-- <li class="active"><a href="/my">トップ</a></li>
-            <li><a href="/my/profile">プロフィール編集</a></li>
-            <li><a href="/my/joshikai">参加予定の女子会</a></li> -->
-        </ul>
-    </div>
+  <div class="admin-normal-navigation">
+    <p>マイページ・メニュー</p>
+    <ul>
+      <li class="item navi_kinyu-menu-li01"><a href="/my">マイページ・トップ</a></li>
+      <li class="item navi_kinyu-menu-li02"><a href="/my/profile">プロフィール編集</a></li>
+      <li class="item navi_kinyu-menu-li03"><a href="/my/joshikai">参加予定の女子会</a></li>
+      <li class="item navi_kinyu-menu-li04"><a href="/my/account">アカウント情報</a></li>
+      <li class="item navi_kinyu-menu-li05"><a href="/logout">ログアウト</a></li>
+      <li class="item navi_kinyu-menu-li06 kinyu-top"><a href="/">きんゆう女子。トップ</a></li>
+      <!-- <li class="active"><a href="/my">トップ</a></li>
+      <li><a href="/my/profile">プロフィール編集</a></li>
+      <li><a href="/my/joshikai">参加予定の女子会</a></li> -->
+    </ul>
+  </div>
 </div>
 
 {$contents}

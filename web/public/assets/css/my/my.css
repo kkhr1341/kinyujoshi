@@ -755,6 +755,13 @@ footer {
 .edit-profile-img .edit-profile-img2:hover {
   opacity: 0.9;
 }
+.joshikai-cansel-block {
+  margin-top: 12px;
+}
+.joshikai-cansel-block .cansel-block-title {
+  text-align: center;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   マイページ - アカウント詳細部分

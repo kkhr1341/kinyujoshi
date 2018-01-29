@@ -120,7 +120,7 @@
   height: 100%;
   z-index: 1011;
   background-color: rgba(255,255,255,.9);
-  padding: 50px 24px 0px; 
+  padding: 50px 36px 0px; 
 }
 .admin-normal-navigation p {
   font-size: 16px;
@@ -129,6 +129,10 @@
 }
 .admin-normal-navigation li {
   text-align: left;
+}
+.admin-normal-navigation li.item:nth-child(1) {
+  border-top: none;
+  border-bottom: none;
 }
 .admin-normal-navigation li a {
   font-size: 13px;
@@ -239,9 +243,6 @@
   margin: 8px 0px;
 }
 
-
-
-
 /* プロフィール修正部分 */
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   font-size: 12px;
@@ -300,6 +301,28 @@
   padding-top: 6px;
 }
 
+/* アカウント情報 */
+.admin-account-el {
+  margin-bottom: 12px;
+}
+.admin-account-el .admin-account-title {
+  font-size: 12px;
+  padding: 12px;
+}
+.credit-list-area li {
+  padding: 12px;
+}
+.credit-list-area li p {
+  font-size: 11px;
+}
+.credit-list-area li .button-area button {
+  font-size: 10px;
+  line-height: 16px;
+  display: block;
+}
+.admin-account-el-open {
+  margin: 12px 0px 24px;
+}
 
 .singlepage-footer {
   background-color: #fff;
