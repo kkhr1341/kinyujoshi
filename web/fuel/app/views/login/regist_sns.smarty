@@ -204,6 +204,7 @@ $(function(){
     params.provider = $('#provider').val();
     params.email = $('#email').val(); //メールアドレス
     params.password = $('#password').val(); //パスワード
+    params.profile_image = $('#profile_image').val(); //プロフィール画像
     params.name = $('#name').val(); //お名前
     params.name_kana = $('#name_kana').val(); //ふりがな
     params.birthday = (age01+age02+age03); //生年月日
