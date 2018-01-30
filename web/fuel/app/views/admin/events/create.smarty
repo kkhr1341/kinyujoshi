@@ -138,11 +138,14 @@
 </form>
 <script>
 $(function(){
-    $('.thumbnail-img-block').uploader('/api/redactor/upload/image', function(data) {
-        var url = data.url;
-        $('#main_image').val(url);
-        $('.thumbnail-img').css('background-image', 'url(' + url + ')');
-    });
+    $('.thumbnail-img-block')
+		uploader('/api/redactor/upload/image', {
+			success: function (data) {
+                var url = data.url;
+                $('#main_image').val(url);
+                $('.thumbnail-img').css('background-image', 'url(' + url + ')');
+			}
+		});
 
 	$('.datetimepicker').datetimepicker({
 		format : 'YYYY/MM/DD HH:mm'

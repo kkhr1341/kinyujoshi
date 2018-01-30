@@ -111,15 +111,26 @@ $(function(){
 			ts.success("保存しました");
 		});
 	});
-    $('.edit-profile-img').uploader('/api/redactor/upload/image', function(data) {
-        var url = data.url;
-        $('#profile_image').val(url);
-        $('.edit-profile-img .img-box').css({
-            'background-image': 'url(' + url + ')',
-            'background-position': 'center center',
-            'background-repeat': 'no-repeat',
-            'background-size': 'cover'
+    $('.edit-profile-img')
+        .uploader('/api/redactor/upload/image', {
+            before: function () {
+                //ローディングアニメーション
+                $(".loader-block").fadeIn(500);
+            },
+            success: function (data) {
+                var url = data.url;
+                $('#profile_image').val(url);
+                $('.edit-profile-img .img-box').css({
+                    'background-image': 'url(' + url + ')',
+                    'background-position': 'center center',
+                    'background-repeat': 'no-repeat',
+                    'background-size': 'cover'
+                });
+                $(".loader-block").fadeOut(500);
+            },
+            error: function (error) {
+                $(".loader-block").fadeOut(500);
+            }
         });
-    });
 });
 </script>

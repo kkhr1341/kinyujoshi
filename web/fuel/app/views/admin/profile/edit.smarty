@@ -117,12 +117,13 @@ $(function(){
 		});
 	});
     $('.edit-profile-img')
-        .uploader('/api/redactor/upload/file')
-        .then(function(data) {
-            var url = data.url;
-            $('#profile_image').val(url);
-            $('.edit-profile-img .img-box').css('background-image', 'url(' + url + ')');
-        })
+        .uploader('/api/redactor/upload/file', {
+            success: function (data) {
+                var url = data.url;
+                $('#profile_image').val(url);
+                $('.edit-profile-img .img-box').css('background-image', 'url(' + url + ')');
+            }
+        });
 	
 });
 </script>

@@ -1,12 +1,12 @@
 ;(function($) {
-    $.fn.uploader = function(url, callback) {
+    $.fn.uploader = function(url, options) {
         var Uploader, defaults;
         defaults = {
-            width: 600,
-            height: 600,
-            crop: false,
-            quality: 100
+            before: new Function(),
+            success: new Function(),
+            error: new Function()
         };
+        var params = $.extend(defaults, options);
         Uploader = function() {};
         Uploader.select = function() {
             var $file, d;
@@ -23,19 +23,19 @@
             $file.trigger('click');
             return d.promise();
         };
-        Uploader.resizeImage = function(file, options) {
-            var d, params;
-            d = new $.Deferred;
-            params = $.extend(defaults, options, {
-                callback: function(data) {
-                    var f;
-                    f = $.canvasResize('dataURLtoBlob', data);
-                    d.resolve(f);
-                }
-            });
-            $.canvasResize(file, params);
-            return d.promise();
-        };
+        // Uploader.resizeImage = function(file, options) {
+        //     var d, params;
+        //     d = new $.Deferred;
+        //     params = $.extend(defaults, options, {
+        //         callback: function(data) {
+        //             var f;
+        //             f = $.canvasResize('dataURLtoBlob', data);
+        //             d.resolve(f);
+        //         }
+        //     });
+        //     $.canvasResize(file, params);
+        //     return d.promise();
+        // };
         Uploader.upload = function(apiUrl, name, data) {
             var d, formData;
             d = new $.Deferred;
@@ -56,15 +56,18 @@
             });
             return d.promise();
         };
-
         this.click(function(e) {
             e.preventDefault();
             Uploader.select()
                 .then(function(data) {
+                    params.before();
                     return Uploader.upload(url, 'file', data)
                 })
                 .then(function(response) {
-                    callback(response);
+                    params.success(response);
+                })
+                .fail(function(error) {
+                    params.error(error);
                 })
         })
     };
