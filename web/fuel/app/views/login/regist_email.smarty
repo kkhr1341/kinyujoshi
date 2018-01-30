@@ -303,19 +303,19 @@ $(function(){
         //ローディングアニメーション
         $(".loader-block").fadeIn(500);
         ajax.post(url, params, function(data){
-
-          $(".loader-block").fadeOut(500);
-
-          setTimeout(function(){
             var after_login_url = $("#after_login_url").val();
             if (after_login_url) {
-                location.href = after_login_url;
+              location.href = after_login_url;
             } else {
-                location.href = "/my";
+              location.href = "/my";
             }
-          },1000);
-
-        });
+          })
+          .done(function(data) {
+              $(".loader-block").fadeOut(500);
+          })
+          .fail(function(error) {
+              $(".loader-block").fadeOut(500);
+          })
       }
       else {
         ts.info("キャンセルしました");
