@@ -16,6 +16,8 @@
                                     <button class="delete" data-id="{$card.id}">情報を削除する</button>
                                 </div>
                             </li>
+                        {foreachelse}
+                            <li><p>クレジットカードの情報がありません</p></li>
                         {/foreach}
                     </ul>
                 </div>
