@@ -30,7 +30,7 @@
 				</tr>
 				<tr>
 					<th class="active">お名前</th>
-					<td>{$profile.nickname}</td>
+					<td>{$profile.name}</td>
 				</tr>
 				<tr>
 					<th class="active">メールアドレス</th>
