@@ -63,7 +63,8 @@
                 ts.error("メールアドレスを正しく入力してください");
                 return false;
             }
-
+            $("#pass-reissue-open").fadeOut(500);
+            
             //ローディングアニメーション
             $(".loader-block").fadeIn(500);
             ajax.post(url, params, function (data) {

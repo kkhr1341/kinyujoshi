@@ -78,13 +78,23 @@ $(function() {
       var params = {
           code: code
       };
+
+      $("#joshikai-cancel-block").fadeOut(500);
+
+      //ローディングアニメーション
+      $(".loader-block").fadeIn(500);
       ajax.post(url, params, function(data){
-          $("#joshikai-cancel-block").hide();
-          ts.success("参加をキャンセルしました");
-          setTimeout(function(){
-              location.href = '/my/joshikai';
-          }, 1000);
-      });
+              ts.success("参加をキャンセルしました");
+              setTimeout(function() {
+                  location.href = '/my/joshikai';
+              }, 1000)
+          })
+          .done(function(data) {
+              $(".loader-block").fadeOut(500);
+          })
+          .fail(function(error) {
+              $(".loader-block").fadeOut(500);
+          })
   });
 });
 </script>

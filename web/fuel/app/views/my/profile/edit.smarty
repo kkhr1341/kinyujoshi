@@ -107,9 +107,14 @@ $(function(){
 		}
         $(".loader-block").fadeIn(500);
 		ajax.post(url, params, function(data){
-            $(".loader-block").fadeOut(500);
-			ts.success("保存しました");
-		});
+              ts.success("保存しました");
+    		})
+            .done(function(data) {
+                $(".loader-block").fadeOut(500);
+            })
+            .fail(function(error) {
+                $(".loader-block").fadeOut(500);
+            })
 	});
     $('.edit-profile-img')
         .uploader('/api/redactor/upload/image', {
