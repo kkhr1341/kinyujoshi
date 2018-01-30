@@ -289,15 +289,11 @@ $(function(){
 
     bootbox.confirm("入力内容を送信しますか？", function(result) {
       if (result) {
+        //ローディングアニメーション
+        $(".loader-block").fadeIn(500);
         ajax.post(url, params, function(data){
 
-          //ローディングアニメーション
-
-          $(".loader-block").fadeIn(500);
-
-          setTimeout(function(){
-            $(".loader-block").fadeOut(500);
-          },2500);
+          $(".loader-block").fadeOut(500);
 
           setTimeout(function(){
             var after_login_url = $("#after_login_url").val();
@@ -306,8 +302,7 @@ $(function(){
             } else {
               location.href = "/my";
             }
-          },3000);
-
+          }, 1000);
         });
       }
       else {
