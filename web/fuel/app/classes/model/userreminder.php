@@ -62,11 +62,13 @@ class UserReminder extends Base {
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
+            $db->commit_transaction();
+
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
             $mail->subject("【きんゆう女子。】パスワード再設定URLのお知らせ");
 
-            $url = \Uri::base() . 'reminder/reset?access_token=' . $access_token;
+            $url = \Uri::base() . 'login/resetting_pass?access_token=' . $access_token;
 
             $mail->html_body(\View::forge('email/reminder/body',
                 array(
@@ -79,6 +81,24 @@ class UserReminder extends Base {
         } catch (\Exception $e) {
             $db->rollback_transaction();
 
+            throw $e;
+        }
+    }
+
+
+    public static function reset($username, $password) {
+        try {
+            \DB::start_transaction();
+
+            $old_password = \Auth::reset_password($username);
+
+            \Auth::change_password($old_password, $password, $username);
+
+            \DB::commit_transaction();
+
+            return true;
+        } catch (\Exception $e) {
+            \DB::rollback_transaction();
             throw $e;
         }
     }

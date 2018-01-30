@@ -9,15 +9,15 @@
       <div class="username-area">
         <p>- ユーザー名 -</p>
         <!-- ユーザー名を表示 -->
-        <p class="name-title">石原さとみ</p>
+        <p class="name-title">{$nickname}</p>
       </div>
       <div class="form-area">
         <form>
-
+          <input type="hidden" id="access_token" value="{$access_token}">
           <div class="regist-add-form-edit-el resetting-pass-el">
             <label class="regist-add-form-edit-title">新しいパスワード</label>
-            <input type="password" id="name" class="form-control resetting-pass-el-input1" placeholder="" value="">
-            <input type="password" id="name" class="form-control" placeholder="ご確認用" value="">
+            <input type="password" id="password" class="form-control resetting-pass-el-input1" placeholder="" value="">
+            <input type="password" id="password_confirm" class="form-control" placeholder="ご確認用" value="">
           </div>
 
           <div class="form-btn tx-center">
@@ -32,7 +32,34 @@
 
 
 <script>
-{literal}
+    $(function() {
+        var form = $('.resetting-pass-block form');
+        form.find('#save').click(function(e){
+            e.preventDefault();
 
-{/literal}
+            var url = "/api/reminder/reset";
+            var params = {
+                access_token: form.find('#access_token').val(),
+                password: form.find('#password').val(),
+                password_confirm: form.find('#password_confirm').val()
+            };
+
+            if (!params.password) {
+                ts.error("パスワードを入力してください");
+                return false;
+            }
+
+            if (!params.password_confirm) {
+                ts.error("確認用パスワードをお確かめください");
+                return false;
+            }
+            ajax.post(url, params, function(data){
+                debugger;
+                ts.success("参加をキャンセルしました");
+                setTimeout(function(){
+                    location.href = '/my/joshikai';
+                }, 1000);
+            });
+        });
+    });
 </script>

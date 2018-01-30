@@ -1,4 +1,6 @@
 <?php
+use \Model\Profiles;
+use \Model\UserReminder;
 
 class Controller_Login extends Controller_KinyuBase
 {
@@ -153,21 +155,30 @@ class Controller_Login extends Controller_KinyuBase
         }
     }
 
-    public function action_resetting_pass() {
-      $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-      $this->template->title = 'パスワード再発行｜きんゆう女子。';
-      $this->template->description = 'パスワード再発行｜きんゆう女子';
-      $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-      $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-      $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+    public function action_resetting_pass()
+    {
+        // トークンチェック
+        if (!$reminder = UserReminder::get_valid(\Input::get('access_token'))) {
+            Response::redirect('/login');
+        }
+        $profile = Profiles::get($reminder['username']);
+        $this->template->nickname = $profile['nickname'];
+        $this->template->access_token = $reminder['access_token'];
 
-      if (Agent::is_mobiledevice()) {
-          $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-          $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
-      } else {
-      }
-      $this->template->contents = View::forge('login/resetting_pass.smarty', $this->data);
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+        $this->template->title = 'パスワード再発行｜きんゆう女子。';
+        $this->template->description = 'パスワード再発行｜きんゆう女子';
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        } else {
+        }
+        $this->template->contents = View::forge('login/resetting_pass.smarty', $this->data);
 
     }
 
