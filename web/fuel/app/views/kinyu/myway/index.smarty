@@ -127,9 +127,9 @@
         <div class="pc edition"><img src="/images/myway/title/title-jewelry.png"></div>
         <p class="text-box-title">わたしらしい美しさは、<br>きれいな笑顔とジュエリーで完成する。</p>
         <p class="description">きれいな笑顔とジュエリーで「わたしの美しさ」を育てていきませんか？無駄な出費を抑えたら本物のジュエリーにも挑戦したい。でも素敵なジュエリーを持っていても笑顔がきれいじゃなかったら？がっかりしてしまうかも？今回の「わたしを知る」では、素敵な私でいるためにジュエリーとオーラルケアについて考えてみました。</p>
-        {*<a href="/report/FxKhYh" class="myway-to-link">ジュエリー編のページはこちら</a>*}
-        <p class="myway-to-link not-open">ジュエリー編のページはこちら</p>
-        <p class="not-open-span"><span style="color:red;">＊</span>現在準備中です。</p>
+        <a href="/report/dtov0W" class="myway-to-link">ジュエリー編のページはこちら</a>
+        {*<p class="myway-to-link not-open">ジュエリー編のページはこちら</p>
+        <p class="not-open-span"><span style="color:red;">＊</span>現在準備中です。</p>*}
       </div>
     </div>
   </div>
