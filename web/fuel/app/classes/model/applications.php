@@ -1,13 +1,6 @@
 <?php
 
 namespace Model;
-use Oil\Exception;
-
-use Payjp\Payjp;
-//use Payjp\Charge;
-use \Model\Payment;
-use \Model\ApplicationCreditPayment;
-use \Model\Profiles;
 
 require_once(dirname(__FILE__) . "/base.php");
 
@@ -212,8 +205,7 @@ class Applications extends Base
                     $name,
                     $email
                 );
-            }
-            // 会員決済 *********************
+            } // 会員決済 *********************
             else {
                 // payjp会員情報取得
                 // 該当会員がいない場合は作成、いる場合は更新
@@ -242,8 +234,7 @@ class Applications extends Base
                         $name,
                         $email
                     );
-                }
-                // 登録カードで決済
+                } // 登録カードで決済
                 else {
                     $customer = $payment->getCustomer($username);
                     $payment->updateCustomer($customer, $name, $email);

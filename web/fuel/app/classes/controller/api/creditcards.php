@@ -6,21 +6,26 @@ class Controller_Api_Creditcards extends Controller_Base
 {
     public function action_delete()
     {
+        $params = \Input::all();
+
+        // 与信
+        \Config::load('payjp', true);
+
+        $payment = new Payment(\Config::get('payjp.private_key'));
+        if (!$username = \Auth::get('username')) {
+            $this->error("削除に失敗しました。");
+        }
         try {
-            $params = \Input::all();
+            $db = \Database_Connection::instance();
+            $db->start_transaction();
 
-            // 与信
-            \Config::load('payjp', true);
-
-            $payment = new Payment(\Config::get('payjp.private_key'));
-            if ($username = \Auth::get('username')) {
-                $customer = $payment->getCustomer($username);
-                $payment->removeCard($customer, $params['card_id']);
-                $this->ok();
-            }
-
+            $customer = $payment->getCustomer($username);
+            $payment->removeCard($customer, $params['card_id']);
+            $db->commit_transaction();
+            $this->ok();
         } catch (Exception $e) {
-            $this->error($e->getMessage());
+            \Log::error($e->getMessage());
+            $this->error("削除に失敗しました。");
         }
     }
 }

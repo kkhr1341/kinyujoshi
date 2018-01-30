@@ -1,11 +1,13 @@
 <?php
 
 namespace Model;
-require_once(dirname(__FILE__)."/base.php");
+require_once(dirname(__FILE__) . "/base.php");
 
-class User extends Base {
+class User extends Base
+{
 
-    public static function getByEmail($email) {
+    public static function getByEmail($email)
+    {
         $result = \DB::select('*')->from('users')
             ->where('users.email', '=', $email)
             ->execute()->current();

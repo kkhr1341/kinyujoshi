@@ -1,10 +1,10 @@
 <?php
 
 namespace Model;
-require_once(dirname(__FILE__)."/base.php");
+require_once(dirname(__FILE__) . "/base.php");
 
-class Login extends Base {
-
+class Login extends Base
+{
 
     public static function validate()
     {
@@ -18,6 +18,4 @@ class Login extends Base {
 
         return $val;
     }
-
-
 }

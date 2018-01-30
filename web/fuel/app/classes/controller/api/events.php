@@ -6,43 +6,48 @@ use \Model\Payment;
 
 class Controller_Api_Events extends Controller_Base
 {
+    public function action_create()
+    {
+        if (!Auth::has_access('events.admin')) {
+            exit();
+        }
+        $this->ok(Events::create(\Input::all()));
+    }
 
-	public function action_create() {
-		if (!Auth::has_access('events.admin')) {
-			exit();
-		}
-		$this->ok(Events::create(\Input::all()));
-	}
-	public function action_save() {
-		if (!Auth::has_access('events.admin')) {
-			exit();
-		}
-		$this->ok(Events::save(\Input::all()));
-	}
-	public function action_delete() {
-		if (!Auth::has_access('events.admin')) {
-			exit();
-		}
-		$this->ok(Events::delete(\Input::all()));
-	}
-	
-	public function action_cancel() {
+    public function action_save()
+    {
+        if (!Auth::has_access('events.admin')) {
+            exit();
+        }
+        $this->ok(Events::save(\Input::all()));
+    }
 
-		if (!Auth::check()) {
-			\Session::set('referrer', \Input::referrer());
-			$this->ok('login');
-		}
+    public function action_delete()
+    {
+        if (!Auth::has_access('events.admin')) {
+            exit();
+        }
+        $this->ok(Events::delete(\Input::all()));
+    }
 
-		$res = Applications::cancel(\Input::all());
-		if (is_string($res)) {
-			$this->error($res);
-		}
-		$this->ok($res);
-		
-	}
-	
-	public function action_application() {
-		try {
+    public function action_cancel()
+    {
+
+        if (!Auth::check()) {
+            \Session::set('referrer', \Input::referrer());
+            $this->ok('login');
+        }
+
+        $res = Applications::cancel(\Input::all());
+        if (is_string($res)) {
+            $this->error($res);
+        }
+        $this->ok($res);
+    }
+
+    public function action_application()
+    {
+        try {
             $params = \Input::all();
 
             // 新規カード登録 or 会員登録をせずに申し込みの場合は以下必須
@@ -64,7 +69,7 @@ class Controller_Api_Events extends Controller_Base
             $payment = new Payment(\Config::get('payjp.private_key'));
 
             // 新規カード決済時の決済トークン（カード登録用に使用）
-            $token = isset($params['token'])? $params['token']: '';
+            $token = isset($params['token']) ? $params['token'] : '';
 
             $res = Applications::create(
                 $payment,
@@ -81,7 +86,5 @@ class Controller_Api_Events extends Controller_Base
         } catch (Exception $e) {
             $this->error($e->getMessage());
         }
-	}
-
-
+    }
 }

@@ -2,11 +2,10 @@
 
 namespace Model;
 
-//use Payjp\Payjp;
+require_once(dirname(__FILE__) . "/base.php");
 
-require_once(dirname(__FILE__)."/base.php");
-
-class Payment extends Base {
+class Payment extends Base
+{
 
     /**
      * Payment constructor.
@@ -25,7 +24,8 @@ class Payment extends Base {
      * @param $email
      * @return \Payjp\Charge
      */
-    public function chargeByNewCard($fee, \Payjp\Customer $customer, \Payjp\Card $card, $application_code, $name, $email) {
+    public function chargeByNewCard($fee, \Payjp\Customer $customer, \Payjp\Card $card, $application_code, $name, $email)
+    {
         return \Payjp\Charge::create(array(
             'amount' => $fee,
             'currency' => 'jpy',
@@ -50,7 +50,8 @@ class Payment extends Base {
      * @param $email
      * @return \Payjp\Charge
      */
-    public function chargeByRegistCard($fee, \Payjp\Customer $customer, $card, $application_code, $name, $email) {
+    public function chargeByRegistCard($fee, \Payjp\Customer $customer, $card, $application_code, $name, $email)
+    {
         return \Payjp\Charge::create(array(
             'amount' => $fee,
             'currency' => 'jpy',
@@ -74,7 +75,8 @@ class Payment extends Base {
      * @param $email
      * @return \Payjp\Charge
      */
-    public function chargeByToken($fee, $token, $application_code, $name, $email) {
+    public function chargeByToken($fee, $token, $application_code, $name, $email)
+    {
         return \Payjp\Charge::create(array(
             'amount' => $fee,
             'currency' => 'jpy',
@@ -93,7 +95,8 @@ class Payment extends Base {
      * 決済取り消し
      * @param $charge_id 決済ID
      */
-    public function cancel($charge_id) {
+    public function cancel($charge_id)
+    {
         $charge = \Payjp\Charge::retrieve($charge_id);
         $charge->refund();
     }
@@ -103,7 +106,8 @@ class Payment extends Base {
      * @param $customer \Payjp\Customer
      * @param $card_id  登録カードID
      */
-    public function removeCard(\Payjp\Customer $customer, $card_id) {
+    public function removeCard(\Payjp\Customer $customer, $card_id)
+    {
         $card = $customer->cards->retrieve($card_id);
         $card->delete();
     }
@@ -112,7 +116,8 @@ class Payment extends Base {
      * @param $username
      * @return bool|\Payjp\Customer
      */
-    public function getCustomer($username) {
+    public function getCustomer($username)
+    {
         try {
             return \Payjp\Customer::retrieve($username);
         } catch (\Payjp\Error\InvalidRequest $e) {
@@ -125,7 +130,8 @@ class Payment extends Base {
      * @return \Payjp\Customer
      * @throws \Exception
      */
-    public function createCustomer($username, $name, $email) {
+    public function createCustomer($username, $name, $email)
+    {
         try {
             return \Payjp\Customer::create(array(
                 'id' => $username,
@@ -144,7 +150,8 @@ class Payment extends Base {
      * @return \Payjp\Customer
      * @throws \Exception
      */
-    public function updateCustomer($customer, $name, $email) {
+    public function updateCustomer($customer, $name, $email)
+    {
         try {
             $customer->email = $email;
             $customer->metadata->name = $name;
@@ -162,7 +169,8 @@ class Payment extends Base {
      * @return mixed
      * @throws \Exception
      */
-    public function createCard(\Payjp\Customer $customer, $token, $name) {
+    public function createCard(\Payjp\Customer $customer, $token, $name)
+    {
         try {
             return $customer->cards->create(array(
                 'card' => $token,
@@ -178,14 +186,15 @@ class Payment extends Base {
      * @return mixed
      * @throws \Exception
      */
-    public function getCard(\Payjp\Customer $customer, $card_id) {
+    public function getCard(\Payjp\Customer $customer, $card_id)
+    {
         try {
             $card = $customer->cards->retrieve($card_id);
             // 下3桁 311 (MARIKO SUZUKI) 有効期限 20/11
             $format = '下4桁 %d (%s) 有効期限 %d/%d';
             return array(
                 "id" => $card_id,
-                "label" =>sprintf($format, $card->last4, $card->name, $card->exp_month, $card->exp_year),
+                "label" => sprintf($format, $card->last4, $card->name, $card->exp_month, $card->exp_year),
             );
         } catch (\Payjp\Error\InvalidRequest $e) {
             return false;

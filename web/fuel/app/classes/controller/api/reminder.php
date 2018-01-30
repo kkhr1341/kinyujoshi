@@ -31,6 +31,7 @@ class Controller_Api_Reminder extends Controller_Base
             }
         }
     }
+
     public function action_reset()
     {
         // トークンチェック

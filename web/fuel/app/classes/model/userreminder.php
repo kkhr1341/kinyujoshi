@@ -1,10 +1,16 @@
 <?php
 
 namespace Model;
-require_once(dirname(__FILE__)."/base.php");
+require_once(dirname(__FILE__) . "/base.php");
 
-class UserReminder extends Base {
+class UserReminder extends Base
+{
 
+    /**
+     * アクセストークンの有効性確認
+     * @param $access_token
+     * @return bool
+     */
     public static function get_valid($access_token)
     {
         $result = \DB::select('*')->from('users_reminders')
@@ -46,8 +52,15 @@ class UserReminder extends Base {
         return $val;
     }
 
-    public static function create($email, $username) {
-
+    /**
+     * パスワード再発行メール送信
+     * @param $email
+     * @param $username
+     * @return bool
+     * @throws \Exception
+     */
+    public static function create($email, $username)
+    {
         $db = \Database_Connection::instance();
         $db->start_transaction();
         try {
@@ -85,8 +98,15 @@ class UserReminder extends Base {
         }
     }
 
-
-    public static function reset($username, $password) {
+    /**
+     * パスワードリセット
+     * @param $username
+     * @param $password
+     * @return bool
+     * @throws \Exception
+     */
+    public static function reset($username, $password)
+    {
         try {
             \DB::start_transaction();
 

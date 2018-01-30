@@ -10,11 +10,8 @@ use \Model\Tsubuyaki;
 
 class Controller_Api_Tsubuyaki extends Controller_Base
 {
-
-  public function action_create() {
-    
-    $this->ok(Tsubuyaki::create(\Input::all()));
-  }
-
-
+    public function action_create()
+    {
+        $this->ok(Tsubuyaki::create(\Input::all()));
+    }
 }

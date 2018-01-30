@@ -1,6 +1,5 @@
 <?php
 
-use \Model\Profiles;
 use \Model\UserCreditCard;
 use \Model\Payment;
 
@@ -11,7 +10,6 @@ class Controller_My_Account extends Controller_Mybase
     {
         \Config::load('payjp', true);
         $this->data['cards'] = $this->get_credit_cards(\Config::get('payjp.private_key'));
-        //$this->data['special'] = Profiles::lists(1, 100, true);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);

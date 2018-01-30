@@ -1,7 +1,7 @@
 <?php
 
 namespace Model;
-require_once(dirname(__FILE__)."/base.php");
+require_once(dirname(__FILE__) . "/base.php");
 
 class ApplicationCreditPayment extends Base
 {

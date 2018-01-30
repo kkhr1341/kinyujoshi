@@ -29,18 +29,18 @@ class MyValidation
         // list ($table, $field) = explode('.', $options);
         $table = $options['table'];
         $field = $options['field'];
-        $wheres = (isset($options['where']))? $options['where']: array();
-        
+        $wheres = (isset($options['where'])) ? $options['where'] : array();
+
         $select = DB::select("$field")
             ->where($field, '=', Str::lower($val))
             ->from($table);
-        
+
         if (isset($options['exclude']['id']) && $exclude_id = $options['exclude']['id']) {
-            $select->where('id', '<>', (int) $exclude_id);
+            $select->where('id', '<>', (int)$exclude_id);
         }
 
-        foreach($wheres as $where) {
-            switch(count($where)) {
+        foreach ($wheres as $where) {
+            switch (count($where)) {
                 case(2):
                     $select->where($where[0], $where[1]);
                     break;
@@ -49,18 +49,18 @@ class MyValidation
                     break;
             }
         }
-        
+
         $result = $select->execute();
-        
-        return ! ($result->count() > 0);
+
+        return !($result->count() > 0);
     }
-    
+
     /*
      * 半角数字チェック
      */
     public static function _validation_num($data)
     {
-        if (! empty($data)) {
+        if (!empty($data)) {
             if (preg_match("/^[0-9]+$/", $data)) {
                 return true;
             } else {
@@ -69,13 +69,13 @@ class MyValidation
         }
         return true;
     }
-    
+
     /*
      * 半角英数字チェック
      */
     public static function _validation_alphanum($data)
     {
-        if (! empty($data)) {
+        if (!empty($data)) {
             if (preg_match("/^[a-zA-Z0-9]+$/", $data)) {
                 return true;
             } else {
@@ -99,7 +99,7 @@ class MyValidation
     {
         $active = \Validation::active();
         $field_val = $active->validated($field);
-        if (! $field_val) {
+        if (!$field_val) {
             $error = $active->error($field);
             $field_val = $error ? $error->value : $active->input($field);
         }
@@ -131,7 +131,7 @@ class MyValidation
             return false;
         }
 
-        foreach($val as $data) {
+        foreach ($val as $data) {
             if (!empty($data)) {
                 return true;
             }
@@ -181,8 +181,8 @@ class MyValidation
         if (!$val) {
             return true;
         }
-        $array_value = array_count_values ($val);
-        foreach($array_value as $key => $count) {
+        $array_value = array_count_values($val);
+        foreach ($array_value as $key => $count) {
             if ($count > 1) {
                 return false;
             }
@@ -204,7 +204,7 @@ class MyValidation
     {
         $active = \Validation::active();
         $field_val = $active->validated($field);
-        if (! $field_val && !$val) {
+        if (!$field_val && !$val) {
             return false;
         }
         return true;

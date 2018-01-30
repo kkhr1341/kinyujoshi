@@ -4,7 +4,6 @@ use \Model\Blogs;
 use \Model\News;
 use \Model\Events;
 use \Model\Projects;
-use \Model\Wp;
 
 class Controller_Kinyu_Top extends Controller_Kinyubase
 {
@@ -41,9 +40,5 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         } else {
             $this->template->contents = View::forge('kinyu/pc_index.smarty', $this->data);
         }
-
-
     }
-
-
 }
