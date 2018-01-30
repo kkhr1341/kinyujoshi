@@ -17,11 +17,11 @@
 
       {if $smarty.foreach.loopname.index == 0}
         <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/20180130013627IMG_8259.jpg) left center / cover no-repeat;">
-          <a href="https://kinyu-joshi.jp/news/nPIgOz">
+          <a href="https://kinyu-joshi.jp/report/Bdf5aF">
             <div class="kinyu-top-list-kind">
             <!-- <p>イベント告知</p> -->
             </div>
-            <h3 class="kinyu-top-list-title">今月のPick Up！"夢とお金。パート2"</h3>
+            <h3 class="kinyu-top-list-title">編集部が考える、ミライに生まれるしごと。</h3>
           </a>
         </div>
         <div class="swiper-slide" style="background: url(https://kinyu-joshi.jp/images/content/school_public/og-school_public02.jpg) left center / cover no-repeat;">
