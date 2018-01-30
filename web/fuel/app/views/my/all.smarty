@@ -17,7 +17,7 @@
           </div>
         </div>
         <p class="profile-name">{$profile.nickname}</p>
-        <p class="profile-catchcopy">私らしく生きる。そしてマイハウス購入する！</p>
+        <p class="profile-catchcopy">{$profile.catchcopy}</p>
       </div>
 
       <div class="admin-normal-joshikai">

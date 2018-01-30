@@ -15,6 +15,15 @@
 
 {$pc_header}
 
+<div class="loader-block">
+    <div class="loader-block-inner">
+        <div class="loader-el">
+            <div class="loader loader-1"></div>
+            <p>送信中です...。</p>
+        </div>
+    </div>
+</div>
+
 <header class="sp admin-normal-header">
     <a class="link-to-top" href="/">〈 TOPへ</a>
     <a href="/"><img class="admin-normal-circle-logo" src="/images/top-circle-logo.png"></a>

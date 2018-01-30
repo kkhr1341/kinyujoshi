@@ -20,22 +20,22 @@
                 >
                 <div class="edit-profile-img2"><p>プロフィール画像を変更する</p></div>
               </div>
-              <input type="hidden" id="profile_image" value="">
+              <input type="hidden" id="profile_image" value="{$profile.profile_image}">
             </div>
             <p class="profile-catchcopy">
               <label class="regist-add-form-edit-title2">ひとことキャッピコピー</label>
-              <input type="text" id="name" class="form-control" placeholder="" value="私らしく生きる。そしてマイハウス購入する！">
+              <input type="text" id="catchcopy" class="form-control" placeholder="" value="{$profile.catchcopy}">
             </p>
           </div>
 
           <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">表示名</label>
-            <input type="text" id="name" class="form-control" placeholder="" value="{$profile.nickname}">
+            <input type="text" id="nickname" class="form-control" placeholder="" value="{$profile.nickname}">
           </div>
 
           <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">お名前</label>
-            <input type="text" id="name" class="form-control" placeholder="" value="{$profile.nickname}">
+            <input type="text" id="name" class="form-control" placeholder="" value="{$profile.name}">
           </div>
 
           <div class="regist-add-form-edit-el">
@@ -46,13 +46,13 @@
 
           <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">個人で発信しているブログなど</label>
-            <input type="text" id="url" class="form-control" placeholder="">
+            <input type="text" id="url" class="form-control" placeholder="" value="{$profile.url}">
           </div>
 
 
           <div class="regist-add-form-edit-el regist-add-form-edit-el02">
             <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。</label>
-            <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
+            <textarea id="introduction" name="introduction" class='form-control' rows="10">{$profile.introduction}</textarea>
           </div>
           
           <div class="form-btn tx-center">
@@ -73,41 +73,41 @@ $(function(){
 		format : 'YYYY/MM/DD'
 	});
 	
-	$('#save').click(function(){
-		
+	$('#save').click(function(e){
+		e.preventDefault();
+
 		var url = "/api/profiles/save";
-		var params = {};
-		params.code = $('#code').val();
-//		params.nickname = $('#nickname').val();
-//		params.email = $('#email').val();
-//		params.url = $('#url').val();
-//		params.fburl = $('#fburl').val();
-//		params.twurl = $('#twurl').val();
-//		params.instaurl = $('#instaurl').val();
+		var params = {
+            "code": $('#code').val(),
+            "email": $('#email').val(),
+            "nickname": $('#nickname').val(),
+            "name": $('#name').val(),
+            "catchcopy": $('#catchcopy').val(),
+            "url": $('#url').val(),
+            "introduction": $('#introduction').val(),
+            "profile_image": $('#profile_image').val()
+        };
 
 		if ($('#profile_image').val()) {
             params.profile_image = $('#profile_image').val();
         }
 
-//		if ($('input[name=release_profile]:checked').val() === 'はい、ぜひしたいです。') {
-//			params.release_profile = 1;
-//		} else if ($('input[name=release_profile]:checked').val() === 'いいえ、したくないです。') {
-//			params.release_profile = 0;
-//		}
-		
-//		if (params.code == "") {
-//			ts.error("ユーザー名を入力してください");
-//			return false;
-//		}
-//		if (params.nickname == "") {
-//			ts.error("ニックネームを入力してください");
-//			return false;
-//		}
-//		if (params.email == "") {
-//			ts.error("メールアドレス名を入力してください");
-//			return false;
-//		}
+		if (params.nickname == "") {
+			ts.error("表示名を入力してください");
+			return false;
+		}
+
+        if (params.name == "") {
+            ts.error("お名前を入力してください");
+            return false;
+        }
+		if (params.email == "") {
+			ts.error("メールアドレス名を入力してください");
+			return false;
+		}
+        $(".loader-block").fadeIn(500);
 		ajax.post(url, params, function(data){
+            $(".loader-block").fadeOut(500);
 			ts.success("保存しました");
 		});
 	});

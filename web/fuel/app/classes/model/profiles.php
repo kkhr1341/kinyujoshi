@@ -37,8 +37,19 @@ class Profiles extends Base {
 //			return "このユーザー名は既に使用されています";
 //		}
 		
-		\DB::update('profiles')->set($params)->where('username', '=', $username)->execute();
-		
+		\DB::update('users')->set(array(
+		    'email' => $params['email']
+        ))->where('username', '=', $username)->execute();
+
+		\DB::update('profiles')->set(array(
+            'catchcopy' => $params['catchcopy'],
+            'nickname' => $params['nickname'],
+            'name' => $params['name'],
+            'url' => $params['url'],
+            'introduction' => $params['introduction'],
+            'profile_image' => $params['profile_image']
+        ))->where('username', '=', $username)->execute();
+
 		return true;
 	}
 

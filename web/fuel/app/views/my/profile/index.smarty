@@ -17,8 +17,8 @@
 	          >
 	        </div>
 	      </div>
-	      <p class="profile-name">みくりん</p>
-	      <p class="profile-catchcopy">私らしく生きる。そしてマイハウス購入する！</p>
+	      <p class="profile-name">{$profile.nickname}</p>
+	      <p class="profile-catchcopy">{$profile.catchcopy}</p>
     	</div>
 
 			<!--<img src="{$profile.profile_image}" />-->
@@ -26,7 +26,7 @@
 			<table class="table admin-profile-table">
 				<tr>
 					<th class="active">表示名</th>
-					<td>みくりん</td>
+					<td>{$profile.nickname}</td>
 				</tr>
 				<tr>
 					<th class="active">お名前</th>
@@ -38,8 +38,7 @@
 				</tr>
 				<tr>
 					<th class="active">自己紹介</th>
-					<td>金融機関の商品企画部門で働いています。しかし、仕事で話題に上がるのはとしているのは富裕層や高齢者のみでありどこか遠くの話に聞こえてしまします。
-また、同世代女子のお金に関する話をプライベートですることはないため、ほかの人はどれくらい収入がありどれくらい貯めているのか気になったため入りたいと思いました。</td>
+					<td>{$profile.introduction|nl2br}</td>
 				</tr>
 			</table>
 

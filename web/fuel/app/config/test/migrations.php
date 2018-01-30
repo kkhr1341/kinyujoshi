@@ -46,9 +46,8 @@ return array(
         37 => '040_add_payment_method_to_applications',
         38 => '041_add_incur_cancellation_fee_date_to_events',
         39 => '042_add_place_url_to_events',
-        40 => '043_rename_field_token_to_charge_id_in_application_credit_payments',
-        41 => '044_create_user_credit_cards',
-        42 => '045_create_users_reminders',
+        40 => '046_add_catchcopy_to_profiles',
+        41 => '047_add_introduction_to_profiles',
       ),
     ),
     'module' => 

@@ -48,7 +48,8 @@ return array(
         39 => '042_add_place_url_to_events',
         40 => '043_rename_field_token_to_charge_id_in_application_credit_payments',
         41 => '044_create_user_credit_cards',
-        42 => '045_create_users_reminders',
+        42 => '046_add_catchcopy_to_profiles',
+        43 => '047_add_introduction_to_profiles',
       ),
     ),
     'module' => 

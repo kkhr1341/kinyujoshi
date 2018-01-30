@@ -99,6 +99,8 @@ class Regist extends Base {
               'nickname' => $params['name'],
               'email' => $params['email'],
               'birthday' => $params['birthday'],
+              'url' => $params['url'],
+              'introduction' => $params['introduction'],
 //              'gender' => $params['gender']
           ];
 
@@ -138,9 +140,7 @@ class Regist extends Base {
               'where_from' => $params['where_from'],
               'where_from_other' => $params['where_from_other'],
               'transmission' => $params['transmission'],
-//              'facebook' => $params['facebook'],
               'job_kind' => $params['job_kind'],
-              'introduction' => $params['introduction'],
               'age' => $params['birthday'],
               'edit_inner' => '',
               'industry' => '',
