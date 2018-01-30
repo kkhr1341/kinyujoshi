@@ -99,6 +99,16 @@ class Payment extends Base {
     }
 
     /**
+     * 登録カード削除
+     * @param $customer \Payjp\Customer
+     * @param $card_id  登録カードID
+     */
+    public function removeCard(\Payjp\Customer $customer, $card_id) {
+        $card = $customer->cards->retrieve($card_id);
+        $card->delete();
+    }
+
+    /**
      * @param $username
      * @return bool|\Payjp\Customer
      */

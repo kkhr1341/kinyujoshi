@@ -1,83 +1,76 @@
 <div class="admin-normal-container">
-  <div class="admin-normal-inner clear">
-    
-    {$my_side}
-    
-    <div class="admin-normal-main">
+    <div class="admin-normal-inner clear">
 
-      <div class="admin-account-el">
-        <p class="admin-account-title admin-account-title1">使用したクレジットカードの管理</p>
-        <div class="admin-account-el-open admin-account-el-open1 credit-list-area" style="display: none;">
-          <ul>
+        {$my_side}
 
-            <li class="clear">
-              <div class="main-area"><p>下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</p></div>
-              <div class="button-area">
-                <button class="delete">情報を削除する</button>
-              </div>
-            </li>
+        <div class="admin-normal-main">
 
-            <li class="clear">
-              <div class="main-area"><p>下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</p></div>
-              <div class="button-area">
-                <button class="delete">情報を削除する</button>
-              </div>
-            </li>
+            <div class="admin-account-el">
+                <p class="admin-account-title admin-account-title1">使用したクレジットカードの管理</p>
+                <div class="admin-account-el-open admin-account-el-open1 credit-list-area" style="display: none;">
+                    <ul>
+                        {foreach from=$cards key="key" item=card name=loopname}
+                            <li class="clear">
+                                <div class="main-area"><p>{$card.label}</p></div>
+                                <div class="button-area">
+                                    <button class="delete" data-id="{$card.id}">情報を削除する</button>
+                                </div>
+                            </li>
+                        {/foreach}
+                    </ul>
+                </div>
 
-            <li class="clear">
-              <div class="main-area"><p>下3桁 311 (MARIKO SUZUKI) 有効期限 20/11</p></div>
-              <div class="button-area">
-                <button class="delete">情報を削除する</button>
-              </div>
-            </li>
+            </div>
 
-          </ul>
+            <div class="admin-account-el">
+                <p class="admin-account-title admin-account-title2">メンバー退会について</p>
+                <div class="admin-account-el-open admin-account-el-open2 resign-area" style="display: none;">
+                    <p>メンバーの退会手続きについては、<a href="/contact" style="color:#4C9BBF;">お問い合わせフォーム</a>からのみ受け付けております。
+                        <span style="display: block;height: 8px;"></span>
+                        また、一度退会されると、同じお名前やメールアドレスは使用できなくなります。あらかじめご了承のほどよろしくお願いいたします。</p>
+                </div>
+            </div>
+
         </div>
-        
-      </div>
-
-      <div class="admin-account-el">
-        <p class="admin-account-title admin-account-title2">メンバー退会について</p>
-        <div class="admin-account-el-open admin-account-el-open2 resign-area" style="display: none;">
-          <p>メンバーの退会手続きについては、<a href="/contact" style="color:#4C9BBF;">お問い合わせフォーム</a>からのみ受け付けております。
-          <span style="display: block;height: 8px;"></span>
-          また、一度退会されると、同じお名前やメールアドレスは使用できなくなります。あらかじめご了承のほどよろしくお願いいたします。</p>
-        </div>    
-      </div>
-      
     </div>
-  </div>
 </div>
 
-    
+
 <script>
-$(function(){
+    $(function () {
 
-  $(".admin-account-title1").click(function() {
-    $(".admin-account-title1").toggleClass("active");
-    $(".admin-account-el-open1").slideToggle();
-  });
-
-  $(".admin-account-title2").click(function() {
-    $(".admin-account-title2").toggleClass("active");
-    $(".admin-account-el-open2").slideToggle();
-  });
-
-  $('.delete').click(function(){
-
-    bootbox.confirm("クレジットカードの情報を削除しますか？", function(result) {
-      if (result) {
-        ajax.post(url, params, function(data){
-          ts.success("削除しました", function(){
-            location.href = "/my/registlist";
-          });
+        $(".admin-account-title1").click(function () {
+            $(".admin-account-title1").toggleClass("active");
+            $(".admin-account-el-open1").slideToggle();
         });
-      }
-      else {
-        ts.info("キャンセルしました");
-      }
+
+        $(".admin-account-title2").click(function () {
+            $(".admin-account-title2").toggleClass("active");
+            $(".admin-account-el-open2").slideToggle();
+        });
+
+        $('.credit-list-area ul li').each(function() {
+            var item = $(this);
+            item.find('.delete').click(function () {
+                var card_id = $(this).data('id');
+                bootbox.confirm("クレジットカードの情報を削除しますか？", function (result) {
+                    if (result) {
+                        var url = "/api/creditcards/delete";
+                        var params = {
+                            card_id: card_id
+                        };
+                        ajax.post(url, params, function (data) {
+                            ts.success("削除しました");
+                            item.fadeOut(1000).queue(function() {
+                                this.remove();
+                            });
+                        });
+                    }
+                    else {
+                        ts.info("キャンセルしました");
+                    }
+                });
+            });
+        })
     });
-  });
-  
-});
 </script>
