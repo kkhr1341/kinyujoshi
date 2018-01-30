@@ -9,6 +9,7 @@ return array(
 	'login_regist'   => 'login/regist',
 	'regist_email'   => 'login/regist_email',
 	'regist_sns'   => 'login/regist_sns',
+	'resetting_pass' => 'login/resetting_pass',
 
 	//テスト環境
 	'testindex' => 'kinyu/top/testindex',

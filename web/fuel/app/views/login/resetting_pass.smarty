@@ -1,0 +1,38 @@
+<div class="kinyu-single-block">
+  <div class="login-add-contents-block">
+
+    
+    <p class="main-title">パスワード再設定</p>
+    <p class="message">以下項目のご入力をお願いします♪</p>
+
+    <div class="resetting-pass-block">
+      <div class="username-area">
+        <p>- ユーザー名 -</p>
+        <!-- ユーザー名を表示 -->
+        <p class="name-title">石原さとみ</p>
+      </div>
+      <div class="form-area">
+        <form>
+
+          <div class="regist-add-form-edit-el resetting-pass-el">
+            <label class="regist-add-form-edit-title">新しいパスワード</label>
+            <input type="password" id="name" class="form-control resetting-pass-el-input1" placeholder="" value="">
+            <input type="password" id="name" class="form-control" placeholder="ご確認用" value="">
+          </div>
+
+          <div class="form-btn tx-center">
+            <button class="btn btn-kinyu" type="button" id="save">再設定する</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+
+<script>
+{literal}
+
+{/literal}
+</script>
