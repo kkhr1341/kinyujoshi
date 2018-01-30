@@ -145,6 +145,7 @@ class Regist extends Base {
               'edit_inner' => '',
               'industry' => '',
               'industry_other' => '',
+              'introduction' => $params['introduction'],
               'created_at' => \DB::expr('now()'),
               'user_agent' => @$_SERVER['HTTP_USER_AGENT'],
           ))->execute();
