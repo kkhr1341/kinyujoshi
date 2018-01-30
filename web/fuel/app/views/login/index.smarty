@@ -50,31 +50,43 @@
 <script>
     $(function () {
 
+        // パスワード再設定メール送信フォーム
         var reminderForm = $('.reminder-form');
         reminderForm.find('.pass-reissue-submit').click(function(e){
             e.preventDefault();
             var url = "/api/reminder/create";
-            var params = {};
-            params.email = reminderForm.find('[name="email"]').val();
+            var params = {
+                email: reminderForm.find('[name="email"]').val()
+            };
 
             if (params.email == "") {
                 ts.error("メールアドレスを正しく入力してください");
                 return false;
             }
 
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(500);
             ajax.post(url, params, function (data) {
-                ts.success("パスワード再設定用メールを送信しました", function () {
-                    $("#pass-reissue-open").fadeOut(500);
-                });
-            });
+                    ts.success("パスワード再設定用メールを送信しました", function () {
+                        $("#pass-reissue-open").fadeOut(500);
+                    });
+                })
+                .done(function(data) {
+                    $(".loader-block").fadeOut(500);
+                })
+                .fail(function(error) {
+                    $(".loader-block").fadeOut(500);
+                })
         });
 
+        // ログインフォーム
         var loginForm = $('.email-form');
         loginForm.find('#login').click(function () {
             var url = "/api/auth/login";
-            var params = {};
-            params.email = loginForm.find('[name="email"]').val();
-            params.password = loginForm.find('[name="password"]').val();
+            var params = {
+                "email": loginForm.find('[name="email"]').val(),
+                "password": loginForm.find('[name="password"]').val()
+            };
 
             if (params.email == "") {
                 ts.error("メールアドレスを正しく入力してください");
@@ -85,34 +97,19 @@
                 return false;
             }
 
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(500);
             ajax.post(url, params, function (data) {
-                ts.success("ログインが完了しました", function () {
-                    location.href = "/my";
-                });
-            });
-        });
-
-        var registForm = $('#regist-form');
-        registForm.find('.regist-btn').click(function () {
-            var url = "/api/auth/register";
-            var params = {};
-            params.email = registForm.find('[name="email"]').val();
-            params.password = registForm.find('[name="password"]').val();
-
-            if (params.email == "") {
-                ts.error("メールアドレスを正しく入力してください");
-                return false;
-            }
-            if (params.password == "") {
-                ts.error("パスワードを入力してください");
-                return false;
-            }
-
-            ajax.post(url, params, function (data) {
-                ts.success("ログインが完了しました", function () {
-                    location.href = "/my";
-                });
-            });
+                    ts.success("ログインが完了しました", function () {
+                        location.href = "/my";
+                    });
+                })
+                .done(function(data) {
+                    $(".loader-block").fadeOut(500);
+                })
+                .fail(function(error) {
+                    $(".loader-block").fadeOut(500);
+                })
         });
     });
     $(function () {

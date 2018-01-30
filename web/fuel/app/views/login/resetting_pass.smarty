@@ -53,13 +53,21 @@
                 ts.error("確認用パスワードをお確かめください");
                 return false;
             }
+
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(500);
             ajax.post(url, params, function(data){
-                debugger;
-                ts.success("参加をキャンセルしました");
-                setTimeout(function(){
-                    location.href = '/my/joshikai';
-                }, 1000);
-            });
+                    ts.success("パスワードの設定が完了しました");
+                    setTimeout(function(){
+                        location.href = '/my';
+                    }, 1000);
+                })
+                .done(function(data) {
+                    $(".loader-block").fadeOut(500);
+                })
+                .fail(function(error) {
+                    $(".loader-block").fadeOut(500);
+                })
         });
     });
 </script>

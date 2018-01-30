@@ -27,12 +27,12 @@ function chargeByNewCard(card, event_code, name, email) {
                     })
                     .done(function(data) {
                         if(data.api_status === 'error') {
-	                    reject(data.message);
-	                }
-	            })
+                            reject(data.message);
+                        }
+                    })
                     .fail(function(error) {
-		        reject(error);
-	            })
+                        reject(error);
+                    })
             }
         })
     })
