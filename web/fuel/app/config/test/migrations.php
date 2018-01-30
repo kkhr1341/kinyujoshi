@@ -57,6 +57,7 @@ return array(
         48 => '051_create_index_code_in_events',
         49 => '052_create_index_code_in_member_regist',
         50 => '053_create_index_username_in_member_regist',
+        51 => '054_create_index_code_in_profiles',
       ),
     ),
     'module' => 
