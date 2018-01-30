@@ -19,6 +19,10 @@ class Controller_Api_Creditcards extends Controller_Base
             $db = \Database_Connection::instance();
             $db->start_transaction();
 
+            \DB::delete('user_credit_cards')
+                ->where('card_id', '=', $params['card_id'])
+                ->execute();
+
             $customer = $payment->getCustomer($username);
             $payment->removeCard($customer, $params['card_id']);
             $db->commit_transaction();
