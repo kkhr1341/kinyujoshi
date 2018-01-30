@@ -88,7 +88,6 @@
   margin: 0 auto;
   padding: 60px 0px 80px;
   position: relative;
-  /*background:url(/images/myway/bg-intro.png) center center / cover no-repeat;*/
 }
 .myway-introduction .myway-description .inner {
   width: 1000px;
@@ -173,20 +172,6 @@
   background-size: cover;
   position: absolute;
 }
-/*#myway-shoes.myway-content-list-el .img-box video {
-  right: -30%;
-}
-#myway-cosmetics.myway-content-list-el .img-box video {
-  right: -10%;
-}*/
-/*#myway-shoes.myway-content-list-el .img-box .video-filter {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.3);
-}*/
 .myway-content-list-el .text-box {
   width: 50%;
   float: right;
@@ -320,7 +305,7 @@
 }
 .myway-header-content .main-tumb-block .video-block {
   float: left;
-  width: 620px;
+  width: 600px;
   height: 340px;
   overflow: hidden;
   position: relative;
@@ -332,7 +317,7 @@
 }
 .myway-header-content .main-tumb-block .title-block {
   float: right;
-  width: 380px;
+  width: 400px;
   padding: 0px 36px;
   box-sizing: border-box;
   display: table;
@@ -344,12 +329,19 @@
   height: 100%;
 }
 .myway-header-content .main-tumb-block .title-block p {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 11px;
+  line-height: 18px;
+}
+.myway-report-content .text-box-title {
+  font-size: 15px!important;
+  line-height: 22px!important;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
 }
 .myway-header-content .main-tumb-block .title-block img {
   width: 280px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .myway-report-content .inner {
   border-bottom: 1px solid gray;
@@ -677,10 +669,18 @@
   width: 92%;
   margin-bottom: 8px;
 }
+.myway-report-content .text-box-title {
+  font-size: 14px!important;
+  line-height: 20px!important;
+  font-weight: bold;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-top: 16px;
+}
 .myway-header-content .main-tumb-block .my-way-description {
   font-size: 10px;
   line-height: 17px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 .myway-report-content .inner {
   width: 88%;
