@@ -51,6 +51,12 @@ return array(
         42 => '045_create_users_reminders',
         43 => '046_add_catchcopy_to_profiles',
         44 => '047_add_introduction_to_profiles',
+        45 => '048_create_index_username_in_users',
+        46 => '049_create_index_code_in_applications',
+        47 => '050_create_index_application_code_in_application_credit_payments',
+        48 => '051_create_index_code_in_events',
+        49 => '052_create_index_code_in_member_regist',
+        50 => '053_create_index_username_in_member_regist',
       ),
     ),
     'module' => 
