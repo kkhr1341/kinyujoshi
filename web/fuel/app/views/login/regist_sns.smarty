@@ -303,7 +303,7 @@ $(function(){
             if (after_login_url) {
               location.href = after_login_url;
             } else {
-              location.href = "/regist/complete";
+              location.href = "/my";
             }
           },3000);
 
