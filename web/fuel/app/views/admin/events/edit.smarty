@@ -42,7 +42,7 @@
 				<div class="form-group">
 					<label class="form-group-event-label">サムネイル画像</label>
 					<a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
-					<input type="hidden" id="main_image">
+					<input type="hidden" id="main_image" value="{$events.main_image}">
 
 					<!-- サムネイル画像を投稿するとここに表示される！ -->
                     {if $events.main_image}
@@ -216,6 +216,10 @@ $(function(){
 			ts.error("決済を選択してください");
 			return false;
 		}
+        if (params.incur_cancellation_fee_date == "") {
+            ts.error("キャンセル料金発生日を入力してください");
+            return false;
+        }
 
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
@@ -236,7 +240,7 @@ $(function(){
 		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
 		params.description = $('#description').val();
-    params.main_image = $('#main_image').val();
+   		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.place = $('#place').val();
 		params.place_url = $('#place_url').val();
@@ -245,7 +249,7 @@ $(function(){
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
-    params.limit = $("#limit").val();
+    	params.limit = $("#limit").val();
 		params.open_date = $('#open_date').val();
 		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;
@@ -286,6 +290,10 @@ $(function(){
 			ts.error("決済方法を選択してください");
 			return false;
 		}
+        if (params.incur_cancellation_fee_date == "") {
+            ts.error("キャンセル料金発生日を入力してください");
+            return false;
+        }
 		
 		ajax.post(url, params, function(data){
 			ts.success("下書き保存しました");
