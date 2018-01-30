@@ -47,7 +47,7 @@
           <div class="regist-selectarea">
             <select id="age2" class='form-control'>
               <option>-</option>
-                {section name=i start=1 loop=12}
+                {section name=i start=1 loop=13}
                   <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
                 {/section}
             </select>
@@ -57,7 +57,7 @@
           <div class="regist-selectarea">
             <select id="age3" class='form-control'>
               <option>-</option>
-                {section name=i start=1 loop=31}
+                {section name=i start=1 loop=32}
                   <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
                 {/section}
             </select>
