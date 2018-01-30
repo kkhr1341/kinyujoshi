@@ -137,7 +137,7 @@
                 }
                 promise = chargeByNewCard(card, event_code.val(), name.val(), email.val())
             } else {
-                promise = chargeByRegisterCard(event_code.val(), cardselect.val())
+                promise = chargeByRegisterCard(event_code.val(), cardselect.val(), name.val(), email.val())
             }
             //ローディングアニメーション
             $(".loader-block").fadeIn(200);

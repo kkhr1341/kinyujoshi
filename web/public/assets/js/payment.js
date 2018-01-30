@@ -42,14 +42,18 @@ function chargeByNewCard(card, event_code, name, email) {
  * 登録カードで申し込み
  * @param event_code String イベントコード
  * @param cardselect String 登録カードID
+ * @param name       String お名前
+ * @param email      String メールアドレス
  * @returns {Promise}
  */
-function chargeByRegisterCard(event_code, cardselect) {
+function chargeByRegisterCard(event_code, cardselect, name, email) {
     return new Promise(function(resolve, reject) {
         var url = "/api/events/application";
         var params = {
             event_code: event_code,
-            cardselect: cardselect
+            cardselect: cardselect,
+            name: name,
+            email: email
         };
         return ajax.post(url, params, function(data) {
                 resolve(data);
