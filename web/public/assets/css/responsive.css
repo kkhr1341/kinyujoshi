@@ -2017,6 +2017,23 @@
   width: 150px;
   padding: 10px 0px;
 }
+/* パスワード再設定 */
+.resetting-pass-block {
+  padding: 24px 20px;
+}
+.resetting-pass-el input {
+  font-size: 12px;
+}
+.resetting-pass-block .username-area {
+  margin-bottom: 20px;
+}
+.resetting-pass-block .username-area .name-title {
+  font-size: 14px;
+  margin-top: 8px;
+}
+.resetting-pass-block .form-btn {
+  margin-top: 16px;
+}
 
 /* メンバー登録部分 */
 .login-add-contents-block {

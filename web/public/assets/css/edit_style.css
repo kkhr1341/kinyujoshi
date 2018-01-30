@@ -3351,6 +3351,33 @@ footer .navi_kinyu-submenu-copy {
   border: none!important;
 }
 
+/* パスワード再設定 */
+.resetting-pass-block {
+  background: #f9f9f9;
+  padding: 36px 80px;
+}
+.resetting-pass-el {
+  margin-bottom: 0px;
+}
+.resetting-pass-el input:first-child {
+  margin-bottom: 12px;
+}
+.resetting-pass-block .username-area {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.resetting-pass-block .username-area .name-title {
+  font-size: 15px;
+  margin-top: 0px;
+  font-weight: bold;
+}
+.resetting-pass-el-input1 {
+  margin-bottom: 8px;
+}
+.resetting-pass-block .form-btn {
+  margin-top: 20px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ローディングアニメーション
