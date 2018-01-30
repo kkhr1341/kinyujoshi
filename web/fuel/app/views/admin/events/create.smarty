@@ -139,7 +139,7 @@
 <script>
 $(function(){
     $('.thumbnail-img-block')
-		uploader('/api/redactor/upload/image', {
+		.uploader('/api/redactor/upload/image', {
 			success: function (data) {
                 var url = data.url;
                 $('#main_image').val(url);
@@ -153,7 +153,9 @@ $(function(){
 	
 	$('#save').click(function(){
 		var url = "/api/events/create";
-		var params = {};
+		var params = {
+
+		};
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
@@ -167,7 +169,7 @@ $(function(){
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
-    params.limit = $("#limit").val();
+   		params.limit = $("#limit").val();
 		params.open_date = $('#open_date').val();
 		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 1;
@@ -209,7 +211,6 @@ $(function(){
 			return false;
 		}
 
-
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
 				location.href = "/admin/events";
@@ -233,14 +234,18 @@ $(function(){
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
-    params.limit = $("#limit").val();
+   		params.limit = $("#limit").val();
 		params.open_date = $('#open_date').val();
-    params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
+    	params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;
 		
 		if (params.title == "") {
 			params.title = "タイトル未設定";
 		}
+        if (params.event_date == "") {
+            ts.error("日付を入力してください");
+            return;
+        }
 		ajax.post(url, params, function(data){
 			ts.success("下書き保存しました", function(){
 				location.href = "/admin/events";

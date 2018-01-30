@@ -85,6 +85,8 @@ class Events extends Base
 
         $code = self::getNewCode('events');
         $params['username'] = \Auth::get('username');
+        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
+        $params['limit'] = (!$params['limit'])? 0: $params['limit'];
         $params['code'] = $code;
         $params['created_at'] = \DB::expr('now()');
 //        $params['main_image'] = self::get_main_image($params);
