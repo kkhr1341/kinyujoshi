@@ -6,6 +6,82 @@ require_once(dirname(__FILE__) . "/base.php");
 class Events extends Base
 {
 
+
+    public static function validate($status)
+    {
+        $val = \Validation::forge();
+        $val->add_callable('myvalidation');
+
+        $val->add('code');
+
+        $val->add('section_code');
+
+        $val->add('status');
+
+        $val->add('event_category', 'カテゴリー');
+
+        $val->add('title', '女子会のタイトル');
+
+        $val->add('main_image', 'サムネイル画像');
+
+        $val->add('content', '女子会の詳細');
+
+        $val->add('event_date', '日付')
+            ->add_rule('required')
+            ->add_rule('valid_date');
+
+        $val->add('event_start_datetime', '開催開始時間');
+
+        $val->add('event_end_datetime', '開催終了時間');
+
+        $val->add('place', '場所');
+
+        $val->add('place_url', '場所のURL');
+
+        $val->add('fee', '女子会参加費')
+            ->add_rule('valid_string','numeric');
+
+        $val->add('limit', '定員')
+            ->add_rule('valid_string', 'numeric');
+
+        $val->add('creditch', '決済方法');
+
+        $val->add('incur_cancellation_fee_date', 'キャンセル料金発生日')
+            ->add_rule('valid_date');
+
+        $val->add('open_date', '公開設定')
+            ->add_rule('valid_date');
+
+        if ($status == 1) {
+
+            $val->field('event_category')
+                ->add_rule('required');
+
+            $val->field('title')
+                ->add_rule('required');
+
+            $val->field('place')
+                ->add_rule('required');
+
+            $val->field('fee')
+                ->add_rule('required');
+
+            $val->field('event_start_datetime')
+                ->add_rule('required');
+
+            $val->field('event_end_datetime')
+                ->add_rule('required');
+
+            $val->field('creditch')
+                ->add_rule('required');
+
+            $val->field('incur_cancellation_fee_date')
+                ->add_rule('required');
+        }
+
+        return $val;
+    }
+
     public static function lists($mode = null, $limit = null, $open = null)
     {
 

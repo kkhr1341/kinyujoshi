@@ -19,7 +19,13 @@ class Controller_Api_Events extends Controller_Base
         if (!Auth::has_access('events.admin')) {
             exit();
         }
-        $this->ok(Events::save(\Input::all()));
+        $val = Events::validate(\Input::post('status'));
+        if (!$val->run()) {
+            $error_messages = $val->error_message();
+            $message = reset($error_messages);
+            $this->error($message);
+        }
+        $this->ok(Events::save($val->validated()));
     }
 
     public function action_delete()

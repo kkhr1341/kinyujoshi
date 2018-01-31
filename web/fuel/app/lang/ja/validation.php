@@ -14,13 +14,13 @@ return array(
         'valid_ip'         => ':labelは不正なIPアドレスです',
         'numeric_min'      => ':labelは:param:1以上で入力してください',
         'numeric_max'      => ':labelは:param:1以内で入力してください',
-        'valid_string'     => ':labelは『:rule』で入力する必要があります',
+        'valid_string'     => ':labelは『:param:1』で入力する必要があります',
         'checkbox_require' => ':labelは1つ以上選択する必要があります',
         'required_with' => ':labelは入力必須項目です。',
         'valid_date' => ':labelの形式が正しくありません。',
     
         # 自作
-        'num' => ':labelは数字で入力してください',
+//        'num' => ':labelは数字で入力してください',
         'alphanum' => ':labelは英数字で入力してください',
         'unique'   => ':labelが既に使われています',
         'is_fullwidth_katakana'   => ':labelは全角カタカナで入力してください',
@@ -30,4 +30,19 @@ return array(
         'is_unique_array_value'   => ':labelの値が重複しています',
         'require_without'   => ':labelは必須です',
         'exists'   => ':labelが存在しません',
+
+        'valid_string_params' => array(
+            'alpha'        => 'アルファベット',
+            'utf8'         => '全角文字',
+            'numeric'      => '数字',
+            'spaces'       => 'スペース',
+            'newlines'     => '改行',
+            'tabs'         => 'タブ',
+            'punctuation'  => 'punctuation',
+            'singlequotes' => 'シングルクオート',
+            'doublequotes' => 'ダブルクオート',
+            'dashes'       => 'ハイフン',
+            'brackets'     => 'brackets',
+            'braces'       => 'braces',
+        ),
 );

@@ -5,7 +5,8 @@ require COREPATH.'bootstrap.php';
 \Autoloader::add_classes(array(
 	// Add classes you want to override here
 	// Example: 'View' => APPPATH.'classes/view.php',
-  'Agent' => APPPATH.'classes/agent.php'
+  'Agent' => APPPATH.'classes/agent.php',
+  'Validation_Error' => APPPATH . 'classes/validation/error.php',
 ));
 
 // Register the autoloader

@@ -165,7 +165,6 @@ $(function(){
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
-		params.description = $('#description').val();
 		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.place = $('#place').val();
@@ -186,10 +185,6 @@ $(function(){
 		}
 		if (params.title == "") {
 			ts.error("女子会のタイトルを入力してください");
-			return false;
-		}
-		if (params.description == "") {
-			ts.error("女子会の説明文を入力してください");
 			return false;
 		}
 		if (params.place == "") {
@@ -239,7 +234,6 @@ $(function(){
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
 		params.title = $('#title').val();
-		params.description = $('#description').val();
    		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.place = $('#place').val();
@@ -260,10 +254,6 @@ $(function(){
 		}
 		if (params.title == "") {
 			ts.error("女子会のタイトルを入力してください");
-			return false;
-		}
-		if (params.description == "") {
-			ts.error("女子会の説明文を入力してください");
 			return false;
 		}
 		if (params.place == "") {

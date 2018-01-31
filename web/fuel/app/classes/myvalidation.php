@@ -55,21 +55,21 @@ class MyValidation
         return !($result->count() > 0);
     }
 
-    /*
-     * 半角数字チェック
-     */
-    public static function _validation_num($data)
-    {
-        if (!empty($data)) {
-            if (preg_match("/^[0-9]+$/", $data)) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-        return true;
-    }
-
+//    /*
+//     * 半角数字チェック
+//     */
+//    public static function _validation_num($data)
+//    {
+//        if (!empty($data)) {
+//            if (preg_match("/^[0-9]+$/", $data)) {
+//                return true;
+//            } else {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//
     /*
      * 半角英数字チェック
      */
