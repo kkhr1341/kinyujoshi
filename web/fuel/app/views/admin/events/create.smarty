@@ -140,10 +140,15 @@
 $(function(){
     $('.thumbnail-img-block')
 		.uploader('/api/redactor/upload/image', {
-			success: function (data) {
-                var url = data.url;
+            success: function (response) {
+                var url = response.data.url;
                 $('#main_image').val(url);
-                $('.thumbnail-img').css('background-image', 'url(' + url + ')');
+                $('.thumbnail-img').css({
+                    'background-image': 'url(' + url + ')',
+                    'background-position': 'center center',
+                    'background-repeat': 'no-repeat',
+                    'background-size': 'cover'
+                });
 			}
 		});
 
@@ -260,6 +265,9 @@ $(function(){
 		fileUpload: '/api/redactor/upload/file',
 		fileManagerJson: '/api/redactor/list/file',
 		callbacks: {
+            imageUpload: function($img, json) {
+                $img.attr('src', json.data.url);
+            },
 			fileUploadError: function(json) {
 				alert(json.message);
 			},

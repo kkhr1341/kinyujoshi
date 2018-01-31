@@ -8,7 +8,7 @@
 
 use \Model\Regist;
 
-class Controller_Api_Regist extends Controller_Base
+class Controller_Api_Regist extends Controller_Apibase
 {
 
     public function action_create()
@@ -17,14 +17,14 @@ class Controller_Api_Regist extends Controller_Base
         if (!$val->run()) {
             $error_messages = $val->error_message();
             $message = reset($error_messages);
-            $this->error($message);
+            return $this->error($message);
         }
         $params = $val->validated();
-        $this->ok(Regist::create($params));
+        return $this->ok(Regist::create($params));
     }
 
     public function action_document()
     {
-        $this->ok(Regist::document(\Input::all()));
+        return $this->ok(Regist::document(\Input::all()));
     }
 }

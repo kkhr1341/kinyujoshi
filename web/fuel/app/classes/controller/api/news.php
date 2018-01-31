@@ -2,14 +2,14 @@
 
 use \Model\News;
 
-class Controller_Api_News extends Controller_Base
+class Controller_Api_News extends Controller_Apibase
 {
     public function action_create()
     {
         if (!Auth::has_access('news.admin')) {
             exit();
         }
-        $this->ok(News::create(\Input::all()));
+        return $this->ok(News::create(\Input::all()));
     }
 
     public function action_save()
@@ -17,7 +17,7 @@ class Controller_Api_News extends Controller_Base
         if (!Auth::has_access('news.admin')) {
             exit();
         }
-        $this->ok(News::save(\Input::all()));
+        return $this->ok(News::save(\Input::all()));
     }
 
     public function action_delete()
@@ -25,6 +25,6 @@ class Controller_Api_News extends Controller_Base
         if (!Auth::has_access('news.admin')) {
             exit();
         }
-        $this->ok(News::delete(\Input::all()));
+        return $this->ok(News::delete(\Input::all()));
     }
 }

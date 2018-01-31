@@ -1,11 +1,42 @@
 <?php
 
 namespace Model;
-
 require_once(dirname(__FILE__) . "/base.php");
 
 class Applications extends Base
 {
+
+    public static function validate($cardselect)
+    {
+        $val = \Validation::forge();
+        $val->add_callable('myvalidation');
+
+        $val->add('event_code')
+            ->add_rule('required');
+
+        $val->add('cardselect')
+            ->add_rule('required');
+
+        $val->add('name', 'お名前（フルネーム）');
+
+        $val->add('email', 'メールアドレス');
+
+        $val->add('token', '決済トークン');
+
+        // 新規カード登録 or 会員登録をせずに申し込みの場合は以下必須
+        if ($cardselect === '0') {
+
+            $val->field('name')
+                ->add_rule('required');
+
+            $val->field('email')
+                ->add_rule('required');
+
+            $val->field('token')
+                ->add_rule('required');
+        }
+        return $val;
+    }
 
     /**
      * 参加イベント一覧取得

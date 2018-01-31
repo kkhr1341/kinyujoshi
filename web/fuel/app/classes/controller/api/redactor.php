@@ -5,7 +5,7 @@ use Aws\Credentials\Credentials;
 
 use \Model\Files;
 
-class Controller_Api_Redactor extends Controller_Base
+class Controller_Api_Redactor extends Controller_Apibase
 {
     private function formatBytes($size, $precision = 2)
     {
@@ -102,9 +102,10 @@ class Controller_Api_Redactor extends Controller_Base
             Files::create($username, $mode, $etag, $title, $size, $url, $thumb, $file_name, $_FILES['file']['type']);
 
         } catch (S3Exception $e) {
-            //エラー処理
-            echo json_encode(array('error' => true, 'message' => 'アップロード中に問題が発生しました。'));
-            exit();
+            return $this->error('アップロード中に問題が発生しました。');
+//            //エラー処理
+//            echo json_encode(array('error' => true, 'message' => 'アップロード中に問題が発生しました。'));
+//            exit();
         }
 
         $array = array(
@@ -113,9 +114,7 @@ class Controller_Api_Redactor extends Controller_Base
             'name' => $file_name
         );
 
-        echo json_encode($array);
-
-        exit();
+        return $this->ok($array);
     }
 
     public function action_list($mode)
@@ -129,8 +128,7 @@ class Controller_Api_Redactor extends Controller_Base
         $username = Auth::get('username');
         $files = Files::lists($username, $mode);
 
-        echo json_encode($files);
-        exit();
+        return $this->ok($files);
     }
 
     public function action_upload($mode)

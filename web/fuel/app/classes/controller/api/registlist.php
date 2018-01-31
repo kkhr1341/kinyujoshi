@@ -8,21 +8,21 @@
 
 use \Model\Registlist;
 
-class Controller_Api_Registlist extends Controller_Base
+class Controller_Api_Registlist extends Controller_Apibase
 {
 
     public function action_create()
     {
-        $this->ok(Registlist::create(\Input::all()));
+        return $this->ok(Registlist::create(\Input::all()));
     }
 
     public function action_save()
     {
-        $this->ok(Registlist::save(\Input::all()));
+        return $this->ok(Registlist::save(\Input::all()));
     }
 
     public function action_delete()
     {
-        $this->ok(Registlist::delete(\Input::all()));
+        return $this->ok(Registlist::delete(\Input::all()));
     }
 }

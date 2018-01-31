@@ -2,7 +2,7 @@
 
 use \Model\Payment;
 
-class Controller_Api_Creditcards extends Controller_Base
+class Controller_Api_Creditcards extends Controller_Apibase
 {
     public function action_delete()
     {
@@ -13,7 +13,7 @@ class Controller_Api_Creditcards extends Controller_Base
 
         $payment = new Payment(\Config::get('payjp.private_key'));
         if (!$username = \Auth::get('username')) {
-            $this->error("削除に失敗しました。");
+            return $this->error("削除に失敗しました。");
         }
         try {
             $db = \Database_Connection::instance();
@@ -26,10 +26,10 @@ class Controller_Api_Creditcards extends Controller_Base
             $customer = $payment->getCustomer($username);
             $payment->removeCard($customer, $params['card_id']);
             $db->commit_transaction();
-            $this->ok();
+            return $this->ok();
         } catch (Exception $e) {
             \Log::error($e->getMessage());
-            $this->error("削除に失敗しました。");
+            return $this->error("削除に失敗しました。");
         }
     }
 }

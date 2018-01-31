@@ -2,10 +2,10 @@
 
 use \Model\Inquiries;
 
-class Controller_Api_Inquiries extends Controller_Base
+class Controller_Api_Inquiries extends Controller_Apibase
 {
     public function action_create()
     {
-        $this->ok(Inquiries::create(\Input::all()));
+        return $this->ok(Inquiries::create(\Input::all()));
     }
 }

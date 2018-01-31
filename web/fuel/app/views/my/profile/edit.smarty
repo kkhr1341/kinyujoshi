@@ -122,8 +122,8 @@ $(function(){
                 //ローディングアニメーション
                 $(".loader-block").fadeIn(500);
             },
-            success: function (data) {
-                var url = data.url;
+            success: function (response) {
+                var url = response.data.url;
                 $('#profile_image').val(url);
                 $('.edit-profile-img .img-box').css({
                     'background-image': 'url(' + url + ')',

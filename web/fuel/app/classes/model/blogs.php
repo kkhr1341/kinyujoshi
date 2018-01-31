@@ -187,6 +187,8 @@ class Blogs extends Base
         $code = self::getNewCode('blogs');
         $params['username'] = \Auth::get('username');
         $params['code'] = $code;
+        $params['section_code'] = '';
+        $params['section_name'] = '';
         $params['created_at'] = \DB::expr('now()');
         $params['main_image'] = self::get_main_image($params);
         \DB::insert('blogs')->set($params)->execute();

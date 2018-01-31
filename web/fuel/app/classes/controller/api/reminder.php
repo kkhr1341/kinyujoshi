@@ -9,7 +9,7 @@
 use \Model\User;
 use \Model\UserReminder;
 
-class Controller_Api_Reminder extends Controller_Base
+class Controller_Api_Reminder extends Controller_Apibase
 {
 
     public function action_create()
@@ -24,10 +24,10 @@ class Controller_Api_Reminder extends Controller_Base
                 $user = User::getByEmail($val->validated('email'));
 
                 // TokenとメールアドレスをDBに登録
-                $this->ok(UserReminder::create($user['email'], $user['username']));
+                return $this->ok(UserReminder::create($user['email'], $user['username']));
 
             } catch (\Exception $e) {
-                $this->error(array('送信に失敗しました。'));
+                return $this->error(array('送信に失敗しました。'));
             }
         }
     }
@@ -36,18 +36,18 @@ class Controller_Api_Reminder extends Controller_Base
     {
         // トークンチェック
         if (!$reminder = UserReminder::get_valid(\Input::post('access_token'))) {
-            $this->error("トークンが不正です。");
+            return $this->error("トークンが不正です。");
         }
         $val = UserReminder::validate_reset();
         if (!$val->run()) {
-            $this->error(array_values($val->error_message()));
+            return $this->error(array_values($val->error_message()));
         } else {
             try {
                 // TokenとメールアドレスをDBに登録
-                $this->ok(UserReminder::reset($reminder['username'], $val->validated('password')));
+                return $this->ok(UserReminder::reset($reminder['username'], $val->validated('password')));
 
             } catch (\Exception $e) {
-                $this->error(array('設定に失敗しました。'));
+                return $this->error(array('設定に失敗しました。'));
             }
         }
     }
