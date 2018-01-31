@@ -23,6 +23,10 @@ test:
 	docker-compose run --rm web php oil test --group=App
 .PHONY: test
 
+composer:
+	docker-compose run composer update
+.PHONY: composer
+
 clean:
 	docker-compose down
 .PHONY: clean
