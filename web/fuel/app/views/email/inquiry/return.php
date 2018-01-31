@@ -57,7 +57,7 @@
             </div>
             <div class="form-mail-p">
               <p>◼︎お問い合わせ内容</p>
-              <?php echo $message; ?><br>
+              <?php echo nl2br($message); ?><br>
             </div>
             <div class="form-mail-p">
               <p>◼︎メールアドレス</p>
