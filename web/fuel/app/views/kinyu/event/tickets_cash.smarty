@@ -116,7 +116,7 @@
 //                  $(".exp_year").removeAttr("name");
 
                     var token = response.id;
-                    var url = "/api/events/application";
+                    var url = "/api/applications/create";
                     var params = {};
 
                     console.log(event_code.val());

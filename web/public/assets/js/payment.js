@@ -13,7 +13,7 @@ function chargeByNewCard(card, event_code, name, email) {
                 reject(response.error.message);
             } else {
                 var token = response.id;
-                var url = "/api/events/application";
+                var url = "/api/applications/create";
                 var params = {
                     event_code: event_code,
                     name: name,
@@ -48,7 +48,7 @@ function chargeByNewCard(card, event_code, name, email) {
  */
 function chargeByRegisterCard(event_code, cardselect, name, email) {
     return new Promise(function(resolve, reject) {
-        var url = "/api/events/application";
+        var url = "/api/applications/create";
         var params = {
             event_code: event_code,
             cardselect: cardselect,

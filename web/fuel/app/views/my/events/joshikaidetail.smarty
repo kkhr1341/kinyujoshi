@@ -74,7 +74,7 @@ $(function() {
   form.find('.joshikai-cancel-submit').click(function(e){
       e.preventDefault();
       var code = $(this).data('code');
-      var url = "/api/events/cancel";
+      var url = "/api/applications/delete";
       var params = {
           code: code
       };

@@ -61,7 +61,7 @@ $(function(){
 
 	$('.cancel').click(function(){
 	
-		var url = "/api/events/cancel";
+		var url = "/api/applications/delete";
 		var params = {};
 		params.code = $(this).attr('code');
 		
