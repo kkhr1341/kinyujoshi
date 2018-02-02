@@ -12,7 +12,7 @@
             <div class="edit-profile-img img-box-block">
               <div class="img-box"
                 {if $profile.profile_image == ''}
-                  style="background-color: red;"
+                  style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
                 {else}
                   style="background:url({$profile.profile_image}) center center / cover no-repeat;"
                 }

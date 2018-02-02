@@ -1881,12 +1881,12 @@
   padding: 12px 0px;
   font-size: 12px;
 }
-
+.regist-add-form-edit-el {
+  margin-bottom: 24px;
+}
 .login-contents-block {
   padding: 80px 0px 50px;
   font-size: 12px;
-}
-.login-regist-block {
 }
 .login-contents-intro {
   width: 88%;
