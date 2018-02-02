@@ -20,7 +20,7 @@
 
         <div class="fee-open-el">
           <label>カード番号</label>
-          {if in_array('user', $roles) || in_array('admin', $roles)}
+          {if (in_array('user', $roles) || in_array('admin', $roles)) && count($cards) > 0}
             <p class="select-before-title">・利用可能なクレジットカード</p>
             <select id="cardselect" name="cardselect">
                 {foreach from=$cards key="key" item=card name=loopname}
@@ -51,14 +51,19 @@
               <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
             </div>
           </div>
-          <div class="fee-open-el">
-            <label>お名前（フルネーム）</label>
-            <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
-          </div>
-          <div class="fee-open-el">
-            <label>メールアドレス</label>
-            <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
-          </div>
+          {if in_array('user', $roles) || in_array('admin', $roles)}
+            <input type="hidden" id="name" name="name" value="{$user.name}">
+            <input type="hidden" id="email" name="email" value="{$user.email}">
+          {else}
+            <div class="fee-open-el">
+              <label>お名前（フルネーム）</label>
+              <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
+            </div>
+            <div class="fee-open-el">
+              <label>メールアドレス</label>
+              <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
+            </div>
+          {/if}
         </div>
 
         <button class="day-cash-submit" type="submit">女子会に参加する</button>

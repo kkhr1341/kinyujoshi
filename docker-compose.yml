@@ -1,11 +1,10 @@
 version: '3'
 services:
-#  php-cli:
-#    build: ./php
-#    volumes:
-#      - ./web:/var/www/html
-#      - ./php/php.ini:/usr/local/etc/php/php.ini
-#    working_dir: /var/www/html
+  # php-cli:
+  #  build: ./php
+  #  volumes:
+  #    - ./web:/var/www/html
+  #  working_dir: /var/www/html
   db:
     build: ./mysql
     environment:
