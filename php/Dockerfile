@@ -7,7 +7,7 @@ RUN apt-get install -y mysql-client libfreetype6-dev libjpeg62-turbo-dev libpng1
 
 RUN docker-php-ext-install mysql pdo_mysql mysqli gd iconv mcrypt mbstring
 
-RUN pecl install xdebug
+RUN pecl install xdebug-2.4.0
 RUN docker-php-ext-enable xdebug
 
 # image magic

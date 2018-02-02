@@ -11,13 +11,17 @@ migrate:
 .PHONY: migrate
 
 install:
-	docker-compose build --no-cache
+	docker-compose build
 	git submodule init
 	docker-compose run composer update
 	git submodule init
 	git submodule update
 	docker-compose run --rm createbuckets
 .PHONY: install
+
+build:
+	docker-compose build --no-cache
+.PHONY: build
 
 test:
 	docker-compose run --rm web php oil test --group=App
