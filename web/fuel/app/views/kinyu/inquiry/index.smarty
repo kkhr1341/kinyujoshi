@@ -1,150 +1,154 @@
 <div class="kinyu-main-single-block">
 
-<div class="company-info-title">
-  <h2>お問い合わせ</h2>
+    <div class="company-info-title">
+        <h2>お問い合わせ</h2>
+    </div>
+
+    <div class="company-details-block clear">
+        <div class="company-details-menu">
+            <ul>
+                <li><a href="/company">運営会社</a></li>
+                <li><a href="/service">会員規約</a></li>
+                <li><a href="/privacy">プライバシーポリシー</a></li>
+                <li><a href="/legal">特定商取引法に基づく表記</a></li>
+                <li><a class="company-details-active">お問い合わせ</a></li>
+            </ul>
+        </div>
+
+        <div class="company-details company-contact">
+
+            <div class="singlepage-block center">
+                <form>
+                    <div class="singlepage-form-block">
+                        <div class="form-group">
+
+                            <label class="form-title"><span class="color-kinyu-color">◆</span> お名前
+                                <!-- <span class="label label-danger">必須</span> --></label>
+                            <input type="text" id="name" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+
+
+                            <label class="form-title"><span class="color-kinyu-color">◆</span> お名前(カナ)
+                                <!-- <span class="label label-danger">必須</span> --></label>
+                            <input type="text" id="name_kana" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス
+                                <!-- <span class="label label-danger">必須</span> --></label>
+                            <input type="text" id="email" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ種別
+                                <!-- <span class="label label-danger">必須</span> --></label>
+
+                            <select id="category_code" class='form-control'>
+                                <option value="">選択してください</option>
+                                <option value="きんゆう女子について">きんゆう女子について</option>
+                                <option value="女子会について">女子会について</option>
+                                <option value="当WEBサイトについて">当WEBサイトについて</option>
+                                <option value="運営会社について">運営会社について</option>
+                                <option value="退会について">退会について</option>
+                                <option value="その他">その他</option>
+                                {foreach from=$categories item=category}
+                                    <option value="{$category.code}">{$category.name}</option>
+                                {/foreach}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-title"><span class="color-kinyu-color">◆</span> 件名
+                                <!-- <span class="label label-danger">必須</span> --></label>
+                            <input type="text" id="title" class="form-control" placeholder="">
+                        </div>
+
+                        <div class="form-group form-group02">
+                            <label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ内容
+                                <!-- <span class="label label-danger">必須</span> --></label>
+                            <textarea id="message" name="message" class='form-control' rows="10"></textarea>
+                        </div>
+
+                        <div class="form-btn tx-center">
+                            <button class="btn btn-primary" type="button" id="save">送信する</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="company-details-block clear">
-  <div class="company-details-menu">
-    <ul>
-    	<li><a href="/company">運営会社</a></li>
-      <li><a href="/service">会員規約</a></li>
-      <li><a href="/privacy">プライバシーポリシー</a></li>
-      <li><a href="/legal">特定商取引法に基づく表記</a></li>
-      <li><a class="company-details-active">お問い合わせ</a></li>
-    </ul>
-  </div>
-
-  <div class="company-details company-contact">
-
-		<div class="singlepage-block center">
-		  <form>
-		    <div class="singlepage-form-block">
-					<div class="form-group">
-
-						<label class="form-title"><span class="color-kinyu-color">◆</span> お名前 <!-- <span class="label label-danger">必須</span> --></label>
-		        <input type="text" id="name" class="form-control" placeholder="">
-					</div>
-					<div class="form-group">
-
-
-						<label class="form-title"><span class="color-kinyu-color">◆</span> お名前(カナ) <!-- <span class="label label-danger">必須</span> --></label>
-		        <input type="text" id="name_kana" class="form-control" placeholder="">
-					</div>
-
-					<div class="form-group">
-
-						<label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス <!-- <span class="label label-danger">必須</span> --></label>
-		        <input type="text" id="email" class="form-control" placeholder="">
-					</div>
-					
-					<div class="form-group">
-						<label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ種別 <!-- <span class="label label-danger">必須</span> --></label>
-
-						<select id="category_code" class='form-control'>
-							<option value="">選択してください</option>
-							<option value="きんゆう女子について">きんゆう女子について</option>
-							<option value="女子会について">女子会について</option>
-							<option value="当WEBサイトについて">当WEBサイトについて</option>
-							<option value="運営会社について">運営会社について</option>
-							<option value="退会について">退会について</option>
-							<option value="その他">その他</option>
-							{foreach from=$categories item=category}
-							<option value="{$category.code}">{$category.name}</option>
-							{/foreach}
-						</select>
-					</div>
-					
-					<div class="form-group">
-						<label class="form-title"><span class="color-kinyu-color">◆</span> 件名 <!-- <span class="label label-danger">必須</span> --></label>
-						<input type="text" id="title" class="form-control" placeholder="">
-					</div>
-					
-					<div class="form-group form-group02">
-						<label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ内容 <!-- <span class="label label-danger">必須</span> --></label>
-						<textarea id="message" name="message" class='form-control' rows="10"></textarea>
-					</div>
-					
-					<div class="form-btn tx-center">
-						<button class="btn btn-primary" type="button" id="save">送信する</button>
-					</div>
-
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-</div>
-
 
 <script>
-{literal}
-$(function(){
-	var title_frame_height = $('#title_frame').height();
-	var page_title_height = $('.page_title').height();
-	
-	var padding_top = (title_frame_height / 2) - (page_title_height / 2);
-	$('.page_title').css('padding-top', padding_top);
-	
-	$('#save').click(function(){
-		var url = "/api/inquiries/create";
-		var params = {};
-		
-		params.name = $('#name').val();
-		params.name_kana = $('#name_kana').val();
-		params.email = $('#email').val();
-		params.category_code = $('#category_code').val();
-		params.title = $('#title').val();
-		params.message = $('#message').val();
-		
-		if (params.name == "") {
-			ts.error("お名前を入力してください");
-			return false;
-		}
-		if (params.name_kana == "") {
-			ts.error("お名前(カナ)を入力してください");
-			return false;
-		}
-		if (params.email == "") {
-			ts.error("メールアドレスを入力してください");
-			return false;
-		}
-		if (params.category_code == "") {
-			ts.error("お問合せ種別を選択してください");
-			return false;
-		}
-		if (params.title == "") {
-			ts.error("件名を入力してください");
-			return false;
-		}
-		if (params.message == "") {
-			ts.error("お問合せ内容を入力してください");
-			return false;
-		}
+    {literal}
+    $(function () {
+        var title_frame_height = $('#title_frame').height();
+        var page_title_height = $('.page_title').height();
 
-		bootbox.confirm("お問合せを送信しますか？", function(result) {
-			if (result) {
-				ajax.post(url, params, function(data){
+        var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+        $('.page_title').css('padding-top', padding_top);
 
-          //ローディングアニメーション
-          $(".loader-block").fadeIn(500);
+        $('#save').click(function () {
+            var url = "/api/inquiries/create";
+            var params = {};
 
-          setTimeout(function(){
-            $(".loader-block").fadeOut(500);
-          },2500);
+            params.name = $('#name').val();
+            params.name_kana = $('#name_kana').val();
+            params.email = $('#email').val();
+            params.category_code = $('#category_code').val();
+            params.title = $('#title').val();
+            params.message = $('#message').val();
 
-          setTimeout(function(){
-            location.href = "/contact/complete";
-          },3000);
+            if (params.name == "") {
+                ts.error("お名前を入力してください");
+                return false;
+            }
+            if (params.name_kana == "") {
+                ts.error("お名前(カナ)を入力してください");
+                return false;
+            }
+            if (params.email == "") {
+                ts.error("メールアドレスを入力してください");
+                return false;
+            }
+            if (params.category_code == "") {
+                ts.error("お問合せ種別を選択してください");
+                return false;
+            }
+            if (params.title == "") {
+                ts.error("件名を入力してください");
+                return false;
+            }
+            if (params.message == "") {
+                ts.error("お問合せ内容を入力してください");
+                return false;
+            }
+
+            bootbox.confirm("お問合せを送信しますか？", function (result) {
+                if (result) {
+                    //ローディングアニメーション
+                    $(".loader-block").fadeIn(200);
+                    ajax.post(url, params, function (data) {
+                            setTimeout(function () {
+                                location.href = "/contact/complete";
+                            }, 1000);
+                        })
+                        .done(function(data) {
+                            $(".loader-block").fadeOut(500);
+                        })
+                        .fail(function(error) {
+                            $(".loader-block").fadeOut(500);
+                        })
+                }
+                else {
+                    ts.info("キャンセルしました");
+                }
+            });
+
         });
-
-			}
-			else {
-				ts.info("キャンセルしました");
-			}
-		});
-		
-	});
-});
-{/literal}
+    });
+    {/literal}
 </script>
