@@ -47,8 +47,8 @@
           <div class="fee-open-el">
             <label>有効期限</label>
             <div class="exp-date-block">
-              <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月">
-              <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="年">
+              <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="（月）＊03、12など2桁">
+              <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="（年）＊2020など4桁">
             </div>
           </div>
           {if in_array('user', $roles) || in_array('admin', $roles)}
