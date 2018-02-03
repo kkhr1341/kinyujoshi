@@ -46,15 +46,18 @@ class Controller_Api_Redactor extends Controller_Apibase
             }
             $credentials = new Credentials(\Config::get('s3.access_key'), \Config::get('s3.secret_key'));
 
-            $s3 = S3Client::factory(array(
+            $params = array(
                 'signature' => 'v4',
                 'credentials' => $credentials,
                 'region' => 'ap-northeast-1',
-                'endpoint' => \Config::get('s3.endpoint'),
                 'version' => "latest",
-                'use_path_style_endpoint' => true,
                 //'version' => '2006-03-01'
-            ));
+            );
+            if (\Config::get('s3.endpoint')) {
+                $params['endpoint'] = \Config::get('s3.endpoint');
+                $params['use_path_style_endpoint'] = true;
+            }
+            $s3 = S3Client::factory($params);
             $res = $s3->putObject(array(
                 'Bucket' => \Config::get('s3.bucket'),
                 'Key' => "stock/{$username}/images/{$updatedev}{$file_name}",
