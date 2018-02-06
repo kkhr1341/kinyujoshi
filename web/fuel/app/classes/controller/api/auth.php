@@ -11,11 +11,11 @@ class Controller_Api_Auth extends Controller_Base
     {
         $val = Login::validate();
         if (!$val->run()) {
-            $this->error('ログインに失敗しました');
+            $this->error('メールアドレスもしくはパスワードが違うようです。');
         }
         $params = $val->validated();
         if (!\Auth::login($params['email'], $params['password'])) {
-            $this->error('ログインに失敗しました');
+            $this->error('メールアドレスもしくはパスワードが違うようです。');
         }
         $this->ok('success');
     }
