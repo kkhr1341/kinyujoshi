@@ -30,18 +30,18 @@
             </select>
             <div class="newcards">
               <p class="select-before-title">・新しいカード番号を入力してください</p>
-              <input type="text" class="number" name="number" maxlength="16" placeholder="新しいカード番号">
+              <input type="text" class="number" name="number" maxlength="16" placeholder="">
             </div>
           {else}
             <input type="hidden" id="cardselect" name="cardselect" value="0">
-            <input type="text" class="number" name="number" maxlength="16" placeholder="カード番号">
+            <input type="text" class="number" name="number" maxlength="16" placeholder="">
           {/if}
         </div>
 
         <div class="no-regist-el">
           <div class="fee-open-el">
             <label>セキュリティコード</label>
-            <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="CVC">
+            <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="">
           </div>
 
           <div class="fee-open-el">

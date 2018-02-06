@@ -136,7 +136,7 @@
           </div>
         </div>
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">個人で発信しているブログなど</label>
+          <label class="regist-add-form-edit-title">個人で発信しているブログなど<span class="label label-primary">任意</span></label>
           <p class="regist-add-form-edit-subtitle">もしありましたら、ご入力をお願いします♪</p>
           <input type="text" id="url" class="form-control" placeholder="">
         </div>

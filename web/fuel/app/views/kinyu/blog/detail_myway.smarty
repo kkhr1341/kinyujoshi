@@ -42,6 +42,24 @@
       </div>
     </div>
 
+  {elseif $reporturl == "/report/dtov0W"}
+
+    <!-- オーラルケア編 -->
+    <div class="myway-header-content" style="background: #ebf9f0;">
+      <div class="main-tumb-block clear">
+        <div class="title-block">
+          <div class="title-block-inner">
+            <img src="/images/myway/title/title-jewelry.pngg">
+            <p>{$blog.description}</p>
+          </div>
+        </div>
+        <div class="video-block">
+          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/1080p1.mp4" ></video>
+        </div>
+      </div>
+    </div>
+
+
   {else}
 
     <!-- その他 -->
@@ -89,6 +107,7 @@
       <ul>
         <li class="myway-list-shoes"><a href="/report/FxKhYh"><img src="/images/myway/title/title-shoes.png"></a></li>
         <li class="myway-list-cosmetics"><a href="/report/fMvmMk"><img src="/images/myway/title/title-cosmetics.png"></a></li>
+        <li class="myway-list-jewelry"><a href="/report/dtov0W"><img src="/images/myway/title/title-jewelry.png"></a></li>
       </ul>
     </div>
   </div>

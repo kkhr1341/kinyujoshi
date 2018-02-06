@@ -17,33 +17,36 @@
 
   <div class="company-details company-legal">
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 社名</h3>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 社名</h3>
       <p class="description">株式会社TOE THE LINE</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 代表者</h3>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 代表者</h3>
       <p class="description">代表取締役　鈴木万梨子</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 事業内容</h3>
-      <p class="description">・<a href="/">きんゆう女子。</a>の企画・開発・運営<br>・まちづくり企画・支援<br>・マーケティング・プロモーション事業</p>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 事業内容</h3>
+      <p class="description">
+        ・きんゆう女子。の企画、開発、運営<br>
+        ・まちづくり企画、支援<br>
+        ・マーケティング、プロモーション、コミュニティプロデュース事業</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 設立</h3>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 設立</h3>
       <p class="description">2016年03月03日</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 資本金</h3>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 資本金</h3>
       <p class="description">8,000,000円</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #8ddcd1;">◆</span> 所在地</h3>
-      <p class="description">〒107-0061 東京都港区北青山3-5-6 青朋ビル本館3F</p>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 所在地</h3>
+      <p class="description">〒103-0025　東京都中央区日本橋茅場町1-5-8　東京証券会館B313</p>
     </div>
 
   </div>

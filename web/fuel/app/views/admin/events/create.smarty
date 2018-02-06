@@ -102,7 +102,7 @@
         </div>
 
         <div class="form-group">
-					<label class="form-group-event-label">キャンセル料金発生日<span class="label label-primary">必須</span></label>
+					<label class="form-group-event-label">キャンセル料金発生日<span class="label label-primary">任意</span></label>
 					<p class="form-group-sub"><span style="color:red;">＊</span>基本的には3日前。それ以外の場合は記入をお願いします。</p>
 					<div class='input-group date datetimepicker'>
 						<input type='text' class="form-control" id="incur_cancellation_fee_date" value="" />
