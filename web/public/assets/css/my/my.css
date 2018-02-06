@@ -453,8 +453,12 @@ footer {
 }
 .admin-normal-side li {
   text-align: center;
-  padding: 8px 0px;
   margin-bottom: 8px;
+  transition: .5s;
+}
+.admin-normal-side li a{
+  display: block;
+  padding: 8px 0px;
 }
 .admin-normal-side li.active {
   background: #a6e9d9;
@@ -543,6 +547,7 @@ footer {
   background-color: #fff;
   color: #5FB3A7;
   font-weight: normal;
+  transition: .5s;
 }
 .admin-profile-table th {
   width: 150px;
@@ -565,6 +570,7 @@ footer {
 .admin-normal-joshikai li {
   width: 100%;
   margin-bottom: 12px;
+  transition: .5s;
 }
 .admin-normal-joshikai li:last-child {
   margin-bottom: 0px;
@@ -685,6 +691,7 @@ footer {
   padding: 8px 0px;
   color: #fff;
   font-weight: bold;
+  transition: .5s;
 }
 .joshikai-cancel-open {
   width: 220px;
@@ -695,6 +702,7 @@ footer {
   margin: 0 auto;
   font-weight: bold;
   margin-top: 24px;
+  transition: .5s;
 }
 .joshikai-cancel-block {
   display: none;
@@ -750,11 +758,6 @@ footer {
   margin: 0 auto;
   margin-top: 24px;
 }
-.edit-profile-img .img-box:hover {
-}
-.edit-profile-img .edit-profile-img2:hover {
-  opacity: 0.9;
-}
 .joshikai-cansel-block {
   margin-top: 12px;
 }
@@ -776,6 +779,7 @@ footer {
   padding: 16px;
   font-weight: bold;
   position: relative;
+  transition: .5s;
 }
 .admin-account-title.active:after {
   content: "×";
@@ -810,6 +814,7 @@ footer {
   letter-spacing: 0.5px;
   background-color: rgb(255, 141, 124);
   color: #fff;
+  transition: .5s;
 }
 .resign-area {
   padding: 16px;
@@ -819,8 +824,41 @@ footer {
 
 
 
+@media screen and (min-width: 640px) {
+
+.admin-normal-side li:hover {
+  background: #8ddcd1;
+  color: #fff;
+}
+.admin-normal-joshikai li:hover {
+  opacity: .5;
+}
+.admin-normal-profile-btn a:hover {
+  background: #8ddcd1;
+  color: #fff;
+}
+.edit-profile-img .img-box:hover {
+}
+.edit-profile-img .edit-profile-img2:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+.joshikai-detail-open:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.joshikai-cancel-open:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.admin-account-el .admin-account-title:hover {
+  opacity: .5;
+  cursor: pointer;
+}
 
 
+
+}
 
 
 
