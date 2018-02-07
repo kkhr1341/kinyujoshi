@@ -15,43 +15,60 @@
       <div class="kinyu-event-list">
         <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>7月6日(木)以降の女子会予約ページを「Peatix」に変更いたしました。</p>
         <ul>
-          {foreach from=$events.datas key="key" item=event name=loopname}
-          {if $event.event_category == "女子会"}
 
-          {$fooo = $event.main_image}
-          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+          {foreach from=$eventall key=key item=event}
+         
+
+            {$fooo = $event.main_image}
+            {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+            
+            <li>
+              <a target="_blank" href="{$event.pay_url}">
+                <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
+                  <p class="event-category normal-event">女子会</p>
+                </div>
+
+                <div class="kinyu-event-list-right">
+                  <p class="event-main-date">
+                    <span>{$event.event_date|date_format:"%-m/%-e"}</span>
+                    <span class="day_of_the_week">{$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</span>
+                    <span class="timezone">{$event.event_start_datetime}〜{$event.event_end_datetime}</span>
+                    </p>
+                  <h3 class="event-title">{$event.title}</h3>
+                  <p class="event-fee"><span>{$event.fee}</span></p>
+                </div>
+              </a>
+            </li>
           
-          <li>
-            <a target="_blank" href="{$event.pay_url}">
-              <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
-                {if $event.event_category == "女子会"}
-                  <p class="event-category normal-event">女子会</p>
-                {else if $event.event_category == "スペシャル"}
-                  <p class="event-category special-event">スペシャル女子会</p>
-                {else if $event.event_category == "コラボ"}
-                  <p class="event-category collabo-event">コラボ女子会</p>
-                {else if $event.event_category == "公立きん"}
-                  <p class="event-category koritsu-event">きんゆう女子。学院</p>
-                {else if $event.event_category == "私立きん"}
-                  <p class="event-category shiritu-event">私立きんゆう女子。学院</p>
-                {else}
-                  <p class="event-category normal-event">女子会</p>
-                {/if}
-              </div>
-
-              <div class="kinyu-event-list-right">
-                <p class="event-main-date">
-                  <span>{$event.event_date|date_format:"%-m/%-e"}</span>
-                  <span class="day_of_the_week">{$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</span>
-                  <span class="timezone">{$event.event_start_datetime}〜{$event.event_end_datetime}</span>
-                  </p>
-                <h3 class="event-title">{$event.title}</h3>
-                <p class="event-fee"><span>{$event.fee}</span></p>
-              </div>
-            </a>
-          </li>
-          {/if}
+          {foreachelse}
+            <div class="non-joshikai">
+              <p>女子会はいま頑張って企画中です...。<br>しばらくした後、再度ご確認いただけますと嬉しいです。</p>
+            </div>
           {/foreach}
+
+          <style>
+            .non-joshikai {
+              padding: 36px 0px;
+              text-align: center;
+              background: #f7f7f7;
+              margin-bottom: 24px;
+            }
+            .non-joshikai p {
+              font-size: 18px;
+              line-height: 26px;
+            }
+            @media screen and (max-width: 640px) {
+              .non-joshikai {
+                padding: 24px;
+                margin-bottom: 16px;
+              }
+              .non-joshikai p {
+                font-size: 13px;
+                line-height: 24px;
+              }
+            }
+          </style>
+
         </ul>
         <div class="other-event"><a style="background: #efdd02;" href="/event_special">特別女子会はこちら</a></div>
       </div>
@@ -127,18 +144,6 @@
   </div>
   {$sp_footer}
 </div>
-
-<script>
-$(function(){
-    $('#gcarender').on('load', function(){
-        $('#gcarender').contents().find('#currentDate1').css('font-size','16px');
-        $('#gcarender').contents().find('#currentDate1').css('padding-left','0em');
-        $('#gcarender').contents().find('#currentDate1').css('padding','5px');
-        $('#gcarender').contents().find('#dateEditableBox1').css('display','block');
-    });
-});
-</script>
-
 
 
 

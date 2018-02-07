@@ -82,6 +82,86 @@ class Events extends Base {
 				->as_array();
 		return $datas;
 	}
+
+	public static function lists03($mode = null, $limit = null, $open = null) {
+		
+		$datas = \DB::select(\DB::expr('*, events.code'))->from('events')
+		->join('profiles', 'left')
+    ->on('events.username', '=', 'profiles.username')
+    	->where('events.event_category', '=', "女子会")
+		->where('events.disable', '=', 0);
+
+		if ($mode === null) {
+		}
+		else {
+			$datas = $datas->where('status', '=', $mode);
+		}
+		
+		if ($open === null) {
+		}
+		else {
+			$datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
+		}
+		
+		// if ($section_code === null) {
+		// }
+		// else {
+		// 	$datas = $datas->where('section_code', '=', $section_code);
+		// }
+		
+		//$datas = $datas->order_by('events.id', 'desc');
+		$datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+		$datas = $datas->order_by('event_date', 'asc');
+		
+		if ($limit === null) {
+		}
+		else {
+			$datas = $datas->limit($limit);
+		}
+		$datas = $datas->execute()
+				->as_array();
+		return $datas;
+	}
+
+	public static function lists04($mode = null, $limit = null, $open = null) {
+		
+		$datas = \DB::select(\DB::expr('*, events.code'))->from('events')
+		->join('profiles', 'left')
+    ->on('events.username', '=', 'profiles.username')
+    	->where('events.event_category', '!=', "女子会")
+		->where('events.disable', '=', 0);
+
+		if ($mode === null) {
+		}
+		else {
+			$datas = $datas->where('status', '=', $mode);
+		}
+		
+		if ($open === null) {
+		}
+		else {
+			$datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
+		}
+		
+		// if ($section_code === null) {
+		// }
+		// else {
+		// 	$datas = $datas->where('section_code', '=', $section_code);
+		// }
+		
+		//$datas = $datas->order_by('events.id', 'desc');
+		$datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+		$datas = $datas->order_by('event_date', 'asc');
+		
+		if ($limit === null) {
+		}
+		else {
+			$datas = $datas->limit($limit);
+		}
+		$datas = $datas->execute()
+				->as_array();
+		return $datas;
+	}
 	
 	public static function create($params) {
 		
