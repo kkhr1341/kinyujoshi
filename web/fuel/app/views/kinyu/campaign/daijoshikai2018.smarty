@@ -629,8 +629,8 @@
     });
 
     /*アイコンを表示させる記述*/
-    var marker = new google.maps.Marker(markerOptions);
-    //var marker1 = new google.maps.Marker(markerOptions);
+    //var marker = new google.maps.Marker(markerOptions);
+    var marker1 = new google.maps.Marker(markerOptions);
   });
 
 
