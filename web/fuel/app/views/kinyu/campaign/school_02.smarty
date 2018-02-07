@@ -252,11 +252,10 @@
           </div>
           <img class="pc certificate-img" src="/images/content/school_public/certificate-img.png">
           <img class="sp certificate-img" src="/images/content/school_public/certificate-img-sp.png">
-          <!-- <p style="font-size: 15px;padding-bottom: 8px;"><span style="color:red;">※</span>お申し込みは終了いたしました。</p> -->
-          <a class="kinyu-gakuin-link" href="https://peatix.com/event/332524/" target="_blank">お申込みはこちら</a>
-          <p style="margin-top: 6px;font-size:12px;"><span style="color:red;">※</span>お支払い画面が立ち上がります。</p>
-          <!-- <p style="font-size: 15px;padding-bottom: 8px;"><span style="color:red;">※</span>お申し込みは終了いたしました。</p>
-          <p style="opacity:.2;" class="kinyu-gakuin-link">お申込みはこちら</p> -->
+          <!-- <a class="kinyu-gakuin-link" href="https://peatix.com/event/332524/" target="_blank">お申込みはこちら</a>
+          <p style="margin-top: 6px;font-size:12px;"><span style="color:red;">※</span>お支払い画面が立ち上がります。</p> -->
+          <p style="font-size: 12px;padding-bottom: 8px;"><span style="color:red;">※</span>お申し込みは終了いたしました。</p>
+          <p style="opacity:.2;" class="kinyu-gakuin-link">お申込みはこちら</p>
         </div>
       </div>
 
@@ -300,7 +299,7 @@
     {$sp_footer}
   </div>
 
-  <div class="pc application-img">
+  <!-- <div class="pc application-img">
     <a href="https://peatix.com/event/332524/" target="_blank">
       <img src="/images/content/school_public/application-img.png">
     </a>
@@ -310,7 +309,7 @@
     <a href="https://peatix.com/event/332524/" target="_blank">
       <p><span>第2回！きんゆう女子。学院の</span><br>お申し込みはこちら</p>
     </a>
-  </div>
+  </div> -->
 </div>
 
 <style>
