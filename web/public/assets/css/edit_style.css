@@ -1,4 +1,4 @@
-@charset "UTF-8";
+w@charset "UTF-8";
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -104,6 +104,7 @@
 }
 .kinyu-header-social-list ul {
   letter-spacing: -40px;
+  font-size:0;
 }
 .kinyu-header-social-list li {
   width: 25px;
@@ -134,20 +135,22 @@
   left: 0;
 }
 .kinyu-main-animation-inner {
-  width: 350px;
-  height: 84px;
+  width: 380px;
+  height: 95px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -42px;
-  margin-left: -175px;
+  margin-top: -47.5px;
+  margin-left: -190px;
 }
 .kinyu-main-animation-sub {
   margin-bottom: 8px;
   display: none;
+  width: 380px;
 }
 .kinyu-main-animation-title {
   display: none; 
+  width: 380px;
 }
 .fixed {
   position: fixed;
@@ -316,7 +319,7 @@
   padding-top: 6%;
 }
 .kinyu-top-introlist-left h2 {
-  width: 74%;
+  width: 220px;
   margin: 0 auto;
 }
 .kinyu-top-introlist-left h2 img {
@@ -690,6 +693,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-banner-area {
   text-align: center;
+  width: 650px;
 }
 .kinyu-top-banner-area li {
   margin-bottom: 24px;
@@ -700,6 +704,7 @@
 } 
 .kinyu-top-banner-area li img {
   border: 1px solid #f0f0f0;
+  width: 100%;
 }
 
 
@@ -1286,6 +1291,9 @@
   text-align: center;
   line-height: 0;
 }
+.joshikai-main-left .img-box .img-box-inner img {
+  width: 350px;
+}
 .joshikai-main-left .img-box .about-joshikai-link {
   display: block;
   margin: 0 auto;
@@ -1298,6 +1306,7 @@
   background: #8ddcd1;
   color: #fff;
   margin-top: 36px;
+  transition: .5s;
 }
 
 .joshikai-main-el {
@@ -1981,6 +1990,7 @@
 }
 .kinyu-credit-list {
   letter-spacing: -40px;
+  font-size:0;
 }
 .kinyu-credit-list-block p {
   font-size: 13px;
@@ -1990,7 +2000,7 @@
   /*font-weight: bold;*/
 }
 .kinyu-credit-list li {
-  width: 18.4%;
+  width: 18%;
   padding: 0px 2%;
   box-sizing: border-box;
   margin-right: 2%;
@@ -3409,7 +3419,7 @@ footer .navi_kinyu-submenu-copy {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1005;
+  z-index: 1006;
 }
 .loader-block-inner {
   width: 200px;
@@ -3650,6 +3660,9 @@ to {
   opacity: .5;
 }
 .regist-btn-list li:hover {
+  opacity: .5;
+}
+.joshikai-main-left .img-box .about-joshikai-link:hover {
   opacity: .5;
 }
 
