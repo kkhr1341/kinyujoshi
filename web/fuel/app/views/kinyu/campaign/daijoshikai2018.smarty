@@ -1,0 +1,700 @@
+<!-- きんゆう女子。カンファレンス・独自 -->
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/font.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/conference.css">
+<script type="text/javascript" src="/assets/js/kinyu/countdown.js"></script>
+<script type="text/javascript" src="/assets/js/kinyu/campaign/conference.js"></script>
+
+<div class="kinyu-conference-container kinyu-daijoshikai2018-container">
+  <!-- イントロダクション -->
+  <div class="conference-introduction">
+    <div style="background:rgba(255,255,255,0);height:100%;width:100%;position:absolute;top:0;"></div>
+    <div class="inner clear">
+      <div class="main-logo-block">
+        <img class="main-logo" src="/images/content/daijoshikai2018/daijoshikai2018-mainlogo.png">
+      </div>
+      <div class="data-box-block">
+        <div class="data-box">
+          <p class="data">2018. <span>3/1</span>（木）<br>19:00〜20:45</p>
+        </div>
+        <div class="tag-block">
+          <ul>
+            <li>#きんゆう女子</li>
+            <li>#東京証券取引所</li>
+            <li>#JPX</li><br>
+            <li>#兜町</li>
+            <li>#秘密の大女子会</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="conference-container-inner">
+
+    <!-- レポ -->
+    <!-- <img class="finish-co" src="/images/content/conference/finish-co02.png"> -->
+
+    <div class="kinyu-conference-el">
+      <div class="inner">
+        <div class="countdown-first">
+          <div class="countdown-first-text text01">大女子会まで</div>
+          <div class="countdown-first-text text02">あと<div id='timerOlympic2'></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 冒頭文 -->
+    <script>
+      $('#timerOlympic2').yycountdown({
+        endDateTime   : '2018/03/01 19:00:00'
+      });
+    </script>
+    <style>
+      #timerOlympic2 .yyc-hou,
+      #timerOlympic2 .yyc-hou-text,
+      #timerOlympic2 .yyc-min,
+      #timerOlympic2 .yyc-min-text,
+      #timerOlympic2 .yyc-sec,
+      #timerOlympic2 .yyc-sec-text {
+        display: none;
+      }
+    </style>
+
+
+
+    <div class="kinyu-conference-el conference-report kinyu-conference-el2n">
+      <div class="inner">
+        <div class="conference-el-header">
+          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p class="sub-title">Report</p>
+          <div class="sub-title-border01"></div>
+          <div class="sub-title-border02"></div>
+        </div>
+        <h2>前回の様子</h2>
+        
+        <!-- <div class="conference-report-el report-list">
+          <h3>レポート一覧</h3>
+          <ul class="main-out-event-list clear">
+            
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/thumb_17105415_969134609889511_1638017480_n.jpg) center bottom / cover no-repeat;">
+              <a href="https://kinyu-joshi.jp/report/P50GdT">
+                <p class="title">『秘密の大女子会@東証Arrows』を開催しました！</p>
+              </a>
+            </li>
+
+            <li class="coming_soon" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/IMG_8702.JPG) center center / cover no-repeat;">
+              <a href="https://kinyu-joshi.jp/report/b9m16I">
+                <p class="title">海外旅行は一番おトクな為替レートで！</p>
+              </a>
+            </li>
+
+            <li class="coming_soon" style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;">
+            </li>
+
+          </ul>
+        </div> -->
+
+        <div class="conference-report-el gallery-list">
+          <h3>ギャラリー(前回の写真)</h3>
+          <ul class="main-out-event-gallery-list">
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1715111.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1685.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1708.JPG) center left / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1683111.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1695.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1696.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1706.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1692.JPG) center left / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1689.JPG) center left / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17204396_10210686521972565_1340916682_n.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17160699_10210686913382350_2058160582_n.jpg) center right / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1699.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1707.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198604_10210686965343649_1940220268_n.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1686.JPG) center center / cover no-repeat;"></li>
+            <!--<li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17142257_10210683420895040_149996863_o%20211111.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1693.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1698.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1701.JPG) center center / cover no-repeat;"></li> -->
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198577_10210683420935041_990254035_n.jpg) center center / cover no-repeat;"></li>
+            <!-- <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17197982_10210683420735036_898227126_n.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/FullSizeRender%20%282%29.jpg) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1690.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/FullSizeRender%20%281%29.jpg) center center / cover no-repeat;"></li> -->
+          </ul>
+        </div>
+
+        <!-- <div class="conference-report-el report-download">
+          <p id="document-open">ビジネス向けレポートはこちら</p>
+        </div> -->
+
+        <script>
+          $("#document-open").click(function() {
+            $(".document-open").fadeIn(500);
+          });
+          $(".document-open-closebtn").click(function() {
+            $(".document-open").fadeOut(500);
+          });
+        </script>
+      
+      </div>
+    </div>
+    <!-- カンファレンスについて -->
+    <div class="kinyu-conference-el conference-description kinyu-conference-el1n">
+      <div class="inner">
+        <div class="conference-el-header">
+          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p class="sub-title">Concept</p>
+          <div class="sub-title-border01"></div>
+          <div class="sub-title-border02"></div>
+        </div>
+        <h2>コンセプト</h2>
+        <div class="text-description">
+          <div class="text-description-title">『金融ワカラナイ女子のための夜』<br>第2回 秘密の大女子会♪<br>〜おかねをふやそう〜<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span><!-- <span>(仮)</span> --></div>
+          <p>宣誓！わたしたちは、投資の本質を知り<br>
+          正々堂々とおかねを増やすことを誓います！<br>
+          わたしたちは、週末時間を<br>
+          ゆたかで楽しい人生にするために<br>
+          正しいおかねの知識と意識を身につけ<br>
+          前向きに投資をしていきます。<br>
+          投資の一歩手前の準備をしっかりして<br>
+          すてきな投資家になり、経済に参加します。<br>
+          このイベントでは、その誓いを宣言し<br>
+          第一歩を踏み出すきっかけを自ら作ります。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 他にはないことがたくさん -->
+    <div class="kinyu-conference-el conference-special kinyu-conference-el2n">
+      <div class="inner">
+        <div class="conference-el-header">
+          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p class="sub-title">Special</p>
+          <div class="sub-title-border01"></div>
+          <div class="sub-title-border02"></div>
+        </div>
+        <h2><div class="pc">パワーチャージできるスペシャル企画♪</div><div class="sp">パワーチャージできる<br>スペシャル企画♪</div></h2>
+        <div class="event-special-block">
+          <ul>
+
+            <li>
+              <div class="event-special-el clear">
+                <div class="img-box" style="background:url(/images/content/conference/ticker.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="text-number">01</p>
+                  <div class="text-main">
+                    <h3 class="pc"><span>3/3 (金) 18:00〜</span><br>秘密の大女子会@東証Arrows<br>恋愛とおかねトークセッション</h3>
+                    <h3 class="sp"><span>3/3 (金) 18:00〜</span><br>秘密の大女子会@東証Arrows 恋愛とおかねトークセッション</h3>
+                    <p>年始年末に東証Arrowsで行われる大納会・発表会をご存知ですか？そう、ニュースでよくみるあの場所です！<br>くるくる回る電光掲示板のある、あの場所です。なんとこの度、第1回投資家宣言♪するわたしたちに、東証さんが東証Arrowsを貸してくださり、ここで大女子会！を行います。<br>Specialゲストに婚活結社「魔女のサバト」主催の川崎貴子さんをお呼びしておかねと恋愛についてのトークセッションを行います。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="event-special-el clear">
+                <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="text-number">02</p>
+                  <div class="text-main">
+                    <h3 class="pc"><span>3/3 (金) 19:15〜</span><br>東証秘密の金運スポットでごはん(軽食)と金運ナイトツアー</h3>
+                    <h3 class="sp"><span>3/3 (金) 19:15〜</span><br>東証秘密の金運スポットでごはん(軽食)と金運ナイトツアー</h3>
+                    <p>東証Arrowsの大女子会のあとは、夜の東証内見学と東証内にある秘密の金運スポットで軽食がでます。軽食が済んだら、兜町にある金運スポット2箇所を巡ります。どこに行くかは当日のお楽しみ♪</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="event-special-el clear">
+                <div class="img-box" style="background:url(/images/content/conference/present.jpg) center left / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="text-number">03</p>
+                  <div class="text-main">
+                    <h3 class="pc"><span>3/4 (土) 11:00〜20:00</span><br>今まで女子会、総まとめ!<br>おかねをふやすあれこれ全部シェア！</h3>
+                    <h3 class="sp"><span>3/4 (土) 11:00〜20:00</span><br>今まで女子会、総まとめ!<br>おかねをふやすあれこれ全部シェア！</h3>
+                    <p>立ち上げから今まで人気だった女子会テーマを総まとめ！<br>
+                    おかねをふやすあれこれが分かる女子会を1日でまとめます。<br>毎週木曜日に参加できなかった方も、参加している方も楽しめるようなきんゆう女子。編集部の渾身の女子会企画です。<br>また、女子会以外の時間は普段なかなか会うこともない金融機関の方とコミュニケーションできる場を設けています。<br>これを機会にいろいろと相談してみたり、ワカラナイこと、質問攻めしてみてはいかがでしょう？笑<br>メンバー限定の優待やお土産もあるかも...！？お楽しみに。</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="event-special-el clear">
+                <div class="img-box" style="background:url(/images/content/conference/present01.jpg) center left / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="text-number">04</p>
+                  <div class="text-main">
+                    <h3 class="pc"><span>3/5 (日) 11:00〜14:00</span><br>東証主催♪株主優待展の訪問ツアー！<br>兜町・茅場町名物ランチ付き</h3>
+                    <h3 class="sp"><span>3/5 (日) 11:00〜14:00</span><br>東証主催♪株主優待展の訪問ツアー！<br>兜町・茅場町名物ランチ付き</h3>
+                    <p>株主優待は、明治時代に鉄道会社が始めてから100年の歴史があります。株を買うときにちょっと嬉しい株主優待。東証主催の「株主優待フェア2017」では上場会社53社の株主優待品を一気に見ることができます！きんゆう女子。が選ぶ、お守り株*の会社の展示もあります。訪問ツアーではきんゆう女子。がその会社のIR担当の方に取材にいった様子もご案内いたします。<br>*お守り株とは？ - きんゆう女子。では持っていると嬉しいことがある元気になれる、自分を守ってくれるようなイメージの株を「お守り株」と呼んでいます。</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 他にはないことがたくさん -->
+    <!-- <div class="kinyu-conference-el conference-schedule kinyu-conference-el1n">
+      <div class="inner">
+        <div class="conference-el-header">
+          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p class="sub-title">Schedule</p>
+          <div class="sub-title-border01"></div>
+          <div class="sub-title-border02"></div>
+        </div>
+        <h2>イベントスケジュール</h2>
+        <div class="schedule-block">
+          <ul class="schedule-block-content">
+            <li>
+              <h3><span>3/3</span> (金)のスケジュール</h3>
+              <img class="pc schedule-img" src="/images/content/conference/schedule_33.jpg">
+              <img class="sp schedule-img" src="/images/content/conference/schedule_33_sp.jpg">
+              </li>
+            <li>
+              <h3><span>3/4</span> (土)のスケジュール</h3>
+              <img class="pc schedule-img" src="/images/content/conference/schedule_34.jpg">
+              <img class="sp schedule-img" src="/images/content/conference/schedule_34_sp.jpg">
+            </li>
+            <li>
+              <h3><span>3/5</span> (日)のスケジュール</h3>
+              <img class="pc schedule-img" src="/images/content/conference/schedule_35.jpg">
+              <img class="sp schedule-img" src="/images/content/conference/schedule_35_sp.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- イベント予定日まで -->
+    <div class="kinyu-conference-el conference-timelimit kinyu-conference-el2n">
+      <div class="inner">
+        <div class="conference-el-header">
+          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p class="sub-title">DATE</p>
+          <div class="sub-title-border01"></div>
+          <div class="sub-title-border02"></div>
+        </div>
+        <h2>取引開始<span> まで...</span></h2>
+        <div class="timelimit-block">
+          <div id='timerOlympic'>
+            <!-- <div class="yycountdown-box 1">
+              <div class="yyc-box yyc-day"></div>
+              <span class="yyc-subbox yyc-day-text">日</span>
+              <span class="yyc-box yyc-hou"></span>
+              <span class="yyc-subbox yyc-hou-text">時間</span>
+              <span class="yyc-box yyc-min"></span>
+              <span class="yyc-subbox yyc-min-text">分</span>
+              <span class="yyc-box yyc-sec"></span>
+              <span class="yyc-subbox yyc-sec-text">秒</span>
+            </div> -->
+          </div>
+        </div>
+        <!-- <img class="finish-co" src="/images/content/conference/finish-co.png"> -->
+        <style>
+          .finish-co {
+            margin-top:24px; 
+          }
+          @media screen and (max-width:767px) {
+            .finish-co {
+              width: 92%;
+            }
+          }
+        </style>
+      </div>
+      <script>
+        $('#timerOlympic').yycountdown({
+          endDateTime   : '2018/03/01 19:00:00'
+        });
+      </script>
+    </div>
+
+    <!-- お申し込み関連はこちら -->
+    <div class="kinyu-conference-el conference-regist kinyu-conference-el1n">
+      <div class="img-inner">
+        <img class="balloon-member" src="/images/content/conference/balloon-member.png">
+        <h2>第2回 秘密の大女子会♪<br>お申込みはこちら</h2>
+        <!-- <div class="banner">
+          <p class="regist-btn"><span style="color:#f9b6b6;">＊</span>現在準備中</p>
+        </div> -->
+        <!-- <div class="finish-application">
+          <p><span style="color:#ef6666;">＊</span>お申し込みは締め切りました</p>
+          <style>
+            .finish-application p {
+              font-size: 30px;
+              line-height: 30px;
+              padding: 36px 0px;
+            }
+            @media screen and (max-width:767px) {
+              .finish-application p {
+                font-size: 18px;
+                line-height: 18px;
+                padding: 16px 0px;
+              }
+              .kinyu-conference-el .img-inner .balloon-member {
+                display: none;
+              }
+            }
+          </style>
+        </div> -->
+
+        <div class="conference-application clear">
+          <div class="application-left">
+            <p class="application-date">【3/1(木) 19:00〜20:30】</p>
+            <h3>Special企画☆ 秘密の大女子会<br>＠東証Arrows(ナイトツアーも♪)</h3>
+            <div class="img-box" style="  background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;"></div>
+            <p class="pc application-fee">参加チケット：4,000<span>円</span><br>(80名限定)</p>
+            <p class="sp application-fee">参加チケット：<br>4,000<span>円</span><br>(80名限定)</p>
+            <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/ryn72Bzm">お申し込みはこちら</a>
+          </div>
+          <!-- <div class="application-right">
+            <p class="application-date">【3/4(土) 11:00〜19:00】</p>
+            <h3>今までの女子会総まとめ<br>〜おかねをふやすあれこれ〜</h3>
+            <div class="img-box" style="  background:url(/images/content/conference/15355695_1212387078827868_7936091575312601603_n.png) center center / cover no-repeat;"></div>
+            <p class="pc application-fee">1dayフリーパス：2,000<span>円</span><br>(100名限定)</p>
+            <p class="sp application-fee">1dayフリーパス：<br>2,000<span>円</span><br>(100名限定)</p>
+            <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/QiALhIkM">お申し込みはこちら</a>
+          </div> -->
+        </div>
+
+        <!-- <div class="conference-application conference-application-single clear">
+          <div class="application-right">
+            <p class="application-date">【3/5(日) 11:00〜14:00】</p>
+            <h3>東証主催♪株主優待展の訪問ツアー！兜町・茅場町名物ランチ付き</h3>
+            <div class="img-box" style="  background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;"></div>
+            <p class="pc application-fee">参加チケット：3,000<span>円</span><br>(30名限定)</p>
+            <p class="sp application-fee">参加チケット：<br>3,000<span>円</span><br>(30名限定)</p>
+            <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/vUhQRFhJ">お申し込みはこちら</a>
+          </div>
+        </div> -->
+
+        <a class="conference-el-regist" href="/regist" target="_blank">メンバー登録の方はこちら</a>
+      </div>
+    </div>
+
+    <!-- イベント予定日まで -->
+    <div class="kinyu-conference-el conference-sponsor kinyu-conference-el2n">
+      <div class="inner">
+        <div class="conference-el-header">
+          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p class="sub-title">Sponsor</p>
+          <div class="sub-title-border01"></div>
+          <div class="sub-title-border02"></div>
+        </div>
+        <h2>スポンサー</h2>
+        <div class="sponsor-block clear">
+
+          <!-- <div class="sponsor-sponsorship">
+            <h3 class="sponsor-block-title">協力企業</h3>
+            <ul class="clear">
+              <li><a href="http://www.heiwa-net.co.jp/" target="_blank">
+                <img src="/images/content/conference/company/heiwa.jpg">
+              </a></li>
+              <li><a href="http://www.fintechjapan.org/" target="_blank">
+                <img src="/images/content/conference/company/fintechas.jpg">
+              </a></li>
+              <p class="pc" style="font-family:'erifont';font-size:4rem;line-height:4rem;margin:40px 0px 50px">現在募集中!</p>
+              <p class="sp" style="font-family:'erifont';font-size:3rem;line-height:3rem;margin:30px 0px 40px">現在募集中!</p>
+            </ul>
+          </div> -->
+
+          <!-- <div class="sponsor-sponsorship">
+            <h3 class="sponsor-block-title">コミュニティパートナー</h3>
+            <ul class="clear">
+            <li><a href="http://www.fintechjapan.org/" target="_blank">
+                <img src="/images/content/conference/company/fintechas.jpg">
+              </a></li>
+          </div> -->
+
+          <div class="sponsor-sponsorship">
+            <h3 class="sponsor-block-title">共同主催</h3>
+            <ul class="clear">
+            <li><a href="http://www.jpx.co.jp/" target="_blank">
+              <img src="/images/content/conference/company/jpx.jpg">
+            </a></li>
+          </div>
+
+          <div class="sponsor-sponsorship">
+            <h3 class="sponsor-block-title sponsor-block-title-main">主催</h3>
+            <ul class="clear">
+              <li><a href="https://kinyu-joshi.jp/" target="_blank">
+                <img src="/images/content/conference/company/kinyujyoshi.jpg">
+              </a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- アクセス -->
+    <div class="kinyu-conference-el conference-access kinyu-conference-el1n">
+      <div class="inner">
+        <div class="conference-el-header">
+          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p class="sub-title">Access</p>
+          <div class="sub-title-border01"></div>
+          <div class="sub-title-border02"></div>
+        </div>
+        <h2>開催場所について</h2>
+        <div class="access-block">
+          <ul class="clear">
+            <li class="conference-access-tosyo">
+              <div class="conference-access-title">
+                <h3>東証Arrows</h3>
+              </div>
+              <div class="img-box">
+                <img class="access-img" src="/images/content/conference/tosyo-img.jpg">
+              </div>
+              <div class="conference-access-description">
+                <p><span>住所</span>：東京都中央区日本橋兜町2-1</p>
+                <p><span>アクセス</span>：茅場町駅11番口徒歩5分、7番口徒歩7分、日本橋駅D2番口徒歩5分</p>
+                <p><span>TEL</span>：03-3666-0141</p>
+                <p><span>URL</span>：<a href="http://www.jpx.co.jp/" target="_blank">http://www.jpx.co.jp/</a></p>
+              </div>
+              <div class="map-block">
+                <div id="area-google-map1" style="height:220px;"></div>
+              </div>
+            </li>
+
+            <!-- <li class="conference-access-sarvador">
+              <div class="conference-access-title">
+                <h3>CAFE SARVADOR</h3>
+              </div>
+              <div class="img-box">
+                <img class="access-img" src="/images/content/conference/cafe-img.jpg">
+              </div>
+              <div class="conference-access-description">
+                <p><span>住所</span>：東京都中央区日本橋茅場町1-5-8 東京証券会館1階</p>
+                <p><span>アクセス</span>：茅場町駅8番出口直結</p>
+                <p><span>TEL</span>：03-5623-3105</p>
+                <p><span>URL</span>：<a href="http://cafe-salvador.com/" target="_blank">http://cafe-salvador.com/</a></p>
+              </div>
+              <div class="map-block">
+                <div id="area-google-map" style="height:220px;"></div>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pc">
+      <div class="footer-logo">
+        <img src="/images/kinyu-logo01.png">
+      </div>
+      <div class="footer-menu">
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/company">運営会社</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/privacy">プライバシーポリシー</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/legal">特定商取引法に基づく表記</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/service">会員規約</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/contact">お問い合わせ</a>
+        </div>
+      </div>
+      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2018 TOE THE LINE, Inc.</p>
+    </footer>
+    <div class="sp">
+      {$sp_footer}
+    </div>
+  </div>
+</div>
+
+
+<div class="conference-document-form">
+  <div class="inner">
+    <p class="title">『第1回 週末投資宣言♪』の資料はこちら</p>
+    <p id="document-open-closebtn">×</p>
+
+    {*<div class="form-group">
+      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> お名前</label>
+      <input type="text" id="name" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> 会社名</label>
+      <input type="text" id="company" class="form-control" placeholder="">
+    </div>
+    <div class="form-group">
+      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> メールアドレス</label>
+      <input type="text" id="email" class="form-control" placeholder="">
+    </div>
+
+    <div class="form-btn tx-center">
+      <button class="btn btn-kinyu" type="button" id="save">資料をダウンロードする</button>
+    </div>*}
+    <img class="coming_soon02" src="/images/content/conference/coming_soon02.png">
+
+  </div>
+</div>
+
+<div id="conference-document-form-after">
+  <div class="inner">
+    <p id="document-form-after-closebtn">×</p>
+    <p class="subtitle">Thanks!</p>
+    <p class="title">ありがとうございます♪</p>
+    <div class="form-btn tx-center">
+      <p>▼レポートのダウンロードはこちらからお願いします</p>
+      <button class="btn btn-kinyu" type="button">
+        <a class="pc" href="/download/1.zip">レポートをダウンロードする</a>
+        <a class="sp" href="/download/gakuin_curriculum_20161121.pdf">レポートをダウンロードする</a>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  $(function() {
+    var hh = $(".main-out-event-gallery-list li").width();
+    $('.main-out-event-gallery-list li').height(hh);
+  });
+
+  $(function(){
+    $("#document-open").click(function() {
+      $(".conference-document-form").fadeIn(500);
+    });
+    $("#document-open-closebtn").click(function() {
+      $(".conference-document-form").fadeOut(500);
+    });
+    $("#document-form-after-closebtn").click(function() {
+      $("#conference-document-form-after").fadeOut(500);
+    });
+  });
+
+  $(function(){
+    var coordinate = new google.maps.LatLng(35.680676, 139.779354);/*座標の指定*/
+    var coordinate1 = new google.maps.LatLng(35.6826631, 139.7787332);/*座標の指定*/
+
+    /*マップの設定*/
+    var mapOptions = {
+      zoom: 16, /*Map表示時の拡大倍率を調整。*/
+      center: coordinate, /*中心点をどこにするか。この場合は、目的地と同じ*/
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP/*地図の表示タイプの指定。*/
+    };
+
+    var mapOptions1 = {
+      zoom: 16, /*Map表示時の拡大倍率を調整。*/
+      center: coordinate1, /*中心点をどこにするか。この場合は、目的地と同じ*/
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP/*地図の表示タイプの指定。*/
+    };
+
+    /*マップをID area-google-mapに埋め込む記述*/
+    var map = new google.maps.Map(document.getElementById('area-google-map'), mapOptions);
+    var map1 = new google.maps.Map(document.getElementById('area-google-map1'), mapOptions1);
+
+    /*マップのデザインの指定*/
+    var styleOptions = [
+      {
+        "stylers":  [
+      { gamma: 0.99 },
+      { visibility: "on" },
+      { lightness: 26 },
+      { hue: "#CFFFF7" },
+      { saturation: -80 }
+    ]
+      }
+    ];
+
+    /*マップのデザインを適用させる記述*/
+    var styleType = new google.maps.StyledMapType(styleOptions);
+    map.mapTypes.set('genius', styleType);
+    map.setMapTypeId('genius');
+    map1.mapTypes.set('genius', styleType);
+    map1.setMapTypeId('genius');
+
+    /*アイコンの表示設定*/
+    var icon = new google.maps.MarkerImage('/images/content/conference/location_cafesarvador1.png',/*アイコンのパス*/
+      new google.maps.Size(50,50),/*アイコンのサイズ*/
+      new google.maps.Point(0, 0)/*座標からのアイコンの位置*/
+    );
+    var icon1 = new google.maps.MarkerImage('/images/content/conference/location_jpxarrows1.png',/*アイコンのパス*/
+      new google.maps.Size(50,50),/*アイコンのサイズ*/
+      new google.maps.Point(0, 0)/*座標からのアイコンの位置*/
+    );
+    
+    var markerOptions = {
+      position: coordinate,/*表示場所と同じ位置に設置*/
+      map: map,
+      icon: icon,
+    };
+            //
+    var marker1 = new google.maps.Marker({
+      position: coordinate1,   //マーカーの位置
+      map: map1,   //表示する地図
+      icon: icon1
+    });
+
+    /*アイコンを表示させる記述*/
+    var marker = new google.maps.Marker(markerOptions);
+    //var marker1 = new google.maps.Marker(markerOptions);
+  });
+
+
+  // 資料ダウンロード
+  $(function(){
+    var title_frame_height = $('#title_frame').height();
+    var page_title_height = $('.page_title').height();
+    
+    var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+    $('.page_title').css('padding-top', padding_top);
+    
+    $('#save').click(function(){
+      var url = "/api/regist/document";
+      var params = {};
+      
+      params.name = $('#name').val();
+      params.company = $('#company').val();
+      params.email = $('#email').val();
+      
+      if (params.name == "") {
+        ts.error("お名前を入力してください");
+        return false;
+      }
+      if (params.company == "") {
+        ts.error("会社名を入力してください");
+        return false;
+      }
+      if (params.email == "") {
+        ts.error("メールアドレスを入力してください。");
+        return false;
+      }
+
+      bootbox.confirm("入力内容を送信しますか？", function(result) {
+        if (result) {
+          ajax.post(url, params, function(data){
+            
+            $(".conference-document-form").fadeOut(500);
+            
+            setTimeout(function(){
+              $("#conference-document-form-after").fadeIn(500);
+            },1000);
+          
+          });
+        }
+        else {
+          ts.info("キャンセルしました");
+        }
+      });
+      
+    });
+  });
+</script>

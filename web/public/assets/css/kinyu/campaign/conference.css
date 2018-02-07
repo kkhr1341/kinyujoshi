@@ -1339,9 +1339,6 @@
   margin-top: -27px;
   margin-left: -140px;
 }
-
-
-
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1354,7 +1351,6 @@
 }
 }
 
-
 @media screen and (min-width: 768px) {
 .conference-application .application-left a:hover,
 .conference-application .application-right a:hover {
@@ -1366,3 +1362,88 @@
   cursor: pointer;
 }
 }
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  第2回 秘密の大女子会
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-daijoshikai2018-container .countdown-first {
+  text-align: center;
+}
+.kinyu-daijoshikai2018-container .countdown-first-text {
+  font-size: 40px;
+  letter-spacing: 3px;
+  width: 330px;
+  margin: 0 auto;
+}
+.kinyu-daijoshikai2018-container .countdown-first-text.text01 {
+  text-align: left;
+}
+.kinyu-daijoshikai2018-container .countdown-first-text.text02 {
+  text-align: right;
+}
+.kinyu-daijoshikai2018-container .countdown-first .yyc-box,
+.kinyu-daijoshikai2018-container .countdown-first #timerOlympic2,
+.kinyu-daijoshikai2018-container .countdown-first .yycountdown-box {
+  display: inline-block;
+}
+
+
+.kinyu-daijoshikai2018-container .conference-introduction .inner .data {
+  line-height: 40px;
+  letter-spacing: 3px;
+}
+.kinyu-daijoshikai2018-container .conference-el-header .sub-title {
+  font-size: 45px;
+  line-height: 45px;
+}
+.kinyu-daijoshikai2018-container .kinyu-conference-el h2 {
+  font-size: 36px;
+  line-height: 48px;
+}
+.kinyu-daijoshikai2018-container .application-left {
+  float: none;
+  width: 100%;
+}
+.kinyu-daijoshikai2018-container .conference-application .application-left .application-button {
+  width: 42%;
+  border-radius: 0px;
+  margin-top: 16px;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block {
+  width: 800px;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block li:last-child {
+  float: none;
+  width: 100%;
+  box-sizing: border-box;
+  border-left: none;
+  padding-left: 50px;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block li .map-block {
+  background: gray;
+  padding: 0px;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block .access-img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 999;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block .img-box:after {
+  content: ".";
+  display: block;
+  width: 290px;
+  height: 290px;
+  border: 1px solid rgba(124, 220, 206, 0.15);
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  top: 50%;
+  left: 50%;
+  margin-top: -145px;
+  margin-left: -145px;
+}
+
+

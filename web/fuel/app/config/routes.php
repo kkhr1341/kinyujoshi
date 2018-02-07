@@ -83,6 +83,7 @@ return array(
 	'school_jpx02' => 'kinyu/campaign/school_02',
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
+	'daijoshikai2018' => 'kinyu/campaign/daijoshikai2018',
 	'map' => 'kinyu/campaign/map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 	'celebration' => 'kinyu/campaign/celebration_20171206',
