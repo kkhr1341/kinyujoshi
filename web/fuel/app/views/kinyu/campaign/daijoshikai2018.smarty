@@ -461,7 +461,7 @@
                 <p><span>URL</span>：<a href="http://www.jpx.co.jp/" target="_blank">http://www.jpx.co.jp/</a></p>
               </div>
               <div class="map-block">
-                <div id="area-google-map1" style="height:220px;"></div>
+                <div id="area-google-map" style="height:220px;"></div>
               </div>
             </li>
 
@@ -611,7 +611,7 @@
     map.setMapTypeId('genius');
 
     /*アイコンの表示設定*/
-    var icon = new google.maps.MarkerImage('/images/content/conference/location_cafesarvador1.png',/*アイコンのパス*/
+    var icon = new google.maps.MarkerImage('/images/content/conference/location_jpxarrows1.png',/*アイコンのパス*/
       new google.maps.Size(50,50),/*アイコンのサイズ*/
       new google.maps.Point(0, 0)/*座標からのアイコンの位置*/
     );
