@@ -579,18 +579,18 @@
   });
 
   $(function(){
-    var coordinate1 = new google.maps.LatLng(35.6826631, 139.7787332);/*座標の指定*/
+    var coordinate = new google.maps.LatLng(35.6826631, 139.7787332);/*座標の指定*/
 
     /*マップの設定*/
-    var mapOptions1 = {
+    var mapOptions = {
       zoom: 16, /*Map表示時の拡大倍率を調整。*/
-      center: coordinate1, /*中心点をどこにするか。この場合は、目的地と同じ*/
+      center: coordinate, /*中心点をどこにするか。この場合は、目的地と同じ*/
       scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP/*地図の表示タイプの指定。*/
     };
 
     /*マップをID area-google-mapに埋め込む記述*/
-    var map1 = new google.maps.Map(document.getElementById('area-google-map1'), mapOptions1);
+    var map = new google.maps.Map(document.getElementById('area-google-map'), mapOptions);
 
     /*マップのデザインの指定*/
     var styleOptions = [
@@ -607,11 +607,11 @@
 
     /*マップのデザインを適用させる記述*/
     var styleType = new google.maps.StyledMapType(styleOptions);
-    map1.mapTypes.set('genius', styleType);
-    map1.setMapTypeId('genius');
+    map.mapTypes.set('genius', styleType);
+    map.setMapTypeId('genius');
 
     /*アイコンの表示設定*/
-    var icon1 = new google.maps.MarkerImage('/images/content/conference/location_jpxarrows1.png',/*アイコンのパス*/
+    var icon = new google.maps.MarkerImage('/images/content/conference/location_cafesarvador1.png',/*アイコンのパス*/
       new google.maps.Size(50,50),/*アイコンのサイズ*/
       new google.maps.Point(0, 0)/*座標からのアイコンの位置*/
     );
@@ -621,16 +621,9 @@
       map: map,
       icon: icon,
     };
-            //
-    var marker1 = new google.maps.Marker({
-      position: coordinate1,   //マーカーの位置
-      map: map1,   //表示する地図
-      icon: icon1
-    });
 
     /*アイコンを表示させる記述*/
-    //var marker = new google.maps.Marker(markerOptions);
-    var marker1 = new google.maps.Marker(markerOptions);
+    var marker = new google.maps.Marker(markerOptions);
   });
 
 
