@@ -1376,6 +1376,21 @@
   width: 330px;
   margin: 0 auto;
 }
+.kinyu-daijoshikai2018-container .countdown-first {
+  position: relative;
+}
+.kinyu-daijoshikai2018-container .countdown-first .top-deco-left {
+  position: absolute;
+  left: 100px;
+  width: 180px;
+  top: -50px;
+}
+.kinyu-daijoshikai2018-container .countdown-first .top-deco-right {
+  position: absolute;
+  right: 100px;
+  width: 180px;
+  top: -50px;
+}
 .kinyu-daijoshikai2018-container .countdown-first-text.text01 {
   text-align: left;
 }
@@ -1387,8 +1402,6 @@
 .kinyu-daijoshikai2018-container .countdown-first .yycountdown-box {
   display: inline-block;
 }
-
-
 .kinyu-daijoshikai2018-container .conference-introduction .inner .data {
   line-height: 40px;
   letter-spacing: 3px;
@@ -1445,5 +1458,39 @@
   margin-top: -145px;
   margin-left: -145px;
 }
-
-
+.kinyu-daijoshikai2018-container .schedule-block-content li:last-child h3 {
+  background: rgba(124, 220, 206, 0.8);
+}
+.kinyu-daijoshikai2018-container .schedule-block-content li:last-child {
+  border: 1px solid rgba(124, 220, 206, 0.5);
+  border-radius: 0px;
+}
+.kinyu-daijoshikai2018-container .schedule-block-content li h3 {
+  border-radius: 0px;
+  font-size: 26px;
+  padding: 12px 20px;
+}
+.kinyu-daijoshikai2018-container .schedule-block-content li h3 span {
+  font-size: 36px;
+}
+.kinyu-daijoshikai2018-container .kinyu-conference-el2n .sub-title {
+  color: rgba(230, 226, 136, 0.5);
+}
+.kinyu-daijoshikai2018-container .kinyu-conference-el2n .conference-el-header .sub-title-border01,
+.kinyu-daijoshikai2018-container .kinyu-conference-el2n .conference-el-header .sub-title-border02 {
+  background: rgba(230, 226, 136, 0.5);
+}
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-number {
+  color: rgba(230, 226, 136, 0.5);
+}
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-main {
+  border-left: 1px solid rgba(230, 226, 136, 0.5);
+}
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-main h3:after {
+  background: rgba(230, 226, 136, 0.5);
+}
+.kinyu-daijoshikai2018-container .sponsor-block-title {
+  border: 1px solid rgba(230, 226, 136, 0.5);
+  color: #444444;
+  font-size: 16px;
+}

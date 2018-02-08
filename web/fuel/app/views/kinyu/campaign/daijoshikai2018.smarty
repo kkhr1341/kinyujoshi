@@ -38,7 +38,9 @@
       <div class="inner">
         <div class="countdown-first">
           <div class="countdown-first-text text01">大女子会まで</div>
-          <div class="countdown-first-text text02">あと<div id='timerOlympic2'></div></div>
+          <div class="countdown-first-text text02">あと<div id='timerOlympic2'></div>♪</div>
+          <img class="top-deco-left" src="/images/content/daijoshikai2018/top-deco-left.png">
+          <img class="top-deco-right" src="/images/content/daijoshikai2018/top-deco-right.png">
         </div>
       </div>
     </div>
@@ -57,6 +59,9 @@
       #timerOlympic2 .yyc-sec,
       #timerOlympic2 .yyc-sec-text {
         display: none;
+      }
+      #timerOlympic2 .yyc-box {
+        color: #6CC4B8;
       }
     </style>
 
@@ -185,8 +190,7 @@
                 <div class="text-box">
                   <p class="text-number">01</p>
                   <div class="text-main">
-                    <h3 class="pc"><span>3/3 (金) 18:00〜</span><br>秘密の大女子会@東証Arrows<br>恋愛とおかねトークセッション</h3>
-                    <h3 class="sp"><span>3/3 (金) 18:00〜</span><br>秘密の大女子会@東証Arrows 恋愛とおかねトークセッション</h3>
+                    <h3><span>3/1 (木) 19:00〜</span><br>きんゆう女子。学院 卒業式</h3>
                     <p>年始年末に東証Arrowsで行われる大納会・発表会をご存知ですか？そう、ニュースでよくみるあの場所です！<br>くるくる回る電光掲示板のある、あの場所です。なんとこの度、第1回投資家宣言♪するわたしたちに、東証さんが東証Arrowsを貸してくださり、ここで大女子会！を行います。<br>Specialゲストに婚活結社「魔女のサバト」主催の川崎貴子さんをお呼びしておかねと恋愛についてのトークセッションを行います。
                     </p>
                   </div>
@@ -200,8 +204,7 @@
                 <div class="text-box">
                   <p class="text-number">02</p>
                   <div class="text-main">
-                    <h3 class="pc"><span>3/3 (金) 19:15〜</span><br>東証秘密の金運スポットでごはん(軽食)と金運ナイトツアー</h3>
-                    <h3 class="sp"><span>3/3 (金) 19:15〜</span><br>東証秘密の金運スポットでごはん(軽食)と金運ナイトツアー</h3>
+                    <h3>「わたしを知る」トークセッション &<br>シンデレラ企画進捗</h3>
                     <p>東証Arrowsの大女子会のあとは、夜の東証内見学と東証内にある秘密の金運スポットで軽食がでます。軽食が済んだら、兜町にある金運スポット2箇所を巡ります。どこに行くかは当日のお楽しみ♪</p>
                   </div>
                 </div>
@@ -214,8 +217,7 @@
                 <div class="text-box">
                   <p class="text-number">03</p>
                   <div class="text-main">
-                    <h3 class="pc"><span>3/4 (土) 11:00〜20:00</span><br>今まで女子会、総まとめ!<br>おかねをふやすあれこれ全部シェア！</h3>
-                    <h3 class="sp"><span>3/4 (土) 11:00〜20:00</span><br>今まで女子会、総まとめ!<br>おかねをふやすあれこれ全部シェア！</h3>
+                    <h3>東証秘密の金運スポットでごはん（軽食）</h3>
                     <p>立ち上げから今まで人気だった女子会テーマを総まとめ！<br>
                     おかねをふやすあれこれが分かる女子会を1日でまとめます。<br>毎週木曜日に参加できなかった方も、参加している方も楽しめるようなきんゆう女子。編集部の渾身の女子会企画です。<br>また、女子会以外の時間は普段なかなか会うこともない金融機関の方とコミュニケーションできる場を設けています。<br>これを機会にいろいろと相談してみたり、ワカラナイこと、質問攻めしてみてはいかがでしょう？笑<br>メンバー限定の優待やお土産もあるかも...！？お楽しみに。</p>
                   </div>
@@ -229,8 +231,7 @@
                 <div class="text-box">
                   <p class="text-number">04</p>
                   <div class="text-main">
-                    <h3 class="pc"><span>3/5 (日) 11:00〜14:00</span><br>東証主催♪株主優待展の訪問ツアー！<br>兜町・茅場町名物ランチ付き</h3>
-                    <h3 class="sp"><span>3/5 (日) 11:00〜14:00</span><br>東証主催♪株主優待展の訪問ツアー！<br>兜町・茅場町名物ランチ付き</h3>
+                    <h3>かぶと町金運ナイトツアー（30名限定）</h3>
                     <p>株主優待は、明治時代に鉄道会社が始めてから100年の歴史があります。株を買うときにちょっと嬉しい株主優待。東証主催の「株主優待フェア2017」では上場会社53社の株主優待品を一気に見ることができます！きんゆう女子。が選ぶ、お守り株*の会社の展示もあります。訪問ツアーではきんゆう女子。がその会社のIR担当の方に取材にいった様子もご案内いたします。<br>*お守り株とは？ - きんゆう女子。では持っていると嬉しいことがある元気になれる、自分を守ってくれるようなイメージの株を「お守り株」と呼んでいます。</p>
                   </div>
                 </div>
@@ -243,7 +244,7 @@
     </div>
 
     <!-- 他にはないことがたくさん -->
-    <!-- <div class="kinyu-conference-el conference-schedule kinyu-conference-el1n">
+    <div class="kinyu-conference-el conference-schedule kinyu-conference-el1n">
       <div class="inner">
         <div class="conference-el-header">
           <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
@@ -255,11 +256,11 @@
         <div class="schedule-block">
           <ul class="schedule-block-content">
             <li>
-              <h3><span>3/3</span> (金)のスケジュール</h3>
+              <h3><span>3/1</span> (木)のスケジュール</h3>
               <img class="pc schedule-img" src="/images/content/conference/schedule_33.jpg">
               <img class="sp schedule-img" src="/images/content/conference/schedule_33_sp.jpg">
               </li>
-            <li>
+            <!-- <li>
               <h3><span>3/4</span> (土)のスケジュール</h3>
               <img class="pc schedule-img" src="/images/content/conference/schedule_34.jpg">
               <img class="sp schedule-img" src="/images/content/conference/schedule_34_sp.jpg">
@@ -268,11 +269,11 @@
               <h3><span>3/5</span> (日)のスケジュール</h3>
               <img class="pc schedule-img" src="/images/content/conference/schedule_35.jpg">
               <img class="sp schedule-img" src="/images/content/conference/schedule_35_sp.jpg">
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- イベント予定日まで -->
     <div class="kinyu-conference-el conference-timelimit kinyu-conference-el2n">
