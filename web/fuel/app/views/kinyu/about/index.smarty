@@ -13,7 +13,7 @@
             <div class="img-box" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
             <div class="title-box">
               <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/pc_title_about.png"><img class="sp" src="/images/about/title_about.png"></p>
+                <p><img class="pc" src="/images/about/title_about.png"><img class="sp" src="/images/about/sp_title_about.png"></p>
               </div>
             </div>
           </a>
@@ -24,7 +24,7 @@
             <div class="img-box" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
             <div class="title-box">
               <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/pc_title_story.png"><img class="sp" src="/images/about/title_story.png"></p>
+                <p><img class="pc" src="/images/about/title_story.png"><img class="sp" src="/images/about/sp_title_story.png"></p>
               </div>
             </div>
           </a>
@@ -35,7 +35,7 @@
             <div class="img-box" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
             <div class="title-box">
               <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/pc_title_design.png"><img class="sp" src="/images/about/title_design.png"></p>
+                <p><img class="pc" src="/images/about/title_design.png"><img class="sp" src="/images/about/sp_title_design.png"></p>
               </div>
             </div>
           </a>

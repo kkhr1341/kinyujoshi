@@ -43,6 +43,7 @@
                     <tr>
                         <td>
                             <h3>パスワード再発行のお知らせ</h3>
+                            いつも、きんゆう女子。をありがとうございます。<br>
                             パスワードの再発行を受け付けました。<br><br>
                             以下URLより、再設定をお願いいたします。<br>
                             <a href="<?php echo $url ?>" target="_blank"><?php echo $url ?></a><br><br>
