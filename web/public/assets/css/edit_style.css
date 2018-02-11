@@ -537,7 +537,7 @@ w@charset "UTF-8";
   　トップページ・女子会リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-joshikai-list li .text-box {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   padding: 4px 6% 16px;
 }
 
@@ -594,7 +594,7 @@ w@charset "UTF-8";
   　トップページ・記事リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-report-list li .text-box {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   padding: 4px 6% 16px;
 }
 .kinyu-top-list-block {
@@ -694,6 +694,7 @@ w@charset "UTF-8";
 .kinyu-top-banner-area {
   text-align: center;
   width: 650px;
+  margin: 0 auto;
 }
 .kinyu-top-banner-area li {
   margin-bottom: 24px;
@@ -723,7 +724,7 @@ w@charset "UTF-8";
 }
 /* 記事のイントロダクション */
 .kinyu-details-introdauction {
-  background: #f9f9f9;
+  background: #f7f7f7;
   width: 100%;
   padding: 50px 0px;
 }
@@ -880,7 +881,7 @@ w@charset "UTF-8";
   width: 100%;
   padding-top: 80px;
   /*border-top: 1px solid #e1e1e1;*/
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 .report-detail-sidebar2 {
   background: #fff;
@@ -1072,7 +1073,7 @@ w@charset "UTF-8";
   transition: .5s;
 }
 .report-detail-sidebar-el .banner-list li a img {
-  border: 1px solid #f9f9f9;
+  border: 1px solid #f7f7f7;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1086,7 +1087,7 @@ w@charset "UTF-8";
 .kinyu-news-list .kinyu-news-list-li {
   position: relative;
   width: 49%;
-  background: #f9f9f9;
+  background: #f7f7f7;
   float: left;
   margin-right: 2%;
   margin-bottom: 2%;
@@ -1246,7 +1247,7 @@ w@charset "UTF-8";
 .joshikai-main {
   width: 1050px;
   height: 400px;
-  background: #f9f9f9;
+  background: #f7f7f7;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -1334,7 +1335,7 @@ w@charset "UTF-8";
 .kinyu-event-list .kinyu-event-list-right {
   padding: 16px;
   background: #fff;
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 .kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind p {
   padding: 8px 0px 2px;
@@ -1781,6 +1782,13 @@ w@charset "UTF-8";
   right: 10px;
   padding: 12px;
   background: #fff;
+  width: 60px;
+  height: 60px;
+  transition: .5s;
+}
+#joinus-open-close img {
+  width: 100%;
+  height: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1850,7 +1858,7 @@ w@charset "UTF-8";
 .kinyu-joshikai-tickets-payment .fee-card {
   background: #8ddcd1;
   border: 1px solid #8ddcd1;
-  color: #fff;
+  color: #fff;1
   font-weight: bold;
 }
 .kinyu-joshikai-tickets-payment .fee-cash {
@@ -1916,7 +1924,7 @@ w@charset "UTF-8";
 }
 .fee-open .inner form input {
   width: 100%;
-  background: #f5f5f5;
+  background: #f7f7f7;
   padding: 12px;
   font-size: 13px;
   box-sizing: border-box;
@@ -2013,6 +2021,85 @@ w@charset "UTF-8";
 }
 .fee-open button {
   transition: .5s;
+}
+
+/* 決済画面 - キャンセルポリシー */
+.cancel-block {
+  width: 90%;
+  border-top: 1px solid #77cbc0;
+  border-bottom: 1px solid #77cbc0;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 28px;
+  padding: 16px 0px;
+}
+.cancel-block .cancel-title {
+  color: #77cbc0;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.cancel-block .cancel-description {
+  font-size: 12px;
+}
+.cancel-block .button-area {
+  font-size: 12px;
+  display: inline-block;
+  padding: 4px;
+  background: #f7f7f7;
+  margin-top: 8px;
+}
+
+.cancel-block .button-area input[type=checkbox] {
+  display: none;
+}
+.cancel-block .button-area label {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  background-color: #f6f7f8;
+  vertical-align: middle;
+  cursor: pointer;
+  width: auto!important;
+  padding-left: 0px!important;
+}
+.cancel-block .button-area label:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  display: block;
+  margin-top: -8px;
+  width: 3px;
+  height: 7px;
+  border-right: 2px solid #77cbc0;
+  border-bottom: 2px solid #77cbc0;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cancel-block .button-area label:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin-top: -10px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #bbb;
+  content: '';
+}
+input[type=checkbox]:checked + .checkbox:after {
+  border-color: #77cbc0;
+}
+input[type=checkbox]:checked + .checkbox:before {
+  opacity: 1;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2450,7 +2537,7 @@ w@charset "UTF-8";
   float: right;
   width: 40%;
   height: 100%;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
 .about-kinyu-header-contetns-list-el:nth-child(even) .img-box {
   float: right;
@@ -2789,7 +2876,7 @@ footer .footer-menu {
 .singlepage-footer {
   margin: 0 auto;
   padding: 80px 0px 36px;
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 .footer-logo {
   width: 260px;
@@ -2841,9 +2928,13 @@ footer .navi_kinyu-submenu-copy {
 }
 .insta-block-inner {
   padding: 40px 60px;
-  background: #f9f9f9;
-  background: #e4f5f2;
-  /*box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1), 0px 0px 5px 3px rgba(255, 255, 255, 1) inset;*/
+  background: #f7f7f7;
+}
+.insta-block-inner h3 a {
+  color: #77cbc0;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
 }
 .insta-block-inner:after {
   content: ".";
@@ -3002,8 +3093,15 @@ footer .navi_kinyu-submenu-copy {
   box-sizing: border-box;
 }
 .login-contents-form-area .email-form input::-webkit-input-placeholder {
-  color: #b0b0b0;
+  color: red;
+  font-size: 12px;
 }
+input::-webkit-input-placeholder {
+ color: #b0b0b0;
+ font-size: 12px;
+}
+
+
 .login-contents-form-area .email-form p {
   text-align: right;
   margin-top: 12px;
@@ -3108,6 +3206,13 @@ footer .navi_kinyu-submenu-copy {
   top: 20px;
   right: 20px;
   padding: 12px;
+  width: 60px;
+  height: 60px;
+  transition: .5s;
+}
+#pass-reissue-close img {
+  width: 100%;
+  height: 100%;
 }
 #pass-reissue-open .inner {
   width: 600px;
@@ -3151,7 +3256,7 @@ footer .navi_kinyu-submenu-copy {
 }
 #pass-reissue-open .pass-reissue-form-el input {
   width: 100%;
-  background: #f9f9f9;
+  background: #f7f7f7;
   padding: 10px;
   font-size: 12px;
   margin-bottom: 20px;
@@ -3380,7 +3485,7 @@ footer .navi_kinyu-submenu-copy {
 
 /* パスワード再設定 */
 .resetting-pass-block {
-  background: #f9f9f9;
+  background: #f7f7f7;
   padding: 36px 80px;
 }
 .resetting-pass-el {
@@ -3617,7 +3722,7 @@ to {
   opacity: .5;
 }
 .about-kinyu-detail-list li:hover {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
 .joshikai-detail-el-info .joinus-block a:hover,
 .joshikai-detail-el-info .joinus-block p:hover {
@@ -3664,6 +3769,11 @@ to {
 }
 .joshikai-main-left .img-box .about-joshikai-link:hover {
   opacity: .5;
+}
+#joinus-open-close:hover,
+#pass-reissue-close:hover {
+  opacity: .5;
+  cursor: pointer;
 }
 
 }
