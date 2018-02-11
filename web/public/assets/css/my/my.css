@@ -411,6 +411,7 @@ footer {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  position: relative;
 }
 .joshikai-attend-detail-table .link-area {
   width: 150px;
@@ -432,6 +433,13 @@ footer {
 .joshikai-attend-detail-table .link-area a.profile-link {
   background-color: #f1f1f1;
 } 
+.joshikai-attend-detail-table .main-img .attend-done {
+  position: absolute;
+  width: 100%;
+  background: rgba(141, 220, 209, 0.9);
+  text-align: center;
+  color: #fff;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
