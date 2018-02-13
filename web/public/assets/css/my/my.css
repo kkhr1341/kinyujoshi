@@ -863,6 +863,9 @@ footer {
   opacity: .5;
   cursor: pointer;
 }
+.credit-list-area li .button-area button:hover {
+  opacity: .5;
+}
 
 
 

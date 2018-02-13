@@ -472,7 +472,15 @@
   line-height: 14px;
   text-align: center;
 }
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　トップページ・バナー部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-banner-area {
+  width: 100%;
+}
+.report-detail-sidebar-el .banner-list {
   width: 100%;
 }
 
@@ -1849,10 +1857,13 @@ input::-webkit-input-placeholder {
 /*ポップアップ*/
 .report-detail-comment-popup .inner {
   width: 92%;
-  height: 400px;
-  margin-top: -200px;
+  height: auto;
+  /*margin-top: -200px;
+  margin-left: -46%;*/
+  padding: 40px 20px 50px;
+  top: auto;
+  margin-top: 50px;
   margin-left: -46%;
-  padding: 10%;
 }
 .report-detail-comment-popup-close {
   width: 50px;
@@ -1861,8 +1872,8 @@ input::-webkit-input-placeholder {
   top: 0;
 }
 .report-detail-comment-popup .inner p.main-message {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
