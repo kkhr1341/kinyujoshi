@@ -2871,17 +2871,17 @@ footer {
 }
 footer .footer-menu {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 .singlepage-footer {
   margin: 0 auto;
-  padding: 80px 0px 36px;
+  padding: 80px 0px 20px;
   background: #f7f7f7;
 }
 .footer-logo {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 .footer-logo img {
   width: 100%;
@@ -2901,6 +2901,10 @@ footer .navi_kinyu-submenu-copy {
   font-size: 10px;
   line-height: 14px;
   text-align: center;
+}
+.navi_kinyu-submenu-copy span {
+  display: block;
+  margin-bottom: 4px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
