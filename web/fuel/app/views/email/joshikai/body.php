@@ -51,14 +51,13 @@
             また、開催日3日前よりキャンセル料が全額かかってしまいますので、<br>
             もしご参加できなくなった場合はお早めにご連絡いただけますと嬉しいです。<br><br>
             ◆キャンセル方法<br>
-            <a href="https://kinyu-joshi.jp/my" target="_blank">マイページ → 参加予定の女子会 → キャンセルする女子会を選択 → 「女子会をキャンセルする」<br>
+            <a href="https://kinyu-joshi.jp/my" target="_blank">マイページ</a> → 参加予定の女子会 → キャンセルする女子会を選択 → 「女子会をキャンセルする」<br>
             <span style="color:#d9534f;">＊</span>メンバー登録をされていない方はお問い合わせフォームよりご連絡くださいませ。<br><br>
-            それでは<?php echo $name; ?>さんにお会いできるのを、きんゆう女子。編集部一同、とても楽しみにしております♪<br><br>
+            それでは、<?php echo $name; ?>さんにお会いできるのを、とても楽しみにしております♪<br><br>
 
             ▼SNSでも活動報告しています！<br>
-            <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">https://www.facebook.com/kinyujyoshi/</a><br>
-            <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">https://www.instagram.com/kinyu_joshi/</a><br>
-            <a href="https://twitter.com/@kinyu_joshi" target="_blank">https://twitter.com/@kinyu_joshi</a><br>
+            <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">Facebook</a><br>
+            <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagram</a><br>
           </td>
         </tr>
       </table>
