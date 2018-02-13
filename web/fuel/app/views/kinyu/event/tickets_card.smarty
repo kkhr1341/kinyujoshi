@@ -152,14 +152,13 @@
                     ts.error("メールアドレスを入力してください");
                     return false;
                 }
+                if ($("[name=cancel_check]:checked").val() == undefined) {
+                  ts.error("「キャンセルポリシーに同意する。」のご確認をお願いします。");
+                  return false;
+                }
                 promise = chargeByNewCard(card, event_code.val(), name.val(), email.val())
             } else {
                 promise = chargeByRegisterCard(event_code.val(), cardselect.val(), name.val(), email.val())
-            }
-
-            if ($("[name=cancel_check]:checked").val() == undefined) {
-              ts.error("「キャンセルポリシーに同意する。」のご確認をお願いします。");
-              return false;
             }
 
             //ローディングアニメーション
