@@ -1775,6 +1775,9 @@ input::-webkit-input-placeholder {
  color: #b0b0b0;
  font-size: 11px;
 }
+.login-contents-form-area .email-form input::-webkit-input-placeholder {
+  font-size: 11px;
+}
 
 /* 決済画面 - キャンセルポリシー */
 .cancel-block {
