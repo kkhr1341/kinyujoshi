@@ -3097,7 +3097,6 @@ footer .navi_kinyu-submenu-copy {
   box-sizing: border-box;
 }
 .login-contents-form-area .email-form input::-webkit-input-placeholder {
-  color: red;
   font-size: 12px;
 }
 input::-webkit-input-placeholder {
