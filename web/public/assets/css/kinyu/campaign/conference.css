@@ -1573,9 +1573,9 @@
   color: #8ddcd1;
 }
 .joshikai-table .description p {
-  font-size: 15px;
-  line-height: 24px;
-  margin-top: 2px;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 8px;
 }
 .joshikai-table .description p a {
   font-size: 15px;
@@ -1591,7 +1591,24 @@
   margin-top: 12px;
   padding: 4px 0px;
 }
-
+.daijoshikai2018-attention {
+  width: 98%;
+  margin: 0 auto;
+}
+.daijoshikai2018-attention li {
+  margin-bottom: 20px;
+}
+.daijoshikai2018-attention li .main-title {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: left;
+}
+.daijoshikai2018-attention li .description {
+  font-size: 15px;
+  line-height: 24px;
+  text-align: left;
+  margin-top: 8px;
+}
 
 
 
