@@ -202,7 +202,11 @@
       <div class="kinyu-top-maincontent-block-el">
         <div class="insta-block">
         <div class="insta-block-inner">
-          <h3 class="kinyu-main-title" style="text-align: center;"><a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank"><img src="/images/main-title/hash-kinyujoshi-title.png" alt="レポート一覧"></a></h3>
+          <h3 class="kinyu-main-title" style="text-align: center;">
+            <a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank">
+              - #きんゆう女子 -
+            </a>
+          </h3>
           <div class="insta-el clear" id="instafeed"></div>
           <!-- <div class="insta-link-block">
             <a class="insta-link" href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ</a>

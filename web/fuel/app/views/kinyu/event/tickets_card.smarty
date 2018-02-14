@@ -66,6 +66,18 @@
           {/if}
         </div>
 
+
+        <div class="cancel-block">
+          <p class="cancel-title">キャンセルポリシー</p>
+          <p class="pc cancel-description">女子会お申込後のキャンセルは受け付けいたしますが、所定のキャンセル料をいただきます。<br>イベント実施3日前までのキャンセルは無料、それ以降のキャンセルは全額返金不可となります。<br>また、イベントによっては申込と同時にキャンセル料が発生する場合がございます。<br>弊社都合でイベントが実施できない場合は、全額返金させていただきますので、ご安心くださいませ。</p>
+          <p class="sp cancel-description">女子会お申込後のキャンセルは受け付けいたしますが、所定のキャンセル料をいただきます。イベント実施3日前までのキャンセルは無料、それ以降のキャンセルは全額返金不可となります。また、イベントによっては申込と同時にキャンセル料が発生する場合がございます。弊社都合でイベントが実施できない場合は、全額返金させていただきますので、ご安心くださいませ。</p>
+          <p class="button-area">
+            <input type="checkbox" name="cancel_check" id="cancel_check">
+            <label for="cancel_check" class="checkbox"></label>
+            <span>キャンセルポリシーに同意する。</span>
+          </p>
+        </div>
+
         <button class="day-cash-submit" type="submit">女子会に参加する</button>
       </form>
     </div>
@@ -140,10 +152,15 @@
                     ts.error("メールアドレスを入力してください");
                     return false;
                 }
+                if ($("[name=cancel_check]:checked").val() == undefined) {
+                  ts.error("「キャンセルポリシーに同意する。」のご確認をお願いします。");
+                  return false;
+                }
                 promise = chargeByNewCard(card, event_code.val(), name.val(), email.val())
             } else {
                 promise = chargeByRegisterCard(event_code.val(), cardselect.val(), name.val(), email.val())
             }
+
             //ローディングアニメーション
             $(".loader-block").fadeIn(200);
             promise

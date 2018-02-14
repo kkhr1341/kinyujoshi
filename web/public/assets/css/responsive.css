@@ -375,9 +375,6 @@
   position: relative;
   border-top: 1px solid #e3e3e3;
 }
-.navi_kinyu-menu-block-el.navi-el-at {
-  background-color: #f5f5f5;
-}
 .navi_kinyu-menu-block-el.navi-el-at .fc-kinyu {
   color: #77cbc0;
   font-weight: bold;
@@ -476,6 +473,18 @@
   text-align: center;
 }
 
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　トップページ・バナー部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-top-banner-area {
+  width: 100%;
+}
+.report-detail-sidebar-el .banner-list {
+  width: 100%;
+}
+
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ピックアップ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -568,7 +577,7 @@
   margin-bottom: 8px;
 }
 .kinyu-top-main-sub {
-  font-size: 10px;
+  font-size: 11px;
   line-height: 16px;
 }
 
@@ -878,6 +887,10 @@
   border-left: none;
   border-right: none;
 }
+.insta-block-inner h3 a {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
 .insta-block-inner .kinyu-main-title {
   width: 80%;
   margin: 0 auto;
@@ -951,8 +964,8 @@
 .kinyu-details-introdauction .text-box h2 {
   margin-top: 6px;
   margin-bottom: 16px;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 22px;
 }
 .kinyu-details-introdauction .text-box .description {
   font-size: 11px;
@@ -1025,8 +1038,8 @@
   line-height: 20px;
 }
 .report-detail-main h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 13px;
+  line-height: 20px;
   padding: 5px 0px 5px 0px;
   border-bottom: 1px solid #8ddcd1;
   margin: 16px 0px;
@@ -1328,8 +1341,8 @@
   height: 100%;
   padding: 36px 0px;
 }
-.joshikai-main-left img {
-  width: 92%;
+.joshikai-main-left .img-box .img-box-inner img {
+  width: 68%;
 }
 .joshikai-main-left .img-box .about-joshikai-link {
   width: 200px;
@@ -1369,7 +1382,7 @@
   margin: 16px 0px 10px;
 }
 .about-joshikai .text-box .description {
-  line-height: 20px;
+  line-height: 18px;
   font-size: 11px;
 }
 .about-joshikai .img-box-el-three-el {
@@ -1448,9 +1461,12 @@
 .special-event-list .bg-area {
   height: 150px;
 }
+.special-event-list .text-area {
+  margin-top: 8px;
+}
 .special-event-list .text-area p {
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 11px;
+  line-height: 11px;
 }
 
 /* 女子会詳細ページ */
@@ -1756,6 +1772,42 @@
   width: 100%;
 }
 
+/* 女子会チケット前の画面 */
+#joinus-open-close {
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+}
+input::-webkit-input-placeholder {
+ color: #b0b0b0;
+ font-size: 11px;
+}
+.login-contents-form-area .email-form input::-webkit-input-placeholder {
+  font-size: 11px;
+}
+
+/* 決済画面 - キャンセルポリシー */
+.cancel-block {
+  width: 92%;
+  margin-top: 32px;
+  margin-bottom: 28px;
+  padding: 16px 0px;
+}
+.cancel-block .cancel-description {
+  font-size: 11px;
+}
+.cancel-block .button-area {
+  font-size: 11px;
+}
+.cancel-block .button-area label:after {
+  width: 11px;
+  height: 11px;
+}
+.cancel-block .button-area label:before {
+  left: 5px;
+}
+
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1805,10 +1857,13 @@
 /*ポップアップ*/
 .report-detail-comment-popup .inner {
   width: 92%;
-  height: 400px;
-  margin-top: -200px;
+  height: auto;
+  /*margin-top: -200px;
+  margin-left: -46%;*/
+  padding: 40px 20px 50px;
+  top: auto;
+  margin-top: 50px;
   margin-left: -46%;
-  padding: 10%;
 }
 .report-detail-comment-popup-close {
   width: 50px;
@@ -1817,8 +1872,8 @@
   top: 0;
 }
 .report-detail-comment-popup .inner p.main-message {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -2157,7 +2212,7 @@ footer .footer-menu {
   margin-bottom: 24px;
   width: 88%;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 .footer-icon {
   display: block;
@@ -2183,6 +2238,10 @@ footer .footer-menu {
   width: 70%;
   margin: 0 auto;
 }
+.navi_kinyu-submenu-copy span {
+  display: block;
+  margin-bottom: 4px;
+}
 .navi_kinyu-submenu-el {
   padding: 0px;
   margin-right: 0px;
@@ -2206,8 +2265,8 @@ footer .navi-link-top {
   margin-top: 0px;
   font-size: 12px;
   background: none;
-  color: #444;
-  border-bottom: 1px solid #8ddcd1;
+  color: #77cbc0;
+  font-weight: bold;
 }
 footer .navi_kinyu-submenu-el a {
   padding: 0px!important;

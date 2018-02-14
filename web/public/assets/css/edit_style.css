@@ -1,4 +1,4 @@
-@charset "UTF-8";
+w@charset "UTF-8";
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -104,6 +104,7 @@
 }
 .kinyu-header-social-list ul {
   letter-spacing: -40px;
+  font-size:0;
 }
 .kinyu-header-social-list li {
   width: 25px;
@@ -134,20 +135,22 @@
   left: 0;
 }
 .kinyu-main-animation-inner {
-  width: 350px;
-  height: 84px;
+  width: 380px;
+  height: 95px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -42px;
-  margin-left: -175px;
+  margin-top: -47.5px;
+  margin-left: -190px;
 }
 .kinyu-main-animation-sub {
   margin-bottom: 8px;
   display: none;
+  width: 380px;
 }
 .kinyu-main-animation-title {
   display: none; 
+  width: 380px;
 }
 .fixed {
   position: fixed;
@@ -316,7 +319,7 @@
   padding-top: 6%;
 }
 .kinyu-top-introlist-left h2 {
-  width: 74%;
+  width: 220px;
   margin: 0 auto;
 }
 .kinyu-top-introlist-left h2 img {
@@ -534,7 +537,7 @@
   　トップページ・女子会リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-joshikai-list li .text-box {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   padding: 4px 6% 16px;
 }
 
@@ -591,7 +594,7 @@
   　トップページ・記事リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-report-list li .text-box {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
   padding: 4px 6% 16px;
 }
 .kinyu-top-list-block {
@@ -690,6 +693,8 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-banner-area {
   text-align: center;
+  width: 750px;
+  margin: 0 auto;
 }
 .kinyu-top-banner-area li {
   margin-bottom: 24px;
@@ -700,6 +705,25 @@
 } 
 .kinyu-top-banner-area li img {
   border: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+/* レポート詳細部分 */
+.report-detail-sidebar-el .banner-list {
+  text-align: center;
+  width: 750px;
+  margin: 0 auto;
+}
+.report-detail-sidebar-el .banner-list li {
+  margin-bottom: 24px;
+}
+.report-detail-sidebar-el .banner-list li a {
+  display: block;
+  line-height: 0;
+}
+.report-detail-sidebar-el .banner-list li a img {
+  border: 1px solid #f0f0f0;
+  width: 100%;
 }
 
 
@@ -718,7 +742,7 @@
 }
 /* 記事のイントロダクション */
 .kinyu-details-introdauction {
-  background: #f9f9f9;
+  background: #f7f7f7;
   width: 100%;
   padding: 50px 0px;
 }
@@ -875,7 +899,7 @@
   width: 100%;
   padding-top: 80px;
   /*border-top: 1px solid #e1e1e1;*/
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 .report-detail-sidebar2 {
   background: #fff;
@@ -1052,23 +1076,6 @@
   display: table-cell;
   vertical-align: middle;
 }
-/* banner-list */
-.report-detail-sidebar-el .banner-list {
-  text-align: center;
-}
-.report-detail-sidebar-el .banner-list li {
-  margin-bottom: 32px;
-}
-.report-detail-sidebar-el .banner-list li:last-child {
-  margin-bottom: 0px;
-}
-.report-detail-sidebar-el .banner-list li a {
-  line-height: 0;
-  transition: .5s;
-}
-.report-detail-sidebar-el .banner-list li a img {
-  border: 1px solid #f9f9f9;
-}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ニュース一覧
@@ -1081,7 +1088,7 @@
 .kinyu-news-list .kinyu-news-list-li {
   position: relative;
   width: 49%;
-  background: #f9f9f9;
+  background: #f7f7f7;
   float: left;
   margin-right: 2%;
   margin-bottom: 2%;
@@ -1241,7 +1248,7 @@
 .joshikai-main {
   width: 1050px;
   height: 400px;
-  background: #f9f9f9;
+  background: #f7f7f7;
   margin: 0 auto;
   margin-top: 40px;
 }
@@ -1286,6 +1293,9 @@
   text-align: center;
   line-height: 0;
 }
+.joshikai-main-left .img-box .img-box-inner img {
+  width: 350px;
+}
 .joshikai-main-left .img-box .about-joshikai-link {
   display: block;
   margin: 0 auto;
@@ -1298,6 +1308,7 @@
   background: #8ddcd1;
   color: #fff;
   margin-top: 36px;
+  transition: .5s;
 }
 
 .joshikai-main-el {
@@ -1325,7 +1336,7 @@
 .kinyu-event-list .kinyu-event-list-right {
   padding: 16px;
   background: #fff;
-  background: #f9f9f9;
+  background: #f7f7f7;
 }
 .kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind p {
   padding: 8px 0px 2px;
@@ -1772,6 +1783,13 @@
   right: 10px;
   padding: 12px;
   background: #fff;
+  width: 60px;
+  height: 60px;
+  transition: .5s;
+}
+#joinus-open-close img {
+  width: 100%;
+  height: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1841,7 +1859,7 @@
 .kinyu-joshikai-tickets-payment .fee-card {
   background: #8ddcd1;
   border: 1px solid #8ddcd1;
-  color: #fff;
+  color: #fff;1
   font-weight: bold;
 }
 .kinyu-joshikai-tickets-payment .fee-cash {
@@ -1907,7 +1925,7 @@
 }
 .fee-open .inner form input {
   width: 100%;
-  background: #f5f5f5;
+  background: #f7f7f7;
   padding: 12px;
   font-size: 13px;
   box-sizing: border-box;
@@ -1981,6 +1999,7 @@
 }
 .kinyu-credit-list {
   letter-spacing: -40px;
+  font-size:0;
 }
 .kinyu-credit-list-block p {
   font-size: 13px;
@@ -1990,7 +2009,7 @@
   /*font-weight: bold;*/
 }
 .kinyu-credit-list li {
-  width: 18.4%;
+  width: 18%;
   padding: 0px 2%;
   box-sizing: border-box;
   margin-right: 2%;
@@ -2003,6 +2022,85 @@
 }
 .fee-open button {
   transition: .5s;
+}
+
+/* 決済画面 - キャンセルポリシー */
+.cancel-block {
+  width: 90%;
+  border-top: 1px solid #77cbc0;
+  border-bottom: 1px solid #77cbc0;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 28px;
+  padding: 16px 0px;
+}
+.cancel-block .cancel-title {
+  color: #77cbc0;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.cancel-block .cancel-description {
+  font-size: 12px;
+}
+.cancel-block .button-area {
+  font-size: 12px;
+  display: inline-block;
+  padding: 4px;
+  background: #f7f7f7;
+  margin-top: 8px;
+}
+
+.cancel-block .button-area input[type=checkbox] {
+  display: none;
+}
+.cancel-block .button-area label {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  background-color: #f6f7f8;
+  vertical-align: middle;
+  cursor: pointer;
+  width: auto!important;
+  padding-left: 0px!important;
+}
+.cancel-block .button-area label:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  display: block;
+  margin-top: -8px;
+  width: 3px;
+  height: 7px;
+  border-right: 2px solid #77cbc0;
+  border-bottom: 2px solid #77cbc0;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cancel-block .button-area label:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin-top: -10px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #bbb;
+  content: '';
+}
+input[type=checkbox]:checked + .checkbox:after {
+  border-color: #77cbc0;
+}
+input[type=checkbox]:checked + .checkbox:before {
+  opacity: 1;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2329,7 +2427,7 @@
   width: 100%;
   height: 100%;
   background: rgba(255,255,255,.95);
-  z-index: 1005;
+  z-index: 1008;
 }
 .report-detail-comment-popup .inner {
   width: 500px;
@@ -2341,7 +2439,7 @@
   margin-left: -250px;
   border: 1px solid #8ddcd1;
   background: rgba(255,255,255,.95);
-  padding: 50px 60px;
+  padding: 50px;
 }
 .report-detail-comment-popup-close {
   width: 80px;
@@ -2349,6 +2447,7 @@
   position: absolute;
   right: 5px;
   top: 5px;
+  transition: .5s;
 }
 .report-detail-comment-popup-close img {
   width: 100%;
@@ -2362,14 +2461,14 @@
   font-size: 20px;
   line-height: 32px;
   font-weight: bold;
-  margin-top: 50px;
+  margin-top: 90px;
   margin-bottom: 20px;
   color: #77cbc0;
 }
 .report-detail-comment-popup .inner p.last-message {
   text-align: center;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 13px;
+  line-height: 13px;
   margin-top: 24px;
 }
 
@@ -2440,7 +2539,7 @@
   float: right;
   width: 40%;
   height: 100%;
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
 .about-kinyu-header-contetns-list-el:nth-child(even) .img-box {
   float: right;
@@ -2774,17 +2873,17 @@ footer {
 }
 footer .footer-menu {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 .singlepage-footer {
   margin: 0 auto;
-  padding: 80px 0px 36px;
-  background: #f9f9f9;
+  padding: 80px 0px 20px;
+  background: #f7f7f7;
 }
 .footer-logo {
   width: 260px;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 .footer-logo img {
   width: 100%;
@@ -2804,6 +2903,10 @@ footer .navi_kinyu-submenu-copy {
   font-size: 10px;
   line-height: 14px;
   text-align: center;
+}
+.navi_kinyu-submenu-copy span {
+  display: block;
+  margin-bottom: 4px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2831,9 +2934,13 @@ footer .navi_kinyu-submenu-copy {
 }
 .insta-block-inner {
   padding: 40px 60px;
-  background: #f9f9f9;
-  background: #e4f5f2;
-  /*box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1), 0px 0px 5px 3px rgba(255, 255, 255, 1) inset;*/
+  background: #f7f7f7;
+}
+.insta-block-inner h3 a {
+  color: #77cbc0;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 8px;
 }
 .insta-block-inner:after {
   content: ".";
@@ -2992,8 +3099,14 @@ footer .navi_kinyu-submenu-copy {
   box-sizing: border-box;
 }
 .login-contents-form-area .email-form input::-webkit-input-placeholder {
-  color: #b0b0b0;
+  font-size: 12px;
 }
+input::-webkit-input-placeholder {
+ color: #b0b0b0;
+ font-size: 12px;
+}
+
+
 .login-contents-form-area .email-form p {
   text-align: right;
   margin-top: 12px;
@@ -3098,6 +3211,13 @@ footer .navi_kinyu-submenu-copy {
   top: 20px;
   right: 20px;
   padding: 12px;
+  width: 60px;
+  height: 60px;
+  transition: .5s;
+}
+#pass-reissue-close img {
+  width: 100%;
+  height: 100%;
 }
 #pass-reissue-open .inner {
   width: 600px;
@@ -3141,7 +3261,7 @@ footer .navi_kinyu-submenu-copy {
 }
 #pass-reissue-open .pass-reissue-form-el input {
   width: 100%;
-  background: #f9f9f9;
+  background: #f7f7f7;
   padding: 10px;
   font-size: 12px;
   margin-bottom: 20px;
@@ -3238,8 +3358,11 @@ footer .navi_kinyu-submenu-copy {
   position: absolute;
   right: 20px;
   top: 20px;
-  background: #e0e0e0;
+  background: #8ddcd1;
   padding: 10px 24px;
+  color: #fff;
+  font-weight: bold;
+  transition: .5s;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -3370,7 +3493,7 @@ footer .navi_kinyu-submenu-copy {
 
 /* パスワード再設定 */
 .resetting-pass-block {
-  background: #f9f9f9;
+  background: #f7f7f7;
   padding: 36px 80px;
 }
 .resetting-pass-el {
@@ -3409,7 +3532,7 @@ footer .navi_kinyu-submenu-copy {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1005;
+  z-index: 1006;
 }
 .loader-block-inner {
   width: 200px;
@@ -3607,7 +3730,7 @@ to {
   opacity: .5;
 }
 .about-kinyu-detail-list li:hover {
-  background-color: #f9f9f9;
+  background-color: #f7f7f7;
 }
 .joshikai-detail-el-info .joinus-block a:hover,
 .joshikai-detail-el-info .joinus-block p:hover {
@@ -3651,6 +3774,22 @@ to {
 }
 .regist-btn-list li:hover {
   opacity: .5;
+}
+.joshikai-main-left .img-box .about-joshikai-link:hover {
+  opacity: .5;
+}
+#joinus-open-close:hover,
+#pass-reissue-close:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.report-detail-comment-popup-close:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.login-another-btn:hover {
+  background: #fff;
+  color: #77cbc0;
 }
 
 }

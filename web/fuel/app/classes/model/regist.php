@@ -134,6 +134,7 @@ class Regist extends Base
                 'code' => $code,
                 'username' => $username,
                 'name' => $params['name'],
+                'name_kana' => $params['name_kana'],
                 'not_know' => $params['not_know'],
                 'interest' => $params['interest'],
                 'ask' => $params['ask'],
@@ -227,8 +228,39 @@ class Regist extends Base
     public static function lists()
     {
         \DB::set_charset('utf8');
-        $datas = \DB::select('*')->from('member_regist');
-        $datas = $datas->order_by('created_at', 'desc');
+        $datas = \DB::select(
+            "member_regist.id",
+            "member_regist.code",
+            "member_regist.username",
+            "member_regist.age",
+            "member_regist.not_know",
+            "member_regist.interest",
+            "member_regist.ask",
+            "member_regist.income",
+            "member_regist.transmission",
+            "member_regist.email",
+            "member_regist.facebook",
+            "member_regist.other_sns",
+            "member_regist.introduction",
+            "member_regist.user_agent",
+            "member_regist.where_from",
+            "member_regist.where_from_other",
+            "member_regist.job_kind",
+            "member_regist.id_name",
+            "member_regist.disable",
+            "member_regist.edit_inner",
+            "member_regist.industry",
+            "member_regist.industry_other",
+            "member_regist.created_at",
+            "member_regist.updated_at",
+            \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
+            \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
+            )
+            ->from('member_regist')
+            ->join('profiles', 'LEFT')
+            ->on('profiles.username', '=', 'member_regist.username');
+
+        $datas = $datas->order_by('member_regist.created_at', 'desc');
         //$datas = $datas->array_unique($input);
         $datas = $datas->where('member_regist.disable', '=', 1)->execute()->as_array();
 //        header('Content-type: text/html; charset=UTF-8');
@@ -238,7 +270,37 @@ class Regist extends Base
 
     public static function getByCodeWithurl($code)
     {
-        $result = \DB::select('*')->from('member_regist')
+        $result = \DB::select(
+            "member_regist.id", 
+            "member_regist.code", 
+            "member_regist.username", 
+            "member_regist.age", 
+            "member_regist.not_know", 
+            "member_regist.interest", 
+            "member_regist.ask", 
+            "member_regist.income", 
+            "member_regist.transmission", 
+            "member_regist.email", 
+            "member_regist.facebook", 
+            "member_regist.other_sns", 
+            "member_regist.introduction", 
+            "member_regist.user_agent", 
+            "member_regist.where_from", 
+            "member_regist.where_from_other", 
+            "member_regist.job_kind", 
+            "member_regist.id_name", 
+            "member_regist.disable", 
+            "member_regist.edit_inner", 
+            "member_regist.industry", 
+            "member_regist.industry_other", 
+            "member_regist.created_at", 
+            "member_regist.updated_at",
+            \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
+            \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
+            )
+            ->from('member_regist')
+            ->join('profiles', 'LEFT')
+            ->on('profiles.username', '=', 'member_regist.username')
             ->where('member_regist.code', '=', $code)
             ->execute()->current();
         if (empty($result)) {

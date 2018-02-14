@@ -16,7 +16,7 @@
 
       <!-- 参加者のループ -->
       <tr>
-        <td class="main-img"><div class="member-img" style="background-color:gray;"></div></td>
+        <td class="main-img"><div class="member-img" style="background-color:gray;"><p class="attend-done">決済済み</p></div></td>
         <td>石原さとみ</td>
         <td>32歳</td>
         <td class="link-area">
