@@ -329,6 +329,13 @@
   padding: 60px 0px 24px;
 }
 
+.joshikai-cancel-block .day-cash-close {
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+}
+
 
 }
 
