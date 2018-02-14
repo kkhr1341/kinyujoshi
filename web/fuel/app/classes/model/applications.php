@@ -133,7 +133,10 @@ class Applications extends Base
         // 参加人数を減らす
         \DB::update('events')->set(array(
             'application_num' => \DB::expr('application_num-1')
-        ))->where('code', '=', $application['event_code'])->execute();
+        ))
+        ->where('application_num', '>', 0)
+        ->where('code', '=', $application['event_code'])
+        ->execute();
 
         // クレジット決済の場合決済取り消し
         if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($params['code'])) {
