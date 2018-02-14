@@ -1,6 +1,7 @@
 <?php
 
 use \Model\Events;
+use \Model\Applications;
 use \Model\Sections;
 
 class Controller_Admin_Events extends Controller_Adminbase
@@ -72,6 +73,7 @@ class Controller_Admin_Events extends Controller_Adminbase
     public function action_attend_detail($code)
     {
         $this->data['events'] = Events::getByCode('events', $code);
+        $this->data['applications'] = Applications::get_applications_by_code($code);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';

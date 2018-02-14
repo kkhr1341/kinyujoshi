@@ -15,45 +15,21 @@
     <table class="table joshikai-attend-detail-table">
 
       <!-- 参加者のループ -->
+      {foreach from=$applications item=application name=loopname}
       <tr>
-        <td class="main-img"><div class="member-img" style="background-color:gray;"><p class="attend-done">決済済み</p></div></td>
-        <td>石原さとみ</td>
-        <td>32歳</td>
+        <td class="main-img"><div class="member-img" style="background-image:url({$application.profile_image})"></td>
+        <td>{$application.name}</td>
+        <td>
+        {if $application.birthday}
+        {((date('Ymd')-$application.birthday|replace:"-":"")/10000)|floor}歳
+        {/if}
+        </td>
         <td class="link-area">
-          <a class="email-link" target="_blank" href="mailto:komori@sundaylunch.jp">個別メールを送る</a>
-          <a class="profile-link" target="_blank" href="mailto:komori@sundaylunch.jp">メンバー情報の詳細</a>
+          <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
+          <a class="profile-link" target="_blank" href="">メンバー情報の詳細</a>
         </td>
       </tr>
-
-      <tr>
-        <td class="main-img"><div class="member-img" style="background-color:gray;"></div></td>
-        <td>石原さとみ</td>
-        <td>32歳</td>
-        <td class="link-area">
-          <a class="email-link" target="_blank" href="mailto:komori@sundaylunch.jp">個別メールを送る</a>
-          <a class="profile-link" target="_blank" href="mailto:komori@sundaylunch.jp">メンバー情報の詳細</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="main-img"><div class="member-img" style="background-color:gray;"></div></td>
-        <td>石原さとみ</td>
-        <td>32歳</td>
-        <td class="link-area">
-          <a class="email-link" target="_blank" href="mailto:komori@sundaylunch.jp">個別メールを送る</a>
-          <a class="profile-link" target="_blank" href="mailto:komori@sundaylunch.jp">メンバー情報の詳細</a>
-        </td>
-      </tr>
-
-      <tr>
-        <td class="main-img"><div class="member-img" style="background-color:gray;"></div></td>
-        <td>石原さとみ</td>
-        <td>32歳</td>
-        <td class="link-area">
-          <a class="email-link" target="_blank" href="mailto:komori@sundaylunch.jp">個別メールを送る</a>
-          <a class="profile-link" target="_blank" href="mailto:komori@sundaylunch.jp">メンバー情報の詳細</a>
-        </td>
-      </tr>
+      {/foreach}
       <!-- 参加者のループ終了 -->
 
     </table>

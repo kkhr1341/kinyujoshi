@@ -1,7 +1,6 @@
 <?php
 
-namespace Model;
-require_once(dirname(__FILE__) . "/base.php");
+namespace Model; require_once(dirname(__FILE__) . "/base.php");
 
 class Applications extends Base
 {
@@ -51,6 +50,23 @@ class Applications extends Base
             ->join('events')
             ->on('applications.event_code', '=', 'events.code')
             ->where('applications.username', '=', $username)
+            ->where('applications.disable', '=', 0)
+            ->where('applications.cancel', '=', 0)
+            ->execute()
+            ->as_array();
+
+        return $datas;
+    }
+
+
+    public static function get_applications_by_code($code)
+    {
+        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, applications.*'))->from('applications')
+            ->join('users', 'LEFT')
+            ->on('applications.username', '=', 'users.username')
+            ->join('profiles', 'LEFT')
+            ->on('profiles.username', '=', 'users.username')
+            ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->where('applications.cancel', '=', 0)
             ->execute()
