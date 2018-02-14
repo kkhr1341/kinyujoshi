@@ -231,7 +231,7 @@ class Regist extends Base
         $datas = $datas->order_by('created_at', 'desc');
         //$datas = $datas->array_unique($input);
         $datas = $datas->where('member_regist.disable', '=', 1)->execute()->as_array();
-        header('Content-type: text/html; charset=UTF-8');
+//        header('Content-type: text/html; charset=UTF-8');
         return $datas;
 
     }
