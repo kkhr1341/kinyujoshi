@@ -1367,6 +1367,18 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   第2回 秘密の大女子会
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-daijoshikai2018-container .conference-introduction {
+  background:url(/images/content/daijoshikai2018/daijoshikai2018_bg.jpg) top center / cover no-repeat;
+}
+
+.kinyu-daijoshikai2018-container {
+  background: #f7f7f7;
+}
+.kinyu-daijoshikai2018-container .conference-description .text-description p {
+  background: none;
+  font-size: 16px;
+  line-height: 28px;
+}
 .kinyu-daijoshikai2018-container .countdown-first {
   text-align: center;
 }
@@ -1494,3 +1506,92 @@
   color: #444444;
   font-size: 16px;
 }
+
+/* スケジュール部分 */
+.schedule-block-joshikai {
+  padding:24px 36px;
+  border: 1px solid #8ddcd1;
+  margin-bottom: 36px;
+}
+.joshikai-table {
+  table-layout:fixed;
+  width: 100%;
+}
+.joshikai-table tr {
+  border-bottom: 1px solid #ebebeb;
+}
+.joshikai-table th {
+  width: 20%;
+  height: 100%;
+  padding: 20px 0px;
+}
+.joshikai-table th p {
+  display: table;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+}
+.joshikai-table th span {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px 0;
+}
+.schedule-block-joshikai .joshikai-table th span {
+  background: rgba(141, 220, 209, 0.08);
+  border-top: 1px solid #8ddcd1;
+  border-bottom: 1px solid #8ddcd1;
+  text-align: center;
+}
+/*.schedule-block-joshikai .speaker-block p span {
+  background: rgba(88, 208, 213, 0.1);
+  font-weight: bold;
+}*/
+.joshikai-table td {
+  width: 80%;
+  vertical-align: top;
+  padding: 32px 8px 32px 24px;
+  word-wrap:break-word;
+}
+.joshikai-table tr:last-child {
+  border-bottom: none; 
+}
+/*.joshikai-table tr:last-child th {
+  padding: 20px 0px 0px;
+}
+.joshikai-table tr:last-child td {
+  padding: 28px 8px 0px 24px; 
+}*/
+.joshikai-table td .main-title {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: bold;
+  display: inherit;
+  position: relative;
+}
+.schedule-block-joshikai .joshikai-table td .main-title:before {
+  content: "◆";
+  color: #8ddcd1;
+}
+.joshikai-table .description p {
+  font-size: 15px;
+  line-height: 24px;
+  margin-top: 2px;
+}
+.joshikai-table .description p a {
+  font-size: 15px;
+  line-height: 24px;
+  color: #79b8e8;
+  font-weight: bold;
+}
+.joshikai-table .attention {
+  background: #f9f9f9;
+}
+.joshikai-table .attention p {
+  text-align: center;
+  margin-top: 12px;
+  padding: 4px 0px;
+}
+
+
+
+

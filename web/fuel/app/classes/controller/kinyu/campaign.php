@@ -103,7 +103,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
        die('このページを見るにはログインが必要です');
     }
 
-    $this->template->title = '第1回 週末投資宣言♪｜きんゆう女子。';
+    $this->template->title = '第2回 東証秘密の大女子会｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-conference.jpg';
     $this->template->description = '宣誓！わたしたちは、投資の本質を知り正々堂々とおかねを増やすことを誓います！わたしたちは、週末時間をゆたかで楽しい人生にするために。正しいおかねの知識と意識を身につけ前向きに投資をしていきます。投資の一歩手前の準備をしっかりしてすてきな投資家になり、経済に参加します。このイベントでは、その誓いを宣言し第一歩を踏み出すきっかけを自ら作ります。';
 

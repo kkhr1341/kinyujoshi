@@ -7,7 +7,7 @@
 <div class="kinyu-conference-container kinyu-daijoshikai2018-container">
   <!-- イントロダクション -->
   <div class="conference-introduction">
-    <div style="background:rgba(255,255,255,0);height:100%;width:100%;position:absolute;top:0;"></div>
+    <div style="background:rgba(255,255,255,0.6);height:100%;width:100%;position:absolute;top:0;"></div>
     <div class="inner clear">
       <div class="main-logo-block">
         <img class="main-logo" src="/images/content/daijoshikai2018/daijoshikai2018-mainlogo.png">
@@ -22,7 +22,7 @@
             <li>#東京証券取引所</li>
             <li>#JPX</li><br>
             <li>#兜町</li>
-            <li>#秘密の大女子会</li>
+            <li>#ひみつの大女子会</li>
           </ul>
         </div>
       </div>
@@ -65,8 +65,6 @@
       }
     </style>
 
-
-
     <div class="kinyu-conference-el conference-report kinyu-conference-el2n">
       <div class="inner">
         <div class="conference-el-header">
@@ -77,13 +75,14 @@
         </div>
         <h2>前回の様子</h2>
         
-        <!-- <div class="conference-report-el report-list">
+        {*
+        <div class="conference-report-el report-list">
           <h3>レポート一覧</h3>
           <ul class="main-out-event-list clear">
             
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/thumb_17105415_969134609889511_1638017480_n.jpg) center bottom / cover no-repeat;">
               <a href="https://kinyu-joshi.jp/report/P50GdT">
-                <p class="title">『秘密の大女子会@東証Arrows』を開催しました！</p>
+                <p class="title">『ひみつの大女子会@東証Arrows』を開催しました！</p>
               </a>
             </li>
 
@@ -97,7 +96,8 @@
             </li>
 
           </ul>
-        </div> -->
+        </div>
+        *}
 
         <div class="conference-report-el gallery-list">
           <h3>ギャラリー(前回の写真)</h3>
@@ -155,18 +155,45 @@
         </div>
         <h2>コンセプト</h2>
         <div class="text-description">
-          <div class="text-description-title">『金融ワカラナイ女子のための夜』<br>第2回 秘密の大女子会♪<br>〜おかねをふやそう〜<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span><!-- <span>(仮)</span> --></div>
-          <p>宣誓！わたしたちは、投資の本質を知り<br>
-          正々堂々とおかねを増やすことを誓います！<br>
-          わたしたちは、週末時間を<br>
-          ゆたかで楽しい人生にするために<br>
-          正しいおかねの知識と意識を身につけ<br>
-          前向きに投資をしていきます。<br>
-          投資の一歩手前の準備をしっかりして<br>
-          すてきな投資家になり、経済に参加します。<br>
-          このイベントでは、その誓いを宣言し<br>
-          第一歩を踏み出すきっかけを自ら作ります。
-          </p>
+          <div class="text-description-title">『金融ワカラナイ女子のための夜』<br>第2回 ひみつの大女子会♪<br>〜おかねをふやそう〜<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span><!-- <span>(仮)</span> --></div>
+          <!-- <p class="pc">
+            「きんゆう女子。」は、3月3日で2周年を迎えます。<br>
+            2周年を機に、「おかね」を積極的に学びたい女性が一堂に集う<br>
+            大女子会を金融発祥の地「兜町」の東京証券取引所にて開催します。<br><br>
+            また、わたしたち「きんゆう女子。」は、投資の本質を知り、<br>
+            正々堂々とおかねを増やすことを誓います！<br>
+            わたしたちは、ライフスタイルをゆたかで楽しい人生に<br>
+            するために正しいおかねの知識と意識を身につけ、<br>
+            前向きに投資をしていきます。<br>
+            投資の一歩手前の準備をしっかりして、<br>
+            すてきな投資家になり、経済に参加します。<br>
+            この女子会では、その誓いを宣言し、<br>
+            第一歩を踏み出すきっかけを自ら作ります。
+          </p> -->
+          
+          <p class="pc">
+          〜きんゆう女子。は2018年3月3日で設立2周年を迎えます。〜
+          <span style="display:block;height:16px;"></span>
+          東証さんってどんなところ？<br>
+          金運スポットやワクワクがいっぱい詰まっている？
+          <span style="display:block;height:16px;"></span>
+          ニュース番組でくるくる回る掲示板をみたことはあるけれど、<br>
+          建物の中は、実際どんなところなんだろう・・・
+          <span style="display:block;height:16px;"></span>
+          平日16:00までは実は誰でも見学できる、東証さん。<br>
+          企業の上場のタイミングに合わせて見学することも実はできるんです。
+          <span style="display:block;height:16px;"></span>
+          そんな、東証さんの夜の時間帯におじゃまします！<br>
+          贅沢に貸切って「ひみつの大女子会」を開催いたします。
+          <span style="display:block;height:16px;"></span>
+          女子会では、きんゆう女子。で学んでいるメンバーの成長を<br>
+          シェアしたり、ゲストをお招きして「おかね」について学びます。
+          <span style="display:block;height:16px;"></span>
+          パーティではスパークリングワインの乾杯から始まり、<br>
+          楽しい会話のおともに軽食もあります。
+          <span style="display:block;height:16px;"></span>
+          "あそび心"と"きんゆう心"を持って楽しく過ごしましょう♡<br>
+          2周年を記念して、特別なゲストからメッセージがあるかもしれません。
         </div>
       </div>
     </div>
@@ -186,13 +213,12 @@
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/conference/ticker.jpg) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">01</p>
                   <div class="text-main">
-                    <h3><span>3/1 (木) 19:00〜</span><br>きんゆう女子。学院 卒業式</h3>
-                    <p>年始年末に東証Arrowsで行われる大納会・発表会をご存知ですか？そう、ニュースでよくみるあの場所です！<br>くるくる回る電光掲示板のある、あの場所です。なんとこの度、第1回投資家宣言♪するわたしたちに、東証さんが東証Arrowsを貸してくださり、ここで大女子会！を行います。<br>Specialゲストに婚活結社「魔女のサバト」主催の川崎貴子さんをお呼びしておかねと恋愛についてのトークセッションを行います。
-                    </p>
+                    <h3><span>3/1 (木) 19:00〜</span><br>「わたしを知る」トークセッション &<br>シンデレラ企画進捗</h3>
+                    <p>「わたしを知る」をテーマにゲストをお呼びしたトークセッションを行います。ゲストや内容は当日まで秘密です♡<br>また、現在進行中の「シンデレラ企画＊」の進捗発表も行いたいと思っております。今回は、2回目ということもあり、メンバーの成長が見える華やかな女子会にしたいと思います。</p>
                   </div>
                 </div>
               </div>
@@ -200,26 +226,12 @@
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center right / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">02</p>
                   <div class="text-main">
-                    <h3>「わたしを知る」トークセッション &<br>シンデレラ企画進捗</h3>
-                    <p>東証Arrowsの大女子会のあとは、夜の東証内見学と東証内にある秘密の金運スポットで軽食がでます。軽食が済んだら、兜町にある金運スポット2箇所を巡ります。どこに行くかは当日のお楽しみ♪</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/conference/present.jpg) center left / cover no-repeat;"></div>
-                <div class="text-box">
-                  <p class="text-number">03</p>
-                  <div class="text-main">
-                    <h3>東証秘密の金運スポットでごはん（軽食）</h3>
-                    <p>立ち上げから今まで人気だった女子会テーマを総まとめ！<br>
-                    おかねをふやすあれこれが分かる女子会を1日でまとめます。<br>毎週木曜日に参加できなかった方も、参加している方も楽しめるようなきんゆう女子。編集部の渾身の女子会企画です。<br>また、女子会以外の時間は普段なかなか会うこともない金融機関の方とコミュニケーションできる場を設けています。<br>これを機会にいろいろと相談してみたり、ワカラナイこと、質問攻めしてみてはいかがでしょう？笑<br>メンバー限定の優待やお土産もあるかも...！？お楽しみに。</p>
+                    <h3>東証見学 & ひみつの金運スポットでごはん（軽食）</h3>
+                    <p>トークセッション終了後は、夜の東証見学を行います。見学後は東証内のひみつの金運スポットで軽食を取りながらの女子会。なかなか身の回りの方には聞けない「おかね」のお話をみんなでしましょう！</p>
                   </div>
                 </div>
               </div>
@@ -229,10 +241,24 @@
               <div class="event-special-el clear">
                 <div class="img-box" style="background:url(/images/content/conference/present01.jpg) center left / cover no-repeat;"></div>
                 <div class="text-box">
-                  <p class="text-number">04</p>
+                  <p class="text-number">03</p>
                   <div class="text-main">
                     <h3>かぶと町金運ナイトツアー（30名限定）</h3>
-                    <p>株主優待は、明治時代に鉄道会社が始めてから100年の歴史があります。株を買うときにちょっと嬉しい株主優待。東証主催の「株主優待フェア2017」では上場会社53社の株主優待品を一気に見ることができます！きんゆう女子。が選ぶ、お守り株*の会社の展示もあります。訪問ツアーではきんゆう女子。がその会社のIR担当の方に取材にいった様子もご案内いたします。<br>*お守り株とは？ - きんゆう女子。では持っていると嬉しいことがある元気になれる、自分を守ってくれるようなイメージの株を「お守り株」と呼んでいます。</p>
+                    <p>東証内にある秘密の金運スポットでの軽食が済んだら、兜町にある金運スポット2箇所を巡ります。どこに行くかは当日のお楽しみ♪</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="event-special-el clear">
+                <div class="img-box" style="background:url(/images/content/conference/ticker.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="text-number">04</p>
+                  <div class="text-main">
+                    <h3>きんゆう女子。学院 卒業式も</h3>
+                    <p>正しくお金と向き合うための投資宣言セレモニーを行い、1月から勉強して成長したきんゆう女子。学院の生徒さんの卒業式も行います。トークセッションや女子会では、生徒さんとの交流会もあるので、ぜひ積極的にコミュニケーションをとりましょう♪
+                    </p>
                   </div>
                 </div>
               </div>
@@ -254,13 +280,13 @@
         </div>
         <h2>イベントスケジュール</h2>
         <div class="schedule-block">
-          <ul class="schedule-block-content">
+          <!-- <ul class="schedule-block-content">
             <li>
               <h3><span>3/1</span> (木)のスケジュール</h3>
               <img class="pc schedule-img" src="/images/content/conference/schedule_33.jpg">
               <img class="sp schedule-img" src="/images/content/conference/schedule_33_sp.jpg">
               </li>
-            <!-- <li>
+            <li>
               <h3><span>3/4</span> (土)のスケジュール</h3>
               <img class="pc schedule-img" src="/images/content/conference/schedule_34.jpg">
               <img class="sp schedule-img" src="/images/content/conference/schedule_34_sp.jpg">
@@ -269,8 +295,76 @@
               <h3><span>3/5</span> (日)のスケジュール</h3>
               <img class="pc schedule-img" src="/images/content/conference/schedule_35.jpg">
               <img class="sp schedule-img" src="/images/content/conference/schedule_35_sp.jpg">
-            </li> -->
-          </ul>
+            </li>
+          </ul> -->
+
+          <div class="schedule-block-joshikai">
+
+            <table class="joshikai-table">
+              <tbody>
+                <!-- Guest Speech -->
+                <tr class="joshikai-table-el1">
+                  <th><p><span>18:30〜</span></p></th>
+                  <td>
+                    <p class="main-title"><span class="title-b">東証西口にて受付開始</span></p>
+                    <div class="description">
+                      <p>西口へのアクセスは<a href="http://www.jpx.co.jp/corporate/jpx-profile/access/#heading_4" target="_blank">こちら</a></p>
+                    </div>
+                    <div class="attention"><p><span style="color:red;">＊</span>19:00以降はセキュリティ上入館できませんので、ご注意くださいませ。</p></div>
+                  </td>
+                </tr>
+
+                <!-- Guest Speech -->
+                <tr class="joshikai-table-el2">
+                  <th><p><span>19:00〜19:15</span></p></th>
+                  <td>
+                    <p class="main-title">きんゆう女子。学院 卒業式</p>
+                    <div class="description">
+                      <p>わあああああ</p>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Guest Speech -->
+                <tr class="joshikai-table-el3">
+                  <th><p><span>19:15〜20:00</span></p></th>
+                  <td>
+                    <p class="main-title">「わたしを知る」トークセッション</p>
+                    <div class="description">
+                      <p>ゲストや内容の詳細は当日まで秘密♡</p>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Guest Speech -->
+                <tr class="joshikai-table-el4">
+                  <th><p><span>20:00〜20:45</span></p></th>
+                  <td>
+                    <p class="main-title">東証秘密の金運スポットで軽食＆交流会</p>
+                  </td>
+                </tr>
+
+                <!-- Guest Speech -->
+                <tr class="joshikai-table-el5">
+                  <th><p><span>20:45</span></p></th>
+                  <td>
+                    <p class="main-title">終了、東口玄関から自由解散</p>
+                  </td>
+                </tr>
+
+                <!-- Guest Speech -->
+                <tr class="joshikai-table-el6">
+                  <th><p><span>20:45〜</span></p></th>
+                  <td>
+                    <p class="main-title">希望の方は、兜町金運ナイトツアーへ♪</p>
+                  </td>
+                </tr>
+
+
+              </tbody>
+            </table>
+
+          </div>
         </div>
       </div>
     </div>
@@ -322,7 +416,7 @@
     <div class="kinyu-conference-el conference-regist kinyu-conference-el1n">
       <div class="img-inner">
         <img class="balloon-member" src="/images/content/conference/balloon-member.png">
-        <h2>第2回 秘密の大女子会♪<br>お申込みはこちら</h2>
+        <h2>第2回 ひみつの大女子会♪<br>お申込みはこちら</h2>
         <!-- <div class="banner">
           <p class="regist-btn"><span style="color:#f9b6b6;">＊</span>現在準備中</p>
         </div> -->
@@ -349,11 +443,11 @@
 
         <div class="conference-application clear">
           <div class="application-left">
-            <p class="application-date">【3/1(木) 19:00〜20:30】</p>
-            <h3>Special企画☆ 秘密の大女子会<br>＠東証Arrows(ナイトツアーも♪)</h3>
+            <p class="application-date">【3/1(木) 19:00〜20:45】</p>
+            <h3>Special企画☆ ひみつの大女子会<br>＠東証Arrows(ナイトツアーも♪)</h3>
             <div class="img-box" style="  background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;"></div>
-            <p class="pc application-fee">参加チケット：4,000<span>円</span><br>(80名限定)</p>
-            <p class="sp application-fee">参加チケット：<br>4,000<span>円</span><br>(80名限定)</p>
+            <p class="pc application-fee">参加費：2,000<span>円</span><br>(<span style="color:#fda8b7;">＊</span>お食事・ドリンク代込み)</p>
+            <p class="sp application-fee">参加費：<br>2,000<span>円</span><br>(<span style="color:#fda8b7;">＊</span>お食事・ドリンク代込み)</p>
             <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/ryn72Bzm">お申し込みはこちら</a>
           </div>
           <!-- <div class="application-right">
@@ -459,7 +553,7 @@
                 <p><span>住所</span>：東京都中央区日本橋兜町2-1</p>
                 <p><span>アクセス</span>：茅場町駅11番口徒歩5分、7番口徒歩7分、日本橋駅D2番口徒歩5分</p>
                 <p><span>TEL</span>：03-3666-0141</p>
-                <p><span>URL</span>：<a href="http://www.jpx.co.jp/" target="_blank">http://www.jpx.co.jp/</a></p>
+                <p><span>URL</span>：<a href="http://www.jpx.co.jp/corporate/jpx-profile/access/index.html" target="_blank">http://www.jpx.co.jp/</a></p>
               </div>
               <div class="map-block">
                 <div id="area-google-map" style="height:220px;"></div>
