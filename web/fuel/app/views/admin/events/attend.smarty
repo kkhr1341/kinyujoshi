@@ -35,7 +35,7 @@
         <td class="main-img"><div class="main-img-inner" style="background:url({$events_item.main_image}) center center / cover no-repeat"></div></td>
         <td>{$events_item.event_date|date_format:"%Y.%m.%d"}</td>
         <td class="main-title">{$events_item.title}</td>
-        <td class="count-title">5<span>名</span></td>
+        <td class="count-title">{$events_item.application_num}<span>名</span></td>
       </tr>
       {/foreach}
     </table>
@@ -62,7 +62,7 @@
         <td class="main-img"><div class="main-img-inner" style="background:url({$events_item.main_image}) center center / cover no-repeat"></div></td>
         <td>{$events_item.event_date|date_format:"%Y.%m.%d"}</td>
         <td class="main-title">{$events_item.title}</td>
-        <td class="count-title">5<span>名</span></td>
+        <td class="count-title">{$events_item.application_num}<span>名</span></td>
       </tr>
       {/foreach}
     </table>

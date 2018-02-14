@@ -60,10 +60,10 @@ class Controller_Admin_Events extends Controller_Adminbase
     {
 
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->data['events'] = Events::lists(1, 50, true);
-        $this->data['sections'] = Sections::lists();
+        // $this->data['events'] = Events::lists(1, 50, true);
+        // $this->data['sections'] = Sections::lists();
         $this->data['all_events'] = Events::lists02();
-        $this->data['closed_events'] = Events::lists(0);
+       //  $this->data['closed_events'] = Events::lists(0);
         $this->data['open_events'] = Events::lists(1);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
