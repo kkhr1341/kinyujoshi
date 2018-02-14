@@ -84,6 +84,7 @@ class Controller_My_Events extends Controller_Mybase
         $code = $application['event_code']; // event code
         $this->data['event'] = Events::getByCodeWithProfile($code);
         $this->data['event_row'] = Events::getByCode('events', $code);
+        $this->data['cancelable'] = Events::cancelable($code);
         $this->template->urlcode = $this->data['event_row']['code'];
 
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);

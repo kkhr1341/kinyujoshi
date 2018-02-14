@@ -31,11 +31,15 @@
           </div>
         </div>
       </div>
-      {if $event.incur_cancellation_fee_date|strtotime > $smarty.now}
+      {if $cancelable === true}
         <p class="joshikai-cancel-open" id="joshikai-cancel-open">女子会をキャンセルする</p>
       {else}
         <div class="joshikai-cansel-block">
-          <p class="cansel-block-title"><span style="color:red";>＊</span>イベント開催日が3日以内のため、女子会のキャンセルはできません。</p>
+          {if $event.incur_cancellation_fee_date == '0000-00-00 00:00:00'}
+            <p class="cansel-block-title"><span style="color:red";>＊</span>イベント開催日が3日以内のため、女子会のキャンセルはできません。</p>
+          {else}
+            <p class="cansel-block-title"><span style="color:red";>＊</span>キャンセルの期日が{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}ため、女子会のキャンセルはできません。</p>
+          {/if}
           <a href=""></a>
         </div>
       {/if}

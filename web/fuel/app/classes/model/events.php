@@ -286,13 +286,13 @@ class Events extends Base
     {
         $defaultCancelableDays = 3;
         $event = self::getByCode('events', $code);
-        if ($event['incur_cancellation_fee_date']) {
+        if ($event['incur_cancellation_fee_date'] != '0000-00-00 00:00:00') {
             $cancelableDate = date('Y-m-d', strtotime($event['incur_cancellation_fee_date']));
         } else {
             // キャンセル料発生日の設定がない場合はイベント開催日の3日前からがキャンセル不可となる
             $cancelableDate = date('Y-m-d', strtotime('-' . $defaultCancelableDays . ' day', strtotime($event['event_date'])));
         }
-        if (strtotime($cancelableDate) <= date('Y-m-d', time())) {
+        if (strtotime($cancelableDate) <= strtotime(date('Y-m-d', time()))) {
             return false;
         }
         return true;

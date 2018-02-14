@@ -2,6 +2,7 @@
 
 use \Model\Applications;
 use \Model\Payment;
+use \Model\Events;
 
 class Controller_Api_Applications extends Controller_Apibase
 {
@@ -10,6 +11,11 @@ class Controller_Api_Applications extends Controller_Apibase
         if (!Auth::check()) {
             \Session::set('referrer', \Input::referrer());
             return $this->ok('login');
+        }
+
+        $application = Applications::getByCode('applications', \Input::post('code'));
+        if (!Events::cancelable($application['event_code'])) {
+            return $this->error('キャンセル期日をすぎておりますためキャンセルはご利用いただけません');
         }
 
         $res = Applications::cancel(\Input::all());
