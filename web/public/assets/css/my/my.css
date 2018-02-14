@@ -749,6 +749,13 @@ footer {
   right: 10px;
   padding: 12px;
   background: #fff;
+  width: 60px;
+  height: 60px;
+  transition: .5s;
+}
+.joshikai-cancel-block .day-cash-close img {
+  width: 100%;
+  height: 100%;
 }
 #admin-joshikai-detail {
   display: none;
@@ -865,6 +872,10 @@ footer {
 }
 .credit-list-area li .button-area button:hover {
   opacity: .5;
+}
+.joshikai-cancel-block .day-cash-close:hover {
+  opacity: .5;
+  cursor: pointer;
 }
 
 
