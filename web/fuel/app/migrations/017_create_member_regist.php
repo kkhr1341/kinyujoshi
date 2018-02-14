@@ -27,8 +27,6 @@ class Create_member_regist
 			'job_kind' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'disable' => array('type' => 'tinyint', 'default' => '1'),
 			'edit_inner' => array('type' => 'text'),
-			'industry' => array('constraint' => 200, 'type' => 'varchar'),
-			'industry_other' => array('constraint' => 200, 'type' => 'varchar'),
 
             'created_at' => array('type' => 'datetime', 'null' => true),
             'updated_at' => array('type' => 'timestamp'),

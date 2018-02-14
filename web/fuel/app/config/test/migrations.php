@@ -59,6 +59,8 @@ return array(
         50 => '054_create_index_code_in_profiles',
         51 => '055_create_index_email_in_users',
         52 => '056_add_id_name_to_member_regist',
+        53 => '057_add_industry_to_member_regist',
+        54 => '058_add_industry_other_to_member_regist',
       ),
     ),
     'module' => 
