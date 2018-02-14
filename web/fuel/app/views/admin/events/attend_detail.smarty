@@ -17,7 +17,7 @@
       <!-- 参加者のループ -->
       {foreach from=$applications item=application name=loopname}
       <tr>
-        <td class="main-img"><div class="member-img" style="background-image:url({$application.profile_image})"></td>
+        <td class="main-img"><div class="member-img" style="background-image:url({$application.profile_image}) center center / cover no-repeat"></td>
         <td>{$application.name}</td>
         <td>
         {if $application.birthday}
