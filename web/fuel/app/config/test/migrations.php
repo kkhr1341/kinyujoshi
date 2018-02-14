@@ -58,7 +58,6 @@ return array(
         49 => '052_create_index_code_in_member_regist',
         50 => '054_create_index_code_in_profiles',
         51 => '055_create_index_email_in_users',
-        52 => '056_add_name_kana_to_member_regist',
       ),
     ),
     'module' => 
