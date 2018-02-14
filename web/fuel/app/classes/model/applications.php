@@ -61,9 +61,11 @@ class Applications extends Base
 
     public static function get_applications_by_code($code)
     {
-        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, applications.*'))->from('applications')
+        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*'))->from('applications')
             ->join('users', 'LEFT')
             ->on('applications.username', '=', 'users.username')
+            ->join('member_regist', 'LEFT')
+            ->on('member_regist.username', '=', 'users.username')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'users.username')
             ->where('applications.event_code', '=', $code)
