@@ -1370,7 +1370,9 @@
 .kinyu-daijoshikai2018-container .conference-introduction {
   background:url(/images/content/daijoshikai2018/daijoshikai2018_bg.jpg) top center / cover no-repeat;
 }
-
+.kinyu-daijoshikai2018-container .conference-el-header .conference-text {
+  width: 150px;
+}
 .kinyu-daijoshikai2018-container {
   background: #f7f7f7;
 }
@@ -1542,10 +1544,6 @@
   border-bottom: 1px solid #8ddcd1;
   text-align: center;
 }
-/*.schedule-block-joshikai .speaker-block p span {
-  background: rgba(88, 208, 213, 0.1);
-  font-weight: bold;
-}*/
 .joshikai-table td {
   width: 80%;
   vertical-align: top;
@@ -1555,12 +1553,6 @@
 .joshikai-table tr:last-child {
   border-bottom: none; 
 }
-/*.joshikai-table tr:last-child th {
-  padding: 20px 0px 0px;
-}
-.joshikai-table tr:last-child td {
-  padding: 28px 8px 0px 24px; 
-}*/
 .joshikai-table td .main-title {
   font-size: 18px;
   line-height: 32px;
@@ -1610,5 +1602,198 @@
   margin-top: 8px;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+    第2回 秘密の大女子会 - スマホ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 767px) {
 
+.kinyu-daijoshikai2018-container .conference-introduction {
+  height: auto;
+  padding: 36px 0px;
+}
+.kinyu-daijoshikai2018-container .conference-introduction .main-logo {
+  width: 260px;
+  height: 260px;
+  margin-left: auto;
+  margin-top: 0px;
+}
+.kinyu-daijoshikai2018-container .conference-introduction .inner .data {
+  font-size: 20px;
+  line-height: 28px;
+}
+.kinyu-daijoshikai2018-container .conference-introduction .inner .tag-block li {
+  font-size: 12px;
+  margin: 0px 4px 4px 0px;
+  padding: 4px 12px;
+}
 
+.kinyu-daijoshikai2018-container .countdown-first-block .inner {
+  padding: 24px 0px 16px;
+}
+.kinyu-daijoshikai2018-container .countdown-first-text {
+  font-size: 22px;
+  width: 50%;
+}
+.kinyu-daijoshikai2018-container .countdown-first .top-deco-left {
+    position: absolute;
+    left: 0px;
+    width: 80px;
+    top: 0;
+}
+.kinyu-daijoshikai2018-container .countdown-first .top-deco-right {
+  position: absolute;
+  right: 0px;
+  width: 80px;
+  top: 0;
+}
+
+.kinyu-daijoshikai2018-container .conference-el-header .sub-title {
+  font-size: 36px;
+  line-height: 36px;
+  padding: 0px 30px 0px;
+}
+.kinyu-daijoshikai2018-container .conference-el-header .conference-text {
+  width: 120px;
+  margin-bottom: 0px;
+}
+.kinyu-daijoshikai2018-container .kinyu-conference-el h2 {
+  font-size: 22px;
+  line-height: 26px;
+  padding: 4px 8% 8px;
+}
+.kinyu-daijoshikai2018-container .conference-report .conference-report-el h3 {
+  font-size: 15px;
+  padding-bottom: 12px;
+}
+.kinyu-daijoshikai2018-container .conference-description .text-description p {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-main {
+  margin-left: 12%;
+}
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-main {
+  padding-left: 20px;
+}
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-number {
+  font-size: 22px;
+  line-height: 22px;
+}
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-main h3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-main p {
+  font-size: 13px;
+  padding-top: 12px;
+  line-height: 22px;
+}
+.kinyu-daijoshikai2018-container .event-special-el .text-box .text-main h3 span {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.schedule-block-joshikai {
+  padding: 4px 20px;
+}
+.joshikai-table th {
+  display: block;
+  width: 100%;
+  height: auto!important;
+  padding: 20px 0px 12px;
+}
+.schedule-block-joshikai .joshikai-table th span {
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1; 
+}
+.joshikai-table td {
+  display: block;
+  width: 100%;
+  padding: 0px 0px 20px 0px;
+}
+.joshikai-table th p {
+  font-size: 13px;
+}
+.joshikai-table th span {
+  padding: 8px 0px;
+}
+.joshikai-table td .main-title {
+  font-size: 15px;
+  line-height: 22px;
+}
+.joshikai-table .description p {
+  font-size: 13px;
+  line-height: 22px;
+  margin-top: 8px;
+}
+.joshikai-table .description p a {
+  font-size: 13px;
+  line-height: 20px;
+}
+.joshikai-table .attention p {
+  text-align: center;
+  margin-top: 12px;
+  padding: 8px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.daijoshikai2018-attention li .main-title {
+  font-size: 15px;
+  line-height: 22px;
+}
+.daijoshikai2018-attention li .description {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+  margin-top: 8px;
+}
+
+.kinyu-daijoshikai2018-container .conference-application h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+.kinyu-daijoshikai2018-container .conference-application .application-fee {
+  font-size: 14px;
+  margin-top: 16px;
+}
+.kinyu-daijoshikai2018-container .application-left {
+  padding-bottom: 0px;
+}
+.kinyu-daijoshikai2018-container .conference-application .application-left .application-button {
+  width: 80%;
+  font-size: 15px;
+}
+.kinyu-daijoshikai2018-container .kinyu-conference-el .conference-el-regist {
+  font-size: 13px;
+}
+
+.kinyu-daijoshikai2018-container .conference-access .access-block {
+  width: 100%;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block .access-img {
+    width: 250px;
+    height: 250px;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block .img-box:after {
+    width: 230px;
+    height: 230px;
+    margin-top: -115px;
+    margin-left: -115px;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block li:last-child {
+  padding-left: 0px;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block li .conference-access-title h3 {
+    font-size: 18px;
+}
+.conference-access-description {
+  padding: 0px 5%;
+}
+
+}

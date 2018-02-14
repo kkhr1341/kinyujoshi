@@ -17,10 +17,17 @@
           <p class="data">2018. <span>3/1</span>（木）<br>19:00〜20:45</p>
         </div>
         <div class="tag-block">
-          <ul>
+          <ul class="pc">
             <li>#きんゆう女子</li>
             <li>#東京証券取引所</li>
             <li>#JPX</li><br>
+            <li>#兜町</li>
+            <li>#ひみつの大女子会</li>
+          </ul>
+          <ul class="sp">
+            <li>#きんゆう女子</li>
+            <li>#東京証券取引所</li>
+            <li>#JPX</li>
             <li>#兜町</li>
             <li>#ひみつの大女子会</li>
           </ul>
@@ -34,7 +41,7 @@
     <!-- レポ -->
     <!-- <img class="finish-co" src="/images/content/conference/finish-co02.png"> -->
 
-    <div class="kinyu-conference-el">
+    <div class="kinyu-conference-el countdown-first-block">
       <div class="inner">
         <div class="countdown-first">
           <div class="countdown-first-text text01">大女子会まで</div>
@@ -68,7 +75,7 @@
     <div class="kinyu-conference-el conference-report kinyu-conference-el2n">
       <div class="inner">
         <div class="conference-el-header">
-          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p><img class="conference-text" src="/images/content/daijoshikai2018/daijoshikai2018-deco.png"></p>
           <p class="sub-title">Report</p>
           <div class="sub-title-border01"></div>
           <div class="sub-title-border02"></div>
@@ -148,52 +155,56 @@
     <div class="kinyu-conference-el conference-description kinyu-conference-el1n">
       <div class="inner">
         <div class="conference-el-header">
-          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p><img class="conference-text" src="/images/content/daijoshikai2018/daijoshikai2018-deco.png"></p>
           <p class="sub-title">Concept</p>
           <div class="sub-title-border01"></div>
           <div class="sub-title-border02"></div>
         </div>
         <h2>コンセプト</h2>
         <div class="text-description">
-          <div class="text-description-title">『金融ワカラナイ女子のための夜』<br>第2回 ひみつの大女子会♪<br>〜おかねをふやそう〜<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span><!-- <span>(仮)</span> --></div>
-          <!-- <p class="pc">
-            「きんゆう女子。」は、3月3日で2周年を迎えます。<br>
-            2周年を機に、「おかね」を積極的に学びたい女性が一堂に集う<br>
-            大女子会を金融発祥の地「兜町」の東京証券取引所にて開催します。<br><br>
-            また、わたしたち「きんゆう女子。」は、投資の本質を知り、<br>
-            正々堂々とおかねを増やすことを誓います！<br>
-            わたしたちは、ライフスタイルをゆたかで楽しい人生に<br>
-            するために正しいおかねの知識と意識を身につけ、<br>
-            前向きに投資をしていきます。<br>
-            投資の一歩手前の準備をしっかりして、<br>
-            すてきな投資家になり、経済に参加します。<br>
-            この女子会では、その誓いを宣言し、<br>
-            第一歩を踏み出すきっかけを自ら作ります。
-          </p> -->
-          
+          <div class="text-description-title">『金融ワカラナイ女子のための夜』<br>第2回 ひみつの大女子会♪<br>〜おかねをふやそう〜<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span><!-- <span>(仮)</span> --></div>          
           <p class="pc">
-          〜きんゆう女子。は2018年3月3日で設立2周年を迎えます。〜
-          <span style="display:block;height:16px;"></span>
-          東証さんってどんなところ？<br>
-          金運スポットやワクワクがいっぱい詰まっている？
-          <span style="display:block;height:16px;"></span>
-          ニュース番組でくるくる回る掲示板をみたことはあるけれど、<br>
-          建物の中は、実際どんなところなんだろう・・・
-          <span style="display:block;height:16px;"></span>
-          平日16:00までは実は誰でも見学できる、東証さん。<br>
-          企業の上場のタイミングに合わせて見学することも実はできるんです。
-          <span style="display:block;height:16px;"></span>
-          そんな、東証さんの夜の時間帯におじゃまします！<br>
-          贅沢に貸切って「ひみつの大女子会」を開催いたします。
-          <span style="display:block;height:16px;"></span>
-          女子会では、きんゆう女子。で学んでいるメンバーの成長を<br>
-          シェアしたり、ゲストをお招きして「おかね」について学びます。
-          <span style="display:block;height:16px;"></span>
-          パーティではスパークリングワインの乾杯から始まり、<br>
-          楽しい会話のおともに軽食もあります。
-          <span style="display:block;height:16px;"></span>
-          "あそび心"と"きんゆう心"を持って楽しく過ごしましょう♡<br>
-          2周年を記念して、特別なゲストからメッセージがあるかもしれません。
+            〜きんゆう女子。は2018年3月3日で設立2周年を迎えます。〜
+            <span style="display:block;height:16px;"></span>
+            東証さんってどんなところ？<br>
+            金運スポットやワクワクがいっぱい詰まっている？
+            <span style="display:block;height:16px;"></span>
+            ニュース番組でくるくる回る掲示板をみたことはあるけれど、<br>
+            建物の中は、実際どんなところなんだろう・・・
+            <span style="display:block;height:16px;"></span>
+            平日16:00までは実は誰でも見学できる、東証さん。<br>
+            企業の上場のタイミングに合わせて見学することも実はできるんです。
+            <span style="display:block;height:16px;"></span>
+            そんな、東証さんの夜の時間帯におじゃまします！<br>
+            贅沢に貸切って「ひみつの大女子会」を開催いたします。
+            <span style="display:block;height:16px;"></span>
+            女子会では、きんゆう女子。で学んでいるメンバーの成長を<br>
+            シェアしたり、ゲストをお招きして「おかね」について学びます。
+            <span style="display:block;height:16px;"></span>
+            パーティではスパークリングワインの乾杯から始まり、<br>
+            楽しい会話のおともに軽食もあります。
+            <span style="display:block;height:16px;"></span>
+            "あそび心"と"きんゆう心"を持って楽しく過ごしましょう♡<br>
+            2周年を記念して、特別なゲストからメッセージがあるかもしれません。
+          </p>
+
+          <p class="sp">
+            〜きんゆう女子。は2018年3月3日で設立2周年を迎えます。〜
+            <span style="display:block;height:10px;"></span>
+            東証さんってどんなところ？金運スポットやワクワクがいっぱい詰まっている？
+            <span style="display:block;height:10px;"></span>
+            ニュース番組でくるくる回る掲示板をみたことはあるけれど、建物の中は、実際どんなところなんだろう・・・
+            <span style="display:block;height:10px;"></span>
+            平日16:00までは実は誰でも見学できる、東証さん。企業の上場のタイミングに合わせて見学することも実はできるんです。
+            <span style="display:block;height:10px;"></span>
+            そんな、東証さんの夜の時間帯におじゃまします！贅沢に貸切って「ひみつの大女子会」を開催いたします。
+            <span style="display:block;height:10px;"></span>
+            女子会では、きんゆう女子。で学んでいるメンバーの成長をシェアしたり、ゲストをお招きして「おかね」について学びます。
+            <span style="display:block;height:10px;"></span>
+            パーティではスパークリングワインの乾杯から始まり、楽しい会話のおともに軽食もあります。
+            <span style="display:block;height:10px;"></span>
+            "あそび心"と"きんゆう心"を持って楽しく過ごしましょう♡ 2周年を記念して、特別なゲストからメッセージがあるかもしれません。
+          </p>
         </div>
       </div>
     </div>
@@ -202,7 +213,7 @@
     <div class="kinyu-conference-el conference-special kinyu-conference-el2n">
       <div class="inner">
         <div class="conference-el-header">
-          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p><img class="conference-text" src="/images/content/daijoshikai2018/daijoshikai2018-deco.png"></p>
           <p class="sub-title">Special</p>
           <div class="sub-title-border01"></div>
           <div class="sub-title-border02"></div>
@@ -217,7 +228,7 @@
                 <div class="text-box">
                   <p class="text-number">01</p>
                   <div class="text-main">
-                    <h3><span>3/1 (木) 19:00〜</span><br>「わたしを知る」トークセッション &<br>シンデレラ企画進捗</h3>
+                    <h3><span>3/1 (木) 19:00〜</span><br>「わたしを知る」トークセッション＆シンデレラ企画進捗</h3>
                     <p>「わたしを知る」をテーマにゲストをお呼びしたトークセッションを行います。ゲストや内容は当日まで秘密です♡<br>また、現在進行中の「シンデレラ企画＊」の進捗発表も行いたいと思っております。今回は、2回目ということもあり、メンバーの成長が見える華やかな女子会にしたいと思います。</p>
                   </div>
                 </div>
@@ -273,7 +284,7 @@
     <div class="kinyu-conference-el conference-schedule kinyu-conference-el1n">
       <div class="inner">
         <div class="conference-el-header">
-          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p><img class="conference-text" src="/images/content/daijoshikai2018/daijoshikai2018-deco.png"></p>
           <p class="sub-title">Schedule</p>
           <div class="sub-title-border01"></div>
           <div class="sub-title-border02"></div>
@@ -400,7 +411,7 @@
     <div class="kinyu-conference-el conference-timelimit kinyu-conference-el2n">
       <div class="inner">
         <div class="conference-el-header">
-          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p><img class="conference-text" src="/images/content/daijoshikai2018/daijoshikai2018-deco.png"></p>
           <p class="sub-title">DATE</p>
           <div class="sub-title-border01"></div>
           <div class="sub-title-border02"></div>
@@ -473,8 +484,7 @@
             <p class="application-date">【3/1(木) 19:00〜20:45】</p>
             <h3>Special企画☆ ひみつの大女子会<br>＠東証Arrows(ナイトツアーも♪)</h3>
             <div class="img-box" style="  background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;"></div>
-            <p class="pc application-fee">参加費：2,000<span>円</span><br>(<span style="color:#fda8b7;">＊</span>お食事・ドリンク代込み)</p>
-            <p class="sp application-fee">参加費：<br>2,000<span>円</span><br>(<span style="color:#fda8b7;">＊</span>お食事・ドリンク代込み)</p>
+            <p class="application-fee">参加費：2,000<span>円</span><br>(<span style="color:#fda8b7;">＊</span>お食事・ドリンク代込み)</p>
             <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/ryn72Bzm">お申し込みはこちら</a>
           </div>
           <!-- <div class="application-right">
@@ -507,7 +517,7 @@
     <div class="kinyu-conference-el conference-sponsor kinyu-conference-el2n">
       <div class="inner">
         <div class="conference-el-header">
-          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p><img class="conference-text" src="/images/content/daijoshikai2018/daijoshikai2018-deco.png"></p>
           <p class="sub-title">Sponsor</p>
           <div class="sub-title-border01"></div>
           <div class="sub-title-border02"></div>
@@ -542,7 +552,7 @@
     <div class="kinyu-conference-el conference-access kinyu-conference-el2n">
       <div class="inner">
         <div class="conference-el-header">
-          <p><img class="conference-text" src="/images/content/conference/conference-text.png"></p>
+          <p><img class="conference-text" src="/images/content/daijoshikai2018/daijoshikai2018-deco.png"></p>
           <p class="sub-title">Access</p>
           <div class="sub-title-border01"></div>
           <div class="sub-title-border02"></div>
