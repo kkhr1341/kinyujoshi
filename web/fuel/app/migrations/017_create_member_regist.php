@@ -25,7 +25,6 @@ class Create_member_regist
 			'where_from' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'where_from_other' => array('constraint' => 200, 'type' => 'varchar', 'null' => true),
 			'job_kind' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
-			'id_name' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'disable' => array('type' => 'tinyint', 'default' => '1'),
 			'edit_inner' => array('type' => 'text'),
 			'industry' => array('constraint' => 200, 'type' => 'varchar'),
