@@ -13,7 +13,7 @@ migrate:
 install:
 	docker-compose build
 	git submodule init
-	docker-compose run composer update
+	docker-compose run --rm composer update
 	git submodule init
 	git submodule update
 	docker-compose run --rm createbuckets
@@ -28,7 +28,7 @@ test:
 .PHONY: test
 
 composer:
-	docker-compose run composer update
+	docker-compose run --rm composer update
 .PHONY: composer
 
 clean:
