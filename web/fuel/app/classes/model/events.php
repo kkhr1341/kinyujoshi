@@ -47,8 +47,7 @@ class Events extends Base
 
         $val->add('creditch', '決済方法');
 
-        $val->add('incur_cancellation_fee_date', 'キャンセル料金発生日')
-            ->add_rule('valid_date');
+        $val->add('incur_cancellation_fee_date', 'キャンセル料金発生日');
 
         $val->add('open_date', '公開設定')
             ->add_rule('valid_date');
@@ -74,9 +73,6 @@ class Events extends Base
                 ->add_rule('required');
 
             $val->field('creditch')
-                ->add_rule('required');
-
-            $val->field('incur_cancellation_fee_date')
                 ->add_rule('required');
         }
 
@@ -175,9 +171,10 @@ class Events extends Base
 
     public static function save($params)
     {
-
         $username = \Auth::get('username');
 //        $params['main_image'] = self::get_main_image($params);
+//        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
+        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
 
         \DB::update('events')->set($params)->where('code', '=', $params['code'])->execute();
 
@@ -278,5 +275,26 @@ class Events extends Base
             return false;
         }
         return $result;
+    }
+
+    /**
+     * イベントキャンセル可否判定
+     * @param $code イベントコード
+     * @return bool true: キャンセル可能, false: キャンセル不可
+     */
+    public static function cancelable($code)
+    {
+        $defaultCancelableDays = 3;
+        $event = self::getByCode('events', $code);
+        if ($event['incur_cancellation_fee_date']) {
+            $cancelableDate = date('Y-m-d', strtotime($event['incur_cancellation_fee_date']));
+        } else {
+            // キャンセル料発生日の設定がない場合はイベント開催日の3日前からがキャンセル不可となる
+            $cancelableDate = date('Y-m-d', strtotime('-' . $defaultCancelableDays . ' day', strtotime($event['event_date'])));
+        }
+        if (strtotime($cancelableDate) <= date('Y-m-d', time())) {
+            return false;
+        }
+        return true;
     }
 }

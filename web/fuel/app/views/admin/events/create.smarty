@@ -210,10 +210,6 @@ $(function(){
 			ts.error("決済を選択してください");
 			return false;
 		}
-        if (params.incur_cancellation_fee_date == "") {
-            ts.error("キャンセル料金発生日を入力してください");
-            return false;
-        }
 
 		ajax.post(url, params, function(data){
 			ts.success("公開しました", function(){
