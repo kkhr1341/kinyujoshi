@@ -88,14 +88,13 @@
 }
 
 .main-out-event-gallery-list {
-  letter-spacing: -.40em; 
 }
 .main-out-event-gallery-list li { 
-  display: inline-block;
-  width: 24.6%;
+  float: left;
+  width: 24.25%;
   height: auto;
-  margin-right: 0.5%;
-  margin-bottom: 0.2%;
+  margin-right: 1%;
+  margin-bottom: 1%;
   letter-spacing: normal;
   position: relative;
   text-align: left;
@@ -1266,16 +1265,16 @@
   box-sizing: border-box;
 }
 .main-out-event-gallery-list li {
-  width: 49%;
+  width: 49.5%;
   height: auto;
   margin-right: 1%;
-  margin-bottom: 0.2%;
+  margin-bottom: 1%;
 }
 .main-out-event-gallery-list li:nth-child(2n) {
   margin-right: 0%!important;
 }
 .main-out-event-gallery-list li:nth-child(4n) {
-  margin-right: 2%;
+  margin-right: 1%;
 }
 .conference-report-el #document-open {
   padding: 12px 30px;

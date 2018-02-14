@@ -108,7 +108,7 @@
 
         <div class="conference-report-el gallery-list">
           <h3>ギャラリー(前回の写真)</h3>
-          <ul class="main-out-event-gallery-list">
+          <ul class="main-out-event-gallery-list clear">
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1715111.JPG) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1685.JPG) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1708.JPG) center left / cover no-repeat;"></li>
@@ -224,7 +224,7 @@
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1685.JPG) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">01</p>
                   <div class="text-main">
@@ -250,7 +250,7 @@
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/conference/present01.jpg) center left / cover no-repeat;"></div>
+                <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198604_10210686965343649_1940220268_n.jpg) center left / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">03</p>
                   <div class="text-main">
@@ -263,11 +263,11 @@
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/conference/ticker.jpg) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background:url(/images/content/school_public/school_public02_main.jpg) left top / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">04</p>
                   <div class="text-main">
-                    <h3>きんゆう女子。学院 卒業式も</h3>
+                    <h3>第2回 きんゆう女子。学院 卒業式を見学</h3>
                     <p>正しくお金と向き合うための投資宣言セレモニーを行い、1月から勉強して成長したきんゆう女子。学院の生徒さんの卒業式も行います。トークセッションや女子会では、生徒さんとの交流会もあるので、ぜひ積極的にコミュニケーションをとりましょう♪
                     </p>
                   </div>
