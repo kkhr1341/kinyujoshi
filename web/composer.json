@@ -19,7 +19,8 @@
         "payjp/payjp-php": "0.0.8"
     },
     "require-dev": {
-        "phpunit/phpunit": "5.7.*"
+        "phpunit/phpunit": "5.7.*",
+        "phpunit/dbunit": "4.*"
     },
     "suggest": {
         "dwoo/dwoo" : "Allow Dwoo templating with the Parser package",
