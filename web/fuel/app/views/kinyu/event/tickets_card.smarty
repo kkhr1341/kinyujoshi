@@ -89,6 +89,24 @@
 <script type="text/javascript">Payjp.setPublicKey('{$payjp_public_key}');</script>
 <script>
     (function() {
+
+
+        $('.button-area').click(function() {
+          // もしチェックが入っていたら
+          if ($('input[name="cancel_check"]').prop('checked')) {
+            // チェックを外す
+            $('input[name="cancel_check"]').prop('checked', false);
+            $(".button-area").removeClass("checked-input");
+          // もしチェックが外れていたら
+          } else {
+            // チェックを入れる
+            $('input[name="cancel_check"]').prop('checked', true);
+            $(".button-area").addClass("checked-input");
+          }
+        });
+ 
+
+
         // 新しいクレジットカード番号入力の表示・非表示切り替え
         function toggleNewCardNumber(cat) {
             if(cat=="0") {

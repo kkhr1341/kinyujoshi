@@ -12,6 +12,9 @@
 
   <div class="joshikai-attend-el-block">
     <p>参加者一覧</p>
+    {foreach from=$applications item=application name=loopname}
+      <p>{$application.email}</p>
+    {/foreach}
     <table class="table joshikai-attend-detail-table">
 
       <!-- 参加者のループ -->

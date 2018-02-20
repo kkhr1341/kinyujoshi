@@ -21,7 +21,7 @@
 
       <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>女子会の参加方法を12月5日より変更いたしました。参加方法はこちらより</p>
 
-      <div class="kinyu-event-list joshikai-main-el">
+      <div id="joshikai-list" class="kinyu-event-list joshikai-main-el">
 
         <p class="kinyu-event-info-title">女子会一覧</p>
         <ul>
@@ -95,9 +95,17 @@
               <div class="border-top"></div>
               <p class="main-title">毎週木曜日夜、お金についてざっくばらんにおしゃべり。女子会スタイルで”金融”の基本をゆる～くたのしく勉強しています。</p>
               <p class="description">女子会内容は週によって変わります。毎月1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり、特別な場所で開催する"特別女子会"も不定期で開催しています。また、コミュニティ活動を通じて、まちづくりやスペースの有効活用にも貢献しています。</p>
+              <a class="link-to" href="#joshikai-list">直近の女子会はこちら</a>
             </div>
           </div>
         </div>
+
+        <div class="joshikai-held-area">
+          <p class="joshikai-held-area-title">ー 主に女子会を開催している場所 ー</p>
+
+        </div>
+
+
       </div>
 
       <div class="special-event-list joshikai-main-el">

@@ -278,7 +278,7 @@
 .kinyu-sp-navi .inner {
   width: 100%;
   margin: 0 auto;
-  padding: 60px 0px 0px;
+  padding: 70px 0px 0px;
 }
 .kinyu-sp-navi .inner li {
   width: 96%;
@@ -301,7 +301,7 @@
   width: 42px;
   height: 42px;
   position: fixed;
-  top: 8px;
+  top: 20px;
   left: 50%;
   margin-left: -21px;
 }
@@ -593,7 +593,7 @@
 }
 .kinyu-sp-introduction p {
   font-size: 11px;
-  line-height: 18px;
+  line-height: 20px;
 }
 .kinyu-sp-introduction .main-title {
   width: 54%;
@@ -1226,7 +1226,7 @@
   padding: 0px 0px 24px;
 }
 .about-kinyu-header-contetns-list-el a {
-  height: 120px;
+  height: 135px;
 }
 .about-kinyu-header-contetns-list-el .title-box img {
   width: 100%;
@@ -1382,7 +1382,7 @@
   margin: 16px 0px 10px;
 }
 .about-joshikai .text-box .description {
-  line-height: 18px;
+  line-height: 20px;
   font-size: 11px;
 }
 .about-joshikai .img-box-el-three-el {
@@ -1633,8 +1633,8 @@
   margin-left: -48%;
 }
 .joinus-open-block .inner form .main-title {
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* 決済関連フォーム */
@@ -1957,6 +1957,8 @@ input::-webkit-input-placeholder {
   padding: 4px 12px;
   width: 72%;
   margin: 0 auto;
+  background: #fff;
+  border: none;
 }
 .login-email-container {
   width: 100%;
@@ -1997,7 +1999,7 @@ input::-webkit-input-placeholder {
 .login-contents-form-area .login-btn {
   width: 150px;
   font-size: 12px;
-  padding: 10px 0px;
+  padding: 12px 0px;
 }
 .login-contents-form-area .email-form p {
   text-align: right;
@@ -2008,7 +2010,6 @@ input::-webkit-input-placeholder {
   right: 12px;
   top: 12px;
   padding: 8px 24px;
-  background: #f9f9f9;
 }
 .login-regist-block .login-another-btn {
   background: #e0e0e0;
@@ -2018,7 +2019,7 @@ input::-webkit-input-placeholder {
   padding: 0px;
 }
 .login-btn-list li a {
-  padding: 8px 0px;
+  padding: 12px 0px;
 }
 .regist-sub-description {
   margin-top: 20px;

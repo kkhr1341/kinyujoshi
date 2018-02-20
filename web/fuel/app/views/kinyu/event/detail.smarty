@@ -85,7 +85,7 @@ console.log($resArray02);
       </div>
 
       <div class="first-login-block">
-        <p>まずは、雰囲気を見たい...という方へ</p>
+        <p>＼ まずは、雰囲気を見たい...という方へ ／</p>
         <a href="/joshikai_tickets/{$urlcode}">メンバー登録をせずに参加（初回のみ）</a>
       </div>
     </form>
