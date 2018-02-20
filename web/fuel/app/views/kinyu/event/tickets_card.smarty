@@ -12,10 +12,11 @@
           <ul class="kinyu-credit-list clear">
             <li><img src="/images/event/credit/kinyu-credit-visa.png"></li>
             <li><img src="/images/event/credit/kinyu-credit-master.png"></li>
-            <li><img src="/images/event/credit/kinyu-credit-jcb.png"></li>
+            <!-- <li><img src="/images/event/credit/kinyu-credit-jcb.png"></li> -->
             <li><img src="/images/event/credit/kinyu-credit-amex.png"></li>
             <li><img src="/images/event/credit/kinyu-credit-diners.png"></li>
           </ul>
+          <p class="sub-credit"><span style="color:#f75e5e;">＊</span>JCBカードも近日中に対応できる予定です。</p>
         </div>
 
         <div class="fee-open-el">
@@ -66,15 +67,25 @@
           {/if}
         </div>
 
-
         <div class="cancel-block">
-          <p class="cancel-title">キャンセルポリシー</p>
-          <p class="pc cancel-description">女子会お申込後のキャンセルは受け付けいたしますが、所定のキャンセル料をいただきます。<br>イベント実施3日前までのキャンセルは無料、それ以降のキャンセルは全額返金不可となります。<br>また、イベントによっては申込と同時にキャンセル料が発生する場合がございます。<br>弊社都合でイベントが実施できない場合は、全額返金させていただきますので、ご安心くださいませ。</p>
-          <p class="sp cancel-description">女子会お申込後のキャンセルは受け付けいたしますが、所定のキャンセル料をいただきます。イベント実施3日前までのキャンセルは無料、それ以降のキャンセルは全額返金不可となります。また、イベントによっては申込と同時にキャンセル料が発生する場合がございます。弊社都合でイベントが実施できない場合は、全額返金させていただきますので、ご安心くださいませ。</p>
+
+          <p class="cancel-title">女子会のお約束事</p>
+
+          <ul class="cancel-block-list">
+            <li>きんゆう女子。のテーマは、「正しい情報をシェアすることで、おかねにとらわれず自由に等身大で生きる」をコンセプトに、みなさま一人一人が「おかね」に関するリテラシーを向上させ、自分らしいライフスタイルを送ることを目指したコミュニティです。</li>
+            <li>みなさまが安心して女子会に参加できるために、ゲスト及び参加者同士での営業や勧誘行為はしないでください。</li>
+            <li>きんゆう女子。会は、個人のための女子会です。企業の見学・視察目的などはご遠慮ください。</li>
+            <li>きんゆう女子。では、企業の特定商品の勧誘や宣伝などを行わない代わりに、みなさまからいただいたアンケートなどを女性向けサービス向上に真摯に取り組んでいる企業に提供し、今後の"金融"の発展に活かしていただくことで、みなさまが安心して交流、勉強できる場を提供しております。</li>
+            <li>女子会の際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
+          </ul>
+
+
+
+
           <p class="button-area">
             <input type="checkbox" name="cancel_check" id="cancel_check">
             <label for="cancel_check" class="checkbox"></label>
-            <span>キャンセルポリシーに同意する。</span>
+            <span>女子会のお約束事に同意する。</span>
           </p>
         </div>
 
