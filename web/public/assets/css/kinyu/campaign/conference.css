@@ -1782,8 +1782,8 @@
   line-height: 18px;
 }
 .daijoshikai2018-attention li .main-title {
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .daijoshikai2018-attention li .description {
   font-size: 13px;
@@ -1834,7 +1834,9 @@
 .conference-access-description {
   padding: 0px 5%;
 }
-
+.daijoshikai2018-attention {
+  width: 92%;
+}
 .fix-application-button {
   font-family: 'utsukushi';
   position: fixed;
