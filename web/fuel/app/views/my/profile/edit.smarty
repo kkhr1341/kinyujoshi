@@ -108,6 +108,7 @@ $(function(){
         $(".loader-block").fadeIn(500);
 		ajax.post(url, params, function(data){
               ts.success("保存しました");
+              location.href = "/my/profile";
     		})
             .done(function(data) {
                 $(".loader-block").fadeOut(500);
