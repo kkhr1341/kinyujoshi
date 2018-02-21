@@ -296,7 +296,7 @@ $(function(){
             if (after_login_url) {
               location.href = after_login_url;
             } else {
-              location.href = "/my";
+              location.href = "/regist_complete";
             }
           })
           .done(function(data) {
