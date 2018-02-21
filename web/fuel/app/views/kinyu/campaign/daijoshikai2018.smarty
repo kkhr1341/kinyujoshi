@@ -14,7 +14,7 @@
       </div>
       <div class="data-box-block">
         <div class="data-box">
-          <p class="data">2018. <span>3/1</span>（木）<br>19:00〜20:45</p>
+          <p class="data">2018. <span>3/1</span>（木）<br>19:30〜21:45</p>
         </div>
         <div class="tag-block">
           <ul class="pc">
@@ -41,8 +41,6 @@
     <div class="kinyu-conference-el countdown-first-block">
       <div class="inner">
         <div class="countdown-first">
-          <!-- <div class="countdown-first-text text01">大女子会まで</div>
-          <div class="countdown-first-text text02">あと<div id='timerOlympic2'></div>♪</div> -->
           <img class="top-deco-left" src="/images/content/daijoshikai2018/top-deco-left.png">
           <img class="top-deco-right" src="/images/content/daijoshikai2018/top-deco-right.png">
           <div class="countdown-first-text text01">毎日がんばるわたしに。</div>
@@ -122,21 +120,9 @@
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1707.JPG) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198604_10210686965343649_1940220268_n.jpg) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1686.JPG) center center / cover no-repeat;"></li>
-            <!--<li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17142257_10210683420895040_149996863_o%20211111.jpg) center center / cover no-repeat;"></li>
-            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1693.JPG) center center / cover no-repeat;"></li>
-            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1698.JPG) center center / cover no-repeat;"></li>
-            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1701.JPG) center center / cover no-repeat;"></li> -->
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198577_10210683420935041_990254035_n.jpg) center center / cover no-repeat;"></li>
-            <!-- <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17197982_10210683420735036_898227126_n.jpg) center center / cover no-repeat;"></li>
-            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/FullSizeRender%20%282%29.jpg) center center / cover no-repeat;"></li>
-            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1690.JPG) center center / cover no-repeat;"></li>
-            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/FullSizeRender%20%281%29.jpg) center center / cover no-repeat;"></li> -->
           </ul>
         </div>
-
-        <!-- <div class="conference-report-el report-download">
-          <p id="document-open">ビジネス向けレポートはこちら</p>
-        </div> -->
 
         <script>
           $("#document-open").click(function() {
@@ -160,7 +146,8 @@
         </div>
         <h2>コンセプト</h2>
         <div class="text-description">
-          <div class="text-description-title">お金にいい運気の町で、おかねにいいこと。ひみつの大女子会で、お金のこと前向きに考えよう！<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span></div>      
+          <div class="text-description-title pc">お金にいい運気の町で、おかねにいいこと。<br>ひみつの大女子会で、お金のこと前向きに考えよう！<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span></div>
+          <div class="text-description-title sp">お金にいい運気の町で、おかねにいいこと。ひみつの大女子会で、お金のこと前向きに考えよう！<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span></div> 
           <p class="pc">            
             東証さんってどんなところ？<br>
             金運スポットやワクワクがいっぱい？<br>
@@ -230,12 +217,12 @@
 
             <li>
               <div class="event-special-el clear">
-                <<!-- div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1685.JPG) center center / cover no-repeat;"></div> -->
                 <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198604_10210686965343649_1940220268_n.jpg) center left / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">01</p>
                   <div class="text-main">
-                    <h3><span>3/1 (木) 19:00〜</span>おかねにいい運気の集まる場所で開催♪<br>〜兜町、東証Arrows＆ひみつの金運スポット〜</h3>
+                    <h3 class="pc">おかねにいい運気の集まる場所で開催♪<br>〜兜町、東証Arrows＆ひみつの金運スポット〜</h3>
+                    <h3 class="sp">おかねにいい運気の集まる場所で開催♪ 〜兜町、東証Arrows＆ひみつの金運スポット〜</h3>
                     <p>日本橋兜町は、おかねにいい運気の集まるまちです。その真ん中にある、東証さんもちゃんと、風水的に運の流れがよくなるように設計されているんです。<br>東証さん内のパワースポットだけでなく、女子会の後には日本橋兜町界隈の金運スポットを巡るナイトツアーを人数限定で行います。</p>
                   </div>
                 </div>
@@ -248,7 +235,8 @@
                 <div class="text-box">
                   <p class="text-number">02</p>
                   <div class="text-main">
-                    <h3>みんな投資とかお金のこと、どうしてる？ 〜考えてることシェアしましょう〜</h3>
+                    <h3 class="pc">みんな投資とかお金のこと、どうしてる？<br>〜考えてることシェアしましょう〜</h3>
+                    <h3 class="sp">みんな投資とかお金のこと、どうしてる？ 〜考えてることシェアしましょう〜</h3>
                     <p>はじめてさんが、気になるみんなの事情。最初にリアルアンケートでシェアする時間を設けます。そんなもやもやや不安を応援してくださるのは、東証の取締役、常務執行役員の岩永さん。熱いメッセージをいただきます。<br>また、個人のスキルを生かして活躍する3人の女性ゲストもお迎えして自分のスタイルをどのように見つけていくのか、ファッションとお金の観点から考えるパネルディスカッションをいたします。</p>
                   </div>
                 </div>
@@ -257,12 +245,12 @@
 
             <li>
               <div class="event-special-el clear">
-                <!-- <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198604_10210686965343649_1940220268_n.jpg) center left / cover no-repeat;"></div> -->
                 <div class="img-box" style="background:url(/images/content/school_public/school_public02_main.jpg) left top / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">03</p>
                   <div class="text-main">
-                    <h3>一歩進んだ、きんゆう女子。学院の生徒さんの卒業をお祝いしよう！次は、わたし</h3>
+                    <h3 class="pc">一歩進んだ、きんゆう女子。学院の生徒さんの<br>卒業をお祝いしよう！次は、わたし♪</h3>
+                    <h3 class="sp">一歩進んだ、きんゆう女子。学院の生徒さんの卒業をお祝いしよう！次は、わたし♪</h3>
                     <p>1月から開校している、「きんゆう女子。学院」の最終日が3月1日。すでに一歩進んだ学院の生徒さんの卒業をみんなでお祝いしましょう！<br>そして、どのようにステップアップしたのか、おしゃべりしながら未来の自分をイメージしていきましょう。卒業式では、角帽を投げるのですがその角帽の意味にも注目してくださいね♪</p>
                     <a href="/school_jpx02" target="_blank">きんゆう女子。学院って？</a>
                   </div>
@@ -272,12 +260,12 @@
 
             <li>
               <div class="event-special-el clear">
-                <!-- <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center right / cover no-repeat;"></div> -->
                 <div class="img-box" style="background:url(/images/content/daijoshikai2018/event-special-el1.jpg) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">04</p>
                   <div class="text-main">
-                    <h3>ひみつの金運スポットで、貸切パーティ♡ 東証さん、優しい…♡</h3>
+                    <h3 class="pc">ひみつの金運スポットで、貸切パーティ<br>東証さん、優しい…♡</h3>
+                    <h3 class="sp">ひみつの金運スポットで、貸切パーティ 東証さん、優しい…♡</h3>
                     <p>そして、一番のポイントは、普段入ることができない東証さんのひみつの金運スポット。贅沢に貸切させていただいて、パーティです。<br>フルーツデザートやスパークリングワインは今回特別に。いつも頑張る女性のために、癒しとワクワクのちょっとしたごほうびの時間にしたいと思っています。
                     </p>
                   </div>
@@ -285,9 +273,8 @@
               </div>
             </li>
 
-            <li>
+            {*<li>
               <div class="event-special-el clear">
-                <!-- <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center right / cover no-repeat;"></div> -->
                 <div class="img-box" style="background:url(/images/content/daijoshikai2018/character.jpg) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">05</p>
@@ -304,7 +291,7 @@
                   </div>
                 </div>
               </div>
-            </li>
+            </li>*}
 
           </ul>
         </div>
@@ -322,23 +309,6 @@
         </div>
         <h2>イベントスケジュール</h2>
         <div class="schedule-block">
-          <!-- <ul class="schedule-block-content">
-            <li>
-              <h3><span>3/1</span> (木)のスケジュール</h3>
-              <img class="pc schedule-img" src="/images/content/conference/schedule_33.jpg">
-              <img class="sp schedule-img" src="/images/content/conference/schedule_33_sp.jpg">
-              </li>
-            <li>
-              <h3><span>3/4</span> (土)のスケジュール</h3>
-              <img class="pc schedule-img" src="/images/content/conference/schedule_34.jpg">
-              <img class="sp schedule-img" src="/images/content/conference/schedule_34_sp.jpg">
-            </li>
-            <li>
-              <h3><span>3/5</span> (日)のスケジュール</h3>
-              <img class="pc schedule-img" src="/images/content/conference/schedule_35.jpg">
-              <img class="sp schedule-img" src="/images/content/conference/schedule_35_sp.jpg">
-            </li>
-          </ul> -->
 
           <div class="schedule-block-joshikai">
 
@@ -362,7 +332,7 @@
                   <td>
                     <p class="main-title">大女子会スタート♪ </p>
                     <div class="description">
-                      <p>自己紹介、きんゆう女子。って何してるの？ リアルタイムアンケート。</p>
+                      <p>自己紹介、きんゆう女子。って何してるの？ リアルタイムアンケート（教えて、きん女。）</p>
                     </div>
                   </td>
                 </tr>
@@ -434,19 +404,8 @@
         <h2>取引開始<span> まで...</span></h2>
         <div class="timelimit-block">
           <div id='timerOlympic'>
-            <!-- <div class="yycountdown-box 1">
-              <div class="yyc-box yyc-day"></div>
-              <span class="yyc-subbox yyc-day-text">日</span>
-              <span class="yyc-box yyc-hou"></span>
-              <span class="yyc-subbox yyc-hou-text">時間</span>
-              <span class="yyc-box yyc-min"></span>
-              <span class="yyc-subbox yyc-min-text">分</span>
-              <span class="yyc-box yyc-sec"></span>
-              <span class="yyc-subbox yyc-sec-text">秒</span>
-            </div> -->
           </div>
         </div>
-        <!-- <img class="finish-co" src="/images/content/conference/finish-co.png"> -->
         <style>
           .finish-co {
             margin-top:24px; 
@@ -470,61 +429,17 @@
       <div class="img-inner">
         <img class="balloon-member" src="/images/content/conference/balloon-member.png">
         <h2>第2回 ひみつの大女子会♪<br>お申込みはこちら</h2>
-        <!-- <div class="banner">
-          <p class="regist-btn"><span style="color:#f9b6b6;">＊</span>現在準備中</p>
-        </div> -->
-        <!-- <div class="finish-application">
-          <p><span style="color:#ef6666;">＊</span>お申し込みは締め切りました</p>
-          <style>
-            .finish-application p {
-              font-size: 30px;
-              line-height: 30px;
-              padding: 36px 0px;
-            }
-            @media screen and (max-width:767px) {
-              .finish-application p {
-                font-size: 18px;
-                line-height: 18px;
-                padding: 16px 0px;
-              }
-              .kinyu-conference-el .img-inner .balloon-member {
-                display: none;
-              }
-            }
-          </style>
-        </div> -->
-
         <div class="conference-application clear">
           <div class="application-left">
-            <p class="application-date">【3/1(木) 19:00〜20:45】</p>
+            <p class="application-date">【3/1(木) 19:30〜21:45】</p>
             <h3>Special企画☆ ひみつの大女子会<br>＠東証Arrows(ナイトツアーも♪)</h3>
             <div class="img-box" style="  background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;"></div>
             <p class="application-fee">参加費：2,000<span>円</span><br>(<span style="color:#fda8b7;">＊</span>お食事・ドリンク代込み)</p>
-            <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/ryn72Bzm">お申し込みはこちら</a>
+            <a class="application-button" target="_blank" href="http://daijoshikai2018.peatix.com/">お申し込みはこちら</a>
           </div>
-          <!-- <div class="application-right">
-            <p class="application-date">【3/4(土) 11:00〜19:00】</p>
-            <h3>今までの女子会総まとめ<br>〜おかねをふやすあれこれ〜</h3>
-            <div class="img-box" style="  background:url(/images/content/conference/15355695_1212387078827868_7936091575312601603_n.png) center center / cover no-repeat;"></div>
-            <p class="pc application-fee">1dayフリーパス：2,000<span>円</span><br>(100名限定)</p>
-            <p class="sp application-fee">1dayフリーパス：<br>2,000<span>円</span><br>(100名限定)</p>
-            <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/QiALhIkM">お申し込みはこちら</a>
-          </div> -->
         </div>
-
-        <!-- <div class="conference-application conference-application-single clear">
-          <div class="application-right">
-            <p class="application-date">【3/5(日) 11:00〜14:00】</p>
-            <h3>東証主催♪株主優待展の訪問ツアー！兜町・茅場町名物ランチ付き</h3>
-            <div class="img-box" style="  background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;"></div>
-            <p class="pc application-fee">参加チケット：3,000<span>円</span><br>(30名限定)</p>
-            <p class="sp application-fee">参加チケット：<br>3,000<span>円</span><br>(30名限定)</p>
-            <a class="application-button" target="_blank" href="https://spike.cc/shop/TOETHELINE/products/vUhQRFhJ">お申し込みはこちら</a>
-          </div>
-        </div> -->
-
-        <a class="conference-el-regist" href="/regist" target="_blank">メンバー登録の方はこちら</a>
       </div>
+      <a class="conference-el-regist" href="/regist" target="_blank">メンバー登録の方はこちら</a>
     </div>
 
     <!-- イベント予定日まで -->
@@ -556,11 +471,8 @@
               </a></li>
             </ul>
           </div>
-
         </div>
       </div>
-    </div>
-
     *}
 
     <!-- アクセス -->
@@ -592,24 +504,6 @@
                 <div id="area-google-map" style="height:220px;"></div>
               </div>
             </li>
-
-            <!-- <li class="conference-access-sarvador">
-              <div class="conference-access-title">
-                <h3>CAFE SARVADOR</h3>
-              </div>
-              <div class="img-box">
-                <img class="access-img" src="/images/content/conference/cafe-img.jpg">
-              </div>
-              <div class="conference-access-description">
-                <p><span>住所</span>：東京都中央区日本橋茅場町1-5-8 東京証券会館1階</p>
-                <p><span>アクセス</span>：茅場町駅8番出口直結</p>
-                <p><span>TEL</span>：03-5623-3105</p>
-                <p><span>URL</span>：<a href="http://cafe-salvador.com/" target="_blank">http://cafe-salvador.com/</a></p>
-              </div>
-              <div class="map-block">
-                <div id="area-google-map" style="height:220px;"></div>
-              </div>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -644,33 +538,6 @@
   </div>
 </div>
 
-
-<div class="conference-document-form">
-  <div class="inner">
-    <p class="title">『第1回 週末投資宣言♪』の資料はこちら</p>
-    <p id="document-open-closebtn">×</p>
-
-    {*<div class="form-group">
-      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> お名前</label>
-      <input type="text" id="name" class="form-control" placeholder="">
-    </div>
-    <div class="form-group">
-      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> 会社名</label>
-      <input type="text" id="company" class="form-control" placeholder="">
-    </div>
-    <div class="form-group">
-      <label class="form-title"><span style="color:rgba(255, 242, 0, 0.5);">◆</span> メールアドレス</label>
-      <input type="text" id="email" class="form-control" placeholder="">
-    </div>
-
-    <div class="form-btn tx-center">
-      <button class="btn btn-kinyu" type="button" id="save">資料をダウンロードする</button>
-    </div>*}
-    <img class="coming_soon02" src="/images/content/conference/coming_soon02.png">
-
-  </div>
-</div>
-
 <div id="conference-document-form-after">
   <div class="inner">
     <p id="document-form-after-closebtn">×</p>
@@ -686,7 +553,16 @@
   </div>
 </div>
 
+<a class="sp fix-application-button" target="_blank" href="http://daijoshikai2018.peatix.com/">お申し込みはこちら</a>
 
+
+<style>
+@media screen and (max-width: 640px) {
+.singlepage-footer {
+  padding: 60px 0px 120px;
+}
+}
+</style>
 
 <script>
   $(function() {

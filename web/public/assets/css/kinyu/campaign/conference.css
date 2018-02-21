@@ -5,8 +5,6 @@
   margin: 0 auto;
   text-align: center;
   font-family: 'utsukushi';
-  background: #fdfdfd;
-  background: #f2fbfa;
   background: #F2FBFA;
 }
 .conference-container-inner {
@@ -1800,7 +1798,7 @@
 }
 .kinyu-daijoshikai2018-container .conference-application .application-left .application-button {
   width: 80%;
-  font-size: 15px;
+  font-size: 14px;
 }
 .kinyu-daijoshikai2018-container .kinyu-conference-el .conference-el-regist {
   font-size: 13px;
@@ -1827,6 +1825,22 @@
 }
 .conference-access-description {
   padding: 0px 5%;
+}
+
+.fix-application-button {
+  font-family: 'utsukushi';
+  position: fixed;
+  width: 96%;
+  bottom: 64px;
+  left: 50%;
+  margin-left: -48%;
+  background: gray;
+  text-align: center;
+  background-color: #fdc2c2;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0px;
+  z-index: 1005;
 }
 
 }
