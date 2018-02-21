@@ -38,16 +38,15 @@
 
   <div class="conference-container-inner">
 
-    <!-- レポ -->
-    <!-- <img class="finish-co" src="/images/content/conference/finish-co02.png"> -->
-
     <div class="kinyu-conference-el countdown-first-block">
       <div class="inner">
         <div class="countdown-first">
-          <div class="countdown-first-text text01">大女子会まで</div>
-          <div class="countdown-first-text text02">あと<div id='timerOlympic2'></div>♪</div>
+          <!-- <div class="countdown-first-text text01">大女子会まで</div>
+          <div class="countdown-first-text text02">あと<div id='timerOlympic2'></div>♪</div> -->
           <img class="top-deco-left" src="/images/content/daijoshikai2018/top-deco-left.png">
           <img class="top-deco-right" src="/images/content/daijoshikai2018/top-deco-right.png">
+          <div class="countdown-first-text text01">毎日がんばるわたしに。</div>
+          <div class="countdown-first-text text02">パワーチャージ！</div>
         </div>
       </div>
     </div>
@@ -107,12 +106,11 @@
         *}
 
         <div class="conference-report-el gallery-list">
-          <h3>ギャラリー(前回の写真)</h3>
           <ul class="main-out-event-gallery-list clear">
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1715111.JPG) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1685.JPG) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1708.JPG) center left / cover no-repeat;"></li>
-            <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1683111.JPG) center center / cover no-repeat;"></li>
+            <li style="background:url(/images/content/daijoshikai2018/gallery-list01.jpg) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1695.JPG) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1696.JPG) center center / cover no-repeat;"></li>
             <li style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1706.JPG) center center / cover no-repeat;"></li>
@@ -162,48 +160,56 @@
         </div>
         <h2>コンセプト</h2>
         <div class="text-description">
-          <div class="text-description-title">『金融ワカラナイ女子のための夜』<br>第2回 ひみつの大女子会♪<br>〜おかねをふやそう〜<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span><!-- <span>(仮)</span> --></div>          
-          <p class="pc">
-            〜きんゆう女子。は2018年3月3日で設立2周年を迎えます。〜
-            <span style="display:block;height:16px;"></span>
+          <div class="text-description-title">お金にいい運気の町で、おかねにいいこと。ひみつの大女子会で、お金のこと前向きに考えよう！<br><span>2018 Spring <span style="color:#fda8b7;">＊</span></span></div>      
+          <p class="pc">            
             東証さんってどんなところ？<br>
-            金運スポットやワクワクがいっぱい詰まっている？
+            金運スポットやワクワクがいっぱい？<br>
+            無機質な数字ばっかり？
             <span style="display:block;height:16px;"></span>
-            ニュース番組でくるくる回る掲示板をみたことはあるけれど、<br>
-            建物の中は、実際どんなところなんだろう・・・
+            ニュース番組などでみかける、くるくる回る掲示板。<br>
+            テレビでは見たことはあるけれど、建物の中はどんなところ？
             <span style="display:block;height:16px;"></span>
-            平日16:00までは実は誰でも見学できる、東証さん。<br>
-            企業の上場のタイミングに合わせて見学することも実はできるんです。
+            実は平日16:00までは誰でも見学ができる東証さん。<br>
+            タイミングを合わせれば、企業の上場するシーンも見学することもできます。
             <span style="display:block;height:16px;"></span>
-            そんな、東証さんの夜の時間帯におじゃまします！<br>
-            贅沢に貸切って「ひみつの大女子会」を開催いたします。
+            そんな東証さんの夜の時間帯に、おじゃまして<br>
+            贅沢に貸し切って、大納会・大発会ならぬ、大女子会を開催します。
             <span style="display:block;height:16px;"></span>
-            女子会では、きんゆう女子。で学んでいるメンバーの成長を<br>
-            シェアしたり、ゲストをお招きして「おかね」について学びます。
+            毎日がんばる女性たちに、お金のことを考える時間と<br>
+            少しでも癒しとワクワクの体験を作れるよう、企画した手作りの大女子会。
             <span style="display:block;height:16px;"></span>
-            パーティではスパークリングワインの乾杯から始まり、<br>
-            楽しい会話のおともに軽食もあります。
+            みんな投資って何してる？何もできてないけど大丈夫？<br>
+            一歩進んだ人ってどう行動したの？
             <span style="display:block;height:16px;"></span>
-            "あそび心"と"きんゆう心"を持って楽しく過ごしましょう♡<br>
-            2周年を記念して、特別なゲストからメッセージがあるかもしれません。
+            ワカラナイ女子と、ちょっとワカル女子でおしゃべりしたり<br>
+            自分のスキルを生かして等身大に生きるゲストの話を聞いたり<br>
+            楽しい時間を作りたいと思います。
+            <span style="display:block;height:16px;"></span>
+            パーティは、東証内のいい運気があつまる、パワースポットで。<br>
+            スパークリングワインも特別にご用意。
+            <span style="display:block;height:16px;"></span>
+            "あそび心"と"きんゆう心"を持って、<br>
+            年に一度の大女子会、一緒に楽しみましょう。
           </p>
 
           <p class="sp">
-            〜きんゆう女子。は2018年3月3日で設立2周年を迎えます。〜
+            東証さんってどんなところ？金運スポットやワクワクがいっぱい？無機質な数字ばっかり？
             <span style="display:block;height:10px;"></span>
-            東証さんってどんなところ？金運スポットやワクワクがいっぱい詰まっている？
+            ニュース番組などでみかける、くるくる回る掲示板。テレビでは見たことはあるけれど、建物の中はどんなところ？
             <span style="display:block;height:10px;"></span>
-            ニュース番組でくるくる回る掲示板をみたことはあるけれど、建物の中は、実際どんなところなんだろう・・・
+            実は平日16:00までは誰でも見学ができる東証さん。タイミングを合わせれば、企業の上場するシーンも見学することもできます。
             <span style="display:block;height:10px;"></span>
-            平日16:00までは実は誰でも見学できる、東証さん。企業の上場のタイミングに合わせて見学することも実はできるんです。
+            そんな東証さんの夜の時間帯に、おじゃまして贅沢に貸し切って、大納会・大発会ならぬ、大女子会を開催します。
             <span style="display:block;height:10px;"></span>
-            そんな、東証さんの夜の時間帯におじゃまします！贅沢に貸切って「ひみつの大女子会」を開催いたします。
+            毎日がんばる女性たちに、お金のことを考える時間と少しでも癒しとワクワクの体験を作れるよう、企画した手作りの大女子会。
             <span style="display:block;height:10px;"></span>
-            女子会では、きんゆう女子。で学んでいるメンバーの成長をシェアしたり、ゲストをお招きして「おかね」について学びます。
+            みんな投資って何してる？何もできてないけど大丈夫？一歩進んだ人ってどう行動したの？
             <span style="display:block;height:10px;"></span>
-            パーティではスパークリングワインの乾杯から始まり、楽しい会話のおともに軽食もあります。
+            ワカラナイ女子と、ちょっとワカル女子でおしゃべりしたり、自分のスキルを生かして等身大に生きるゲストの話を聞いたり、楽しい時間を作りたいと思います。
             <span style="display:block;height:10px;"></span>
-            "あそび心"と"きんゆう心"を持って楽しく過ごしましょう♡ 2周年を記念して、特別なゲストからメッセージがあるかもしれません。
+            パーティは、東証内のいい運気があつまる、パワースポットで。スパークリングワインも特別にご用意。
+            <span style="display:block;height:10px;"></span>
+            "あそび心"と"きんゆう心"を持って、年に一度の大女子会、一緒に楽しみましょう。
           </p>
         </div>
       </div>
@@ -218,18 +224,19 @@
           <div class="sub-title-border01"></div>
           <div class="sub-title-border02"></div>
         </div>
-        <h2><div class="pc">パワーチャージできるスペシャル企画♪</div><div class="sp">パワーチャージできる<br>スペシャル企画♪</div></h2>
+        <h2><div class="pc">パワーチャージできるスペシャル企画♪</div><div class="sp">パワーチャージできる<br>ポイント♪</div></h2>
         <div class="event-special-block">
           <ul>
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1685.JPG) center center / cover no-repeat;"></div>
+                <<!-- div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1685.JPG) center center / cover no-repeat;"></div> -->
+                <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198604_10210686965343649_1940220268_n.jpg) center left / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">01</p>
                   <div class="text-main">
-                    <h3><span>3/1 (木) 19:00〜</span><br>「わたしを知る」トークセッション＆シンデレラ企画進捗</h3>
-                    <p>「わたしを知る」をテーマにゲストをお呼びしたトークセッションを行います。ゲストや内容は当日まで秘密です♡<br>また、現在進行中の「シンデレラ企画＊」の進捗発表も行いたいと思っております。今回は、2回目ということもあり、メンバーの成長が見える華やかな女子会にしたいと思います。</p>
+                    <h3><span>3/1 (木) 19:00〜</span>おかねにいい運気の集まる場所で開催♪<br>〜兜町、東証Arrows＆ひみつの金運スポット〜</h3>
+                    <p>日本橋兜町は、おかねにいい運気の集まるまちです。その真ん中にある、東証さんもちゃんと、風水的に運の流れがよくなるように設計されているんです。<br>東証さん内のパワースポットだけでなく、女子会の後には日本橋兜町界隈の金運スポットを巡るナイトツアーを人数限定で行います。</p>
                   </div>
                 </div>
               </div>
@@ -237,12 +244,12 @@
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center right / cover no-repeat;"></div>
+                <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/IMG_1685.JPG) center right / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">02</p>
                   <div class="text-main">
-                    <h3>東証見学 & ひみつの金運スポットでごはん（軽食）</h3>
-                    <p>トークセッション終了後は、夜の東証見学を行います。見学後は東証内のひみつの金運スポットで軽食を取りながらの女子会。なかなか身の回りの方には聞けない「おかね」のお話をみんなでしましょう！</p>
+                    <h3>みんな投資とかお金のこと、どうしてる？ 〜考えてることシェアしましょう〜</h3>
+                    <p>はじめてさんが、気になるみんなの事情。最初にリアルアンケートでシェアする時間を設けます。そんなもやもやや不安を応援してくださるのは、東証の取締役、常務執行役員の岩永さん。熱いメッセージをいただきます。<br>また、個人のスキルを生かして活躍する3人の女性ゲストもお迎えして自分のスタイルをどのように見つけていくのか、ファッションとお金の観点から考えるパネルディスカッションをいたします。</p>
                   </div>
                 </div>
               </div>
@@ -250,12 +257,14 @@
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198604_10210686965343649_1940220268_n.jpg) center left / cover no-repeat;"></div>
+                <!-- <div class="img-box" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/17198604_10210686965343649_1940220268_n.jpg) center left / cover no-repeat;"></div> -->
+                <div class="img-box" style="background:url(/images/content/school_public/school_public02_main.jpg) left top / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">03</p>
                   <div class="text-main">
-                    <h3>かぶと町金運ナイトツアー（30名限定）</h3>
-                    <p>東証内にある秘密の金運スポットでの軽食が済んだら、兜町にある金運スポット2箇所を巡ります。どこに行くかは当日のお楽しみ♪</p>
+                    <h3>一歩進んだ、きんゆう女子。学院の生徒さんの卒業をお祝いしよう！次は、わたし</h3>
+                    <p>1月から開校している、「きんゆう女子。学院」の最終日が3月1日。すでに一歩進んだ学院の生徒さんの卒業をみんなでお祝いしましょう！<br>そして、どのようにステップアップしたのか、おしゃべりしながら未来の自分をイメージしていきましょう。卒業式では、角帽を投げるのですがその角帽の意味にも注目してくださいね♪</p>
+                    <a href="/school_jpx02" target="_blank">きんゆう女子。学院って？</a>
                   </div>
                 </div>
               </div>
@@ -263,12 +272,34 @@
 
             <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/school_public/school_public02_main.jpg) left top / cover no-repeat;"></div>
+                <!-- <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center right / cover no-repeat;"></div> -->
+                <div class="img-box" style="background:url(/images/content/daijoshikai2018/event-special-el1.jpg) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">04</p>
                   <div class="text-main">
-                    <h3>第2回 きんゆう女子。学院 卒業式を見学</h3>
-                    <p>正しくお金と向き合うための投資宣言セレモニーを行い、1月から勉強して成長したきんゆう女子。学院の生徒さんの卒業式も行います。トークセッションや女子会では、生徒さんとの交流会もあるので、ぜひ積極的にコミュニケーションをとりましょう♪
+                    <h3>ひみつの金運スポットで、貸切パーティ♡ 東証さん、優しい…♡</h3>
+                    <p>そして、一番のポイントは、普段入ることができない東証さんのひみつの金運スポット。贅沢に貸切させていただいて、パーティです。<br>フルーツデザートやスパークリングワインは今回特別に。いつも頑張る女性のために、癒しとワクワクのちょっとしたごほうびの時間にしたいと思っています。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="event-special-el clear">
+                <!-- <div class="img-box" style="background:url(/images/content/conference/tosyo-kinyu.jpg) center right / cover no-repeat;"></div> -->
+                <div class="img-box" style="background:url(/images/content/daijoshikai2018/character.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="text-number">05</p>
+                  <div class="text-main">
+                    <h3>「きんゆう」ならではの、かわいい特別ゲストにも来ていただきます♪</h3>
+                    <p>ひみつの金運スポットでのパーティでは、特別ゲストとして「とうしくん」と「ふくももちゃん」に来ていただき、会を盛り上げていただきます♪
+                    <span style="display:block;height:12px;"></span>
+                    <span style="font-weight:bold;"><span style="color:#b4cdf5;">◆</span>とうしくん</span><br>
+                    「証券投資の日（10月4日）」のマスコットキャラクターで、10月4日生まれの男の子。兄弟がほかに9頭いるそう♡ 東証のある、日本橋兜町で生まれました。
+                    <span style="display:block;height:8px;"></span>
+                    <span style="font-weight:bold;"><span style="color:#E22880;">◆</span>ふくももちゃん</span><br>
+                    イオン銀行さんの公式キャラクターで、小さいながらお金についてあれこれ勉強中...♡ 将来は森の仲間たちに頼られるファイナンシャルプランナーになるのが夢なんだそうです♪ 実は、きんゆう女子。と同じ、3月3日がお誕生日...！
                     </p>
                   </div>
                 </div>
@@ -315,11 +346,11 @@
               <tbody>
                 <!-- Guest Speech -->
                 <tr class="joshikai-table-el1">
-                  <th><p><span>18:30〜</span></p></th>
+                  <th><p><span>19:00〜</span></p></th>
                   <td>
                     <p class="main-title"><span class="title-b">東証西口にて受付開始</span></p>
                     <div class="description">
-                      <p>西口へのアクセスは<a href="http://www.jpx.co.jp/corporate/jpx-profile/access/#heading_4" target="_blank">こちら</a></p>
+                      <p>早くお越しいただいた方は東証さん見学もできます。<br>西口へのアクセスは<a href="http://www.jpx.co.jp/corporate/jpx-profile/access/#heading_4" target="_blank">こちら</a></p>
                     </div>
                     <div class="attention"><p><span style="color:red;">＊</span>19:00以降はセキュリティ上入館できませんので、ご注意くださいませ。</p></div>
                   </td>
@@ -327,42 +358,31 @@
 
                 <!-- Guest Speech -->
                 <tr class="joshikai-table-el2">
-                  <th><p><span>19:00〜19:15</span></p></th>
+                  <th><p><span>19:30〜</span></p></th>
                   <td>
-                    <p class="main-title">きんゆう女子。学院 卒業式を見学♪</p>
+                    <p class="main-title">大女子会スタート♪ </p>
                     <div class="description">
-                      <p>1月から行われていた "きんゆう女子。学院" の卒業式の見学です♪ ワカラナイ女子が2か月間おかねのことを勉強して成長した姿を皆さんでお祝いしましょう(*´˘`*)♡</p>
+                      <p>自己紹介、きんゆう女子。って何してるの？ リアルタイムアンケート。</p>
                     </div>
                   </td>
                 </tr>
 
                 <!-- Guest Speech -->
                 <tr class="joshikai-table-el3">
-                  <th><p><span>19:15〜19:45</span></p></th>
+                  <th><p><span>20:00〜</span></p></th>
                   <td>
-                    <p class="main-title">「わたしを知る」ゲストのトークセッション</p>
+                    <p class="main-title">東証の常務の方からあつ〜い♪ メッセージ♡<br>きんゆう女子。学院の卒業式セレモニー＆トークセッション <br></p>
                     <div class="description">
-                      <p>現在準備中ですので、楽しみにお待ちください♡</p>
+                      <p>「わたしを知る」をテーマにゲストとのトークセッションを行います。"おかね"と"ファッション"の観点から、自分自身の判断軸を改めて考える時間を設定しました！ </p>
                     </div>
                   </td>
                 </tr>
 
                 <!-- Guest Speech -->
                 <tr class="joshikai-table-el4">
-                  <th><p><span>19:45〜20:00</span></p></th>
+                  <th><p><span>20:40〜</span></p></th>
                   <td>
-                    <p class="main-title">シンデレラ企画の企画進捗発表</p>
-                    <div class="description">
-                      <p>*シンデレラ企画とは、お金も見た目も整えて、前に進みたいきんじょ。ガール7人が、自ら変身していくプログラムです。</p>
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- Guest Speech -->
-                <tr class="joshikai-table-el5">
-                  <th><p><span>20:00〜20:45</span></p></th>
-                  <td>
-                    <p class="main-title">東証内にある、秘密の金運スポットでのパーティ</p>
+                    <p class="main-title">東証の"秘密の金運スポット"でパーティー </p>
                     <div class="description">
                       <p>東証さんの中には実は金運スポットと呼ばれる場所があります♡ 普段は見学コースにもなく見ることがない場所ですが、今回大女子会のために開放していただくことになりました。メンバーと楽しく交流しましょう! みなさんの2018年の金運があがりますように願いながら、スパークリングワインで乾杯しましょう♪</p>
                     </div>
@@ -370,18 +390,13 @@
                 </tr>
 
                 <!-- Guest Speech -->
-                <tr class="joshikai-table-el6">
-                  <th><p><span>20:45</span></p></th>
+                <tr class="joshikai-table-el5">
+                  <th><p><span>21:30〜</span></p></th>
                   <td>
-                    <p class="main-title">終了、東口玄関から自由解散</p>
-                  </td>
-                </tr>
-
-                <!-- Guest Speech -->
-                <tr class="joshikai-table-el7">
-                  <th><p><span>20:45〜21:00頃</span></p></th>
-                  <td>
-                    <p class="main-title">希望の方は、兜町金運ナイトツアーへ♪</p>
+                    <p class="main-title">ひみつの大女子会終了<br>ご希望の方は、一緒に兜町の金運スポット巡るナイトツアーへ<br>（15分ほどの予定）</p>
+                    <div class="description">
+                      <p>ひみつの大女子会後は、希望者の方と日本橋兜町にある金運スポットを巡るナイトツアーを行います。金融の歴史や文化や、これから新しく今れ変わっていく兜町について知りたい...！という方はぜひご参加ください♪</p>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -392,14 +407,14 @@
             <ul>
               <li>
                 <p class="main-title">■ 遅刻・欠席について</p>
-                <p class="description">入館セキュリティの都合上、19:00以降のご入館はできません。<br>遅刻のないよう、お気をつけてお越しください。</p>
+                <p class="description">入館セキュリティの都合上、19:30以降のご入館はできません。<br>遅刻のないよう、お気をつけてお越しください。</p>
               </li>
               <li>
                 <p class="main-title">■ 編集部からのお約束</p>
-                <p class="description">中立なポジションで、質の高いお金の情報を多角的にシェアできる場を提供します。必要なことを必要なだけまとめた情報を用意、シェアいたします。女子会を通じた営業・勧誘はありませんのでご安心ください。<br>また、ご参加いただく方同士でも営業・勧誘はお断りさせていただいております。マナーを守ってご参加いただければと思います。お困りのことがあれば編集部までお問い合わせください。</p>
+                <p class="description">女子会を通じた営業・勧誘はありませんのでご安心ください。<br>また、ご参加いただく方同士でも営業・勧誘はお断りさせていただいております。マナーを守ってご参加いただければと思います。お困りのことがあれば編集部までお問い合わせください。</p>
               </li>
               <li>
-                <p class="description">主催：きんゆう女子。<br>お問い合わせ先：support@kinyu-joshi.jp<br>協賛：株式会社日本取引所グループ/株式会社東京証券取引所</p>
+                <p class="description">主催：きんゆう女子。<br>お問い合わせ先：support@kinyu-joshi.jp<br>協力：株式会社日本取引所グループ/株式会社東京証券取引所、イオンフィナンシャルサービス株式会社</p>
               </li>
             </ul>
           </div>
