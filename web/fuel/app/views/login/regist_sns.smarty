@@ -2,8 +2,8 @@
   <div class="login-add-contents-block">
 
     <!-- Googleアカウントの場合は（Googleアカウントで）に変更 -->
-    <p class="main-title">メンバー登録<span>（Facebookアカウントで）</span></p>
-    <p class="message">みなさまの「きんゆう」のこと教えてください♪</p>
+    <p class="main-title">メンバー登録</p>
+    <p class="message">追加でみなさまの「きんゆう」のことも教えてください♪</p>
 
     <form name="form1">
       <input type="hidden" id="uid" value="{$userdata.uid}">
@@ -22,7 +22,7 @@
 
         <div class="regist-add-form-edit-el">
           <label class="regist-add-form-edit-title">お名前</label>
-          <p class="regist-add-form-edit-subtitle">漢字フルネームでのご入力をお願いします。</p>
+          <p class="regist-add-form-edit-subtitle">漢字フルネームで入力してください。</p>
           <input type="text" id="name" value="{$userdata.name}" class="form-control" placeholder="" value="">
         </div>
 
@@ -220,7 +220,7 @@ $(function(){
     params.introduction = $('#introduction').val();
 
     if (params.uid == "" || params.provider == "") {
-      ts.error("システムに不具合が発生しました。お手数ですが、最初からやり直してください。");
+      ts.error("システムに不具合が発生しました...。お手数ですが、最初からやり直していただけますと嬉しいです。");
       location.href = '/login';
       return false;
     }

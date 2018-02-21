@@ -1,9 +1,8 @@
 <div class="kinyu-single-block">
   <div class="login-add-contents-block">
-
     
-    <p class="main-title">メンバー登録<span>（メールアドレスで）</span></p>
-    <p class="message">以下項目のご入力をお願いします♪</p>
+    <p class="main-title">メンバー登録</p>
+    <p class="message">追加でみなさまの「きんゆう」のことも教えてください♪</p>
 
     <form name="form1">
       <input type="hidden" id="after_login_url" value="{$after_login_url}">
@@ -16,14 +15,14 @@
 
         <div class="regist-add-form-edit-el">
           <label class="regist-add-form-edit-title">パスワード</label>
-          <p class="regist-add-form-edit-subtitle">半角英数字でのご入力をお願いします。</p>
+          <p class="regist-add-form-edit-subtitle">半角英数字6文字以上で入力してください。</p>
           <input type="password" name="password" id="password" class="form-control" placeholder="">
           <input type="password" name="confirm_password" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
         </div>
 
         <div class="regist-add-form-edit-el">
           <label class="regist-add-form-edit-title">お名前</label>
-          <p class="regist-add-form-edit-subtitle">漢字フルネームでのご入力をお願いします。</p>
+          <p class="regist-add-form-edit-subtitle">漢字フルネームで入力してください。</p>
           <input type="text" id="name" class="form-control" placeholder="" value="">
         </div>
 
@@ -208,6 +207,14 @@ $(function(){
     if(password.match(/[A-Za-z0-9]+/)) {
     } else {
       ts.error("パスワードは半角英数字のみで入力してください。");
+      return false;
+    }
+
+    // 正規表現 - ポスワード 6文字以上
+    var pass_check = new RegExp( /^\w{6,}$/);
+    if (pass_check.test(password)) { 
+    }else{
+      ts.error("パスワードは6文字以上で入力してください。");
       return false;
     }
 
