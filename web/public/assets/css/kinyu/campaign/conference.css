@@ -1403,6 +1403,14 @@
   position: relative;
   z-index: 1002;
 }
+.kinyu-daijoshikai2018-container .text-description-title {
+  font-size:18px;
+  line-height:30px;
+  margin-bottom:16px;
+  word-break: break-all;
+  width: 88%;
+  margin: 0 auto;
+}
 .kinyu-daijoshikai2018-container .countdown-first {
   position: relative;
 }
@@ -1830,10 +1838,10 @@
 .fix-application-button {
   font-family: 'utsukushi';
   position: fixed;
-  width: 96%;
-  bottom: 64px;
+  width: 98%;
+  bottom: 59px;
   left: 50%;
-  margin-left: -48%;
+  margin-left: -49%;
   background: gray;
   text-align: center;
   background-color: #fdc2c2;
