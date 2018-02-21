@@ -127,14 +127,25 @@
           
           <div class="form-btn tx-center ">
             <div class="">
+
               <div class="">
-                <p><input type="checkbox" value="" name="editmember" id="" class="form-radio" value="修正を許可する">修正を許可する</p>
+                <p class="admin-member-button-area">
+                  <input type="checkbox" value="" name="editmember" id="editmember">
+                  <label for="editmember" class="checkbox"></label>
+                  <span>修正を許可する</span>
+                </p>
                 <button class="btn btn-kinyu" type="button" id="save">メンバー情報を更新する</button>
               </div>
+
               <div style="margin-top:50px;">
-                <p><input type="checkbox" value="" name="deletemember" id="" class="form-radio" value="削除を許可する">削除を許可する</p>
-                <button class="btn btn-delete" type="button" id="delete">削除する。</button>
+                <p class="admin-member-button-area">
+                  <input type="checkbox" value="" name="deletemember" id="deletemember">
+                  <label for="deletemember" class="checkbox"></label>
+                  <span>削除を許可する</span>
+                </p>
+                <button class="btn btn-delete" type="button" id="delete">メンバー情報を更新する</button>
               </div>
+
           </div>
         </div>
       </form>
