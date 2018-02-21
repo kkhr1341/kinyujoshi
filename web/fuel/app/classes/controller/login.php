@@ -138,4 +138,23 @@ class Controller_Login extends Controller_KinyuBase
         }
         $this->template->contents = View::forge('login/resetting_pass.smarty', $this->data);
     }
+
+    public function action_complete()
+    {
+        $this->template->title = 'メンバー登録ありがとうございます！｜きんゆう女子。';
+        $this->template->description = '';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+        //$this->template->today = date("Y年n月");
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        }
+        $this->template->contents = View::forge('login/complete.smarty', $this->data);
+
+    }
 }

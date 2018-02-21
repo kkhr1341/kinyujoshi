@@ -1,0 +1,32 @@
+<div class="kinyu-single-block">
+  <div class="kinyu-joshikai-detail-el-block">
+    <div class="joshikai-complete-message">
+      <h2>メンバー登録ありがとうございます♪</h2>
+      <p class="pc">
+      	ご入力いただいたメールアドレス宛にご確認メールをお送りしました。	<br><br>
+      	きんゆう女子。では、「おかね」について、ゆるく楽しく、<br>
+      	でもしっかりとお勉強できる女子会を開催しています。<br>
+      	気になる内容の女子会がありましたら、是非チェックしてみてください♪<br><br>
+      	今後も編集部より、きんゆう女子。の女子会や活動について、<br>
+  			不定期でメールをお送りさせていただきます。楽しみにお待ちくださいませ。
+  		</p>
+      <p class="sp">
+      	ご入力いただいたメールアドレス宛に<br>ご確認メールをお送りしました。
+      	<span style="display:block;height:8px;"></span>
+      	きんゆう女子。では、「おかね」について、<br>
+      	ゆるく楽しく、でもしっかりとお勉強できる<br>
+      	女子会を開催しています。
+      	<span style="display:block;height:8px;"></span>
+      	気になる内容の女子会がありましたら、<br>
+      	是非チェックしてみてください♪
+      	<span style="display:block;height:8px;"></span>
+      	今後も編集部より、きんゆう女子。の<br>
+      	女子会や活動について、<br>
+      	不定期でメールをお送りさせていただきます。<br>
+      	楽しみにお待ちくださいませ。
+    	</p>
+      <a href="/" class="message-top">女子会の予定はこちら</a>
+      <a href="/" class="message-top message-top02">マイページへ</a>
+    </div>
+  </div>
+</div>
