@@ -1,2 +1,4 @@
 /.project
 /.DS_Store
+web/fuel/app/cache/fuel/agent/*
+web/fuel/app/logs/
