@@ -561,6 +561,7 @@
   padding: 12px 20px;
   border: 2px solid #fdc2c2;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 .conference-application-single .application-right .application-date {
   border: 2px solid #FCF080;
@@ -1634,6 +1635,13 @@
 .kinyu-daijoshikai2018-container .conference-access .access-block li .map-block {
   margin-top: 32px;
 }
+.kinyu-daijoshikai2018-container .conference-application .application-left .application-date {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.kinyu-daijoshikai2018-container .kinyu-conference-el .img-inner .balloon-member {
+  top: 65px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
     第2回 秘密の大女子会 - スマホ
@@ -1851,6 +1859,10 @@
   font-weight: bold;
   padding: 10px 0px;
   z-index: 1005;
+}
+.kinyu-daijoshikai2018-container .conference-application .application-left .application-date {
+  font-size: 14px;
+  padding: 10px 20px;
 }
 
 }

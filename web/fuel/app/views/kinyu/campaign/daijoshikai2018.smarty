@@ -428,11 +428,10 @@
     <div class="kinyu-conference-el conference-regist kinyu-conference-el1n">
       <div class="img-inner">
         <img class="balloon-member" src="/images/content/conference/balloon-member.png">
-        <h2>第2回 ひみつの大女子会♪<br>お申込みはこちら</h2>
+        <h2>お申込みはこちら</h2>
         <div class="conference-application clear">
           <div class="application-left">
             <p class="application-date">【3/1(木) 19:30〜21:45】</p>
-            <h3>Special企画☆ ひみつの大女子会<br>＠東証Arrows(ナイトツアーも♪)</h3>
             <div class="img-box" style="  background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;"></div>
             <p class="application-fee">参加費：2,000<span>円</span><br>(<span style="color:#fda8b7;">＊</span>お食事・ドリンク代込み)</p>
             <a class="application-button" target="_blank" href="http://daijoshikai2018.peatix.com/">お申し込みはこちら</a>
