@@ -273,14 +273,14 @@
               </div>
             </li>
 
-            {*<li>
+            <li>
               <div class="event-special-el clear">
-                <div class="img-box" style="background:url(/images/content/daijoshikai2018/character.jpg) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background:url(/images/content/daijoshikai2018/character02.jpg) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <p class="text-number">05</p>
                   <div class="text-main">
                     <h3>「きんゆう」ならではの、かわいい特別ゲストにも来ていただきます♪</h3>
-                    <p>ひみつの金運スポットでのパーティでは、特別ゲストとして「とうしくん」と「ふくももちゃん」に来ていただき、会を盛り上げていただきます♪
+                    <p>ひみつの金運スポットでのパーティでは、特別ゲストとして「とうしくん」と「ふくももちゃ ん」に来ていただき、会を盛り上げていただきます♪
                     <span style="display:block;height:12px;"></span>
                     <span style="font-weight:bold;"><span style="color:#b4cdf5;">◆</span>とうしくん</span><br>
                     「証券投資の日（10月4日）」のマスコットキャラクターで、10月4日生まれの男の子。兄弟がほかに9頭いるそう♡ 東証のある、日本橋兜町で生まれました。
@@ -291,7 +291,7 @@
                   </div>
                 </div>
               </div>
-            </li>*}
+            </li>
 
           </ul>
         </div>
