@@ -94,9 +94,9 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
   public function action_daijoshikai2018() {
 
-    $this->template->title = '第2回 東証秘密の大女子会｜きんゆう女子。';
+    $this->template->title = 'ひみつの大女子会♪ 2018｜きんゆう女子。';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/daijoshikai2018/daijoshikai2018_fb.jpg';
-    $this->template->description = '宣誓！わたしたちは、投資の本質を知り正々堂々とおかねを増やすことを誓います！わたしたちは、週末時間をゆたかで楽しい人生にするために。正しいおかねの知識と意識を身につけ前向きに投資をしていきます。投資の一歩手前の準備をしっかりしてすてきな投資家になり、経済に参加します。このイベントでは、その誓いを宣言し第一歩を踏み出すきっかけを自ら作ります。';
+    $this->template->description = '東証さんってどんなところ？金運スポットやワクワクがいっぱい？無機質な数字ばっかり？ニュース番組などでみかける、くるくる回る掲示板。テレビでは見たことはあるけれど、建物の中はどんなところ？実は平日16:00までは誰でも見学ができる東証さん。タイミングを合わせれば、企業の上場するシーンも見学することもできます。そんな東証さんの夜の時間帯に、おじゃまして贅沢に貸し切って、大納会・大発会ならぬ、大女子会を開催します。';
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
