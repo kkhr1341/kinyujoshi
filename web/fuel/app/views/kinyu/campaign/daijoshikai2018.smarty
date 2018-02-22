@@ -273,7 +273,7 @@
               </div>
             </li>
 
-            <li>
+            {*<li>
               <div class="event-special-el clear">
                 <div class="img-box" style="background:url(/images/content/daijoshikai2018/character.jpg) center center / cover no-repeat;"></div>
                 <div class="text-box">
@@ -291,7 +291,7 @@
                   </div>
                 </div>
               </div>
-            </li>
+            </li>*}
 
           </ul>
         </div>
