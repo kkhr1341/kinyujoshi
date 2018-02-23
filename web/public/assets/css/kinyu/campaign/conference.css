@@ -1603,6 +1603,14 @@
   color: #79b8e8;
   font-weight: bold;
 }
+.joshikai-table .description p .guest-url {
+  font-size: 11px;
+  line-height: 11px;
+}
+.joshikai-table .description p .guest-url a {
+  font-size: 11px;
+  line-height: 11px;
+}
 .joshikai-table .attention {
   background: #f9f9f9;
 }
