@@ -230,7 +230,7 @@ class Applications extends Base
             //		}
 
             if (self::completed($event_code, $username, $email)) {
-                return "この女子会は既にお申込み済みです。ありがとうございます！";
+                return "この女子会は、すでにお申込みいただいております。";
             }
 
             // 申し込みイベンドコード生成

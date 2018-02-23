@@ -79,9 +79,6 @@
             <li>女子会の際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
           </ul>
 
-
-
-
           <p class="button-area">
             <input type="checkbox" name="cancel_check" id="cancel_check">
             <label for="cancel_check" class="checkbox"></label>
@@ -89,7 +86,11 @@
           </p>
         </div>
 
-        <button class="day-cash-submit" type="submit">女子会に参加する</button>
+        <div class="kinyu-credit-fee-area">
+          <p><span>参加費</span>：{$event.fee}円</p>
+        </div>
+
+        <button class="day-cash-submit" type="submit">お支払いする</button>
       </form>
     </div>
   </div>
@@ -156,6 +157,11 @@
                 name: name.val()
             };
 
+            if ($("[name=cancel_check]:checked").val() == undefined) {
+              ts.error("「女子会のお約束事に同意する。」のご確認をお願いします。");
+              return false;
+            }
+
             if (cardselect.val() === '0') {
                 if (!card.number) {
                     ts.error("カード番号を入力してください");
@@ -180,10 +186,6 @@
                 if (!email.val()) {
                     ts.error("メールアドレスを入力してください");
                     return false;
-                }
-                if ($("[name=cancel_check]:checked").val() == undefined) {
-                  ts.error("「キャンセルポリシーに同意する。」のご確認をお願いします。");
-                  return false;
                 }
                 promise = chargeByNewCard(card, event_code.val(), name.val(), email.val())
             } else {
