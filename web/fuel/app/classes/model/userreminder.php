@@ -79,7 +79,7 @@ class UserReminder extends Base
 
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
-            $mail->subject("【きんゆう女子。】パスワード再設定URLのお知らせ");
+            $mail->subject("【きんゆう女子。】パスワード再発行のお知らせ");
 
             $url = \Uri::base() . 'login/resetting_pass?access_token=' . $access_token;
 

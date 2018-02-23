@@ -1475,7 +1475,64 @@
 }
 .joshikai-held-area-title {
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
+}
+.joshikai-held-el {
+  width: 92%;
+  margin: 0 auto;
+  height: 400px;
+}
+.joshikai-held-el .img-block {
+  width: 50%;
+  float: right;
+  padding-left: 36px;
+  height: 100%;
+}
+.joshikai-held-el .text-block {
+  width: 50%;
+  float: left;
+  height: 100%;
+  display: table;
+  padding-right: 36px;
+}
+.joshikai-held-el .text-block-inner {
+  height: 100%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.joshikai-held-el .text-block .place-area {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ec8484;
+}
+.joshikai-held-el .text-block .place-title {
+  font-size: 20px;
+  margin-top: 16px;
+  margin-bottom: 2px;
+}
+.joshikai-held-el .text-block .border-area {
+  height: 1px;
+  width: 150px;
+  background: #8ddcd1;
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.joshikai-held-el .text-block .place-sub-title {
+  font-size: 13px;
+}
+.joshikai-held-el .text-block .place-description {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 16px;
+}
+.place-link {
+  margin-top: 24px;
+  display: inline-block;
+  font-weight: bold;
+  color: #77cbc0;
 }
 
 
@@ -1703,6 +1760,7 @@
 .joshikai-complete-message {
   padding: 60px 0px 80px;
   text-align: center;
+  background: #f7f7f7;
 }
 .joshikai-complete-message h2 {
   font-size: 22px;
@@ -1715,16 +1773,21 @@
 .joshikai-complete-message .message-top {
   display: block;
   margin: 0 auto;
-  width: 200px;
-  margin-top: 8px;
+  width: 220px;
   font-size: 13px;
-  padding: 8px 0px;
-  font-weight: bold;
+  padding: 10px 0px;
   text-align: center;
   background: #8ddcd1;
   color: #fff;
   margin-top: 36px;
   transition: .5s;
+  border: 1px solid #8ddcd1;
+}
+.joshikai-complete-message .message-top02 {
+  margin-top: 12px!important;
+  border: 1px solid #8ddcd1;
+  background: #fff;
+  color: #77cbc0;
 }
 
 /* 女子会チケット前の画面 */
@@ -2024,8 +2087,13 @@
   font-size: 13px;
   line-height: 13px;
   margin-bottom: 8px;
-  /*color: #77cbc0;*/
-  /*font-weight: bold;*/
+}
+.kinyu-credit-list-block p.sub-credit {
+  margin-bottom: 0px; 
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #696969;
 }
 .kinyu-credit-list li {
   width: 18%;
@@ -2045,18 +2113,19 @@
 
 /* 決済画面 - キャンセルポリシー */
 .cancel-block {
-  width: 90%;
+  width: 92%;
   border-top: 1px solid #77cbc0;
   border-bottom: 1px solid #77cbc0;
   margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 28px;
-  padding: 16px 0px;
+  margin-bottom: 36px;
+  padding: 20px;
 }
 .cancel-block .cancel-title {
   color: #77cbc0;
   font-weight: bold;
   margin-bottom: 4px;
+  font-size: 14px;
 }
 .cancel-block .cancel-description {
   font-size: 12px;
@@ -2123,6 +2192,28 @@ input[type=checkbox]:checked + .checkbox:after {
 }
 input[type=checkbox]:checked + .checkbox:before {
   opacity: 1;
+}
+.cancel-block-list {
+  padding: 8px 0px;
+}
+.cancel-block-list li {
+  font-size: 12px;
+  line-height: 22px;
+  position: relative;
+  text-align: left;
+  padding-left: 15px;
+  margin-bottom: 12px;
+}
+.cancel-block-list li:last-child {
+  margin-bottom: 0px; 
+}
+.cancel-block-list li:before {
+  content: "◆";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #8ddcd1;
+  font-size: 10px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

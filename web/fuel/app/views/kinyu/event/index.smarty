@@ -102,7 +102,23 @@
 
         <div class="joshikai-held-area">
           <p class="joshikai-held-area-title">ー 主に女子会を開催している場所 ー</p>
+          
+          <div class="joshikai-held-el-block">
 
+            <div class="joshikai-held-el sarvador-held clear">
+              <div class="img-block" style="background:url(/images/event/about-joshikai2.jpg) center center / cover no-repeat"></div>
+              <div class="text-block">
+                <div class="text-block-inner">
+                  <p class="place-area">兜町</p>
+                  <p class="place-title">CAFE SARVADOR BUSINESS SALON</p>
+                  <p class="place-sub-title">カフェ・サルバトル</p>
+                  <div class="border-area"></div>
+                  <p class="place-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  <a class="place-link" href="">詳細はこちら</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
 

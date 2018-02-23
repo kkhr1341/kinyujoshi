@@ -53,8 +53,7 @@
   <div class="inner">  
     <form>
       <p class="main-title">女子会をキャンセルしますか？</p>
-      <!-- <p class="description">女子会当日に現金でお支払いください。</p> -->
-      <p class="description">＊もし、キャンセルされる場合、再度お申し込みいただくことができなくなってしまいますので、ご注意くださいませ。</p>
+      <p class="description">＊女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
       <button class="joshikai-cancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
     </form>
   </div>
