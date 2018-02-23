@@ -49,9 +49,11 @@ class Applications extends Base
         $datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, events.*'))->from('applications')
             ->join('events')
             ->on('applications.event_code', '=', 'events.code')
+            ->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'))
             ->where('applications.username', '=', $username)
             ->where('applications.disable', '=', 0)
             ->where('applications.cancel', '=', 0)
+            ->order_by('event_date', 'asc')
             ->execute()
             ->as_array();
 
