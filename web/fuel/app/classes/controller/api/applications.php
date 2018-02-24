@@ -28,6 +28,9 @@ class Controller_Api_Applications extends Controller_Apibase
     public function action_create()
     {
         try {
+            if (!Events::applicable(\Input::post('event_code'))) {
+                return $this->error('イベントの受付を終了いたしました。');
+            }
             $val = Applications::validate(\Input::post('cardselect'));
             if (!$val->run(\Input::post())) {
                 $error_messages = $val->error_message();

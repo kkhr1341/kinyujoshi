@@ -46,14 +46,18 @@ console.log($resArray02);
             </li>
           </ul>
 
-          <!-- ログインユーザー -->
-          <div class="joinus-block">
-          {if in_array('user', $roles) || in_array('admin', $roles)}
-            <a href="/joshikai_tickets/{$urlcode}">女子会のお申込みはこちら</a>
+          {if $event.applicable}
+            <!-- ログインユーザー -->
+            <div class="joinus-block">
+            {if in_array('user', $roles) || in_array('admin', $roles)}
+              <a href="/joshikai_tickets/{$urlcode}">女子会のお申込みはこちら</a>
+            {else}
+              <p id="joinus-open">女子会のお申込みはこちら</p>
+            {/if}
+            </div>
           {else}
-            <p id="joinus-open">女子会のお申込みはこちら</p>
+            <div>受付終了</div>
           {/if}
-          </div>       
         </div>
       </div>
 

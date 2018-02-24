@@ -78,6 +78,13 @@ class Events extends Base
 
         return $val;
     }
+   
+    public static function getByCode($table, $code)
+    {
+       $event = parent::getByCode($table, $code);
+       $event['applicable'] = self::is_applicable_by_event_date($event['event_date']);
+       return $event;
+    }
 
     public static function lists($mode = null, $limit = null, $open = null)
     {
@@ -259,7 +266,11 @@ class Events extends Base
             ->order_by('event_date', 'asc')
             ->execute()
             ->as_array();
-
+        
+        foreach($datas['datas'] as $key => $data){
+            $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+        }
+        
         $datas['pagination'] = $pagination;
 
         return $datas;
@@ -280,7 +291,27 @@ class Events extends Base
     }
 
     /**
-     * イベントキャンセル可否判定
+     * イベント申し込みが可能かを確認するメソッド
+     * @param $code イベントコード
+     * @return bool true: 申し込み可能, false: 申し込み不可
+     */
+    public static function applicable($code)
+    {
+        $event = self::getByCode('events', $code);
+        return self::is_applicable_by_event_date($event['event_date']);
+    }
+
+    private static function is_applicable_by_event_date($event_date)
+    {
+        $applicableTime = strtotime(date('Y-m-d 13:00:00', strtotime($event_date)));
+        if (time() < $applicableTime) {
+            return true;
+        } 
+        return false;
+    } 
+
+    /**
+     * イベントキャンセルが可能か確認するメソッド
      * @param $code イベントコード
      * @return bool true: キャンセル可能, false: キャンセル不可
      */
