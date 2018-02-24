@@ -34,7 +34,7 @@
 				</tr>
 				<tr>
 					<th class="active">メールアドレス</th>
-					<td>{$profile.email}</td>
+					<td>{$email}</td>
 				</tr>
 				<tr>
 					<th class="active">自己紹介</th>

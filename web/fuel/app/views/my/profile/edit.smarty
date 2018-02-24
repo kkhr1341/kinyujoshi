@@ -41,7 +41,7 @@
           <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">メールアドレス</label>
             <p class="regist-add-form-edit-subtitle">きんゆう女子。からお知らせをお届けするメールアドレスになります。</p>
-            <input type="text" id="email" class="form-control" placeholder="" value="{$profile.email}">
+            <input type="text" id="email" class="form-control" placeholder="" value="{$email}">
           </div>
 
           <div class="regist-add-form-edit-el">
