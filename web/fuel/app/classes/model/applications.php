@@ -106,14 +106,21 @@ class Applications extends Base
 
     public static function cancel($params)
     {
-
-        // 与信
         \Config::load('payjp', true);
 
         $username = \Auth::get('username');
 
         // 参加状態取得
-        $application = self::getByCode('applications', $params['code']);
+        $application = \DB::select(\DB::expr('users.email, applications.event_code, applications.cancel, applications.username, profiles.name'))
+            ->from('applications')
+            ->join('users')
+            ->on('applications.username', '=', 'users.username')
+            ->join('profiles')
+            ->on('applications.username', '=', 'profiles.username')
+            ->where('applications.code', '=', $params['code'])
+            ->where('applications.disable', '=', 0)
+            ->execute()
+            ->current();
 
         // 存在チェック
         if (empty($application)) {
@@ -146,6 +153,16 @@ class Applications extends Base
             $payment->cancel($charge_id);
         }
 
+        // サンクスメール
+        $mail = \Email::forge('jis');
+        $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+        $mail->subject("【きんゆう女子。】女子会のキャンセルが完了しました。");
+        $mail->html_body(\View::forge('email/joshikai/cancel', array(
+            'name' => $application['name']
+        )));
+        $mail->to($application['email']); //送り先
+        $mail->send();
+        
         return true;
     }
 
