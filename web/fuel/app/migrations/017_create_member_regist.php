@@ -24,7 +24,9 @@ class Create_member_regist
 			'user_agent' => array('constraint' => 300, 'type' => 'varchar', 'null' => true),
 			'where_from' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'where_from_other' => array('constraint' => 200, 'type' => 'varchar', 'null' => true),
+                        'name_kana' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
 			'job_kind' => array('constraint' => 50, 'type' => 'varchar', 'null' => true),
+
 			'disable' => array('type' => 'tinyint', 'default' => '1'),
 			'edit_inner' => array('type' => 'text'),
 
