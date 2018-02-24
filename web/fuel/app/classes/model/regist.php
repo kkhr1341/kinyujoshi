@@ -13,10 +13,20 @@ class Regist extends Base
 
         $val->add('email', 'メールアドレス')
             ->add_rule('required')
-            ->add_rule('unique', array(
-                'table' => 'users',
-                'field' => 'email',
-            ));
+            ->add_rule( // login_validate
+                function($email) {
+                    $select = \DB::select("email")
+                        ->where('email', '=', \Str::lower($email))
+                        ->from('users');
+                    $result = $select->execute();
+
+                    if ($result->count() > 0) {
+                        \Validation::active()->set_message('closure', 'このメールアドレスですでにメンバー登録がされているようです。');
+                        return false;
+                    } else {
+                        return true;
+                    }
+                });
 
         $val->add('name', 'お名前')
             ->add_rule('required');
