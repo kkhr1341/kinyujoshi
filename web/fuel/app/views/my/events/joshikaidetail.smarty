@@ -31,29 +31,22 @@
           </div>
         </div>
       </div>
-      {if $cancelable === true}
-        <p class="joshikai-cancel-open" id="joshikai-cancel-open">女子会をキャンセルする</p>
-      {else}
-        <div class="joshikai-cansel-block">
-          {if $event.incur_cancellation_fee_date == '0000-00-00 00:00:00'}
-            <p class="cansel-block-title"><span style="color:red";>＊</span>開催日が3日以内のため、女子会のキャンセルはできません。</p>
-          {else}
-            <p class="cansel-block-title"><span style="color:red";>＊</span>キャンセルの期日が{$event.incur_cancellation_fee_date|date_format:"Y.m.d"}のため、女子会のキャンセルはできません。</p>
-          {/if}
-          <a href=""></a>
-        </div>
-      {/if}
+      <p class="joshikai-cancel-open" id="joshikai-cancel-open" data-cancelable="{if $cancelable}true{else}false{/if}">女子会をキャンセルする</p>
     </div>
   </div>
 </div>
 
-<!-- 当日現金払い -->
+<!-- キャンセル期日以内 -->
 <div id="joshikai-cancel-block" class="joshikai-cancel-block fee-open" style="display: none;">
   <div id="day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form>
       <p class="main-title">女子会をキャンセルしますか？</p>
-      <p class="description">＊女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+      {if $cancelable} 
+        <p class="description">＊女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+      {else}
+        <p class="description">＊キャンセル料金かかります。</p>
+      {/if}
       <button class="joshikai-cancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
     </form>
   </div>

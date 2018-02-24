@@ -13,11 +13,6 @@ class Controller_Api_Applications extends Controller_Apibase
             return $this->ok('login');
         }
 
-        $application = Applications::getByCode('applications', \Input::post('code'));
-        if (!Events::cancelable($application['event_code'])) {
-            return $this->error('キャンセル期日をすぎておりますためキャンセルはご利用いただけません');
-        }
-
         $res = Applications::cancel(\Input::all());
         if (is_string($res)) {
             return $this->error($res);
