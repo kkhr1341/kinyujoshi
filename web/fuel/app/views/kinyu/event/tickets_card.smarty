@@ -77,9 +77,10 @@
             <li>きんゆう女子。会は、個人のための女子会です。企業の見学・視察目的などはご遠慮ください。</li>
             <li>きんゆう女子。では、企業の特定商品の勧誘や宣伝などを行わない代わりに、みなさまからいただいたアンケートなどを女性向けサービス向上に真摯に取り組んでいる企業に提供し、今後の"金融"の発展に活かしていただくことで、みなさまが安心して交流、勉強できる場を提供しております。</li>
             <li>女子会の際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
+            <li>お席の手配のため、女子会開催日より3日前になりますとキャンセル料が全額かかってしまいます。あらかじめご了承ください。</li>
           </ul>
 
-          <p class="button-area">
+          <p class="cancel-button-area">
             <input type="checkbox" name="cancel_check" id="cancel_check">
             <label for="cancel_check" class="checkbox"></label>
             <span>女子会のお約束事に同意する。</span>
@@ -103,17 +104,17 @@
     (function() {
 
 
-        $('.button-area').click(function() {
+        $('.cancel-button-area').click(function() {
           // もしチェックが入っていたら
           if ($('input[name="cancel_check"]').prop('checked')) {
             // チェックを外す
             $('input[name="cancel_check"]').prop('checked', false);
-            $(".button-area").removeClass("checked-input");
+            $(".cancel-button-area").removeClass("checked-input");
           // もしチェックが外れていたら
           } else {
             // チェックを入れる
             $('input[name="cancel_check"]').prop('checked', true);
-            $(".button-area").addClass("checked-input");
+            $(".cancel-button-area").addClass("checked-input");
           }
         });
  

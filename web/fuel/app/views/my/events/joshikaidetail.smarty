@@ -45,7 +45,15 @@
       {if $cancelable} 
         <p class="description">＊女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
       {else}
-        <p class="description">＊キャンセル料金かかります。</p>
+        <div class="cancel-description">
+          <p><span class="cancel-description-title"><span style="color: red;">＊</span>キャンセル料がかかります...。</span>
+          女子会開催日より3日前以降のため、キャンセル料が全額かかってしまいます。すでに場所を手配済でしたので、ご了承のほどよろしくお願いいたします。</p>
+          <div class="cancel-button-area">
+            <input type="checkbox" name="cancel_check" id="cancel_check">
+            <label for="cancel_check" class="checkbox"></label>
+            <span>キャンセル料について同意する。</span>
+          </div>
+        </div>
       {/if}
       <button class="joshikai-cancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
     </form>
@@ -54,6 +62,20 @@
 
 <script>
 $(function() {
+
+  $('.cancel-button-area').click(function() {
+    // もしチェックが入っていたら
+    if ($('input[name="cancel_check"]').prop('checked')) {
+      // チェックを外す
+      $('input[name="cancel_check"]').prop('checked', false);
+      $(".cancel-button-area").removeClass("checked-input");
+    // もしチェックが外れていたら
+    } else {
+      // チェックを入れる
+      $('input[name="cancel_check"]').prop('checked', true);
+      $(".cancel-button-area").addClass("checked-input");
+    }
+  });
 
   $("#joshikai-detail-open").click(function() {
     $("#admin-joshikai-detail").slideToggle(500);
@@ -74,6 +96,11 @@ $(function() {
       var params = {
           code: code
       };
+
+      if ($("[name=cancel_check]:checked").val() == undefined) {
+        ts.error("「キャンセル料について同意する。」のご確認をお願いします。");
+        return false;
+      }
 
       $("#joshikai-cancel-block").fadeOut(500);
 
