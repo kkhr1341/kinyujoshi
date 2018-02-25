@@ -121,6 +121,11 @@ class Events extends Base
         }
         $datas = $datas->execute()
             ->as_array();
+        
+        foreach($datas as $key => $data){
+            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+        }
+
         return $datas;
     }
 
@@ -159,6 +164,11 @@ class Events extends Base
         }
         $datas = $datas->execute()
             ->as_array();
+        
+        foreach($datas as $key => $data){
+            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+        }
+
         return $datas;
     }
 

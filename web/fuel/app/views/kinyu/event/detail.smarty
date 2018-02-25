@@ -46,7 +46,9 @@ console.log($resArray02);
             </li>
           </ul>
 
-          {if $event.applicable}
+          {if $event.applicable eq false}
+            <div>受付終了</div>
+          {else}
             <!-- ログインユーザー -->
             <div class="joinus-block">
             {if in_array('user', $roles) || in_array('admin', $roles)}
@@ -55,8 +57,6 @@ console.log($resArray02);
               <p id="joinus-open">女子会のお申込みはこちら</p>
             {/if}
             </div>
-          {else}
-            <div>受付終了</div>
           {/if}
         </div>
       </div>
