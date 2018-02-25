@@ -1340,11 +1340,22 @@
 }
 .kinyu-event-list .kinyu-event-list-right {
   padding: 16px;
-  background: #fff;
   background: #f7f7f7;
+  position: relative;
+}
+.kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind {
+  position: relative;
 }
 .kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind p {
   padding: 8px 0px 2px;
+}
+.kinyu-event-list .kinyu-event-list-right .joshikai-applicable {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 11px;
+  font-weight: normal;
+  color: #f56e6e;
 }
 .kinyu-event-list ul {
   letter-spacing: -0.5em;
@@ -1971,7 +1982,6 @@
   font-size: 22px;
   padding-bottom: 4px;
   display: inline-block;
-  border-bottom: 2px solid #77cbc0;
   margin: 0 auto;
   margin-bottom: 12px;
 }
@@ -2001,6 +2011,26 @@
   text-align: center;
   color: #727070;
   margin-bottom: 16px;
+}
+.fee-open .inner form .cancel-description {
+  border: 1px solid #efb1b1;
+  display: inline-block;
+  padding: 12px 16px;
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+.fee-open .inner form .cancel-description p {
+  font-size: 12px;
+  line-height: 18px;
+}
+.fee-open .inner form .cancel-description .cancel-description-title {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+
 }
 .fee-open .fee-open-el {
   margin-bottom: 24px;
@@ -2071,7 +2101,7 @@
 
 /* 対応カードの部分 */
 .kinyu-credit-list-block {
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   margin-top: 20px;
@@ -2110,10 +2140,18 @@
 .fee-open button {
   transition: .5s;
 }
-
+/* 決済画面 - 参加費の部分 */
+.kinyu-credit-fee-area p {
+  font-size: 13px;
+}
+.kinyu-credit-fee-area p span {
+  color: #77cbc0;
+  font-weight: bold;
+  font-size: 13px;
+}
 /* 決済画面 - キャンセルポリシー */
 .cancel-block {
-  width: 92%;
+  width: 100%;
   border-top: 1px solid #77cbc0;
   border-bottom: 1px solid #77cbc0;
   margin: 0 auto;
@@ -2130,7 +2168,7 @@
 .cancel-block .cancel-description {
   font-size: 12px;
 }
-.cancel-block .button-area {
+.cancel-button-area {
   font-size: 12px;
   display: inline-block;
   padding: 4px;
@@ -2138,13 +2176,13 @@
   margin-top: 8px;
   transition: .5s;
 }
-.cancel-block .button-area input[type=checkbox] {
+.cancel-button-area input[type=checkbox] {
   display: none;
 }
-.cancel-block .button-area.checked-input {
+.cancel-button-area.checked-input {
   background: #e0f7f4;
 }
-.cancel-block .button-area label {
+.cancel-button-area label {
   box-sizing: border-box;
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
@@ -2157,7 +2195,7 @@
   width: auto!important;
   padding-left: 0px!important;
 }
-.cancel-block .button-area label:before {
+.cancel-button-area label:before {
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
   position: absolute;
@@ -2175,7 +2213,7 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.cancel-block .button-area label:after {
+.cancel-button-area label:after {
   -webkit-transition: border-color 0.2s linear;
   transition: border-color 0.2s linear;
   position: absolute;
@@ -3904,7 +3942,7 @@ to {
   background: #fff;
   color: #77cbc0;
 }
-.cancel-block .button-area:hover {
+.cancel-button-area:hover {
   cursor: pointer;
 }
 
