@@ -104,6 +104,9 @@
                       {$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
                       </span>
                       {$event.event_start_datetime}〜{$event.event_end_datetime}</p>
+                    {if $event.applicable}
+                      <p class="joshikai-applicable">＊受付終了</p>
+                    {/if}
                   </div>
                   <h3 class="kinyu-top-list-title">{$event.title}</h3>
                 </div>
