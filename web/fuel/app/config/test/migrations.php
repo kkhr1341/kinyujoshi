@@ -61,6 +61,7 @@ return array(
         52 => '056_add_id_name_to_member_regist',
         53 => '057_add_industry_to_member_regist',
         54 => '058_add_industry_other_to_member_regist',
+        55 => '059_delete_email_from_profiles',
       ),
     ),
     'module' => 
