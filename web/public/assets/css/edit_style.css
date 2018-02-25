@@ -1667,7 +1667,7 @@
 .joshikai-detail-el-info .joinus-block {
   margin-left: 20px;
   border-top: 1px solid #dedede;
-  padding-top: 16px;
+  padding-top: 20px;
 }
 .joshikai-detail-el-info .joinus-block a,
 .joshikai-detail-el-info .joinus-block p
@@ -1681,6 +1681,23 @@
   text-align: center;
   padding: 14px 0px;
   transition: .5s;
+}
+.joshikai-detail-el-info .joinus-block .applicable-title {
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  margin-top: 8px;
+}
+.joshikai-detail-el-info .joinus-block .applicable-link {
+  display: block;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: bold;
+  background: #8ddcd1;
+  color: #fff;
+  text-align: center;
+  padding: 14px 0px;
+  opacity: .3;
 }
 .joshikai-sidebar {
   width: 320px;

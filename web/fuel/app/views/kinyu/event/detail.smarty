@@ -47,7 +47,10 @@ console.log($resArray02);
           </ul>
 
           {if $event.applicable eq false}
-            <div>受付終了</div>
+            <div class="joinus-block joinus-block-finish">
+              <div class="applicable-link">女子会のお申込みはこちら</div>
+              <div class="applicable-title"><span style="color:red;">＊</span>お申込みの受付は終了しました</div>
+            </div>
           {else}
             <!-- ログインユーザー -->
             <div class="joinus-block">

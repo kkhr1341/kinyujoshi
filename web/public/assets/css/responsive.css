@@ -1575,6 +1575,14 @@
   position: absolute;
   right: 0px;
 }
+.joshikai-detail-el-info .joinus-block.joinus-block-finish {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  margin-left: 0px;
+  width: 100%;
+  margin-top: 28px;
+}
 
 /* 決済ページ */
 .kinyu-joshikai-tickets-block {
