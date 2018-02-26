@@ -43,7 +43,8 @@
     <form>
       <p class="main-title">女子会をキャンセルしますか？</p>
       {if $cancelable} 
-        <p class="description">＊女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+        <p class="description"><span style="color:red;">＊</span>女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+        <button class="joshikai-precancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
       {else}
         <div class="cancel-description">
           <p><span class="cancel-description-title"><span style="color: red;">＊</span>キャンセル料がかかります...。</span>
@@ -54,8 +55,8 @@
             <span>キャンセル料について同意する。</span>
           </div>
         </div>
+        <button class="joshikai-cancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
       {/if}
-      <button class="joshikai-cancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
     </form>
   </div>
 </div>
@@ -89,6 +90,32 @@ $(function() {
   });
   var form = $('#joshikai-cancel-block form')
 
+  form.find('.joshikai-precancel-submit').click(function(e){
+      e.preventDefault();
+      var code = $(this).data('code');
+      var url = "/api/applications/delete";
+      var params = {
+          code: code
+      };
+
+      $("#joshikai-cancel-block").fadeOut(500);
+
+      //ローディングアニメーション
+      $(".loader-block").fadeIn(500);
+      ajax.post(url, params, function(data){
+              ts.success("参加をキャンセルしました");
+              setTimeout(function() {
+                  location.href = '/my/joshikai';
+              }, 1000)
+          })
+          .done(function(data) {
+              $(".loader-block").fadeOut(500);
+          })
+          .fail(function(error) {
+              $(".loader-block").fadeOut(500);
+          })
+  });
+
   form.find('.joshikai-cancel-submit').click(function(e){
       e.preventDefault();
       var code = $(this).data('code');
@@ -119,5 +146,6 @@ $(function() {
               $(".loader-block").fadeOut(500);
           })
   });
+
 });
 </script>
