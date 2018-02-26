@@ -5,6 +5,47 @@ require_once(dirname(__FILE__) . "/base.php");
 
 class Profiles extends Base
 {
+
+    public static function validate($username)
+    {
+        $val = \Validation::forge();
+        $val->add_callable('myvalidation');
+
+        $val->add('profile_image', 'プロフィール画像');
+
+        $val->add('catchcopy', 'ひとことキャッピコピー');
+
+        $val->add('nickname', '表示名');
+
+        $val->add('name', 'お名前')
+            ->add_rule('required');
+
+        $val->add('email', 'メールアドレス')
+            ->add_rule('required')
+            ->add_rule(
+                function($email) use($username) {
+                    $select = \DB::select("email")
+                        ->where('email', '=', $email)
+                        ->where('username', '<>', $username)
+                        ->from('users');
+
+                    $result = $select->execute();
+
+                    if ($result->count() > 0) {
+                        \Validation::active()->set_message('closure', 'このメールアドレスですでにメンバー登録がされているようです。');
+                        return false;
+                    } else {
+                        return true;
+                    }
+                });
+
+        $val->add('url', '個人で発信しているブログなど');
+
+        $val->add('introduction', '自己紹介');
+
+        return $val;
+    }
+
     public static function create($params)
     {
 

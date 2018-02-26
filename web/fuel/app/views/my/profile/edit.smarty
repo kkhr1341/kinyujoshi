@@ -114,6 +114,7 @@ $(function(){
                 $(".loader-block").fadeOut(500);
             })
             .fail(function(error) {
+                ts.error("保存に失敗しました");
                 $(".loader-block").fadeOut(500);
             })
 	});
@@ -135,6 +136,7 @@ $(function(){
                 $(".loader-block").fadeOut(500);
             },
             error: function (error) {
+                ts.error("アップロードに失敗しました");
                 $(".loader-block").fadeOut(500);
             }
         });
