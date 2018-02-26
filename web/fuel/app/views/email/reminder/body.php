@@ -43,10 +43,10 @@
                     <tr>
                         <td>
                             <h3>パスワード再発行のお知らせ</h3>
-                            いつも、きんゆう女子。をありがとうございます。<br>
                             パスワードの再発行を受け付けました。<br><br>
                             以下URLより、再設定をお願いいたします。<br>
-                            <a href="<?php echo $url ?>" target="_blank"><?php echo $url ?></a><br><br>
+                            <a href="<?php echo $url ?>" target="_blank"><?php echo $url ?></a><br>
+                            <span style="color:red;">＊</span>セキュリティのためURLの有効期限は30分になります。<br><br>
                             本メールに心当たりがない場合やご不明点などがありましたら、<br>
                             お気軽にお問い合わせくださいませ。<br><br>
                             ◆きんゆう女子。お問い合わせ<br>
