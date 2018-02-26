@@ -11,7 +11,8 @@
       {if in_array('user', $roles) || in_array('admin', $roles)}
         <li><a href="/my">マイページ</a></li>
       {else}
-        <li><a href="/login">メンバー登録 / ログイン</a></li>
+        <li><a href="/login_regist">メンバー登録</a></li>
+        <li><a href="/login">ログイン</a></li>
       {/if}
     </ul>
   </nav>
