@@ -79,7 +79,7 @@ return array(
 		'Facebook' => array(
 			'app_id' => '238238496713735',
 			'app_secret' => 'b0775d7ccffaaa6a7d657a777587e4ad',
-			'scope' => 'email,user_birthday'
+			'scope' => 'email'
 		),
 
 		'Google' => array(
@@ -87,7 +87,7 @@ return array(
 			'client_secret' => 'Q3vXsXDLuLWwAMkeYjYJd-Sp',
 //            'redirect_uri' => 'http://localhost/',
             //'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
-			'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/user.birthday.read'
+			'scope' => 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email'
 		),
 	
 
