@@ -43,5 +43,5 @@ reset:
 .PHONY: reset
 
 mysql:
-	docker-compose exec db mysql -uroot -ppass
+	docker-compose exec db mysql -uroot -ppass -Dkinyujoshi_development
 .PHONY: mysql
