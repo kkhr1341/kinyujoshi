@@ -335,7 +335,8 @@ class Applications extends Base
             $mail->subject("【きんゆう女子。】女子会のお申込みありがとうございます。");
             $mail->html_body(\View::forge('email/joshikai/body',
                 array(
-                    'name' => $name
+                    'name' => $name,
+                    'event' => $event
                 )));
             $mail->to($email); //送り先
             $mail->send();

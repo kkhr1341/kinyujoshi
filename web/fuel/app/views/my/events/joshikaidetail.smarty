@@ -52,7 +52,7 @@
       {else}
         <div class="cancel-description">
           <p><span class="cancel-description-title"><span style="color: red;">＊</span>キャンセル料がかかります...。</span>
-          {if $event.incur_cancellation_fee_date}
+          {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != "0000-00-00 00:00:00"}
             女子会開催日より3日前以降のため、キャンセル料が全額かかってしまいます。すでに場所を手配済でしたので、ご了承のほどよろしくお願いいたします。</p>
           {else}
             {$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}以降のため、キャンセル料が全額かかってしまいます。すでに場所を手配済でしたので、ご了承のほどよろしくお願いいたします。</p>
