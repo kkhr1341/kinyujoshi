@@ -43,12 +43,20 @@
     <form>
       <p class="main-title">女子会をキャンセルしますか？</p>
       {if $cancelable} 
-        <p class="description"><span style="color:red;">＊</span>女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+        {if $event.incur_cancellation_fee_date}
+          <p class="description"><span style="color:red;">＊</span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+        {else}
+          <p class="description"><span style="color:red;">＊</span>女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+        {/if}
         <button class="joshikai-precancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
       {else}
         <div class="cancel-description">
           <p><span class="cancel-description-title"><span style="color: red;">＊</span>キャンセル料がかかります...。</span>
-          女子会開催日より3日前以降のため、キャンセル料が全額かかってしまいます。すでに場所を手配済でしたので、ご了承のほどよろしくお願いいたします。</p>
+          {if $event.incur_cancellation_fee_date}
+            女子会開催日より3日前以降のため、キャンセル料が全額かかってしまいます。すでに場所を手配済でしたので、ご了承のほどよろしくお願いいたします。</p>
+          {else}
+            {$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}以降のため、キャンセル料が全額かかってしまいます。すでに場所を手配済でしたので、ご了承のほどよろしくお願いいたします。</p>
+          {/if}
           <div class="cancel-button-area">
             <input type="checkbox" name="cancel_check" id="cancel_check">
             <label for="cancel_check" class="checkbox"></label>
