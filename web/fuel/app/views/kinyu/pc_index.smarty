@@ -54,7 +54,7 @@
       </div>
 
       <div class="introduction-list">
-        <ul class="clear">
+        <!-- <ul class="clear">
           <li style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;">
             <a href=""><p><span>はじめての方へ</span></p></a>
           </li>
@@ -67,7 +67,17 @@
           <li style="background: url(/images/about/about-story.jpg) center center / cover no-repeat;">
             <a href="/about"><p><span>きんゆう女子。について</span></p></a>
           </li>
-        </ul>
+        </ul> -->
+        <div class="kinyu-top-banner-area">
+          <ul>
+            <li>
+              <a href="/start">
+                <img class="" src="/images/banner/firsttime_pc.jpg">
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
 

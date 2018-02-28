@@ -511,7 +511,7 @@
 .introduction-list {
   margin-top: 50px;
 }
-.introduction-list li {
+/*.introduction-list li {
   width: 23.5%;
   height: 150px;
   float: left;  
@@ -553,7 +553,7 @@
   background-color: rgba(255,255,255,1);
   box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1), 0px 0px 5px 3px rgba(255, 255, 255, 1) inset;
   padding: 5px 12px;
-}
+}*/
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・女子会リスト
@@ -723,6 +723,7 @@
 }
 .kinyu-top-banner-area li {
   margin-bottom: 24px;
+  transition: .5s;
 }
 .kinyu-top-banner-area li a {
   display: block;
@@ -731,6 +732,12 @@
 .kinyu-top-banner-area li img {
   border: 1px solid #f0f0f0;
   width: 100%;
+}
+
+.introduction-list .kinyu-top-banner-area {
+  text-align: center;
+  width: 650px;
+  margin: 0 auto;
 }
 
 /* レポート詳細部分 */
@@ -4211,6 +4218,9 @@ to {
 .pass-reissue-submit:hover {
   cursor: pointer;
   opacity: .5;
+}
+.kinyu-top-banner-area li:hover {
+  opacity: .5; 
 }
 
 }
