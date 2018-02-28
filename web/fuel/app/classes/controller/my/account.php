@@ -16,6 +16,7 @@ class Controller_My_Account extends Controller_Mybase
         $this->template->contents = View::forge('my/account/index.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・プロフィール';
+        $this->template->title = 'アカウント情報｜きん女。マイページ';
     }
 
     /**
