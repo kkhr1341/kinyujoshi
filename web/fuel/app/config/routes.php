@@ -16,8 +16,11 @@ return array(
 	'testindex' => 'kinyu/top/testindex',
 	'testsp' => 'kinyu/top/testspindex',
 		
-	// きんゆう女子
+	// きんゆう女子。
 	'kinyu'   => 'kinyu/top',
+
+	// はじめての方へ
+	'start'   => 'kinyu/start/index',	
 	
 	//aboutページ
 	'about' => 'kinyu/about/index',

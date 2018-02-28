@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>【きんゆう女子。】女子会がキャンセルされました。</title>
+<title>【きんゆう女子。】女子会をキャンセルいたしました。</title>
 
 <!-- <link rel="stylesheet" type="text/css" href="https://irodori.fund/assets/css/irodori/email.css" /> -->
 
@@ -44,8 +44,8 @@
           <td>
             <h3>女子会をキャンセルいたしました。</h3>
             <?php echo $name; ?> さん<br><br>
-            先日は、女子会にお申込いただき、ありがとございました。<br><br>
-            女子会のキャンセルの件、承りました。<br><br>
+            先日は、女子会にお申込みいただき、ありがとうございました。<br><br>
+            女子会のキャンセルの件、ご対応させていただきました。<br><br>
             またの機会がありましたら、ぜひご参加くださいませ♪<br><br>
             今後とも、きんゆう女子。をよろしくお願いします。
           </td>

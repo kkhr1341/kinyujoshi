@@ -11,7 +11,8 @@ class Controller_My_Profile extends Controller_Mybase
         $this->template->contents = View::forge('my/profile/index.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-        $this->template->description = 'マイページ・プロフィール';
+        $this->template->description = 'プロフィール｜きん女。マイページ';
+        $this->template->title = 'プロフィール｜きん女。マイページ';
     }
 
     public function action_edit()
@@ -22,6 +23,7 @@ class Controller_My_Profile extends Controller_Mybase
         $this->template->contents = View::forge('my/profile/edit.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-        $this->template->description = 'マイページ・プロフィール';
+        $this->template->description = 'プロフィール編集｜きん女。マイページ';
+        $this->template->title = 'プロフィール編集｜きん女。マイページ';
     }
 }

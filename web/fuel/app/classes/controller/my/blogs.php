@@ -15,6 +15,7 @@ class Controller_My_Blogs extends Controller_Mybase
         $this->data['open_blogs'] = Blogs::lists02(1);
         $this->template->contents = View::forge('my/blogs/index.smarty', $this->data);
         $this->template->description = 'マイページ・ブログ';
+        $this->template->title = '参加予定の女子会｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     }
