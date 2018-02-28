@@ -1,0 +1,173 @@
+<div class="kinyu-single-block kinyu-start-block">
+	
+	<div class="kinyu-start-block-container">		
+
+		<div class="main-bg-area" style="background:url(/images/start/main-bg.jpg) center center / cover no-repeat;">
+			<h2><img src="/images/start/start-title.png"></h2>
+		</div>
+		
+		<div class="kinyu-start-introduction">
+			<div class="bg-deco"></div>
+			<div class="kinyu-start-intro-block">
+				<div class="kinyu-start-intro-inner clear">
+					<div class="title-box">
+						<div class="title-box-inner">
+							<p>わたしらしい<br>「ミライ」への解放</p>
+						</div>
+					</div>
+					<div class="description-box"><p>
+						初めまして、きんゆう女子。編集部です。<br>
+						わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、<br>
+						ワカラナイ女子のためのコミュニティです。<br><br>
+						「おかねにとらわれず、自由で自分らしく等身大に生きる」<br>
+						をコンセプトに、身近な家計から世界の経済まで、<br>
+						広い意味での「金融」をテーマに女子会（勉強会）を開催しています。<br><br>
+						ゆる〜く、楽しく。でもしっかりと行っているのでご安心ください。<br><br>
+						また、わたしたちはどの金融機関にも属さず、<br>
+						中立的なポジションを保っています。<br>
+						特定の金融商品やサービスに紐づかせるような<br>
+						女子会は行わないポリシーです。
+					</p></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="kinyu-start-content-contaner">
+			<div class="kinyu-start-content-block">
+				<div class="kinyu-start-content-inner">
+					<h3 class="main-title">「きん女。」で、できること</h3>
+					
+					<div class="kinyu-start-content-action-block">
+						<div class="kinyu-start-content-action-el clear">
+							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
+							<div class="text-box">
+								<div class="text-box-inner">
+									<p class="action-title"><span class="action-number">01</span>女子会に参加</p>
+									<p class="action-description">女子会は毎週木曜日夜、日本橋兜町or銀座で開催しています。女子会の1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり特別な場所でも開催したりしています。また、コミュニティ活動を通じて、まちづくりにも貢献しています。</p>
+									<a class="text-link" href="">女子会の予定へ</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="kinyu-start-content-action-el clear">
+							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
+							<div class="text-box">
+								<div class="text-box-inner">
+									<p class="action-title"><span class="action-number">02</span>レポートを見る</p>
+									<p class="action-description">女子会は毎週木曜日夜、日本橋兜町or銀座で開催しています。女子会の1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり特別な場所でも開催したりしています。また、コミュニティ活動を通じて、まちづくりにも貢献しています。</p>
+									<a class="text-link" href="">レポート一覧へ</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="kinyu-start-content-action-el clear">
+							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
+							<div class="text-box">
+								<div class="text-box-inner">
+									<p class="action-title"><span class="action-number">03</span>「わたしを知る。」見る</p>
+									<p class="action-description">女子会は毎週木曜日夜、日本橋兜町or銀座で開催しています。女子会の1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり特別な場所でも開催したりしています。また、コミュニティ活動を通じて、まちづくりにも貢献しています。</p>
+									<a class="text-link" href="">「わたしを知る。」へ</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="kinyu-start-content-block">
+				<div class="kinyu-start-content-inner">
+					<h3 class="main-title">「きん女。ストーリー」</h3>
+					<div class="about-kinyu-header-contetns-list">
+
+		        <div class="about-kinyu-header-contetns-list-el">
+		          <a class="clear" href="/about_main">
+		            <div class="img-box" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
+		            <div class="title-box">
+		              <div class="title-box-inner">
+		                <p><img class="pc" src="/images/about/title_about.png"><img class="sp" src="/images/about/sp_title_about.png"></p>
+		              </div>
+		            </div>
+		          </a>
+		        </div>
+
+		        <div class="about-kinyu-header-contetns-list-el">
+		          <a class="clear" href="/about_story">
+		            <div class="img-box" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
+		            <div class="title-box">
+		              <div class="title-box-inner">
+		                <p><img class="pc" src="/images/about/title_story.png"><img class="sp" src="/images/about/sp_title_story.png"></p>
+		              </div>
+		            </div>
+		          </a>
+		        </div>
+
+		        <div class="about-kinyu-header-contetns-list-el">
+		          <a class="clear" href="/about_design">
+		            <div class="img-box" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
+		            <div class="title-box">
+		              <div class="title-box-inner">
+		                <p><img class="pc" src="/images/about/title_design.png"><img class="sp" src="/images/about/sp_title_design.png"></p>
+		              </div>
+		            </div>
+		          </a>
+		        </div>
+
+
+		      </div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+<!--
+
+◆はじめての方へ
+
+初めまして。きんゆう女子。編集部です。
+
+わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、ワカラナイ女子のためのコミュニティです。
+
+「おかねにとらわれず、自由で自分らしく等身大に生きる」をコンセプトに、
+身近な家計から世界の経済まで、広い意味での「金融」をテーマに女子会（勉強会）を開催しています。
+女子会は、基本少人数制で、様々な方が安心して話せる場所になるよう工夫しています。
+ゆる〜く、楽しく。でもしっかりと行っているのでご安心ください。
+
+また、わたしたちはどの金融機関にも属さず、中立的なポジションを保っています。
+特定の金融商品やサービスに紐づかせるような女子会は行わないポリシーです。
+
+
+◆きんゆう女子。でできること
+
+・女子会の参加
+女子会は毎週木曜日夜、日本橋兜町or銀座で開催しています。
+女子会の1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、
+4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。
+ゲストを呼んだり特別な場所でも開催したりしています。また、コミュニティ活動を通じて、まちづくりにも貢献しています。
+
+・レポートをの閲覧
+テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+
+・わたしを知る
+テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+
+
+◆きん女。ストーリーも見てみてください♪
+きんゆう女子。の詳細や、生まれたストーリー、みなさんにとってよりよい
+
+
+-->
+
+
+
+
+
+
+
+
+</div>
