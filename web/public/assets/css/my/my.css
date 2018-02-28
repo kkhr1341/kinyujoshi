@@ -626,7 +626,6 @@ footer {
 .admin-normal-joshikai li {
   width: 100%;
   margin-bottom: 12px;
-  transition: .5s;
 }
 .admin-normal-joshikai li:last-child {
   margin-bottom: 0px;
@@ -666,7 +665,7 @@ footer {
   font-size: 14px;
   text-align: center;
   padding: 20px 0px;
-  background: #dfdfdf;
+  background: #fff;
 }
 .admin-normal-joshikai li .to-link-joshikai {
   width: 200px;
@@ -678,6 +677,7 @@ footer {
   background-color: #8ddcd1;
   color: #fff;
   font-weight: bold;
+  transition: .5s;
 }
 .admin-normal-joshikai-title {
   font-size: 14px;
@@ -809,7 +809,8 @@ footer {
   display: none;
   margin-top: 20px;
 }
-.joshikai-cancel-submit {
+.joshikai-cancel-submit,
+.joshikai-precancel-submit {
   background: #efb1b1;
   font-weight: bold;
   font-size: 13px;
@@ -893,7 +894,7 @@ footer {
   background: #8ddcd1;
   color: #fff;
 }
-.admin-normal-joshikai li:hover {
+.admin-normal-joshikai li a:hover {
   opacity: .5;
 }
 .admin-normal-profile-btn a:hover {

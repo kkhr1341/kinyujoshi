@@ -1452,6 +1452,86 @@
   width: 100%;
 }
 
+/* 主に女子会を開催している場所 */
+.joshikai-held-area {
+  padding: 16px 20px 20px 20px;
+  margin-top: 36px;
+}
+.joshikai-held-el {
+  height: auto;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 24px 0px;
+}
+.joshikai-held-el:first-child {
+  padding: 24px 0px;
+}
+.joshikai-held-el:last-child {
+  margin-bottom: 0px;
+  border-bottom: none;
+  padding: 24px 0px 8px;
+}
+.joshikai-held-el .img-block {
+  width: 100%;
+  float: none;
+  padding-left: 0px;
+  height: 160px;
+}
+.joshikai-held-el .text-block {
+  width: 100%;
+  float: left;
+  height: 100%;
+  display: block;
+  padding-right: 0px;
+}
+.joshikai-held-el:nth-child(even) .img-block {
+  float: none;
+}
+.joshikai-held-el:nth-child(even) .text-block {
+  float: none;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.joshikai-held-el .text-block .place-description {
+  width: 100%;
+}
+.joshikai-held-place-area {
+  font-size: 12px;
+}
+.joshikai-held-area-title {
+  font-size: 12px;
+  margin-bottom: 0px;
+  color: #77cbc0;
+  text-align: left;
+  font-weight: bold;
+}
+.joshikai-held-place-address {
+  font-size: 10px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+.joshikai-held-place-title {
+  font-size: 14px;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+.joshikai-held-place-sub-title {
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+.joshikai-held-el .text-block .place-description {
+  font-size: 11px;
+  line-height: 18px;
+}
+.place-link {
+  font-size: 11px;
+  line-height: 11px;
+  width: 100%;
+  margin-top: 12px;
+  font-weight: normal;
+}
+
+
 /* 過去の特別女子会 */
 .special-event-list li {
   width: 100%;
