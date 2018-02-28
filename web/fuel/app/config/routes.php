@@ -1,9 +1,13 @@
 <?php
 return array(
 	'_root_'  => 'kinyu/top',  // The default route
+	//'_root_'  => 'maintenance/top',
 	'_404_'   => '/error/404',    // The main 404 route
 	'_500_'   => '/error/500',    // The main 404 route
 	'page/(:any)'   => 'page/top/$1',
+
+	//メンテナンス
+	'maintenance'  => 'maintenance/top',
 	
 	//◆メンバー登録/ログイン部分
 	'login_regist'   => 'login/regist',
