@@ -43,10 +43,9 @@
         <tr>
           <td>
             <h3>女子会のお申込みありがとうございます♪</h3>
-            <span style="color:#d9534f;">＊</span>このメールは、女子会にお申込みいただいた方に自動で送信しているメールです。<br><br><br>
+            <span style="color:#d9534f;">＊</span>このメールは、女子会にお申込みいただいた方に自動で送信しているメールです。<br><br>
             <?php echo $name; ?> さん<br><br>
-            この度は、「きんゆう女子。会」にお申込みいただき、ありがとうございます！<br>
-            一緒にきんゆうを楽しく勉強しましょう！<br><br>
+            この度は、「きんゆう女子。会」にお申込みいただき、ありがとうございます。<br><br>
             お申込みいただいた女子会の詳細は、マイページよりご確認をお願いいたします。<br>
             <a href="https://kinyu-joshi.jp/my" target="_blank">マイページはこちら</a><br><br>
             女子会の日程が近づきましたら、再度リマインドメールをお送りさせていただきます。<br><br>
@@ -57,10 +56,9 @@
             <?php endif; ?>
             もしご参加できなくなった場合はお早めにご連絡いただけますと嬉しいです。<br><br>
             ◆キャンセル方法<br>
-            <a href="https://kinyu-joshi.jp/my" target="_blank">マイページ</a> → 参加予定の女子会 → キャンセルする女子会を選択 → 「女子会をキャンセルする」<br>
-            <span style="color:#d9534f;">＊</span>メンバー登録をされていない方はお問い合わせフォームよりご連絡くださいませ。<br><br>
-            それでは、<?php echo $name; ?>さんにお会いできるのを、とても楽しみにしております♪<br><br>
-
+            <a href="https://kinyu-joshi.jp/my" target="_blank">マイページ</a> → 参加予定の女子会 → キャンセルする女子会を選択 → 「女子会をキャンセルする」<br><br>
+            <span style="color:#d9534f;">＊</span>メンバー登録をされていない方は<a href="https://kinyu-joshi.jp/contact" target="_blank">お問い合わせフォーム</a>よりご連絡くださいませ。<br><br>
+            それでは、<?php echo $name; ?>さんにお会いできるのを楽しみにしております♪<br><br>
             ▼SNSでも活動報告しています！<br>
             <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">Facebook</a><br>
             <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagram</a><br>
