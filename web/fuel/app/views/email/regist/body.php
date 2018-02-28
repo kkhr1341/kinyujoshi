@@ -56,9 +56,6 @@
             今後も編集部より、きんゆう女子。のイベント・活動について、不定期で、メールをお送りさせていただきます。楽しみにお待ちくださいませ。<br><br>
 
             それでは<?php echo $name; ?>さまにお会いできる日を、きんゆう女子。編集部一同、とても楽しみにしております♪<br><br>
-            <span style="color:#d9534f;">＊</span>きんゆう女子。編集部より <?php echo $name; ?>さま宛に、<br>
-            別途、きんゆう女子。のご案内メールをお送りさせていただく場合がございます。<br><br>
-
 
             ▼SNSでも活動報告しています！<br>
             <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">https://www.facebook.com/kinyujyoshi/</a><br>
