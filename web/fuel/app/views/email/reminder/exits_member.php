@@ -71,7 +71,7 @@
                             
                             ③「パスワードを設定する」ボタンをクリックしてください。<br><br>
                             
-                            ④ 以下URL先の「ログイン画面」に移動します。<br>
+                            ④ 以下URL先の「ログインページ」に移動します。<br>
                             <a href="https://kinyu-joshi.jp/login" target="_blank">https://kinyu-joshi.jp/login</a><br><br>
                             ＊「パスワードを設定する」ボタンをクリックしたら、自動で移動します。
                             
