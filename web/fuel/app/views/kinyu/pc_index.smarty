@@ -23,7 +23,22 @@
           <a class="main-intro-link" href="/about">きんゆう女子。について　〉</a>
         </div>
         
-        <div class="kinyu-top-introlist-right">  
+        <div class="kinyu-top-introlist-right">
+
+          <!-- news -->
+          <!-- <div class="kinyu-top-introlist-news clear">
+            {foreach from=$news item=new name=foo}
+            <a href="/news/{$new.code}">
+              <div class="title-area">
+                <p>NEWS</p>
+              </div>
+              <div class="text-area">
+                <p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
+                <p class="news-title">{$new.title}</p>
+              </div>
+            </a>
+            {/foreach}
+          </div> -->
           
           <!-- pickup -->
           <div class="swiper-container02 kinyu-top-introlist-pickup">
@@ -88,7 +103,7 @@
 
         <div class="kinyu-top-list kinyu-top-joshikai-list">
           <h3 class="kinyu-top-main-title">直近のきんゆう女子。会</h3>
-          <p class="kinyu-top-main-sub">「おかね」について楽しくお勉強♪<br>毎週木曜日19:00〜開催中！</p>
+          <p class="kinyu-top-main-sub">「おかね」についてゆるりと話そう。</p>
           <ul class="clear">
           {foreach from=$events key="key" item=event name=loopname}
 

@@ -3,11 +3,11 @@
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
-      <li><a href="/about">きん女。ストーリー</a></li>
+      <li><a href="/news">ニュース</a></li>
       <li><a href="/joshikai">女子会</a></li>
       <li><a href="/report">レポート</a></li>
-      <li><a href="/news">ニュース</a></li>
       <li><a href="/myway">「わたし」を知る。</a></li>
+      <li><a href="/about">きん女。ストーリー</a></li>
       {if in_array('user', $roles) || in_array('admin', $roles)}
         <li><a href="/my">マイページ</a></li>
       {else}
