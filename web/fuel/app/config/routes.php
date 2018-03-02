@@ -14,6 +14,7 @@ return array(
 	'regist_email'   => 'login/regist_email',
 	'regist_sns'   => 'login/regist_sns',
 	'resetting_pass' => 'login/resetting_pass',
+	'resetting_pass_exuser' => 'login/resetting_pass_exuser',
 	'regist_complete' => 'login/complete',
 
 	//テスト環境
