@@ -45,16 +45,16 @@
             <h3>女子会のお申込みありがとうございます♪</h3>
             <span style="color:#d9534f;">＊</span>このメールは、女子会にお申込みいただいた方に自動で送信しているメールです。<br><br>
             <?php echo $name; ?> さん<br><br>
-            この度は、「きんゆう女子。会」にお申込みいただき、ありがとうございます。<br><br>
+            この度は、女子会にお申込みいただき、ありがとうございます。<br><br>
             お申込みいただいた女子会の詳細は、マイページよりご確認をお願いいたします。<br>
             <a href="https://kinyu-joshi.jp/my" target="_blank">マイページはこちら</a><br><br>
             女子会の日程が近づきましたら、再度リマインドメールをお送りさせていただきます。<br><br>
             <?php if ($event['incur_cancellation_fee_date'] && $event['incur_cancellation_fee_date'] != "0000-00-00 00:00:00"): ?>
-            また、<?php echo date('Y年m月d日', strtotime($event['incur_cancellation_fee_date'])) ?>よりキャンセル料が全額かかってしまいますので、<br>
+            また、<?php echo date('Y年m月d日', strtotime($event['incur_cancellation_fee_date'])) ?>より全額のキャンセル料が発生してしまいますので、<br>
             <?php else: ?>
-            また、開催日3日前よりキャンセル料が全額かかってしまいますので、<br>
+            また、開催日3日前より全額のキャンセル料が発生してしまいますので、<br>
             <?php endif; ?>
-            もしご参加できなくなった場合はお早めにご連絡いただけますと嬉しいです。<br><br>
+            もしご参加が難しくなった場合はお早めにご連絡いただけますと嬉しいです。<br><br>
             ◆キャンセル方法<br>
             <a href="https://kinyu-joshi.jp/my" target="_blank">マイページ</a> → 参加予定の女子会 → キャンセルする女子会を選択 → 「女子会をキャンセルする」<br><br>
             <span style="color:#d9534f;">＊</span>メンバー登録をされていない方は<a href="https://kinyu-joshi.jp/contact" target="_blank">お問い合わせフォーム</a>よりご連絡くださいませ。<br><br>
