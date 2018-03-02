@@ -81,7 +81,7 @@ class RegistReminder extends Base
      * @return bool
      * @throws \Exception
      */
-    public static function send($member_regist_id)
+    public static function send($member_regist_id, $email)
     {
         $db = \Database_Connection::instance();
         $db->start_transaction();
@@ -94,19 +94,9 @@ class RegistReminder extends Base
                 'member_regist_id' => $member_regist_id,
                 'access_token' => $access_token,
                 'expires' => date('Y-m-d H:i:s', strtotime("+90 days")),
+                'email' => $email,
                 'created_at' => \DB::expr('now()'),
             ))->execute();
-
-            // 参加状態取得
-            $member_regist = \DB::select('*')
-                ->from('member_regist')
-                ->where('id', '=', $member_regist_id)
-                ->execute()
-                ->current();
-
-            $email = $member_regist['email'];
-
-            echo $email . "email";
 
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
