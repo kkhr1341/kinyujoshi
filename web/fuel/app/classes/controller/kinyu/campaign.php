@@ -41,6 +41,24 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/campaign/school_public.smarty', $this->data);
     }
 
+
+    // 第2回きんゆう女子。学院
+    public function action_school_02()
+    {
+        $this->template->title = '第2回 きんゆう女子。学院｜きんゆう女子。';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/school_public/og-school_public02.jpg';
+        $this->template->description = 'きんゆう女子。学院は、私立きんゆう女子。学院の姉妹校です♪ きんゆう女子。学院にも科目があります。きんゆう女子。学院では、文系科目をメインにバランスよく多角的に金融の全体像から考え方、普段の生活に役立つことを学びます。';
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        }
+        $this->template->contents = View::forge('kinyu/campaign/school_02.smarty', $this->data);
+    }
+
     public function action_conference()
     {
         $this->template->title = '第1回 週末投資宣言♪｜きんゆう女子。';
@@ -58,6 +76,25 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
         }
 
         $this->template->contents = View::forge('kinyu/campaign/conference.smarty', $this->data);
+    }
+
+    public function action_daijoshikai2018()
+    {
+
+        $this->template->title = 'ひみつの大女子会♪ 2018｜きんゆう女子。';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/daijoshikai2018/daijoshikai2018_fb.jpg';
+        $this->template->description = '東証さんってどんなところ？金運スポットやワクワクがいっぱい？無機質な数字ばっかり？ニュース番組などでみかける、くるくる回る掲示板。テレビでは見たことはあるけれど、建物の中はどんなところ？実は平日16:00までは誰でも見学ができる東証さん。タイミングを合わせれば、企業の上場するシーンも見学することもできます。そんな東証さんの夜の時間帯に、おじゃまして贅沢に貸し切って、大納会・大発会ならぬ、大女子会を開催します。';
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        }
+
+        $this->template->contents = View::forge('kinyu/campaign/daijoshikai2018.smarty', $this->data);
     }
 
     public function action_map()
