@@ -143,6 +143,9 @@ class Controller_Login extends Controller_KinyuBase
 
     public function action_resetting_pass_exuser()
     {
+        if (Auth::check()) {
+            Response::redirect('/my');
+        }
         // トークンチェック
         if (!$reminder = RegistReminder::get_valid(\Input::get('access_token'))) {
             Response::redirect('/login');

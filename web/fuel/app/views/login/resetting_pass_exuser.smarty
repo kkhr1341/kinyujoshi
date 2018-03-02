@@ -60,7 +60,7 @@
             ajax.post(url, params, function(data){
                     ts.success("パスワードの設定が完了しました");
                     setTimeout(function(){
-                        location.href = '/my';
+                        location.href = '/login';
                     }, 1000);
                 })
                 .done(function(data) {

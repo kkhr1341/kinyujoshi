@@ -177,68 +177,11 @@ class RegistReminder extends Base
             Profiles::create($profile);
 
             $db->commit_transaction();
-
-            // ログイン
-            \Auth::instance()->force_login((int)$user_id);
         } catch (Exception $e) {
             $db->rollback_transaction();
             \Log::error('register error::' . $e->getMessage());
             throw $e;
         }
-
-/*
-        $email = \Email::forge('jis');
-        $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
-        $email->subject("【きんゆう女子。】メンバー登録ありがとうございます(*^^*)");
-
-        $name = $params['name'];
-
-        $email->html_body(\View::forge('email/regist/body',
-            array(
-                'name' => $name
-            )));
-        $email->to($params['email']); //送り先
-        $email->send();
-
-        $email02 = \Email::forge('jis');
-        $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
-        $email02->subject("【きんゆう女子。】メンバー登録がありました！");
-
-        $name = $params['name'];
-        $name_kana = $params['name_kana'];
-        $age = $params['birthday'];
-        $not_know = $params['not_know'];
-        $interest = $params['interest'];
-        $ask = $params['ask'];
-        $income = $params['income'];
-        $where_from = $params['where_from'];
-        $where_from_other = $params['where_from_other'];
-        $transmission = $params['transmission'];
-        $email = $params['email'];
-        $facebook = "";
-        $job_kind = $params['job_kind'];
-        $introduction = $params['introduction'];
-
-        $email02->html_body(\View::forge('email/regist/return',
-            array(
-                'name' => $name,
-                'name_kana' => $name_kana,
-                'age' => $age,
-                'not_know' => $not_know,
-                'interest' => $interest,
-                'ask' => $ask,
-                'income' => $income,
-                'where_from' => $where_from,
-                'where_from_other' => $where_from_other,
-                'transmission' => $transmission,
-                'email' => $email,
-                'facebook' => $facebook,
-                'job_kind' => $job_kind,
-                'introduction' => $introduction
-            )));
-        $email02->to('cs@kinyu-joshi.jp'); //送り先
-        $email02->send();
-*/
 
         return array();
     }
