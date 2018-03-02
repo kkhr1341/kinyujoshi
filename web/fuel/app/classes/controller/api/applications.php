@@ -12,8 +12,13 @@ class Controller_Api_Applications extends Controller_Apibase
             \Session::set('referrer', \Input::referrer());
             return $this->ok('login');
         }
+        $event_code = Applications::get_event_code_by_code(\Input::post('code'));
 
-        $res = Applications::cancel(\Input::all());
+        if (!Events::cancelable($event_code)) {
+            $res = Applications::non_cancelable_cancel(\Input::all());
+        } else {
+            $res = Applications::cancelable_cancel(\Input::all());
+        }
         if (is_string($res)) {
             return $this->error($res);
         }
