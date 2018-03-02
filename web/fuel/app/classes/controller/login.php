@@ -2,6 +2,8 @@
 
 use \Model\Profiles;
 use \Model\UserReminder;
+use \Model\RegistReminder;
+use \Model\MemberRegist;
 
 class Controller_Login extends Controller_KinyuBase
 {
@@ -142,11 +144,15 @@ class Controller_Login extends Controller_KinyuBase
     public function action_resetting_pass_exuser()
     {
         // トークンチェック
-        if (!$reminder = UserReminder::get_valid(\Input::get('access_token'))) {
+        if (!$reminder = RegistReminder::get_valid(\Input::get('access_token'))) {
             Response::redirect('/login');
         }
-        $profile = Profiles::get($reminder['username']);
-        $this->template->nickname = $profile['nickname'];
+        $member_regist = \DB::select('*')->from('member_regist')
+                ->where('id', '=', $reminder['id'])
+                ->execute()->current();
+
+        $this->template->nickname = $member_regist['name'];
+        $this->template->email = $member_regist['email'];
         $this->template->access_token = $reminder['access_token'];
 
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';

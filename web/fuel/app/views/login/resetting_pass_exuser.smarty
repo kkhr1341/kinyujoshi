@@ -10,7 +10,7 @@
         <p>- お名前 -</p>
         <!-- ユーザー名を表示 -->
         <p class="name-title">{$nickname}</p>
-        <p class="name-title">（email：<!--メールアドレスが入ります-->）</p>
+        <p class="name-title">（email：{$email}）</p>
       </div>
       <div class="form-area">
         <form>
@@ -38,7 +38,7 @@
         form.find('#save').click(function(e){
             e.preventDefault();
 
-            var url = "/api/reminder/reset";
+            var url = "/api/registreminder/create";
             var params = {
                 access_token: form.find('#access_token').val(),
                 password: form.find('#password').val(),

@@ -23,10 +23,44 @@ class RegistReminder extends Base
         return $result;
     }
 
-    public static function validate_reset()
+    public static function validate()
     {
         $val = \Validation::forge();
         $val->add_callable('myvalidation');
+
+        $val->add('access_token', '認証トークン')
+            ->add_rule('required');
+
+        $access_token = \Input::post('access_token');
+
+        $val->add('email', 'メールアドレス')
+            ->add_rule(
+                function($email) use ($access_token) {
+
+                    if (!$regist_reminder = self::get_valid($access_token)) {
+                        \Validation::active()->set_message('closure', '認証トークンの有効期限がきれました。');
+                        return false;
+                    }
+
+                    $member_regist = \DB::select('*')
+                        ->from('member_regist')
+                        ->where('id', '=', $regist_reminder['member_regist_id'])
+                        ->execute()
+                        ->current();
+
+                    $select = \DB::select("email")
+                        ->where('email', '=', $member_regist['email'])
+                        ->from('users');
+
+                    $result = $select->execute();
+
+                    if ($result->count() > 0) {
+                        \Validation::active()->set_message('closure', 'このメールアドレスですでにメンバー登録がされているようです。');
+                        return false;
+                    } else {
+                        return true;
+                    }
+                });
 
         $val->add('password', '新しいパスワード')
             ->add_rule('required')
@@ -80,7 +114,7 @@ class RegistReminder extends Base
 
             $mail->attach(DOCROOT.'public/images/kinyu-logo.png', true);
 
-            $url = \Uri::base() . 'login/regist_reminder?access_token=' . $access_token;
+            $url = \Uri::base() . 'login/resetting_pass_exuser?access_token=' . $access_token;
 
             $mail->html_body(\View::forge('email/regist_reminder/body',
                 array(
@@ -100,8 +134,8 @@ class RegistReminder extends Base
     }
 
     /**
-     * パスワードリセット
-     * @param $username
+     * 本登録
+     * @param $member_regist_id
      * @param $password
      * @return bool
      * @throws \Exception
@@ -111,17 +145,19 @@ class RegistReminder extends Base
         $db = \Database_Connection::instance();
         $db->start_transaction();
         try {
-            $username = \Str::random('alnum', 16);
-            $user_id = \Auth::create_user(
-                $username,
-                $params["password"],
-                $params["email"],
-                1
-            );
 
             $member_regist = \DB::select('*')->from('member_regist')
                 ->where('id', '=', $member_regist_id)
                 ->execute()->current();
+
+            $username = \Str::random('alnum', 16);
+
+            $user_id = \Auth::create_user(
+                $username,
+                $password,
+                $member_regist["email"],
+                1
+            );
 
             // プロフィール登録
             $profile_code = Profiles::getNewCode('profiles', 6);
@@ -134,6 +170,7 @@ class RegistReminder extends Base
                 'nickname' => $member_regist['name'],
                 'birthday' => $member_regist['age'],
                 'url' => '',
+                'profile_image' => '',
                 'introduction' => $member_regist['introduction'],
             ];
 
@@ -203,6 +240,6 @@ class RegistReminder extends Base
         $email02->send();
 */
 
-        return $params;
+        return array();
     }
 }
