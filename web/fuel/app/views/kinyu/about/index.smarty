@@ -1,48 +1,179 @@
-<div class="kinyu-single-block kinyu-about-block">
-  <div class="about-kinyu-container">
-
-    <h2 class="kinyu-top-main-title">きん女。ストーリー</h2>
-    <p class="kinyu-top-main-sub">「きんゆう女子。」のコンセプト、生まれたストーリー<br>わたしたちの想いをお伝えします。</p>
-
-    <div class="about-kinyu-top-container">
-
-      <div class="about-kinyu-header-contetns-list">
-
-        <div class="about-kinyu-header-contetns-list-el">
-          <a class="clear" href="/about_main">
-            <div class="img-box" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
-            <div class="title-box">
-              <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/title_about.png"><img class="sp" src="/images/about/sp_title_about.png"></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="about-kinyu-header-contetns-list-el">
-          <a class="clear" href="/about_story">
-            <div class="img-box" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
-            <div class="title-box">
-              <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/title_story.png"><img class="sp" src="/images/about/sp_title_story.png"></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="about-kinyu-header-contetns-list-el">
-          <a class="clear" href="/about_design">
-            <div class="img-box" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
-            <div class="title-box">
-              <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/title_design.png"><img class="sp" src="/images/about/sp_title_design.png"></p>
-              </div>
-            </div>
-          </a>
-        </div>
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
 
 
+<div class="kinyu-main-single-block kinyu-about-single">
+
+  <!-- <div class="kinyu-main-single-title">
+    <div class="sp inner">
+      <h1>きんゆう女子。とは..?</h1>
+      <img style="width:100%;" src="/images/new/kinyu-border-line01.png">
+    </div>
+
+    <div class="pc inner">
+      <h1>きんゆう女子。とは..?</h1>
+      <img style="width:100%;" src="/images/new/kinyu-border-line_pc.png">
+    </div>
+  </div> -->
+
+  <div class="inner">
+    <div class="top-slider sp">
+      <ul class="bxslider">
+        <li class="back09">
+          <p class="slider-title-sp-b sp"><img src="/images/deco/top-deco02r.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+        <li class="back10">
+          <p class="slider-title-sp-b sp"><img src="/images/deco/top-deco03r.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+        <li class="back08">
+          <p class="slider-title-sp-b sp"><img src="/images/deco/top-deco07.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+      </ul>
+    </div>
+
+    {*<div class="top-slider pc">
+      <ul class="bxslider">
+        <li class="back09-pc">
+          <p class="slider-title-sp-b"><img src="/images/deco/top-deco-pc01r.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+        <li class="back10-pc">
+          <p class="slider-title-sp-b"><img src="/images/deco/top-deco-pc02r.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+        <li class="back08-pc">
+          <p class="slider-title-sp-b"><img src="/images/deco/top-deco-pc06.png" alt="金融,きんゆう女子,Fintech"></p>
+        </li>
+      </ul>
+    </div>
+    *}
+
+    <div class="about-kinyujoshi-block">
+
+      <div class="about-kinyujoshi-intro center">
+        <h2 class="about-kinyujoshi-intro-title center"><img src="/images/title/about/about-title01.png"></h2>
+        <p class="pc about-kinyujoshi-intro-description center">
+          わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、<br>
+          ワカラナイ女子のための金融コミュニティです。<span style="display: block;height: 24px;"></span>
+          毎週木曜日夜、お金についてざっくばらんにおしゃべり。<br>
+          女子会スタイルで”金融”の基本をゆる～くたのしく勉強しています。<span style="display: block;height: 24px;"></span>
+          わたしたちは、「おかね」に対する意識の低さに不安を感じています。<br>
+          よくワカラナイまま大人になってしまいました…。<span style="display: block;height: 24px;"></span>
+          誰に聞いたらいいかワカラナイ、そもそも何を聞いたらいいかワカラナイ！<br>
+          でもそうは言っていられない。現実を見る必要もある。<span style="display: block;height: 24px;"></span>
+          就職、結婚、転職、独立…。<br>
+          前向きに未来を考えるライフイベント前の女子たちへ。<span style="display: block;height: 24px;"></span>
+          地に足をつけて「おかね」と「じぶん」に向き合ってみませんか？<span style="display: block;height: 24px;"></span>
+          きんゆう女子。の活動を通じて情報を自ら取りに行き、<br>
+          ありのままの「わたし」の生きる道が見つかりますように。<span style="display: block;height: 24px;"></span>
+        </p>
+        <p class="pc about-kinyujoshi-intro-description-sub center">
+          <span style="color:#e33f3f;">＊</span>残念ながらわたしたちはすぐに儲けられる術を教えたり、<br>
+          目先のお金のピンチを救って差し上げることはできません。(ゴメンナサイ！)<br>
+          ただ、ひとつ言えること。<br>
+          豊かなオトナの女性になるため、人生の選択肢を増やすため<br>
+          また将来の不安を少しでも軽減するためにはきっと役立てられると思うのです。<br>
+          大人の女性になるため、人生の選択肢を増やすため、<br>
+          そしてライフイベントを迎える準備として。<br>
+          1人でも多くの素敵な女子たちが<br>
+          仲間になってくださることを楽しみにしています。
+        </p>
+        <p class="sp about-kinyujoshi-intro-description center">
+          わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、ワカラナイ女子のための金融コミュニティです。
+          <span style="display: block;height: 16px;"></span>
+          毎週木曜日夜、お金についてざっくばらんにおしゃべり。女子会スタイルで”金融”の基本をゆる～くたのしく勉強しています。
+          <span style="display: block;height: 16px;"></span>
+          わたしたちは、「おかね」に対する意識の低さに不安を感じています。よくワカラナイまま大人になってしまいました…。
+          <span style="display: block;height: 16px;"></span>
+          誰に聞いたらいいかワカラナイ、そもそも何を聞いたらいいかワカラナイ！でもそうは言っていられない。現実を見る必要もある。
+          <span style="display: block;height: 16px;"></span>
+          就職、結婚、転職、独立…。<br>
+          前向きに未来を考える<br>ライフイベント前の女子たちへ。
+          <span style="display: block;height: 16px;"></span>
+          地に足をつけて「おかね」と「じぶん」に向き合ってみませんか？
+          <span style="display: block;height: 16px;"></span>
+          きんゆう女子。の活動を通じて情報を自ら取りに行き、ありのままの「わたし」の生きる道が見つかりますように。
+          <span style="display: block;height: 16px;"></span>
+        </p>
+        <p class="sp about-kinyujoshi-intro-description-sub center">
+          <span style="color:#e33f3f;">＊</span>残念ながらわたしたちはすぐに儲けられる術を教えたり、目先のお金のピンチを救って差し上げることはできません。(ゴメンナサイ！)<br>
+          ただ、ひとつ言えること。<br>
+          豊かなオトナの女性になるため、人生の選択肢を増やすため、また将来の不安を少しでも軽減するためにはきっと役立てられると思うのです。<br>
+          大人の女性になるため、人生の選択肢を増やすため、そしてライフイベントを迎える準備として。<br>
+          1人でも多くの素敵な女子たちが、仲間になってくださることを楽しみにしています。
+        </p>
       </div>
+
+
+      <div class="about-kinyujoshi-service center">
+        <h2 class="about-kinyujoshi-intro-title center">
+          <img src="/images/title/about/about-title04.png">
+        </h2>
+        <ul class="clear">
+          <li>
+            <div class="about-kinyujoshi-service-el tx-center">
+              <h3 class="service-title center">
+                <img src="/images/title/about/about-title02.png">
+              </h3>
+              <div class="service-image center">
+                <img src="/images/icon/about-kinyu-service-01.png">
+              </div>
+              <p class="service-description">
+                ひとりよりも、みんなで集まれば<br>知恵も情報もシェアできます。<br>きんゆう女子。では、<br>みんなでおかねの情報を持ち寄って<br>一つのサイトを作っています。
+              </p>
+              <a class="btn-white service-link center" href="/report">レポートを読む</a>
+            </div>
+          </li>
+
+          <li>
+            <div class="about-kinyujoshi-service-el tx-center">
+              <h3 class="service-title center">
+                <img src="/images/title/about/about-title03.png">
+              </h3>
+              <div class="service-image center">
+                <img src="/images/icon/about-kinyu-service-02.png">
+              </div>
+              <p class="service-description">
+                おかねについて気軽に話せる会を木曜夜と土曜日午後に行っています。同じ悩みをもったワカラナイ女子同士でお茶をしながら一緒に勉強をしています。金融業界の先生をゲストに迎えた勉強会もあります。
+              </p>
+              <a class="btn-tiffany service-link center" href="/event">女子会に参加する</a>
+              <p class="pc about-kinyujoshi-service-balloon01"><img src="/images/icon/balloon.png"></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      
+      <div class="about-kinyujoshi-management center">
+        <h2 class="singlepage-block-title center">
+          <img src="/images/title/about/about-title05.png" alt="金融・おかねの知識を学び、ライフスタイルを一緒に見直しましょう！">
+        </h2>
+
+        <p class="pc about-kinyujoshi-intro-description center">
+        きんゆう女子。は、どこの金融機関にも属さず、金融商品・サービスの販売や<br>紹介を目的としていない「中立」で「フラット」な女性コミュニティです。<br>
+        <span style="display: block;height: 24px;"></span>
+        昇進、独立、転職、結婚など一番「人生が変わる」、<br>
+        そして「迷う」転換期に必ず付いて回るのが「お金」のこと。<br>
+        お金と向き合うことで、"お金に囚われず、自由で等身大に生きること"を目的として運営しています。<br>
+        <span style="display: block;height: 24px;"></span>
+        私たちは、特定の金融商品やサービスに紐付かせる、<br>
+        または、加担することが目的の広告や取引を行わないポリシーです。<br>
+        編集部及びメンバー同士はもちろんのこと、ゲスト及び協賛・協力企業にも、<br>このポリシーにご賛同いただいた方のみ、ご参加・お取引いただいております。<br>
+        <span style="display: block;height: 24px;"></span>
+        女子会で集まった女性の意見を匿名で集約し、金融×女子の視点で、各種プロデュース<br>（コミュニティ、イベント・サービス・商品・ノベルティ・ウェブサイト・紙面をワンストップで。）や、<br>ブランディング、コンテンツ提供、ユーザーテスト・インタビュー・情報発信を行い運営しています。<br>また、コミュニティ発信活動を通じた"まちづくり"に貢献しています。<br>
+        </p>
+
+        <p class="sp about-kinyujoshi-intro-description center">
+        きんゆう女子。は、どこの金融機関にも属さず、金融商品・サービスの販売や紹介を目的としていない「中立」で「フラット」な女性コミュニティです。
+        <span style="display: block;height: 16px;"></span>
+        昇進、独立、転職、結婚など一番「人生が変わる」、そして「迷う」転換期に必ず付いて回るのが「お金」のこと。お金と向き合うことで、"お金に囚われず、自由で等身大に生きること"を目的として運営しています。
+        <span style="display: block;height: 16px;"></span>
+        私たちは、特定の金融商品やサービスに紐付かせる、または、加担することが目的の広告や取引を行わないポリシーです。編集部及びメンバー同士はもちろんのこと、ゲスト及び協賛・協力企業にも、このポリシーにご賛同いただいた方のみ、ご参加・お取引いただいております。
+        <span style="display: block;height: 16px;"></span>
+        女子会で集まった女性の意見を匿名で集約し、金融×女子の視点で、各種プロデュース（コミュニティ、イベント・サービス・商品・ノベルティ・ウェブサイト・紙面をワンストップで。）や、ブランディング、コンテンツ提供、ユーザーテスト・インタビュー・情報発信を行い運営しています。また、コミュニティ発信活動を通じた"まちづくり"に貢献しています。<br>
+        </p>
+      </div>
+
+
+        <span style="display: block;height: 24px;"></span>
     </div>
   </div>
+  {$sp_footer}
 </div>

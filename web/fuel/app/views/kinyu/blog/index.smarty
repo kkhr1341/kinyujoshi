@@ -1,10 +1,12 @@
-<div class="kinyu-list-block">
+{$pc_side}
+<div class="kinyu-top-list-block">
   <div class="inner">
-
-    <h2 class="kinyu-top-main-title">レポート一覧</h2>
-    <p class="kinyu-top-main-sub">きんゆう女子。の日々の活動報告♪</p>
-
-    <div class="kinyu-top-list kinyu-top-report-list">
+    <div class="pc category-menu">
+      <a href="/"><img class="pc-kinyu-logo" src="/images/kinyu-logo01.png"></a>
+    </div>
+    <div class="kinyu-top-list kinyu-report-list">
+      <h2 class="pc kinyu-main-title"><img src="/images/main-title/kinyu-title-report.png" alt="レポート一覧"></h2>
+      <h2 class="sp kinyu-main-title"><img src="/images/main-title/kinyu-title-report-sp.png" alt="レポート一覧"></h2>
       <ul class="clear">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
 
@@ -12,34 +14,65 @@
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
           <li>
-            <a href="/report/{$blog.code}">
-              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
-              <div class="text-box">
-                <div class="kinyu-top-list-kind">
-                  {if $blog.kind == "女子会レポート"}
-                    <p>女子会レポート</p>
-                  {else if $blog.kind == "イベントレポート"}
-                    <p>イベントレポート</p>
-                  {else if $blog.kind == "取材レポート"}
-                    <p>取材レポート</p>
-                  {else if $blog.kind == "イベント告知"}
-                    <p>イベント告知</p>
-                  {else if $blog.kind == "コラム"}
-                    <p>コラム</p>
-                  {else}
-                    <p>レポート</p>
-                  {/if}
-                </div>
-                <h3 class="kinyu-top-list-title">{$blog.title}</h3>
-              </div>
-            </a>
-          </li>
+          <a href="/report/{$blog.code}">
+          <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+          <div class="kinyu-top-list-kind">
+            {if $blog.kind == "女子会レポート"}
+              <p>女子会レポート</p>
+            {else if $blog.kind == "イベントレポート"}
+              <p>イベントレポート</p>
+            {else if $blog.kind == "取材レポート"}
+              <p>取材レポート</p>
+            {else if $blog.kind == "イベント告知"}
+              <p>イベント告知</p>
+            {else if $blog.kind == "コラム"}
+              <p>コラム</p>
+            {else}
+              <p>レポート</p>
+            {/if}
+          </div>
+          <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+          </a>
+        </li>
+
         {/foreach}    
       </ul>
     </div>
     <div class="blog-pagenation tx-center">
-      {$pagination}
+      {$pagination|nofilter}
     </div>
+
+    <div class="sp">
+      <img class="kinyu-sp-border-line" src="/images/new/kinyu-border-line01.png">
+      <!--  -->
+      {$sp_top_after}
+      {$sp_footer}
+    </div>
+
+
+    <footer class="pc">
+      <div class="footer-logo">
+        <a href="/"><img src="/images/kinyu-logo01.png"></a>
+      </div>
+      <div class="footer-menu">
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/company">運営会社</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/privacy">プライバシーポリシー</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/legal">特定商取引法に基づく表記</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/service">会員規約</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/contact">お問い合わせ</a>
+        </div>
+      </div>
+      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2018 TOE THE LINE, Inc.</p>
+    </footer>
 
 
     <script>
@@ -48,7 +81,6 @@
         var hh = $(".kinyu-top-list li").innerWidth();
         var mm = $(".kinyu-top-list").innerWidth();
         var ss = $(".kinyu-top-introlist li").innerWidth();
-        var ggg = $(".kinyu-top-list-block").innerWidth();
 
         $(window).load(function(){
           var ww = $(".category-menu ul").height();
@@ -61,7 +93,6 @@
         //$('.kinyu-top-list li').height(hh);
         $('.category-menu').width(mm);
         $('.kinyu-top-introlist li').height(ss);
-        $('.kinyu-header-top').width(ggg);
       });
     </script>
 

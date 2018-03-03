@@ -4,12 +4,6 @@
 <script type="text/javascript" src="/assets/js/kinyu/countdown.js"></script>
 <script type="text/javascript" src="/assets/js/kinyu/campaign/conference.js"></script>
 
-<style>
-.kinyu-header-top {
-  display:none;
-}
-</style>
-
 <div class="kinyu-conference-container">
   <!-- イントロダクション -->
   <div class="conference-introduction">
@@ -64,9 +58,6 @@
               <a href="https://kinyu-joshi.jp/report/b9m16I">
                 <p class="title">海外旅行は一番おトクな為替レートで！</p>
               </a>
-            </li>
-
-            <li class="coming_soon" style="background:url(/images/content/conference/coming_soon.png) center center / cover no-repeat;">
             </li>
 
           </ul>
@@ -456,6 +447,33 @@
           </ul>
         </div>
       </div>
+    </div>
+
+    <footer class="pc">
+      <div class="footer-logo">
+        <img src="/images/kinyu-logo01.png">
+      </div>
+      <div class="footer-menu">
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/company">運営会社</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/privacy">プライバシーポリシー</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/legal">特定商取引法に基づく表記</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/service">会員規約</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/contact">お問い合わせ</a>
+        </div>
+      </div>
+      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2018 TOE THE LINE, Inc.</p>
+    </footer>
+    <div class="sp">
+      {$sp_footer}
     </div>
   </div>
 </div>

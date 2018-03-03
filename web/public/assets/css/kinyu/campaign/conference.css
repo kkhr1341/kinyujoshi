@@ -6,7 +6,6 @@
   text-align: center;
   font-family: 'utsukushi';
   background: #F2FBFA;
-  padding-top: 130px;
 }
 .conference-container-inner {
   width: 1100px;
@@ -1462,13 +1461,6 @@
   border-radius: 0px;
   margin-top: 16px;
 }
-.kinyu-daijoshikai2018-container .conference-application .application-left p.application-button {
-  opacity: .3;
-}
-.kinyu-daijoshikai2018-container .conference-application .application-left .application-sub-button {
-  font-size: 13px;
-  margin-top: 4px;
-}
 .kinyu-daijoshikai2018-container .conference-access .access-block {
   width: 800px;
 }
@@ -1879,10 +1871,6 @@
 .kinyu-daijoshikai2018-container .conference-application .application-left .application-date {
   font-size: 14px;
   padding: 10px 20px;
-}
-.kinyu-daijoshikai2018-container .conference-application .application-left .application-sub-button {
-  font-size: 12px;
-  margin-top: 4px;
 }
 
 }

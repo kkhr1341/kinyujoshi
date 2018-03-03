@@ -14,18 +14,18 @@
 
       <div class="kinyu-school_public-intro pc">
         <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
-        <img style="width:100%;" src="/images/content/school_public/school_public_main.png">
+        <img src="/images/content/school_public/school_public_main.png">
       </div>
       <!-- きんゆう女子。学院とは？ -->
       <div class="kinyu-school_public-el about-public_school">
         <h3><img src="/images/content/school_public/main-title-about.png"></h3>
         <div class="pc description-area">
           <p><span class="bottom-border">きんゆう女子。学院は、<br>私立きんゆう女子。学院の姉妹校です♪</span></p>
-          <p>普段のゆるい女子会は、意見交換やおしゃべりの場。<br>でも、きんゆう女子学院は、ゆるい一面もありつつ、<br>
+          <p>普段のゆるい女子会は、意見交換やおしゃべりの場。<br>でも、きんゆう女子。学院は、ゆるい一面もありつつ、<br>
           <span class="bottom-border">しっかりきちんと勉強する場です。</span></p>
           <p>学生時代に国語や算数があったように、<br>
-          きんゆう女子学院にも科目があります。</p>
-          <p>きんゆう女子学院では、文系科目をメインに<br>
+          きんゆう女子。学院にも科目があります。</p>
+          <p>きんゆう女子。学院では、文系科目をメインに<br>
           バランスよく多角的に<span class="bottom-border">金融の全体像から考え方、</span><br>
           <span class="bottom-border">普段の生活に役立つことを学びます。</span></p>
           <p>ワークショップやゲームを通じて<br>
@@ -42,8 +42,8 @@
           ゆるい一面もありつつ、<br>
           <span class="bottom-border">しっかりきちんと勉強する場です。</span></p>
           <p>学生時代に国語や算数があったように、<br>
-          きんゆう女子学院にも科目があります。</p>
-          <p>きんゆう女子学院では、<br>
+          きんゆう女子。学院にも科目があります。</p>
+          <p>きんゆう女子。学院では、<br>
           文系科目をメインに、<br>
           バランスよく多角的に<br>
           <span class="bottom-border">金融の全体像から考え方、</span><br>
@@ -279,6 +279,32 @@
       </div>
 
     </div>
+  </div>
+  <footer class="pc">
+    <div class="footer-logo">
+      <img src="/images/kinyu-logo01.png">
+    </div>
+    <div class="footer-menu">
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/company">運営会社</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/privacy">プライバシーポリシー</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/legal">特定商取引法に基づく表記</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/service">会員規約</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/contact">お問い合わせ</a>
+      </div>
+    </div>
+    <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2018 TOE THE LINE, Inc.</p>
+  </footer>
+  <div class="sp">
+    {$sp_footer}
   </div>
 </div>
 

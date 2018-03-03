@@ -1,42 +1,28 @@
 <?php
 return array(
 	'_root_'  => 'kinyu/top',  // The default route
-	//'_root_'  => 'maintenance/top',
 	'_404_'   => '/error/404',    // The main 404 route
 	'_500_'   => '/error/500',    // The main 404 route
+	'my'   => 'my/top',
 	'page/(:any)'   => 'page/top/$1',
+	'blogs'   => 'blogs/top',
 
-	//メンテナンス
-	'maintenance'  => 'maintenance/top',
-	
-	//◆メンバー登録/ログイン部分
-	'login_regist'   => 'login/regist',
-	'regist_email'   => 'login/regist_email',
-	'regist_sns'   => 'login/regist_sns',
-	'resetting_pass' => 'login/resetting_pass',
-	'resetting_pass_exuser' => 'login/resetting_pass_exuser',
-	'regist_complete' => 'login/complete',
+	//admin
+
+	//会員登録情報
+	'my/registlist' => 'my/registlist/index',
+	'my/registlist/create' => 'my/registlist/create',
+	'my/registlist/(:any)'   => 'my/registlist/detail/$1',
 
 	//テスト環境
 	'testindex' => 'kinyu/top/testindex',
 	'testsp' => 'kinyu/top/testspindex',
 		
-	// きんゆう女子。
+	// きんゆう女子
 	'kinyu'   => 'kinyu/top',
-
-	// はじめての方へ
-	'start'   => 'kinyu/start/index',	
-	
-	//aboutページ
 	'about' => 'kinyu/about/index',
-	'about_main' => 'kinyu/about/about_main',
-	'about_contents' => 'kinyu/about/about_contents',
-	'about_story' => 'kinyu/about/about_story',
-	'about_policy' => 'kinyu/about/about_policy',
-	'about_design' => 'kinyu/about/about_design',
-	'about_hensyubu' => 'kinyu/about/about_hensyubu',
-
 	'report'   => 'kinyu/blog/index',
+	'report/1'   => 'kinyu/top',
 	'report/(:num)'   => 'kinyu/blog/index/$1',
 	'report/(:any)'   => 'kinyu/blog/detail/$1',
 	'welcome/blog/(:any)'   => 'kinyu/blog/welcome/$1',
@@ -55,12 +41,9 @@ return array(
 	//'welcome/event'   => 'kinyu/event/welcome',
 
 	//イベント関連
-	'joshikai'   => 'kinyu/event/index',
-	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
-	'joshikai_tickets/(:any)'   => 'kinyu/event/tickets/$1',
-	'joshikai_payment_card/(:any)'   => 'kinyu/event/tickets_card/$1',
-	'joshikai_payment_cash/(:any)'   => 'kinyu/event/tickets_cash/$1',
-	'joshikai_complete'   => 'kinyu/event/complete',
+	'event'   => 'kinyu/event/choice',
+	'event_main'   => 'kinyu/event/index',
+	'event_special'   => 'kinyu/event/special',
 
 	//ニュース
 	'news'   => 'kinyu/news/index',
@@ -97,49 +80,21 @@ return array(
 
 	//キャンペーン
 	'school' => 'kinyu/campaign/school',
+	'school_jpx02' => 'kinyu/campaign/school_02',
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
+	'daijoshikai2018' => 'kinyu/campaign/daijoshikai2018',
 	'map' => 'kinyu/campaign/map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 	'celebration' => 'kinyu/campaign/celebration_20171206',
-	'daijoshikai2018' => 'kinyu/campaign/daijoshikai2018',
-	'school_jpx02' => 'kinyu/campaign/school_02',
 
 	'blog/page/(:any)'   => 'kinyu/blog/page/index/$1',
 	'event/page/(:any)'   => 'kinyu/event/page/index/$1',
 	'project'   => 'kinyu/project/index',
 	'project/(:num)'   => 'kinyu/project/index/$1',
 	'project/(:any)'   => 'kinyu/project/detail/$1',
-
-
-	//マイページ - トップ
-	'my'   => 'my/top',
-	//マイページ - プロフィール、女子会リスト
-	'my/profile'   => 'my/profile/index',
-	'my/account'   => 'my/account/index',
-	'my/joshikai' => 'my/events/joshikailist',
-	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
-
-	'admin'   => 'admin/top',
-	//管理画面admin - 会員リスト
-	'admin/registlist' => 'admin/registlist/index',
-	'admin/registlist/create' => 'admin/registlist/create',
-	'admin/registlist/(:any)'   => 'admin/registlist/detail/$1',
-	//管理画面admin - 女子会
-	'admin/report' => 'admin/blogs/index',
-	'admin/report/create' => 'admin/blogs/create',
-	'admin/report/edit/(:any)' => 'admin/blogs/edit/$1',
-	//管理画面admin - 女子会
-	'admin/joshikai' => 'admin/events/index',
-	'admin/joshikai/create' => 'admin/events/create',
-	'admin/joshikai/edit/(:any)' => 'admin/events/edit/$1',
-	'admin/joshikai/attend' => 'admin/events/attend',
-	'admin/joshikai/attend/(:any)' => 'admin/events/attend_detail/$1',
-	//管理画面admin - ニュース
-	'admin/news' => 'admin/news/index',
-	'admin/news/create' => 'admin/news/create',
-	'admin/news/edit/(:any)' => 'admin/news/edit/$1',
-	//管理画面admin - 会員リスト
+	
+	// admin
 	'my/projects/courses/create/(:any)'   => 'my/projects/courses_create/$1',
 	'my/projects/courses/edit/(:any)'   => 'my/projects/courses_edit/$1',
 	'my/projects/blog/create/(:any)'   => 'my/projects/blog_create/$1',

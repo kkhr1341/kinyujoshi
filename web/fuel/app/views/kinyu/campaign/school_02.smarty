@@ -14,7 +14,7 @@
 
       <div class="kinyu-school_public-intro pc">
         <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
-        <img style="width:100%;" src="/images/content/school_public/school_public02_main.jpg">
+        <img src="/images/content/school_public/school_public02_main.jpg">
       </div>
       <!-- きんゆう女子。学院とは？ -->
       <div class="kinyu-school_public-el about-public_school">
@@ -272,6 +272,44 @@
 
     </div>
   </div>
+  <footer class="pc">
+    <div class="footer-logo">
+      <img src="/images/kinyu-logo01.png">
+    </div>
+    <div class="footer-menu">
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/company">運営会社</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/privacy">プライバシーポリシー</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/legal">特定商取引法に基づく表記</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/service">会員規約</a>
+      </div>
+      <div class="navi_kinyu-submenu-el clear">
+        <a href="/contact">お問い合わせ</a>
+      </div>
+    </div>
+    <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2018 TOE THE LINE, Inc.</p>
+  </footer>
+  <div class="sp">
+    {$sp_footer}
+  </div>
+
+  <!-- <div class="pc application-img">
+    <a href="https://peatix.com/event/332524/" target="_blank">
+      <img src="/images/content/school_public/application-img.png">
+    </a>
+  </div>
+
+  <div class="sp fix-application">
+    <a href="https://peatix.com/event/332524/" target="_blank">
+      <p><span>第2回！きんゆう女子。学院の</span><br>お申し込みはこちら</p>
+    </a>
+  </div> -->
 </div>
 
 <style>

@@ -417,11 +417,8 @@
         <h2>取引開始<span> まで...</span></h2>
         <div class="timelimit-block">
           <div id='timerOlympic'>
-            <div class="yycountdown-box">
-              <div class="yyc-box yyc-day">0</div><span class="yyc-subbox yyc-day-text">日</span><span class="yyc-box yyc-hou">0</span><span class="yyc-subbox yyc-hou-text">時間</span><span class="yyc-box yyc-min">0</span><span class="yyc-subbox yyc-min-text">分</span><span class="yyc-box yyc-sec">0</span><span class="yyc-subbox yyc-sec-text">秒</span></div>
           </div>
         </div>
-        <img class="finish-co" src="/images/content/conference/finish-co.png">
         <style>
           .finish-co {
             margin-top:24px; 
@@ -434,9 +431,9 @@
         </style>
       </div>
       <script>
-        // $('#timerOlympic').yycountdown({
-        //   endDateTime   : '2018/03/01 19:00:00'
-        // });
+        $('#timerOlympic').yycountdown({
+          endDateTime   : '2018/03/01 19:00:00'
+        });
       </script>
     </div>
 
@@ -450,8 +447,7 @@
             <p class="application-date">【3/1(木) 19:30〜21:45】</p>
             <div class="img-box" style="  background:url(/images/content/conference/content-after-conference.jpg) center center / cover no-repeat;"></div>
             <p class="application-fee">参加費：2,000<span>円</span><br>(<span style="color:#fda8b7;">＊</span>お食事・ドリンク代込み)</p>
-            <p class="application-button" target="_blank" href="http://daijoshikai2018.peatix.com/">お申し込みはこちら</p>
-            <p class="application-sub-button"><span style="color:#fda8b7;">＊</span>お申込みは締め切りました</p>
+            <a class="application-button" target="_blank" href="http://daijoshikai2018.peatix.com/">お申し込みはこちら</a>
           </div>
         </div>
       </div>
@@ -524,6 +520,33 @@
         </div>
       </div>
     </div>
+
+    <footer class="pc">
+      <div class="footer-logo">
+        <img src="/images/kinyu-logo01.png">
+      </div>
+      <div class="footer-menu">
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/company">運営会社</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/privacy">プライバシーポリシー</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/legal">特定商取引法に基づく表記</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/service">会員規約</a>
+        </div>
+        <div class="navi_kinyu-submenu-el clear">
+          <a href="/contact">お問い合わせ</a>
+        </div>
+      </div>
+      <p class="navi_kinyu-submenu-copy">COPYRIGHT © 2018 TOE THE LINE, Inc.</p>
+    </footer>
+    <div class="sp">
+      {$sp_footer}
+    </div>
   </div>
 </div>
 
@@ -542,7 +565,16 @@
   </div>
 </div>
 
-<!-- <a class="sp fix-application-button" target="_blank" href="http://daijoshikai2018.peatix.com/">お申し込みはこちら</a> -->
+<a class="sp fix-application-button" target="_blank" href="http://daijoshikai2018.peatix.com/">お申し込みはこちら</a>
+
+
+<style>
+@media screen and (max-width: 640px) {
+.singlepage-footer {
+  padding: 60px 0px 120px;
+}
+}
+</style>
 
 <script>
   $(function() {

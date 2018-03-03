@@ -13,13 +13,12 @@
 .main-img-box-container {
   height: 600px;
   position: relative;
-  margin-top: 130px;
 }
-.main-img-box-container .main-logo {
+.main-logo {
   position: absolute;
   top: 50%;
-  right: 17%;
-  margin-top: -210px;
+  right: 10%;
+  margin-top: -80px;
   z-index: 1001;
 }
 .kinyu-logo {
@@ -89,7 +88,6 @@
   margin: 0 auto;
   padding: 60px 0px 80px;
   position: relative;
-  /*background:url(/images/myway/bg-intro.png) center center / cover no-repeat;*/
 }
 .myway-introduction .myway-description .inner {
   width: 1000px;
@@ -97,19 +95,19 @@
   text-align: center;
 }
 .myway-introduction .myway-description p {
-  font-size: 13px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 28px;
   width: 800px;
   margin: 0 auto;
 }
 .intoduction-title {
-  font-size: 24px;
+  font-size: 26px;
   line-height: 36px;
   margin-bottom: 36px;
 }
 .intoduction-title span {
-  border-bottom: 1px solid gray;
-  padding-bottom: 4px;
+  border-bottom: 2px solid gray;
+  padding-bottom: 8px;
 }
 
 /* イントロダクション-画像 */
@@ -158,7 +156,6 @@
 }
 .myway-content-list-el .inner {
   width: 88%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 80px 0px;
   border-top: 1px solid;
@@ -175,14 +172,14 @@
   background-size: cover;
   position: absolute;
 }
-.myway-content-list-el .text-box img {
-  width: 56%;
-}
 .myway-content-list-el .text-box {
   width: 50%;
   float: right;
   padding-left: 52px;
   padding-top: 12px;
+}
+.myway-content-list-el .text-box img {
+  width: 56%;
 }
 .myway-content-list-el-even .img-box {
   float: right;
@@ -203,12 +200,8 @@
   padding: 12px 0px;
   text-align: center;
 }
-.myway-content-list-el .text-box .description {
-  font-size: 13px;
-  line-height: 24px;
-}
 .myway-content-list-el .text-box .myway-to-link {
-  font-size: 13px;
+  font-size: 15px;
   width: 360px;
   display: block;
   margin: 0 auto;
@@ -218,16 +211,24 @@
   margin-top: 20px;
   color: #fff;
   font-weight: bold;
-  transition: .5s;
 }
-.myway-content-list-el .text-box p.myway-to-link {
-  opacity: .4;
-}
+
 .myway-to-link-coming {
   text-align: center;
   font-size: 13px;
   line-height: 13px;
   margin-top: 4px;
+}
+
+/* 非公開の場合 */
+.myway-content-list-el .text-box p.myway-to-link {
+  opacity: .3;
+}
+.not-open-span {
+  font-size: 11px;
+  line-height: 11px;
+  text-align: center;
+  margin-top: 6px;
 }
 
 /* くつ編 */
@@ -287,25 +288,24 @@
   記事部分 
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-report-content {
-  width: 100%;
-  padding-top: 130px;
-}
-.myway-header-content {
-}
-.myway-report-content-title {
-  text-align: center;
-  padding: 24px 0px 40px;
-}
-.myway-header-content .main-tumb-block {
   width: 1000px;
   margin: 0 auto;
-  padding: 50px 0px;
+}
+.myway-header-content {
+  padding-top: 50px;
+}
+.myway-header-content h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.myway-header-content .main-tumb-block {
+  padding: 36px 0px;
   box-sizing: border-box;
   position: relative;
 }
 .myway-header-content .main-tumb-block .video-block {
   float: left;
-  width: 620px;
+  width: 600px;
   height: 340px;
   overflow: hidden;
   position: relative;
@@ -317,7 +317,7 @@
 }
 .myway-header-content .main-tumb-block .title-block {
   float: right;
-  width: 380px;
+  width: 400px;
   padding: 0px 36px;
   box-sizing: border-box;
   display: table;
@@ -329,19 +329,24 @@
   height: 100%;
 }
 .myway-header-content .main-tumb-block .title-block p {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 11px;
+  line-height: 18px;
+}
+.myway-report-content .text-box-title {
+  font-size: 15px!important;
+  line-height: 22px!important;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
 }
 .myway-header-content .main-tumb-block .title-block img {
   width: 280px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .myway-report-content .inner {
+  border-bottom: 1px solid gray;
+  padding: 40px 0px;
   position: relative;
-  background: #fff;
-  width: 1000px;
-  padding: 80px 0px;
-  margin: 0 auto;
 }
 .myway-report-content .myway-report-detail {
   width: 640px;
@@ -388,7 +393,7 @@
 .myway-report-content .report-detail-main h2 {
   font-size: 18px;
   line-height: 26px;
-  border-bottom: 1px solid #444;
+  border-bottom: 2px solid #444;
 }
 .myway-report-content .report-detail-main h2:before {
   color: #444;
@@ -419,61 +424,19 @@
   display: block;
   margin: 0 auto;
 }
-.myway-list-block {
-  width: 1000px;
-  margin: 0 auto;
-  margin-bottom: 100px;
-}
-.myway-list {
-  margin-top: 24px;
-}
-.myway-list-title {
-  display: block;
-  margin: 0 auto;
-}
-.myway-list-block ul {
-  letter-spacing: -40px;
-  text-align: center;
-}
-.myway-list-block li {
-  width: 32%;
-  display: inline-block;
-  letter-spacing: normal;
-  margin-right: 2%;
-}
-.myway-list-block li:last-child {
-  margin-right: 0%;
-}
-.myway-list-block li a {
-  display: block;
-  line-height: 0px;
-  text-align: center;
-  padding: 10px 0px;
-}
-.myway-list-block li a img {
-  width: 60%;
-}
-.myway-list-block .myway-list-shoes {
-  background: #FBECE4;
-}
-.myway-list-block .myway-list-cosmetics {
-  background: #EBFAFF;
-}
-.myway-list-block .myway-list-jewelry {
-  background: #ebf9f0;
-}
+
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマートフォン
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 
 
 /*-*- イントロダクション -*-*/
 .main-img-box-container {
   height: auto;
   overflow: hidden;
-  margin-top: 0px;
 }
 .main-img-box {
   width: 100%;
@@ -518,7 +481,7 @@
   width: 100%;
 }
 .intoduction-title {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 32px;
   margin-bottom: 20px;
 } 
@@ -528,8 +491,8 @@
 }
 .myway-introduction .myway-description p {
   width: 84%;
-  font-size: 11px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 18px;
 }
 
 /* イントロダクション-画像 */
@@ -585,14 +548,18 @@
   height: 200px;
   float: none;
 }
-/* くつ */
+/* 動画タグ */
 #myway-shoes.myway-content-list-el .img-box video {
   height: 110%;
   right: auto;
 }
 #myway-cosmetics.myway-content-list-el .img-box video {
-    height: 110%;
-    right: auto;
+  height: 110%;
+  right: auto;
+}
+#myway-jewelry.myway-content-list-el .img-box video {
+  height: 110%;
+  right: auto;
 }
 .myway-content-list-el .text-box {
   width: 100%;
@@ -605,13 +572,13 @@
   padding-top: 8px;
 }
 .myway-content-list-el .edition img {
-  width: 84%;
+  width: 80%;
   margin-bottom: 8px;
 }
 .myway-content-list-el .text-box .myway-to-link {
   width: 84%;
   font-size: 12px;
-  padding: 12px 0px;
+  padding: 10px 0px;
   margin-top: 20px;
   position: relative;
 }
@@ -627,7 +594,6 @@
 }
 .myway-content-list-el .text-box .description {
   font-size: 11px;
-  line-height: 18px;
 }
 
 /* coming-soon */
@@ -663,23 +629,11 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-report-content {
   width: 100%;
-  padding-top: 10px;
-}
-.myway-report-content-title {
-  width: 52%;
-  margin: 0 auto;
-  padding: 16px 0px 24px;
-}
-.myway-report-content-title img {
-  width: 100%;
-}
-.myway-header-content .main-tumb-block {
-    width: 100%;
 }
 .myway-header-content {
   width: 88%;
   margin: 0 auto;
-  padding-top: 0px;
+  padding-top: 36px;
 }
 .myway-header-content h2 {
   width: 60%;
@@ -690,7 +644,7 @@
   width: 100%;
 }
 .myway-header-content .main-tumb-block {
-  padding: 24px;
+  padding: 6%;
 }
 .myway-header-content .main-tumb-block .video-block {
   width: 100%;
@@ -706,24 +660,27 @@
   top: auto;
   right: auto;
   margin-top: 0px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-align: center;
   height: auto;
   float: none;
-  padding: 0px 0px;
-}
-.myway-header-content .main-tumb-block .title-block p {
-  font-size: 11px;
-  line-height: 18px;
 }
 .myway-header-content .main-tumb-block .title-block img {
   width: 92%;
   margin-bottom: 8px;
 }
+.myway-report-content .text-box-title {
+  font-size: 14px!important;
+  line-height: 20px!important;
+  font-weight: bold;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-top: 16px;
+}
 .myway-header-content .main-tumb-block .my-way-description {
   font-size: 10px;
   line-height: 17px;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 .myway-report-content .inner {
   width: 88%;
@@ -785,33 +742,20 @@
   padding: 10px 0px 8px;
   width: 60%;
 }
+/*.myway-content-after .instagram_block_li li {
+  width: 48%;
+}
+.myway-content-after .instagram_block_li li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}*/
+
 .myway-report-content footer {
   padding: 50px 0px 80px;
 }
-
-.myway-list-block {
-  width: 92%;
-  margin: 0 auto;
-  margin-bottom: 36px;
-  margin-top: 32px;
-}
-.myway-list-title {
-  width: 88%;
-}
-.myway-list-block li {
-  width: 80%;
-  display: inline-block;
-  letter-spacing: normal;
-  margin-right: 0%;
-  margin-bottom: 12px;
 }
 
-}
-
-/* pc - hoverイベント */
-.myway-content-list-el .text-box .myway-to-link:hover {
-  opacity: .5;
-} 
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -832,82 +776,5 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   タブレットのみ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-@media screen and (min-width: 480px) and (max-width:1024px) {
-/*.main-img-box-container {
-  height: 400px;
-}
-.main-img-box {
-  height: 400px;
-}*/
-.main-logo {
-  height: 68%;
-}
-.main-img-box-container .main-logo {
-  right: 17%;
-  margin-top: -175px;
-}
-.intoduction-title {
-  font-size: 20px;
-  line-height: 40px;
-  margin-bottom: 24px;
-}
-.myway-introduction .myway-description p {
-  width: 70%;
-  font-size: 13px;
-  line-height: 22px;
-}
-.myway-content-list-el .edition img {
-  width: 50%;
-  margin-bottom: 12px;
-}
-.myway-content-list-el .img-box {
-  height: 270px;
-  margin: 0 auto;
-  width: 70%;
-}
-.myway-content-list-el .text-box .text-box-title {
-  font-size: 18px;
-  line-height: 30px;
-}
-.myway-content-list-el .text-box .description {
-  font-size: 13px;
-  line-height: 22px;
-  width: 80%;
-  margin: 0 auto;
-}
-.myway-content-list-el .text-box .myway-to-link {
-  width: 60%;
-  font-size: 13px;
-  margin-top: 24px;
-}
-.myway-header-content .main-tumb-block .title-block img {
-  width: 50%;
-  margin-bottom: 8px;
-}
-.myway-header-content .main-tumb-block {
-  padding: 42px 24px;
-}
-.myway-header-content .main-tumb-block .title-block p {
-  font-size: 13px;
-  line-height: 22px;
-  width: 80%;
-  margin: 0 auto;
-}
-.myway-header-content .main-tumb-block .video-block {
-  height: 270px;
-  margin: 0 auto;
-  width: 70%;
-}
-.myway-header-content .main-tumb-block .video-block video {
-  height: 110%;
-  right: auto;
-}
-.myway-list-block li {
-  width: 32%;
-}
-.myway-list-title {
-  width: 55%;
-}
-
-
+@media screen and (min-width: 641px) and (max-width: 768px) {
 }
