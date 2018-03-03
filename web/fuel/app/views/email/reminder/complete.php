@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>【きんゆう女子。】WEBアップデート♪ パスワード設定のお願い。</title>
+    <title>【きんゆう女子。】パスワードの再設定が完了しました。</title>
 
     <!-- <link rel="stylesheet" type="text/css" href="https://irodori.fund/assets/css/irodori/email.css" /> -->
 
@@ -42,54 +42,11 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>パスワード発行手続きのご依頼について</h3>
-
-                            こんにちは!<br>
-                            きんゆう女子。編集部です。<br><br>
-
-                            先日のメンバーの方にはお伝えしておりましたが、 <br>
-                            WEBサイトのアップデートに伴い、きんゆう女子。のサイト内で、<br>
-                            女子会のお申込みが可能となりました。<br><br>
-
-                            女子会に参加するには、新しく追加した"マイページ"へのログインが必要になります。<br>
-                            そのため、メンバー登録方法についても、Googleアカウント・Facebookアカウント・メールアドレスでのご登録が可能になりました。<br><br>
-
-                            このメールをお送りしているみなさまは、すでにメンバー登録をいただいておりましたので、<br>
-                            再度ご登録いただくのはお手数をおかけしてしまうと考えまして...。 <br><br>
-
-                            パスワードの設定のみで、マイページへのログインが可能になるよう設計いたしました。<br>
-                            つきましては、以下1~6の手順にて、パスワードの設定をお願いできますと幸いです。<br><br><br>
-
-
-                            ◆パスワードの設定手順<br>
-                            ------------------<br><br>
-
-                            ① 以下URL先に移動してください。<br>
-                            <a href="<?php echo $url ?>" target="_blank"><?php echo $url ?></a><br><br>
-
-                            ②「新しいパスワード」にて、お好きなパスワードを入力してください。 <br><br>
-
-                            ③「パスワードを設定する」ボタンをクリックしてください。<br><br>
-
-                            ④ 以下URL先の「ログインページ」に移動します。<br>
-                            <a href="https://kinyu-joshi.jp/login" target="_blank">https://kinyu-joshi.jp/login</a><br><br>
-                            ＊③の「パスワードを設定する」ボタンをクリックしたら、自動で移動します。
-
-                            ⑤ メールアドレスと先ほど、設定したパスワードを入力してログインしてください。<br><br>
-
-                            ⑥ マイページに移動できたら完了です♪<br><br>
-
-                            ------------------<br><br>
-
-                            パスワードの設定方法は、以上になります。<br><br>
-
-                            もし、①〜⑥の手順でご不明点などありましたら、<br>
-                            いつでもお気軽にご連絡ください。<br><br>
-
-                            ◆お問い合わせフォーム<br>
-                            <a href="https://kinyu-joshi.jp/contact" target="_blank">https://kinyu-joshi.jp/contact</a><br><br>
-
-                            それでは、パスワードの設定をお願いいたします( ́∀`)!
+                            <h3>パスワードの再設定が完了しました。</h3>
+                            パスワードの設定が完了しましたので、ご連絡いたします。<br><br>
+                            次回より、新しいパスワードでのログインをお願いいたします。<br><br>
+                            ◆マイページ<br>
+                            <a href="https://kinyu-joshi.jp/my" target="_blank">https://kinyu-joshi.jp/my</a>
                         </td>
                     </tr>
                 </table>

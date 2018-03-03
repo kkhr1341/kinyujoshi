@@ -91,7 +91,7 @@
           <div class="text-box">
             <div class="text-box-inner">
               <div class="border-top"></div>
-              <p class="main-title">毎週木曜日夜、お金についてざっくばらんにおしゃべり。女子会スタイルで”金融”の基本をゆる～くたのしく勉強しています。</p>
+              <p class="main-title">おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広い"きんゆう"をテーマに女子会をしています。</p>
               <p class="description">女子会の内容は週によって変わります。毎月1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり、特別な場所で開催する"特別女子会"も不定期で開催しています。また、コミュニティ活動を通じて、まちづくりやスペースの有効活用にも貢献しています。</p>
             </div>
           </div>
@@ -100,9 +100,10 @@
             <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai3.jpg) center center / cover no-repeat"></div>
             <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai4.jpg) center center / cover no-repeat"></div>
           </div>
-          <a class="sp link-to" href="#joshikai-list">直近の女子会はこちら</a>
+          <a class="sp link-to" href="#joshikai-list">今後の女子会の予定はこちら</a>
         </div>
 
+        {*
         <div class="joshikai-held-area">
           <p class="joshikai-held-area-title">主に女子会を開催している場所</p>          
           <div class="joshikai-held-el-block">
@@ -134,6 +135,7 @@
             </div>
           </div>
         </div>
+        *}
       </div>
 
       <div class="special-event-list joshikai-main-el">

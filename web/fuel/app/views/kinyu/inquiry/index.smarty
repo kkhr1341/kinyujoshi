@@ -134,9 +134,7 @@
                     //ローディングアニメーション
                     $(".loader-block").fadeIn(200);
                     ajax.post(url, params, function (data) {
-                            setTimeout(function () {
-                                location.href = "/contact/complete";
-                            }, 1000);
+                            location.href = "/contact/complete";
                         })
                         .done(function(data) {
                             $(".loader-block").fadeOut(500);

@@ -105,7 +105,7 @@ class RegistReminder extends Base
 
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
-            $mail->subject("【きんゆう女子。】お知らせ");
+            $mail->subject("【きんゆう女子。】WEBアップデート♪ パスワード設定のお願い。");
 
             $mail->attach(DOCROOT.'public/images/kinyu-logo.png', true);
 
