@@ -2,60 +2,60 @@
 <div class="kinyu-sp-navi">
   <div class="kinyu-sp-header-menu kinyu-sp-header-close">
     <img class="menu-trigger" src="/images/new/sp-header-close_w.png">
+    <a href="/" class="navi-icon"><img class="top-circle-logo" src="/images/top-circle-logo.png"></a>
   </div>
 
   <div class="inner">
     <p class="pc-menu-trigger-close"><img src="/images/new/sp-header-close.png"></p>
     <ul class="navi_contents-block-menu">
-      <li class="item navi_menu">
+      <!-- <li class="item navi_menu">
         <div class="navi-icon">
-          <a href="/"><img src="/images/icon/top-icon-kinyu.png"></a>
+          <a href="/"><img class="top-circle-logo" src="/images/top-circle-logo.png"></a>
         </div>
-      </li>
+      </li> -->
 
       <li class="item navi_kinyu-menu-li01">
         <div class="navi_kinyu-menu-block clear">
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/about">きんゆう女子。って？</a>
+          <div class="navi_kinyu-menu-block-el navi-el-at">
+            <a class="fc-kinyu" href="/about">きん女。ストーリー</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/event">女子会に参加する</a>
+            <a href="/login_regist"><!-- <span style="color:#8ddcd1;">◆</span>  -->メンバー登録</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/regist">メンバーになる</a>
+            <a href="/my"><!-- <span style="color:#8ddcd1;">◆</span>  -->マイページ</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/report">レポート</a>
+            <a href="/joshikai"><!-- <span style="color:#8ddcd1;">◆</span>  -->女子会に参加する</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/news">ニュース</a>
+            <a href="/report"><!-- <span style="color:#8ddcd1;">◆</span>  -->レポートを見る</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/news"><!-- <span style="color:#8ddcd1;">◆</span>  -->ニュースを見る</a>
           </div>
         </div>
       </li>
 
-      <li class="item navi_banner_area navi_kinyu-menu-li02">
-        <a class="navi_banner_area_el" href="/school_jpx02">
-          <img src="/images/content/school_public/og-school_public02.jpg">
-        </a>
+      <li class="item navi_kinyu-menu-li02">
+        <div class="navi-social-area">
+          <div class="navi-social-area-el">
+            <a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/instagram_icon.png"></a>
+          </div>
+          <div class="navi-social-area-el">
+            <a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a>
+          </div>
+        </div>
+      </li>
+
+      <li class="item navi_banner_area navi_kinyu-menu-li03">
         <a class="navi_banner_area_el" href="/myway">
           <img src="/images/myway/og_myway.jpg">
         </a>
-        <a class="navi_banner_area_el" href="/oom-reit">
-          <img src="/images/content/ooedo_joshikai/oom-reit-og.jpg">
-        </a>
-        <a class="navi_banner_area_el" href="/school_jpx">
-          <img src="/images/content/school_public/og-school_public.png">
-        </a>
-        <a class="navi_banner_area_el" href="/conference">
-          <img src="/images/og-conference.jpg">
-        </a>
-        <a class="navi_banner_area_el" href="/school">
-          <img src="/images/og-gakuin.jpg">
-        </a>
       </li>
 
-      <li class="item navi_kinyu-menu-li03">
-        <div class="navi_kinyu-menu-block clear">
+      <li class="item navi_kinyu-menu-li04">
+        <!-- <div class="navi_kinyu-menu-block clear">
           <div class="navi_kinyu-menu-block-el">
             <a href="/company">運営会社</a>
           </div>
@@ -71,7 +71,8 @@
           <div class="navi_kinyu-menu-block-el">
             <a href="/contact">お問い合わせ</a>
           </div>
-        </div>
+        </div> -->
+        <img src="/images/menu/menu-footer-illust.png" width="100%;">
       </li>
     </ul>
 
