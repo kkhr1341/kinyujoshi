@@ -63,7 +63,7 @@
                         </span>
                         {$event.event_start_datetime}〜{$event.event_end_datetime}
                       </p>
-                      {if $event.applicable}
+                      {if $event.applicable eq false}
                         <p class="joshikai-applicable">＊受付終了</p>
                       {/if}
                     </div>
