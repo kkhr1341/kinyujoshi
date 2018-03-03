@@ -49,22 +49,17 @@
             <label>有効期限</label>
             <div class="exp-date-block">
               <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="（月）＊03、12など2桁">
-              <input type="text" class="exp_year" name="exp_year" maxlength="4" placeholder="（年）＊2020など4桁">
+              <input type="text" class="exp_year" name="exp_year" maxlength="2" placeholder="（年）＊20など2桁">
             </div>
           </div>
-          {if in_array('user', $roles) || in_array('admin', $roles)}
-            <input type="hidden" id="name" name="name" value="{$user.name}">
-            <input type="hidden" id="email" name="email" value="{$user.email}">
-          {else}
-            <div class="fee-open-el">
-              <label>お名前（フルネーム）</label>
-              <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
-            </div>
-            <div class="fee-open-el">
-              <label>メールアドレス</label>
-              <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
-            </div>
-          {/if}
+          <div class="fee-open-el">
+            <label>お名前（フルネーム）</label>
+            <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
+          </div>
+          <div class="fee-open-el">
+            <label>メールアドレス</label>
+            <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
+          </div>
         </div>
 
         <div class="cancel-block">
@@ -158,7 +153,7 @@
                 number: number.val(),
                 cvc: cvc.val(),
                 exp_month: exp_month.val(),
-                exp_year: exp_year.val(),
+                exp_year: '20' + exp_year.val(),
                 name: name.val()
             };
 
