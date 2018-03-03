@@ -44,12 +44,8 @@ return array(
             // After Request forged
             if ($maintenance_active and ! \Config::get('maintenance.through'))
             {
-                $data = array(
-                    'title' => 'Maintenance 503 (メンテナンス 503)',
-                    'content' => render('maintenance/index'),
-                );
                 // Set a HTTP 503 output header
-                return Response::forge(render('maintenance', $data, false), 503)->send(true);
+                return Response::forge(render('maintenance', array(), false), 503)->send(true);
             }
         },
         'request_started' => function() use ($maintenance_active)
