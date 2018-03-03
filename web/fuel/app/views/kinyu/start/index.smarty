@@ -15,23 +15,31 @@
 							<p>わたしらしい<br>「ミライ」への解放</p>
 						</div>
 					</div>
-					<div class="description-box"><p>
-						はじめまして。「きんゆう女子。」編集部です。<br><br>
-
+					<div class="description-box">
+						<p class="pc">はじめまして。「きんゆう女子。」編集部です。<br><br>
 						「きんゆう女子。」は、2016年3月3日に生まれた、<br>
 						20〜30代を中心とした金融ワカラナイ女子による、<br>
 						ワカラナイ女子のためのコミュニティです。<br><br>
-
 						「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」<br>
 						をコンセプトに、身近な家計管理から世界経済、FinTech（フィンテック）、<br>
 						ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。<br><br>
-
 						ゆる〜く、楽しく。でもちょっと真面目に。<br><br>
-
 						わたしたち編集部では、女性たちが、お金の漠然とした不安や焦りから解放され、<br>
 						ワカラナイ・難しいから諦めていたことを行動に移し実現に近づけていく…<br>
 						そっと後押しするようなフォローをしていきたいと思っています。<br>
-					</p></div>
+						</p>
+						<p class="sp">はじめまして。「きんゆう女子。」編集部です。<br><br>
+						「きんゆう女子。」は、2016年3月3日に生まれた、20〜30代を中心とした金融ワカラナイ女子による、
+						ワカラナイ女子のためのコミュニティです。<br><br>
+						「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」
+						をコンセプトに、身近な家計管理から世界経済、FinTech（フィンテック）、
+						ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。<br><br>
+						ゆる〜く、楽しく。でもちょっと真面目に。<br><br>
+						わたしたち編集部では、女性たちが、お金の漠然とした不安や焦りから解放され、
+						ワカラナイ・難しいから諦めていたことを行動に移し実現に近づけていく…
+						そっと後押しするようなフォローをしていきたいと思っています。<br>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -43,7 +51,7 @@
 					
 					<div class="kinyu-start-content-action-block">
 						<div class="kinyu-start-content-action-el clear">
-							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
+							<div class="img-box" style="background: url(/images/event/L1070084.jpg) center center / cover no-repeat;"></div>
 							<div class="text-box">
 								<div class="text-box-inner">
 									<p class="action-title"><span class="action-number">01</span>女子会</p>
@@ -54,7 +62,7 @@
 						</div>
 
 						<div class="kinyu-start-content-action-el clear">
-							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
+							<div class="img-box" style="background: url(/images/start/share-img.jpg) center center / cover no-repeat;"></div>
 							<div class="text-box">
 								<div class="text-box-inner">
 									<p class="action-title"><span class="action-number">02</span>シェア</p>
@@ -65,7 +73,7 @@
 						</div>
 
 						<div class="kinyu-start-content-action-el clear">
-							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
+							<div class="img-box" style="background: url(/images/start/report-img.jpg) center center / cover no-repeat;"></div>
 							<div class="text-box">
 								<div class="text-box-inner">
 									<p class="action-title"><span class="action-number">03</span>レポート</p>
