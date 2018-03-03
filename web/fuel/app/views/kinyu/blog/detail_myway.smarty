@@ -49,7 +49,7 @@
       <div class="main-tumb-block clear">
         <div class="title-block">
           <div class="title-block-inner">
-            <img src="/images/myway/title/title-jewelry.pngg">
+            <img src="/images/myway/title/title-jewelry.png">
             <p>{$blog.description}</p>
           </div>
         </div>
