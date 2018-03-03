@@ -1762,6 +1762,9 @@
   font-size: 13px;
   padding-top: 8px;
 }
+.joshikai-detail-el-info li .info-detail a {
+  transition: .5s;
+}
 .joshikai-detail-el-info .joinus-block {
   margin-left: 20px;
   border-top: 1px solid #dedede;
@@ -4298,6 +4301,10 @@ to {
   opacity: .5;
 }
 .kinyu-top-introlist-right a:hover {
+  opacity: .5;
+}
+.joshikai-detail-el-info li .info-detail a {
+  color: #77cbc0;
   opacity: .5;
 }
 
