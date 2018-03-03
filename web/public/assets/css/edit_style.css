@@ -4303,7 +4303,7 @@ to {
 .kinyu-top-introlist-right a:hover {
   opacity: .5;
 }
-.joshikai-detail-el-info li .info-detail a {
+.joshikai-detail-el-info li .info-detail a:hover {
   color: #77cbc0;
   opacity: .5;
 }
