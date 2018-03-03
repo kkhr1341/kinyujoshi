@@ -202,12 +202,11 @@
             promise
                 .then(function(data) {
                     $(".loader-block").fadeOut(500);
-                    setTimeout(function(){
-                        location.href = "/joshikai_complete";
-                    },1000);
+                    location.href = "/joshikai_complete";
                 })
-                .catch(function() {
+                .catch(function(error) {
                     $(".loader-block").fadeOut(500);
+                    ts.error(error);
                 })
         });
     })();
