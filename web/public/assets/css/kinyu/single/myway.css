@@ -18,8 +18,8 @@
 .main-img-box-container .main-logo {
   position: absolute;
   top: 50%;
-  right: 17%;
-  margin-top: -210px;
+  right: 12%;
+  margin-top: -90px;
   z-index: 1001;
 }
 .kinyu-logo {
@@ -502,7 +502,7 @@
   display: none;
 }*/
 
-.main-logo {
+.main-img-box-container .main-logo {
   width: auto;
   height: 80%;
   position: absolute;
@@ -843,6 +843,7 @@
   height: 68%;
 }
 .main-img-box-container .main-logo {
+  height: 70%;
   right: 17%;
   margin-top: -175px;
 }
