@@ -155,7 +155,7 @@
 
 
 .admin-normal-profile {
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 .admin-normal-profile .img-box-block {
   width: 120px;
@@ -353,6 +353,15 @@
 }
 .joshikai-cancel-block .description {
   margin-top: 8px;
+}
+
+.admin-normal-main .profile-alert {
+  font-size: 10px;
+  line-height: 16px;
+  margin-bottom: 24px;
+  padding: 0px 16px;
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;
 }
 
 

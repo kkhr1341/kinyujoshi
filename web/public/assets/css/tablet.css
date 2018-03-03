@@ -282,6 +282,9 @@
   font-size: 12px;
   line-height: 20px;
 }
+.kinyu-event-list-subdescription {
+  font-size: 12px;
+}
 
 /* きんゆう女子会。って？ */
 .joshikai-main-el {
@@ -631,6 +634,11 @@
 }
 .regist-sub-description {
   font-size: 12px;
+}
+
+.joshikai-cancel-block .inner {
+  width: 72%!important;
+  margin-left: -36%!important;
 }
 
 

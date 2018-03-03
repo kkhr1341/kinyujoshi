@@ -16,17 +16,21 @@
 						</div>
 					</div>
 					<div class="description-box"><p>
-						初めまして、きんゆう女子。編集部です。<br>
-						わたしたちは、20〜30代を中心とした金融ワカラナイ女子による、<br>
+						はじめまして。「きんゆう女子。」編集部です。<br><br>
+
+						「きんゆう女子。」は、2016年3月3日に生まれた、<br>
+						20〜30代を中心とした金融ワカラナイ女子による、<br>
 						ワカラナイ女子のためのコミュニティです。<br><br>
-						「おかねにとらわれず、自由で自分らしく等身大に生きる」<br>
-						をコンセプトに、身近な家計から世界の経済まで、<br>
-						広い意味での「金融」をテーマに女子会（勉強会）を開催しています。<br><br>
-						ゆる〜く、楽しく。でもしっかりと行っているのでご安心ください。<br><br>
-						また、わたしたちはどの金融機関にも属さず、<br>
-						中立的なポジションを保っています。<br>
-						特定の金融商品やサービスに紐づかせるような<br>
-						女子会は行わないポリシーです。
+
+						「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」<br>
+						をコンセプトに、身近な家計管理から世界経済、FinTech（フィンテック）、<br>
+						ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。<br><br>
+
+						ゆる〜く、楽しく。でもちょっと真面目に。<br><br>
+
+						わたしたち編集部では、女性たちが、お金の漠然とした不安や焦りから解放され、<br>
+						ワカラナイ・難しいから諦めていたことを行動に移し実現に近づけていく…<br>
+						そっと後押しするようなフォローをしていきたいと思っています。<br>
 					</p></div>
 				</div>
 			</div>
@@ -35,16 +39,16 @@
 		<div class="kinyu-start-content-contaner">
 			<div class="kinyu-start-content-block">
 				<div class="kinyu-start-content-inner">
-					<h3 class="main-title">「きん女。」で、できること</h3>
+					<h3 class="main-title">「きん女。」って何してるの？</h3>
 					
 					<div class="kinyu-start-content-action-block">
 						<div class="kinyu-start-content-action-el clear">
 							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
 							<div class="text-box">
 								<div class="text-box-inner">
-									<p class="action-title"><span class="action-number">01</span>女子会に参加</p>
-									<p class="action-description">女子会は毎週木曜日夜、日本橋兜町or銀座で開催しています。女子会の1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり特別な場所でも開催したりしています。また、コミュニティ活動を通じて、まちづくりにも貢献しています。</p>
-									<a class="text-link" href="">女子会の予定へ</a>
+									<p class="action-title"><span class="action-number">01</span>女子会</p>
+									<p class="action-description">"きんゆう"について気軽に話せる女子会を毎週行っています。同じ悩みをもったワカラナイ女子同士でお茶をしながら一緒におしゃべりしています。金融業界の方をゲストに迎えた勉強会もあります。</p>
+									<a class="text-link" href="/joshikai">女子会の予定へ</a>
 								</div>
 							</div>
 						</div>
@@ -53,9 +57,9 @@
 							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
 							<div class="text-box">
 								<div class="text-box-inner">
-									<p class="action-title"><span class="action-number">02</span>レポートを見る</p>
-									<p class="action-description">女子会は毎週木曜日夜、日本橋兜町or銀座で開催しています。女子会の1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり特別な場所でも開催したりしています。また、コミュニティ活動を通じて、まちづくりにも貢献しています。</p>
-									<a class="text-link" href="">レポート一覧へ</a>
+									<p class="action-title"><span class="action-number">02</span>シェア</p>
+									<p class="action-description">ひとりよりも、みんなで考えればよい知恵も情報も一度にシェアできます。みんなでおかねの情報を持ち寄って一つのサイトを作っています。</p>
+									<!-- <a class="text-link" href="">レポート一覧へ</a> -->
 								</div>
 							</div>
 						</div>
@@ -64,9 +68,9 @@
 							<div class="img-box" style="background: url(/images/kinyu-support.jpg);"></div>
 							<div class="text-box">
 								<div class="text-box-inner">
-									<p class="action-title"><span class="action-number">03</span>「わたしを知る。」見る</p>
-									<p class="action-description">女子会は毎週木曜日夜、日本橋兜町or銀座で開催しています。女子会の1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり特別な場所でも開催したりしています。また、コミュニティ活動を通じて、まちづくりにも貢献しています。</p>
-									<a class="text-link" href="">「わたしを知る。」へ</a>
+									<p class="action-title"><span class="action-number">03</span>レポート</p>
+									<p class="action-description">企業の方へ、私たちの声や気持ちをお届けしリアルとオンラインで情報発信することで、よりよいサービスの向上に貢献して、運営しています。</p>
+									<a class="text-link" href="/report">レポート一覧へ</a>
 								</div>
 							</div>
 						</div>
