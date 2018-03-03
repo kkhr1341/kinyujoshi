@@ -48,7 +48,7 @@ class RegistReminder extends Base
                         ->execute()
                         ->current();
 
-                    if (!$member_regist['username']) {
+                    if ($member_regist['username']) {
                         \Validation::active()->set_message('closure', 'このメールアドレスですでにメンバー登録がされているようです。');
                         return false;
                     }
