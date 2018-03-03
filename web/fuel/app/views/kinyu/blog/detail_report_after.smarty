@@ -34,7 +34,7 @@
 
     <!-- 直近の女子会 -->
   <div class="report-detail-sidebar-el">
-    <p class="report-detail-sidebar-el-title">直近の女子会</p>
+    <p class="report-detail-sidebar-el-title">今後の女子会の予定</p>
     <div class="report-sidebar-event-list">
       <ul class="clear">
         {foreach from=$top_events item=event name=loopname}
