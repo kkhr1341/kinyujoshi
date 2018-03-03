@@ -150,8 +150,9 @@ class Controller_Login extends Controller_KinyuBase
         if (!$reminder = RegistReminder::get_valid(\Input::get('access_token'))) {
             Response::redirect('/login');
         }
+
         $member_regist = \DB::select('*')->from('member_regist')
-                ->where('id', '=', $reminder['id'])
+                ->where('id', '=', $reminder['member_regist_id'])
                 ->execute()->current();
 
         $this->template->nickname = $member_regist['name'];
