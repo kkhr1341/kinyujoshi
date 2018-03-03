@@ -72,7 +72,7 @@
             <a href="/contact">お問い合わせ</a>
           </div>
         </div> -->
-        <img src="/images/menu/menu-footer-illust.png" width="100%;">
+        {*<img src="/images/menu/menu-footer-illust.png" width="100%;">*}
       </li>
     </ul>
 
