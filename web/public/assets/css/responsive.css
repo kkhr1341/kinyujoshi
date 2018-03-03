@@ -2367,6 +2367,124 @@ input::-webkit-input-placeholder {
   line-height: 16px;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  はじめての方へ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-start-block-container .main-bg-area {
+  height: 300px;
+}
+.kinyu-start-block-container .main-bg-area h2 {
+  width: 250px;
+  position: absolute;
+  top: 20px;
+  margin-top: 0px;
+  left: -10px;
+} 
+.kinyu-start-intro-block {
+  background: #f7f7f7;
+  padding-top: 32px;
+  padding-bottom: 42px;
+}
+.kinyu-start-intro-inner {
+  width: 88%;
+  display: block;
+  padding: 0px;
+  background: none;
+}
+.kinyu-start-intro-inner .title-box-inner p {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.kinyu-start-introduction .bg-deco {
+  display: none;
+}
+.kinyu-start-intro-inner .title-box {
+  width: 100%;
+  float: none;
+  padding-right: 0px;
+}
+.kinyu-start-intro-inner .description-box {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+.kinyu-start-content-inner {
+  width: 88%;
+  margin: 0 auto;
+  padding: 42px 0px;
+  border-top: 1px solid #8ddcd1;
+}
+.kinyu-start-content-inner .main-title {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.kinyu-start-content-action-el {
+  margin-bottom: 0px;
+  padding: 36px 0px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.kinyu-start-content-action-el:first-child {
+  padding-top: 0px;
+}
+.kinyu-start-content-action-el:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.kinyu-start-content-action-el .img-box {
+  width: 30%;
+  height: 100px;
+  position: relative;
+}
+.kinyu-start-content-action-el .img-box:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.1);
+  top: 0;
+
+}
+.kinyu-start-content-action-el .text-box {
+  width: 70%;
+  padding-left: 24px;
+  height: auto;
+}
+.kinyu-start-content-action-el:nth-child(even) .text-box {
+  float: left;
+  padding-left: 12px;
+  padding-right: 24px;
+}
+.kinyu-start-content-action-el .text-box-inner {
+  display: block;
+}
+.kinyu-start-content-action-el .text-box .action-title {
+  margin-top: 4px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #77cbc0;
+  margin-bottom: 12px;
+}
+.kinyu-start-content-action-el .text-box .action-title .action-number {
+  font-size: 14px;
+  line-height: 16px;
+  border-bottom: 1px solid #8ddcd1;
+  vertical-align: bottom;
+  margin-right: 12px;
+  padding-bottom: 4px;
+}
+.kinyu-start-content-action-el .text-box .action-description {
+  font-size: 11px;
+  line-height: 20px;
+}
+.kinyu-start-content-action-el .text-box .text-link {
+  padding: 6px 40px;
+  margin-top: 20px;
+  font-size: 11px;
+  margin-top: 16px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ウェルカムページの部分
