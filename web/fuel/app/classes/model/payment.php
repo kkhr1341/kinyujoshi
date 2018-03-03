@@ -32,6 +32,7 @@ class Payment extends Base
             'capture' => false,
             'customer' => $customer,
             'card' => $card,
+            'expiry_days' => 60,
             'metadata' => array(
                 'application_code' => $application_code,
                 'username' => $customer->id,
@@ -58,6 +59,7 @@ class Payment extends Base
             'capture' => false,
             'customer' => $customer,
             'card' => $card,
+            'expiry_days' => 60,
             'metadata' => array(
                 'application_code' => $application_code,
                 'username' => $customer->id,
@@ -82,6 +84,7 @@ class Payment extends Base
             'currency' => 'jpy',
             'capture' => false,
             'card' => $token,
+            'expiry_days' => 60,
             'metadata' => array(
                 'application_code' => $application_code,
                 'username' => 'guest',
