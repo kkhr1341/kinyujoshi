@@ -7,10 +7,15 @@
  * @returns {Promise}
  */
 function chargeByNewCard(card, event_code, name, email) {
+    var paymentErrorMessage = '決済ができませんでした...。カード情報を再度ご確認いただけますと幸いです。';
     return new Promise(function(resolve, reject) {
         Payjp.createToken(card, function (s, response) {
             if (response.error) {
-                reject(response.error.message);
+                if (response.error.code == 'invalid_expiry_year') {
+                    reject('有効期限の"年"は、4桁でのご入力をお願いいたします。');
+                } else {
+                    reject(paymentErrorMessage);
+                }
             } else {
                 var token = response.id;
                 var url = "/api/applications/create";
@@ -23,15 +28,15 @@ function chargeByNewCard(card, event_code, name, email) {
                 };
                 // $.postが独自カスタマイズされているためコールバック関数orエラーハンドリングが特殊なかたちに。。。
                 return ajax.post(url, params, function(data) {
-	                resolve(data);
+	                    resolve(data);
                     })
                     .done(function(data) {
                         if(data.api_status === 'error') {
-                            reject(data.message);
+                            reject(paymentErrorMessage);
                         }
                     })
                     .fail(function(error) {
-                        reject(error);
+                        reject(paymentErrorMessage);
                     })
             }
         })
@@ -47,6 +52,7 @@ function chargeByNewCard(card, event_code, name, email) {
  * @returns {Promise}
  */
 function chargeByRegisterCard(event_code, cardselect, name, email) {
+    var paymentErrorMessage = '決済ができませんでした...。カード情報を再度ご確認いただけますと幸いです。';
     return new Promise(function(resolve, reject) {
         var url = "/api/applications/create";
         var params = {
@@ -60,11 +66,11 @@ function chargeByRegisterCard(event_code, cardselect, name, email) {
             })
             .done(function(data) {
                 if(data.api_status === 'error') {
-	            reject(data.message);
-	        }
-	    })
+                    reject(paymentErrorMessage);
+                }
+            })
             .fail(function(error) {
-                reject(error);
-	    })
+                reject(paymentErrorMessage);
+	        })
     })
 }

@@ -58,6 +58,13 @@ return array(
         49 => '052_create_index_code_in_member_regist',
         50 => '054_create_index_code_in_profiles',
         51 => '055_create_index_email_in_users',
+        52 => '056_add_id_name_to_member_regist',
+        53 => '057_add_industry_to_member_regist',
+        54 => '058_add_industry_other_to_member_regist',
+        55 => '059_delete_email_from_profiles',
+        56 => '060_create_regist_reminders',
+        57 => '061_create_application_cancels',
+        58 => '062_add_email_to_regist_reminders',
       ),
     ),
     'module' => 

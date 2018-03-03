@@ -8,7 +8,7 @@ return array(
 
 	//メンテナンス
 	'maintenance'  => 'maintenance/top',
-	
+
 	//◆メンバー登録/ログイン部分
 	'login_regist'   => 'login/regist',
 	'regist_email'   => 'login/regist_email',
@@ -20,13 +20,13 @@ return array(
 	//テスト環境
 	'testindex' => 'kinyu/top/testindex',
 	'testsp' => 'kinyu/top/testspindex',
-		
+
 	// きんゆう女子。
 	'kinyu'   => 'kinyu/top',
 
 	// はじめての方へ
-	'start'   => 'kinyu/start/index',	
-	
+	'start'   => 'kinyu/start/index',
+
 	//aboutページ
 	'about' => 'kinyu/about/index',
 	'about_main' => 'kinyu/about/about_main',
@@ -67,9 +67,9 @@ return array(
 	'news/1'   => 'kinyu/news/index',
 	'news/(:num)'   => 'kinyu/news/index/$1',
 	'news/(:any)'   => 'kinyu/news/detail/$1',
-	
+
 	//お問い合わせ
-	'contact' => 'kinyu/inquiry',	
+	'contact' => 'kinyu/inquiry',
 	'contact/complete' => 'kinyu/inquiry/complete',
 
 	//会員登録
