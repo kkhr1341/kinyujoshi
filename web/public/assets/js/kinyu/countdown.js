@@ -11,7 +11,7 @@
 		//default setting
 		var defaults = {
 			startDateTime : new Date(),
-			endDateTime   : '2018/03/01 00:00:00',
+			endDateTime   : '2020/07/24 00:00:00',
 			diffDateTime  : 0,
 			unit          : {d: '日', h: '時間', m: '分', s: '秒'},
 			complete      : null,

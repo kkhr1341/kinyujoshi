@@ -156,7 +156,6 @@
 }
 .course-place .text-area .title {
   font-size: 20px;
-  line-height: 28px;
   padding: 8px 0px;
 }
 .course-place .text-area .description {
@@ -341,7 +340,7 @@
   margin-top: 24px;
 }
 .about-public_school .description-area p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 24px;
   margin-bottom: 12px;
 }
@@ -358,7 +357,7 @@
 }
 .policy-public_school .description-area p {
   background: url(/images/icon/dott.png) left 4px / 12px 12px no-repeat;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 10px;
   line-height: 20px;
   padding-left: 21px;
@@ -376,7 +375,7 @@
 }
 .course-public_school .gakuin-session-inner .session-description {
   font-size: 12px;
-  line-height: 22px;
+  line-height: 18px;
   width: 92%;
   margin: 0 auto;
 }
@@ -390,8 +389,8 @@
 }
 .course-public_school .gakuin-session-inner .class-el p {
   font-size: 12px;
-  line-height: 20px;
-  margin-top: 16px;
+  line-height: 18px;
+  margin-top: 8px;
   text-align: center;
 }
 .course-public_school .gakuin-session-inner .theme-block {
@@ -431,8 +430,7 @@
   display: none;
 }
 .course-place .text-area .title {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
   padding: 0px;
   margin: 6px 0px;
   display: inline-block;
@@ -553,18 +551,16 @@
 
 .fix-application {
   position: fixed;
-  bottom: 62px;
-  width: 96%;
-  left: 50%;
-  margin-left: -48%;
+  bottom: 0;
+  width: 100%;
   background: #7CDCCE;
 }
 .fix-application a {
   display: block;
-  padding: 2px 0px 4px;
+  padding: 4px 0px 8px;
 }
 .fix-application p {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   color: #fff;
   position: relative;
@@ -579,7 +575,7 @@
 
 }
 .fix-application p span {
-  font-size: 10px;
+  font-size: 11px;
 }
 
 footer {
