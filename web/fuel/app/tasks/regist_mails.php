@@ -39,10 +39,38 @@ class Regist_mails {
                         WHERE
                           regist_reminders.email = member_regist.email
                     )';
+
+                $blacks = array(
+                    '0bu79t1c38C3r7n@ezweb.ne.jp',
+                    'jazzdream.net@me.com ',
+                    'nami.a.s.73@ezweb.ne.jp',
+                    'nami.a.s.73@gmail.com ',
+                    'wiptdgm@gmail.com',
+                    ' wiptdgm@gmail.com',
+                );
+
 		$member_regists = \DB::query($sql)->execute();
 		foreach($member_regists as $data) {
-		    echo $data['email'] . "\n";
-		    RegistReminder::send($data['id'], $data['email']);
+                    $email = $data['email'];
+                    $email = trim($email);
+                    $email = preg_replace("/( |　)/", "", $email);
+                    if (in_array($email, $blacks)) {
+                        continue;
+                    }
+                    $regist_reminder = \DB::select('*')
+                        ->from('regist_reminders')
+                        ->where('email', '=', $email)
+                        ->execute()
+                        ->current();
+                    if ($regist_reminder) {
+                        continue;
+                    } 
+
+                    if(preg_match('/(.+)@(.+)/',$email)) {
+		        echo $data['id'] . ":";
+		        echo $email . "\n";
+		        RegistReminder::send($data['id'], $email);
+                    }
 		}
 	}
 
@@ -55,7 +83,7 @@ class Regist_mails {
             ->current();
 
 	    echo $member_regist['email'] . "\n";
-        RegistReminder::send($member_regist['id'], $member_regist['email']);
+         // RegistReminder::send($member_regist['id'], $member_regist['email']);
 	}
 }
 
