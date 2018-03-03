@@ -59,9 +59,7 @@
             $(".loader-block").fadeIn(500);
             ajax.post(url, params, function(data){
                     ts.success("パスワードの設定が完了しました");
-                    setTimeout(function(){
-                        location.href = '/login';
-                    }, 1000);
+                    location.href = '/login';
                 })
                 .done(function(data) {
                     $(".loader-block").fadeOut(500);

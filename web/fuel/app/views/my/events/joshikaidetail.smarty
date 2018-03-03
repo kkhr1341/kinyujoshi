@@ -143,9 +143,7 @@ $(function() {
       $(".loader-block").fadeIn(500);
       ajax.post(url, params, function(data){
               ts.success("参加をキャンセルしました");
-              setTimeout(function() {
-                  location.href = '/my/joshikai';
-              }, 1000)
+              location.href = '/my/joshikai';
           })
           .done(function(data) {
               $(".loader-block").fadeOut(500);
