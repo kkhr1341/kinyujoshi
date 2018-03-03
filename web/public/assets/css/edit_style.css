@@ -387,11 +387,12 @@
   height: 100%;
   display: block;
   position: relative;
+  transition: .5s;
 }
 .kinyu-top-introlist-title {
   position: absolute;
   bottom: 0;
-  background: rgba(124, 220, 206, 0.8);
+  background: rgba(124, 220, 206, 0.9);
   padding: 12px 16px;
   width: 100%;
 }
@@ -4060,9 +4061,9 @@ to {
 .category-menu li:hover  {
   background: #eafffb;
 }
-.kinyu-top-introlist-right a:hover {
+/*.kinyu-top-introlist-right a:hover {
   opacity: .5;
-}
+}*/
 .kinyu-top-list li a:hover {
   background: rgba(255,255,255,.5);
 }
@@ -4294,6 +4295,9 @@ to {
   opacity: .5;
 }
 .kinyu-header-social-list li:hover {
+  opacity: .5;
+}
+.kinyu-top-introlist-right a:hover {
   opacity: .5;
 }
 
