@@ -65,6 +65,7 @@ return array(
         56 => '060_create_regist_reminders',
         57 => '061_create_application_cancels',
         58 => '062_add_email_to_regist_reminders',
+        59 => '063_change_title_to_null_in_inquiries',
       ),
     ),
     'module' => 

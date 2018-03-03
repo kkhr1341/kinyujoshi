@@ -27,13 +27,13 @@ class Inquiries extends Base
         $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
         $email02->subject("[きんゆう女子。] お問合せがありました");
         $name = $params['name'];
-        $title = $params['title'];
+        // $title = $params['title'];
         $category_code = $params['category_code'];
         $message = $params['message'];
         $email = $params['email'];
         $email02->html_body(\View::forge('email/inquiry/return',
             array('name' => $name,
-                'title' => $title,
+                'title' => '',
                 'category_code' => $category_code,
                 'message' => $message,
                 'email' => $email
