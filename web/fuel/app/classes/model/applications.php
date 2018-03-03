@@ -247,7 +247,7 @@ class Applications extends Base
         // サンクスメール
         $mail = \Email::forge('jis');
         $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
-        $mail->subject("【きんゆう女子。】女子会をキャンセルいたしました。");
+        $mail->subject("【きんゆう女子。】女子会のお申込みを取り消しました。");
         $mail->html_body(\View::forge('email/joshikai/cancel', array(
             'name' => $application['name']
         )));
