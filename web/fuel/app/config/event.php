@@ -18,6 +18,7 @@ foreach (\Config::get('maintenance.through_path_list') as $path)
 }
 foreach (\Config::get('maintenance.through_ip_list') as $ip)
 {
+
     if($ip == getenv('REMOTE_ADDR'))
     {
         \Config::set('maintenance.through', true);
