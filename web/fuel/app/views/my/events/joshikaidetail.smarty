@@ -41,21 +41,21 @@
   <div id="day-cash-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
   <div class="inner">  
     <form>
-      <p class="main-title">女子会をキャンセルしますか？</p>
+      <p class="main-title">参加を取り消しますか？</p>
       {if $cancelable} 
         {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != '0000-00-00 00:00:00'}
-          <p class="description"><span style="color:red;">＊</span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+          <p class="description"><span style="color:red;">＊</span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}より、キャンセル料が発生いたしますので、あらかじめご注意ください。</p>
         {else}
-          <p class="description"><span style="color:red;">＊</span>女子会開催日より3日前になりますとキャンセル料が全額かかってしまうので、再度お申込みされる場合はご注意くださいませ。</p>
+          <p class="description"><span style="color:red;">＊</span>女子会の3日前より、キャンセル料が発生いたしますので、あらかじめご注意ください。</p>
         {/if}
         <button class="joshikai-precancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
       {else}
         <div class="cancel-description">
           <p><span class="cancel-description-title"><span style="color: red;">＊</span>キャンセル料がかかります...。</span>
           {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != "0000-00-00 00:00:00"}
-            {$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}以降のため、キャンセル料が全額かかってしまいます。すでに場所を手配済でしたので、ご了承のほどよろしくお願いいたします。</p>
+            {$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}以降のため、キャンセル料が全額かかってしまいます。ご了承のほどよろしくお願いいたします。</p>
           {else}
-            女子会開催日より3日前以降のため、キャンセル料が全額かかってしまいます。すでに場所を手配済でしたので、ご了承のほどよろしくお願いいたします。</p>
+            女子会開催日より3日前以降のため、キャンセル料が全額かかってしまいます。ご了承のほどよろしくお願いいたします。</p>
           {/if}
           <div class="cancel-button-area">
             <input type="checkbox" name="cancel_check" id="cancel_check">
@@ -63,7 +63,7 @@
             <span>キャンセル料について同意する。</span>
           </div>
         </div>
-        <button class="joshikai-cancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
+        <button class="joshikai-cancel-submit" data-code="{$application_code}" type="button" id="submit">今回は、取り消す</button>
       {/if}
     </form>
   </div>
@@ -111,7 +111,7 @@ $(function() {
       //ローディングアニメーション
       $(".loader-block").fadeIn(500);
       ajax.post(url, params, function(data){
-              ts.success("参加をキャンセルしました");
+              ts.success("参加を取り消しました。");
               setTimeout(function() {
                   location.href = '/my/joshikai';
               }, 1000)
@@ -142,7 +142,7 @@ $(function() {
       //ローディングアニメーション
       $(".loader-block").fadeIn(500);
       ajax.post(url, params, function(data){
-              ts.success("参加をキャンセルしました");
+              ts.success("参加を取り消しました。");
               location.href = '/my/joshikai';
           })
           .done(function(data) {
