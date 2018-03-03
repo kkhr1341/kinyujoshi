@@ -48,6 +48,11 @@ class RegistReminder extends Base
                         ->execute()
                         ->current();
 
+                    if (!$member_regist['username']) {
+                        \Validation::active()->set_message('closure', 'このメールアドレスですでにメンバー登録がされているようです。');
+                        return false;
+                    }
+
                     $select = \DB::select("email")
                         ->where('email', '=', $member_regist['email'])
                         ->from('users');
@@ -165,6 +170,10 @@ class RegistReminder extends Base
             ];
 
             Profiles::create($profile);
+
+            \DB::update('member_regist')->set(array(
+                'username' => $username,
+            ))->where('id', '=', $member_regist_id)->execute();
 
             $db->commit_transaction();
         } catch (Exception $e) {
