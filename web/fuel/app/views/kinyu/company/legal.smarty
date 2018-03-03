@@ -54,7 +54,7 @@
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払い方法及び、お支払い時期</h3>
-      <p class="description">・クレジットカード<br>イベント開催日にご決済となります。<br><span style="display:block;height:8px;"></span>・代金引換<br>イベント参加時に現金でのお支払いになります。</p>
+      <p class="description">・クレジットカード<br>イベント開催日に決済となります。<br><span style="display:block;height:8px;"></span>・代金引換<br>イベント参加時に現金でのお支払いになります。</p>
     </div>
 
     <div class="company-details-el">

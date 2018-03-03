@@ -2438,15 +2438,6 @@ input::-webkit-input-placeholder {
   height: 100px;
   position: relative;
 }
-.kinyu-start-content-action-el .img-box:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.1);
-  top: 0;
-
-}
 .kinyu-start-content-action-el .text-box {
   width: 70%;
   padding-left: 24px;

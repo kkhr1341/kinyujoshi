@@ -141,7 +141,7 @@
 
         <div class="regist-add-form-edit-el form-radio-block">
           <label class="regist-add-form-edit-title">金融機関で働いていますか？</label>
-          <p class="regist-add-form-edit-subtitle">金融についてワカラナイ女性のためのコミュニティなのでご注意くださいませ( ´ ▽ ` )ﾉ</p>
+          <p class="regist-add-form-edit-subtitle">金融ワカラナイ女子のためのコミュニティなので、簡単すぎたらゴメンなさい...。(;_;)</p>
           <div class="radio_box_03 clear">
             <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
             <label for="job_kind1">はい</label>
@@ -153,6 +153,7 @@
 
         <div class="regist-add-form-edit-el regist-add-form-edit-el02">
           <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。</label>
+          <p class="regist-add-form-edit-subtitle">トライしてみたいこと、夢や目標、知りたいことや、おかねの"もやもや"など</p>
           <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
         </div>
         

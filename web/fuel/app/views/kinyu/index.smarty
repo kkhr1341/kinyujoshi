@@ -64,7 +64,7 @@
         <!-- きんゆう女子。会 -->
         <div class="kinyu-top-maincontent-block-el">
           <div class="kinyu-top-list kinyu-top-joshikai-list">
-            <h3 class="kinyu-top-main-title">直近のきんゆう女子。会</h3>
+            <h3 class="kinyu-top-main-title">今後の女子会の予定</h3>
             <p class="kinyu-top-main-sub">「おかね」についてゆるりと話そう。</p>
             <ul class="clear">
             {foreach from=$events key="key" item=event name=loopname}
