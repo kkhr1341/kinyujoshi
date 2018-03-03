@@ -114,6 +114,18 @@ class UserReminder extends Base
 
             \Auth::change_password($old_password, $password, $username);
 
+            $result = \DB::select('*')->from('users')
+                ->where('users.username', '=', $username)
+                ->execute()->current();
+
+            // サンクスメール
+            $mail = \Email::forge('jis');
+            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $mail->subject("【きんゆう女子。】パスワードの再設定が完了しました。");
+            $mail->html_body(\View::forge('email/reminder/complete'));
+            $mail->to($result['email']); //送り先
+            $mail->send();
+
             \DB::commit_transaction();
 
             return true;

@@ -175,6 +175,14 @@ class RegistReminder extends Base
                 'username' => $username,
             ))->where('id', '=', $member_regist_id)->execute();
 
+            // サンクスメール
+            $mail = \Email::forge('jis');
+            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $mail->subject("【きんゆう女子。】パスワードの設定が完了しました。");
+            $mail->html_body(\View::forge('email/regist_reminder/complete'));
+            $mail->to($member_regist["email"]); //送り先
+            $mail->send();
+
             $db->commit_transaction();
         } catch (Exception $e) {
             $db->rollback_transaction();
