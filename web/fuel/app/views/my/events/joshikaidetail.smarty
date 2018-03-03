@@ -54,7 +54,7 @@
         {else}
           <p class="description"><span style="color:red;">＊</span>女子会の3日前より、キャンセル料が発生いたしますので、あらかじめご注意ください。</p>
         {/if}
-        <button class="joshikai-precancel-submit" data-code="{$application_code}" type="button" id="submit">キャンセルする</button>
+        <button class="joshikai-precancel-submit" data-code="{$application_code}" type="button" id="submit">今回は、取り消す</button>
       {else}
         <div class="cancel-description">
           <p><span class="cancel-description-title"><span style="color: red;">＊</span>キャンセル料がかかります...。</span>
