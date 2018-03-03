@@ -1,4 +1,11 @@
 /.project
-/.DS_Store
-web/fuel/app/cache/fuel/agent/*
-web/fuel/app/logs/
+.DS_Store
+.idea
+
+web/composer.phar
+web/fuel/vendor
+web/fuel/app/logs/*/*/*
+web/fuel/app/cache/*/*
+web/fuel/app/config/crypt.php
+web/fuel/app/config/production/*
+web/fuel/app/tmp/*
