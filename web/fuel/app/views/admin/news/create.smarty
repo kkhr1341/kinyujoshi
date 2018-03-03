@@ -111,6 +111,9 @@ $(function(){
 		fileUpload: '/api/redactor/upload/file',
 		fileManagerJson: '/api/redactor/list/file',
 		callbacks: {
+            imageUpload: function($img, json) {
+                $img.attr('src', json.data.url);
+            },
 			fileUploadError: function(json) {
 				alert(json.message);
 			},
