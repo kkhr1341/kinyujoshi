@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" />
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>【きんゆう女子。】お知らせ</title>
+    <title>【きんゆう女子。】WEBアップデート♪ パスワード設定のお願い。</title>
 
     <!-- <link rel="stylesheet" type="text/css" href="https://irodori.fund/assets/css/irodori/email.css" /> -->
 
@@ -23,7 +23,7 @@
             <div class="content">
                 <table bgcolor="#fff">
                     <tr>
-                        <td><img src="images/kinyu-logo.png" style="width: 200px;"></td>
+                        <td><img src="/images/kinyu-logo.png" style="width: 200px;"></td>
                     </tr>
                 </table>
             </div>
@@ -42,15 +42,54 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>パスワード再発行のお知らせ</h3>
-                            パスワードの再発行を受け付けました。<br><br>
-                            以下URLより、再設定をお願いいたします。<br>
-                            <a href="<?php echo $url ?>" target="_blank"><?php echo $url ?></a><br>
-                            <span style="color:red;">＊</span>セキュリティのためURLの有効期限は30分になります。<br><br>
-                            本メールに心当たりがない場合やご不明点などがありましたら、<br>
-                            お気軽にお問い合わせくださいませ。<br><br>
-                            ◆きんゆう女子。お問い合わせ<br>
-                            <a href="https://kinyu-joshi.jp/contact" target="_blank">https://kinyu-joshi.jp/contact</a>
+                            <h3>パスワード発行手続きのご依頼について</h3>
+
+                            こんにちは!<br>
+                            きんゆう女子。編集部です。<br><br>
+
+                            先日のメンバーの方にはお伝えしておりましたが、 <br>
+                            WEBサイトのアップデートに伴い、きんゆう女子。のサイト内で、<br>
+                            女子会のお申込みが可能となりました。<br><br>
+
+                            女子会に参加するには、新しく追加した"マイページ"へのログインが必要になります。<br>
+                            そのため、メンバー登録方法についても、Googleアカウント・Facebookアカウント・メールアドレスでのご登録が可能になりました。<br><br>
+
+                            このメールをお送りしているみなさまは、すでにメンバー登録をいただいておりましたので、<br>
+                            再度ご登録いただくのはお手数をおかけしてしまうと考えまして...。 <br><br>
+
+                            パスワードの設定のみで、マイページへのログインが可能になるよう設計いたしました。<br>
+                            つきましては、以下1~6の手順にて、パスワードの設定をお願いできますと幸いです。<br><br><br>
+
+
+                            ◆パスワードの設定手順<br>
+                            ------------------<br><br>
+
+                            ① 以下URL先に移動してください。<br>
+                            <a href="<?php echo $url ?>" target="_blank"><?php echo $url ?></a><br><br>
+
+                            ②「新しいパスワード」にて、お好きなパスワードを入力してください。 <br><br>
+
+                            ③「パスワードを設定する」ボタンをクリックしてください。<br><br>
+
+                            ④ 以下URL先の「ログインページ」に移動します。<br>
+                            <a href="https://kinyu-joshi.jp/login" target="_blank">https://kinyu-joshi.jp/login</a><br><br>
+                            ＊③の「パスワードを設定する」ボタンをクリックしたら、自動で移動します。
+
+                            ⑤ メールアドレスと先ほど、設定したパスワードを入力してログインしてください。<br><br>
+
+                            ⑥ マイページに移動できたら完了です♪<br><br>
+
+                            ------------------<br><br>
+
+                            パスワードの設定方法は、以上になります。<br><br>
+
+                            もし、①〜⑥の手順でご不明点などありましたら、<br>
+                            いつでもお気軽にご連絡ください。<br><br>
+
+                            ◆お問い合わせフォーム<br>
+                            <a href="https://kinyu-joshi.jp/contact" target="_blank">https://kinyu-joshi.jp/contact</a><br><br>
+
+                            それでは、パスワードの設定をお願いいたします( ́∀`)!
                         </td>
                     </tr>
                 </table>
