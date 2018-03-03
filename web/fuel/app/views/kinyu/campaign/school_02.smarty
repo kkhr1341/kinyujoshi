@@ -1,0 +1,304 @@
+
+<!-- きんゆう女子学院・独自CSS -->
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/gakuin.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/school_public.css">
+<script type="text/javascript" src="/assets/js/kinyu/campaign/school_public.js"></script>
+
+<div class="kinyu-main-single-block">
+  <div class="kinyu-school_public-intro sp">
+    <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
+    <img style="width:100%;" src="/images/content/school_public/school_public_main2.jpg">
+  </div>
+  <div class="inner">
+    <div class="kinyu-school_public-block">
+
+      <div class="kinyu-school_public-intro pc">
+        <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
+        <img style="width:100%;" src="/images/content/school_public/school_public02_main.jpg">
+      </div>
+      <!-- きんゆう女子。学院とは？ -->
+      <div class="kinyu-school_public-el about-public_school">
+        <h3><img src="/images/content/school_public/main-title-about.png"></h3>
+        <div class="pc description-area">
+          <p><span class="bottom-border">きんゆう女子。学院は、<br>私立きんゆう女子。学院の姉妹校です♪</span></p>
+          <p>普段のゆるい女子会は、意見交換やおしゃべりの場。<br>でも、きんゆう女子学院は、ゆるい一面もありつつ、<br>
+          <span class="bottom-border">しっかりきちんと勉強する場です。</span></p>
+          <p>学生時代に国語や算数があったように、<br>
+          きんゆう女子。学院にも科目があります。</p>
+          <p>きんゆう女子。学院では、文系科目をメインに<br>
+          バランスよく多角的に<span class="bottom-border">金融の全体像から考え方、</span><br>
+          <span class="bottom-border">普段の生活に役立つことを学びます。</span></p>
+          <p>在学中は、インプットするだけでなく、<br>
+          自己紹介の時間や参加者同士で意見交換や<br>
+          情報をシェアする時間があり、<br>
+          交流を通じて自分の判断軸を見つけて、<br>
+          <span class="bottom-border">自らアクションできる女性</span>になることを目標としています。
+          </p>
+
+        </div>
+
+        <div class="sp description-area">
+          <p><span class="bottom-border">きんゆう女子。学院は、<br>私立きんゆう女子。学院の姉妹校です♪</span></p>
+          <p>普段のゆるい女子会は、<br>
+          意見交換やおしゃべりの場。<br>
+          でも、きんゆう女子学院は、<br>
+          ゆるい一面もありつつ、<br>
+          <span class="bottom-border">しっかりきちんと勉強する場です。</span></p>
+          <p>学生時代に国語や算数があったように、<br>
+          きんゆう女子学院にも科目があります。</p>
+          <p>きんゆう女子。学院では、<br>
+          文系科目をメインに、<br>
+          バランスよく多角的に<br>
+          <span class="bottom-border">金融の全体像から考え方、</span><br>
+          <span class="bottom-border">普段の生活に役立つことを学びます。</span></p>
+          
+          <p>在学中は、インプットするだけでなく、<br>
+          自己紹介の時間や参加者同士で意見交換や<br>
+          情報をシェアする時間があり、<br>
+          交流を通じて自分の判断軸を見つけて、<br>
+          <span class="bottom-border">自らアクションできる女性</span><br>
+          になることを目標としています。
+          </p>
+        </div>
+      </div>
+
+      <!-- 教育方針 -->
+      <div class="kinyu-school_public-el policy-public_school">
+        <h3><img src="/images/content/school_public/main-title-policy.png"></h3>
+        <div class="pc description-area">
+          <p>きんゆうについて考えるスタートラインに立とう</p>
+          <p>正しい情報を取りに行き、見分ける力をつけよう</p>
+          <p>今の日本のきんゆうの動きについて知ろう</p>
+          <p>お金について語り合えるお友達をつくろう</p>
+        </div>
+        <div class="sp description-area">
+          <p>きんゆうについて考えるスタートラインに立とう</p>
+          <p>正しい情報を取りに行き、見分ける力をつけよう</p>
+          <p>今の日本のきんゆうの動きについて知ろう</p>
+          <p>お金について語り合えるお友達をつくろう</p>
+        </div>
+      </div>
+
+      <!-- 授業内容 -->
+      <div class="kinyu-school_public-el course-public_school">
+        <h3><img src="/images/content/school_public/main-title-course.png"></h3>
+        <div class="gakuin-session-inner">
+          <p class="pc session-description">きんゆう女子。として未来のために<br>必要なお金のことを4回の授業で学びます。<br>4回受けたら卒業。ありふれた情報の中から自分に必要な正しい情報を<br>キャッチできることを目標にしています。</p>
+          <p class="sp session-description">きんゆう女子。として未来のために必要なお金のことを4回の授業で学びます。4回受けたら卒業。ありふれた情報の中から自分に必要な正しい情報をキャッチできることを目標にしています。</p>
+          <div class="class-block">
+            <p class="class-title"><学院日程></p>
+            <div class="class-el">
+              <p><span>第1回：1月25日(木) 18:00〜20:00頃</span><br>入学式＆授業＠東証会議室<br>きんゆうとは？人生に必要なお金の話<br><span style="background:none;color:red;">※</span>18:30より株式投資体験を行います。</p>
+              <p><span>第2回：2月8日(木) 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル・ビジネスサロン<br>資産づくりを始める前に、つみたてNISAのお話</p>
+              <p><span>第3回：2月15日(木) 18:30〜21:00頃</span><br>授業＠カフェ・サルバドル・ビジネスサロン<br>投資信託、ETFについて<br>地域連携で地域経済を活性化、悪い情報から身を守る方法</p>
+              <p><span>第4回：3月1日(木) 17:00〜22:00</span><br>授業、卒業テスト、卒業式＠東証会議室＆オープンプラットフォーム<br>株式投資について、お金と向き合って人生を楽しもう<br><span style="background:none;color:red;">※</span>東証秘密の大女子会と併催予定</p></p>
+              <p><span>謝恩会：3月17日(土) 11:30〜13:30</span></p>
+            </div>
+            <p class="class-el-sub"><span style="color:red;">※</span>時間や内容は、予告なく変更になる場合がございます。あらかじめご了承ください。<br><span style="color:red;">※</span>集合時間や場所など、詳しい内容については、参加者にのみメルマガもしくはメールにてご案内いたします。
+            </p>
+          </div>
+          <div class="theme-block" id="document_first_day">
+            <p class="theme-title"><主なテーマ></p>
+            <div class="theme-el">
+              <p>きんゆう全般のこと</p>
+              <p>つみたてNISA</p>
+              <p>悪い情報から自分の身を守る知識</p>
+              <p>お金と向き合って人生を楽しむこと</p>
+            </div>
+          </div>
+          <div class="course-place">
+            <ul>
+              <li class="clear">
+                <div class="img-area" style="background: url(/images/content/school_public/about_schoolpublic02_01.jpg)center center / cover no-repeat;"></div>
+                <div class="text-area">
+                  <p class="count"><img src="/images/content/school_public/course-place-count1.png"></p>
+                  <p class="title">卒業式は東京証券取引所内のチッカー（電光掲示版）の前で行います！</p>
+                </div>
+              </li>
+              <li class="clear">
+                <div class="img-area" style="background: url(/images/content/school_public/about_schoolpublic02_02.jpg)center center / cover no-repeat;"></div>
+                <div class="text-area">
+                  <p class="count"><img src="/images/content/school_public/course-place-count2.png"></p>
+                  <p class="title">卒業式には、マントと角帽をかぶって♪また、MVSの発表もあります。</p>
+                </div>
+              </li>
+            </ul>
+            <p class="p-sub"><span style="color:red;">※</span>スケジュールの内容や、会場が予告なく変更になる場合がございます。あらかじめご了承ください。</p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kinyu-school_public-el gakuin-educational-teacher">
+        <h3><img src="/images/content/school_public/main-title-teacher.png"></h3>
+        <div class="kinyu-gakuin-teacher-list">
+          <ul class="clear">
+            <li class="head-teacher">
+              <p class="teacher-title">校長先生</p>
+              <div class="teacher-img" style="background: url(/images/content/school_public/ogp.jpg)center top / cover no-repeat;border: 1px solid #dedede;box-sizing: border-box;"></div>
+              <div class="teacher-text-box">
+                <p class="teacher-name">青沼 見和<span>先生</span></p>
+                <p class="teacher-description">日本取引所グループ 広報・IR部 調査役。<br>
+                子供の頃からお小遣い帳で<br>お金を管理していた凝り性のＢ型。</p>
+              </div>
+            </li>
+            <li class="official-teacher">
+              <p class="teacher-title">教頭先生</p>
+              <div class="teacher-img" style="background: url(/images/content/school_public/arrows_icon.jpg)center top / cover no-repeat;border: 1px solid #dedede;box-sizing: border-box;"></div>
+              <div class="teacher-text-box">
+                <p class="teacher-name">東証 あろーずくん</p>
+                <p class="pc teacher-description">
+                東証のマスコット、あろーずくん<br>今回の学院の様子をレポートしてくれます！<br>アドバイスもしてくれるかも？！
+                </p>
+                <p class="sp teacher-description">
+                東証のマスコット、あろーずくん。今回の学院の様子をレポートしてくれます！アドバイスもしてくれるかも？！
+                </p>
+              </div>
+            </li>
+            <li class="president-teacher">
+              <p class="teacher-title">理事長</p>
+              <div class="teacher-img" style="background: url(/images/content/teacher/teacher-kinyu.jpg)center top / cover no-repeat;"></div>
+              <div class="teacher-text-box">
+                <p class="teacher-name">きんゆう女子。編集部</p>
+                <p class="pc teacher-description">学院の先生のオファーから<br>「きんゆう女子学院」の企画を行っています。<br>生徒さんへの個別学校相談もしています。</p>
+                <p class="sp teacher-description">学院の先生のオファーから「きんゆう女子学院」の企画を行っています。生徒さんへの個別学校相談もしています。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        {*
+        <div class="kinyu-gakuin-sub-teacher-list health-teacher">
+          <p class="teacher-title">保健の先生</p>
+          <div class="coming">
+            <img src="/images/content/school_public/comingsoon.png">
+          </div>
+          <!-- <ul class="clear">
+            <li>
+              <div class="teacher-img" style="background: url(/images/content/teacher/teacher-cs.png)center top / cover no-repeat;"></div>
+              <div class="teacher-text-box">
+                <p class="teacher-name">◯◯<span>先生</span></p>
+              </div>
+            </li>
+            <li>
+              <div class="teacher-img" style="background: url(/images/content/teacher/teacher-cs.png)center top / cover no-repeat;"></div>
+              <div class="teacher-text-box">
+                <p class="teacher-name">◯◯<span>先生</span></p>
+              </div>
+            </li>
+            <li>
+              <div class="teacher-img" style="background: url(/images/content/teacher/teacher-cs.png)center top / cover no-repeat;"></div>
+              <div class="teacher-text-box">
+                <p class="teacher-name">◯◯<span>先生</span></p>
+              </div>
+            </li>
+          </ul> -->
+          <p class="pc description">ホームルームで、ライフイベントとお金についてお話いただくことがメインです。<br>結婚とお金、転職とお金、引越しとお金・・・・相談したいことがいっぱい！<br>(※保健の先生は全て女性です。)</p>
+          <p class="sp description">ホームルームで、ライフイベントと<br>お金についてお話いただくことが<br>メインです。<br>結婚とお金、転職とお金、<br>引越しとお金・・・・<br>相談したいことがいっぱい！<br>(※保健の先生は全て女性です。)</p>
+        </div>
+        *}
+
+        <div class="kinyu-gakuin-teacher-list kinyu-gakuin-teacher-list-last">
+          <ul class="clear">
+            <li class="homeroom-teacher">
+              <p class="teacher-title">担任の先生</p>
+              <div class="teacher-img" style="background: url(/images/content/teacher/teacher-kinyu02.jpg)center top / cover no-repeat;border:2px solid #7CDCCE;box-sizing:border-box;"></div>
+              <div class="teacher-text-box">
+                <p class="teacher-name">きんゆう女子。編集部</p>
+                <p class="teacher-description">学校案内や入学方法、卒業テストの傾向と対策についてご案内させていただきます。適宜学校に対するご要望・ご相談にものらせていただきます。</p>
+              </div>
+            </li>
+            <li class="pta">
+              <p class="teacher-title">特別ゲスト</p>
+              <!-- <div class="teacher-img" style="background: url(/images/content/teacher/teacher-tosyo.jpg)center top / cover no-repeat;border:2px solid #dedede;box-sizing:border-box;"></div> -->
+              <img style="width:100%;" src="/images/content/school_public/guest-list.jpg">
+            </li>
+            {*
+            <li class="pta">
+              <p class="teacher-title">PTA</p>
+              <div class="teacher-img" style="background: url(/images/content/teacher/teacher-cs.png)center top / cover no-repeat;"></div>
+              <div class="teacher-text-box">
+              </div>
+            </li>
+            *}
+            <li class="pc">
+              <img class="illust-model01" src="/images/content/school_public/teacher_illust.png">
+            </li>
+          </ul>
+          <img class="sp illust-model01" src="/images/content/school_public/teacher_illust_sp.png">
+        </div>
+      </div>
+
+      <!-- 参加費用 -->
+      <div class="kinyu-school_public-el gakuin-fee">
+        <h3><img src="/images/content/school_public/main-title-fee.png"></h3>
+        <div class="inner">
+          <div class="fee-conditions-details">
+            <p style="border-bottom:3px solid #fdc2c2;">レポート提出<span>(各授業分)</span><br></p>
+            <p class="fee-conditions-details-g"> ＆ </p>
+            <p style="border-bottom:3px solid #FFF200;">3,000円<span>(謝恩会費用)</span></p>
+          </div>
+          <p class="gakuin-fee-inner-p"><span style="color:red;">※</span>3,000円は、最終日の謝恩会に使います。<br>最後まで頑張って勉強しましょう！</p>
+          <p class="gakuin-fee-inner-p"><span style="color:red;">※</span>レポートは、必ずご提出をお願いします♪</p>
+          <div class="fee-about-report">
+            <p class="theme-title"><レポートとは...？></p>
+            <p class="pc fee-about-report-main">授業で書いたノートと勉強した感想文です。<br>金融ワカラナイ…でも勉強してどう思ったか？<br>そして何がワカラナイ原因なのか？<br>日々の生活で私たち普通の女の子はどんなことを考えているのか？<br>そういったワカラナイ女性の声を金融業界にお届けするレポートです。<br>私たちきんゆう女子。のレポートにより、<br>ミライの金融サービスが作られていくことにつながります。<br>みなさん、頑張りましょう(^ ^)！</p>
+            <p class="sp fee-about-report-main">授業で書いたノートと勉強した感想文です。金融ワカラナイ…でも勉強してどう思ったか？ そして何がワカラナイ原因なのか？ 
+            日々の生活で私たち普通の女の子はどんなことを考えているのか？ そういったワカラナイ女性の声を金融業界にお届けするレポートです。
+            私たちきんゆう女子。のレポートにより、
+            ミライの金融サービスが作られていくことにつながります。
+            みなさん、頑張りましょう！</p>
+            <p class="pc gakuin-fee-inner-p"><span style="color:red;">※</span>レポートはきんゆう女子のwebサイトなどで、<br>匿名でご紹介させていただきます。</p>
+            <p class="sp gakuin-fee-inner-p"><span style="color:red;">※</span>レポートはきんゆう女子のwebサイトなどで、匿名でご紹介させていただきます。</p>
+          </div>
+          <img class="pc certificate-img" src="/images/content/school_public/certificate-img.png">
+          <img class="sp certificate-img" src="/images/content/school_public/certificate-img-sp.png">
+          <!-- <a class="kinyu-gakuin-link" href="https://peatix.com/event/332524/" target="_blank">お申込みはこちら</a>
+          <p style="margin-top: 6px;font-size:12px;"><span style="color:red;">※</span>お支払い画面が立ち上がります。</p> -->
+          <p style="font-size: 12px;padding-bottom: 8px;"><span style="color:red;">※</span>お申し込みは終了いたしました。</p>
+          <p style="opacity:.2;" class="kinyu-gakuin-link">お申込みはこちら</p>
+        </div>
+      </div>
+
+
+      <div class="kinyu-school_public-el company-public_school">
+        <h3><img src="/images/content/school_public/main-title-support.png"></h3>
+        <div class="sponsor-list">
+          <ul class="clear">
+            <li><img src="/images/content/school_public/company/jpx2.jpg"></li>
+            <!-- <li><img src="/images/content/school_public/company/heiwa.jpg"></li> -->
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+
+.jpx-img {
+  position: absolute;
+  top: 20px;
+  left: auto;
+  right: 20px;
+}
+.course-place .p-sub {
+  margin-top:36px;
+  text-align:center;
+}
+@media screen and (max-width: 480px) {
+  .jpx-img {
+    top: 10px;
+    right: 10px;
+  }
+  .course-place .text-area .title {
+    font-size: 13px;
+    line-height: 20px;
+    border-bottom: none;
+  }
+  .course-place .p-sub {
+    margin-top:16px;
+    font-size: 11px;
+  }
+}
+</style>

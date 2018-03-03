@@ -2,12 +2,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/font.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/gakuin.css">
 
-<style>
-.kinyu-header-top {
-  display:none;
-}
-</style>
-
 <div class="kinyu-main-single-block">
   <div class="inner">
     <div class="kinyu-gakuin-introduction">

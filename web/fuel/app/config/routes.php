@@ -14,6 +14,7 @@ return array(
 	'regist_email'   => 'login/regist_email',
 	'regist_sns'   => 'login/regist_sns',
 	'resetting_pass' => 'login/resetting_pass',
+	'resetting_pass_exuser' => 'login/resetting_pass_exuser',
 	'regist_complete' => 'login/complete',
 
 	//テスト環境
@@ -101,6 +102,8 @@ return array(
 	'map' => 'kinyu/campaign/map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 	'celebration' => 'kinyu/campaign/celebration_20171206',
+	'daijoshikai2018' => 'kinyu/campaign/daijoshikai2018',
+	'school_jpx02' => 'kinyu/campaign/school_02',
 
 	'blog/page/(:any)'   => 'kinyu/blog/page/index/$1',
 	'event/page/(:any)'   => 'kinyu/event/page/index/$1',

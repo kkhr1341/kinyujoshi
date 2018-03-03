@@ -5,7 +5,7 @@
     
     <div class="admin-normal-main">
 
-			<div class="admin-normal-profile">
+		<div class="admin-normal-profile">
 	      <div class="img-box-block">
 	        <div class="img-box"
 	          {if $profile.profile_image == ''}
@@ -19,9 +19,11 @@
 	      </div>
 	      <p class="profile-name">{$profile.nickname}</p>
 	      <p class="profile-catchcopy">{$profile.catchcopy}</p>
-    	</div>
 
-			<!--<img src="{$profile.profile_image}" />-->
+    	</div>
+    		<div class="profile-alert-block">
+				<p class="profile-alert">プロフィールは自分用です...！<br>どこにも公開されておりませんので、ご安心ください♪</p>
+			</div>
 								
 			<table class="table admin-profile-table">
 				<tr>

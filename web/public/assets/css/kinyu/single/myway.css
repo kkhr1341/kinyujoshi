@@ -18,8 +18,8 @@
 .main-img-box-container .main-logo {
   position: absolute;
   top: 50%;
-  right: 10%;
-  margin-top: -80px;
+  right: 17%;
+  margin-top: -210px;
   z-index: 1001;
 }
 .kinyu-logo {
@@ -466,7 +466,7 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマートフォン
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 
 
 /*-*- イントロダクション -*-*/
@@ -663,11 +663,23 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-report-content {
   width: 100%;
+  padding-top: 10px;
+}
+.myway-report-content-title {
+  width: 52%;
+  margin: 0 auto;
+  padding: 16px 0px 24px;
+}
+.myway-report-content-title img {
+  width: 100%;
+}
+.myway-header-content .main-tumb-block {
+    width: 100%;
 }
 .myway-header-content {
   width: 88%;
   margin: 0 auto;
-  padding-top: 36px;
+  padding-top: 0px;
 }
 .myway-header-content h2 {
   width: 60%;
@@ -678,7 +690,7 @@
   width: 100%;
 }
 .myway-header-content .main-tumb-block {
-  padding: 6%;
+  padding: 24px;
 }
 .myway-header-content .main-tumb-block .video-block {
   width: 100%;
@@ -694,10 +706,15 @@
   top: auto;
   right: auto;
   margin-top: 0px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   text-align: center;
   height: auto;
   float: none;
+  padding: 0px 0px;
+}
+.myway-header-content .main-tumb-block .title-block p {
+  font-size: 11px;
+  line-height: 18px;
 }
 .myway-header-content .main-tumb-block .title-block img {
   width: 92%;
@@ -772,6 +789,23 @@
   padding: 50px 0px 80px;
 }
 
+.myway-list-block {
+  width: 92%;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  margin-top: 32px;
+}
+.myway-list-title {
+  width: 88%;
+}
+.myway-list-block li {
+  width: 80%;
+  display: inline-block;
+  letter-spacing: normal;
+  margin-right: 0%;
+  margin-bottom: 12px;
+}
+
 }
 
 /* pc - hoverイベント */
@@ -798,5 +832,82 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   タブレットのみ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-@media screen and (min-width: 641px) and (max-width: 768px) {
+@media screen and (min-width: 480px) and (max-width:1024px) {
+/*.main-img-box-container {
+  height: 400px;
+}
+.main-img-box {
+  height: 400px;
+}*/
+.main-logo {
+  height: 68%;
+}
+.main-img-box-container .main-logo {
+  right: 17%;
+  margin-top: -175px;
+}
+.intoduction-title {
+  font-size: 20px;
+  line-height: 40px;
+  margin-bottom: 24px;
+}
+.myway-introduction .myway-description p {
+  width: 70%;
+  font-size: 13px;
+  line-height: 22px;
+}
+.myway-content-list-el .edition img {
+  width: 50%;
+  margin-bottom: 12px;
+}
+.myway-content-list-el .img-box {
+  height: 270px;
+  margin: 0 auto;
+  width: 70%;
+}
+.myway-content-list-el .text-box .text-box-title {
+  font-size: 18px;
+  line-height: 30px;
+}
+.myway-content-list-el .text-box .description {
+  font-size: 13px;
+  line-height: 22px;
+  width: 80%;
+  margin: 0 auto;
+}
+.myway-content-list-el .text-box .myway-to-link {
+  width: 60%;
+  font-size: 13px;
+  margin-top: 24px;
+}
+.myway-header-content .main-tumb-block .title-block img {
+  width: 50%;
+  margin-bottom: 8px;
+}
+.myway-header-content .main-tumb-block {
+  padding: 42px 24px;
+}
+.myway-header-content .main-tumb-block .title-block p {
+  font-size: 13px;
+  line-height: 22px;
+  width: 80%;
+  margin: 0 auto;
+}
+.myway-header-content .main-tumb-block .video-block {
+  height: 270px;
+  margin: 0 auto;
+  width: 70%;
+}
+.myway-header-content .main-tumb-block .video-block video {
+  height: 110%;
+  right: auto;
+}
+.myway-list-block li {
+  width: 32%;
+}
+.myway-list-title {
+  width: 55%;
+}
+
+
 }

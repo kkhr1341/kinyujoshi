@@ -1,0 +1,74 @@
+<div class="kinyu-single-block">
+  <div class="login-add-contents-block">
+
+    
+    <p class="main-title">パスワード再設定</p>
+    <p class="message">以下項目のご入力をお願いします♪</p>
+
+    <div class="resetting-pass-block">
+      <div class="username-area">
+        <p>- お名前 -</p>
+        <!-- ユーザー名を表示 -->
+        <p class="name-title">{$nickname}</p>
+        <p class="name-title">（email：{$email}）</p>
+      </div>
+      <div class="form-area">
+        <form>
+          <input type="hidden" id="access_token" value="{$access_token}">
+          <div class="regist-add-form-edit-el resetting-pass-el">
+            <label class="regist-add-form-edit-title">新しいパスワード</label>
+            <input type="password" id="password" class="form-control resetting-pass-el-input1" placeholder="" value="">
+            <input type="password" id="password_confirm" class="form-control" placeholder="ご確認用" value="">
+          </div>
+
+          <div class="form-btn tx-center">
+            <button class="btn btn-kinyu" type="button" id="save">パスワードを設定する</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+  </div>
+</div>
+
+
+<script>
+    $(function() {
+        var form = $('.resetting-pass-block form');
+        form.find('#save').click(function(e){
+            e.preventDefault();
+
+            var url = "/api/registreminder/create";
+            var params = {
+                access_token: form.find('#access_token').val(),
+                password: form.find('#password').val(),
+                password_confirm: form.find('#password_confirm').val()
+            };
+
+            if (!params.password) {
+                ts.error("パスワードを入力してください");
+                return false;
+            }
+
+            if (!params.password_confirm) {
+                ts.error("確認用パスワードをお確かめください");
+                return false;
+            }
+
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(500);
+            ajax.post(url, params, function(data){
+                    ts.success("パスワードの設定が完了しました");
+                    setTimeout(function(){
+                        location.href = '/login';
+                    }, 1000);
+                })
+                .done(function(data) {
+                    $(".loader-block").fadeOut(500);
+                })
+                .fail(function(error) {
+                    $(".loader-block").fadeOut(500);
+                })
+        });
+    });
+</script>

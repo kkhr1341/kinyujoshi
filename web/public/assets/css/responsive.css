@@ -568,8 +568,13 @@
   padding: 42px 6%;
 }
 .kinyu-list-block {
-  width: 88%;
+  width: 100%;
   padding: 24px 0% 50px!important;
+  background: #fff;
+}
+.kinyu-list-block .inner {
+  width: 88%;
+  padding: 0px 0px;
 }
 .kinyu-top-main-title {
   font-size: 16px;
@@ -657,13 +662,11 @@
 }
 .introduction-list li:last-child {
   margin-bottom: 0px;
+  height: auto;
 }
-/*.introduction-list li:nth-child(2) {
-  display: none;
+.introduction-list .kinyu-top-banner-area {
+  width: 92%;
 }
-.introduction-list li:nth-child(3) {
-  display: none;
-}*/
 .introduction-list li p {
   font-size: 13px;
 }
@@ -769,6 +772,7 @@
 }
 .kinyu-top-joshikai-list li .text-box {
   padding: 2px 6% 16px;
+  background: #f7f7f7;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -834,11 +838,12 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-introlist-news {
   width: 100%;
-  margin-top: 24px;
+  margin-top: 36px;
+  padding: 4px 0px 0px;
 }
-.kinyu-top-introlist-news .kinyu-top-introlist-news-link {
-  height: 38px;
-}
+/*.kinyu-top-introlist-news .kinyu-top-introlist-news-link {
+  height: auto;
+}*/
 .kinyu-top-introlist-news .title-area {
   width: 20%;
 }
@@ -856,6 +861,9 @@
   font-size: 11px;
   height: 12px;
   line-height: 12px;
+}
+.kinyu-top-introlist-news .sidebar-more-link {
+  margin-top: 8px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -944,6 +952,9 @@
   width: 100%;
   padding-left: 0px;
 }
+.kinyu-details-introdauction .text-box .category {
+  font-size: 11px;
+}
 .kinyu-details-introdauction .text-box .text-box-inner {
   padding-top: 20px;
 }
@@ -964,12 +975,12 @@
 .kinyu-details-introdauction .text-box h2 {
   margin-top: 6px;
   margin-bottom: 16px;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 24px;
 }
 .kinyu-details-introdauction .text-box .description {
   font-size: 11px;
-  line-height: 18px;
+  line-height: 20px;
 }
 .report-sp-detail-block {
   padding-top: 0px;
@@ -1031,7 +1042,7 @@
 }
 .report-detail-main p {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 22px;
 }
 .report-detail-main a {
   font-size: 12px;
@@ -1254,14 +1265,14 @@
 }
 .about-kinyu-description .main-catchcopy {
   font-size: 13px;
-  line-height: 20px;
+  line-height: 22px;
   margin-bottom: 24px;
   font-weight: bold;
 }
 .about-kinyu-description .main-description {
   width: 90%;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 22px;
 }
 .about-kinyu-description .afterword .afterword-text {
   font-size: 13px;
@@ -1288,19 +1299,19 @@
   height: 100px;
 }
 .about-kinyu-description .profile .text-box {
-  width: 75%;
+  width: 100%;
 }
 .about-kinyu-description .profile .name-text {
   font-size: 12px;
 }
 .about-kinyu-description .profile .position-text {
   font-size: 11px;
-  line-height: 16px;
+  line-height: 20px;
   margin: 6px 0px 10px;
 }
 .about-kinyu-description .profile .detail-text {
   font-size: 10px;
-  line-height: 18px;
+  line-height: 20px;
 }
 .about-kinyu-description .profile .profile-text {
   display: block;
@@ -1357,7 +1368,9 @@
 .kinyu-event-list-subdescription {
   text-align: center;
   margin-top: 36px;
-  font-size: 12px;
+  font-size: 11px;
+  width: 80%;
+  padding: 8px 12px;
 }
 .kinyu-event-info-title {
   font-size: 16px;
@@ -1521,7 +1534,7 @@
 }
 .joshikai-held-el .text-block .place-description {
   font-size: 11px;
-  line-height: 18px;
+  line-height: 20px;
 }
 .place-link {
   font-size: 11px;
@@ -1748,7 +1761,7 @@
 }
 .fee-open .inner form .cancel-description p {
   font-size: 11px;
-  line-height: 16px;
+  line-height: 18px;
 }
 .joinus-open-block .login-block {
   padding: 0px 0px 24px 0px;
@@ -1934,6 +1947,19 @@ input::-webkit-input-placeholder {
   left: 0;
   color: #8ddcd1;
   font-size: 10px;
+}
+.cancel-button-area {
+  font-size: 11px;
+}
+.cancel-button-area label:after {
+  margin-top: -11px;
+}
+.kinyu-credit-fee-area p {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.kinyu-credit-fee-area p span {
+  font-size: 12px;
 }
 
 
@@ -2158,6 +2184,38 @@ input::-webkit-input-placeholder {
   font-size: 11px;
 }
 
+/* メンバーになると...？ */
+.about-member-block {
+  width: 88%;
+  margin-top: 36px;
+  padding: 24px 28px;
+}
+.about-member-block .about-member-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #77cbc0;
+}
+.about-member-list li {
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 24px;
+}
+.about-member-list li:last-child {
+  margin-bottom: 4px; 
+}
+.about-member-list li span {
+  position: absolute;
+  left: 0;
+  font-size: 13px;
+  line-height: 15px;
+  margin-right: 12px;
+  padding-bottom: 2px;
+  margin-top: 4px;
+}
+
 /* パスワード再発行 */
 #pass-reissue-close {
   top: 0px;
@@ -2282,7 +2340,7 @@ input::-webkit-input-placeholder {
 }
 .company-details-el .description{
   font-size: 11px;
-  line-height: 16px;
+  line-height: 20px;
   padding-left: 0px;
 }
 .company-details-el-last {

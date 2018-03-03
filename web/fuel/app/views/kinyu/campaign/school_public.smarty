@@ -4,12 +4,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/school_public.css">
 <script type="text/javascript" src="/assets/js/kinyu/campaign/school_public.js"></script>
 
-<style>
-.kinyu-header-top {
-  display:none;
-}
-</style>
-
 <div class="kinyu-main-single-block">
   <div class="kinyu-school_public-intro sp">
         <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
@@ -20,7 +14,7 @@
 
       <div class="kinyu-school_public-intro pc">
         <img class="jpx-img" src="/images/content/school_public/jpx-img.png">
-        <img src="/images/content/school_public/school_public_main.png">
+        <img style="width:100%;" src="/images/content/school_public/school_public_main.png">
       </div>
       <!-- きんゆう女子。学院とは？ -->
       <div class="kinyu-school_public-el about-public_school">

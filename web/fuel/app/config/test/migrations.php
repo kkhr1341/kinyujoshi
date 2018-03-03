@@ -62,6 +62,9 @@ return array(
         53 => '057_add_industry_to_member_regist',
         54 => '058_add_industry_other_to_member_regist',
         55 => '059_delete_email_from_profiles',
+        56 => '060_create_regist_reminders',
+        57 => '061_create_application_cancels',
+        58 => '062_add_email_to_regist_reminders',
       ),
     ),
     'module' => 

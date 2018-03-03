@@ -132,6 +132,7 @@
   display: inline-block;
   letter-spacing: normal;
   margin: 0px 2px;
+  transition: 0.5s;
 }
 .kinyu-header-social-list li a {
   display: block;
@@ -457,33 +458,38 @@
 
 /* ニュース */
 .kinyu-top-introlist-news {
-  width: 700px;
+  width: 80%;
   margin: 0 auto;
   box-sizing: border-box;
-  margin-top: 32px;
+  margin-top: 50px;
+  border-top: 1px solid #8ddcd1;
+  padding: 8px 0px 0px;
 }
 .kinyu-top-introlist-news .kinyu-top-introlist-news-link {
   display: block;
-  border: 1px solid #8ddcd1;
-  height: 40px;
+  /*border: 1px solid #8ddcd1;*/
+  height: 30px;
   padding: 4px 0px;
   transition: .5s;
 }
 .kinyu-top-introlist-news .sidebar-more-link {
-  margin-top: 8px;
+  font-size: 11px;
+  line-height: 11px;
+}
+.kinyu-top-introlist-news .sidebar-more-link a {
+  /*border-top: 1px solid #8ddcd1;*/
 }
 .kinyu-top-introlist-news .title-area {
   float: left;
-  width: 16%;
+  width: 20%;
   height: 100%;
-  padding-top: 14px;
+  padding-top: 12px;
   text-align: center;
 }
 .kinyu-top-introlist-news .text-area {
   float: right;
-  width: 84%;
-  height: 100%;
-  padding: 5px 12px 0px 24px;
+  width: 80%;
+  padding: 0px 12px 0px 24px;
   border-left: 1px solid #f7f5f5;
   text-align: left;
 }
@@ -491,7 +497,7 @@
   font-size: 12px;
   height: 12px;
   line-height: 12px;
-  color: #48a799;
+  color: #77cbc0;
 }
 .kinyu-top-introlist-news .text-area .news-date {
   font-size: 11px;
@@ -711,14 +717,12 @@
   margin-top: 16px;
 }
 
-
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・バナー部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-banner-area {
   text-align: center;
-  width: 750px;
+  width: 650px;
   margin: 0 auto;
 }
 .kinyu-top-banner-area li {
@@ -748,6 +752,7 @@
 }
 .report-detail-sidebar-el .banner-list li {
   margin-bottom: 24px;
+  transition: .5s;
 }
 .report-detail-sidebar-el .banner-list li a {
   display: block;
@@ -1033,6 +1038,7 @@
   width: 32%;
   float: left;
   margin-right: 2%;
+  transition: .5s;
 }
 .report-sidebar-report-list li:last-child {
   margin-right: 0%;
@@ -1648,15 +1654,17 @@
 .special-event-list .bg-area {
   height: 200px;
   background: gray;
+  transition: .5s;
 }
 .special-event-list .text-area {
   margin-top: 12px;
+  transition: .5s;
 }
 .special-event-list .text-area p {
   text-align: center;
   font-size: 12px;
   line-height: 12px;
-  transition: .5s;x5
+  transition: .5s;
 }
 
 /* 女子会ページの詳細 */
@@ -1834,8 +1842,14 @@
 
 .kinyu-event-list-subdescription {
   text-align: center;
-  margin-bottom: 0px;
   font-size: 13px;
+  width: 400px;
+  padding: 8px 0px;
+  margin: 0 auto;
+  margin-top: 32px;
+  display: block;
+  border: 1px solid #f9aaa0;
+  transition: .5s;
 }
 /* 過去のスペシャル女子会の設計 */
 .past-specialevent-list {
@@ -2929,8 +2943,8 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 /* プロフィール部分 */
 .about-kinyu-description .profile {
-  padding: 20px 28px 0px;
-  width: 75%;
+  padding: 20px 0px 0px;
+  width: 80%;
   margin: 0 auto;
   margin-top: 42px;
 }
@@ -2944,6 +2958,7 @@ input[type=checkbox]:checked + .checkbox:before {
   width: 20%;
   float: left;
   box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1), 0px 0px 5px 3px rgba(255, 255, 255, 1) inset;
+  display: none;
 }
 .about-kinyu-description .profile .story-img-box {
   height: 150px;
@@ -2952,7 +2967,7 @@ input[type=checkbox]:checked + .checkbox:before {
   height: 150px;
 }
 .about-kinyu-description .profile .text-box {
-  width: 75%;
+  width: 100%;
   float: right;
   text-align: left;
   padding-top: 4px;
@@ -3280,7 +3295,7 @@ footer .navi_kinyu-submenu-copy {
   background: rgba(222, 222, 222, 0.2);
 }
 .login-contents-intro {
-  margin-bottom: 50px;
+  margin-bottom: 42px;
   text-align: center;
 }
 .login-contents-intro .caution {
@@ -3383,7 +3398,7 @@ input::-webkit-input-placeholder {
 
 /* 登録部分 */
 .regist-btn-list {
-  width: 620px;
+  width: 650px;
   margin: 0 auto;
 }
 .regist-btn-list li {
@@ -3750,6 +3765,37 @@ input::-webkit-input-placeholder {
   border: none!important;
 }
 
+/* メンバーになると...？ */
+.about-member-block {
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 42px;
+  padding: 36px 50px;
+  border: 1px solid #8ddcd1;
+}
+.about-member-block .about-member-title {
+  font-size: 20px;
+  margin-bottom: 28px;
+  text-align: center;
+  color: #77cbc0;
+}
+.about-member-list li {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.about-member-list li:last-child {
+  margin-bottom: 4px; 
+}
+.about-member-list li span {
+  font-size: 15px;
+  border-bottom: 1px solid #8ddcd1;
+  vertical-align: bottom;
+  margin-right: 12px;
+  padding-bottom: 4px;
+  color: #77cbc0;
+}
+
+
 /* パスワード再設定 */
 .resetting-pass-block {
   background: #f7f7f7;
@@ -3821,10 +3867,11 @@ input::-webkit-input-placeholder {
   align-items: center;
 }
 .kinyu-start-intro-inner .title-box {
-  width: 50%;
+  width: 45%;
   height: 100%;
   float: left;
   text-align: center;
+  padding-right: 36px
 }
 .kinyu-start-intro-inner .title-box-inner p {
   font-size: 25px;
@@ -3832,7 +3879,7 @@ input::-webkit-input-placeholder {
   color: #77cbc0;
 }
 .kinyu-start-intro-inner .description-box {
-  width: 50%;
+  width: 55%;
   float: right;
 }
 .kinyu-start-content-inner {
@@ -4020,8 +4067,10 @@ to {
   opacity: .5;
 }
 .kinyu-top-introlist-news .kinyu-top-introlist-news-link:hover {
-  background: #f7f7f7;
   opacity: .5;
+}
+.kinyu-top-introlist-news .kinyu-top-introlist-news-link:hover .kinyu-top-introlist-news .text-area .news-title {
+  color: #77cbc0;
 }
 .report-detail-share .social-list li:hover {
   opacity: .5;
@@ -4221,6 +4270,22 @@ to {
 }
 .kinyu-top-banner-area li:hover {
   opacity: .5; 
+}
+.kinyu-event-list-subdescription:hover {
+  background: #f9aaa0;
+  color: #fff;
+}
+.special-event-list li:hover .bg-area {
+  opacity: .5;
+}
+.special-event-list li:hover .text-area p {
+  color: #77cbc0; 
+}
+.report-sidebar-report-list li:hover {
+  opacity: .5;
+}
+.kinyu-header-social-list li:hover {
+  opacity: .5;
 }
 
 }

@@ -1,6 +1,7 @@
 <?php
 
-namespace Model; require_once(dirname(__FILE__) . "/base.php");
+namespace Model;
+require_once(dirname(__FILE__) . "/base.php");
 
 class Applications extends Base
 {
@@ -35,6 +36,16 @@ class Applications extends Base
                 ->add_rule('required');
         }
         return $val;
+    }
+
+    public static function get_event_code_by_code($code)
+    {
+        $application = \DB::select('*')->from('applications')
+            ->where('code', '=', $code)
+            ->where('disable', '=', 0)
+            ->execute()
+            ->current();
+        return $application['event_code'];
     }
 
     /**
@@ -104,7 +115,7 @@ class Applications extends Base
         return true;
     }
 
-    public static function cancel($params)
+    public static function cancelable_cancel($params)
     {
         \Config::load('payjp', true);
 
@@ -138,14 +149,26 @@ class Applications extends Base
         }
 
         // キャンセルする
-        \DB::update('applications')->set(array('cancel' => 1))->where('code', '=', $params['code'])->execute();
+        \DB::update('applications')->set(
+            array(
+                'cancel' => 1,
+                'updated_at' => \DB::expr('now()'),
+            )
+        )->where('code', '=', $params['code'])->execute();
+
+        // 申し込みキャンセルデータ作成
+        \DB::insert('application_cancels')->set(array(
+            'application_code' => $params['code'],
+            'created_at' => \DB::expr('now()'),
+        ))->execute();
+
         // 参加人数を減らす
         \DB::update('events')->set(array(
             'application_num' => \DB::expr('application_num-1')
         ))
-        ->where('application_num', '>', 0)
-        ->where('code', '=', $application['event_code'])
-        ->execute();
+            ->where('application_num', '>', 0)
+            ->where('code', '=', $application['event_code'])
+            ->execute();
 
         // クレジット決済の場合決済取り消し
         if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($params['code'])) {
@@ -162,7 +185,75 @@ class Applications extends Base
         )));
         $mail->to($application['email']); //送り先
         $mail->send();
-        
+
+        return true;
+    }
+
+    public static function non_cancelable_cancel($params)
+    {
+        \Config::load('payjp', true);
+
+        $username = \Auth::get('username');
+
+        // 参加状態取得
+        $application = \DB::select(\DB::expr('users.email, applications.event_code, applications.cancel, applications.username, profiles.name'))
+            ->from('applications')
+            ->join('users')
+            ->on('applications.username', '=', 'users.username')
+            ->join('profiles')
+            ->on('applications.username', '=', 'profiles.username')
+            ->where('applications.code', '=', $params['code'])
+            ->where('applications.disable', '=', 0)
+            ->execute()
+            ->current();
+
+        // 存在チェック
+        if (empty($application)) {
+            return "該当の参加申込が見つかりませんでした";
+        }
+
+        // 自分のかを確認する
+        if ($application['username'] != $username) {
+            return "セキュリティー上の問題が発生いたしました";
+        }
+
+        // キャンセル状況確認
+        if ($application['cancel'] != 0) {
+            return "この参加申し込みは既にキャンセル済みです";
+        }
+
+        // キャンセルする
+        \DB::update('applications')->set(
+            array(
+                'cancel' => 1,
+                'updated_at' => \DB::expr('now()'),
+            )
+        )->where('code', '=', $params['code'])->execute();
+
+        // 申し込みキャンセルデータ作成
+        \DB::insert('application_cancels')->set(array(
+            'application_code' => $params['code'],
+            'created_at' => \DB::expr('now()'),
+        ))->execute();
+
+        // 参加人数を減らす
+        \DB::update('events')->set(array(
+            'application_num' => \DB::expr('application_num-1')
+        ))
+            ->where('application_num', '>', 0)
+            ->where('code', '=', $application['event_code'])
+            ->execute();
+
+        // サンクスメール
+        $mail = \Email::forge('jis');
+        $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+        $mail->subject("【きんゆう女子。】女子会をキャンセルいたしました。");
+        $mail->html_body(\View::forge('email/joshikai/cancel', array(
+            'name' => $application['name']
+        )));
+        $mail->to($application['email']); //送り先
+        $mail->send();
+
         return true;
     }
 

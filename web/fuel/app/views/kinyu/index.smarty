@@ -22,7 +22,7 @@
   <div class="kinyu-sp-introduction">
     <h2><img class="main-title" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
     <!-- <div class="main-title-border"></div> -->
-    <p>＼ 正しい情報をシェアしよう！／<br>経済に前向きに関わることでおかねにとらわれず<br>自由で等身大に生きる。</p>
+    <p>＼ 正しい情報をシェアしよう！／<br>経済に前向きに関わることで<br>おかねにとらわれず<br>自由で等身大に生きる。</p>
     <a class="main-intro-link" href="/about">きんゆう女子。って？</a>
     
     <!-- news -->
@@ -44,20 +44,15 @@
     </div>
 
     <div class="introduction-list">
-      <ul class="clear">
-        <li style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;">
-          <a href=""><p><span>はじめての方へ</span></p></a>
-        </li>
-        <li style="background: url(/images/about/about-story.jpg) center center / cover no-repeat;">
-          <a href="/about"><p><span>きんゆう女子。について</span></p></a>
-        </li>
-        <li style="background: url(/images/event/about-joshikai4.jpg) top center / cover no-repeat;">
-          <a href="/joshikai"><p><span>女子会の案内</span></p></a>
-        </li>
-        <!-- <li style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/2017112210242723846709_10212850110380923_1669592387_o.jpg) center center / cover no-repeat;">
-          <a href="/report"><p><span>レポートを見る</span></p></a>
-        </li> -->
-      </ul>
+      <div class="kinyu-top-banner-area">
+        <ul class="clear">
+          <li>
+            <a href="/start">
+              <img class="sp" src="/images/banner/firsttime_sp.jpg">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 

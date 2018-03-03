@@ -2,6 +2,8 @@
 
 use \Model\Profiles;
 use \Model\UserReminder;
+use \Model\RegistReminder;
+use \Model\MemberRegist;
 
 class Controller_Login extends Controller_KinyuBase
 {
@@ -137,6 +139,38 @@ class Controller_Login extends Controller_KinyuBase
             $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
         }
         $this->template->contents = View::forge('login/resetting_pass.smarty', $this->data);
+    }
+
+    public function action_resetting_pass_exuser()
+    {
+        if (Auth::check()) {
+            Response::redirect('/my');
+        }
+        // トークンチェック
+        if (!$reminder = RegistReminder::get_valid(\Input::get('access_token'))) {
+            Response::redirect('/login');
+        }
+        $member_regist = \DB::select('*')->from('member_regist')
+                ->where('id', '=', $reminder['id'])
+                ->execute()->current();
+
+        $this->template->nickname = $member_regist['name'];
+        $this->template->email = $member_regist['email'];
+        $this->template->access_token = $reminder['access_token'];
+
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+        $this->template->title = 'パスワード再発行｜きんゆう女子。';
+        $this->template->description = 'パスワード再発行｜きんゆう女子';
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        }
+        $this->template->contents = View::forge('login/resetting_pass_exuser.smarty', $this->data);
     }
 
     public function action_complete()

@@ -13,6 +13,9 @@
 .kinyu-school_public-intro {
   position: relative;
 }
+.kinyu-school_public-intro .main-img {
+  width: 100%;
+}
 .jpx-img {
   position: absolute;
   top: 20px;

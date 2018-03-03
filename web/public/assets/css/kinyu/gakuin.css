@@ -451,15 +451,18 @@
 
 /*協賛企業*/
 .sponsor-list {
-  width: 1000px;
+  width: 100%;
 }
 .sponsor-list li {
   width: 23.5%;
   float: left;
   box-sizing:border-box;
-  margin-right: 2%;
+  margin-left: 2%;
   margin-bottom: 2%;
   border: 1px solid #f1f1f1;
+}
+.sponsor-list li:first-child {
+  margin-left: 0%;
 }
 .sponsor-list li:nth-child(4n) {
   margin-right: 0%;
