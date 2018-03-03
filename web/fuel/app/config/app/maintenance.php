@@ -9,5 +9,6 @@ return array(
     // メンテナンス画面をスルーする 接続 IP
     'through_ip_list' => array(
         '172.31.9.195',
+        '172.19.0.1',
     ),
 );

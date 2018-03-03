@@ -16,6 +16,7 @@
         "opauth/google": "dev-master",
         "opauth/github": "dev-master",
         "aws/aws-sdk-php": "^3.12",
+        "opauth/opauth": "0.4.4",
         "payjp/payjp-php": "0.0.8"
     },
     "require-dev": {
