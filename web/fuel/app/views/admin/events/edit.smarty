@@ -225,7 +225,7 @@ $(function(){
 	});
 
 	$('#preview').click(function(){
-		window.open("/event/"+code);
+		window.open("/joshikai/"+code);
 	});
 
 	$('#save_closed').click(function(){
