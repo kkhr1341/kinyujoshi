@@ -21,9 +21,10 @@
       <th style="display:none;">3年後の自分の年収をどのくらいにしたいですか？</th>
       <th style="display:none;">どこで、きんゆう女子。を知りましたか？</th>
       <th style="display:none;">きんゆう女子。で情報発信したいですか？</th>
-      <th style="width:400px;">自己紹介</th>
+      <th style="width:350px;">自己紹介</th>
       <th>編集部記入欄</th>
       <th>詳細</th>
+      <th>pass済</th>
     </tr>
   </thead>
 
@@ -51,10 +52,15 @@
       <td style="display:none;">{$email.income}</td>
       <td style="display:none;">{$email.where_from}</td>
       <td style="display:none;">{$email.transmission}</td>
-      <td style="width:400px;">{$email.introduction}</td>
+      <td style="width:350px;">{$email.introduction}</td>
       <!-- 備考欄 -->
       <td style="background: #dbfffa;">{$email.edit_inner}</td>
       <td><a class="admin-registlist-more" href="/admin/registlist/{$email.code}">編集</a></td>
+      <td>
+      {if $email.username}
+      ○     
+      {/if}
+      </td>
     </tr>
     {/foreach}
     <div class="now_member_block">
