@@ -2442,12 +2442,13 @@ input[type=checkbox]:checked + .checkbox:before {
 .report-detail-share .social-list li:last-child {
   margin-right: 0px;
 }
-.share-this-title {
+.report-detail-share .share-this-title {
+  width: 55%;
   display: block;
   margin: 0 auto;
-  margin-bottom: 12px;
 }
-.share-this-page {
+.report-detail-share .share-this-page {
+  width: 25%;
   display: block;
   margin: 0 auto;
 }

@@ -1091,7 +1091,7 @@
   background: #f7f7f7;
   border-radius: 0px 0px 0px 0px;
   padding-top: 0px;
-  padding: 16px 0px;
+  padding: 24px 0px 16px
 }
 .report-detail-share .social-list {
   text-align: center;
@@ -1108,10 +1108,10 @@
 }
 .report-detail-share-el .share-this-title {
   width: 90%;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
 .report-detail-share-el .share-this-page {
-  width: 80px;
+  width: 35%;
 }
 
 /* サイドバー */

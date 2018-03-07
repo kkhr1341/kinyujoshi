@@ -23,7 +23,7 @@
       <div class="report-detail-share clear">
         <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
         <div class="report-detail-share-el report-detail-share-right">
-          <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
+          <img class="share-this-title" src="/images/detail-title/kinyu-share-news.png">
           <img class="share-this-page" src="/images/social/social-this-page.png">
           <div class="social-list">
             <ul>
