@@ -566,7 +566,7 @@
   　トップページ・女子会リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-joshikai-list li .text-box {
-  padding: 4px 2px 16px;
+  padding: 4px 2px 0px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -623,7 +623,7 @@
   　トップページ・記事リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-report-list li .text-box {
-  padding: 4px 1% 16px;
+  padding: 4px 1% 0px;
 }
 .kinyu-top-list-block {
   margin-left: 24%;

@@ -900,6 +900,19 @@ footer {
   padding: 16px;
 }
 
+.redactor-modal-tab label.checkbox {
+  padding-left: 20px;
+  position: relative;
+}
+.redactor-modal-tab label.checkbox input[type="checkbox"] {
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+  margin-left: 0px;
+  position: absolute;
+  left: 0;
+  margin: 1px 0 0;
+}
+
 
 
 
