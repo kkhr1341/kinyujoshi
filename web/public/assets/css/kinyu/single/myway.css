@@ -320,7 +320,7 @@
 .myway-header-content .main-tumb-block .title-block {
   float: right;
   width: 380px;
-  padding: 0px 36px;
+  padding: 0px 0px 0px 36px;
   box-sizing: border-box;
   display: table;
   height: 340px;
