@@ -9,7 +9,7 @@
   {if $reporturl == "/report/FxKhYh"}
     
     <!-- くつ編 -->
-    <div class="myway-header-content" style="background: #FBECE4;">
+    <div id="myway-header-shoes" class="myway-header-content" style="background: #FBECE4;">
       <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
       <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;">
         <div class="title-block">
@@ -29,7 +29,7 @@
 
     <!-- コスメ編 -->
 
-    <div class="myway-header-content" style="background: #EBFAFF;">
+    <div id="myway-header-cosmetics" class="myway-header-content" style="background: #EBFAFF;">
       <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
       <div class="main-tumb-block clear">
         <div class="title-block">
@@ -48,7 +48,7 @@
   {elseif $reporturl == "/report/dtov0W"}
 
     <!-- オーラルケア編 -->
-    <div class="myway-header-content" style="background: #ebf9f0;">
+    <div id="myway-header-jewelry" class="myway-header-content" style="background: #ebf9f0;">
       <div class="main-tumb-block clear">
         <div class="title-block">
           <div class="title-block-inner">
