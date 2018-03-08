@@ -15,6 +15,7 @@
         <div class="title-block">
           <div class="title-block-inner">
             <img src="/images/myway/title/title-shoes.png">
+            <p class="main-description">毎日を豊かにするために、<br>ちゃんと"靴"を選んでる…？</p>
             <p>{$blog.description}</p>
           </div>
         </div>
@@ -27,12 +28,14 @@
   {elseif $reporturl == "/report/fMvmMk"}
 
     <!-- コスメ編 -->
+
     <div class="myway-header-content" style="background: #EBFAFF;">
       <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
       <div class="main-tumb-block clear">
         <div class="title-block">
           <div class="title-block-inner">
             <img src="/images/myway/title/title-cosmetics.png">
+            <p class="main-description">コスメポーチや、おうちのメイクBOX<br>きれいになってる…？</p>
             <p>{$blog.description}</p>
           </div>
         </div>
@@ -50,6 +53,7 @@
         <div class="title-block">
           <div class="title-block-inner">
             <img src="/images/myway/title/title-jewelry.png">
+            <p class="main-description">わたしらしい美しさは、<br>きれいな笑顔とジュエリーで完成する。</p>
             <p>{$blog.description}</p>
           </div>
         </div>

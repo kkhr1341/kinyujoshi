@@ -330,13 +330,19 @@
   vertical-align: middle;
   height: 100%;
 }
+.myway-header-content .main-tumb-block .title-block .main-description {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: bold;
+  padding: 4px 0px 12px;
+  text-align: center;
+}
 .myway-header-content .main-tumb-block .title-block p {
   font-size: 12px;
   line-height: 20px;
 }
 .myway-header-content .main-tumb-block .title-block img {
   width: 280px;
-  margin-bottom: 20px;
 }
 .myway-report-content .inner {
   position: relative;
@@ -611,8 +617,12 @@
   padding-top: 8px;
 }
 .myway-content-list-el .edition img {
-  width: 70%;
+  width: 65%;
   margin-bottom: 8px;
+}
+#myway-jewelry.myway-content-list-el .edition img {
+  width: 62%;
+  margin-bottom: 20px;
 }
 .myway-content-list-el .text-box .myway-to-link {
   width: 84%;
@@ -723,7 +733,7 @@
   line-height: 18px;
 }
 .myway-header-content .main-tumb-block .title-block img {
-  width: 92%;
+  width: 72%;
   margin-bottom: 8px;
 }
 .myway-header-content .main-tumb-block .my-way-description {
@@ -810,6 +820,10 @@
   letter-spacing: normal;
   margin-right: 0%;
   margin-bottom: 12px;
+}
+.myway-header-content .main-tumb-block .title-block .main-description {
+  font-size: 14px;
+  line-height: 22px;
 }
 
 }
