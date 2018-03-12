@@ -4,12 +4,6 @@
 <script type="text/javascript" src="/assets/js/kinyu/countdown.js"></script>
 <script type="text/javascript" src="/assets/js/kinyu/campaign/conference.js"></script>
 
-<style>
-.kinyu-header-top {
-  display:none;
-}
-</style>
-
 <div class="kinyu-conference-container">
   <!-- イントロダクション -->
   <div class="conference-introduction">
