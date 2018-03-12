@@ -19,10 +19,16 @@
       <!-- 参加者のループ -->
       {foreach from=$applications item=application name=loopname}
       <tr>
-        <td class="main-img"><div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat"></td>
+        <td class="main-img">
+            {if $application.profile_image eq ""}
+                <div class="member-img" style="background:url(/images/my/non-profile-img.jpg) center center / cover no-repeat">
+            {else}
+                <div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat">
+            {/if}
+        </td>
         <td>{$application.name}</td>
         <td>
-        {if $application.birthday}
+        {if $application.birthday != '0000-00-00'}
         {((date('Ymd')-$application.birthday|replace:"-":"")/10000)|floor}歳
         {/if}
         </td>
@@ -51,10 +57,16 @@
       <!-- 参加者のループ -->
       {foreach from=$cancel_applications item=application name=loopname}
       <tr>
-        <td class="main-img"><div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat"></td>
+        <td class="main-img">
+          {if $application.profile_image eq ""}
+            <div class="member-img" style="background:url(/images/my/non-profile-img.jpg) center center / cover no-repeat">
+          {else}
+            <div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat">
+          {/if}
+        </td>
         <td>{$application.name}</td>
         <td>
-        {if $application.birthday}
+        {if $application.birthday != '0000-00-00'}
         {((date('Ymd')-$application.birthday|replace:"-":"")/10000)|floor}歳
         {/if}
         </td>
