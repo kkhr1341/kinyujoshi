@@ -174,6 +174,20 @@ class Applications extends Base
         if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($params['code'])) {
             $payment = new Payment(\Config::get('payjp.private_key'));
             $payment->cancel($charge_id);
+
+            // 決済データをキャンセル状態に
+            \DB::update('application_cancel_payments')->set(array(
+                'cancel' => 1,
+                'updated_at' => \DB::expr('now()'),
+            ))
+                ->where('application_code', '=', $params['code'])
+                ->execute();
+
+            // 決済キャンセルデータ作成
+            \DB::insert('application_credit_payment_cancels')->set(array(
+                'application_code' => $params['code'],
+                'created_at' => \DB::expr('now()'),
+            ))->execute();
         }
 
         // サンクスメール

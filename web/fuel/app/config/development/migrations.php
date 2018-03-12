@@ -66,6 +66,9 @@ return array(
         57 => '061_create_application_cancels',
         58 => '062_add_email_to_regist_reminders',
         59 => '063_change_title_to_null_in_inquiries',
+        60 => '064_create_application_credit_payment_sales',
+        61 => '065_create_application_credit_payment_cancels',
+        62 => '066_add_cancel_to_application_credit_payments',
       ),
     ),
     'module' => 

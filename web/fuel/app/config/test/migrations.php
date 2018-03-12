@@ -62,9 +62,10 @@ return array(
         53 => '057_add_industry_to_member_regist',
         54 => '058_add_industry_other_to_member_regist',
         55 => '059_delete_email_from_profiles',
-        56 => '060_create_regist_reminders',
-        57 => '061_create_application_cancels',
-        58 => '062_add_email_to_regist_reminders',
+        56 => '063_change_title_to_null_in_inquiries',
+        57 => '064_create_application_credit_payment_sales',
+        58 => '065_create_application_credit_payment_cancels',
+        59 => '066_add_cancel_to_application_credit_payments',
       ),
     ),
     'module' => 
