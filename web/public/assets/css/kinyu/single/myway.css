@@ -945,6 +945,12 @@
 .myway-list-title {
   width: 55%;
 }
+#myway-jewelry.myway-content-list-el .edition img {
+  width: 45%;
+}
+.coming-soon img {
+  width: 50%;
+}
 
 
 }

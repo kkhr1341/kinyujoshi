@@ -894,7 +894,7 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマホ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
 /*.kinyu-conference-container {
   margin-top: 16px;
 }*/
@@ -1884,15 +1884,89 @@
   font-size: 12px;
   margin-top: 4px;
 }
-
 }
 
-
 @media screen and (max-width: 340px) {
-
 .kinyu-daijoshikai2018-container .countdown-first-text {
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 2px;
 }
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+    週末投資宣言 - タブレット
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 480px) and (max-width:1024px) {
+  .schedule-block {
+    width: 65%;
+  }
+  .sponsor-sponsorship li {
+    width: 300px;
+  }
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+    第2回 秘密の大女子会 - タブレット
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 480px) and (max-width:1024px) {
+
+.conference-introduction .main-logo {
+  width: 320px;
+  height: 320px;
+}
+.conference-introduction .inner .data {
+  font-size: 25px;
+}
+.conference-introduction .inner .data span {
+  font-size: 45px;
+  line-height: 45px;
+}
+.kinyu-daijoshikai2018-container .countdown-first-text {
+  font-size: 28px;
+  line-height: 42px;
+  width: 55%;
+}
+.kinyu-daijoshikai2018-container .countdown-first .top-deco-right {
+  width: 130px;
+  top: -25px;
+}
+.kinyu-daijoshikai2018-container .countdown-first .top-deco-left {
+  width: 130px;
+  top: -25px;
+}
+.conference-el-header {
+  width: 60%;
+}
+.event-special-block li:nth-child(odd) .event-special-el .img-box {
+  float: left;
+}
+.event-special-block li:nth-child(odd) .event-special-el .text-box {
+  float: right;
+  width: 64%;
+}
+.event-special-block li:nth-child(even) .event-special-el .img-box {
+  float: right;
+}
+.event-special-block li:nth-child(even) .event-special-el .text-box {
+  float: left;
+  width: 64%;
+}
+.event-special-el .text-box .text-main {
+  margin-left: 12%;
+}
+.kinyu-daijoshikai2018-container .conference-description .text-description p {
+  margin: 0 auto;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block li:last-child {
+  padding-left: 0px;
+}
+.kinyu-daijoshikai2018-container .conference-access .access-block {
+  width: 100%;
+}
+.kinyu-daijoshikai2018-container .schedule-block {
+  width: 90%;
+}
+
 }
