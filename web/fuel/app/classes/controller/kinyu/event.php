@@ -14,7 +14,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
         $pagination = $this->data['events']['pagination'];
         $this->data['pagination'] = $pagination::instance('mypagination');
-        $this->template->title = 'いつもの女子会。｜きんゆう女子。';
+        $this->template->title = '女子会ページ｜きんゆう女子。';
         $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
         $this->template->today = date("Y年n月");
