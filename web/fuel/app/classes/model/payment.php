@@ -127,6 +127,20 @@ class Payment extends Base
             return false;
         }
     }
+    
+    /**
+     * @param $username
+     * @return bool|\Payjp\Customer
+     */
+    public function sale($charge_id)
+    {
+        try {
+            $ch = \Payjp\Charge::retrieve($charge_id);
+            return $ch->capture();
+        } catch (\Payjp\Error\InvalidRequest $e) {
+            return false;
+        }
+    }
 
     /**
      * @param $username

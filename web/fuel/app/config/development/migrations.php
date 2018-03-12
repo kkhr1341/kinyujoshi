@@ -69,6 +69,7 @@ return array(
         60 => '064_create_application_credit_payment_sales',
         61 => '065_create_application_credit_payment_cancels',
         62 => '066_add_cancel_to_application_credit_payments',
+        63 => '067_add_sale_to_application_credit_payments',
       ),
     ),
     'module' => 

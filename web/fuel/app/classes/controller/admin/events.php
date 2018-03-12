@@ -74,6 +74,7 @@ class Controller_Admin_Events extends Controller_Adminbase
     {
         $this->data['events'] = Events::getByCode('events', $code);
         $this->data['applications'] = Applications::get_applications_by_code($code);
+        $this->data['cancel_applications'] = Applications::get_cancel_applications_by_code($code);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';

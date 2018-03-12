@@ -71,19 +71,40 @@ class Applications extends Base
         return $datas;
     }
 
-
     public static function get_applications_by_code($code)
     {
-        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*'))->from('applications')
+        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*, application_credit_payments.sale'))->from('applications')
             ->join('users', 'LEFT')
             ->on('applications.username', '=', 'users.username')
             ->join('member_regist', 'LEFT')
             ->on('member_regist.username', '=', 'users.username')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'users.username')
+            ->join('application_credit_payments', 'LEFT')
+            ->on('applications.code', '=', 'application_credit_payments.application_code')
             ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->where('applications.cancel', '=', 0)
+            ->execute()
+            ->as_array();
+
+        return $datas;
+    }
+
+    public static function get_cancel_applications_by_code($code)
+    {
+        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*, application_credit_payments.sale, application_credit_payments.cancel as payment_cancel'))->from('applications')
+            ->join('users', 'LEFT')
+            ->on('applications.username', '=', 'users.username')
+            ->join('member_regist', 'LEFT')
+            ->on('member_regist.username', '=', 'users.username')
+            ->join('profiles', 'LEFT')
+            ->on('profiles.username', '=', 'users.username')
+            ->join('application_credit_payments', 'LEFT')
+            ->on('applications.code', '=', 'application_credit_payments.application_code')
+            ->where('applications.event_code', '=', $code)
+            ->where('applications.disable', '=', 0)
+            ->where('applications.cancel', '=', 1)
             ->execute()
             ->as_array();
 
@@ -148,59 +169,71 @@ class Applications extends Base
             return "この参加申し込みは既にキャンセル済みです";
         }
 
-        // キャンセルする
-        \DB::update('applications')->set(
-            array(
-                'cancel' => 1,
-                'updated_at' => \DB::expr('now()'),
-            )
-        )->where('code', '=', $params['code'])->execute();
+        $db = \Database_Connection::instance();
+        $db->start_transaction();
+        try {
+            $username = \Auth::get('username');
 
-        // 申し込みキャンセルデータ作成
-        \DB::insert('application_cancels')->set(array(
-            'application_code' => $params['code'],
-            'created_at' => \DB::expr('now()'),
-        ))->execute();
+            // キャンセルする
+            \DB::update('applications')->set(
+                array(
+                    'cancel' => 1,
+                    'updated_at' => \DB::expr('now()'),
+                )
+            )->where('code', '=', $params['code'])->execute();
 
-        // 参加人数を減らす
-        \DB::update('events')->set(array(
-            'application_num' => \DB::expr('application_num-1')
-        ))
-            ->where('application_num', '>', 0)
-            ->where('code', '=', $application['event_code'])
-            ->execute();
-
-        // クレジット決済の場合決済取り消し
-        if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($params['code'])) {
-            $payment = new Payment(\Config::get('payjp.private_key'));
-            $payment->cancel($charge_id);
-
-            // 決済データをキャンセル状態に
-            \DB::update('application_cancel_payments')->set(array(
-                'cancel' => 1,
-                'updated_at' => \DB::expr('now()'),
-            ))
-                ->where('application_code', '=', $params['code'])
-                ->execute();
-
-            // 決済キャンセルデータ作成
-            \DB::insert('application_credit_payment_cancels')->set(array(
+            // 申し込みキャンセルデータ作成
+            \DB::insert('application_cancels')->set(array(
                 'application_code' => $params['code'],
                 'created_at' => \DB::expr('now()'),
             ))->execute();
+
+            // 参加人数を減らす
+            \DB::update('events')->set(array(
+                'application_num' => \DB::expr('application_num-1')
+            ))
+                ->where('application_num', '>', 0)
+                ->where('code', '=', $application['event_code'])
+                ->execute();
+
+            // クレジット決済の場合決済取り消し
+            if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($params['code'])) {
+                // 決済データをキャンセル状態に
+                \DB::update('application_credit_payments')->set(array(
+                    'cancel' => 1,
+                    'updated_at' => \DB::expr('now()'),
+                ))
+                    ->where('application_code', '=', $params['code'])
+                    ->execute();
+
+                // 決済キャンセルデータ作成
+                \DB::insert('application_credit_payment_cancels')->set(array(
+                    'application_code' => $params['code'],
+                    'created_at' => \DB::expr('now()'),
+                ))->execute();
+            
+                $payment = new Payment(\Config::get('payjp.private_key'));
+                $payment->cancel($charge_id);
+            }
+
+            $db->commit_transaction();
+
+            // サンクスメール
+            $mail = \Email::forge('jis');
+            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $mail->subject("【きんゆう女子。】女子会をキャンセルいたしました。");
+            $mail->html_body(\View::forge('email/joshikai/cancel', array(
+                'name' => $application['name']
+            )));
+            $mail->to($application['email']); //送り先
+            $mail->send();
+
+            return true;
+        } catch (\Exception $e) {
+            $db->rollback_transaction();
+
+            throw $e;
         }
-
-        // サンクスメール
-        $mail = \Email::forge('jis');
-        $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
-        $mail->subject("【きんゆう女子。】女子会をキャンセルいたしました。");
-        $mail->html_body(\View::forge('email/joshikai/cancel', array(
-            'name' => $application['name']
-        )));
-        $mail->to($application['email']); //送り先
-        $mail->send();
-
-        return true;
     }
 
     public static function non_cancelable_cancel($params)
@@ -236,39 +269,50 @@ class Applications extends Base
             return "この参加申し込みは既にキャンセル済みです";
         }
 
-        // キャンセルする
-        \DB::update('applications')->set(
-            array(
-                'cancel' => 1,
-                'updated_at' => \DB::expr('now()'),
-            )
-        )->where('code', '=', $params['code'])->execute();
+        $db = \Database_Connection::instance();
+        $db->start_transaction();
+        try {
 
-        // 申し込みキャンセルデータ作成
-        \DB::insert('application_cancels')->set(array(
-            'application_code' => $params['code'],
-            'created_at' => \DB::expr('now()'),
-        ))->execute();
+            // キャンセルする
+            \DB::update('applications')->set(
+                array(
+                    'cancel' => 1,
+                    'updated_at' => \DB::expr('now()'),
+                )
+            )->where('code', '=', $params['code'])->execute();
 
-        // 参加人数を減らす
-        \DB::update('events')->set(array(
-            'application_num' => \DB::expr('application_num-1')
-        ))
-            ->where('application_num', '>', 0)
-            ->where('code', '=', $application['event_code'])
-            ->execute();
+            // 申し込みキャンセルデータ作成
+            \DB::insert('application_cancels')->set(array(
+                'application_code' => $params['code'],
+                'created_at' => \DB::expr('now()'),
+            ))->execute();
 
-        // サンクスメール
-        $mail = \Email::forge('jis');
-        $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
-        $mail->subject("【きんゆう女子。】女子会のお申込みを取り消しました。");
-        $mail->html_body(\View::forge('email/joshikai/cancel', array(
-            'name' => $application['name']
-        )));
-        $mail->to($application['email']); //送り先
-        $mail->send();
+            // 参加人数を減らす
+            \DB::update('events')->set(array(
+                'application_num' => \DB::expr('application_num-1')
+            ))
+                ->where('application_num', '>', 0)
+                ->where('code', '=', $application['event_code'])
+                ->execute();
+        
+            $db->commit_transaction();
 
-        return true;
+            // サンクスメール
+            $mail = \Email::forge('jis');
+            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $mail->subject("【きんゆう女子。】女子会のお申込みを取り消しました。");
+            $mail->html_body(\View::forge('email/joshikai/cancel', array(
+                'name' => $application['name']
+            )));
+            $mail->to($application['email']); //送り先
+            $mail->send();
+
+            return true;
+        } catch (\Exception $e) {
+            $db->rollback_transaction();
+
+            throw $e;
+        }
     }
 
     /**

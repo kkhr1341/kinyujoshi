@@ -9,7 +9,6 @@
       </div>
     </div>
   </div>
-
   <div class="joshikai-attend-el-block">
     <p>参加者一覧</p>
     {foreach from=$applications item=application name=loopname}
@@ -32,6 +31,41 @@
           {if $application.username != 'guest'}
           <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
+          {if $application.sale eq '0'}
+            <a class="sales-link" href="#" data-application_code="{$application.code}">支払い確定</a>
+          {else}
+            支払確定
+          {/if}
+        </td>
+      </tr>
+      {/foreach}
+      <!-- 参加者のループ終了 -->
+
+    </table>
+  </div>
+
+  <div class="joshikai-attend-el-block">
+    <p>キャンセル一覧</p>
+    <table class="table joshikai-attend-detail-table">
+
+      <!-- 参加者のループ -->
+      {foreach from=$cancel_applications item=application name=loopname}
+      <tr>
+        <td class="main-img"><div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat"></td>
+        <td>{$application.name}</td>
+        <td>
+        {if $application.birthday}
+        {((date('Ymd')-$application.birthday|replace:"-":"")/10000)|floor}歳
+        {/if}
+        </td>
+        <td class="link-area">
+          <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
+          {if $application.username != 'guest'}
+          <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
+          {/if}
+          {if $application.payment_cancel eq '0'}
+            <a class="sales-link" href="#" data-application_code="{$application.code}">キャンセル料支払い確定</a>
+          {/if}
         </td>
       </tr>
       {/foreach}
@@ -40,3 +74,25 @@
     </table>
   </div>
 </div>
+<script>
+$(function(){
+        $('.sales-link').click(function(){
+                self = this;
+                var url = "/api/applicationpayments/sale";
+                var params = {};
+                params.code = $(this).data('application_code');
+                bootbox.confirm("売り上げを確定しますか？", function(result) {
+                        if (result) {
+                                ajax.post(url, params, function(data){
+                                        ts.success("売り上げ確定しました", function(){
+                                             $(self).remove(); 
+                                        });
+                                });
+                        }
+                        else {
+                                ts.info("キャンセルしました");
+                        }
+                });
+        });
+});
+</script>
