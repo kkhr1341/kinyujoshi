@@ -3,7 +3,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1024px) {
 
 .ooedo-joshikai-container p, .ooedo-joshikai-container a {
   font-size: 12px;
