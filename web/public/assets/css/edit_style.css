@@ -4312,5 +4312,8 @@ to {
   color: #77cbc0;
   opacity: .5;
 }
+.kinyu-error-container a:hover {
+  opacity: .5;
+}
 
 }
