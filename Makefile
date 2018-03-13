@@ -31,16 +31,15 @@ composer:
 	docker-compose run --rm composer update
 .PHONY: composer
 
-clean:
+down:
 	docker-compose down
-.PHONY: clean
+.PHONY: down
 
-reset:
+clean:
 	docker-compose down
 	docker volume rm kinyujoshi_db-data
 	docker volume rm kinyujoshi_test-db-data
-	docker-compose up -d
-.PHONY: reset
+.PHONY: clean
 
 mysql:
 	docker-compose exec db mysql -uroot -ppass -Dkinyujoshi_development
