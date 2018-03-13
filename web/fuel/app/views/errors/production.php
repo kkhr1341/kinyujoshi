@@ -58,11 +58,8 @@
 		      <li><a href="/report">レポート</a></li>
 		      <li><a href="/myway">「わたし」を知る。</a></li>
 		      <li><a href="/about">きん女。ストーリー</a></li>
-		      {if in_array('user', $roles) || in_array('admin', $roles)}
-		        <li><a href="/my">マイページ</a></li>
-		      {else}
-		        <li><a href="/login_regist">メンバー登録</a></li>
-		        <li><a href="/login">ログイン</a></li>
+		      <li><a href="/login_regist">メンバー登録</a></li>
+		      <li><a href="/login">ログイン</a></li>
 		      {/if}
 		    </ul>
 		  </nav>
