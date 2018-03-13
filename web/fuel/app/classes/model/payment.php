@@ -138,7 +138,7 @@ class Payment extends Base
             $ch = \Payjp\Charge::retrieve($charge_id);
             return $ch->capture();
         } catch (\Payjp\Error\InvalidRequest $e) {
-            return false;
+            throw new \Exception("売上処理に失敗しました。");
         }
     }
 
