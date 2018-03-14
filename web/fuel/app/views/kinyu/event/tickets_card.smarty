@@ -12,11 +12,10 @@
           <ul class="kinyu-credit-list clear">
             <li><img src="/images/event/credit/kinyu-credit-visa.png"></li>
             <li><img src="/images/event/credit/kinyu-credit-master.png"></li>
-            <!-- <li><img src="/images/event/credit/kinyu-credit-jcb.png"></li> -->
-            <!--<li><img src="/images/event/credit/kinyu-credit-amex.png"></li>-->
-            <!--<li><img src="/images/event/credit/kinyu-credit-diners.png"></li>-->
+            <li><img src="/images/event/credit/kinyu-credit-jcb.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-amex.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-diners.png"></li>
           </ul>
-          <p class="sub-credit"><span style="color:#f75e5e;">＊</span>JCB、AMEX、Dinersも近日中に対応予定です。</p>
         </div>
 
         <div class="fee-open-el">
