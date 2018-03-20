@@ -90,7 +90,7 @@ class Blogs extends Base
             $datas = $datas->where('section_code', '=', $section_code);
         }
 
-        $datas = $datas->order_by('blogs.id', 'desc');
+        $datas = $datas->order_by('blogs.open_date', 'desc');
 
         if ($limit === null) {
         } else {
