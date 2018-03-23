@@ -37,7 +37,9 @@
           {if $application.username != 'guest'}
           <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
-          {if $application.sale eq '0'}
+          {if $application.payment_cancel eq '1'}
+            決済取り消し
+          {elseif $application.sale eq '0'}
             <a class="sales-link" href="#" data-application_code="{$application.code}">支払い確定</a>
           {else}
             支払確定
