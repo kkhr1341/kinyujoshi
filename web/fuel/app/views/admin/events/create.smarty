@@ -34,6 +34,34 @@
 
 				</div>
 
+				<!-- <div class="form-group">
+					<label class="form-group-event-label">メンバー限定女子会</label>
+
+					<div class="radio_box clear">
+						<p class="form-group-sub"><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
+            <input type="radio" value="いつもの女子会" name="event_category" id="event1" class="form-radio" placeholder="">
+            <label for="event1" class="form-long">YES!</label>
+            
+            <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="">
+            <label for="event2" class="form-long">NO!
+
+            </label>
+          </div>
+
+				</div> -->
+
+				<div class="form-group mb50">
+					<label class="form-group-event-label">メンバー限定女子会</label>
+					<div class="radio_box clear">
+            <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="">
+            <label for="secret01" class="form-long">YES!</label>
+            
+            <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="">
+            <label for="secret02" class="form-long">NO!</label>
+
+          </div>
+        </div>
+
 				<div class="form-group">
 					<label class="form-group-event-label">女子会のタイトル</label>
 					<input type="text" id="title" class="form-control" placeholder="">
@@ -163,6 +191,7 @@ $(function(){
 		};
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
+		params.secret = $("[name=secret]:checked").val();
 		params.title = $('#title').val();
 		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
@@ -180,6 +209,10 @@ $(function(){
 		
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");
+			return false;
+		}
+		if (params.secret == "") {
+			ts.error("メンバー限定の女子会か選択してください");
 			return false;
 		}
 		if (params.title == "") {
@@ -223,6 +256,7 @@ $(function(){
 		var params = {};
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
+		params.secret = $("[name=secret]:checked").val();
 		params.title = $('#title').val();
 		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
@@ -233,7 +267,7 @@ $(function(){
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
-   		params.limit = $("#limit").val();
+   	params.limit = $("#limit").val();
 		params.open_date = $('#open_date').val();
     	params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;

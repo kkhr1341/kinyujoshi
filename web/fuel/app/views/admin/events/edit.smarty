@@ -33,6 +33,18 @@
             <label for="event5" class="form-long">私:きん学院</label>
           </div>
 				</div>
+
+				<div class="form-group mb50">
+					<label class="form-group-event-label">メンバー限定女子会</label>
+					<div class="radio_box clear">
+            <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="" {if $events.secret == "1"}checked{/if}>
+            <label for="secret01" class="form-long">YES!</label>
+            
+            <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" {if $events.secret == "2"}checked{/if}>
+            <label for="secret02" class="form-long">NO!</label>
+
+          </div>
+        </div>
 				
 				<div class="form-group">
 					<label class="form-group-event-label">女子会のタイトル</label>
@@ -169,6 +181,7 @@ $(function(){
 		params.code = code;
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
+		params.secret = $("[name=secret]:checked").val();
 		params.title = $('#title').val();
 		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
@@ -186,6 +199,10 @@ $(function(){
 		
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");
+			return false;
+		}
+		if (params.secret == "") {
+			ts.error("メンバー限定の女子会か選択してください");
 			return false;
 		}
 		if (params.title == "") {
@@ -234,6 +251,7 @@ $(function(){
 		params.code = code;
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
+		params.secret = $("[name=secret]:checked").val();
 		params.title = $('#title').val();
    		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
@@ -251,6 +269,10 @@ $(function(){
 		
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");
+			return false;
+		}
+		if (params.secret == "") {
+			ts.error("メンバー限定の女子会か選択してください");
 			return false;
 		}
 		if (params.title == "") {
