@@ -4,6 +4,7 @@
 <div class="admin-normal-side">
   <ul>
     <li><a href="/my">マイページ・トップ</a></li>
+    <li><a href="/my/member_joshikai">メンバー限定の女子会</a></li>
     <li><a href="/my/profile">プロフィール編集</a></li>
     <li><a href="/my/joshikai">参加予定の女子会</a></li>
     <li><a href="/my/account">アカウント情報</a></li>
