@@ -69,21 +69,21 @@ class Regist_mails {
                     if(preg_match('/(.+)@(.+)/',$email)) {
 		        echo $data['id'] . ":";
 		        echo $email . "\n";
-		        RegistReminder::send($data['id'], $email);
+		        // RegistReminder::send($data['id'], $email);
                     }
 		}
 	}
 
 	public static function test($member_regist_id) {
 
-        $member_regist = \DB::select('*')
-            ->from('member_regist')
-            ->where('id', '=', $member_regist_id)
-            ->execute()
-            ->current();
+            $member_regist = \DB::select('*')
+                ->from('member_regist')
+                ->where('id', '=', $member_regist_id)
+                ->execute()
+                ->current();
 
 	    echo $member_regist['email'] . "\n";
-         // RegistReminder::send($member_regist['id'], $member_regist['email']);
+            RegistReminder::send($member_regist['id'], $member_regist['email']);
 	}
 }
 
