@@ -26,6 +26,8 @@ class Events extends Base
 
         $val->add('content', '女子会の詳細');
 
+        $val->add('secret', 'メンバー限定女子会');
+
         $val->add('event_date', '日付')
             ->add_rule('required')
             ->add_rule('valid_date');
@@ -87,7 +89,7 @@ class Events extends Base
        return $event;
     }
 
-    public static function lists($mode = null, $limit = null, $open = null)
+    public static function lists($mode = null, $limit = null, $open = null, $secret = null)
     {
 
         $datas = \DB::select(\DB::expr('*, events.code, (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num'))
@@ -95,6 +97,11 @@ class Events extends Base
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
             ->where('events.disable', '=', 0);
+
+        if ($secret === null) {
+        } else {
+            $datas = $datas->where('secret', '=', $secret);
+        }
 
         if ($mode === null) {
         } else {
@@ -130,8 +137,7 @@ class Events extends Base
         return $datas;
     }
 
-
-    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null)
+    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null)
     {
 
         $datas = \DB::select(\DB::expr('*, events.code, (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num'))
@@ -139,6 +145,11 @@ class Events extends Base
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
             ->where('events.disable', '=', 0);
+        
+        if ($secret === null) {
+        } else {
+            $datas = $datas->where('secret', '=', $secret);
+        }
 
         if ($mode === null) {
         } else {
@@ -149,12 +160,6 @@ class Events extends Base
         } else {
             $datas = $datas->where('event_date', '<', \DB::expr('NOW()'));
         }
-
-        // if ($section_code === null) {
-        // }
-        // else {
-        // 	$datas = $datas->where('section_code', '=', $section_code);
-        // }
 
         $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
         $datas = $datas->order_by('event_date', 'asc');
@@ -232,7 +237,7 @@ class Events extends Base
     }
 
 
-    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5)
+    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $secret = null)
     {
 
         $total = \DB::select(\DB::expr('count(*) as cnt'))
@@ -243,6 +248,9 @@ class Events extends Base
 
         if ($section_code !== null) {
             $total = $total->where('section_code', '=', $section_code);
+        }
+        if ($secret !== null) {
+            $total = $total->where('secret', '=', $secret);
         }
 
         $total = $total->execute()->current();
@@ -263,16 +271,18 @@ class Events extends Base
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
             ->where('status', '=', 1)
+            ->where('secret', '=', 0)
             ->where('open_date', '<', \DB::expr('NOW()'));
-
 
         if ($section_code !== null) {
             $datas['datas'] = $datas['datas']->where('section_code', '=', $section_code);
         }
+        if ($secret !== null) {
+            $datas['datas'] = $datas['datas']->where('secret', '=', $secret);
+        }
 
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
-            //->order_by('open_date', 'desc')
             ->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'))
             ->order_by('event_date', 'asc')
             ->execute()

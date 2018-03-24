@@ -114,10 +114,9 @@ class Controller_Kinyubase extends Controller_Template
             //'kinyu/drawer.min.js'
         ), array(), 'layout', false);
 
-        set_exception_handler(function ($e) {
-            $this->error($e->getMessage());
-        });
-
+        //set_exception_handler(function ($e) {
+        //    $this->error($e->getMessage());
+        //});
 
     }
 

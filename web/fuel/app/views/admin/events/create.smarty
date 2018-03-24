@@ -56,7 +56,7 @@
             <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="">
             <label for="secret01" class="form-long">YES!</label>
             
-            <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="">
+            <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" checked>
             <label for="secret02" class="form-long">NO!</label>
 
           </div>

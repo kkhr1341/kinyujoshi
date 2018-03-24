@@ -102,7 +102,7 @@ class Controller_My_Events extends Controller_Mybase
     public function action_member_joshikai()
     {
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->data['events'] = Events::lists(1, 50, true);
+        $this->data['events'] = Events::lists(1, 50, true, 1);
         $this->data['sections'] = Sections::lists();
         //$this->data['all_events'] = Events::lists02();
         //$this->data['closed_events'] = Events::lists(0);

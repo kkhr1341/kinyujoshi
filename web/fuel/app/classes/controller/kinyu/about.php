@@ -9,7 +9,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     public function action_index()
     {
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。ストーリー｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -31,7 +31,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     public function action_about_main()
     {
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。って？｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -52,7 +52,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     public function action_about_contents()
     {
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -73,7 +73,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     public function action_about_story()
     {
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -95,7 +95,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     {
 
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -117,7 +117,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     {
 
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -139,7 +139,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     {
 
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -160,7 +160,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     {
 
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。とは...？｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
@@ -182,7 +182,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     {
 
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
-        $this->data['events'] = Events::lists(1, 100, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
         $this->template->title = 'きんゆう女子。とは...？｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';

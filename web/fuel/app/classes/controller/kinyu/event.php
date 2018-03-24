@@ -11,7 +11,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 {
     public function action_index($page = 1)
     {
-        $this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
+        $this->data['events'] = Events::all('event', '/event/', $page, 2, 20, 0);
         $pagination = $this->data['events']['pagination'];
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '女子会ページ｜きんゆう女子。';
@@ -35,8 +35,11 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_detail($code)
     {
+        if (!$this->viewable($code)) {
+            throw new HttpNoAccessException;
+        }
         // 最新を取得
-        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
+        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
         $this->template->title = $this->data['event']['title'];
         $this->data['join_status'] = Applications::join_status($code);
@@ -68,7 +71,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         \Config::load('payjp', true);
         $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
         // 最新を取得
-        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
+        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code);
@@ -100,7 +103,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         \Config::load('payjp', true);
         $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
         // 最新を取得
-        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
+        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code);
@@ -140,7 +143,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         \Config::load('payjp', true);
         $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
         // 最新を取得
-        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5);
+        $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code);
@@ -209,5 +212,17 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
             }
         }
         return $cards;
+    }
+
+    private function viewable($code)
+    {
+        $event = Events::getByCode('events', $code);
+        if ($event['secret'] == 0) {
+            return true;
+        }
+        if (Auth::check()) {
+            return true;
+        }
+        return false;
     }
 }
