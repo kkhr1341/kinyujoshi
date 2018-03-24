@@ -489,6 +489,33 @@ footer {
   color: #fff;
 }
 
+/* メンバー限定女子会部分 */
+.kinyu-top-member_joshikai ul {
+  padding-top: 8px;
+}
+.kinyu-top-member_joshikai li {
+  width: 49%;
+  margin-right: 2%;
+}
+.kinyu-top-member_joshikai li a {
+  background: none;
+}
+.kinyu-top-member_joshikai li:nth-child(2n) {
+  margin-right: 0%;
+}
+.kinyu-top-member_joshikai li:nth-child(3n) {
+  margin-right: 2%;
+}
+.kinyu-top-member_joshikai .kinyu-top-main-title,
+.kinyu-top-member_joshikai .kinyu-top-list-kind p {
+  color: #444444;
+}
+.kinyu-top-member_joshikai li:hover a {
+  background: none;
+}
+
+
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   一般ユーザー
@@ -503,7 +530,7 @@ footer {
   padding: 70px 0px;
 }
 .admin-normal-side {
-  width: 200px;
+  width: 190px;
   float: left;
   padding-right: 20px;
 }
@@ -511,6 +538,17 @@ footer {
   text-align: center;
   margin-bottom: 8px;
   transition: .5s;
+  position: relative;
+}
+.admin-normal-side li:nth-child(2):before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 5px solid #efcab4;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #efcab4;
 }
 .admin-normal-side li a{
   display: block;
@@ -522,9 +560,9 @@ footer {
 .admin-normal-side li.active a {
 }
 .admin-normal-main {
-  width: 800px;
+  width: 810px;
   float: right;
-  padding: 0px 80px;
+  padding: 0px 0px 0px 80px;
   border-left: 1px solid #fff;
   min-height: 200px;
 }

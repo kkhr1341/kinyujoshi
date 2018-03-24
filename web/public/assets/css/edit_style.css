@@ -2252,13 +2252,16 @@
   color: #696969;
 }
 .kinyu-credit-list li {
-  width: 18%;
-  padding: 0px 2%;
+  width: 15%;
+  padding: 4px 2%;
   box-sizing: border-box;
   margin-right: 2%;
   display: inline-block;
   letter-spacing: normal;
   background-color: #fff;
+}
+.kinyu-credit-list li:last-child {
+  margin-right: 0%;
 }
 .kinyu-credit-list li img {
   width: 100%;
