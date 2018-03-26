@@ -491,11 +491,11 @@ footer {
 
 /* メンバー限定女子会部分 */
 .kinyu-top-member_joshikai ul {
-  padding-top: 8px;
+  padding-top: 24px;
 }
 .kinyu-top-member_joshikai li {
-  width: 49%;
-  margin-right: 2%;
+  width: 48.25%;
+  margin-right: 3.5%;
 }
 .kinyu-top-member_joshikai li a {
   background: none;
@@ -562,7 +562,7 @@ footer {
 .admin-normal-main {
   width: 810px;
   float: right;
-  padding: 0px 0px 0px 80px;
+  padding: 0px 0px 0px 50px;
   border-left: 1px solid #fff;
   min-height: 200px;
 }

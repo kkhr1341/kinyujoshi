@@ -364,6 +364,18 @@
   border-right: 1px solid #8ddcd1;
 }
 
+.kinyu-top-member_joshikai li {
+  width: 100%;
+}
+
+.admin-normal-joshikai li .joshikai-no {
+  font-size: 13px;
+  padding: 16px 0px;
+}
+.kinyu-top-member_joshikai ul {
+  padding-top: 8px;
+}
+
 
 }
 

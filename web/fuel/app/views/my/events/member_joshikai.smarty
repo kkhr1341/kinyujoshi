@@ -33,16 +33,18 @@
             </a>
           </li>
         {foreachelse}
-          <!-- 参加女子会がない場合 -->
+        </ul>
+      </div>
+      <!-- 参加女子会がない場合 -->
+      <div class="admin-normal-joshikai joshikailist-main">
+        <ul>
           <li>
-            <p class="joshikai-no">参加予定の女子会はありません..。</p>
+            <p class="joshikai-no">女子会企画中です..。</p>
             <a href="/joshikai" class="to-link-joshikai">今後の女子会の予定へ</a>
           </li>
-        {/foreach}    
         </ul>
-        </div>
-
-
+      </div>
+      {/foreach}    
     </div>
   </div>
 </div>
