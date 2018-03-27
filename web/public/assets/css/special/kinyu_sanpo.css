@@ -1,13 +1,24 @@
 /* ----------------------------------
     共通
 ---------------------------------- */
-
-
+.kinyu_sanpo-block-container {
+	background: #f9f9f9;
+}
 .kinyu_sanpo-block {
 	width: 1000px;
 	margin: 0 auto;
+	padding: 60px 0px 80px;
 }
-
+.kinyu_sanpo-block h2 {
+	width: 920px;
+	margin: 0 auto;
+	margin-bottom: 32px;
+}
+.kinyu_sanpo-block h2 img {
+	display: block;
+	width: 320px;
+	margin: 0 auto;
+}
 .kinyu_sanpo-block-list {
 
 }
