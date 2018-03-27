@@ -111,6 +111,9 @@ return array(
 	'project/(:num)'   => 'kinyu/project/index/$1',
 	'project/(:any)'   => 'kinyu/project/detail/$1',
 
+	// 特別ページ
+	'kinyu_sanpo' => 'kinyu/special/kinyu_sanpo',
+
 
 	//マイページ - トップ
 	'my'   => 'my/top',
