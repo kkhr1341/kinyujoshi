@@ -85,6 +85,7 @@ class Applications extends Base
             ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->where('applications.cancel', '=', 0)
+            ->order_by('applications.created_at','asc')
             ->execute()
             ->as_array();
 
@@ -105,6 +106,7 @@ class Applications extends Base
             ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->where('applications.cancel', '=', 1)
+            ->order_by('applications.created_at','asc')
             ->execute()
             ->as_array();
 

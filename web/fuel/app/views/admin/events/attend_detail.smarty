@@ -32,6 +32,9 @@
         {((date('Ymd')-$application.birthday|replace:"-":"")/10000)|floor}歳
         {/if}
         </td>
+        <td>
+          <p>申し込み日時：<br/>{$application.created_at}</p>
+        </td>
         <td class="link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
           {if $application.username != 'guest'}
@@ -72,6 +75,13 @@
         {((date('Ymd')-$application.birthday|replace:"-":"")/10000)|floor}歳
         {/if}
         </td>
+        <td>
+          <p>申し込み日時：<br/>{$application.created_at}</p>
+          <p>キャンセル日時：<br/>{$application.cancel_at}</p> 
+          {if $application.payment_cancel_at}
+            <p>支払いキャンセル日時：<br/>{$application.payment_cancel_at}</p> 
+          {/if}
+        </td>
         <td class="link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
           {if $application.username != 'guest'}
@@ -80,9 +90,6 @@
           {if $application.payment_cancel eq '0'}
             <a class="sales-link" href="#" data-application_code="{$application.code}">キャンセル料支払い確定</a>
           {/if}
-          <p>申し込み日時：<br/>{$application.created_at}</p>
-          <p>キャンセル日時：<br/>{$application.cancel_at}</p> 
-          <p>支払いキャンセル日時：<br/>{$application.payment_cancel_at}</p> 
         </td>
       </tr>
       {/foreach}
