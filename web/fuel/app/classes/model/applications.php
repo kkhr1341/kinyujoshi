@@ -73,7 +73,7 @@ class Applications extends Base
 
     public static function get_applications_by_code($code)
     {
-        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*, application_credit_payments.sale, application_credit_payments.cancel as payment_cancel'))->from('applications')
+        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*, application_credit_payments.sale, application_credit_payments.cancel as payment_cancel, (select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at'))->from('applications')
             ->join('users', 'LEFT')
             ->on('applications.username', '=', 'users.username')
             ->join('member_regist', 'LEFT')
@@ -94,7 +94,8 @@ class Applications extends Base
 
     public static function get_cancel_applications_by_code($code)
     {
-        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*, application_credit_payments.sale, application_credit_payments.cancel as payment_cancel, (select ac.created_at from application_cancels as ac where ac.application_code = applications.code) as cancel_at, (select acpc.created_at from application_credit_payment_cancels as acpc where acpc.application_code = applications.code) as payment_cancel_at'))->from('applications')
+        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*, application_credit_payments.sale, application_credit_payments.cancel as payment_cancel, (select ac.created_at from application_cancels as ac where ac.application_code = applications.code) as cancel_at, (select acpc.created_at from application_credit_payment_cancels as acpc where acpc.application_code = applications.code) as payment_cancel_at'))
+            ->from('applications')
             ->join('users', 'LEFT')
             ->on('applications.username', '=', 'users.username')
             ->join('member_regist', 'LEFT')

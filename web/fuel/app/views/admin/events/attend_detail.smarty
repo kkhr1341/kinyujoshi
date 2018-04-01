@@ -34,6 +34,9 @@
         </td>
         <td>
           <p>申し込み日時：<br/>{$application.created_at}</p>
+          {if $application.payment_sale_at}
+          <p>支払い確定日時：<br/>{$application.payment_sale_at}</p>
+          {/if}
         </td>
         <td class="link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
