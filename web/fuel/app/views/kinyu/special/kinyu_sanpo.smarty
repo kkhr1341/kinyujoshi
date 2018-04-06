@@ -1,0 +1,33 @@
+<!-- きんゆう女子。カンファレンス・独自 -->
+<link rel="stylesheet" type="text/css" href="/assets/css/special/kinyu_sanpo.css">
+
+<div class="kinyu-single-block kinyu_sanpo-block-container">
+
+	<div class="kinyu_sanpo-block">
+
+		<h2 class="">
+			<img src="/images/special/kinyu_sanpo/kinyu-sanpo-title.png">
+		</h2>
+		
+		<div class="kinyu_sanpo-block-list">
+			<ul>
+
+				<li>
+					<a href="map">
+						<div class="img-block">
+							<img src="/images/special/kinyu_sanpo/thumb_kabutomap.jpg">
+						</div>
+					</a>
+					<div class="text-area">
+						<h3>かぶと町マップ<span> - 金曜午後は兜町にエスケープ♪</span></h3>
+						<p class="description">レトロな町・金ゆうの町、日本橋兜町・茅場町エリア。あまり知られていない、かくれ家的なお店がいっぱい！きんゆう女子。のおすすめスポットをご紹介♪</p>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+
+
+	</div>
+
+</div>
