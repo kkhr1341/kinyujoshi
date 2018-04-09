@@ -71,6 +71,9 @@ return array(
         62 => '066_add_cancel_to_application_credit_payments',
         63 => '067_add_sale_to_application_credit_payments',
         64 => '068_add_secret_to_events',
+        65 => '069_create_event_remind_mail_templates',
+        66 => '070_create_event_remind_mails',
+        67 => '071_create_event_remind_mail_default_templates',
       ),
     ),
     'module' => 
