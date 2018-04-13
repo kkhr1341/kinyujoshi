@@ -3,7 +3,8 @@
 $seeds = array(
     array(
         'id' => '1',
-        'content' => "こんにちは\nテストメール\nよろしくおねがいたします。",
+        'subject' => "お世話になっております。",
+        'body' => "こんにちは\nテストメール\nよろしくおねがいたします。",
         'created_at' => \DB::expr('now()'),
     ),
 );

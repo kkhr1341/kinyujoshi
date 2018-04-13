@@ -1,0 +1,43 @@
+
+<ol class="breadcrumb">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li class="active">リマインドメールの管理</li>
+</ol>
+
+<div class="tab-content">
+
+	<!-- 公開 -->
+	<div class="tab-pane active" id="tab1">
+		{if sizeof($open_events) == 0}
+		<div class="alert alert-warning mt20" role="alert">公開中のイベントはありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>日付</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+				</tr>
+			</thead>
+			{foreach from=$open_events item=events_item}
+			<tr class="events pointer" code="{$events_item.code}">
+				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
+				<td>{$events_item.section_code}</td>
+				<td>{$events_item.title}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+</div>
+
+
+<script>
+$(function(){
+	$('.events').click(function(){
+		var code = $(this).attr('code');
+		location.href = "/admin/remindmailtemplates/edit/"+code;
+	});
+});
+</script>

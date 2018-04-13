@@ -48,6 +48,10 @@
                 <a href="/admin/registlist">会員リスト一覧</a>
               </li>
 
+              <li>
+                <a href="/admin/remindmailtemplates">リマインドメールの管理</a>
+              </li>
+
               <!-- {/if} -->
               <!-- <li>
                 <a href="/my/profile">プロフィールの修正</a>

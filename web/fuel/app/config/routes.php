@@ -143,6 +143,9 @@ return array(
 	'admin/news' => 'admin/news/index',
 	'admin/news/create' => 'admin/news/create',
 	'admin/news/edit/(:any)' => 'admin/news/edit/$1',
+	//管理画面admin - 女子会リマインドメール
+	'admin/remindmailtemplates' => 'admin/remindmailtemplates/index',
+	'admin/remindmailtemplates/edit/(:any)' => 'admin/remindmailtemplates/edit/$1',
 	//管理画面admin - 会員リスト
 	'my/projects/courses/create/(:any)'   => 'my/projects/courses_create/$1',
 	'my/projects/courses/edit/(:any)'   => 'my/projects/courses_edit/$1',
