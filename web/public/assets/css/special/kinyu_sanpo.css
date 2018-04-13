@@ -1,0 +1,62 @@
+/* ----------------------------------
+    共通
+---------------------------------- */
+.kinyu_sanpo-block-container {
+	background: #f9f9f9;
+}
+.kinyu_sanpo-block {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 60px 0px 80px;
+}
+.kinyu_sanpo-block h2 {
+	width: 920px;
+	margin: 0 auto;
+	margin-bottom: 32px;
+}
+.kinyu_sanpo-block h2 img {
+	display: block;
+	width: 320px;
+	margin: 0 auto;
+}
+.kinyu_sanpo-block-list {
+
+}
+.kinyu_sanpo-block-list li {
+}
+.kinyu_sanpo-block-list li a {
+	display: block;
+}
+.kinyu_sanpo-block-list li .img-block {
+	line-height: 0;
+}
+.kinyu_sanpo-block-list li img {
+	width: 100%;
+	border: 1px solid #efefef;
+}
+.kinyu_sanpo-block-list li .text-area {
+	margin-top: 20px;
+}
+.kinyu_sanpo-block-list li h3 {
+	color:#77cbc0;
+	font-size: 20px;
+	margin-bottom: 12px;
+}
+.kinyu_sanpo-block-list li h3 span {
+	font-size: 13px;
+}
+
+
+
+/* ----------------------------------
+    スマートフォン＆タブレット
+---------------------------------- */
+@media screen and (max-width: 1024px) {
+}
+
+
+/* ----------------------------------
+    タブレットのみ
+---------------------------------- */
+@media screen and (min-width: 480px) and (max-width:1024px) {
+}
