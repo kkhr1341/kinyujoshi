@@ -189,14 +189,13 @@ class Events extends Base
         $params['created_at'] = \DB::expr('now()');
 //        $params['main_image'] = self::get_main_image($params);
         \DB::insert('events')->set($params)->execute();
-
         return $params;
     }
 
 
     public static function save($params)
     {
-        $username = \Auth::get('username');
+//        $username = \Auth::get('username');
 //        $params['main_image'] = self::get_main_image($params);
 //        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
         if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
@@ -209,7 +208,7 @@ class Events extends Base
     public static function delete($params)
     {
 
-        $username = \Auth::get('username');
+//        $username = \Auth::get('username');
         \DB::update('events')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
 
         return $params;
