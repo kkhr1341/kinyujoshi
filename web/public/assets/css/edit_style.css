@@ -2382,6 +2382,10 @@ input[type=checkbox]:checked + .checkbox:before {
   color: #8ddcd1;
   font-size: 10px;
 }
+.cancel-block-list li span {
+  color: #ff9595;
+  font-weight: bold;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
