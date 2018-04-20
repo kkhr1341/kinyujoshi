@@ -1,0 +1,82 @@
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  大江戸温泉女子会 2018
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+
+/* メインビジュアル */
+.bx-wrapper {
+	height: 700px;
+}
+.bxslider {
+	height: 700px;
+}
+.bxslider li {
+	height: 700px;
+	position: relative;
+}
+.bx-wrapper .bx-viewport {
+	box-shadow: none;
+	border: none;
+	left: auto;
+}
+.oj2018-introduction {
+	position: relative;
+}
+.oj2018-introduction .main-logo {
+	position: absolute;
+	width: 400px;
+	height: 410px;
+	right: 10%;
+	top: 50%;
+	margin-top: -210px;
+}
+.oj2018-introduction .intro-border {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+/* メニュー */
+.oj2018 .menu-block {
+	margin-bottom: 24px;
+}
+.oj2018 .menu-block .menu-title {
+	width: 220px;
+	display: block;
+	margin: 0 auto;
+}
+.oj2018 .menu-block .menu-list {
+	text-align: center;
+	margin-top: 20px;
+}
+.oj2018 .menu-block .menu-list li {
+	display: inline-block;
+}
+.oj2018 .menu-block .menu-list a {
+	position: relative;
+	padding: 0px 20px;
+}
+.oj2018 .menu-block .menu-list li a:after {
+	content: "/";
+	position: absolute;
+	right: -7px;
+}
+
+/* コンテンツ共通ブロック */
+.section-title {
+	width: 65%;
+}
+.section-title img {
+	width: 100%;
+}
+
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スマートフォン
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 1024px) {
+
+}
