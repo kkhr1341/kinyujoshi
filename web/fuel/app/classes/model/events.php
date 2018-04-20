@@ -121,7 +121,7 @@ class Events extends Base
 
         //$datas = $datas->order_by('events.id', 'desc');
         $datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
-        $datas = $datas->order_by('event_date', 'asc');
+        $datas = $datas->order_by('event_date', 'desc');
 
         if ($limit === null) {
         } else {
@@ -271,6 +271,7 @@ class Events extends Base
             ->on('events.username', '=', 'profiles.username')
             ->where('status', '=', 1)
             ->where('secret', '=', 0)
+            ->where('events.disable', '=', 0)
             ->where('open_date', '<', \DB::expr('NOW()'));
 
         if ($section_code !== null) {
