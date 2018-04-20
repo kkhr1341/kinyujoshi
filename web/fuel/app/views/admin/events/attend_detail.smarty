@@ -129,9 +129,9 @@
 
             <p>動的に変わる部分には以下を設定してください。</p>
             <p>
-            {'{% name %}'|escape}: 氏名<br>
-            {'{% event_title %}'|escape}: イベント名<br>
-            {'{% event_place %}'|escape}: イベント開催場所<br>
+            氏名: {'{% name %}'|escape}<br>
+            イベント名: {'{% event_title %}'|escape}<br>
+            イベント開催場所: {'{% event_place %}'|escape}<br>
             </p>
             <div class='input-group date datetimepicker'>
                 <textarea name="body" style="border: 1px solid #d9d8d8; width: 500px; height: 200px;"></textarea>
