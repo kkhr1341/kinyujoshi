@@ -7,27 +7,41 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
 {
     public function action_send()
     {
-        $event = Events::getByCode('events', \Input::post('code'));
-        $applications = Applications::get_applications_by_code(\Input::post('code'));
-        foreach ($applications as $application) {
-            $this->send($application['email'], \Input::post('subject'), \Input::post('body'), array(
-                'event_title' => $event['title'],
-                'event_place' => $event['place'],
-                'name' => $application['name'],
-            ));
+        if (!Auth::check()) {
+            return $this->error('login');
         }
-        return $this->ok();
+        try {
+            $event = Events::getByCode('events', \Input::post('code'));
+            $applications = Applications::get_applications_by_code(\Input::post('code'));
+            foreach ($applications as $application) {
+                $this->send($application['email'], \Input::post('subject'), \Input::post('body'), array(
+                    'event_title' => $event['title'],
+                    'event_place' => $event['place'],
+                    'name' => $application['name'],
+                ));
+            }
+            return $this->ok();
+        } catch (\Exception $e) {
+            return $this->error('送信に失敗しました');
+        }
     }
 
     public function action_testsend()
     {
-        $event = Events::getByCode('events', \Input::post('code'));
-        $this->send(Input::post('email'), \Input::post('subject'), \Input::post('body'), array(
-            'event_title' => $event['title'],
-            'event_place' => $event['place'],
-            'name' => 'てすと太郎',
-        ));
-        return $this->ok();
+        if (!Auth::check()) {
+            return $this->error('login');
+        }
+        try {
+            $event = Events::getByCode('events', \Input::post('code'));
+            $this->send(Input::post('email'), \Input::post('subject'), \Input::post('body'), array(
+                'event_title' => $event['title'],
+                'event_place' => $event['place'],
+                'name' => 'てすと太郎',
+            ));
+            return $this->ok();
+        } catch (\Exception $e) {
+            return $this->error('送信に失敗しました');
+        }
     }
 
     private function send($mail, $subject, $body, $options=array())
