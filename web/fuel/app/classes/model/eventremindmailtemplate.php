@@ -54,6 +54,7 @@ class EventRemindMailTemplate extends Base
         $email->subject($subject);
 
         $options = array(
+            'event_url' => \Uri::base(false) . 'joshikai/' . $event_code,
             'event_title' => $event['title'],
             'event_place' => $event['place'],
             'name' => $name,
