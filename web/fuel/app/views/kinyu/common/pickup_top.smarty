@@ -1,13 +1,13 @@
 {foreach from=$blogs_pick item=blog name=loopname}
 
   {if $smarty.foreach.loopname.index == 0}
-    <div class="swiper-slide" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/20180228204609d24148-1-345640-20.jpg) center center / cover no-repeat;">
-      <a target="_blank" href="https://kinyu-joshi.jp/joshikai/H3GhYx">
+    <div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20180407164225image.jpg) center center / cover no-repeat;">
+      <a target="_blank" href="https://kinyu-joshi.jp/joshikai/NjdJgU">
         <div class="kinyu-top-list-kind">
           <!-- <p>イベント告知</p> -->
         </div>
         <div class="kinyu-top-introlist-title">
-          <h3 class="kinyu-top-list-title">植物とおかね。 〜KABOLO × きんゆう女子。〜</h3>
+          <h3 class="kinyu-top-list-title">アクションする日。お財布の整理して、家計簿アプリを使ってみよう♪</h3>
         </div>
       </a>
     </div>

@@ -1,0 +1,78 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/ooedoonsen_joshikai.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/ooedoonsen_joshikai2018.css">
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.bxslider').bxSlider({
+      auto: true,
+      mode: 'fade',
+      speed: 2000,
+      pause: 5500,
+      pager: false
+    });
+  });
+</script>
+
+<style>
+.kinyu-header-top {
+  display:none;
+}
+</style>
+
+<div id="top" class="oj2018 ooedo-joshikai-2018">
+
+	<!-- トップヘッダー -->
+	<div class="ooedo-header">
+    <div class="ooedo-header-inner">
+      <a href="/"><img class="ooedo-kinyu-logo" src="/images/kinyu-logo-top.png"></a>
+      <a href="http://oom-reit.com/" target="_blank"><img class="ooedo-logo" src="/images/content/ooedo_joshikai/ooedo_logo.png"></a>
+    </div>
+  </div>
+
+	<!-- サムネイル -->
+	<div class="oj2018-introduction">
+		<ul class="bxslider">
+    	<li style="background: url(/images/content/ooedo_joshikai2018/main-bg1.jpg) center center / cover no-repeat;">
+    		<img class="main-logo" src="/images/content/ooedo_joshikai2018/main-logo.png">
+    	</li>
+    	<li style="background: url(/images/content/ooedo_joshikai2018/main-bg2.jpg) center center / cover no-repeat;"></li>
+    	<li style="background: url(/images/content/ooedo_joshikai/about-ooedo-img.jpg) center center / cover no-repeat;"></li>
+  	</ul>
+  	<img class="intro-border" src="/images/content/ooedo_joshikai2018/intro-border.png">
+  </div>
+
+	<!-- メニューボックス -->
+	<div class="menu-block">
+		<img class="menu-title" src="/images/content/ooedo_joshikai2018/menu-title.png">
+		<ul class="menu-list">
+			<li><a href="">コンセプト</a></li>
+			<li><a href="">REIT:リーとってなに？</a></li>
+			<li><a href="">女子会の内容</a></li>
+			<li><a href="">大江戸温泉アセットマネジメンさんって？</a></li>
+			<li><a href="">お申込み</a></li>
+	</div>
+
+	<div class="joshikai-top-fix" style="background: url(/images/content/ooedo_joshikai2018/bg-blue.png) center center / contain repeat;"></div>
+
+	<!-- メインコンセプト -->
+	<div id="concept" class="oj2018-block">
+		<div class="concept-block">
+			<h2 class="section-title"><img src="/images/content/ooedo_joshikai2018/title/title-concept.png"></h2>
+			<h2 class="section-title"><img src="/images/content/ooedo_joshikai2018/title/title-reit.png"></h2>
+			<h2 class="section-title"><img src="/images/content/ooedo_joshikai2018/title/title-joshikai.png"></h2>
+		</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
