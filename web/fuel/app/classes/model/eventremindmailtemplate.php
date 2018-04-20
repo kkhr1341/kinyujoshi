@@ -45,7 +45,7 @@ class EventRemindMailTemplate extends Base
             ->current();
     }
 
-    public static function send($mail, $subject, $body, $event_code)
+    public static function send($mail, $subject, $body, $name, $event_code)
     {
         $event = Events::getByCode('events', $event_code);
 
@@ -56,7 +56,7 @@ class EventRemindMailTemplate extends Base
         $options = array(
             'event_title' => $event['title'],
             'event_place' => $event['place'],
-            'name' => 'てすと太郎',
+            'name' => $name,
         );
 
         foreach ($options as $key => $value) {
