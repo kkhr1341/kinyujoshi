@@ -18,7 +18,7 @@
   <div class="company-details company-legal">
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 社名</h3>
-      <p class="description">株式会社TOE THE LINE</p>
+      <p class="description">株式会社TOE THE LINE<br><a style="color:#81b3e0;" href="https://toetheline.jp/" target="_blank">https://toetheline.jp/</a></p>
     </div>
 
     <div class="company-details-el">

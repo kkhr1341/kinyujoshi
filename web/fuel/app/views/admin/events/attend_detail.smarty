@@ -11,6 +11,11 @@
   </div>
   <div class="joshikai-attend-el-block">
     <p>参加者一覧</p>
+
+    <div class="clearw">
+    	<a class="btn btn-primary float_right" id="broadcat_mail" href="#" role="button">メールを一斉送信する</a>
+    </div>
+
     {foreach from=$applications item=application name=loopname}
       <p>{$application.email}</p>
     {/foreach}
@@ -60,6 +65,7 @@
 
   <div class="joshikai-attend-el-block">
     <p>キャンセル一覧</p>
+
     <table class="table joshikai-attend-detail-table">
 
       <!-- 参加者のループ -->
@@ -101,6 +107,55 @@
     </table>
   </div>
 </div>
+
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- dialog body -->
+      <div class="modal-body">
+        <input type='hidden' name="code" value="{$events.code}" />
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <div class="form-group">
+            <label class="form-group-event-label">件名</label>
+            <div class='input-group'>
+                <input type='text' class="form-control" name="subject" value="" style="width: 500px;" />
+            </div>
+        </div>
+
+        <div class="form-group">
+
+            <label class="form-group-event-label">本文</label>
+
+            <p>動的に変わる部分には以下を設定してください。</p>
+            <p>
+            氏名: {'{% name %}'|escape}<br>
+            イベント名: {'{% event_title %}'|escape}<br>
+            イベント開催場所: {'{% event_place %}'|escape}<br>
+            イベントURL: {'{% event_url %}'|escape}<br>
+            </p>
+            <div class='input-group date datetimepicker'>
+                <textarea name="body" style="border: 1px solid #d9d8d8; width: 500px; height: 200px;"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group-event-label">テストメール送信先</label>
+            <div class='input-group'>
+                <input type='text' class="form-control" name="email" value="" style="width: 500px;" />
+            </div>
+        </div>
+
+      </div>
+      <!-- dialog buttons -->
+      <div class="modal-footer">
+        <button type="button" class="btn test-btn btn-primary">テスト送信</button>
+        <button type="button" class="btn send-btn btn-primary">送信</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 $(function(){
         $('.sales-link').click(function(){
@@ -120,6 +175,83 @@ $(function(){
                                 ts.info("キャンセルしました");
                         }
                 });
+        });
+
+        // メール一斉送信用モーダル
+        var $modal = $("#myModal");
+
+        $("#broadcat_mail").on("click", function() {
+            $modal.modal({
+              "backdrop"  : "static",
+              "keyboard"  : true,
+              "show"      : true
+            });
+        })
+
+        $modal.find(".send-btn").on("click", function(e) {
+
+            var params = {};
+            params.code = $modal.find("[name='code']").val();
+            params.subject = $modal.find("[name='subject']").val();
+            params.body = $modal.find("[name='body']").val();
+
+            if (!params.subject) {
+                ts.error("件名が入力されておりません。");
+                return true;
+            }
+
+            if (!params.body) {
+                ts.error("本文が入力されておりません。");
+                return true;
+            }
+
+            if (!confirm('メールを送信します。よろしいですか？')) {
+                return true;
+            }
+
+            var url = "/api/eventbroadcastmails/send";
+
+            ajax.post(url, params, function(data){
+                ts.success("送信完了しました", function(){
+                     $modal.modal('hide');
+                });
+            });
+        });
+
+        $modal.find(".test-btn").on("click", function(e) {
+
+            var params = {};
+            params.code = $modal.find("[name='code']").val();
+            params.subject = $modal.find("[name='subject']").val();
+            params.body = $modal.find("[name='body']").val();
+            params.email = $modal.find("[name='email']").val();
+
+            if (!params.subject) {
+                ts.error("件名が入力されておりません。");
+                return true;
+            }
+
+            if (!params.body) {
+                ts.error("本文が入力されておりません。");
+                return true;
+            }
+
+            if (!params.email) {
+                ts.error("メールアドレスが入力されておりません。");
+                return true;
+            }
+
+            if (!confirm('メールを送信します。よろしいですか？')) {
+                return true;
+            }
+
+            var url = "/api/eventbroadcastmails/testsend";
+
+            ajax.post(url, params, function(data){
+                ts.success("テストメールを送信完了しました", function(){
+                     $modal.modal('hide');
+                });
+            });
         });
 });
 </script>
