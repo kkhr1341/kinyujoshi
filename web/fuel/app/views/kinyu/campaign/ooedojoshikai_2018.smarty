@@ -53,15 +53,183 @@
 			<li><a href="">お申込み</a></li>
 	</div>
 
-	<div class="joshikai-top-fix" style="background: url(/images/content/ooedo_joshikai2018/bg-blue.png) center center / contain repeat;"></div>
-
 	<!-- メインコンセプト -->
-	<div id="concept" class="oj2018-block">
-		<div class="concept-block">
-			<h2 class="section-title"><img src="/images/content/ooedo_joshikai2018/title/title-concept.png"></h2>
-			<h2 class="section-title"><img src="/images/content/ooedo_joshikai2018/title/title-reit.png"></h2>
-			<h2 class="section-title"><img src="/images/content/ooedo_joshikai2018/title/title-joshikai.png"></h2>
+	<div id="concept" class="oj2018-block" style="background: #f4efec;">
+		<div class="joshikai-top-fix" style="background: url(/images/content/ooedo_joshikai2018/bg-blue.png) center center / contain repeat;"></div>
+		<div class="oj2018-block-inner">
+			<div class="concept-block">
+				<h2 class="section-title"><img class="title" src="/images/content/ooedo_joshikai2018/title/title-concept.png"></h2>
+				<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
 		</div>
+		<img class="concept-illust01" src="/images/content/ooedo_joshikai2018/illust/concept-illust01.png">
+		<img class="concept-illust02" src="/images/content/ooedo_joshikai2018/illust/concept-illust02.png">
+	</div>
+
+	<!-- REITについて -->
+	<div id="about_reit" class="oj2018-block">
+		<div class="oj2018-block-inner">
+			<div class="concept-block">
+				<h2 class="section-title"><img class="title" src="/images/content/ooedo_joshikai2018/title/title-reit.png"></h2>
+				<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+		</div>
+		<img class="reit-illust01" src="/images/content/ooedo_joshikai2018/illust/reit-illust01.png">
+	</div>
+
+
+	<!-- REITについて -->
+	<div class="oj2018-bg-area">
+		<img class="intro-border02" src="/images/content/ooedo_joshikai2018/intro-border02.png">
+	</div>
+
+	<!-- 女子会内容 -->
+	<div id="concept" class="oj2018-block" style="background: #f4efec;">
+		<div class="oj2018-block-inner">
+			<div class="concept-block">
+				<h2 class="section-title">
+					<img class="title" src="/images/content/ooedo_joshikai2018/title/title-joshikai.png">
+					<img class="joshikai-illust01" src="/images/content/ooedo_joshikai2018/illust/joshikai-illust01.png">
+					<img class="joshikai-illust02" src="/images/content/ooedo_joshikai2018/illust/joshikai-illust02.png">
+				</h2>
+				<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+
+
+				<!-- イベントの詳細 -->
+				<div class="oj2018-joshikai-block">
+
+					<!-- DAY1 -->
+					<div class="oj2018-joshikai-el day1-el">
+						<h3 class="joshikai-title"><img src="/images/content/ooedo_joshikai2018/joshikai/day1-title.png" alt=""></h3>
+						<div class="joshikai-date">
+							<p class="main-date">
+								<span>日時</span>：2018年5月24日(木) 19:00〜<br>
+								<span>場所</span>：カフェ・サルバドル
+							</p>
+							<p class="sub-date">住所：東京都中央区日本橋茅場町1-5-8 東京証券会館1階<br>
+							URL：<a href="http://cafe-salvador.com/" target="_blank">http://cafe-salvador.com/</a></p>
+							<img class="day1-goods-img" src="/images/content/ooedo_joshikai2018/joshikai/day1-originalgoods.png">
+						</div>
+						
+						<div class="joshikai-contents-block">
+							<div class="joshikai-contents-el clear">
+								<div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) center center / cover no-repeat;"></div>
+								<div class="text-box">
+									<p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+									<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>			
+								</div>
+							</div>
+							<div class="joshikai-contents-el clear">
+								<div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) center center / cover no-repeat;"></div>
+								<div class="text-box">
+									<p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+									<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>			
+								</div>
+							</div>
+						</div>
+
+						<div class="joshikai-contents-block joshikai-place-block">
+							<div class="joshikai-contents-el clear">
+								<div class="img-box" style="background: url(/images/content/ooedo_joshikai2018/cafe-img.jpg) center center / cover no-repeat;"></div>
+								<div class="text-box">
+									<p class="description">
+										◆開催場所<br>
+										CAFE SALVADOR BUSINESS SALON (カフェ サルバドル ビジネス サロン)<br>
+										URL：http://cafe-salvador.com/<br>
+										〜カフェスタッフにきんゆう女子。とお伝えください〜<br><br>
+										◆ゲスト<br>
+										大江戸温泉アセットマネジメント株式会社<br>
+										代表取締役社長　今西文則さん<br>
+										財務部長　本多智裕さん<br>
+										財務部 マネージャー　廣田典子さん
+									</p>			
+								</div>
+								<img class="cafe-illust" src="/images/content/ooedo_joshikai2018/illust/cafe-illust.png">
+							</div>
+						</div>
+					</div>
+
+					<!-- DAY2 -->
+					<div class="oj2018-joshikai-el day2-el">
+						<h3 class="joshikai-title"><img src="/images/content/ooedo_joshikai2018/joshikai/day2-title.png" alt=""></h3>
+						<div class="joshikai-date">
+							<p class="main-date">
+								<span>日時</span>：2018年5月24日(木) 19:00〜<br>
+								<span>場所</span>：カフェ・サルバドル
+							</p>
+							<p class="sub-date">住所：東京都中央区日本橋茅場町1-5-8 東京証券会館1階<br>
+							URL：<a href="http://cafe-salvador.com/" target="_blank">http://cafe-salvador.com/</a></p>
+						</div>
+
+						<div class="joshikai-contents-block">
+							<div class="day2-schedule-title">
+								<img src="/images/content/ooedo_joshikai2018/joshikai/day2-schedule-title.png" alt="">
+							</div>
+							<div class="day2-contents-detail">
+								<!-- <img src="/images/content/ooedo_joshikai2018/joshikai/day2-first.png"> -->
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 大江戸温泉アセットマネジメントさんって？ -->
+	<div id="about-ooam" class="oj2018-block">
+		<div class="oj2018-block-inner">
+			<div class="concept-block">
+				<h2 class="section-title">
+					<img class="title" src="/images/content/ooedo_joshikai2018/title/title-ooam.png">
+				</h2>
+				<div class="joshikai-contents-block">
+					<div class="joshikai-contents-el clear">
+						<div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) center center / contain no-repeat;"></div>
+						<div class="text-box">
+							<p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+							<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 大江戸温泉アセットマネジメントさんって？ -->
+	<div id="joinus" class="oj2018-block" style="background: #f4efec;">
+		<div class="oj2018-block-inner">
+			<div class="concept-block">
+				<h2 class="section-title">
+					<img class="title" src="/images/content/ooedo_joshikai2018/title/title-joinus.png">
+				</h2>
+				<div class="joinus-block">
+				</div>
+				<a class="to-joshikai-link" href="">
+					<span>お申込みはこちら</span>
+				</a>
+				<div class="joinus-notes-block">
+					<p class="joinus-title">- 注意事項 -</p>
+					<div class="joinus-notes-inner">
+						<ul>
+							<li>中立なポジションで、質の高いお金の情報を多角的にシェアできる場を提供します。必要なことを必要なだけまとめた情報を用意、シェアいたします。</li>
+							<li>今回の女子会を通じて特定のREIT投資口の取得勧誘を行うものではありませんのでご安心ください。</li>
+							<li>ご参加いただく方同士でも営業・勧誘はお断りさせていただいております。お困りのことがあれば編集部までお問い合わせください。(お問い合わせは<a href="/contact" target="_blank">こちら</a>より)</li>
+							<li>きんゆう女子。は、20代〜30代からの「金融ワカラナイ女子のためのコミュニティ」です。金融機関の視察・見学・調査目的でのご参加や金融にお詳しい方のご参加はご遠慮いただいております。マナー等守れない場合はご参加をご遠慮頂く可能性がございます。</li>
+							<li>スケジュールや内容は予告なく変更になる場合がございます。あらかじめご了承ください。</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
 
 </div>
 

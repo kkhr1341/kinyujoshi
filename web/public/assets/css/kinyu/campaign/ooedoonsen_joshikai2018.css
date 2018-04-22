@@ -3,7 +3,11 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 
 
-/* メインビジュアル */
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  メインビジュアル
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .bx-wrapper {
 	height: 700px;
 }
@@ -36,7 +40,11 @@
 	width: 100%;
 }
 
-/* メニュー */
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  メニュー
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .oj2018 .menu-block {
 	margin-bottom: 24px;
 }
@@ -62,16 +70,303 @@
 	right: -7px;
 }
 
-/* コンテンツ共通ブロック */
-.section-title {
-	width: 65%;
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  共通
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.oj2018-block {
+	width: 100%;
+	position: relative;
+	padding: 100px 0px;
 }
-.section-title img {
+.oj2018-block-inner {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+}
+.section-title {
+	width: 92%;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	position: relative;
+}
+.section-title .title {
+	width: 100%;
+}
+.joshikai-top-fix {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.oj2018-block .description {
+	font-size: 15px;
+  line-height: 28px;
+  width: 72%;
+  margin: 0 auto;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  コンセプト
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.concept-illust01 {
+	width: 340px;
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+.concept-illust02 {
+	width: 250px;
+	position: absolute;
+	left: 0;
+	bottom: 20px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  REITの説明箇所
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.reit-illust01 {
+	width: 250px;
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  背景メイン
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.oj2018-bg-area {
+	height: 450px;
+	background: gray;
+	position: relative;
+}
+.oj2018-bg-area .intro-border02 {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  女子会内容
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.joshikai-illust01 {
+	width: 170px;
+	position: absolute;
+	left: 50px;
+	top: 30px;
+}
+.joshikai-illust02 {
+	width: 220px;
+	position: absolute;
+	right: -10px;
+  bottom: -32px;
+}
+
+/* 女子会詳細部分 */
+.oj2018-joshikai-block {
+}
+.oj2018-joshikai-el {
+	background: #fff;
+	margin-top: 65px;
+	padding: 0px 80px 80px 80px;
+	position: relative;
+}
+.oj2018-joshikai-el .joshikai-title {
+	width: 100%;
+	margin: 0 auto;
+}
+.oj2018-joshikai-el .joshikai-title img {
+	width: 100%;
+	margin-top: -15px;
+}
+.joshikai-date {
+	border-top: 1px solid #6b9fcd;
+	border-bottom: 1px solid #6b9fcd;
+	margin-top: 32px;
+	padding: 24px 0px;
+	position: relative;
+}
+.joshikai-date .main-date {
+	font-size: 18px;
+	line-height: 28px;
+}
+.joshikai-date .main-date span {
+	color: #6b9fcd;
+}
+.joshikai-date .sub-date {
+	margin-top: 4px;
+}
+.joshikai-date .day1-goods-img {
+	position: absolute;
+	width: 120px;
+	right: -25px;
+	bottom: -25px;
+}
+.joshikai-contents-block {
+	padding: 50px 0px;
+}
+.oj2018-joshikai-el .cafe-illust {
+	width: 230px;
+	position: absolute;
+	right: 50px;
+	bottom: 30px;
+}
+
+/* 2カラムボックス */
+.joshikai-contents-el .img-box {
+	height: 220px;
+	width: 35%;
+	float: left;
+	position: relative;
+}
+.joshikai-contents-el .text-box {
+	width: 65%;
+	float: right;
+	margin-top: 12px;
+	padding-left: 32px;
+}
+.joshikai-contents-el .text-box .main-description {
+	font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.joshikai-contents-el .text-box .description {
+	font-size: 14px;
+  line-height: 24px;
+  width: 100%;
+  text-align: left;
+}
+.joshikai-contents-el:nth-child(even) .img-box {
+	float: right;	
+}
+.joshikai-contents-el:nth-child(even) .text-box {
+	float: left;
+	padding-left: 0px;
+	padding-right: 32px;
+}
+.oj2018-joshikai-el .joshikai-contents-el {
+	margin-top: 50px;
+}
+.oj2018-joshikai-el .joshikai-contents-el:nth-child(even) {
+	margin-top: 50px;
+}
+.joshikai-place-block {
+	border-top: 1px solid #6b9fcd;
+}
+.joshikai-place-block .joshikai-contents-el .img-box {
+	width: 30%;
+	height: 250px;
+}
+.joshikai-place-block .joshikai-contents-el .text-box {
+	width: 70%;
+}
+
+/* DAY2 */
+.day2-el .joshikai-date {
+	border-top: 1px solid #f57d80;
+	border-bottom: 1px solid #f57d80;
+}
+.day2-el .joshikai-date .main-date span {
+	color: #f57d80;
+}
+.day2-schedule-title {
+	width: 350px;
+	margin: 0 auto;
+}
+.day2-schedule-title img {
 	width: 100%;
 }
 
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  大江戸温泉アセットマネジメントさんって？
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#about-ooam .joshikai-contents-el .img-box {
+	height: 350px;
+	width: 50%;
+}
+#about-ooam .joshikai-contents-el .text-box {
+	width: 50%;
+}
 
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  お申込みの部分
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#joinus .joinus-block {
+	height: 300px;
+	background: #fff;
+}
+.to-joshikai-link {
+	background: #6b9fcd;
+	display: block;
+	width: 450px;
+	margin: 0 auto;
+	padding: 2px;
+	position: relative;
+	margin-top: 32px;
+}
+.to-joshikai-link:after {
+	content: "〉";
+	position: absolute;
+	right: 0;
+	top: 15px;
+	font-size: 15px;
+	color: #fff;
+}
+.to-joshikai-link span {
+	color: #fff;
+	display: block;
+	font-size: 15px;
+	border: 1px solid #fff;
+	padding: 12px 0px;
+}
+.joinus-notes-block {
+	width: 850px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.joinus-notes-block .joinus-title {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.joinus-notes-inner {
+	border-top: 1px solid #6b9fcd;
+	border-bottom: 1px solid #6b9fcd;
+	padding: 20px 40px;
+}
+.joinus-notes-inner li {
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 16px;
+	padding-left: 20px;
+	position: relative;
+	text-align: left;
+}
+.joinus-notes-inner li:after {
+	content: "●";
+	color: #6b9fcd;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-size: 10px;
+}
+.joinus-notes-inner li:last-child {
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
