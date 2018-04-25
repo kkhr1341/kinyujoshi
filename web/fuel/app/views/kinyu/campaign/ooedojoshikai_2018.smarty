@@ -33,12 +33,11 @@
 	<!-- サムネイル -->
 	<div class="oj2018-introduction">
 		<ul class="bxslider">
-    	<li style="background: url(/images/content/ooedo_joshikai2018/main-bg1.jpg) center center / cover no-repeat;">
-    		<img class="main-logo" src="/images/content/ooedo_joshikai2018/main-logo.png">
-    	</li>
-    	<li style="background: url(/images/content/ooedo_joshikai2018/main-bg2.jpg) center center / cover no-repeat;"></li>
-    	<li style="background: url(/images/content/ooedo_joshikai/about-ooedo-img.jpg) center center / cover no-repeat;"></li>
-  	</ul>
+    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg1.jpg) top -30px center / cover no-repeat;"></li>
+    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg2.jpg) center center / cover no-repeat;"></li>
+    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg3.jpg) center center / cover no-repeat;"></li>
+  		</ul>
+		<img class="main-logo" src="/images/content/ooedo_joshikai2018/main-logo.png">
   	<img class="intro-border" src="/images/content/ooedo_joshikai2018/intro-border.png">
   </div>
 
@@ -51,6 +50,7 @@
 			<li><a href="">女子会の内容</a></li>
 			<li><a href="">大江戸温泉アセットマネジメンさんって？</a></li>
 			<li><a href="">お申込み</a></li>
+		</ul>
 	</div>
 
 	<!-- メインコンセプト -->
@@ -77,7 +77,6 @@
 		<img class="reit-illust01" src="/images/content/ooedo_joshikai2018/illust/reit-illust01.png">
 	</div>
 
-
 	<!-- REITについて -->
 	<div class="oj2018-bg-area">
 		<img class="intro-border02" src="/images/content/ooedo_joshikai2018/intro-border02.png">
@@ -93,8 +92,6 @@
 					<img class="joshikai-illust02" src="/images/content/ooedo_joshikai2018/illust/joshikai-illust02.png">
 				</h2>
 				<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-
-
 
 				<!-- イベントの詳細 -->
 				<div class="oj2018-joshikai-block">
@@ -167,15 +164,28 @@
 								<img src="/images/content/ooedo_joshikai2018/joshikai/day2-schedule-title.png" alt="">
 							</div>
 							<div class="day2-contents-detail">
-								<!-- <img src="/images/content/ooedo_joshikai2018/joshikai/day2-first.png"> -->
+								<div class="day2-contents-detail-el"></div>
+								<div class="day2-contents-border"></div>
+								<div class="day2-contents-detail-el"></div>
+								<div class="day2-contents-detail-after"></div>
+								<div class="day2-contents-detail-access">
+									<ul>
+										<li>
+											<p class="title">- 帰りの新幹線の時刻(観光なし) - </p>
+											<p class="access-list">①【伊東11:05 - 東京12:41】JR特急スーパービュー踊り子2号<br>
+											②【伊東11:05 - 東京12:41】JR特急スーパービュー踊り子2号</p>
+										</li>
+										<li>
+											<p class="title">- 帰りの新幹線の時刻(観光あり) - </p>
+											<p class="access-list">①【伊東11:05 - 東京12:41】JR特急スーパービュー踊り子2号<br>
+											②【伊東11:05 - 東京12:41】JR特急スーパービュー踊り子2号</p>
+										</li>
+									</ul>
+								</div>
+								<p class="day2-sub-description"><span style="color: #f3626c;">※</span>当日の流れやスケジュールは変更になる場合があります。あらかじめ、ご了承ください。</p>
 							</div>
-
 						</div>
-
-
 					</div>
-
-
 				</div>
 			</div>
 		</div>
@@ -225,12 +235,15 @@
 						</ul>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
+</div>
 
-
+<div class="joinus-pc-block">
+	<a href="">
+		<img src="/images/content/ooedo_joshikai2018/joinus-link2.png">
+	</a>
 </div>
 
 

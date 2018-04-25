@@ -14,6 +14,9 @@
 .bxslider {
 	height: 700px;
 }
+.bxslider ul {
+	position: relative;
+}
 .bxslider li {
 	height: 700px;
 	position: relative;
@@ -30,9 +33,9 @@
 	position: absolute;
 	width: 400px;
 	height: 410px;
-	right: 10%;
+	left: 10%;
 	top: 50%;
-	margin-top: -210px;
+	margin-top: -230px;
 }
 .oj2018-introduction .intro-border {
 	position: absolute;
@@ -211,7 +214,7 @@
 	bottom: -25px;
 }
 .joshikai-contents-block {
-	padding: 50px 0px;
+	padding: 40px 0px 50px;
 }
 .oj2018-joshikai-el .cafe-illust {
 	width: 230px;
@@ -254,7 +257,7 @@
 	padding-right: 32px;
 }
 .oj2018-joshikai-el .joshikai-contents-el {
-	margin-top: 50px;
+	margin-top: 0px;
 }
 .oj2018-joshikai-el .joshikai-contents-el:nth-child(even) {
 	margin-top: 50px;
@@ -284,6 +287,40 @@
 }
 .day2-schedule-title img {
 	width: 100%;
+}
+.day2-contents-detail {
+
+}
+.day2-contents-detail-el {
+
+}
+.day2-contents-border {
+	height: 10px;
+	width: 100%;
+	background: url(/images/content/ooedo_joshikai2018/border-joshikai2.png);
+}
+.day2-sub-description {
+	border-top: 1px solid #6b9fcd;
+	padding-top: 24px;
+}
+
+/* アクセスエリア */
+.day2-contents-detail-access {
+	padding: 50px 0px;
+}
+.day2-contents-detail-access li {
+	margin-bottom: 16px;
+}
+.day2-contents-detail-access li:last-child {
+	margin-bottom: 0px;
+}
+.day2-contents-detail-access .title {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+.day2-contents-detail-access .access-list {
+	font-size: 14px;
 }
 
 
@@ -366,6 +403,25 @@
 	font-size: 10px;
 }
 .joinus-notes-inner li:last-child {
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  
+  お申込み部分
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.joinus-pc-block {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 160px;
+	line-height: 0;
+}
+.joinus-pc-block a {
+	line-height: 0;
+}
+.joinus-pc-block img {
+	width: 100%;
 }
 
 
