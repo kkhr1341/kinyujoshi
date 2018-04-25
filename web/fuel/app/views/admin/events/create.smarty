@@ -100,6 +100,25 @@
 					</div>
 				</div>
 
+                <div class="form-group">
+                    <label class="form-group-event-label">2日目の日付</label>
+                    <div class='input-group date datetimepicker'>
+                        <input type='text' class="form-control" id="event_date2" value="" />
+                        <span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">2日目の開催時間</label>
+                    <div class="event-datetime">
+                        <input type="text" id="event_start_datetime2" class="form-control" placeholder="(例)19:30" value="">
+                        〜
+                        <input type="text" id="event_end_datetime2" class="form-control" placeholder="(例)21:30" value="">
+                    </div>
+                </div>
+
 				<div class="form-group">
 					<label class="form-group-event-label">場所</label>
 					<input type="text" id="place" class="form-control" placeholder="(例)カフェサルバドル、フィンゲート">
@@ -126,7 +145,7 @@
             <input type="radio" value="1" name="creditch" id="creditch01" class="form-radio" placeholder="">
             <label for="creditch01" class="form-long">クレジットカード払い＆当日現金払い</label>
 -->
-            <input type="radio" value="0" name="creditch" id="creditch02" class="form-radio" placeholder="">
+            <input type="radio" value="0" name="creditch" id="creditch02" class="form-radio" placeholder="" checked>
             <label for="creditch02" class="form-long">クレジットカードのみ</label>
          	</div>
         </div>
@@ -208,7 +227,17 @@ $(function(){
 		params.open_date = $('#open_date').val();
 		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 1;
-		
+
+		if ($('#event_date2').val()) {
+            params.event_other_dates = [
+                {
+                    event_date: $('#event_date2').val(),
+                    event_start_datetime: $('#event_start_datetime2').val(),
+                    event_end_datetime: $('#event_end_datetime2').val(),
+                }
+            ]
+        }
+
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");
 			return false;
@@ -269,11 +298,21 @@ $(function(){
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
-   	params.limit = $("#limit").val();
+   	    params.limit = $("#limit").val();
 		params.open_date = $('#open_date').val();
     	params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;
-		
+
+        if ($('#event_date2').val()) {
+            params.event_other_dates = [
+                {
+                    event_date: $('#event_date2').val(),
+                    event_start_datetime: $('#event_start_datetime2').val(),
+                    event_end_datetime: $('#event_end_datetime2').val(),
+                }
+            ]
+        }
+
 		if (params.title == "") {
 			params.title = "タイトル未設定";
 		}

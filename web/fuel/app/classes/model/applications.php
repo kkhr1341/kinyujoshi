@@ -57,7 +57,7 @@ class Applications extends Base
 
         $username = \Auth::get('username');
 
-        $datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, events.*'))->from('applications')
+        $datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, applications.event_code, events.*'))->from('applications')
             ->join('events')
             ->on('applications.event_code', '=', 'events.code')
             ->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'))
