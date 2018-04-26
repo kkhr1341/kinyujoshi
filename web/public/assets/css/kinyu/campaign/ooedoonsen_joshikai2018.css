@@ -154,6 +154,10 @@
 #about_reit .description {
 	margin-top: 32px;
 }
+#about_reit .report-link {
+    font-size: 15px;
+    line-height: 28px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   
@@ -631,6 +635,7 @@
 	right: 0;
 	width: 160px;
 	line-height: 0;
+	z-index: 1006;
 }
 .joinus-pc-block a {
 	line-height: 0;
