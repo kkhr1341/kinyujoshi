@@ -138,6 +138,23 @@
 	right: 0;
 	bottom: 20px;
 }
+.reit-text {
+	font-size: 15px;
+	line-height: 28px;
+	margin-bottom: 40px;
+}
+.reit-illust-block {
+	padding: 24px 4px;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+}
+.reit-illust-block img {
+	width: 100%;
+}
+#about_reit .description {
+	margin-top: 32px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   
@@ -552,7 +569,7 @@
 	float: left;
 	padding: 0px 50px;
 	box-sizing: border-box;
-	margin-bottom: 30px;
+	margin-bottom: 24px;
 	position: relative;
 }
 .fee-detail-el:first-child::after {

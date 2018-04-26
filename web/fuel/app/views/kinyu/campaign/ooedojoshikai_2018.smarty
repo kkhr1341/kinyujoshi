@@ -45,11 +45,11 @@
 	<div class="menu-block">
 		<img class="menu-title" src="/images/content/ooedo_joshikai2018/menu-title.png">
 		<ul class="menu-list">
-			<li><a href="">コンセプト</a></li>
-			<li><a href="">REIT:リートってなに？</a></li>
-			<li><a href="">女子会の内容</a></li>
-			<li><a href="">大江戸温泉アセットマネジメンさんって？</a></li>
-			<li><a href="">お申込み</a></li>
+			<li><a href="#concept">コンセプト</a></li>
+			<li><a href="#about_reit">REIT:リートってなに？</a></li>
+			<li><a href="#joshikai">女子会の内容</a></li>
+			<li><a href="#about-ooam">大江戸温泉アセットマネジメンさんって？</a></li>
+			<li><a href="#joinus">お申込み</a></li>
 		</ul>
 	</div>
 
@@ -74,7 +74,7 @@
 					また、REITの前に知っておきたい、”投資信託”についてもふれます。
 					<span style="display: block;height: 12px;"></span>
 					2日間セットで、ゆるりとご参加ください♪<br>
-</p>
+				</p>
 			</div>
 		</div>
 		<img class="concept-illust01" src="/images/content/ooedo_joshikai2018/illust/concept-illust01.png">
@@ -86,7 +86,12 @@
 		<div class="oj2018-block-inner">
 			<div class="concept-block">
 				<h2 class="section-title"><img class="title" src="/images/content/ooedo_joshikai2018/title/title-reit.png"></h2>
-				<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+				<p class="reit-text"><span style="font-weight:bold;color:#f57d80;">REIT：リート</span>とは、「Real Estate Investment Trust」の略でアメリカで生まれた投資信託の仲間です。<br>投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が含まれているのパッケージのことです。</p>
+				<div class="reit-illust-block">
+					<img src="/images/content/ooedo_joshikai2018/reit-illust.png">
+				</div>
+				<p class="description">キーワード！<br><span style="font-weight:bold;color:#f57d80;">投資信託　ETF　上場</span><br>
+				おさらいしたい方は、こちらの記事もチェック。</p>
 			</div>
 		</div>
 		<img class="reit-illust01" src="/images/content/ooedo_joshikai2018/illust/reit-illust01.png">
@@ -98,7 +103,7 @@
 	</div>
 
 	<!-- 女子会内容 -->
-	<div id="concept" class="oj2018-block" style="background: #f4efec;">
+	<div id="joshikai" class="oj2018-block" style="background: #f4efec;">
 		<div class="oj2018-block-inner">
 			<div class="concept-block">
 				<h2 class="section-title">
@@ -247,7 +252,7 @@
 				</h2>
 				<div class="joshikai-contents-block">
 					<div class="joshikai-contents-el clear">
-						<div class="img-box" style="background: url(/images/content/ooedo_joshikai/ooedo-bg1.jpg) center center / cover no-repeat;"></div>
+						<div class="img-box" style="background: url(/images/content/ooedo_joshikai2018/ooam-img.jpg) center center / cover no-repeat;"></div>
 						<div class="text-box">
 							<!-- <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p> -->
 							<p class="description">大江戸温泉アセットマネジメントさんは、全国で温泉施設の経営、および活性化事業を行う大江戸温泉物語グループの一員で、「大江戸温泉リート投資法人」の資産運用会社です♪大江戸温泉リートは、温泉・温浴関連施設を主な投資対象とする日本初のユニークな特化型リートとして、2016年8月に東京証券取引所に上場しました。お客様にお手頃でお得感のある価格で高品質なサービスを提供することを可能にする「大江戸モデル」が導入された温泉・温浴関連施設へ重点投資を行い、地域の活性化及び温泉関連産業の大衆化に貢献することを基本理念としています。</p>
@@ -261,7 +266,7 @@
 		</div>
 	</div>
 
-	<!-- 大江戸温泉アセットマネジメントさんって？ -->
+	<!-- お申込み -->
 	<div id="joinus" class="oj2018-block" style="background: #f4efec;">
 		<div class="oj2018-block-inner">
 			<div class="concept-block">
