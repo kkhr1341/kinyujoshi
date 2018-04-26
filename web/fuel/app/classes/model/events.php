@@ -36,6 +36,8 @@ class Events extends Base
 
         $val->add('event_end_datetime', '開催終了時間');
 
+        $val->add('event_other_dates');
+
         $val->add('place', '場所');
 
         $val->add('place_url', '場所のURL');
@@ -89,6 +91,19 @@ class Events extends Base
        return $event;
     }
 
+    public static function getEventOtherDates($code)
+    {
+        $result = \DB::select('*')
+            ->from('event_other_dates')
+            ->where('event_code', '=', $code)
+            ->execute()
+            ->as_array();
+        if (empty($result)) {
+            return false;
+        }
+        return $result;
+    }
+
     public static function lists($mode = null, $limit = null, $open = null, $secret = null)
     {
 
@@ -132,6 +147,12 @@ class Events extends Base
         
         foreach($datas as $key => $data){
             $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+
+            // 二日目の女子会開催日
+            $event_other_dates = Events::getEventOtherDates($data['code']);
+            $datas[$key]['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
+            $datas[$key]['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
+            $datas[$key]['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
         }
 
         return $datas;
@@ -173,6 +194,11 @@ class Events extends Base
         
         foreach($datas as $key => $data){
             $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            // 二日目の女子会開催日
+            $event_other_dates = Events::getEventOtherDates($data['code']);
+            $datas[$key]['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
+            $datas[$key]['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
+            $datas[$key]['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
         }
 
         return $datas;
@@ -180,29 +206,89 @@ class Events extends Base
 
     public static function create($params)
     {
+        $data = array();
 
         $code = self::getNewCode('events');
-        $params['username'] = \Auth::get('username');
-        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
-        $params['limit'] = (!$params['limit'])? 0: $params['limit'];
-        $params['code'] = $code;
-        $params['created_at'] = \DB::expr('now()');
-//        $params['main_image'] = self::get_main_image($params);
-        \DB::insert('events')->set($params)->execute();
-        return $params;
+
+        if(!$params['incur_cancellation_fee_date']) $data['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
+
+        $data['section_code'] = $params['section_code'];
+        $data['secret'] = $params['secret'];
+        $data['title'] = $params['title'];
+        $data['main_image'] = $params['main_image'];
+        $data['content'] = $params['content'];
+        $data['place'] = $params['place'];
+        $data['place_url'] = $params['place_url'];
+        $data['fee'] = $params['fee'];
+        $data['event_date'] = $params['event_date'];
+        $data['event_start_datetime'] = $params['event_start_datetime'];
+        $data['event_end_datetime'] = $params['event_end_datetime'];
+        $data['creditch'] = $params['creditch'];
+        $data['limit'] = (!$params['limit'])? 0: $params['limit'];
+        $data['open_date'] = $params['open_date'];
+        $data['status'] = $params['status'];
+        $data['username'] = \Auth::get('username');
+        $data['code'] = $code;
+        $data['created_at'] = \DB::expr('now()');
+
+        \DB::insert('events')->set($data)->execute();
+        if ($params['event_other_dates']) {
+            foreach ($params['event_other_dates'] as $value) {
+                \DB::insert('event_other_dates')->set(array(
+                    'event_code' => $code,
+                    'event_date' => $value['event_date'],
+                    'event_start_datetime' => $value['event_start_datetime'],
+                    'event_end_datetime' => $value['event_end_datetime'],
+                    'created_at' => \DB::expr('now()'),
+                ))->execute();
+            }
+        }
+        return $data;
     }
 
 
     public static function save($params)
     {
+        $data = array();
 //        $username = \Auth::get('username');
 //        $params['main_image'] = self::get_main_image($params);
 //        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
-        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
+        if(!$params['incur_cancellation_fee_date']) $data['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
 
-        \DB::update('events')->set($params)->where('code', '=', $params['code'])->execute();
+        $data['section_code'] = $params['section_code'];
+        $data['secret'] = $params['secret'];
+        $data['title'] = $params['title'];
+        $data['main_image'] = $params['main_image'];
+        $data['content'] = $params['content'];
+        $data['place'] = $params['place'];
+        $data['place_url'] = $params['place_url'];
+        $data['fee'] = $params['fee'];
+        $data['event_date'] = $params['event_date'];
+        $data['event_start_datetime'] = $params['event_start_datetime'];
+        $data['event_end_datetime'] = $params['event_end_datetime'];
+        $data['creditch'] = $params['creditch'];
+        $data['limit'] = (!$params['limit'])? 0: $params['limit'];
+        $data['open_date'] = $params['open_date'];
+        $data['status'] = $params['status'];
+        $data['username'] = \Auth::get('username');
+        $data['updated_at'] = \DB::expr('now()');
 
-        return $params;
+        \DB::update('events')->set($data)->where('code', '=', $params['code'])->execute();
+
+        \DB::delete('event_other_dates')->where('event_code', '=', $params['code'])->execute();
+        if ($params['event_other_dates']) {
+            foreach ($params['event_other_dates'] as $value) {
+                \DB::insert('event_other_dates')->set(array(
+                    'event_code' => $params['code'],
+                    'event_date' => $value['event_date'],
+                    'event_start_datetime' => $value['event_start_datetime'],
+                    'event_end_datetime' => $value['event_end_datetime'],
+                    'created_at' => \DB::expr('now()'),
+                ))->execute();
+            }
+        }
+
+        return $data;
     }
 
     public static function delete($params)
@@ -290,6 +376,11 @@ class Events extends Base
         
         foreach($datas['datas'] as $key => $data){
             $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            // 二日目の女子会開催日
+            $event_other_dates = Events::getEventOtherDates($data['code']);
+            $datas['datas'][$key]['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
+            $datas['datas'][$key]['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
+            $datas['datas'][$key]['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
         }
         
         $datas['pagination'] = $pagination;

@@ -74,9 +74,8 @@ return array(
         65 => '069_create_event_remind_mail_templates',
         66 => '070_create_event_remind_mails',
         67 => '071_create_event_remind_mail_default_templates',
-        68 => '072_create_event_places',
-        69 => '073_add_place_code_to_events',
-        70 => '074_create_event_mails',
+        68 => '074_create_event_mails',
+        69 => '075_create_event_other_dates',
       ),
     ),
     'module' => 

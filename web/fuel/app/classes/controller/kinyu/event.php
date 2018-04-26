@@ -41,6 +41,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
+
+        // 二日目の女子会開催日
+        $event_other_dates = Events::getEventOtherDates($code);
+        $this->data['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
+        $this->data['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
+        $this->data['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
+
         $this->template->title = $this->data['event']['title'];
         $this->data['join_status'] = Applications::join_status($code);
         $this->data['event_row'] = Events::getByCode('events', $code);
@@ -73,6 +80,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
+
+        // 二日目の女子会開催日
+        $event_other_dates = Events::getEventOtherDates($code);
+        $this->data['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
+        $this->data['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
+        $this->data['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
+
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code);
         $this->data['event_row'] = Events::getByCode('events', $code);
@@ -105,6 +119,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
+
+        // 二日目の女子会開催日
+        $event_other_dates = Events::getEventOtherDates($code);
+        $this->data['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
+        $this->data['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
+        $this->data['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
+
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code);
         $this->template->ogimg = $this->data['event']['main_image'];
