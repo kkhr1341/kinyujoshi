@@ -155,7 +155,6 @@
 	margin-top: 32px;
 }
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   
   背景メイン
@@ -361,6 +360,10 @@
 	font-size: 14px;
   line-height: 22px;
 }
+.day2-contents-detail-el .img-description {
+	text-align: right;
+	margin-top: 24px;
+}
 
 /* 伊東の観光部分 */
 .day2-contents-detail-after {
@@ -412,6 +415,16 @@
   color: #4ba0e0;
   display: inline-block;
   margin-top: 12px;
+}
+
+.pre-joshikai-area {
+	font-size: 15px;
+	text-align: right;
+	margin-top: 32px;
+}
+.pre-joshikai-area a {
+	font-size: 15px;
+	color: #2ea2de;
 }
 
 /* アクセスエリア */

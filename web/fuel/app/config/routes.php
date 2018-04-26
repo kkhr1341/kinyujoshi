@@ -101,7 +101,7 @@ return array(
 	'conference' => 'kinyu/campaign/conference',
 	'map' => 'kinyu/campaign/map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
-	'oom-joshikai2018' => 'kinyu/campaign/ooedojoshikai_2018',
+	'ooam-joshikai2018' => 'kinyu/campaign/ooedojoshikai_2018',
 	'celebration' => 'kinyu/campaign/celebration_20171206',
 	'daijoshikai2018' => 'kinyu/campaign/daijoshikai2018',
 	'school_jpx02' => 'kinyu/campaign/school_02',
