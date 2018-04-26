@@ -157,14 +157,14 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     public function action_ooedojoshikai_2018()
     {
 
-        // switch (true) {
-        //     case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-        //     case $_SERVER['PHP_AUTH_USER'] !== 'ooedo2018':
-        //     case $_SERVER['PHP_AUTH_PW'] !== '1234567890':
-        //     header('WWW-Authenticate: Basic realm="Enter username and password."');
-        //     header('Content-Type: text/plain; charset=utf-8');
-        //     die('このページを見るにはログインが必要です');
-        // }
+        switch (true) {
+            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+            case $_SERVER['PHP_AUTH_USER'] !== 'ooam-joshikai2018':
+            case $_SERVER['PHP_AUTH_PW'] !== 'Spaspa3472':
+            header('WWW-Authenticate: Basic realm="Enter username and password."');
+            header('Content-Type: text/plain; charset=utf-8');
+            die('このページを見るにはログインが必要です');
+        }
 
         $this->template->title = '【伊東編】大江戸温泉できんゆう女子。会';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/content/ooedo_joshikai/oom-reit-og.jpg';
