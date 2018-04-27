@@ -58,10 +58,22 @@ class Controller_Api_Redactor extends Controller_Apibase
                 $params['use_path_style_endpoint'] = true;
             }
             $s3 = S3Client::factory($params);
+
+            //
+            $image = new Imagick($_FILES['file']['tmp_name']);
+            $tmp_file_path = "/tmp/{$file_name}";
+
+            $image_info = getimagesize($_FILES['file']['tmp_name']);
+            $width = $image_info[0] > 1500? 1500: $image_info[0];
+
+            $thumbImg = clone $image;
+            $thumbImg->thumbnailImage($width, 0);
+            $thumbImg->writeImage($tmp_file_path);
+
             $res = $s3->putObject(array(
                 'Bucket' => \Config::get('s3.bucket'),
                 'Key' => "stock/{$username}/images/{$updatedev}{$file_name}",
-                'Body' => fopen($_FILES['file']['tmp_name'], 'r'),
+                'Body' => fopen($tmp_file_path, 'r'),
                 'ACL' => 'public-read',
                 'ContentType' => $_FILES['file']['type'],
             ));
