@@ -104,7 +104,7 @@ class Events extends Base
         return $result;
     }
 
-    public static function lists($mode = null, $limit = null, $open = null, $secret = null)
+    public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc")
     {
 
         $datas = \DB::select(\DB::expr('*, events.code, (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num'))
@@ -136,7 +136,7 @@ class Events extends Base
 
         //$datas = $datas->order_by('events.id', 'desc');
         $datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
-        $datas = $datas->order_by('event_date', 'desc');
+        $datas = $datas->order_by('event_date', $sort);
 
         if ($limit === null) {
         } else {
