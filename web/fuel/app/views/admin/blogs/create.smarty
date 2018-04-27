@@ -102,6 +102,17 @@
           </div>
         </div>
 
+        <div class="form-group mb50">
+			<label class="form-group-event-label">メンバー限定レポート</label>
+			<div class="radio_box clear">
+            <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="">
+            <label for="secret01" class="form-long">YES!</label>
+
+            <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" checked>
+            <label for="secret02" class="form-long">NO!</label>
+          </div>
+        </div>
+
 				<div class="form-group">
 					<label class="form-group-event-label">タイトル</label>
           <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
@@ -154,7 +165,8 @@ $(function(){
 		params.section_code = $("[name=section_code]:checked").val();
 		params.kind = $("[name=kind]:checked").val();
 		//params.keyword = $("[name=keyword]:checked").val();
-    params.pickup = $("[name=pickup]:checked").val();
+        params.pickup = $("[name=pickup]:checked").val();
+        params.secret = $("[name=secret]:checked").val();
 		params.title = $('#title').val();
 		params.description = $('#description').val();
 		params.content = $('#content').val();
@@ -194,7 +206,8 @@ $(function(){
 		params.section_code = $("[name=section_code]:checked").val();
 		params.kind = $("[name=kind]:checked").val();
 		//params.keyword = $("[name=keyword]:checked").val();
-    params.pickup = $("[name=pickup]:checked").val();
+        params.pickup = $("[name=pickup]:checked").val();
+        params.secret = $("[name=secret]:checked").val();
 		params.title = $('#title').val();
 		params.description = $('#description').val();
 		params.content = $('#content').val();

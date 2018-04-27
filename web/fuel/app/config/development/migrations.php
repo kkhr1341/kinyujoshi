@@ -78,6 +78,7 @@ return array(
         69 => '073_add_place_code_to_events',
         70 => '074_create_event_mails',
         71 => '075_create_event_other_dates',
+        72 => '076_add_secret_to_blogs',
       ),
     ),
     'module' => 
