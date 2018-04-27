@@ -17,7 +17,7 @@ seed:
 install:
 	docker-compose build
 	git submodule init
-	docker-compose run --rm composer update
+	docker-compose run --rm composer install
 	git submodule init
 	git submodule update
 	docker-compose run --rm createbuckets
@@ -32,7 +32,7 @@ test:
 .PHONY: test
 
 composer:
-	docker-compose run --rm composer update
+	docker-compose run --rm composer install
 .PHONY: composer
 
 down:
