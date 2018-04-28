@@ -18,7 +18,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         }
         $pagination = $this->data['blogs']['pagination'];
         $this->data['pagination'] = $pagination::instance('mypagination');
-        $this->data['events'] = Events::lists(1, 10, true, 0);
+        $this->data['events'] = Events::lists(1, 10, true, 0, 'asc');
         $this->template->title = 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
