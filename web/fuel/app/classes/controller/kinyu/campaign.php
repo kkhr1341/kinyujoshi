@@ -177,8 +177,9 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
             $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        } else {
+            //$this->template->contents = View::forge('kinyu/campaign/ooedojoshikai_2018.smarty', $this->data);
         }
-
         $this->template->contents = View::forge('kinyu/campaign/ooedojoshikai_2018.smarty', $this->data);
     }
 
