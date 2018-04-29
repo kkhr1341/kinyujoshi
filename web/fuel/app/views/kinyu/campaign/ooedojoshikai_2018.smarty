@@ -31,11 +31,24 @@
   </div>
 
 	<!-- サムネイル -->
-	<div class="oj2018-introduction">
+	<div class="oj2018-introduction pc">
 		<ul class="bxslider">
     		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg1.jpg) top -30px center / cover no-repeat;"></li>
     		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg2.jpg) center center / cover no-repeat;"></li>
     		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg3.jpg) center center / cover no-repeat;"></li>
+  	</ul>
+		<img class="main-logo" src="/images/content/ooedo_joshikai2018/main-logo.png">
+  	<img class="intro-border pc" src="/images/content/ooedo_joshikai2018/intro-border.png">
+  	<img class="intro-border sp" src="/images/content/ooedo_joshikai2018/intro-border_sp.png">
+  </div>
+
+  <!-- サムネイル -->
+	<div class="oj2018-introduction sp">
+		<img class="ooam-logo" src="/images/content/ooedo_joshikai/ooedo_logo2.png">
+		<ul class="bxslider">
+    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg1.jpg) right -40px center / cover no-repeat;"></li>
+    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg2.jpg) right center / cover no-repeat;"></li>
+    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg3.jpg) left center / cover no-repeat;"></li>
   	</ul>
 		<img class="main-logo" src="/images/content/ooedo_joshikai2018/main-logo.png">
   	<img class="intro-border pc" src="/images/content/ooedo_joshikai2018/intro-border.png">
@@ -112,8 +125,12 @@
 				<h2 class="section-title pc"><img class="title" src="/images/content/ooedo_joshikai2018/title/title-reit.png"></h2>
 				<h2 class="section-title sp"><img class="title" src="/images/content/ooedo_joshikai2018/title/sp/title-reit.png"></h2>
 				<p class="reit-text pc"><span style="font-weight:bold;color:#f57d80;">REIT：リート</span>とは、「Real Estate Investment Trust」の略でアメリカで生まれた投資信託の仲間で、不動産に特化した投資信託です。<br>投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が含まれているのパッケージのことです。</p>
+				<p class="reit-text sp"><span style="font-weight:bold;color:#f57d80;">REIT：リート</span>とは、「Real Estate Investment Trust」の略でアメリカで生まれた投資信託の仲間で、不動産に特化した投資信託です。
+				<span style="display: block;height: 12px;"></span>
+				投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が含まれているのパッケージのことです。</p>
 				<div class="reit-illust-block">
-					<img src="/images/content/ooedo_joshikai2018/reit-illust.jpg">
+					<img class="pc" src="/images/content/ooedo_joshikai2018/reit-illust.jpg">
+					<img class="sp" src="/images/content/ooedo_joshikai2018/reit-illust_sp.png">
 				</div>
 				<p class="description">キーワード！<br><span style="font-weight:bold;color:#f57d80;">投資信託　ETF　上場</span><br>
 				おさらいしたい方は、こちらの記事もチェック。</p>
@@ -342,7 +359,7 @@
 
 					<div class="fee-block">
 						<p class="fee-title">- 参加費 -</p>
-						<p class="fee-details">10,000円（<span style="color:#6b9fcd;">DAY1</span>&<span style="color:#f57d80;">DAY2</span>）</p>
+						<p class="fee-details">10,000円（<span style="color:#6b9fcd;">1回目</span>&<span style="color:#f57d80;">2回目</span>）</p>
 					</div>
 	
 					<a class="to-joshikai-link" href="">
@@ -373,5 +390,11 @@
 <div class="joinus-pc-block pc">
 	<a href="">
 		<img src="/images/content/ooedo_joshikai2018/joinus-link2.png">
+	</a>
+</div>
+
+<div class="joinus-pc-block sp">
+	<a class="to-joshikai-link" href="">
+		<span>お申込みはこちら</span>
 	</a>
 </div>

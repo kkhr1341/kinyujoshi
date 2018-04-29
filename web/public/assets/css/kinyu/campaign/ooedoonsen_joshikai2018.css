@@ -83,6 +83,9 @@
 	position: relative;
 	padding: 100px 0px;
 }
+#about-ooam {
+	padding: 100px 0px 120px;
+}
 .oj2018-block-inner {
 	width: 1000px;
 	margin: 0 auto;
@@ -510,7 +513,7 @@
 	width: 200px;
 	position: absolute;
   right: 0px;
-  bottom: -54px;
+  bottom: -100px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -601,20 +604,29 @@
 	position: relative;
 }
 .fee-detail-el:first-child::after {
-    content: '';
-    width: 35px;
-    height: 35px;
-    background: url(/images/content/ooedo_joshikai2018/joinus/day_dev.png);
-    background-size: 35px 35px;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: -17.5px;
-    top: 140px;
-    opacity: .5;
+  content: '';
+  width: 35px;
+  height: 35px;
+  background: url(/images/content/ooedo_joshikai2018/joinus/day_dev.png);
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: -17.5px;
+  top: 140px;
+  opacity: .5;
 }
-
+.oj2018-introduction {
+	position: relative;
+}
+.ooam-logo {
+	width: 150px;
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  z-index: 1004;
+}
 .fee-detail-el .fee-detail-date {
-	width: 140px;
+	width: 70px;
 }
 .fee-detail-el .img-box {
 	width: 100%;
@@ -673,6 +685,8 @@
 }
 .oj2018-block-inner {
 	width: 92%;
+	position: relative;
+	z-index: 1000;
 }
 .ooedo-header-inner {
 	width: 100%;
@@ -681,15 +695,15 @@
 	width: 100%;
 }
 .bx-wrapper {
-	height: 450px;
+	height: 400px;
 }
 .bxslider {
-	height: 450px;
+	height: 400px;
 }
 .bxslider ul {
 }
 .bxslider li {
-	height: 450px;
+	height: 400px;
 }
 
 .section-title {
@@ -953,7 +967,7 @@
   line-height: 18px;
 }
 .day2-contents-detail-access {
-	padding: 24px 0px;
+	padding: 32px 0px;
 }
 .day2-sub-description {
   padding-top: 24px;
@@ -1000,6 +1014,40 @@
 .day2-contents-detail-el {
 	padding: 40px 0px;
 }
+.oj2018 .menu-block {
+  margin-bottom: 12px;
+  padding: 24px 0px;
+}
+.oj2018 .menu-block .menu-title {
+	width: 160px;
+}
+.oj2018 .menu-block .menu-list {
+	margin-top: 12px;
+}
+.oj2018-introduction .main-logo {
+  position: absolute;
+  width: 200px;
+  height: 205px;
+  left: 50%;
+  top: 50%;
+  margin-top: -102.5px;
+  margin-left: -100px;
+}
+.oj2018 .menu-block .menu-list li {
+	width: 80%;
+	margin: 0 auto;
+	display: block;
+	padding: 8px 0px;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #efefef;
+}
+.oj2018 .menu-block .menu-list li:first-child {
+	border-top: 1px solid #6b9fcd;
+	padding: 12px 0px 8px;
+}
+.oj2018 .menu-block .menu-list li a:after {
+	content: "";
+}
 
 /* テキスト関連 */
 .oj2018-block .description {
@@ -1044,8 +1092,12 @@
   line-height: 16px;
 }
 
+.singlepage-footer {
+	background: #fff;
+}
+
 /* イラスト装飾関連 */
-.concept-illust01,
+/*.concept-illust01,
 .concept-illust02,
 .reit-illust01,
 .joshikai-illust01,
@@ -1053,8 +1105,63 @@
 .oj2018-joshikai-el .cafe-illust,
 .day1-goods-img {
 	display: none;
+}*/
+
+.concept-illust01 {
+	width: 250px;
+	z-index: 999;
+	opacity: .2;
+}
+.concept-illust02 {
+	width: 200px;
+	z-index: 999;
+	opacity: .4;
+}
+.reit-illust01 {
+	width: 200px;
+	opacity: .2;
+}
+.joshikai-illust01 {
+  width: 90px;
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  opacity: .5;
+}
+.joshikai-illust02 {
+	width: 100px;
+  position: absolute;
+  right: -10px;
+  bottom: 0px;
+  opacity: .5;
+}
+.oj2018-joshikai-el .cafe-illust {
+  width: 110px;
+  position: absolute;
+  right: 9px;
+  bottom: 220px;
+}
+.joshikai-date .day1-goods-img {
+  position: absolute;
+  width: 75px;
+  right: -25px;
+  bottom: -70px;
+  z-index: 1002;
+}
+#about-ooam {
+	padding: 50px 0px 72px;
 }
 
+.joinus-pc-block {
+	width: 100%;
+	text-align: center;
+}
+.joinus-pc-block .to-joshikai-link span {
+	padding: 20px 0px;
+}
+.joinus-pc-block .to-joshikai-link:after {
+	top: 24px;
+}
 
 
 }
