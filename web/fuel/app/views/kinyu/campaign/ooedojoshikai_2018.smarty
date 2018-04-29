@@ -46,9 +46,9 @@
 	<div class="oj2018-introduction sp">
 		<img class="ooam-logo" src="/images/content/ooedo_joshikai/ooedo_logo2.png">
 		<ul class="bxslider">
-    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg1.jpg) right -40px center / cover no-repeat;"></li>
-    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg2.jpg) right center / cover no-repeat;"></li>
-    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg3.jpg) left center / cover no-repeat;"></li>
+    		<li style="background: url(/images/content/ooedo_joshikai2018/sp/main-bg1.jpg) right -40px center / cover no-repeat;"></li>
+    		<li style="background: url(/images/content/ooedo_joshikai2018/sp/main-bg2.jpg) right center / cover no-repeat;"></li>
+    		<li style="background: url(/images/content/ooedo_joshikai2018/sp/main-bg3.jpg) left center / cover no-repeat;"></li>
   	</ul>
 		<img class="main-logo" src="/images/content/ooedo_joshikai2018/main-logo.png">
   	<img class="intro-border pc" src="/images/content/ooedo_joshikai2018/intro-border.png">
@@ -248,7 +248,8 @@
 								<div class="day2-contents-detail-el">
 									<img class="date2-1-area" src="/images/content/ooedo_joshikai2018/joshikai/day2-1-date.png">
 									<img class="pc" src="/images/content/ooedo_joshikai2018/joshikai/day1_all.png" alt="">
-									<img class="sp" src="/images/content/ooedo_joshikai2018/joshikai/day1_all_sp.jpg" alt="">
+									<img class="sp" src="/images/content/ooedo_joshikai2018/joshikai/day1_all_sp1.png" alt="">
+									<img class="sp" src="/images/content/ooedo_joshikai2018/joshikai/day1_all_sp2.png" alt="">
 									<img class="pc" style="margin:50px 0px 32px;" src="/images/content/ooedo_joshikai2018/joshikai/day1_all2.png" alt="">
 									<img class="day1_all2 sp" src="/images/content/ooedo_joshikai2018/joshikai/day1_all2_sp.png" alt="">
 									<img class="pc" src="/images/content/ooedo_joshikai2018/joshikai/day1_all3.png" alt="">
