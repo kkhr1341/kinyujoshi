@@ -59,11 +59,11 @@
 	<div class="menu-block">
 		<img class="menu-title" src="/images/content/ooedo_joshikai2018/menu-title.png">
 		<ul class="menu-list">
-			<li><a href="#concept">コンセプト</a></li>
-			<li><a href="#about_reit">REIT:リートってなに？</a></li>
-			<li><a href="#joshikai">女子会の内容</a></li>
-			<li><a href="#about-ooam">大江戸温泉アセットマネジメンさんって？</a></li>
-			<li><a href="#joinus">お申込み</a></li>
+			<li><a href="#concept"><span>コンセプト</span></a></li>
+			<li><a href="#about_reit"><span>REIT:リートってなに？</span></a></li>
+			<li><a href="#joshikai"><span>女子会の内容</span></a></li>
+			<li><a href="#about-ooam"><span>大江戸温泉アセットマネジメンさんって？</span></a></li>
+			<li><a href="#joinus"><span>お申込み</span></a></li>
 		</ul>
 	</div>
 
@@ -136,8 +136,8 @@
 				おさらいしたい方は、こちらの記事もチェック。</p>
 				
 				<div class="report-link-block">
-					<a class="report-link" href="https://kinyu-joshi.jp/report/XSt0V0" target="_blank">◆ ETFが上場セレモニーを見学したレポート</a>
-					<a class="report-link" href="https://kinyu-joshi.jp/report/oujQcT" target="_blank">◆ きんゆう女子。学院で投資信託を勉強した時のレポート</a>
+					<p>◆ ETFが上場セレモニーを見学した<a href="https://kinyu-joshi.jp/report/XSt0V0" target="_blank">レポート</a></p>
+					<p>◆ きんゆう女子。学院で投資信託を勉強した時の<a href="https://kinyu-joshi.jp/report/oujQcT" target="_blank">レポート</a></p>
 				</div>
 
 			</div>
@@ -277,7 +277,7 @@
 										<div class="text-box">
 											<p class="title">伊豆シャボテン動物公園の観光へ</p>
 											<p class="description">世界各国から集めた1500種類のサボテンや多肉植物を見ることができる。放し飼いのリスザル・クジャクをはじめ、大人気のカピバラともふれあいができ、動物たちと驚きの距離の近さ。かわいい動物と植物、自然に触れて日頃の疲れが癒そう！</p>
-											<a href="http://izushaboten.com/">◆伊豆シャボテン動物公園</a>
+											<a href="http://izushaboten.com/" target="_blank">◆伊豆シャボテン動物公園</a>
 										</div>
 									</div>
 								</div>
@@ -363,7 +363,7 @@
 						<p class="fee-details">10,000円（<span style="color:#6b9fcd;">1回目</span>&<span style="color:#f57d80;">2回目</span>）</p>
 					</div>
 	
-					<a class="to-joshikai-link" href="">
+					<a class="to-joshikai-link" href="" target="_blank">
 						<span>お申込みはこちら</span>
 					</a>
 
@@ -389,13 +389,13 @@
 </div>
 
 <div class="joinus-pc-block pc">
-	<a href="">
+	<a href="" target="_blank">
 		<img src="/images/content/ooedo_joshikai2018/joinus-link2.png">
 	</a>
 </div>
 
 <div class="joinus-pc-block sp">
-	<a class="to-joshikai-link" href="">
+	<a class="to-joshikai-link" href="" target="_blank">
 		<span>お申込みはこちら</span>
 	</a>
 </div>

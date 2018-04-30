@@ -164,6 +164,15 @@
 .report-link-block {
 	margin-top: 24px;
 }
+.report-link-block p {
+	font-size: 15px;
+  line-height: 28px;
+}
+.report-link-block a {
+	font-size: 15px;
+  line-height: 28px;
+  color: #4ba0e0;
+}
 .report-link {
 	display: block;
 	font-size: 15px;
@@ -248,7 +257,8 @@
 }
 .joshikai-date .main-date {
 	font-size: 18px;
-	line-height: 28px;
+	line-height: 30px;
+	margin-bottom: 12px;
 }
 .joshikai-date .main-date span {
 	color: #6b9fcd;
@@ -532,6 +542,7 @@
 	margin: 0 auto;
 	padding: 2px;
 	position: relative;
+	transition: .5s;
 }
 .to-joshikai-link:after {
 	content: "〉";
@@ -745,6 +756,7 @@
 .joshikai-date .main-date {
 	font-size: 13px;
   line-height: 22px;
+  margin-bottom: 0px;
 }
 
 
@@ -1168,12 +1180,50 @@
 .joinus-pc-block .to-joshikai-link:after {
 	top: 24px;
 }
-
-
+.report-link-block p {
+	font-size: 12px;
+  line-height: 20px;
+}
+.report-link-block a {
+	font-size: 12px;
+  line-height: 20px;
+  color: #4ba0e0;
+}
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  PCのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 1025px) {
 
+.oj2018 .menu-block .menu-list a span {
+	border-bottom: 1px solid #fff;
+	padding-bottom: 2px;
+	transition: .5s;
+}
+.oj2018 .menu-block .menu-list a:hover span {
+	border-bottom: 1px solid #6b9fcd;
+	opacity: .5;
+}
+.to-joshikai-link:hover {
+	opacity: .5;
+}
+.report-link-block a,
+.pre-joshikai-area a {
+	transition: .5s;
+}
+.report-link-block a:hover,
+.pre-joshikai-area a:hover {
+	opacity: .3;
+}
+.joinus-pc-block {
+	transition: .5s;
+}
+.joinus-pc-block:hover {
+	opacity: .5;
+}
 
+}
 
 
 
