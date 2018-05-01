@@ -47,6 +47,7 @@
 
                 <div class="form-group mb50">
                     <label class="form-group-event-label">表示/非表示</label>
+                    <p>女子会としては有効にしたいけど、TOP、女子会一覧に表示したくない場合は非表示に設定してください。</p>
                     <div class="radio_box clear">
                         <input type="radio" value="1" name="display" id="display01" class="form-radio" placeholder="" {if $events.display == "1"}checked{/if}>
                         <label for="display01" class="form-long">YES!</label>
@@ -91,6 +92,7 @@
 
 				<div class="form-group">
 					<label class="form-group-event-label">表示用日付</label>
+                    <p>日付の形式を変えたい、複数日付設定したい場合などに設定してください。</p>
 					<input type='text' class="form-control" id="display_event_date" value="{$events.display_event_date}" />
 				</div>
 
