@@ -341,6 +341,10 @@
 	border-top: 1px solid #f57d80;
 	border-bottom: 1px solid #f57d80;
 }
+.day2-el .joshikai-date .link {
+	text-decoration: underline;
+	color: #4ba0e0;
+}
 .day2-el .joshikai-date .main-date span {
 	color: #f57d80;
 }

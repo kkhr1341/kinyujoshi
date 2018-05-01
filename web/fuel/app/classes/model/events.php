@@ -34,6 +34,8 @@ class Events extends Base
             ->add_rule('required')
             ->add_rule('valid_date');
 
+        $val->add('display_event_date', '表示用日付');
+
         $val->add('event_start_datetime', '開催開始時間');
 
         $val->add('event_end_datetime', '開催終了時間');
@@ -201,6 +203,7 @@ class Events extends Base
         $data['place'] = $params['place'];
         $data['place_url'] = $params['place_url'];
         $data['fee'] = $params['fee'];
+        $data['display_event_date'] = $params['display_event_date'];
         $data['event_date'] = $params['event_date'];
         $data['event_start_datetime'] = $params['event_start_datetime'];
         $data['event_end_datetime'] = $params['event_end_datetime'];
@@ -232,6 +235,7 @@ class Events extends Base
         $data['place'] = $params['place'];
         $data['place_url'] = $params['place_url'];
         $data['fee'] = $params['fee'];
+        $data['display_event_date'] = $params['display_event_date'];
         $data['event_date'] = $params['event_date'];
         $data['event_start_datetime'] = $params['event_start_datetime'];
         $data['event_end_datetime'] = $params['event_end_datetime'];
