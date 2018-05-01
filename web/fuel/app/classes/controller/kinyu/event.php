@@ -35,7 +35,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_detail($code)
     {
-        if (!$this->viewable($code)) {
+        if (Input::get('preview', '') != 1 && !$this->viewable($code)) {
             throw new HttpNoAccessException;
         }
         // 最新を取得
@@ -220,6 +220,9 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     private function viewable($code)
     {
         $event = Events::getByCode('events', $code);
+        if ($event['status'] == 0) {
+            return false;
+        }
         if ($event['secret'] == 0) {
             return true;
         }

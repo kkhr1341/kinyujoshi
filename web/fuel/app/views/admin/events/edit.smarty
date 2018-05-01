@@ -263,7 +263,7 @@ $(function(){
 	});
 
 	$('#preview').click(function(){
-		window.open("/joshikai/"+code);
+		window.open("/joshikai/"+code+"?preview=1");
 	});
 
 	$('#save_closed').click(function(){
