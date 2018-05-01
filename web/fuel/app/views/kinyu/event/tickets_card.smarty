@@ -87,7 +87,7 @@
         </div>
 
         <div class="kinyu-credit-fee-area">
-          <p><span>参加費</span>：{$event.fee}円</p>
+          <p><span>参加費</span>：{$event.fee|number_format}円</p>
         </div>
 
         <button class="day-cash-submit" type="submit">お支払いする</button>

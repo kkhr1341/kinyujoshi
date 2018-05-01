@@ -27,7 +27,7 @@ var $resArray02 = $resArray[1];
           {/if}
         </p>
 
-        <p><span>参加費</span>：{$event.fee}円</p>
+        <p><span>参加費</span>：{$event.fee|number_format}円</p>
       </div>
 
       <div class="kinyu-joshikai-tickets-payment">
