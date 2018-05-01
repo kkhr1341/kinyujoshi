@@ -18,7 +18,11 @@
             <li>
               <p class="info-title">日時</p>
               <p class="info-detail">
+                {if $event.display_event_date}
+                  {$event.display_event_date}
+                {else}
                   {$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）{$event.event_start_datetime}〜{$event.event_end_datetime}
+                {/if}
               </p>
             </li>
             <li>
