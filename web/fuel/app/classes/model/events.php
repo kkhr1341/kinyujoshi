@@ -145,16 +145,20 @@ class Events extends Base
         return $datas;
     }
 
-    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null)
+    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1)
     {
 
         $datas = \DB::select(\DB::expr('*, events.code, (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num'))
             ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
-            ->where('events.display', '=', 1)
             ->where('events.disable', '=', 0);
-        
+
+        if ($display === null) {
+        } else {
+            $datas = $datas->where('display', '=', $display);
+        }
+
         if ($secret === null) {
         } else {
             $datas = $datas->where('secret', '=', $secret);
