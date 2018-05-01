@@ -79,6 +79,7 @@ return array(
         70 => '074_create_event_mails',
         71 => '075_create_event_other_dates',
         72 => '076_add_secret_to_blogs',
+        73 => '077_add_display_to_events',
       ),
     ),
     'module' => 

@@ -86,12 +86,6 @@ class Controller_My_Events extends Controller_Mybase
         $code = $application['event_code']; // event code
         $this->data['event'] = Events::getByCodeWithProfile($code);
 
-        // 二日目の女子会開催日
-        $event_other_dates = Events::getEventOtherDates($code);
-        $this->data['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
-        $this->data['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
-        $this->data['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
-
         $this->data['event_row'] = Events::getByCode('events', $code);
         $this->data['cancelable'] = Events::cancelable($code);
         $this->template->urlcode = $this->data['event_row']['code'];

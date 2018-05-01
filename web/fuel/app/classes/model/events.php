@@ -28,6 +28,8 @@ class Events extends Base
 
         $val->add('secret', 'メンバー限定女子会');
 
+        $val->add('display', '表示/非表示');
+
         $val->add('event_date', '日付')
             ->add_rule('required')
             ->add_rule('valid_date');
@@ -35,8 +37,6 @@ class Events extends Base
         $val->add('event_start_datetime', '開催開始時間');
 
         $val->add('event_end_datetime', '開催終了時間');
-
-        $val->add('event_other_dates');
 
         $val->add('place', '場所');
 
@@ -91,19 +91,6 @@ class Events extends Base
        return $event;
     }
 
-    public static function getEventOtherDates($code)
-    {
-        $result = \DB::select('*')
-            ->from('event_other_dates')
-            ->where('event_code', '=', $code)
-            ->execute()
-            ->as_array();
-        if (empty($result)) {
-            return false;
-        }
-        return $result;
-    }
-
     public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc")
     {
 
@@ -111,6 +98,7 @@ class Events extends Base
             ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
+            ->where('events.display', '=', 1)
             ->where('events.disable', '=', 0);
 
         if ($secret === null) {
@@ -144,17 +132,10 @@ class Events extends Base
         }
         $datas = $datas->execute()
             ->as_array();
-        
         foreach($datas as $key => $data){
             $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
 
-            // 二日目の女子会開催日
-            $event_other_dates = Events::getEventOtherDates($data['code']);
-            $datas[$key]['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
-            $datas[$key]['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
-            $datas[$key]['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
         }
-
         return $datas;
     }
 
@@ -165,6 +146,7 @@ class Events extends Base
             ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
+            ->where('events.display', '=', 1)
             ->where('events.disable', '=', 0);
         
         if ($secret === null) {
@@ -191,14 +173,8 @@ class Events extends Base
         }
         $datas = $datas->execute()
             ->as_array();
-        
         foreach($datas as $key => $data){
             $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
-            // 二日目の女子会開催日
-            $event_other_dates = Events::getEventOtherDates($data['code']);
-            $datas[$key]['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
-            $datas[$key]['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
-            $datas[$key]['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
         }
 
         return $datas;
@@ -214,6 +190,7 @@ class Events extends Base
 
         $data['section_code'] = $params['section_code'];
         $data['secret'] = $params['secret'];
+        $data['display'] = $params['display'];
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];
@@ -230,19 +207,6 @@ class Events extends Base
         $data['username'] = \Auth::get('username');
         $data['code'] = $code;
         $data['created_at'] = \DB::expr('now()');
-
-        \DB::insert('events')->set($data)->execute();
-        if ($params['event_other_dates']) {
-            foreach ($params['event_other_dates'] as $value) {
-                \DB::insert('event_other_dates')->set(array(
-                    'event_code' => $code,
-                    'event_date' => $value['event_date'],
-                    'event_start_datetime' => $value['event_start_datetime'],
-                    'event_end_datetime' => $value['event_end_datetime'],
-                    'created_at' => \DB::expr('now()'),
-                ))->execute();
-            }
-        }
         return $data;
     }
 
@@ -257,6 +221,7 @@ class Events extends Base
 
         $data['section_code'] = $params['section_code'];
         $data['secret'] = $params['secret'];
+        $data['display'] = $params['display'];
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];
@@ -274,19 +239,6 @@ class Events extends Base
         $data['updated_at'] = \DB::expr('now()');
 
         \DB::update('events')->set($data)->where('code', '=', $params['code'])->execute();
-
-        \DB::delete('event_other_dates')->where('event_code', '=', $params['code'])->execute();
-        if ($params['event_other_dates']) {
-            foreach ($params['event_other_dates'] as $value) {
-                \DB::insert('event_other_dates')->set(array(
-                    'event_code' => $params['code'],
-                    'event_date' => $value['event_date'],
-                    'event_start_datetime' => $value['event_start_datetime'],
-                    'event_end_datetime' => $value['event_end_datetime'],
-                    'created_at' => \DB::expr('now()'),
-                ))->execute();
-            }
-        }
 
         return $data;
     }
@@ -327,6 +279,7 @@ class Events extends Base
 
         $total = \DB::select(\DB::expr('count(*) as cnt'))
             ->where('status', '=', 1)
+            ->where('display', '=', 1)
             ->where('open_date', '<', \DB::expr('NOW()'))
             ->from('events')
             ->where('disable', '=', 0);
@@ -356,6 +309,7 @@ class Events extends Base
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
             ->where('status', '=', 1)
+            ->where('display', '=', 1)
             ->where('secret', '=', 0)
             ->where('events.disable', '=', 0)
             ->where('open_date', '<', \DB::expr('NOW()'));
@@ -376,13 +330,7 @@ class Events extends Base
         
         foreach($datas['datas'] as $key => $data){
             $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
-            // 二日目の女子会開催日
-            $event_other_dates = Events::getEventOtherDates($data['code']);
-            $datas['datas'][$key]['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
-            $datas['datas'][$key]['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
-            $datas['datas'][$key]['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
         }
-        
         $datas['pagination'] = $pagination;
 
         return $datas;

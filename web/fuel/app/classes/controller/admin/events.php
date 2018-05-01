@@ -52,12 +52,6 @@ class Controller_Admin_Events extends Controller_Adminbase
         $this->data['events'] = Events::getByCode('events', $code);
         $this->data['sections'] = Sections::lists();
 
-        // 二日目の女子会開催日
-        $event_other_dates = Events::getEventOtherDates($code);
-        $this->data['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
-        $this->data['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
-        $this->data['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
-
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
         $this->template->contents = View::forge('admin/events/edit.smarty', $this->data);

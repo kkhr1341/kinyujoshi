@@ -9,14 +9,6 @@ class Controller_My_Top extends Controller_Mybase
     public function action_index()
     {
         $this->data['applications'] = Applications::get_applications();
-        foreach($this->data['applications'] as $key => $data){
-            // 二日目の女子会開催日
-            $event_other_dates = Events::getEventOtherDates($data['event_code']);
-            $this->data['applications'][$key]['event_date2'] = isset($event_other_dates[0]['event_date'])? $event_other_dates[0]['event_date']: '';
-            $this->data['applications'][$key]['event_start_datetime2'] = isset($event_other_dates[0]['event_start_datetime'])? $event_other_dates[0]['event_start_datetime']: '';
-            $this->data['applications'][$key]['event_end_datetime2'] = isset($event_other_dates[0]['event_end_datetime'])? $event_other_dates[0]['event_end_datetime']: '';
-        }
-
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->title = 'マイページ｜きんゆう女子。';
         $this->template->description = 'マイページ・トップ';

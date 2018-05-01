@@ -34,30 +34,26 @@
 
 				</div>
 
-				<!-- <div class="form-group">
-					<label class="form-group-event-label">メンバー限定女子会</label>
-
-					<div class="radio_box clear">
-						<p class="form-group-sub"><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
-            <input type="radio" value="いつもの女子会" name="event_category" id="event1" class="form-radio" placeholder="">
-            <label for="event1" class="form-long">YES!</label>
-            
-            <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="">
-            <label for="event2" class="form-long">NO!
-
-            </label>
-          </div>
-
-				</div> -->
-
-				<div class="form-group mb50">
-					<label class="form-group-event-label">メンバー限定女子会</label>
-					<div class="radio_box clear">
+		<div class="form-group mb50">
+			<label class="form-group-event-label">メンバー限定女子会</label>
+			<div class="radio_box clear">
             <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="">
             <label for="secret01" class="form-long">YES!</label>
             
             <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" checked>
             <label for="secret02" class="form-long">NO!</label>
+          </div>
+        </div>
+
+
+		<div class="form-group mb50">
+			<label class="form-group-event-label">表示/非表示</label>
+			<div class="radio_box clear">
+            <input type="radio" value="1" name="display" id="display01" class="form-radio" placeholder="" checked>
+            <label for="display01" class="form-long">YES!</label>
+
+            <input type="radio" value="0" name="display" id="display02" class="form-radio" placeholder="">
+            <label for="display02" class="form-long">NO!</label>
 
           </div>
         </div>
@@ -99,25 +95,6 @@
 						<input type="text" id="event_end_datetime" class="form-control" placeholder="(例)21:30">
 					</div>
 				</div>
-
-                <div class="form-group">
-                    <label class="form-group-event-label">2日目の日付</label>
-                    <div class='input-group date datetimepicker'>
-                        <input type='text' class="form-control" id="event_date2" value="" />
-                        <span class="input-group-addon">
-							<span class="glyphicon glyphicon-calendar"></span>
-						</span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group-event-label">2日目の開催時間</label>
-                    <div class="event-datetime">
-                        <input type="text" id="event_start_datetime2" class="form-control" placeholder="(例)19:30" value="">
-                        〜
-                        <input type="text" id="event_end_datetime2" class="form-control" placeholder="(例)21:30" value="">
-                    </div>
-                </div>
 
 				<div class="form-group">
 					<label class="form-group-event-label">場所</label>
@@ -213,6 +190,7 @@ $(function(){
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
 		params.secret = $("[name=secret]:checked").val();
+		params.display = $("[name=display]:checked").val();
 		params.title = $('#title').val();
 		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
@@ -227,16 +205,6 @@ $(function(){
 		params.open_date = $('#open_date').val();
 		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 1;
-
-		if ($('#event_date2').val()) {
-            params.event_other_dates = [
-                {
-                    event_date: $('#event_date2').val(),
-                    event_start_datetime: $('#event_start_datetime2').val(),
-                    event_end_datetime: $('#event_end_datetime2').val(),
-                }
-            ]
-        }
 
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");
@@ -288,6 +256,7 @@ $(function(){
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
 		params.secret = $("[name=secret]:checked").val();
+		params.display = $("[name=display]:checked").val();
 		params.title = $('#title').val();
 		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
@@ -302,16 +271,6 @@ $(function(){
 		params.open_date = $('#open_date').val();
     	params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;
-
-        if ($('#event_date2').val()) {
-            params.event_other_dates = [
-                {
-                    event_date: $('#event_date2').val(),
-                    event_start_datetime: $('#event_start_datetime2').val(),
-                    event_end_datetime: $('#event_end_datetime2').val(),
-                }
-            ]
-        }
 
 		if (params.title == "") {
 			params.title = "タイトル未設定";

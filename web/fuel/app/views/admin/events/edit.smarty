@@ -12,39 +12,49 @@
 		<div class="my-form-container clear">
 			<div class="form-left">
 
-				<div class="form-group mb50">
-					<label class="form-group-event-label">カテゴリー</label>
+			    <div class="form-group mb50">
+			        <label class="form-group-event-label">カテゴリー</label>
 
-					<div class="radio_box clear">
-						<p class="form-group-sub"><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
-            <input type="radio" value="いつもの女子会" name="event_category" id="event1" class="form-radio" placeholder="" {if $events.event_category == "いつもの女子会"}checked{/if}>
-            <label for="event1" class="form-long">いつもの女子会</label>
-            
-            <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="" {if $events.event_category == "スペシャル"}checked{/if}>
-            <label for="event2" class="form-long">スペシャル</label>
+			        <div class="radio_box clear">
+			            <p class="form-group-sub"><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
+                        <input type="radio" value="いつもの女子会" name="event_category" id="event1" class="form-radio" placeholder="" {if $events.event_category == "いつもの女子会"}checked{/if}>
+                        <label for="event1" class="form-long">いつもの女子会</label>
 
-            <input type="radio" value="コラボ" name="event_category" id="event3" class="form-radio" placeholder="" {if $events.event_category == "コラボ"}checked{/if}> 
-            <label for="event3" class="form-long">コラボ</label>
+                        <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="" {if $events.event_category == "スペシャル"}checked{/if}>
+                        <label for="event2" class="form-long">スペシャル</label>
 
-            <input type="radio" value="公立きん" name="event_category" id="event4" class="form-radio" placeholder="" {if $events.event_category == "公立きん"}checked{/if}>
-            <label for="event4" class="form-long">きん学院</label>
+                        <input type="radio" value="コラボ" name="event_category" id="event3" class="form-radio" placeholder="" {if $events.event_category == "コラボ"}checked{/if}>
+                        <label for="event3" class="form-long">コラボ</label>
 
-            <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="" {if $events.event_category == "私立きん"}checked{/if}>
-            <label for="event5" class="form-long">私:きん学院</label>
-          </div>
-				</div>
+                        <input type="radio" value="公立きん" name="event_category" id="event4" class="form-radio" placeholder="" {if $events.event_category == "公立きん"}checked{/if}>
+                        <label for="event4" class="form-long">きん学院</label>
 
-				<div class="form-group mb50">
-					<label class="form-group-event-label">メンバー限定女子会</label>
-					<div class="radio_box clear">
-            <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="" {if $events.secret == "1"}checked{/if}>
-            <label for="secret01" class="form-long">YES!</label>
-            
-            <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" {if $events.secret == "0"}checked{/if}>
-            <label for="secret02" class="form-long">NO!</label>
+                        <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="" {if $events.event_category == "私立きん"}checked{/if}>
+                        <label for="event5" class="form-long">私:きん学院</label>
+                    </div>
+		        </div>
 
-          </div>
-        </div>
+                <div class="form-group mb50">
+                    <label class="form-group-event-label">メンバー限定女子会</label>
+                    <div class="radio_box clear">
+                        <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="" {if $events.secret == "1"}checked{/if}>
+                        <label for="secret01" class="form-long">YES!</label>
+
+                        <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" {if $events.secret == "0"}checked{/if}>
+                        <label for="secret02" class="form-long">NO!</label>
+                    </div>
+                </div>
+
+                <div class="form-group mb50">
+                    <label class="form-group-event-label">表示/非表示</label>
+                    <div class="radio_box clear">
+                        <input type="radio" value="1" name="display" id="display01" class="form-radio" placeholder="" {if $events.display == "1"}checked{/if}>
+                        <label for="display01" class="form-long">YES!</label>
+
+                        <input type="radio" value="0" name="display" id="display02" class="form-radio" placeholder="" {if $events.display == "0"}checked{/if}>
+                        <label for="display02" class="form-long">NO!</label>
+                    </div>
+                </div>
 				
 				<div class="form-group">
 					<label class="form-group-event-label">女子会のタイトル</label>
@@ -87,25 +97,6 @@
 						<input type="text" id="event_end_datetime" class="form-control" placeholder="(例)21:30" value="{$events.event_end_datetime}">
 					</div>
 				</div>
-
-                <div class="form-group">
-                    <label class="form-group-event-label">2日目の日付</label>
-                    <div class='input-group date datetimepicker'>
-                        <input type='text' class="form-control" id="event_date2" value="{$event_date2|date_format:"%Y/%m/%d"}" />
-                        <span class="input-group-addon">
-							<span class="glyphicon glyphicon-calendar"></span>
-						</span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group-event-label">2日目の開催時間</label>
-                    <div class="event-datetime">
-                        <input type="text" id="event_start_datetime2" class="form-control" placeholder="(例)19:30" value="{$event_start_datetime2}">
-                        〜
-                        <input type="text" id="event_end_datetime2" class="form-control" placeholder="(例)21:30" value="{$event_end_datetime2}">
-                    </div>
-                </div>
 
 				<div class="form-group">
 					<label class="form-group-event-label">場所</label>
@@ -203,6 +194,7 @@ $(function(){
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
 		params.secret = $("[name=secret]:checked").val();
+		params.display = $("[name=display]:checked").val();
 		params.title = $('#title').val();
 		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
@@ -217,16 +209,6 @@ $(function(){
 		params.open_date = $('#open_date').val();
 		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 1;
-
-        if ($('#event_date2').val()) {
-            params.event_other_dates = [
-                {
-                    event_date: $('#event_date2').val(),
-                    event_start_datetime: $('#event_start_datetime2').val(),
-                    event_end_datetime: $('#event_end_datetime2').val(),
-                }
-            ]
-        }
 
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");
@@ -283,6 +265,7 @@ $(function(){
 		params.section_code = "event";
 		params.event_category = $("[name=event_category]:checked").val();
 		params.secret = $("[name=secret]:checked").val();
+		params.display = $("[name=display]:checked").val();
 		params.title = $('#title').val();
    		params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
@@ -297,16 +280,6 @@ $(function(){
 		params.open_date = $('#open_date').val();
 		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;
-
-        if ($('#event_date2').val()) {
-            params.event_other_dates = [
-                {
-                    event_date: $('#event_date2').val(),
-                    event_start_datetime: $('#event_start_datetime2').val(),
-                    event_end_datetime: $('#event_end_datetime2').val(),
-                }
-            ]
-        }
 
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");
