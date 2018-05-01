@@ -90,6 +90,11 @@
 				</div>
 
 				<div class="form-group">
+					<label class="form-group-event-label">表示用日付</label>
+					<input type='text' class="form-control" id="display_event_date" value="{$events.display_event_date}" />
+				</div>
+
+				<div class="form-group">
 					<label class="form-group-event-label">開催時間</label>
 					<div class="event-datetime">
 						<input type="text" id="event_start_datetime" class="form-control" placeholder="(例)19:30" value="{$events.event_start_datetime}">
@@ -202,6 +207,7 @@ $(function(){
 		params.place_url = $('#place_url').val();
 		params.fee = $('#fee').val();
 		params.event_date = $('#event_date').val();
+		params.display_event_date = $('#display_event_date').val();
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.limit = $("#limit").val();
@@ -273,6 +279,7 @@ $(function(){
 		params.place_url = $('#place_url').val();
 		params.fee = $('#fee').val();
 		params.event_date = $('#event_date').val();
+		params.display_event_date = $('#display_event_date').val();
 		params.event_start_datetime = $('#event_start_datetime').val();
 		params.event_end_datetime = $('#event_end_datetime').val();
 		params.creditch = $("[name=creditch]:checked").val();
