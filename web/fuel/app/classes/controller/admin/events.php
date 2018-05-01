@@ -65,7 +65,7 @@ class Controller_Admin_Events extends Controller_Adminbase
         // $this->data['sections'] = Sections::lists();
         $this->data['all_events'] = Events::lists02(null, null, null, null, null, null);
        //  $this->data['closed_events'] = Events::lists(0);
-        $this->data['open_events'] = Events::lists(1);
+        $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->contents = View::forge('admin/events/attend.smarty', $this->data);
