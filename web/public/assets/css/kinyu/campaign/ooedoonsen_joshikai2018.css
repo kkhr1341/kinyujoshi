@@ -307,7 +307,7 @@
 }
 .joshikai-contents-el .text-box .description {
 	font-size: 13px;
-  line-height: 24px;
+  line-height: 22px;
   width: 100%;
   text-align: left;
 }
@@ -930,7 +930,7 @@
   line-height: 13px!important;
 }
 #joinus .joinus-block {
-	padding: 24px 24px 40px 24px;
+	padding: 32px 24px 40px 24px;
 }
 .fee-detail-el {
   width: 100%;
@@ -1286,6 +1286,45 @@
 	font-size: 11px;
   line-height: 18px;
 }
+
+.fee-block-privilege {
+	width: 84%;
+	padding: 12px 20px;
+	margin-top: 20px;
+  margin-bottom: 32px;
+}
+.fee-detail-el .joshikai-title span {
+	font-size: 10px;
+}
+.fee-block-privilege .main-title {
+	font-size: 12px;
+}
+.fee-block-privilege li p {
+	font-size: 11px;
+}
+.fee-conditions {
+	margin-bottom: 20px;
+}
+.fee-conditions li .conditions-title {
+	font-size: 13px;
+}
+.fee-conditions li .conditions-description {
+	font-size: 11px;
+}
+
+.joshikai-contents-el .day1-illust-balloon {
+    width: 140px;
+    position: absolute;
+    right: -13px;
+    top: -15px;
+}
+.day2-el .joshikai-date .day2-illust-balloon {
+    width: 100px;
+    position: absolute;
+    right: -20px;
+    top: -33px;
+}
+
 
 
 }
