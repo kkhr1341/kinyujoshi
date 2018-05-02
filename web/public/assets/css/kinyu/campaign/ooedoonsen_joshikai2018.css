@@ -902,15 +902,15 @@
 	height: 180px;
 }
 #about-ooam .joshikai-contents-el .text-box .description {
-	font-size: 12px;
+	font-size: 11px;
   line-height: 20px;
   margin-top: 16px;
 }
 .ooam-img-icon {
-  width: 175px;
+  width: 165px;
   position: absolute;
   right: 0px;
-  bottom: -120px;
+  bottom: -125px;
 }
 
 #joinus .fee-block-title {
@@ -1086,7 +1086,7 @@
   top: -20px;
 }
 .day2-el .joshikai-contents-block {
-	padding: 20px 0px 0px;
+	padding: 42px 0px 0px;
 }
 .day2-contents-detail-el img.date2-1-area {
 	width: 80px!important;
@@ -1313,16 +1313,17 @@
 }
 
 .joshikai-contents-el .day1-illust-balloon {
-    width: 140px;
-    position: absolute;
-    right: -13px;
-    top: -15px;
+  width: 140px;
+  position: absolute;
+  right: -13px;
+  top: -15px;
 }
 .day2-el .joshikai-date .day2-illust-balloon {
-    width: 100px;
-    position: absolute;
-    right: -20px;
-    top: -33px;
+	width: 110px;
+  position: absolute;
+  top: auto;
+  right: -20px;
+  bottom: -45px;
 }
 
 
