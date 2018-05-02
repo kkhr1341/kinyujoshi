@@ -83,7 +83,7 @@
 					今回の特別女子会は、そんな癒しとお勉強を楽しむ時間に。<br>
 					みんなで1泊2日、温泉で女子会しましょう♪
 					<span style="display: block;height: 12px;"></span>
-					テーマは、金融界の中でもまちとつながっている金融、”REIT（リート）”について。<br>
+					テーマは、金融界の中でもまちとつながっている金融、”REIT：リート”について。<br>
 					大家さんになる感覚を持つことができるREITを一緒に勉強しましょう。
 					<span style="display: block;height: 12px;"></span>
 					また、REITの前に知っておきたい、”投資信託”についてもふれます。
@@ -156,12 +156,12 @@
 				<p class="description pc">今回、訪問する場所は、静岡県伊東市にある「伊東ホテルニュー岡部」です。<br>
 					自分が大家さんになったつもりで、<br>施設の敷地や建物設備（機械室など）を視察しましょう。
 					<span style="display: block;height: 12px;"></span>
-					また、修学旅行気分でお泊りまします。REITの仕組みをリアルで体験してみましょう！<br>
+					また、修学旅行気分でお泊りまします。REIT：リートの仕組みをリアルで体験してみましょう！<br>
 					支配人の千葉さんと温泉ソムリエ勉強中（!?）の、財務部長 本多さんのやさしいガイド付き。
 				</p>
 				<p class="description sp">今回、訪問する場所は、静岡県伊東市にある「伊東ホテルニュー岡部」です。自分が伊東ホテルニュー岡部の大家さんになったつもりで、施設の敷地や建物設備（機械室など）を視察しましょう。
 					<span style="display: block;height: 12px;"></span>
-					また、修学旅行気分でお泊りまします。REITの仕組みをリアルで体験してみましょう！支配人の千葉さんと温泉ソムリエ勉強中（!?）の、財務部長 本多さんのやさしいガイド付き。
+					また、修学旅行気分でお泊りまします。REIT：リートの仕組みをリアルで体験してみましょう！支配人の千葉さんと温泉ソムリエ勉強中（!?）の、財務部長 本多さんのやさしいガイド付き。
 				</p>
 				<!-- イベントの詳細 -->
 				<div class="oj2018-joshikai-block">
@@ -192,8 +192,9 @@
 								<div class="img-box" style="background: url(/images/content/ooedo_joshikai2018/joshikai/day1-img2.jpg) center center / cover no-repeat;"></div>
 								<div class="text-box">
 									<p class="main-description">後半は、資産づくりのお話と不動産投資信託(REIT：リート)がテーマ。</p>
-									<p class="description">聞いたことあるかも？なんだそれ？という方も、これを機会に少し勉強しましょう。投資信託は、なかなか目にみえにくいもの。どんな風に作られて、どんな風に買うことができるのか、リートという金融商品のプロデューサーである大江戸温泉アセットマネジメントさんに教えていただきます。</p>			
+									<p class="description">聞いたことあるかも？なんだそれ？という方も、これを機会に少し勉強しましょう。投資信託は、なかなか目にみえにくいもの。どんな風に作られて、どんな風に買うことができるのか、リートという金融商品のプロデューサーである大江戸温泉アセットマネジメントさんに教えていただきます。</p>	
 								</div>
+								<img class="day1-illust-balloon" src="/images/content/ooedo_joshikai2018/joshikai/day1-illust.png">
 							</div>
 							<p class="pre-joshikai-area"><span style="color:#f57d80;">＊</span>前回の女子会の様子は<a href="https://kinyu-joshi.jp/report/LjbKWn" target="_blank">こちら</a></p>
 						</div>
@@ -231,6 +232,7 @@
 							</p>
 							<p class="sub-date">住所：静岡県伊東市桜木町2丁目1−1<br>
 							伊東ホテルニュー岡部　物件詳細は<a class="link" href="https://oom-reit.com/ja/portfolio/detail.php?id=0003" target="_blank">こちら</a></p>
+							<img class="day2-illust-balloon" src="/images/content/ooedo_joshikai2018/joshikai/day2-illust.png">
 						</div>
 
 						<div class="joshikai-contents-block">
@@ -275,10 +277,17 @@
 									</div>
 								</div>
 
+								<div class="joshikai-attention">
+									<p class="attention-title"><span style="color:#f3626c;">＊</span> 現地集合・現地解散となります <span style="color:#f3626c;">＊</span></p>
+									<p class="attention-description pc">往復の交通費や2日目の移動にかかる交通費、観光時の入園料や飲食代金は、<br>
+									参加費に含まれませんので、ご自身でご準備をお願いいたします。</p>
+									<p class="attention-description sp">往復の交通費や2日目の移動にかかる交通費、観光時の入園料や飲食代金は、参加費に含まれませんので、ご自身でご準備をお願いいたします。</p>
+								</div>
+
 								<!-- アクセス部分 -->
 								<div class="day2-contents-detail-access">
 									<ul>
-										<p class="main-title">- 参考アクセス -</p>
+										<p class="main-title">東京駅からのアクセスの例<br><span>（ご自身でお手配ください。）</span></p>
 										<li>
 											<p class="title"><span style="color:#f57d80;">行き</span>：東京発 伊東着の場合（片道：2,270円）</p>
 											<p class="access-list pc">東京駅（9:38）＝＝東海道本線（熱海行）＝＝熱海駅（11:32）<br>
@@ -333,15 +342,28 @@
 			<div class="concept-block">
 				<h2 class="section-title pc"><img class="title" src="/images/content/ooedo_joshikai2018/title/title-joinus.png"></h2>
 				<h2 class="section-title sp"><img class="title" src="/images/content/ooedo_joshikai2018/title/sp/title-joinus.png"></h2>
-				<p class="fee-block-title">- 参加費について -</p>
+				<p class="fee-block-title">- 参加条件について -</p>
 				<div class="joinus-block">
+
+					<div class="fee-conditions">
+						<ul>
+							<li>
+								<p class="conditions-title">1. しっかり勉強にコミットしよう！</p>
+								<p class="conditions-description">2回セットでお申込みください。参加した感想を500文字程度のレポートにして当日ご提出いただきます♪</p>
+							</li>
+							<li>
+								<p class="conditions-title">2. 電車の切符はご自身でお手配ください♪</p>
+								<p class="conditions-description">現地集合・現地解散です。往復交通費や観光等にかかる費用は各自ご準備ください。</p>
+							</li>
+						</ul>
+					</div>
 
 					<div class="fee-detail clear">
 						<div class="fee-detail-el">
 							<img class="fee-detail-date" src="/images/content/ooedo_joshikai2018/joinus/day1.png">
 							<p class="date-title">5月24日<span>(木)</span></p>
 							<div class="img-box" style="background: url(/images/content/ooedo_joshikai2018/joshikai/day1-img1.jpg) center center / cover no-repeat;"></div>
-							<p class="joshikai-title">ツアーの前に、カフェでしっかり予習！</p>
+							<p class="joshikai-title">ツアーの前に、カフェでしっかり予習！<br><span><span style="color: #f3626c;">※</span>1回目は参加しない場合でも費用は変わりません。</span></p>
 						</div>
 						<div class="fee-detail-el">
 							<img class="fee-detail-date" src="/images/content/ooedo_joshikai2018/joinus/day2.png">
@@ -355,7 +377,18 @@
 						<p class="fee-title">- 参加費 -</p>
 						<p class="fee-details">10,000円（<span style="color:#6b9fcd;">1回目</span>&<span style="color:#f57d80;">2回目</span>）</p>
 					</div>
-	
+
+					<div class="fee-block-privilege">
+						<p class="main-title">嬉しい特典♪</p>
+						<ul>
+							<li><p>5月24日：フリードリンク付</p></li>
+							<li><p>6月10日：夕食（飲み放題付）</p></li>
+							<li><p>6月11日：朝食付</p></li>
+							<span style="display: block;height: 12px;"></span>
+							<li><p>女子会、勉強会参加費、資料、施設見学ツアー、伊東駅と伊東ホテルニュー岡部往復送迎、うちわ＆トートバッグ付！</p></li>
+						</ul>
+					</div>
+
 					<a class="to-joshikai-link" href="https://kinyu-joshi.jp/joshikai_tickets/KLcMGS" target="_blank">
 						<span>お申込みはこちら</span>
 					</a>
@@ -369,10 +402,11 @@
 							<li>今回の女子会を通じて特定のREIT投資口の取得勧誘を行うものではありませんのでご安心ください。</li>
 							<li>ご参加いただく方同士でも営業・勧誘はお断りさせていただいております。お困りのことがあれば編集部までお問い合わせください。(お問い合わせは<a href="/contact" target="_blank">こちら</a>より)</li>
 							<li>きんゆう女子。は、20代〜30代からの「金融ワカラナイ女子のためのコミュニティ」です。金融機関の視察・見学・調査目的でのご参加や金融にお詳しい方のご参加はご遠慮いただいております。マナー等守れない場合はご参加をご遠慮頂く可能性がございます。</li>
-							<li>各自現地集合・現地解散となります。往復の交通費や2日目の移動にかかる交通費、観光時の入園料や飲食代金は、参加費に含まれませんので、ご自身でご準備をお願いいたします。</li>
-							<li>参加費に含まれるもの：女子会・勉強会参加費、資料、見学ツアー、伊東駅から伊東ホテルニュー岡部までの往復送迎、うちわ＆トートバック、6月10日夕食1回、6月11日朝食1回</li>
-							<li>参加条件：2回セットでお申し込みください。金融を前向きに勉強したいメンバー向けのイベントです。 参加した感想を500文字程度のレポートにして当日ご提出いただきます！レポートは、大江戸温泉アセットマネジメントさんのWEBサイトや資料、きんゆう女子。のWEBサイトなどで匿名でご紹介させていただきます。</li>
-							<li>お申し込み後お取消する場合は、施設や食事準備の関係上、5月30日までにお知らせください。5月31日以降のお取消はご返金できませんのでご注意ください。また、女子会に参加しない場合でも費用は変わりません。</li>
+							<li>各自現地集合・現地解散となります。往復の交通費や2日目の移動にかかる交通費、観光時の入園料や飲食代金は、参加費に含まれませんので、ご自身でお手配、ご準備をお願いいたします。</li>
+							<li>参加費に含まれるもの：女子会・勉強会参加費、資料、施設見学ツアー、伊東駅から伊東ホテルニュー岡部までの往復送迎、うちわ＆トートバック、6月10日夕食1回（飲み放題付）、6月11日朝食1回</li>
+							<li>参加条件：2回セットでお申込みください。金融を前向きに勉強したいメンバー向けのイベントです。 参加した感想を500文字程度のレポートにして当日ご提出いただきます！レポートは、大江戸温泉アセットマネジメントさんのWEBサイトや資料、きんゆう女子。のWEBサイトなどで匿名でご紹介させていただきます。</li>
+							<li>女子会当日は、写真撮影または取材が入る可能性があります。お写真に写りたくない方は、あらかじめ編集部にお申出ください。</li>
+							<li>お申し込み後お取消する場合は、施設や食事準備の関係上、<span style="font-weight:bold;">5月30日</span>までにお知らせください。<span style="color:#f57d80;font-weight:bold;">5月31日以降</span>のお取消はご返金できませんのでご注意ください。また、1回目（5月24日）に参加しない場合でも費用は変わりません。</li>
 						</ul>
 					</div>
 				</div>
