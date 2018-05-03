@@ -3,6 +3,7 @@
 use \Model\Blogs;
 use \Model\News;
 use \Model\Events;
+use \Model\EventDisplayTopPages;
 use \Model\Projects;
 
 class Controller_Kinyu_Top extends Controller_Kinyubase
@@ -26,6 +27,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         $this->data['top_blogs'] = Blogs::lists(1, 9, true);
         $this->data['top_blogs2'] = Blogs::lists02(1, 12, true);
         $this->data['blogs_pick'] = Blogs::lists_picks(1, 5, true);
+        $this->data['display_top_event'] = EventDisplayTopPages::get();
         $this->template->reload_animation = View::forge('kinyu/template/reload_animation.smarty', $this->data);
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);

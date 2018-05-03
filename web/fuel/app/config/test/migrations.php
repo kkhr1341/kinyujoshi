@@ -81,6 +81,7 @@ return array(
         72 => '076_add_secret_to_blogs',
         73 => '077_add_display_to_events',
         74 => '078_add_display_event_date_to_events',
+        75 => '079_create_event_display_top_pages',
       ),
     ),
     'module' => 
