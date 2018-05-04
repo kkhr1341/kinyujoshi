@@ -205,6 +205,7 @@ class Events extends Base
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];
+        $data['place_code'] = '';
         $data['place'] = $params['place'];
         $data['place_url'] = $params['place_url'];
         $data['fee'] = $params['fee'];
@@ -219,6 +220,7 @@ class Events extends Base
         $data['username'] = \Auth::get('username');
         $data['code'] = $code;
         $data['created_at'] = \DB::expr('now()');
+        \DB::insert('events')->set($data)->execute();
         return $data;
     }
 

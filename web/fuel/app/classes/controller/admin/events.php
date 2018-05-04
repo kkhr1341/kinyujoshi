@@ -19,7 +19,7 @@ class Controller_Admin_Events extends Controller_Adminbase
 
         $this->data['sections'] = Sections::lists();
         $this->data['all_events'] = Events::lists02();
-        $this->data['closed_events'] = Events::lists(0);
+        $this->data['closed_events'] = Events::lists(0, null, null, null, "desc", null);
         $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
         $this->data['display_top_event'] = EventDisplayTopPages::get();
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
