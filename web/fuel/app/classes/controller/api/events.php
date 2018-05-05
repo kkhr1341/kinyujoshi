@@ -9,7 +9,11 @@ class Controller_Api_Events extends Controller_Apibase
         if (!Auth::has_access('events.admin')) {
             exit();
         }
-        return $this->ok(Events::create(\Input::all()));
+        try {
+            return $this->ok(Events::create(\Input::all()));
+        } catch(Exception $e) {
+            return $this->error("保存に失敗しました。");
+        } 
     }
 
     public function action_save()

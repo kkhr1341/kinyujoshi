@@ -196,7 +196,7 @@ class Events extends Base
 
         $code = self::getNewCode('events');
 
-        $data['incur_cancellation_fee_date'] = !$params['incur_cancellation_fee_date']? '0000-00-00 00:00:00': $params['incur_cancellation_fee_date'];
+        $data['incur_cancellation_fee_date'] = (!isset($params['incur_cancellation_fee_date']) || !$params['incur_cancellation_fee_date'])? '0000-00-00 00:00:00': $params['incur_cancellation_fee_date'];
 
         $data['event_category'] = $params['event_category'];
         $data['section_code'] = $params['section_code'];
@@ -205,7 +205,6 @@ class Events extends Base
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];
-        $data['place_code'] = '';
         $data['place'] = $params['place'];
         $data['place_url'] = $params['place_url'];
         $data['fee'] = $params['fee'];
