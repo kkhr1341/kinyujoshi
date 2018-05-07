@@ -29,6 +29,15 @@
   <div class="inner clear">
 
     <div class="report-detail-main">
+
+      <!--
+      {if $viewable == true}
+        {$blog.content|nofilter}
+      {else}
+        <p>not view</p>
+      {/if}
+      -->
+
       {$blog.content|nofilter}
 
       <!-- ソーシャルシェア -->

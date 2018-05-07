@@ -41,6 +41,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         // 最新を取得
         $this->data['blogs'] = Blogs::all('kinyu', '/kinyu/blog/', 1, 3, 5);
         $this->data['blog'] = Blogs::getByCodeWithProfile($code);
+        $this->data['viewable'] = $this->viewable($code);
         $this->data['top_events'] = Events::lists(1, 7, true);
 
         if ($this->data['blog'] === false) {
@@ -84,5 +85,17 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         } else {
             $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_after.smarty', $this->data);
         }
+    }
+
+    private function viewable($code)
+    {
+        $blog = Blogs::getByCode('blogs', $code);
+        if ($blog['secret'] == 0) {
+            return true;
+        }
+        if (Auth::check()) {
+            return true;
+        }
+        return false;
     }
 }
