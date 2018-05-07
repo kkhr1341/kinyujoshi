@@ -68,7 +68,7 @@
 
 	<!-- 過去 -->
 	<div class="tab-pane" id="tab3">
-		{if sizeof($all_events) == 0}
+		{if sizeof($past_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">イベントはありません</div>
 		{else}
 		<table class="table table-hover mt20">
@@ -79,7 +79,7 @@
 					<th>タイトル</th>
 				</tr>
 			</thead>
-			{foreach from=$all_events item=events_item}
+			{foreach from=$past_events item=events_item}
 			<tr class="events pointer" code="{$events_item.code}">
 				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
 				<td>{$events_item.section_code}</td>
@@ -92,7 +92,7 @@
 
 	<!-- TOPバナー設定 -->
 	<div class="tab-pane" id="tab4">
-		{if sizeof($open_events) == 0}
+		{if sizeof($all_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">イベントはありません</div>
 		{else}
 
@@ -107,7 +107,7 @@
                             <th>タイトル</th>
                         </tr>
                     </thead>
-                    {foreach from=$open_events item=events_item}
+                    {foreach from=$all_events item=events_item}
                     <tr code="{$events_item.code}">
                         <td>
                             <div class="radio_box clear">
@@ -140,15 +140,23 @@ $(function(){
 		location.href = "/admin/joshikai/edit/"+code;
 	});
 
-	$('#save-top-display-events').click(function(){
-	    var code = $('#tab4 [name="code"]:checked').val();
-        if (!code) {
-            ts.error("イベントを選択してください");
-            return;
+    $('#tab4 .form-long').click(function(e){
+        e.preventDefault();
+        var radio = $('#' + $(this).attr('for'));
+        if (radio.is(':checked')) {
+            radio.prop('checked', false);
+        } else {
+            radio.prop('checked', true);
         }
+    });
+
+	$('#save-top-display-events').click(function(){
         var url = "/api/eventdisplaytoppages/save";
+	    var code = $('#tab4 [name="code"]:checked').val();
         var params = {};
-        params.code = code;
+        if (code) {
+            params.code = code;
+        }
         bootbox.confirm("このイベントをTOPに表示しますか？", function(result) {
             if (result) {
                 ajax.post(url, params, function(data){

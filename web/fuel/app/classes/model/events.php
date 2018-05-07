@@ -171,10 +171,10 @@ class Events extends Base
 
         if ($open === null) {
         } else {
-            $datas = $datas->where('event_date', '<', \DB::expr('NOW()'));
+            $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
         }
 
-        $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+//        $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
         $datas = $datas->order_by('event_date', 'asc');
 
         if ($limit === null) {

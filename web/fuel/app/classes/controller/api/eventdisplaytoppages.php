@@ -9,6 +9,10 @@ class Controller_Api_Eventdisplaytoppages extends Controller_Apibase
         if (!Auth::check()) {
             return $this->error('login');
         }
-        return $this->ok(EventDisplayTopPages::save(\Input::post('code')));
+        if (\Input::post('code')) {
+            return $this->ok(EventDisplayTopPages::save(\Input::post('code')));
+        } else {
+            return $this->ok(EventDisplayTopPages::delete());
+        }
     }
 }

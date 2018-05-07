@@ -18,6 +18,7 @@ class Controller_Admin_Events extends Controller_Adminbase
         }
 
         $this->data['sections'] = Sections::lists();
+        $this->data['past_events'] = Events::lists02(null, null, 1);
         $this->data['all_events'] = Events::lists02();
         $this->data['closed_events'] = Events::lists(0, null, null, null, "desc", null);
         $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
@@ -65,7 +66,7 @@ class Controller_Admin_Events extends Controller_Adminbase
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         // $this->data['events'] = Events::lists(1, 50, true);
         // $this->data['sections'] = Sections::lists();
-        $this->data['all_events'] = Events::lists02(null, null, null, null, null, null);
+        $this->data['all_events'] = Events::lists02(null, null, 1, null, null, null);
        //  $this->data['closed_events'] = Events::lists(0);
         $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';

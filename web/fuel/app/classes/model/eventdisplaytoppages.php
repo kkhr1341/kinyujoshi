@@ -17,12 +17,18 @@ class EventDisplayTopPages extends Base
             ->execute();
     }
 
+    public static function delete()
+    {
+        \DB::delete('event_display_top_pages')->execute();
+    }
+
     public static function get()
     {
         return \DB::select(\DB::expr('*'))
             ->from('event_display_top_pages')
             ->join('events')
             ->on('events.code', '=', 'event_display_top_pages.event_code')
+            ->where('events.status', '=', 1)
             ->where('events.disable', '=', 0)
             ->execute()
             ->current();
