@@ -1,284 +1,341 @@
-
 <ol class="breadcrumb">
-	<li><a href="/">ホーム</a></li>
-	<li><a href="/admin">マイページ</a></li>
-	<li><a href="/admin/report">記事の管理</a></li>
-	<li class="active">記事を編集する</li>
+    <li><a href="/">ホーム</a></li>
+    <li><a href="/admin">マイページ</a></li>
+    <li><a href="/admin/report">記事の管理</a></li>
+    <li class="active">記事を編集する</li>
 </ol>
 
 <form>
-	<fieldset>
-		<div class="my-form-container clear">
-			<div class="form-left">
+    <fieldset>
+        <div class="my-form-container clear">
+            <div class="form-left">
 
-        {*
-				<div class="form-group mb50">
-				
-					<label class="form-group-event-label">カテゴリー</label>
-					<div class="radio_box clear">
-            <input type="radio" value="lifestyle" name="section_code" id="section_code1" class="form-radio" placeholder="" {if $blogs.section_code == "lifestyle"}checked{/if}>
-            <label for="section_code1" class="form-long">ライフスタイル</label>
-            
-            <input type="radio" value="carrier" name="section_code" id="section_code2" class="form-radio" placeholder="" {if $blogs.section_code == "carrier"}checked{/if}>
-            <label for="section_code2" class="form-long">キャリア</label>
-            
-            <input type="radio" value="independence" name="section_code" id="section_code3" class="form-radio" placeholder="" {if $blogs.section_code == "independence"}checked{/if}>
-            <label for="section_code3" class="form-long">どくりつ&きぎょう</label>
+                {*
+                <div class="form-group mb50">
 
-            <input type="radio" value="parallel" name="section_code" id="section_code4" class="form-radio" placeholder="" {if $blogs.section_code == "parallel"}checked{/if}>
-            <label for="section_code4" class="form-long">パラレル</label>
-          </div>
-          
-				</div>
-        *}
+                    <label class="form-group-event-label">カテゴリー</label>
+                    <div class="radio_box clear">
+                        <input type="radio" value="lifestyle" name="section_code" id="section_code1" class="form-radio"
+                               placeholder="" {if $blogs.section_code== "lifestyle"}checked{/if}>
+                        <label for="section_code1" class="form-long">ライフスタイル</label>
 
+                        <input type="radio" value="carrier" name="section_code" id="section_code2" class="form-radio"
+                               placeholder="" {if $blogs.section_code== "carrier"}checked{/if}>
+                        <label for="section_code2" class="form-long">キャリア</label>
 
-				<div class="form-group mb50">
+                        <input type="radio" value="independence" name="section_code" id="section_code3"
+                               class="form-radio" placeholder="" {if $blogs.section_code== "independence"}checked{/if}>
+                        <label for="section_code3" class="form-long">どくりつ&きぎょう</label>
 
-					<label class="form-group-event-label">レポートの種類</label>
-					<div class="radio_box clear">
-            <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="" {if $blogs.kind == "女子会レポート"}checked{/if}>
-            <label for="kind1" class="form-long">女子会レポ</label>   
+                        <input type="radio" value="parallel" name="section_code" id="section_code4" class="form-radio"
+                               placeholder="" {if $blogs.section_code== "parallel"}checked{/if}>
+                        <label for="section_code4" class="form-long">パラレル</label>
+                    </div>
 
-            <input type="radio" value="イベントレポート" name="kind" id="kind2" class="form-radio" placeholder="" {if $blogs.kind == "イベントレポート"}checked{/if}>
-            <label for="kind2" class="form-long">イベントレポ</label>
-            
-            <input type="radio" value="取材レポート" name="kind" id="kind3" class="form-radio" placeholder="" {if $blogs.kind == "取材レポート"}checked{/if}>
-            <label for="kind3" class="form-long">取材レポ</label>
-
-            <input type="radio" value="イベント告知" name="kind" id="kind4" class="form-radio" placeholder="" {if $blogs.kind == "イベント告知"}checked{/if}>
-            <label for="kind4" class="form-long">イベント告知</label>
-
-            <input type="radio" value="コラム" name="kind" id="kind5" class="form-radio" placeholder="" {if $blogs.kind == "コラム"}checked{/if}>
-            <label for="kind5" class="form-long">コラム</label>
-
-            <input type="radio" value="わたしを知る" name="kind" id="kind6" class="form-radio" placeholder="" {if $blogs.kind == "わたしを知る"}checked{/if}>
-            <label for="kind6" class="form-long" style="border:1px solid #89e2d1;box-sizing: border-box;">「わたし」を知る</label>
-
-          </div>
-					
-        </div>
-	
-				{*
-        <div class="form-group mb50">
-					<label class="form-group-event-label">キーワード</label>
-			
-					<div class="radio_box clear">
-            <input type="radio" value="ためる" name="keyword" id="keyword01" class="form-radio" placeholder="" {if 'ためる' == $blogs.keyword}checked{/if}>
-            <label for="keyword01" class="form-long">ためる</label>
-            
-            <input type="radio" value="つかう" name="keyword" id="keyword02" class="form-radio" placeholder="" {if 'つかう' == $blogs.keyword}checked{/if}>
-            <label for="keyword02" class="form-long">つかう</label>
-            
-            <input type="radio" value="ふやす" name="keyword" id="keyword03" class="form-radio" placeholder="" {if 'ふやす' == $blogs.keyword}checked{/if}>
-            <label for="keyword03" class="form-long">ふやす</label>
-
-            <input type="radio" value="まもる" name="keyword" id="keyword04" class="form-radio" placeholder="" {if 'まもる' == $blogs.keyword}checked{/if}>
-            <label for="keyword04" class="form-long">まもる</label>
-
-            <input type="radio" value="かせぐ" name="keyword" id="keyword05" class="form-radio" placeholder="" {if 'かせぐ' == $blogs.keyword}checked{/if}>
-            <label for="keyword05" class="form-long">かせぐ</label>
-
-          </div>
-        </div>
-        *}
-
-        <div class="form-group mb50">
-					<label class="form-group-event-label">ピックアップ</label>
-					<div class="radio_box clear">
-            <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="" {if $blogs.pickup == '1'}checked{/if}>
-            <label for="pickup01" class="form-long">yes</label>
-            <input type="radio" value="0" name="pickup" id="pickup02" class="form-radio" placeholder="" {if $blogs.pickup == '0'}checked{/if}>
-            <label for="pickup02" class="form-long">no!</label>
-          </div>
-        </div>
+                </div>
+                *}
 
 
-		<div class="form-group mb50">
-			<label class="form-group-event-label">メンバー限定レポート</label>
-			<div class="radio_box clear">
-            <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="" {if $blogs.secret == "1"}checked{/if}>
-            <label for="secret01" class="form-long">YES!</label>
+                <div class="form-group mb50">
 
-            <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" {if $blogs.secret == "0"}checked{/if}>
-            <label for="secret02" class="form-long">NO!</label>
-          </div>
-        </div>
+                    <label class="form-group-event-label">レポートの種類</label>
+                    <div class="radio_box clear">
+                        <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="" {if
+                               $blogs.kind== "女子会レポート"}checked{/if}>
+                        <label for="kind1" class="form-long">女子会レポ</label>
 
-				<div class="form-group">
-					<label class="form-group-event-label">タイトル</label>
-          <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
-					<input style="height: 40px;" type="text" id="title" class="form-control" placeholder="" value="{$blogs.title}">
-				</div>
+                        <input type="radio" value="イベントレポート" name="kind" id="kind2" class="form-radio" placeholder=""
+                               {if $blogs.kind== "イベントレポート"}checked{/if}>
+                        <label for="kind2" class="form-long">イベントレポ</label>
 
-				<div class="form-group">
-					<label class="form-group-event-label">説明文</label>
-          <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
-					<textarea style="height: 120px;" type="text" id="description" class="form-control" placeholder="">{$blogs.description}</textarea>
-				</div>
+                        <input type="radio" value="取材レポート" name="kind" id="kind3" class="form-radio" placeholder="" {if
+                               $blogs.kind== "取材レポート"}checked{/if}>
+                        <label for="kind3" class="form-long">取材レポ</label>
 
-				<div class="form-group">
-					<label class="form-group-event-label">本文</label>
-					<textarea id="content" name="content">{$blogs.content}</textarea>
-				</div>
-				
-				<div class="form-group">
-					<label class="form-group-event-label">公開日時</label>
+                        <input type="radio" value="イベント告知" name="kind" id="kind4" class="form-radio" placeholder="" {if
+                               $blogs.kind== "イベント告知"}checked{/if}>
+                        <label for="kind4" class="form-long">イベント告知</label>
 
-					<div class='input-group date datetimepicker'>
-						<input type='text' class="form-control" id="open_date" value="{$blogs.open_date|date_format:"%Y/%m/%d %H:%M"}" />
-						<span class="input-group-addon">
+                        <input type="radio" value="コラム" name="kind" id="kind5" class="form-radio" placeholder="" {if
+                               $blogs.kind== "コラム"}checked{/if}>
+                        <label for="kind5" class="form-long">コラム</label>
+
+                        <input type="radio" value="わたしを知る" name="kind" id="kind6" class="form-radio" placeholder="" {if
+                               $blogs.kind== "わたしを知る"}checked{/if}>
+                        <label for="kind6" class="form-long" style="border:1px solid #89e2d1;box-sizing: border-box;">「わたし」を知る</label>
+
+                    </div>
+
+                </div>
+
+                {*
+                <div class="form-group mb50">
+                    <label class="form-group-event-label">キーワード</label>
+
+                    <div class="radio_box clear">
+                        <input type="radio" value="ためる" name="keyword" id="keyword01" class="form-radio" placeholder=""
+                               {if 'ためる' == $blogs.keyword}checked{/if}>
+                        <label for="keyword01" class="form-long">ためる</label>
+
+                        <input type="radio" value="つかう" name="keyword" id="keyword02" class="form-radio" placeholder=""
+                               {if 'つかう' == $blogs.keyword}checked{/if}>
+                        <label for="keyword02" class="form-long">つかう</label>
+
+                        <input type="radio" value="ふやす" name="keyword" id="keyword03" class="form-radio" placeholder=""
+                               {if 'ふやす' == $blogs.keyword}checked{/if}>
+                        <label for="keyword03" class="form-long">ふやす</label>
+
+                        <input type="radio" value="まもる" name="keyword" id="keyword04" class="form-radio" placeholder=""
+                               {if 'まもる' == $blogs.keyword}checked{/if}>
+                        <label for="keyword04" class="form-long">まもる</label>
+
+                        <input type="radio" value="かせぐ" name="keyword" id="keyword05" class="form-radio" placeholder=""
+                               {if 'かせぐ' == $blogs.keyword}checked{/if}>
+                        <label for="keyword05" class="form-long">かせぐ</label>
+
+                    </div>
+                </div>
+                *}
+
+                <div class="form-group mb50">
+                    <label class="form-group-event-label">ピックアップ</label>
+                    <div class="radio_box clear">
+                        <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="" {if
+                               $blogs.pickup== '1'}checked{/if}>
+                        <label for="pickup01" class="form-long">yes</label>
+                        <input type="radio" value="0" name="pickup" id="pickup02" class="form-radio" placeholder="" {if
+                               $blogs.pickup== '0'}checked{/if}>
+                        <label for="pickup02" class="form-long">no!</label>
+                    </div>
+                </div>
+
+
+                <div class="form-group mb50">
+                    <label class="form-group-event-label">メンバー限定レポート</label>
+                    <div class="radio_box clear">
+                        <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="" {if
+                               $blogs.secret== "1"}checked{/if}>
+                        <label for="secret01" class="form-long">YES!</label>
+
+                        <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" {if
+                               $blogs.secret== "0"}checked{/if}>
+                        <label for="secret02" class="form-long">NO!</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">タイトル</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
+                    <input style="height: 40px;" type="text" id="title" class="form-control" placeholder=""
+                           value="{$blogs.title}">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">サムネイル画像</label>
+                    <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+                    <input type="hidden" id="main_image" value="{$blogs.main_image}">
+
+                    <!-- サムネイル画像を投稿するとここに表示される！ -->
+                    {if $blogs.main_image}
+                    <div class="thumbnail-img"
+                         style="background:url({$blogs.main_image}) center center / cover no-repeat;"></div>
+                    {else}
+                    <div class="thumbnail-img"></div>
+                    {/if}
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">説明文</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
+                    <textarea style="height: 120px;" type="text" id="description" class="form-control" placeholder="">{$blogs.description}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">本文</label>
+                    <textarea id="content" name="content">{$blogs.content}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">公開日時</label>
+
+                    <div class='input-group date datetimepicker'>
+                        <input type='text' class="form-control" id="open_date" value="{$blogs.open_date|date_format:" %Y/%m/%d
+                        %H:%M"}" />
+                        <span class="input-group-addon">
 							<span class="glyphicon glyphicon-calendar"></span>
 						</span>
-					</div>
-				</div>
-			</div>
-			<div class="form-right">
-				<div class="edit-block-menu">
-					<li><button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button></li>
-					<li><button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button></li>
-					<li><button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button></li>
-					<li><button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button></li>
-				</div>
-			</div>
-		</div>
-	</fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="form-right">
+                <div class="edit-block-menu">
+                    <li>
+                        <button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button>
+                    </li>
+                    <li>
+                        <button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button>
+                    </li>
+                    <li>
+                        <button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー
+                        </button>
+                    </li>
+                    <li>
+                        <button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </fieldset>
 </form>
 
 <script>
 
-var code = "{$blogs.code}";
-// $(function(){
-// 	$('.preview-blog').click(function(){
-// 		location.href = window.open("/blog/"+code);
-// 	});
-// });
-var ttttt01 = $('#section_code').val();
-console.log(ttttt01);
+    var code = "{$blogs.code}";
+    // $(function(){
+    // 	$('.preview-blog').click(function(){
+    // 		location.href = window.open("/blog/"+code);
+    // 	});
+    // });
 
-$(function(){
+    $('.thumbnail-img-block')
+        .uploader('/api/redactor/upload/image', {
+            success: function (response) {
+                var url = response.data.url;
+                $('#main_image').val(url);
+                $('.thumbnail-img').css({
+                    'background-image': 'url(' + url + ')',
+                    'background-position': 'center center',
+                    'background-repeat': 'no-repeat',
+                    'background-size': 'cover'
+                });
+            }
+        });
 
-	$('.datetimepicker').datetimepicker({
-		format : 'YYYY/MM/DD HH:mm'
-	});
-	
-	$('#save').click(function(){
-		var url = "/api/blogs/save";
-		var params = {};
-		params.code = code;
-		
-		params.section_code = $('#section_code').val();
-		//params.section_name = $('#section_name').val();
+    $(function () {
 
-		params.section_code = $("[name=section_code]:checked").val();
-		params.kind = $("[name=kind]:checked").val();
-		//params.keyword = $("[name=keyword]:checked").val();
-		params.pickup = $("[name=pickup]:checked").val();
-		params.secret = $("[name=secret]:checked").val();
-		params.title = $('#title').val();
-		params.description = $('#description').val();
-		params.content = $('#content').val();
-		params.open_date = $('#open_date').val();
-		params.status = 1;
-		
-		// if (params.section_code == "") {
-		// 	ts.error("カテゴリを選択してください");
-		// 	return false;
-		// }
-		// if (params.kind == "") {
-		// 	ts.error("種別");
-		// 	return false;
-		// }
-		if (params.title == "") {
-			ts.error("タイトルを入力してください");
-			return false;
-		}
-		if (params.description == "") {
-			ts.error("説明文を入力してください");
-			return false;
-		}
-		if (strip_tags(params.content) == "") {
-			ts.error("本文を入力してください");
-			return false;
-		}
-		
-		ajax.post(url, params, function(data){
-			ts.success("公開しました", function(){
-				//location.href = "/admin/blogs";
-			});
-		});
-	});
+        $('.datetimepicker').datetimepicker({
+            format: 'YYYY/MM/DD HH:mm'
+        });
 
-	$('#preview').click(function(){
-		window.open("/report/"+code);
-	});
+        $('#save').click(function () {
+            var url = "/api/blogs/save";
+            var params = {};
+            params.code = code;
 
-	$('#save_closed').click(function(){
-		var url = "/api/blogs/save";
-		var params = {};
-		params.code = code;
-		
-		params.section_code = $('#section_code').val();
-		//params.section_name = $('#section_name').val();
+            params.section_code = $('#section_code').val();
+            //params.section_name = $('#section_name').val();
 
-		params.section_code = $("[name=section_code]:checked").val();
-		params.kind = $("[name=kind]:checked").val();
-		//params.keyword = $("[name=keyword]:checked").val();
-		params.pickup = $("[name=pickup]:checked").val();
-		
-		params.secret = $("[name=secret]:checked").val();
-		params.title = $('#title').val();
-		params.description = $('#description').val();
-		params.content = $('#content').val();
-		params.open_date = $('#open_date').val();
-		params.status = 0;
-		
-		if (params.title == "") {
-			params.title = "タイトル未設定";
-		}
-		
-		ajax.post(url, params, function(data){
-			ts.success("下書き保存しました");
-		});
-	});
+            params.section_code = $("[name=section_code]:checked").val();
+            params.kind = $("[name=kind]:checked").val();
+            //params.keyword = $("[name=keyword]:checked").val();
+            params.pickup = $("[name=pickup]:checked").val();
+            params.secret = $("[name=secret]:checked").val();
+            params.title = $('#title').val();
+            params.main_image = $('#main_image').val();
+            params.description = $('#description').val();
+            params.content = $('#content').val();
+            params.open_date = $('#open_date').val();
+            params.status = 1;
 
-	$('#delete').click(function(){
-		var url = "/api/blogs/delete";
-		var params = {};
-		params.code = code;
-		bootbox.confirm("この記事を削除しますか？", function(result) {
-			if (result) {
-				ajax.post(url, params, function(data){
-					ts.success("削除しました", function(){
-						location.href = "/admin/blogs";
-					});
-				});
-			}
-			else {
-				ts.info("キャンセルしました");
-			}
-		});
-	});
-	
-	$('#content').redactor({
-		focus: false,
-		lang: 'en',
-		plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
-		imageUpload: '/api/redactor/upload/image',
-		imageManagerJson: '/api/redactor/list/image',
-		fileUpload: '/api/redactor/upload/file',
-		fileManagerJson: '/api/redactor/list/file',
-		callbacks: {
-            imageUpload: function($img, json) {
-                $img.attr('src', json.data.url);
-            },
-			fileUploadError: function(json) {
-				alert(json.message);
-			},
-			imageUploadError: function(json) {
-				alert(json.message);
-			},
-		}
-	});
-});
+            // if (params.section_code == "") {
+            // 	ts.error("カテゴリを選択してください");
+            // 	return false;
+            // }
+            // if (params.kind == "") {
+            // 	ts.error("種別");
+            // 	return false;
+            // }
+            if (params.title == "") {
+                ts.error("タイトルを入力してください");
+                return false;
+            }
+            if (params.description == "") {
+                ts.error("説明文を入力してください");
+                return false;
+            }
+            if (strip_tags(params.content) == "") {
+                ts.error("本文を入力してください");
+                return false;
+            }
+
+            ajax.post(url, params, function (data) {
+                ts.success("公開しました", function () {
+                    //location.href = "/admin/blogs";
+                });
+            });
+        });
+
+        $('#preview').click(function () {
+            window.open("/report/" + code);
+        });
+
+        $('#save_closed').click(function () {
+            var url = "/api/blogs/save";
+            var params = {};
+            params.code = code;
+
+            params.section_code = $('#section_code').val();
+            //params.section_name = $('#section_name').val();
+
+            params.section_code = $("[name=section_code]:checked").val();
+            params.kind = $("[name=kind]:checked").val();
+            //params.keyword = $("[name=keyword]:checked").val();
+            params.pickup = $("[name=pickup]:checked").val();
+
+            params.secret = $("[name=secret]:checked").val();
+            params.title = $('#title').val();
+            params.main_image = $('#main_image').val();
+            params.description = $('#description').val();
+            params.content = $('#content').val();
+            params.open_date = $('#open_date').val();
+            params.status = 0;
+
+            if (params.title == "") {
+                params.title = "タイトル未設定";
+            }
+
+            ajax.post(url, params, function (data) {
+                ts.success("下書き保存しました");
+            });
+        });
+
+        $('#delete').click(function () {
+            var url = "/api/blogs/delete";
+            var params = {};
+            params.code = code;
+            bootbox.confirm("この記事を削除しますか？", function (result) {
+                if (result) {
+                    ajax.post(url, params, function (data) {
+                        ts.success("削除しました", function () {
+                            location.href = "/admin/blogs";
+                        });
+                    });
+                }
+                else {
+                    ts.info("キャンセルしました");
+                }
+            });
+        });
+
+        $('#content').redactor({
+            focus: false,
+            lang: 'en',
+            plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
+            imageUpload: '/api/redactor/upload/image',
+            imageManagerJson: '/api/redactor/list/image',
+            fileUpload: '/api/redactor/upload/file',
+            fileManagerJson: '/api/redactor/list/file',
+            callbacks: {
+                imageUpload: function ($img, json) {
+                    $img.attr('src', json.data.url);
+                },
+                fileUploadError: function (json) {
+                    alert(json.message);
+                },
+                imageUploadError: function (json) {
+                    alert(json.message);
+                },
+            }
+        });
+    });
 </script>

@@ -190,7 +190,6 @@ class Blogs extends Base
         $params['section_code'] = '';
         $params['section_name'] = '';
         $params['created_at'] = \DB::expr('now()');
-        $params['main_image'] = self::get_main_image($params);
         \DB::insert('blogs')->set($params)->execute();
 
         return $params;
@@ -200,8 +199,7 @@ class Blogs extends Base
     public static function save($params)
     {
 
-        $username = \Auth::get('username');
-        $params['main_image'] = self::get_main_image($params);
+//        $username = \Auth::get('username');
 
         \DB::update('blogs')->set($params)->where('code', '=', $params['code'])->execute();
 
