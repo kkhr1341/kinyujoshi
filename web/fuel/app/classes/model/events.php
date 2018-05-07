@@ -145,6 +145,16 @@ class Events extends Base
         return $datas;
     }
 
+    /**
+     * 過去のイベント一覧取得
+     * @param null $mode
+     * @param null $limit
+     * @param null $open
+     * @param null $section_code
+     * @param null $secret
+     * @param int $display
+     * @return mixed
+     */
     public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1)
     {
 
@@ -169,12 +179,12 @@ class Events extends Base
             $datas = $datas->where('status', '=', $mode);
         }
 
-        if ($open === null) {
-        } else {
-            $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
-        }
+//        if ($open === null) {
+//        } else {
+////            $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+//        }
 
-//        $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+        $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
         $datas = $datas->order_by('event_date', 'asc');
 
         if ($limit === null) {
@@ -188,6 +198,27 @@ class Events extends Base
         }
 
         return $datas;
+    }
+
+    /**
+     * 全イベント一覧取得
+     * @param null $mode
+     * @param null $limit
+     * @param null $open
+     * @param null $section_code
+     * @param null $secret
+     * @param int $display
+     * @return mixed
+     */
+    public static function lists03()
+    {
+        return \DB::select(\DB::expr('*, events.code, (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num'))
+            ->from('events')
+            ->join('profiles', 'left')
+            ->on('events.username', '=', 'profiles.username')
+            ->where('events.disable', '=', 0)
+            ->order_by('event_date', 'asc')
+            ->execute();
     }
 
     public static function create($params)
