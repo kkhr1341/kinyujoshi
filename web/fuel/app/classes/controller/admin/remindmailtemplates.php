@@ -17,7 +17,7 @@ class Controller_Admin_Remindmailtemplates extends Controller_Adminbase
             Response::redirect('/');
             exit();
         }
-        $this->data['open_events'] = Events::lists(1);
+        $this->data['open_events'] = Events::lists(1, null, null, null, "asc");
 
         $this->template->contents = View::forge('admin/remindmailtemplates/index.smarty', $this->data);
     }
