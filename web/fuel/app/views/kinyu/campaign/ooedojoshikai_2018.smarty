@@ -129,7 +129,7 @@
 				<span style="display: block;height: 12px;"></span>
 				投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が含まれているのパッケージのことです。</p>
 				<div class="reit-illust-block">
-					<img class="pc" src="/images/content/ooedo_joshikai2018/reit-illust.jpg">
+					<img class="pc" src="/images/content/ooedo_joshikai2018/reit-illust.png">
 					<img class="sp" src="/images/content/ooedo_joshikai2018/reit-illust_sp.png">
 				</div>
 				<p class="description">キーワード！<br><span style="font-weight:bold;color:#f57d80;">投資信託　ETF　上場</span></p>
@@ -185,7 +185,7 @@
 								<div class="img-box" style="background: url(/images/content/ooedo_joshikai2018/joshikai/day1-img1.jpg) center center / cover no-repeat;"></div>
 								<div class="text-box">
 									<p class="main-description">前半は、奥深い温泉について考えてみます。</p>
-									<p class="description">日本の温泉の種類や温泉の効用など基本的なことから、温泉でのマナーや面白い楽しみ方まで温泉に詳しくなりましょう！そして、意外な温泉と金融の共通点を探ります。温泉とエンターテインメント、お食事が人気の大江戸温泉物語グループとはどんな会社でどんな施設なのか？そのビジネスモデルの秘密にも迫ってみます。</p>			
+									<p class="description">日本の温泉の種類や温泉の効用など基本的なことから、温泉でのマナーや面白い楽しみ方まで温泉に詳しくなりましょう！そして、意外な温泉と金融の共通点を探ります。温泉とエンターテインメント、お食事が人気の大江戸温泉物語とはどんな温泉施設なのか？そしてそのなかの14施設を保有している大江戸温泉リート投資法人（以下「大江戸温泉リート」といいます。）とはどんな投資戦略を持っているのか？そのビジネスモデルの秘密にも迫ってみます。</p>			
 								</div>
 							</div>
 							<div class="joshikai-contents-el clear">
@@ -211,8 +211,7 @@
 										大江戸温泉アセットマネジメント株式会社<br>
 										財務部長　本多智裕さん<br>
 										財務部 マネージャー　廣田典子さん<br>
-										企画管理部長　伊藤真也さん<br>
-										投資運用部長　須藤政司さん
+										企画管理部　マネージャー　小玉裕子さん<br>
 									</p>			
 								</div>
 								<div class="img-box" style="background: url(/images/content/ooedo_joshikai2018/cafe-img.jpg) center center / cover no-repeat;"></div>
@@ -245,7 +244,16 @@
 									<img class="pc" src="/images/content/ooedo_joshikai2018/joshikai/day1_all.png" alt="">
 									<img class="sp" src="/images/content/ooedo_joshikai2018/joshikai/day1_all_sp1.png" alt="">
 									<img class="sp" src="/images/content/ooedo_joshikai2018/joshikai/day1_all_sp2.png" alt="">
-									<img class="pc" style="margin:50px 0px 32px;" src="/images/content/ooedo_joshikai2018/joshikai/day1_all2.png" alt="">
+									<div class="day1-contents-detail-after">
+										<p>◆ゲスト<br>大江戸温泉アセットマネジメント株式会社
+											<span style="display: block;height: 8px;"></span>
+											財務部長　本多智裕さん<br>
+											財務部 マネージャー　廣田典子さん<br>
+											企画管理部長　伊藤真也さん<br>
+											企画管理部　マネージャー　小玉裕子さん<br>
+											投資運用部長　須藤政司さん</p>
+									</div>
+									<img class="pc" style="margin:40px 0px 32px;" src="/images/content/ooedo_joshikai2018/joshikai/day1_all2.png" alt="">
 									<img class="day1_all2 sp" src="/images/content/ooedo_joshikai2018/joshikai/day1_all2_sp.png" alt="">
 									<img class="pc" src="/images/content/ooedo_joshikai2018/joshikai/day1_all3.png" alt="">
 									<img class="day1_all3 sp" src="/images/content/ooedo_joshikai2018/joshikai/day1_all3_sp.png" alt="">
@@ -323,7 +331,7 @@
 						<div class="img-box" style="background: url(/images/content/ooedo_joshikai2018/ooam-img.jpg) center center / cover no-repeat;"></div>
 						<div class="text-box">
 							<!-- <p class="main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p> -->
-							<p class="description">大江戸温泉アセットマネジメントさんは、全国で温泉・温浴関連施設の経営、および活性化事業を行う大江戸温泉物語グループの一員で、「大江戸温泉リート投資法人」の資産運用会社です♪
+							<p class="description">大江戸温泉アセットマネジメントさんは、全国で温泉・温浴関連施設の経営、および活性化事業を行う大江戸温泉物語グループの一員で、「大江戸温泉リート」の資産運用会社です♪
 								<span style="display: block;height: 12px;"></span>「大江戸温泉リート」は、温泉・温浴関連施設を主な投資対象とする日本初のユニークな特化型リートとして、2016年8月に東京証券取引所に上場しました。
 								<span style="display: block;height: 12px;"></span>「大江戸温泉リート」は、お客様にお手頃でお得感のある価格で高品質なサービスを提供することを可能にする「大江戸モデル」が導入された温泉・温浴関連施設へ重点投資を行い、地域の活性化及び温泉関連産業の大衆化に貢献することを基本理念としています。</p>
 							<a class="about-ooedo-detail-link ff-normal" href="http://oom-reit.com/" target="_blank"><span style="color:#FBB79E">◆</span>投資法人WEBサイト</a>
@@ -399,12 +407,13 @@
 					<div class="joinus-notes-inner">
 						<ul>
 							<li>どの金融機関にも属さないポジションで、質の高いお金の情報を多角的にシェアできる場を提供します。必要なことを必要なだけまとめた情報を用意、シェアいたします。</li>
-							<li>今回の女子会を通じて特定のREIT投資口の取得勧誘を行うものではありませんのでご安心ください。</li>
+							<li>今回の特別女子会は、大江戸温泉アセットマネジメントさんの「大江戸温泉リート」のIR活動の一環として開催いたします。</li>
+							<li>今回の特別女子会を通じて特定のREIT投資口の取得勧誘を行うものではありませんのでご安心ください。</li>
 							<li>ご参加いただく方同士でも営業・勧誘はお断りさせていただいております。お困りのことがあれば編集部までお問い合わせください。(お問い合わせは<a href="/contact" target="_blank">こちら</a>より)</li>
 							<li>きんゆう女子。は、20代〜30代からの「金融ワカラナイ女子のためのコミュニティ」です。金融機関の視察・見学・調査目的でのご参加や金融にお詳しい方のご参加はご遠慮いただいております。マナー等守れない場合はご参加をご遠慮頂く可能性がございます。</li>
 							<li>各自現地集合・現地解散となります。往復の交通費や2回目の移動にかかる交通費、観光時の入園料や飲食代金は、参加費に含まれませんので、ご自身でお手配、ご準備をお願いいたします。</li>
 							<li>参加費に含まれるもの：女子会・勉強会参加費、資料、施設見学ツアー、伊東駅から伊東ホテルニュー岡部までの往復送迎、うちわ＆トートバック、6月10日夕食1回（飲み放題付）、6月11日朝食1回</li>
-							<li>参加条件：2回セットでお申込みください。金融を前向きに勉強したいメンバー向けのイベントです。 参加した感想を500文字程度のレポートにして当日ご提出いただきます！レポートは、大江戸温泉アセットマネジメントさんのWEBサイトや資料、きんゆう女子。のWEBサイトなどで匿名でご紹介させていただきます。</li>
+							<li>参加条件：2回セットでお申込みください。金融を前向きに勉強したいメンバー向けのイベントです。 参加した感想を500文字程度のレポートにして当日ご提出いただきます！レポートは、大江戸温泉リートのIR活動として資料等に掲載したり、きんゆう女子。のWEBサイトなどで匿名でご紹介させていただきます。</li>
 							<li>女子会当日は、写真撮影または取材が入る可能性があります。お写真に写りたくない方は、あらかじめ編集部にお申出ください。</li>
 							<li>お申し込み後お取消する場合は、施設や食事準備の関係上、<span style="font-weight:bold;">5月30日</span>までにお知らせください。<span style="color:#f57d80;font-weight:bold;">5月31日以降</span>のお取消はご返金できませんのでご注意ください。また、1回目（5月24日）に参加しない場合でも費用は変わりません。</li>
 						</ul>

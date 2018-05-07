@@ -413,6 +413,14 @@
   top: -5px;
 }
 
+.day1-contents-detail-after {
+	width: 70%;
+	border: 1px solid #f57d80;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 16px 0px;
+}
+
 /* 伊東の観光部分 */
 .day2-contents-detail-after {
 	padding: 40px 32px;
@@ -1106,7 +1114,7 @@
 }
 
 .day2-contents-detail-el img {
-	width: 88%;
+	width: 100%;
 	margin: 0 auto;
 }
 .day2-contents-detail-el {
@@ -1234,10 +1242,11 @@
   opacity: .5;
 }
 .oj2018-joshikai-el .cafe-illust {
-  width: 110px;
+  width: 130px;
   position: absolute;
-  right: 9px;
-  bottom: 220px;
+	right: -10px;
+  bottom: 165px;
+  opacity: .5;
 }
 .joshikai-date .day1-goods-img {
   position: absolute;
@@ -1324,6 +1333,16 @@
   top: auto;
   right: -20px;
   bottom: -45px;
+}
+
+.day1-contents-detail-after {
+	width: 92%;
+	margin-top: 24px;
+	padding: 16px 0px;
+}
+.day1-contents-detail-after p {
+  font-size: 11px;
+  line-height: 16px;
 }
 
 
