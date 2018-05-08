@@ -31,10 +31,11 @@
                 <div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat">
             {/if}
         </td>
+        <td>{$application.username}</td>
         <td>{$application.name}</td>
         <td>
         {if $application.birthday != '' && $application.birthday != '0000-00-00'}
-        {((date('Ymd')-$application.birthday|replace:"-":"")/10000)|floor}歳
+        {((date('Ymd') - ($application.birthday|replace:"-":""))/10000)|floor}歳
         {/if}
         </td>
         <td>
