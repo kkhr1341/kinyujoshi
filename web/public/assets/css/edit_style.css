@@ -1708,6 +1708,9 @@
   font-size: 13px;
   line-height: 24px;
 }
+.joshikai-detail-el-content-box a {
+  color: #60abe4;
+}
 .joshikai-detail-el-content-box blockquote {
   font-size: 11px;
   line-height: 18px;
