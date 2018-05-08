@@ -1143,12 +1143,17 @@
 	width: 80%;
 	margin: 0 auto;
 	display: block;
-	padding: 8px 0px;
 	margin-bottom: 0px;
 	border-bottom: 1px solid #efefef;
 }
 .oj2018 .menu-block .menu-list li:first-child {
 	border-top: 1px solid #6b9fcd;
+}
+.oj2018 .menu-block .menu-list li a {
+	display: block;
+	padding: 8px 0px;
+}
+.oj2018 .menu-block .menu-list li:first-child a {
 	padding: 12px 0px 8px;
 }
 .oj2018 .menu-block .menu-list li a:after {
