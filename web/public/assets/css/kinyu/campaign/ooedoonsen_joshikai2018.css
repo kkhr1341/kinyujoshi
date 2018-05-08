@@ -742,7 +742,15 @@
 	font-size: 13px;
 }
 
-
+.joshikai-company {
+	margin-top: 50px;
+	font-size: 15px;
+	line-height: 24px;
+}
+.joshikai-company span {
+	font-size: 13px;
+	line-height: 24px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   
@@ -1348,6 +1356,15 @@
 .day1-contents-detail-after p {
   font-size: 11px;
   line-height: 16px;
+}
+
+.joshikai-company {
+	margin-top: 32px;
+	font-size: 12px;
+	line-height: 20px;
+}
+.joshikai-company span {
+	font-size: 11px;
 }
 
 
