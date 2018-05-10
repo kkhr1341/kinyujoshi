@@ -131,6 +131,8 @@
                     </p>
                     {if $event.applicable eq false}
                       <p class="joshikai-applicable">＊受付終了</p>
+                    {else if $event.full eq true}
+                      <p class="joshikai-applicable">＊満席</p>
                     {/if}
                   </div>
                   <h3 class="kinyu-top-list-title">{$event.title}</h3>

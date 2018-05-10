@@ -63,6 +63,11 @@ console.log($resArray02);
               <div class="applicable-link">女子会のお申込みはこちら</div>
               <div class="applicable-title"><span style="color:red;">＊</span>お申込みの受付は終了しました</div>
             </div>
+          {else if $event.full eq true}
+            <div class="joinus-block joinus-block-finish">
+              <div class="applicable-link">女子会のお申込みはこちら</div>
+              <div class="applicable-title"><span style="color:red;">＊</span>満席のため受付終了しました</div>
+            </div>
           {else}
             <!-- ログインユーザー -->
             <div class="joinus-block">

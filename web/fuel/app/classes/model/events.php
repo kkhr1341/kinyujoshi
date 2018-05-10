@@ -88,15 +88,33 @@ class Events extends Base
    
     public static function getByCode($table, $code)
     {
-       $event = parent::getByCode($table, $code);
-       $event['applicable'] = self::is_applicable_by_event_date($event['event_date']);
-       return $event;
+        $event = parent::getByCode($table, $code);
+        $event['applicable'] = self::is_applicable_by_event_date($event['event_date']);
+        $application_num = self::getApplicationNum($code);
+
+        $event['full'] = $application_num >= $event['limit'] ? true: false;
+        return $event;
+    }
+
+    private static function getApplicationNum($code)
+    {
+        $total = \DB::select(\DB::expr('count(*) as cnt'))
+            ->from('applications')
+            ->where('event_code', '=', $code)
+            ->where('cancel', '=', 0)
+            ->where('disable', '=', 0);
+
+        $data = $total->execute()->current();
+        return $data['cnt'];
     }
 
     public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc", $display=1)
     {
+        $select = '*';
+        $select .= ', events.code';
+        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
 
-        $datas = \DB::select(\DB::expr('*, events.code, (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num'))
+        $datas = \DB::select(\DB::expr($select))
             ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
@@ -140,6 +158,7 @@ class Events extends Base
             ->as_array();
         foreach($datas as $key => $data){
             $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas[$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
 
         }
         return $datas;
@@ -157,8 +176,11 @@ class Events extends Base
      */
     public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1)
     {
+        $select = '*';
+        $select .= ', events.code';
+        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
 
-        $datas = \DB::select(\DB::expr('*, events.code, (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num'))
+        $datas = \DB::select(\DB::expr($select))
             ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
@@ -195,6 +217,7 @@ class Events extends Base
             ->as_array();
         foreach($datas as $key => $data){
             $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas[$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
         }
 
         return $datas;
@@ -212,7 +235,11 @@ class Events extends Base
      */
     public static function lists03()
     {
-        return \DB::select(\DB::expr('*, events.code, (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num'))
+        $select = '*';
+        $select .= ', events.code';
+        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+
+        return \DB::select(\DB::expr($select))
             ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
@@ -351,7 +378,12 @@ class Events extends Base
 
         $pagination = \Pagination::forge('mypagination', $config);
 
-        $datas['datas'] = \DB::select(\DB::expr('*, events.code'))->from('events')
+        $select = '*';
+        $select .= ', events.code';
+        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+
+        $datas['datas'] = \DB::select(\DB::expr($select))
+            ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
             ->where('status', '=', 1)
@@ -376,6 +408,7 @@ class Events extends Base
         
         foreach($datas['datas'] as $key => $data){
             $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas['datas'][$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
         }
         $datas['pagination'] = $pagination;
 
