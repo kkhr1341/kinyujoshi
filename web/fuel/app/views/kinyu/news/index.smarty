@@ -10,24 +10,18 @@
 			{foreach from=$news.datas item=blog}
 				<li class="kinyu-news-list-li">
 					<a href="/news/{$blog.code}">
-	
 						<div class="kinyu-news-list-el clear">
-
-                {$fooo = $blog.main_image}
-                {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
 							{if $blog.main_image == ""}
-							 <div class="img-box" style="background: url(/images/submain.png) center center / cover no-repeat;"></div>
-							 {else}
-							<div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
-							 {/if}
-							 <div class="text-box">
-							   <p class="date">{$blog.open_date|date_format:"%Y.%-m.%-d"}</p>
-							   <h3 class="title">{$blog.title}</h3>
-							 </div>
-
+							    <div class="img-box" style="background: url(/images/submain.png) center center / cover no-repeat;"></div>
+                            {else}
+                                {$thumb_filename = $blog.main_image|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+							    <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
+							{/if}
+                            <div class="text-box">
+                                <p class="date">{$blog.open_date|date_format:"%Y.%-m.%-d"}</p>
+                                <h3 class="title">{$blog.title}</h3>
+                            </div>
 						</div>
-
 					</a>
 				</li>
 			{/foreach}

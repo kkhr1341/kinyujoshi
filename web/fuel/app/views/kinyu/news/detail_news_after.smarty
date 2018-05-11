@@ -16,12 +16,16 @@
           {break}
         {/if}
 
-        {$fooo = $news.main_image}
-        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
         <li class="clear">
           <a href="/news/{$news.code}">
-            <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+
+            {if $news.main_image == ""}
+              <div class="img-box" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
+            {else}
+              {$thumb_filename = $news.main_image|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+              <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+            {/if}
+
             <div class="text-box">
               <div class="kinyu-top-list-kind">
                 <p>{$news.open_date|date_format:"%Y.%-m.%-d"}</p>
@@ -35,7 +39,7 @@
     </div>
   </div>
 
-    <!-- 直近の女子会 -->
+  <!-- 直近の女子会 -->
   <div class="report-detail-sidebar-el">
     <p class="report-detail-sidebar-el-title">今後の女子会の予定</p>
     <div class="report-sidebar-event-list">

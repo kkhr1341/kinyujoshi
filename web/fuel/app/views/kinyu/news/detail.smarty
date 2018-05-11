@@ -2,7 +2,12 @@
 
   <div class="kinyu-details-introdauction">
     <div class="kinyu-details-introdauction-inner clear">
-      <div class="img-box" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+
+      {if $news.main_image == ""}
+        <div class="img-box" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
+      {else}
+        <div class="img-box" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+      {/if}
       <div class="text-box">
         <div class="text-box-inner">
           <h2>{$news.title}</h2>
@@ -18,20 +23,25 @@
       {$news.content|nofilter}
 
       <!-- ソーシャルシェア -->
-      {$fooo = $news.main_image}
-      {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
       <div class="report-detail-share clear">
-        <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
-        <div class="report-detail-share-el report-detail-share-right">
-          <img class="share-this-title" src="/images/detail-title/kinyu-share-news.png">
-          <img class="share-this-page" src="/images/social/social-this-page.png">
-          <div class="social-list">
-            <ul>
-              {$social_share}
-            </ul>
-          </div>
+        {if $news.main_image == ""}
+          <div class="report-detail-share-el report-detail-share-left" style="background:url(/images/submain.png) center center / cover no-repeat;"><div class="bg-white05"></div>
+        {else}
+          {$thumb_filename = $news.main_image|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+          <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div>
+        {/if}
+      </div>
+
+      <div class="report-detail-share-el report-detail-share-right">
+        <img class="share-this-title" src="/images/detail-title/kinyu-share-news.png">
+        <img class="share-this-page" src="/images/social/social-this-page.png">
+        <div class="social-list">
+          <ul>
+            {$social_share}
+          </ul>
         </div>
       </div>
+    </div>
     </div>
   </div>
   <div class="report-detail-sidebar">
