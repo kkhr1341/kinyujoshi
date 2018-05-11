@@ -171,10 +171,11 @@ class Events extends Base
      * @param null $open
      * @param null $section_code
      * @param null $secret
-     * @param int $display
+     * @param int  $display
+     * @param null $sort
      * @return mixed
      */
-    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1)
+    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1, $sort="asc")
     {
         $select = '*';
         $select .= ', events.code';
@@ -207,7 +208,7 @@ class Events extends Base
 //        }
 
         $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
-        $datas = $datas->order_by('event_date', 'asc');
+        $datas = $datas->order_by('event_date', $sort);
 
         if ($limit === null) {
         } else {
