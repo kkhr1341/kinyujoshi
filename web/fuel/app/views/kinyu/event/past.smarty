@@ -1,0 +1,220 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+
+<div class="kinyu-single-block joshikai-main-block">
+  <div class="joshikai-main clear">
+    <div class="joshikai-main-left">
+      <div class="img-box">
+        <div class="img-box-inner">
+          <img src="/images/event/joshikai-title.png">
+          <a class="about-joshikai-link" href="#about-joshikai">きんゆう女子。会って？</a>
+        </div>
+      </div>
+    </div>
+    <div class="joshikai-main-right">
+      <div class="white-bg"></div>
+    </div>
+  </div>
+
+  <div class="inner">
+
+    <div id="kinyu-event-scroll-point" class="center">
+
+      <a class="kinyu-event-list-subdescription" href="https://kinyu-joshi.jp/news/vCPlDi"><span style="color:red;">＊</span>3月3日より、女子会の参加方法が変わりました。<br>詳細はこちらよりご確認ください。</a>
+
+      <div id="joshikai-list" class="kinyu-event-list joshikai-main-el">
+
+        <p class="kinyu-event-info-title">過去の女子会一覧</p>
+        <ul>
+          {foreach from=$events.datas key="key" item=event name=loopname}
+          {$fooo = $event.main_image}
+          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+          
+          <li>
+            {if $event.event_category == "女子会"}
+              <div class="bg-joshikai"></div>
+            {else if $event.event_category == "スペシャル"}
+              <div class="bg-special-joshikai"></div>
+              <img src="/images/event/specialjoshikai_title.png" class="special_joshikai_title">
+            {else}
+              <div class="bg-joshikai"></div>
+            {/if}
+            <div class="kinyu-event-list-el">
+              <a href="/joshikai/{$event.code}">
+                <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
+                </div>
+                
+                {if $event.event_category == "女子会"}
+                  <div class="kinyu-event-list-right">
+                {else if $event.event_category == "スペシャル"}
+                  <div class="kinyu-event-list-right special">
+                {else}
+                  <div class="kinyu-event-list-right">
+                {/if}
+                  <!-- <p class="event-main-date">
+                    <span class="fw-bold">{$event.event_date|date_format:"%-m/%-e"}</span>
+                    <span class="fw-bold day_of_the_week">{$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</span>
+                    <span class="timezone">{$event.event_start_datetime}〜{$event.event_end_datetime}</span>
+                  </p> -->
+                  <div class="kinyu-top-list-kind kinyu-top-event-kind">
+                    <p>
+                    <span class="date-box">
+                      <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
+                      {$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
+                    </span>
+                    {if $event.applicable eq false}
+                      <p class="joshikai-applicable">＊受付終了</p>
+                    {else if $event.full eq true}
+                      <p class="joshikai-applicable">＊満席</p>
+                    {/if}
+                    </p>
+                  </div>
+                  <h3 class="event-title">{$event.title}</h3>
+                  <div class="event-subbox">
+                    <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    <p class="event-subbox-el">場所：{$event.place}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+          {/foreach}
+        </ul>
+      </div>
+
+      <!-- きんゆう女子会。って？ -->
+      <div id="about-joshikai" class="joshikai-main-el about-joshikai">
+        <p class="kinyu-event-info-title">きんゆう女子。会って？</p>
+        <div class="about-joshikai-inner clear">
+          <div class="img-box">
+            <div class="white-bg2"></div>
+            <div class="img-box-el" style="background:url(/images/event/about-joshikai1.jpg) center center / cover no-repeat"></div>
+            <div class="img-box-el-three clear">
+              <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai2.jpg) center center / cover no-repeat"></div>
+              <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai3.jpg) center center / cover no-repeat"></div>
+              <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai4.jpg) center center / cover no-repeat"></div>
+            </div>
+          </div>
+          <div class="text-box">
+            <div class="text-box-inner">
+              <div class="border-top"></div>
+              <p class="main-title">おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広い"きんゆう"をテーマに女子会をしています。</p>
+              <p class="description">女子会の内容は週によって変わります。毎月1週目は「最新のお金のサービスアップデート」、2週目は「ライフスタイルとお金」、3週目は「アクションする日」、4週目は「お金を整理する日」、「おしゃべりする日」を基本テーマに編集部がオリジナルで企画・運営しています。ゲストを呼んだり、特別な場所で開催する"特別女子会"も不定期で開催しています。また、コミュニティ活動を通じて、まちづくりやスペースの有効活用にも貢献しています。</p>
+              <a class="link-to" href="#joshikai-list">今後の女子会の予定はこちら</a>
+            </div>
+          </div>
+        </div>
+        
+        {*
+        <div class="joshikai-held-area">
+          <p class="joshikai-held-area-title">ー 主に女子会を開催している場所 ー</p>          
+          <div class="joshikai-held-el-block">
+            <div class="joshikai-held-el sarvador-held clear">
+              <div class="img-block" style="background:url(/images/event/joshikai-held-CAFE_SARVADOR_BUSINESS_SALON.jpg) center center / cover no-repeat"></div>
+              <div class="text-block">
+                <div class="text-block-inner">
+                  <p class="joshikai-held-place-area kabutocho">ー 兜町 ー</p>
+                  <p class="joshikai-held-place-title kabutocho">CAFE SARVADOR BUSINESS SALON</p>
+                  <p class="joshikai-held-place-sub-title">カフェ・サルバトル</p>
+                  <p class="place-description">きんゆう女子。誕生当初から拠点となっていた、カフェ・サルバトル。金融発祥の地「日本橋兜町・茅場町」にあり、本棚には金融関連の書籍が並ぶなど、金融街ならではのカフェスペースになっています♪ カレーが美味しい...！</p>
+                  <p class="joshikai-held-place-address">住所：東京都中央区日本橋茅場町1-5-8 東京証券会館1階</p>
+                  <div class="place-link-block">
+                    <a class="place-link kabutocho" href="http://cafe-salvador.com/" target="_blank">詳細はこちら</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="joshikai-held-el sarvador-held clear">
+              <div class="img-block" style="background:url(/images/event/joshikai-held-RAMO_FRUTAS_CAFE.jpg) center center / cover no-repeat"></div>
+              <div class="text-block">
+                <div class="text-block-inner">
+                  <p class="joshikai-held-place-area ginza">ー 銀座 ー</p>
+                  <p class="joshikai-held-place-title ginza">RAMO FRUTAS CAFE</p>
+                  <p class="joshikai-held-place-sub-title">ラモ・フルータス・カフェ</p>
+                  <p class="place-description">きんゆう女子。会 @銀座の拠点は、GINZA PLACE 3F common ginza、「RAMO FRUTAS CAFE」。カラフルでフレッシュな旬のフルーツを使ったメニューが特徴的なカフェです。開放感のあるカフェで、ガラス張りの店内からの銀座の眺めがすてき！</p>
+                  <p class="joshikai-held-place-address">住所：東京都中央区銀座五5-8-1 GINZA PLACE 3F</p>
+                  <div class="place-link-block">
+                    <a class="place-link ginza" href="https://ginzaplace.jp/commonginza/" target="_blank">詳細はこちら</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        *}
+
+      </div>
+
+      <div class="special-event-list joshikai-main-el">
+        <p class="kinyu-event-info-title">過去の特別女子会。</p>
+        <ul class="clear">
+
+          <li>
+            <a href="/daijoshikai2018" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/past-special9.jpg) center center / cover no-repeat"></div>
+              <div class="text-area"><p>東証ひみつの大女子会♪ 2018</p></div>
+            </a>
+          </li>
+          
+          <li>
+            <a href="/school_jpx02" target="_blank">
+              <div class="bg-area" style="background:url(/images/content/school_public/og-school_public02.jpg) left top / cover no-repeat"></div>
+              <div class="text-area"><p>第2回 きんゆう女子。学院</p></div>
+            </a>
+          </li>
+          
+          <li>
+            <a href="http://ac.nikkeibp.co.jp/2017z1105finw/" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/past-special7.jpg) left center / cover no-repeat"></div>
+              <div class="text-area"><p>お金と私をアップデート 2017 autumn</p></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="/oom-reit" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/past-special5.jpg) center center / cover no-repeat"></div>
+              <div class="text-area"><p>大江戸温泉できんゆう女子会。</p></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://jpx-moneyschool.com/" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/past-special4.jpg) center center / cover no-repeat"></div>
+              <div class="text-area"><p>JPX＊マネースクール-ロボアドとミライの資産形成</p></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="/school_jpx" target="_blank">
+              <div class="bg-area" style="background:url(/images/content/school_public/og-school_public.png) top center / cover no-repeat"></div>
+              <div class="text-area"><p>きんゆう女子。学院</p></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://ac.nikkeibp.co.jp/2017x0422finw/" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/past-special3.png) center center / cover no-repeat"></div>
+              <div class="text-area"><p>お金と私をアップデート 2017 spring</p></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="/conference" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/past-special1.png) center center / cover no-repeat"></div>
+              <div class="text-area"><p>第1回 週末投資宣言♪</p></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="/school" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/past-special2.png) center center / cover no-repeat"></div>
+              <div class="text-area"><p>私立きんゆう女子。学院</p></div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+

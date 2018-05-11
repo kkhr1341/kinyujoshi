@@ -56,6 +56,7 @@ return array(
 
 	//イベント関連
 	'joshikai'   => 'kinyu/event/index',
+	'joshikai_past'   => 'kinyu/event/past',
 	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
 	'joshikai_tickets/(:any)'   => 'kinyu/event/tickets/$1',
 	'joshikai_payment_card/(:any)'   => 'kinyu/event/tickets_card/$1',

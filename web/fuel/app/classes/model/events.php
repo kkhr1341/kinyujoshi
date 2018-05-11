@@ -30,6 +30,8 @@ class Events extends Base
 
         $val->add('display', '表示/非表示');
 
+        $val->add('display_past', '過去の女子会への表示/非表示');
+
         $val->add('event_date', '日付')
             ->add_rule('required')
             ->add_rule('valid_date');
@@ -261,6 +263,7 @@ class Events extends Base
         $data['section_code'] = $params['section_code'];
         $data['secret'] = $params['secret'];
         $data['display'] = $params['display'];
+        $data['display_past'] = $params['display_past'];
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];
@@ -295,6 +298,7 @@ class Events extends Base
         $data['section_code'] = $params['section_code'];
         $data['secret'] = $params['secret'];
         $data['display'] = $params['display'];
+        $data['display_past'] = $params['display_past'];
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];
@@ -348,15 +352,20 @@ class Events extends Base
     }
 
 
-    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $secret = null)
+    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $secret = null, $past = null)
     {
-
         $total = \DB::select(\DB::expr('count(*) as cnt'))
             ->where('status', '=', 1)
             ->where('display', '=', 1)
-            ->where('open_date', '<', \DB::expr('NOW()'))
             ->from('events')
             ->where('disable', '=', 0);
+
+        if ($past === null) {
+            $total = $total->where('open_date', '<', \DB::expr('NOW()'));
+        } else if ($past === 0) {
+            $total = $total->where('display_past', '=', 1);
+            $total = $total->where('event_date', '<', \DB::expr('NOW()'));
+        }
 
         if ($section_code !== null) {
             $total = $total->where('section_code', '=', $section_code);
@@ -390,8 +399,15 @@ class Events extends Base
             ->where('status', '=', 1)
             ->where('display', '=', 1)
             ->where('secret', '=', 0)
-            ->where('events.disable', '=', 0)
-            ->where('open_date', '<', \DB::expr('NOW()'));
+            ->where('events.disable', '=', 0);
+
+        if ($past === null) {
+            $datas['datas'] = $datas['datas']->where('open_date', '<', \DB::expr('NOW()'));
+            $datas['datas'] = $datas['datas']->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+        } else if ($past === 0) {
+            $datas['datas'] = $datas['datas']->where('display_past', '=', 1);
+            $datas['datas'] = $datas['datas']->where('event_date', '<', \DB::expr('NOW()'));
+        }
 
         if ($section_code !== null) {
             $datas['datas'] = $datas['datas']->where('section_code', '=', $section_code);
@@ -402,11 +418,9 @@ class Events extends Base
 
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
-            ->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'))
             ->order_by('event_date', 'asc')
             ->execute()
             ->as_array();
-        
         foreach($datas['datas'] as $key => $data){
             $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
             $datas['datas'][$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
