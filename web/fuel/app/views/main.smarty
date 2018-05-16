@@ -19,7 +19,8 @@
     <!-- <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" /> -->
 	</head>
 
-	<body class="drawer drawer--left">
+	<body class="drawer drawer--left" onCopy="return false;">
+  <!-- <body class="drawer drawer--left" onMouseDown="return false;" onSelectStart="return false" oncontextmenu="return false;"> -->
 
     {$pc_header}
 

@@ -40,6 +40,16 @@ div, nav, section {
 ol, ul, li {
   list-style: none;
 }
+img {
+  user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -webkit-touch-callout: none;
+}
 table {
   border-collapse: collapse;
   border-spacing: 0;

@@ -643,3 +643,10 @@ $(function() {
     $('.insta-block-inner li').height(ddddd);
   },1000);
 });
+
+//画像のみ右クリック禁止
+$(function(){
+    $("img").on("contextmenu", function(){
+        return false;
+    })
+});
