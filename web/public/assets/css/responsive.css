@@ -2603,4 +2603,17 @@ footer .navi_kinyu-submenu-el a {
 .kinyu-sp-menu-block li {
   max-width: 85px;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　スクショ対策
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.report-detail-main figure:after {
+  content: "© きんゆう女子。 2018";
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 11px;
+  color: #fff;
+}
+
 }
