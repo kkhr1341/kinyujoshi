@@ -33,8 +33,8 @@
 	<!-- サムネイル -->
 	<div class="oj2018-introduction pc">
 		<ul class="bxslider">
+			<li style="background: url(/images/content/ooedo_joshikai2018/main-bg2.jpg) center center / cover no-repeat;"></li>
     		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg1.jpg) top -30px center / cover no-repeat;"></li>
-    		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg2.jpg) center center / cover no-repeat;"></li>
     		<li style="background: url(/images/content/ooedo_joshikai2018/main-bg3.jpg) center center / cover no-repeat;"></li>
   	</ul>
 		<img class="main-logo" src="/images/content/ooedo_joshikai2018/main-logo.png">
@@ -46,8 +46,8 @@
 	<div class="oj2018-introduction sp">
 		<img class="ooam-logo" src="/images/content/ooedo_joshikai/ooedo_logo2.png">
 		<ul class="bxslider">
+			<li style="background: url(/images/content/ooedo_joshikai2018/sp/main-bg2.jpg) right center / cover no-repeat;"></li>
     		<li style="background: url(/images/content/ooedo_joshikai2018/sp/main-bg1.jpg) right -40px center / cover no-repeat;"></li>
-    		<li style="background: url(/images/content/ooedo_joshikai2018/sp/main-bg2.jpg) right center / cover no-repeat;"></li>
     		<li style="background: url(/images/content/ooedo_joshikai2018/sp/main-bg3.jpg) left center / cover no-repeat;"></li>
   	</ul>
 		<img class="main-logo" src="/images/content/ooedo_joshikai2018/main-logo.png">
