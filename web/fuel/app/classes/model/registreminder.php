@@ -111,7 +111,7 @@ class RegistReminder extends Base
 
             $url = \Uri::base() . 'login/resetting_pass_exuser?access_token=' . $access_token;
 
-            $mail->html_body(\View::forge('email/regist_reminder/body',
+            $mail->html_body(\View::forge('email/regist_reminder/body_201806',
                 array(
                     'url' => $url,
                 )));

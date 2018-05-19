@@ -54,3 +54,41 @@ http://localhost:1080/
 ```
 http://localhost:9000/
 ```
+
+# Task実行
+
+## パスワード未設定ユーザーへのメール配信
+
+### 本番
+
+#### パスワード送信してないユーザーにリマインドメールを送信 （送信済のメンバーには送らない）
+```
+FUEL_ENV=production php oil refine regist_mails:send_nomembers
+```
+
+#### パスワード送信してないユーザーにリマインドメールを再送信
+```
+FUEL_ENV=production php oil refine regist_mails:resend_nomembers
+```
+
+#### ユーザーIDを指定してリマインドメールを送信 
+```
+FUEL_ENV=production php oil refine regist_mails:send_member {ID}
+```
+
+### ローカル
+
+#### パスワード送信してないユーザーにリマインドメールを送信 （送信済のメンバーには送らない）
+```
+docker-compose run --rm web php oil refine regist_mails:send_nomembers
+```
+
+#### パスワード送信してないユーザーにリマインドメールを再送信
+```
+docker-compose run --rm web php oil refine regist_mails:resend_nomembers
+```
+
+#### ユーザーIDを指定してリマインドメールを送信 
+```
+docker-compose run --rm web php oil refine regist_mails:send_member {ID}
+```
