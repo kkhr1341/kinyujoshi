@@ -1,13 +1,16 @@
 <?php
 
 namespace Fuel\Tasks;
+
 use \Model\RegistReminder;
 
-class Regist_mails {
-	
-	public static function send_nomembers() {
+class Regist_mails
+{
 
-		$sql = 'SELECT
+    public static function send_nomembers()
+    {
+
+        $sql = 'SELECT
                     member_regist.id,
                     member_regist.email
                   FROM
@@ -40,8 +43,8 @@ class Regist_mails {
                           regist_reminders.email = member_regist.email
                     )';
 
-		$member_regists = \DB::query($sql)->execute();
-		foreach($member_regists as $data) {
+        $member_regists = \DB::query($sql)->execute();
+        foreach ($member_regists as $data) {
 
             $email = $data['email'];
             $email = trim($email);
@@ -55,16 +58,17 @@ class Regist_mails {
                 continue;
             }
 
-            if(!preg_match('/(.+)@(.+)/',$email)) {
+            if (!preg_match('/(.+)@(.+)/', $email)) {
                 continue;
             }
             echo $data['id'] . ":";
             echo $email . "\n";
             RegistReminder::send($data['id'], $email);
-		}
-	}
+        }
+    }
 
-    public static function resend_nomembers() {
+    public static function resend_nomembers()
+    {
 
         $sql = 'SELECT
                     member_regist.id,
@@ -92,12 +96,12 @@ class Regist_mails {
                     )';
 
         $member_regists = \DB::query($sql)->execute();
-        foreach($member_regists as $data) {
+        foreach ($member_regists as $data) {
 
             $email = $data['email'];
             $email = trim($email);
 
-            if(!preg_match('/(.+)@(.+)/',$email)) {
+            if (!preg_match('/(.+)@(.+)/', $email)) {
                 continue;
             }
             echo $data['id'] . ":";
@@ -106,7 +110,8 @@ class Regist_mails {
         }
     }
 
-	public static function send_member($member_regist_id) {
+    public static function send_member($member_regist_id)
+    {
 
         $member_regist = \DB::select('*')
             ->from('member_regist')
@@ -114,9 +119,9 @@ class Regist_mails {
             ->execute()
             ->current();
 
-	    echo $member_regist['email'] . "\n";
+        echo $member_regist['email'] . "\n";
         RegistReminder::send($member_regist['id'], $member_regist['email']);
-	}
+    }
 }
 
 /* End of file tasks/robots.php */
