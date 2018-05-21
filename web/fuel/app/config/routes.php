@@ -101,6 +101,7 @@ return array(
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
 	'map' => 'kinyu/campaign/map',
+	'kinyu_map' => 'kinyu/campaign/kinyu_map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 	'ooam-joshikai2018' => 'kinyu/campaign/ooedojoshikai_2018',
 	'celebration' => 'kinyu/campaign/celebration_20171206',

@@ -1,0 +1,64 @@
+
+<style type="text/css">
+#map {
+    height: 500px;
+}
+</style>
+
+<div id="map"></div>
+
+{literal}
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        var mapOptions = {
+            zoom: 7,
+
+            center: new google.maps.LatLng(36.5047743,138.3054407), // New York
+
+            styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
+        };
+
+        var mapElement = document.getElementById('map');
+
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // 東京
+        var marker1 = new google.maps.Marker({
+            position: new google.maps.LatLng(35.7183139,139.7720296),
+            map: map,
+        });
+        var infoWindow1 = new google.maps.InfoWindow({
+            content: '<div class="sample"><a href="https://travel.rakuten.co.jp/mytrip/ranking/spot-tokyo/#shitamachi">東京</a></div>'
+        });
+        marker1.addListener( "click", function ( argument ) {
+            infoWindow1.open(map, marker1);
+        } ) ;
+
+        // 静岡
+        var marker2 = new google.maps.Marker({
+            position: new google.maps.LatLng(35.4541175,138.9540632),
+            map: map,
+        });
+        var infoWindow2 = new google.maps.InfoWindow({
+            content: '<div class="sample"><a href="https://travel.rakuten.co.jp/mytrip/ranking/spot-tokyo/#shitamachi">静岡</a></div>'
+        });
+        marker2.addListener( "click", function ( argument ) {
+            infoWindow2.open(map, marker2);
+        } ) ;
+
+        // 千葉
+        var marker3 = new google.maps.Marker({
+            position: new google.maps.LatLng(35.1822148,139.7979044),
+            map: map,
+        });
+        var infoWindow3 = new google.maps.InfoWindow({
+            content: '<div class="sample"><a href="https://travel.rakuten.co.jp/mytrip/ranking/spot-tokyo/#shitamachi">千葉</a></div>'
+        });
+        marker3.addListener( "click", function ( argument ) {
+            infoWindow3.open(map, marker3);
+        } ) ;
+    }
+</script>
+{/literal}
