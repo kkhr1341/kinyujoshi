@@ -52,6 +52,10 @@
                 <a href="/admin/remindmailtemplates">リマインドメールの管理</a>
               </li>
 
+              <li>
+                <a href="/admin/inquiries">お問い合わせの管理</a>
+              </li>
+
               <!-- {/if} -->
               <!-- <li>
                 <a href="/my/profile">プロフィールの修正</a>

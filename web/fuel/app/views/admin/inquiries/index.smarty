@@ -1,0 +1,73 @@
+<p class="regist-list">お問い合わせリスト</p>
+<table id="tbl" class="sample_01 registlist-block-admin">
+  <thead>
+    <tr>
+      <th style="width:10%;">ID</th>
+      <th style="width:10%;">登録日</th>
+      <th style="width:10%;">名前</th>
+      <th style="width:10%;">メールアドレス</th>
+      <th style="width:60%;">本文</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {foreach from=$inquiries item=inquiry name=loop}
+    <tr>
+      <td>{$inquiry.id}</td>
+      <td>{$inquiry.created_at|date_format:"Y.m.d"}</td>
+      <td>{$inquiry.name}</td>
+      <td>{$inquiry.email}</td>
+      <td>{$inquiry.message|nl2br}</td>
+    </tr>
+    {/foreach}
+  </tbody>
+</table>
+
+<style>
+.sample_01{
+  width: 860px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.sample_01 tr {
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.sample_01 th{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 6px;
+  vertical-align: top;
+  color: #333;
+  background-color: #eee;
+  border: 1px solid #b9b9b9;
+}
+.sample_01 td{
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 6px;
+  line-height: 20px;
+  background-color: #fff;
+  border: 1px solid #b9b9b9;
+  word-break: break-word;
+}
+.registlist-block-admin td a {
+  transition: 0.5s;
+}
+.registlist-block-admin td a:hover {
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.admin-registlist-more {
+  padding: 8px 10px;
+  color: #fff;
+  background-color: #7CDCCE;
+}
+.regist-list {
+  display: inline-block;
+  font-size: 20px;
+  border-bottom: 4px solid #7CDCCE;
+  padding-bottom: 2px;
+}
+</style>

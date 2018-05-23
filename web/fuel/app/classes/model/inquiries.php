@@ -43,4 +43,13 @@ class Inquiries extends Base
 
         return $params;
     }
+
+    public static function lists()
+    {
+        return \DB::select(\DB::expr('*'))
+            ->from('inquiries')
+            ->order_by('created_at', 'desc')
+            ->execute()
+            ->as_array();
+    }
 }
