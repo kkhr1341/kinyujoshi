@@ -52,7 +52,7 @@ class Events extends Base
 
         $val->add('limit', '定員')
             ->add_rule('valid_string', 'numeric')
-            ->add_rule('numeric_between',1, 1000);
+            ->add_rule('numeric_between',0, 1000);
 
         $val->add('creditch', '決済方法');
 
