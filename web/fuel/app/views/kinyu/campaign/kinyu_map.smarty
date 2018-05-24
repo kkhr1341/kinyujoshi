@@ -1,11 +1,44 @@
 
 <style type="text/css">
+.kinyu-map-block {
+  line-height: 0;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 50px 0px 80px;
+}
 #map {
-    height: 500px;
+  height: 600px;
+}
+.logo-area {
+  width: 300px;
+  height: 220px;
+  position: absolute;
+  top: 50%;
+  margin-top: -110px;
+  left: 50px;
+  background: rgba(255,255,255,.9);
+  z-index: 1000;
+  box-shadow: 0 0px 5px 5px rgba(255,255,255,.9);
+}
+.kinyu-map-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.kinyu-map-title img {
+  width: 450px;
 }
 </style>
 
-<div id="map"></div>
+<div class="kinyu-list-block">
+  <div class="kinyu-map-block">
+    <h2 class="kinyu-map-title"><img src="/images/kinyu_map/kinyu-map-title.png"></h2>
+    <div id="map"></div>
+  </div>
+</div>
+
+
+
 
 {literal}
 <script type="text/javascript">
@@ -17,7 +50,7 @@
 
             center: new google.maps.LatLng(36.5047743,138.3054407), // New York
 
-            styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}]
+            styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#8ddcd1"}]}]
         };
 
         var mapElement = document.getElementById('map');
@@ -30,7 +63,7 @@
             map: map,
         });
         var infoWindow1 = new google.maps.InfoWindow({
-            content: '<div class="sample"><a href="https://travel.rakuten.co.jp/mytrip/ranking/spot-tokyo/#shitamachi">東京</a></div>'
+            content: '<div class="sample"><a href="https://travel.rakuten.co.jp/mytrip/ranking/spot-tokyo/#shitamachi"></a></div>'
         });
         marker1.addListener( "click", function ( argument ) {
             infoWindow1.open(map, marker1);
