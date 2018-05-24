@@ -101,7 +101,6 @@ return array(
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
 	'map' => 'kinyu/campaign/map',
-	'kinyu_map' => 'kinyu/campaign/kinyu_map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 	'ooam-joshikai2018' => 'kinyu/campaign/ooedojoshikai_2018',
 	'celebration' => 'kinyu/campaign/celebration_20171206',
@@ -114,9 +113,9 @@ return array(
 	'project/(:num)'   => 'kinyu/project/index/$1',
 	'project/(:any)'   => 'kinyu/project/detail/$1',
 
-	// 特別ページ
-	'kinyu_sanpo' => 'kinyu/special/kinyu_sanpo',
-
+	// きんゆうマップ
+	'kinyu_map' => 'kinyu/campaign/kinyu_map',
+	'map_ooedoito' => 'kinyu/kinyumap/ooedo_ito',
 
 	//マイページ - トップ
 	'my'   => 'my/top',
