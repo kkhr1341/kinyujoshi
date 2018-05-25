@@ -237,7 +237,7 @@ class Blogs extends Base
     }
 
 
-    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5)
+    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $search_text='')
     {
 
         $total = \DB::select(\DB::expr('count(*) as cnt'))
@@ -274,6 +274,14 @@ class Blogs extends Base
 
         if ($section_code !== null) {
             $datas['datas'] = $datas['datas']->where('section_code', '=', $section_code);
+        }
+
+        if ($search_text !== null) {
+            $datas['datas'] = $datas['datas']
+                ->and_where_open()
+                ->or_where('title', 'like', '%' . $search_text . '%')
+                ->or_where('content', 'like', '%' . $search_text . '%')
+                ->and_where_close();
         }
 
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
