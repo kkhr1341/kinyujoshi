@@ -119,6 +119,15 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
     public function action_kinyu_map()
     {
 
+        switch (true) {
+            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+            case $_SERVER['PHP_AUTH_USER'] !== 'kinyu_map':
+            case $_SERVER['PHP_AUTH_PW']   !== '1234567890':
+            header('WWW-Authenticate: Basic realm="Enter username and password."');
+            header('Content-Type: text/plain; charset=utf-8');
+            die('このページを見るにはログインが必要です');
+        }
+
         $this->template->lang = 'en';
         $this->template->title = 'かぶと町マップ｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/map/map-og.jpg';
