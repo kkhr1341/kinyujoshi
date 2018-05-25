@@ -61,7 +61,7 @@
             </div>
             <div class="form-mail-p">
               <p>◼︎メールアドレス</p>
-              <?php echo $email; ?><br>
+              <p>メールアドレスは、<a href="https://kinyu-joshi.jp/admin" target="_blank">管理ページ</a>からご確認ください。</p>
             </div>
 
             <style>
