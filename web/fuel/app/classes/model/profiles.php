@@ -67,19 +67,20 @@ class Profiles extends Base
     {
 
         $username = \Auth::get('username');
+        $email = \Auth::get_email();
 
-//		// コードが既に使用されていないか確認
-//		$proile = \DB::select('*')->from('profiles')
-//						->where('disable', '=', '0')
-//						->where('code', '=', $params['code'])
-//						->where('username', '!=', $username)
-//						->execute()
-//						->current();
+		// コードが既に使用されていないか確認
+		$before = \DB::select('*')->from('profiles')
+            ->where('disable', '=', '0')
+            ->where('username', '!=', $username)
+            ->execute()
+            ->current();
 //
 //		if (!empty($proile)) {
 //			return "このユーザー名は既に使用されています";
 //		}
 
+        // メールアドレスの変更確認
         \DB::update('users')->set(array(
             'email' => $params['email']
         ))->where('username', '=', $username)->execute();
@@ -92,6 +93,25 @@ class Profiles extends Base
             'introduction' => $params['introduction'],
             'profile_image' => $params['profile_image']
         ))->where('username', '=', $username)->execute();
+
+        // メールアドレスの変更通知を通知
+        if ($email != $params['email']) {
+
+            $mail = \Email::forge('jis');
+            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $mail->subject("【きんゆう女子。】WEBアップデート♪ パスワード設定のお願い。");
+
+            $mail->attach(DOCROOT.'images/kinyu-logo.png', true);
+
+            $mail->html_body(\View::forge('email/email_change_notify/return',
+                array(
+                    'username' => $username,
+                    'before_email' => $email,
+                    'after_email'  => $params['email'],
+                )));
+            $mail->to($params['email']); //送り先
+            $mail->send();
+        }
 
         return true;
     }

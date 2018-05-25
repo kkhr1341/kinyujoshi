@@ -83,6 +83,9 @@ return array(
         74 => '078_add_display_event_date_to_events',
         75 => '079_create_event_display_top_pages',
         76 => '080_add_display_past_to_events',
+        77 => '081_add_specific_link_to_events',
+        78 => '081_create_index_code_in_blogs',
+        79 => '082_create_blog_stocks',
       ),
     ),
     'module' => 

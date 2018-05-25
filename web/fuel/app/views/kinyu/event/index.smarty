@@ -39,7 +39,11 @@
               <div class="bg-joshikai"></div>
             {/if}
             <div class="kinyu-event-list-el">
+              {if empty($event.specific_link)}
               <a href="/joshikai/{$event.code}">
+              {else}
+              <a href="{$event.specific_link}" target="_blank">
+              {/if}
                 <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
                 </div>
                 
