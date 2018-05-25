@@ -99,7 +99,7 @@ class Profiles extends Base
 
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
-            $mail->subject("【きんゆう女子。】WEBアップデート♪ パスワード設定のお願い。");
+            $mail->subject("【きんゆう女子。】メールアドレス変更通知");
 
             $mail->attach(DOCROOT.'images/kinyu-logo.png', true);
 
@@ -109,7 +109,7 @@ class Profiles extends Base
                     'before_email' => $email,
                     'after_email'  => $params['email'],
                 )));
-            $mail->to($params['email']); //送り先
+            $mail->to('support@kinyu-joshi.jp'); //送り先
             $mail->send();
         }
 
