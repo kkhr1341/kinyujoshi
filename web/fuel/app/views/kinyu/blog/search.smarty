@@ -1,8 +1,7 @@
 <div class="kinyu-list-block">
   <div class="inner">
 
-    <h2 class="kinyu-top-main-title">レポート一覧</h2>
-    <p class="kinyu-top-main-sub">きんゆう女子。の日々の活動報告♪</p>
+    <h2 class="kinyu-top-main-title">「{$search_text}」を含むレポート一覧</h2>
 
     <div class="kinyu-top-search">
         <form action="/report/search" method="get">
