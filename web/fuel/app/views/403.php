@@ -39,7 +39,7 @@
 		<script type="text/javascript" src="/assets/js/kinyu/swiper.min.js"></script>
 		<script type="text/javascript" src="/assets/js/kinyu/jquery.bxslider.min.js"></script>
 
-		<script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyAFVmKPPwT4ziVB36CPISDQEQR-7c8lBoE"></script>
+		<script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyCZqIv_Xh0iQ1XOI1n1Q821t94SNTf0oeQ"></script>
 		<meta name="google-site-verification" content="bt-Z1O8HWo_rQ3TlPedxm8q3q1xV9ky7hWlxAqisA2w" />
 		<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
 		<!-- <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" /> -->

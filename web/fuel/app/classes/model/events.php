@@ -18,7 +18,8 @@ class Events extends Base
 
         $val->add('status');
 
-        $val->add('event_category', 'カテゴリー');
+        $val->add('event_category', 'カテゴリー')
+            ->add_rule('required');
 
         $val->add('title', '女子会のタイトル');
 
@@ -31,6 +32,8 @@ class Events extends Base
         $val->add('display', '表示/非表示');
 
         $val->add('display_past', '過去の女子会への表示/非表示');
+
+        $val->add('specific_link', '特定のリンク');
 
         $val->add('event_date', '日付')
             ->add_rule('required')
@@ -264,6 +267,7 @@ class Events extends Base
         $data['secret'] = $params['secret'];
         $data['display'] = $params['display'];
         $data['display_past'] = $params['display_past'];
+        $data['specific_link'] = $params['specific_link'];
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];
@@ -299,6 +303,7 @@ class Events extends Base
         $data['secret'] = $params['secret'];
         $data['display'] = $params['display'];
         $data['display_past'] = $params['display_past'];
+        $data['specific_link'] = $params['specific_link'];
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];

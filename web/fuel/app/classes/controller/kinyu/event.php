@@ -247,6 +247,9 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         if ($event['status'] == 0) {
             return false;
         }
+        if ($event['specific_link']) {
+            return false;
+        }
         if ($event['secret'] == 0) {
             return true;
         }

@@ -113,9 +113,9 @@ return array(
 	'project/(:num)'   => 'kinyu/project/index/$1',
 	'project/(:any)'   => 'kinyu/project/detail/$1',
 
-	// 特別ページ
-	'kinyu_sanpo' => 'kinyu/special/kinyu_sanpo',
-
+	// きんゆうマップ
+	'kinyu_map' => 'kinyu/campaign/kinyu_map',
+	'map_ooedoito' => 'kinyu/kinyumap/ooedo_ito',
 
 	//マイページ - トップ
 	'my'   => 'my/top',

@@ -7,7 +7,13 @@
 
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
+
+    {if empty($display_top_event.specific_link)}
     <a target="_blank" href="/joshikai/{$display_top_event.code}">
+    {else}
+    <a target="_blank" href="{$display_top_event.specific_link}">
+    {/if}
+
         <div class="kinyu-top-list-kind">
         </div>
         <div class="kinyu-top-introlist-title">

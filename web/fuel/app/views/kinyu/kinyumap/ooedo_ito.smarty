@@ -1,0 +1,18 @@
+<div class="kinyu-list-block">
+	<div class="kinyu-map-block">
+		<img class="kinyu-map-block-img" src="/images/kinyu_map/ooedo.jpg">
+	</div>
+</div>
+
+<style>
+.kinyu-map-block {
+  line-height: 0;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 80px 0px 80px;
+}
+.kinyu-map-block-img {
+	width: 100%;
+}
+</style>
