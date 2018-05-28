@@ -379,6 +379,9 @@ $(function(){
 	});
 
 	$('#copy').click(function(){
+	    if(!confirm('このイベントを複製します。よろしいですか？')) {
+	        return false;
+	    }
         var url = "/api/events/create";
         var params = {};
         params.section_code = "event";
