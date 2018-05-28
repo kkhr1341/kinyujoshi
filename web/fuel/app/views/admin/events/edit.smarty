@@ -176,13 +176,21 @@
 				</div>
 
 			</div>
+
 			<div class="form-right">
-				<div class="edit-block-menu">
-					<li><button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button></li>
-					<li><button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button></li>
-					<li><button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button></li>
-					<li><button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button></li>
-				</div>
+			    {if $past == true}
+                    <div class="edit-block-menu">
+                        <li><button class="edit-block-menu-btn copy-btn" type="button" id="copy">複製</button></li>
+                    </div>
+			    {else}
+                    <div class="edit-block-menu">
+                        <li><button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button></li>
+                        <li><button class="edit-block-menu-btn copy-btn" type="button" id="copy">複製</button></li>
+                        <li><button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button></li>
+                        <li><button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button></li>
+                        <li><button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button></li>
+                    </div>
+			    {/if}
 			</div>
 		</div>
 		
@@ -369,7 +377,51 @@ $(function(){
 			}
 		});
 	});
-	
+
+	$('#copy').click(function(){
+        var url = "/api/events/create";
+        var params = {};
+        params.section_code = "event";
+        params.event_category = $("[name=event_category]:checked").val() || '';
+        params.secret = $("[name=secret]:checked").val();
+        params.display = $("[name=display]:checked").val();
+        params.display_past = $("[name=display_past]:checked").val();
+        params.title = $('#title').val();
+        params.specific_link = $('#specific_link').val();
+        params.main_image = $('#main_image').val();
+        params.content = $('#content').val();
+        params.place = $('#place').val();
+        params.place_url = $('#place_url').val();
+        params.fee = $('#fee').val();
+        params.display_event_date = $('#display_event_date').val();
+        params.event_date = $('#event_date').val();
+        params.event_start_datetime = $('#event_start_datetime').val();
+        params.event_end_datetime = $('#event_end_datetime').val();
+        params.creditch = $("[name=creditch]:checked").val();
+        params.limit = $("#limit").val();
+        params.open_date = $('#open_date').val();
+        params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
+        params.status = 0;
+
+        if (params.event_category == "") {
+            ts.error("女子会のカテゴリーを選択してください");
+            return false;
+        }
+
+        if (params.title == "") {
+            params.title = "タイトル未設定";
+        }
+        if (params.event_date == "") {
+            ts.error("日付を入力してください");
+            return;
+        }
+        ajax.post(url, params, function(data){
+			ts.success("複製しました", function(){
+				location.href = "/admin/joshikai/edit/" + data.data.code;
+			});
+        });
+    });
+
 	$('#content').redactor({
 		focus: false,
 		lang: 'en',

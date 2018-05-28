@@ -53,6 +53,7 @@ class Controller_Admin_Events extends Controller_Adminbase
         }
 
         $this->data['events'] = Events::getByCode('events', $code);
+        $this->data['past'] = Events::isPast($code);
         $this->data['sections'] = Sections::lists();
 
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';

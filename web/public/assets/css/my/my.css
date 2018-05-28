@@ -57,6 +57,10 @@
   color: #fff;
   background-color: #346abb;
 }
+.edit-block-menu li .copy-btn {
+  color: #fff;
+  background-color: #ffa500;
+}
 .edit-block-menu li .draft-btn {
   background-color: #fff;
 }

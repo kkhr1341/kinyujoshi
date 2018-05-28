@@ -356,6 +356,24 @@ class Events extends Base
         return $url;
     }
 
+    /**
+     * 過去イベントかどうか判定する
+     * @param $code イベントコード
+     * @return bool 過去のイベントの場合: true, 過去のイベントじゃない場合: false
+     */
+    public static function isPast($code)
+    {
+        $result = \DB::select()
+            ->from('events')
+            ->where('events.code', '=', $code)
+            ->where('event_date', '<', \DB::expr('NOW()'))
+            ->execute()
+            ->current();
+        if (empty($result)) {
+            return false;
+        }
+        return true;
+    }
 
     public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $secret = null, $past = null)
     {
