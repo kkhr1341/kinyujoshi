@@ -5,6 +5,9 @@
 </div>
 
 <style>
+.kinyu-list-block {
+	/*background: url(/images/kinyu_map/ooedo-border2.png);*/
+}
 .kinyu-map-block {
   line-height: 0;
   width: 1000px;
