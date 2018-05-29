@@ -5,7 +5,7 @@
   width: 1200px;
   margin: 0 auto;
   position: relative;
-  padding: 50px 0px 80px;
+  padding: 60px 0px 100px;
 }
 #map {
   height: 600px;
@@ -28,11 +28,45 @@
 .kinyu-map-title img {
   width: 450px;
 }
+.map-point img {
+  width: 250px;
+}
+.description-block {
+  width: 720px;
+  margin: 0 auto;
+  border-left: 1px solid #77cbc0;
+  border-right: 1px solid #77cbc0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.main-map-description {
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  color: #77cbc0;
+}
+.sub-map-description {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+  line-height: 22px;
+}
 </style>
 
 <div class="kinyu-list-block">
   <div class="kinyu-map-block">
     <h2 class="kinyu-map-title"><img src="/images/kinyu_map/kinyu-map-title.png"></h2>
+    <div class="description-block">
+      <p class="main-map-description">きんゆう散歩って？</p>
+      <p class="sub-map-description">
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+    </div>
     <div id="map"></div>
   </div>
 </div>
@@ -43,9 +77,9 @@
 
     function init() {
         var mapOptions = {
-            zoom: 6,
+            zoom: 8,
 
-            center: new google.maps.LatLng(38.2908448,139.3063051),
+            center: new google.maps.LatLng(35.617125,138.171108),
 
             styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#8ddcd1"}]}]
         };
@@ -56,11 +90,11 @@
 
         // 東京
         var marker1 = new google.maps.Marker({
-            position: new google.maps.LatLng(36.5047743,138.3054407),
+            position: new google.maps.LatLng(35.6802483,139.7786506),
             map: map,
         });
         var infoWindow1 = new google.maps.InfoWindow({
-            content: '<div class="sample"><a href="/map_ooedoito"></a></div>'
+            content: '<div class="sample map-point"><a href="/map" target="_blank"><img src="/images/map/map-thum.jpg"></a></div>'
         });
         marker1.addListener( "click", function ( argument ) {
             infoWindow1.open(map, marker1);
@@ -68,27 +102,27 @@
 
         // 静岡
         var marker2 = new google.maps.Marker({
-            position: new google.maps.LatLng(35.4541175,138.9540632),
+            position: new google.maps.LatLng(34.9653667,139.0917716),
             map: map,
         });
         var infoWindow2 = new google.maps.InfoWindow({
-            content: '<div class="sample"><a href="/map_ooedoito">静岡</a></div>'
+            content: '<div class="sample map-point"><a href="/map_ooedoito" target="_blank">伊東ホテルニュー岡部</a></div>'
         });
         marker2.addListener( "click", function ( argument ) {
             infoWindow2.open(map, marker2);
         } ) ;
 
         // 千葉
-        var marker3 = new google.maps.Marker({
-            position: new google.maps.LatLng(35.1822148,139.7979044),
-            map: map,
-        });
-        var infoWindow3 = new google.maps.InfoWindow({
-            content: '<div class="sample"><a href="/map_ooedoito">千葉</a></div>'
-        });
-        marker3.addListener( "click", function ( argument ) {
-            infoWindow3.open(map, marker3);
-        } ) ;
+        // var marker3 = new google.maps.Marker({
+        //     position: new google.maps.LatLng(35.1822148,139.7979044),
+        //     map: map,
+        // });
+        // var infoWindow3 = new google.maps.InfoWindow({
+        //     content: '<div class="sample"><a href="/map_ooedoito">千葉</a></div>'
+        // });
+        // marker3.addListener( "click", function ( argument ) {
+        //     infoWindow3.open(map, marker3);
+        // } ) ;
     }
 </script>
 {/literal}
