@@ -28,8 +28,15 @@
 .kinyu-map-title img {
   width: 450px;
 }
-.map-point img {
+.map-point {
   width: 250px;
+}
+.map-point a {
+  display: block;
+  transition: .5s;
+}
+.map-point img {
+  width: 100%;
 }
 .description-block {
   width: 720px;
@@ -50,6 +57,27 @@
   margin-top: 24px;
   font-size: 13px;
   line-height: 22px;
+}
+.map-el-title {
+  text-align: center;
+  border-left: 1px solid #77cbc0;
+  border-right: 1px solid #77cbc0;
+  font-size: 12px;
+  line-height: 18px;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 12px;
+}
+.map-decription {
+  text-align: center;
+  font-size: 10px;
+  line-height: 16px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 12px;
+}
+.map-point a:hover {
+  opacity: .5;
 }
 </style>
 
@@ -94,7 +122,7 @@
             map: map,
         });
         var infoWindow1 = new google.maps.InfoWindow({
-            content: '<div class="sample map-point"><a href="/map" target="_blank"><img src="/images/map/map-thum.jpg"></a></div>'
+            content: '<div class="sample map-point"><a href="/map" target="_blank"><img src="/images/map/map-thum.jpg"><p class="map-el-title">金融発症の地「兜町」を散策</p><p class="map-decription">レトロな金ゆうの町、日本橋兜町・茅場町。あまり知られていない隠れ家的なお店がいっぱい！</p></a></div>'
         });
         marker1.addListener( "click", function ( argument ) {
             infoWindow1.open(map, marker1);
@@ -106,7 +134,7 @@
             map: map,
         });
         var infoWindow2 = new google.maps.InfoWindow({
-            content: '<div class="sample map-point"><a href="/map_ooedoito" target="_blank">伊東ホテルニュー岡部</a></div>'
+            content: '<div class="sample map-point"><a href="/map" target="_blank"><img src="/images/map/map-thum.jpg"><p class="map-el-title">金融発症の地「兜町」を散策</p><p class="map-decription">レトロな金ゆうの町、日本橋兜町・茅場町。あまり知られていない隠れ家的なお店がいっぱい！</p></a></div>'
         });
         marker2.addListener( "click", function ( argument ) {
             infoWindow2.open(map, marker2);
