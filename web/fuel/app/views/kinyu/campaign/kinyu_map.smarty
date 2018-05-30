@@ -1,85 +1,4 @@
-
-<style type="text/css">
-.kinyu-map-block {
-  line-height: 0;
-  width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  padding: 60px 0px 100px;
-}
-#map {
-  height: 600px;
-}
-.logo-area {
-  width: 300px;
-  height: 220px;
-  position: absolute;
-  top: 50%;
-  margin-top: -110px;
-  left: 50px;
-  background: rgba(255,255,255,.9);
-  z-index: 1000;
-  box-shadow: 0 0px 5px 5px rgba(255,255,255,.9);
-}
-.kinyu-map-title {
-  text-align: center;
-  margin-bottom: 32px;
-}
-.kinyu-map-title img {
-  width: 450px;
-}
-.map-point {
-  width: 250px;
-}
-.map-point a {
-  display: block;
-  transition: .5s;
-}
-.map-point img {
-  width: 100%;
-}
-.description-block {
-  width: 720px;
-  margin: 0 auto;
-  border-left: 1px solid #77cbc0;
-  border-right: 1px solid #77cbc0;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.main-map-description {
-  text-align: center;
-  font-size: 18px;
-  line-height: 18px;
-  color: #77cbc0;
-}
-.sub-map-description {
-  text-align: center;
-  margin-top: 24px;
-  font-size: 13px;
-  line-height: 22px;
-}
-.map-el-title {
-  text-align: center;
-  border-left: 1px solid #77cbc0;
-  border-right: 1px solid #77cbc0;
-  font-size: 12px;
-  line-height: 18px;
-  width: 85%;
-  margin: 0 auto;
-  margin-top: 12px;
-}
-.map-decription {
-  text-align: center;
-  font-size: 10px;
-  line-height: 16px;
-  margin: 0 auto;
-  width: 100%;
-  margin-top: 12px;
-}
-.map-point a:hover {
-  opacity: .5;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
 
 <div class="kinyu-list-block">
   <div class="kinyu-map-block">
@@ -95,7 +14,10 @@
       テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
       </p>
     </div>
-    <div id="map"></div>
+    <div class="map-container">
+      <div id="map"></div>
+      <img class="map-illust01" src="/images/content/teacher/illust-model01.png">
+    </div>
   </div>
 </div>
 
