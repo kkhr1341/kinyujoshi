@@ -1,6 +1,9 @@
 <div class="kinyu-list-block">
 	<div class="kinyu-map-block">
-		<img class="kinyu-map-block-img" src="/images/kinyu_map/ooedo.jpg">
+		<img class="kinyu-map-block-img" src="/images/kinyu_map/ooedo.jpg" usemap="#ImageMap" alt="" />
+			<map name="ImageMap">
+  			<area shape="rect" coords="705,282,912,321" href="#" alt="" />
+			</map>
 	</div>
 </div>
 
@@ -17,5 +20,8 @@
 }
 .kinyu-map-block-img {
 	width: 100%;
+}
+.kinyu-map-block a:hover {
+	opacity: .5;
 }
 </style>
