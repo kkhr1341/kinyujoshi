@@ -2,7 +2,7 @@
 	<div class="kinyu-map-block">
 		<img class="kinyu-map-block-img" src="/images/kinyu_map/ooedo.jpg" usemap="#ImageMap" alt="" />
 			<map name="ImageMap">
-  			<area shape="rect" coords="705,282,912,321" href="/#reit-illust" alt="" />
+  			<area shape="rect" coords="705,282,912,321" href="/ooam-joshikai2018#reit-illust" alt="" />
 			</map>
 	</div>
 </div>
