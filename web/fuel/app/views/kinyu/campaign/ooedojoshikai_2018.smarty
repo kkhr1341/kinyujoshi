@@ -128,7 +128,7 @@
 				<p class="reit-text sp"><span style="font-weight:bold;color:#f57d80;">REIT：リート</span>とは、「Real Estate Investment Trust」の略でアメリカで生まれた不動産に特化した投資信託です。
 				<span style="display: block;height: 12px;"></span>
 				投資信託は、いろんな金融商品(債権・株・不動産・外貨など)が含まれているのパッケージのことです。</p>
-				<div id="reit-illust" class="reit-illust-block">
+				<div class="reit-illust-block">
 					<img class="pc" src="/images/content/ooedo_joshikai2018/reit-illust.png">
 					<img class="sp" src="/images/content/ooedo_joshikai2018/reit-illust_sp.png">
 				</div>
@@ -397,9 +397,10 @@
 						</ul>
 					</div>
 
-					<a class="to-joshikai-link" href="https://kinyu-joshi.jp/joshikai_tickets/KLcMGS">
+					<p class="to-joshikai-link">
 						<span>お申込みはこちら</span>
-					</a>
+					</p>
+					<p style="padding-top:8px;"><span style="color:#f57d80;">※</span>お申込みは締め切りました</p>
 
 				</div>
 				<div class="joinus-notes-block">
@@ -425,7 +426,7 @@
 	</div>
 </div>
 
-<div class="joinus-pc-block pc">
+<!-- <div class="joinus-pc-block pc">
 	<a href="https://kinyu-joshi.jp/joshikai_tickets/KLcMGS">
 		<img src="/images/content/ooedo_joshikai2018/joinus-link2.png">
 	</a>
@@ -435,4 +436,4 @@
 	<a class="to-joshikai-link" href="https://kinyu-joshi.jp/joshikai_tickets/KLcMGS">
 		<span>お申込みはこちら</span>
 	</a>
-</div>
+</div> -->

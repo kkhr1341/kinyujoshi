@@ -593,7 +593,7 @@
 	margin: 0 auto;
 	padding: 2px;
 	position: relative;
-	transition: .5s;
+	opacity: .2;
 }
 .to-joshikai-link:after {
 	content: "〉";
@@ -1383,9 +1383,6 @@
 }
 .oj2018 .menu-block .menu-list a:hover span {
 	border-bottom: 1px solid #6b9fcd;
-	opacity: .5;
-}
-.to-joshikai-link:hover {
 	opacity: .5;
 }
 .report-link-block a,
