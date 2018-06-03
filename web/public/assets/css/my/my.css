@@ -483,8 +483,15 @@ footer {
   font-weight: bold;
 }
 .joshikai-attend-detail-table .link-area a.profile-link {
+  margin-bottom: 8px;
   background-color: #f1f1f1;
-} 
+}
+
+.joshikai-attend-detail-table .link-area a.sales-link {
+  margin-bottom: 8px;
+  background-color: #ad7d4c;
+}
+
 .joshikai-attend-detail-table .main-img .attend-done {
   position: absolute;
   width: 100%;

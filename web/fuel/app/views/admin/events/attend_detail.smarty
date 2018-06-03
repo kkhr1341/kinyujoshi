@@ -46,15 +46,21 @@
         </td>
         <td class="link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
+
           {if $application.username != 'guest'}
-          <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
+            <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
+
           {if $application.payment_cancel eq '1'}
             決済取り消し
           {elseif $application.sale eq '0'}
-            <a class="sales-link" href="#" data-application_code="{$application.code}">支払い確定</a>
+            <a class="sales-link" href="javascript:void(0);" data-application_code="{$application.code}">支払い確定</a>
           {else}
             支払確定
+          {/if}
+
+          {if $application.cancel == 0}
+            <a class="cancel-link" href="javascript:void(0);" data-event_code={$events.code} data-application_code="{$application.code}">キャンセル</a>
           {/if}
         </td>
       </tr>
@@ -164,6 +170,7 @@ $(function(){
                 var url = "/api/applicationpayments/sale";
                 var params = {};
                 params.code = $(this).data('application_code');
+
                 bootbox.confirm("売り上げを確定しますか？", function(result) {
                         if (result) {
                                 ajax.post(url, params, function(data){
@@ -174,6 +181,27 @@ $(function(){
                         }
                         else {
                                 ts.info("キャンセルしました");
+                        }
+                });
+        });
+
+        $('.cancel-link').click(function(){
+                self = this;
+                var url = "/api/applications/force_delete";
+                var event_code = $(this).data('event_code');
+                var params = {};
+                params.code = $(this).data('application_code');
+
+                bootbox.confirm("キャンセルを確定しますか？", function(result) {
+                        if (result) {
+                                ajax.post(url, params, function(data){
+                                        ts.success("キャンセル確定しました", function(){
+                                             location.href = '/admin/joshikai/attend/' + event_code;
+                                        });
+                                });
+                        }
+                        else {
+                            ts.info("キャンセルしました");
                         }
                 });
         });

@@ -175,8 +175,6 @@ class Applications extends Base
         $db = \Database_Connection::instance();
         $db->start_transaction();
         try {
-            $username = \Auth::get('username');
-
             // キャンセルする
             \DB::update('applications')->set(
                 array(
@@ -508,4 +506,86 @@ class Applications extends Base
             throw $e;
         }
     }
+
+    public static function force_cancel($code)
+    {
+        \Config::load('payjp', true);
+
+        // 参加状態取得
+        $application = \DB::select(\DB::expr('users.email, applications.event_code, applications.cancel, applications.username, profiles.name'))
+            ->from('applications')
+            ->join('users')
+            ->on('applications.username', '=', 'users.username')
+            ->join('profiles')
+            ->on('applications.username', '=', 'profiles.username')
+            ->where('applications.code', '=', $code)
+            ->where('applications.disable', '=', 0)
+            ->execute()
+            ->current();
+
+        // 存在チェック
+        if (empty($application)) {
+            return "該当の参加申込が見つかりませんでした";
+        }
+
+        // キャンセル状況確認
+        if ($application['cancel'] != 0) {
+            return "この参加申し込みは既にキャンセル済みです";
+        }
+
+        $db = \Database_Connection::instance();
+        $db->start_transaction();
+        try {
+            // キャンセルする
+            \DB::update('applications')->set(
+                array(
+                    'cancel' => 1,
+                    'updated_at' => \DB::expr('now()'),
+                )
+            )->where('code', '=', $code)->execute();
+
+            // 申し込みキャンセルデータ作成
+            \DB::insert('application_cancels')->set(array(
+                'application_code' => $code,
+                'created_at' => \DB::expr('now()'),
+            ))->execute();
+
+            // 参加人数を減らす
+            \DB::update('events')->set(array(
+                'application_num' => \DB::expr('application_num-1')
+            ))
+                ->where('application_num', '>', 0)
+                ->where('code', '=', $application['event_code'])
+                ->execute();
+
+            // クレジット決済の場合決済取り消し
+            if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($code)) {
+                // 決済データをキャンセル状態に
+                \DB::update('application_credit_payments')->set(array(
+                    'cancel' => 1,
+                    'updated_at' => \DB::expr('now()'),
+                ))
+                    ->where('application_code', '=', $code)
+                    ->execute();
+
+                // 決済キャンセルデータ作成
+                \DB::insert('application_credit_payment_cancels')->set(array(
+                    'application_code' => $code,
+                    'created_at' => \DB::expr('now()'),
+                ))->execute();
+
+                $payment = new Payment(\Config::get('payjp.private_key'));
+                $payment->cancel($charge_id);
+            }
+
+            $db->commit_transaction();
+
+            return true;
+        } catch (\Exception $e) {
+            $db->rollback_transaction();
+
+            throw $e;
+        }
+    }
+
 }

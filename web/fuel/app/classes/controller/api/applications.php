@@ -57,4 +57,28 @@ class Controller_Api_Applications extends Controller_Apibase
             return $this->error($e->getMessage());
         }
     }
+
+    public function action_force_delete()
+    {
+        if (!Auth::check()) {
+            return $this->error('no administrator');
+        }
+
+        $group = Auth::group();
+        if (!in_array('admin', $group->get_roles())) {
+            return $this->error('no administrator');
+        }
+
+        $event_code = Applications::get_event_code_by_code(\Input::post('code'));
+
+        if (!Events::cancelable($event_code)) {
+            $res = Applications::non_cancelable_cancel(\Input::all());
+        } else {
+            $res = Applications::cancelable_cancel(\Input::all());
+        }
+        if (is_string($res)) {
+            return $this->error($res);
+        }
+        return $this->ok($res);
+    }
 }

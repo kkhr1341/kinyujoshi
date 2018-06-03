@@ -11,8 +11,8 @@ class Controller_Kinyu_Kinyumap extends Controller_Kinyubase
 
         switch (true) {
             case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-            case $_SERVER['PHP_AUTH_USER'] !== 'kinyu_map':
-            case $_SERVER['PHP_AUTH_PW']   !== '1234567890':
+            case $_SERVER['PHP_AUTH_USER'] !== 'map_ooedoito':
+            case $_SERVER['PHP_AUTH_PW']   !== 'Spaspa3472':
             header('WWW-Authenticate: Basic realm="Enter username and password."');
             header('Content-Type: text/plain; charset=utf-8');
             die('このページを見るにはログインが必要です');

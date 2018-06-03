@@ -12,7 +12,8 @@ class ApplicationCreditPayment extends Base
      */
     public static function getChargeIdByApplicationCode($application_code)
     {
-        $data = \DB::select('charge_id')->from('application_credit_payments')
+        $data = \DB::select('charge_id')
+            ->from('application_credit_payments')
             ->where('application_code', '=', $application_code)
             ->execute()
             ->current();
