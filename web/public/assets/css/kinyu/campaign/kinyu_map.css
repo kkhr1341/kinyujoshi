@@ -4,7 +4,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-map-block {
   line-height: 0;
-  width: 1200px;
+  width: 1000px;
   margin: 0 auto;
   position: relative;
   padding: 60px 0px 100px;
@@ -56,9 +56,9 @@
 }
 .sub-map-description {
   text-align: center;
-  margin-top: 24px;
+  margin-top: 16px;
   font-size: 13px;
-  line-height: 22px;
+  line-height: 24px;
 }
 .map-el-title {
   text-align: center;

@@ -6,17 +6,16 @@
     <div class="description-block">
       <p class="main-map-description">きんゆう散歩って？</p>
       <p class="sub-map-description">
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      金融を楽しく勉強したい...。でも現実を見る必要もあるし、<br>
+      正直カロリーを使うことも多い。そんな時は気分転換してみたくなりますよね。<br>
+      ちょっとリフレッシュしたい時にお散歩感覚で、金融を見たり、触れたり、<br>
+      考えることができるようなコンテンツを考えてみました。<br>
+      気分転換に日本中を”きんゆう散歩”してみませんか？( ´ ▽ ` )ﾉ
       </p>
     </div>
     <div class="map-container">
       <div id="map"></div>
-      <img class="map-illust01" src="/images/content/teacher/illust-model01.png">
+      <img class="map-illust01" src="/images/kinyu_map/map-01illust.png">
     </div>
   </div>
 </div>
