@@ -910,6 +910,10 @@ footer {
   position: relative;
   transition: .5s;
 }
+
+.admin-account-el .admin-account-title a {
+  color: #fff;
+}
 .admin-account-title.active:after {
   content: "×";
   font-size: 16px;

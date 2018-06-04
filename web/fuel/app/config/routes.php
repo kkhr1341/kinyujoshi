@@ -73,6 +73,9 @@ return array(
 	'contact' => 'kinyu/inquiry',
 	'contact/complete' => 'kinyu/inquiry/complete',
 
+    //退会完了ページ
+    'withdrawal/complete' => 'kinyu/withdrawal/complete',
+
 	//会員登録
 	'regist' => 'kinyu/regist',
 	'regist/complete' => 'kinyu/regist/complete',
