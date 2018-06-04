@@ -7,7 +7,7 @@
   width: 1000px;
   margin: 0 auto;
   position: relative;
-  padding: 60px 0px 100px;
+  padding: 60px 0px 150px;
 }
 #map {
   height: 600px;
@@ -86,16 +86,16 @@
 }
 .map-container .map-illust01 {
 	position: absolute;
-	bottom: 50px;
-	left: -50px;
-	width: 200px;
+  top: 65px;
+  right: -109px;
+  width: 200px;
 	/*-webkit-animation-name: fadein;*/
-  animation-name: mapillust;
+  /*animation-name: mapillust;
   animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite;*/
 }
 
-@-webkit-keyframes mapillust {
+/*@-webkit-keyframes mapillust {
   0% {
     transform: rotate(0deg);
   }
@@ -105,8 +105,39 @@
   100% {
     transform: rotate(0deg);
   }
-}
+}*/
 
+.map-container .illust-dog1 {
+  position: absolute;
+  top: -73px;
+  left: 19px;
+  width: 100px;
+}
+.map-container .illust-dog2 {
+  position: absolute;
+  bottom: -60px;
+  left: 19px;
+  width: 100px;
+}
+.map-container .illust-bonjour {
+  position: absolute;
+  top: -104px;
+  left: -27px;
+  width: 100px;
+  transform: rotate(-21deg);
+}
+.map-container .illust-flower {
+  position: absolute;
+  bottom: -104px;
+  right: -55px;
+  width: 120px;
+}
+.map-container .illust-sun {
+  position: absolute;
+  top: -105px;
+  right: -109px;
+  width: 100px;
+}
 
 
 

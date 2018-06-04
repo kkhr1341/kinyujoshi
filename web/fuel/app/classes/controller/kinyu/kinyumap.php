@@ -19,8 +19,8 @@ class Controller_Kinyu_Kinyumap extends Controller_Kinyubase
         }
 
         $this->data['company'] = Companies::get();
-        $this->template->title = '運営会社｜きんゆう女子。';
-        $this->template->description = 'きんゆう女子。は、株式会社TOE THE LINEが運営しています。きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。';
+        $this->template->title = '大江戸温泉リートの投資先を見てみよう！｜きんゆう女子。';
+        $this->template->description = '大江戸温泉リートの投資先を見てみよう！';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
