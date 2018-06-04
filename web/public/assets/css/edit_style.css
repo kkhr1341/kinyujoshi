@@ -3,455 +3,520 @@
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-container {
-  position: relative;
+    position: relative;
 }
+
 .fs-kinyu-style {
 }
+
 .pc {
-  display: block!important;
+    display: block !important;
 }
+
 .sp {
-  display: none!important;
+    display: none !important;
 }
+
 .kinyu-main {
-  position: relative;
+    position: relative;
 }
+
 .tablet-div {
-  display: none;
+    display: none;
 }
+
 .kinyu-single-block,
 .kinyu-main-single-block {
-  padding-top: 130px;
+    padding-top: 130px;
 }
+
 #canvas {
-  position:fixed;
-  width:100%;
-  height:100%;
-  overflow: hidden;
-  opacity: 0.5;
-  z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.5;
+    z-index: -1;
 }
+
 .kinyu-sp-navi {
-  display: none;
+    display: none;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
    ヘッダー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-header-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  z-index: 1005;
-  text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1005;
+    text-align: center;
 }
+
 .kinyu-header-top .main-logo {
-  padding: 30px 0px 22px;
+    padding: 30px 0px 22px;
 }
+
 .kinyu-header {
-  background-color: #fff;
-  z-index: 1005;
-  width: 100%;
-  height: 130px;
-  position: fixed;
-  /*top: 0;*/
-  text-align: center;
-  box-shadow: 0px 0px 2px #d5d3d3;
+    background-color: #fff;
+    z-index: 1005;
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    /*top: 0;*/
+    text-align: center;
+    box-shadow: 0px 0px 2px #d5d3d3;
 }
+
 .kinyu-header h1.main-logo {
-  padding: 28px 0px 16px; 
+    padding: 28px 0px 16px;
 }
+
 .kinyu-header h1.main-logo a,
 .kinyu-header-top .main-logo a {
-  line-height: 0;
-  display: block;
-  width: 190px;
-  height: 50px;
-  margin: 0 auto;
+    line-height: 0;
+    display: block;
+    width: 190px;
+    height: 50px;
+    margin: 0 auto;
 }
+
 .kinyu-header h1.main-logo a img,
 .kinyu-header-top .main-logo a img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
+
 .kinyu-header-nav {
-  text-align: center;
-  margin-top: 0px;
-  letter-spacing: -4em;
-  font-size: 0px;
+    text-align: center;
+    margin-top: 0px;
+    letter-spacing: -4em;
+    font-size: 0px;
 }
+
 .kinyu-header-nav li {
-  display: inline-block;
-  margin-right: 36px;
-  letter-spacing: normal;
-  box-sizing: border-box;
-  transition: .5s;
-  position: relative;
+    display: inline-block;
+    margin-right: 36px;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    transition: .5s;
+    position: relative;
 }
+
 .kinyu-header-nav li:after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #8ddcd1;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  transition: .5s;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #8ddcd1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
 }
+
 .kinyu-header-nav li:last-child {
-  margin-right: 0px;
+    margin-right: 0px;
 }
+
 .kinyu-header-nav li a {
-  font-size: 12px;
-  line-height: 12px;
-  transition: .5s;
-  display: block;
-  padding-bottom: 16px;
+    font-size: 12px;
+    line-height: 12px;
+    transition: .5s;
+    display: block;
+    padding-bottom: 16px;
 }
+
 .kinyu-header-nav li.active a {
-  padding-bottom: 2px;
-  border-bottom: 1px solid #8ddcd1;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #8ddcd1;
 }
+
 /* ソーシャルリスト */
 .kinyu-header-social-list {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 1005;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1005;
 }
+
 .kinyu-header-social-list ul {
-  letter-spacing: -40px;
-  font-size:0;
+    letter-spacing: -40px;
+    font-size: 0;
 }
+
 .kinyu-header-social-list li {
-  width: 25px;
-  height: 25px;
-  display: inline-block;
-  letter-spacing: normal;
-  margin: 0px 2px;
-  transition: 0.5s;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    letter-spacing: normal;
+    margin: 0px 2px;
+    transition: 0.5s;
 }
+
 .kinyu-header-social-list li a {
-  display: block;
-  width: 100%;
-  height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
+
 .kinyu-header-social-list li a img {
-  width: 100%;
+    width: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-main-animation {
-  width: 100%;
-  height: 100vh;
-  background: rgba(255,255,255,.99);
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, .99);
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
+
 .kinyu-main-animation-inner {
-  width: 380px;
-  height: 95px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -47.5px;
-  margin-left: -190px;
+    width: 380px;
+    height: 95px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -47.5px;
+    margin-left: -190px;
 }
+
 .kinyu-main-animation-sub {
-  margin-bottom: 8px;
-  display: none;
-  width: 380px;
+    margin-bottom: 8px;
+    display: none;
+    width: 380px;
 }
+
 .kinyu-main-animation-title {
-  display: none; 
-  width: 380px;
+    display: none;
+    width: 380px;
 }
+
 .fixed {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
+
 .pc-kinyu-logo {
-  width: 150px;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 16px;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 16px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ナビゲーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-nav {
-  width: 80px;
-  padding: 22px;
-  height: 100%;
-  position: fixed;
-  right: 0;
-  border-left: 1px solid #f1f1f1;
-  background: #fff;
-  z-index: 1001;
+    width: 80px;
+    padding: 22px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    border-left: 1px solid #f1f1f1;
+    background: #fff;
+    z-index: 1001;
 }
+
 /* メニュー部分 */
 .kinyu-main-menu li {
-  position: relative;
-  width: 36px;
-  height: 36px;
-  /*background-color: #8ddcd1;*/
-  border-radius: 50%;
-  margin-bottom: 20px;
-  box-sizing: border-box;
+    position: relative;
+    width: 36px;
+    height: 36px;
+    /*background-color: #8ddcd1;*/
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
+
 .kinyu-main-menu li.menu-open {
-  height: 26px;
-  margin-bottom: 30px;
+    height: 26px;
+    margin-bottom: 30px;
 }
+
 .kinyu-main-menu li:first-child {
-  margin-bottom: 36px;
+    margin-bottom: 36px;
 }
+
 .kinyu-main-menu li a {
-  display: block;
-  line-height: 0;
-  padding:7px;
-  transition: .5s;
+    display: block;
+    line-height: 0;
+    padding: 7px;
+    transition: .5s;
 }
+
 .kinyu-main-icon {
-  font-size: 26px;
-  line-height: 32px!important;
-  color: #8ddcd1;
-  text-align: center;
-  padding: 0px!important;
+    font-size: 26px;
+    line-height: 32px !important;
+    color: #8ddcd1;
+    text-align: center;
+    padding: 0px !important;
 }
+
 .kinyu-main-menu li a img {
-  width: 100%;
+    width: 100%;
 }
+
 /* ツールチップ */
 .kinyu-main-menu li .tool-chip {
-  display: none;
-  position: absolute;
-  min-width: 200px;
-  background: #fff;
-  right: 0;
-  margin-right: 45px;
-  top: 50%;
-  font-size: 12px;
-  padding: 4px 12px;
-  line-height: 18px;
-  box-sizing: border-box;
-  text-align: center;
-  box-shadow: 1px 1px 2px whitesmoke;
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    background: #fff;
+    right: 0;
+    margin-right: 45px;
+    top: 50%;
+    font-size: 12px;
+    padding: 4px 12px;
+    line-height: 18px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 1px 1px 2px whitesmoke;
 }
+
 @-webkit-keyframes fadein {
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: block;
-    opacity: 0;
-  }
-  100% {
-    display: block;
-    opacity: 1;
-  }
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
 }
-@keyframes fadein
-{
-  0% {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: block;
-    opacity: 0;
-  }
-  100% {
-    display: block;
-    opacity: 1;
-  }
+
+@keyframes fadein {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップ・左部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-introduction {
-  width: 24%;
-  height: 100%;
-  background: gray;
-  position: fixed;
-  left: 0;
+    width: 24%;
+    height: 100%;
+    background: gray;
+    position: fixed;
+    left: 0;
 }
+
 .kinyu-introduction ul {
-  height: 100%;
+    height: 100%;
 }
+
 .bg-introduction {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(255,255,255,.6);
-  z-index: 999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .6);
+    z-index: 999;
 }
+
 .kinyu-introduction ul li {
-  height: 100%;
+    height: 100%;
 }
+
 .kinyu-introduction-logo {
-  width: 230px;
-  position: absolute;
-  left: 50%;
-  bottom: 50px;
-  margin-left: -115px;
-  z-index: 1001;
+    width: 230px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    margin-left: -115px;
+    z-index: 1001;
 }
+
 .main-title-border {
-  width: 100px;
-  height: 1px;
-  background: #8ddcd1;
-  margin: 0 auto;
-  margin-top: 24px;
-  margin-bottom: 20px;
+    width: 100px;
+    height: 1px;
+    background: #8ddcd1;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 20px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・メインコンセプト部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-intro {
-  padding: 40px 6% 72px;
+    padding: 40px 6% 72px;
 }
+
 .kinyu-top-maincontent-block {
 }
+
 .kinyu-top-maincontent-block-el {
-  padding: 72px 6%;
-  border-top: 1px solid #e5e5e5;
+    padding: 72px 6%;
+    border-top: 1px solid #e5e5e5;
 }
+
 .kinyu-top-introlist-left {
-  width: 31.333%;
-  margin-right: 3%;
-  float: left;
-  border-radius: 10px;
-  text-align: center;
-  padding-top: 6%;
+    width: 31.333%;
+    margin-right: 3%;
+    float: left;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 6%;
 }
+
 .kinyu-top-introlist-left h2 {
-  width: 220px;
-  margin: 0 auto;
+    width: 220px;
+    margin: 0 auto;
 }
+
 .kinyu-top-introlist-left h2 img {
-  width: 100%;
+    width: 100%;
 }
+
 .kinyu-top-introlist-left .main-intro-description {
-  font-size: 12px;
-  line-height: 22px;
+    font-size: 12px;
+    line-height: 22px;
 }
+
 .main-intro-link {
-  display: inline-block;
-  transition: 0.5s;
-  box-sizing: border-box;
-  font-size: 12px;
-  color: #77cbc0;
-  font-weight: bold;
-  margin-top: 16px;
-  transition: .5s;
+    display: inline-block;
+    transition: 0.5s;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #77cbc0;
+    font-weight: bold;
+    margin-top: 16px;
+    transition: .5s;
 }
+
 .kinyu-top-main-icon {
-  width: 48px;
-  height: 48px;
-  border: 2px solid #8ddcd1;
-  border-radius: 50%;
-  background: #8ddcd1;
-  margin: 0 auto;
-  box-sizing: border-box;
-  margin-bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #8ddcd1;
+    border-radius: 50%;
+    background: #8ddcd1;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
+
 .kinyu-top-main-icon p {
-  font-size: 30px;
-  line-height: 45px;
-  color: #fff;
+    font-size: 30px;
+    line-height: 45px;
+    color: #fff;
 }
+
 .kinyu-top-introlist-right {
-  width: 65.667%;
-  float: left;
+    width: 65.667%;
+    float: left;
 }
+
 .kinyu-top-introlist-pickup {
-  height: 350px;
-  position: relative;
+    height: 350px;
+    position: relative;
 }
+
 .kinyu-top-introlist-right a {
-  height: 100%;
-  display: block;
-  position: relative;
-  transition: .5s;
+    height: 100%;
+    display: block;
+    position: relative;
+    transition: .5s;
 }
+
 .kinyu-top-introlist-title {
-  position: absolute;
-  bottom: 0;
-  background: rgba(124, 220, 206, 0.9);
-  padding: 12px 16px;
-  width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(124, 220, 206, 0.9);
+    padding: 12px 16px;
+    width: 100%;
 }
+
 .kinyu-top-introlist-pickup h3 {
-  color:#fff;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 14px;
-  height: 14px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
 }
+
 .kinyu-top-introlist-pickup .swiper-wrapper,
 .kinyu-top-introlist-pickup .swiper-slide {
-  height: 100%;
+    height: 100%;
 }
+
 .kinyu-top-introlist-pickup .swiper-slide {
-  transition: .5s;
+    transition: .5s;
 }
+
 .kinyu-top-introlist-pickup .swiper-arrow {
-  position: absolute;
-  bottom: 50%;
-  width: 27px;
-  height: 44px;
-  margin-bottom: -12px;
-  z-index: 10;
-  cursor: pointer;
-  -moz-background-size: 27px 44px;
-  -webkit-background-size: 27px 44px;
-  background-size: 27px 44px;
-  background-position: center;
-  background-repeat: no-repeat;
+    position: absolute;
+    bottom: 50%;
+    width: 27px;
+    height: 44px;
+    margin-bottom: -12px;
+    z-index: 10;
+    cursor: pointer;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 .kinyu-top-introlist-pickup .swiper-button-prev02 {
-  left: 10px;
+    left: 10px;
 }
+
 .kinyu-top-introlist-pickup .swiper-button-next02 {
-  right: 10px;
+    right: 10px;
 }
+
 .swiper-button-next02.swiper-button-disabled,
 .swiper-button-prev02.swiper-button-disabled {
-  opacity: .1;
-  cursor: auto;
-  pointer-events: none;
+    opacity: .1;
+    cursor: auto;
+    pointer-events: none;
 }
-.kinyu-top-introlist-pickup.swiper-container-horizontal>.swiper-pagination02 {
-  bottom: inherit;
-  left: inherit;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: auto;
+
+.kinyu-top-introlist-pickup.swiper-container-horizontal > .swiper-pagination02 {
+    bottom: inherit;
+    left: inherit;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
 }
+
 .kinyu-top-introlist-pickup .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  display: inline-block;
-  border-radius: 0;
-  background: #fff;
-  opacity: .5;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 0;
+    background: #fff;
+    opacity: .5;
 }
+
 .kinyu-top-introlist-pickup .swiper-pagination-bullet-active {
     opacity: 1;
     background: #8ddcd1;
@@ -459,70 +524,79 @@
 
 /* ニュース */
 .kinyu-top-introlist-news {
-  width: 80%;
-  margin: 0 auto;
-  box-sizing: border-box;
-  margin-top: 50px;
-  border-top: 1px solid #8ddcd1;
-  padding: 8px 0px 0px;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 50px;
+    border-top: 1px solid #8ddcd1;
+    padding: 8px 0px 0px;
 }
+
 .kinyu-top-introlist-news .kinyu-top-introlist-news-link {
-  display: block;
-  /*border: 1px solid #8ddcd1;*/
-  height: 30px;
-  padding: 4px 0px;
-  transition: .5s;
+    display: block;
+    /*border: 1px solid #8ddcd1;*/
+    height: 30px;
+    padding: 4px 0px;
+    transition: .5s;
 }
+
 .kinyu-top-introlist-news .sidebar-more-link {
-  font-size: 11px;
-  line-height: 11px;
-  margin-top: 12px;
+    font-size: 11px;
+    line-height: 11px;
+    margin-top: 12px;
 }
+
 .kinyu-top-introlist-news .sidebar-more-link a {
-  /*border-top: 1px solid #8ddcd1;*/
+    /*border-top: 1px solid #8ddcd1;*/
 }
+
 .kinyu-top-introlist-news .title-area {
-  float: left;
-  width: 20%;
-  height: 100%;
-  padding-top: 12px;
-  text-align: center;
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding-top: 12px;
+    text-align: center;
 }
+
 .kinyu-top-introlist-news .text-area {
-  float: right;
-  width: 80%;
-  padding: 0px 12px 0px 24px;
-  border-left: 1px solid #f7f5f5;
-  text-align: left;
+    float: right;
+    width: 80%;
+    padding: 0px 12px 0px 24px;
+    border-left: 1px solid #f7f5f5;
+    text-align: left;
 }
+
 .kinyu-top-introlist-news .title-area p {
-  font-size: 12px;
-  height: 12px;
-  line-height: 12px;
-  color: #77cbc0;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    color: #77cbc0;
 }
+
 .kinyu-top-introlist-news .text-area .news-date {
-  font-size: 11px;
-  height: 11px;
-  line-height: 11px;
-  color: #929191;
+    font-size: 11px;
+    height: 11px;
+    line-height: 11px;
+    color: #929191;
 }
+
 .kinyu-top-introlist-news .text-area .news-title {
-  margin-top: 5px;
-  font-size: 12px;
-  height: 12px;
-  line-height: 12px;
-  transition: .5s;
+    margin-top: 5px;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    transition: .5s;
 }
 
 /* イントロダクション・リスト */
 .introduction-list {
-  margin-top: 50px;
+    margin-top: 50px;
 }
+
 /*.introduction-list li {
   width: 23.5%;
   height: 150px;
-  float: left;  
+  float: left;
   background-color: gray;
   margin-right: 2%;
   position: relative;
@@ -567,7 +641,7 @@
   　トップページ・女子会リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-joshikai-list li .text-box {
-  padding: 4px 2px 0px;
+    padding: 4px 2px 0px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -576,622 +650,711 @@
 .kinyu-top-member-block {
 
 }
+
 .kinyu-top-member-list {
-  height: 300px;
-  margin-top: 24px;
+    height: 300px;
+    margin-top: 24px;
 }
+
 .kinyu-top-member-list .img-box {
-  width: 50%;
-  float: left;
-  height: 100%;
+    width: 50%;
+    float: left;
+    height: 100%;
 }
+
 .kinyu-top-member-list .text-box {
-  width: 50%;
-  float: right;
-  padding-left: 36px;
+    width: 50%;
+    float: right;
+    padding-left: 36px;
 }
+
 .border-top {
-  width: 200px;
-  height: 1px;
-  background: #8ddcd1;
+    width: 200px;
+    height: 1px;
+    background: #8ddcd1;
 }
+
 .kinyu-top-member-list .text-box {
-  margin-top: 12px;
+    margin-top: 12px;
 }
+
 .kinyu-top-member-list .text-box .main-title {
-  font-size: 18px;
-  line-height: 26px;
-  margin: 32px 0px 20px;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 32px 0px 20px;
 }
+
 .kinyu-top-member-list .text-box .description {
-  font-size: 12px;
-  line-height: 22px;
-  margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 20px;
 }
+
 .kinyu-top-member-list .text-box .link-to {
-  display: block;
-  background: #8ddcd1;
-  width: 200px;
-  text-align: center;
-  padding: 8px 20px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 12px;
-  transition: .5s;
+    display: block;
+    background: #8ddcd1;
+    width: 200px;
+    text-align: center;
+    padding: 8px 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    transition: .5s;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・記事リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-report-list li .text-box {
-  padding: 4px 1% 0px;
+    padding: 4px 1% 0px;
 }
+
 .kinyu-top-list-block {
-  margin-left: 24%;
-  padding: 130px 0px 0px;
-  position: relative;
+    margin-left: 24%;
+    padding: 130px 0px 0px;
+    position: relative;
 }
+
 .kinyu-top-list-block .inner {
-  max-width: 1300px;
-  margin: 0 auto;
-  height: 100%;
-  position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
 }
+
 .kinyu-sp-border-line {
-  width: 100%;
-  margin: 24px 0px;
+    width: 100%;
+    margin: 24px 0px;
 }
 
 /*-- 記事一覧部分 --*/
 .kinyu-list-block {
-  background: #f9f9f9;
-  padding-top: 130px;
+    background: #f9f9f9;
+    padding-top: 130px;
 }
+
 .kinyu-list-block .inner {
-  width: 1050px;
-  margin: 0 auto;
-  padding: 40px 0px;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 40px 0px;
 }
+
 .kinyu-top-list {
-  padding: 0px 0% 0px;
+    padding: 0px 0% 0px;
 }
+
 .kinyu-top-main-title {
-  font-size: 20px;
-  line-height: 20px;
-  color: #77cbc0;
-  font-weight: normal;
-  margin-bottom: 12px;
-  text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    color: #77cbc0;
+    font-weight: normal;
+    margin-bottom: 12px;
+    text-align: center;
 }
+
 .kinyu-top-main-sub {
-  font-size: 12px;
-  margin-bottom: 18px;
-  text-align: center;
+    font-size: 12px;
+    margin-bottom: 18px;
+    text-align: center;
 }
+
 .kinyu-top-list li {
-  float: left;
-  vertical-align: top;
-  width: 31%;
-  margin-right: 3.5%;
-  margin-bottom: 3.5%;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 0px 0px #e0e0e0;
-  position: relative;
-  transition: .5s;
+    float: left;
+    vertical-align: top;
+    width: 31%;
+    margin-right: 3.5%;
+    margin-bottom: 3.5%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 0px #e0e0e0;
+    position: relative;
+    transition: .5s;
 }
+
 .kinyu-top-list li:nth-child(3n) {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 /*.kinyu-top-list ul li:nth-last-child(-n+3) {
   margin-bottom: 0%;
 }*/
 .kinyu-top-list li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.1);
-  position: relative;
-  transition: .5s;
-  border-radius: 2px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    position: relative;
+    transition: .5s;
+    border-radius: 2px;
 }
+
 .kinyu-top-list .img-box {
-  width: 100%;
-  height: 180px;
+    width: 100%;
+    height: 180px;
 }
+
 .list-kind-img {
-  position: absolute;
-  left: 16px;
-  width: 50px;
-  height: 50px;
+    position: absolute;
+    left: 16px;
+    width: 50px;
+    height: 50px;
 }
+
 .kinyu-top-list-title {
-  font-size: 13px;
-  line-height: 20px;
-  /*padding: 0px 4px 10px;*/
-  height: 40px;
-  width: 100%;
-  box-sizing: border-box;
-  transition: 0.5s;
+    font-size: 13px;
+    line-height: 20px;
+    /*padding: 0px 4px 10px;*/
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.5s;
 }
 
 /* ページネーション */
 .kinyu-top-list-block .blog-pagenation {
-  margin-top: 16px;
+    margin-top: 16px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・バナー部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-banner-area {
-  text-align: center;
-  width: 650px;
-  margin: 0 auto;
+    text-align: center;
+    width: 650px;
+    margin: 0 auto;
 }
+
 .kinyu-top-banner-area li {
-  margin-bottom: 24px;
-  transition: .5s;
+    margin-bottom: 24px;
+    transition: .5s;
 }
+
 .kinyu-top-banner-area li a {
-  display: block;
-  line-height: 0;
-} 
+    display: block;
+    line-height: 0;
+}
+
 .kinyu-top-banner-area li img {
-  border: 1px solid #f0f0f0;
-  width: 100%;
+    border: 1px solid #f0f0f0;
+    width: 100%;
 }
 
 .introduction-list .kinyu-top-banner-area {
-  text-align: center;
-  width: 650px;
-  margin: 0 auto;
+    text-align: center;
+    width: 650px;
+    margin: 0 auto;
 }
 
 /* レポート詳細部分 */
 .report-detail-sidebar-el .banner-list {
-  text-align: center;
-  width: 750px;
-  margin: 0 auto;
+    text-align: center;
+    width: 750px;
+    margin: 0 auto;
 }
+
 .report-detail-sidebar-el .banner-list li {
-  margin-bottom: 24px;
-  transition: .5s;
+    margin-bottom: 24px;
+    transition: .5s;
 }
+
 .report-detail-sidebar-el .banner-list li a {
-  display: block;
-  line-height: 0;
+    display: block;
+    line-height: 0;
 }
+
 .report-detail-sidebar-el .banner-list li a img {
-  border: 1px solid #f0f0f0;
-  width: 100%;
+    border: 1px solid #f0f0f0;
+    width: 100%;
 }
-
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　記事詳細部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-details-block {
-  padding-top: 130px;
+    padding-top: 130px;
 }
+
 .kinyu-main-block .inner {
-  background: #fff;
-  width: 1000px;
-  padding: 80px 0px;
-  margin: 0 auto;
+    background: #fff;
+    width: 1000px;
+    padding: 80px 0px;
+    margin: 0 auto;
 }
+
 /* 記事のイントロダクション */
 .kinyu-details-introdauction {
-  background: #f7f7f7;
-  width: 100%;
-  padding: 50px 0px;
+    background: #f7f7f7;
+    width: 100%;
+    padding: 50px 0px;
 }
+
 .kinyu-details-introdauction-inner {
-  width: 1000px;
-  height: 300px;
-  margin: 0 auto;
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
 }
+
 /* 画像 */
 .kinyu-details-introdauction .img-box {
-  float: left;
-  width: 45%;
-  height: 100%;
+    float: left;
+    width: 45%;
+    height: 100%;
 }
+
 /* タイトル */
 .kinyu-details-introdauction .text-box {
-  float: right;
-  width: 55%;
-  height: 100%;
-  display: table;
-  padding-left: 4%;
+    float: right;
+    width: 55%;
+    height: 100%;
+    display: table;
+    padding-left: 4%;
 }
+
 .kinyu-details-introdauction .text-box .text-box-inner {
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
+
 .kinyu-details-introdauction .text-box .category {
-  color: #77cbc0;
-  font-size: 12px;
-  font-weight: bold;
+    color: #77cbc0;
+    font-size: 12px;
+    font-weight: bold;
 }
+
 .kinyu-details-introdauction .text-box h2 {
-  margin-top: 6px;
-  margin-bottom: 16px;
-  font-size: 20px;
-  line-height: 28px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
 }
+
 .kinyu-details-introdauction .text-box .description {
-  font-size: 12px;
-  line-height: 20px;
-  padding: 16px 0px 12px;
-  border-top: 1px solid #e0dede;
-  color: gray;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 16px 0px 12px;
+    border-top: 1px solid #e0dede;
+    color: gray;
 }
+
 .kinyu-details-introdauction .text-box .description-sub {
-  font-size: 12px;
-  line-height: 22px;
+    font-size: 12px;
+    line-height: 22px;
 }
+
 .report-detail-header .logo {
-  width: 170px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 30px;
+    width: 170px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
+
 .kinyu-top-list-kind p {
-  color: #77cbc0;
-  font-size: 12px;
-  line-height: 12px;
-  padding: 16px 0px 8px;
-  font-weight: bold;
+    color: #77cbc0;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 16px 0px 8px;
+    font-weight: bold;
 }
+
 .kinyu-top-list-kind p span {
-  font-size: 13px;
-  line-height: 13px;
-  font-weight: bold;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: bold;
 }
 
 /* イベント部分のみ */
 .kinyu-top-event-kind {
-  position: relative;
+    position: relative;
 }
+
 .kinyu-top-event-kind p {
-  line-height: 20px;
-  padding: 16px 0px 10px;
+    line-height: 20px;
+    padding: 16px 0px 10px;
 }
+
 .kinyu-top-event-kind p .date-box {
-  border: 1px solid #8ddcd1;
-  padding: 6px 4px 6px 6px;
-  margin-right: 6px;
-  background-color: #8ddcd1;
-  color: #fff;
+    border: 1px solid #8ddcd1;
+    padding: 6px 4px 6px 6px;
+    margin-right: 6px;
+    background-color: #8ddcd1;
+    color: #fff;
 }
+
 .kinyu-top-event-kind p .date {
-  font-size: 13px;
-  line-height: 13px;
-  font-weight: bold;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: bold;
 }
+
 .kinyu-top-event-kind p.joshikai-applicable {
-  position: absolute;
-  right: 5px;
-  top: 0;
-  font-size: 11px;
-  font-weight: normal;
-  color: #f56e6e;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    font-size: 11px;
+    font-weight: normal;
+    color: #f56e6e;
 }
 
 /* 本文 */
 .report-detail-main {
-  width: 1000px;
-  margin: 0 auto;
-  /*border-left: 1px solid #f3f3f3;
+    width: 1000px;
+    margin: 0 auto;
+    /*border-left: 1px solid #f3f3f3;
   border-right: 1px solid #f3f3f3;
   padding: 0px 120px;*/
 }
+
 .report-detail-main img {
-  width: 100%;
+    width: 100%;
 }
+
 .report-detail-main h2 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 32px;
-  padding: 5px 0px 5px 0px;
-  background-color: #fff;
-  border-radius: 0px;
-  border-bottom: 1px solid #8ddcd1;
-  margin: 20px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    padding: 5px 0px 5px 0px;
+    background-color: #fff;
+    border-radius: 0px;
+    border-bottom: 1px solid #8ddcd1;
+    margin: 20px 0px;
 }
+
 .report-detail-main h2:before {
-  content: "■ ";
-  color:#8ddcd1;
+    content: "■ ";
+    color: #8ddcd1;
 }
+
 .report-detail-main h3 {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 26px;
-  padding: 5px 0px 5px 0px;
-  margin: 0px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 5px 0px 5px 0px;
+    margin: 0px;
 }
+
 .report-detail-main p strong {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 .report-detail-main p {
-  font-size: 14px;
-  line-height: 24px;
+    font-size: 14px;
+    line-height: 24px;
 }
+
 .report-detail-main a {
-  color: #4C9BBF;
-  font-size: 14px;
-  line-height: 26px;
+    color: #4C9BBF;
+    font-size: 14px;
+    line-height: 26px;
 }
+
 .report-detail-main .report-bottom {
-  text-align: right;
-  margin-top: 16px;
+    text-align: right;
+    margin-top: 16px;
 }
+
 .report-detail-main blockquote {
-  font-size: 12px;
-  line-height: 18px;
-  margin-top: 5px;
-  border-left: 2px solid #d8d8d8;
-  color: #a09f9f;
-  padding-left: 8px;
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 5px;
+    border-left: 2px solid #d8d8d8;
+    color: #a09f9f;
+    padding-left: 8px;
 }
+
 .report-detail-main blockquote a {
-  font-size: 12px;
-  line-height: 16px;
-  color: #a09f9f;
+    font-size: 12px;
+    line-height: 16px;
+    color: #a09f9f;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　記事・サイドバー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .report-detail-sidebar {
-  width: 100%;
-  padding-top: 80px;
-  /*border-top: 1px solid #e1e1e1;*/
-  background: #f7f7f7;
+    width: 100%;
+    padding-top: 80px;
+    /*border-top: 1px solid #e1e1e1;*/
+    background: #f7f7f7;
 }
+
 .report-detail-sidebar2 {
-  background: #fff;
-  padding-top: 80px;
+    background: #fff;
+    padding-top: 80px;
 }
+
 .report-detail-sidebar-inner {
-  width: 1000px;
-  margin: 0 auto;
+    width: 1000px;
+    margin: 0 auto;
 }
+
 .report-detail-sidebar-el {
-  padding-bottom: 50px;
-  margin-bottom: 50px;
-  border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #e3e3e3;
 }
+
 .report-detail-sidebar-el:last-child {
     border-bottom: none;
     margin-bottom: 30px;
 }
+
 .report-detail-sidebar-el textarea {
-  width: 100%;
-  background: #ffffff;
-  resize: none;
-  padding: 16px;
-  box-sizing: border-box;
-  font-size: 12px;
-  line-height: 18px;
+    width: 100%;
+    background: #ffffff;
+    resize: none;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 18px;
 }
+
 .report-detail-sidebar-el button {
-  display: block;
-  width: 25%;
-  margin: 0 auto;
-  margin-top: 16px;
-  font-size: 13px;
-  padding:12px 0px;
-  font-weight: bold; 
+    display: block;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 16px;
+    font-size: 13px;
+    padding: 12px 0px;
+    font-weight: bold;
 }
+
 .report-detail-sidebar-el-title {
-  font-size: 14px;
-  line-height: 14px;
-  border-left: 2px solid #8ddcd1;
-  margin-bottom: 16px;
-  padding: 2px 0px 2px 8px;
+    font-size: 14px;
+    line-height: 14px;
+    border-left: 2px solid #8ddcd1;
+    margin-bottom: 16px;
+    padding: 2px 0px 2px 8px;
 }
+
 /* 直近の女子会 */
 .report-sidebar-event-list li {
-  width: 32%;
-  float: left;
-  margin-right: 2%;
-  transition: .5s;
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    transition: .5s;
 }
+
 .report-sidebar-event-list li:last-child {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 .report-sidebar-event-list li .img-box {
-  width: 100%;
-  height: 160px;
+    width: 100%;
+    height: 160px;
 }
+
 .report-sidebar-event-list li .text-box {
-  padding: 8px 2px 0px;
+    padding: 8px 2px 0px;
 }
+
 .report-sidebar-event-list li .text-box .kinyu-top-event-kind p {
-  padding: 12px 0px 6px;
+    padding: 12px 0px 6px;
 }
+
 .report-sidebar-event-list li .text-box .title {
-  width: 100%;
-  font-size: 13px;
-  line-height: 20px;
-  height: 40px;
-  margin-top: 8px;
+    width: 100%;
+    font-size: 13px;
+    line-height: 20px;
+    height: 40px;
+    margin-top: 8px;
 }
+
 .sidebar-more-link {
-  text-align: right;
+    text-align: right;
 }
+
 .report-detail-sidebar .sidebar-more-link {
-  margin-top: 16px;
+    margin-top: 16px;
 }
+
 .sidebar-more-link a {
-  font-size: 12px;
-  line-height: 12px;
-  color: #77cbc0;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+    font-size: 12px;
+    line-height: 12px;
+    color: #77cbc0;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 
 /* 編集部のおすすめ記事 */
 .report-sidebar-report-list li {
-  width: 32%;
-  float: left;
-  margin-right: 2%;
-  transition: .5s;
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    transition: .5s;
 }
+
 .report-sidebar-report-list li:last-child {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 .report-sidebar-report-list li .img-box {
-  width: 100%;
-  height: 160px;
+    width: 100%;
+    height: 160px;
 }
+
 .report-sidebar-report-list li .text-box {
-  width: 100%;
-  padding: 12px 2px 0px;
+    width: 100%;
+    padding: 12px 2px 0px;
 }
+
 .report-sidebar-report-list li .text-box .title {
-  font-size: 13px;
-  line-height: 20px;
-  height: 40px;
+    font-size: 13px;
+    line-height: 20px;
+    height: 40px;
 }
 
 /* 最新ニュース記事 */
 .kinyu-sidebar-news-list li {
-  width: 32%;
-  float: left;
-  margin-right: 2%;
-  transition: .5s;
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    transition: .5s;
 }
+
 .kinyu-sidebar-news-list li:last-child {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 .kinyu-sidebar-news-list li .img-box {
-  width: 100%;
-  height: 160px;
+    width: 100%;
+    height: 160px;
 }
+
 .kinyu-sidebar-news-list li .text-box {
-  width: 100%;
-  padding: 0px 4px 0px;
+    width: 100%;
+    padding: 0px 4px 0px;
 }
+
 .kinyu-sidebar-news-list li .text-box .title {
-  font-size: 13px;
-  line-height: 20px;
-  height: 40px;
+    font-size: 13px;
+    line-height: 20px;
+    height: 40px;
 }
 
 /* INSTAGRAM */
 .report-detail-sidebar-el .insta-el li {
-  width: 33%;
-  height: 250px;
-  margin-right: 0.5%;
-  margin-bottom: 0.5%;
-  float: left;
+    width: 33%;
+    height: 250px;
+    margin-right: 0.5%;
+    margin-bottom: 0.5%;
+    float: left;
 }
+
 .report-detail-sidebar-el .insta-hash-title {
-  text-align: center;
-  color: #77cbc0;
-  font-size: 17px;
-  margin-bottom: 12px;
+    text-align: center;
+    color: #77cbc0;
+    font-size: 17px;
+    margin-bottom: 12px;
 }
+
 .report-detail-sidebar-el .insta-el li:nth-child(3n) {
-  margin-right: 0px;
+    margin-right: 0px;
 }
+
 .report-detail-sidebar-el .insta-el li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
+
 .report-detail-sidebar-el .insta-el li a p {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: rgba(124, 220, 206, 0.8);
-  transition: .5s;
-  text-align: center;
-  display: table;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(124, 220, 206, 0.8);
+    transition: .5s;
+    text-align: center;
+    display: table;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
 }
+
 .report-detail-sidebar-el .insta-el li a p span {
-  width: 100%;
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ニュース一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-news-list {
-  padding: 0px 0% 0px;
-  width: 1000px;
-  margin: 0 auto;
+    padding: 0px 0% 0px;
+    width: 1000px;
+    margin: 0 auto;
 }
+
 .kinyu-news-list .kinyu-news-list-li {
-  position: relative;
-  width: 49%;
-  background: #f7f7f7;
-  float: left;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  transition: .5s;
+    position: relative;
+    width: 49%;
+    background: #f7f7f7;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    transition: .5s;
 }
+
 .kinyu-news-list .kinyu-news-list-li:nth-child(2n) {
-  margin-right: 0%; 
+    margin-right: 0%;
 }
+
 .kinyu-news-list .kinyu-news-title {
-  width: 300px;
-  padding-left: 8px;
+    width: 300px;
+    padding-left: 8px;
 }
+
 .kinyu-news-list .kinyu-news-list-li:after {
-  content: "〉";
-  font-size: 22px;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -11px;
-  color: #8ddcd1;
+    content: "〉";
+    font-size: 22px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -11px;
+    color: #8ddcd1;
 }
+
 .kinyu-news-list-el .img-box {
-  width: 25%;
-  height: 120px;
-  float: left;
-  border-radius: 1px;
-  transition: .5s;
+    width: 25%;
+    height: 120px;
+    float: left;
+    border-radius: 1px;
+    transition: .5s;
 }
+
 .kinyu-news-list-el .text-box {
-  width: 71%;
-  float: right;
-  padding: 12px 50px 0px 0px;
+    width: 71%;
+    float: right;
+    padding: 12px 50px 0px 0px;
 }
+
 .kinyu-news-list-el .text-box .date {
-  font-size: 13px;
-  margin-bottom: 4px;
-  color: #77cbc0;
-  font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #77cbc0;
+    font-weight: bold;
 }
+
 .kinyu-news-list-el .text-box .title {
-  font-size: 13px;
-  line-height: 20px;
-  transition: .5s;
+    font-size: 13px;
+    line-height: 20px;
+    transition: .5s;
 }
+
 .news-pagination {
-  margin-top: 24px;
-  text-align: center;
+    margin-top: 24px;
+    text-align: center;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会ページ - 女子会一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-
 
 /*.news-new-event {
   border:1px solid #8ddcd1;
@@ -1292,1504 +1455,1740 @@
   transition: .5s;
 }*/
 .joshikai-main-block .inner {
-  width: 1050px;
-  margin: 0 auto;
-  margin-top: 16px;
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 16px;
 }
+
 .joshikai-main {
-  width: 1050px;
-  height: 400px;
-  background: #f7f7f7;
-  margin: 0 auto;
-  margin-top: 16px;
+    width: 1050px;
+    height: 400px;
+    background: #f7f7f7;
+    margin: 0 auto;
+    margin-top: 16px;
 }
+
 .joshikai-main-left {
-  float: left;
-  width: 525px;
-  height: 100%;
+    float: left;
+    width: 525px;
+    height: 100%;
 }
+
 .joshikai-main-right {
-  float: right;
-  position: relative;
-  width: 525px;
-  height: 100%;
-  background: url(/images/event/L1070084.jpg) center center / cover no-repeat;
+    float: right;
+    position: relative;
+    width: 525px;
+    height: 100%;
+    background: url(/images/event/L1070084.jpg) center center / cover no-repeat;
 }
+
 .white-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .3);
 }
+
 .white-bg2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
 }
+
 .joshikai-main-left .img-box {
-  height: 100%;
-  display: table;
-  width: 100%;
-  position: relative;
+    height: 100%;
+    display: table;
+    width: 100%;
+    position: relative;
 }
+
 .joshikai-main-left .img-box .img-box-inner {
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  line-height: 0;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 0;
 }
+
 .joshikai-main-left .img-box .img-box-inner img {
-  width: 350px;
+    width: 350px;
 }
+
 .joshikai-main-left .img-box .about-joshikai-link {
-  display: block;
-  margin: 0 auto;
-  width: 200px;
-  margin-top: 8px;
-  font-size: 13px;
-  padding: 8px 0px;
-  font-weight: bold;
-  text-align: center;
-  background: #8ddcd1;
-  color: #fff;
-  margin-top: 36px;
-  transition: .5s;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    margin-top: 8px;
+    font-size: 13px;
+    padding: 8px 0px;
+    font-weight: bold;
+    text-align: center;
+    background: #8ddcd1;
+    color: #fff;
+    margin-top: 36px;
+    transition: .5s;
 }
 
 .joshikai-main-el {
-  padding: 60px 0px;
+    padding: 60px 0px;
 }
+
 .kinyu-event-list {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 .special_joshikai_title {
-  transform: rotate(-12deg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  top: -5px;
-  left: -18px;
-  z-index: 1003;
+    transform: rotate(-12deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: -5px;
+    left: -18px;
+    z-index: 1003;
 }
+
 .kinyu-event-list-el {
-  position: relative;
-  z-index: 1002;
+    position: relative;
+    z-index: 1002;
 }
+
 .kinyu-event-list .kinyu-event-list-left {
-  height: 200px;
+    height: 200px;
 }
+
 .kinyu-event-list .kinyu-event-list-right {
-  padding: 16px;
-  background: #f7f7f7;
-  position: relative;
+    padding: 16px;
+    background: #f7f7f7;
+    position: relative;
 }
+
 .kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind {
-  position: relative;
+    position: relative;
 }
+
 .kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind p {
-  padding: 8px 0px 2px;
+    padding: 8px 0px 2px;
 }
+
 .kinyu-event-list .kinyu-event-list-right .joshikai-applicable {
-  position: absolute;
-  right: 0;
-  top: 0;
-  font-size: 11px;
-  font-weight: normal;
-  color: #f56e6e;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 11px;
+    font-weight: normal;
+    color: #f56e6e;
 }
+
 .kinyu-event-list ul {
-  letter-spacing: -0.5em;
-  padding-bottom: 20px;
+    letter-spacing: -0.5em;
+    padding-bottom: 20px;
 }
+
 .kinyu-event-info-title {
-  font-size: 18px;
-  line-height: 18px;
-  color: #77cbc0;
-  font-weight: normal;
-  margin-bottom: 24px;
-  text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    color: #77cbc0;
+    font-weight: normal;
+    margin-bottom: 24px;
+    text-align: center;
 }
+
 .kinyu-event-list li {
-  display: inline-block;
-  width: 30.8%;
-  letter-spacing: normal;
-  box-sizing: border-box;
-  margin-right: 3.8%;
-  margin-bottom: 3.8%;
-  position: relative;
-  transition: .5s;
+    display: inline-block;
+    width: 30.8%;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    margin-right: 3.8%;
+    margin-bottom: 3.8%;
+    position: relative;
+    transition: .5s;
 }
+
 .kinyu-event-list li:nth-child(3n) {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 .kinyu-event-list li:nth-last-child(-n+3) {
-  margin-bottom: 0%;
+    margin-bottom: 0%;
 }
+
 .kinyu-event-list li .event-category {
-  display: inline-block;
-  background: rgba(255,255,255,.8);
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 12px;
-  line-height: 12px;
-  padding: 4px 8px;
-  color: #46aa9c;
+    display: inline-block;
+    background: rgba(255, 255, 255, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 4px 8px;
+    color: #46aa9c;
 }
+
 .kinyu-event-list li p.event-main-date {
-  display: inline-block;
-  font-size: 13px;
-  line-height: 13px;
-  vertical-align: bottom;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 13px;
+    vertical-align: bottom;
 }
+
 .kinyu-event-list li p.event-main-date span {
-  color: #77cbc0;
+    color: #77cbc0;
 }
+
 .kinyu-event-list li p.event-main-date span.timezone,
- .event-main-date span.day_of_the_week {
-  font-size: 12px;
+.event-main-date span.day_of_the_week {
+    font-size: 12px;
 }
+
 .kinyu-event-list li .event-title {
-  font-size: 13px;
-  line-height: 22px;
-  height: 44px;
-  margin: 12px 0px 16px;
-  padding: 0px 1px;
+    font-size: 13px;
+    line-height: 22px;
+    height: 44px;
+    margin: 12px 0px 16px;
+    padding: 0px 1px;
 }
+
 .event-subbox {
-  border-top: 1px solid #e3e3e3;
-  padding: 12px 1px 0px 1px;
+    border-top: 1px solid #e3e3e3;
+    padding: 12px 1px 0px 1px;
 }
+
 .event-subbox .event-subbox-el {
-  font-size: 12px;
-  line-height: 18px;
-  height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    height: 18px;
 }
 
 /* きんゆう女子会。って？ */
 .about-joshikai {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 .about-joshikai-inner {
 
 }
+
 .about-joshikai .img-box {
-  width: 50%;
-  float: left;
-  position: relative;
+    width: 50%;
+    float: left;
+    position: relative;
 }
+
 .about-joshikai .img-box-el {
-  height: 250px;
-  margin-bottom: 1%;
+    height: 250px;
+    margin-bottom: 1%;
 }
+
 .about-joshikai .img-box-el-three-el {
-  width: 32.6666667%;
-  height: 120px;
-  margin-right: 1%;
-  float: left;
+    width: 32.6666667%;
+    height: 120px;
+    margin-right: 1%;
+    float: left;
 }
+
 .about-joshikai .img-box-el-three-el:last-child {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 .about-joshikai .text-box {
-  width: 50%;
-  float: right;
-  padding-left: 36px;
+    width: 50%;
+    float: right;
+    padding-left: 36px;
 }
+
 .about-joshikai .text-box-inner {
-  margin-top: 24px;
+    margin-top: 24px;
 }
+
 .about-joshikai .text-box-inner .border-top {
-  width: 200px;
-  height: 1px;
-  background: #8ddcd1;
+    width: 200px;
+    height: 1px;
+    background: #8ddcd1;
 }
+
 .about-joshikai .text-box .main-title {
-  font-size: 18px;
-  line-height: 28px;
-  margin: 32px 0px 20px;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 32px 0px 20px;
 }
+
 .about-joshikai .text-box .description {
-  line-height: 22px;
-  font-size: 12px;
+    line-height: 22px;
+    font-size: 12px;
 }
+
 .about-joshikai .text-box-inner .link-to {
-  font-size: 12px;
-  margin-top: 24px;
-  display: inline-block;
-  font-weight: bold;
-  color: #77cbc0;
-  transition: .5s;
+    font-size: 12px;
+    margin-top: 24px;
+    display: inline-block;
+    font-weight: bold;
+    color: #77cbc0;
+    transition: .5s;
 }
 
 /* 主に女子会を開催している場所 */
 .joshikai-held-area {
-  background: #f7f7f7;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 50px;
-  padding: 50px;
+    background: #f7f7f7;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 50px;
 }
+
 .joshikai-held-area-title {
-  text-align: center;
-  font-size: 14px;
-  margin-bottom: 16px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 16px;
 }
+
 .joshikai-held-el {
-  margin: 0 auto;
-  height: 350px;
-  padding: 36px 0px;
-  border-bottom: 1px solid #e5e5e5;
+    margin: 0 auto;
+    height: 350px;
+    padding: 36px 0px;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 .joshikai-held-el:first-child {
-  padding: 0px 0px 36px;
+    padding: 0px 0px 36px;
 }
+
 .joshikai-held-el:last-child {
-  margin-bottom: 0px;
-  border-bottom: none;
-  padding: 36px 0px 0px;
+    margin-bottom: 0px;
+    border-bottom: none;
+    padding: 36px 0px 0px;
 }
+
 .joshikai-held-el .img-block {
-  width: 50%;
-  float: right;
-  padding-left: 36px;
-  height: 100%;
+    width: 50%;
+    float: right;
+    padding-left: 36px;
+    height: 100%;
 }
+
 .joshikai-held-el .text-block {
-  width: 50%;
-  float: left;
-  height: 100%;
-  display: table;
-  padding-right: 36px;
+    width: 50%;
+    float: left;
+    height: 100%;
+    display: table;
+    padding-right: 36px;
 }
+
 .joshikai-held-el:nth-child(even) .img-block {
-  float: left;
+    float: left;
 }
+
 .joshikai-held-el:nth-child(even) .text-block {
-  float: right;
-  padding-right: 0px;
-  padding-left: 36px;
+    float: right;
+    padding-right: 0px;
+    padding-left: 36px;
 }
+
 .joshikai-held-el .text-block-inner {
-  height: 100%;
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+    height: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
+
 .joshikai-held-place-area {
-  font-size: 14px;
-  font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;
 }
+
 .joshikai-held-place-area.kabutocho {
-  color: #f5af3f;
+    color: #f5af3f;
 }
+
 .joshikai-held-place-title.kabutocho {
-  background: rgba(245, 175, 63, 0.1);
+    background: rgba(245, 175, 63, 0.1);
 }
+
 .joshikai-held-place-area.ginza {
-  color: #ec8484;
+    color: #ec8484;
 }
+
 .joshikai-held-place-title.ginza {
-  background: rgba(236, 132, 132, 0.1);
+    background: rgba(236, 132, 132, 0.1);
 }
+
 .joshikai-held-place-title {
-  font-size: 20px;
-  margin-top: 16px;
-  margin-bottom: 2px;
-  display: inline-block;
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 2px;
+    display: inline-block;
 }
+
 .joshikai-held-place-sub-title {
-  font-size: 12px;
+    font-size: 12px;
 }
+
 .joshikai-held-place-address {
-  font-size: 11px;
-  line-height: 20px;
-  margin-top: 12px;
+    font-size: 11px;
+    line-height: 20px;
+    margin-top: 12px;
 }
+
 .joshikai-held-el .text-block .place-description {
-  width: 80%;
-  margin: 0 auto;
-  font-size: 12px;
-  line-height: 22px;
-  margin-top: 16px;
-  text-align: left;
-  word-break: break-all;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 12px;
+    line-height: 22px;
+    margin-top: 16px;
+    text-align: left;
+    word-break: break-all;
 }
+
 .joshikai-held-el .text-block .place-link-block {
-  text-align: right;
+    text-align: right;
 }
+
 .joshikai-held-el .text-block .place-link {
-  margin-top: 16px;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 12px;
-  margin: 0 auto;
-  text-align: right;
-  margin-top: 16px;
-  transition: 0.5s;
+    margin-top: 16px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 16px;
+    transition: 0.5s;
 }
+
 .place-link.kabutocho {
-  color: #f5af3f;
+    color: #f5af3f;
 }
+
 .place-link.ginza {
-  color: #ec8484;
+    color: #ec8484;
 }
 
 /* 過去の特別女子会 */
 .special-event-list li {
-  float: left;
-  width: 48.1%;
-  margin-right: 3.8%;
-  margin-bottom: 2.5%;
-  transition: .5s;
+    float: left;
+    width: 48.1%;
+    margin-right: 3.8%;
+    margin-bottom: 2.5%;
+    transition: .5s;
 }
+
 .special-event-list li:nth-child(2n) {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 .special-event-list .bg-area {
-  height: 200px;
-  background: gray;
-  transition: .5s;
+    height: 200px;
+    background: gray;
+    transition: .5s;
 }
+
 .special-event-list .text-area {
-  margin-top: 12px;
-  transition: .5s;
+    margin-top: 12px;
+    transition: .5s;
 }
+
 .special-event-list .text-area p {
-  text-align: center;
-  font-size: 12px;
-  line-height: 12px;
-  transition: .5s;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+    transition: .5s;
 }
 
 /* 女子会ページの詳細 */
 .kinyu-joshikai-detail-block {
-  background: #fff;
+    background: #fff;
 }
+
 .kinyu-joshikai-detail-inner {
-  width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  padding-top: 36px;
-  padding-bottom: 80px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 80px;
 }
+
 .kinyu-joshikai-detail-title {
-  padding-left: 32px;
-  display: table-cell;
-  vertical-align: middle;
+    padding-left: 32px;
+    display: table-cell;
+    vertical-align: middle;
 }
+
 .kinyu-joshikai-detail-title p {
-  font-size: 22px;
-  line-height: 34px;
+    font-size: 22px;
+    line-height: 34px;
 }
+
 .kinyu-joshikai-detail-el-block {
 }
 
 /* 女子会内文章 */
 .joshikai-detail-el-content-box h2 {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 26px;
-  padding: 5px 0px 5px 0px;
-  background-color: #fff;
-  border-radius: 0px;
-  border-bottom: 1px solid #8ddcd1;
-  margin: 20px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    padding: 5px 0px 5px 0px;
+    background-color: #fff;
+    border-radius: 0px;
+    border-bottom: 1px solid #8ddcd1;
+    margin: 20px 0px;
 }
+
 .joshikai-detail-el-content-box p {
-  font-size: 13px;
-  line-height: 24px;
+    font-size: 13px;
+    line-height: 24px;
 }
+
 .joshikai-detail-el-content-box a {
-  color: #60abe4;
+    color: #60abe4;
 }
+
 .joshikai-detail-el-content-box blockquote {
-  font-size: 11px;
-  line-height: 18px;
-  margin-top: 5px;
-  border-left: 2px solid #d8d8d8;
-  color: #a09f9f;
-  padding-left: 8px;
+    font-size: 11px;
+    line-height: 18px;
+    margin-top: 5px;
+    border-left: 2px solid #d8d8d8;
+    color: #a09f9f;
+    padding-left: 8px;
 }
+
 .kinyu-joshikai-detail-el {
-  width: 643px;
-  float: left;
-  padding-right: 36px;
-  box-sizing: content-box;
-  border-right: 1px solid #f5f5f5;
+    width: 643px;
+    float: left;
+    padding-right: 36px;
+    box-sizing: content-box;
+    border-right: 1px solid #f5f5f5;
 }
+
 .kinyu-joshikai-detail-el-header .main-image {
-  height: 350px;
+    height: 350px;
 }
+
 .kinyu-joshikai-detail-el .info-title {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
+
 .joshikai-detail-el-content-box {
-  padding-top: 24px;
+    padding-top: 24px;
 }
+
 .kinyu-joshikai-detail-content figure img {
-  width: 100%;
+    width: 100%;
 }
+
 .joshikai-detail-el-info li {
-  margin-bottom: 24px;
-  padding-top: 8px;
-  padding-left: 20px;
+    margin-bottom: 24px;
+    padding-top: 8px;
+    padding-left: 20px;
 }
+
 .joshikai-detail-el-info li .event-title {
-  font-size: 16px;
-  line-height: 26px;
-  border-bottom: 1px solid #dedede;
-  padding-bottom: 20px;
-  font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 20px;
+    font-weight: bold;
 }
+
 .joshikai-detail-el-info li.date {
-  border-top: none;
-  padding-top: 0px;
-  border-left: 4px solid #8ddcd1;
+    border-top: none;
+    padding-top: 0px;
+    border-left: 4px solid #8ddcd1;
 }
+
 .joshikai-detail-el-info li.date .info-detail {
 }
+
 .joshikai-detail-el-info li .info-title {
-  font-size: 13px;
-  line-height: 13px;
-  color: #77cbc0;
-  font-weight: bold;
+    font-size: 13px;
+    line-height: 13px;
+    color: #77cbc0;
+    font-weight: bold;
 }
+
 .joshikai-detail-el-info li .info-detail {
-  font-size: 13px;
-  padding-top: 8px;
+    font-size: 13px;
+    padding-top: 8px;
 }
+
 .joshikai-detail-el-info li .info-detail a {
-  transition: .5s;
+    transition: .5s;
 }
+
 .joshikai-detail-el-info .joinus-block {
-  margin-left: 20px;
-  border-top: 1px solid #dedede;
-  padding-top: 20px;
+    margin-left: 20px;
+    border-top: 1px solid #dedede;
+    padding-top: 20px;
 }
+
 .joshikai-detail-el-info .joinus-block a,
-.joshikai-detail-el-info .joinus-block p
-{
-  display: block;
-  font-size: 13px;
-  line-height: 13px;
-  font-weight: bold;
-  background: #8ddcd1;
-  color: #fff;
-  text-align: center;
-  padding: 14px 0px;
-  transition: .5s;
+.joshikai-detail-el-info .joinus-block p {
+    display: block;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: bold;
+    background: #8ddcd1;
+    color: #fff;
+    text-align: center;
+    padding: 14px 0px;
+    transition: .5s;
 }
+
 .joshikai-detail-el-info .joinus-block .applicable-title {
-  font-size: 11px;
-  line-height: 11px;
-  text-align: center;
-  margin-top: 8px;
+    font-size: 11px;
+    line-height: 11px;
+    text-align: center;
+    margin-top: 8px;
 }
+
 .joshikai-detail-el-info .joinus-block .applicable-link {
-  display: block;
-  font-size: 13px;
-  line-height: 13px;
-  font-weight: bold;
-  background: #8ddcd1;
-  color: #fff;
-  text-align: center;
-  padding: 14px 0px;
-  opacity: .3;
+    display: block;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: bold;
+    background: #8ddcd1;
+    color: #fff;
+    text-align: center;
+    padding: 14px 0px;
+    opacity: .3;
 }
+
 .joshikai-sidebar {
-  width: 320px;
-  float: right;
-  margin-top: 8px;
+    width: 320px;
+    float: right;
+    margin-top: 8px;
 }
+
 .joshikai-detail-el-content-box .info-title {
-  font-size: 14px;
-  line-height: 14px;
-  color: #77cbc0;
-  font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    color: #77cbc0;
+    font-weight: bold;
 }
 
 /* 未登録メンバーの決済ページ */
 .joshikai-detail-el-info .no-login-area {
-  position: relative;
+    position: relative;
 }
+
 .joshikai-detail-el-info .no-menber-fee-el {
-  margin-top: 12px;
+    margin-top: 12px;
 }
+
 .joshikai-detail-el-info .no-menber-fee-el .description {
-  font-size: 12px;
-  padding-left: 1px;
+    font-size: 12px;
+    padding-left: 1px;
 }
+
 .joshikai-detail-el-info .no-menber-fee-el .no-menber-fee-el-btn {
-  display: block;
-  margin-top: 4px;
-  text-align: center;
-  background: gray;
-  padding: 10px 0px;
+    display: block;
+    margin-top: 4px;
+    text-align: center;
+    background: gray;
+    padding: 10px 0px;
 }
+
 .joshikai-detail-el-info .no-menber-fee-el .login-member {
-  background: #8ddcd1;
-  color: #fff;
-  font-weight: bold;
+    background: #8ddcd1;
+    color: #fff;
+    font-weight: bold;
 }
+
 .joshikai-detail-el-info .no-menber-fee-el .no-member {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 /* メンバー登録なし・参加部分 */
 .no-login-area-joinbtn {
-  display: none;
+    display: none;
 }
 
 .kinyu-event-list-subdescription {
-  text-align: center;
-  font-size: 13px;
-  width: 400px;
-  padding: 8px 0px;
-  margin: 0 auto;
-  margin-top: 32px;
-  display: block;
-  border: 1px solid #f9aaa0;
-  transition: .5s;
+    text-align: center;
+    font-size: 13px;
+    width: 400px;
+    padding: 8px 0px;
+    margin: 0 auto;
+    margin-top: 32px;
+    display: block;
+    border: 1px solid #f9aaa0;
+    transition: .5s;
 }
+
 /* 過去のスペシャル女子会の設計 */
 .past-specialevent-list {
-  width: 92%;
-  margin: 0 auto;
-  margin-top: 8px;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 8px;
 }
+
 .past-specialevent-list li {
-  float: left;
-  width: 49%;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  transition: .5s;
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    transition: .5s;
 }
+
 .past-specialevent-list li:nth-child(2n) {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 .past-specialevent-list a {
-  display: block;
-  width: 100%;
-  height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
+
 .past-specialevent-list li .img-box {
-  height: 180px;
+    height: 180px;
 }
+
 .past-specialevent-list li .title {
-  font-size: 14px;
-  text-align: center;
-  margin-top: 4px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 4px;
 }
+
 .kinyu-eventbottom-arrow {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 24px;
-  color:#8ddcd1;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 24px;
+    color: #8ddcd1;
 }
 
 /* 女子会予約後のメッセージ */
 .joshikai-complete-message {
-  padding: 60px 0px 80px;
-  text-align: center;
-  background: #f7f7f7;
+    padding: 60px 0px 80px;
+    text-align: center;
+    background: #f7f7f7;
 }
+
 .joshikai-complete-message h2 {
-  font-size: 22px;
-  color: #77cbc0;
-  font-weight: bold;
+    font-size: 22px;
+    color: #77cbc0;
+    font-weight: bold;
 }
+
 .joshikai-complete-message p {
-  margin-top: 20px;
+    margin-top: 20px;
 }
+
 .joshikai-complete-message .message-top {
-  display: block;
-  margin: 0 auto;
-  width: 220px;
-  font-size: 13px;
-  padding: 10px 0px;
-  text-align: center;
-  background: #8ddcd1;
-  color: #fff;
-  margin-top: 36px;
-  transition: .5s;
-  border: 1px solid #8ddcd1;
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    font-size: 13px;
+    padding: 10px 0px;
+    text-align: center;
+    background: #8ddcd1;
+    color: #fff;
+    margin-top: 36px;
+    transition: .5s;
+    border: 1px solid #8ddcd1;
 }
+
 .joshikai-complete-message .message-top02 {
-  margin-top: 12px!important;
-  border: 1px solid #8ddcd1;
-  background: #fff;
-  color: #77cbc0;
+    margin-top: 12px !important;
+    border: 1px solid #8ddcd1;
+    background: #fff;
+    color: #77cbc0;
 }
 
 /* 女子会チケット前の画面 */
 .joinus-open-block {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(240, 240, 240, 0.95);
-  z-index: 1006;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 240, 240, 0.95);
+    z-index: 1006;
 }
+
 .joinus-open-block .inner {
-  width: 400px;
-  height: 400px;
-  background-color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -200px;
-  margin-left: -200px;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
 }
+
 .joinus-open-block .inner form .main-title {
-  font-size: 22px;
-  line-height: 32px;
-  border-bottom: none;
-  margin-bottom: 24px;
-  padding-top: 42px;
-  text-align: center;
+    font-size: 22px;
+    line-height: 32px;
+    border-bottom: none;
+    margin-bottom: 24px;
+    padding-top: 42px;
+    text-align: center;
 }
+
 .joinus-open-block .login-block {
-  padding: 0px 0px 28px 0px;
-  width: 80%;
-  margin: 0 auto;
+    padding: 0px 0px 28px 0px;
+    width: 80%;
+    margin: 0 auto;
 }
+
 .joinus-open-block .login-block a {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 0px;
-  margin-bottom: 12px;
-  transition: .5s;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0px;
+    margin-bottom: 12px;
+    transition: .5s;
 }
+
 .joinus-open-block .login-block a.login {
-  background: #8ddcd1;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
+    background: #8ddcd1;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
 }
+
 .joinus-open-block .login-block a.login_regist {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
+
 .joinus-open-block .login-block a:last-child {
-  margin-bottom: 0px;
-  text-align: center;
+    margin-bottom: 0px;
+    text-align: center;
 }
+
 .first-login-block {
-  padding: 28px 0px 0px 0px;
-  border-top: 1px solid #e5e5e5;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
+    padding: 28px 0px 0px 0px;
+    border-top: 1px solid #e5e5e5;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
+
 .joinus-open-block .first-login-block a {
-  display: block;
-  background: #f9f0ca;
-  margin: 0 auto;
-  padding: 10px 0px;
-  margin-bottom: 12px;
-  transition: .5s;
+    display: block;
+    background: #f9f0ca;
+    margin: 0 auto;
+    padding: 10px 0px;
+    margin-bottom: 12px;
+    transition: .5s;
 }
+
 #joinus-open-close {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 12px;
-  background: #fff;
-  width: 60px;
-  height: 60px;
-  transition: .5s;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 12px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    transition: .5s;
 }
+
 #joinus-open-close img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会決済ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-joshikai-tickets-block {
-  width: 800px;
-  margin: 0 auto;
-  border: 1px solid #8ddcd1;
-  padding: 36px;
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid #8ddcd1;
+    padding: 36px;
 }
+
 .kinyu-joshikai-tickets-block .ticket-title {
-  font-size: 13px;
-  line-height: 13px;
-  color: #77cbc0;
-  font-weight: bold;
-  margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #77cbc0;
+    font-weight: bold;
+    margin-bottom: 12px;
 }
+
 .kinyu-joshikai-tickets-fee span {
-  color: #77cbc0;
-  font-weight: bold;
-  margin-bottom: 12px;
+    color: #77cbc0;
+    font-weight: bold;
+    margin-bottom: 12px;
 }
+
 .kinyu-joshikai-tickets-fee p {
-  font-size: 13px;
-  text-align: center;
+    font-size: 13px;
+    text-align: center;
 }
+
 .kinyu-joshikai-tickets-main {
-  padding-bottom: 24px;
-  border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e9e9e9;
 }
+
 .kinyu-joshikai-tickets-main-inner {
-  display: table;
-  height: 130px;
+    display: table;
+    height: 130px;
 }
+
 .kinyu-joshikai-tickets-main .tickets-img {
-  width: 200px;
-  height: 100%;
-  display: table-cell;
+    width: 200px;
+    height: 100%;
+    display: table-cell;
 }
+
 .kinyu-joshikai-tickets-main h2 {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 22px;
-  line-height: 34px;
-  padding-left: 24px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+    line-height: 34px;
+    padding-left: 24px;
 }
+
 .kinyu-joshikai-tickets-fee {
-  padding: 24px 0px;
+    padding: 24px 0px;
 }
+
 .kinyu-joshikai-tickets-payment {
-  padding-top: 24px;
-  border-top: 1px solid #e9e9e9;
+    padding-top: 24px;
+    border-top: 1px solid #e9e9e9;
 }
+
 .kinyu-joshikai-tickets-payment a {
-  width: 100%;
-  display: block;
-  margin-bottom: 10px;
-  padding: 12px 0px;
-  font-size: 13px;
-  text-align: center;
-  transition: .5s;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px 0px;
+    font-size: 13px;
+    text-align: center;
+    transition: .5s;
 }
+
 .kinyu-joshikai-tickets-payment a:nth-child(2) {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
+
 .kinyu-joshikai-tickets-payment .fee-card {
-  background: #8ddcd1;
-  border: 1px solid #8ddcd1;
-  color: #fff;1
-  font-weight: bold;
+    background: #8ddcd1;
+    border: 1px solid #8ddcd1;
+    color: #fff;
+    1 font-weight: bold;
 }
+
 .kinyu-joshikai-tickets-payment .fee-cash {
-  background: #f1f1f1;
-  border: 1px solid #f1f1f1;
+    background: #f1f1f1;
+    border: 1px solid #f1f1f1;
 }
 
 /* 決済画面 */
 .joshikai-payment-block {
-  padding-top: 130px;
-  padding-bottom: 80px;
+    padding-top: 130px;
+    padding-bottom: 80px;
 }
+
 .fee-open {
-  padding-top: 50px;
+    padding-top: 50px;
 }
+
 .day-card-open {
 }
+
 .fee-open .inner {
-  width: 720px;
-  margin: 0 auto;
+    width: 720px;
+    margin: 0 auto;
 }
+
 .fee-open .inner form {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
 }
+
 .fee-open .inner form .main-title {
-  font-size: 22px;
-  padding-bottom: 4px;
-  display: inline-block;
-  margin: 0 auto;
-  margin-bottom: 12px;
+    font-size: 22px;
+    padding-bottom: 4px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 12px;
 }
+
 .fee-open .inner form label {
-  font-size: 13px;
-  color: #77cbc0;
-  border-left: 2px solid #77cbc0;
-  margin-bottom: 8px;
-  margin-left: 1px;
-  padding-left: 6px;
-  font-weight: bold;
-  width: 100%;
-  text-align: left;
+    font-size: 13px;
+    color: #77cbc0;
+    border-left: 2px solid #77cbc0;
+    margin-bottom: 8px;
+    margin-left: 1px;
+    padding-left: 6px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
 }
+
 .fee-open .inner form .day-cash-open-form-el p {
-  text-align: left;
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 0.1rem;
-  color: #a0a0a0;
-  margin-top: 0px;
-  margin-bottom: 6px;
+    text-align: left;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.1rem;
+    color: #a0a0a0;
+    margin-top: 0px;
+    margin-bottom: 6px;
 }
+
 .fee-open .inner form .description {
-  font-size: 13px;
-  line-height: 20px;
-  text-align: center;
-  color: #727070;
-  margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: #727070;
+    margin-bottom: 16px;
 }
+
 .fee-open .inner form .cancel-description {
-  border: 1px solid #efb1b1;
-  display: inline-block;
-  padding: 12px 16px;
-  width: 92%;
-  margin: 0 auto;
-  margin-top: 8px;
-  margin-bottom: 0px;
+    border: 1px solid #efb1b1;
+    display: inline-block;
+    padding: 12px 16px;
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-bottom: 0px;
 }
+
 .fee-open .inner form .cancel-description p {
-  font-size: 12px;
-  line-height: 18px;
+    font-size: 12px;
+    line-height: 18px;
 }
+
 .fee-open .inner form .cancel-description .cancel-description-title {
-  font-size: 13px;
-  display: block;
-  margin-bottom: 4px;
-  font-weight: bold;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
 
 }
+
 .fee-open .fee-open-el {
-  margin-bottom: 24px;
+    margin-bottom: 24px;
 }
+
 .fee-open .inner form input {
-  width: 100%;
-  background: #f7f7f7;
-  padding: 12px;
-  font-size: 13px;
-  box-sizing: border-box;
+    width: 100%;
+    background: #f7f7f7;
+    padding: 12px;
+    font-size: 13px;
+    box-sizing: border-box;
 }
+
 .fee-open .inner form select {
-  width: 100%;
-  padding: 12px;
-  font-size: 13px;
-  background: #f5f5f5;
+    width: 100%;
+    padding: 12px;
+    font-size: 13px;
+    background: #f5f5f5;
 }
+
 .fee-open .inner form .select-before-title {
-  text-align: left;
-  font-size: 12px;
+    text-align: left;
+    font-size: 12px;
 }
+
 .fee-open .inner form .newcards {
-  margin-top: 16px;
+    margin-top: 16px;
 }
+
 .fee-open .inner form .newcards p {
-  color: #77cbc0;
-  font-weight: bold;
+    color: #77cbc0;
+    font-weight: bold;
 }
+
 .login-btn-list li.email-login-bg a {
-  background: #79cec1;
-  color: #fff;
-  font-weight: bold;
+    background: #79cec1;
+    color: #fff;
+    font-weight: bold;
 }
+
 .day-cash-submit {
-  background: #8ddcd1;
-  font-weight: bold;
-  font-size: 13px;
-  display: block;
-  width: 250px;
-  text-align: center;
-  padding: 16px 0px;
-  color: #fff;
-  margin: 0 auto;
+    background: #8ddcd1;
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+    width: 250px;
+    text-align: center;
+    padding: 16px 0px;
+    color: #fff;
+    margin: 0 auto;
 }
+
 .day-card-open .day-cash-submit {
-  margin-top: 12px;
+    margin-top: 12px;
 }
+
 .kinyu-joshikai-tickets-payment-list p {
-  font-size: 12px;
-  text-align: center;
+    font-size: 12px;
+    text-align: center;
 }
 
 /* カード払い */
 .day-card-open .exp-date-block {
-  font-size: 0px;
-  display: inline-block;
-  letter-spacing: -40em;
-  width: 100%;
+    font-size: 0px;
+    display: inline-block;
+    letter-spacing: -40em;
+    width: 100%;
 }
+
 .day-card-open .exp-date-block input {
-  width: 48%!important;
-  display: inline-block;
-  letter-spacing: normal;
+    width: 48% !important;
+    display: inline-block;
+    letter-spacing: normal;
 }
+
 .day-card-open .exp-date-block input:first-child {
-  margin-right: 4%;
+    margin-right: 4%;
 }
 
 /* 対応カードの部分 */
 .kinyu-credit-list-block {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 32px;
-  background-color: rgba(141, 220, 209, 0.5);
-  padding: 24px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 32px;
+    background-color: rgba(141, 220, 209, 0.5);
+    padding: 24px;
 }
+
 .kinyu-credit-list {
-  letter-spacing: -40px;
-  font-size:0;
+    letter-spacing: -40px;
+    font-size: 0;
 }
+
 .kinyu-credit-list-block p {
-  font-size: 13px;
-  line-height: 13px;
-  margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 8px;
 }
+
 .kinyu-credit-list-block p.sub-credit {
-  margin-bottom: 0px; 
-  margin-top: 12px;
-  font-size: 12px;
-  line-height: 12px;
-  color: #696969;
+    margin-bottom: 0px;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #696969;
 }
+
 .kinyu-credit-list li {
-  width: 15%;
-  padding: 4px 2%;
-  box-sizing: border-box;
-  margin-right: 2%;
-  display: inline-block;
-  letter-spacing: normal;
-  background-color: #fff;
+    width: 15%;
+    padding: 4px 2%;
+    box-sizing: border-box;
+    margin-right: 2%;
+    display: inline-block;
+    letter-spacing: normal;
+    background-color: #fff;
 }
+
 .kinyu-credit-list li:last-child {
-  margin-right: 0%;
+    margin-right: 0%;
 }
+
 .kinyu-credit-list li img {
-  width: 100%;
+    width: 100%;
 }
+
 .fee-open button {
-  transition: .5s;
+    transition: .5s;
 }
+
 /* 決済画面 - 参加費の部分 */
 .kinyu-credit-fee-area p {
-  font-size: 13px;
+    font-size: 13px;
 }
+
 .kinyu-credit-fee-area p span {
-  color: #77cbc0;
-  font-weight: bold;
-  font-size: 13px;
+    color: #77cbc0;
+    font-weight: bold;
+    font-size: 13px;
 }
+
 /* 決済画面 - キャンセルポリシー */
 .cancel-block {
-  width: 100%;
-  border-top: 1px solid #77cbc0;
-  border-bottom: 1px solid #77cbc0;
-  margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 36px;
-  padding: 20px;
+    width: 100%;
+    border-top: 1px solid #77cbc0;
+    border-bottom: 1px solid #77cbc0;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 36px;
+    padding: 20px;
 }
+
 .cancel-block .cancel-title {
-  color: #77cbc0;
-  font-weight: bold;
-  margin-bottom: 4px;
-  font-size: 14px;
+    color: #77cbc0;
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 14px;
 }
+
 .cancel-block .cancel-description {
-  font-size: 12px;
+    font-size: 12px;
 }
+
 .cancel-button-area {
-  font-size: 12px;
-  display: inline-block;
-  padding: 4px;
-  background: #f7f7f7;
-  margin-top: 8px;
-  transition: .5s;
+    font-size: 12px;
+    display: inline-block;
+    padding: 4px;
+    background: #f7f7f7;
+    margin-top: 8px;
+    transition: .5s;
 }
+
 .cancel-button-area input[type=checkbox] {
-  display: none;
+    display: none;
 }
+
 .cancel-button-area.checked-input {
-  background: #e0f7f4;
+    background: #e0f7f4;
 }
+
 .cancel-button-area label {
-  box-sizing: border-box;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
-  position: relative;
-  display: inline-block;
-  padding-right: 20px;
-  background-color: #f6f7f8;
-  vertical-align: middle;
-  cursor: pointer;
-  width: auto!important;
-  padding-left: 0px!important;
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    background-color: #f6f7f8;
+    vertical-align: middle;
+    cursor: pointer;
+    width: auto !important;
+    padding-left: 0px !important;
 }
+
 .cancel-button-area label:before {
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-  position: absolute;
-  top: 50%;
-  left: 6px;
-  display: block;
-  margin-top: -8px;
-  width: 3px;
-  height: 7px;
-  border-right: 2px solid #77cbc0;
-  border-bottom: 2px solid #77cbc0;
-  content: '';
-  opacity: 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    display: block;
+    margin-top: -8px;
+    width: 3px;
+    height: 7px;
+    border-right: 2px solid #77cbc0;
+    border-bottom: 2px solid #77cbc0;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
+
 .cancel-button-area label:after {
-  -webkit-transition: border-color 0.2s linear;
-  transition: border-color 0.2s linear;
-  position: absolute;
-  top: 50%;
-  display: block;
-  margin-top: -10px;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #bbb;
-  content: '';
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -10px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #bbb;
+    content: '';
 }
+
 input[type=checkbox]:checked + .checkbox:after {
-  border-color: #77cbc0;
+    border-color: #77cbc0;
 }
+
 input[type=checkbox]:checked + .checkbox:before {
-  opacity: 1;
+    opacity: 1;
 }
+
 .cancel-block-list {
-  padding: 8px 0px;
+    padding: 8px 0px;
 }
+
 .cancel-block-list li {
-  font-size: 12px;
-  line-height: 22px;
-  position: relative;
-  text-align: left;
-  padding-left: 15px;
-  margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 22px;
+    position: relative;
+    text-align: left;
+    padding-left: 15px;
+    margin-bottom: 12px;
 }
+
 .cancel-block-list li:last-child {
-  margin-bottom: 0px; 
+    margin-bottom: 0px;
 }
+
 .cancel-block-list li:before {
-  content: "◆";
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #8ddcd1;
-  font-size: 10px;
+    content: "◆";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #8ddcd1;
+    font-size: 10px;
 }
+
 .cancel-block-list li span {
-  color: #ff9595;
-  font-weight: bold;
+    color: #ff9595;
+    font-weight: bold;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-content-after-el {
-  text-align: center;
-  margin-top: 70px;
+    text-align: center;
+    margin-top: 70px;
 }
+
 /* メンバー促進 */
 .after-content-member {
-  text-align: center;
+    text-align: center;
 }
+
 .after-content-member img {
-  display: block;
-  width: 540px;
-  margin: 0 auto;
+    display: block;
+    width: 540px;
+    margin: 0 auto;
 }
+
 .after-content-member a {
-  display: inline-block;
-  padding: 12px 80px;
-  background: #8ddcd1;
-  color: #fff;
-  margin-top: 24px;
-  transition: .5s;
+    display: inline-block;
+    padding: 12px 80px;
+    background: #8ddcd1;
+    color: #fff;
+    margin-top: 24px;
+    transition: .5s;
 }
 
 /* ソーシャルのシェア部分 */
 .report-detail-share {
-  width: 100%;
-  height: 180px;
-  margin-top: 36px;
+    width: 100%;
+    height: 180px;
+    margin-top: 36px;
 }
+
 .report-detail-share-el {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
+
 .report-detail-share-el h3 {
-  text-align: center;
-  margin-bottom: 8px;
+    text-align: center;
+    margin-bottom: 8px;
 }
+
 .report-detail-share-left {
-  float: left;
-  width: 40%;
+    float: left;
+    width: 40%;
 }
+
 .report-detail-share-right {
-  float: right;
-  width: 60%;
-  background: #f7f7f7;
-  padding-top: 40px;
+    float: right;
+    width: 60%;
+    background: #f7f7f7;
+    padding-top: 40px;
 }
+
 .report-detail-share .social-list {
-  text-align: center;
-  margin-top: 12px;
+    text-align: center;
+    margin-top: 12px;
 }
+
 .report-detail-share .social-list li {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  margin-right: 12px;
-  transition: .5s;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+    transition: .5s;
 }
+
 .report-detail-share .social-list li:last-child {
-  margin-right: 0px;
+    margin-right: 0px;
 }
+
 .report-detail-share .share-this-title {
-  width: 55%;
-  display: block;
-  margin: 0 auto;
+    width: 55%;
+    display: block;
+    margin: 0 auto;
 }
+
 .report-detail-share .share-this-page {
-  width: 25%;
-  display: block;
-  margin: 0 auto;
+    width: 25%;
+    display: block;
+    margin: 0 auto;
 }
+
 .report-detail-share .social-list li a {
-  display: block;
-  width: 100%;
-  height: 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
+
 .report-detail-share .social-list li a .social-logo {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
 }
+
 .report-detail-share .social-list li .facebook {
-  background: #708fe5;
+    background: #708fe5;
 }
+
 .report-detail-share .social-list li .twitter {
-  background: #87e1f9; 
+    background: #87e1f9;
 }
 
 /* おすすめPick Up! */
 .kinyu-content-after .after-content li {
-  width: 219px;
-  height: 219px;
-  background: gray;
-  float: left;
-  margin-right: 21.5px;
-  margin-bottom: 21.5px;
-  position: relative;
-  overflow: hidden;
+    width: 219px;
+    height: 219px;
+    background: gray;
+    float: left;
+    margin-right: 21.5px;
+    margin-bottom: 21.5px;
+    position: relative;
+    overflow: hidden;
 }
+
 .kinyu-content-after .after-content li a {
-  display: block;
-  width: 205px;
-  height: 205px;
+    display: block;
+    width: 205px;
+    height: 205px;
 }
+
 .kinyu-content-after .after-content .kinyu-top-list-title {
-  font-size: 13px;
-  line-height: 18px;
-  text-align: left;
-  position: absolute;
-  bottom: 0;
-  padding: 6px;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4));
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    padding: 6px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4));
 }
+
 .kinyu-content-after .after-content li:nth-child(3n) {
-  margin-right: 0px;
+    margin-right: 0px;
 }
 
 /* カテゴリーから記事をえらぶ */
 .kinyu-content-after .after-category {
-  text-align: center;
+    text-align: center;
 }
+
 .kinyu-content-after .after-category li {
-  display: inline-block;
-  border-radius: 20px;
-  transition: 0.5s;
-  padding: 8px;
+    display: inline-block;
+    border-radius: 20px;
+    transition: 0.5s;
+    padding: 8px;
 }
+
 .kinyu-content-after .after-category li a {
-  display: block;
-  padding: 6px 24px;
-  font-size: 20px;
-  background: #eafffb;
-  border-radius: 20px; 
+    display: block;
+    padding: 6px 24px;
+    font-size: 20px;
+    background: #eafffb;
+    border-radius: 20px;
 }
 
 /* きんゆう女子。のメニュー */
 .report-detail-menu li {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 20px;
-  border-radius: 3px;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 3px;
 }
+
 .report-detail-menu li:last-child {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
+
 .report-detail-menu li .tw-columns,
 .report-detail-menu li .tw-columns01 {
-  width: 48.5%;
-  height: 100%;
-  float: left;
+    width: 48.5%;
+    height: 100%;
+    float: left;
 }
+
 .report-detail-menu li .tw-columns01 {
-  margin-right: 3%;
+    margin-right: 3%;
 }
+
 .report-detail-menu li a {
-  display: block;
-  line-height: 200px;
-  background: rgba(255,255,255,.2);
-  transition: .5s;
+    display: block;
+    line-height: 200px;
+    background: rgba(255, 255, 255, .2);
+    transition: .5s;
 }
+
 .report-detail-menu li a p {
-  color: #fff;
-  font-size: 26px;
-  line-height: 26px;
-  display: inline-block;
-  border-bottom: 1px solid rgba(255,255,255,.5);
-  padding-bottom: 8px;
-  text-shadow: 1px 1px 1px gray;
-  transition: .5s;
+    color: #fff;
+    font-size: 26px;
+    line-height: 26px;
+    display: inline-block;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 1px gray;
+    transition: .5s;
 }
+
 .report-detail-menu li .tw-columns01,
 .report-detail-menu li .tw-columns {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 /* 編集部へのコメント */
 .kinyu-content-after .report-detail-comment textarea {
-  height: 200px;
-  width: 100%;
-  border: 1px solid #cff9f3;
-  border-radius: 3px;
-  padding: 12px;
-  box-sizing: border-box;
-  font-size: 15px;
-  line-height: 20px;
-  transition: 055s;
-  resize: none;
-  background: #fbfbfb;
+    height: 200px;
+    width: 100%;
+    border: 1px solid #cff9f3;
+    border-radius: 3px;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 20px;
+    transition: 055s;
+    resize: none;
+    background: #fbfbfb;
 }
+
 .kinyu-content-after .report-detail-comment p {
-  text-align: left;
+    text-align: left;
 }
+
 .kinyu-content-after .report-detail-comment textarea:focus {
-  border: 1px solid #8ddcd1;
-  background: #efefef;
-  outline: 0;
+    border: 1px solid #8ddcd1;
+    background: #efefef;
+    outline: 0;
 }
+
 .kinyu-content-after .report-detail-comment button {
-  margin-top: 16px;
+    margin-top: 16px;
 }
+
 .btn-kinyu {
-  padding: 12px 50px;
-  background: #8ddcd1;
-  color: #fff;
-  font-weight: bold;
-  transition: .5s;
+    padding: 12px 50px;
+    background: #8ddcd1;
+    color: #fff;
+    font-weight: bold;
+    transition: .5s;
 }
 
 /* ソーシャル関連 */
 .kinyu-social-list {
-  font-size:0;
-  border: 1px solid #8ddcd1;
-  padding: 16px 0px;
-  position: relative;
+    font-size: 0;
+    border: 1px solid #8ddcd1;
+    padding: 16px 0px;
+    position: relative;
 }
+
 .kinyu-social-list .deco1 {
-  width: 10px;
-  height: 20px;
-  background: #fff;
-  position: absolute;
-  top: 0;
-  left: -1px;
-  visibility: visible;
+    width: 10px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    visibility: visible;
 }
-.kinyu-social-list .deco2{
-  width: 10px;
-  height: 20px;
-  background: #fff;
-  position: absolute;
-  bottom: 0;
-  right: -1px;
-  visibility: visible;
+
+.kinyu-social-list .deco2 {
+    width: 10px;
+    height: 20px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    right: -1px;
+    visibility: visible;
 }
+
 .kinyu-social-list-el {
-  float: left;
-  width: 33.333%;
-  padding: 0px 16px;
-  min-height: 230px;
+    float: left;
+    width: 33.333%;
+    padding: 0px 16px;
+    min-height: 230px;
 }
+
 .kinyu-social-list .kinyu-social-list-el:first-child {
-  border-right: 1px solid #8ddcd1;
+    border-right: 1px solid #8ddcd1;
 }
+
 .kinyu-social-list .kinyu-social-list-el:nth-child(3n) {
-  border-left: 1px solid #8ddcd1;
+    border-left: 1px solid #8ddcd1;
 }
+
 .kinyu-social-list-el .follow-link {
-  display: block;
-  width: 82%;
-  margin: 0 auto;
-  padding: 8px 0px;
-  text-align: center;
-  color: #fff;
-  line-height: 18px;
-  transition: .5s;
+    display: block;
+    width: 82%;
+    margin: 0 auto;
+    padding: 8px 0px;
+    text-align: center;
+    color: #fff;
+    line-height: 18px;
+    transition: .5s;
 }
+
 .kinyu-social-list-el p {
-  line-height: 18px;
+    line-height: 18px;
 }
+
 .kinyu-social-list-el .follow-link.twitter {
-  background: #1da1f2;
+    background: #1da1f2;
 }
+
 .kinyu-social-list-el .follow-link.twitter:before {
-  content: " ";
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  padding-right: 10px;
-  background: url(/images/social/twitter_btn.png) center center / cover no-repeat;
-  background-size: contain;
-  vertical-align: middle;
+    content: " ";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    padding-right: 10px;
+    background: url(/images/social/twitter_btn.png) center center / cover no-repeat;
+    background-size: contain;
+    vertical-align: middle;
 }
+
 .kinyu-social-list-el .follow-link.instagram {
-  background: #fff;
-  color: #3897f0;
-  border: 1px solid #3897f0;
+    background: #fff;
+    color: #3897f0;
+    border: 1px solid #3897f0;
 }
+
 .kinyu-social-list-el .follow-link.instagram:before {
-  content: " ";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  padding-right: 10px;
-  background: url(/images/social/insta_follow02.png) center center / cover no-repeat;
-  background-size: contain;
-  vertical-align: middle;
+    content: " ";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+    background: url(/images/social/insta_follow02.png) center center / cover no-repeat;
+    background-size: contain;
+    vertical-align: middle;
 }
+
 /* Twitter */
 .kinyu-social-list-el .twitter-block,
 .kinyu-social-list-el .instagram-block {
-  padding-top: 12px;
+    padding-top: 12px;
 }
+
 .kinyu-social-list-el .kinyu-social-link {
-  display: block;
-  color: #0693e3;
-  text-decoration: underline;
-  font-size: 14px;
-  padding: 8px 0px 16px;
+    display: block;
+    color: #0693e3;
+    text-decoration: underline;
+    font-size: 14px;
+    padding: 8px 0px 16px;
 }
+
 .kinyu-social-list-el .img-box {
-  width: 80px;
-  height: 80px;
-  border-radius: 3px;
-  margin: 0 auto;
-  margin-top: 12px;
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-top: 12px;
 }
+
 .kinyu-social-list-el .instagram-block .img-box {
-  border-radius: 50%;
+    border-radius: 50%;
 }
+
 .kinyu-social-list-el .social-list-title {
-  height: 36px;
+    height: 36px;
 }
 
 /*ポップアップ*/
 .report-detail-comment-popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.95);
-  z-index: 1008;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .95);
+    z-index: 1008;
 }
+
 .report-detail-comment-popup .inner {
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -250px;
-  margin-left: -250px;
-  border: 1px solid #8ddcd1;
-  background: rgba(255,255,255,.95);
-  padding: 50px;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
+    border: 1px solid #8ddcd1;
+    background: rgba(255, 255, 255, .95);
+    padding: 50px;
 }
+
 .report-detail-comment-popup-close {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  transition: .5s;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: .5s;
 }
+
 .report-detail-comment-popup-close img {
-  width: 100%;
+    width: 100%;
 }
+
 .report-detail-comment-popup .inner p {
-  font-size: 13px;
-  line-height: 24px;
-  text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+    text-align: center;
 }
+
 .report-detail-comment-popup .inner p.main-message {
-  font-size: 20px;
-  line-height: 32px;
-  font-weight: bold;
-  margin-top: 90px;
-  margin-bottom: 20px;
-  color: #77cbc0;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: bold;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    color: #77cbc0;
 }
+
 .report-detail-comment-popup .inner p.last-message {
-  text-align: center;
-  font-size: 13px;
-  line-height: 13px;
-  margin-top: 24px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 13px;
+    margin-top: 24px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　個別ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-main-single-block .inner {
-  width: 1050px;
-  margin: 0 auto;
-  padding-top: 20px;
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 20px;
 }
+
 .company-detail-header {
-  width: 1050px;
-  margin: 0 auto;
-  padding: 20px 0px;
-  border-bottom: 1px solid #f1f1f1;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 20px 0px;
+    border-bottom: 1px solid #f1f1f1;
 }
+
 .company-detail-header .logo {
-  width: 150px;
-  display: block;
-  margin: 0 auto;
+    width: 150px;
+    display: block;
+    margin: 0 auto;
 }
+
 .single-page-after {
-  width: 660px;
-  margin: 0 auto;
+    width: 660px;
+    margin: 0 auto;
 }
+
 .single-page-after .kinyu-content-after {
-  border-top: none;
+    border-top: none;
 }
+
 .kinyu-main-single-title h1 {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 24px;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2797,354 +3196,420 @@ input[type=checkbox]:checked + .checkbox:before {
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 /* indexページ */
 .kinyu-about-block {
-  background: #f7f7f7;
+    background: #f7f7f7;
 }
+
 .about-kinyu-header-contetns {
-  height: 350px;
-  background: blue;
+    height: 350px;
+    background: blue;
 }
+
 .about-kinyu-header-contetns-list {
 }
+
 .about-kinyu-header-contetns-list-el {
-  width: 100%;
-  padding: 24px 0px;
+    width: 100%;
+    padding: 24px 0px;
 }
+
 .about-kinyu-header-contetns-list-el:first-child {
-  border-top: none; 
-  padding: 0px 0px 24px;
+    border-top: none;
+    padding: 0px 0px 24px;
 }
+
 .about-kinyu-header-contetns-list-el a {
-  display: block;
-  height: 300px;
-  width: 100%;
-  transition: .5s;
+    display: block;
+    height: 300px;
+    width: 100%;
+    transition: .5s;
 }
+
 .about-kinyu-header-contetns-list-el .img-box {
-  float: left;
-  width: 60%;
-  height: 100%;
+    float: left;
+    width: 60%;
+    height: 100%;
 }
+
 .about-kinyu-header-contetns-list-el .title-box {
-  float: right;
-  width: 40%;
-  height: 100%;
-  background-color: #f7f7f7;
+    float: right;
+    width: 40%;
+    height: 100%;
+    background-color: #f7f7f7;
 }
+
 .about-kinyu-header-contetns-list-el:nth-child(even) .img-box {
-  float: right;
+    float: right;
 }
+
 .about-kinyu-header-contetns-list-el:nth-child(even) .title-box {
-  float: left;
+    float: left;
 }
+
 .about-kinyu-header-contetns-list-el .title-box-inner {
-  display: table;
-  width: 100%;
-  height: 100%;
+    display: table;
+    width: 100%;
+    height: 100%;
 }
+
 /*.about-kinyu-header-contetns-list-el:nth-child(even) .title-box-inner {
   border-right: none;
 }*/
 .about-kinyu-header-contetns-list-el .title-box-inner p {
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
-  background: #fff;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    background: #fff;
 }
+
 .about-kinyu-header-contetns-list-el .title-box img {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
 }
+
 .about-kinyu-header-contetns-list-el p {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 /* detailページ */
 .about-kinyu-container {
-  width: 1000px;
-  margin: 0 auto;
-  padding: 40px 0px 80px;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0px 80px;
 }
+
 .about-kinyu-container-inner {
-  padding-bottom: 50px;
+    padding-bottom: 50px;
 }
+
 .about-kinyu-header {
-  border-top: 1px solid #77cbc0;
-  border-bottom: 1px solid #77cbc0;
-  text-align: center;
-  padding:8px 0px;
-  background: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid #77cbc0;
+    border-bottom: 1px solid #77cbc0;
+    text-align: center;
+    padding: 8px 0px;
+    background: rgba(255, 255, 255, 0.5);
 }
+
 .about-kinyu-container-left {
-  float: left;
-  width: 155px;
-  padding-top: 24px;
-  height: 400px;
+    float: left;
+    width: 155px;
+    padding-top: 24px;
+    height: 400px;
 }
+
 .about-kinyu-container-left li {
-  /*text-align: right;*/
-  margin-bottom: 20px;
+    /*text-align: right;*/
+    margin-bottom: 20px;
 }
+
 .about-kinyu-container-left li:last-child {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
+
 .about-kinyu-container-left li a {
-  display: block;
-  font-size: 12px;
-  line-height: 14px;
-  opacity: 1;
-  transition: .5s;
-  padding-right: 12px;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 1;
+    transition: .5s;
+    padding-right: 12px;
 }
+
 .about-kinyu-container-left li.active a {
-  color: #77cbc0;
-  font-weight: bold;
-  opacity: 1;
-  border-right: 3px solid #8ddcd1;
+    color: #77cbc0;
+    font-weight: bold;
+    opacity: 1;
+    border-right: 3px solid #8ddcd1;
 }
+
 .about-kinyu-container-right {
-  float: right;
-  width: 814px;
-  padding-left: 30px;
-  border-left: 1px solid #e0dede;
-  box-sizing: content-box;
+    float: right;
+    width: 814px;
+    padding-left: 30px;
+    border-left: 1px solid #e0dede;
+    box-sizing: content-box;
 }
+
 .about-kinyu-bgarea {
-  height: 400px;  
+    height: 400px;
 }
+
 .about-kinyu-details-area {
-  text-align: center;
-  margin-top: 42px;
+    text-align: center;
+    margin-top: 42px;
 }
+
 .about-kinyu-details-area h2 {
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: .05em;
-  display: inline-block;
-  border-bottom: 1px solid #8ddcd1;
-  padding-bottom: 2px; 
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: .05em;
+    display: inline-block;
+    border-bottom: 1px solid #8ddcd1;
+    padding-bottom: 2px;
 }
+
 .about-kinyu-description {
-  margin-top: 28px;
-  padding-bottom: 36px;
+    margin-top: 28px;
+    padding-bottom: 36px;
 }
+
 .about-kinyu-description .main-catchcopy {
-  font-size: 15px;
-  line-height: 24px;
-  margin-bottom: 16px;
-  font-weight: bold;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    font-weight: bold;
 }
+
 .about-kinyu-description .main-description {
-  width: 80%;
-  margin: 0 auto;
-  font-size: 13px;
-  line-height: 24px;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 24px;
 }
+
 /* story */
 .about-kinyu-description .story-description {
-  text-align: left;
-  width: 80%;
+    text-align: left;
+    width: 80%;
 }
+
 .about-kinyu-description .afterword {
-  width: 64%;
-  margin: 0 auto;
-  margin-top: 42px;
-  font-size: 12px;
-  line-height: 22px;
+    width: 64%;
+    margin: 0 auto;
+    margin-top: 42px;
+    font-size: 12px;
+    line-height: 22px;
 }
+
 .about-kinyu-description .afterword .afterword-text {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #77cbc0;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #77cbc0;
 }
+
 /* プロフィール部分 */
 .about-kinyu-description .profile {
-  padding: 20px 0px 0px;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 42px;
+    padding: 20px 0px 0px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 42px;
 }
+
 .about-kinyu-description .profile .profile-text {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 16px;
-  color: #77cbc0;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #77cbc0;
 }
+
 .about-kinyu-description .profile .img-box {
-  width: 20%;
-  float: left;
-  box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1), 0px 0px 5px 3px rgba(255, 255, 255, 1) inset;
-  display: none;
+    width: 20%;
+    float: left;
+    box-shadow: 0px 0px 5px 3px rgba(255, 255, 255, 1), 0px 0px 5px 3px rgba(255, 255, 255, 1) inset;
+    display: none;
 }
+
 .about-kinyu-description .profile .story-img-box {
-  height: 150px;
+    height: 150px;
 }
+
 .about-kinyu-description .profile .design-img-box {
-  height: 150px;
+    height: 150px;
 }
+
 .about-kinyu-description .profile .text-box {
-  width: 100%;
-  float: right;
-  text-align: left;
-  padding-top: 4px;
+    width: 100%;
+    float: right;
+    text-align: left;
+    padding-top: 4px;
 }
+
 .about-kinyu-description .profile .name-text {
-  font-size: 13px;
-  font-weight: bold;
+    font-size: 13px;
+    font-weight: bold;
 }
+
 .about-kinyu-description .profile .position-text {
-  font-size: 12px;
-  margin: 6px 0px 10px;
+    font-size: 12px;
+    margin: 6px 0px 10px;
 }
+
 .about-kinyu-description .profile .detail-text {
-  font-size: 11px;
-  line-height: 20px;
+    font-size: 11px;
+    line-height: 20px;
 }
+
 .divide-kinyu-description {
-  height: 1px;
-  background: #e0dede;
-  width: 300px;
-  margin:0 auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
+    height: 1px;
+    background: #e0dede;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
+
 .about-kinyujoshi-intro-description-sub {
-  font-size: 12px;
-  line-height: 22px;
+    font-size: 12px;
+    line-height: 22px;
 }
 
 /* 下部のリスト */
 .about-kinyu-detail-list {
-  padding-top: 50px;
-  border-top: 1px solid #e0dede;
+    padding-top: 50px;
+    border-top: 1px solid #e0dede;
 }
+
 .about-kinyu-detail-list ul {
-  font-size: 0;
-  letter-spacing: -40px;
+    font-size: 0;
+    letter-spacing: -40px;
 }
+
 .about-kinyu-detail-list li {
-  display: inline-block;
-  letter-spacing: normal;
-  width: 33.3333%;
-  border-right: 1px solid #f0f0f0;
-  transition: .5s;
-  box-sizing: border-box;
+    display: inline-block;
+    letter-spacing: normal;
+    width: 33.3333%;
+    border-right: 1px solid #f0f0f0;
+    transition: .5s;
+    box-sizing: border-box;
 }
+
 .about-kinyu-detail-list li a {
-  display: block;
-  line-height: 0;
+    display: block;
+    line-height: 0;
 }
+
 .about-kinyu-detail-list li:last-child {
-  border-right: none;
+    border-right: none;
 }
+
 .about-kinyu-detail-list li img {
-  width: 100%;
+    width: 100%;
 }
+
 .about-kinyu-detail-list p {
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 24px;
-  color: #77cbc0;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: #77cbc0;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   会社関連の情報
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .company-details-block {
-  width: 1050px;
-  margin: 0 auto;
-  padding: 60px 0px; 
+    width: 1050px;
+    margin: 0 auto;
+    padding: 60px 0px;
 }
+
 .company-details-menu {
-  width: 250px;
-  height: 400px;
-  float: left;
-  padding-right: 30px;
-  box-sizing: border-box;
+    width: 250px;
+    height: 400px;
+    float: left;
+    padding-right: 30px;
+    box-sizing: border-box;
 }
+
 .company-details-service-title {
-  font-size: 16px;
-  margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
+
 .company-details-menu li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 .company-details-menu li .company-details-active {
-  background-color: #ececec;
+    background-color: #ececec;
 }
+
 .company-details-menu a {
-  display: block;
-  color: #444444;
-  text-align: center;
-  padding: 12px 0px; 
-  font-size: 13px;
+    display: block;
+    color: #444444;
+    text-align: center;
+    padding: 12px 0px;
+    font-size: 13px;
 }
+
 .company-details {
-  width: 750px;
-  float: right;
-  box-sizing: border-box;
-  padding-left: 30px;
-  border-left: 1px solid #f5f5f5;
+    width: 750px;
+    float: right;
+    box-sizing: border-box;
+    padding-left: 30px;
+    border-left: 1px solid #f5f5f5;
 }
+
 .company-details .first-description {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
+
 .company-details-el {
-  margin: 30px 0px;
+    margin: 30px 0px;
 }
+
 .company-details-el-last {
-  padding-top: 30px;
-  border-top: 1px dotted #ececec;
+    padding-top: 30px;
+    border-top: 1px dotted #ececec;
 }
+
 .company-info-title {
-  text-align: center;
-  padding: 50px 0px 0px;
+    text-align: center;
+    padding: 50px 0px 0px;
 }
+
 .company-info-title h2 {
-  font-size: 24px;
-  display: inline-block;
-  border-bottom: 1px solid #8ddcd1;
-  padding-bottom: 6px;
+    font-size: 24px;
+    display: inline-block;
+    border-bottom: 1px solid #8ddcd1;
+    padding-bottom: 6px;
 }
+
 .company-details-el .title {
-  font-size: 16px;
-  line-height: 20px;
-  padding: 5px 0px;
-  background-color: #fff;
-  border-radius: 0px;
-  border-bottom: 1px solid #8ddcd1;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 5px 0px;
+    background-color: #fff;
+    border-radius: 0px;
+    border-bottom: 1px solid #8ddcd1;
 }
-.company-details-el .description{
-  margin-top: 10px;
-  padding-left: 10px;
+
+.company-details-el .description {
+    margin-top: 10px;
+    padding-left: 10px;
 }
+
 .company-legal .company-details-el:first-child {
-  margin: 0px 0px 30px;
+    margin: 0px 0px 30px;
 }
+
 .company-legal .company-details-el .description {
-  margin-top: 16px;
-  padding-left: 0px;
+    margin-top: 16px;
+    padding-left: 0px;
 }
+
 .company-contact .description {
-  text-align: center;
+    text-align: center;
 }
+
 .kinyu-report-list h3.center-title p,
 .kinyu-news-list h3.center-title p {
-  line-height: 12px;
-  font-size: 18px;
-  padding: 0px 20px;
-  margin-left: 8px;
-  background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
+    line-height: 12px;
+    font-size: 18px;
+    padding: 0px 20px;
+    margin-left: 8px;
+    background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
 }
+
 .company-contact .form-control {
-  border: 1px solid #e5e5e5;
-  font-size: 12px;
+    border: 1px solid #e5e5e5;
+    font-size: 12px;
 }
+
 .company-contact .form-group .form-title {
-  font-size: 12px;
-  line-height: 20px;
-  margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 8px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -3158,62 +3623,73 @@ input[type=checkbox]:checked + .checkbox:before {
   　フッター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 footer {
-  padding: 100px 0px 36px;
+    padding: 100px 0px 36px;
 }
+
 footer .footer-menu {
-  text-align: center;
-  margin-bottom: 36px;
+    text-align: center;
+    margin-bottom: 36px;
 }
+
 .singlepage-footer {
-  margin: 0 auto;
-  padding: 80px 0px 20px;
-  /*background: #f7f7f7;*/
+    margin: 0 auto;
+    padding: 80px 0px 20px;
+    /*background: #f7f7f7;*/
 }
+
 .footer-logo {
-  width: 260px;
-  margin: 0 auto;
-  margin-bottom: 60px;
+    width: 260px;
+    margin: 0 auto;
+    margin-bottom: 60px;
 }
+
 .footer-logo img {
-  width: 100%;
+    width: 100%;
 }
+
 footer .navi_kinyu-submenu-el {
-  display: inline-block;
-  margin-right: 8px;
+    display: inline-block;
+    margin-right: 8px;
 }
+
 footer .navi_kinyu-submenu-el a {
-  display: block;
-  padding: 2px 16px;
-  margin-right: 8px;
-  transition: 0.5s;
-  font-size: 11px;
+    display: block;
+    padding: 2px 16px;
+    margin-right: 8px;
+    transition: 0.5s;
+    font-size: 11px;
 }
+
 footer .navi_kinyu-submenu-copy {
-  font-size: 10px;
-  line-height: 14px;
-  text-align: center;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
 }
+
 .navi_kinyu-submenu-copy span {
-  display: block;
-  margin-bottom: 4px;
+    display: block;
+    margin-bottom: 4px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　メンバー登録ページ微調整
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .form-group .form-title {
-  width: 100%;
+    width: 100%;
 }
+
 .select-area .regist-selectarea {
-  display: inline-block;
+    display: inline-block;
 }
+
 .select-area .regist-selectarea .form-control {
-  width: auto;
-  display: inline-block;
-  padding: 0px 8px;
+    width: auto;
+    display: inline-block;
+    padding: 0px 8px;
 }
+
 .select-area .regist-selectarea p {
-  display: inline-block;
+    display: inline-block;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -3221,81 +3697,92 @@ footer .navi_kinyu-submenu-copy {
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .insta-block {
 }
+
 .insta-block-inner {
-  padding: 40px 60px;
-  background: #f7f7f7;
+    padding: 40px 60px;
+    background: #f7f7f7;
 }
+
 .insta-block-inner h3 a {
-  color: #77cbc0;
-  font-size: 16px;
-  display: block;
-  margin-bottom: 8px;
+    color: #77cbc0;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
 }
+
 .insta-block-inner:after {
-  content: ".";
-  display: block;
-  height: 0;
-  font-size: 0;
-  clear: both;
-  visibility: hidden;
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
 }
+
 .insta-block-inner li {
-  display: block;
-  list-style: none;
-  float: left;
-  width: 33%;
-  height: 100px;
-  margin-right: 0.5%;
-  margin-bottom: 0.5%;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-  transition: .5s;
+    display: block;
+    list-style: none;
+    float: left;
+    width: 33%;
+    height: 100px;
+    margin-right: 0.5%;
+    margin-bottom: 0.5%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
 }
+
 .insta-block-inner li:nth-child(3n) {
-  margin-right: 0%;
-  margin-bottom: 0.5%;
+    margin-right: 0%;
+    margin-bottom: 0.5%;
 }
+
 .insta-block-inner li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
+
 .insta-block-inner li a p {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: rgba(124, 220, 206, 0.8);
-  transition: .5s;
-  text-align: center;
-  display: table;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(124, 220, 206, 0.8);
+    transition: .5s;
+    text-align: center;
+    display: table;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
 }
+
 .insta-block-inner li a p span {
-  width: 100%;
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
+
 .insta-link-block {
-  text-align: right;
+    text-align: right;
 }
+
 .insta-link {
-  line-height: 13px;
-  display: inline-block;
-  border-bottom: 1px solid #6c6c6c;
-  padding-bottom: 2px;
-  margin-top: 10px;
-  color: #6c6c6c;
-  transition: .5s;
+    line-height: 13px;
+    display: inline-block;
+    border-bottom: 1px solid #6c6c6c;
+    padding-bottom: 2px;
+    margin-top: 10px;
+    color: #6c6c6c;
+    transition: .5s;
 }
+
 .insta-block-inner .sidebar-more-link {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -3304,236 +3791,274 @@ footer .navi_kinyu-submenu-copy {
 
 /* ログイン部分 */
 .login-contents-block {
-  padding: 80px 0px;
-  position: relative;
-  background: #d7f2ef;
+    padding: 80px 0px;
+    position: relative;
+    background: #d7f2ef;
 }
+
 .login-regist-block {
-  background: rgba(222, 222, 222, 0.2);
+    background: rgba(222, 222, 222, 0.2);
 }
+
 .login-contents-intro {
-  margin-bottom: 42px;
-  text-align: center;
+    margin-bottom: 42px;
+    text-align: center;
 }
+
 .login-contents-intro .caution {
-  font-size: 12px;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 8px 24px;
-  background: #fff;
-  transition: .5s;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 8px 24px;
+    background: #fff;
+    transition: .5s;
 }
+
 .login-contents-title {
-  display: inline-block;
-  font-size: 26px;
+    display: inline-block;
+    font-size: 26px;
 }
+
 .login-contents-title span {
-  padding-bottom: 4px;
+    padding-bottom: 4px;
 }
+
 .login-contents-block-inner {
-  width: 900px;
-  margin: 0 auto;
+    width: 900px;
+    margin: 0 auto;
 }
+
 .login-contents-sidearea {
-  box-sizing: content-box;  
-  width: 226px;
-  float: left;
-  margin-right: 36px;
-  padding: 4px 0px;
+    box-sizing: content-box;
+    width: 226px;
+    float: left;
+    margin-right: 36px;
+    padding: 4px 0px;
 }
+
 .login-contents-sidearea li {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
+
 .login-contents-sidearea li a {
-  display: block;
-  text-align: center;
-  padding: 8px 0px;
-  opacity: .5;
+    display: block;
+    text-align: center;
+    padding: 8px 0px;
+    opacity: .5;
 }
+
 .login-contents-sidearea li a.active {
-  background: #f0eeee;
-  opacity: 1;
-  font-weight: bold;
+    background: #f0eeee;
+    opacity: 1;
+    font-weight: bold;
 }
+
 .login-contents-mainarea {
-  width: 100%;
+    width: 100%;
 }
+
 .login-contents-form-area label.title {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 20px;
-  text-align: left;
-  width: 100%;
-  padding-left: 10px;
-  border-left: 2px solid #8ddcd1;
-  font-weight: normal;
-  margin-left: 2px;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    padding-left: 10px;
+    border-left: 2px solid #8ddcd1;
+    font-weight: normal;
+    margin-left: 2px;
 }
+
 .login-contents-form-area label {
-  font-size: 13px;
-  color: #77cbc0;
-  margin-bottom: 20px;
-  width: 100%;
+    font-size: 13px;
+    color: #77cbc0;
+    margin-bottom: 20px;
+    width: 100%;
 }
+
 .login-contents-form-area .email-form {
-  padding-bottom: 16px;
+    padding-bottom: 16px;
 }
+
 .login-contents-form-area .email-form input {
-  width: 100%;
-  background: #fff;
-  padding: 10px;
-  font-size: 12px;
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  line-height: normal;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    line-height: normal;
 }
+
 .login-contents-form-area .email-form input::-webkit-input-placeholder {
-  font-size: 12px;
+    font-size: 12px;
 }
+
 input::-webkit-input-placeholder {
- color: #b0b0b0;
- font-size: 12px;
+    color: #b0b0b0;
+    font-size: 12px;
 }
+
 .login-contents-form-area .email-form p {
-  text-align: right;
-  margin-top: 12px;
+    text-align: right;
+    margin-top: 12px;
 }
+
 .login-contents-form-area .email-form p #pass-reissue-btn {
-  transition: .5s;
+    transition: .5s;
 }
+
 .login-contents-form-area .login-btn {
-  display: block;
-  width: 200px;
-  color: #fff;
-  margin: 0 auto;
-  font-size: 13px;
-  padding: 12px 0px;
-  background: #8ddcd1;
-  font-weight: bold;
-  transition: .5s;
+    display: block;
+    width: 200px;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 12px 0px;
+    background: #8ddcd1;
+    font-weight: bold;
+    transition: .5s;
 }
 
 /* 登録部分 */
 .regist-btn-list {
-  width: 650px;
-  margin: 0 auto;
+    width: 650px;
+    margin: 0 auto;
 }
+
 .regist-btn-list li {
-  width: 100%;
-  margin-bottom: 16px;
-  transition: .5s;
+    width: 100%;
+    margin-bottom: 16px;
+    transition: .5s;
 }
+
 .regist-btn-list li a {
-  display: block;
-  padding: 12px 0px;
-  font-size: 14px;
-  text-align: center;
+    display: block;
+    padding: 12px 0px;
+    font-size: 14px;
+    text-align: center;
 }
 
 /* メールアドレスの登録/ログイン部分 */
 .login-email-container {
-  width: 50%;
-  float: left;
-  padding-right: 4%;
-  border-right: 1px solid #e6e6e6;
+    width: 50%;
+    float: left;
+    padding-right: 4%;
+    border-right: 1px solid #e6e6e6;
 }
 
 /* ソーシャルアカウントでの登録/ログイン部分 */
 .login-btn-list {
-  width: 46%;
-  float: right;
+    width: 46%;
+    float: right;
 }
+
 .login-contents ul {
-  padding: 0px 4px;
+    padding: 0px 4px;
 }
+
 .login-contents li {
-  width: 100%;
-  margin-bottom: 12px;
-  transition: .5s;
+    width: 100%;
+    margin-bottom: 12px;
+    transition: .5s;
 }
+
 .login-contents li a {
-  display: block;
-  text-align: center;
-  padding:10px 0px;
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
 }
+
 .login-contents li.email-login-bg a {
-  background: #79cec1;
-  color: #fff;
-  font-weight: bold;
+    background: #79cec1;
+    color: #fff;
+    font-weight: bold;
 }
+
 .login-contents li.email-login-bg p {
-  display: block;
-  text-align: center;
-  padding: 10px 0px;
-  background: #79cec1;
-  color: #fff;
-  font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+    background: #79cec1;
+    color: #fff;
+    font-weight: bold;
 }
+
 .email-login-bg a {
-  background: #8ddcd1;
-  color: #fff;
+    background: #8ddcd1;
+    color: #fff;
 }
+
 .fb-login-bg a {
-  background: #7093d2;
-  color: #fff;
+    background: #7093d2;
+    color: #fff;
 }
+
 .google-login-bg a {
-  background: #e68787;
-  color: #fff;
+    background: #e68787;
+    color: #fff;
 }
+
 /* pass再発行 */
 #pass-reissue-btn {
-  color: #4eaedc;
+    color: #4eaedc;
 }
+
 #pass-reissue-open {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(151, 216, 207, 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1006;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(151, 216, 207, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1006;
 }
+
 #pass-reissue-close {
-  background: #fff;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 12px;
-  width: 60px;
-  height: 60px;
-  transition: .5s;
+    background: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    width: 60px;
+    height: 60px;
+    transition: .5s;
 }
+
 #pass-reissue-close img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
+
 #pass-reissue-open .inner {
-  width: 600px;
-  height: 300px;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -150px;
-  margin-left: -300px;
-  display: table;
-  padding: 36px;
+    width: 600px;
+    height: 300px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -300px;
+    display: table;
+    padding: 36px;
 }
+
 #pass-reissue-open .inner form {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
+
 #pass-reissue-open .main-title {
-  font-size: 22px;
-  padding-bottom: 2px;
-  display: inline-block;
-  border-bottom: 1px solid #77cbc0;
-  margin: 0 auto;
-  margin-bottom: 12px;
+    font-size: 22px;
+    padding-bottom: 2px;
+    display: inline-block;
+    border-bottom: 1px solid #77cbc0;
+    margin: 0 auto;
+    margin-bottom: 12px;
 }
+
 #pass-reissue-open .description {
     font-size: 12px;
     line-height: 18px;
@@ -3541,452 +4066,594 @@ input::-webkit-input-placeholder {
     color: #727070;
     margin-bottom: 16px;
 }
+
 #pass-reissue-open .pass-reissue-form-el label {
-  font-size: 12px;
-  color: #77cbc0;
-  margin-bottom: 8px;
-  font-weight: bold;
-  width: 100%;
-  text-align: left;
+    font-size: 12px;
+    color: #77cbc0;
+    margin-bottom: 8px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
 }
+
 #pass-reissue-open .pass-reissue-form-el input {
-  width: 100%;
-  background: #f7f7f7;
-  padding: 10px;
-  font-size: 12px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
+    width: 100%;
+    background: #f7f7f7;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
+
 .pass-reissue-submit {
-  background: #8ddcd1;
-  font-size: 13px;
-  display: block;
-  width: 150px;
-  text-align: center;
-  padding: 12px 0px;
-  color: #fff;
-  margin: 0 auto;
-  transition: .5s;
+    background: #8ddcd1;
+    font-size: 13px;
+    display: block;
+    width: 150px;
+    text-align: center;
+    padding: 12px 0px;
+    color: #fff;
+    margin: 0 auto;
+    transition: .5s;
 }
+
 .regist-sub-description {
-  margin-top:20px;
-  text-align:center;
-  font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
 }
+
 .regist-sub-description a {
-  font-size: 12px;
+    font-size: 12px;
 }
+
 /*メンバー登録部分のみ*/
 .login-contents-regist .login-btn-list {
-  margin-top: 0px;
-  margin-bottom: 24px;
+    margin-top: 0px;
+    margin-bottom: 24px;
 }
+
 .login-contents-regist .login-btn-list ul {
-  padding: 0px;
+    padding: 0px;
 }
+
 .login-contents-regist .email-form {
-  border-bottom: none;
+    border-bottom: none;
 }
+
 .login-contents-regist .email-form p {
-  text-align: left;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.1rem;
-  color: #a0a0a0;
-  margin-top: 0px;
-  margin-bottom: 6px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1rem;
+    color: #a0a0a0;
+    margin-top: 0px;
+    margin-bottom: 6px;
 }
+
 .login-contents-regist .regist-selectarea,
 .login-contents-regist .regist-selectarea p {
-  display: inline-block;
+    display: inline-block;
 }
+
 .login-contents-regist .regist-selectarea select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  display: inline-block;
-  padding: 0px 8px;
-  background: #fff;
-  height: 36px;
-  font-size: 13px;
-  background-image: url(/images/login/select-arrow.png);
-  background-position: right 8px center;
-  background-repeat: no-repeat;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: inline-block;
+    padding: 0px 8px;
+    background: #fff;
+    height: 36px;
+    font-size: 13px;
+    background-image: url(/images/login/select-arrow.png);
+    background-position: right 8px center;
+    background-repeat: no-repeat;
 }
+
 .login-contents-regist .regist-selectarea select#age1 {
-  width: 100px;
+    width: 100px;
 }
+
 .login-contents-regist .regist-selectarea select#age2 {
-  width: 80px;
+    width: 80px;
 }
+
 .login-contents-regist .regist-selectarea select#age3 {
-  width: 80px;
+    width: 80px;
 }
+
 .login-contents-regist .regist-email-form-el label {
-  margin-bottom: 6px;
+    margin-bottom: 6px;
 }
+
 .login-contents-regist .email-form input {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
+
 .login-contents-regist .regist-email-form-el {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
+
 .login-contents-regist .regist-email-label {
-  color: #444;
-  border-left: 2px solid #8ddcd1;
-  padding-left: 10px;
-  margin-bottom: 20px;
-  font-size: 14px;
+    color: #444;
+    border-left: 2px solid #8ddcd1;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
+
 /* 別のボタン */
 .login-another-btn {
-  display: inline-block;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background: #8ddcd1;
-  padding: 10px 24px;
-  color: #fff;
-  font-weight: bold;
-  transition: .5s;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #8ddcd1;
+    padding: 10px 24px;
+    color: #fff;
+    font-weight: bold;
+    transition: .5s;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   メンバー登録・追加情報フォーム
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .login-add-contents-block {
-  width: 800px;
-  margin: 0 auto;
-  padding: 40px 0px 80px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px 0px 80px;
 }
+
 .login-add-contents-block .main-title {
-  text-align: center;
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 16px;
-  color: #77cbc0;
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 16px;
+    color: #77cbc0;
 }
+
 .login-add-contents-block .main-title span {
-  font-size: 15px;
-  line-height: 22px;
+    font-size: 15px;
+    line-height: 22px;
 }
+
 .login-add-contents-block .message {
-  text-align: center;
-  font-size: 14px;
-  line-height: 22px;
-  margin-bottom: 36px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 36px;
 }
+
 .login-add-contents-block .form-control {
-  border: 1px solid #e5e5e5;
-  line-height: normal;
+    border: 1px solid #e5e5e5;
+    line-height: normal;
 }
+
 .regist-add-form-edit-el {
-  margin-bottom: 32px;
+    margin-bottom: 32px;
 }
+
 .regist-add-form-edit-title {
-  font-size: 14px;
-  color: #77cbc0;
-  margin-bottom: 10px;
-  width: 100%;
-  font-weight: bold;
-  padding-left: 8px;
-  margin-left: 2px;
-  border-left: 2px solid #8ddcd1;
+    font-size: 14px;
+    color: #77cbc0;
+    margin-bottom: 10px;
+    width: 100%;
+    font-weight: bold;
+    padding-left: 8px;
+    margin-left: 2px;
+    border-left: 2px solid #8ddcd1;
 }
+
 .regist-add-form-edit-title2 {
-  font-size: 14px;
-  color: #77cbc0;
-  margin-bottom: 10px;
-  width: 100%;
-  font-weight: bold;
-  padding-left: 8px;
-  margin-left: 2px;
-  margin-top: 24px;
+    font-size: 14px;
+    color: #77cbc0;
+    margin-bottom: 10px;
+    width: 100%;
+    font-weight: bold;
+    padding-left: 8px;
+    margin-left: 2px;
+    margin-top: 24px;
 }
+
 .regist-add-form-edit-subtitle {
-  text-align: left;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.1rem;
-  color: #6d6d6d;
-  margin-top: 0px;
-  margin-bottom: 10px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1rem;
+    color: #6d6d6d;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
+
 .regist-add-form-edit-el select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  display: inline-block;
-  padding: 0px 8px;
-  background: #fff;
-  height: 36px;
-  font-size: 13px;
-  background-image: url(/images/login/select-arrow.png);
-  background-position: right 8px center;
-  background-repeat: no-repeat;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: inline-block;
+    padding: 0px 8px;
+    background: #fff;
+    height: 36px;
+    font-size: 13px;
+    background-image: url(/images/login/select-arrow.png);
+    background-position: right 8px center;
+    background-repeat: no-repeat;
 }
+
 .regist-add-form-edit-el select#age1 {
-  width: 150px;
+    width: 150px;
 }
+
 .regist-add-form-edit-el select#age2 {
-  width: 100px;
+    width: 100px;
 }
+
 .regist-add-form-edit-el select#age3 {
-  width: 100px;
+    width: 100px;
 }
+
 .regist-add-form-edit-el .regist-selectarea p {
-  display: inline-block;
-  text-align: left;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.1rem;
-  color: gray;
-  margin-top: 0px;
-  margin-right: 6px;
-  vertical-align: bottom;
+    display: inline-block;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1rem;
+    color: gray;
+    margin-top: 0px;
+    margin-right: 6px;
+    vertical-align: bottom;
 }
+
 .radio_box label, .radio_box_02 label, .radio_box_03 label {
-  padding: 12px 24px;
-  font-size: 12px;
+    padding: 12px 24px;
+    font-size: 12px;
 }
+
 .regist-add-form-table {
-  display: block;
-  padding: 24px 0px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+    display: block;
+    padding: 24px 0px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
+
 .regist-add-form-table tr {
-  margin-bottom: 12px;
-  display: block;
+    margin-bottom: 12px;
+    display: block;
 }
+
 .regist-add-form-table tr:last-child {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
+
 .regist-add-form-table th {
-  background-color: #8ddcd1!important;
-  color: #fff;
-  border: none!important;
-  width: 160px;
-  font-weight: bold;
+    background-color: #8ddcd1 !important;
+    color: #fff;
+    border: none !important;
+    width: 160px;
+    font-weight: bold;
 }
+
 .regist-add-form-table td {
-  border: none!important;
+    border: none !important;
 }
 
 /* メンバーになると...？ */
 .about-member-block {
-  width: 650px;
-  margin: 0 auto;
-  margin-top: 42px;
-  padding: 36px 50px;
-  border: 1px solid #8ddcd1;
-}
-.about-member-block .about-member-title {
-  font-size: 20px;
-  margin-bottom: 28px;
-  text-align: center;
-  color: #77cbc0;
-}
-.about-member-list li {
-  font-size: 14px;
-  margin-bottom: 24px;
-}
-.about-member-list li:last-child {
-  margin-bottom: 4px; 
-}
-.about-member-list li span {
-  font-size: 15px;
-  border-bottom: 1px solid #8ddcd1;
-  vertical-align: bottom;
-  margin-right: 12px;
-  padding-bottom: 4px;
-  color: #77cbc0;
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 42px;
+    padding: 36px 50px;
+    border: 1px solid #8ddcd1;
 }
 
+.about-member-block .about-member-title {
+    font-size: 20px;
+    margin-bottom: 28px;
+    text-align: center;
+    color: #77cbc0;
+}
+
+.about-member-list li {
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.about-member-list li:last-child {
+    margin-bottom: 4px;
+}
+
+.about-member-list li span {
+    font-size: 15px;
+    border-bottom: 1px solid #8ddcd1;
+    vertical-align: bottom;
+    margin-right: 12px;
+    padding-bottom: 4px;
+    color: #77cbc0;
+}
 
 /* パスワード再設定 */
 .resetting-pass-block {
-  background: #f7f7f7;
-  padding: 36px 80px;
+    background: #f7f7f7;
+    padding: 36px 80px;
 }
+
 .resetting-pass-el {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
+
 .resetting-pass-el input:first-child {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
+
 .resetting-pass-block .username-area {
-  margin-bottom: 24px;
-  text-align: center;
+    margin-bottom: 24px;
+    text-align: center;
 }
+
 .resetting-pass-block .username-area .name-title {
-  font-size: 15px;
-  margin-top: 0px;
-  font-weight: bold;
+    font-size: 15px;
+    margin-top: 0px;
+    font-weight: bold;
 }
+
 .resetting-pass-el-input1 {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
+
 .resetting-pass-block .form-btn {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
    はじめての方へ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-start-block-container .main-bg-area {
-  height: 500px;
-  position: relative;
+    height: 500px;
+    position: relative;
 }
+
 .kinyu-start-block-container .main-bg-area h2 {
-  width: 450px;
-  height: 150px;
-  position: absolute;
-  top: 50%;
-  margin-top: -75px;
-  left: 5%;
+    width: 450px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    margin-top: -75px;
+    left: 5%;
 }
+
 .kinyu-start-block-container .main-bg-area h2 img {
-  width: 100%;
+    width: 100%;
 }
+
 .kinyu-start-introduction {
-  width: 100%;
-  position: relative;
+    width: 100%;
+    position: relative;
 }
+
 .kinyu-start-introduction .bg-deco {
-  height: 250px;
-  width: 100%;
-  background: #d7f2ef;
-  position: absolute;
-  bottom: 0;
-  z-index: 1000;
+    height: 250px;
+    width: 100%;
+    background: #d7f2ef;
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
 }
+
 .kinyu-start-intro-block {
-  padding-bottom: 70px;
+    padding-bottom: 70px;
 }
+
 .kinyu-start-intro-inner {
-  width: 1050px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1001;
-  background: #fff;
-  padding: 70px;
-  display: flex;
-  align-items: center;
+    width: 1050px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1001;
+    background: #fff;
+    padding: 70px;
+    display: flex;
+    align-items: center;
 }
+
 .kinyu-start-intro-inner .title-box {
-  width: 45%;
-  height: 100%;
-  float: left;
-  text-align: center;
-  padding-right: 36px
+    width: 45%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    padding-right: 36px
 }
+
 .kinyu-start-intro-inner .title-box-inner p {
-  font-size: 25px;
-  line-height: 40px;
-  color: #77cbc0;
+    font-size: 25px;
+    line-height: 40px;
+    color: #77cbc0;
 }
+
 .kinyu-start-intro-inner .description-box {
-  width: 55%;
-  float: right;
+    width: 55%;
+    float: right;
 }
+
 .kinyu-start-content-inner {
-  width: 1050px;
-  margin: 0 auto;
-  padding: 70px 0px;
-  border-top: 1px solid #8ddcd1;
+    width: 1050px;
+    margin: 0 auto;
+    padding: 70px 0px;
+    border-top: 1px solid #8ddcd1;
 }
+
 .kinyu-start-content-inner .main-title {
-  font-size: 25px;
-  line-height: 40px;
-  text-align: center;
-  margin-bottom: 24px;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 24px;
 }
+
 /* きんゆう女子。でできること */
 .kinyu-start-content-action-el {
-  /*display: flex;
+    /*display: flex;
   align-items: center;*/
-  margin-bottom: 42px;
+    margin-bottom: 42px;
 }
+
 .kinyu-start-content-action-el:last-child {
-  margin-bottom: 16px;
+    margin-bottom: 16px;
 }
+
 .kinyu-start-content-action-el .img-box {
-  width: 40%;
-  height: 320px;
-  float: left;
-  position: relative;
+    width: 40%;
+    height: 320px;
+    float: left;
+    position: relative;
 }
+
 .kinyu-start-content-action-el .img-box:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.2);
-  top: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .2);
+    top: 0;
 }
+
 .kinyu-start-content-action-el .text-box {
-  width: 60%;
-  height: 320px;
-  float: right;
-  padding-left: 42px;
-  display: table;
+    width: 60%;
+    height: 320px;
+    float: right;
+    padding-left: 42px;
+    display: table;
 }
+
 .kinyu-start-content-action-el .text-box-inner {
-  width: 100%;
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle;
+    width: 100%;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
+
 .kinyu-start-content-action-el:nth-child(even) .img-box {
-  float: right;
+    float: right;
 }
+
 .kinyu-start-content-action-el:nth-child(even) .text-box {
-  float: left;
-  padding-left: 10px;
-  padding-right: 42px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 42px;
 }
+
 .kinyu-start-content-action-el .text-box .action-title {
-  font-size: 22px;
-  line-height: 22px;
-  color: #77cbc0;
-  margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 22px;
+    color: #77cbc0;
+    margin-bottom: 20px;
 }
+
 .kinyu-start-content-action-el .text-box .action-title .action-number {
-  font-size: 16px;
-  line-height: 22px;
-  border-bottom: 1px solid #8ddcd1;
-  vertical-align: bottom;
-  margin-right: 12px;
-  padding-bottom: 4px;
+    font-size: 16px;
+    line-height: 22px;
+    border-bottom: 1px solid #8ddcd1;
+    vertical-align: bottom;
+    margin-right: 12px;
+    padding-bottom: 4px;
 }
+
 .kinyu-start-content-action-el .text-box .action-description {
-  font-size: 13px;
-  line-height: 24px;
+    font-size: 13px;
+    line-height: 24px;
 }
+
 .kinyu-start-content-action-el .text-box .text-link {
-  display: inline-block;
-  padding: 8px 50px;
-  border: 1px solid #8ddcd1;
-  margin-top: 20px;
-  font-size: 12px;
-  color: #77cbc0;
-  transition: .5s;
+    display: inline-block;
+    padding: 8px 50px;
+    border: 1px solid #8ddcd1;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #77cbc0;
+    transition: .5s;
 }
+
 /* きん女。ストーリー */
 .kinyu-start-content-contaner .about-kinyu-header-contetns-list-el .title-box-inner p {
-  background-color: #f7f7f7;
+    background-color: #f7f7f7;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  チェックボックス
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.checkbox-list {
+    /*background: #ffffff;*/
+    padding: 10px;
+}
+
+.checkbox-list-item {
+    font-size: 12px;
+    /*display: inline-block;*/
+    padding: 4px;
+    /*background: #f7f7f7;*/
+    margin-top: 8px;
+    transition: .5s;
+}
+.checkbox-list-item input[type=checkbox] {
+    display: none;
+}
+.checkbox-list-item.checked-input {
+    background: #e0f7f4;
+}
+.checkbox-list-item label {
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    background-color: #f6f7f8;
+    vertical-align: middle;
+    cursor: pointer;
+    width: auto!important;
+    padding-left: 0px!important;
+}
+.checkbox-list-item label:before {
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 6px;
+    display: block;
+    margin-top: -8px;
+    width: 3px;
+    height: 7px;
+    border-right: 2px solid #77cbc0;
+    border-bottom: 2px solid #77cbc0;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox-list-item label:after {
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -10px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #bbb;
+    content: '';
+}
+.checkbox-list-item span {
+    cursor: pointer;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ローディングアニメーション
@@ -3994,349 +4661,432 @@ input::-webkit-input-placeholder {
 
 /* リロード部分 */
 .loader-block {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,.95);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1006;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1006;
 }
+
 .loader-block-inner {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -150px;
-  margin-left: -100px;
-  text-align: center;
-  display: table;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -100px;
+    text-align: center;
+    display: table;
 }
+
 .loader-el {
-  width: 100%;
-  height: 100%;
-  display: table-cell;
-  vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
+
 .loader {
-  display: inline-block;
-  margin-bottom: 4px;
-  width: 80px;
-  height: 80px;
-  border: 1px solid #8ddcd1;
-  border-radius: 50%;
-  animation: spin 0.75s infinite linear;
+    display: inline-block;
+    margin-bottom: 4px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #8ddcd1;
+    border-radius: 50%;
+    animation: spin 0.75s infinite linear;
 }
+
 .loader::before,
 .loader::after {
-  left: -1px;
-  top: -1px;
-  display: none;
-  position: absolute;
-  content: '';
-  width: inherit;
-  height: inherit;
-  border: inherit;
-  border-radius: inherit;
+    left: -1px;
+    top: -1px;
+    display: none;
+    position: absolute;
+    content: '';
+    width: inherit;
+    height: inherit;
+    border: inherit;
+    border-radius: inherit;
 }
+
 .loader-1 {
-  border-top-width: 0;
+    border-top-width: 0;
 }
+
 @keyframes spin {
-from {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(360deg);
-}
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　スクショ対策
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .report-detail-main figure {
-  position: relative;
+    position: relative;
 }
+
 .report-detail-main figure:after {
-  content: "© きんゆう女子。 2018";
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  font-size: 13px;
-  color: #fff;
+    content: "© きんゆう女子。 2018";
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-size: 13px;
+    color: #fff;
 }
 
 @media screen and (min-width: 640px) {
 
-.btn-kinyu:hover {
-  opacity: .5; 
-}
-.social-menu li:hover {
-  opacity: .5;
-}
-.navi_contents-block .inner .menu-trigger-close:hover {
-  background: #9cefe2;
-}
-.kinyu-top-list li:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-.navi_kinyu-menu-block-el a:hover {
-  background: #f5f5f5;
-}
-.navi_kinyu-submenu-el a:hover {
-  opacity: .5;
-}
-.category-menu li:hover  {
-  background: #eafffb;
-}
-/*.kinyu-top-introlist-right a:hover {
+    .btn-kinyu:hover {
+        opacity: .5;
+    }
+
+    .social-menu li:hover {
+        opacity: .5;
+    }
+
+    .navi_contents-block .inner .menu-trigger-close:hover {
+        background: #9cefe2;
+    }
+
+    .kinyu-top-list li:hover {
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    .navi_kinyu-menu-block-el a:hover {
+        background: #f5f5f5;
+    }
+
+    .navi_kinyu-submenu-el a:hover {
+        opacity: .5;
+    }
+
+    .category-menu li:hover {
+        background: #eafffb;
+    }
+
+    /*.kinyu-top-introlist-right a:hover {
   opacity: .5;
 }*/
-.kinyu-top-list li a:hover {
-  background: rgba(255,255,255,.5);
-}
-.pc-top-intro:hover {
-   opacity: .5;
-}
-.kinyu-news-list .kinyu-news-list-li:hover .kinyu-news-list-el .img-box {
-  opacity: .5;
-}
-.navi_banner_area .navi_banner_area_el:hover {
-  opacity: .5;
-}
-.kinyu-top-introlist-news .kinyu-top-introlist-news-link:hover {
-  opacity: .5;
-}
-.kinyu-top-introlist-news .kinyu-top-introlist-news-link:hover .kinyu-top-introlist-news .text-area .news-title {
-  color: #77cbc0;
-}
-.report-detail-share .social-list li:hover {
-  opacity: .5;
-}
-.report-detail-menu li a:hover {
-  background: rgba(255,255,255,.8);
-}
-.report-detail-menu li a:hover p {
-  color: #444444;
-  text-shadow: 1px 1px 1px #dbfffa;
-  border-bottom: 1px solid rgba(124, 220, 206, .8);
-}
-.company-details-menu li:hover {
-  background-color: #ececec;
-}
-.prev-news-list a:hover {
-  background: #8ddcd1;
-  color: #fff!important;
-}
-.after-content-member a:hover {
-  opacity: .5;
-}
-.kinyu-event-list li:hover,
-.kinyu-specialevent-list li:hover {
-  opacity: .5;
-}
-.kinyu-regist-branch-block .new-joshikai-flow:hover {
-  background: #d9d9d9;
-}
-.kinyu-social-list-el .follow-link:hover {
-  opacity: .5;
-}
-.kinyu-main-menu li:hover > .tool-chip {
-  display: block;
-  -webkit-animation-name: fadein;
-  animation-name: fadein;
-  -webkit-animation-duration: .6s;
-  animation-duration: .6s;
-}
-.menu-trigger:hover {
-  cursor: pointer;
-}
-.news-new-event a:hover {
-  opacity: .3;
-}
-.event-choice-el:hover {
-  background: rgba(124, 220, 206, 0.7);
-}
-.event-choice-el-block:first-child .event-choice-el:hover {
-  background: rgba(249, 231, 15, 0.7);
-}
-.past-specialevent-list li:hover {
-  opacity: .5;
-}
-.report-list-banner:hover,
-.report-list-banner-top:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-.kinyu-top-maincontent li a:hover {
-  opacity: .5;
-}
-.kinyu-top-introlist-pickup .swiper-slide:hover {
-  opacity: .5;
-}
-.pc-menu-trigger-close img:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-.insta-link:hover {
-  opacity: .5;
-}
-.insta-block-inner li a:hover > p {
-  opacity: 1;
-  cursor: pointer;
-}
-.kinyu-header-nav li:hover {
-  cursor: pointer;
-}
-.kinyu-header-nav li:hover a {
-  color: #77cbc0;
-}
-.kinyu-header-nav li:hover:after {
-  opacity: 1;
-}
-.about-kinyu-container-left li a:hover {
-  color: #77cbc0;
-  opacity: 1;
-}
-.login-contents-intro .caution:hover {
-  background: #f9aaa0;
-  color: #fff;
-  font-weight: bold;
-}
-.login-btn-list li:hover {
-  opacity: .5;
-}
-.about-kinyu-header-contetns-list-el a:hover {
-  background: #8ddcd1;
-  opacity: .5;
-}
-.report-detail-sidebar-el .insta-el li a p:hover {
-  opacity: 1;
-}
-.report-detail-sidebar-el .banner-list li a:hover {
-  opacity: .5;
-}
-.about-kinyu-detail-list li:hover {
-  background-color: #f7f7f7;
-}
-.joshikai-detail-el-info .joinus-block a:hover,
-.joshikai-detail-el-info .joinus-block p:hover {
-  cursor: pointer;
-  opacity: .5;
-}
-.joinus-open-block .login-block a:hover {
-  cursor: pointer;
-  opacity: .5;
-}
-.joinus-open-block .first-login-block a:hover {
-  cursor: pointer;
-  opacity: .5;
-}
-.kinyu-joshikai-tickets-payment a:hover {
-  cursor: pointer;
-  opacity: .5;
-}
-.fee-open button:hover {
-  cursor: pointer;
-  opacity: .5;
-}
-.joshikai-complete-message .message-top:hover {
-  cursor: pointer;
-  opacity: .5;
-}
-.kinyu-news-list .kinyu-news-list-li:hover {
-  opacity: .5; 
-}
-.report-sidebar-event-list li:hover {
-  opacity: .5; 
-}
-.kinyu-sidebar-news-list li:hover {
-  opacity: .5;
-}
-.sidebar-more-link a:hover {
-  opacity: .5;
-}
-.login-contents-form-area .login-btn:hover {
-  opacity: .5;
-}
-.regist-btn-list li:hover {
-  opacity: .5;
-}
-.joshikai-main-left .img-box .about-joshikai-link:hover {
-  opacity: .5;
-}
-#joinus-open-close:hover,
-#pass-reissue-close:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-.report-detail-comment-popup-close:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-.login-another-btn:hover {
-  background: #fff;
-  color: #77cbc0;
-}
-.cancel-button-area:hover {
-  cursor: pointer;
-}
-.place-link:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-.kinyu-start-content-action-el .text-box .text-link:hover {
-  background: #8ddcd1;
-  color: #fff;
-}
-.kinyu-top-member-list .text-box .link-to:hover {
-  opacity: .5;
-}
-.main-intro-link:hover {
-  opacity: .5;
-}
-.about-joshikai .text-box-inner .link-to:hover {
-  opacity: .5;
-}
-.login-contents-form-area .email-form p #pass-reissue-btn:hover {
-  opacity: .5;
-  cursor: pointer;
-}
-.pass-reissue-submit:hover {
-  cursor: pointer;
-  opacity: .5;
-}
-.kinyu-top-banner-area li:hover {
-  opacity: .5; 
-}
-.kinyu-event-list-subdescription:hover {
-  background: #f9aaa0;
-  color: #fff;
-}
-.special-event-list li:hover .bg-area {
-  opacity: .5;
-}
-.special-event-list li:hover .text-area p {
-  color: #77cbc0; 
-}
-.report-sidebar-report-list li:hover {
-  opacity: .5;
-}
-.kinyu-header-social-list li:hover {
-  opacity: .5;
-}
-.kinyu-top-introlist-right a:hover {
-  opacity: .5;
-}
-.joshikai-detail-el-info li .info-detail a:hover {
-  color: #77cbc0;
-  opacity: .5;
-}
-.kinyu-error-container a:hover {
-  opacity: .5;
-}
+    .kinyu-top-list li a:hover {
+        background: rgba(255, 255, 255, .5);
+    }
+
+    .pc-top-intro:hover {
+        opacity: .5;
+    }
+
+    .kinyu-news-list .kinyu-news-list-li:hover .kinyu-news-list-el .img-box {
+        opacity: .5;
+    }
+
+    .navi_banner_area .navi_banner_area_el:hover {
+        opacity: .5;
+    }
+
+    .kinyu-top-introlist-news .kinyu-top-introlist-news-link:hover {
+        opacity: .5;
+    }
+
+    .kinyu-top-introlist-news .kinyu-top-introlist-news-link:hover .kinyu-top-introlist-news .text-area .news-title {
+        color: #77cbc0;
+    }
+
+    .report-detail-share .social-list li:hover {
+        opacity: .5;
+    }
+
+    .report-detail-menu li a:hover {
+        background: rgba(255, 255, 255, .8);
+    }
+
+    .report-detail-menu li a:hover p {
+        color: #444444;
+        text-shadow: 1px 1px 1px #dbfffa;
+        border-bottom: 1px solid rgba(124, 220, 206, .8);
+    }
+
+    .company-details-menu li:hover {
+        background-color: #ececec;
+    }
+
+    .prev-news-list a:hover {
+        background: #8ddcd1;
+        color: #fff !important;
+    }
+
+    .after-content-member a:hover {
+        opacity: .5;
+    }
+
+    .kinyu-event-list li:hover,
+    .kinyu-specialevent-list li:hover {
+        opacity: .5;
+    }
+
+    .kinyu-regist-branch-block .new-joshikai-flow:hover {
+        background: #d9d9d9;
+    }
+
+    .kinyu-social-list-el .follow-link:hover {
+        opacity: .5;
+    }
+
+    .kinyu-main-menu li:hover > .tool-chip {
+        display: block;
+        -webkit-animation-name: fadein;
+        animation-name: fadein;
+        -webkit-animation-duration: .6s;
+        animation-duration: .6s;
+    }
+
+    .menu-trigger:hover {
+        cursor: pointer;
+    }
+
+    .news-new-event a:hover {
+        opacity: .3;
+    }
+
+    .event-choice-el:hover {
+        background: rgba(124, 220, 206, 0.7);
+    }
+
+    .event-choice-el-block:first-child .event-choice-el:hover {
+        background: rgba(249, 231, 15, 0.7);
+    }
+
+    .past-specialevent-list li:hover {
+        opacity: .5;
+    }
+
+    .report-list-banner:hover,
+    .report-list-banner-top:hover {
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    .kinyu-top-maincontent li a:hover {
+        opacity: .5;
+    }
+
+    .kinyu-top-introlist-pickup .swiper-slide:hover {
+        opacity: .5;
+    }
+
+    .pc-menu-trigger-close img:hover {
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    .insta-link:hover {
+        opacity: .5;
+    }
+
+    .insta-block-inner li a:hover > p {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .kinyu-header-nav li:hover {
+        cursor: pointer;
+    }
+
+    .kinyu-header-nav li:hover a {
+        color: #77cbc0;
+    }
+
+    .kinyu-header-nav li:hover:after {
+        opacity: 1;
+    }
+
+    .about-kinyu-container-left li a:hover {
+        color: #77cbc0;
+        opacity: 1;
+    }
+
+    .login-contents-intro .caution:hover {
+        background: #f9aaa0;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .login-btn-list li:hover {
+        opacity: .5;
+    }
+
+    .about-kinyu-header-contetns-list-el a:hover {
+        background: #8ddcd1;
+        opacity: .5;
+    }
+
+    .report-detail-sidebar-el .insta-el li a p:hover {
+        opacity: 1;
+    }
+
+    .report-detail-sidebar-el .banner-list li a:hover {
+        opacity: .5;
+    }
+
+    .about-kinyu-detail-list li:hover {
+        background-color: #f7f7f7;
+    }
+
+    .joshikai-detail-el-info .joinus-block a:hover,
+    .joshikai-detail-el-info .joinus-block p:hover {
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .joinus-open-block .login-block a:hover {
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .joinus-open-block .first-login-block a:hover {
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .kinyu-joshikai-tickets-payment a:hover {
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .fee-open button:hover {
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .joshikai-complete-message .message-top:hover {
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .kinyu-news-list .kinyu-news-list-li:hover {
+        opacity: .5;
+    }
+
+    .report-sidebar-event-list li:hover {
+        opacity: .5;
+    }
+
+    .kinyu-sidebar-news-list li:hover {
+        opacity: .5;
+    }
+
+    .sidebar-more-link a:hover {
+        opacity: .5;
+    }
+
+    .login-contents-form-area .login-btn:hover {
+        opacity: .5;
+    }
+
+    .regist-btn-list li:hover {
+        opacity: .5;
+    }
+
+    .joshikai-main-left .img-box .about-joshikai-link:hover {
+        opacity: .5;
+    }
+
+    #joinus-open-close:hover,
+    #pass-reissue-close:hover {
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    .report-detail-comment-popup-close:hover {
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    .login-another-btn:hover {
+        background: #fff;
+        color: #77cbc0;
+    }
+
+    .cancel-button-area:hover {
+        cursor: pointer;
+    }
+
+    .place-link:hover {
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    .kinyu-start-content-action-el .text-box .text-link:hover {
+        background: #8ddcd1;
+        color: #fff;
+    }
+
+    .kinyu-top-member-list .text-box .link-to:hover {
+        opacity: .5;
+    }
+
+    .main-intro-link:hover {
+        opacity: .5;
+    }
+
+    .about-joshikai .text-box-inner .link-to:hover {
+        opacity: .5;
+    }
+
+    .login-contents-form-area .email-form p #pass-reissue-btn:hover {
+        opacity: .5;
+        cursor: pointer;
+    }
+
+    .pass-reissue-submit:hover {
+        cursor: pointer;
+        opacity: .5;
+    }
+
+    .kinyu-top-banner-area li:hover {
+        opacity: .5;
+    }
+
+    .kinyu-event-list-subdescription:hover {
+        background: #f9aaa0;
+        color: #fff;
+    }
+
+    .special-event-list li:hover .bg-area {
+        opacity: .5;
+    }
+
+    .special-event-list li:hover .text-area p {
+        color: #77cbc0;
+    }
+
+    .report-sidebar-report-list li:hover {
+        opacity: .5;
+    }
+
+    .kinyu-header-social-list li:hover {
+        opacity: .5;
+    }
+
+    .kinyu-top-introlist-right a:hover {
+        opacity: .5;
+    }
+
+    .joshikai-detail-el-info li .info-detail a:hover {
+        color: #77cbc0;
+        opacity: .5;
+    }
+
+    .kinyu-error-container a:hover {
+        opacity: .5;
+    }
 
 }

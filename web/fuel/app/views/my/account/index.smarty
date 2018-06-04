@@ -25,12 +25,7 @@
             </div>
 
             <div class="admin-account-el">
-                <p class="admin-account-title admin-account-title2">メンバー退会について</p>
-                <div class="admin-account-el-open admin-account-el-open2 resign-area" style="display: none;">
-                    <p>メンバーの退会手続きについては、<a href="/contact" style="color:#4C9BBF;">お問い合わせフォーム</a>から受け付けております。
-                    <span style="display: block;height: 12px;"></span>
-                    一度退会されると、同じお名前やメールアドレスは使用できなくなりますので。あらかじめご了承ください。</p>
-                </div>
+                <p class="admin-account-title admin-account-title2"><a href="/my/account/withdrawal">メンバー退会について</a></p>
             </div>
 
         </div>
