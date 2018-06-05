@@ -129,7 +129,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
         }
 
         $this->template->lang = 'en';
-        $this->template->title = 'かぶと町マップ｜きんゆう女子。';
+        $this->template->title = 'きんゆう散歩｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/map/map-og.jpg';
         $this->template->description = 'レトロな町・金ゆうの町、日本橋兜町・茅場町。あまり知られていない、かくれ家的なお店がいっぱい！！ きんゆう女子。おすすめのスポットをご紹介♪';
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);

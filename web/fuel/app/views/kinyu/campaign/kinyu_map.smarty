@@ -6,17 +6,24 @@
     <div class="description-block">
       <p class="main-map-description">きんゆう散歩って？</p>
       <p class="sub-map-description">
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-      テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+      金融を楽しく勉強したい...。でも現実を見る必要もあるし、<br>
+      正直カロリーを使うことも多い。そんな時は気分転換してみたくなりますよね。<br>
+      ちょっとリフレッシュしたい時にお散歩感覚で、金融を見たり、触れたり、<br>
+      考えることができるようなコンテンツを考えてみました。<br>
+      気分転換に日本中を”きんゆう散歩”してみませんか？( ´ ▽ ` )ﾉ
       </p>
     </div>
     <div class="map-container">
       <div id="map"></div>
-      <img class="map-illust01" src="/images/content/teacher/illust-model01.png">
+      <img class="map-illust01" src="/images/kinyu_map/map-01illust.png">
+
+
+      <img class="illust-dog1" src="/images/kinyu_map/dog01.png">
+      <img class="illust-dog2" src="/images/kinyu_map/dog02.png">
+      <img class="illust-bonjour" src="/images/kinyu_map/bonjour.png">
+      <img class="illust-flower" src="/images/kinyu_map/flower.png">
+      <img class="illust-sun" src="/images/kinyu_map/sun.png">
+
     </div>
   </div>
 </div>
@@ -56,7 +63,7 @@
             map: map,
         });
         var infoWindow2 = new google.maps.InfoWindow({
-            content: '<div class="sample map-point"><a href="/map" target="_blank"><img src="/images/map/map-thum.jpg"><p class="map-el-title">金融発症の地「兜町」を散策</p><p class="map-decription">レトロな金ゆうの町、日本橋兜町・茅場町。あまり知られていない隠れ家的なお店がいっぱい！</p></a></div>'
+            content: '<div class="sample map-point"><a href="/map_ooedoito" target="_blank"><img src="/images/kinyu_map/map-ooedoito-title.jpg"><p class="map-el-title">リートの投資施設を散策</p><p class="map-decription">伊東にある大江戸温泉物語の施設「伊東ホテルニュー岡部」は、大江戸温泉リートの投資先の7.2%を占めています。</p></a></div>'
         });
         marker2.addListener( "click", function ( argument ) {
             infoWindow2.open(map, marker2);
