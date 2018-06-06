@@ -1,9 +1,11 @@
 <div class="kinyu-list-block">
 	<div class="kinyu-map-block">
+
 		<img class="kinyu-map-block-img" src="/images/kinyu_map/ooedo.jpg" usemap="#ImageMap" alt="" />
 			<map name="ImageMap">
   			<area shape="rect" coords="705,283,918,327" href="https://kinyu-joshi.jp/ooam-joshikai2018#reit-illust" alt="" target="_blank"/>
 			</map>
+		<img class="map-ooedoito-illust1" src="/images/kinyu_map/ooedo_illust.png" alt="" />
 	</div>
 </div>
 
@@ -23,5 +25,11 @@
 }
 .kinyu-map-block a:hover {
 	opacity: .5;
+}
+.map-ooedoito-illust1 {
+	position: absolute;
+	top: 47px;
+  right: -17px;
+  width: 130px;
 }
 </style>
