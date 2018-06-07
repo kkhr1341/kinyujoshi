@@ -29,7 +29,7 @@
 .map-ooedoito-illust1 {
 	position: absolute;
 	top: 47px;
-  right: -17px;
-  width: 130px;
+  right: -30px;
+  width: 210px;
 }
 </style>
