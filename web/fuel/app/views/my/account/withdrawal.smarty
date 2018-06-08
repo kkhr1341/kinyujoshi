@@ -71,16 +71,18 @@ $(function(){
 
 		var url = "/api/users/withdrawal";
 
-        var withdrawal_reasons = $('.checkbox-list-item').map(function(){
+        var withdrawal_reasons = $('.checkbox-list-item')
+        .filter(function(){
+            return $(this).find('[name="withdrawal_reasons[]"]:checked').val();
+        })
+        .map(function(){
 
-		  var codes = $(this).find('[name="withdrawal_reasons[]"]:checked').map(function(){
-		    return $(this).val();
-		  }).get();
+		  var code = $(this).find('[name="withdrawal_reasons[]"]:checked').val();
 
 		  var reason_text = $(this).find('input[name="withdrawal_reason_messages[]"]').val() || '';
 
           return {
-            code: codes,
+            code: code,
             reason_text: reason_text,
           }
         }).get();

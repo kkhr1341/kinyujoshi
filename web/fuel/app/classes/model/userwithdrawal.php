@@ -19,6 +19,71 @@ class Userwithdrawal extends Base
         return $val;
     }
 
+    /**
+     * ユーザーデータの物理削除
+     * @param $username
+     */
+    public static function deleteUser($username)
+    {
+        // 退会者情報物理削除
+        $user = \DB::select("*")->from('users')
+            ->where(array('username' => $username))
+            ->execute()
+            ->current();
+
+        \DB::delete('member_regist')
+            ->where(array('username' => $username))
+            ->execute();
+
+        \DB::delete('users_reminders')
+            ->where(array('username' => $username))
+            ->execute();
+
+        \DB::delete('users_providers')
+            ->where(array('parent_id' => $user['id']))
+            ->execute();
+
+        // 女子会参加履歴削除
+        $applications = \DB::select("*")->from('applications')
+            ->where(array('username' => $username))
+            ->execute()
+            ->as_array();
+
+        foreach ($applications as $key => $application) {
+
+            \DB::delete('event_mails')
+                ->where(array('application_code' => $application['code']))
+                ->execute();
+
+            \DB::delete('event_remind_mails')
+                ->where(array('application_code' => $application['code']))
+                ->execute();
+
+            \DB::delete('application_cancels')
+                ->where(array('application_code' => $application['code']))
+                ->execute();
+
+            \DB::delete('application_credit_payment_cancels')
+                ->where(array('application_code' => $application['code']))
+                ->execute();
+
+            \DB::delete('application_credit_payment_sales')
+                ->where(array('application_code' => $application['code']))
+                ->execute();
+
+            \DB::delete('application_credit_payments')
+                ->where(array('application_code' => $application['code']))
+                ->execute();
+        }
+
+        \DB::delete('applications')
+            ->where(array('username' => $username))
+            ->execute();
+
+        \DB::delete('users')
+            ->where(array('username' => $username))
+            ->execute();
+    }
 
     /**
      * 退会処理
@@ -64,64 +129,13 @@ class Userwithdrawal extends Base
                 }
             }
 
-            // 退会者情報物理削除
-            $user = \DB::select("*")->from('users')
+            $user = \DB::select("*")
+                ->from('users')
                 ->where(array('username' => $username))
                 ->execute()
                 ->current();
 
-            \DB::delete('member_regist')
-                ->where(array('username' => $username))
-                ->execute();
-
-            \DB::delete('users_reminders')
-                ->where(array('username' => $username))
-                ->execute();
-
-            \DB::delete('users_providers')
-                ->where(array('parent_id' => $user['id']))
-                ->execute();
-
-            // 女子会参加履歴削除
-            $applications = \DB::select("*")->from('applications')
-                ->where(array('username' => $username))
-                ->execute()
-                ->as_array();
-
-            foreach ($applications as $key => $application) {
-
-                \DB::delete('event_mails')
-                    ->where(array('application_code' => $application['code']))
-                    ->execute();
-
-                \DB::delete('event_remind_mails')
-                    ->where(array('application_code' => $application['code']))
-                    ->execute();
-
-                \DB::delete('application_cancels')
-                    ->where(array('application_code' => $application['code']))
-                    ->execute();
-
-                \DB::delete('application_credit_payment_cancels')
-                    ->where(array('application_code' => $application['code']))
-                    ->execute();
-
-                \DB::delete('application_credit_payment_sales')
-                    ->where(array('application_code' => $application['code']))
-                    ->execute();
-
-                \DB::delete('application_credit_payments')
-                    ->where(array('application_code' => $application['code']))
-                    ->execute();
-            }
-
-            \DB::delete('applications')
-                ->where(array('username' => $username))
-                ->execute();
-
-            \DB::delete('users')
-                ->where(array('username' => $username))
-                ->execute();
+            self::deleteUser($username);
 
             $db->commit_transaction();
 
@@ -148,18 +162,5 @@ class Userwithdrawal extends Base
 
             throw $e;
         }
-
-
-//        $reasons = \DB::select("*")->from('withdrawal_reasons')
-//            ->order_by('sort', 'asc')
-//            ->execute()
-//            ->as_array();
-//
-//        $keys = [];
-//        foreach ($reasons as $key => $reason) {
-//            $keys[$reason['code']] = $reason;
-//        }
-//        return $keys;
     }
-
 }
