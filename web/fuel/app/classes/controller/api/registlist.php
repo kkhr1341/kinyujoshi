@@ -7,6 +7,7 @@
  */
 
 use \Model\Registlist;
+use \Model\Userwithdrawal;
 
 class Controller_Api_Registlist extends Controller_Apibase
 {
@@ -23,6 +24,13 @@ class Controller_Api_Registlist extends Controller_Apibase
 
     public function action_delete()
     {
-        return $this->ok(Registlist::delete(\Input::all()));
+        // パスワード設定済みのユーザー
+        if($username = Registlist::getUsername(\Input::all('code'))) {
+            Userwithdrawal::deleteUser($username);
+            return $this->ok();
+        } else {
+            // パスワード未設定済みのユーザー
+            return $this->ok(Registlist::delete(\Input::all()));
+        }
     }
 }
