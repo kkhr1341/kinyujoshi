@@ -12,12 +12,15 @@ class Controller_Api_Applications extends Controller_Apibase
             \Session::set('referrer', \Input::referrer());
             return $this->ok('login');
         }
-        $event_code = Applications::get_event_code_by_code(\Input::post('code'));
+
+        $code = \Input::post('code');
+
+        $event_code = Applications::get_event_code_by_code($code);
 
         if (!Events::cancelable($event_code)) {
-            $res = Applications::non_cancelable_cancel(\Input::all());
+            $res = Applications::non_cancelable_cancel($code);
         } else {
-            $res = Applications::cancelable_cancel(\Input::all());
+            $res = Applications::cancelable_cancel($code);
         }
         if (is_string($res)) {
             return $this->error($res);
@@ -69,12 +72,16 @@ class Controller_Api_Applications extends Controller_Apibase
             return $this->error('no administrator');
         }
 
-        $event_code = Applications::get_event_code_by_code(\Input::post('code'));
+        $code = \Input::post('code');
+
+        $event_code = Applications::get_event_code_by_code($code);
+
+        $username = \Auth::get('username');
 
         if (!Events::cancelable($event_code)) {
-            $res = Applications::non_cancelable_cancel(\Input::all());
+            $res = Applications::non_cancelable_cancel($code, $username);
         } else {
-            $res = Applications::cancelable_cancel(\Input::all());
+            $res = Applications::cancelable_cancel($code, $username);
         }
         if (is_string($res)) {
             return $this->error($res);

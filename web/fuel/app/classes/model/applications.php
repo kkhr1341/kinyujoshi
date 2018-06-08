@@ -139,20 +139,25 @@ class Applications extends Base
         return true;
     }
 
-    public static function cancelable_cancel($params)
+    public static function cancelable_cancel($code)
     {
         \Config::load('payjp', true);
 
-        $username = \Auth::get('username');
+        $select = '';
+        $select .= 'ifnull(users.email, applications.email) as email,';
+        $select .= 'applications.event_code,';
+        $select .= 'applications.cancel,';
+        $select .= 'applications.username,';
+        $select .= 'profiles.name';
 
         // 参加状態取得
-        $application = \DB::select(\DB::expr('users.email, applications.event_code, applications.cancel, applications.username, profiles.name'))
+        $application = \DB::select(\DB::expr($select))
             ->from('applications')
-            ->join('users')
+            ->join('users', 'left')
             ->on('applications.username', '=', 'users.username')
-            ->join('profiles')
+            ->join('profiles', 'left')
             ->on('applications.username', '=', 'profiles.username')
-            ->where('applications.code', '=', $params['code'])
+            ->where('applications.code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->execute()
             ->current();
@@ -162,10 +167,10 @@ class Applications extends Base
             return "該当の参加申込が見つかりませんでした";
         }
 
-        // 自分のかを確認する
-        if ($application['username'] != $username) {
-            return "セキュリティー上の問題が発生いたしました";
-        }
+//        // 自分のかを確認する
+//        if ($application['username'] != $username) {
+//            return "セキュリティー上の問題が発生いたしました";
+//        }
 
         // キャンセル状況確認
         if ($application['cancel'] != 0) {
@@ -181,11 +186,11 @@ class Applications extends Base
                     'cancel' => 1,
                     'updated_at' => \DB::expr('now()'),
                 )
-            )->where('code', '=', $params['code'])->execute();
+            )->where('code', '=', $code)->execute();
 
             // 申し込みキャンセルデータ作成
             \DB::insert('application_cancels')->set(array(
-                'application_code' => $params['code'],
+                'application_code' => $code,
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
@@ -198,18 +203,18 @@ class Applications extends Base
                 ->execute();
 
             // クレジット決済の場合決済取り消し
-            if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($params['code'])) {
+            if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($code)) {
                 // 決済データをキャンセル状態に
                 \DB::update('application_credit_payments')->set(array(
                     'cancel' => 1,
                     'updated_at' => \DB::expr('now()'),
                 ))
-                    ->where('application_code', '=', $params['code'])
+                    ->where('application_code', '=', $code)
                     ->execute();
 
                 // 決済キャンセルデータ作成
                 \DB::insert('application_credit_payment_cancels')->set(array(
-                    'application_code' => $params['code'],
+                    'application_code' => $code,
                     'created_at' => \DB::expr('now()'),
                 ))->execute();
             
@@ -237,20 +242,25 @@ class Applications extends Base
         }
     }
 
-    public static function non_cancelable_cancel($params)
+    public static function non_cancelable_cancel($code)
     {
         \Config::load('payjp', true);
 
-        $username = \Auth::get('username');
+        $select = '';
+        $select .= 'ifnull(users.email, applications.email) as email,';
+        $select .= 'applications.event_code,';
+        $select .= 'applications.cancel,';
+        $select .= 'applications.username,';
+        $select .= 'profiles.name';
 
         // 参加状態取得
-        $application = \DB::select(\DB::expr('users.email, applications.event_code, applications.cancel, applications.username, profiles.name'))
+        $application = \DB::select(\DB::expr($select))
             ->from('applications')
-            ->join('users')
+            ->join('users', 'left')
             ->on('applications.username', '=', 'users.username')
-            ->join('profiles')
+            ->join('profiles', 'left')
             ->on('applications.username', '=', 'profiles.username')
-            ->where('applications.code', '=', $params['code'])
+            ->where('applications.code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->execute()
             ->current();
@@ -260,10 +270,10 @@ class Applications extends Base
             return "該当の参加申込が見つかりませんでした";
         }
 
-        // 自分のかを確認する
-        if ($application['username'] != $username) {
-            return "セキュリティー上の問題が発生いたしました";
-        }
+//        // 自分のかを確認する
+//        if ($application['username'] != $username) {
+//            return "セキュリティー上の問題が発生いたしました";
+//        }
 
         // キャンセル状況確認
         if ($application['cancel'] != 0) {
@@ -280,11 +290,11 @@ class Applications extends Base
                     'cancel' => 1,
                     'updated_at' => \DB::expr('now()'),
                 )
-            )->where('code', '=', $params['code'])->execute();
+            )->where('code', '=', $code)->execute();
 
             // 申し込みキャンセルデータ作成
             \DB::insert('application_cancels')->set(array(
-                'application_code' => $params['code'],
+                'application_code' => $code,
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
