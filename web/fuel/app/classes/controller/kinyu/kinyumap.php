@@ -9,14 +9,14 @@ class Controller_Kinyu_Kinyumap extends Controller_Kinyubase
     public function action_ooedo_ito()
     {
 
-        switch (true) {
-            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-            case $_SERVER['PHP_AUTH_USER'] !== 'map_ooedoito':
-            case $_SERVER['PHP_AUTH_PW']   !== 'Spaspa3472':
-            header('WWW-Authenticate: Basic realm="Enter username and password."');
-            header('Content-Type: text/plain; charset=utf-8');
-            die('このページを見るにはログインが必要です');
-        }
+        // switch (true) {
+        //     case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+        //     case $_SERVER['PHP_AUTH_USER'] !== 'map_ooedoito':
+        //     case $_SERVER['PHP_AUTH_PW']   !== 'Spaspa3472':
+        //     header('WWW-Authenticate: Basic realm="Enter username and password."');
+        //     header('Content-Type: text/plain; charset=utf-8');
+        //     die('このページを見るにはログインが必要です');
+        // }
 
         $this->data['company'] = Companies::get();
         $this->template->title = '大江戸温泉リートの投資先を見てみよう！｜きんゆう女子。';

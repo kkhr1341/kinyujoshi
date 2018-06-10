@@ -1,4 +1,4 @@
-<div class="kinyu-list-block">
+<div class="kinyu-list-block kinyu-map-block-container">
 	<div class="kinyu-map-block">
 
 		<img class="kinyu-map-block-img" src="/images/kinyu_map/ooedo.jpg" usemap="#ImageMap" alt="" />
@@ -31,5 +31,23 @@
 	top: 47px;
   right: -30px;
   width: 210px;
+}
+@media screen and (max-width: 1024px) {
+.kinyu-map-block-container {
+	padding: 0px 0% 40px!important;
+}
+.kinyu-map-block {
+  line-height: 0;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding:0px;
+}
+.map-ooedoito-illust1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 70px;
+}
 }
 </style>
