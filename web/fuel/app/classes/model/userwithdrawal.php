@@ -74,6 +74,10 @@ class Userwithdrawal extends Base
             \DB::delete('application_credit_payments')
                 ->where(array('application_code' => $application['code']))
                 ->execute();
+
+            \DB::delete('participated_applications')
+                ->where(array('application_code' => $application['code']))
+                ->execute();
         }
 
         \DB::delete('applications')
