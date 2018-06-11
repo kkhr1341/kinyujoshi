@@ -39,6 +39,10 @@ class Userwithdrawal extends Base
             ->where(array('username' => $username))
             ->execute();
 
+        \DB::delete('change_email_histories')
+            ->where(array('username' => $username))
+            ->execute();
+
         \DB::delete('users_providers')
             ->where(array('parent_id' => $user['id']))
             ->execute();
