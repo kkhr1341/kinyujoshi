@@ -25,7 +25,7 @@
             </div>
 
             <div class="admin-account-el">
-                <p class="admin-account-title admin-account-title2"><a href="/my/account/withdrawal">メンバー退会について</a></p>
+                <a href="/my/account/withdrawal">メンバー退会について</a>
             </div>
 
         </div>

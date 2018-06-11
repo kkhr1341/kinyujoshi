@@ -913,6 +913,10 @@ footer {
 .joshikai-cansel-block .cansel-block-title {
   text-align: center;
 }
+.admin-normal-container .regist-add-form-edit-title {
+  color: #66b5aa;
+  border-left: 2px solid #7ac3b9;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -930,9 +934,15 @@ footer {
   position: relative;
   transition: .5s;
 }
-
-.admin-account-el .admin-account-title a {
+.admin-account-el a {
+  font-size: 13px;
+  background-color: #8ddcd1;
   color: #fff;
+  padding: 16px;
+  font-weight: bold;
+  position: relative;
+  transition: .5s;
+  display: block;
 }
 .admin-account-title.active:after {
   content: "×";
@@ -1017,7 +1027,8 @@ footer {
   opacity: .5;
   cursor: pointer;
 }
-.admin-account-el .admin-account-title:hover {
+.admin-account-el .admin-account-title:hover,
+.admin-account-el a:hover {
   opacity: .5;
   cursor: pointer;
 }
