@@ -124,6 +124,15 @@
             <label class="form-title">編集部入力欄(備考)</label>
             <textarea id="edit_inner" name="edit_inner" class='form-control' rows="10">{$registel.edit_inner}</textarea>
           </div>
+
+          <div class="form-group form-group02">
+            <label class="form-title">参加イベント一覧</label>
+            <ul>
+            {foreach from=$participated_events item=participated_event name=loop}
+            <li>・{$participated_event.created_at} {$participated_event.title}</li>
+            {/foreach}
+            </ul>
+          </div>
           
           <div class="form-btn tx-center ">
             <div class="">

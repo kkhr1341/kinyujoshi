@@ -477,19 +477,39 @@ footer {
   font-size: 12px;
 }
 .joshikai-attend-detail-table .link-area a.email-link {
-  margin-bottom: 8px;
+  margin-top: 8px;
   background-color: #8ddcd1;
   color: #fff;
   font-weight: bold;
 }
 .joshikai-attend-detail-table .link-area a.profile-link {
-  margin-bottom: 8px;
+  margin-top: 8px;
   background-color: #f1f1f1;
 }
 
 .joshikai-attend-detail-table .link-area a.sales-link {
-  margin-bottom: 8px;
+  margin-top: 8px;
   background-color: #ad7d4c;
+  color: #fff;
+}
+
+.joshikai-attend-detail-table .link-area a.cancel-link {
+  margin-top: 8px;
+  background-color: #D13B3E;
+  color: #fff;
+}
+
+.joshikai-attend-detail-table .link-area a.participated-link {
+  margin-top: 8px;
+  background-color: #857669;
+  color: #fff;
+}
+
+
+.joshikai-attend-detail-table .link-area p {
+  text-align: center;
+  margin: 5px 0px;
+  font-weight: bold;
 }
 
 .joshikai-attend-detail-table .main-img .attend-done {

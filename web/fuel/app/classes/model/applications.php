@@ -73,7 +73,21 @@ class Applications extends Base
 
     public static function get_applications_by_code($code)
     {
-        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*, application_credit_payments.sale, application_credit_payments.cancel as payment_cancel, (select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at'))->from('applications')
+
+        $select = '';
+        $select .= 'ifnull(profiles.name, applications.name)as name, ';
+        $select .= 'profiles.profile_image, ';
+        $select .= 'ifnull(users.email, applications.email) as email, ';
+        $select .= 'profiles.birthday, ';
+        $select .= 'member_regist.code as member_regist_code, ';
+        $select .= 'applications.*, ';
+        $select .= 'application_credit_payments.sale, ';
+        $select .= 'application_credit_payments.cancel as payment_cancel, ';
+        $select .= '(select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at, ';
+        $select .= '(select pa.created_at from participated_applications as pa where pa.application_code = applications.code) as participated';
+
+        $datas = \DB::select(\DB::expr($select))
+            ->from('applications')
             ->join('users', 'LEFT')
             ->on('applications.username', '=', 'users.username')
             ->join('member_regist', 'LEFT')

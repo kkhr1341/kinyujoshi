@@ -52,15 +52,21 @@
           {/if}
 
           {if $application.payment_cancel eq '1'}
-            決済取り消し
+            <p>決済取り消し</p>
           {elseif $application.sale eq '0'}
             <a class="sales-link" href="javascript:void(0);" data-application_code="{$application.code}">支払い確定</a>
           {else}
-            支払確定
+            <p>支払確定</p>
           {/if}
 
           {if $application.cancel == 0}
             <a class="cancel-link" href="javascript:void(0);" data-event_code={$events.code} data-application_code="{$application.code}">キャンセル</a>
+          {/if}
+
+          {if $application.participated eq ''}
+            <a class="participated-link" href="javascript:void(0);" data-application_code="{$application.code}">参加済み</a>
+          {else}
+            <p>参加済み</p>
           {/if}
         </td>
       </tr>
@@ -198,6 +204,24 @@ $(function(){
                                         ts.success("キャンセル確定しました", function(){
                                              location.href = '/admin/joshikai/attend/' + event_code;
                                         });
+                                });
+                        }
+                        else {
+                            ts.info("キャンセルしました");
+                        }
+                });
+        });
+
+        $('.participated-link').click(function(){
+                self = this;
+                var url = "/api/participatedapplications/create";
+                var params = {};
+                params.application_code = $(this).data('application_code');
+
+                bootbox.confirm("参加確定をしますか？", function(result) {
+                        if (result) {
+                                ajax.post(url, params, function(data){
+                                    $(self).remove();
                                 });
                         }
                         else {

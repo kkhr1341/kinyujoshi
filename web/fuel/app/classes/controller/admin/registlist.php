@@ -2,6 +2,8 @@
 
 use \Model\Sections;
 use \Model\regist;
+use \Model\Registlist;
+use \Model\ParticipatedApplications;
 
 class Controller_Admin_Registlist extends Controller_Adminbase
 {
@@ -30,6 +32,14 @@ class Controller_Admin_Registlist extends Controller_Adminbase
     public function action_detail($code)
     {
         $this->data['registlist'] = Regist::lists();
+
+        $username = Registlist::getUsername($code);
+        if ($username) {
+            $this->data['participated_events'] = ParticipatedApplications::lists($username);
+        } else {
+            $this->data['participated_events'] = array();
+        }
+
         $this->data['registel'] = Regist::getByCodeWithurl($code);
         $this->template->contents = View::forge('admin/registlist/detail.smarty', $this->data);
         $this->template->description = 'マイページ・ブログ';

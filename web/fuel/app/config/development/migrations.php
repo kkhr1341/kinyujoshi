@@ -86,6 +86,7 @@ return array(
         77 => '081_add_specific_link_to_events',
         78 => '081_create_index_code_in_blogs',
         79 => '082_create_blog_stocks',
+        84 => '086_create_participated_applications',
       ),
     ),
     'module' => 
