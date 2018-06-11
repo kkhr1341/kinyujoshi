@@ -22,7 +22,7 @@
                   <span>{$reason.name}</span>
                   <!-- ↓その他の時に表示テキストエリア↓ -->
                   {if $reason.code eq '9R000P'}
-                    <input type="text" name="withdrawal_reason_messages[]" class="form-control" placeholder="" value="">
+                    <input type="text" name="withdrawal_reason_messages[]" class="form-control" placeholder="その他の方はこちら" value="">
                   {/if}
                   <!-- ↑その他の時に表示テキストエリア↑ -->
                 </div>
