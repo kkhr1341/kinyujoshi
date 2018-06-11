@@ -39,4 +39,19 @@ class Registlist extends Base
 
         return $params;
     }
+
+    public static function getUsername($code)
+    {
+        $result = \DB::select('users.username')
+            ->from('member_regist')
+            ->where('code', '=', $code)
+            ->join('users')
+            ->on('member_regist.username', '=', 'users.username')
+            ->execute()
+            ->current();
+        if (empty($result)) {
+            return false;
+        }
+        return $result['username'];
+    }
 }
