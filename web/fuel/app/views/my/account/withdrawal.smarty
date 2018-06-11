@@ -8,11 +8,10 @@
       <form name="form1">
         <div class="singlepage-form-block">
 
-          <p>退会フォーム</p>
-          <p>もしよろしければ退会理由を教えていただけませんか？</p>
+          <p class="withdrawal-title">退会フォーム</p>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">退会理由</label>
+            <label class="regist-add-form-edit-title">よろしければ退会理由を教えていただけませんか？（任意）</label>
 
             <div class="checkbox-list">
 
@@ -34,7 +33,7 @@
           </div>
 
           <div class="regist-add-form-edit-el regist-add-form-edit-el02">
-            <label class="regist-add-form-edit-title">何かありましたらご入力ください。</label>
+            <label class="regist-add-form-edit-title">何かありましたらご入力ください。（任意）</label>
             <textarea id="message" name="message" class='form-control' rows="10"></textarea>
           </div>
 
@@ -48,6 +47,35 @@
   </div>
 </div>
 
+<style>
+/*.checkbox-list-item label:after {
+  border: 2px solid #fff;
+}*/
+.withdrawal-title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.checkbox-list-item .form-control {
+  margin-top: 12px;
+}
+.checkbox-list {
+  padding: 0px;
+}
+.admin-normal-container .regist-add-form-edit-title {
+  margin-bottom: 8px;
+}
+.regist-add-form-edit-el textarea.form-control {
+  margin-top: 8px;
+}
+@media screen and (max-width: 1023px) {
+  .withdrawal-title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 32px;
+  } 
+}
+</style>
 
 <script>
 $(function(){
