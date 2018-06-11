@@ -34,9 +34,25 @@ class Registlist extends Base
     public static function delete($params)
     {
 
-        $username = \Auth::get('username');
-        \DB::update('member_regist')->set(array('disable' => 0))->where('code', '=', $params['code'])->execute();
+        \DB::delete('member_regist')
+            ->where(array('code' => $params['code']))
+            ->execute();
 
         return $params;
+    }
+
+    public static function getUsername($code)
+    {
+        $result = \DB::select('users.username')
+            ->from('member_regist')
+            ->where('code', '=', $code)
+            ->join('users')
+            ->on('member_regist.username', '=', 'users.username')
+            ->execute()
+            ->current();
+        if (empty($result)) {
+            return false;
+        }
+        return $result['username'];
     }
 }

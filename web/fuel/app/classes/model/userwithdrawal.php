@@ -25,7 +25,7 @@ class Userwithdrawal extends Base
      */
     public static function deleteUser($username)
     {
-        // 退会者情報物理削除
+        // 退会者情報削除
         $user = \DB::select("*")->from('users')
             ->where(array('username' => $username))
             ->execute()
