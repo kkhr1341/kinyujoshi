@@ -103,6 +103,13 @@ class Userwithdrawal extends Base
         $db->start_transaction();
         try {
 
+            $profile = \DB::select('*')
+                ->from('profiles')
+                ->where('disable', '=', 0)
+                ->where('username', '=', $username)
+                 ->execute()
+                ->current();
+
             // 退会情報
             $user_withdrawal_code = self::getNewCode('user_withdrawal');
             \DB::insert('user_withdrawal')->set(array(
@@ -148,7 +155,9 @@ class Userwithdrawal extends Base
             $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
             $email->subject("【きんゆう女子。】メンバー退会完了のご案内");
 
-            $email->html_body(\View::forge('email/withdrawal/body'));
+            $email->html_body(\View::forge('email/withdrawal/body', array(
+                'name' => $profile["name"]
+            )));
             $email->to($user['email']); //送り先
             $email->send();
 
@@ -157,7 +166,7 @@ class Userwithdrawal extends Base
             $email02->subject("【きんゆう女子。】メンバー退会がありました");
 
             $email02->html_body(\View::forge('email/withdrawal/return'));
-            $email02->to('cs@kinyu-joshi.jp'); //送り先
+            $email02->to('system@sundaylunch.jp'); //送り先
             $email02->send();
 
             return true;
