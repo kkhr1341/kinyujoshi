@@ -37,6 +37,7 @@ return array(
 	'about_hensyubu' => 'kinyu/about/about_hensyubu',
 
 	'report'   => 'kinyu/blog/index',
+	'report/search'   => 'kinyu/blog/search',
 	'report/(:num)'   => 'kinyu/blog/index/$1',
 	'report/(:any)'   => 'kinyu/blog/detail/$1',
 	'welcome/blog/(:any)'   => 'kinyu/blog/welcome/$1',
