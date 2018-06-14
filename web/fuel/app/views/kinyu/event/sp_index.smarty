@@ -147,6 +147,13 @@
       <div class="special-event-list joshikai-main-el">
         <p class="kinyu-event-info-title">過去の特別女子会。</p>
         <ul class="clear">
+
+          <li>
+            <a href="/ooam-joshikai2018" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/ooam-joshikai-ito.jpg) left center / cover no-repeat"></div>
+              <div class="text-area"><p>【伊東編】大江戸温泉できんゆう女子会。</p></div>
+            </a>
+          </li>
           
           <li>
             <a href="/daijoshikai2018" target="_blank">
