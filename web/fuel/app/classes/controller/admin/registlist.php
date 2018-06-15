@@ -76,6 +76,8 @@ class Controller_Admin_Registlist extends Controller_Adminbase
 
             if ($application["birthday"] && $application["birthday"] != '0000-00-00') {
                 $application["birthday"] = floor((date('Ymd') - (str_replace("-", "", $application["birthday"])))/10000);
+            } else {
+                $application["birthday"] = "";
             }
 
             if ($application["application_count"] > 0) {
