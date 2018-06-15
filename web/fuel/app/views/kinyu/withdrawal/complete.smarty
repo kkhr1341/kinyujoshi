@@ -7,9 +7,13 @@
   				<div class="content_form static_content_frame">
   					<div class="inquiry-complete-box">
   						<div class="alert center course_comp_text_frame inquiry-complete" role="alert">
-  							<h2>今までありがとうございました。</h2>
+  							<h2 class="pc">メンバー退会のお手続きが完了しました。</h2>
+                <h2 class="sp">メンバー退会のお手続きが<br>完了しました。</h2>
   							<p>
-  								メッセージメッセージメッセージメッセージ
+  								今まで、ありがとうございました(*´꒳`*)<br>
+                  メンバー退会の完了通知をご登録いただいていたメールアドレス宛にお送りいたしました。<br>
+                  お手数おかけいたしますが、念のためご確認いただけますと嬉しいです。<br>
+                  よろしくお願いいたします。
   							</p>
   						</div>
   						<div class="center tx-center">
@@ -32,7 +36,6 @@
   .inquiry-complete-box h2 {
     font-size: 24px;
     line-height: 24px;
-    font-family: 'utsukushi';
     margin-bottom: 24px;
   }
   .inquiry-complete {
@@ -51,16 +54,15 @@
     padding-bottom: 60px;
   }
   .inquiry-complete-box h2 {
-    font-size: 24px;
-    line-height: 24px;
-    font-family: 'utsukushi';
+    font-size: 18px;
+    line-height: 28px;
     margin-bottom: 24px;
   }
   .inquiry-complete {
     width: 84%;
     margin-top: 50px;
     margin-bottom: 36px;
-    padding: 60px 4%;
+    padding: 32px 4%;
   }
 
   }
