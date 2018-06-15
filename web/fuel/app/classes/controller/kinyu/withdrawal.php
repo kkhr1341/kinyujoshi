@@ -5,7 +5,7 @@ class Controller_Kinyu_Withdrawal extends Controller_Kinyubase
 
     public function action_complete()
     {
-        $this->template->title = 'お問い合わせ完了｜きんゆう女子。';
+        $this->template->title = '退会完了｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = "きんゆう女子について。きんゆうについてなど疑問に思ったことを何でもお問い合わせください。";
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
