@@ -13,7 +13,8 @@
     <p>参加者一覧</p>
 
     <div class="clearw">
-    	<a class="btn btn-primary float_right" id="broadcat_mail" href="#" role="button">メールを一斉送信する</a>
+    	<a class="btn btn-primary float_right" id="broadcast_mail" href="#" role="button">メールを一斉送信する</a>
+    	<a class="btn btn-primary float_right" id="download_csv" href="#" role="button" data-event_code={$events.code}>CSVダウンロード</a>
     </div>
 
     {foreach from=$applications item=application name=loopname}
@@ -230,10 +231,17 @@ $(function(){
                 });
         });
 
+        // CSVダウンロード
+        $("#download_csv").on("click", function() {
+            var code = $(this).data("event_code");
+            location.href = '/admin/registlist/memberlist/' + code;
+            return;
+        })
+
         // メール一斉送信用モーダル
         var $modal = $("#myModal");
 
-        $("#broadcat_mail").on("click", function() {
+        $("#broadcast_mail").on("click", function() {
             $modal.modal({
               "backdrop"  : "static",
               "keyboard"  : true,
