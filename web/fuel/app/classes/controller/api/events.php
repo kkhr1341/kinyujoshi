@@ -9,8 +9,14 @@ class Controller_Api_Events extends Controller_Apibase
         if (!Auth::has_access('events.admin')) {
             exit();
         }
+        $val = Events::validate(\Input::post('status'));
+        if (!$val->run()) {
+            $error_messages = $val->error_message();
+            $message = reset($error_messages);
+            return $this->error($message);
+        }
         try {
-            return $this->ok(Events::create(\Input::all()));
+            return $this->ok(Events::create($val->validated()));
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         } 
@@ -21,6 +27,7 @@ class Controller_Api_Events extends Controller_Apibase
         if (!Auth::has_access('events.admin')) {
             exit();
         }
+
         $val = Events::validate(\Input::post('status'));
         if (!$val->run()) {
             $error_messages = $val->error_message();

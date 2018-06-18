@@ -37,7 +37,8 @@ class Events extends Base
 
         $val->add('event_date', '日付')
             ->add_rule('required')
-            ->add_rule('valid_date');
+            ->add_rule('valid_date')
+            ->add_rule('is_future_date');
 
         $val->add('display_event_date', '表示用日付');
 
@@ -86,6 +87,7 @@ class Events extends Base
 
             $val->field('creditch')
                 ->add_rule('required');
+
         }
 
         return $val;

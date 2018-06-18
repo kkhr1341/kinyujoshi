@@ -31,6 +31,7 @@ return array(
         'is_unique_array_value'   => ':labelの値が重複しています',
         'require_without'   => ':labelは必須です',
         'exists'   => ':labelが存在しません',
+        'is_future_date'   => ':labelは明日以降の日付で入力してください',
 
         'valid_string_params' => array(
             'alpha'        => 'アルファベット',
