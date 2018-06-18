@@ -142,7 +142,6 @@ $(function(){
             if (result) {
                 $(".loader-block").fadeIn(500);
                 ajax.post(url, params, function(data){
-                    ts.success("保存しました");
                     location.href = "/withdrawal/complete";
                 })
                 .done(function(data) {

@@ -157,7 +157,7 @@ class Userwithdrawal extends Base
             // 退会メール送信
             $email = \Email::forge('jis');
             $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
-            $email->subject("【きんゆう女子。】メンバー退会完了のご案内");
+            $email->subject("【きんゆう女子。】メンバー退会完了のお知らせ");
 
             $email->html_body(\View::forge('email/withdrawal/body', array(
                 'name' => $profile["name"]

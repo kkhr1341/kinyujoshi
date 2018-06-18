@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>【きんゆう女子。】メンバー退会完了のご案内</title>
+<title>【きんゆう女子。】メンバー退会完了のお知らせ</title>
 
 <!-- <link rel="stylesheet" type="text/css" href="https://irodori.fund/assets/css/irodori/email.css" /> -->
 
@@ -42,7 +42,7 @@
       <table>
         <tr>
           <td>
-            <h3>メンバー退会完了のご案内</h3>
+            <h3>メンバー退会完了のお知らせ</h3>
             メンバー退会のお手続きが完了しました。<br>
             今まで、ありがとうございました(*´꒳`*)<br><br>
             <?php echo $name ?>さまが、より良いライフスタイルをお送りできるよう<br>
