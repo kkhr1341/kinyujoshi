@@ -6,7 +6,6 @@
  * @extends  Controller
  */
 
-use \Model\User;
 use \Model\RegistReminder;
 
 class Controller_Api_Registreminder extends Controller_Apibase

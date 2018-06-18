@@ -27,13 +27,6 @@ class Controller_Api_Remindmailtemplates extends Controller_Apibase
             return $this->error('login');
         }
         try {
-//            $val = EventRemindMailTemplate::validate();
-//            if (!$val->run()) {
-//                $error_messages = $val->error_message();
-//                $message = reset($error_messages);
-//                return $this->error($message);
-//            }
-
             $event = Events::getByCode('events', \Input::post('event_code'));
             $this->send(Input::post('email'), \Input::post('subject'), \Input::post('body'), array(
                 'event_title' => $event['title'],
