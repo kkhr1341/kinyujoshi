@@ -130,7 +130,6 @@ return array(
 	//管理画面admin - 会員リスト
 	'admin/registlist' => 'admin/registlist/index',
 	'admin/registlist/create' => 'admin/registlist/create',
-    'admin/registlist/memberlist/(:any)'   => 'admin/registlist/memberlist/$1',
 	'admin/registlist/(:any)'   => 'admin/registlist/detail/$1',
 	//管理画面admin - 女子会
 	'admin/report' => 'admin/blogs/index',
@@ -138,6 +137,7 @@ return array(
 	'admin/report/edit/(:any)' => 'admin/blogs/edit/$1',
 	//管理画面admin - 女子会
 	'admin/joshikai' => 'admin/events/index',
+    'admin/joshikai/memberlist/(:any)'   => 'admin/events/memberlist/$1',
 	'admin/joshikai/create' => 'admin/events/create',
 	'admin/joshikai/edit/(:any)' => 'admin/events/edit/$1',
 	'admin/joshikai/attend' => 'admin/events/attend',
