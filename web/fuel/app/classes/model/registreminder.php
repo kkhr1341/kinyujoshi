@@ -147,7 +147,7 @@ class RegistReminder extends Base
 
             $username = \Str::random('alnum', 16);
 
-            $user_id = \Auth::create_user(
+            \Auth::create_user(
                 $username,
                 $password,
                 $member_regist["email"],
@@ -157,7 +157,7 @@ class RegistReminder extends Base
             // プロフィール登録
             $profile_code = Profiles::getNewCode('profiles', 6);
 
-            $profile = [
+            $profile = array(
                 'code' => $profile_code,
                 'username' => $username,
                 'name' => $member_regist['name'],
@@ -167,7 +167,7 @@ class RegistReminder extends Base
                 'url' => '',
                 'profile_image' => '',
                 'introduction' => $member_regist['introduction'],
-            ];
+            );
 
             Profiles::create($profile);
 
