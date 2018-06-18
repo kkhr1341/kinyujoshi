@@ -88,6 +88,7 @@ return array(
         79 => '085_create_user_withdrawal_reason_texts',
         80 => '086_create_participated_applications',
         81 => '087_create_change_email_histories',
+        82 => '088_add_send_to_event_mails',
       ),
     ),
     'module' => 
