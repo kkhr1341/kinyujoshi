@@ -12,17 +12,32 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
             return $this->error('login');
         }
         try {
+
+            $error_mails = array();
+
             // 参加者に一斉送信
             $applications = Applications::get_applications_by_code(\Input::post('code'));
             foreach ($applications as $application) {
-                EventRemindMailTemplate::send(
-                    $application['email'],
-                    \Input::post('subject'),
-                    \Input::post('body'),
-                    $application['name'],
-                    \Input::post('code')
-                );
-                EventMails::create($application['code'], $application['email']);
+                try {
+                    EventRemindMailTemplate::send(
+                        $application['email'],
+                        \Input::post('subject'),
+                        \Input::post('body'),
+                        $application['name'],
+                        \Input::post('code')
+                    );
+                    EventMails::sended($application['code'], $application['email']);
+                }
+                catch(\EmailValidationFailedException $e)
+                {
+                    array_push($error_mails, $application['email']);
+                    EventMails::send_error($application['code'], $application['email']);
+                }
+                catch(\EmailSendingFailedException $e)
+                {
+                    array_push($error_mails, $application['email']);
+                    EventMails::send_error($application['code'], $application['email']);
+                }
             }
 
             // 運営にも一通同じ内容で送信
@@ -33,6 +48,10 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
                 'てすと太郎',
                 \Input::post('code')
             );
+
+            if($error_mails) {
+                EventRemindMailTemplate::notify($error_mails);
+            }
 
             return $this->ok();
         } catch (\Exception $e) {
