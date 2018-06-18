@@ -86,7 +86,7 @@ class Applications extends Base
         $select .= 'application_credit_payments.cancel as payment_cancel, ';
         $select .= '(select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at, ';
         $select .= '(select pa.created_at from participated_applications as pa where pa.application_code = applications.code) as participated, ';
-        $select .= '(select count(*) from applications as tp where applications.username = tp.username) as application_count';
+        $select .= '(select count(*) from applications as tp inner join participated_applications as pa on pa.application_code = tp.code where applications.username != "guest" and applications.username = tp.username) as application_count';
 
         $datas = \DB::select(\DB::expr($select))
             ->from('applications')
