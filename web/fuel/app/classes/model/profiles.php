@@ -90,6 +90,13 @@ class Profiles extends Base
         // メールアドレスの変更通知を通知
         if ($email != $params['email']) {
 
+            // 変更履歴
+            \DB::insert('change_email_histories')->set(array(
+                'username' => $username,
+                'before_email' => $email,
+                'after_email' => $params['email'],
+            ))->execute();
+
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
             $mail->subject("【きんゆう女子。】メールアドレス変更通知");
