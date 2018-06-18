@@ -35,6 +35,10 @@ class Userwithdrawal extends Base
             ->where(array('username' => $username))
             ->execute();
 
+        \DB::delete('profiles')
+            ->where(array('username' => $username))
+            ->execute();
+
         \DB::delete('users_reminders')
             ->where(array('username' => $username))
             ->execute();
