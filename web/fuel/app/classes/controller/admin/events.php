@@ -86,4 +86,60 @@ class Controller_Admin_Events extends Controller_Adminbase
         $this->template->contents = View::forge('admin/events/attend_detail.smarty', $this->data);
     }
 
+    public function action_memberlist($code)
+    {
+        $csv_name = Date("Y-m-d") . '.csv';
+        $response = new Response();
+
+        // content-type: csv
+        $response->set_header('Content-Type', 'application/csv');
+
+        // ファイル名をセット
+        $response->set_header('Content-Disposition', 'attachment; filename="'. $csv_name .'"');
+
+        // キャッシュをなしに
+        $response->set_header('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
+        $response->set_header('Expires', 'Mon, 26 Jul 1997 05:00:00 GMT');
+        $response->set_header('Pragma', 'no-cache');
+
+        $applications = \Model\Applications::get_applications_by_code($code);
+
+
+        $data = array();
+        $data[] = array(
+            "名前",
+            "年齢",
+            "ワカラナイド",
+            "参加回数"
+        );
+        foreach ($applications as $application) {
+
+            if ($application["birthday"] && $application["birthday"] != '0000-00-00') {
+                $application["birthday"] = floor((date('Ymd') - (str_replace("-", "", $application["birthday"])))/10000);
+            } else {
+                $application["birthday"] = "";
+            }
+
+            if ($application["application_count"] > 0) {
+                $application["application_count"]--;
+            }
+
+            $data[] = array(
+                $application["name"],
+                $application["birthday"],
+                $application["not_know"],
+                $application["application_count"],
+            );
+        }
+
+        // 名前、年齢, 分からないど, 女子会参加回数
+
+        // CSVを出力
+        $csv = Format::forge($data)->to_csv();
+        $csv = mb_convert_encoding($csv, 'SJIS-win', 'UTF-8');
+        echo $csv;
+
+        // Response
+        return $response;
+    }
 }
