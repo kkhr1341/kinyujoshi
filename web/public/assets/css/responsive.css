@@ -257,6 +257,16 @@
   width: 100%;
   height: 100%;
 }
+.header-profile-block {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 11px;
+  left: 10px;
+  border-radius: 50%;
+  z-index: 1005;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ナビゲーション
@@ -1861,7 +1871,7 @@
   text-align: center;
   margin-top: 8px;
   margin-bottom: 24px;
-  padding: 20px;
+  padding: 12px;
 }
 .kinyu-credit-list {
   letter-spacing: -40px;
@@ -1881,7 +1891,7 @@
 }
 .kinyu-credit-list li {
   background: none;
-  width: 20%;
+  width: 16.67%;
   padding: 0px;
   box-sizing: border-box;
   margin-right: 0px;
@@ -1890,6 +1900,10 @@
 }
 .kinyu-credit-list li img {
   width: 100%;
+}
+.credit-illust {
+  width: 72%;
+  margin-bottom: 24px;
 }
 
 /* 女子会チケット前の画面 */
