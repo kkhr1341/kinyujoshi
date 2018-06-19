@@ -683,10 +683,10 @@
 
 /* 検索フォーム関連 */
 .kinyu-top-search {
-  width: 265px;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 60px;
+  border-bottom: 1px solid #c0c0c0;
 }
 .kinyu-top-search input.search {
   font-family: "FontAwesome";
@@ -694,20 +694,35 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border-bottom: 1px solid #c0c0c0;
-  width: 227px;
+  width: 150px;
   height: 30px;
   margin-right: 5px;
   font-size: 12px;
 }
+.kinyu-top-search input[type="text"]:focus {
+  background: none;
+}
 .kinyu-top-search button {
   font-family: "FontAwesome";
   display: inline-block;
-  background: #eaeaea;
+  /*background: #eaeaea;*/
   font-size: 12px;
-  padding: 8px;
+  padding: 8px 2px;
+  transition: .5s;
 }
-
+.kinyu-top-search-title {
+  margin-bottom: 32px;
+  margin-top: 12px;
+}
+.kinyu-search-content {
+  top: 52px;
+}
+.none-hit-report {
+  margin-top: 50px;
+  text-align: center;
+  border-top: 1px solid #ececec;
+  padding-top: 24px;
+}
 .kinyu-top-list li {
   float: left;
   vertical-align: top;
@@ -4393,6 +4408,9 @@ to {
   opacity: .5;
 }
 .header-profile-block:hover {
+  opacity: .5;
+}
+.kinyu-top-search button:hover {
   opacity: .5;
 }
 
