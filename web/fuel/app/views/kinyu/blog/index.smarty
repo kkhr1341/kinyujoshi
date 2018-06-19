@@ -6,7 +6,8 @@
 
     <div class="kinyu-top-search">
         <form action="/report/search" method="get">
-            <input type="text" name="search_text" class="search" placeholder="&#xf002; 検索する">
+            <input type="text" name="search_text" class="search" placeholder="気になるキーワードを入力してください♪">
+            <button>&#xf002; </button>
         </form>
     </div>
 
