@@ -892,6 +892,40 @@
   width: 50%;
   margin-bottom: 24px;
 }
+/* 検索フォーム関連 */
+.kinyu-top-search {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: auto;
+  background: #f9f9f9;
+  border: 1px solid #eaeaea;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.kinyu-top-search input.search {
+  width: 80%;
+  height: 30px;
+  margin-right: 0px;
+  font-size: 12px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.kinyu-top-search button {
+  padding: 10px 0px;
+  width: 18%;
+}
+.kinyu-top-search-title {
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+.kinyu-search-content {
+  top: 52px;
+}
+.none-hit-report {
+  margin-top: 32px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップ - インスタグラムリスト
