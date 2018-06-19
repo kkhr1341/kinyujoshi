@@ -5,7 +5,7 @@
         <input type="hidden" name="event_code" value="{$event.code}" />
         <span class="charge-errors"></span>
 
-        <h2 class="main-title">カードでお支払い</h2>
+        <h2 class="main-title"><span style="color:#77cbc0;">＊</span> カードでお支払い <span style="color:#77cbc0;">＊</span></h2>
 
         <div class="kinyu-credit-list-block">
           <p>- 対応カード -</p>
@@ -17,6 +17,10 @@
             <li><img src="/images/event/credit/kinyu-credit-diners.png"></li>
             <li><img src="/images/event/credit/kinyu-credit-discover.png"></li>
           </ul>
+        </div>
+
+        <div class="credit-illust">
+          <img src="/images/event/credit_illust.png">
         </div>
 
         <div class="fee-open-el">
