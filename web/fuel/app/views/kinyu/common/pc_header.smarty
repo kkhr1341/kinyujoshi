@@ -20,24 +20,13 @@
   <div class="pc">
     <div class="kinyu-header-social-list">
       <ul>
-        <li>
-          {if in_array('user', $roles) || in_array('admin', $roles)}
-          <a href="/my" class="header-profile-block"
-            {if $profile.profile_image == ''}
-              style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
-            {else}
-              style="background:url({$profile.profile_image}) center center / cover no-repeat;"
-            {/if}
-          ></a>
-          {/if}
-        </li>
         <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/instagram_icon.png"></a></li>
         <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a></li>
       </ul>
     </div>
   </div>
 
-  <!-- {if in_array('user', $roles) || in_array('admin', $roles)}
+  {if in_array('user', $roles) || in_array('admin', $roles)}
     <a href="/my" class="header-profile-block"
       {if $profile.profile_image == ''}
         style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
@@ -45,6 +34,6 @@
         style="background:url({$profile.profile_image}) center center / cover no-repeat;"
       {/if}
     ></a>
-  {/if} -->
+  {/if}
 
 </header>
