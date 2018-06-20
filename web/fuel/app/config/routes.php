@@ -97,6 +97,12 @@ return array(
 	//特定商取引法に基づく表記
 	'legal' => 'kinyu/company/legal',
 
+	//リンクポリシー
+	'link_policy' => 'kinyu/company/link',
+
+	//よくあるご質問
+	'faq' => 'kinyu/company/faq',
+
 		//企業用ページ
 	'business' => 'kinyu/company/business',
 

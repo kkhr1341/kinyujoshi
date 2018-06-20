@@ -1,0 +1,35 @@
+<div class="kinyu-main-single-block">
+
+<div class="company-info-title">
+  <h2>リンクポリシー</h2>
+</div>
+
+<div class="company-details-block clear">
+
+  <div class="company-details">
+    <!-- <p class="company-details-service-title"><span style="color: #8ddcd1;">◆</span> きんゆう女子。会員規約</p> -->
+    <p class="first-description">
+    「きんゆう女子。」（<a href="https://kinyu-joshi.jp/">https://kinyu-joshi.jp/</a>）の各ページへのリンクは原則自由です。<br>ただし、リンクされる場合は下記の項目に従ったご対応をお願いいたします。<br><br>
+    1. 以下に該当するリンクはお断りします。また、該当するリンクを発見した場合、リンク元に対してリンクの取り下げをお願いする場合があります。その際は速やかなご対応をお願いいたします。<br>
+    ・「きんゆう女子。」の事業に支障をきたしたり、信用、評判に影響を与えたりするおそれがあるリンク<br>
+    ・法令又は公序良俗に反する内容含むサイトからのリンク<br>
+    ・営業目的や勧誘のためのリンク<br>
+    ・「きんゆう女子。」と関連があるような誤解を生じさせるリンク<br><br>
+    2. 出典として「きんゆう女子。」へのリンクであることの明記をお願いいたします。<br><br>
+    3. URLやレポートなどのコンテンツは、予告無く、変更または削除される可能性があります。<br><br>
+    4. ・リンクによってトラブルが発生した場合には、リンクされた方ご自身の責任でのご対応をお願いいたします。
+    </p>
+  </div>
+</div>
+</div>
+<script>
+{literal}
+$(function(){
+  var title_frame_height = $('#title_frame').height();
+  var page_title_height = $('.page_title').height();
+  
+  var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+  $('.page_title').css('padding-top', padding_top);
+});
+{/literal}
+</script>
