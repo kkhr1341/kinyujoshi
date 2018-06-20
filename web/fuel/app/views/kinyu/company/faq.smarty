@@ -1,0 +1,72 @@
+<div class="kinyu-main-single-block">
+
+<div class="company-info-title">
+  <h2>よくあるご質問</h2>
+</div>
+
+<div class="company-details-block clear">
+
+  <div class="qa-list">
+    <ul>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+    <li>
+      <p class="question-text">参加にあたって、必要な持ち物はありますか？</p>
+      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+    </li>
+
+
+
+  </div>
+</div>
+</div>
+<script>
+{literal}
+$(function(){
+  var title_frame_height = $('#title_frame').height();
+  var page_title_height = $('.page_title').height();
+  
+  var padding_top = (title_frame_height / 2) - (page_title_height / 2);
+  $('.page_title').css('padding-top', padding_top);
+});
+{/literal}
+</script>
