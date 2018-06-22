@@ -19,7 +19,7 @@
 
     <div id="kinyu-event-scroll-point" class="center">
 
-      <div id="joshikai-list" class="kinyu-event-list joshikai-main-el">
+      <div id="joshikai-list" class="kinyu-event-list joshiakai-now-list joshikai-main-el">
 
         <p class="kinyu-event-info-title">女子会一覧</p>
         <ul>
@@ -86,6 +86,9 @@
           </li>
           {/foreach}
         </ul>
+        <div class="link-to">
+          <a href="/joshikai_past">過去の女子会一覧へ</a>
+        </div>
       </div>
 
       <!-- きんゆう女子会。って？ -->

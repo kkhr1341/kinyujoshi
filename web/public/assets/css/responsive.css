@@ -1462,6 +1462,25 @@
   font-weight: bold;
   font-size: 12px;
 }
+.joshikai-past-block .inner {
+  margin-top: 0px;
+}
+.joshikai-past-list .link-to {
+  width: 250px;
+  margin-top: 12px;
+}
+.joshikai-past-list .link-to a {
+  padding: 10px 20px;
+  font-size: 12px;
+}
+.joshiakai-now-list .link-to {
+  width: 250px;
+  margin-top: 12px;
+}
+.joshiakai-now-list .link-to a {
+  padding: 10px 20px;
+  font-size: 12px;
+}
 
 /* 女子会リスト */
 .kinyu-event-list {
