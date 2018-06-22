@@ -1326,6 +1326,34 @@
 .joshikai-past-list {
   padding: 24px 0px 60px;
 }
+.joshikai-past-list .link-to {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.joshikai-past-list .link-to a {
+  display: block;
+  background: #8ddcd1;
+  text-align: center;
+  padding: 12px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  transition: .5s;
+}
+.joshiakai-now-list .link-to {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.joshiakai-now-list .link-to a {
+  display: block;
+  background: #ececec;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 13px;
+  transition: .5s;
+}
 .joshikai-past-list .kinyu-event-list-right {
   background: #fff!important;
 }
