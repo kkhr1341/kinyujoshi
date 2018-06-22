@@ -377,6 +377,32 @@
   padding-top: 8px;
 }
 
+/* main-menu-list */
+.main-menu-list {
+
+}
+.main-menu-list li {
+  margin-bottom: 12px;
+  text-align: center;
+}
+.main-menu-list li a {
+  display: block;
+}
+.main-menu-list .main-li {
+  background: #fff;
+  box-shadow: 0px 0px 5px 0px #eaeaea;
+}
+.main-menu-list .main-li a {
+  padding: 14px 0px;
+}
+.main-menu-list .sub-li {
+  margin-bottom: 24px;
+  padding-top:
+}
+.main-menu-list .sub-li a {
+  padding: 4px 0px;
+}
+
 
 }
 

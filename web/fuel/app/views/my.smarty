@@ -23,7 +23,7 @@
 </div>
 
 <header class="sp admin-normal-header">
-    <a class="link-to-top" href="/">〈 TOPへ</a>
+    <a class="link-to-top" href="/my">〈 マイページTOPへ</a>
     <a href="/"><img class="admin-normal-circle-logo" src="/images/top-circle-logo.png"></a>
 </header>
 

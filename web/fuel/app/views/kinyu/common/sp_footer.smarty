@@ -9,6 +9,9 @@
       <a href="/company">運営会社</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
+      <a href="/faq">よくあるご質問</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
       <a href="/privacy">プライバシーポリシー</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
@@ -16,6 +19,9 @@
     </div>
     <div class="navi_kinyu-submenu-el clear">
       <a href="/service">会員規約</a>
+    </div>
+    <div class="navi_kinyu-submenu-el clear">
+      <a href="/link_policy">リンクポリシー</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
       <a href="/contact">お問い合わせ</a>

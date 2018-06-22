@@ -553,7 +553,8 @@ footer {
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container {
   padding-top: 130px;
-  background: #c5e9e4;
+  /*background: #c5e9e4;*/
+  background: #f9f9f9;
 }
 .admin-normal-container .admin-normal-inner {
   width: 1000px;
@@ -568,7 +569,6 @@ footer {
 .admin-normal-side li {
   text-align: center;
   margin-bottom: 8px;
-  transition: .5s;
   position: relative;
 }
 .admin-normal-side li:nth-child(2):before {
@@ -584,6 +584,7 @@ footer {
 .admin-normal-side li a{
   display: block;
   padding: 8px 0px;
+  transition: .5s;
 }
 .admin-normal-side li.active {
   background: #a6e9d9;
@@ -594,7 +595,7 @@ footer {
   width: 810px;
   float: right;
   padding: 0px 0px 0px 50px;
-  border-left: 1px solid #fff;
+  border-left: 1px solid #ececec;
   min-height: 200px;
 }
 .admin-normal-profile {
@@ -638,7 +639,7 @@ footer {
   line-height: 18px;
 
 }
-.admin-normal-profile .img-box-block:after {
+/*.admin-normal-profile .img-box-block:after {
   content: "";
   position: absolute;
   top: 5px;
@@ -648,7 +649,7 @@ footer {
   border-radius: 50%;
   background: #8ddcd1;
   z-index: 999;
-}
+}*/
 .admin-normal-profile .profile-name {
   font-size: 16px;
   line-height: 16px;
@@ -671,8 +672,8 @@ footer {
   font-size: 11px;
   line-height: 16px;
   position: relative;
-  color: #77cbc0;
-  font-weight: bold;
+  /*color: #77cbc0;
+  font-weight: bold;*/
   margin-bottom: 24px;
   padding: 0px 24px; 
   border-left: 1px solid #8ddcd1;
@@ -701,7 +702,7 @@ footer {
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-joshikai {
   padding-top: 50px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #ececec;
 }
 .joshikailist-main {
   padding-top: 0px;
@@ -1002,11 +1003,11 @@ footer {
 
 @media screen and (min-width: 640px) {
 
-.admin-normal-side li:hover {
+.admin-normal-side a:hover {
   background: #8ddcd1;
   color: #fff;
 }
-.admin-normal-joshikai li a:hover {
+.admin-normal-joshikai li:hover {
   opacity: .5;
 }
 .admin-normal-profile-btn a:hover {
