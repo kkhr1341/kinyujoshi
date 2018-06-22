@@ -37,8 +37,7 @@ class Events extends Base
 
         $val->add('event_date', '日付')
             ->add_rule('required')
-            ->add_rule('valid_date')
-            ->add_rule('is_future_date');
+            ->add_rule('valid_date');
 
         $val->add('display_event_date', '表示用日付');
 
@@ -335,6 +334,14 @@ class Events extends Base
         \DB::update('events')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
 
         return $params;
+    }
+
+    public static function updateDisplayPast($code, $display_past)
+    {
+        \DB::update('events')
+            ->set(array('display_past' => $display_past))
+            ->where('code', '=', $code)
+            ->execute();
     }
 
     private static function get_main_image($params)
