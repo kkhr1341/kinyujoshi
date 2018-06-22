@@ -20,6 +20,19 @@
         <p class="profile-catchcopy">{$profile.catchcopy}</p>
       </div>
 
+      <div class="main-menu-list sp">
+        <ul>
+          <li class="main-li"><a href="/my/joshikai">参加予定の女子会</a></li>
+          <li class="main-li"><a href="/my/member_joshikai">メンバー限定女子会</a></li>
+          <li class="main-li"><a href="/my/profile">プロフィール編集</a></li>
+          <li class="main-li"><a href="/my/account">アカウント情報</a></li>
+          <li class="sub-li"><a href="/logout">ログアウト</a></li>
+        </ul>
+
+
+      </div>
+
+      
       <div class="admin-normal-joshikai">
         <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
         <ul class="clear">

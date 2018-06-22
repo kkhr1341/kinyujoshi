@@ -1594,7 +1594,7 @@ th {
   line-height: 1.42857143;
   vertical-align: top;
   /*border-top: 1px solid #ddd;*/
-  border-top: 2px solid #c5e9e4;
+  border-top: 2px solid #f9f9f9;
   word-break: break-all;
 }
 .table > thead > tr > th {
