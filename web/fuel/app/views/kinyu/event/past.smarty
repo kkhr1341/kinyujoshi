@@ -1,7 +1,7 @@
 <link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
 
-<div class="kinyu-single-block joshikai-main-block">
-  <div class="joshikai-main clear">
+<div class="kinyu-single-block joshikai-main-block" style="background: #f9f9f9;">
+  <<!-- div class="joshikai-main clear">
     <div class="joshikai-main-left">
       <div class="img-box">
         <div class="img-box-inner">
@@ -13,15 +13,15 @@
     <div class="joshikai-main-right">
       <div class="white-bg"></div>
     </div>
-  </div>
+  </div> -->
 
   <div class="inner">
 
     <div id="kinyu-event-scroll-point" class="center">
 
-      <a class="kinyu-event-list-subdescription" href="https://kinyu-joshi.jp/news/vCPlDi"><span style="color:red;">＊</span>3月3日より、女子会の参加方法が変わりました。<br>詳細はこちらよりご確認ください。</a>
+      <!-- <a class="kinyu-event-list-subdescription" href="https://kinyu-joshi.jp/news/vCPlDi"><span style="color:red;">＊</span>3月3日より、女子会の参加方法が変わりました。<br>詳細はこちらよりご確認ください。</a> -->
 
-      <div id="joshikai-list" class="kinyu-event-list joshikai-main-el">
+      <div id="joshikai-list" class="kinyu-event-list joshikai-past-list joshikai-main-el">
 
         <p class="kinyu-event-info-title">過去の女子会一覧</p>
         <ul>

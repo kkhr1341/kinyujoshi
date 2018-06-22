@@ -1368,6 +1368,12 @@
 .kinyu-event-list {
   border-bottom: 1px solid #e5e5e5;
 }
+.joshikai-past-list {
+  padding: 24px 0px 60px;
+}
+.joshikai-past-list .kinyu-event-list-right {
+  background: #fff!important;
+}
 .special_joshikai_title {
   transform: rotate(-12deg);
   position: absolute;
