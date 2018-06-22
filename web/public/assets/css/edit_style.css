@@ -3133,7 +3133,7 @@ input[type=checkbox]:checked + .checkbox:before {
   padding-left: 50px;
   padding-top: 4px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
 }
 .qa-list .question-text:before {
   content: "Ｑ";
@@ -3152,6 +3152,8 @@ input[type=checkbox]:checked + .checkbox:before {
   position: relative;
   padding-left: 50px;
   padding-top: 4px;
+  font-size: 14px;
+  line-height: 24px;
 }
 .qa-list .answer-text:before {
   content: "Ａ";
