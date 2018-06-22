@@ -9,11 +9,13 @@
       </div>
     </div>
   </div>
+
   <div class="joshikai-attend-el-block">
     <p>参加者一覧</p>
 
-    <div class="clearw">
-    	<a class="btn btn-primary float_right" id="broadcat_mail" href="#" role="button">メールを一斉送信する</a>
+    <div class="clearw float_right" style="margin-bottom: 10px;">
+    	<a class="btn btn-primary" id="broadcast_mail" href="#" role="button">メールを一斉送信する</a>
+    	<a class="btn btn-primary" id="download_csv" href="/admin/joshikai/memberlist/{$events.code}" role="button">CSVダウンロード</a>
     </div>
 
     {foreach from=$applications item=application name=loopname}
@@ -233,7 +235,7 @@ $(function(){
         // メール一斉送信用モーダル
         var $modal = $("#myModal");
 
-        $("#broadcat_mail").on("click", function() {
+        $("#broadcast_mail").on("click", function() {
             $modal.modal({
               "backdrop"  : "static",
               "keyboard"  : true,

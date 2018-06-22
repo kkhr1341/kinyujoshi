@@ -26,16 +26,25 @@
 		<table class="table table-hover mt20">
 			<thead>
 				<tr>
+					<th>ID</th>
 					<th>日付</th>
 					<th>カテゴリ</th>
 					<th>タイトル</th>
+					<th>過去記事</th>
 				</tr>
 			</thead>
 			{foreach from=$open_events item=events_item}
-			<tr class="events pointer" code="{$events_item.code}">
+			<tr class="events pointer" data-code="{$events_item.code}">
+				<td>{$events_item.code}</td>
 				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
 				<td>{$events_item.section_code}</td>
 				<td>{$events_item.title}</td>
+			    <td>
+                    <div class="display_past_button radio_box clear">
+                        <input type="checkbox" value="1" name="display_past" id="display_past_{$events_item.code}" class="form-radio" {if $events_item.display_past== "1"}checked{/if}>
+                        <label for="display_past_{$events_item.code}" class="form-long" data-code="{$events_item.code}">YES!</label>
+                    </div>
+                </td>
 			</tr>
 			{/foreach}
 		</table>
@@ -50,13 +59,15 @@
 		<table class="table table-hover mt20">
 			<thead>
 				<tr>
+					<th>ID</th>
 					<th>日付</th>
 					<th>カテゴリ</th>
 					<th>タイトル</th>
 				</tr>
 			</thead>
 			{foreach from=$closed_events item=events_item}
-			<tr class="events pointer" code="{$events_item.code}">
+			<tr class="events pointer" data-code="{$events_item.code}">
+				<td>{$events_item.code}</td>
 				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
 				<td>{$events_item.section_code}</td>
 				<td>{$events_item.title}</td>
@@ -74,16 +85,25 @@
 		<table class="table table-hover mt20">
 			<thead>
 				<tr>
+					<th>ID</th>
 					<th>日付</th>
 					<th>カテゴリ</th>
 					<th>タイトル</th>
+					<th>過去記事</th>
 				</tr>
 			</thead>
 			{foreach from=$past_events item=events_item}
-			<tr class="events pointer" code="{$events_item.code}">
+			<tr class="events pointer" data-code="{$events_item.code}">
+				<td>{$events_item.code}</td>
 				<td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
 				<td>{$events_item.section_code}</td>
 				<td>{$events_item.title}</td>
+			    <td>
+                    <div class="display_past_button radio_box clear">
+                        <input type="checkbox" value="1" name="display_past" id="display_past_{$events_item.code}" class="form-radio" {if $events_item.display_past== "1"}checked{/if}>
+                        <label for="display_past_{$events_item.code}" class="form-long" data-code="{$events_item.code}">YES!</label>
+                    </div>
+                </td>
 			</tr>
 			{/foreach}
 		</table>
@@ -135,10 +155,30 @@
 
 <script>
 $(function(){
-	$('.events').click(function(){
-		var code = $(this).attr('code');
+	$('.events').click(function(e){
+        e.preventDefault();
+		var code = $(this).data('code');
 		location.href = "/admin/joshikai/edit/"+code;
 	});
+
+	$('.events .display_past_button label').click(function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var code = $(this).data('code');
+
+        var checkBoxes = $(this).parent().find('[name="display_past"]');
+        checkBoxes.prop("checked", !checkBoxes.prop("checked"));
+
+        var url = "/api/eventdisplaypast/save";
+        var params = {};
+        if (code) {
+            params.code = code;
+            params.display_past = checkBoxes.prop("checked") === true? 1: 0;
+        }
+        ajax.post(url, params, function(data){
+            ts.success("設定が完了しました");
+        });
+    });
 
     $('#tab4 .form-long').click(function(e){
         e.preventDefault();

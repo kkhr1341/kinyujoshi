@@ -69,19 +69,12 @@ class Profiles extends Base
         $username = \Auth::get('username');
         $email = \Auth::get_email();
 
-		// コードが既に使用されていないか確認
-		$before = \DB::select('*')->from('profiles')
-            ->where('disable', '=', '0')
-            ->where('username', '!=', $username)
-            ->execute()
-            ->current();
-//
-//		if (!empty($proile)) {
-//			return "このユーザー名は既に使用されています";
-//		}
-
         // メールアドレスの変更確認
         \DB::update('users')->set(array(
+            'email' => $params['email']
+        ))->where('username', '=', $username)->execute();
+
+        \DB::update('member_regist')->set(array(
             'email' => $params['email']
         ))->where('username', '=', $username)->execute();
 
@@ -96,6 +89,13 @@ class Profiles extends Base
 
         // メールアドレスの変更通知を通知
         if ($email != $params['email']) {
+
+            // 変更履歴
+            \DB::insert('change_email_histories')->set(array(
+                'username' => $username,
+                'before_email' => $email,
+                'after_email' => $params['email'],
+            ))->execute();
 
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元

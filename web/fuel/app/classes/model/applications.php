@@ -80,11 +80,13 @@ class Applications extends Base
         $select .= 'ifnull(users.email, applications.email) as email, ';
         $select .= 'profiles.birthday, ';
         $select .= 'member_regist.code as member_regist_code, ';
+        $select .= 'member_regist.not_know, ';
         $select .= 'applications.*, ';
         $select .= 'application_credit_payments.sale, ';
         $select .= 'application_credit_payments.cancel as payment_cancel, ';
         $select .= '(select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at, ';
-        $select .= '(select pa.created_at from participated_applications as pa where pa.application_code = applications.code) as participated';
+        $select .= '(select pa.created_at from participated_applications as pa where pa.application_code = applications.code) as participated, ';
+        $select .= '(select count(*) from applications as tp inner join participated_applications as pa on pa.application_code = tp.code where applications.username != "guest" and applications.username = tp.username) as application_count';
 
         $datas = \DB::select(\DB::expr($select))
             ->from('applications')

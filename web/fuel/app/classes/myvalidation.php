@@ -85,6 +85,22 @@ class MyValidation
         return true;
     }
 
+    /*
+     * 過去日付で入力されてしまっていないかチェック
+     */
+    public static function _validation_is_future_date($data)
+    {
+        if (!empty($data)) {
+            if (date('Y-m-d') < date('Y-m-d', strtotime($data))
+        ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
     /**
      * Match specific other submitted field string value
      * (must be both strings, check is type sensitive)

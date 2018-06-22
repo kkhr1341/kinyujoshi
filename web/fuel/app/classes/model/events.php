@@ -86,6 +86,7 @@ class Events extends Base
 
             $val->field('creditch')
                 ->add_rule('required');
+
         }
 
         return $val;
@@ -333,6 +334,14 @@ class Events extends Base
         \DB::update('events')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
 
         return $params;
+    }
+
+    public static function updateDisplayPast($code, $display_past)
+    {
+        \DB::update('events')
+            ->set(array('display_past' => $display_past))
+            ->where('code', '=', $code)
+            ->execute();
     }
 
     private static function get_main_image($params)

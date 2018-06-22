@@ -144,6 +144,7 @@ return array(
 	'admin/report/edit/(:any)' => 'admin/blogs/edit/$1',
 	//管理画面admin - 女子会
 	'admin/joshikai' => 'admin/events/index',
+    'admin/joshikai/memberlist/(:any)'   => 'admin/events/memberlist/$1',
 	'admin/joshikai/create' => 'admin/events/create',
 	'admin/joshikai/edit/(:any)' => 'admin/events/edit/$1',
 	'admin/joshikai/attend' => 'admin/events/attend',

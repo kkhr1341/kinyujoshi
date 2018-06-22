@@ -68,4 +68,21 @@ class EventRemindMailTemplate extends Base
         $email->to($mail); //送り先
         $email->send();
     }
+
+    public static function notify($error_mails)
+    {
+        $email = \Email::forge('jis');
+        $email->from("no-reply@kinyu-joshi.jp", '');
+        $email->subject("メール一斉送信でエラーがありました");
+
+        $body = 'エラーメール' . "\n";
+        $body .= '件数（' . count($error_mails) . '）' . "\n";
+        foreach($error_mails as $error_mail) {
+            $body .= $error_mail. "\n";
+        }
+
+        $email->body($body);
+        $email->to('cs@kinyu-joshi.jp');
+        $email->send();
+    }
 }
