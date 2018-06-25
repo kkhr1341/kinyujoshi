@@ -262,7 +262,7 @@ class Regist extends Base
             $total->where(\DB::expr("ifnull(profiles.name, member_regist.name)"), 'like', '%' . $params['name'] . '%');
         }
         if (isset($params['email']) && $params['email']) {
-            $total->where('member_regist.email', $params['email']);
+            $total->where('member_regist.email', 'like','%' . $params['email'] . '%');
         }
         if (isset($params['introduction']) && $params['introduction']) {
             $total->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
@@ -323,7 +323,7 @@ class Regist extends Base
             $datas['datas']->where(\DB::expr("ifnull(profiles.name, member_regist.name)"), 'like', '%' . $params['name'] . '%');
         }
         if (isset($params['email']) && $params['email']) {
-            $datas['datas']->where('member_regist.email', $params['email']);
+            $datas['datas']->where('member_regist.email', 'like','%' . $params['email'] . '%');
         }
         if (isset($params['introduction']) && $params['introduction']) {
             $datas['datas']->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
