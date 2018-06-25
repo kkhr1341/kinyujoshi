@@ -3,6 +3,35 @@
   <a href="/admin/registlist/create" id="create">メンバー追加</a>
   <a href="#" id="download">CSVダウンロード</a>
 </div>
+
+<div class="now_member_block">
+  <p class="now_member">現在の会員数：<span>{$total}</span>名！</p>
+</div>
+
+<div class="search_form">
+  <form action="" method="get">
+    <table class="sample_01">
+      <tbody>
+      <tr>
+        <th>会員ID</th>
+        <td><input type="text" name="username" class="form-control" placeholder="" value="{$params.username}"></td>
+        <th>名前</th>
+        <td><input type="text" name="name" class="form-control" placeholder="" value="{$params.name}"></td>
+      </tr>
+      <tr>
+          <th>Email</th>
+          <td><input type="text" name="email" class="form-control" placeholder="" value="{$params.email}"></td>
+          <th>自己紹介</th>
+          <td><input type="text" name="introduction" class="form-control" placeholder="" value="{$params.introduction}"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="search-btn" type="submit" id="search">検索</button>
+
+  </form>
+</div>
+
 <table id="tbl" class="sample_01 registlist-block-admin">
   <thead>
     <tr>
@@ -10,7 +39,7 @@
       <th></th>
       <th>登録日</th>
       <th>名前</th>
-      <th>会員No</th>
+      <th>会員ID</th>
       <th style="display:none;">かな</th>
       <!-- メールアドレス -->
       <th>Email</th>
@@ -31,7 +60,7 @@
   </thead>
 
   <tbody>
-    {foreach from=$registlist item=email name=loop}
+    {foreach from=$registlist.datas item=email name=loop}
     <tr>
       <td>{$smarty.foreach.loop.iteration} </td>
       <td>{$email.created_at|date_format:"Y.m.d"}</td>
@@ -67,15 +96,28 @@
       </td>
     </tr>
     {/foreach}
-    <div class="now_member_block">
-      <p class="now_member">現在の会員数：<span>{$smarty.foreach.loop.total}</span>名！</p>
-    </div>
-
   </tbody>
 </table>
 
+<div class="blog-pagenation tx-center">
+  {$pagination}
+</div>
 
 <style>
+
+.search_form .search-btn {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color: #8ddcd1;
+    border-color: #8ddcd1;
+    margin: 8px auto 15px auto;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 12px;
+    width: 200px;
+}
+
 .now_member_block {
   background: #eeeeee;
   margin: 16px 0px 20px;

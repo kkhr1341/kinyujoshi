@@ -234,6 +234,111 @@ class Regist extends Base
         return $params;
     }
 
+    public static function total()
+    {
+        \DB::set_charset('utf8');
+        $total = \DB::select(\DB::expr('count(*) as cnt'))
+            ->from('member_regist')
+            ->join('profiles', 'LEFT')
+            ->on('profiles.username', '=', 'member_regist.username')
+            ->where('member_regist.disable', '=', 1);
+
+        $total = $total->execute()->current();
+        return $total['cnt'];
+    }
+    public static function all($pagination_url, $page, $uri_segment = 3, $per_page = 5, $params)
+    {
+        \DB::set_charset('utf8');
+        $total = \DB::select(\DB::expr('count(*) as cnt'))
+            ->from('member_regist')
+            ->join('profiles', 'LEFT')
+            ->on('profiles.username', '=', 'member_regist.username')
+            ->where('member_regist.disable', '=', 1);
+
+        if (isset($params['username']) && $params['username']) {
+            $total->where('member_regist.username', $params['username']);
+        }
+        if (isset($params['name']) && $params['name']) {
+            $total->where(\DB::expr("ifnull(profiles.name, member_regist.name)"), 'like', '%' . $params['name'] . '%');
+        }
+        if (isset($params['email']) && $params['email']) {
+            $total->where('member_regist.email', $params['email']);
+        }
+        if (isset($params['introduction']) && $params['introduction']) {
+            $total->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
+        }
+
+        $total = $total->execute()->current();
+        $datas['total'] = $total['cnt'];
+
+        $config = array(
+            'pagination_url' => $pagination_url,
+            'total_items' => $total['cnt'],
+            'per_page' => $per_page,
+            'uri_segment' => $uri_segment,
+            'current_page' => (int)$page,
+            'name' => 'bootstrap',
+            'wrapper' => '<ul class="pagination">{pagination}</ul>',
+        );
+
+        $pagination = \Pagination::forge('mypagination', $config);
+
+        $datas['datas'] = \DB::select(
+                "member_regist.id",
+                "member_regist.code",
+                "member_regist.username",
+                "member_regist.age",
+                "member_regist.not_know",
+                "member_regist.interest",
+                "member_regist.ask",
+                "member_regist.income",
+                "member_regist.transmission",
+                "member_regist.email",
+                "member_regist.facebook",
+                "member_regist.other_sns",
+                "member_regist.introduction",
+                "member_regist.user_agent",
+                "member_regist.where_from",
+                "member_regist.where_from_other",
+                "member_regist.job_kind",
+                "member_regist.id_name",
+                "member_regist.disable",
+                "member_regist.edit_inner",
+                "member_regist.industry",
+                "member_regist.industry_other",
+                "member_regist.created_at",
+                "member_regist.updated_at",
+                \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
+                \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
+            )
+            ->from('member_regist')
+            ->join('profiles', 'LEFT')
+            ->on('profiles.username', '=', 'member_regist.username')
+            ->where('member_regist.disable', '=', 1);
+
+        if (isset($params['username']) && $params['username']) {
+            $datas['datas']->where('member_regist.username', $params['username']);
+        }
+        if (isset($params['name']) && $params['name']) {
+            $datas['datas']->where(\DB::expr("ifnull(profiles.name, member_regist.name)"), 'like', '%' . $params['name'] . '%');
+        }
+        if (isset($params['email']) && $params['email']) {
+            $datas['datas']->where('member_regist.email', $params['email']);
+        }
+        if (isset($params['introduction']) && $params['introduction']) {
+            $datas['datas']->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
+        }
+
+        $datas['datas'] = $datas['datas']->limit($pagination->per_page)
+            ->offset($pagination->offset)
+            ->order_by('member_regist.created_at', 'desc')
+            ->execute()
+            ->as_array();
+        $datas['pagination'] = $pagination;
+
+        return $datas;
+    }
+
     public static function lists()
     {
         \DB::set_charset('utf8');
