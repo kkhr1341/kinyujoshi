@@ -30,11 +30,14 @@
      var values = {};
      var results = json
      .filter(function(value){
-        return value[key] != 'null'
+        return value[key] != null && value[key] != ''
      })
      .map(function(value){
         return value[key]
      })
+
+     console.log( results );
+
      $.each(results, function(key, val) {
         if(values[val] == undefined) {
             values[val] = 0;
