@@ -983,10 +983,41 @@ footer {
   margin: 1px 0 0;
 }
 
+.js-tab {
+    margin-bottom: 10px;
+}
+.js-tab::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.js-tab > div {
+    cursor:pointer;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 10px;
+    width: 48%;
+    float: left;
+    text-align: center;
+}
+.js-tab > div.active {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+}
+.js-tab .tab1 {
+    float: left;
+}
+.js-tab .tab2 {
+    float: right;
+}
 
-
-
-
+.js-tab_content {
+    display:none;
+}
+.js-tab_content.active {
+    display:block;
+}
 @media screen and (min-width: 640px) {
 
 .admin-normal-side a:hover {

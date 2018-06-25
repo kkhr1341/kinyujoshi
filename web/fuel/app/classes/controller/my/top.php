@@ -8,7 +8,8 @@ class Controller_My_Top extends Controller_Mybase
 
     public function action_index()
     {
-        $this->data['applications'] = Applications::get_applications();
+        $username = \Auth::get('username');
+        $this->data['applications'] = Applications::get_next_events_applications($username);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->title = 'マイページ｜きんゆう女子。';
         $this->template->description = 'マイページ・トップ';

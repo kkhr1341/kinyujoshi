@@ -49,18 +49,35 @@ class Applications extends Base
     }
 
     /**
-     * 参加イベント一覧取得
+     * 参加予定イベント一覧取得
      * @return unknown
      */
-    public static function get_applications()
+    public static function get_next_events_applications($username)
     {
-
-        $username = \Auth::get('username');
-
         $datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, applications.event_code, events.*'))->from('applications')
             ->join('events')
             ->on('applications.event_code', '=', 'events.code')
             ->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'))
+            ->where('applications.username', '=', $username)
+            ->where('applications.disable', '=', 0)
+            ->where('applications.cancel', '=', 0)
+            ->order_by('event_date', 'asc')
+            ->execute()
+            ->as_array();
+
+        return $datas;
+    }
+
+    /**
+     * 過去の参加イベント一覧取得
+     * @return unknown
+     */
+    public static function get_prev_events_applications($username)
+    {
+        $datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, applications.event_code, events.*'))->from('applications')
+            ->join('events')
+            ->on('applications.event_code', '=', 'events.code')
+            ->where('event_date', '<', \DB::expr('NOW() - INTERVAL 1 DAY'))
             ->where('applications.username', '=', $username)
             ->where('applications.disable', '=', 0)
             ->where('applications.cancel', '=', 0)
