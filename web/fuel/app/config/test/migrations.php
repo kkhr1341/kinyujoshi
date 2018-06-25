@@ -89,6 +89,7 @@ return array(
         80 => '086_create_participated_applications',
         81 => '087_create_change_email_histories',
         82 => '088_add_send_to_event_mails',
+        83 => '089_add_authentication_to_blogs',
       ),
     ),
     'module' => 

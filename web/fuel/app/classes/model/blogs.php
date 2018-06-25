@@ -5,7 +5,36 @@ require_once(dirname(__FILE__) . "/base.php");
 
 class Blogs extends Base
 {
+    public static function validate()
+    {
+        $val = \Validation::forge();
+        $val->add_callable('myvalidation');
 
+        $val->add('code');
+//        $val->add('username');
+//        $val->add('section_code');
+        $val->add('project_code');
+        $val->add('status');
+        $val->add('open_date');
+        $val->add('secret');
+        $val->add('title');
+        $val->add('content');
+        $val->add('main_image');
+//        $val->add('disable');
+        $val->add('description');
+//        $val->add('section_name');
+        $val->add('pickup');
+        $val->add('kind');
+        $val->add('keyword');
+        $val->add('where_from');
+        $val->add('where_from_other');
+        $val->add('authentication_user', '認証ユーザー名')
+            ->add_rule('required_with', 'authentication_password');
+        $val->add('authentication_password', '認証パスワード')
+            ->add_rule('required_with', 'authentication_user');
+
+        return $val;
+    }
 
     /**
      * 指定のプロジェクトの活動報告を取得する
@@ -190,6 +219,7 @@ class Blogs extends Base
         $params['section_code'] = '';
         $params['section_name'] = '';
         $params['created_at'] = \DB::expr('now()');
+
         \DB::insert('blogs')->set($params)->execute();
 
         return $params;
