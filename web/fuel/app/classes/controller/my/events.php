@@ -71,7 +71,8 @@ class Controller_My_Events extends Controller_Mybase
         $this->data['all_events'] = Events::lists02();
         $this->data['closed_events'] = Events::lists(0);
         $this->data['open_events'] = Events::lists(1);
-        $this->data['applications'] = Applications::get_applications($username);
+        $this->data['applications'] = Applications::get_next_events_applications($username);
+        $this->data['prev_applications'] = Applications::get_prev_events_applications($username);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->title = '参加予定の女子会｜きん女。マイページ';
@@ -110,7 +111,7 @@ class Controller_My_Events extends Controller_Mybase
         //$this->data['all_events'] = Events::lists02();
         //$this->data['closed_events'] = Events::lists(0);
         //$this->data['open_events'] = Events::lists(1);
-        $this->data['applications'] = Applications::get_applications($username);
+        $this->data['applications'] = Applications::get_next_events_applications($username);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->title = '参加予定の女子会｜きん女。マイページ';

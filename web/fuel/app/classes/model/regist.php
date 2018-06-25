@@ -367,6 +367,7 @@ class Regist extends Base
             "member_regist.industry_other",
             "member_regist.created_at",
             "member_regist.updated_at",
+            \DB::expr("exists(select * from users where users.username = member_regist.username) as is_user"),
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
             \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
             )
