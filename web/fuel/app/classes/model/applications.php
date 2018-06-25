@@ -52,11 +52,8 @@ class Applications extends Base
      * 参加イベント一覧取得
      * @return unknown
      */
-    public static function get_applications()
+    public static function get_applications($username)
     {
-
-        $username = \Auth::get('username');
-
         $datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, applications.event_code, events.*'))->from('applications')
             ->join('events')
             ->on('applications.event_code', '=', 'events.code')
