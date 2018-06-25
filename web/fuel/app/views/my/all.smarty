@@ -4,6 +4,7 @@
     {$my_side}
     
     <div class="admin-normal-main">
+      
       <div class="admin-normal-profile">
         <div class="img-box-block">
           <div class="img-box"
@@ -33,6 +34,7 @@
       </div>
 
       
+      {*
       <div class="admin-normal-joshikai">
         <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
         <ul class="clear">
@@ -72,6 +74,8 @@
 
         </ul>
       </div>
+      *}
+      
     </div>
   </div>
 </div>
