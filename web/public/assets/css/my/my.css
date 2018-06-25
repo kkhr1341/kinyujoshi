@@ -3,9 +3,6 @@
   width: 100%;
   position: relative;
 }
-.header-profile-block {
-  display: none;
-}
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   font-size: 13px;
 }
@@ -987,7 +984,7 @@ footer {
 }
 
 .js-tab {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .js-tab::after {
     content: "";
@@ -996,16 +993,23 @@ footer {
 }
 .js-tab > div {
     cursor:pointer;
-    display: inline-block;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 10px;
+    width: 48%;
+    float: left;
     text-align: center;
-    transition: .5s;
-    font-size: 14px;
-    opacity: .3;
-    padding-right: 20px;
-    font-weight: normal;
 }
 .js-tab > div.active {
-    opacity: 1;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+}
+.js-tab .tab1 {
+    float: left;
+}
+.js-tab .tab2 {
+    float: right;
 }
 
 .js-tab_content {
