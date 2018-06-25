@@ -28,7 +28,11 @@
 
 
      var values = {};
-     var results = json.map(function(value){
+     var results = json
+     .filter(function(value){
+        return value[key] != 'null'
+     })
+     .map(function(value){
         return value[key]
      })
      $.each(results, function(key, val) {
