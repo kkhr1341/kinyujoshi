@@ -38,10 +38,10 @@
         values[val]++;
      })
 
-     var resultValue = [values].map(function(data) {
-       return [Object.keys(data)[0], Object.values(data)[0]]
-     })
-
+     var resultValue = [];
+     Object.keys(values).forEach(function (key) {
+       resultValue.push([key, values[key]]);
+     });
 
      var data = new google.visualization.DataTable();
      data.addColumn('string', 'Topping');
