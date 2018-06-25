@@ -155,7 +155,7 @@
 
 
 .admin-normal-profile {
-  padding-bottom: 16px;
+  padding-bottom: 24px;
 }
 .admin-normal-profile .img-box-block {
   width: 120px;
@@ -393,7 +393,7 @@
   box-shadow: 0px 0px 5px 0px #eaeaea;
 }
 .main-menu-list .main-li a {
-  padding: 14px 0px;
+  padding: 16px 0px;
 }
 .main-menu-list .sub-li {
   margin-bottom: 24px;

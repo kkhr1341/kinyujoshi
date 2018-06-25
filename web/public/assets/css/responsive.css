@@ -259,10 +259,10 @@
 }
 .header-profile-block {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   position: fixed;
-  top: 11px;
+  top: 12px;
   left: 10px;
   border-radius: 50%;
   z-index: 1005;
