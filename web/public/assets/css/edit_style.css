@@ -145,8 +145,8 @@
 /*  */
 .header-profile-block {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   position: absolute;
   top: 16px;
   left: 16px;
@@ -3183,7 +3183,7 @@ input[type=checkbox]:checked + .checkbox:before {
   font-size: 14px;
   line-height: 24px;
 }
-.qa-list .answer-text:before {
+/*.qa-list .answer-text:before {
   content: "Ａ";
   width: 28px;
   height: 28px;
@@ -3195,7 +3195,7 @@ input[type=checkbox]:checked + .checkbox:before {
   top: 0;
   left: 0;
   color: #fff;
-}
+}*/
 
 
 
