@@ -1,4 +1,4 @@
-{$pc_side}
+{*{$pc_side}*}
 
 <script src="/assets/js/kinyu/topanimation.js"></script>
 <div class="kinyu-main-animation">
@@ -303,11 +303,11 @@ $(function() {
 });
 </script>
 
-<style>
+<!-- <style>
 footer {
   margin-left: 24%!important;
 }
 .kinyu-header-top {
   margin-left:24%;
 }
-</style>
+</style> -->
