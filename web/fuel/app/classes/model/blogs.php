@@ -280,6 +280,14 @@ class Blogs extends Base
             $total = $total->where('section_code', '=', $section_code);
         }
 
+        if ($search_text !== null) {
+            $total = $total
+                ->and_where_open()
+                ->or_where('title', 'like', '%' . $search_text . '%')
+                ->or_where('content', 'like', '%' . $search_text . '%')
+                ->and_where_close();
+        }
+
         $total = $total->execute()->current();
 
         $config = array(
