@@ -7,7 +7,7 @@ var $resArray02 = $resArray[1];
 console.log($resArray02);
 </script>
 
-<div class="kinyu-single-block joshikai-main-block">
+<div class="kinyu-single-block joshikai-main-block joshikai-main-detail">
   <div class="kinyu-joshikai-detail-inner">
 
     <div class="kinyu-joshikai-detail-el-block clear">

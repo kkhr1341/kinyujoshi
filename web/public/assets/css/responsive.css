@@ -2566,6 +2566,80 @@ input::-webkit-input-placeholder {
   　フッター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 footer {
+  background: #f9f9f9;
+  border:none;
+}
+.footer-inner {
+  width: 100%;
+  padding: 50px 0 32px;
+}
+.footer-logo {
+  display: block;
+  float: none;
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.footer-logo img {
+}
+.new_area {
+  display: block;
+  float: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.new_area a {
+}
+.new_area img {
+  width: 100%;
+}
+.footer-menu {
+  display: block;
+  float: none;
+  margin-top: 42px;
+}
+.footer-menu-title {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.footer-menu-title span {
+  background: none;
+  text-align: center;
+  padding: 0px 16px;
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;
+}
+.footer-menu-title:after {
+  content: none;
+}
+.footer-menu ul {
+  text-align: center;
+  padding: 0px 6%;
+}
+.footer-menu ul:last-child {
+}
+.footer-menu ul > li {
+  display: inline-block;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.footer-menu ul > li:last-child {
+}
+.footer-menu ul > li a {
+  font-size: 11px;
+  line-height: 15px;
+}
+.navi_kinyu-submenu-copy {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 80px;
+  background: #f9f9f9;
+}
+
+
+
+/*footer {
   padding: 50px 0px 20px;
   background: #f5f5f5;
   position: relative;
@@ -2580,8 +2654,6 @@ footer .footer-menu {
 .footer-icon {
   display: block;
   width: 42px;
-  /*margin: 0 auto;
-  margin-bottom: 24px;*/
   position: absolute;
   top: 0;
   left: 50%;
@@ -2634,7 +2706,7 @@ footer .navi-link-top {
 footer .navi_kinyu-submenu-el a {
   padding: 0px!important;
   font-size: 10px;
-}
+}*/
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   フォーム関連ポップアップ

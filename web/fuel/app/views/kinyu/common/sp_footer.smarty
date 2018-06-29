@@ -1,4 +1,4 @@
-<footer class="singlepage-footer">
+<!-- <footer class="singlepage-footer">
   <img class="sp footer-icon" src="/images/new/footer-icon.png" class="footer-icon">
   <div class="footer-logo">
     <a href="/about"><img src="/images/kinyu-logo-top.png"></a>
@@ -31,4 +31,53 @@
     <span>© TOE THE LINE Inc. 2018　All rights reserved.</span>
     掲載の写真・記事・イラスト等の全てのコンテンツの無断転写・転載を禁じます。
   </p>
+</footer> -->
+
+<footer>
+  <div class="footer-inner clear">
+    <div class="footer-logo">
+      <img src="/images/top-circle-logo.png">
+    </div>
+    <div class="new_area">
+      <a href="/start"><img src="/images/banner/firsttime_sp.jpg"></a>
+    </div>
+
+    <div class="footer-menu pc">
+      <p class="footer-menu-title"><span>きんゆう女子。について</span></p>
+      <ul>
+        <li><a href="/faq">よくあるご質問</a></li>
+        <li><a href="/contact">お問い合わせ</a></li>
+        <li><a href="/service">会員規約</a></li>
+      </ul>
+      <ul>
+        <li><a href="/josh">女子会規約</a></li>
+        <li><a href="/privacy">プライバシーポリシー</a></li>
+        <li><a href="/link_policy">リンクポリシー</a></li>
+      </ul>
+      <ul>
+        <!-- <li><a href="">企業の方はこちら</a></li> -->
+        <li><a href="/legal">特定商取引法に基づく表記</a></li>
+        <li><a href="/company">運営会社</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-menu sp">
+      <p class="footer-menu-title"><span>きんゆう女子。について</span></p>
+      <ul>
+        <li><a href="/faq">よくあるご質問</a></li>
+        <li><a href="/contact">お問い合わせ</a></li>
+        <li><a href="/service">会員規約</a></li>
+        <li><a href="/josh">女子会規約</a></li>
+        <li><a href="/privacy">プライバシーポリシー</a></li>
+        <li><a href="/link_policy">リンクポリシー</a></li>
+        <!-- <li><a href="">企業の方はこちら</a></li> -->
+        <li><a href="/legal">特定商取引法に基づく表記</a></li>
+        <li><a href="/company">運営会社</a></li>
+      </ul>
+    </div>
+
+  </div>
 </footer>
+<p class="navi_kinyu-submenu-copy">
+  <span>© TOE THE LINE Inc. 2018　All rights reserved.
+</p>
