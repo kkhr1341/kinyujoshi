@@ -2,6 +2,10 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.video-container iframe {
+  width: 1000px;
+  height: 565px;
+}
 .kinyu-container {
   position: relative;
 }
