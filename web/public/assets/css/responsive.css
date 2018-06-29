@@ -3,6 +3,11 @@
 ---------------------------------- */
 @media screen and (max-width: 1024px) {
 
+.video-container iframe {
+  width: 100%;
+  height: 190px;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマホのみ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -2616,5 +2621,9 @@ footer .navi_kinyu-submenu-el a {
 @media screen and (max-width: 340px) {
 .kinyu-sp-menu-block li {
   max-width: 85px;
+}
+.video-container iframe {
+  width: 100%;
+  height: 170px;
 }
 }
