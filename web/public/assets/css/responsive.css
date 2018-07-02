@@ -2600,8 +2600,9 @@ footer {
 }
 .footer-menu-title {
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   margin-bottom: 12px;
+  font-weight: bold;
 }
 .footer-menu-title span {
   background: none;
@@ -2635,6 +2636,25 @@ footer {
   margin-bottom: 0px;
   padding-bottom: 80px;
   background: #f9f9f9;
+}
+footer .link-to-top {
+  width: 68%;
+  margin: 0 auto;
+  background: #eaeaea;
+  margin-top: 32px;
+}
+footer .link-to-top a {
+  position: relative;
+  display: block;
+  padding: 8px 0px;
+  text-align: center;
+  font-size: 11px;
+  color: gray;
+}
+footer .link-to-top a:after {
+  content: "〉";
+  position: absolute;
+  right: 0;
 }
 
 

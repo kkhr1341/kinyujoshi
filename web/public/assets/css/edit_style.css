@@ -589,16 +589,16 @@
 
 }
 .kinyu-top-member-list {
-  height: 300px;
+  height: 350px;
   margin-top: 24px;
 }
 .kinyu-top-member-list .img-box {
-  width: 50%;
+  width: 55%;
   float: left;
   height: 100%;
 }
 .kinyu-top-member-list .text-box {
-  width: 50%;
+  width: 45%;
   float: right;
   padding-left: 36px;
 }
@@ -608,7 +608,7 @@
   background: #8ddcd1;
 }
 .kinyu-top-member-list .text-box {
-  margin-top: 12px;
+  margin-top: 24px;
 }
 .kinyu-top-member-list .text-box .main-title {
   font-size: 18px;
@@ -4007,6 +4007,76 @@ input::-webkit-input-placeholder {
 /* きん女。ストーリー */
 .kinyu-start-content-contaner .about-kinyu-header-contetns-list-el .title-box-inner p {
   background-color: #f7f7f7;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  チェックボックス
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.checkbox-list {
+    /*background: #ffffff;*/
+    padding: 10px;
+}
+
+.checkbox-list-item {
+    font-size: 12px;
+    /*display: inline-block;*/
+    padding: 4px;
+    /*background: #f7f7f7;*/
+    margin-top: 8px;
+    transition: .5s;
+}
+.checkbox-list-item input[type=checkbox] {
+    display: none;
+}
+.checkbox-list-item.checked-input {
+    background: #e0f7f4;
+}
+.checkbox-list-item label {
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    background-color: #f6f7f8;
+    vertical-align: middle;
+    cursor: pointer;
+    width: auto!important;
+    padding-left: 0px!important;
+}
+.checkbox-list-item label:before {
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    display: block;
+    margin-top: -9px;
+    width: 3px;
+    height: 7px;
+    border-right: 2px solid #77cbc0;
+    border-bottom: 2px solid #77cbc0;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox-list-item label:after {
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -10px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #bbb;
+    content: '';
+}
+.checkbox-list-item span {
+    cursor: pointer;
 }
 
 

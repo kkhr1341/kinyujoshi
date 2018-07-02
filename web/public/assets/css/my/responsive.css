@@ -8,10 +8,11 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container {
   padding-top: 42px;
+  background: #fff;
 }
 .admin-normal-container .admin-normal-inner {
   width: 100%;
-  padding: 36px 0px 70px;
+  padding: 36px 0px 50px;
 }
 .admin-normal-side {
   display: none;
@@ -23,7 +24,6 @@
   padding: 0px;
   border-left: none;
 }
-
 /* ヘッダー */
 .admin-normal-header {
   position: fixed;
@@ -195,8 +195,11 @@
 .joshikailist-main {
   padding-top: 0px;
 }
+.admin-normal-joshikai li {
+}
 .admin-normal-joshikai li a {
   height: 82px;
+  background: #f9f9f9;
 }
 .admin-normal-joshikai-title {
   font-size: 12px;
@@ -208,6 +211,7 @@
 .admin-normal-joshikai li .text-box {
   width: 75%;
   padding: 0px 12px;
+  background: none;
 }
 .admin-normal-joshikai li .text-box .date-text {
   font-size: 12px;
@@ -257,6 +261,11 @@
   font-size: 12px;
   line-height: 20px;
   padding: 10px;
+  border-top: 2px solid #fff;
+}
+.singlepage-form-block .form-control {
+  background: #f9f9f9;
+  box-shadow: none;
 }
 .admin-profile-table th {
   width: 80px;

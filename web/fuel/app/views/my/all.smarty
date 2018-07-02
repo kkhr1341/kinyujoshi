@@ -34,7 +34,6 @@
       </div>
 
       
-      {*
       <div class="admin-normal-joshikai">
         <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
         <ul class="clear">
@@ -74,7 +73,6 @@
 
         </ul>
       </div>
-      *}
       
     </div>
   </div>

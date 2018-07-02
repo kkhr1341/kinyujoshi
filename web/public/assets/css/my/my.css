@@ -934,6 +934,9 @@ footer {
   position: relative;
   transition: .5s;
 }
+.admin-account-el a.admin-account-title {
+  display: block;
+}
 .admin-account-title.active:after {
   content: "×";
   font-size: 16px;
