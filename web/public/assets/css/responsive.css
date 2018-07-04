@@ -1106,6 +1106,7 @@ mark, .mark {
 /* イベント部分のみ */
 .kinyu-top-event-kind p {
   padding: 20px 0px 4px;
+  font-size: 12px;
 }
 .kinyu-top-event-kind p .date-box {
   padding: 4px 2px 4px 4px;
@@ -1509,7 +1510,7 @@ mark, .mark {
   padding: 8px 20px;
   color: #fff;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 11px;
 }
 .joshikai-past-block .inner {
   margin-top: 0px;
@@ -1519,16 +1520,23 @@ mark, .mark {
   margin-top: 12px;
 }
 .joshikai-past-list .link-to a {
-  padding: 10px 20px;
-  font-size: 12px;
+  padding: 8px 12px;
+  font-size: 10px;
+  font-weight: 300;
 }
 .joshiakai-now-list .link-to {
   width: 250px;
   margin-top: 12px;
 }
 .joshiakai-now-list .link-to a {
-  padding: 8px 20px;
+  padding: 8px 12px;
+  font-size: 10px;
+}
+.event-subbox .event-subbox-el {
   font-size: 11px;
+}
+.kinyu-event-list .kinyu-event-list-right {
+  background: #f9f9f9!important;
 }
 
 /* 女子会リスト */
