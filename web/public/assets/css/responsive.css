@@ -67,6 +67,7 @@
   -moz-transition-duration: 800ms;
   -webkit-transition-duration: 800ms;
   position: relative;
+  overflow: hidden;
 }
 .kinyu-main.sssss {
   opacity: .5;
@@ -291,12 +292,27 @@
   padding: 70px 0px 0px;
 }
 .kinyu-sp-navi .inner li {
-  width: 96%;
+  width: 80%;
   margin: 0 auto;
 }
 .navi_kinyu-menu-li01 {
-  border-top: 1px solid #8ddcd1;
-  border-bottom: 1px solid #8ddcd1;
+  /*border-top: 1px solid #8ddcd1;
+  border-bottom: 1px solid #8ddcd1;*/
+}
+.navi_kinyu-menu-li01 .main-area {
+  border-left: 1px solid #8ddcd1;
+}
+.navi_kinyu-menu-li01 .navi_kinyu-menu-block-el a span {
+  position: relative;
+}
+.navi_kinyu-menu-li01 .to-my-page {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  border-radius: 50%;
 }
 .kinyu-sp-navi .inner li.navi_kinyu-menu-li03 {
   padding-bottom: 16px;
@@ -383,7 +399,7 @@
   display: inline-block;
   letter-spacing: normal;
   position: relative;
-  border-top: 1px solid #e3e3e3;
+  /*border-top: 1px solid #e3e3e3;*/
 }
 .navi_kinyu-menu-block-el.navi-el-at .fc-kinyu {
   color: #77cbc0;
@@ -401,7 +417,7 @@
   box-sizing: border-box;
   font-size: 12px;
   line-height: 20px;
-  padding: 16px 12px;
+  padding: 16px 0px 16px 20px;
   transition: .5s;
 }
 .navi_kinyu-menu-block .navi_kinyu-menu-block-el a:hover {
@@ -448,7 +464,7 @@
   line-height: 0;
   margin-bottom: 12px;
   transition: .5s;
-  width: 82%;
+  width: 92%;
   margin: 0 auto;
 }
 .navi_banner_area .navi_banner_area_el:last-child {
@@ -509,21 +525,24 @@
 }
 .swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet {
   margin: 0 4px;
-  border: 1px solid #dadada;
   border-radius: 0%;
   width: 6px;
   height: 6px;
+  opacity: .4;
 }
 .swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet-active {
-  border: 1px solid #8ddcd1;
+  opacity: 1;
 }
 .swiper-container, .swiper-container02 {
-  overflow-x: hidden;
-  overflow-y: visible!important;
+  overflow: visible;
+  /*overflow-x: visible!important;
+  overflow-y: hidden;*/
 }
 .kinyu-top-introlist-pickup.swiper-container-horizontal>.swiper-pagination02 {
-  top: 6px;
+  position: relative;
+  top: auto;
   right: 6px;
+  bottom: -3px;
 }
 .kinyu-top-introlist-pickup {
   width: 100%;
@@ -602,7 +621,7 @@
 .kinyu-sp-introduction {
   width: 88%;
   margin: 0 auto;
-  margin-top: 36px;
+  margin-top: 50px;
   margin-bottom: 50px;
   text-align: center; 
 }
@@ -775,7 +794,7 @@
   　トップ - 女子会リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-list ul li:nth-last-child(-n+3) {
-  margin-bottom: 4%;
+  margin-bottom: 6%;
 }
 .kinyu-top-list ul li:last-child {
   margin-bottom: 0%;
@@ -2112,6 +2131,9 @@ input::-webkit-input-placeholder {
 .kinyu-main-single-block {
   padding-top: 0px;
 }
+.company-info-block {
+  background: #fff;
+}
 .kinyu-main-single-block .inner {
   width: 100%;
   margin: 0 auto;
@@ -2434,6 +2456,29 @@ input::-webkit-input-placeholder {
   line-height: 16px;
 }
 
+/* よくあるご質問 */
+.qa-list {
+  margin-top: 12px;
+}
+.qa-list .question-text {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.qa-list .question-text:before {
+  width: 25px;
+  height: 25px;
+}
+.qa-list .answer-text {
+  font-size: 12px;
+  line-height: 20px;
+}
+.qa-list .answer-text a {
+  color:#5499d8;
+  font-size: 14px;
+  line-height: 25px;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   はじめての方へ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -2640,7 +2685,7 @@ footer {
 footer .link-to-top {
   width: 68%;
   margin: 0 auto;
-  background: #eaeaea;
+  background: #f1f1f1;
   margin-top: 32px;
 }
 footer .link-to-top a {

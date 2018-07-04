@@ -9,11 +9,12 @@
 <div class="kinyu-sp-header">
   <div class="kinyu-sp-menu-block">
     <ul>
-      <li class="menu-block-el1"><a href="/login_regist"><img src="/images/menu/under-menu-member.png"></a></li>
-      <li class="menu-block-el2"><a href="/joshikai"><img src="/images/menu/under-menu-joshikai.png"></a></li>
       {if in_array('user', $roles) || in_array('admin', $roles)}
+        <li class="menu-block-el2"><a href="/joshikai"><img src="/images/menu/under-menu-joshikai.png"></a></li>
         <li class="menu-block-el3"><a href="/my"><img src="/images/menu/under-menu-my.png"></a></li>
       {else}
+        <li class="menu-block-el1"><a href="/login_regist"><img src="/images/menu/under-menu-member.png"></a></li>
+        <li class="menu-block-el2"><a href="/joshikai"><img src="/images/menu/under-menu-joshikai.png"></a></li>
         <li class="menu-block-el3"><a href="/my"><img src="/images/menu/under-menu-my.png"></a></li>
       {/if}
     </ul>

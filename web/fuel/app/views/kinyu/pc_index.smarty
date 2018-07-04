@@ -286,7 +286,7 @@ $(function() {
   var ss = $(".kinyu-top-introlist li").innerWidth();
   var dd = $(".insta-block-inner li").innerWidth();
   var ddd = $(".insta-block-inner li").width();
-  var ggg = $(".kinyu-top-list-block").innerWidth();
+  //var ggg = $(".kinyu-top-list-block").innerWidth();
 
   $(window).load(function(){
     var ww = $(".category-menu ul").height();
@@ -299,7 +299,7 @@ $(function() {
   //$('.kinyu-top-list li').height(hh);
   $('.category-menu').width(mm);
   $('.kinyu-top-introlist li').height(ss);
-  $('.kinyu-header-top').width(ggg);
+  //$('.kinyu-header-top').width(ggg);
 });
 </script>
 
