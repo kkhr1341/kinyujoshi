@@ -301,15 +301,15 @@ input:focus {
 ---------------------------------------------------*/
 @media screen and (max-width: 1024px) {
 
-/*body {
+body {
   font-family: 'Noto Sans JP';
   font-weight: 300;
-}*/
+}
 
 p, a {
   font-size: 12px;
   line-height: 18px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   color: #444444;
 }
 
