@@ -29,9 +29,8 @@ html {
 }
 body {  
   color: #444444;
-  /*font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;*/
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
-  font-weight: 500;
+  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "メイリオ", sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
@@ -300,7 +299,12 @@ input:focus {
 
 /* スマートフォンのスタイル
 ---------------------------------------------------*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
+
+body {
+  /*font-family: 'Noto Sans JP';
+  font-weight: 300;*/
+}
 
 p, a {
   font-size: 12px;
