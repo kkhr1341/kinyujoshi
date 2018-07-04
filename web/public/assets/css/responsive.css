@@ -2178,6 +2178,7 @@ input::-webkit-input-placeholder {
 }
 .kinyu-main-single-block {
   padding-top: 0px;
+  background: #fff;
 }
 .company-info-block {
   background: #fff;
@@ -2538,11 +2539,13 @@ input::-webkit-input-placeholder {
   font-size: 11px;
   line-height: 18px;
   padding-left: 40px;
+  word-break: break-all;
 }
 .qa-list .answer-text a {
   color:#5499d8;
-  font-size: 14px;
-  line-height: 25px;
+  font-size: 11px;
+  line-height: 18px;
+  word-break: break-all;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2586,6 +2589,10 @@ input::-webkit-input-placeholder {
   width: 100%;
   float: none;
   text-align: center;
+}
+.kinyu-start-intro-inner .description-box p { 
+  font-size: 11px;
+  line-height: 20px;
 }
 .kinyu-start-content-inner {
   width: 88%;
@@ -2634,7 +2641,7 @@ input::-webkit-input-placeholder {
   font-size: 18px;
   line-height: 18px;
   color: #77cbc0;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 .kinyu-start-content-action-el .text-box .action-title .action-number {
   font-size: 14px;

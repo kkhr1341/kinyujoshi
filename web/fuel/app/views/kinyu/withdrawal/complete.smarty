@@ -7,18 +7,28 @@
   				<div class="content_form static_content_frame">
   					<div class="inquiry-complete-box">
   						<div class="alert center course_comp_text_frame inquiry-complete" role="alert">
-  							<h2 class="pc">メンバー退会のお手続きが完了しました。</h2>
-                <h2 class="sp">メンバー退会のお手続きが<br>完了しました。</h2>
-  							<p>
-  								今まで、ありがとうございました(*´꒳`*)<br>
-                  メンバー退会の完了通知をご登録いただいていたメールアドレス宛にお送りいたしました。<br>
-                  お手数おかけいたしますが、念のためご確認いただけますと嬉しいです。<br>
-                  よろしくお願いいたします。
+  							<h2>今まで、ありがとうございました♪<br>退会手続きが完了しました。</h2>
+  							<p class="pc">
+  								退会完了通知を登録いただいていたメールアドレス宛にお送りいたしました。<br>
+                  何かご不明点などございましたら「きんゆう女子。編集部（support@kinyu-joshi.jp）」までお問い合わせください。<br><br>
+                  これからも卒業した皆さまが、より良いライフスタイルをお送りできるよう、編集部一同陰ながら応援しております♪<br><br>
+                  もしまたワカラナイこと、金融について気軽に話したいなど思い立った時は、いつでもお待ちしております。<br>
+                  今後とも「きんゆう女子。」をよろしくお願いいたします。<br><br>
+                  きんゆう女子。編集部　一同<br>
+                  support@kinyu-joshi.jp 
   							</p>
+                <p class="sp">
+                  退会完了通知を登録いただいていたメールアドレス宛にお送りいたしました。何かご不明点などございましたら「きんゆう女子。編集部（support@kinyu-joshi.jp）」までお問い合わせください。<br><br>
+                  これからも卒業した皆さまが、より良いライフスタイルをお送りできるよう、編集部一同陰ながら応援しております♪<br><br>
+                  もしまたワカラナイこと、金融について気軽に話したいなど思い立った時は、いつでもお待ちしております。
+                  今後とも「きんゆう女子。」をよろしくお願いいたします。<br><br>
+                  きんゆう女子。編集部　一同<br>
+                  support@kinyu-joshi.jp 
+                </p>
   						</div>
-  						<div class="center tx-center">
-  							<a href="/" class="btn btn-primary">トップページに戻る</a>
-  						</div>
+              <div class="center tx-center to-link-top">
+                <a href="/" class="btn btn-primary">トップページに戻る</a>
+              </div>
   					</div>
 
   				</div>
@@ -34,18 +44,24 @@
     margin: 0 auto;
   }
   .inquiry-complete-box h2 {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 28px;
     margin-bottom: 24px;
   }
   .inquiry-complete {
     width: 640px;
     margin: 0 auto;
     margin-top: 60px;
-    margin-bottom: 60px;
-    padding: 50px 0px;
+    margin-bottom: 32px;
+    padding: 50px;
     text-align: center;
-    border: 1px solid #7CDCCE;
+    border: 1px solid #8ddcd1;
+  }
+  .inquiry-complete p {
+    padding: 0px 32px;
+  }
+  .to-link-top {
+    margin-bottom: 60px;
   }
   @media screen and (max-width: 767px) { 
   .inquiry-complete-box {
@@ -54,15 +70,29 @@
     padding-bottom: 60px;
   }
   .inquiry-complete-box h2 {
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .inquiry-complete p {
+    padding: 0px;
+    font-size: 11px;
   }
   .inquiry-complete {
     width: 84%;
     margin-top: 50px;
     margin-bottom: 36px;
-    padding: 32px 4%;
+    padding: 24px 20px;
+    margin-bottom: 24px;
+  }
+  .btn {
+    font-size: 11px;
+    line-height: inherit;
+    padding: 12px 24px;
+  }
+  .to-link-top {
+    margin-bottom: 0px;
   }
 
   }

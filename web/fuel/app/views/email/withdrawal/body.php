@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>【きんゆう女子。】メンバー退会完了のお知らせ</title>
+<title>【きんゆう女子。】メンバー退会手続き完了のお知らせ</title>
 
 <!-- <link rel="stylesheet" type="text/css" href="https://irodori.fund/assets/css/irodori/email.css" /> -->
 
@@ -42,13 +42,15 @@
       <table>
         <tr>
           <td>
-            <h3>メンバー退会完了のお知らせ</h3>
-            メンバー退会のお手続きが完了しました。<br>
-            今まで、ありがとうございました(*´꒳`*)<br><br>
-            <?php echo $name ?>さまが、より良いライフスタイルをお送りできるよう<br>
-            編集部一同、陰ながら応援しております♪<br><br>
-            もし何か気になることがありましたら、いつでもお待ちしておりますね。<br>
-            今後ともよろしくお願いいたします。
+            <h3>退会手続き完了のお知らせ</h3>
+            今まで、ありがとうございました(´꒳`)<br>
+            退会手続きが完了しました。<br><br>
+            退会完了通知を登録いただいていたメールアドレス宛にお送りいたしました。<br><br>
+            何かご不明点などございましたら「きんゆう女子。編集部（support@kinyu-joshi.jp）」までお問い合わせください。<br>
+            これからも卒業した皆さまが、より良いライフスタイルをお送りできるよう、編集部一同陰ながら応援しております♪<br><br>
+            もしまたワカラナイこと、金融について気軽に話したいなど思い立った時は、いつでもお待ちしております。<br>今後とも「きんゆう女子。」をよろしくお願いいたします。<br><br>
+            きんゆう女子。編集部　一同<br>
+            support@kinyu-joshi.jp
           </td>
         </tr>
       </table>

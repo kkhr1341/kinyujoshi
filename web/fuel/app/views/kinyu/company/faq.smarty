@@ -35,12 +35,12 @@
       <p class="answer-text">
         迷惑メール対策でスマートフォンにてドメイン指定を行なっている場合、メールが受信できない可能性があります。（@kinyu-joshi.jp）の受信設定をお願いいたします。<br><br>
         ・ソフトバンクの場合<br>
-        https://www.softbank.jp/mobile/support/iphone/antispam/email_i/white/<br><br>
+        <a href="https://www.softbank.jp/mobile/support/iphone/antispam/email_i/white/" target="_blank">https://www.softbank.jp/mobile/support/iphone/antispam/email_i/white/</a><br><br>
         ・auの場合<br>
-        【iPhone】https://www.au.com/support/faq/view.k13121323725/<br>
-        【Android】https://www.au.com/support/faq/view.k13121723783/<br><br>
+        【iPhone】<a href="https://www.au.com/support/faq/view.k13121323725/" target="_blank">https://www.au.com/support/faq/view.k13121323725/</a><br>
+        【Android】<a href="https://www.au.com/support/faq/view.k13121723783/" target="_blank">https://www.au.com/support/faq/view.k13121723783/</a><br><br>
         ・docomoの場合<br>
-      https://www.nttdocomo.co.jp/info/spam_mail/spmode/domain/index.html
+      <a href="https://www.nttdocomo.co.jp/info/spam_mail/spmode/domain/index.html" target="_blank">https://www.nttdocomo.co.jp/info/spam_mail/spmode/domain/index.html</a>
       </p>
     </li>
 
@@ -52,7 +52,7 @@
 
     <li>
       <p class="question-text">パスワードの変更はどこからできますか？</p>
-      <p class="answer-text">Peatixで申し込み済みのチケット（QRコード）を印刷のうえお持ちください。</p>
+      <p class="answer-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
     </li>
 
     <li>

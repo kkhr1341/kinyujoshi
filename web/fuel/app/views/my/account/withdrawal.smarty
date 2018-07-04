@@ -11,7 +11,7 @@
           <p class="withdrawal-title">退会フォーム</p>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">よろしければ退会理由を教えていただけませんか？（任意）</label>
+            <label class="regist-add-form-edit-title">よろしければ、退会の理由を教えていただけますか？<br>今後のサービス改善に参考にさせていただきます。（任意）</label>
 
             <div class="checkbox-list">
 
@@ -33,7 +33,7 @@
           </div>
 
           <div class="regist-add-form-edit-el regist-add-form-edit-el02">
-            <label class="regist-add-form-edit-title">何かありましたらご入力ください。（任意）</label>
+            <label class="regist-add-form-edit-title">その他、編集部へメッセージやご意見（任意）</label>
             <textarea id="message" name="message" class='form-control' rows="10"></textarea>
           </div>
 

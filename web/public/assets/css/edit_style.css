@@ -3712,6 +3712,7 @@ input::-webkit-input-placeholder {
 }
 .regist-add-form-edit-title {
   font-size: 14px;
+  line-height: 22px;
   color: #77cbc0;
   margin-bottom: 10px;
   width: 100%;
