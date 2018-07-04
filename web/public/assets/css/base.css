@@ -302,8 +302,8 @@ input:focus {
 @media screen and (max-width: 1024px) {
 
 body {
-  /*font-family: 'Noto Sans JP';
-  font-weight: 300;*/
+  font-family: 'Noto Sans JP';
+  font-weight: 300;
 }
 
 p, a {
