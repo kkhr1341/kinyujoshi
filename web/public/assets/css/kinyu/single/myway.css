@@ -639,6 +639,7 @@
   padding: 12px 0px;
   margin-top: 20px;
   position: relative;
+  font-weight: 400;
 }
 .myway-content-list-el .text-box .myway-to-link:after {
   content: "〉";
@@ -859,8 +860,9 @@
   height: 180px;
 }
 .myway-content-list-el .text-box .text-box-title {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 22px;
+  font-weight: 400;
 }
 
 

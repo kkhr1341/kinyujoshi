@@ -1,6 +1,6 @@
 <!-- ヘッダー -->
 <header class="fix-header-sp">
-  <a href="/" class="header-sp-logo"><img src="/images/kinyu-logo-sp.png"></a>
+  <a href="/" class="header-sp-logo"><img src="/images/kinyu-logo.png"></a>
   <div class="kinyu-sp-header-menu">
     <img class="menu-trigger" src="/images/new/sp-header-menu.png">
   </div>

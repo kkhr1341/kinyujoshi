@@ -12,6 +12,14 @@
 .pc {
   display: none!important;
 }
+mark, .mark {
+  font-weight: 400;
+  padding: 0px 2px;
+}
+.report-detail-main p strong {
+  font-weight: 400;
+}
+
 /* トップページ・sp_top_after */
 .sp_top_after {
   width: 88%;
@@ -403,7 +411,7 @@
 }
 .navi_kinyu-menu-block-el.navi-el-at .fc-kinyu {
   color: #77cbc0;
-  font-weight: bold;
+  font-weight: 400;
 }
 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:first-child {
   border-top: none;
@@ -588,8 +596,8 @@
   position: relative;
 }
 .main-intro-link {
-  margin-top: 12px;
-  font-size: 12px;
+  margin-top: 11px;
+  font-size: 11px;
   border: none;
   font-weight: normal;
 }
@@ -628,6 +636,10 @@
 .kinyu-sp-introduction p {
   font-size: 11px;
   line-height: 20px;
+}
+.kinyu-top-introlist-news .text-area .news-date {
+  font-size: 10px;
+  line-height: 10px;
 }
 .kinyu-sp-introduction .main-title {
   width: 54%;
@@ -735,7 +747,7 @@
 }
 .kinyu-top-list-title {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 18¥¥20px;
   height: 36px;
   padding: 10px 0px 4px;
   box-sizing: content-box;
@@ -854,6 +866,7 @@
 }
 .kinyu-top-member-list .text-box .link-to {
   font-size: 11px;
+  font-weight: 400;
 }
 .kinyu-top-member-list .text-box .description {
   line-height: 20px;
@@ -1017,6 +1030,7 @@
 }
 .kinyu-details-introdauction .text-box .category {
   font-size: 11px;
+  font-weight: normal;
 }
 .kinyu-details-introdauction .text-box .text-box-inner {
   padding-top: 20px;
@@ -1034,12 +1048,14 @@
   padding: 0px;
   border-left: none;
   border-right: none;
+  color: #616161;
 }
 .kinyu-details-introdauction .text-box h2 {
   margin-top: 6px;
   margin-bottom: 16px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 24px;
+  font-weight: 400;
 }
 .kinyu-details-introdauction .text-box .description {
   font-size: 11px;
@@ -1073,7 +1089,7 @@
 .report-detail-title {
   font-size: 14px;
   line-height: 20px;
-  font-weight: bold;
+  font-weight: 400;
   padding: 2px 0px 0px;
 }
 .kinyu-top-introlist-pickup .kinyu-top-list-kind p {
@@ -1081,7 +1097,7 @@
 }
 .kinyu-top-list-kind p {
   color: #77cbc0;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 12px;
   padding: 16px 0px 0px;
   font-weight: normal;
@@ -1094,10 +1110,13 @@
 .kinyu-top-event-kind p .date-box {
   padding: 4px 2px 4px 4px;
 }
+.kinyu-top-list-kind p span {
+  font-weight: 400;
+}
 .kinyu-top-event-kind p .date {
   font-size: 12px;
   line-height: 12px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .kinyu-content-after .report-detail-comment p {
@@ -1113,11 +1132,12 @@
   line-height: 20px;
 }
 .report-detail-main h2 {
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 22px;
   padding: 5px 0px 5px 0px;
   border-bottom: 1px solid #8ddcd1;
   margin: 16px 0px;
+  font-weight: 400;
 }
 .report-detail-main h3 {
   font-size: 14px;
@@ -1129,7 +1149,7 @@
   line-height: 15px;
   margin-top: 5px;
   border-left: 1px solid #dcdcdc;
-  color: #bbb9b9;
+  color: #8c8c8c;
   padding-left: 8px;
 }
 .report-detail-main blockquote a {
@@ -1247,6 +1267,7 @@
 .report-detail-sidebar-el button {
   width: 130px;
   font-size: 12px;
+  font-weight: 400;
 }
 
 /* ニュース部分 */
@@ -1286,6 +1307,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-single-block {
   padding-top: 0px;
+  background: #fff;
 }
 .about-kinyu-container {
   width: 92%;
@@ -1320,7 +1342,7 @@
   height: 200px;
 }
 .about-kinyu-details-area h2 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   padding-bottom: 4px;
 }
@@ -1328,15 +1350,15 @@
   padding-bottom: 0px;
 }
 .about-kinyu-description .main-catchcopy {
-  font-size: 13px;
-  line-height: 22px;
+  font-size: 12px;
+  line-height: 20px;
   margin-bottom: 24px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .about-kinyu-description .main-description {
   width: 90%;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 11px;
+  line-height: 20px;
 }
 .about-kinyu-description .afterword .afterword-text {
   font-size: 13px;
@@ -1346,7 +1368,7 @@
   width: 90%;
   margin: 0 auto;
   margin-top: 42px;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 20px;
 }
 .about-kinyu-details-area {
@@ -1367,15 +1389,16 @@
 }
 .about-kinyu-description .profile .name-text {
   font-size: 12px;
+  font-weight: 400;
 }
 .about-kinyu-description .profile .position-text {
-  font-size: 11px;
-  line-height: 20px;
+  font-size: 10px;
+  line-height: 18px;
   margin: 6px 0px 10px;
 }
 .about-kinyu-description .profile .detail-text {
   font-size: 10px;
-  line-height: 20px;
+  line-height: 18px;
 }
 .about-kinyu-description .profile .profile-text {
   display: block;
@@ -1391,6 +1414,10 @@
 }
 .about-kinyu-header-contetns-list-el .title-box {
   width: 42%;
+  background: #f9f9f9;
+}
+.about-kinyu-header-contetns-list-el .title-box-inner p {
+  background: #f9f9f9;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1422,12 +1449,14 @@
 .joshikai-main-left .img-box .about-joshikai-link {
   width: 200px;
   margin-top: 8px;
-  font-size: 12px;
+  font-size: 11px;
   padding: 8px 0px;
   margin-top: 24px;
+  font-weight: 300;
 }
 .joshikai-main-block .inner {
   width: 88%;
+  margin-top: 0px;
 }
 .kinyu-event-list-subdescription {
   text-align: center;
@@ -1440,6 +1469,7 @@
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 16px;
+  font-weight: 300;
 }
 .about-joshikai .img-box {
   width: 100%;
@@ -1478,7 +1508,7 @@
   text-align: center;
   padding: 8px 20px;
   color: #fff;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 12px;
 }
 .joshikai-past-block .inner {
@@ -1497,8 +1527,8 @@
   margin-top: 12px;
 }
 .joshiakai-now-list .link-to a {
-  padding: 10px 20px;
-  font-size: 12px;
+  padding: 8px 20px;
+  font-size: 11px;
 }
 
 /* 女子会リスト */
@@ -1599,7 +1629,7 @@
   margin-bottom: 0px;
   color: #77cbc0;
   text-align: left;
-  font-weight: bold;
+  font-weight: 400;
 }
 .joshikai-held-place-address {
   font-size: 10px;
@@ -1745,6 +1775,7 @@
 .joshikai-detail-el-info .joinus-block a, .joshikai-detail-el-info .joinus-block p {
   padding: 12px 0px;
   font-size: 12px;
+  font-weight: 400;
 }
 .joshikai-detail-el-info .joinus-block p:after {
   content: "〉";
@@ -1791,14 +1822,16 @@
   line-height: 20px;
 }
 .kinyu-joshikai-tickets-block .ticket-title {
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 11px;
+  line-height: 11px;
   margin-bottom: 8px;
+  font-weight: 300;
 }
 .kinyu-joshikai-tickets-payment a {
   margin-bottom: 10px;
   padding: 10px 0px;
   font-size: 12px;
+  font-weight: 400;
 }
 .kinyu-joshikai-tickets-payment-list p {
   font-size: 11px;
@@ -1820,6 +1853,9 @@
   font-size: 16px;
   line-height: 24px;
 }
+.joinus-open-block .login-block a.login {
+  font-weight: 400;
+}
 
 /* 決済関連フォーム */
 .joshikai-payment-block {
@@ -1840,7 +1876,7 @@
   line-height: 24px;
   margin-bottom: 16px;
   padding-bottom: 2px;
-  border-bottom: 1px solid #77cbc0;
+  border-bottom: 1px solid #8ddcd1;
 }
 .fee-open .inner form .cancel-description p {
   font-size: 11px;
@@ -1853,7 +1889,7 @@
   padding: 24px 0px 0px 0px;
 }
 .first-login-block p {
-  font-size: 11px;
+  font-size: 10px;
   margin-bottom: 4px;
 }
 .day-cash-close {
@@ -1883,17 +1919,20 @@
 }
 .fee-open .inner form .newcards p {
   color: #77cbc0;
-  font-weight: bold;
+  font-weight: 400;
 }
 .day-cash-submit {
   font-size: 12px;
   width: 200px;
   padding: 12px 0px;
   margin-top: 0px!important;
+  font-weight: 400;
 }
 .fee-open .inner form label {
   margin-bottom: 6px;
   font-size: 12px;
+  font-weight: 400;
+  border-left: 1px solid #8ddcd1;
 }
 .fee-open .inner form .description {
   margin-bottom: 12px;
@@ -1953,7 +1992,7 @@
   line-height: 12px;
   margin-bottom: 8px;
   color: #77cbc0;
-  font-weight: bold;
+  font-weight: 400;
 }
 .kinyu-credit-list-block p.sub-credit {
   margin-top: 8px;
@@ -2014,7 +2053,8 @@ input::-webkit-input-placeholder {
   left: 5px;
 }
 .cancel-block .cancel-title {
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 400;
 }
 .cancel-block-list li {
   font-size: 11px;
@@ -2087,7 +2127,7 @@ input::-webkit-input-placeholder {
 .kinyu-news-list-el .text-box .date {
   font-size: 11px;
   margin-bottom: 4px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 
@@ -2186,6 +2226,10 @@ input::-webkit-input-placeholder {
 .login-contents-block {
   padding: 80px 0px 50px;
   font-size: 12px;
+  background: #c5e9e4;
+}
+.login-regist-block {
+  background: #fff;
 }
 .login-contents-intro {
   width: 88%;
@@ -2218,6 +2262,7 @@ input::-webkit-input-placeholder {
 .login-contents-title {
   font-size: 18px;
   line-height: 24px;
+  margin-bottom: 0px;
 }
 .login-btn-list {
   width: 100%;
@@ -2243,6 +2288,7 @@ input::-webkit-input-placeholder {
   width: 150px;
   font-size: 12px;
   padding: 12px 0px;
+  font-weight: 400;
 }
 .login-contents-form-area .email-form p {
   text-align: right;
@@ -2253,10 +2299,14 @@ input::-webkit-input-placeholder {
   right: 12px;
   top: 12px;
   padding: 8px 24px;
+  font-weight: 400;
 }
 .login-regist-block .login-another-btn {
-  background: #e0e0e0;
+  background: #fff;
   font-size: 11px;
+  font-weight: 400;
+  border: 1px solid #8ddcd1;
+  color: #77cbc0;
 }
 .login-btn-list ul {
   padding: 0px;
@@ -2267,7 +2317,7 @@ input::-webkit-input-placeholder {
 .regist-sub-description {
   margin-top: 20px;
   text-align: center;
-  font-size: 11px;
+  font-size: 10px;
 }
 .regist-sub-description a {
   font-size: 11px;
@@ -2280,15 +2330,16 @@ input::-webkit-input-placeholder {
   padding: 24px 28px;
 }
 .about-member-block .about-member-title {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 20px;
   text-align: center;
   color: #77cbc0;
+  font-weight: 400;
 }
 .about-member-list li {
-  font-size: 12px;
-  line-height: 20px;
-  margin-bottom: 20px;
+  font-size: 11px;
+  line-height: 18px;
+  margin-bottom: 12px;
   position: relative;
   padding-left: 24px;
 }
@@ -2302,7 +2353,7 @@ input::-webkit-input-placeholder {
   line-height: 15px;
   margin-right: 12px;
   padding-bottom: 2px;
-  margin-top: 4px;
+  margin-top: 1px;
 }
 
 /* パスワード再発行 */
@@ -2440,38 +2491,45 @@ input::-webkit-input-placeholder {
   padding: 36px 0px 10px;
 }
 .company-info-title h2 {
-  font-size: 18px;
+  font-size: 16px;
 }
 .company-details-service-title {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .company-legal .company-details-el .description {
   margin-top: 12px;
-  font-size: 12px;
+  font-size: 11px;
 }
 .company-details-el-last p {
   font-size: 11px;
-  line-height: 16px;
+  line-height: 18px;
 }
 
 /* よくあるご質問 */
 .qa-list {
   margin-top: 12px;
 }
+.qa-list li {
+  margin-bottom: 32px;
+}
 .qa-list .question-text {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   margin-bottom: 8px;
+  font-weight: 400;
+  padding-top: 0px;
+  padding-left: 40px;
 }
 .qa-list .question-text:before {
   width: 25px;
   height: 25px;
 }
 .qa-list .answer-text {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 11px;
+  line-height: 18px;
+  padding-left: 40px;
 }
 .qa-list .answer-text a {
   color:#5499d8;
@@ -2647,7 +2705,7 @@ footer {
   text-align: center;
   font-size: 12px;
   margin-bottom: 12px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .footer-menu-title span {
   background: none;
@@ -2766,7 +2824,7 @@ footer .navi-link-top {
   font-size: 12px;
   background: none;
   color: #77cbc0;
-  font-weight: bold;
+  font-weight: 400;
 }
 footer .navi_kinyu-submenu-el a {
   padding: 0px!important;
