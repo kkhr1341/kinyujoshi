@@ -74,7 +74,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
     {
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
         $this->data['events'] = Events::lists(1, 100, true, 0);
-        $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
+        $this->template->title = '生まれたストーリー｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
@@ -118,7 +118,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
 
         $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
         $this->data['events'] = Events::lists(1, 100, true, 0);
-        $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
+        $this->template->title = 'デザインコンセプト｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);

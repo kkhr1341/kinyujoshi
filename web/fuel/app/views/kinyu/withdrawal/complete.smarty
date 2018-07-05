@@ -1,171 +1,31 @@
-<div class="kinyu-main-single-block">
-
-  <div class="white">
-  	<div class="container center">
-  		<div class="row">
-  			<section>
-  				<div class="content_form static_content_frame">
-  					<div class="inquiry-complete-box">
-  						<div class="alert center course_comp_text_frame inquiry-complete" role="alert">
-  							<h2>今まで、ありがとうございました♪<br>退会手続きが完了しました。</h2>
-  							<p class="pc">
-  								退会完了通知を登録いただいていたメールアドレス宛にお送りいたしました。<br>
-                  何かご不明点などございましたら「きんゆう女子。編集部（support@kinyu-joshi.jp）」までお問い合わせください。<br><br>
-                  これからも卒業した皆さまが、より良いライフスタイルをお送りできるよう、編集部一同陰ながら応援しております♪<br><br>
-                  もしまたワカラナイこと、金融について気軽に話したいなど思い立った時は、いつでもお待ちしております。<br>
-                  今後とも「きんゆう女子。」をよろしくお願いいたします。<br><br>
-                  きんゆう女子。編集部　一同<br>
-                  support@kinyu-joshi.jp 
-  							</p>
-                <p class="sp">
-                  退会完了通知を登録いただいていたメールアドレス宛にお送りいたしました。何かご不明点などございましたら「きんゆう女子。編集部（support@kinyu-joshi.jp）」までお問い合わせください。<br><br>
-                  これからも卒業した皆さまが、より良いライフスタイルをお送りできるよう、編集部一同陰ながら応援しております♪<br><br>
-                  もしまたワカラナイこと、金融について気軽に話したいなど思い立った時は、いつでもお待ちしております。
-                  今後とも「きんゆう女子。」をよろしくお願いいたします。<br><br>
-                  きんゆう女子。編集部　一同<br>
-                  support@kinyu-joshi.jp 
-                </p>
-  						</div>
-              <div class="center tx-center to-link-top">
-                <a href="/" class="btn btn-primary">トップページに戻る</a>
-              </div>
-  					</div>
-
-  				</div>
-  			</section>
-  		</div>
-  	</div>
+<div class="kinyu-single-block">
+  <div class="complete-message-block">
+    <div class="complete-message">
+      <h2>今まで、ありがとうございました♪<br>退会手続きが完了しました。</h2>
+      <p class="pc">
+        退会完了通知を登録いただいていたメールアドレス宛にお送りいたしました。<br>
+        何かご不明点などございましたら<br>
+        「きんゆう女子。編集部（support@kinyu-joshi.jp）」<br>
+        までお問い合わせください。<br><br>
+        これからも卒業した皆さまが、<br>
+        より良いライフスタイルをお送りできるよう、<br>
+        編集部一同陰ながら応援しております♪<br><br>
+        もしまたワカラナイこと、<br>
+        金融について気軽に話したいなど思い立った時は、<br>
+        いつでもお待ちしております。<br>
+        今後とも「きんゆう女子。」をよろしくお願いいたします。<br><br>
+        きんゆう女子。編集部　一同<br>
+        support@kinyu-joshi.jp 
+      </p>
+      <p class="sp">
+        退会完了通知を登録いただいていたメールアドレス宛にお送りいたしました。何かご不明点などございましたら「きんゆう女子。編集部（support@kinyu-joshi.jp）」までお問い合わせください。<br><br>
+        これからも卒業した皆さまが、より良いライフスタイルをお送りできるよう、編集部一同陰ながら応援しております♪<br><br>
+        もしまたワカラナイこと、金融について気軽に話したいなど思い立った時は、いつでもお待ちしております。
+        今後とも「きんゆう女子。」をよろしくお願いいたします。<br><br>
+        きんゆう女子。編集部　一同<br>
+        support@kinyu-joshi.jp 
+      </p>
+      <a href="/" class="message-top">トップページに戻る</a>
+    </div>
   </div>
 </div>
-
-<style>
-  .inquiry-complete-box {
-    width: 1000px;
-    margin: 0 auto;
-  }
-  .inquiry-complete-box h2 {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 24px;
-  }
-  .inquiry-complete {
-    width: 640px;
-    margin: 0 auto;
-    margin-top: 60px;
-    margin-bottom: 32px;
-    padding: 50px;
-    text-align: center;
-    border: 1px solid #8ddcd1;
-  }
-  .inquiry-complete p {
-    padding: 0px 32px;
-  }
-  .to-link-top {
-    margin-bottom: 60px;
-  }
-  @media screen and (max-width: 767px) { 
-  .inquiry-complete-box {
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 60px;
-  }
-  .inquiry-complete-box h2 {
-    font-size: 15px;
-    line-height: 22px;
-    margin-bottom: 20px;
-    font-weight: 400;
-  }
-  .inquiry-complete p {
-    padding: 0px;
-    font-size: 11px;
-  }
-  .inquiry-complete {
-    width: 84%;
-    margin-top: 50px;
-    margin-bottom: 36px;
-    padding: 24px 20px;
-    margin-bottom: 24px;
-  }
-  .btn {
-    font-size: 11px;
-    line-height: inherit;
-    padding: 12px 24px;
-  }
-  .to-link-top {
-    margin-bottom: 0px;
-  }
-
-  }
-
-
-</style>
-
-<script>
-{literal}
-$(function(){
-  var title_frame_height = $('#title_frame').height();
-  var page_title_height = $('.page_title').height();
-  
-  var padding_top = (title_frame_height / 2) - (page_title_height / 2);
-  $('.page_title').css('padding-top', padding_top);
-  
-  $('#save').click(function(){
-    var url = "/api/regist/create";
-    var params = {};
-    
-    params.name = $('#name').val();
-    params.age = $('#age').val();
-    params.not_know = $("[name=not_know]:checked").val();
-    params.interest = $('#interest').val();
-    params.ask = $('#ask').val();
-    params.income = $('#income').val();
-    params.transmission = $("[name=transmission]:checked").val();
-    params.email = $('#email').val();
-    params.facebook = $('#facebook').val();
-    params.other_sns = $('#other_sns').val();
-    params.introduction = $('#introduction').val();
-    
-    if (params.name == "") {
-      ts.error("お名前を入力してください");
-      return false;
-    }
-    if (params.age == "") {
-      ts.error("年齢を入力してください");
-      return false;
-    }
-    if (params.not_know == "") {
-      ts.error("きんゆうワカラナイ度を入力してください。");
-      return false;
-    }
-    if (params.interest == "") {
-      ts.error("お金について知りたいこと・興味のあることを入力してください");
-      return false;
-    }
-    if (params.ask == "") {
-      ts.error("きんゆう女子。でどんな出会いや発見がほしいですか？を入力してください");
-      return false;
-    }
-    if (params.email == "") {
-      ts.error("件名を入力してください");
-      return false;
-    }
-    if (params.introduction == "") {
-      ts.error("簡単な自己紹介を入力してください");
-      return false;
-    }
-
-    bootbox.confirm("会員登録いたしますか？", function(result) {
-      if (result) {
-        ajax.post(url, params, function(data){
-          location.href = "/regist/complete";
-        });
-      }
-      else {
-        ts.info("キャンセルしました");
-      }
-    });
-    
-  });
-});
-{/literal}
-</script>

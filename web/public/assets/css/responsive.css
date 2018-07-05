@@ -585,6 +585,7 @@ mark, .mark {
   line-height: 12px;
   height: 12px;
   padding: 0px;
+  font-weight: 300;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -614,9 +615,10 @@ mark, .mark {
   padding: 0px 0px;
 }
 .kinyu-top-main-title {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 26px;
   margin-bottom: 8px;
+  font-weight: 300;
 }
 .kinyu-top-main-sub {
   font-size: 10px;
@@ -1053,9 +1055,9 @@ mark, .mark {
 .kinyu-details-introdauction .text-box h2 {
   margin-top: 6px;
   margin-bottom: 16px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: 300;
 }
 .kinyu-details-introdauction .text-box .description {
   font-size: 11px;
@@ -1226,6 +1228,7 @@ mark, .mark {
   font-size: 13px;
   line-height: 13px;
   margin-bottom: 12px;
+  border-left: 1px solid #8ddcd1;
 }
 .report-sidebar-event-list li {
   width: 100%;
@@ -1467,8 +1470,8 @@ mark, .mark {
   padding: 8px 12px;
 }
 .kinyu-event-info-title {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 26px;
   margin-bottom: 16px;
   font-weight: 300;
 }
@@ -1863,6 +1866,35 @@ mark, .mark {
 }
 .joinus-open-block .login-block a.login {
   font-weight: 400;
+}
+
+/* 完了画面 */
+.complete-message {
+  background: #fff;
+  padding: 50px 0px;
+  width: 92%;
+  margin: 0 auto;
+}
+.complete-message h2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.complete-message p {
+  font-size: 11px;
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+.complete-message .message-top {
+  font-size: 12px;
+  padding: 8px 0px;
+  margin-top: 24px;
+}
+.complete-message .message-top02 {
+  margin-top: 12px!important;
+  border: 1px solid #8ddcd1;
+  background: #fff;
+  color: #77cbc0;
 }
 
 /* 決済関連フォーム */
@@ -2292,7 +2324,7 @@ input::-webkit-input-placeholder {
   font-size: 13px;
 }
 .login-contents-form-area .email-form input {
-  padding: 8px;
+  padding: 10px;
 }
 .login-contents-form-area .login-btn {
   width: 150px;
@@ -2310,6 +2342,7 @@ input::-webkit-input-placeholder {
   top: 12px;
   padding: 8px 24px;
   font-weight: 400;
+  font-size: 11px;
 }
 .login-regist-block .login-another-btn {
   background: #fff;

@@ -320,9 +320,10 @@ p, a {
   right: 10px;
 }
 .btn {
-  font-size: 13px;
+  font-size: 12px;
   line-height: inherit;
-  padding: 16px 30px;
+  padding: 12px 35px;
+  font-weight: 400;
 }
 .form-group .form-sub-title {
   margin-bottom: 12px;
@@ -349,7 +350,7 @@ p, a {
 @media screen and (min-width: 768px) {
 a :hover,
 button :hover {
-  cursor: pointer!important;
+  cursor: pointer;
 }
 .btn-tiffany:hover {
   background-color: #fff;

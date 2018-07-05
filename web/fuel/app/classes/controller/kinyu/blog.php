@@ -19,7 +19,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60);
         }
         $pagination = $this->data['blogs']['pagination'];
-        $this->template->title = '記事一覧｜きんゆう女子。';
+        $this->template->title = 'レポート一覧｜きんゆう女子。';
         $this->template->description = 'きんゆう女子。は、なかなか聞けないお金の話。 先延ばしにしがちなお金の計画。 私には無関係と思っている金融の話など、お金に関する様々な情報を配信しています。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 

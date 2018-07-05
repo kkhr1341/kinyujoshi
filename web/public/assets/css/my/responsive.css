@@ -3,6 +3,13 @@
 ---------------------------------- */
 @media screen and (max-width: 1023px) {
 
+.btn {
+  font-size: 12px;
+  line-height: inherit;
+  padding: 10px 30px;
+  font-weight: 400;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   一般ユーザー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -36,8 +43,9 @@
 .admin-normal-header .link-to-top {
   display: inline-block;
   color: #fff;
-  font-weight: bold;
-  margin-top: 11px;
+  font-weight: 400;
+  margin-top: 13px;
+  font-size: 11px;
 }
 .admin-normal-circle-logo {
   width: 40px;
@@ -134,7 +142,7 @@
 .admin-normal-navigation p {
   font-size: 16px;
   color: #77bfb5;
-  font-weight: bold;
+  font-weight: normal;
 }
 .admin-normal-navigation li {
   text-align: left;
@@ -144,10 +152,10 @@
   border-bottom: none;
 }
 .admin-normal-navigation li a {
-  font-size: 13px;
+  font-size: 12px;
 }
 .admin-normal-navigation li.kinyu-top {
-  font-weight: bold;
+  font-weight: 400;
   padding-top: 12px;
   width: 100%;
   position: relative;
@@ -177,8 +185,8 @@
   line-height: 14px;
   margin-top: 32px;
   margin-bottom: 16px;
-  font-weight: bold;
-  color: #5FB3A7;
+  font-weight: 400;
+  color: #77cbc0;
 }
 .admin-normal-profile .profile-catchcopy {
   font-size: 12px;
@@ -202,7 +210,7 @@
   background: #f9f9f9;
 }
 .admin-normal-joshikai-title {
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 8px;
 }
 .admin-normal-joshikai li .img-box {
@@ -214,15 +222,15 @@
   background: none;
 }
 .admin-normal-joshikai li .text-box .date-text {
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 11px;
+  line-height: 11px;
   margin-bottom: 6px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .admin-normal-joshikai li .text-box .title-text {
   font-size: 12px;
-  line-height: 18px;
-  height: 36px;
+  line-height: 20px;
+  height: 40px;
 }
 
 
@@ -230,17 +238,18 @@
   height: 180px;
 }
 .admin-joshikai-detail-el-header h2 {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 22px;
   padding: 20px 0px 24px;
 }
 .admin-normal-joshikai-el .info-title {
-    font-size: 13px;
-    line-height: 13px;
+    font-size: 11px;
+    line-height: 11px;
     margin-bottom: 4px;
+    font-weight: 400;
 }
 .admin-normal-joshikai-el .info-detail {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 20px;
 }
 .admin-normal-joshikai-el h2 {
@@ -266,9 +275,11 @@
 .singlepage-form-block .form-control {
   background: #f9f9f9;
   box-shadow: none;
+  font-size: 12px;
 }
 .admin-profile-table th {
   width: 80px;
+  font-weight: 400;
 }
 .admin-normal-profile-btn {
   margin-top: 20px;
@@ -277,28 +288,29 @@
 .admin-normal-profile-btn a {
   background-color:#8ddcd1;
   color: #fff;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 12px;
   padding: 12px 24px;
 }
 .regist-add-form-edit-title2 {
-  font-size: 13px;
+  font-size: 12px;
   color: #77bfb5;
   margin-bottom: 8px;
+  font-weight: 400;
 }
 .regist-add-form-edit-el {
   margin-bottom: 24px;
 }
 .regist-add-form-edit-title {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 11px;
   color: #77bfb5;
   margin-bottom: 10px;
   width: 100%;
-  font-weight: bold;
+  font-weight: 400;
   padding-left: 8px;
   margin-left: 2px;
-  border-left: 2px solid #8ddcd1;
+  border-left: 1px solid #8ddcd1;
 }
 .regist-add-form-edit-subtitle {
   font-size: 11px;
@@ -314,10 +326,11 @@
   height: 50px;
 }
 .edit-profile-img .edit-profile-img2 p {
-  font-size: 11px;
+  font-size: 10px;
   line-height: 15px;
   display: block;
   padding-top: 6px;
+  font-weight: 400;
 }
 
 /* アカウント情報 */
@@ -327,6 +340,7 @@
 .admin-account-el .admin-account-title {
   font-size: 12px;
   padding: 12px;
+  font-weight: 400;
 }
 .credit-list-area li {
   padding: 12px;
@@ -341,8 +355,13 @@
 }
 .admin-account-el-open {
   margin: 12px 0px 24px;
+  background: #f9f9f9;
 }
-
+.credit-list-area li .main-area {
+  width: 80%;
+  float: left;
+  padding-right: 24px;
+}
 .singlepage-footer {
   background-color: #fff;
   padding: 60px 0px 24px;
@@ -420,6 +439,35 @@
 .main-menu-list .sub-li a {
   padding: 4px 0px;
 }
+
+.joshikai-cancel-submit, .joshikai-precancel-submit {
+  font-size: 12px;
+  font-weight: 400;
+}
+.joshikai-cancel-open {
+  font-weight: 400;
+}
+.joshikai-detail-open {
+  font-weight: 400;
+}
+
+/* 退会フォーム */
+.withdrawal-block .regist-add-form-edit-title {
+  font-size: 12px;
+  line-height: 18px;
+}
+.withdrawal-block .checkbox-list-item {
+  font-size: 11px;
+}
+.withdrawal-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+.checkbox-list-item {
+  font-size: 12px;
+}
+
 
 
 }

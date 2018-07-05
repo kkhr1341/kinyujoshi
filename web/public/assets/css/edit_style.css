@@ -96,7 +96,7 @@
 .kinyu-header-nav li:after {
   content: "";
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: #8ddcd1;
   position: absolute;
   bottom: 0;
@@ -1692,8 +1692,6 @@
   font-size: 22px;
   line-height: 34px;
 }
-.kinyu-joshikai-detail-el-block {
-}
 
 /* 女子会内文章 */
 .joshikai-detail-el-content-box h2 {
@@ -1896,40 +1894,6 @@
   font-size: 20px;
   margin-top: 24px;
   color:#8ddcd1;
-}
-
-/* 女子会予約後のメッセージ */
-.joshikai-complete-message {
-  padding: 60px 0px 80px;
-  text-align: center;
-  background: #f7f7f7;
-}
-.joshikai-complete-message h2 {
-  font-size: 22px;
-  color: #77cbc0;
-  font-weight: bold;
-}
-.joshikai-complete-message p {
-  margin-top: 20px;
-}
-.joshikai-complete-message .message-top {
-  display: block;
-  margin: 0 auto;
-  width: 220px;
-  font-size: 13px;
-  padding: 10px 0px;
-  text-align: center;
-  background: #8ddcd1;
-  color: #fff;
-  margin-top: 36px;
-  transition: .5s;
-  border: 1px solid #8ddcd1;
-}
-.joshikai-complete-message .message-top02 {
-  margin-top: 12px!important;
-  border: 1px solid #8ddcd1;
-  background: #fff;
-  color: #77cbc0;
 }
 
 /* 女子会チケット前の画面 */
@@ -3135,6 +3099,41 @@ input[type=checkbox]:checked + .checkbox:before {
   margin-top: 16px;
   padding-left: 0px;
 }
+
+/* 完了画面 */
+.complete-message {
+  padding: 60px 0px;
+  text-align: center;
+  background: #f7f7f7;
+}
+.complete-message h2 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #77cbc0;
+}
+.complete-message p {
+  margin-top: 32px;
+}
+.complete-message .message-top {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  font-size: 13px;
+  padding: 10px 0px;
+  text-align: center;
+  background: #8ddcd1;
+  color: #fff;
+  margin-top: 36px;
+  transition: .5s;
+  border: 1px solid #8ddcd1;
+}
+.complete-message .message-top02 {
+  margin-top: 12px!important;
+  border: 1px solid #8ddcd1;
+  background: #fff;
+  color: #77cbc0;
+}
+
 .company-contact .description {
   text-align: center;
 }
@@ -3196,19 +3195,6 @@ input[type=checkbox]:checked + .checkbox:before {
   font-size: 14px;
   line-height: 25px;
 }
-/*.qa-list .answer-text:before {
-  content: "Ａ";
-  width: 28px;
-  height: 28px;
-  background: #cceae6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #fff;
-}*/
 
 
 
@@ -4545,7 +4531,9 @@ to {
 .footer-menu ul > li:hover,
 .new_area a:hover {
   opacity: .5;
-
+}
+.message-top:hover {
+  opacity: .5;
 }
 
 }
