@@ -23,7 +23,7 @@
     <h2><img class="main-title" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
     <!-- <div class="main-title-border"></div> -->
     <p>素直に生きよう。<br>小さなアクションのつみかさねで、<br>信頼をつくる。</p>
-    <a class="main-intro-link" href="/about">きんゆう女子。って？</a>
+    <a class="main-intro-link" href="/about">きん女。ストーリー</a>
     
     <!-- news -->
     <div class="kinyu-top-introlist-news">
@@ -64,7 +64,7 @@
         <!-- きんゆう女子。会 -->
         <div class="kinyu-top-maincontent-block-el">
           <div class="kinyu-top-list kinyu-top-joshikai-list">
-            <h3 class="kinyu-top-main-title">今後の女子会の予定</h3>
+            <h3 class="kinyu-top-main-title">女子会の予定</h3>
             <p class="kinyu-top-main-sub">「おかね」についてゆるりと話そう。</p>
             <ul class="clear">
             {foreach from=$events key="key" item=event name=loopname}
@@ -212,6 +212,11 @@
               <li>
                 <a target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
                   <img class="" src="/images/banner/asahi_&w_sp.jpg">
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="/map">
+                  <img class="" src="/images/map/map-thum-banner.jpg">
                 </a>
               </li>
             </ul>

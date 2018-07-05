@@ -20,7 +20,7 @@
           <h2><img class="main-intro-img" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
           <div class="main-title-border"></div>
           <p class="main-intro-description">素直に生きよう。<br>小さなアクションの<br>つみかさねで、<br>信頼をつくる。</p>
-          <a class="main-intro-link" href="/about">きんゆう女子。について　〉</a>
+          <a class="main-intro-link" href="/about">きん女。ストーリー　〉</a>
         </div>
         
         <div class="kinyu-top-introlist-right">
@@ -102,7 +102,7 @@
       <div class="kinyu-top-maincontent-block-el">
 
         <div class="kinyu-top-list kinyu-top-joshikai-list">
-          <h3 class="kinyu-top-main-title">今後の女子会の予定</h3>
+          <h3 class="kinyu-top-main-title">女子会の予定</h3
           <p class="kinyu-top-main-sub">「おかね」についてゆるりと話そう。</p>
           <ul class="clear">
           {foreach from=$events key="key" item=event name=loopname}

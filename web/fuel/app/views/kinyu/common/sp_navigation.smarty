@@ -62,30 +62,18 @@
 
       <li class="item navi_banner_area navi_kinyu-menu-li03">
         <a class="navi_banner_area_el" href="/myway">
-          <img src="/images/myway/og_myway.jpg">
+          <img src="/images/banner/myway_sp.jpg">
         </a>
       </li>
 
-      <li class="item navi_kinyu-menu-li04">
-        <!-- <div class="navi_kinyu-menu-block clear">
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/company">運営会社</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/privacy">プライバシーポリシー</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/legal">特定商取引法に基づく表記</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/service">会員規約</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/contact">お問い合わせ</a>
-          </div>
-        </div> -->
-        {*<img src="/images/menu/menu-footer-illust.png" width="100%;">*}
+      <li class="item navi_banner_area navi_kinyu-menu-li04">
+        <a class="navi_banner_area_el" href="/map">
+          <img src="/images/map/map-thum-banner.jpg">
+        </a>
       </li>
+
+        
+
     </ul>
 
   </div>

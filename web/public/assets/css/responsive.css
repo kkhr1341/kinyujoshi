@@ -297,7 +297,7 @@ mark, .mark {
 .kinyu-sp-navi .inner {
   width: 100%;
   margin: 0 auto;
-  padding: 70px 0px 0px;
+  padding: 70px 0px 50px;
 }
 .kinyu-sp-navi .inner li {
   width: 80%;
@@ -322,7 +322,7 @@ mark, .mark {
   margin-top: -14px;
   border-radius: 50%;
 }
-.kinyu-sp-navi .inner li.navi_kinyu-menu-li03 {
+/*.kinyu-sp-navi .inner li.navi_kinyu-menu-li03 {
   padding-bottom: 16px;
 }
 .kinyu-sp-navi .inner li.navi_kinyu-menu-li04 {
@@ -330,7 +330,7 @@ mark, .mark {
   border-top: 1px dotted #e5e5e5;
   padding-top: 24px;
   background: #f9f9f9;
-}
+}*/
 .kinyu-sp-navi .navi-icon {
   width: 42px;
   height: 42px;
@@ -2284,6 +2284,7 @@ input::-webkit-input-placeholder {
 .login-contents-form-area label.title {
   margin-bottom: 12px;
   font-size: 12px;
+  font-weight: 300;
 }
 .login-contents-regist .regist-email-label {
   padding: 0px 0px 0px 8px;
