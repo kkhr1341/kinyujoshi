@@ -51,7 +51,7 @@
             きんゆう女子。では様々な女子会を開催しています^^<br>
             HP上で、女子会の日程・内容をご案内しています。<br>
             是非チェックしてみてください！<br>
-            <a href="https://kinyu-joshi.jp/event" target="_blank">https://kinyu-joshi.jp/event</a><br><br>
+            <a href="https://kinyu-joshi.jp/joshikai" target="_blank">https://kinyu-joshi.jp/joshikai</a><br><br>
 
             今後も編集部より、きんゆう女子。のイベント・活動について、不定期で、メールをお送りさせていただきます。楽しみにお待ちくださいませ。<br><br>
 
