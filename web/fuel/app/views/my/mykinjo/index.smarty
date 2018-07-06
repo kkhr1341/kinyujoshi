@@ -8,8 +8,8 @@
 
       <div class="admin-normal-joshikai joshikailist-main">
 
-         <h3 class="mypage-content-title"><span>myきん女。</span></h3>
-         <p class="mypage-content-description">myきん女。では、参加予定の女子会や過去参加した女子会<br>などを確認することができます。<br></p>
+         <h3 class="mypage-content-title last-fix"><span>myきん女。</span></h3>
+         <p class="mypage-content-description">myきん女。では、参加予定の女子会や過去参加した女子会<br>などを確認することができます。<br>今後もより便利な機能を追加していく予定です♪</p>
 
         <div class="js-tab">
 

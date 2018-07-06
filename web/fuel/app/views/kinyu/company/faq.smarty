@@ -59,24 +59,30 @@
     </li>
 
     <li>
+      <p class="question-text">女子会のキャンセルはどこからできますか？</p>
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログインすると「参加予定の女子会」が表示されます。該当の女子会を押していただき「女子をキャンセルする」より、参加を取り消すことができます。<br></p>
+    </li>
+
+    <li>
       <p class="question-text">ログアウトはどこからできますか？</p>
       <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「ログアウト」を押すと、マイページよりログアウトを行うことができます。「ログアウト」している状態だと、メンバー限定コンテンツなど一部非表示になります。</p>
     </li>
 
     <li>
+      <p class="question-text">登録したメールアドレスを変更したいです。</p>
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「ログイン情報の設定」より、変更することができます。
+      </p>
+    </li>
+
+    <li>
       <p class="question-text">パスワードの変更はどこからできますか？</p>
-      <p class="answer-text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「<a href="/my/account/withdrawal" target="_blank">ログイン情報の設定</a>」より、変更することができます。</p>
     </li>
 
     <li>
       <p class="question-text">パスワードを忘れてしまいました。</p>
       <p class="answer-text"><a href="/login" target="_blank">ログインページ</a>の「パスワードをお忘れの方はこちら」より変更することができます。<br>
       ※パスワードは、メールアドレスにてメンバー登録された方のみ有効となります。</p>
-    </li>
-
-    <li>
-      <p class="question-text">【変更予定】登録したメールアドレスを変更したいです。</p>
-      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/profile" target="_blank">プロフィール編集</a>」→「プロフィールを編集する」よりメールアドレスの部分を新しいメールアドレスに変更の上「保存」を押してください。<br>※Google・Facebookで登録されている方については、ログイン時のアドレスは変更されませんので、ご注意ください。</p>
     </li>
 
     <li>

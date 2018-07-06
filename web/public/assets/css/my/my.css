@@ -706,6 +706,11 @@ footer {
   text-align: center;
 }
 .admin-normal-container .mypage-content-title span {
+  padding: 4px 40px;
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;
+}
+.admin-normal-container .last-fix span {
   padding: 4px 28px 4px 40px;
   border-left: 1px solid #8ddcd1;
   border-right: 1px solid #8ddcd1;
@@ -713,6 +718,9 @@ footer {
 .mypage-content-description {
   margin-bottom: 32px;
   text-align: center;
+  font-size: 12px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ececec;
 }
 
 /*.admin-normal-profile .img-box-block:after {
@@ -824,7 +832,7 @@ footer {
   line-height: 20px;
 }
 .admin-normal-joshikai li .joshikai-no {
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   padding: 20px 0px;
   background: #fff;
@@ -1107,9 +1115,10 @@ footer {
     text-align: center;
     transition: .5s;
     font-size: 14px;
-    opacity: .3;
+    opacity: .5;
     padding-right: 20px;
     font-weight: normal;
+    color: #77cbc0;
 }
 .js-tab > div.active {
     opacity: 1;
