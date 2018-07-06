@@ -118,7 +118,7 @@
             $(".loader-block").fadeIn(500);
             setTimeout(function() {
                 ajax.post(url, params, function (data) {
-                    ts.success("更新がしました。");
+                    ts.success("ログイン情報を更新しました。");
                 })
                 .done(function(data) {
                     $(".loader-block").fadeOut(500);
