@@ -10,7 +10,6 @@ class Controller_My_Account extends Controller_Mybase
     public function action_index()
     {
         \Config::load('payjp', true);
-        $this->data['is_sns'] = $this->is_sns_login();
         $this->data['email'] = Auth::get('email');
         $this->data['cards'] = $this->get_credit_cards(\Config::get('payjp.private_key'));
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
@@ -55,27 +54,5 @@ class Controller_My_Account extends Controller_Mybase
             }
         }
         return $cards;
-    }
-
-    /**
-     * SNSログインか否かを判定
-     */
-    private function is_sns_login()
-    {
-        if ($authentication = \Session::get('auth-strategy.authentication', array()))
-        {
-            switch($authentication['provider'])
-            {
-                case 'Facebook':
-                case 'Google':
-                    return true;
-                default:
-                    return false;
-            }
-        }
-        else
-        {
-            return false;
-        }
     }
 }
