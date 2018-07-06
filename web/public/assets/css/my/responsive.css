@@ -89,6 +89,15 @@
   height: 1px;
   background-color: #fff;
 }
+.js-tab {
+  margin-bottom: 16px;
+}
+.js-tab > div {
+  font-size: 12px;
+  opacity: .3;
+  padding-right: 12px;
+  font-weight: normal;
+}
 .admin-normal-menu span:nth-of-type(1) {
   top: 0;
 }
@@ -155,7 +164,7 @@
 
 
 .admin-normal-profile {
-  padding-bottom: 16px;
+  padding-bottom: 24px;
 }
 .admin-normal-profile .img-box-block {
   width: 120px;
@@ -273,6 +282,7 @@
 }
 .regist-add-form-edit-title {
   font-size: 13px;
+  line-height: 18px;
   color: #77bfb5;
   margin-bottom: 10px;
   width: 100%;
@@ -374,6 +384,32 @@
 }
 .kinyu-top-member_joshikai ul {
   padding-top: 8px;
+}
+
+/* main-menu-list */
+.main-menu-list {
+
+}
+.main-menu-list li {
+  margin-bottom: 12px;
+  text-align: center;
+}
+.main-menu-list li a {
+  display: block;
+}
+.main-menu-list .main-li {
+  background: #fff;
+  box-shadow: 0px 0px 5px 0px #eaeaea;
+}
+.main-menu-list .main-li a {
+  padding: 16px 0px;
+}
+.main-menu-list .sub-li {
+  margin-bottom: 24px;
+  padding-top:
+}
+.main-menu-list .sub-li a {
+  padding: 4px 0px;
 }
 
 

@@ -1,0 +1,167 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+
+<div class="kinyu-single-block joshikai-main-block">
+
+  <div class="inner">
+
+    <h2 class="kinyu-top-main-title">診断チャート</h2>
+
+    <div class="diagnosticchart-question-container">
+
+        <div class="diagnosticchart-question"></div>
+
+        <div class="diagnosticchart-answer">
+            <button class="btn btn-primary btn-yes">YES</button>
+            <button class="btn btn-primary btn-no">NO</button>
+        </div>
+    </div>
+
+
+    <div class="diagnosticchart-answer-container">
+       <div class="diagnosticchart-answer-catchcopy"></div>
+       <div class="diagnosticchart-answer-type"></div>
+       <div class="diagnosticchart-answer-title"></div>
+       <div class="diagnosticchart-answer-charactor"></div>
+       <div class="diagnosticchart-answer-description"></div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+.btn-yes {
+    color: #fff;
+    background-color: #ff4c4c;
+    border-color: #ff4c4c;
+    font-weight: bold;
+}
+.btn-no {
+    color: #fff;
+    background-color: #4c61ff;
+    border-color: #4c61ff;
+    font-weight: bold;
+}
+.diagnosticchart-question-container {
+    display: none;
+}
+.diagnosticchart-question {
+    text-align: center;
+    border: 1px solid #bababa;
+    padding: 15px;
+    width: 80%;
+    margin:0px auto 20px auto;
+}
+.diagnosticchart-answer {
+    margin-bottom: 18px;
+    text-align: center;
+}
+.diagnosticchart-answer-container {
+    display: none;
+}
+.diagnosticchart-answer-catchcopy {
+    text-align: center;
+}
+.diagnosticchart-answer-charactor {
+    text-align: center;
+}
+.diagnosticchart-answer-charactor img {
+    width: 100px;
+}
+
+.diagnosticchart-answer-type {
+    font-weight: bold;
+    text-align: center;
+}
+.diagnosticchart-answer-title {
+    text-align: center;
+}
+.diagnosticchart-answer-description {
+    text-align: center;
+    padding: 15px;
+    width: 80%;
+    margin:0px auto 20px auto;
+}
+
+</style>
+
+<script>
+{literal}
+$(function(){
+  var $questionContainer  = $('.diagnosticchart-question-container');
+  var $answerContainer  = $('.diagnosticchart-answer-container');
+
+  var $question  = $('.diagnosticchart-question');
+  var $yesButton = $('.diagnosticchart-answer .btn-yes');
+  var $noButton  = $('.diagnosticchart-answer .btn-no');
+
+  var $answerCatchcopy   = $('.diagnosticchart-answer-catchcopy');
+  var $answerCharactor   = $('.diagnosticchart-answer-charactor');
+  var $answerType        = $('.diagnosticchart-answer-type');
+  var $answerTitle       = $('.diagnosticchart-answer-title');
+  var $answerDescription = $('.diagnosticchart-answer-description');
+
+  function answer(route_id) {
+    var route_id = route_id || 1;
+
+    $questionContainer.fadeOut();
+
+    $.getJSON('/api/diagnosticchart/route/' + route_id, function(response) {
+      var label        = response.data.label;
+
+      var yes_type_id = response.data.yes_type_id || '';
+      var yes_route_id = response.data.yes_route_id || '';
+      var no_type_id  = response.data.no_type_id || '';
+      var no_route_id  = response.data.no_route_id || '';
+
+      $question.html(label.replace(/\\n/g, '<br>'));
+
+      $yesButton.data('answer', yes_route_id).off('click').on('click', function() {
+        if(yes_type_id) {
+          // complete
+          completed(yes_type_id);
+        } else if(yes_route_id) {
+          // answer
+          answer(yes_route_id);
+        }
+      });
+      $noButton.data('answer',  no_route_id).off('click').on('click', function() {
+        if(no_type_id) {
+          // complete
+          completed(no_type_id);
+        } else if(no_route_id) {
+          // answer
+          answer(no_route_id);
+        }
+       });
+       $questionContainer.fadeIn();
+    });
+  }
+
+  function completed(type_id) {
+    $questionContainer.fadeOut();
+    $.getJSON('/api/diagnosticchart/type/' + type_id, function(response) {
+      var color = response.data.color || '000000';
+      var catch_copy = response.data.catch_copy || '';
+      var charactor_image = response.data.charactor_image || '';
+      var type = response.data.type || '';
+      var title = response.data.title || '';
+      var description  = response.data.description || '';
+
+      $answerCatchcopy.html(catch_copy);
+      $answerCharactor.html($('<img>', {src:charactor_image}));
+      $answerType.css('color', color);
+      $answerType.html(type);
+      $answerTitle.html(title);
+      $answerTitle.css('color', color);
+      $answerDescription.html(description.replace(/\\n/g, '<br>'));
+      $answerDescription.css('border', '2px solid ' + color);
+
+      $answerContainer.fadeIn();
+    });
+  }
+
+  answer();
+});
+{/literal}
+</script>
+
