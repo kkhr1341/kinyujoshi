@@ -46,6 +46,10 @@ class Userwithdrawal extends Base
             ->where(array('username' => $username))
             ->execute();
 
+        \DB::delete('passports')
+            ->where(array('username' => $username))
+            ->execute();
+
         \DB::delete('users_providers')
             ->where(array('parent_id' => $user['id']))
             ->execute();
