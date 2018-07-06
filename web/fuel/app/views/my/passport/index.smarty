@@ -9,7 +9,13 @@
       <div class="admin-normal-joshikai joshikailist-main">
 
          <h3 class="mypage-content-title"><span>きん女。パスポート</span></h3>
-         <p class="mypage-content-description">myきん女。では、参加予定の女子会や過去参加した女子会<br>などを確認することができます。<br>今後もより便利な機能を追加していく予定です♪</p>
+         <p class="mypage-content-description">
+          きん女。パスポートでは、メンバー限定の福利厚生や優待情報などを掲載予定です。<br>
+          現在、編集部で企画を頑張っているので、もうしばらくお待ちくださいませ♪<br>
+          <span style="display: block;height:12px;"></span>
+          また、どんなことができたら嬉しいか、メンバーさんと決めていきたいので、<br>
+          ぜひみなさんの声を聞かせていただけると嬉しいです(*´꒳`*)
+         </p>
 
         <div class="request-block">
           <img class="request-title" src="/images/my/mykinjo-textarea.png">
@@ -21,12 +27,20 @@
   </div>
 </div>
 
-<div id="request-popup" class="report-detail-comment-popup" style="display: none;">
+<div id="request-popup" class="request-modal-popup">
    <div class="inner">
-     <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
-     <p class="main-message">きんゆう女子。編集部にコメントしていただき、誠にありがとうございます！</p>
-     <p>
-     みなさまからいただいたコメントを参考に「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
+     <div class="request-modal-popup-close"><img src="/images/new/sp-header-close.png"></div>
+     <p class="main-message">アドバイスありがとうございます♪</p>
+     <p class="pc">
+     みなさまからいただいたアドバイスを参考に<br>「きん女。パスポート」の企画をブラッシュアップしてまいります。
+     <span style="display: block;height: 12px;"></span>
+     また何かありましたら、何でもお聞かせくださいね(*´꒳`*)<br>
+     今後ともよろしくお願いいたします♪
+     </p>
+     <p class="sp">
+     みなさまからいただいたアドバイスを参考に<br>「きん女。パスポート」の企画をブラッシュアップしてまいります。<br><br>
+     また何かありましたら、何でもお聞かせくださいね(*´꒳`*)<br>
+     今後ともよろしくお願いいたします♪
      </p>
      <p class="last-message">きんゆう女子。編集部より</p>
    </div>
@@ -44,16 +58,16 @@
       params.message = $('#message').val();
       
       if (params.message == "") {
-        ts.error("編集部へのコメントを記入してください。");
+        ts.error("「どんなことができたら嬉しいですか？」を入力してください。");
         return false;
       }
 
-      bootbox.confirm("編集部へのコメントを送信しますか？", function(result) {
+      bootbox.confirm("内容を送信しますか？", function(result) {
         if (result) {
           $(".loader-block").fadeIn(500);
           ajax.post(url, params, function(data){
             document.getElementById("message").value="";
-            $('.report-detail-comment-popup').fadeIn(800);          
+            $('.request-modal-popup').fadeIn(800);          
           })
           .done(function(data) {
               $(".loader-block").fadeOut(500);
@@ -68,8 +82,8 @@
         }
       });
     });
-    $(".report-detail-comment-popup-close").click(function() {
-      $(".report-detail-comment-popup").fadeOut(800);
+    $(".request-modal-popup-close").click(function() {
+      $(".request-modal-popup").fadeOut(800);
     });
   });
 </script>
