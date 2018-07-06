@@ -1,4 +1,52 @@
 @charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - myきん女。
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.mykinjo-block {
+  
+}
+.mykinjo-thub {
+  height: 250px;
+}
+.mykinjo-block .text-box {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.mykinjo-block .text-box .title {
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.mykinjo-block .text-box .description {
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+}
+.mykinjo-block .request-block {
+  
+}
+.mykinjo-block .request-block .request-title {
+  width: 320px;
+  display: block;
+  margin: 0 auto;
+}
+.mykinjo-block .request-block textarea {
+  resize: none;
+  margin: 20px 0px;
+}
+.mykinjo-block .request-block button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+
+
+
+
 .my-form-container {
   width: 100%;
   position: relative;

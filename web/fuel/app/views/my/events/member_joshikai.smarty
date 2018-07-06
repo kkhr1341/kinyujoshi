@@ -6,8 +6,28 @@
     <div class="admin-normal-main">
 
       <div class="kinyu-top-list kinyu-top-member_joshikai">
-        <h3 class="kinyu-top-main-title"><span>メンバー限定の女子会</span></h3>
-        <ul class="clear">
+        <!-- h3 class="kinyu-top-main-title"><span>myきん女。</span></h3> -->
+
+        <div class="mykinjo-block">
+          
+          <div class="mykinjo-thub" style="background: gray;"></div>
+          
+          <div class="text-box">
+            <p class="title">テキストテキストテキストテキストテキスト<br>テキストテキストテキストテキスト</p>
+            <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+
+          <div class="request-block">
+            <img class="request-title" src="/images/my/mykinjo-textarea.png">
+            <textarea id="message" name="message" class="form-control" rows="10"></textarea>
+            <button class="btn btn-primary" type="button" id="save">送信する</button>
+          </div>
+
+        </div>
+        
+
+
+        <!-- <ul class="clear">
         {foreach from=$events key="key" item=event name=loopname}
 
           {$fooo = $event.main_image}
@@ -33,10 +53,12 @@
             </a>
           </li>
         {foreachelse}
-        </ul>
+        </ul> -->
+
+
       </div>
       <!-- 参加女子会がない場合 -->
-      <div class="admin-normal-joshikai joshikailist-main">
+      <!-- <div class="admin-normal-joshikai joshikailist-main">
         <ul>
           <li>
             <p class="joshikai-no">女子会企画中です..。</p>
@@ -44,7 +66,7 @@
           </li>
         </ul>
       </div>
-      {/foreach}    
+      {/foreach}    --> 
     </div>
   </div>
 </div>
