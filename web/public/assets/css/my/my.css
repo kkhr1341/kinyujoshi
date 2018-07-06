@@ -1041,8 +1041,8 @@ footer {
   font-size: 13px;
   background-color: #8ddcd1;
   color: #fff;
-  padding: 16px;
   font-weight: bold;
+  padding: 16px;
   position: relative;
   transition: .5s;
 }
@@ -1087,6 +1087,26 @@ footer {
 .resign-area {
   padding: 16px;
 }
+
+/* ログイン情報の修正 */
+.login-edit-block {
+  padding: 36px;
+}
+.login-edit-block .form-control {
+  background: #f9f9f9;
+}
+.mypage-account-block .notice-sns {
+  text-align: center;
+}
+.mypage-account-block .notice-sns span {
+  border-left: 1px solid #ffa7a7;
+  border-right: 1px solid #ffa7a7;
+  background: #fdf5f5;
+  padding: 4px 40px;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+
 
 .redactor-modal-tab label.checkbox {
   padding-left: 20px;

@@ -1,4 +1,4 @@
-<div class="admin-normal-container">
+<div class="admin-normal-container mypage-account-block">
     <div class="admin-normal-inner clear">
 
         {$my_side}
@@ -24,10 +24,11 @@
 
             </div>
             <div class="admin-account-el edit-account-form">
-                <p class="admin-account-title admin-account-title3">ログイン情報の編集</p>
+                <p class="admin-account-title admin-account-title3">ログイン情報の設定</p>
                 <div class="admin-account-el-open admin-account-el-open3 credit-list-area" style="display: none;">
 
-                    <div style="padding: 10px;">
+                    <div class="login-edit-block">
+                        <p class="notice-sns"><span>Facebook・Googleでログインされている方は、パスワードを設定することで<br>メールアドレスからもログインできるようになります。</span></p>
                         <div class="regist-add-form-edit-el">
                             <label class="regist-add-form-edit-title">メールアドレス</label>
                             <input type="text" id="email" class="form-control" placeholder="" value="{$email}">
@@ -35,12 +36,8 @@
 
                         <div class="regist-add-form-edit-el">
                             <label class="regist-add-form-edit-title">新しいパスワード</label>
-                            <input type="password" id="new_password" class="form-control" placeholder="" value="">
-                        </div>
-
-                        <div class="regist-add-form-edit-el">
-                            <label class="regist-add-form-edit-title">確認用パスワード</label>
-                            <input type="password" id="confirm_password" class="form-control" placeholder="" value="">
+                            <input type="password" id="new_password" class="form-control" placeholder="新しいパスワードを入力してください。" value="">
+                            <input type="password" id="confirm_password" class="form-control" placeholder="ご確認用" value="">
                         </div>
                         <div class="form-btn tx-center">
                             <button class="btn btn-kinyu" type="button" id="save">更新する</button>

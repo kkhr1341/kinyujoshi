@@ -69,8 +69,8 @@
     </li>
 
     <li>
-      <p class="question-text">登録したメールアドレスを変更したいです。</p>
-      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「ログイン情報の設定」より、変更することができます。
+      <p class="question-text">登録したメールアドレスやパスワードを変更したいです。</p>
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「ログイン情報の設定」より、変更することができます。<br>また、Facebook・Googleでご登録された方は、パスワードを設定することでメールアドレスでもログインすることできるようになります。
       </p>
     </li>
 
@@ -92,7 +92,7 @@
 
     <li>
       <p class="question-text">退会したいです。</p>
-      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「<a href="/my/account/withdrawal" target="_blank">メンバー退会</a>」より、退会を行うことができます。また、退会後の情報はプライバシーポリシーに従って管理・削除いたします。<br>2018年3月3日にマイページ機能ができました。それ以前にご登録いただいていた方はお手数おかけいたしますが、お問い合わせフォームまたは、きんゆう女子。編集部（support@kinyu-joshi.jp）までご連絡ください。</p>
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「<a href="/my/account/withdrawal" target="_blank">メンバー退会</a>」より、退会を行うことができます。また、退会後の情報は<a href="/privacy" target="_blank">プライバシーポリシー</a>に従って管理・削除いたします。<br>2018年3月3日にマイページ機能ができました。それ以前にご登録いただいていた方はお手数おかけいたしますが、<a href="/contact" target="_blank">お問い合わせフォーム</a>または、きんゆう女子。編集部（support@kinyu-joshi.jp）までご連絡ください。</p>
     </li>
 
     <li>
