@@ -24,30 +24,45 @@
 
             </div>
             <div class="admin-account-el edit-account-form">
-                <p class="admin-account-title admin-account-title3">ログイン情報の編集</p>
-                <div class="admin-account-el-open admin-account-el-open3 credit-list-area" style="display: none;">
+                {if $is_sns === true}
+                    <p class="admin-account-title admin-account-title3">お知らせ用メールアドレス設定</p>
+                    <div class="admin-account-el-open admin-account-el-open3 credit-list-area" style="display: none;">
 
-                    <div style="padding: 10px;">
-                        <div class="regist-add-form-edit-el">
-                            <label class="regist-add-form-edit-title">メールアドレス</label>
-                            <input type="text" id="email" class="form-control" placeholder="" value="{$email}">
-                        </div>
-
-                        <div class="regist-add-form-edit-el">
-                            <label class="regist-add-form-edit-title">新しいパスワード</label>
-                            <input type="password" id="new_password" class="form-control" placeholder="" value="">
-                        </div>
-
-                        <div class="regist-add-form-edit-el">
-                            <label class="regist-add-form-edit-title">確認用パスワード</label>
-                            <input type="password" id="confirm_password" class="form-control" placeholder="" value="">
-                        </div>
-                        <div class="form-btn tx-center">
-                            <button class="btn btn-kinyu" type="button" id="save">更新する</button>
+                        <div style="padding: 10px;">
+                            <div class="regist-add-form-edit-el">
+                                <label class="regist-add-form-edit-title">メールアドレス</label>
+                                <input type="text" id="email" class="form-control" placeholder="" value="{$email}">
+                            </div>
+                            <div class="form-btn tx-center">
+                                <button class="btn btn-kinyu" type="button" id="save">更新する</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {else}
+                    <p class="admin-account-title admin-account-title3">ログイン情報の編集</p>
+                    <div class="admin-account-el-open admin-account-el-open3 credit-list-area" style="display: none;">
 
+                        <div style="padding: 10px;">
+                            <div class="regist-add-form-edit-el">
+                                <label class="regist-add-form-edit-title">メールアドレス</label>
+                                <input type="text" id="email" class="form-control" placeholder="" value="{$email}">
+                            </div>
+
+                            <div class="regist-add-form-edit-el">
+                                <label class="regist-add-form-edit-title">新しいパスワード</label>
+                                <input type="password" id="new_password" class="form-control" placeholder="" value="">
+                            </div>
+
+                            <div class="regist-add-form-edit-el">
+                                <label class="regist-add-form-edit-title">確認用パスワード</label>
+                                <input type="password" id="confirm_password" class="form-control" placeholder="" value="">
+                            </div>
+                            <div class="form-btn tx-center">
+                                <button class="btn btn-kinyu" type="button" id="save">更新する</button>
+                            </div>
+                        </div>
+                    </div>
+                {/if}
             </div>
 
             <div class="admin-account-el">
@@ -110,21 +125,13 @@
             var url = '/api/users/save';
             var params = {
                 "email": $email.val(),
-                "new_password": $new_password.val(),
-                "confirm_password": $confirm_password.val(),
+                "new_password": $new_password.val() || '',
+                "confirm_password": $confirm_password.val() || '',
             };
 
             if (params.email == "") {
-              ts.error("メールアドレスを入力してください。");
-              return false;
-            }
-            if (params.new_password == "") {
-              ts.error("パスワードを入力してください。");
-              return false;
-            }
-            if (params.confirm_password == "") {
-              ts.error("確認パスワードを入力してください");
-              return false;
+                ts.error("メールアドレスを入力してください。");
+                return false;
             }
 
             ajax.post(url, params, function (data) {
