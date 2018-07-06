@@ -11,7 +11,7 @@
 }
 .mykinjo-block .text-box {
   margin-top: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 42px;
 }
 .mykinjo-block .text-box .title {
   font-size: 18px;
@@ -34,7 +34,7 @@
 }
 .mykinjo-block .request-block textarea {
   resize: none;
-  margin: 20px 0px;
+  margin: 8px 0px 20px;
 }
 .mykinjo-block .request-block button {
   display: block;
@@ -622,7 +622,7 @@ footer {
   margin-bottom: 8px;
   position: relative;
 }
-.admin-normal-side li:nth-child(2):before {
+/*.admin-normal-side li:nth-child(2):before {
   content: "";
   position: absolute;
   top: 0;
@@ -631,11 +631,18 @@ footer {
   border-right: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 5px solid #efcab4;
-}
+}*/
 .admin-normal-side li a{
   display: block;
   padding: 8px 0px;
   transition: .5s;
+}
+.admin-normal-side li:last-child {
+  border-top: 1px dotted #dcdcdc; 
+  margin-top: 16px;
+}
+.admin-normal-side li:last-child a {
+  font-size: 12px;
 }
 .admin-normal-side li.active {
   background: #a6e9d9;
