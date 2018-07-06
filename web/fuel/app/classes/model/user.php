@@ -41,7 +41,7 @@ class User extends Base
                     if ($new_password === $confirm_password) {
                         return true;
                     } else {
-                        \Validation::active()->set_message('closure', 'パスワードと確認の値が異なりました。');
+                        \Validation::active()->set_message('closure', 'ご確認用のパスワードが違うようです...。再度ご入力をお願いいたします。');
                         return false;
                     }
                 });

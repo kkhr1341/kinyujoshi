@@ -50,10 +50,18 @@
 
       bootbox.confirm("編集部へのコメントを送信しますか？", function(result) {
         if (result) {
+          $(".loader-block").fadeIn(500);
           ajax.post(url, params, function(data){
             document.getElementById("message").value="";
             $('.report-detail-comment-popup').fadeIn(800);          
-          });
+          })
+          .done(function(data) {
+              $(".loader-block").fadeOut(500);
+          })
+          .fail(function(error) {
+              ts.error("処理に失敗しました。管理者までお問い合わせください。");
+              $(".loader-block").fadeOut(500);
+          })
         }
         else {
           ts.info("キャンセルしました");

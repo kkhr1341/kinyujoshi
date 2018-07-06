@@ -115,9 +115,19 @@
                 return false;
             }
 
-            ajax.post(url, params, function (data) {
-                ts.success("更新がしました。");
-            });
+            $(".loader-block").fadeIn(500);
+            setTimeout(function() {
+                ajax.post(url, params, function (data) {
+                    ts.success("更新がしました。");
+                })
+                .done(function(data) {
+                    $(".loader-block").fadeOut(500);
+                })
+                .fail(function(error) {
+                    ts.error("更新処理に失敗しました。管理者までお問い合わせください。");
+                    $(".loader-block").fadeOut(500);
+                })
+            }, 2000);
         });
     });
 </script>
