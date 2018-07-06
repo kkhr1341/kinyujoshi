@@ -78,7 +78,7 @@ class Controller_Auth extends Controller
                         break;
                     }
 
-                    $userdata = [
+                    $userdata = array(
                         'group' => 1,
                         'uid' => $opauth->get('auth.uid', '?'),
                         'provider' => $opauth->get('auth.provider', '?'),
@@ -100,7 +100,7 @@ class Controller_Auth extends Controller
                         'secret' => $opauth->get('auth.credentials.secret', null),
                         'expires' => $opauth->get('auth.credentials.expires', null),
                         'refresh_token' => $opauth->get('auth.credentials.refresh_token', null),
-                    ];
+                    );
                     \Session::set_flash('userdata', $userdata);
 
                     $url = '/regist_sns';

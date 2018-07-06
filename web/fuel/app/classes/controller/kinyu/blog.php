@@ -19,7 +19,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60);
         }
         $pagination = $this->data['blogs']['pagination'];
-        $this->template->title = '記事一覧｜きんゆう女子。';
+        $this->template->title = 'レポート一覧｜きんゆう女子。';
         $this->template->description = 'きんゆう女子。は、なかなか聞けないお金の話。 先延ばしにしがちなお金の計画。 私には無関係と思っている金融の話など、お金に関する様々な情報を配信しています。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
@@ -36,8 +36,44 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
         }
+
         $this->template->contents = View::forge('kinyu/blog/index.smarty', $this->data)
             ->set_safe('pagination', $pagination);
+
+        Asset::css(array('kinyu/font-awesome.min.css',), array(), 'layout', false);
+    }
+
+    public function action_search($page = 1)
+    {
+
+        if (Agent::is_mobiledevice()) {
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 30, Input::get('search_text'));
+        } else {
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 60, Input::get('search_text'));
+        }
+        $pagination = $this->data['blogs']['pagination'];
+        $this->template->search_text = Input::get('search_text');
+        $this->template->title = Input::get('search_text') . 'を含むレポート｜きんゆう女子。';
+        $this->template->description = 'きんゆう女子。は、なかなか聞けないお金の話。 先延ばしにしがちなお金の計画。 私には無関係と思っている金融の話など、お金に関する様々な情報を配信しています。';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+
+        $this->data['top_blogs'] = Blogs::lists(1, 5, true);
+        $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
+        $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
+        $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        }
+        $this->template->contents = View::forge('kinyu/blog/search.smarty', $this->data)
+            ->set_safe('pagination', $pagination);
+
+        Asset::css(array('kinyu/font-awesome.min.css',), array(), 'layout', false);
     }
 
     public function action_detail($code)

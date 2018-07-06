@@ -4,6 +4,13 @@
     <h2 class="kinyu-top-main-title">レポート一覧</h2>
     <p class="kinyu-top-main-sub">きんゆう女子。の日々の活動報告♪</p>
 
+    <div class="kinyu-top-search">
+        <form action="/report/search" method="get">
+            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+            <button>&#xf002; </button>
+        </form>
+    </div>
+
     <div class="kinyu-top-list kinyu-top-report-list">
       <ul class="clear">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}

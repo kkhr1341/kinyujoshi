@@ -37,6 +37,7 @@ return array(
 	'about_hensyubu' => 'kinyu/about/about_hensyubu',
 
 	'report'   => 'kinyu/blog/index',
+	'report/search'   => 'kinyu/blog/search',
 	'report/(:num)'   => 'kinyu/blog/index/$1',
 	'report/(:any)'   => 'kinyu/blog/detail/$1',
 	'welcome/blog/(:any)'   => 'kinyu/blog/welcome/$1',
@@ -56,6 +57,7 @@ return array(
 
 	//イベント関連
 	'joshikai'   => 'kinyu/event/index',
+	'event'   => 'kinyu/event/index',
 	'joshikai_past'   => 'kinyu/event/past',
 	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
 	'joshikai_tickets/(:any)'   => 'kinyu/event/tickets/$1',
@@ -72,6 +74,9 @@ return array(
 	//お問い合わせ
 	'contact' => 'kinyu/inquiry',
 	'contact/complete' => 'kinyu/inquiry/complete',
+
+    //退会完了ページ
+    'withdrawal/complete' => 'kinyu/withdrawal/complete',
 
 	//会員登録
 	'regist' => 'kinyu/regist',
@@ -92,6 +97,15 @@ return array(
 
 	//特定商取引法に基づく表記
 	'legal' => 'kinyu/company/legal',
+
+	//リンクポリシー
+	'link_policy' => 'kinyu/company/link',
+
+	//よくあるご質問
+	'faq' => 'kinyu/company/faq',
+
+	//女子会参加規約
+	'joshikai_policy' => 'kinyu/company/joshikai',
 
 		//企業用ページ
 	'business' => 'kinyu/company/business',
@@ -125,6 +139,8 @@ return array(
 	'my/joshikai' => 'my/events/joshikailist',
 	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
 	'my/member_joshikai' => 'my/events/member_joshikai',
+	'my/kinjo'   => 'my/mykinjo/index',
+	'my/passport'   => 'my/passport/index',
 
 	'admin'   => 'admin/top',
 	//管理画面admin - 会員リスト

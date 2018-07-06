@@ -1,6 +1,6 @@
 <!-- ヘッダー -->
 <header class="fix-header-sp">
-  <a href="/" class="header-sp-logo"><img src="/images/kinyu-logo-sp.png"></a>
+  <a href="/" class="header-sp-logo"><img src="/images/kinyu-logo.png"></a>
   <div class="kinyu-sp-header-menu">
     <img class="menu-trigger" src="/images/new/sp-header-menu.png">
   </div>
@@ -9,13 +9,24 @@
 <div class="kinyu-sp-header">
   <div class="kinyu-sp-menu-block">
     <ul>
-      <li class="menu-block-el1"><a href="/login_regist"><img src="/images/menu/under-menu-member.png"></a></li>
-      <li class="menu-block-el2"><a href="/joshikai"><img src="/images/menu/under-menu-joshikai.png"></a></li>
       {if in_array('user', $roles) || in_array('admin', $roles)}
+        <li class="menu-block-el2"><a href="/joshikai"><img src="/images/menu/under-menu-joshikai.png"></a></li>
         <li class="menu-block-el3"><a href="/my"><img src="/images/menu/under-menu-my.png"></a></li>
       {else}
+        <li class="menu-block-el1"><a href="/login_regist"><img src="/images/menu/under-menu-member.png"></a></li>
+        <li class="menu-block-el2"><a href="/joshikai"><img src="/images/menu/under-menu-joshikai.png"></a></li>
         <li class="menu-block-el3"><a href="/my"><img src="/images/menu/under-menu-my.png"></a></li>
       {/if}
     </ul>
   </div>
 </div>
+
+{if in_array('user', $roles) || in_array('admin', $roles)}
+  <a href="/my" class="header-profile-block"
+    {if $profile.profile_image == ''}
+      style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
+    {else}
+      style="background:url({$profile.profile_image}) center center / cover no-repeat;"
+    {/if}
+  ></a>
+{/if}

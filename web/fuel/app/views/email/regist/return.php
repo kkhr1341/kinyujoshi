@@ -40,8 +40,7 @@
       <table>
         <tr>
           <td>
-            <h3>【きんゆう女子。】メンバー登録がありました！</h3>
-            <p>メンバーの詳細は、<a href="https://kinyu-joshi.jp/admin" target="_blank">管理ページ</a>からご確認ください。</p>
+            <h3>【きんゆう女子。】きん女。パスポートにメッセージがありました。</h3>
 
             <style>
               .form-mail-p {
