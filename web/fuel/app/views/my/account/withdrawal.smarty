@@ -95,16 +95,18 @@ $(function(){
         bootbox.confirm("本当に退会しますか？", function (result) {
             if (result) {
                 $(".loader-block").fadeIn(500);
-                ajax.post(url, params, function(data){
-                    location.href = "/withdrawal/complete";
-                })
-                .done(function(data) {
-                    $(".loader-block").fadeOut(500);
-                })
-                .fail(function(error) {
-                    ts.error("退会処理に失敗しました。管理者までお問い合わせください。");
-                    $(".loader-block").fadeOut(500);
-                })
+                setTimeout(function() {
+                    ajax.post(url, params, function(data){
+                        location.href = "/withdrawal/complete";
+                    })
+                    .done(function(data) {
+                        $(".loader-block").fadeOut(500);
+                    })
+                    .fail(function(error) {
+                        ts.error("退会処理に失敗しました。管理者までお問い合わせください。");
+                        $(".loader-block").fadeOut(500);
+                    })
+                }, 2000);
             }
             else {
                 ts.info("キャンセルしました");
