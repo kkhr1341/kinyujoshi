@@ -66,10 +66,10 @@
         </div>
 
         <div class="regist-add-form-edit-el select-area">
-          <label class="regist-add-form-edit-title">都道府県</label>
+          <label class="regist-add-form-edit-title">お住まいの地域</label>
 
           <div class="regist-selectarea">
-            <select name="prefecture" class='form-control'>
+            <select id="prefecture" name="prefecture" class='form-control'>
               <option>-</option>
               {foreach from=$prefectures key=k item=v}
                 <option value="{$k}">{$v}</option>

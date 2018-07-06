@@ -35,6 +35,7 @@
 .mykinjo-block .request-block textarea {
   resize: none;
   margin: 8px 0px 20px;
+  padding: 12px;
 }
 .mykinjo-block .request-block button {
   display: block;

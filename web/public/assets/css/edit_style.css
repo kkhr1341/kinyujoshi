@@ -3762,6 +3762,9 @@ input::-webkit-input-placeholder {
 .regist-add-form-edit-el select#age3 {
   width: 100px;
 }
+.regist-add-form-edit-el select#prefecture {
+  width: 100px;
+}
 .regist-add-form-edit-el .regist-selectarea p {
   display: inline-block;
   text-align: left;
