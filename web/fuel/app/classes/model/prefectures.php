@@ -3,20 +3,19 @@
 namespace Model;
 require_once(dirname(__FILE__) . "/base.php");
 
-class Withdrawalreasons extends Base
+class Prefectures extends Base
 {
 
     public static function lists()
     {
 
-        $reasons = \DB::select("*")->from('withdrawal_reasons')
-            ->order_by('sort', 'asc')
+        $values = \DB::select("*")->from('prefectures')
             ->execute()
             ->as_array();
 
         $keys = array();
-        foreach ($reasons as $key => $reason) {
-            $keys[$reason['code']] = $reason;
+        foreach ($values as $key => $value) {
+            $keys[$value['code']] = $value['name'];
         }
         return $keys;
     }

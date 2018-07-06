@@ -65,6 +65,18 @@
           </div>
         </div>
 
+        <div class="regist-add-form-edit-el select-area">
+          <label class="regist-add-form-edit-title">都道府県</label>
+
+          <div class="regist-selectarea">
+            <select name="prefecture" class='form-control'>
+              <option>-</option>
+              {foreach from=$prefectures key=k item=v}
+                <option value="{$k}">{$v}</option>
+              {/foreach}
+            </select>
+          </div>
+        </div>
 
         <div class="regist-add-form-edit-el form-radio-block">
           <label class="regist-add-form-edit-title">きんゆうワカラナイ度</label>
@@ -232,6 +244,7 @@ $(function(){
     params.name = $('#name').val(); //お名前
     params.name_kana = $('#name_kana').val(); //ふりがな
     params.birthday = (age01+age02+age03); //生年月日
+    params.prefecture = $("[name=prefecture]").val(); //都道府県
     params.not_know = $("[name=not_know]:checked").val(); //金融ワカラナイ度
     params.interest = $('#interest').val();
     params.ask = $('#ask').val();
@@ -271,6 +284,10 @@ $(function(){
     if (age03 == "-") {
         ts.error("生年月日の「日」を入力してください");
         return false;
+    }
+    if (params.prefecture == "") {
+      ts.error("都道府県を入力してください");
+      return false;
     }
 
     if ($("[name=not_know]:checked").val() == undefined) {

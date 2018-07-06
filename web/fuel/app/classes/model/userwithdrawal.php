@@ -11,8 +11,7 @@ class Userwithdrawal extends Base
         $val = \Validation::forge();
         $val->add_callable('myvalidation');
 
-        $val->add('withdrawal_reasons', '退会理由')
-            ->add_rule('required');
+        $val->add('withdrawal_reasons', '退会理由');
 
         $val->add('message');
 
@@ -107,6 +106,7 @@ class Userwithdrawal extends Base
      */
     public static function withdrawal($username, $message, $reasons=array())
     {
+        $reasons = $reasons ? $reasons : array();
         $db = \Database_Connection::instance();
         $db->start_transaction();
         try {
