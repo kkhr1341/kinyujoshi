@@ -26,6 +26,10 @@
     </div>
   </div>
 
+  <!-- <div class="pc">
+    <a class="kinyu-header-mylink" href="/my">マイページへ</a>
+  </div> -->
+
   {if in_array('user', $roles) || in_array('admin', $roles)}
     <a href="/my" class="header-profile-block"
       {if $profile.profile_image == ''}

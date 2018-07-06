@@ -156,6 +156,15 @@
   border-radius: 50%;
   transition: .5s;
 }
+/*マイページにログイン*/
+.kinyu-header-mylink {
+  background: #8ddcd1;
+  padding: 4px 20px;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  color: #fff;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
@@ -3319,7 +3328,7 @@ input[type=checkbox]:checked + .checkbox:before {
   background: #f9f9f9;
 }
 .login-contents-intro {
-  margin-bottom: 42px;
+  /*margin-bottom: 42px;*/
   text-align: center;
 }
 .login-contents-intro .caution {
