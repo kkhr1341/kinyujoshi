@@ -698,6 +698,23 @@ footer {
   line-height: 18px;
 
 }
+.admin-normal-container .mypage-content-title {
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 24px;
+  color: #77cbc0;
+  text-align: center;
+}
+.admin-normal-container .mypage-content-title span {
+  padding: 4px 28px 4px 40px;
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;
+}
+.mypage-content-description {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
 /*.admin-normal-profile .img-box-block:after {
   content: "";
   position: absolute;
