@@ -92,11 +92,6 @@ $(function(){
             "message": message,
         };
 
-		if (params.withdrawal_reasons == "") {
-			ts.error("退会理由は必須です");
-			return false;
-		}
-
         bootbox.confirm("本当に退会しますか？", function (result) {
             if (result) {
                 $(".loader-block").fadeIn(500);
