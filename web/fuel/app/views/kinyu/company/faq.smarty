@@ -76,7 +76,7 @@
 
     <li>
       <p class="question-text">パスワードの変更はどこからできますか？</p>
-      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「<a href="/my/account/withdrawal" target="_blank">ログイン情報の設定</a>」より、変更することができます。</p>
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「<ログイン情報の設定」より、変更することができます。</p>
     </li>
 
     <li>
