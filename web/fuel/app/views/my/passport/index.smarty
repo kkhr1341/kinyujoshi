@@ -28,6 +28,19 @@
   </div>
 </div>
 
+<!-- コメント -->
+<div id="request-popup" class="report-detail-comment-popup" style="display: block;">
+  <div class="inner">
+    <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
+    <p class="main-message">きんゆう女子。編集部にコメントしていただき、誠にありがとうございます！</p>
+    <p>
+    みなさまからいただいたコメントを参考に「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
+    </p>
+    <p class="last-message">きんゆう女子。編集部より</p>
+  </div>
+</div>
+
+
 
 {literal}
 <script>
