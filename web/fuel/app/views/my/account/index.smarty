@@ -28,9 +28,11 @@
                 <div class="admin-account-el-open admin-account-el-open3 credit-list-area" style="display: none;">
 
                     <div class="login-edit-block">
-                        <p class="notice-sns"><span>Facebook・Googleでログインされている方は、パスワードを設定することで<br>メールアドレスからもログインできるようになります。</span></p>
+                        <p class="notice-sns pc"><span>Facebook・Googleでログインされている方は、パスワードを設定することで<br>メールアドレスからもログインできるようになります。</span></p>
+                        <p class="notice-sns sp"><span>Facebook・Googleでログインされている方は、パスワードを設定することでメールアドレスからもログインできるようになります。</span></p>
                         <div class="regist-add-form-edit-el">
                             <label class="regist-add-form-edit-title">メールアドレス</label>
+                            <p class="notice-email-sub"><span style="color:red;">＊</span>メールアドレスのみを変更したい場合は、新しいパスワードは空欄にして「更新する」を押してください♪</p>
                             <input type="text" id="email" class="form-control" placeholder="" value="{$email}">
                         </div>
 

@@ -11,6 +11,35 @@
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - myきん女。
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.admin-normal-container .mypage-content-title {
+  font-size: 16px;
+  line-height: 16px;
+}
+.mypage-content-description {
+  width: 92%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 11px;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #ececec;
+}
+.mykinjo-block .request-block .request-title {
+  width: 82%;
+}
+.mykinjo-block .request-block textarea {
+  background: #f9f9f9;
+}
+.admin-normal-container .mypage-content-mainimg {
+  height: 200px;
+  background: gray;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   一般ユーザー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container {
@@ -302,8 +331,8 @@
   margin-bottom: 24px;
 }
 .regist-add-form-edit-title {
-  font-size: 11px;
-  line-height: 11px;
+  font-size: 12px;
+  line-height: 12px;
   color: #77bfb5;
   margin-bottom: 10px;
   width: 100%;
@@ -341,6 +370,8 @@
   font-size: 12px;
   padding: 12px;
   font-weight: 400;
+  background-color: #efefef;
+  color: #444;
 }
 .credit-list-area li {
   padding: 12px;
@@ -366,13 +397,34 @@
   background-color: #fff;
   padding: 60px 0px 24px;
 }
-
 .joshikai-cancel-block .day-cash-close {
   top: 0px;
   right: 0px;
   width: 50px;
   height: 50px;
 }
+
+/*ログイン部分 */
+.login-edit-block {
+    padding: 28px 20px;
+}
+.mypage-account-block .notice-sns {
+  font-size: 10px;
+}
+.mypage-account-block .notice-sns span {
+  padding: 4px 24px;
+}
+.login-edit-block .form-control {
+  font-size: 12px;
+  background: #fff;
+}
+.mypage-account-block .notice-email-sub {
+  font-size: 10px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+
 
 /* 女子会部分 */
 .joshikai-cancel-block .inner {
@@ -407,8 +459,9 @@
 }
 
 .admin-normal-joshikai li .joshikai-no {
-  font-size: 13px;
+  font-size: 11px;
   padding: 16px 0px;
+  background: #f9f9f9;
 }
 .kinyu-top-member_joshikai ul {
   padding-top: 8px;
@@ -438,6 +491,7 @@
 }
 .main-menu-list .sub-li a {
   padding: 4px 0px;
+  color: gray;
 }
 
 .joshikai-cancel-submit, .joshikai-precancel-submit {

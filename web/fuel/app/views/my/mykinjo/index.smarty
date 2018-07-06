@@ -7,9 +7,21 @@
 
 
       <div class="admin-normal-joshikai joshikailist-main">
-
+        <div class="mypage-content-mainimg" style="background:url(/images/my/my_kinjo_img.jpg) center center / cover no-repeat;"><div class="white-modal"></div></div>
          <h3 class="mypage-content-title last-fix"><span>myきん女。</span></h3>
-         <p class="mypage-content-description">myきん女。では、参加予定の女子会や過去参加した女子会<br>などを確認することができます。<br>今後もより便利な機能を追加していく予定です♪</p>
+         <p class="mypage-content-description pc">
+          myきん女。では、これから参加する女子会や、<br>
+          今までに参加した女子会などをチェックすることができます。
+          <span style="display: block;height:12px;"></span>
+          これからも楽しい機能をアップしていきますので<br>
+          たまに見にきてくださいね。お気軽にどうぞ♪</p>
+         <p class="mypage-content-description sp">
+           myきん女。では、これから参加する女子会や、
+          今までに参加した女子会などをチェックすることができます。
+          <span style="display: block;height:12px;"></span>
+          これからも楽しい機能をアップしていきますので
+          たまに見にきてくださいね。お気軽にどうぞ♪</p>
+         </p>
 
         <div class="js-tab">
 
@@ -80,8 +92,12 @@
               </div>
             </a>
           </li>
+        {foreachelse}
+          <!-- 参加女子会がない場合 -->
+          <li>
+            <a href="/joshikai" class="to-link-joshikai">女子会の予定はこちら</a>
+          </li>
         {/foreach}
-
         </ul>
       </div>
     </div>
