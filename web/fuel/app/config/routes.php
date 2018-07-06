@@ -48,6 +48,9 @@ return array(
 	//myplan
 	'myway' => 'kinyu/myway/index',
 
+    //diagnostic_chart
+    'diagnosticchart' => 'kinyu/diagnosticchart/index',
+
 	//未公開
 	'gallery' => 'kinyu/gallery/index',
 	//'event/schedule'   => 'kinyu/event/schedule',
