@@ -28,33 +28,45 @@
                 <a href="/admin">マイページ</a>
               </li>
 
-              <!-- {if in_array('admin', $roles)} -->
+              {if in_array('admin', $roles)}
               <li>
                 <a href="/admin/news">ニュースの管理</a>
               </li>
+              {/if}
 
               <li>
                 <a href="/admin/report">レポートの管理</a>
               </li>
 
+              {if in_array('admin', $roles)}
               <li>
                 <a href="/admin/joshikai">女子会の管理</a>
               </li>
+              {/if}
+
+              {if in_array('admin', $roles)}
               <li>
                 <a href="/admin/joshikai/attend">女子会参加者の管理</a>
               </li>
+              {/if}
 
+              {if in_array('admin', $roles)}
               <li>
                 <a href="/admin/registlist">会員リスト一覧</a>
               </li>
+              {/if}
 
+              {if in_array('admin', $roles)}
               <li>
                 <a href="/admin/remindmailtemplates">リマインドメールの管理</a>
               </li>
+              {/if}
 
+              {if in_array('admin', $roles)}
               <li>
                 <a href="/admin/inquiries">お問い合わせの管理</a>
               </li>
+              {/if}
 
               <!-- {/if} -->
               <!-- <li>

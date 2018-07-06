@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>【きんゆう女子。】メンバー登録がありました！</title>
+<title>【きんゆう女子。】きん女。パスポートにメッセージがありました！</title>
 
 <!-- <link rel="stylesheet" type="text/css" href="https://irodori.fund/assets/css/irodori/email.css" /> -->
 
@@ -40,7 +40,9 @@
       <table>
         <tr>
           <td>
-            <h3>【きんゆう女子。】きん女。パスポートにメッセージがありました。</h3>
+            <h3>【きんゆう女子。】きん女。パスポートにメッセージがありました！</h3>
+              <p><?php echo $name ?>様よりメッセージ</p>
+              <p><?php echo $message ?></p>
 
             <style>
               .form-mail-p {

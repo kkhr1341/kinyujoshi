@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<div id="request-popup" class="report-detail-comment-popup" style="display: block;">
+<div id="request-popup" class="report-detail-comment-popup" style="display: none;">
    <div class="inner">
      <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
      <p class="main-message">きんゆう女子。編集部にコメントしていただき、誠にありがとうございます！</p>
@@ -36,14 +36,9 @@
 {literal}
 <script>
   $(function(){
-    // var title_frame_height = $('#title_frame').height();
-    // var page_title_height = $('.page_title').height();
-    
-    // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
-    // $('.page_title').css('padding-top', padding_top);
     
     $('#save').click(function(){
-      var url = "/api/comment/create";
+      var url = "/api/passports/create";
       var params = {};
 
       params.message = $('#message').val();
