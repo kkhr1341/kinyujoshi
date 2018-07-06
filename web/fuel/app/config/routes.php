@@ -139,6 +139,7 @@ return array(
 	'my/joshikai' => 'my/events/joshikailist',
 	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
 	'my/member_joshikai' => 'my/events/member_joshikai',
+	'my/kinjo'   => 'my/mykinjo/index',
 
 	'admin'   => 'admin/top',
 	//管理画面admin - 会員リスト
