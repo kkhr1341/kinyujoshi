@@ -1,0 +1,117 @@
+<div class="admin-normal-container withdrawal-block">
+  <div class="admin-normal-inner clear">
+
+    {$my_side}
+
+    <div class="admin-normal-main">
+
+      <form name="form1">
+        <div class="singlepage-form-block">
+
+          <p class="withdrawal-title">退会フォーム</p>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">よろしければ、退会の理由を教えていただけますか？<br>今後のサービス改善に参考にさせていただきます。（任意）</label>
+
+            <div class="checkbox-list">
+
+              {foreach from=$reasons item=reason}
+                <div class="checkbox-list-item">
+                  <input type="checkbox" name="withdrawal_reasons[]" id="withdrawal_reasons_{$reason.id}" value="{$reason.code}">
+                  <label for="withdrawal_reasons_{$reason.id}" class="checkbox"></label>
+                  <span>{$reason.name}</span>
+                  <!-- ↓その他の時に表示テキストエリア↓ -->
+                  {if $reason.code eq '9R000P'}
+                    <input type="text" name="withdrawal_reason_messages[]" class="form-control" placeholder="その他の方はこちら" value="">
+                  {/if}
+                  <!-- ↑その他の時に表示テキストエリア↑ -->
+                </div>
+              {/foreach}
+
+            </div>
+
+          </div>
+
+          <div class="regist-add-form-edit-el regist-add-form-edit-el02">
+            <label class="regist-add-form-edit-title">その他、編集部へメッセージやご意見（任意）</label>
+            <textarea id="message" name="message" class='form-control' rows="10"></textarea>
+          </div>
+
+          <div class="form-btn tx-center">
+            <button class="btn btn-kinyu" type="button" id="save">退会する</button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function(){
+
+    $('.checkbox-list-item').each(function() {
+        var input = $(this).find('input[name="withdrawal_reasons[]"]');
+
+        // ラベルクリック時にチェックボックスにチェックをいれる
+        $(this).find('span').on('click', function() {
+            input.trigger('click');
+        })
+
+        // その他テキストフォーカスにその他のチェックボックスにチェックを入れる
+        $(this).find('input[name="withdrawal_reason_messages[]"]').on('click', function() {
+            input.prop("checked",true);
+        })
+    })
+
+	$('#save').click(function(e){
+		e.preventDefault();
+
+		var url = "/api/users/withdrawal";
+
+        var withdrawal_reasons = $('.checkbox-list-item')
+        .filter(function(){
+            return $(this).find('[name="withdrawal_reasons[]"]:checked').val();
+        })
+        .map(function(){
+
+		  var code = $(this).find('[name="withdrawal_reasons[]"]:checked').val();
+
+		  var reason_text = $(this).find('input[name="withdrawal_reason_messages[]"]').val() || '';
+
+          return {
+            code: code,
+            reason_text: reason_text,
+          }
+        }).get();
+
+        var message = $('[name="message"]').val();
+
+		var params = {
+            "withdrawal_reasons": withdrawal_reasons,
+            "message": message,
+        };
+
+        bootbox.confirm("本当に退会しますか？", function (result) {
+            if (result) {
+                $(".loader-block").fadeIn(500);
+                setTimeout(function() {
+                    ajax.post(url, params, function(data){
+                        location.href = "/withdrawal/complete";
+                    })
+                    .done(function(data) {
+                        $(".loader-block").fadeOut(500);
+                    })
+                    .fail(function(error) {
+                        ts.error("退会処理に失敗しました。管理者までお問い合わせください。");
+                        $(".loader-block").fadeOut(500);
+                    })
+                }, 2000);
+            }
+            else {
+                ts.info("キャンセルしました");
+            }
+        });
+	});
+});
+</script>

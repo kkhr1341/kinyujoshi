@@ -1,0 +1,90 @@
+<div class="admin-normal-container mykinjo-block">
+  <div class="admin-normal-inner clear">
+    
+    {$my_side}
+    
+    <div class="admin-normal-main">
+
+
+      <div class="admin-normal-joshikai joshikailist-main">
+
+         <h3 class="mypage-content-title"><span>きん女。パスポート</span></h3>
+         <p class="mypage-content-description">
+          きん女。パスポートでは、メンバー限定の福利厚生や優待情報などを掲載予定です。<br>
+          現在、編集部で企画を頑張っているので、もうしばらくお待ちくださいませ♪<br>
+          <span style="display: block;height:12px;"></span>
+          また、どんなことができたら嬉しいか、メンバーさんと決めていきたいので、<br>
+          ぜひみなさんの声を聞かせていただけると嬉しいです(*´꒳`*)
+         </p>
+
+        <div class="request-block">
+          <img class="request-title" src="/images/my/mykinjo-textarea.png">
+          <textarea id="message" name="message" class="form-control" rows="10"></textarea>
+          <button class="btn btn-primary" type="button" id="save">送信する</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="request-popup" class="request-modal-popup">
+   <div class="inner">
+     <div class="request-modal-popup-close"><img src="/images/new/sp-header-close.png"></div>
+     <p class="main-message">アドバイスありがとうございます♪</p>
+     <p class="pc">
+     みなさまからいただいたアドバイスを参考に<br>「きん女。パスポート」の企画をブラッシュアップしてまいります。
+     <span style="display: block;height: 12px;"></span>
+     また何かありましたら、何でもお聞かせくださいね(*´꒳`*)<br>
+     今後ともよろしくお願いいたします♪
+     </p>
+     <p class="sp">
+     みなさまからいただいたアドバイスを参考に<br>「きん女。パスポート」の企画をブラッシュアップしてまいります。<br><br>
+     また何かありましたら、何でもお聞かせくださいね(*´꒳`*)<br>
+     今後ともよろしくお願いいたします♪
+     </p>
+     <p class="last-message">きんゆう女子。編集部より</p>
+   </div>
+  </div>
+</div>
+
+{literal}
+<script>
+  $(function(){
+    
+    $('#save').click(function(){
+      var url = "/api/passports/create";
+      var params = {};
+
+      params.message = $('#message').val();
+      
+      if (params.message == "") {
+        ts.error("「どんなことができたら嬉しいですか？」を入力してください。");
+        return false;
+      }
+
+      bootbox.confirm("内容を送信しますか？", function(result) {
+        if (result) {
+          $(".loader-block").fadeIn(500);
+          ajax.post(url, params, function(data){
+            document.getElementById("message").value="";
+            $('.request-modal-popup').fadeIn(800);          
+          })
+          .done(function(data) {
+              $(".loader-block").fadeOut(500);
+          })
+          .fail(function(error) {
+              ts.error("処理に失敗しました。管理者までお問い合わせください。");
+              $(".loader-block").fadeOut(500);
+          })
+        }
+        else {
+          ts.info("キャンセルしました");
+        }
+      });
+    });
+    $(".request-modal-popup-close").click(function() {
+      $(".request-modal-popup").fadeOut(800);
+    });
+  });
+</script>
+{/literal}

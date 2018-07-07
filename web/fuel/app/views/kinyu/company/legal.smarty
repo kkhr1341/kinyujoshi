@@ -1,71 +1,89 @@
-<div class="kinyu-main-single-block">
+<div class="kinyu-main-single-block company-info-block">
 
 <div class="company-info-title">
   <h2>特定商取引法に基づく表記</h2>
 </div>
 
 <div class="company-details-block clear">
-  <div class="company-details-menu">
-    <ul>
-      <li><a href="/company">運営会社</a></li>
-      <li><a href="/service">会員規約</a></li>
-      <li><a href="/privacy">プライバシーポリシー</a></li>
-      <li><a class="company-details-active">特定商取引法に基づく表記</a></li>
-      <li><a href="/contact">お問い合わせ</a></li>
-    </ul>
-  </div>
 
   <div class="company-details company-legal">
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 販売業者</h3>
-      <p class="description">株式会社TOE THE LINE</p>
+      <p class="description">
+        名称　　：　株式会社TOE THE LINE<br>
+        代表者　：　鈴木　万梨子<br>
+        住所　　：　東京都中央区日本橋茅場町1-5-8　東京証券会館B313<br>
+        電話番号：　03-6264-9003<br>
+        営業時間：　平日10時～18時（土日祝日は営業しておりません。）<br>
+      </p>
+    </div>
+
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お問合せ先</h3>
+      <p class="description">support@kinyu-joshi.jp<br><span style="color:red;">※</span>原則として、お問合せはメールにて承ります。あらかじめご了承ください。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 運営責任者</h3>
-      <p class="description">鈴木 万梨子</p>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> サービス名</h3>
+      <p class="description">「きんゆう女子。」</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 所在地</h3>
-      <p class="description">〒103-0025 東京都中央区日本橋茅場町1-5-8 東京証券会館B313</p>
-    </div>
-
-    <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 連絡先</h3>
-      <p class="description">email : support@kinyu-joshi.jp<br>電話番号 : 03-6264-9003<br><span style="color:red;">＊</span>お問い合わせはメールにて承ります。予めご了承ください。</p>
-    </div>
-
-    <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お申し込みの有効期限</h3>
-      <p class="description">イベント実施1日前まで</p>
-    </div>
-
-    <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 販売価格</h3>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 販売代金</h3>
       <p class="description">各イベントごとに記載</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 返品・キャンセル</h3>
-      <p class="description">キャンセルは受け付けいたしますが、所定のキャンセル料をいただきます。<br>イベント実施3日前までのキャンセルは無料、それ以降のキャンセルは全額返金不可となります。また、イベントによっては申込と同時にキャンセル料が発生する場合がございます。<br>
-      弊社都合でイベントが実施できない場合は、全額返金させていただきます。</p>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 商品代金以外の料金</h3>
+      <p class="description">インターネット接続には別途、ご契約の通信事業者への通信料が発生します。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払い方法及び、お支払い時期</h3>
-      <p class="description">・クレジットカード<br>イベント開催日に決済となります。<br><span style="display:block;height:8px;"></span>・代金引換<br>イベント参加時に現金でのお支払いになります。</p>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払方法</h3>
+      <p class="description">
+        ・クレジット決済（VISA・MasterCard・JCB・American Express・Discover・Dinars Club INTARNATIONAL）<br>
+        ・当日現金払い<br>
+        ・一部Peatix Inc.が提供する決済システムを利用しておりますので、同社の定めるところに従います。（<a href="https://about.peatix.com/ja/legal-company.html" target="_blank">https://about.peatix.com/ja/legal-company.html</a>）
+      </p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 商品の受け渡し時期および方法</h3>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お申込みの有効期限</h3>
+      <p class="description">イベント実施1日前まで</p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払い時期</h3>
+      <p class="description">
+        ・クレジット決済<br>
+        　各クレジットカード会社への請求は女子会翌日までに行います。<br>
+        ・当日現金払い<br>
+        　イベント当日、会場にて代金をお支払いください。<br>
+        ・一部Peatix Inc.が提供する決済システムを利用しておりますので、同社の定めるところに従います。（<a href="https://about.peatix.com/ja/legal-company.html" target="_blank">https://about.peatix.com/ja/legal-company.html</a>）
+      </p>
+    </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 商品の引渡し時期</h3>
       <p class="description">お申込みのイベント開催日に、イベント開催をもって引渡しになります。</p>
     </div>
 
     <div class="company-details-el">
-      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員情報変更・契約期間・解約について</h3>
-      <p class="description">会員情報変更・解約は、email : support@kinyu-joshi.jpよりお問い合わせいただければいつでも行うことができます。変更したい内容を明記の上お問い合わせください。</p>
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 返品・キャンセル</h3>
+      <p class="description">
+        ・サービスの性質上、イベント実施後の返品・キャンセルはいたしかねます。<br>
+        ・弊社都合によりイベントを開催することができなかった場合は、全額を返金させていただきます。<br>
+        ・原則として、イベント開催の３日前まで、キャンセルを受け付けます。それ以降は100％のキャンセル料を頂戴いたします。キャンセルを希望される場合には、弊社（ support@kinyu-joshi.jp）までご連絡ください。<br>
+        ・イベントにより、キャンセルをお受けできない場合がございます。その場合には、各イベントのお申込みページに記載しておりますので、ご確認ください。
+      </p>
     </div>
+
+    <div class="company-details-el">
+      <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員情報変更・退会について</h3>
+      <p class="description">会員情報変更はマイページから行うことができます。退会は、退会フォームよりいつでも行うことが可能です。退会された方の個人情報は当社が定めるプライバシーポリシーの定めに従い、適切に処理いたします。</p>
+    </div>
+
   </div>
 </div>
 </div>

@@ -36,7 +36,6 @@
   <thead>
     <tr>
       <!-- お名前 -->
-      <th></th>
       <th>登録日</th>
       <th>名前</th>
       <th>会員ID</th>
@@ -52,7 +51,8 @@
       <th style="display:none;">どこで、きんゆう女子。を知りましたか？</th>
       <th style="display:none;">きんゆう女子。で情報発信したいですか？</th>
       <th style="display:none;">金融機関の方ですか？</th>
-      <th style="width:350px;">自己紹介</th>
+      <th style="width:70px;">パス<br>設定有</th>
+      <th style="width:300px;">自己紹介</th>
       <th>編集部記入欄</th>
       <th>詳細</th>
       <th>pass済</th>
@@ -62,7 +62,6 @@
   <tbody>
     {foreach from=$registlist.datas item=email name=loop}
     <tr>
-      <td>{$smarty.foreach.loop.iteration} </td>
       <td>{$email.created_at|date_format:"Y.m.d"}</td>
       <td>{$email.name}</td>
       <td>{$email.username}</td>
@@ -85,7 +84,15 @@
       <td style="display:none;">{$email.where_from}</td>
       <td style="display:none;">{$email.transmission}</td>
       <td style="display:none;">{$email.job_kind}</td>
-      <td style="width:350px;">{$email.introduction}</td>
+      {if $email.is_user == 1}
+        <td style="width:70px;">
+          ○<br>
+          <a class="admin-registlist-more" href="/admin/registlist/{$email.code}" style="font-size: 8px;">リマインド</a>
+        </td>
+      {else}
+        <td style="width:70px;"></td>
+      {/if}
+      <td style="width:300px;">{$email.introduction}</td>
       <!-- 備考欄 -->
       <td style="background: #dbfffa;">{$email.edit_inner}</td>
       <td><a class="admin-registlist-more" href="/admin/registlist/{$email.code}">編集</a></td>

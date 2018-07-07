@@ -19,7 +19,7 @@
 
     <div id="kinyu-event-scroll-point" class="center">
 
-      <div id="joshikai-list" class="kinyu-event-list joshikai-main-el">
+      <div id="joshikai-list" class="kinyu-event-list joshiakai-now-list joshikai-main-el">
 
         <p class="kinyu-event-info-title">女子会一覧</p>
         <ul>
@@ -66,14 +66,13 @@
                         <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
                         {$event.event_date|date_format:"(%a)"|replace:"Sun":">日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
                       {/if}
-
                     </span>
+                    </p>
                     {if $event.applicable eq false}
                       <p class="joshikai-applicable">＊受付終了</p>
                     {else if $event.full eq true}
                       <p class="joshikai-applicable">＊満席</p>
                     {/if}
-                    </p>
                   </div>
                   <h3 class="event-title">{$event.title}</h3>
                   <div class="event-subbox">
@@ -86,6 +85,9 @@
           </li>
           {/foreach}
         </ul>
+        <div class="link-to">
+          <a href="/joshikai_past">過去の女子会一覧へ</a>
+        </div>
       </div>
 
       <!-- きんゆう女子会。って？ -->

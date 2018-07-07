@@ -1,0 +1,84 @@
+<div class="kinyu-list-block">
+  <div class="inner">
+
+    <h2 class="kinyu-top-main-title kinyu-top-search-title">"{$search_text}"を含むレポート一覧</h2>
+
+    <!-- <div class="kinyu-top-search">
+        <form action="/report/search" method="get">
+            <input type="text" name="search_text" class="search" placeholder="&#xf002; 検索する">
+        </form>
+    </div> -->
+    <div class="kinyu-top-search">
+        <form action="/report/search" method="get">
+            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+            <button>&#xf002; </button>
+        </form>
+    </div>
+
+    <div class="kinyu-top-list kinyu-top-report-list">
+      <ul class="clear">
+        {foreach from=$blogs.datas key="key" item=blog name=loopname}
+
+          {$fooo = $blog.main_image}
+          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+          <li>
+            <a href="/report/{$blog.code}">
+              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+              <div class="text-box">
+                <div class="kinyu-top-list-kind">
+                  {if $blog.kind == "女子会レポート"}
+                    <p>女子会レポート</p>
+                  {else if $blog.kind == "イベントレポート"}
+                    <p>イベントレポート</p>
+                  {else if $blog.kind == "取材レポート"}
+                    <p>取材レポート</p>
+                  {else if $blog.kind == "イベント告知"}
+                    <p>イベント告知</p>
+                  {else if $blog.kind == "コラム"}
+                    <p>コラム</p>
+                  {else}
+                    <p>レポート</p>
+                  {/if}
+                </div>
+                <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+              </div>
+            </a>
+          </li>
+        {foreachelse}  
+          <p class="none-hit-report">該当するレポートはありませんでした...。</p>
+        {/foreach}
+      </ul>
+    </div>
+    <div class="blog-pagenation tx-center">
+      {$pagination}
+    </div>
+
+
+    <script>
+      $(function() {
+
+        var hh = $(".kinyu-top-list li").innerWidth();
+        var mm = $(".kinyu-top-list").innerWidth();
+        var ss = $(".kinyu-top-introlist li").innerWidth();
+        var ggg = $(".kinyu-top-list-block").innerWidth();
+
+        $(window).load(function(){
+          var ww = $(".category-menu ul").height();
+          var zz = $(".category-menu").height();
+          console.log(ww);
+          console.log(zz);
+          $('.kinyu-top-introlist').css('margin-top',ww);
+        });
+
+        //$('.kinyu-top-list li').height(hh);
+        $('.category-menu').width(mm);
+        $('.kinyu-top-introlist li').height(ss);
+        $('.kinyu-header-top').width(ggg);
+      });
+    </script>
+
+
+
+  </div>
+</div>

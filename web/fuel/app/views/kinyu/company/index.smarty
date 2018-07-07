@@ -1,19 +1,10 @@
-<div class="kinyu-main-single-block">
+<div class="kinyu-main-single-block company-info-block">
 
 <div class="company-info-title">
   <h2>運営会社</h2>
 </div>
 
 <div class="company-details-block clear">
-  <div class="company-details-menu">
-    <ul>
-    	<li><a class="company-details-active">運営会社</a></li>
-      <li><a href="/service">会員規約</a></li>
-      <li><a href="/privacy">プライバシーポリシー</a></li>
-      <li><a href="/legal">特定商取引法に基づく表記</a></li>
-      <li><a href="/contact">お問い合わせ</a></li>
-    </ul>
-  </div>
 
   <div class="company-details company-legal">
     <div class="company-details-el">

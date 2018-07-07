@@ -7,8 +7,17 @@
 
 
       <div class="admin-normal-joshikai joshikailist-main">
-        <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
-        <ul class="clear">
+
+        <!-- <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p> -->
+
+        <div class="js-tab">
+
+        <div class="tab1 active">参加予定の女子会</div>
+        <div class="tab2">過去に参加した女子会</div>
+
+        </div>
+
+        <ul class="clear js-tab_content tab1 active">
 
           {foreach from=$applications item=application name=loopname}
 
@@ -26,7 +35,7 @@
                     {if $application.display_event_date}
                       {$application.display_event_date}
                     {else}
-                  　　 {$application.event_date|date_format:"Y.m.d"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+                      {$application.event_date|date_format:"Y.m.d"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
                     {/if}
                   </p>
                   <p class="title-text">{$application.title}</p>
@@ -42,9 +51,73 @@
             <a href="/joshikai" class="to-link-joshikai">今後の女子会の予定へ</a>
           </li>
         {/foreach}
+        </ul>
+
+        <ul class="clear js-tab_content tab2" style="display: none;">
+
+          {foreach from=$prev_applications item=application name=loopname}
+
+          {$fooo = $application.main_image}
+          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+          <!-- 女子会 -->
+          <!-- 現状、全ての女子会を表示 -->
+          <li>
+            <a href="/my/joshikai/{$application.application_code}" class="clear">
+              <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+              <div class="text-box">
+                <div class="text-box-inner">
+                  <p class="date-text">
+                    {if $application.display_event_date}
+                      {$application.display_event_date}
+                    {else}
+                      {$application.event_date|date_format:"Y.m.d"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+                    {/if}
+                  </p>
+                  <p class="title-text">{$application.title}</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        {/foreach}
 
         </ul>
       </div>
     </div>
   </div>
 </div>
+<script>
+$(function(){
+
+	/*=======================================
+	タブ切り替え
+	=========================================*/
+	// タブメニューをクリックしたとき
+	$('.js-tab > div').click(function(){
+
+		// タブメニューとタブコンテンツのクラス「active」を削除
+		$('.js-tab > div,.js-tab_content').removeClass('active');
+
+		// タブメニューのクラスを取得し、変数「tabClass」に格納（例：sky）
+		var tabClass = $(this).attr('class');
+
+		// クリックしたタブメニューにクラス「active」を付与
+		$(this).addClass('active');
+
+		// それぞれのタブコンテンツに対して
+		$('.js-tab_content').each(function(){
+
+			// 変数「tabClass」と、同じクラスがついたタブコンテンツに
+			if($(this).attr('class').indexOf(tabClass) != -1){
+
+				// クラス「active」を付与し、フェードインしながら表示
+				$(this).addClass('active').fadeIn(1000);
+
+			}else{
+
+				$(this).hide();
+			}
+		});
+	});
+});
+</script>

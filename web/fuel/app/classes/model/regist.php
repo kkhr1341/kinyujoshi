@@ -38,6 +38,9 @@ class Regist extends Base
             ->add_rule('mb_convert_kana', 'a', 'utf-8')
             ->add_rule('valid_date');
 
+        $val->add('prefecture', '都道府県')
+            ->add_rule('required');
+
         $val->add('profile_image', 'プロフィール画像');
 
         $val->add('provider');
@@ -103,17 +106,18 @@ class Regist extends Base
             // プロフィール登録
             $profile_code = Profiles::getNewCode('profiles', 6);
 
-            $profile = [
+            $profile = array(
                 'code' => $profile_code,
                 'username' => $username,
                 'name' => $params['name'],
                 'name_kana' => $params['name_kana'],
                 'nickname' => $params['name'],
                 'birthday' => $params['birthday'],
+                'prefecture' => $params['prefecture'],
                 'url' => $params['url'],
                 'introduction' => $params['introduction'],
 //              'gender' => $params['gender']
-            ];
+            );
 
             if (isset($params["profile_image"]) && $params["profile_image"]) {
                 $profile["profile_image"] = $params["profile_image"];
@@ -192,6 +196,7 @@ class Regist extends Base
         $name = $params['name'];
         $name_kana = $params['name_kana'];
         $age = $params['birthday'];
+        $prefecture = $params['prefecture'];
         $not_know = $params['not_know'];
         $interest = $params['interest'];
         $ask = $params['ask'];
@@ -209,6 +214,7 @@ class Regist extends Base
                 'name' => $name,
                 'name_kana' => $name_kana,
                 'age' => $age,
+                'prefecture' => $prefecture,
                 'not_know' => $not_know,
                 'interest' => $interest,
                 'ask' => $ask,
@@ -367,6 +373,7 @@ class Regist extends Base
             "member_regist.industry_other",
             "member_regist.created_at",
             "member_regist.updated_at",
+            \DB::expr("exists(select * from users where users.username = member_regist.username) as is_user"),
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
             \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
             )
@@ -389,7 +396,8 @@ class Regist extends Base
             "member_regist.code", 
             "member_regist.username", 
             "member_regist.age", 
-            "member_regist.not_know", 
+            "member_regist.prefecture",
+            "member_regist.not_know",
             "member_regist.interest", 
             "member_regist.ask", 
             "member_regist.income", 
