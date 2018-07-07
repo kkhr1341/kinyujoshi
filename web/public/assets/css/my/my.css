@@ -28,7 +28,7 @@
   
 }
 .mykinjo-block .request-block .request-title {
-  width: 320px;
+  width: 360px;
   display: block;
   margin: 0 auto;
 }
@@ -749,7 +749,20 @@ footer {
   font-weight: bold;
   color: #fff;
   line-height: 18px;
-
+}
+.admin-normal-container .mypage-content-mainimg {
+  height: 400px;
+  background: gray;
+  margin-bottom: 45px;
+  position: relative;
+}
+.admin-normal-container .mypage-content-mainimg .white-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.1);
 }
 .admin-normal-container .mypage-content-title {
   font-size: 22px;
@@ -800,18 +813,20 @@ footer {
   line-height: 22px;
   width: 80%;
   margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 .admin-normal-main .profile-alert-block {
   text-align: center;
 }
 .admin-normal-main .profile-alert {
   display: inline-block;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 20px;
   position: relative;
   /*color: #77cbc0;
   font-weight: bold;*/
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   padding: 0px 24px; 
   border-left: 1px solid #8ddcd1;
   border-right: 1px solid #8ddcd1;
@@ -1158,6 +1173,12 @@ footer {
   padding: 4px 40px;
   display: inline-block;
   margin-bottom: 32px;
+}
+.mypage-account-block .notice-email-sub {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #828282;
+
 }
 
 

@@ -7,13 +7,21 @@
 
 
       <div class="admin-normal-joshikai joshikailist-main">
+        <div class="mypage-content-mainimg" style="background:url(/images/my/my_passport_img.jpg) center center / cover no-repeat;"><div class="white-modal"></div></div>
 
          <h3 class="mypage-content-title"><span>きん女。パスポート</span></h3>
-         <p class="mypage-content-description">
+         <p class="mypage-content-description pc">
           きん女。パスポートでは、メンバー限定の福利厚生や優待情報などを掲載予定です。<br>
           現在、編集部で企画を頑張っているので、もうしばらくお待ちくださいませ♪<br>
           <span style="display: block;height:12px;"></span>
           また、どんなことができたら嬉しいか、メンバーさんと決めていきたいので、<br>
+          ぜひみなさんの声を聞かせていただけると嬉しいです(*´꒳`*)
+         </p>
+         <p class="mypage-content-description sp">
+          きん女。パスポートでは、メンバー限定の福利厚生や優待情報などを掲載予定です。
+          現在、編集部で企画を頑張っているので、もうしばらくお待ちくださいませ♪<br>
+          <span style="display: block;height:12px;"></span>
+          また、どんなことができたら嬉しいか、メンバーさんと決めていきたいので、
           ぜひみなさんの声を聞かせていただけると嬉しいです(*´꒳`*)
          </p>
 
@@ -58,7 +66,7 @@
       params.message = $('#message').val();
       
       if (params.message == "") {
-        ts.error("「どんなことができたら嬉しいですか？」を入力してください。");
+        ts.error("「どんな優待や特典があると嬉しいですか？」を入力してください。");
         return false;
       }
 

@@ -23,7 +23,7 @@
               <input type="hidden" id="profile_image" value="{$profile.profile_image}">
             </div>
             <p class="profile-catchcopy">
-              <label class="regist-add-form-edit-title2">ひとことキャッピコピー</label>
+              <label class="regist-add-form-edit-title2">ひとこと or 人生で叶えたい夢や目標など</label>
               <input type="text" id="catchcopy" class="form-control" placeholder="" value="{$profile.catchcopy}">
             </p>
           </div>
