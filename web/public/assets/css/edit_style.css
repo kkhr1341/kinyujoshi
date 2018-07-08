@@ -3043,6 +3043,9 @@ input[type=checkbox]:checked + .checkbox:before {
   margin: 0 auto;
   padding: 40px 0px 60px; 
 }
+.company-details-block a {
+  color: #5499d8;
+}
 /*.company-details-menu {
   width: 250px;
   height: 400px;
