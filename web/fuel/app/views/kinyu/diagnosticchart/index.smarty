@@ -100,63 +100,80 @@ $(function(){
   var $answerTitle       = $('.diagnosticchart-answer-title');
   var $answerDescription = $('.diagnosticchart-answer-description');
 
+  var routes = [];
+
   function answer(route_id) {
-    var route_id = route_id || 1;
+    var route_id = route_id || '';
 
     $questionContainer.fadeOut();
 
     $.getJSON('/api/diagnosticchart/route/' + route_id, function(response) {
-      var label        = response.data.label;
+      var current_route_code = response.data.current_route_code;
+      var question = response.data.question;
 
-      var yes_type_id = response.data.yes_type_id || '';
-      var yes_route_id = response.data.yes_route_id || '';
-      var no_type_id  = response.data.no_type_id || '';
-      var no_route_id  = response.data.no_route_id || '';
+      var yes_type_code = response.data.yes_type_code || '';
+      var yes_route_code = response.data.yes_route_code || '';
+      var no_type_code = response.data.no_type_code || '';
+      var no_route_code = response.data.no_route_code || '';
 
-      $question.html(label.replace(/\\n/g, '<br>'));
+      $question.html(question.replace(/\\n/g, '<br>'));
 
-      $yesButton.data('answer', yes_route_id).off('click').on('click', function() {
-        if(yes_type_id) {
+      routes.push(current_route_code);
+
+      $yesButton.off('click').on('click', function() {
+        if(yes_type_code) {
           // complete
-          completed(yes_type_id);
-        } else if(yes_route_id) {
+          completed(yes_type_code);
+        } else if(yes_route_code) {
           // answer
-          answer(yes_route_id);
+          answer(yes_route_code);
         }
       });
-      $noButton.data('answer',  no_route_id).off('click').on('click', function() {
-        if(no_type_id) {
+      $noButton.off('click').on('click', function() {
+        if(no_type_code) {
           // complete
-          completed(no_type_id);
-        } else if(no_route_id) {
+          completed(no_type_code);
+        } else if(no_route_code) {
           // answer
-          answer(no_route_id);
+          answer(no_route_code);
         }
        });
        $questionContainer.fadeIn();
     });
   }
 
-  function completed(type_id) {
+  function completed(type_code) {
     $questionContainer.fadeOut();
-    $.getJSON('/api/diagnosticchart/type/' + type_id, function(response) {
-      var color = response.data.color || '000000';
-      var catch_copy = response.data.catch_copy || '';
-      var charactor_image = response.data.charactor_image || '';
-      var type = response.data.type || '';
-      var title = response.data.title || '';
-      var description  = response.data.description || '';
 
-      $answerCatchcopy.html(catch_copy);
-      $answerCharactor.html($('<img>', {src:charactor_image}));
-      $answerType.css('color', color);
-      $answerType.html(type);
-      $answerTitle.html(title);
-      $answerTitle.css('color', color);
-      $answerDescription.html(description.replace(/\\n/g, '<br>'));
-      $answerDescription.css('border', '2px solid ' + color);
+    $.ajax({
+      type: "POST",
+      url: "/api/diagnosticchart/type/",
+      data: {
+          "type_code": type_code,
+          "routes": routes
+      },
+      success: function(response){
 
-      $answerContainer.fadeIn();
+        var value = JSON.parse(response);
+
+        var color = '000000';
+        var catch_copy = value.data.catch_copy || '';
+        var charactor_image = value.data.charactor_image || '';
+        var type = value.data.type || '';
+        var title = value.data.title || '';
+        var description = value.data.description || '';
+
+        $answerCatchcopy.html(catch_copy);
+        $answerCharactor.html($('<img>', {src:charactor_image}));
+        $answerType.css('color', color);
+        $answerType.html(type);
+        $answerTitle.html(title);
+        $answerTitle.css('color', color);
+        $answerDescription.html(description.replace(/\\n/g, '<br>'));
+        $answerDescription.css('border', '2px solid ' + color);
+
+        $answerContainer.fadeIn();
+      }
     });
   }
 

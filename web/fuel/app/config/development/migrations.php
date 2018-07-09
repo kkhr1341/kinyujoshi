@@ -93,6 +93,12 @@ return array(
         84 => '090_create_prefectures',
         85 => '091_add_prefecture_to_profiles',
         86 => '092_create_passports',
+        87 => '093_create_diagnostic_chart_routes',
+        88 => '094_create_diagnostic_chart_route_paths',
+        89 => '095_create_diagnostic_chart_types',
+        90 => '096_create_diagnostic_chart_route_types',
+        91 => '097_create_diagnostic_chart_type_users',
+        92 => '098_create_diagnostic_chart_route_users',
       ),
     ),
     'module' => 
