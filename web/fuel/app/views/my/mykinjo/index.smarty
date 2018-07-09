@@ -1,0 +1,140 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+    
+    {$my_side}
+    
+    <div class="admin-normal-main">
+
+
+      <div class="admin-normal-joshikai joshikailist-main">
+        <div class="mypage-content-mainimg" style="background:url(/images/my/my_kinjo_img.jpg) center center / cover no-repeat;"><div class="white-modal"></div></div>
+         <h3 class="mypage-content-title last-fix"><span>myきん女。</span></h3>
+         <p class="mypage-content-description pc">
+          myきん女。では、これから参加する女子会や、<br>
+          今までに参加した女子会などをチェックすることができます。
+          <span style="display: block;height:12px;"></span>
+          これからも楽しい機能をアップしていきますので<br>
+          たまに見にきてくださいね。お気軽にどうぞ♪</p>
+         <p class="mypage-content-description sp">
+           myきん女。では、これから参加する女子会や、
+          今までに参加した女子会などをチェックすることができます。
+          <span style="display: block;height:12px;"></span>
+          これからも楽しい機能をアップしていきますので
+          たまに見にきてくださいね。お気軽にどうぞ♪</p>
+         </p>
+
+        <div class="js-tab">
+
+        <div class="tab1 active">参加予定の女子会</div>
+        <div class="tab2">過去に参加した女子会</div>
+
+        </div>
+
+        <ul class="clear js-tab_content tab1 active">
+
+          {foreach from=$applications item=application name=loopname}
+
+          {$fooo = $application.main_image}
+          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+          
+          <!-- 女子会 -->
+          <!-- 現状、全ての女子会を表示 -->
+          <li>  
+            <a href="/my/joshikai/{$application.application_code}" class="clear">
+              <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+              <div class="text-box">
+                <div class="text-box-inner">
+                  <p class="date-text">
+                    {if $application.display_event_date}
+                      {$application.display_event_date}
+                    {else}
+                      {$application.event_date|date_format:"Y.m.d"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+                    {/if}
+                  </p>
+                  <p class="title-text">{$application.title}</p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+        {foreachelse}
+          <!-- 参加女子会がない場合 -->
+          <li>
+            <p class="joshikai-no">参加予定の女子会はありません..。</p>
+            <a href="/joshikai" class="to-link-joshikai">今後の女子会の予定へ</a>
+          </li>
+        {/foreach}
+        </ul>
+
+        <ul class="clear js-tab_content tab2" style="display: none;">
+
+          {foreach from=$prev_applications item=application name=loopname}
+
+          {$fooo = $application.main_image}
+          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+          <!-- 女子会 -->
+          <!-- 現状、全ての女子会を表示 -->
+          <li>
+            <a href="/my/joshikai/{$application.application_code}" class="clear">
+              <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+              <div class="text-box">
+                <div class="text-box-inner">
+                  <p class="date-text">
+                    {if $application.display_event_date}
+                      {$application.display_event_date}
+                    {else}
+                      {$application.event_date|date_format:"Y.m.d"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+                    {/if}
+                  </p>
+                  <p class="title-text">{$application.title}</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        {foreachelse}
+          <!-- 参加女子会がない場合 -->
+          <li>
+            <a href="/joshikai" class="to-link-joshikai">女子会の予定はこちら</a>
+          </li>
+        {/foreach}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function(){
+
+  /*=======================================
+  タブ切り替え
+  =========================================*/
+  // タブメニューをクリックしたとき
+  $('.js-tab > div').click(function(){
+
+    // タブメニューとタブコンテンツのクラス「active」を削除
+    $('.js-tab > div,.js-tab_content').removeClass('active');
+
+    // タブメニューのクラスを取得し、変数「tabClass」に格納（例：sky）
+    var tabClass = $(this).attr('class');
+
+    // クリックしたタブメニューにクラス「active」を付与
+    $(this).addClass('active');
+
+    // それぞれのタブコンテンツに対して
+    $('.js-tab_content').each(function(){
+
+      // 変数「tabClass」と、同じクラスがついたタブコンテンツに
+      if($(this).attr('class').indexOf(tabClass) != -1){
+
+        // クラス「active」を付与し、フェードインしながら表示
+        $(this).addClass('active').fadeIn(1000);
+
+      }else{
+
+        $(this).hide();
+      }
+    });
+  });
+});
+</script>

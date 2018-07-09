@@ -39,6 +39,9 @@
   display: none;
 }
 
+/* 文字省略 */
+
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
    ヘッダー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -47,7 +50,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: rgba(255,255,255,.93);
   z-index: 1005;
   text-align: center;
 }
@@ -97,7 +100,7 @@
 .kinyu-header-nav li:after {
   content: "";
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: #8ddcd1;
   position: absolute;
   bottom: 0;
@@ -149,13 +152,22 @@
 /*  */
 .header-profile-block {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 45px;
+  height: 45px;
   position: absolute;
   top: 16px;
   left: 16px;
   border-radius: 50%;
   transition: .5s;
+}
+/*マイページにログイン*/
+.kinyu-header-mylink {
+  background: #8ddcd1;
+  padding: 4px 20px;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  color: #fff;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -464,9 +476,8 @@
   height: 8px;
   display: inline-block;
   border-radius: 0;
-  background: #fff;
+  background: #8ddcd1;
   opacity: .5;
-  box-shadow: 0px 0px 1px 0px #000;
 }
 .kinyu-top-introlist-pickup .swiper-pagination-bullet-active {
     opacity: 1;
@@ -593,16 +604,16 @@
 
 }
 .kinyu-top-member-list {
-  height: 300px;
+  height: 350px;
   margin-top: 24px;
 }
 .kinyu-top-member-list .img-box {
-  width: 50%;
+  width: 55%;
   float: left;
   height: 100%;
 }
 .kinyu-top-member-list .text-box {
-  width: 50%;
+  width: 45%;
   float: right;
   padding-left: 36px;
 }
@@ -612,7 +623,7 @@
   background: #8ddcd1;
 }
 .kinyu-top-member-list .text-box {
-  margin-top: 12px;
+  margin-top: 24px;
 }
 .kinyu-top-member-list .text-box .main-title {
   font-size: 18px;
@@ -767,7 +778,6 @@
 .kinyu-top-list-title {
   font-size: 13px;
   line-height: 20px;
-  /*padding: 0px 4px 10px;*/
   height: 40px;
   width: 100%;
   box-sizing: border-box;
@@ -1695,8 +1705,6 @@
   font-size: 22px;
   line-height: 34px;
 }
-.kinyu-joshikai-detail-el-block {
-}
 
 /* 女子会内文章 */
 .joshikai-detail-el-content-box h2 {
@@ -1899,40 +1907,6 @@
   font-size: 20px;
   margin-top: 24px;
   color:#8ddcd1;
-}
-
-/* 女子会予約後のメッセージ */
-.joshikai-complete-message {
-  padding: 60px 0px 80px;
-  text-align: center;
-  background: #f7f7f7;
-}
-.joshikai-complete-message h2 {
-  font-size: 22px;
-  color: #77cbc0;
-  font-weight: bold;
-}
-.joshikai-complete-message p {
-  margin-top: 20px;
-}
-.joshikai-complete-message .message-top {
-  display: block;
-  margin: 0 auto;
-  width: 220px;
-  font-size: 13px;
-  padding: 10px 0px;
-  text-align: center;
-  background: #8ddcd1;
-  color: #fff;
-  margin-top: 36px;
-  transition: .5s;
-  border: 1px solid #8ddcd1;
-}
-.joshikai-complete-message .message-top02 {
-  margin-top: 12px!important;
-  border: 1px solid #8ddcd1;
-  background: #fff;
-  color: #77cbc0;
 }
 
 /* 女子会チケット前の画面 */
@@ -2297,8 +2271,8 @@
 /* 決済画面 - キャンセルポリシー */
 .cancel-block {
   width: 100%;
-  border-top: 1px solid #77cbc0;
-  border-bottom: 1px solid #77cbc0;
+  border-top: 1px solid #8ddcd1;
+  border-bottom: 1px solid #8ddcd1;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 36px;
@@ -2882,8 +2856,8 @@ input[type=checkbox]:checked + .checkbox:before {
   padding-bottom: 50px;
 }
 .about-kinyu-header {
-  border-top: 1px solid #77cbc0;
-  border-bottom: 1px solid #77cbc0;
+  border-top: 1px solid #8ddcd1;
+  border-bottom: 1px solid #8ddcd1;
   text-align: center;
   padding:8px 0px;
   background: rgba(255, 255, 255, 0.5);
@@ -3138,6 +3112,41 @@ input[type=checkbox]:checked + .checkbox:before {
   margin-top: 16px;
   padding-left: 0px;
 }
+
+/* 完了画面 */
+.complete-message {
+  padding: 60px 0px;
+  text-align: center;
+  background: #f7f7f7;
+}
+.complete-message h2 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #77cbc0;
+}
+.complete-message p {
+  margin-top: 32px;
+}
+.complete-message .message-top {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  font-size: 13px;
+  padding: 10px 0px;
+  text-align: center;
+  background: #8ddcd1;
+  color: #fff;
+  margin-top: 36px;
+  transition: .5s;
+  border: 1px solid #8ddcd1;
+}
+.complete-message .message-top02 {
+  margin-top: 12px!important;
+  border: 1px solid #8ddcd1;
+  background: #fff;
+  color: #77cbc0;
+}
+
 .company-contact .description {
   text-align: center;
 }
@@ -3199,19 +3208,6 @@ input[type=checkbox]:checked + .checkbox:before {
   font-size: 14px;
   line-height: 25px;
 }
-/*.qa-list .answer-text:before {
-  content: "Ａ";
-  width: 28px;
-  height: 28px;
-  background: #cceae6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #fff;
-}*/
 
 
 
@@ -3336,7 +3332,7 @@ input[type=checkbox]:checked + .checkbox:before {
   background: #f9f9f9;
 }
 .login-contents-intro {
-  margin-bottom: 42px;
+  /*margin-bottom: 42px;*/
   text-align: center;
 }
 .login-contents-intro .caution {
@@ -3555,7 +3551,7 @@ input::-webkit-input-placeholder {
   font-size: 22px;
   padding-bottom: 2px;
   display: inline-block;
-  border-bottom: 1px solid #77cbc0;
+  border-bottom: 1px solid #8ddcd1;
   margin: 0 auto;
   margin-bottom: 12px;
 }
@@ -3715,6 +3711,7 @@ input::-webkit-input-placeholder {
 }
 .regist-add-form-edit-title {
   font-size: 14px;
+  line-height: 22px;
   color: #77cbc0;
   margin-bottom: 10px;
   width: 100%;
@@ -3767,6 +3764,9 @@ input::-webkit-input-placeholder {
   width: 100px;
 }
 .regist-add-form-edit-el select#age3 {
+  width: 100px;
+}
+.regist-add-form-edit-el select#prefecture {
   width: 100px;
 }
 .regist-add-form-edit-el .regist-selectarea p {
@@ -4013,50 +4013,80 @@ input::-webkit-input-placeholder {
   background-color: #f7f7f7;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  チェックボックス
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.checkbox-list {
+    /*background: #ffffff;*/
+    padding: 10px;
+}
+
+.checkbox-list-item {
+    font-size: 12px;
+    /*display: inline-block;*/
+    padding: 4px;
+    /*background: #f7f7f7;*/
+    margin-top: 8px;
+    transition: .5s;
+}
+.checkbox-list-item input[type=checkbox] {
+    display: none;
+}
+.checkbox-list-item.checked-input {
+    background: #e0f7f4;
+}
+.checkbox-list-item label {
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    background-color: #f6f7f8;
+    vertical-align: middle;
+    cursor: pointer;
+    width: auto!important;
+    padding-left: 0px!important;
+}
+.checkbox-list-item label:before {
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    display: block;
+    margin-top: -9px;
+    width: 3px;
+    height: 7px;
+    border-right: 2px solid #77cbc0;
+    border-bottom: 2px solid #77cbc0;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox-list-item label:after {
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -10px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #bbb;
+    content: '';
+}
+.checkbox-list-item span {
+    cursor: pointer;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　フッター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-/*footer {
-  padding: 100px 0px 36px;
-}
-footer .footer-menu {
-  text-align: center;
-  margin-bottom: 36px;
-}
-.singlepage-footer {
-  margin: 0 auto;
-  padding: 80px 0px 20px;
-}
-.footer-logo {
-  width: 260px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-}
-.footer-logo img {
-  width: 100%;
-}
-footer .navi_kinyu-submenu-el {
-  display: inline-block;
-  margin-right: 8px;
-}
-footer .navi_kinyu-submenu-el a {
-  display: block;
-  padding: 2px 8px;
-  margin-right: 8px;
-  transition: 0.5s;
-  font-size: 12px;
-}
-footer .navi_kinyu-submenu-copy {
-  font-size: 10px;
-  line-height: 14px;
-  text-align: center;
-}
-.navi_kinyu-submenu-copy span {
-  display: block;
-  margin-bottom: 4px;
-}*/
-
 footer {
   border-bottom: 1px solid #eee;
   background: #fff;
@@ -4091,6 +4121,7 @@ footer {
 .new_area a {
   display: block;
   line-height: 0;
+  transition: .5s;
 }
 .new_area img {
   width: 100%;
@@ -4136,6 +4167,7 @@ footer {
 .footer-menu ul > li {
   margin-bottom: 10px;
   font-size: 12px;
+  transition: .5s;
 }
 .footer-menu ul > li:last-child {
   margin-bottom: 0px;
@@ -4510,6 +4542,13 @@ to {
 }
 .joshikai-past-list .link-to:hover,
 .joshiakai-now-list .link-to:hover {
+  opacity: .5;
+}
+.footer-menu ul > li:hover,
+.new_area a:hover {
+  opacity: .5;
+}
+.message-top:hover {
   opacity: .5;
 }
 

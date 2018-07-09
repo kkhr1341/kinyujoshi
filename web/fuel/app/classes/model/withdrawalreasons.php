@@ -14,7 +14,7 @@ class Withdrawalreasons extends Base
             ->execute()
             ->as_array();
 
-        $keys = [];
+        $keys = array();
         foreach ($reasons as $key => $reason) {
             $keys[$reason['code']] = $reason;
         }

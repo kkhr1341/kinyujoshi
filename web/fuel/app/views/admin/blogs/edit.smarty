@@ -169,12 +169,12 @@
 
                 <div class="form-group">
                     <label class="form-group-event-label">認証ユーザー名</label>
-                    <input type="text" id="authentication_user" class="form-control" placeholder="">
+                    <input type="text" id="authentication_user" class="form-control" placeholder="" value={$blogs.authentication_user}>
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">認証パスワード</label>
-                    <input type="text" id="authentication_password" class="form-control" placeholder="">
+                    <input type="text" id="authentication_password" class="form-control" placeholder="" value={$blogs.authentication_password}>
                 </div>
             </div>
             <div class="form-right">

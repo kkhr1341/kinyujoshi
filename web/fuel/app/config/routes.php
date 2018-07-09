@@ -50,7 +50,6 @@ return array(
 
     //diagnostic_chart
     'diagnosticchart' => 'kinyu/diagnosticchart/index',
-    'diagnosticchart/complete/(:any)' => 'kinyu/diagnosticchart/complete/$1',
 
 	//未公開
 	'gallery' => 'kinyu/gallery/index',
@@ -108,6 +107,9 @@ return array(
 	//よくあるご質問
 	'faq' => 'kinyu/company/faq',
 
+	//女子会参加規約
+	'joshikai_policy' => 'kinyu/company/joshikai',
+
 		//企業用ページ
 	'business' => 'kinyu/company/business',
 
@@ -140,6 +142,8 @@ return array(
 	'my/joshikai' => 'my/events/joshikailist',
 	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
 	'my/member_joshikai' => 'my/events/member_joshikai',
+	'my/kinjo'   => 'my/mykinjo/index',
+	'my/passport'   => 'my/passport/index',
 
 	'admin'   => 'admin/top',
 	//管理画面admin - 会員リスト

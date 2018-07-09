@@ -6,45 +6,72 @@
     <div class="admin-normal-main">
 
       <div class="kinyu-top-list kinyu-top-member_joshikai">
-        <h3 class="kinyu-top-main-title"><span>メンバー限定の女子会</span></h3>
-        <ul class="clear">
-        {foreach from=$events key="key" item=event name=loopname}
+        <!-- h3 class="kinyu-top-main-title"><span>myきん女。</span></h3> -->
 
-          {$fooo = $event.main_image}
-          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+        <div class="mykinjo-block">
+          
+          <div class="mykinjo-thub" style="background: gray;"></div>
+          
+          <div class="text-box">
+            <p class="title">テキストテキストテキストテキストテキスト<br>テキストテキストテキストテキスト</p>
+            <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
 
-          <li>
-            <a href="/joshikai/{$event.code}">
-              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
-              <div class="text-box">
-                <div class="kinyu-top-list-kind kinyu-top-event-kind">
-                  <p>
-                  <span class="date-box">
-                    <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
-                    {$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
-                    </span>
-                    {$event.event_start_datetime}〜{$event.event_end_datetime}</p>
-                  {if $event.applicable eq false}
-                    <p class="joshikai-applicable">＊受付終了</p>
-                  {/if}
-                </div>
-                <h3 class="kinyu-top-list-title">{$event.title}</h3>
-              </div>
-            </a>
-          </li>
-        {foreachelse}
-        </ul>
+          <div class="request-block">
+            <img class="request-title" src="/images/my/mykinjo-textarea.png">
+            <textarea id="message" name="message" class="form-control" rows="10"></textarea>
+            <button class="btn btn-primary" type="button" id="save">送信する</button>
+          </div>
+
+        </div>
+      
       </div>
-      <!-- 参加女子会がない場合 -->
-      <div class="admin-normal-joshikai joshikailist-main">
-        <ul>
-          <li>
-            <p class="joshikai-no">女子会企画中です..。</p>
-            <a href="/joshikai" class="to-link-joshikai">今後の女子会の予定へ</a>
-          </li>
-        </ul>
-      </div>
-      {/foreach}    
     </div>
   </div>
 </div>
+
+
+
+{literal}
+<script>
+
+$(function(){
+  
+  $('#save').click(function(){
+    var url = "/api/comment/create";
+    var params = {};
+
+    params.message = $('#message').val();
+    
+    if (params.message == "") {
+      ts.error("「どんなことができたら嬉しいですか？」の部分を入力してください。");
+      return false;
+    }
+
+    bootbox.confirm("「できたら嬉しいこと」を送信しますか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          document.getElementById("message").value="";
+
+          $(".loader-block").fadeIn(500);
+
+          setTimeout(function(){
+            $(".loader-block").fadeOut(500);
+          },2500);
+
+          setTimeout(function(){
+            $('.report-detail-comment-popup').fadeIn(800);  
+          },3000);
+        });
+      }
+      else {
+        ts.info("キャンセルしました");
+      }
+    });
+  });
+  $(".report-detail-comment-popup-close").click(function() {
+    $(".report-detail-comment-popup").fadeOut(800);
+  });
+});
+</script>
+{/literal}

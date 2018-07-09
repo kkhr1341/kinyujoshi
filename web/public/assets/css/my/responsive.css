@@ -3,15 +3,52 @@
 ---------------------------------- */
 @media screen and (max-width: 1023px) {
 
+.btn {
+  font-size: 12px;
+  line-height: inherit;
+  padding: 10px 30px;
+  font-weight: 400;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - myきん女。
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.admin-normal-container .mypage-content-title {
+  font-size: 16px;
+  line-height: 16px;
+}
+.mypage-content-description {
+  width: 92%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 11px;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #ececec;
+}
+.mykinjo-block .request-block .request-title {
+  width: 82%;
+}
+.mykinjo-block .request-block textarea {
+  background: #f9f9f9;
+}
+.admin-normal-container .mypage-content-mainimg {
+  height: 200px;
+  background: gray;
+  margin-bottom: 36px;
+  position: relative;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   一般ユーザー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container {
   padding-top: 42px;
+  background: #fff;
 }
 .admin-normal-container .admin-normal-inner {
   width: 100%;
-  padding: 36px 0px 70px;
+  padding: 36px 0px 50px;
 }
 .admin-normal-side {
   display: none;
@@ -23,7 +60,6 @@
   padding: 0px;
   border-left: none;
 }
-
 /* ヘッダー */
 .admin-normal-header {
   position: fixed;
@@ -36,8 +72,9 @@
 .admin-normal-header .link-to-top {
   display: inline-block;
   color: #fff;
-  font-weight: bold;
-  margin-top: 11px;
+  font-weight: 400;
+  margin-top: 13px;
+  font-size: 11px;
 }
 .admin-normal-circle-logo {
   width: 40px;
@@ -134,7 +171,7 @@
 .admin-normal-navigation p {
   font-size: 16px;
   color: #77bfb5;
-  font-weight: bold;
+  font-weight: normal;
 }
 .admin-normal-navigation li {
   text-align: left;
@@ -144,10 +181,10 @@
   border-bottom: none;
 }
 .admin-normal-navigation li a {
-  font-size: 13px;
+  font-size: 12px;
 }
 .admin-normal-navigation li.kinyu-top {
-  font-weight: bold;
+  font-weight: 400;
   padding-top: 12px;
   width: 100%;
   position: relative;
@@ -177,8 +214,8 @@
   line-height: 14px;
   margin-top: 32px;
   margin-bottom: 16px;
-  font-weight: bold;
-  color: #5FB3A7;
+  font-weight: 400;
+  color: #77cbc0;
 }
 .admin-normal-profile .profile-catchcopy {
   font-size: 12px;
@@ -195,11 +232,14 @@
 .joshikailist-main {
   padding-top: 0px;
 }
+.admin-normal-joshikai li {
+}
 .admin-normal-joshikai li a {
   height: 82px;
+  background: #f9f9f9;
 }
 .admin-normal-joshikai-title {
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 8px;
 }
 .admin-normal-joshikai li .img-box {
@@ -208,17 +248,18 @@
 .admin-normal-joshikai li .text-box {
   width: 75%;
   padding: 0px 12px;
+  background: none;
 }
 .admin-normal-joshikai li .text-box .date-text {
-  font-size: 12px;
-  line-height: 12px;
+  font-size: 11px;
+  line-height: 11px;
   margin-bottom: 6px;
-  font-weight: bold;
+  font-weight: 400;
 }
 .admin-normal-joshikai li .text-box .title-text {
   font-size: 12px;
-  line-height: 18px;
-  height: 36px;
+  line-height: 20px;
+  height: 40px;
 }
 
 
@@ -226,17 +267,18 @@
   height: 180px;
 }
 .admin-joshikai-detail-el-header h2 {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 22px;
   padding: 20px 0px 24px;
 }
 .admin-normal-joshikai-el .info-title {
-    font-size: 13px;
-    line-height: 13px;
+    font-size: 11px;
+    line-height: 11px;
     margin-bottom: 4px;
+    font-weight: 400;
 }
 .admin-normal-joshikai-el .info-detail {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 20px;
 }
 .admin-normal-joshikai-el h2 {
@@ -257,9 +299,16 @@
   font-size: 12px;
   line-height: 20px;
   padding: 10px;
+  border-top: 2px solid #fff;
+}
+.singlepage-form-block .form-control {
+  background: #f9f9f9;
+  box-shadow: none;
+  font-size: 12px;
 }
 .admin-profile-table th {
   width: 80px;
+  font-weight: 400;
 }
 .admin-normal-profile-btn {
   margin-top: 20px;
@@ -268,28 +317,29 @@
 .admin-normal-profile-btn a {
   background-color:#8ddcd1;
   color: #fff;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 12px;
   padding: 12px 24px;
 }
 .regist-add-form-edit-title2 {
-  font-size: 13px;
+  font-size: 12px;
   color: #77bfb5;
   margin-bottom: 8px;
+  font-weight: 400;
 }
 .regist-add-form-edit-el {
   margin-bottom: 24px;
 }
 .regist-add-form-edit-title {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 12px;
   color: #77bfb5;
   margin-bottom: 10px;
   width: 100%;
-  font-weight: bold;
+  font-weight: 400;
   padding-left: 8px;
   margin-left: 2px;
-  border-left: 2px solid #8ddcd1;
+  border-left: 1px solid #8ddcd1;
 }
 .regist-add-form-edit-subtitle {
   font-size: 11px;
@@ -305,10 +355,11 @@
   height: 50px;
 }
 .edit-profile-img .edit-profile-img2 p {
-  font-size: 11px;
+  font-size: 10px;
   line-height: 15px;
   display: block;
   padding-top: 6px;
+  font-weight: 400;
 }
 
 /* アカウント情報 */
@@ -318,6 +369,9 @@
 .admin-account-el .admin-account-title {
   font-size: 12px;
   padding: 12px;
+  font-weight: 400;
+  background-color: #efefef;
+  color: #444;
 }
 .credit-list-area li {
   padding: 12px;
@@ -332,19 +386,45 @@
 }
 .admin-account-el-open {
   margin: 12px 0px 24px;
+  background: #f9f9f9;
 }
-
+.credit-list-area li .main-area {
+  width: 80%;
+  float: left;
+  padding-right: 24px;
+}
 .singlepage-footer {
   background-color: #fff;
   padding: 60px 0px 24px;
 }
-
 .joshikai-cancel-block .day-cash-close {
   top: 0px;
   right: 0px;
   width: 50px;
   height: 50px;
 }
+
+/*ログイン部分 */
+.login-edit-block {
+    padding: 28px 20px;
+}
+.mypage-account-block .notice-sns {
+  font-size: 10px;
+}
+.mypage-account-block .notice-sns span {
+  padding: 4px 24px;
+}
+.login-edit-block .form-control {
+  font-size: 12px;
+  background: #fff;
+}
+.mypage-account-block .notice-email-sub {
+  font-size: 10px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+
 
 /* 女子会部分 */
 .joshikai-cancel-block .inner {
@@ -379,8 +459,9 @@
 }
 
 .admin-normal-joshikai li .joshikai-no {
-  font-size: 13px;
+  font-size: 11px;
   padding: 16px 0px;
+  background: #f9f9f9;
 }
 .kinyu-top-member_joshikai ul {
   padding-top: 8px;
@@ -410,7 +491,37 @@
 }
 .main-menu-list .sub-li a {
   padding: 4px 0px;
+  color: gray;
 }
+
+.joshikai-cancel-submit, .joshikai-precancel-submit {
+  font-size: 12px;
+  font-weight: 400;
+}
+.joshikai-cancel-open {
+  font-weight: 400;
+}
+.joshikai-detail-open {
+  font-weight: 400;
+}
+
+/* 退会フォーム */
+.withdrawal-block .regist-add-form-edit-title {
+  font-size: 12px;
+  line-height: 18px;
+}
+.withdrawal-block .checkbox-list-item {
+  font-size: 11px;
+}
+.withdrawal-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+.checkbox-list-item {
+  font-size: 12px;
+}
+
 
 
 }

@@ -1,4 +1,106 @@
 @charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - myきん女。
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.mykinjo-block {
+  
+}
+.mykinjo-thub {
+  height: 250px;
+}
+.mykinjo-block .text-box {
+  margin-top: 24px;
+  margin-bottom: 42px;
+}
+.mykinjo-block .text-box .title {
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.mykinjo-block .text-box .description {
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+}
+.mykinjo-block .request-block {
+  
+}
+.mykinjo-block .request-block .request-title {
+  width: 360px;
+  display: block;
+  margin: 0 auto;
+}
+.mykinjo-block .request-block textarea {
+  resize: none;
+  margin: 8px 0px 20px;
+  padding: 12px;
+}
+.mykinjo-block .request-block button {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+
+.request-modal-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.95);
+  z-index: 1008;
+}
+.request-modal-popup .inner {
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -250px;
+  border: 1px solid #8ddcd1;
+  background: rgba(255,255,255,.95);
+  padding: 50px 32px;
+}
+.request-modal-popup .inner p.main-message {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 24px;
+  color: #77cbc0;
+}
+.request-modal-popup-close {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  transition: .5s;
+}
+.request-modal-popup-close img {
+  width: 100%;
+}
+.request-modal-popup .inner p {
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+}
+.request-modal-popup .inner p.last-message {
+  text-align: center;
+  font-size: 13px;
+  line-height: 13px;
+  margin-top: 24px;
+}
+
+
+
+
 .my-form-container {
   width: 100%;
   position: relative;
@@ -204,13 +306,13 @@
   margin-bottom: 12px;
 }
 .form-group .form-group-event-label {
-  color: #5FB3A7;
+  color: #77cbc0;
   font-size: 13px;
   line-height: 13px;
   font-weight: bold;
   margin-bottom: 4px;
   padding-left: 5px;
-  border-left: 2px solid #5FB3A7;
+  border-left: 2px solid #77cbc0;
   margin: 0px 0px 12px 2px;
 }
 .form-group .radio_box label,
@@ -574,7 +676,7 @@ footer {
   margin-bottom: 8px;
   position: relative;
 }
-.admin-normal-side li:nth-child(2):before {
+/*.admin-normal-side li:nth-child(2):before {
   content: "";
   position: absolute;
   top: 0;
@@ -583,11 +685,18 @@ footer {
   border-right: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-left: 5px solid #efcab4;
-}
+}*/
 .admin-normal-side li a{
   display: block;
   padding: 8px 0px;
   transition: .5s;
+}
+.admin-normal-side li:last-child {
+  border-top: 1px dotted #dcdcdc; 
+  margin-top: 16px;
+}
+.admin-normal-side li:last-child a {
+  font-size: 12px;
 }
 .admin-normal-side li.active {
   background: #a6e9d9;
@@ -640,8 +749,46 @@ footer {
   font-weight: bold;
   color: #fff;
   line-height: 18px;
-
 }
+.admin-normal-container .mypage-content-mainimg {
+  height: 400px;
+  background: gray;
+  margin-bottom: 45px;
+  position: relative;
+}
+.admin-normal-container .mypage-content-mainimg .white-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.1);
+}
+.admin-normal-container .mypage-content-title {
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 24px;
+  color: #77cbc0;
+  text-align: center;
+}
+.admin-normal-container .mypage-content-title span {
+  padding: 4px 40px;
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;
+}
+.admin-normal-container .last-fix span {
+  padding: 4px 28px 4px 40px;
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;
+}
+.mypage-content-description {
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ececec;
+}
+
 /*.admin-normal-profile .img-box-block:after {
   content: "";
   position: absolute;
@@ -666,18 +813,20 @@ footer {
   line-height: 22px;
   width: 80%;
   margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 .admin-normal-main .profile-alert-block {
   text-align: center;
 }
 .admin-normal-main .profile-alert {
   display: inline-block;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 20px;
   position: relative;
   /*color: #77cbc0;
   font-weight: bold;*/
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   padding: 0px 24px; 
   border-left: 1px solid #8ddcd1;
   border-right: 1px solid #8ddcd1;
@@ -689,7 +838,7 @@ footer {
 .admin-normal-profile-btn a {
   border: none;
   background-color: #fff;
-  color: #5FB3A7;
+  color: #77cbc0;
   font-weight: normal;
   transition: .5s;
 }
@@ -741,7 +890,7 @@ footer {
   vertical-align: middle;
 }
 .admin-normal-joshikai li .text-box .date-text {
-  color: #5FB3A7;
+  color: #77cbc0;
   font-size: 14px;
   line-height: 14px;
   margin-bottom: 8px;
@@ -751,7 +900,7 @@ footer {
   line-height: 20px;
 }
 .admin-normal-joshikai li .joshikai-no {
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   padding: 20px 0px;
   background: #fff;
@@ -820,7 +969,7 @@ footer {
   margin-bottom: 20px;
 }
 .admin-normal-joshikai-el .info-title {
-  color: #5FB3A7;
+  color: #77cbc0;
   font-size: 15px;
   line-height: 15px;
   font-weight: bold;
@@ -918,6 +1067,37 @@ footer {
   text-align: center;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - 退会フォーム
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withdrawal-title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.checkbox-list-item .form-control {
+  margin-top: 12px;
+}
+.checkbox-list {
+  padding: 0px;
+}
+.admin-normal-container .regist-add-form-edit-title {
+  margin-bottom: 8px;
+}
+.regist-add-form-edit-el textarea.form-control {
+  margin-top: 8px;
+}
+.checkbox-list-item {
+  font-size: 13px;
+}
+.checkbox-list-item label:before {
+  z-index: 1005;
+}
+.checkbox-list-item label:after {
+  border: 1px solid #e2e2e2;
+  background: #fff;
+  z-index: 1003;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   マイページ - アカウント詳細部分
@@ -929,10 +1109,13 @@ footer {
   font-size: 13px;
   background-color: #8ddcd1;
   color: #fff;
-  padding: 16px;
   font-weight: bold;
+  padding: 16px;
   position: relative;
   transition: .5s;
+}
+.admin-account-el a.admin-account-title {
+  display: block;
 }
 .admin-account-title.active:after {
   content: "×";
@@ -973,6 +1156,32 @@ footer {
   padding: 16px;
 }
 
+/* ログイン情報の修正 */
+.login-edit-block {
+  padding: 36px;
+}
+.login-edit-block .form-control {
+  background: #f9f9f9;
+}
+.mypage-account-block .notice-sns {
+  text-align: center;
+}
+.mypage-account-block .notice-sns span {
+  border-left: 1px solid #ffa7a7;
+  border-right: 1px solid #ffa7a7;
+  background: #fdf5f5;
+  padding: 4px 40px;
+  display: inline-block;
+  margin-bottom: 32px;
+}
+.mypage-account-block .notice-email-sub {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #828282;
+
+}
+
+
 .redactor-modal-tab label.checkbox {
   padding-left: 20px;
   position: relative;
@@ -1000,9 +1209,10 @@ footer {
     text-align: center;
     transition: .5s;
     font-size: 14px;
-    opacity: .3;
+    opacity: .5;
     padding-right: 20px;
     font-weight: normal;
+    color: #77cbc0;
 }
 .js-tab > div.active {
     opacity: 1;
@@ -1049,6 +1259,10 @@ footer {
   opacity: .5;
 }
 .joshikai-cancel-block .day-cash-close:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.request-modal-popup-close:hover {
   opacity: .5;
   cursor: pointer;
 }

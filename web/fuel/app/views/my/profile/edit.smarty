@@ -23,7 +23,7 @@
               <input type="hidden" id="profile_image" value="{$profile.profile_image}">
             </div>
             <p class="profile-catchcopy">
-              <label class="regist-add-form-edit-title2">ひとことキャッピコピー</label>
+              <label class="regist-add-form-edit-title2">ひとこと or 人生で叶えたい夢や目標など</label>
               <input type="text" id="catchcopy" class="form-control" placeholder="" value="{$profile.catchcopy}">
             </p>
           </div>
@@ -39,16 +39,9 @@
           </div>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">メールアドレス</label>
-            <p class="regist-add-form-edit-subtitle">きんゆう女子。からお知らせをお届けするメールアドレスになります。</p>
-            <input type="text" id="email" class="form-control" placeholder="" value="{$email}">
-          </div>
-
-          <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">個人で発信しているブログなど</label>
             <input type="text" id="url" class="form-control" placeholder="" value="{$profile.url}">
           </div>
-
 
           <div class="regist-add-form-edit-el regist-add-form-edit-el02">
             <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。</label>
@@ -79,7 +72,6 @@ $(function(){
 		var url = "/api/profiles/save";
 		var params = {
             "code": $('#code').val(),
-            "email": $('#email').val(),
             "nickname": $('#nickname').val(),
             "name": $('#name').val(),
             "catchcopy": $('#catchcopy').val(),
@@ -101,10 +93,6 @@ $(function(){
             ts.error("お名前を入力してください");
             return false;
         }
-		if (params.email == "") {
-			ts.error("メールアドレス名を入力してください");
-			return false;
-		}
         $(".loader-block").fadeIn(500);
 		ajax.post(url, params, function(data){
               ts.success("保存しました");

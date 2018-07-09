@@ -28,10 +28,10 @@ html {
   line-height: 1;
 }
 body {  
-  -webkit-font-smoothing: antialiased;
   color: #444444;
-  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "メイリオ", sans-serif;
   font-weight: 300;
+  -webkit-font-smoothing: antialiased;
   position: relative;
 }
 div, nav, section {
@@ -299,12 +299,17 @@ input:focus {
 
 /* スマートフォンのスタイル
 ---------------------------------------------------*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
+
+body {
+  font-family: 'Noto Sans JP';
+  font-weight: 300;
+}
 
 p, a {
   font-size: 12px;
   line-height: 18px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   color: #444444;
 }
 
@@ -315,9 +320,10 @@ p, a {
   right: 10px;
 }
 .btn {
-  font-size: 13px;
+  font-size: 12px;
   line-height: inherit;
-  padding: 16px 30px;
+  padding: 12px 35px;
+  font-weight: 400;
 }
 .form-group .form-sub-title {
   margin-bottom: 12px;
@@ -344,7 +350,7 @@ p, a {
 @media screen and (min-width: 768px) {
 a :hover,
 button :hover {
-  cursor: pointer!important;
+  cursor: pointer;
 }
 .btn-tiffany:hover {
   background-color: #fff;

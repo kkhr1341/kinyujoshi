@@ -1,4 +1,4 @@
-<div class="admin-normal-container">
+<div class="admin-normal-container mypage-account-block">
     <div class="admin-normal-inner clear">
 
         {$my_side}
@@ -23,9 +23,33 @@
                 </div>
 
             </div>
+            <div class="admin-account-el edit-account-form">
+                <p class="admin-account-title admin-account-title3">ログイン情報の設定</p>
+                <div class="admin-account-el-open admin-account-el-open3 credit-list-area" style="display: none;">
+
+                    <div class="login-edit-block">
+                        <p class="notice-sns pc"><span>Facebook・Googleでログインされている方は、パスワードを設定することで<br>メールアドレスからもログインできるようになります。</span></p>
+                        <p class="notice-sns sp"><span>Facebook・Googleでログインされている方は、パスワードを設定することでメールアドレスからもログインできるようになります。</span></p>
+                        <div class="regist-add-form-edit-el">
+                            <label class="regist-add-form-edit-title">メールアドレス</label>
+                            <p class="notice-email-sub"><span style="color:red;">＊</span>メールアドレスのみを変更したい場合は、新しいパスワードは空欄にして「更新する」を押してください♪</p>
+                            <input type="text" id="email" class="form-control" placeholder="" value="{$email}">
+                        </div>
+
+                        <div class="regist-add-form-edit-el">
+                            <label class="regist-add-form-edit-title">新しいパスワード</label>
+                            <input type="password" id="new_password" class="form-control" placeholder="新しいパスワードを入力してください。" value="">
+                            <input type="password" id="confirm_password" class="form-control" placeholder="ご確認用" value="">
+                        </div>
+                        <div class="form-btn tx-center">
+                            <button class="btn btn-kinyu" type="button" id="save">更新する</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="admin-account-el">
-                <a href="/my/account/withdrawal">メンバー退会について</a>
+                <a class="admin-account-title" href="/my/account/withdrawal">メンバー退会について</a>
             </div>
 
         </div>
@@ -41,6 +65,11 @@
             $(".admin-account-el-open1").slideToggle();
         });
 
+        $(".admin-account-title3").click(function () {
+            $(".admin-account-title3").toggleClass("active");
+            $(".admin-account-el-open3").slideToggle();
+        });
+
         $(".admin-account-title2").click(function () {
             $(".admin-account-title2").toggleClass("active");
             $(".admin-account-el-open2").slideToggle();
@@ -53,7 +82,6 @@
                 bootbox.confirm("クレジットカードの情報を削除しますか？", function (result) {
                     if (result) {
 
-
                         var url = "/api/creditcards/delete";
                         var params = {
                             card_id: card_id
@@ -64,8 +92,6 @@
                                 this.remove();
                             });
                         });
-
-                        
                     }
                     else {
                         ts.info("キャンセルしました");
@@ -73,5 +99,37 @@
                 });
             });
         })
+
+        var $form  = $('.edit-account-form');
+        var $email = $form.find('#email');
+        var $new_password = $form.find('#new_password');
+        var $confirm_password = $form.find('#confirm_password');
+        $form.find('.btn-kinyu').on('click', function() {
+            var url = '/api/users/save';
+            var params = {
+                "email": $email.val(),
+                "new_password": $new_password.val() || '',
+                "confirm_password": $confirm_password.val() || '',
+            };
+
+            if (params.email == "") {
+                ts.error("メールアドレスを入力してください。");
+                return false;
+            }
+
+            $(".loader-block").fadeIn(500);
+            setTimeout(function() {
+                ajax.post(url, params, function (data) {
+                    ts.success("ログイン情報を更新しました。");
+                })
+                .done(function(data) {
+                    $(".loader-block").fadeOut(500);
+                })
+                .fail(function(error) {
+                    ts.error("更新処理に失敗しました。管理者までお問い合わせください。");
+                    $(".loader-block").fadeOut(500);
+                })
+            }, 2000);
+        });
     });
 </script>

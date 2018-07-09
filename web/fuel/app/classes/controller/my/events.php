@@ -114,7 +114,7 @@ class Controller_My_Events extends Controller_Mybase
         $this->data['applications'] = Applications::get_next_events_applications($username);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
-        $this->template->title = '参加予定の女子会｜きん女。マイページ';
+        $this->template->title = 'myきん女。｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->contents = View::forge('my/events/member_joshikai.smarty', $this->data);

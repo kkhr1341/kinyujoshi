@@ -16,23 +16,35 @@
 
       <li class="item navi_kinyu-menu-li01">
         <div class="navi_kinyu-menu-block clear">
-          <div class="navi_kinyu-menu-block-el navi-el-at">
+
+          {if in_array('user', $roles) || in_array('admin', $roles)}
+          <!-- ログインしている場合 -->
+            <div class="navi_kinyu-menu-block-el main-area">
+              <a href="/my"><span>マイページ<div class="to-my-page" style="background:url({$profile.profile_image}) center center / cover no-repeat;"></div></span></a>
+            </div>
+          {else}
+          <!-- していない場合 -->
+            <div class="navi_kinyu-menu-block-el main-area">
+              <a href="/my">マイページへログイン</a>
+            </div>
+            <div class="navi_kinyu-menu-block-el main-area">
+              <a href="/login_regist">メンバー登録</a>
+            </div>
+          {/if}
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/joshikai">女子会の予定</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/report">レポートを見る</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/news">ニュースを見る</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
             <a class="fc-kinyu" href="/about">きん女。ストーリー</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/login_regist"><!-- <span style="color:#8ddcd1;">◆</span>  -->メンバー登録</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/my"><!-- <span style="color:#8ddcd1;">◆</span>  -->マイページ</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/joshikai"><!-- <span style="color:#8ddcd1;">◆</span>  -->女子会に参加する</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/report"><!-- <span style="color:#8ddcd1;">◆</span>  -->レポートを見る</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/news"><!-- <span style="color:#8ddcd1;">◆</span>  -->ニュースを見る</a>
+            <a class="fc-kinyu" href="/faq">よくあるご質問</a>
           </div>
         </div>
       </li>
@@ -50,30 +62,18 @@
 
       <li class="item navi_banner_area navi_kinyu-menu-li03">
         <a class="navi_banner_area_el" href="/myway">
-          <img src="/images/myway/og_myway.jpg">
+          <img src="/images/banner/myway_sp.jpg">
         </a>
       </li>
 
-      <li class="item navi_kinyu-menu-li04">
-        <!-- <div class="navi_kinyu-menu-block clear">
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/company">運営会社</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/privacy">プライバシーポリシー</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/legal">特定商取引法に基づく表記</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/service">会員規約</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/contact">お問い合わせ</a>
-          </div>
-        </div> -->
-        {*<img src="/images/menu/menu-footer-illust.png" width="100%;">*}
+      <li class="item navi_banner_area navi_kinyu-menu-li04">
+        <a class="navi_banner_area_el" href="/map">
+          <img src="/images/map/map-thum-banner.jpg">
+        </a>
       </li>
+
+        
+
     </ul>
 
   </div>

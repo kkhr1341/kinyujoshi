@@ -16,13 +16,6 @@
 </div>
 {/if}
 
-<div class="swiper-slide" style="background: url(https://jpx-moneyschool.com/img/img2018/og-img2.jpg) center center / cover no-repeat;">
-    <a target="_blank" href="https://jpx-moneyschool.com/">
-        <div class="kinyu-top-list-kind">
-        </div>
-    </a>
-</div>
-
 {foreach from=$blogs_pick item=blog name=loopname}
 
   {if $smarty.foreach.loopname.index == 0}

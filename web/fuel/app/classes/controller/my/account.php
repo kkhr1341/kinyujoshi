@@ -10,6 +10,7 @@ class Controller_My_Account extends Controller_Mybase
     public function action_index()
     {
         \Config::load('payjp', true);
+        $this->data['email'] = Auth::get('email');
         $this->data['cards'] = $this->get_credit_cards(\Config::get('payjp.private_key'));
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
