@@ -81,7 +81,7 @@
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員情報変更・退会について</h3>
-      <p class="description">会員情報変更はマイページから行うことができます。退会は、退会フォームよりいつでも行うことが可能です。退会された方の個人情報は当社が定めるプライバシーポリシーの定めに従い、適切に処理いたします。</p>
+      <p class="description">会員情報変更は<a href="/my" target="_blank">マイページ</a>から行うことができます。退会は、退会フォームよりいつでも行うことが可能です。退会された方の個人情報は当社が定める<a href="/privacy" target="_blank">プライバシーポリシー</a>の定めに従い、適切に処理いたします。</p>
     </div>
 
   </div>
