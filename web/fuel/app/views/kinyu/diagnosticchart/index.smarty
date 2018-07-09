@@ -15,8 +15,18 @@
             <button class="btn btn-primary btn-no">NO</button>
         </div>
     </div>
+
+
+    <div class="diagnosticchart-answer-container">
+       <div class="diagnosticchart-answer-catchcopy"></div>
+       <div class="diagnosticchart-answer-type"></div>
+       <div class="diagnosticchart-answer-title"></div>
+       <div class="diagnosticchart-answer-charactor"></div>
+       <div class="diagnosticchart-answer-description"></div>
+    </div>
   </div>
 </div>
+
 
 <style>
 .btn-yes {
@@ -41,6 +51,37 @@
     width: 80%;
     margin:0px auto 20px auto;
 }
+.diagnosticchart-answer {
+    margin-bottom: 18px;
+    text-align: center;
+}
+.diagnosticchart-answer-container {
+    display: none;
+}
+.diagnosticchart-answer-catchcopy {
+    text-align: center;
+}
+.diagnosticchart-answer-charactor {
+    text-align: center;
+}
+.diagnosticchart-answer-charactor img {
+    width: 100px;
+}
+
+.diagnosticchart-answer-type {
+    font-weight: bold;
+    text-align: center;
+}
+.diagnosticchart-answer-title {
+    text-align: center;
+}
+.diagnosticchart-answer-description {
+    text-align: center;
+    padding: 15px;
+    width: 80%;
+    margin:0px auto 20px auto;
+}
+
 </style>
 
 <script>
@@ -97,7 +138,26 @@ $(function(){
   }
 
   function completed(type_id) {
-    return location.href = '/diagnosticchart/complete/' + type_id;
+    $questionContainer.fadeOut();
+    $.getJSON('/api/diagnosticchart/type/' + type_id, function(response) {
+      var color = response.data.color || '000000';
+      var catch_copy = response.data.catch_copy || '';
+      var charactor_image = response.data.charactor_image || '';
+      var type = response.data.type || '';
+      var title = response.data.title || '';
+      var description  = response.data.description || '';
+
+      $answerCatchcopy.html(catch_copy);
+      $answerCharactor.html($('<img>', {src:charactor_image}));
+      $answerType.css('color', color);
+      $answerType.html(type);
+      $answerTitle.html(title);
+      $answerTitle.css('color', color);
+      $answerDescription.html(description.replace(/\\n/g, '<br>'));
+      $answerDescription.css('border', '2px solid ' + color);
+
+      $answerContainer.fadeIn();
+    });
   }
 
   answer();
