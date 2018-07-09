@@ -1593,6 +1593,11 @@ mark, .mark {
 .event-form iframe {
   width: 100%;
 }
+.kinyu-joshikai-detail-content figure:after {
+  right: 8px;
+  bottom: 8px;
+  font-size: 11px;
+}
 
 /* 主に女子会を開催している場所 */
 .joshikai-held-area {

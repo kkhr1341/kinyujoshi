@@ -1748,6 +1748,17 @@
 .joshikai-detail-el-content-box {
   padding-top: 24px;
 }
+.kinyu-joshikai-detail-content figure {
+  position: relative;
+}
+.kinyu-joshikai-detail-content figure:after {
+  content: "© きんゆう女子。 2018";
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 13px;
+  color: #fff;
+}
 .kinyu-joshikai-detail-content figure img {
   width: 100%;
 }
