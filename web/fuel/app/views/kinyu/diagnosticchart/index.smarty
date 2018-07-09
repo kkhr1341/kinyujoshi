@@ -104,6 +104,23 @@
     margin:0px auto 20px auto;
 }
 
+/* each type style */
+.diagnosticchart-answer-container.type-A {
+    background-color: #4286f4;
+}
+
+.diagnosticchart-answer-container.type-B {
+    background-color: #f441e5;
+}
+
+.diagnosticchart-answer-container.type-C {
+    background-color: #41f464;
+}
+
+.diagnosticchart-answer-container.type-D {
+    background-color: #f4a041;
+}
+
 </style>
 
 <script>
@@ -195,6 +212,8 @@ $(function(){
         $answerType.html(type);
         $answerTitle.html(title);
         $answerDescription.html(description.replace(/\\n/g, '<br>'));
+
+        $answerContainer.addClass('type-' + type);
 
         $answerContainer.fadeIn();
       }
