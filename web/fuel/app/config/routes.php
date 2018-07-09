@@ -50,6 +50,7 @@ return array(
 
     //diagnostic_chart
     'diagnosticchart' => 'kinyu/diagnosticchart/index',
+    'diagnosticchart/complete/(:any)' => 'kinyu/diagnosticchart/complete/$1',
 
 	//未公開
 	'gallery' => 'kinyu/gallery/index',
