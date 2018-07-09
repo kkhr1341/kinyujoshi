@@ -6,6 +6,15 @@
 
     <h2 class="kinyu-top-main-title">診断チャート</h2>
 
+    <div class="diagnosticchart-intro-container">
+
+        <div class="diagnosticchart-intro-message">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
+
+        <div class="diagnosticchart-intro-start">
+            <button class="btn btn-primary">START</button>
+        </div>
+    </div>
+
     <div class="diagnosticchart-question-container">
 
         <div class="diagnosticchart-question"></div>
@@ -41,6 +50,19 @@
     border-color: #4c61ff;
     font-weight: bold;
 }
+
+.diagnosticchart-intro-message {
+    text-align: center;
+    border: 1px solid #bababa;
+    padding: 15px;
+    width: 80%;
+    margin:0px auto 20px auto;
+}
+.diagnosticchart-intro-start {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
 .diagnosticchart-question-container {
     display: none;
 }
@@ -87,8 +109,12 @@
 <script>
 {literal}
 $(function(){
+
+  var $introContainer  = $('.diagnosticchart-intro-container');
   var $questionContainer  = $('.diagnosticchart-question-container');
   var $answerContainer  = $('.diagnosticchart-answer-container');
+
+  var $startButton  = $introContainer.find('button');
 
   var $question  = $('.diagnosticchart-question');
   var $yesButton = $('.diagnosticchart-answer .btn-yes');
@@ -102,6 +128,7 @@ $(function(){
 
   var routes = [];
 
+  // 回答
   function answer(route_id) {
     var route_id = route_id || '';
 
@@ -142,6 +169,7 @@ $(function(){
     });
   }
 
+  // 完了画面表示
   function completed(type_code) {
     $questionContainer.fadeOut();
 
@@ -156,28 +184,28 @@ $(function(){
 
         var value = JSON.parse(response);
 
-        var color = '000000';
         var catch_copy = value.data.catch_copy || '';
-        var charactor_image = value.data.charactor_image || '';
+        var character_image = value.data.character_image || '';
         var type = value.data.type || '';
         var title = value.data.title || '';
         var description = value.data.description || '';
 
         $answerCatchcopy.html(catch_copy);
-        $answerCharactor.html($('<img>', {src:charactor_image}));
-        $answerType.css('color', color);
+        $answerCharactor.html($('<img>', {src:character_image}));
         $answerType.html(type);
         $answerTitle.html(title);
-        $answerTitle.css('color', color);
         $answerDescription.html(description.replace(/\\n/g, '<br>'));
-        $answerDescription.css('border', '2px solid ' + color);
 
         $answerContainer.fadeIn();
       }
     });
   }
 
-  answer();
+  // START ボタン
+  $startButton.on('click', function() {
+    $introContainer.fadeOut();
+    answer();
+  })
 });
 {/literal}
 </script>
