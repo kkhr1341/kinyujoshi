@@ -37,7 +37,7 @@ $seeds = array(
     array('id' => '2', 'route_code' => 'VgE5Mu', 'type_code' => 'pttyS2', 'yes_no' => '1', 'created_at' => \DB::expr('now()')),
     array('id' => '3', 'route_code' => 'JXBiGW', 'type_code' => 'pT8Xsz', 'yes_no' => '1', 'created_at' => \DB::expr('now()')),
     array('id' => '4', 'route_code' => '7nuMaT', 'type_code' => 'GT7f0Q', 'yes_no' => '1', 'created_at' => \DB::expr('now()')),
-    array('id' => '5', 'route_code' => 'JXBiGW', 'type_code' => 'RgKLhu', 'yes_no' => '0', 'created_at' => \DB::expr('now()')),
+    array('id' => '5', 'route_code' => '7nuMaT', 'type_code' => 'RgKLhu', 'yes_no' => '0', 'created_at' => \DB::expr('now()')),
     array('id' => '6', 'route_code' => 'EuYdha', 'type_code' => 'pttyS2', 'yes_no' => '0', 'created_at' => \DB::expr('now()')),
     array('id' => '7', 'route_code' => 'JkvoS5', 'type_code' => 'pT8Xsz', 'yes_no' => '0', 'created_at' => \DB::expr('now()')),
 );
