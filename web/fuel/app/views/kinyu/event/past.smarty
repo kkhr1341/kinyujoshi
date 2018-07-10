@@ -70,7 +70,11 @@
                   </div>
                   <h3 class="event-title">{$event.title}</h3>
                   <div class="event-subbox">
+                    {if is_numeric($event.fee)}
                     <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    {else}
+                    <p class="event-subbox-el">参加費：{$event.fee}</p>
+                    {/if}
                     <p class="event-subbox-el">場所：{$event.place}</p>
                   </div>
                 </div>
