@@ -54,7 +54,11 @@ console.log($resArray02);
             </li>
             <li>
               <p class="info-title">参加費</p>
+              {if is_numeric($event.fee)}
               <p class="info-detail">{$event.fee|number_format}円</p>
+              {else}
+              <p class="info-detail">{$event.fee}</p>
+              {/if}
             </li>
           </ul>
 
