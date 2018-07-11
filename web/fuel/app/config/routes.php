@@ -127,7 +127,7 @@ return array(
 	'project/(:any)'   => 'kinyu/project/detail/$1',
 
 	// きんゆう散歩
-	'kinyu_map' => 'kinyu/campaign/kinyu_map',
+	'kinyu_sanpo' => 'kinyu/kinyumap/index',
 	'map_ooedoito' => 'kinyu/kinyumap/ooedo_ito',
 	'map_kabuto' => 'kinyu/kinyumap/map_kabuto',
 
