@@ -26,14 +26,29 @@
     <div class="map-container">
       <div id="map"></div>
       <img class="map-illust01" src="/images/kinyu_map/map-01illust.png">
-
-
       <img class="illust-dog1" src="/images/kinyu_map/dog01.png">
       <img class="illust-dog2" src="/images/kinyu_map/dog02.png">
       <img class="illust-bonjour" src="/images/kinyu_map/bonjour.png">
       <img class="illust-flower" src="/images/kinyu_map/flower.png">
       <img class="illust-sun" src="/images/kinyu_map/sun.png">
+    </div>
 
+    <div class="kinyu-map-list-block">
+      <p class="map-list-title">お散歩リスト♪</p>
+      <ul class="clear">
+        <li>
+          <a href="/map" target="_blank">
+            <img src="/images/kinyu_map/og/map_kubuto.jpg">
+            <p>かぶと町マップ</p>
+          </a>
+        </li>
+        <li>
+          <a href="/map_ooedoito" target="_blank">
+            <img src="/images/kinyu_map/og/map_ooedoito.jpg">
+            <p>温泉リートマップ</p>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

@@ -128,8 +128,8 @@
 }
 .map-container .illust-flower {
   position: absolute;
-  bottom: -104px;
-  right: -55px;
+  bottom: -126px;
+  right: -6px;
   width: 120px;
 }
 .map-container .illust-sun {
@@ -142,6 +142,51 @@
   display: none;
 }
 
+/* マップ・コンテンツラスト部分 */
+.map_last {
+  width: 450px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  transition: .5s;
+}
+.map_last img { 
+  width: 100%;
+}
+
+/* コンテンツ一覧 */
+.kinyu-map-list-block {
+  border-top: 1px solid #8ddcd1;
+  margin-top: 120px;
+  padding: 32px 50px 0px;
+}
+.kinyu-map-list-block .map-list-title {
+  text-align: center;
+  font-size: 18px;
+  line-height: 18px;
+  color: #77cbc0;
+  margin-bottom: 20px;
+}
+.kinyu-map-list-block li {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+  margin-bottom: 2%;
+}
+.kinyu-map-list-block li:nth-child(2n) {
+  margin-right: 0%;
+}
+.kinyu-map-list-block li a {
+  display: block;
+  transition: .5s;
+}
+.kinyu-map-list-block li img {
+  width: 100%;
+}
+.kinyu-map-list-block li p {
+  text-align: center;
+}
+
+
 
 /* ----------------------------------
     スマートフォン＆タブレット
@@ -150,7 +195,7 @@
 
 .kinyu-map-block {
   width: 100%;
-  padding: 12px 0px 32px;
+  padding: 12px 0px 0px;
 }
 .kinyu-map-title img {
   width: 78%;
@@ -225,21 +270,53 @@
   width: 160px;
 }
 .map-el-title {
-    font-size: 10px;
-    line-height: 16px;
-    margin-top: 8px;
-    width: 98%;
-    font-weight: 400;
-    font-family: 'Noto Sans JP'!important;
+  font-size: 10px;
+  line-height: 16px;
+  margin-top: 8px;
+  width: 98%;
+  font-weight: 400;
+  font-family: 'Noto Sans JP'!important;
 }
 .map-decription {
-    font-size: 10px;
-    line-height: 15px;
-    margin-top: 4px;
-    font-family: 'Noto Sans JP'!important;
+  font-size: 10px;
+  line-height: 15px;
+  margin-top: 4px;
+  font-family: 'Noto Sans JP'!important;
 }
 
+/* コンテンツ一覧 */
+.kinyu-map-list-block {
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 32px 0px 0px;
+  border-top: 1px solid #eaeaea;
+}
+.kinyu-map-list-block .map-list-title {
+  font-size: 15px;
+  line-height: 15px;
+  margin-bottom: 12px;
+}
+.kinyu-map-list-block li {
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+  margin-bottom: 2%;
+}
+.kinyu-map-list-block li:nth-child(2n) {
+  margin-right: 0%;
+}
+.kinyu-map-list-block li p {
+  font-size: 11px;
+}
+}
 
+@media screen and (min-width: 1025px) {
+
+  .map_last:hover,
+  .kinyu-map-list-block li a:hover  {
+    opacity: .5;
+  }
 
 }
 

@@ -193,6 +193,7 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        $this->template->map_last = View::forge('kinyu/kinyu_map/map_last.smarty', $this->data);
 
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
