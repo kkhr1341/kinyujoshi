@@ -10,13 +10,9 @@ class Controller_Admin_Events extends Controller_Adminbase
 
     public function action_index()
     {
-
-        if (!Auth::has_access('events.admin')) {
-            \Auth::logout();
-            Response::redirect('/');
-            exit();
+        if (!Auth::has_access('events.read')) {
+            throw new HttpNoAccessException;
         }
-
         $this->data['sections'] = Sections::lists();
         $this->data['past_events'] = Events::lists02();
         $this->data['closed_events'] = Events::lists(0, null, null, null, "desc", null);
@@ -30,13 +26,9 @@ class Controller_Admin_Events extends Controller_Adminbase
 
     public function action_create()
     {
-
-        if (!Auth::has_access('events.admin')) {
-            \Auth::logout();
-            Response::redirect('/');
-            exit();
+        if (!Auth::has_access('events.read')) {
+            throw new HttpNoAccessException;
         }
-
         $this->data['sections'] = Sections::lists();
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
@@ -45,13 +37,9 @@ class Controller_Admin_Events extends Controller_Adminbase
 
     public function action_edit($code)
     {
-
-        if (!Auth::has_access('events.admin')) {
-            \Auth::logout();
-            Response::redirect('/');
-            exit();
+        if (!Auth::has_access('events.read')) {
+            throw new HttpNoAccessException;
         }
-
         $this->data['events'] = Events::getByCode('events', $code);
         $this->data['past'] = Events::isPast($code);
         $this->data['sections'] = Sections::lists();
@@ -63,7 +51,9 @@ class Controller_Admin_Events extends Controller_Adminbase
 
     public function action_attend()
     {
-
+        if (!Auth::has_access('events.read')) {
+            throw new HttpNoAccessException;
+        }
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         // $this->data['events'] = Events::lists(1, 50, true);
         // $this->data['sections'] = Sections::lists();
@@ -77,6 +67,9 @@ class Controller_Admin_Events extends Controller_Adminbase
 
     public function action_attend_detail($code)
     {
+        if (!Auth::has_access('events.read')) {
+            throw new HttpNoAccessException;
+        }
         $this->data['events'] = Events::getByCode('events', $code);
         $this->data['applications'] = Applications::get_applications_by_code($code);
         $this->data['cancel_applications'] = Applications::get_cancel_applications_by_code($code);
@@ -88,6 +81,9 @@ class Controller_Admin_Events extends Controller_Adminbase
 
     public function action_memberlist($code)
     {
+        if (!Auth::has_access('events.read')) {
+            throw new HttpNoAccessException;
+        }
         $csv_name = Date("Y-m-d") . '.csv';
         $response = new Response();
 

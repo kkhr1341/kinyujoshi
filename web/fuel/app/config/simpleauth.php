@@ -83,6 +83,7 @@ return array(
 		-1   => array('name' => 'Banned', 'roles' => array('banned')),
 		0    => array('name' => 'Guests', 'roles' => array()),
 		1    => array('name' => 'Users', 'roles' => array('user')),
+		30   => array('name' => 'Editors', 'roles' => array('user', 'editor')),
 		50   => array('name' => 'Moderators', 'roles' => array('user', 'moderator')),
 		100  => array('name' => 'Administrators', 'roles' => array('user', 'moderator', 'admin')),
 	),
@@ -92,11 +93,19 @@ return array(
 	 */
 	'roles' => array(
 		'admin' => array(
-							'news' => array('admin'),
-							'events' => array('admin'),
-							'projects' => array('admin'),
-							'pages' => array('admin'),
-					),
+            'top' => array('read'),
+            'applications' => array('read'),
+            'blogs' => array('read', 'create', 'edit', 'delete'),
+            'events' => array('read', 'create', 'edit'),
+            'inquiries' => array('read'),
+            'news' => array('read', 'create', 'edit'),
+            'registlist' => array('read', 'create'),
+            'remindmailtemplates' => array('read', 'edit'),
+        ),
+        'editor' => array(
+            'top' => array('read'),
+            'blogs' => array('read', 'create', 'edit', 'delete'),
+        ),
 		
 		/**
 		 * Examples
