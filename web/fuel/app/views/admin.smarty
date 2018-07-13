@@ -13,7 +13,6 @@
 </head>
 <body class="drawer drawer--left">
 
-    {if in_array('admin', $roles)}
     <div id="content_frame">
 
       <div class="container">
@@ -28,41 +27,43 @@
                 <a href="/admin">マイページ</a>
               </li>
 
-              {if in_array('admin', $roles)}
+              {if (Auth::has_access('news.read'))}
               <li>
                 <a href="/admin/news">ニュースの管理</a>
               </li>
               {/if}
 
+              {if (Auth::has_access('blogs.read'))}
               <li>
                 <a href="/admin/report">レポートの管理</a>
               </li>
+              {/if}
 
-              {if in_array('admin', $roles)}
+              {if (Auth::has_access('events.read'))}
               <li>
                 <a href="/admin/joshikai">女子会の管理</a>
               </li>
               {/if}
 
-              {if in_array('admin', $roles)}
+              {if (Auth::has_access('events.read'))}
               <li>
                 <a href="/admin/joshikai/attend">女子会参加者の管理</a>
               </li>
               {/if}
 
-              {if in_array('admin', $roles)}
+              {if (Auth::has_access('registlist.read'))}
               <li>
                 <a href="/admin/registlist">会員リスト一覧</a>
               </li>
               {/if}
 
-              {if in_array('admin', $roles)}
+              {if (Auth::has_access('remindmailtemplates.read'))}
               <li>
                 <a href="/admin/remindmailtemplates">リマインドメールの管理</a>
               </li>
               {/if}
 
-              {if in_array('admin', $roles)}
+              {if (Auth::has_access('inquiries.read'))}
               <li>
                 <a href="/admin/inquiries">お問い合わせの管理</a>
               </li>
@@ -94,9 +95,6 @@
         </div>
       </div>
     </footer>
-  {else}
-    ユーザー権限では閲覧できません。
-  {/if}
 <script>
 $(function(){
   $(".admin-normal-menu-block").click(function() {

@@ -8,17 +8,11 @@ use \Model\ParticipatedApplications;
 class Controller_Admin_Registlist extends Controller_Adminbase
 {
 
-    public function action_create()
-    {
-        $this->data['sections'] = Sections::lists();
-        $this->data['registlist'] = Regist::lists();
-        $this->template->contents = View::forge('admin/registlist/create.smarty', $this->data);
-        $this->template->description = 'マイページ・ブログ';
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-    }
-
     public function action_index()
     {
+        if (!Auth::has_access('registlist.read')) {
+            throw new HttpNoAccessException;
+        }
         $this->data['sections'] = Sections::lists();
 
         $params = Input::get();
@@ -43,6 +37,9 @@ class Controller_Admin_Registlist extends Controller_Adminbase
 
     public function action_detail($code)
     {
+        if (!Auth::has_access('registlist.read')) {
+            throw new HttpNoAccessException;
+        }
         $this->data['registlist'] = Regist::lists();
 
         $username = Registlist::getUsername($code);
@@ -54,6 +51,18 @@ class Controller_Admin_Registlist extends Controller_Adminbase
 
         $this->data['registel'] = Regist::getByCodeWithurl($code);
         $this->template->contents = View::forge('admin/registlist/detail.smarty', $this->data);
+        $this->template->description = 'マイページ・ブログ';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+    }
+
+    public function action_create()
+    {
+        if (!Auth::has_access('registlist.read')) {
+            throw new HttpNoAccessException;
+        }
+        $this->data['sections'] = Sections::lists();
+        $this->data['registlist'] = Regist::lists();
+        $this->template->contents = View::forge('admin/registlist/create.smarty', $this->data);
         $this->template->description = 'マイページ・ブログ';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     }

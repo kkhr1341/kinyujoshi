@@ -1,6 +1,3 @@
-
-{if in_array('admin', $roles)}
-
 <ol class="my-header-menu">
 	<li><a href="/">ホーム</a></li>
 	<li><a href="/admin">マイページ</a></li>
@@ -12,14 +9,21 @@
 
 
 <ul class="nav nav-tabs">
-	<li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
-	<li><a href="#tab1" data-toggle="tab">公開</a></li>
+    {if in_array('admin', $roles)}
+	    <li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
+	{/if}
+    {if in_array('admin', $roles)}
+	    <li><a href="#tab1" data-toggle="tab">公開</a></li>
+	{/if}
 	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
-	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
+    {if in_array('admin', $roles)}
+	    <li><a href="#tab3" data-toggle="tab">すべて</a></li>
+	{/if}
 </ul>
 <div class="tab-content">
 
-	<div class="tab-pane active" id="tab4">
+    {if in_array('admin', $roles)}
+	<div class="tab-pane" id="tab4">
 		{if sizeof($open_blogs) == 0}
 		<div class="alert alert-warning mt20" role="alert">公開中の記事はありません</div>
 		{else}
@@ -51,7 +55,9 @@
 		</table>
 		{/if}
 	</div>
+    {/if}
 
+    {if in_array('admin', $roles)}
 	<div class="tab-pane" id="tab1">
 		{if sizeof($open_blogs) == 0}
 		<div class="alert alert-warning mt20" role="alert">公開中の記事はありません</div>
@@ -84,6 +90,8 @@
 		</table>
 		{/if}
 	</div>
+    {/if}
+
 	<div class="tab-pane" id="tab2">
 		{if sizeof($closed_blogs) == 0}
 		<div class="alert alert-warning mt20" role="alert">下書き状態の記事はありません</div>
@@ -116,6 +124,8 @@
 		</table>
 		{/if}
 	</div>
+
+    {if in_array('admin', $roles)}
 	<div class="tab-pane" id="tab3">
 		{if sizeof($all_blogs) == 0}
 		<div class="alert alert-warning mt20" role="alert">記事はありません</div>
@@ -146,14 +156,8 @@
 		</table>
 		{/if}
 	</div>
+    {/if}
 </div>
-
-{else}
-
-かきくけこ
-
-{/if}
-
 
 <script>
 $(function(){
@@ -161,5 +165,8 @@ $(function(){
 		var code = $(this).attr('code');
 		location.href = "/admin/report/edit/"+code;
 	});
+
+	// 一番目のタブをアクティブにする
+	$('.nav-tabs li:first a').trigger('click')
 });
 </script>

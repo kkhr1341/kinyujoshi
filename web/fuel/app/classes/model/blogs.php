@@ -91,13 +91,18 @@ class Blogs extends Base
         return $datas;
     }
 
-    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null)
+    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $username = null)
     {
 
         $datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
             ->where('blogs.disable', '=', 0);
+
+        if ($username === null) {
+        } else {
+            $datas = $datas->where('blogs.username', '=', $username);
+        }
 
         if ($mode === null) {
         } else {
