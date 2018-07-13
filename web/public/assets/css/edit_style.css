@@ -4269,14 +4269,14 @@ to {
 .report-detail-main figure {
   position: relative;
 }
-.report-detail-main figure:after {
+/*.report-detail-main figure:after {
   content: "© きんゆう女子。 2018";
   position: absolute;
   right: 12px;
   bottom: 12px;
   font-size: 13px;
   color: #fff;
-}
+}*/
 
 @media screen and (min-width: 640px) {
 
