@@ -55,7 +55,7 @@
         {foreach from=$news item=new name=foo}
         <a href="/news/{$new.code}" class="kinyu-top-introlist-news-link">
           <div class="title-area">
-            <p>NEWS</p>
+            <p>お知らせ</p>
           </div>
           <div class="text-area">
             <p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
@@ -64,7 +64,7 @@
         </a>
         {/foreach}
         <div class="sidebar-more-link">
-          <a href="/news">ニュースをもっと見る ></a>
+          <a href="/news">お知らせをもっと見る ></a>
         </div>
       </div>
 

@@ -3814,7 +3814,8 @@ input::-webkit-input-placeholder {
   margin: 0 auto;
   margin-top: 42px;
   padding: 36px 50px;
-  border: 1px solid #8ddcd1;
+  /*border: 1px solid #8ddcd1;*/
+  background: #fff;
 }
 .about-member-block .about-member-title {
   font-size: 20px;
