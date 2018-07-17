@@ -756,7 +756,7 @@ mark, .mark {
   font-size: 12px;
   line-height: 20px;
   height: 40px;
-  padding: 10px 0px 4px;
+  padding: 12px 0px 12px;
   box-sizing: content-box;
 }
 .list-kind-img {
@@ -1116,7 +1116,7 @@ mark, .mark {
   font-size: 12px;
 }
 .kinyu-top-event-kind p .date-box {
-  padding: 4px 2px 4px 4px;
+  padding: 2px 2px 2px 4px;
 }
 .kinyu-top-list-kind p span {
   font-weight: 400;
@@ -1541,7 +1541,8 @@ mark, .mark {
   font-size: 10px;
 }
 .event-subbox .event-subbox-el {
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 16px;
 }
 .kinyu-event-list .kinyu-event-list-right {
   background: #f9f9f9!important;

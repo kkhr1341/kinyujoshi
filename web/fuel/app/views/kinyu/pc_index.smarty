@@ -144,6 +144,10 @@
                     {/if}
                   </div>
                   <h3 class="kinyu-top-list-title">{$event.title}</h3>
+                  <div class="event-subbox">
+                    <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    <p class="event-subbox-el">場所：{$event.place}</p>
+                  </div>
                 </div>
               </a>
             </li>   

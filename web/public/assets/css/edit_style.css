@@ -782,6 +782,8 @@
   width: 100%;
   box-sizing: border-box;
   transition: 0.5s;
+  margin-top: 4px;
+  margin-bottom: 12px;
 }
 
 /* ページネーション */
@@ -1473,12 +1475,12 @@
   padding: 0px 1px;
 }
 .event-subbox {
-  border-top: 1px solid #e3e3e3;
+  border-top: 1px solid #f3f3f3;
   padding: 12px 1px 0px 1px;
 }
 .event-subbox .event-subbox-el {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 16px;
   height: 18px;
 }
 
