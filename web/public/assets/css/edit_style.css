@@ -149,26 +149,74 @@
 .kinyu-header-social-list li a img {
   width: 100%;
 }
-/*  */
-.header-profile-block {
-  display: block;
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  border-radius: 50%;
-  transition: .5s;
-}
+
 /*マイページにログイン*/
-.kinyu-header-mylink {
-  background: #8ddcd1;
-  padding: 4px 20px;
+.header-login-area {
   position: fixed;
   top: 16px;
-  left: 16px;
+  right: 16px;
+}
+.header-login-area ul {
+  letter-spacing: -40px;
+}
+.header-login-area li {
+  display: inline-block;
+  letter-spacing: normal;
+  margin-left: 12px;
+}
+.header-login-area li a {
+  display: block;
+  background: #8ddcd1;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 13px;
+  border: 1px solid #8ddcd1;
+  transition: .5s;
+}
+.header-login-area li:first-child a {
+  background: #fff;
+  color: #77cbc0;
+}
+.header-login-area li a:hover {
+  opacity: .5;
+}
+
+/* ログインしている場合 */
+.header-mypage-block {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: #8ddcd1;
+  padding: 4px 12px;
+  transition: .5s;
+}
+.header-mypage-block .inner {
+  display: table;
+  height: 32px;
+}
+.header-mypage-block .img-block {
+  width: 32px;
+  height: 100%;
+  border-radius: 50%;
+  display: table-cell;
+  margin-right: 8px;
+}
+.header-mypage-block .text-box {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  padding-left: 12px;
+}
+.header-mypage-block .text-box p {
+  font-size: 12px;
+  line-height: 12px;
   color: #fff;
 }
+.header-mypage-block:hover {
+  opacity: .5;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
@@ -782,8 +830,10 @@
   width: 100%;
   box-sizing: border-box;
   transition: 0.5s;
+}
+.kinyu-top-joshikai-list .kinyu-top-list-title {
   margin-top: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 /* ページネーション */

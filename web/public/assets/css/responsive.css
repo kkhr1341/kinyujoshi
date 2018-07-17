@@ -161,15 +161,15 @@ mark, .mark {
 }
 .kinyu-sp-header {
   width: 100%;
-  /*height: 54px;*/
+  height: 50px;
   background: rgba(255,255,255,1);
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1005;
+  z-index: 1004;
   box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
-  border-left: 1px solid #8ddcd1;
-  border-right: 1px solid #8ddcd1;
+/*  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;*/
 }
 .kinyu-sp-header a {
   display: block;
@@ -191,7 +191,7 @@ mark, .mark {
   display: block;
   width: 116px;
   margin: 0 auto;
-  margin-top: 9px;
+  margin-top: 8px;
 }
 .header-sp-logo img {
   width: 100%;
@@ -225,19 +225,21 @@ mark, .mark {
 /* メニュー */
 .kinyu-sp-menu-block {
   height: 100%;
+  padding-right: 50px;
 }
 .kinyu-sp-menu-block ul {
-  padding: 6px;
+  padding: 6px 6px 2px 6px;
   box-sizing: border-box;
   text-align: center;
 }
 .kinyu-sp-menu-block li {
   display: inline-block;
-  max-width: 95px;
+  /*max-width: 95px;*/
   text-align: center;
   box-sizing: border-box;
   margin: auto 2%;
   box-sizing: border-box;
+  height: 40px;
 }
 .kinyu-sp-menu-block li:first-child {
   margin-left: 0;
@@ -246,7 +248,8 @@ mark, .mark {
   margin-right: 0;
 }
 .kinyu-sp-menu-block li img {
-  width: 100%;
+  /*width: 100%;*/
+  height: 100%;
 }
 .kinyu-sp-header-jyoshikai {
   background: #ffd4d4!important;
@@ -256,16 +259,24 @@ mark, .mark {
   width: 50px;
   height: 50px;
   right: 0;
-  top: 0;
+  bottom: 0;
   border-radius: 0px 0px 0px 0px;
-  z-index: 9999;
+  z-index: 1005;
+  background: #8ddcd1;
+  transition: .5s;
 }
+/*.kinyu-sp-header-close.active {
+  bottom: auto;
+  top: 0;
+}*/
 .kinyu-sp-header-menu img {
   width: 50px;
   height: 50px;
 }
 .kinyu-sp-header-close {
   background: #8ddcd1;
+  bottom: auto;
+  top: 0;
 }
 .kinyu-sp-header-close img {
   width: 100%;
@@ -273,11 +284,11 @@ mark, .mark {
 }
 .header-profile-block {
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   position: fixed;
   top: 12px;
-  left: 10px;
+  right: 10px;
   border-radius: 50%;
   z-index: 1005;
 }
@@ -585,11 +596,11 @@ mark, .mark {
 .kinyu-top-introlist-title {
   padding: 12px;
 }
-.kinyu-top-introlist-pickup h3 {
+.kinyu-top-introlist-pickup .kinyu-top-list-title {
   font-size: 12px;
   line-height: 12px;
   height: 12px;
-  padding: 0px;
+  padding: 0px!important;
   font-weight: 300;
 }
 
@@ -756,8 +767,10 @@ mark, .mark {
   font-size: 12px;
   line-height: 20px;
   height: 40px;
-  padding: 12px 0px 12px;
   box-sizing: content-box;
+}
+.kinyu-top-joshikai-list .kinyu-top-list-title {
+  padding: 12px 0px 12px;
 }
 .list-kind-img {
   position: absolute;
