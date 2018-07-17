@@ -35,7 +35,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_past($page = 1)
     {
-        $this->data['events'] = Events::all('event', '/event/', $page, 2, 20, 0, 0);
+        $this->data['events'] = Events::all('event', '/event/', $page, 2, 100, 0, 0);
         $pagination = $this->data['events']['pagination'];
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '過去の女子会｜きんゆう女子。';
