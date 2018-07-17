@@ -6,6 +6,7 @@
       <li><a href="/news">お知らせ</a></li>
       <li><a href="/joshikai">女子会</a></li>
       <li><a href="/report">レポート</a></li>
+      <li><a href="/kinyu_sanpo">きんゆう散歩</a></li>
       <li><a href="/myway">「わたし」を知る。</a></li>
       <li><a href="/about">きん女。ストーリー</a></li>
       {if in_array('user', $roles) || in_array('admin', $roles)}
