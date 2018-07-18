@@ -67,4 +67,36 @@
   	<script src="/assets/js/kinyu/swiper.js"></script>
   	{/literal}
   </body>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (isIPhoneX()) {
+        document.documentElement.className = "iphonex";
+      }
+    }, false);
+
+    function isIPhoneX() {
+      return isIPhone() && (window.screen.width === 375 && window.screen.height === 812 || window.screen.width === 812 && window.screen.height === 375);
+    }
+
+    function isIPhone() {
+      return !!(navigator.userAgent.match(/iPhone/i));
+    }
+  </script>
+
+  <style>
+    @media screen and (orientation: portrait) {
+      .iphonex {
+        margin-bottom: 34px;
+      }
+    }
+
+    @media screen and (orientation: landscape) {
+      .iphonex {
+        margin-bottom: 21px;
+      }
+    }
+  </style>
 </html>

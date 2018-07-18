@@ -171,6 +171,26 @@ mark, .mark {
 /*  border-left: 1px solid #8ddcd1;
   border-right: 1px solid #8ddcd1;*/
 }
+
+@media screen and (orientation: portrait) {
+  .iphonex .kinyu-sp-header {
+    height: 84px;
+  }
+  .iphonex .kinyu-sp-header-menu {
+    bottom: 34px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .iphonex .kinyu-sp-header {
+    height: 71px;
+  }
+  .iphonex .kinyu-sp-header-menu {
+    bottom: 21px;
+  }
+}
+
+
 .kinyu-sp-header a {
   display: block;
   height: 100%;
