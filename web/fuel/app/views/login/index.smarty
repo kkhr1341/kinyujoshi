@@ -1,6 +1,6 @@
 <div class="kinyu-single-block">
     <div class="login-contents-block">
-        <!-- <a class="login-another-btn" href="/login_regist">メンバー登録へ</a> -->
+        <a class="login-another-btn sp" href="/login_regist">メンバー登録へ</a>
         <div class="login-contents-intro">
             <h2 class="login-contents-title"><span>マイページにログインする</span></h2><br>
         </div>

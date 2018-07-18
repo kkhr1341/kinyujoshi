@@ -250,7 +250,7 @@
 .main-map-description {
   font-size: 16px;
   line-height: 16px;
-  padding: 0px 20% 0px 24px;
+  padding: 0px 20% 0px 20px;
   text-align: left;
 }
 .sub-map-description {
@@ -258,7 +258,7 @@
   margin-top: 12px;
   font-size: 11px;
   line-height: 20px;
-  padding: 0px 20% 0px 24px;
+  padding: 0px 20% 0px 20px;
   text-align: left;
 }
 #map {

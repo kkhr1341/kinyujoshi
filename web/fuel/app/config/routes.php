@@ -130,6 +130,7 @@ return array(
 	'kinyu_sanpo' => 'kinyu/kinyumap/index',
 	'map_ooedoito' => 'kinyu/kinyumap/ooedo_ito',
 	'map_kabuto' => 'kinyu/kinyumap/map_kabuto',
+	'sanpo_nihonginko' => 'kinyu/kinyumap/sanpo_nihonginko',
 
 	//マイページ - トップ
 	'my'   => 'my/top',
