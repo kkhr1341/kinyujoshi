@@ -2422,6 +2422,9 @@ input::-webkit-input-placeholder {
   padding-bottom: 2px;
   margin-top: 1px;
 }
+.login-regist-block .about-member-block {
+  border: 1px solid #8ddcd1;
+}
 
 /* パスワード再発行 */
 #pass-reissue-close {
