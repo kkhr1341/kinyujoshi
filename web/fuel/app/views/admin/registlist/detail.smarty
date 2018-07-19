@@ -20,6 +20,12 @@
               <input type="text" id="age" class="form-control" placeholder="" value="{$registel.age}">
             {/if}
           </div>
+
+          <div class="form-group">
+            <label class="form-title">お住まい <span class="label label-danger">必須</span></label>
+            <p>{$registel.prefecture}</p>
+          </div>
+
           <div class="form-group form-radio-block">
             <label class="form-title">きんゆうワカラナイ度 <span class="label label-danger">必須</span></label>
             <p class="form-sub-title">あなたのきんゆうワカラナイ度を教えてください(^ ^)!</p>
