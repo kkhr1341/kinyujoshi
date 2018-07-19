@@ -23,7 +23,7 @@
 
       <div class="main-menu-list sp">
         <ul>
-          <li class="main-li"><a href="/my/kinjo">myきん女。</a></li>
+          <li class="main-li"><a href="/my/kinjo">myきん女。<br><span>（参加予定の女子会）</span></a></li>
           <li class="main-li"><a href="/my/passport">きん女。パスポート</a></li>
           <li class="main-li"><a href="/my/profile">プロフィール編集</a></li>
           <li class="main-li"><a href="/my/account">アカウント情報</a></li>

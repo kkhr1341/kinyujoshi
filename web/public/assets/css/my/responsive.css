@@ -488,6 +488,9 @@
 .main-menu-list .main-li a {
   padding: 16px 0px;
 }
+.main-menu-list .main-li a span {
+  font-size: 10px;
+}
 .main-menu-list .sub-li {
   margin-bottom: 24px;
   padding-top:
