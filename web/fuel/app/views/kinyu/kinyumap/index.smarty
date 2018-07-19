@@ -2,7 +2,8 @@
 
 <div class="kinyu-list-block">
   <div class="kinyu-map-block">
-    <h2 class="kinyu-map-title"><img src="/images/kinyu_map/kinyu-map-title.png"></h2>
+    <!-- <h2 class="kinyu-map-title"><img src="/images/kinyu_map/kinyu-map-title.png"></h2> -->
+    <h2 class="kinyu-map-title"><img src="/images/kinyu_map/main-img.jpg"></h2>
     <div class="description-block">
       <p class="main-map-description">きんゆう散歩って？</p>
       <p class="sub-map-description pc">
