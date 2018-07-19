@@ -482,6 +482,9 @@
 .kinyu-top-introlist-pickup .swiper-slide {
   height: 100%;
 }
+.kinyu-top-introlist-pickup .swiper-wrapper {
+  transition: .5s;
+}
 .kinyu-top-introlist-pickup .swiper-slide {
   transition: .5s;
 }
@@ -846,12 +849,18 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-banner-area {
   text-align: center;
-  width: 650px;
+  width: 100%;
   margin: 0 auto;
 }
 .kinyu-top-banner-area li {
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
   margin-bottom: 24px;
   transition: .5s;
+}
+.kinyu-top-banner-area li:last-child {
+  margin-right: 0%;
 }
 .kinyu-top-banner-area li a {
   display: block;
@@ -1715,7 +1724,7 @@
   float: left;
   width: 48.1%;
   margin-right: 3.8%;
-  margin-bottom: 2.5%;
+  margin-bottom: 3.8%;
   transition: .5s;
 }
 .special-event-list li:nth-child(2n) {
@@ -4423,8 +4432,8 @@ to {
 .kinyu-top-maincontent li a:hover {
   opacity: .5;
 }
-.kinyu-top-introlist-pickup .swiper-slide:hover {
-  opacity: .5;
+.kinyu-top-introlist-pickup .swiper-wrapper:hover {
+  opacity: .5!important;
 }
 .pc-menu-trigger-close img:hover {
   opacity: .5;

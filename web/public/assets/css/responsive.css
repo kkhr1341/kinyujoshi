@@ -68,6 +68,17 @@ mark, .mark {
   font-size: 12px;
   padding: 10px 50px;
 }
+.kinyu-top-banner-area li {
+  float: none;
+  width: 92%;
+  margin: 0 auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+.kinyu-top-banner-area li:last-child {
+  margin-right: auto;
+  margin-bottom: 12px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　メイン
