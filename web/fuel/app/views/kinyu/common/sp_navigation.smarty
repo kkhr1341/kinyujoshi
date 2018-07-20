@@ -60,24 +60,30 @@
           <div class="navi-social-area-el">
             <a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a>
           </div>
+          <div class="navi-social-area-el">
+            <a href="https://twitter.com/kinyu_joshi" target="_blank"><img src="/images/social/twitter_icon.png"></a>
+          </div>
         </div>
       </li>
-
+      
       <li class="item navi_banner_area navi_kinyu-menu-li03">
-        <a class="navi_banner_area_el" href="/myway">
-          <img src="/images/banner/myway_sp.jpg">
+        <a class="navi_banner_area_el" href="/kinyu_sanpo">
+          <img class="" src="/images/kinyu_map/og/og-main.jpg">
         </a>
       </li>
 
       <li class="item navi_banner_area navi_kinyu-menu-li04">
-        <a class="navi_banner_area_el" href="/map">
-          <img src="/images/map/map-thum-banner.jpg">
+        <a class="navi_banner_area_el" href="/myway">
+          <img class="" src="/images/myway/og_myway.jpg">
         </a>
       </li>
 
-        
+      <li class="item navi_banner_area navi_kinyu-menu-li05">
+        <a target="_blank" class="navi_banner_area_el" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
+          <img class="" src="/images/banner/asahi_&w_og.jpg">
+        </a>
+      </li>        
 
     </ul>
-
   </div>
 </div>

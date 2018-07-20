@@ -39,4 +39,12 @@
     </div>
   {/if}
 
+  <div class="kinyu-header-social-list">
+    <ul>
+      <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/instagram_icon.png"></a></li>
+      <li><a href="https://twitter.com/kinyu_joshi" target="_blank"><img src="/images/social/twitter_icon.png"></a></li>
+      <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a></li>
+    </ul>
+  </div>
+
 </header>
