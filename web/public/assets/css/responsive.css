@@ -2410,7 +2410,7 @@ input::-webkit-input-placeholder {
 .about-member-block {
   width: 88%;
   margin-top: 36px;
-  padding: 24px 28px;
+  padding: 24px 36px 24px 28px;
 }
 .about-member-block .about-member-title {
   font-size: 14px;
@@ -2432,6 +2432,7 @@ input::-webkit-input-placeholder {
 .about-member-list li span {
   position: absolute;
   left: 0;
+  top: 0;
   font-size: 13px;
   line-height: 15px;
   margin-right: 12px;
@@ -2440,6 +2441,11 @@ input::-webkit-input-placeholder {
 }
 .login-regist-block .about-member-block {
   border: 1px solid #8ddcd1;
+}
+.about-member-block .login-illust {
+  bottom: -17px;
+  right: -32px;
+  width: 77px;
 }
 
 /* パスワード再発行 */

@@ -3895,6 +3895,7 @@ input::-webkit-input-placeholder {
   padding: 36px 50px;
   /*border: 1px solid #8ddcd1;*/
   background: #fff;
+  position: relative;
 }
 .about-member-block .about-member-title {
   font-size: 20px;
@@ -3904,18 +3905,31 @@ input::-webkit-input-placeholder {
 }
 .about-member-list li {
   font-size: 14px;
+  line-height: 25px;
   margin-bottom: 24px;
+  position: relative;
+  padding-left: 30px;
 }
 .about-member-list li:last-child {
   margin-bottom: 4px; 
 }
 .about-member-list li span {
+  position: absolute;
+  left: 0;
+  top: 4px;
   font-size: 15px;
+  line-height: 15px;
   border-bottom: 1px solid #8ddcd1;
   vertical-align: bottom;
   margin-right: 12px;
   padding-bottom: 4px;
   color: #77cbc0;
+}
+.about-member-block .login-illust {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 110px;
 }
 
 
