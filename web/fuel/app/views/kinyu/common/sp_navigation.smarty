@@ -1,7 +1,7 @@
 <!-- ナビゲーション -->
 <div class="kinyu-sp-navi">
   <div class="kinyu-sp-header-menu kinyu-sp-header-close">
-    <img class="menu-trigger" src="/images/new/sp-header-close_w.png">
+    <img class="menu-trigger" src="/images/menu/close.png">
     <a href="/" class="navi-icon"><img class="top-circle-logo" src="/images/top-circle-logo.png"></a>
   </div>
 
@@ -19,7 +19,7 @@
 
           {if in_array('user', $roles) || in_array('admin', $roles)}
           <!-- ログインしている場合 -->
-            <div class="navi_kinyu-menu-block-el main-area">
+            <div class="navi_kinyu-menu-block-el main-area profile-area">
               <a href="/my"><span>マイページ<div class="to-my-page" style="background:url({$profile.profile_image}) center center / cover no-repeat;"></div></span></a>
             </div>
           {else}
@@ -32,13 +32,16 @@
             </div>
           {/if}
           <div class="navi_kinyu-menu-block-el">
-            <a href="/joshikai">女子会の予定</a>
+            <a href="/news">お知らせ</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/report">レポートを見る</a>
+            <a href="/joshikai">女子会</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/news">ニュースを見る</a>
+            <a href="/report">レポート</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/kinyu_sanpo">きんゆう散歩</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a class="fc-kinyu" href="/about">きん女。ストーリー</a>

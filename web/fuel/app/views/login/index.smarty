@@ -1,6 +1,6 @@
 <div class="kinyu-single-block">
     <div class="login-contents-block">
-        <a class="login-another-btn" href="/login_regist">メンバー登録へ</a>
+        <a class="login-another-btn sp" href="/login_regist">メンバー登録へ</a>
         <div class="login-contents-intro">
             <h2 class="login-contents-title"><span>マイページにログインする</span></h2><br>
         </div>
@@ -26,6 +26,18 @@
                 </div>
             </div>
         </div>
+        
+        <div class="about-member-block">
+          <h2 class="about-member-title">マイページでできること</h2>
+          <div class="about-member-list">
+            <ul>
+              <li><span>01</span>参加予定の女子会を確認することができます。</li>
+              <li><span>02</span>メンバー限定コンテンツを見ることができます。（準備中）</li>
+              <li><span>03</span>福利厚生や優待を受けることができます。（準備中）</li>
+            </ul>
+          </div>
+        </div>
+
     </div>
 </div>
 

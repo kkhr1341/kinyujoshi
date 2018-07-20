@@ -1,0 +1,25 @@
+<!-- リロード時アニメーション -->
+<script src="/assets/js/kinyu/topanimation.js"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
+
+<div class="kinyu-list-block kinyu-map-block-container">
+
+  <div class="kabuto-map-block">
+
+    <!-- <a class="sp to-top-link" href="/"><img src="/images/map/to-top-sp.png"></a>
+    <a class="pc to-top-link" href="/"><img src="/images/map/to-top.png"></a> -->
+
+    <div class="">
+      きんゆう散歩＿金融スポットシリーズ＿日本銀行<br>
+      日本銀行は日本にある、たった一つの中央銀行で、政府機関や株式会社ではありません。<br>
+      日本銀行を上から見ると「円」に見える理由は、謎につつまれています。平日は誰でも見学ができます。<br>
+
+    </div>
+
+    <div class="kabuto-map-block-inner">
+    </div>
+  </div>
+
+  {$map_last}
+
+</div>

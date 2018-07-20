@@ -38,7 +38,7 @@ class Controller_Login extends Controller_KinyuBase
 
         if (!Auth::check()) {
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-            $this->template->title = 'ログイン｜きんゆう女子。';
+            $this->template->title = 'メンバー登録｜きんゆう女子。';
             $this->template->description = 'ログイン｜きんゆう女子';
             $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
             $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -67,7 +67,7 @@ class Controller_Login extends Controller_KinyuBase
             $this->data['prefectures'] = Prefectures::lists();
 
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-            $this->template->title = 'ログイン｜きんゆう女子。';
+            $this->template->title = 'メンバー登録｜きんゆう女子。';
             $this->template->description = 'ログイン｜きんゆう女子';
             $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
             $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -102,7 +102,7 @@ class Controller_Login extends Controller_KinyuBase
             $this->template->after_login_url = $after_login_url;
 
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-            $this->template->title = 'ログイン｜きんゆう女子。';
+            $this->template->title = 'メンバー登録｜きんゆう女子。';
             $this->template->description = 'ログイン｜きんゆう女子';
             $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
             $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
