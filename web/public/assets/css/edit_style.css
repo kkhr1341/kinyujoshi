@@ -149,26 +149,74 @@
 .kinyu-header-social-list li a img {
   width: 100%;
 }
-/*  */
-.header-profile-block {
-  display: block;
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  border-radius: 50%;
-  transition: .5s;
-}
+
 /*マイページにログイン*/
-.kinyu-header-mylink {
-  background: #8ddcd1;
-  padding: 4px 20px;
+.header-login-area {
   position: fixed;
   top: 16px;
-  left: 16px;
+  right: 16px;
+}
+.header-login-area ul {
+  letter-spacing: -40px;
+}
+.header-login-area li {
+  display: inline-block;
+  letter-spacing: normal;
+  margin-left: 12px;
+}
+.header-login-area li a {
+  display: block;
+  background: #8ddcd1;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 13px;
+  border: 1px solid #8ddcd1;
+  transition: .5s;
+}
+.header-login-area li:first-child a {
+  background: #fff;
+  color: #77cbc0;
+}
+.header-login-area li a:hover {
+  opacity: .5;
+}
+
+/* ログインしている場合 */
+.header-mypage-block {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: #8ddcd1;
+  padding: 4px 12px;
+  transition: .5s;
+}
+.header-mypage-block .inner {
+  display: table;
+  height: 32px;
+}
+.header-mypage-block .img-block {
+  width: 32px;
+  height: 100%;
+  border-radius: 50%;
+  display: table-cell;
+  margin-right: 8px;
+}
+.header-mypage-block .text-box {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  padding-left: 12px;
+}
+.header-mypage-block .text-box p {
+  font-size: 12px;
+  line-height: 12px;
   color: #fff;
 }
+.header-mypage-block:hover {
+  opacity: .5;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
@@ -433,6 +481,9 @@
 .kinyu-top-introlist-pickup .swiper-wrapper,
 .kinyu-top-introlist-pickup .swiper-slide {
   height: 100%;
+}
+.kinyu-top-introlist-pickup .swiper-wrapper {
+  transition: .5s;
 }
 .kinyu-top-introlist-pickup .swiper-slide {
   transition: .5s;
@@ -783,6 +834,10 @@
   box-sizing: border-box;
   transition: 0.5s;
 }
+.kinyu-top-joshikai-list .kinyu-top-list-title {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
 
 /* ページネーション */
 .kinyu-top-list-block .blog-pagenation {
@@ -794,12 +849,18 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-banner-area {
   text-align: center;
-  width: 650px;
+  width: 100%;
   margin: 0 auto;
 }
 .kinyu-top-banner-area li {
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
   margin-bottom: 24px;
   transition: .5s;
+}
+.kinyu-top-banner-area li:last-child {
+  margin-right: 0%;
 }
 .kinyu-top-banner-area li a {
   display: block;
@@ -814,6 +875,10 @@
   text-align: center;
   width: 750px;
   margin: 0 auto;
+}
+.kiinyu-top-mainarea-bottom li {
+  width: 100%;
+  float: none;
 }
 
 /* レポート詳細部分 */
@@ -1473,12 +1538,12 @@
   padding: 0px 1px;
 }
 .event-subbox {
-  border-top: 1px solid #e3e3e3;
+  border-top: 1px solid #f3f3f3;
   padding: 12px 1px 0px 1px;
 }
 .event-subbox .event-subbox-el {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 11px;
+  line-height: 16px;
   height: 18px;
 }
 
@@ -1663,7 +1728,7 @@
   float: left;
   width: 48.1%;
   margin-right: 3.8%;
-  margin-bottom: 2.5%;
+  margin-bottom: 3.8%;
   transition: .5s;
 }
 .special-event-list li:nth-child(2n) {
@@ -3828,7 +3893,8 @@ input::-webkit-input-placeholder {
   margin: 0 auto;
   margin-top: 42px;
   padding: 36px 50px;
-  border: 1px solid #8ddcd1;
+  /*border: 1px solid #8ddcd1;*/
+  background: #fff;
 }
 .about-member-block .about-member-title {
   font-size: 20px;
@@ -4384,8 +4450,8 @@ to {
 .kinyu-top-maincontent li a:hover {
   opacity: .5;
 }
-.kinyu-top-introlist-pickup .swiper-slide:hover {
-  opacity: .5;
+.kinyu-top-introlist-pickup .swiper-wrapper:hover {
+  opacity: .5!important;
 }
 .pc-menu-trigger-close img:hover {
   opacity: .5;

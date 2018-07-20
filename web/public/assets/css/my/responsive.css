@@ -238,6 +238,9 @@
   height: 82px;
   background: #f9f9f9;
 }
+.admin-normal-joshikai li .to-link-joshikai {
+  font-weight: normal;
+}
 .admin-normal-joshikai-title {
   font-size: 11px;
   margin-bottom: 8px;
@@ -459,7 +462,7 @@
 }
 
 .admin-normal-joshikai li .joshikai-no {
-  font-size: 11px;
+  font-size: 10px;
   padding: 16px 0px;
   background: #f9f9f9;
 }
@@ -484,6 +487,9 @@
 }
 .main-menu-list .main-li a {
   padding: 16px 0px;
+}
+.main-menu-list .main-li a span {
+  font-size: 10px;
 }
 .main-menu-list .sub-li {
   margin-bottom: 24px;

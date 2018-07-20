@@ -30,7 +30,7 @@
       {foreach from=$news item=new name=foo}
       <a href="/news/{$new.code}" class="kinyu-top-introlist-news-link">
         <div class="title-area">
-          <p>NEWS</p>
+          <p>お知らせ</p>
         </div>
         <div class="text-area">
           <p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
@@ -39,12 +39,12 @@
       </a>
       {/foreach}
       <div class="sidebar-more-link">
-        <a href="/news">ニュースをもっと見る ></a>
+        <a href="/news">お知らせをもっと見る ></a>
       </div>
     </div>
 
     <div class="introduction-list">
-      <div class="kinyu-top-banner-area">
+      <div class="kinyu-top-banner-area kinyu-top-banner-area">
         <ul class="clear">
           <li>
             <a href="/start">
@@ -111,6 +111,10 @@
                       {/if}
                     </div>
                     <h3 class="kinyu-top-list-title">{$event.title}</h3>
+                    <div class="event-subbox">
+                      <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                      <p class="event-subbox-el">場所：{$event.place}</p>
+                    </div>
                   </div>
                 </a>
               </li>   
@@ -204,24 +208,29 @@
         <div class="kinyu-top-maincontent-block-el">     
           <div class="kinyu-top-banner-area">
             <ul class="clear">
+              <!-- きんゆう散歩 -->
+              <li>
+                <a target="_blank" href="/kinyu_sanpo">
+                  <img class="" src="/images/kinyu_map/og/og-main.jpg">
+                </a>
+              </li>
+              <!-- わたしを知る -->
               <li>
                 <a target="_blank" href="/myway">
-                  <img class="" src="/images/banner/myway_sp.jpg">
+                  <img class="" src="/images/myway/og_myway.jpg">
                 </a>
               </li>
+              <!-- 朝日デジタル -->
               <li>
                 <a target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
-                  <img class="" src="/images/banner/asahi_&w_sp.jpg">
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="/map">
-                  <img class="" src="/images/map/map-thum-banner.jpg">
+                  <img class="" src="/images/banner/asahi_&w_og.jpg">
                 </a>
               </li>
             </ul>
           </div>
         </div>
+
+
       </div>
     </div>
   </div>

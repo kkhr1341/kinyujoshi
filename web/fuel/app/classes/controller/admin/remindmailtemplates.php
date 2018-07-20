@@ -11,11 +11,8 @@ class Controller_Admin_Remindmailtemplates extends Controller_Adminbase
 
     public function action_index()
     {
-
-        if (!Auth::has_access('events.admin')) {
-            \Auth::logout();
-            Response::redirect('/');
-            exit();
+        if (!Auth::has_access('remindmailtemplates.read')) {
+            throw new HttpNoAccessException;
         }
         $this->data['open_events'] = Events::lists(1, null, null, null, "asc");
 
@@ -24,13 +21,9 @@ class Controller_Admin_Remindmailtemplates extends Controller_Adminbase
 
     public function action_edit($code)
     {
-
-        if (!Auth::has_access('events.admin')) {
-            \Auth::logout();
-            Response::redirect('/');
-            exit();
+        if (!Auth::has_access('remindmailtemplates.read')) {
+            throw new HttpNoAccessException;
         }
-
         $this->data['events'] = Events::getByCode('events', $code);
 
         if ($event_remind_mail_template = EventRemindMailTemplate::getByEventCode($code)) {

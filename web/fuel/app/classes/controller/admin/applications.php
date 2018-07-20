@@ -8,6 +8,9 @@ class Controller_Admin_Applications extends Controller_Adminbase
 
     public function action_index()
     {
+        if (!Auth::has_access('applications.read')) {
+            throw new HttpNoAccessException;
+        }
         $username = \Auth::get('username');
         $this->data['sections'] = Sections::lists();
         $this->data['applications'] = Applications::get_next_events_applications($username);

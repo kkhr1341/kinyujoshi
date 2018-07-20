@@ -691,6 +691,9 @@ footer {
   padding: 8px 0px;
   transition: .5s;
 }
+.admin-normal-side li a span {
+  font-size: 11px;
+}
 .admin-normal-side li:last-child {
   border-top: 1px dotted #dcdcdc; 
   margin-top: 16px;
