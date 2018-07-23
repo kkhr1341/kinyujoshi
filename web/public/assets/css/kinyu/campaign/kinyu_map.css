@@ -226,19 +226,91 @@
   width: 100%;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　マップ - レポートリスト
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-map-joshikai-block {
+  width: 1050px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 60px 0px;
+  margin-bottom: 60px;
+}
+.kinyu-map-block-container .kinyu-top-list {
+  padding-bottom: 40px;
+}
+.kinyu-map-block-container .kinyu-top-list:last-child {
+  padding-bottom: 0px;
+}
+.kinyu-map-block-container .kinyu-top-list .kinyu-top-main-title {
+  margin-bottom: 36px;
+}
+.kinyu-map-block-container .kinyu-top-list .list-title {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.kinyu-map-block-container .kinyu-top-list ul {
+  letter-spacing: -40px;
+  text-align: center;
+}
+.kinyu-map-block-container .kinyu-top-list li {
+  display: inline-block;
+  float: none;
+  letter-spacing: normal;
+  margin-bottom: 0%;
+  margin-right: 2%;
+}
+.kinyu-map-block-container .kinyu-top-list li:nth-child(even) {
+  margin-right: 0%;
+}
+.kinyu-map-block-container .kinyu-top-list-title {
+  height: auto;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 8px;
+}
+.to-special-site {
+  width: 320px;
+  display: block;
+  background: #6b9fcd;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 12px;
+  transition: .5s;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+}
+.to-special-site:after {
+  content: "〉";
+  position: absolute;
+  right: 0;
+}
+.kinyu-map-block-container .kinyu-top-list:last-child .to-special-site {
+  background: #f57d80;
+}
+
+
 
 
 /* ----------------------------------
     スマートフォン＆タブレット
 ---------------------------------- */
 @media screen and (max-width: 1024px) {
-
+.kinyu-map-main-container {
+  padding: 0px 0% 50px!important;
+}
+.kinyu-map-main-container .kinyu-map-block {
+  padding: 0px 0px 0px;
+}
 .kinyu-map-block {
   width: 100%;
   padding: 12px 0px 0px;
 }
 .kinyu-map-title img {
-  width: 78%;
+  width: 100%;
 }
 .description-block {
   width: 92%;
@@ -362,6 +434,35 @@
   width: 100%;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　マップ - レポートリスト
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-map-joshikai-block {
+  width: 88%;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 32px 0px 50px;
+  margin-top: 32px;
+  margin-bottom: 50px;
+}
+.kinyu-map-block-container .kinyu-top-list .kinyu-top-main-title {
+  margin-bottom: 16px;
+}
+.kinyu-map-block-container .kinyu-top-list .list-title {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+.kinyu-map-block-container .kinyu-top-list-title {
+  font-size: 11px;
+  line-height: 16px;
+}
+.to-special-site {
+  width: 70%;
+  padding: 8px 20px;
+  font-size: 11px;
+  margin-top: 20px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　かぶと町マップ
@@ -404,7 +505,8 @@
   .kinyu-map-list-block li a:hover  {
     opacity: .5;
   }
-  .to-top-link:hover {
+  .to-top-link:hover,
+  .to-special-site:hover {
     opacity: .5;
   }
   .kabuto-map-description-inner .inner .kabuto-map-description-close:hover {

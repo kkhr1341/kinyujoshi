@@ -3,19 +3,77 @@
 <div class="kinyu-list-block kinyu-map-block-container">
 	<div class="kinyu-map-block">
 
-		<img class="kinyu-map-block-img" src="/images/kinyu_map/ooedo.jpg" usemap="#ImageMap" alt="" />
-			<map name="ImageMap">
+    <img class="kinyu-map-block-img pc" src="/images/kinyu_map/ooedo.jpg" usemap="#ImageMap" alt="" />
+		<img class="kinyu-map-block-img sp" src="/images/kinyu_map/ooedo_sp.jpg" alt="">
+			
+      <map name="ImageMap">
   			<area shape="rect" coords="705,283,918,327" href="https://kinyu-joshi.jp/ooam-joshikai2018#reit-illust" alt="" target="_blank"/>
 			</map>
 		<img class="map-ooedoito-illust1" src="/images/kinyu_map/ooedo_illust.png" alt="" />
 	</div>
+
+  <!-- 女子会の様子 -->
+  <!-- <div class="joshikai-list">
+    <p>大江戸温泉さんとの<br>女子会レポートはこちら</p>
+    
+  </div> -->
+  <div class="kinyu-map-joshikai-block">
+    <div class="kinyu-top-list">
+      <h3 class="kinyu-top-main-title pc">大江戸温泉での女子会レポートはこちら♪</h3>
+      <h3 class="kinyu-top-main-title sp">大江戸温泉での<br>女子会レポートはこちら♪</h3>
+      <p class="list-title">【2回目(伊東編)】</p>
+      <ul class="clear">
+        <li>
+          <a href="/report/Xh9R4A" target="_blank">
+          <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20180629144457image.jpg) center center / cover no-repeat;""></div>
+            <div class="text-box">
+              <h3 class="kinyu-top-list-title">＜前編＞〜温泉リート〜 まちと繋がる金融の世界♨︎</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/report/" target="_blank">
+          <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20180629214630image.jpg) center center / cover no-repeat;""></div>
+            <div class="text-box">
+              <h3 class="kinyu-top-list-title">＜後編＞〜温泉リート〜 まちと繋がる金融の世界</h3>
+            </div>
+          </a>
+        </li> 
+      </ul>
+      <a class="to-special-site" href="/ooam-joshikai2018" target="_blank">2回目：特設サイトはこちら</a>
+    </div>
+
+    <div class="kinyu-top-list">
+      <p class="list-title">【1回目 (お台場編)】</p>
+      <ul class="clear">
+        <li>
+          <a href="/report/LjbKWn" target="_blank">
+          <div class="img-box" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/10207192197536638/images/2017100415203220994150_1451310271602213_4923011598505313996_n.png) center center / cover no-repeat;""></div>
+            <div class="text-box">
+              <h3 class="kinyu-top-list-title">＜前編＞温泉と投資♪女子会レポート</h3>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/report/C3Qfeg" target="_blank">
+          <div class="img-box" style="background: url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/201710241238512017100417545492794BD8-14E5-488E-B42C-B30CE56E43C1.jpg) center center / cover no-repeat;""></div>
+            <div class="text-box">
+              <h3 class="kinyu-top-list-title">＜後編＞温泉と投資♪女子会レポート</h3>
+            </div>
+          </a>
+        </li> 
+      </ul>
+      <a class="to-special-site" href="/oom-reit" target="_blank">1回目：特設サイトはこちら</a>
+    </div>
+  </div>
+
   {$map_last}
 </div>
 
 <style>
 .kinyu-map-block {
   line-height: 0;
-  width: 1000px;
+  width: 1050px;
   margin: 0 auto;
   position: relative;
   padding: 80px 0px 60px;
@@ -32,6 +90,7 @@
   right: -30px;
   width: 210px;
 }
+
 @media screen and (max-width: 1024px) {
 .kinyu-map-block-container {
 	padding: 0px 0% 40px!important;
