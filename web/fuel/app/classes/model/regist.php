@@ -415,6 +415,7 @@ class Regist extends Base
             "member_regist.edit_inner", 
             "member_regist.industry", 
             "member_regist.industry_other", 
+            "profiles.prefecture", 
             "member_regist.created_at", 
             "member_regist.updated_at",
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
