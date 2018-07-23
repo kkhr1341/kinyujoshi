@@ -23,7 +23,11 @@
 
           <div class="form-group">
             <label class="form-title">お住まい <span class="label label-danger">必須</span></label>
-            <p>{$registel.prefecture}</p>
+            {if $registel.prefecture == ""}
+              <p>登録なし</p>
+            {else}
+              <p>{$registel.prefecture}</p>
+            {/if}
           </div>
 
           <div class="form-group form-radio-block">
