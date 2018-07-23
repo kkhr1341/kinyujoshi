@@ -34,7 +34,6 @@
               <div class="bg-joshikai"></div>
             {else if $event.event_category == "スペシャル"}
               <div class="bg-special-joshikai"></div>
-              <img src="/images/event/specialjoshikai_title.png" class="special_joshikai_title">
             {else}
               <div class="bg-joshikai"></div>
             {/if}
