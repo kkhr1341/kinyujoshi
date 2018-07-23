@@ -1,9 +1,9 @@
-<div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
+<!-- <div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
   <a href="/kinyu_sanpo">
     <div class="kinyu-top-list-kind">
     </div>
   </a>
-</div>
+</div> -->
 
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
