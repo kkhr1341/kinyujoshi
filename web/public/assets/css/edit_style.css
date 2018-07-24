@@ -157,6 +157,7 @@
   right: 16px;
 }
 .header-login-area ul {
+  font-size:0;
   letter-spacing: -40px;
 }
 .header-login-area li {
