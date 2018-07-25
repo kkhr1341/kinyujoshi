@@ -6,7 +6,7 @@ class Controller_Api_Events extends Controller_Apibase
 {
     public function action_create()
     {
-        if (!Auth::has_access('events.admin')) {
+        if (!Auth::has_access('events.create')) {
             exit();
         }
         $val = Events::validate(\Input::post('status'));
@@ -24,7 +24,7 @@ class Controller_Api_Events extends Controller_Apibase
 
     public function action_save()
     {
-        if (!Auth::has_access('events.admin')) {
+        if (!Auth::has_access('events.edit')) {
             exit();
         }
 
@@ -39,7 +39,7 @@ class Controller_Api_Events extends Controller_Apibase
 
     public function action_delete()
     {
-        if (!Auth::has_access('events.admin')) {
+        if (!Auth::has_access('events.delete')) {
             exit();
         }
         return $this->ok(Events::delete(\Input::all()));
