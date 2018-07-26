@@ -20,6 +20,7 @@
   </head>
 
   <body class="drawer drawer--left">
+    <canvas id="canvas"></canvas>
     <!-- Facebook -->
     <div id="fb-root"></div>
     <!-- <script>(function(d, s, id) {
@@ -51,7 +52,7 @@
     </div>
 
     <!-- 1000人達成イベントメッセージ -->
-    <!-- <div class="celebration-message">
+    <div class="celebration-message">
       <div class="main-block">
         <div class="main-block-inner">
           <img class="message01" src="/images/kinjo1000_message.png">
@@ -62,9 +63,9 @@
           <p id="celebration-message-close" class="close-btn"><img src="/images/close-btn.png"></p>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <!-- <style>
+    <style>
       .celebration-message {
         display: none;
         width: 100%;
@@ -176,7 +177,7 @@
           padding: 8px 0px;
         }
       }
-    </style> -->
+    </style>
 
     <!-- 解析コード -->
     {literal}
@@ -191,7 +192,7 @@
       })();
     </script>
 
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       $('.bxslider').bxSlider({
         auto: true,
         pause: 8000,
@@ -204,8 +205,8 @@
           $(".celebration-message").fadeOut(500);
         });
       });
-    </script> -->
-    <!-- <script type="text/javascript">
+    </script>
+    <script type="text/javascript">
       $(function(){
         if($.cookie("access")){
         }else{
@@ -217,7 +218,7 @@
           $.cookie("access","foo", { expires: 2 });
         })
       });
-    </script> -->
+    </script>
     <script src="/assets/js/kinyu/swiper.js"></script>
     {/literal}
 </body>

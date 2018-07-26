@@ -528,6 +528,15 @@
   font-size: 12px;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　紙吹雪の場合
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/*.admin-normal-container {
+  background: rgba(113, 113, 113, 0.05);
+}*/
+.admin-normal-container {
+  background: none;
+}
 
 
 }

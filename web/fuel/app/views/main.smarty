@@ -17,6 +17,10 @@
 
 
   	{Asset::render('layout')}
+    <!-- 紙吹雪 -->
+    <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
+    <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
+    
   	{if isset($lang) && $lang eq 'en'}
   	<script type="text/javascript" src="//maps.google.com/maps/api/js?language=en&key=AIzaSyCZqIv_Xh0iQ1XOI1n1Q821t94SNTf0oeQ"></script>
   	{else}
@@ -28,6 +32,7 @@
 
 	<!-- <body class="drawer drawer--left" onCopy="return false;"> -->
     <body class="drawer drawer--left">
+    <canvas id="canvas"></canvas>
 
     {$pc_header}
 

@@ -222,7 +222,7 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.kinyu-main-animation {
+#kinyu-main-animation {
   width: 100%;
   height: 100vh;
   background: rgba(255,255,255,.99);
@@ -231,7 +231,7 @@
   top: 0;
   left: 0;
 }
-.kinyu-main-animation-inner {
+#kinyu-main-animation-inner {
   width: 380px;
   height: 95px;
   position: absolute;
@@ -239,13 +239,14 @@
   left: 50%;
   margin-top: -47.5px;
   margin-left: -190px;
+  z-index: 1007;
 }
-.kinyu-main-animation-sub {
+#kinyu-main-animation-sub {
   margin-bottom: 8px;
   display: none;
   width: 380px;
 }
-.kinyu-main-animation-title {
+#kinyu-main-animation-title {
   display: none; 
   width: 380px;
 }
@@ -259,6 +260,94 @@
   display: block;
   margin: 0 auto;
   padding-bottom: 16px;
+}
+#kinyu-main-animation video {
+  /*background: url('/video_bg.jpg') no-repeat;*/
+  background-attachment: fixed; 
+  background-position: center center;
+  background-size: cover;
+  left: 0;
+  min-height: 100%;
+  min-height: 100vh;
+  min-width: 100%;
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 1004;
+}
+#kinyu-main-animation .d-white {
+  background: rgba(255,255,255,.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1006
+}
+
+/* 季節限定 */
+#kinyu-season-animation {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#kinyu-season-animation-inner {
+  width: 420px;
+  height: 125px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -62.5px;
+  margin-left: -210px;
+  z-index: 1007;
+}
+#kinyu-season-animation-sub {
+  display: none;
+  width: 420px;
+}
+#kinyu-season-animation-title {
+  display: none; 
+  width: 420px;
+  margin-top: -10px;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.pc-kinyu-logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+#kinyu-season-animation video {
+  display: none;
+  /*background: url('/video_bg.jpg') no-repeat;*/
+  background-attachment: fixed; 
+  background-position: center center;
+  background-size: cover;
+  left: 0;
+  min-height: 100%;
+  min-height: 100vh;
+  min-width: 100%;
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 1004;
+}
+#kinyu-season-animation .d-white {
+  background: rgba(255,255,255,.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1006
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -4358,6 +4447,32 @@ to {
   font-size: 13px;
   color: #fff;
 }*/
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　紙吹雪の場合
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-about-block,
+.kinyu-list-block,
+.myway-content-list,
+.report-detail-sidebar,
+.kinyu-details-introdauction,
+.joshikai-main-detail,
+.kinyu-main-single-block,
+.insta-block-inner,
+.login-regist-block {
+  background: rgba(113, 113, 113, 0.05);
+}
+.kinyu-main-block .inner,
+.report-detail-sidebar2,
+footer {
+  background: none;
+}
+.login-contents-block {
+  background: rgba(0, 197, 170, 0.1);
+}
+
+
 
 @media screen and (min-width: 640px) {
 

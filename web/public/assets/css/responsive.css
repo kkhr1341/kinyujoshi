@@ -2971,6 +2971,38 @@ footer .navi_kinyu-submenu-el a {
   color: #fff;
 }
 
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　紙吹雪の場合
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.kinyu-top-joshikai-list li .text-box,
+.kinyu-start-intro-block,
+.joshikai-main,
+footer {
+  background: rgba(113, 113, 113, 0.05);
+}
+.kinyu-single-block,
+.company-info-block,
+.kinyu-list-block,
+.login-regist-block,
+.about-member-block {
+  background: none;
+}
+.login-contents-block .about-member-block {
+  background: rgba(255,255,255,.8);
+}
+.login-regist-block .about-member-block {
+  background: none;
+}
+.login-contents-block {
+  background: rgba(0, 197, 170, 0.1);
+}
+
+}
+
+
+
 }
 
 @media screen and (max-width: 340px) {
