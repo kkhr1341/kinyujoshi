@@ -19,7 +19,7 @@ class Controller_Kinyu_Kinyumap extends Controller_Kinyubase
 
         $this->template->title = 'きんゆう散歩｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu_map/og/og-main.jpg';
-        $this->template->description = 'レトロな町・金ゆうの町、日本橋兜町・茅場町。あまり知られていない、かくれ家的なお店がいっぱい！！ きんゆう女子。おすすめのスポットをご紹介♪';
+        $this->template->description = '金融や経済ってあまり目に見えないけれど、実は身の回りには金融・経済に関わることがたくさん。ゆるりと旅する感覚で、金融を見たり、触れたり、考えてみよう。世界にある金融が見えると、ぐっと金融が楽しくなるかも♪ このページでは、金融に関わるスポットを更新していきます。あなたのオススメの金融・金運スポットがありましたら、ぜひ教えてください♪';
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
