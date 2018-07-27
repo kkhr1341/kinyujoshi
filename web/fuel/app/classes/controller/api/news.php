@@ -6,7 +6,7 @@ class Controller_Api_News extends Controller_Apibase
 {
     public function action_create()
     {
-        if (!Auth::has_access('news.admin')) {
+        if (!Auth::has_access('news.create')) {
             exit();
         }
         return $this->ok(News::create(\Input::all()));
@@ -14,7 +14,7 @@ class Controller_Api_News extends Controller_Apibase
 
     public function action_save()
     {
-        if (!Auth::has_access('news.admin')) {
+        if (!Auth::has_access('news.edit')) {
             exit();
         }
         return $this->ok(News::save(\Input::all()));
@@ -22,7 +22,7 @@ class Controller_Api_News extends Controller_Apibase
 
     public function action_delete()
     {
-        if (!Auth::has_access('news.admin')) {
+        if (!Auth::has_access('news.delete')) {
             exit();
         }
         return $this->ok(News::delete(\Input::all()));

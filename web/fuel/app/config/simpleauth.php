@@ -98,7 +98,7 @@ return array(
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
             'inquiries' => array('read'),
-            'news' => array('read', 'create', 'edit'),
+            'news' => array('read', 'create', 'edit', 'delete'),
             'registlist' => array('read', 'create'),
             'remindmailtemplates' => array('read', 'edit'),
         ),
