@@ -96,7 +96,7 @@ return array(
             'top' => array('read'),
             'applications' => array('read'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
-            'events' => array('read', 'create', 'edit'),
+            'events' => array('read', 'create', 'edit', 'delete'),
             'inquiries' => array('read'),
             'news' => array('read', 'create', 'edit'),
             'registlist' => array('read', 'create'),
