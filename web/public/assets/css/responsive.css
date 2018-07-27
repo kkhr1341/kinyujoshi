@@ -43,10 +43,10 @@ mark, .mark {
 .kinyu-nav {
   display: none;
 }
-.kinyu-main-animation {
+#kinyu-main-animation {
   height: 100%;
 }
-.kinyu-main-animation-inner {
+#kinyu-main-animation-inner {
   width: 250px;
   height: 60px;
   position: absolute;
@@ -55,7 +55,7 @@ mark, .mark {
   margin-top: -30px;
   margin-left: -125px;
 }
-.kinyu-main-animation-inner img {
+#kinyu-main-animation-inner img {
   width: 100%;
 }
 .kinyu-main-title {
@@ -2969,6 +2969,78 @@ footer .navi_kinyu-submenu-el a {
   bottom: 8px;
   font-size: 11px;
   color: #fff;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　紙吹雪の場合
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.kinyu-top-joshikai-list li .text-box,
+.kinyu-start-intro-block,
+.joshikai-main,
+footer {
+  background: rgba(113, 113, 113, 0.05);
+}
+.kinyu-single-block,
+.company-info-block,
+.kinyu-list-block,
+.login-regist-block,
+.about-member-block {
+  background: none;
+}
+.login-contents-block .about-member-block {
+  background: rgba(255,255,255,.8);
+}
+.login-regist-block .about-member-block {
+  background: none;
+}
+.login-contents-block {
+  background: rgba(0, 197, 170, 0.1);
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　お祝いメッセージ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.celebration-main-block {
+  width: 92%;
+  height: 380px;
+  padding: 4px;
+  margin-top: -190px;
+  margin-left: -46%;
+  display: table;
+}
+.celebration-message .close-btn {
+  right: 10px;
+  top: 10px;
+}
+.celebration-message .close-btn img {
+  width: 20px;
+}
+.celebration-message .message01 {
+  width: 88%;
+  margin-bottom: 24px;
+}
+.celebration-message .message02 {
+  width: 72%;
+}
+.celebration-message-description {
+  width: 98%;
+  padding: 12px 0px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.celebration-message-description p {
+  font-size: 15px;
+  line-height: 24px;
+}
+.celebration1206-to-link-top {
+  display: block;
+  width: 70%;
+  font-size: 11px;
+  padding: 10px 0px;
+  font-weight: 400;
 }
 
 }

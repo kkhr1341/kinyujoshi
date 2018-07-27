@@ -1,9 +1,9 @@
-<!-- <div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
+<div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
   <a href="/kinyu_sanpo">
     <div class="kinyu-top-list-kind">
     </div>
   </a>
-</div> -->
+</div>
 
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
@@ -24,16 +24,6 @@
 {/if}
 
 {foreach from=$blogs_pick item=blog name=loopname}
-
-  {if $smarty.foreach.loopname.index == 1}
-    <div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/131057614037576/images/20180719204954image.jpg) center center / cover no-repeat;">
-      <a href="https://kinyu-joshi.jp/joshikai/1auGLu">
-        <!-- <div class="kinyu-top-introlist-title">
-          <h3 class="kinyu-top-list-title">{$blog.title}</h3>
-        </div> -->
-      </a>
-    </div>
-  {/if}
 
   <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
     <a href="/report/{$blog.code}">

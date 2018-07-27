@@ -9,8 +9,14 @@
 	<title>{$title}</title>
   <link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet" />
 	{Asset::render('layout')}
+  
+  <!-- 紙吹雪 -->
+  <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
+  <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
+
 </head>
 <body class="drawer drawer--left">
+  <canvas id="canvas"></canvas>
 
 {$pc_header}
 
