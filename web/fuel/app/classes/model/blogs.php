@@ -51,7 +51,7 @@ class Blogs extends Base
      * }
      */
 
-    public static function lists($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null)
+    public static function lists($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $is_secret=false)
     {
 
         $datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
@@ -80,6 +80,10 @@ class Blogs extends Base
             $datas = $datas->where('section_code', '=', $section_code);
         }
 
+        if ($is_secret === false) {
+            $datas = $datas->where('secret', '=', 0);
+        }
+
         $datas = $datas->order_by(\DB::expr('RAND()'));
 
         if ($limit === null) {
@@ -91,7 +95,7 @@ class Blogs extends Base
         return $datas;
     }
 
-    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $username = null)
+    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $username = null, $is_secret=false)
     {
 
         $datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
@@ -124,6 +128,10 @@ class Blogs extends Base
             $datas = $datas->where('section_code', '=', $section_code);
         }
 
+        if ($is_secret === false) {
+            $datas = $datas->where('secret', '=', 0);
+        }
+
         $datas = $datas->order_by('blogs.open_date', 'desc');
 
         if ($limit === null) {
@@ -135,7 +143,7 @@ class Blogs extends Base
         return $datas;
     }
 
-    public static function listspick($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null)
+    public static function listspick($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $is_secret=false)
     {
 
         $datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
@@ -162,6 +170,10 @@ class Blogs extends Base
         if ($section_code === null) {
         } else {
             $datas = $datas->where('section_code', '=', $section_code);
+        }
+
+        if ($is_secret === false) {
+            $datas = $datas->where('secret', '=', 0);
         }
 
         $datas = $datas->order_by('blogs.id', 'desc');
@@ -272,7 +284,7 @@ class Blogs extends Base
     }
 
 
-    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $search_text='')
+    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $search_text='', $is_secret=false)
     {
 
         $total = \DB::select(\DB::expr('count(*) as cnt'))
@@ -283,6 +295,10 @@ class Blogs extends Base
 
         if ($section_code !== null) {
             $total = $total->where('section_code', '=', $section_code);
+        }
+
+        if ($is_secret === false) {
+            $total = $total->where('secret', '=', 0);
         }
 
         if ($search_text !== null) {
@@ -317,6 +333,10 @@ class Blogs extends Base
 
         if ($section_code !== null) {
             $datas['datas'] = $datas['datas']->where('section_code', '=', $section_code);
+        }
+
+        if ($is_secret === false) {
+            $datas['datas'] = $datas['datas']->where('secret', '=', 0);
         }
 
         if ($search_text !== null) {
