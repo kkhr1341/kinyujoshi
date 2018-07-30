@@ -113,9 +113,9 @@
 
             //ローディングアニメーション
             $(".loader-block").fadeIn(500);
-            ajax.post(url, params, function (data) {
+            ajax.post(url, params, function (response) {
                     ts.success("ログインが完了しました", function () {
-                        location.href = "/my";
+                        location.href = response.data.after_login_url || '/my';
                     });
                 })
                 .done(function(data) {
