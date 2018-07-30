@@ -89,7 +89,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         }
 
         if (!$this->viewable($code)) {
-            Response::redirect('login');
+            Response::redirect('login?after_login_url=/report/' . $code);
         }
 
         if ($this->data['blog']['status'] == 0) {
