@@ -146,6 +146,7 @@ return array(
 	'admin'   => 'admin/top',
 	//管理画面admin - 会員リスト
 	'admin/registlist' => 'admin/registlist/index',
+	'admin/registlist/memberlist' => 'admin/registlist/memberlist',
 	'admin/registlist/create' => 'admin/registlist/create',
 	'admin/registlist/(:any)'   => 'admin/registlist/detail/$1',
 	//管理画面admin - 女子会
