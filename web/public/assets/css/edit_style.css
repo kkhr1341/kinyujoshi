@@ -1001,7 +1001,7 @@
 .kinyu-main-block .inner {
   background: #fff;
   width: 1000px;
-  padding: 80px 0px;
+  padding: 70px 0px 80px;
   margin: 0 auto;
 }
 /* 記事のイントロダクション */
@@ -1164,6 +1164,116 @@
   font-size: 12px;
   line-height: 16px;
   color: #a09f9f;
+}
+/* レポートチェック部分 */
+#check-report {
+  position: fixed;
+  right: 8px;
+  z-index: 1006;
+  bottom: 16px;
+  transition: .5s;
+}
+#report-chack-img {
+  width: 90px;
+  margin-bottom: 4px;
+  opacity: 1;
+  transition: .5s;
+}
+#report-chack-img.img-checked {
+  opacity: 0;
+}
+.report-chack-logo-img {
+  width: 100%;
+}
+#check-report a {
+  background-repeat: no-repeat;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+  transition: .5s;
+  background: #ececec;
+}
+#check-report.checked a {
+  background: rgba(141, 220, 209, 1.0);
+}
+
+/* メンバー限定レポート */
+.no-member-report-block {
+  text-align: center;
+}
+.no-member-report-block p {
+  margin-bottom: 24px;
+}
+.no-member-report-block .button-block button {
+  margin-right: 20px;
+}
+.no-member-report-block .button-block button:last-child  {
+  background: none;
+  border: 1px solid #8ddcd1;
+  color: #77cbc0;
+}
+
+/* チェック機能のモダルウィンドウ */
+.check-report-modal {
+  background: rgba(247, 247, 247, 0.95);
+  /*z-index: 1005;*/
+}
+.check-report-modal .modal-dialog {
+  margin: 80px auto;
+}
+.check-report-modal .modal-body {
+  padding: 60px 40px;
+}
+.check-report-modal .main-title {
+  font-size: 24px;
+  line-height: 38px;
+  color: #77cbc0;
+  text-align: center;
+}
+.check-report-modal .main-description {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 26px;
+}
+.check-report-modal .main-description span {
+  font-weight: bold;
+}
+.check-report-modal button.close {
+  margin-top: -50px;
+  margin-right: -32px;
+}
+.check-report-modal .check-flow {
+  display: block;
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+.check-report-modal .text-close {
+  position: relative;
+  float: none;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 13px;
+  display: block;
+  width: 120px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 12px 20px;
+  color: #444444;
+  opacity: 1;
+  background: rgb(239, 239, 239);
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -4838,6 +4948,9 @@ footer {
   opacity: .5;
 }
 .kinyu-error-container a:hover {
+  opacity: .5;
+}
+#check-report a:hover {
   opacity: .5;
 }
 .header-profile-block:hover {
