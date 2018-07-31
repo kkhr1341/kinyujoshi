@@ -12,6 +12,14 @@
     </ul>
   </nav>
 
+  <!-- 検索窓 -->
+  <div class="kinyu-top-search">
+    <form action="/report/search" method="get">
+      <input type="text" name="search_text" class="search" placeholder="気になるキーワードを検索♪" autocomplete="off">
+      <button>&#xf002; </button>
+    </form>
+  </div>
+
   {if in_array('user', $roles) || in_array('admin', $roles)}
     <a href="/my">
       <div class="header-mypage-block">

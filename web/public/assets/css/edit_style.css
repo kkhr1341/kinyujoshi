@@ -845,6 +845,11 @@
   top: 60px;
   border-bottom: 1px solid #c0c0c0;
 }
+.kinyu-header-top .kinyu-top-search {
+  top: 20px;
+  left: 20px;
+  padding: 0px 4px;
+}
 .kinyu-top-search input.search {
   font-family: "FontAwesome";
   display: inline-block;
@@ -855,6 +860,9 @@
   height: 30px;
   margin-right: 5px;
   font-size: 12px;
+}
+.kinyu-header-top .kinyu-top-search input.search {
+  width: 180px;
 }
 .kinyu-top-search input[type="text"]:focus {
   background: none;
@@ -3140,7 +3148,7 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .about-kinyu-container-left {
   float: left;
-  width: 155px;
+  width: 175px;
   padding-top: 24px;
   height: 400px;
 }
@@ -3167,7 +3175,7 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .about-kinyu-container-right {
   float: right;
-  width: 814px;
+  width: 794px;
   padding-left: 30px;
   border-left: 1px solid #e0dede;
   box-sizing: content-box;

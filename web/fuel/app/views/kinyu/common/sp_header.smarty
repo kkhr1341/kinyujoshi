@@ -31,6 +31,15 @@
   </div>
 </div>
 
+<div class="search-block">
+  <div class="kinyu-top-search pc">
+    <form action="/report/search" method="get">
+      <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+      <button>&#xf002; </button>
+    </form>
+  </div>
+</div>
+
 {if in_array('user', $roles) || in_array('admin', $roles)}
   <a href="/my" class="header-profile-block"
     {if $profile.profile_image == ''}

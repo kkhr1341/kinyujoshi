@@ -25,6 +25,32 @@
         不定期でメールをお送りさせていただきます。<br>
         楽しみにお待ちくださいませ。
       </p>
+
+      <div class="after-regist-kinjo-check">
+        <img class="kinjo-check-sub" src="/images/kinjo-check.png">
+        <a href="/">
+          <!-- <img src=""> -->
+        </a>
+      </div>
+
+      <style>
+        .after-regist-kinjo-check {
+          text-align: center;
+          margin: 40px 0px;
+        }
+        .after-regist-kinjo-check .kinjo-check-sub {
+          width: 300px;
+        }
+        .after-regist-kinjo-check a {
+          display: block;
+          width: 500px;
+          height: 200px;
+          background: gray;
+          margin: 0 auto;
+          margin-top: 8px;
+        }
+      </style>
+
       <a href="/" class="message-top">トップページに戻る</a>
       <a href="/" class="message-top message-top02">マイページへ</a>
     </div>

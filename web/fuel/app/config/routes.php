@@ -34,6 +34,8 @@ return array(
 	'about_story' => 'kinyu/about/about_story',
 	'about_policy' => 'kinyu/about/about_policy',
 	'about_design' => 'kinyu/about/about_design',
+	'about_community' => 'kinyu/about/about_community',
+	'about_insight' => 'kinyu/about/about_insight',
 	'about_hensyubu' => 'kinyu/about/about_hensyubu',
 
 	'report'   => 'kinyu/blog/index',

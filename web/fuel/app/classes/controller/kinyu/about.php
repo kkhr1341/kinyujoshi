@@ -134,6 +134,50 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/about/about_design.smarty', $this->data);
     }
 
+    //コミュニティマネジメント
+    public function action_about_Community()
+    {
+
+        $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
+        $this->template->title = 'コミュニティマネジメント｜きんゆう女子。';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+        $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        } else {
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        }
+        $this->template->contents = View::forge('kinyu/about/about_community.smarty', $this->data);
+    }
+
+    //インサイトポリシー
+    public function action_about_Insight()
+    {
+
+        $this->data['blogs'] = Blogs::lists(1, 12, true, 'kinyu');
+        $this->data['events'] = Events::lists(1, 100, true, 0);
+        $this->template->title = 'インサイトポリシー｜きんゆう女子。';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+        $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        } else {
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        }
+        $this->template->contents = View::forge('kinyu/about/about_insight.smarty', $this->data);
+    }
+
     //きんゆう女子。編集部について
     public function action_about_hensyubu()
     {

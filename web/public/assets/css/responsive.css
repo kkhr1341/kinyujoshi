@@ -318,6 +318,10 @@
         background: #8ddcd1;
         transition: .5s;
     }
+    .kinyu-sp-navi .kinyu-sp-header-menu {
+        width: 45px;
+        height: 45px;
+    }
 
     /*.kinyu-sp-header-close.active {
       bottom: auto;
@@ -349,6 +353,12 @@
         border-radius: 50%;
         z-index: 1005;
     }
+
+    /* 検索ボックス */
+    .kinyu-sp-header .search-block {
+        
+    }
+
 
     /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
       　ナビゲーション
