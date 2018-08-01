@@ -43,14 +43,14 @@ class Controller_Mybase extends Controller_Template
         Asset::add_path('assets/css', 'css');
         Asset::add_path('assets/js', 'js');
         Asset::css(array(
-            'kinyu/font.css',
+            //'kinyu/font.css',
             'kinyu/bootstrap01.css',
             'kinyu/animate.css',
             'kinyu/redactor.css',
-            'kinyu/font-awesome.min.css',
+            //'kinyu/font-awesome.min.css',
             'kinyu/bootstrap-datetimepicker.min.css',
             'kinyu/toastr.css',
-            'kinyu/bootstrap-select.min.css',
+            //'kinyu/bootstrap-select.min.css',
             //'kinyu/base.css',
             //'kinyu/bg.css',
             //'kinyu/style.css',
@@ -63,8 +63,8 @@ class Controller_Mybase extends Controller_Template
             'kinyu/bg.css',
             //'style.css',
             'kinyu/swiper.min.css',
-            'kinyu/jumboShare.css',
-            'kinyu/drawer.css',
+            //'kinyu/jumboShare.css',
+            //'kinyu/drawer.css',
             'edit_style.css',
             'tablet.css',
             'responsive.css',

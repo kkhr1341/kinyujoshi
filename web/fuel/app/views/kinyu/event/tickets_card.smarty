@@ -46,7 +46,7 @@
         <div class="no-regist-el">
           <div class="fee-open-el">
             <label>セキュリティコード</label>
-            <input type="text" class="cvc" name="cvc" maxlength="3" placeholder="">
+            <input type="text" class="cvc" name="cvc" maxlength="4" placeholder="">
           </div>
 
           <div class="fee-open-el">

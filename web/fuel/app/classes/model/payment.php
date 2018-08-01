@@ -208,10 +208,10 @@ class Payment extends Base
         try {
             $card = $customer->cards->retrieve($card_id);
             // 下3桁 311 (MARIKO SUZUKI) 有効期限 20/11
-            $format = '下4桁 %d (%s) 有効期限 %d/%d';
+            $format = '下4桁 %s (%s) 有効期限 %s/%s';
             return array(
                 "id" => $card_id,
-                "label" => sprintf($format, $card->last4, $card->name, $card->exp_month, $card->exp_year),
+                "label" => sprintf($format, $card->last4, $card->name, sprintf('%02d', $card->exp_month), $card->exp_year),
             );
         } catch (\Payjp\Error\InvalidRequest $e) {
             return false;

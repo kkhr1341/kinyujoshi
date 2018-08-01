@@ -3,7 +3,7 @@
   <div class="login-contents-block login-regist-block">
 
     <!-- ログイン部分 -->
-    <a class="login-another-btn" href="/login">ログインへ</a>
+    <a class="login-another-btn sp" href="/login">ログインへ</a>
 
     <div class="login-contents-intro">
       <h2 class="login-contents-title"><span>きんゆう女子。にメンバー登録♪</span></h2><br>

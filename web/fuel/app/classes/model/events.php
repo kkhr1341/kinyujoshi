@@ -384,7 +384,7 @@ class Events extends Base
         return true;
     }
 
-    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $secret = null, $past = null)
+    public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $secret = null, $past = null, $sort='asc')
     {
         $total = \DB::select(\DB::expr('count(*) as cnt'))
             ->where('status', '=', 1)
@@ -450,7 +450,7 @@ class Events extends Base
 
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
-            ->order_by('event_date', 'asc')
+            ->order_by('event_date', $sort)
             ->execute()
             ->as_array();
         foreach($datas['datas'] as $key => $data){

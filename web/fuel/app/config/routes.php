@@ -117,7 +117,6 @@ return array(
 	'school' => 'kinyu/campaign/school',
 	'school_jpx' => 'kinyu/campaign/school_public',
 	'conference' => 'kinyu/campaign/conference',
-	'map' => 'kinyu/campaign/map',
 	'oom-reit' => 'kinyu/campaign/ooedoonsen_joshikai',
 	'ooam-joshikai2018' => 'kinyu/campaign/ooedojoshikai_2018',
 	'celebration' => 'kinyu/campaign/celebration_20171206',
@@ -130,9 +129,11 @@ return array(
 	'project/(:num)'   => 'kinyu/project/index/$1',
 	'project/(:any)'   => 'kinyu/project/detail/$1',
 
-	// きんゆうマップ
-	'kinyu_map' => 'kinyu/campaign/kinyu_map',
+	// きんゆう散歩
+	'kinyu_sanpo' => 'kinyu/kinyumap/index',
 	'map_ooedoito' => 'kinyu/kinyumap/ooedo_ito',
+	'map_kabuto' => 'kinyu/kinyumap/map_kabuto',
+	'sanpo_nihonginko' => 'kinyu/kinyumap/sanpo_nihonginko',
 
 	//マイページ - トップ
 	'my'   => 'my/top',
@@ -148,6 +149,7 @@ return array(
 	'admin'   => 'admin/top',
 	//管理画面admin - 会員リスト
 	'admin/registlist' => 'admin/registlist/index',
+	'admin/registlist/memberlist' => 'admin/registlist/memberlist',
 	'admin/registlist/create' => 'admin/registlist/create',
 	'admin/registlist/(:any)'   => 'admin/registlist/detail/$1',
 	//管理画面admin - 女子会

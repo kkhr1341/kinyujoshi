@@ -1,6 +1,6 @@
 <div class="kinyu-single-block">
     <div class="login-contents-block">
-        <a class="login-another-btn" href="/login_regist">メンバー登録へ</a>
+        <a class="login-another-btn sp" href="/login_regist">メンバー登録へ</a>
         <div class="login-contents-intro">
             <h2 class="login-contents-title"><span>マイページにログインする</span></h2><br>
         </div>
@@ -26,6 +26,20 @@
                 </div>
             </div>
         </div>
+        
+        <div class="about-member-block">
+          <h2 class="about-member-title">マイページでできること</h2>
+          <div class="about-member-list">
+            <ul>
+              <li><span>01</span>参加予定の女子会や過去参加した女子会を確認することができます。</li>
+              <li><span>02</span>メンバー限定コンテンツを見ることができます。(準備中、お楽しみに！)</li>
+              <li class="pc"><span>03</span>優待や特典のついたきん女。パスポートを使うことができます。<br>(準備中、お楽しみに！)</li>
+              <li class="sp"><span>03</span>優待や特典のついたきん女。パスポートを使うことができます。(準備中、お楽しみに！)</li>
+            </ul>
+          </div>
+          <img class="login-illust" src="/images/login/login-mypage-illust.png">
+        </div>
+
     </div>
 </div>
 
@@ -99,9 +113,9 @@
 
             //ローディングアニメーション
             $(".loader-block").fadeIn(500);
-            ajax.post(url, params, function (data) {
+            ajax.post(url, params, function (response) {
                     ts.success("ログインが完了しました", function () {
-                        location.href = "/my";
+                        location.href = response.data.after_login_url || '/my';
                     });
                 })
                 .done(function(data) {

@@ -1,3 +1,10 @@
+<div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
+  <a href="/kinyu_sanpo">
+    <div class="kinyu-top-list-kind">
+    </div>
+  </a>
+</div>
+
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
 
@@ -17,20 +24,6 @@
 {/if}
 
 {foreach from=$blogs_pick item=blog name=loopname}
-
-  {if $smarty.foreach.loopname.index == 0}
-
-    
-  {/if}
-
-  {if $smarty.foreach.loopname.index == 2}
-    <div class="swiper-slide" style="background: url(/images/map/map-thum.jpg) center center / cover no-repeat;">
-      <a href="/map">
-        <div class="kinyu-top-list-kind">
-        </div>
-      </a>
-    </div>
-  {/if}
 
   <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
     <a href="/report/{$blog.code}">

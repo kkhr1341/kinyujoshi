@@ -23,7 +23,7 @@
 
       <div class="main-menu-list sp">
         <ul>
-          <li class="main-li"><a href="/my/kinjo">myきん女。</a></li>
+          <li class="main-li"><a href="/my/kinjo">myきん女。<br><span>（参加予定の女子会）</span></a></li>
           <li class="main-li"><a href="/my/passport">きん女。パスポート</a></li>
           <li class="main-li"><a href="/my/profile">プロフィール編集</a></li>
           <li class="main-li"><a href="/my/account">アカウント情報</a></li>
@@ -66,7 +66,7 @@
           {foreachelse}
             <!-- 参加女子会がない場合 -->
             <li>
-              <p class="joshikai-no">参加予定の女子会はありません..。</p>
+              <p class="joshikai-no">女子会のご参加いつでもお待ちしています♪</p>
               <a href="/joshikai#joshikai-list" class="to-link-joshikai">女子会の予定へ</a>
             </li>
           {/foreach}

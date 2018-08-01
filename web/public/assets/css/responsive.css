@@ -43,10 +43,10 @@ mark, .mark {
 .kinyu-nav {
   display: none;
 }
-.kinyu-main-animation {
+#kinyu-main-animation {
   height: 100%;
 }
-.kinyu-main-animation-inner {
+#kinyu-main-animation-inner {
   width: 250px;
   height: 60px;
   position: absolute;
@@ -55,7 +55,7 @@ mark, .mark {
   margin-top: -30px;
   margin-left: -125px;
 }
-.kinyu-main-animation-inner img {
+#kinyu-main-animation-inner img {
   width: 100%;
 }
 .kinyu-main-title {
@@ -67,6 +67,17 @@ mark, .mark {
 .btn-kinyu {
   font-size: 12px;
   padding: 10px 50px;
+}
+.kinyu-top-banner-area li {
+  float: none;
+  width: 92%;
+  margin: 0 auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+.kinyu-top-banner-area li:last-child {
+  margin-right: auto;
+  margin-bottom: 12px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -89,7 +100,7 @@ mark, .mark {
   -webkit-transform: translate3d(-100%, 0, 0);
 }
 .kinyu-main {
-  padding-top: 50px;
+  padding-top: 45px;
 }
 .kinyu-top-list-block {
   margin-left: 0px;
@@ -161,15 +172,15 @@ mark, .mark {
 }
 .kinyu-sp-header {
   width: 100%;
-  /*height: 54px;*/
+  height: 50px;
   background: rgba(255,255,255,1);
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1005;
+  z-index: 1004;
   box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.1);
-  border-left: 1px solid #8ddcd1;
-  border-right: 1px solid #8ddcd1;
+/*  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;*/
 }
 .kinyu-sp-header a {
   display: block;
@@ -177,7 +188,7 @@ mark, .mark {
   line-height: 0;
 }
 .fix-header-sp {
-  height: 50px;
+  height: 45px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -189,9 +200,10 @@ mark, .mark {
 }
 .header-sp-logo {
   display: block;
-  width: 116px;
+  /*width: 116px;*/
+  width: 110px;
   margin: 0 auto;
-  margin-top: 9px;
+  margin-top: 7px;
 }
 .header-sp-logo img {
   width: 100%;
@@ -225,19 +237,21 @@ mark, .mark {
 /* メニュー */
 .kinyu-sp-menu-block {
   height: 100%;
+  padding-right: 50px;
 }
 .kinyu-sp-menu-block ul {
-  padding: 6px;
+  padding: 6px 6px 2px 6px;
   box-sizing: border-box;
   text-align: center;
 }
 .kinyu-sp-menu-block li {
   display: inline-block;
-  max-width: 95px;
+  /*max-width: 95px;*/
   text-align: center;
   box-sizing: border-box;
-  margin: auto 2%;
+  margin: auto 4%;
   box-sizing: border-box;
+  height: 40px;
 }
 .kinyu-sp-menu-block li:first-child {
   margin-left: 0;
@@ -246,7 +260,8 @@ mark, .mark {
   margin-right: 0;
 }
 .kinyu-sp-menu-block li img {
-  width: 100%;
+  /*width: 100%;*/
+  height: 100%;
 }
 .kinyu-sp-header-jyoshikai {
   background: #ffd4d4!important;
@@ -256,16 +271,24 @@ mark, .mark {
   width: 50px;
   height: 50px;
   right: 0;
-  top: 0;
+  bottom: 0;
   border-radius: 0px 0px 0px 0px;
-  z-index: 9999;
+  z-index: 1005;
+  background: #8ddcd1;
+  transition: .5s;
 }
+/*.kinyu-sp-header-close.active {
+  bottom: auto;
+  top: 0;
+}*/
 .kinyu-sp-header-menu img {
   width: 50px;
   height: 50px;
 }
 .kinyu-sp-header-close {
   background: #8ddcd1;
+  bottom: auto;
+  top: 0;
 }
 .kinyu-sp-header-close img {
   width: 100%;
@@ -273,11 +296,11 @@ mark, .mark {
 }
 .header-profile-block {
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   position: fixed;
-  top: 12px;
-  left: 10px;
+  top: 8px;
+  right: 8px;
   border-radius: 50%;
   z-index: 1005;
 }
@@ -314,6 +337,9 @@ mark, .mark {
 }
 .navi_kinyu-menu-li01 .main-area {
   border-left: 1px solid #8ddcd1;
+}
+.navi_kinyu-menu-li01 .main-area.profile-area {
+  background: #f5f5f5;
 }
 .navi_kinyu-menu-li01 .navi_kinyu-menu-block-el a span {
   position: relative;
@@ -451,12 +477,12 @@ mark, .mark {
 /* ソーシャルリスト部分 */
 .navi-social-area {
   text-align: center;
+  margin-bottom: 32px;
 }
 .navi-social-area .navi-social-area-el {
-  width: 32px;
   height: 32px;
   display: inline-block;
-  margin: 0px 4px;
+  margin: 0px 12px;
 }
 .navi-social-area .navi-social-area-el a {
   display: block;
@@ -464,7 +490,7 @@ mark, .mark {
   height: 100%;
 }
 .navi-social-area .navi-social-area-el img {
-  width: 100%;
+  height: 32px;
 }
 
 /* ナビ・バナー部分 */
@@ -585,11 +611,11 @@ mark, .mark {
 .kinyu-top-introlist-title {
   padding: 12px;
 }
-.kinyu-top-introlist-pickup h3 {
+.kinyu-top-introlist-pickup .kinyu-top-list-title {
   font-size: 12px;
   line-height: 12px;
   height: 12px;
-  padding: 0px;
+  padding: 0px!important;
   font-weight: 300;
 }
 
@@ -756,8 +782,10 @@ mark, .mark {
   font-size: 12px;
   line-height: 20px;
   height: 40px;
-  padding: 10px 0px 4px;
   box-sizing: content-box;
+}
+.kinyu-top-joshikai-list .kinyu-top-list-title {
+  padding: 12px 0px 12px;
 }
 .list-kind-img {
   position: absolute;
@@ -1116,7 +1144,7 @@ mark, .mark {
   font-size: 12px;
 }
 .kinyu-top-event-kind p .date-box {
-  padding: 4px 2px 4px 4px;
+  padding: 2px 2px 2px 4px;
 }
 .kinyu-top-list-kind p span {
   font-weight: 400;
@@ -1308,7 +1336,7 @@ mark, .mark {
   padding: 0px;
 }
 .kinyu-sidebar-news-list .kinyu-top-list-title {
-  padding: 8px 0px 4px;
+  padding: 4px 0px 4px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1541,7 +1569,8 @@ mark, .mark {
   font-size: 10px;
 }
 .event-subbox .event-subbox-el {
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 16px;
 }
 .kinyu-event-list .kinyu-event-list-right {
   background: #f9f9f9!important;
@@ -1592,6 +1621,11 @@ mark, .mark {
 }
 .event-form iframe {
   width: 100%;
+}
+.kinyu-joshikai-detail-content figure:after {
+  right: 8px;
+  bottom: 8px;
+  font-size: 11px;
 }
 
 /* 主に女子会を開催している場所 */
@@ -1783,7 +1817,7 @@ mark, .mark {
   padding-top: 0px;
   position: fixed;
   width: 96%;
-  bottom: 64px;
+  bottom: 60px;
   left: 50%;
   margin-left: -48%;
   z-index: 1004;
@@ -2159,7 +2193,7 @@ input::-webkit-input-placeholder {
   height: 80px;
 }
 .kinyu-news-list-el .text-box {
-  padding: 10px 26px 0px 0px;
+  padding: 16px 26px 0px 0px;
 }
 .kinyu-news-list .kinyu-news-list-li:after {
   right: -5px;
@@ -2171,6 +2205,7 @@ input::-webkit-input-placeholder {
 }
 .kinyu-news-list-el .text-box .date {
   font-size: 11px;
+  line-height: 11px;
   margin-bottom: 4px;
   font-weight: 400;
 }
@@ -2375,7 +2410,7 @@ input::-webkit-input-placeholder {
 .about-member-block {
   width: 88%;
   margin-top: 36px;
-  padding: 24px 28px;
+  padding: 24px 36px 24px 28px;
 }
 .about-member-block .about-member-title {
   font-size: 14px;
@@ -2397,11 +2432,20 @@ input::-webkit-input-placeholder {
 .about-member-list li span {
   position: absolute;
   left: 0;
+  top: 0;
   font-size: 13px;
   line-height: 15px;
   margin-right: 12px;
   padding-bottom: 2px;
   margin-top: 1px;
+}
+.login-regist-block .about-member-block {
+  border: 1px solid #8ddcd1;
+}
+.about-member-block .login-illust {
+  bottom: -17px;
+  right: -32px;
+  width: 77px;
 }
 
 /* パスワード再発行 */
@@ -2925,6 +2969,78 @@ footer .navi_kinyu-submenu-el a {
   bottom: 8px;
   font-size: 11px;
   color: #fff;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　紙吹雪の場合
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.kinyu-top-joshikai-list li .text-box,
+.kinyu-start-intro-block,
+.joshikai-main,
+footer {
+  background: rgba(113, 113, 113, 0.05);
+}
+.kinyu-single-block,
+.company-info-block,
+.kinyu-list-block,
+.login-regist-block,
+.about-member-block {
+  background: none;
+}
+.login-contents-block .about-member-block {
+  background: rgba(255,255,255,.8);
+}
+.login-regist-block .about-member-block {
+  background: none;
+}
+.login-contents-block {
+  background: rgba(0, 197, 170, 0.1);
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　お祝いメッセージ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.celebration-main-block {
+  width: 92%;
+  height: 380px;
+  padding: 4px;
+  margin-top: -190px;
+  margin-left: -46%;
+  display: table;
+}
+.celebration-message .close-btn {
+  right: 10px;
+  top: 10px;
+}
+.celebration-message .close-btn img {
+  width: 20px;
+}
+.celebration-message .message01 {
+  width: 88%;
+  margin-bottom: 24px;
+}
+.celebration-message .message02 {
+  width: 72%;
+}
+.celebration-message-description {
+  width: 98%;
+  padding: 12px 0px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.celebration-message-description p {
+  font-size: 15px;
+  line-height: 24px;
+}
+.celebration1206-to-link-top {
+  display: block;
+  width: 70%;
+  font-size: 11px;
+  padding: 10px 0px;
+  font-weight: 400;
 }
 
 }

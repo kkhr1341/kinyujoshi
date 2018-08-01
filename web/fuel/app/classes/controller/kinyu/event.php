@@ -15,8 +15,8 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $pagination = $this->data['events']['pagination'];
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '女子会｜きんゆう女子。';
-        $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
+        $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.jpg';
         $this->template->today = date("Y年n月");
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -35,12 +35,12 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_past($page = 1)
     {
-        $this->data['events'] = Events::all('event', '/event/', $page, 2, 20, 0, 0);
+        $this->data['events'] = Events::all('event', '/event/', $page, 2, 100, 0, 0, 'desc');
         $pagination = $this->data['events']['pagination'];
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '過去の女子会｜きんゆう女子。';
-        $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
+        $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.jpg';
         $this->template->today = date("Y年n月");
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -200,7 +200,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     public function action_complete()
     {
         $this->template->title = '女子会のご予約ありがとうございます。｜きんゆう女子。';
-        $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
+        $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
         $this->template->today = date("Y年n月");
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);

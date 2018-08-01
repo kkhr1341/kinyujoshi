@@ -182,6 +182,7 @@
                     <div class="edit-block-menu">
                         <li><button class="edit-block-menu-btn release-btn" type="button" id="save" data-past="true">更新</button></li>
                         <li><button class="edit-block-menu-btn copy-btn" type="button" id="copy">複製</button></li>
+                        <li><button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button></li>
                     </div>
 			    {else}
                     <div class="edit-block-menu">

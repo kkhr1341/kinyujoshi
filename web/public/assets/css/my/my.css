@@ -691,6 +691,9 @@ footer {
   padding: 8px 0px;
   transition: .5s;
 }
+.admin-normal-side li a span {
+  font-size: 11px;
+}
 .admin-normal-side li:last-child {
   border-top: 1px dotted #dcdcdc; 
   margin-top: 16px;
@@ -970,13 +973,13 @@ footer {
 }
 .admin-normal-joshikai-el .info-title {
   color: #77cbc0;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 14px;
   font-weight: bold;
   margin-bottom: 4px;
 }
 .admin-normal-joshikai-el .info-detail {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 20px;
 }
 .joshikai-detail-open {
@@ -1224,6 +1227,16 @@ footer {
 .js-tab_content.active {
     display:block;
 }
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　紙吹雪の場合
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.admin-normal-container {
+  background: rgba(113, 113, 113, 0.05);
+}
+
+
 @media screen and (min-width: 640px) {
 
 .admin-normal-side a:hover {

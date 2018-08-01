@@ -1,7 +1,7 @@
 <!-- ナビゲーション -->
 <div class="kinyu-sp-navi">
   <div class="kinyu-sp-header-menu kinyu-sp-header-close">
-    <img class="menu-trigger" src="/images/new/sp-header-close_w.png">
+    <img class="menu-trigger" src="/images/menu/close.png">
     <a href="/" class="navi-icon"><img class="top-circle-logo" src="/images/top-circle-logo.png"></a>
   </div>
 
@@ -19,7 +19,7 @@
 
           {if in_array('user', $roles) || in_array('admin', $roles)}
           <!-- ログインしている場合 -->
-            <div class="navi_kinyu-menu-block-el main-area">
+            <div class="navi_kinyu-menu-block-el main-area profile-area">
               <a href="/my"><span>マイページ<div class="to-my-page" style="background:url({$profile.profile_image}) center center / cover no-repeat;"></div></span></a>
             </div>
           {else}
@@ -32,13 +32,16 @@
             </div>
           {/if}
           <div class="navi_kinyu-menu-block-el">
-            <a href="/joshikai">女子会の予定</a>
+            <a href="/news">お知らせ</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/report">レポートを見る</a>
+            <a href="/joshikai">女子会</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a href="/news">ニュースを見る</a>
+            <a href="/report">レポート</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a href="/kinyu_sanpo">きんゆう散歩</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a class="fc-kinyu" href="/about">きん女。ストーリー</a>
@@ -57,24 +60,30 @@
           <div class="navi-social-area-el">
             <a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a>
           </div>
+          <div class="navi-social-area-el">
+            <a href="https://twitter.com/kinyu_joshi" target="_blank"><img src="/images/social/twitter_icon.png"></a>
+          </div>
         </div>
       </li>
-
+      
       <li class="item navi_banner_area navi_kinyu-menu-li03">
-        <a class="navi_banner_area_el" href="/myway">
-          <img src="/images/banner/myway_sp.jpg">
+        <a class="navi_banner_area_el" href="/kinyu_sanpo">
+          <img class="" src="/images/kinyu_map/og/og-main.jpg">
         </a>
       </li>
 
       <li class="item navi_banner_area navi_kinyu-menu-li04">
-        <a class="navi_banner_area_el" href="/map">
-          <img src="/images/map/map-thum-banner.jpg">
+        <a class="navi_banner_area_el" href="/myway">
+          <img class="" src="/images/myway/og_myway.jpg">
         </a>
       </li>
 
-        
+      <li class="item navi_banner_area navi_kinyu-menu-li05">
+        <a target="_blank" class="navi_banner_area_el" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
+          <img class="" src="/images/banner/asahi_&w_og.jpg">
+        </a>
+      </li>        
 
     </ul>
-
   </div>
 </div>

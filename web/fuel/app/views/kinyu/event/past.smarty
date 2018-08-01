@@ -34,7 +34,6 @@
               <div class="bg-joshikai"></div>
             {else if $event.event_category == "スペシャル"}
               <div class="bg-special-joshikai"></div>
-              <img src="/images/event/specialjoshikai_title.png" class="special_joshikai_title">
             {else}
               <div class="bg-joshikai"></div>
             {/if}
@@ -61,16 +60,20 @@
                       <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
                       {$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
                     </span>
-                    {if $event.applicable eq false}
+                    <!-- {if $event.applicable eq false}
                       <p class="joshikai-applicable">＊受付終了</p>
                     {else if $event.full eq true}
                       <p class="joshikai-applicable">＊満席</p>
-                    {/if}
+                    {/if} -->
                     </p>
                   </div>
                   <h3 class="event-title">{$event.title}</h3>
                   <div class="event-subbox">
+                    {if is_numeric($event.fee)}
                     <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    {else}
+                    <p class="event-subbox-el">参加費：{$event.fee}</p>
+                    {/if}
                     <p class="event-subbox-el">場所：{$event.place}</p>
                   </div>
                 </div>

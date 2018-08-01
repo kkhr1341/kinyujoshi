@@ -6,6 +6,9 @@ class Controller_Api_Blogs extends Controller_Base
 {
     public function action_create()
     {
+        if (!Auth::has_access('blogs.create')) {
+            return $this->error('permission denied');
+        }
         $val = Blogs::validate();
         if (!$val->run()) {
             $error_messages = $val->error_message();
@@ -21,6 +24,9 @@ class Controller_Api_Blogs extends Controller_Base
 
     public function action_save()
     {
+        if (!Auth::has_access('blogs.edit')) {
+            return $this->error('permission denied');
+        }
         $val = Blogs::validate();
         if (!$val->run()) {
             $error_messages = $val->error_message();
@@ -37,6 +43,9 @@ class Controller_Api_Blogs extends Controller_Base
 
     public function action_delete()
     {
+        if (!Auth::has_access('blogs.delete')) {
+            return $this->error('permission denied');
+        }
         $this->ok(Blogs::delete(\Input::all()));
     }
 }
