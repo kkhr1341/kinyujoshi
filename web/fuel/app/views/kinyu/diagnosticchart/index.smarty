@@ -4,14 +4,14 @@
 
   <div class="inner">
 
-    <h2 class="kinyu-top-main-title">診断チャート</h2>
+    <!--<h2 class="kinyu-top-main-title">診断チャート</h2>-->
 
     <div class="diagnosticchart-intro-container">
 
-        <div class="diagnosticchart-intro-message">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>
-
+        <!--<div class="diagnosticchart-intro-message">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>-->
+		<div class="diagnosticchart-intro-image"><img src="/images/diagnosticchart/chart_main.jpg"></div>
         <div class="diagnosticchart-intro-start">
-            <button class="btn btn-primary">START</button>
+            <button class="btn btn-primary">診断スタート♪</button>
         </div>
     </div>
 
@@ -38,6 +38,11 @@
 
 
 <style>
+	
+.diagnosticchart-intro-image img {
+	max-width: 1050px;
+}
+	
 .btn-yes {
     color: #fff;
     background-color: #ff4c4c;
@@ -61,6 +66,14 @@
 .diagnosticchart-intro-start {
     margin-bottom: 18px;
     text-align: center;
+}
+.diagnosticchart-intro-start .btn-primary {
+    width: 100%;
+	margin-top: 30px;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: normal;
+	max-width: 300px;
 }
 
 .diagnosticchart-question-container {
