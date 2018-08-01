@@ -650,3 +650,13 @@ $(function(){
         return false;
     })
 });
+
+//ヘッダー検索窓（スマホ）
+$(function(){
+
+
+});
+
+
+
+

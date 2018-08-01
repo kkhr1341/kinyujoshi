@@ -1,6 +1,9 @@
 <!-- ヘッダー -->
 <header class="fix-header-sp">
   <a href="/" class="header-sp-logo"><img src="/images/kinyu-logo.png"></a>
+  <div id="kinyu-sp-header-search-open">
+    <img src="/images/search-btn.png">
+  </div>
 </header>
 
 <div class="kinyu-sp-header">
@@ -31,12 +34,22 @@
   </div>
 </div>
 
-<div class="search-block">
-  <div class="kinyu-top-search pc">
-    <form action="/report/search" method="get">
-      <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
-      <button>&#xf002; </button>
-    </form>
+<div class="kinyu-sp-header-search-open">
+  <img src="/images/search-btn.png">
+</div>
+
+<div class="kinyu-sp-header-search">
+  <div class="kinyu-top-search-block">
+    <div class="close-block">
+      <img src="/images/close-btn-kinjo.png">
+    </div>
+    <img class="search-title" src="/images/search-title-white.png">
+    <div class="kinyu-top-search">
+      <form action="/report/search" method="get">
+        <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+        <button>&#xf002; </button>
+      </form>
+    </div>
   </div>
 </div>
 
