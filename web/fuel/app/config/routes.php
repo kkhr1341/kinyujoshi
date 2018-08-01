@@ -51,7 +51,7 @@ return array(
 	'myway' => 'kinyu/myway/index',
 
     //diagnostic_chart
-    'diagnosticchart' => 'kinyu/diagnosticchart/index',
+    'kinjo_check' => 'kinyu/diagnosticchart/index',
 
 	//未公開
 	'gallery' => 'kinyu/gallery/index',
