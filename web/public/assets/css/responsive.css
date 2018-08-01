@@ -359,7 +359,7 @@
       display: none;
       width: 100%;
       height: 100%;
-      background: rgba(255,255,255,.9);
+      /*background: rgba(255,255,255,.9);*/
       position: fixed;
       z-index: 1006;
       top: 0;
@@ -401,13 +401,22 @@
       width: 100%;
       height: 100%;
     }
+    .kinyu-sp-header-search .sub-search-title {
+      color: #fff;
+      font-size: 11px;
+      line-height: 16px;
+      text-align: center;
+      font-weight: 400;
+      margin-top: 8px;
+    }
     /* openアイコン */
     #kinyu-sp-header-search-open {
-      width: 22px;
-      height: 22px;
+      width: 43px;
+      height: 43px;
       position: absolute;
-      top: 11px;
-      left: 7px;
+      top: 0px;
+      left: 0px;
+      padding: 12px;
     }
     #kinyu-sp-header-search-open img {
       width: 100%;
@@ -3111,6 +3120,7 @@
 
     .regist-add-form-edit-title {
         font-size: 12px;
+        font-weight: 400;
     }
 
     .login-add-contents-block .main-title {

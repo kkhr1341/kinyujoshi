@@ -34,10 +34,6 @@
   </div>
 </div>
 
-<div class="kinyu-sp-header-search-open">
-  <img src="/images/search-btn.png">
-</div>
-
 <div class="kinyu-sp-header-search">
   <div class="kinyu-top-search-block">
     <div class="close-block">
@@ -50,6 +46,7 @@
         <button>&#xf002; </button>
       </form>
     </div>
+    <p class="sub-search-title"><span style="color: #f3626c;">＊</span>レポートページに移動します。</p>
   </div>
 </div>
 
