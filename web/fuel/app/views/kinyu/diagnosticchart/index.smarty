@@ -1,6 +1,6 @@
 <link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
 
-<div class="kinyu-single-block joshikai-main-block">
+<div class="kinyu-single-block joshikai-main-block kinjo_check">
 
   <div class="inner">
 
@@ -9,7 +9,8 @@
     <div class="diagnosticchart-intro-container">
 
         <!--<div class="diagnosticchart-intro-message">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>-->
-		<div class="diagnosticchart-intro-image"><img src="/images/diagnosticchart/chart_main.jpg"></div>
+		<div class="diagnosticchart-intro-image pc"><img src="/images/diagnosticchart/chart_main.jpg"></div>
+		<div class="diagnosticchart-intro-image sp"><img src="/images/diagnosticchart/chart_main_sp.jpg"></div>
         <div class="diagnosticchart-intro-start">
             <button class="btn btn-primary">診断スタート♪</button>
         </div>
@@ -27,6 +28,7 @@
 
 
     <div class="diagnosticchart-answer-container">
+	   <div class="diagnosticchart-answer-top">あなたのタイプは...</div>
        <div class="diagnosticchart-answer-catchcopy"></div>
        <div class="diagnosticchart-answer-type"></div>
        <div class="diagnosticchart-answer-title"></div>
@@ -38,22 +40,29 @@
 
 
 <style>
-	
+
 .diagnosticchart-intro-image img {
-	max-width: 1050px;
+	width: 100%;
 }
 	
 .btn-yes {
-    color: #fff;
-    background-color: #ff4c4c;
-    border-color: #ff4c4c;
-    font-weight: bold;
+	color: #ff9494;
+    background-color: #fff;
+    border: 1px solid #ff9494;
+    font-weight: normal;
+	width: 200px;
+	padding: 15px;
+	font-size: 16px;
+	margin-right: 20px;
 }
 .btn-no {
-    color: #fff;
-    background-color: #4c61ff;
-    border-color: #4c61ff;
-    font-weight: bold;
+    color: #7eb2ff;
+    background-color: #fff;
+    border: 1px solid #7eb2ff;
+    font-weight: normal;
+	padding: 15px;
+	font-size: 16px;
+	width: 200px;
 }
 
 .diagnosticchart-intro-message {
@@ -81,10 +90,14 @@
 }
 .diagnosticchart-question {
     text-align: center;
-    border: 1px solid #bababa;
-    padding: 15px;
-    width: 80%;
-    margin:0px auto 20px auto;
+    padding: 50px 15px;
+    width: 88%;
+	max-width: 650px;
+	line-height: 1.7;
+    margin: 40px auto 20px;
+	font-size: 20px;
+    box-shadow: 0px 0px 5px #e9e9e9;
+    background: #ffffff;
 }
 .diagnosticchart-answer {
     margin-bottom: 18px;
@@ -134,6 +147,22 @@
     background-color: #f4a041;
 }
 
+@media screen and (max-width: 480px) {
+	.kinjo_check .inner {
+		width: 100%;
+	}
+	.btn-yes {
+		width: 100%;
+		padding: 15px;
+		margin-right: 0px;
+	}
+	.btn-no {
+		width: 100%;
+		padding: 15px;
+		width: 200px;
+	}
+}
+	
 </style>
 
 <script>
