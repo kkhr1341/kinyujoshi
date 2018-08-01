@@ -28,8 +28,9 @@
 
       <div class="after-regist-kinjo-check">
         <img class="kinjo-check-sub" src="/images/kinjo-check.png">
-        <a href="/">
-          <!-- <img src=""> -->
+        <a href="/kinjo_check">
+          <img class="pc" src="/images/diagnosticchart/chart_main.jpg">
+          <img class="sp" src="/images/diagnosticchart/chart_main.jpg">
         </a>
       </div>
 
@@ -43,11 +44,13 @@
         }
         .after-regist-kinjo-check a {
           display: block;
-          width: 500px;
-          height: 200px;
-          background: gray;
+          width: 600px;
           margin: 0 auto;
           margin-top: 8px;
+          border: 1px solid #8ddcd1;
+        }
+        .after-regist-kinjo-check a img {
+          width: 100%;
         }
       </style>
 
