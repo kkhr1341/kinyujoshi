@@ -64,6 +64,12 @@ class Events extends Base
         $val->add('open_date', '公開設定')
             ->add_rule('valid_date');
 
+        $val->add('authentication_user', '認証ユーザー名')
+            ->add_rule('required_with', 'authentication_password');
+
+        $val->add('authentication_password', '認証パスワード')
+            ->add_rule('required_with', 'authentication_user');
+
         if ($status == 1) {
 
             $val->field('event_category')
@@ -283,6 +289,8 @@ class Events extends Base
         $data['limit'] = (!$params['limit'])? 0: $params['limit'];
         $data['open_date'] = $params['open_date'];
         $data['status'] = $params['status'];
+        $data['authentication_user'] = $params['authentication_user'];
+        $data['authentication_password'] = $params['authentication_password'];
         $data['username'] = \Auth::get('username');
         $data['code'] = $code;
         $data['created_at'] = \DB::expr('now()');
@@ -319,6 +327,8 @@ class Events extends Base
         $data['limit'] = (!$params['limit'])? 0: $params['limit'];
         $data['open_date'] = $params['open_date'];
         $data['status'] = $params['status'];
+        $data['authentication_user'] = $params['authentication_user'];
+        $data['authentication_password'] = $params['authentication_password'];
         $data['username'] = \Auth::get('username');
         $data['updated_at'] = \DB::expr('now()');
 

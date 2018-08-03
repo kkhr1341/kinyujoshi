@@ -93,6 +93,9 @@ return array(
         84 => '090_create_prefectures',
         85 => '091_add_prefecture_to_profiles',
         86 => '092_create_passports',
+        87 => '093_create_index_code_in_blogs',
+        88 => '094_create_blog_stocks',
+        89 => '100_add_authentication_to_events',
       ),
     ),
     'module' => 
