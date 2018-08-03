@@ -12,27 +12,28 @@
 		<div class="diagnosticchart-intro-image pc"><img src="/images/diagnosticchart/chart_main.jpg"></div>
 		<div class="diagnosticchart-intro-image sp"><img src="/images/diagnosticchart/chart_main_sp.jpg"></div>
         <div class="diagnosticchart-intro-start">
-            <button class="btn btn-primary">診断スタート♪</button>
+            <button class="btn btn-primary ripple">診断スタート♪<span class="ripple__effect is-white"></span></button>
         </div>
     </div>
 
     <div class="diagnosticchart-question-container">
-
-        <div class="diagnosticchart-question"></div>
-
+        <div class="diagnosticchart-question">
+			<div class="diagnosticchart-question-number">Q1</div>
+			<div class="diagnosticchart-question-text">Q1</div>
+		</div>
         <div class="diagnosticchart-answer">
-            <button class="btn btn-primary btn-yes">YES</button>
-            <button class="btn btn-primary btn-no">NO</button>
+            <button class="btn btn-primary btn-yes ripple">YES<span class="ripple__effect is-white"></span></button>
+            <button class="btn btn-primary btn-no ripple">NO<span class="ripple__effect is-white"></span></button>
         </div>
     </div>
 
-
+	<div class="diagnosticchart-answer-loading-container">あなたのタイプは...</div>
+	  
     <div class="diagnosticchart-answer-container">
-	   <div class="diagnosticchart-answer-top">あなたのタイプは...</div>
        <div class="diagnosticchart-answer-catchcopy"></div>
-       <div class="diagnosticchart-answer-type"></div>
-       <div class="diagnosticchart-answer-title"></div>
        <div class="diagnosticchart-answer-charactor"></div>
+		<!--<div class="diagnosticchart-answer-title"><img src="/images/diagnosticchart/typeC.jpg"></div>-->
+		<div class="diagnosticchart-answer-type"></div>
        <div class="diagnosticchart-answer-description"></div>
     </div>
   </div>
@@ -46,9 +47,9 @@
 }
 	
 .btn-yes {
-	color: #ff9494;
-    background-color: #fff;
-    border: 1px solid #ff9494;
+	color: #fff;
+    background-color: #ff9494;
+    border: none;
     font-weight: normal;
 	width: 200px;
 	padding: 15px;
@@ -56,14 +57,15 @@
 	margin-right: 20px;
 }
 .btn-no {
-    color: #7eb2ff;
-    background-color: #fff;
-    border: 1px solid #7eb2ff;
+	color: #fff;
+    background-color: #7eb2ff;
+    border: none;
     font-weight: normal;
 	padding: 15px;
 	font-size: 16px;
 	width: 200px;
 }
+
 
 .diagnosticchart-intro-message {
     text-align: center;
@@ -94,17 +96,30 @@
     width: 88%;
 	max-width: 650px;
 	line-height: 1.7;
-    margin: 40px auto 20px;
+    margin: 40px auto;
 	font-size: 20px;
-    box-shadow: 0px 0px 5px #e9e9e9;
+/*    box-shadow: 0px 0px 5px #e9e9e9;*/
     background: #ffffff;
+	position: relative;
+}
+.diagnosticchart-question-number {
+	position: absolute;
+	font-size: 20px;
+	color: #8ddcd1;
+	top: 0;
+	left: 0;
 }
 .diagnosticchart-answer {
     margin-bottom: 18px;
     text-align: center;
 }
+	
+.diagnosticchart-answer-loading-container {
+    display: none;
+}
 .diagnosticchart-answer-container {
     display: none;
+	padding: 20px;
 }
 .diagnosticchart-answer-catchcopy {
     text-align: center;
@@ -114,6 +129,9 @@
 }
 .diagnosticchart-answer-charactor img {
     width: 100px;
+	padding: 15px;
+    background: #fff;
+    border-radius: 50%;
 }
 
 .diagnosticchart-answer-type {
@@ -127,43 +145,150 @@
     text-align: center;
     padding: 15px;
     width: 80%;
+	line-height: 1.3;
     margin:0px auto 20px auto;
 }
 
+.diagnosticchart-answer-top {
+    text-align: center;
+}	
+
 /* each type style */
 .diagnosticchart-answer-container.type-A {
-    background-color: #4286f4;
+    background-color: #eff7ed;
 }
 
 .diagnosticchart-answer-container.type-B {
-    background-color: #f441e5;
+    background-color: #F7EBF1;
 }
 
 .diagnosticchart-answer-container.type-C {
-    background-color: #41f464;
+    background-color: #EFF8F9;
 }
 
 .diagnosticchart-answer-container.type-D {
-    background-color: #f4a041;
+    background-color: #F7F0F0;
 }
 
+	
 @media screen and (max-width: 480px) {
 	.kinjo_check .inner {
 		width: 100%;
 	}
 	.btn-yes {
-		width: 100%;
+		width: 88%;
 		padding: 15px;
 		margin-right: 0px;
 	}
 	.btn-no {
-		width: 100%;
+		width: 88%;
 		padding: 15px;
-		width: 200px;
+		margin-top: 20px;
 	}
 }
+
 	
+	
+/* クリックできる要素 */
+.ripple {
+    /* 必須 */
+    overflow: hidden;
+    position: relative;
+}
+	
+.ripple::after {
+  position: absolute;
+  top: 50%;
+  right: .2em;
+  content: '';
+  margin-top: -5px;
+  border: 7px solid transparent;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-color: #fff;
+  transition: all .2s;
+}
+.ripple:hover::after {
+  right: -.05em;
+}
+
+/* エフェクト要素 */
+.ripple__effect {
+    /* 値の変更はエフェクト形体・サイズ・スピードに影響する */
+    width: 150px;
+    height: 150px;
+
+    /* 必須 */
+    position: absolute;
+    border-radius: 100%;
+    pointer-events: none;
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* エフェクト要素の色を指定 */
+.ripple__effect.is-orange { background: #f1c40f;}
+.ripple__effect.is-white   { background: #fff;}
+.ripple__effect.is-black  { background: #999;}
+
+/* classが付与されたらアニメーションを実行 */
+.ripple__effect.is-show {
+    animation: ripple 0.75s ease-out;
+}
+
+/* アニメーションの定義 */
+@keyframes ripple {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}	
+	
+
 </style>
+
+<script>
+$(function() {
+    var $clickable = $('.ripple');
+
+    /* mousedownだと直ぐに発動し、clickだとマウスボタンを離した時に発動する */
+    $clickable.on('mousedown', function(e) {
+        var _self   = this;
+        var x       = e.offsetX;
+        var y       = e.offsetY;
+
+        var $effect = $(_self).find('.ripple__effect');
+        var w       = $effect.width();
+        var h       = $effect.height();
+
+        /* クリックした座標を中心とする */
+        $effect.css({
+            left: x - w / 2,
+            top: y - h / 2
+        });
+
+        /* jsではclassの付け替えをするだけ */
+        if (!$effect.hasClass('is-show')) {
+            $effect.addClass('is-show');
+
+            /*
+             * エフェクトアニメーションが終わったらclassを削除する
+             * ここでは、単純にcssで設定するdurationと時間を合わせているだけですが
+             * keyframes終了のイベント(AnimationEnd)が取れるかと思うので、それで対応した方が良いかも
+             */
+            setTimeout(function() {
+                $effect.removeClass('is-show');
+            }, 750);
+        }
+        return false;
+    });
+
+});
+</script>
+
 
 <script>
 {literal}
@@ -171,11 +296,12 @@ $(function(){
 
   var $introContainer  = $('.diagnosticchart-intro-container');
   var $questionContainer  = $('.diagnosticchart-question-container');
+  var $answerLoadingContainer  = $('.diagnosticchart-answer-loading-container');
   var $answerContainer  = $('.diagnosticchart-answer-container');
 
   var $startButton  = $introContainer.find('button');
 
-  var $question  = $('.diagnosticchart-question');
+  var $questionText  = $('.diagnosticchart-question-text');
   var $yesButton = $('.diagnosticchart-answer .btn-yes');
   var $noButton  = $('.diagnosticchart-answer .btn-no');
 
@@ -191,7 +317,7 @@ $(function(){
   function answer(route_id) {
     var route_id = route_id || '';
 
-    $questionContainer.fadeOut();
+    $questionText.fadeOut();
 
     $.getJSON('/api/diagnosticchart/route/' + route_id, function(response) {
       var current_route_code = response.data.current_route_code;
@@ -202,14 +328,14 @@ $(function(){
       var no_type_code = response.data.no_type_code || '';
       var no_route_code = response.data.no_route_code || '';
 
-      $question.html(question.replace(/\\n/g, '<br>'));
+      $questionText.html(question.replace(/\\n/g, '<br>'));
 
       routes.push(current_route_code);
 
       $yesButton.off('click').on('click', function() {
         if(yes_type_code) {
           // complete
-          completed(yes_type_code);
+          answerLoading(yes_type_code);
         } else if(yes_route_code) {
           // answer
           answer(yes_route_code);
@@ -218,19 +344,32 @@ $(function(){
       $noButton.off('click').on('click', function() {
         if(no_type_code) {
           // complete
-          completed(no_type_code);
+          answerLoading(no_type_code);
         } else if(no_route_code) {
           // answer
           answer(no_route_code);
         }
        });
-       $questionContainer.fadeIn();
+       $questionText.fadeIn();
     });
   }
 
   // 完了画面表示
+  function answerLoading(type_code) {
+      $questionContainer.fadeOut(1500, function() {
+		  setTimeout(function() {
+			  $answerLoadingContainer.fadeIn(1000, function() {
+				  setTimeout(function() {
+				  	completed(type_code);
+				  }, 3000)
+			  });
+		   }, 500)
+	  });
+  }
+	  
+  // 完了画面表示
   function completed(type_code) {
-    $questionContainer.fadeOut();
+    $answerLoadingContainer.fadeOut();
 
     $.ajax({
       type: "POST",
@@ -244,6 +383,7 @@ $(function(){
         var value = JSON.parse(response);
 
         var catch_copy = value.data.catch_copy || '';
+        var type_image = value.data.type_image || '';
         var character_image = value.data.character_image || '';
         var type = value.data.type || '';
         var title = value.data.title || '';
@@ -251,13 +391,13 @@ $(function(){
 
         $answerCatchcopy.html(catch_copy);
         $answerCharactor.html($('<img>', {src:character_image}));
-        $answerType.html(type);
+        $answerType.html($('<img>', {src:type_image}));
         $answerTitle.html(title);
         $answerDescription.html(description.replace(/\\n/g, '<br>'));
 
         $answerContainer.addClass('type-' + type);
 
-        $answerContainer.fadeIn();
+        $answerContainer.fadeIn(3000);
       }
     });
   }
@@ -265,6 +405,7 @@ $(function(){
   // START ボタン
   $startButton.on('click', function() {
     $introContainer.fadeOut();
+    $questionContainer.fadeIn();
     answer();
   })
 });
