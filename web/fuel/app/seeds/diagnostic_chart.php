@@ -21,10 +21,10 @@ foreach ($seeds as $key => $seed) {
 }
 
 $seeds = array(
-    array('id' => '1', 'code' => 'RgKLhu', 'type' => 'A', 'character_name' => 'そろそろきちんとやらなきゃさん', 'catch_copy' => '人生100年時代に備えたい', 'description' => '金融？何のこと？\n自分が何がワカラナイか\nそれすらワカラナイ•••\n金融とか投資とか自分には関係ない？\nでもそろそろお金の整理からはじめたい！', 'character_image' => '/images/diagnosticchart/A.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '2', 'code' => 'pttyS2', 'type' => 'B', 'character_name' => '先延ばしなまよい子さん', 'catch_copy' => 'みんなのリアルを教えて欲しい', 'description' => 'お金のコト大事ってわかったケド\n何したらいいかな・・・？\nみんなどうしてるの？\n怖いから迷って、いつのまにか\n時間が経ってる・・・', 'character_image' => '/images/diagnosticchart/B.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '3', 'code' => 'pT8Xsz', 'type' => 'C', 'character_name' => 'ついついなんとかなる ? 子さん', 'catch_copy' => '自分への投資が欠かせない', 'description' => '貯金あんまりないです•••\nがんばって働いてはいるけど\nその分使ってる！汗\nあんまり心配してなかったけど\nこのままで大丈夫かな、ワタシ。', 'character_image' => '/images/diagnosticchart/C.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '4', 'code' => 'GT7f0Q', 'type' => 'D', 'character_name' => 'わくわく冒険したい子さん', 'catch_copy' => '人生もっと自由に楽しみたい！', 'description' => '金融に強くなって\n自分に自信をつけたい！\n仕事もプライベートも\nもっとレベル UP したい！', 'character_image' => '/images/diagnosticchart/D.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '1', 'code' => 'RgKLhu', 'type' => 'A', 'character_name' => 'そろそろきちんとやらなきゃさん', 'catch_copy' => ' \ 人生100年時代に備えたい /', 'description' => '金融？何のこと？\n自分が何がワカラナイか\nそれすらワカラナイ•••\n金融とか投資とか自分には関係ない？\nでもそろそろお金の整理からはじめたい！', 'character_image' => '/images/diagnosticchart/A.png', 'type_image' => '/images/diagnosticchart/typeA.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '2', 'code' => 'pttyS2', 'type' => 'B', 'character_name' => '先延ばしなまよい子さん', 'catch_copy' => '\ みんなのリアルを教えて欲しい /', 'description' => 'お金のコト大事ってわかったケド\n何したらいいかな・・・？\nみんなどうしてるの？\n怖いから迷って、いつのまにか\n時間が経ってる・・・', 'character_image' => '/images/diagnosticchart/B.png', 'type_image' => '/images/diagnosticchart/typeB.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '3', 'code' => 'pT8Xsz', 'type' => 'C', 'character_name' => 'ついついなんとかなる ? 子さん', 'catch_copy' => '\ 自分への投資が欠かせない /', 'description' => '貯金あんまりないです•••\nがんばって働いてはいるけど\nその分使ってる！汗\nあんまり心配してなかったけど\nこのままで大丈夫かな、ワタシ。', 'character_image' => '/images/diagnosticchart/C.png', 'type_image' => '/images/diagnosticchart/typeC.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '4', 'code' => 'GT7f0Q', 'type' => 'D', 'character_name' => 'わくわく冒険したい子さん', 'catch_copy' => '\ 人生もっと自由に楽しみたい！ /', 'description' => '金融に強くなって\n自分に自信をつけたい！\n仕事もプライベートも\nもっとレベル UP したい！', 'character_image' => '/images/diagnosticchart/D.png', 'type_image' => '/images/diagnosticchart/typeD.png', 'created_at' => \DB::expr('now()')),
 );
 
 foreach ($seeds as $key => $seed) {

@@ -40,6 +40,7 @@ class Controller_Api_Diagnosticchart extends Controller_Apibase
             return $this->ok(array(
                 'type' => $chart_type['type'],
                 'character_name' => $chart_type['character_name'],
+                'type_image' => $chart_type['type_image'],
                 'catch_copy' => $chart_type['catch_copy'],
                 'description' => $chart_type['description'],
                 'character_image' => $chart_type['character_image'],
