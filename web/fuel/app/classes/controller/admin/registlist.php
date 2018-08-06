@@ -18,6 +18,9 @@ class Controller_Admin_Registlist extends Controller_Adminbase
         $params = Input::get();
         unset($params['page']);
 
+        // 一般ユーザーのみを対象とする
+        $params['group'] = array(1);
+
         $this->data['registlist'] = Regist::all('/admin/registlist/?' . http_build_query($params), Input::get('page', 1), 'page', 30, $params);
         $pagination = $this->data['registlist']['pagination'];
 
@@ -28,7 +31,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             'introduction' => Input::get('introduction', ''),
         );
 
-        $this->template->total = Regist::total();
+        $this->template->total = $this->data['registlist']['total'];
         $this->template->contents = View::forge('admin/registlist/registlist.smarty', $this->data);
         $this->template->contents->set_safe('pagination', $pagination);
         $this->template->description = 'マイページ・ブログ';
