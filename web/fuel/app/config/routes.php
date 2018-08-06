@@ -27,6 +27,9 @@ return array(
 	// はじめての方へ
 	'start'   => 'kinyu/start/index',
 
+	// きんじょ。キャラクター
+	'character'   => 'kinyu/character/index',
+
 	//aboutページ
 	'about' => 'kinyu/about/index',
 	'about_main' => 'kinyu/about/about_main',
