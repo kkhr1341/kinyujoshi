@@ -37,6 +37,13 @@ class Registlist extends Base
                 ))
                 ->where('username', '=', $username)
                 ->execute();
+
+            \DB::update('users')
+                ->set(array(
+                    'email' => $params['email'],
+                ))
+                ->where('username', '=', $username)
+                ->execute();
         }
 
         return $params;
