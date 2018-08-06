@@ -276,7 +276,10 @@ class Regist extends Base
             $total->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
         }
         if (isset($params['group']) && $params['group']) {
-            $total->where('users.group', 'in', $params['group']);
+            $total->or_where_open()
+                ->where('users.group', 'in', $params['group'])
+                ->where('users.group', 'is', null)
+                ->or_where_close();
         }
 
         $total = $total->execute()->current();
@@ -343,7 +346,10 @@ class Regist extends Base
             $datas['datas']->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
         }
         if (isset($params['group']) && $params['group']) {
-            $datas['datas']->where('users.group', 'in', $params['group']);
+            $datas['datas']->or_where_open()
+                ->where('users.group', 'in', $params['group'])
+                ->where('users.group', 'is', null)
+                ->or_where_close();
         }
 
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
