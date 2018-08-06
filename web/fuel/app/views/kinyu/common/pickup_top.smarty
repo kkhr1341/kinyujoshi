@@ -1,3 +1,5 @@
+
+<!-- 女子会TOP表示 -->
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
 
