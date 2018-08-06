@@ -27,8 +27,18 @@ class Registlist extends Base
 
     public static function save($params)
     {
-        $username = \Auth::get('username');
         \DB::update('member_regist')->set($params)->where('code', '=', $params['code'])->execute();
+
+        if ($username = self::getUsername($params['code'])) {
+            \DB::update('profiles')
+                ->set(array(
+                    'name' => $params['name'],
+                    'name_kana' => $params['name_kana'],
+                ))
+                ->where('username', '=', $username)
+                ->execute();
+        }
+
         return $params;
     }
 
