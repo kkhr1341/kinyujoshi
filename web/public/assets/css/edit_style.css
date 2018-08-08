@@ -218,6 +218,46 @@
   opacity: .5;
 }
 
+/* ヘッダー下のコンテンツ */
+.header-hover-content-block {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 130px;
+  z-index: 1004;
+}
+.header-hover-inner {
+  display: none;
+  position: fixed;
+  background: #fff;
+  width: 1050px;
+  top: 0;
+  left: 50%;
+  margin-top: 130px;
+  margin-left: -525px;
+  z-index: 1006;
+  padding: 40px 40px 24px 40px;
+}
+.header-hover-inner-ul li {
+  width: 31.333%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+}
+.header-hover-inner-ul li a {
+  display: block;
+  transition: .5s;
+}
+.header-hover-inner-ul li:nth-child(3n) {
+  margin-right: 0%;
+}
+.header-hover-inner-ul li img {
+  width: 100%;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション

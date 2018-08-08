@@ -6,20 +6,49 @@
       <li><a href="/news">お知らせ</a></li>
       <li><a href="/joshikai">女子会</a></li>
       <li><a href="/report">レポート</a></li>
-      <li><a href="/kinyu_sanpo">きんゆう散歩</a></li>
+      <li class="header-hover01">
+        <a href="/kinyu_sanpo">コレクション</a>
+
+        <!-- hoverコンテンツ -->
+        <div class="header-hover-inner">
+          <ul class="header-hover-inner-ul">
+            <li>
+              <a href="">
+                <img src="/images/kinyu_map/og/og-main.jpg">
+                <p>きんゆう散歩</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="/images/kinyu_map/og/og-main.jpg">
+                <p>きんゆう散歩</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="/images/kinyu_map/og/og-main.jpg">
+                <p>きんゆう散歩</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="/images/kinyu_map/og/og-main.jpg">
+                <p>きんゆう散歩</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="/images/kinyu_map/og/og-main.jpg">
+                <p>きんゆう散歩</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
       <li><a href="/myway">「わたし」を知る。</a></li>
       <li><a href="/about">きん女。ストーリー</a></li>
     </ul>
   </nav>
-
-  <!-- 検索窓 -->
-  <div class="kinyu-top-search">
-    <form action="/report/search" method="get">
-      <input type="text" name="search_text" class="search" placeholder="気になるキーワードを検索♪" autocomplete="off">
-      <button>&#xf002; </button>
-    </form>
-  </div>
-
   {if in_array('user', $roles) || in_array('admin', $roles)}
     <a href="/my">
       <div class="header-mypage-block">
@@ -46,7 +75,6 @@
       </ul>
     </div>
   {/if}
-
   <div class="kinyu-header-social-list">
     <ul>
       <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/instagram_icon.png"></a></li>
@@ -54,5 +82,29 @@
       <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a></li>
     </ul>
   </div>
-
 </header>
+
+<div class="header-hover-content-block"></div>
+
+<script>
+  $(function() {
+    // $(".header-hover01").hover(
+
+    // );
+    $('.header-hover01').hover(
+      function() {
+      //マウスカーソルが重なった時の処理
+      $(".header-hover-inner").fadeIn();
+      $(".header-hover-content-block").fadeIn(500);
+      },
+      function() {
+      //マウスカーソルが離れた時の処理
+      $(".header-hover-inner").fadeOut();
+      $(".header-hover-content-block").fadeOut(500);
+      }
+    );
+  });
+</script>
+
+
+
