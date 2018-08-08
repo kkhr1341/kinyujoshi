@@ -26,14 +26,14 @@
     <meta name="google-site-verification" content="bt-Z1O8HWo_rQ3TlPedxm8q3q1xV9ky7hWlxAqisA2w" />
     <!-- <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" /> -->
     <!-- 紙吹雪 -->
-    <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
-    <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
+    <!-- <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
+    <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script> -->
 
 	</head>
 
 	<!-- <body class="drawer drawer--left" onCopy="return false;"> -->
     <body class="drawer drawer--left">
-    <canvas id="canvas"></canvas>
+    <!-- <canvas id="canvas"></canvas> -->
 
     {$pc_header}
 
@@ -58,20 +58,19 @@
     </div>
 
     <!-- 1500人達成イベントメッセージ -->
-    <div class="celebration-message"></div>
+    <!-- <div class="celebration-message"></div>
     <div class="celebration-main-block-container">
       <div class="celebration-main-block">
         <div class="main-block-inner">
           <img class="message01" src="/images/celebration/kinjo1500.png">
           <div class="celebration-message-description">
-            <!-- <img class="message03" src="/images/kinjo1000_message_pre.png"> -->
             <p>きんゆう女子。メンバー<br>1500名に♪</p>
           </div>
           <a class="celebration1206-to-link-top" href="https://kinyu-joshi.jp/news/Au43Ih">お知らせはこちら</a>
           <p id="celebration-message-close" class="close-btn"><img src="/images/close-btn.png"></p>
         </div>
       </div>
-    </div>
+    </div> -->
 
   	<!-- 解析コード -->
   	{literal}
@@ -87,7 +86,7 @@
 		</script>
 
     <!-- 1500人達成イベント-js -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $(function() {
         $("#celebration-message-close").click(function() {
           $(".celebration-message").fadeOut(500);
@@ -111,7 +110,7 @@
           $.cookie("access","foo", { expires: 2 });
         })
       });
-    </script>
+    </script> -->
 
   	<script src="/assets/js/kinyu/swiper.js"></script>
   	{/literal}
