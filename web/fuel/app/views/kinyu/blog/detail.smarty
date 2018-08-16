@@ -63,12 +63,19 @@
 </div>
 
 {if in_array('user', $roles) || in_array('admin', $roles)}
-    <div id="check-report"{if $stocked === true} class="checked"{/if}>
-        <img id="report-chack-img" src="/images/report-chack.png"{if $stocked === true} class="img-checked"{/if}>
-        <a href="#" data-code="{$blog.code}">
-          <img class="report-chack-logo-img" src="/images/kinyu-logo-text.png">
-        </a>
-    </div>
+  <div id="check-report"{if $stocked === true} class="checked"{/if}>
+    <img id="report-chack-img" src="/images/report-chack.png"{if $stocked === true} class="img-checked"{/if}>
+    <a href="#" data-code="{$blog.code}">
+      <img class="report-chack-logo-img" src="/images/kinyu-logo-text.png">
+    </a>
+  </div>
+{else}
+  <div class="check-report-dummy">
+    <img class="report-chack-img-dummy" src="/images/report-chack.png">
+    <p>
+      <img class="report-chack-logo-img-dummy" src="/images/kinyu-logo-text.png">
+    </p>
+  </div>
 {/if}
 
 <div id="myModal" class="modal check-report-modal fade">
@@ -83,6 +90,25 @@
         <p class="main-description pc">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、<br>自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪<span style="display:block;height:12px;"></span>また、チェックボタンができたことに伴い、<br>レポートはメンバーさん限定になりましたので、<br>ご理解のほど、よろしくお願いいたします。</p>
         <p class="main-description sp">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪<span style="display:block;height:12px;"></span>また、チェックボタンができたことに伴い、レポートはメンバーさん限定になりましたので、ご理解のほど、よろしくお願いいたします。</p>
         <p class="close text-close" data-dismiss="modal">閉じる</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="check-report-modal-dummy" class="check-report-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- dialog body -->
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <p class="main-title">レポートを"チェック"するには<br>マイページへのログインが必要です。</p>
+
+        <p class="main-description pc">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、<br>自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪</p>
+        <p class="main-description sp">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪</p>
+        <ul class="check-report-modal-dummy-ul">
+          <li><a href="/login_regist">新規メンバー登録</a></li>
+          <li><a href="/my">マイページへログイン</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -115,6 +141,14 @@ $(function(){
 // });
 
 $(function() {
+
+    $(".check-report-dummy").click(function() {
+      $("#check-report-modal-dummy").fadeIn(500);
+    });
+
+    $("#check-report-modal-dummy .close").click(function() {
+      $("#check-report-modal-dummy").fadeOut(500);
+    });
 
     var check = function(code, cb) {
         var url = "/api/blogstocks/create";

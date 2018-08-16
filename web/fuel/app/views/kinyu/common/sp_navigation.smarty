@@ -44,7 +44,10 @@
             <a href="/kinyu_sanpo">きんゆう散歩</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a class="fc-kinyu" href="/about">きん女。ストーリー</a>
+            <a class="fc-kinyu" href="/about">ストーリー</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
+            <a class="fc-kinyu" href="/kinyu_check">きん女。診断</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a class="fc-kinyu" href="/faq">よくあるご質問</a>

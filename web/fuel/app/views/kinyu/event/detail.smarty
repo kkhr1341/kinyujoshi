@@ -44,7 +44,7 @@ console.log($resArray02);
               </p>
 
             </li>
-            <li>
+            <li class="place">
               <p class="info-title">開催場所</p>
               {if $event.place_url}
               <p class="info-detail"><a href="{$event.place_url}" target="_blank">{$event.place}</a></p>

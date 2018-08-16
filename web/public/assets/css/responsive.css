@@ -1591,6 +1591,7 @@
 
     .report-detail-sidebar2 {
         padding-top: 36px;
+        background: #fff;
     }
 
     .report-detail-sidebar-el .insta-hash-title {
@@ -1698,6 +1699,56 @@
         padding: 12px 20px;
     }
 
+    /* チェック機能のモダルウィンドウ - ダミー */
+    .report-chack-img-dummy {
+        width: 60px;
+        margin-bottom: 4px;
+        opacity: 1;
+        transition: .5s;
+    }
+
+    .report-chack-logo-img-dummy {
+        margin-bottom: 3px;
+    }
+
+    .check-report-dummy {
+        right: 4px;
+        bottom: 65px;
+    }
+
+    .check-report-dummy p {
+        background-repeat: no-repeat;
+        text-decoration: none;
+        margin: 0 auto;
+        width: 45px;
+        height: 45px;
+        padding: 8px;
+    }
+    /* ポップアップ */
+    #check-report-modal-dummy {
+      z-index: 1006;
+    }
+    #check-report-modal-dummy .main-description {
+      padding: 20px 0px 24px;
+    }
+    #check-report-modal-dummy .main-title {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    .check-report-modal-dummy-ul li {
+      width: 92%;
+      margin: 0 auto;
+      margin-bottom: 12px;
+    }
+    .check-report-modal-dummy-ul li a {
+      font-size: 12px;
+      font-weight: 400;
+      padding: 10px 0px;
+    }
+    #check-report-modal-dummy .main-description span {
+      font-weight: 400;
+    }
+
     /* ニュース部分 */
     .kinyu-sidebar-news-list li {
         height: 88px;
@@ -1733,6 +1784,10 @@
 
     .kinyu-sidebar-news-list .kinyu-top-list-title {
         padding: 4px 0px 4px;
+    }
+
+    .report-detail-sidebar-inner .kinyu-top-banner-area {
+        padding-bottom: 50px;
     }
 
     /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

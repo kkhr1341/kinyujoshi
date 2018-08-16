@@ -1253,6 +1253,40 @@
   background: rgba(141, 220, 209, 1.0);
 }
 
+/* レポートチェック機能ダミー */
+.check-report-dummy {
+  position: fixed;
+  right: 8px;
+  z-index: 1004;
+  bottom: 16px;
+  transition: .5s;
+}
+.report-chack-img-dummy {
+  width: 90px;
+  margin-bottom: 4px;
+  opacity: 1;
+  transition: .5s;
+}
+.report-chack-logo-img-dummy {
+  width: 100%;
+}
+.check-report-dummy p {
+  background-repeat: no-repeat;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+  transition: .5s;
+  background: #ececec;
+}
+
 /* メンバー限定レポート */
 .no-member-report-block {
   text-align: center;
@@ -1323,6 +1357,47 @@
   opacity: 1;
   background: rgb(239, 239, 239);
 }
+
+/* ダミー */
+#check-report-modal-dummy {
+  display: none;
+  background: rgba(247, 247, 247, 0.95);
+  position: fixed;
+  z-index: 1005;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#check-report-modal-dummy .main-description {
+  padding: 32px 0px;
+}
+.check-report-modal-dummy-ul {
+  
+}
+.check-report-modal-dummy-ul li {
+  width: 100%;
+  margin-bottom: 16px;
+  transition: .5s;
+}
+.check-report-modal-dummy-ul li:last-child {
+  margin-bottom: 0px;
+}
+.check-report-modal-dummy-ul li a {
+  display: block;
+  padding: 12px 0px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #8ddcd1;
+  color: #77cbc0;
+  font-weight: bold;
+}
+.check-report-modal-dummy-ul li:last-child a {
+  color: #fff;
+  background: #8ddcd1;
+  font-weight: normal;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　記事・サイドバー
@@ -1508,6 +1583,10 @@
   height: 100%;
   display: table-cell;
   vertical-align: middle;
+}
+
+.report-detail-sidebar-inner .kinyu-top-banner-area {
+  padding-bottom: 70px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2093,6 +2172,9 @@
   border-left: 4px solid #8ddcd1;
 }
 .joshikai-detail-el-info li.date .info-detail {
+}
+.joshikai-detail-el-info li.place .info-detail {
+  color: #5499d8;
 }
 .joshikai-detail-el-info li .info-title {
   font-size: 13px;
@@ -5015,8 +5097,16 @@ footer {
 .new_area a:hover {
   opacity: .5;
 }
-.message-top:hover {
+.message-top:hover,
+.check-report-modal-dummy-ul li:hover {
+  opacity: .5;
+}
+.check-report-dummy p:hover {
+  cursor: pointer;
   opacity: .5;
 }
 
 }
+
+
+

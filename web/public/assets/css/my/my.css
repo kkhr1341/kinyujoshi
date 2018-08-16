@@ -1054,7 +1054,7 @@ footer {
 .admin-normal-joshikai li {
     width: 100%;
     margin-bottom: 12px;
-    /*transition: .5s;*/
+    transition: .5s;
     position: relative;
 }
 
