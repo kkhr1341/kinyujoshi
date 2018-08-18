@@ -61,7 +61,9 @@
   </div>
 </div>
 
-{$contents}
+<div class="my-container kinjo-check01">
+  {$contents}
+</div>
 {$sp_footer}
 
 <script>

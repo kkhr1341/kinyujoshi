@@ -258,7 +258,6 @@
   width: 100%;
 }
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -3643,6 +3642,25 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .select-area .regist-selectarea p {
   display: inline-block;
+}
+
+/* complete */
+.after-regist-kinjo-check {
+  text-align: center;
+  margin: 40px 0px;
+}
+.after-regist-kinjo-check .kinjo-check-sub {
+  width: 300px;
+}
+.after-regist-kinjo-check a {
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 8px;
+  border: 1px solid #8ddcd1;
+}
+.after-regist-kinjo-check a img {
+  width: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

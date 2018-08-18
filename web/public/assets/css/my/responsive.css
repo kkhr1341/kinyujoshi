@@ -10,6 +10,10 @@
   font-weight: 400;
 }
 
+.my-container {
+  padding-top: 42px;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   マイページ - myきん女。
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -43,7 +47,6 @@
   一般ユーザー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container {
-  padding-top: 42px;
   background: #fff;
 }
 .admin-normal-container .admin-normal-inner {
@@ -197,10 +200,26 @@
   padding: 8px 0px;
 }
 
-
-
-
 .admin-normal-profile {
+  margin-bottom: 24px;
+}
+.admin-normal-profile .img-box {
+  width: 60px;
+  height: 60px;
+}
+.admin-normal-profile .text-box {
+  height: 60px;
+  padding-left: 12px;
+}
+.admin-normal-profile .text-box .profile-name {
+  font-size: 13px;
+  line-height: 18px;
+}
+.admin-normal-profile .text-box .profile-catchcopy {
+  font-size: 11px;
+}
+
+/*.admin-normal-profile {
   padding-bottom: 24px;
 }
 .admin-normal-profile .img-box-block {
@@ -222,9 +241,7 @@
   line-height: 20px;
   width: 100%;
   margin: 0 auto;
-}
-
-
+}*/
 
 .admin-normal-joshikai {
   padding-top: 32px;
@@ -263,6 +280,66 @@
   font-size: 12px;
   line-height: 20px;
   height: 40px;
+}
+
+/* 診断チャートエリア */
+.kinjo-check-block_sp {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #dedede;
+}
+.kinjo-check-block_sp .open-area {
+  display: table;
+  background: #fff;
+  padding: 4px 12px 4px 8px;
+}
+.kinjo-check-block_sp .open-area .icon-img {
+  width: 45px;
+  height: 45px;
+  display: table-cell;
+}
+.kinjo-check-block_sp .open-area .kinjo-check-title {
+  height: 45px;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: 400;
+  padding-left: 12px;
+  position: relative;
+}
+.kinjo-check-block_sp .open-area .kinjo-check-title:after {
+  content: "〉";
+  position: absolute;
+  right: 0;
+  transform: rotate(90deg);
+  margin-top: 6px;
+  font-size: 15px;
+}
+.kinjo-check-block_sp .open-area.active .kinjo-check-title:after {
+  transform: rotate(270deg);
+  margin-top: -3px;
+}
+
+.kinjo-check-block_sp .text-box {
+  display: none;
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #f5f5f5;
+}
+.kinjo-check-block_sp .text-box .kinjo-check-description {
+  font-size: 11px;
+  line-height: 20px;
+}
+.kinjo-check-block_sp .text-box .to-kinjo-type {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  margin-top: 8px;
+  color: #5499d8;
+}
+
+.after-regist-kinjo-check .kinjo-check-sub {
+  width: 72%;
 }
 
 

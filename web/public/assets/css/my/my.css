@@ -3,10 +3,6 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   マイページ - myきん女。
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.mykinjo-block {
-
-}
-
 .mykinjo-thub {
     height: 250px;
 }
@@ -776,12 +772,28 @@ footer {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   一般ユーザー
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.admin-normal-container {
+.my-container {
     padding-top: 130px;
     /*background: #c5e9e4;*/
     background: #f9f9f9;
 }
 
+/* 診断結果による色分け */
+/*.my-container.kinjo-check01 {
+  background: #fff6f1;
+}
+.my-container.kinjo-check01 .admin-normal-profile .img-box {
+  box-shadow: inset 0px 0px 10px 8px #fff6f1;
+}
+.admin-normal-container.kinjo-check02 {
+  background: #44A938;
+}
+.admin-normal-container.kinjo-check03 {
+  background: #68B7C9;
+}
+.admin-normal-container.kinjo-check04 {
+  background: #E285AB;
+}*/
 .admin-normal-container .admin-normal-inner {
     width: 1000px;
     margin: 0 auto;
@@ -844,49 +856,33 @@ footer {
     min-height: 200px;
 }
 
+/* プロフィール部分 */
 .admin-normal-profile {
-    text-align: center;
-    padding-bottom: 24px;
+  display: table;
+}
+.admin-normal-profile .img-box {
+  width: 70px;
+  height: 70px;
+  box-shadow: inset 0px 0px 10px 8px #f9f9f9;
 }
 
 .admin-normal-profile .img-box-block {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    position: relative;
+  display: table-cell;
 }
-
-.admin-normal-profile .img-box {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: relative;
-    z-index: 1000;
+.admin-normal-profile .text-box {
+  display: table-cell;
+  height: 70px;
+  vertical-align: middle;
+  padding-left: 20px;
 }
-
-.edit-profile-img .edit-profile-img2 {
-    opacity: 0;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    z-index: 1002;
-    background: #8ddcd1;
-    transition: .5s;
-    display: table;
+.admin-normal-profile .text-box .profile-name {
+  color: #77cbc0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
 }
-
-.edit-profile-img .edit-profile-img2 p {
-    height: 100%;
-    vertical-align: middle;
-    display: table-cell;
-    padding: 0px 20px;
-    font-weight: bold;
-    color: #fff;
-    line-height: 18px;
+.admin-normal-profile .text-box .profile-catchcopy {
+  font-size: 12px;
 }
 
 .admin-normal-container .mypage-content-mainimg {
@@ -904,6 +900,57 @@ footer {
     height: 100%;
     background: rgba(255, 255, 255, .1);
 }
+
+/* きん女check部分 */
+.kinjo-check-block {
+  display: table;
+  background: #fff;
+  padding: 16px 20px;
+  margin: 24px 0px 32px;
+}
+.kinjo-check-block .icon-box {
+  display: table-cell;
+  width: 22%;
+  padding: 8px;
+
+}
+.kinjo-check-block .icon-box img {
+  width: 100%;
+}
+.kinjo-check-block .text-box {
+  display: table-cell;
+  vertical-align: middle;
+  width: 78%;
+  padding-left: 24px;
+}
+.kinjo-check-block .kinjo-check-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.kinjo-check-block .kinjo-check-description {
+  font-size: 12px;
+  margin: 4px 0px;
+}
+.kinjo-check-block .to-kinjo-type {
+  font-size: 12px;
+  display: block;
+  text-align: right;
+  color: #5499d8;
+}
+
+/* checkしていない場合 */
+/* complete */
+.after-regist-kinjo-check {
+  text-align: center;
+  margin: 32px 0px 40px;
+}
+.after-regist-kinjo-check .kinjo-check-sub {
+  width: 320px;
+}
+.after-regist-kinjo-check a {
+  width: 100%;
+}
+
 
 .admin-normal-container .mypage-content-title {
     font-size: 22px;
@@ -932,36 +979,6 @@ footer {
     padding-bottom: 32px;
     border-bottom: 1px solid #ececec;
 }
-
-/*.admin-normal-profile .img-box-block:after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #8ddcd1;
-  z-index: 999;
-}*/
-.admin-normal-profile .profile-name {
-    font-size: 16px;
-    line-height: 16px;
-    margin-top: 32px;
-    margin-bottom: 16px;
-    font-weight: bold;
-    color: #77cbc0;
-}
-
-.admin-normal-profile .profile-catchcopy {
-    font-size: 14px;
-    line-height: 22px;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
-
 .admin-normal-main .profile-alert-block {
     text-align: center;
 }
@@ -1042,8 +1059,7 @@ footer {
   女子会部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-joshikai {
-    padding-top: 50px;
-    border-top: 1px solid #ececec;
+    /*border-top: 1px solid #ececec;*/
 }
 
 .joshikailist-main {
@@ -1121,8 +1137,11 @@ footer {
 }
 
 .admin-normal-joshikai-title {
-    font-size: 14px;
-    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    border-left: 2px solid #8ddcd1;
+    padding-left: 10px;
 }
 
 /* 女子会詳細 */
@@ -1478,9 +1497,9 @@ footer {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.admin-normal-container {
+/*.admin-normal-container {
     background: rgba(113, 113, 113, 0.05);
-}
+}*/
 
 @media screen and (min-width: 640px) {
 
