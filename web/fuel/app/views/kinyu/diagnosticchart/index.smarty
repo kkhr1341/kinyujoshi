@@ -18,8 +18,8 @@
 
     <div class="diagnosticchart-question-container">
         <div class="diagnosticchart-question">
-			<div class="diagnosticchart-question-number">Q1</div>
-			<div class="diagnosticchart-question-text">Q1</div>
+			<div class="diagnosticchart-question-number"></div>
+			<div class="diagnosticchart-question-text"></div>
 		</div>
         <div class="diagnosticchart-answer">
             <button class="btn btn-primary btn-yes ripple">YES<span class="ripple__effect is-white"></span></button>
@@ -317,6 +317,7 @@ $(function(){
 
   var $startButton  = $introContainer.find('button');
 
+  var $questionNumber  = $('.diagnosticchart-question-number');
   var $questionText  = $('.diagnosticchart-question-text');
   var $yesButton = $('.diagnosticchart-answer .btn-yes');
   var $noButton  = $('.diagnosticchart-answer .btn-no');
@@ -330,8 +331,9 @@ $(function(){
   var routes = [];
 
   // 回答
-  function answer(route_id) {
+  function answer(route_id, number) {
     var route_id = route_id || '';
+    var number = number || 1;
 
     $questionText.fadeOut();
 
@@ -344,6 +346,7 @@ $(function(){
       var no_type_code = response.data.no_type_code || '';
       var no_route_code = response.data.no_route_code || '';
 
+      $questionNumber.text('Q' + number);
       $questionText.html(question.replace(/\\n/g, '<br>'));
 
       routes.push(current_route_code);
@@ -354,7 +357,7 @@ $(function(){
           answerLoading(yes_type_code);
         } else if(yes_route_code) {
           // answer
-          answer(yes_route_code);
+          answer(yes_route_code, ++number);
         }
       });
       $noButton.off('click').on('click', function() {
@@ -363,7 +366,7 @@ $(function(){
           answerLoading(no_type_code);
         } else if(no_route_code) {
           // answer
-          answer(no_route_code);
+          answer(no_route_code, ++number);
         }
        });
        $questionText.fadeIn();
