@@ -102,6 +102,7 @@ return array(
         93 => '097_create_diagnostic_chart_type_users',
         94 => '098_create_diagnostic_chart_route_users',
         95 => '099_add_type_image_to_diagnostic_chart_types',
+        96 => '100_add_authentication_to_events',
       ),
     ),
     'module' => 

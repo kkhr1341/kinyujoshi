@@ -1,7 +1,8 @@
 <link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 
 <div class="kinyu-single-block joshikai-main-block kinjo_check">
-
+<p class="diagnosticchart-subtitle">診断チャート</p>
   <div class="inner">
 
     <!--<h2 class="kinyu-top-main-title">診断チャート</h2>-->
@@ -11,38 +12,67 @@
         <!--<div class="diagnosticchart-intro-message">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>-->
 		<div class="diagnosticchart-intro-image pc"><img src="/images/diagnosticchart/chart_main.jpg"></div>
 		<div class="diagnosticchart-intro-image sp"><img src="/images/diagnosticchart/chart_main_sp.jpg"></div>
+		<div class="diagnosticchart-intro-text">
+			<p class="diagnosticchart-intro-text-title"><img src="/images/diagnosticchart/type_ttl.png"></p>
+			<p class="diagnosticchart-intro-text-description">豊かに生きるための第一歩は「自分を知ること」です。<br>どんな風になりたい？<br>どんな人生を送りたい？<br>そして、わたしはどんな人なの？<br>そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。<br>自分がどのタイプなのか、診断してみましょう。</p>
+		</div>
         <div class="diagnosticchart-intro-start">
+            <button class="btn btn-primary ripple">診断スタート♪<span class="ripple__effect is-white"></span></button>
+        </div>
+		<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"> </div>
+		<div class="diagnosticchart-intro-start">
             <button class="btn btn-primary ripple">診断スタート♪<span class="ripple__effect is-white"></span></button>
         </div>
     </div>
 
     <div class="diagnosticchart-question-container">
+		<div class="diagnosticchart-question-el">
         <div class="diagnosticchart-question">
 			<div class="diagnosticchart-question-number"></div>
-			<div class="diagnosticchart-question-text"></div>
+			<div class="diagnosticchart-question-text-wrapper"><div class="diagnosticchart-question-text"></div></div>
+		
+			<div class="diagnosticchart-answer">
+				<button class="btn btn-primary btn-yes ripple">YES<span class="ripple__effect is-white"></span></button>
+				<button class="btn btn-primary btn-no ripple">NO<span class="ripple__effect is-white"></span></button>
+       		 </div>
+			</div>
 		</div>
-        <div class="diagnosticchart-answer">
-            <button class="btn btn-primary btn-yes ripple">YES<span class="ripple__effect is-white"></span></button>
-            <button class="btn btn-primary btn-no ripple">NO<span class="ripple__effect is-white"></span></button>
-        </div>
     </div>
 
 	<div class="diagnosticchart-answer-loading-container"><img src="/images/diagnosticchart/kingyo.gif"></div>
 	  
     <div class="diagnosticchart-answer-container">
-       <div class="diagnosticchart-answer-catchcopy"></div>
-       <div class="diagnosticchart-answer-charactor"></div>
+        <div class="diagnosticchart-answer-catchcopy"></div>
+        <div class="diagnosticchart-answer-charactor"></div>
 		<div class="diagnosticchart-answer-type"></div>
-       <div class="diagnosticchart-answer-description"></div>
+        <div class="diagnosticchart-answer-description"></div>
+		<a href="/kinjo_type" class="diagnosticchart-answer-to-link-mypage">他のタイプを見る</a>
+		<a href="/my" class="diagnosticchart-answer-to-link-mypage">マイページへ</a>
+		
     </div>
   </div>
 </div>
 
 
 <style>
+.kinjo_check .inner {
+	margin-top: 0;
+}	
 
+.diagnosticchart-intro-container {
+    padding-bottom: 30px;
+}	
+	
+.diagnosticchart-subtitle {
+	font-size: 18px;
+	padding: 12px 0;
+	text-align: center;
+	background: #8ddcd1;
+	color: #fff;
+}
 .diagnosticchart-intro-image img {
 	width: 100%;
+	margin-top: 30px;
 }
 	
 .btn-yes {
@@ -52,20 +82,28 @@
     font-weight: normal;
 	width: 200px;
 	padding: 15px;
-	font-size: 16px;
+	font-size: 14px;
 	margin-right: 20px;
 }
+	
 .btn-no {
 	color: #fff;
     background-color: #7eb2ff;
     border: none;
     font-weight: normal;
 	padding: 15px;
-	font-size: 16px;
+	font-size: 14px;
 	width: 200px;
 }
 
-
+.kinyu-single-block.joshikai-main-block.kinjo_check {
+    background: #f8f8f8;
+}
+	
+.diagnosticchart-question-container {
+    padding: 60px 0;
+}
+	
 .diagnosticchart-intro-message {
     text-align: center;
     border: 1px solid #bababa;
@@ -73,51 +111,98 @@
     width: 80%;
     margin:0px auto 20px auto;
 }
+.diagnosticchart-intro-text {
+	width: 100%;
+	max-width: 650px;
+	margin: 50px auto;
+}
+.diagnosticchart-intro-text-title {
+	text-align: center;
+}
+.diagnosticchart-intro-text-title img {
+	width: 100%;
+	max-width: 300px;
+}
+.diagnosticchart-intro-text-description {
+	text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 24px;
+}
 .diagnosticchart-intro-start {
-    margin-bottom: 18px;
     text-align: center;
 }
 .diagnosticchart-intro-start .btn-primary {
     width: 100%;
-	margin: 30px 0;
+	margin: 0px 0 30px;
 	padding: 20px;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: normal;
 	max-width: 300px;
 }
-
+	.diagnosticchart-intro-type-img {
+		text-align: center;
+		margin: 30px 0;
+	}
+.diagnosticchart-intro-type-img img {
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+		
 .diagnosticchart-question-container {
     display: none;
 }
 .diagnosticchart-question {
     text-align: center;
+	width: 100%;
     padding: 50px 15px;
-    width: 88%;
-	max-width: 650px;
 	line-height: 1.7;
-    margin: 40px auto;
-	font-size: 20px;
-   height: 200px;
-    background: #ffffff;
+    margin: 0 auto;
+	font-size: 18px;
+    height: 230px;
 	position: relative;
+    background: #ffffff;
+	display: table;
+	border: solid 1px #8ddcd1;
+  	outline: solid 1px #fff;
+}
+.diagnosticchart-question-el {
+	border: solid 2px #8ddcd1;
+	padding: 2px;
+	width: 88%;
+	max-width: 650px;
+	margin: 0 auto;
+}
+	
+.diagnosticchart-question-text-wrapper {
+	height: 100px;
+	display: inline-block;
+    text-align: center;
+}
+.diagnosticchart-question-text {
+	display: table-cell;
+	height: 120px;
+  	vertical-align: middle;
 }
 .diagnosticchart-question-number {
+	font-family: 'Dancing Script', cursive;
 	position: absolute;
-	font-size: 20px;
+	font-size: 28px;
 	color: #8ddcd1;
-	top: 0;
-	left: 0;
+	top: 10px;
+    left: 20px;
 }
 .diagnosticchart-answer {
-   margin-bottom: 18px;
     text-align: center;
+	margin-top: 50px;
 }
 .diagnosticchart-answer-loading-container {
     display: none;
 }
 .diagnosticchart-answer-container {
     display: none;
-	padding: 20px;
+	padding: 20px 20px 30px;
 }
 .diagnosticchart-answer-catchcopy {
     text-align: center;
@@ -148,6 +233,7 @@
     text-align: center;
     padding: 15px;
     width: 80%;
+	font-size: 13px;
 	line-height: 1.6;
     margin:0px auto 20px auto;
 }
@@ -157,7 +243,8 @@
 }	
 .diagnosticchart-answer-loading-container {
 	text-align: center;
-	padding: 80px 0
+	padding: 80px 0;
+	height: 432px;
 }
 .diagnosticchart-answer-loading-container img {
 	width: 100%;
@@ -168,14 +255,14 @@
 
 
 .diagnosticchart-answer {
-    margin-bottom: 40px;
+  
 }
 
 .diagnosticchart-answer-container.type-A {
     background-color: #eff7ed;
 }
 .diagnosticchart-answer-container.type-B {
-    background-color: #F7EBF1;
+    background-color: #fdf5f9;
 }
 
 .diagnosticchart-answer-container.type-C {
@@ -185,11 +272,58 @@
 .diagnosticchart-answer-container.type-D {
     background-color: #F7F0F0;
 }
-
+.diagnosticchart-answer-to-link-mypage {
+	display: block;
+	width: 200px;
+    padding: 13px 0px;
+    margin: 0 auto;
+    margin-top: 16px;
+    text-align: center;
+    height: auto;
+    background-color: #8ddcd1;
+    color: #fff;
+    transition: .5s;
+}
 	
+.diagnosticchart-answer-to-link-mypage:hover {
+	opacity: .8;
+}
+
 @media screen and (max-width: 480px) {
+	.kinyu-single-block.joshikai-main-block.kinjo_check {
+		background: #fff;
+	}
+	.diagnosticchart-subtitle {
+		font-size: 16px;
+		padding: 10px;
+	}
+	.diagnosticchart-intro-image img {
+		margin-top: 0px;
+	}
+	.diagnosticchart-intro-type-img img {
+		width: 88%;
+		margin: 0 auto;
+	}
+	.diagnosticchart-intro-text-title img {
+		max-width: 200px;
+	}
+	.diagnosticchart-intro-text-title {
+		font-size: 18px;
+	}
+	.diagnosticchart-intro-text-description {
+		width: 88%;
+		margin: 16px auto 0;
+	}
 	.kinjo_check .inner {
 		width: 100%;
+	}
+	.diagnosticchart-question-el {
+		border: none;
+	}
+	.diagnosticchart-intro-start .btn-primary {
+		font-size: 16px;
+		max-width: 100%;
+		width: 88%;
 	}
 	.btn-yes {
 		width: 88%;
@@ -346,7 +480,7 @@ $(function(){
       var no_type_code = response.data.no_type_code || '';
       var no_route_code = response.data.no_route_code || '';
 
-      $questionNumber.text('Q' + number);
+      $questionNumber.text('Step' + number);
       $questionText.html(question.replace(/\\n/g, '<br>'));
 
       routes.push(current_route_code);
