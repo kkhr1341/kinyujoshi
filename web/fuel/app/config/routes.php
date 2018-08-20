@@ -55,6 +55,7 @@ return array(
 
     //diagnostic_chart
     'kinjo_check' => 'kinyu/diagnosticchart/index',
+	'kinjo_type' => 'kinyu/diagnosticchart/kinjo_type',
 
 	//未公開
 	'gallery' => 'kinyu/gallery/index',
