@@ -17,11 +17,23 @@
 			<p class="diagnosticchart-intro-text-description">豊かに生きるための第一歩は「自分を知ること」です。<br>どんな風になりたい？<br>どんな人生を送りたい？<br>そして、わたしはどんな人なの？<br>そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。<br>自分がどのタイプなのか、診断してみましょう。</p>
 		</div>
         <div class="diagnosticchart-intro-start">
-            <button class="btn btn-primary ripple">診断スタート♪<span class="ripple__effect is-white"></span></button>
+            <button class="btn btn-primary ripple" data-is_diagnosed="{$is_diagnosed}">診断スタート♪<span class="ripple__effect is-white"></span></button>
+            {if $is_diagnosed == true}
+                <div class="reset-timer" data-reset_time="{$reset_time}">
+                  <span class="reset-timer-text">のこり</span>
+                  <span class="reset-timer-time"></span>
+                </div>
+            {/if}
         </div>
-		<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"> </div>
-		<div class="diagnosticchart-intro-start">
-            <button class="btn btn-primary ripple">診断スタート♪<span class="ripple__effect is-white"></span></button>
+	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"> </div>
+	<div class="diagnosticchart-intro-start">
+            <button class="btn btn-primary ripple" data-is_diagnosed="{$is_diagnosed}">診断スタート♪<span class="ripple__effect is-white"></span></button>
+            {if $is_diagnosed == true}
+                <div class="reset-timer" data-reset_time="{$reset_time}">
+                  <span class="reset-timer-text">のこり</span>
+                  <span class="reset-timer-time"></span>
+                </div>
+            {/if}
         </div>
     </div>
 
@@ -442,6 +454,35 @@ $(function() {
 
 <script>
 {literal}
+
+// 診断が有効化されるまでのカウントダウン処理
+function countDown($element, endDate, callback) {
+  var startDateTime = new Date();
+  var endDateTime = new Date(endDate);
+  var left = endDateTime - startDateTime;
+
+  if (left <= 0) {
+    $element.text('');
+    callback();
+    return;
+  }
+
+  var a_day = 24 * 60 * 60 * 1000;
+
+  var d = Math.floor(left / a_day) 
+
+  var h = Math.floor((left % a_day) / (60 * 60 * 1000)) 
+
+  var m = Math.floor((left % a_day) / (60 * 1000)) % 60 
+
+  var s = Math.floor((left % a_day) / 1000) % 60 % 60 
+
+  $element.find('.reset-timer-time').text(d + '日' + h + '時間' + m + '分' + s + '秒');
+  setTimeout(function() {
+    countDown($element, endDate, callback);
+  }, 1000);
+}
+
 $(function(){
 
   var $introContainer  = $('.diagnosticchart-intro-container');
@@ -561,6 +602,20 @@ $(function(){
     $questionContainer.fadeIn();
     answer();
   })
+ 
+  // 診断の実行可否処理
+  // 診断の実行ができる状態であれば「診断スタート」ボタンクリック可
+  // 診断の実行ができない状態であれば「診断スタート」ボタンクリック不可・カウントダウン実行
+  var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
+  $startButton.prop('disabled', is_diagnosed);
+  if (is_diagnosed == true) {
+    $('.reset-timer').each(function() {
+      var endDate = $(this).data('reset_time');
+      countDown($(this), endDate, function() {
+        $startButton.prop('disabled', false);
+      });
+    })
+  }
 });
 {/literal}
 </script>
