@@ -1,6 +1,9 @@
-<!-- 診断チャートをしている場合 -->
-
+<!--=================== 
+　 PC
+=====================-->
 <div class="pc">
+
+  <!-- 診断チャートをしている場合 -->
   <div class="kinjo-check-block clear">
     <div class="icon-box">
       <img src="/images/diagnosticchart/A.png">
@@ -24,6 +27,9 @@
   </div>
 </div>
 
+<!--=================== 
+　　スマホ
+=====================-->
 <div class="sp">
 
   <!-- 診断チャートをしている場合 -->
@@ -39,20 +45,18 @@
   </div>
 
   <!-- 診断チャートをしていない場合 -->
-  <!-- <div class="after-regist-kinjo-check">
+  <div class="after-regist-kinjo-check">
     <img class="kinjo-check-sub" src="/images/kinjo-check.png">
     <a href="/kinjo_check">
       <img class="pc" src="/images/diagnosticchart/chart_main.jpg">
       <img class="sp" src="/images/diagnosticchart/chart_main.jpg">
     </a>
-  </div> -->
+  </div>
 
 </div>
 
-
 <script>
 $(function() {
-
   //クリック表示
   $("#kinjo_check_btn").click(function() {
     $("#kinjo_check_open_content").slideToggle();
