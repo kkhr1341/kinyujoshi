@@ -6,65 +6,69 @@
 
     <div class="about-kinyu-top-container">
 
-      <div class="about-kinyu-header-contetns-list">
-
-        <div class="about-kinyu-header-contetns-list-el">
-          <a class="clear" href="/about_main">
-            <div class="img-box" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
-            <div class="title-box">
-              <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/title_about.png"><img class="sp" src="/images/about/sp_title_about.png"></p>
+      <div class="about-kinyu-el-block about-kinyu-el-block1">
+        <ul>
+          <li>
+            <a href="/about_history">
+              <div class="about-kinyu-el-img" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
+              <div class="about-kinyu-el-inner">
+                <img src="/images/about/title_history.png">
               </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="about-kinyu-header-contetns-list-el">
-          <a class="clear" href="/about_story">
-            <div class="img-box" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
-            <div class="title-box">
-              <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/title_story.png"><img class="sp" src="/images/about/sp_title_story.png"></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="about-kinyu-header-contetns-list-el">
-          <a class="clear" href="/about_design">
-            <div class="img-box" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
-            <div class="title-box">
-              <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/title_design.png"><img class="sp" src="/images/about/sp_title_design.png"></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="about-kinyu-header-contetns-list-el">
-          <a class="clear" href="/about_design">
-            <div class="img-box" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
-            <div class="title-box">
-              <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/title_design.png"><img class="sp" src="/images/about/sp_title_design.png"></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="about-kinyu-header-contetns-list-el">
-          <a class="clear" href="/about_design">
-            <div class="img-box" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
-            <div class="title-box">
-              <div class="title-box-inner">
-                <p><img class="pc" src="/images/about/title_design.png"><img class="sp" src="/images/about/sp_title_design.png"></p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-
+            </a>
+          </li>
+        </ul>
       </div>
+
+      <div class="about-kinyu-el-block about-kinyu-el-block2">
+        <ul class="clear">
+          <li>
+            <a href="/about_story">
+              <div class="about-kinyu-el-img" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
+              <div class="about-kinyu-el-inner">
+                <img src="/images/about/title_story.png">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/about_main">
+              <div class="about-kinyu-el-img" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
+              <div class="about-kinyu-el-inner">
+                <img src="/images/about/title_index.png">
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-kinyu-el-block about-kinyu-el-block3">
+        <ul class="clear">
+          <li>
+            <a href="/about_design">
+              <div class="about-kinyu-el-img" style="background:url(/images/about/about-design.jpg) center center / cover no-repeat;"></div>
+              <div class="about-kinyu-el-inner">
+                <img src="/images/about/title_design.png">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/about_community">
+              <div class="about-kinyu-el-img" style="background:url(/images/about/about-community.jpg) center center / cover no-repeat;"></div>
+              <div class="about-kinyu-el-inner">
+                <img src="/images/about/title_community.png">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/about_insight">
+              <div class="about-kinyu-el-img" style="background:url(/images/about/about-insight.jpg) center center / cover no-repeat;"></div>
+              <div class="about-kinyu-el-inner">
+                <img src="/images/about/title_insight.png">
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </div>

@@ -40,6 +40,7 @@ return array(
 	'about_community' => 'kinyu/about/about_community',
 	'about_insight' => 'kinyu/about/about_insight',
 	'about_hensyubu' => 'kinyu/about/about_hensyubu',
+	'about_history' => 'kinyu/about/about_history',
 
 	'report'   => 'kinyu/blog/index',
 	'report/search'   => 'kinyu/blog/search',
