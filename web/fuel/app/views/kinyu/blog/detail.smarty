@@ -116,10 +116,10 @@
 
 <script>
 $(function(){
-    // var readReportTutorial = document.cookie.replace(/(?:(?:^|.*;\s*)read_report_tutorial\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    // if (readReportTutorial === "true") {
-    //     return false;
-    // }
+    var readReportTutorial = document.cookie.replace(/(?:(?:^|.*;\s*)read_report_tutorial\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    if (readReportTutorial === "true") {
+        return false;
+    }
     document.cookie = "read_report_tutorial=true";
     $("#myModal").modal({
       "backdrop"  : "static",
