@@ -73,28 +73,6 @@
         </div>
       </div>
     </div>
-    <div class="about-kinyu-detail-list">
-      <!-- <p>ABOUT きんゆう女子。</p> -->
-      <ul>
-        <li>
-          <a href="/about_main">
-            <img class="pc" src="/images/about/title_about.png">
-            <img class="sp" src="/images/about/sp_title_about.png">
-          </a>
-        </li>
-        <li>
-          <a href="/about_story">
-            <img class="pc" src="/images/about/title_story.png">
-            <img class="sp" src="/images/about/sp_title_story.png">
-          </a>
-        </li>
-        <li>
-          <a href="/about_design">
-            <img class="pc" src="/images/about/title_design.png">
-            <img class="sp" src="/images/about/sp_title_design.png">
-          </a>
-        </li>
-      </ul>
-    </div>
+    {$about_contents_after}
   </div>
 </div>

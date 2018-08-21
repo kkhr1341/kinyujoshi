@@ -1798,6 +1798,57 @@
         background: #fff;
     }
 
+    .about-kinyu-el-block {
+        margin-bottom: 0%;
+    }
+
+    .about-kinyu-top-container li {
+        margin-bottom: 24px;
+    }
+
+    .about-kinyu-top-container {
+        width: 100%;
+    }
+
+    .about-kinyu-el-inner {
+        width: 65%;
+        height: 103px;
+    }
+    .about-contents-after-container {
+        margin-top: 0px;
+    }
+    .about-contents-after-container .about-kinyu-el-block3 li {
+        margin-bottom: 4%;
+    }
+    .about-kinyu-el-block3 li:last-child {
+        margin-bottom: 0px;
+    }
+
+    /* block1 */
+    .about-kinyu-el-block1 li .about-kinyu-el-img {
+      height: 180px;
+    }
+
+    /* block2 */
+    .about-kinyu-el-block2 li {
+      width: 100%;
+      margin-right: 0%;
+      float: none;
+    }
+    .about-kinyu-el-block2 li .about-kinyu-el-img {
+      height: 180px;
+    }
+
+    /* block3 */
+    .about-kinyu-el-block3 li {
+      width: 100%;
+      margin-right: 0%;
+      float: none;
+    }
+    .about-kinyu-el-block3 li .about-kinyu-el-img {
+      height: 180px;
+    }
+    
     .about-kinyu-container {
         width: 92%;
         padding: 24px 0px 50px;

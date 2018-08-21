@@ -10,7 +10,7 @@
         <ul>
           <li>
             <a href="/about_history">
-              <div class="about-kinyu-el-img" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
+              <div class="about-kinyu-el-img" style="background:url(/images/about/about-history.jpg) center center / cover no-repeat;"></div>
               <div class="about-kinyu-el-inner">
                 <img src="/images/about/title_history.png">
               </div>
