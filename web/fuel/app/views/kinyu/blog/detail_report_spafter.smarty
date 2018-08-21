@@ -120,20 +120,30 @@
         <a href="/event">もっと見る ></a>
       </div>
     </div>
-    <div class="report-detail-sidebar-el">
-      <ul class="banner-list clear">
+    
+    <div class="kinyu-top-banner-area">
+      <ul class="clear">
+        <!-- きんゆう散歩 -->
         <li>
-          <a href="/myway">
-            <img src="/images/banner/myway_sp.jpg">
+          <a target="_blank" href="/kinyu_sanpo">
+            <img class="" src="/images/kinyu_map/og/og-main.jpg">
           </a>
         </li>
+        <!-- わたしを知る -->
         <li>
-          <a href="/myway">
-            <img src="/images/banner/asahi_&w_sp.jpg">
+          <a target="_blank" href="/myway">
+            <img class="" src="/images/myway/og_myway.jpg">
+          </a>
+        </li>
+        <!-- 朝日デジタル -->
+        <li>
+          <a target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
+            <img class="" src="/images/banner/asahi_&w_og.jpg">
           </a>
         </li>
       </ul>
     </div>
+
   </div>
 </div>
 

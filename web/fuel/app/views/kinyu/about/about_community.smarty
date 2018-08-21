@@ -1,0 +1,79 @@
+<div class="kinyu-single-block">
+  <div class="about-kinyu-container">
+    
+    <div class="about-kinyu-container-inner clear">
+      
+      <div class="about-kinyu-container-left">
+        <ul>
+          <li><a href="/about_main">きんゆう女子。って？</a></li>
+          <li><a href="/about_story">生まれたストーリー</a></li>
+          <li><a href="/about_history">これまでの歩み</a></li>
+          <li><a href="/about_design">デザインについて</a></li>
+          <li class="active"><a href="/about_community">コミュニティマネジメント</a></li>
+          <li><a href="/about_insight">インサイトポリシー</a></li>
+        </ul>
+      </div>
+
+      <div class="about-kinyu-container-right">
+
+        <div class="about-kinyu-bgarea" style="background:url(/images/about/about-community.jpg) center center / cover no-repeat;"></div>
+        <div class="about-kinyu-details-area">
+          <h2>コミュニティマネジメント</h2>
+
+          <div class="about-kinyu-description">
+
+            <p class="main-catchcopy">メンバーが主役になれるコミュニティ</p>
+
+            <p class="pc main-description">
+              金融ワカラナイ女子にとって<br>
+              メンバー登録を行ったり女子会に参加したりすることは<br>
+              とても勇気のいる一歩だと思います。<br><br>
+
+              だから私たちは、どんな方にも<br>
+              安心してゆるりと楽しくおかねや自分自身と向き合える<br>
+              雰囲気づくりをとても大切にしています。<br><br>
+
+              人生の転換期にきんゆう女子。に加わった方々に<br>
+              寄り添っていくには、どうしたらいいか。<br>
+              「できない」とあきらめず私にもできそう！やってみよう<br>
+              と思えるようになるには、どうしたらいいか。<br>
+              そんな想いをもって女子会やおたよりにも心を配っています。<br><br>
+
+              おかねの勉強やアクションを通して<br>
+              わたしらしいライフスタイルを見つけるための<br>
+              はじめのちいさなちいさな一歩に「きんゆう女子。」がありますように。
+            </p>
+
+            <p class="sp main-description">
+              金融ワカラナイ女子にとってメンバー登録を行ったり女子会に参加したりすることはとても勇気のいる一歩だと思います。<br><br>
+
+              だから私たちは、どんな方にも安心してゆるりと楽しくおかねや自分自身と向き合える雰囲気づくりをとても大切にしています。<br><br>
+
+              人生の転換期にきんゆう女子。に加わった方々に寄り添っていくには、どうしたらいいか。<br>
+              「できない」とあきらめず私にもできそう！やってみようと思えるようになるには、どうしたらいいか。
+              そんな想いをもって女子会やおたよりにも心を配っています。<br><br>
+
+              おかねの勉強やアクションを通してわたしらしいライフスタイルを見つけるためのはじめのちいさなちいさな一歩に「きんゆう女子。」がありますように。
+            </p>
+
+            <div class="profile">
+              <p class="profile-text">ー Profile ー</p>
+              <div class="profile-block clear">
+                <div class="img-box story-img-box" style="background:url(/images/about/profile/keita_komori.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="name-text">金子圭都 （かねこ・けいと）</p>
+                  <p class="position-text">株式会社TOE THE LINE<br>コミュニティマネージャー</p>
+                  <p class="detail-text">シンクタンクで金融系システムの保守・運用・サポート窓口などに携わる。2016年10月にきんゆう女子。会に参加したことがきっかけで、2017年4月からコミュニティマネージャーに就任。女子会に参加するメンバーが、いつでも安心して楽しく学べる環境を整えながら、20〜30代女性の生き方に寄り添うパーソナルファイナンシャルプランナー（2012年AFP取得）。CFP取得のため勉強中で、パラレルワーカーや新しい働き方を実現する女性に寄り添うファイナンシャルプランナーを目指す。</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {$about_contents_after}
+
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+
+    {$my_side}
+
+    <div class="admin-normal-main">
+      <div class="admin-normal-joshikai joshikailist-main admin-normal-check-joshikai">
+        <p class="admin-normal-joshikai-title">チェックしたレポート</p>
+
+        <ul class="clear">
+
+          {foreach from=$blogs item=blog name=loopname}
+
+          <!-- 女子会 -->
+          <!-- 現状、全ての女子会を表示 -->
+          <li class="check-report-list">
+            <a href="/report/{$blog.code}" class="clear">
+              <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+              <div class="text-box">
+                <div class="text-box-inner">
+                  <p class="date-text">
+                    {$blog.open_date|date_format:"Y年m月d日"}
+                  </p>
+                  <p class="title-text">{$blog.title}</p>
+                </div>
+              </div>
+            </a>
+            <button class="delete-button" data-code="{$blog.code}">×</button>
+          </li>
+        {foreachelse}
+          <p class="check-no">チェックしたレポートはありません..。</p>
+          <a href="/report" class="to-link-report">レポート一覧へ</a>
+        {/foreach}
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+
+    var unCheck = function(code, cb) {
+        var url = "/api/blogstocks/delete";
+        var params = {
+            code: code
+        };
+        ajax.post(url, params, function(data){
+            cb();
+        });
+    }
+
+    var button = $('#check-report');
+    $('.joshikailist-main ul li').each(function() {
+        var li = $(this);
+        $(this).find('.delete-button')
+            .off('click')
+            .on('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var code = $(this).data('code');
+                bootbox.confirm("チェックしたレポートを削除してもよろしいですか？", function(result) {
+                    if(result) {
+                        unCheck(code, function() {
+                            li.remove();
+                            ts.success('チェックを外しました。');
+                        });
+                    }
+                })
+            })
+    })
+});
+
+</script>

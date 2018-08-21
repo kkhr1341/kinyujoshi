@@ -1,6 +1,7 @@
 <?php
 
 use \Model\Blogs;
+use \Model\Blogstocks;
 use \Model\Events;
 
 class Controller_Kinyu_Blog extends Controller_Kinyubase
@@ -81,6 +82,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         // 最新を取得
         $this->data['blogs'] = Blogs::all('kinyu', '/kinyu/blog/', 1, 3, 5);
         $this->data['blog'] = Blogs::getByCodeWithProfile($code);
+        $this->data['stocked'] = Blogstocks::stocked($code);
         $this->data['viewable'] = $this->viewable($code);
         $this->data['top_events'] = Events::lists(1, 7, true);
 

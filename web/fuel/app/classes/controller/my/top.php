@@ -17,5 +17,7 @@ class Controller_My_Top extends Controller_Mybase
         $this->template->contents = View::forge('my/all.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+        $this->template->kinjo_check = View::forge('my/common/kinjo_check.smarty', $this->data);
+
     }
 }

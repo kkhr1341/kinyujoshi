@@ -25,6 +25,15 @@
         不定期でメールをお送りさせていただきます。<br>
         楽しみにお待ちくださいませ。
       </p>
+
+      <div class="after-regist-kinjo-check">
+        <img class="kinjo-check-sub" src="/images/kinjo-check.png">
+        <a href="/kinjo_check">
+          <img class="pc" src="/images/diagnosticchart/chart_main.jpg">
+          <img class="sp" src="/images/diagnosticchart/chart_main.jpg">
+        </a>
+      </div>
+
       <a href="/" class="message-top">トップページに戻る</a>
       <a href="/" class="message-top message-top02">マイページへ</a>
     </div>

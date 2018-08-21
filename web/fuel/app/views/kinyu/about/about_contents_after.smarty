@@ -1,0 +1,100 @@
+<!-- <div class="about-contents-after">
+<ul>
+
+  <li>
+    <a href="/about_history">
+      <img src="/images/about/title_history.png">
+    </a>
+  </li>
+
+  <li>
+    <a href="/about_story">
+      <img src="/images/about/title_story.png">
+    </a>
+  </li>
+
+  <li>
+    <a href="/about_main">
+      <img src="/images/about/title_index.png">
+    </a>
+  </li>
+
+  <li>
+    <a href="/about_design">
+      <img src="/images/about/title_design.png">
+    </a>
+  </li>
+
+  <li>
+    <a href="/about_community">
+      <img src="/images/about/title_community.png">
+    </a>
+  </li>
+
+  <li>
+    <a href="/about_insight">
+      <img src="/images/about/title_insight.png">
+    </a>
+  </li>
+
+</ul>
+</div> -->
+
+<div class="about-kinyu-top-container about-contents-after-container">
+  <div class="about-kinyu-el-block about-kinyu-el-block3">
+    <ul class="clear">
+
+
+      <li>
+        <a href="/about_history">
+          <div class="about-kinyu-el-img" style="background:url(/images/about/about-history.jpg) center center / cover no-repeat;"></div>
+          <div class="about-kinyu-el-inner">
+            <img src="/images/about/title_history.png">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/about_story">
+          <div class="about-kinyu-el-img" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
+          <div class="about-kinyu-el-inner">
+            <img src="/images/about/title_story.png">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/about_main">
+          <div class="about-kinyu-el-img" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
+          <div class="about-kinyu-el-inner">
+            <img src="/images/about/title_index.png">
+          </div>
+        </a>
+      </li>
+
+      <li>
+        <a href="/about_design">
+          <div class="about-kinyu-el-img" style="background:url(/images/about/about-design.jpg) center center / cover no-repeat;"></div>
+          <div class="about-kinyu-el-inner">
+            <img src="/images/about/title_design.png">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/about_community">
+          <div class="about-kinyu-el-img" style="background:url(/images/about/about-community.jpg) center center / cover no-repeat;"></div>
+          <div class="about-kinyu-el-inner">
+            <img src="/images/about/title_community.png">
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/about_insight">
+          <div class="about-kinyu-el-img" style="background:url(/images/about/about-insight.jpg) center center / cover no-repeat;"></div>
+          <div class="about-kinyu-el-inner">
+            <img src="/images/about/title_insight.png">
+          </div>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</div>

@@ -218,6 +218,45 @@
   opacity: .5;
 }
 
+/* ヘッダー下のコンテンツ */
+.header-hover-content-block {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 130px;
+  z-index: 1004;
+}
+.header-hover-inner {
+  display: none;
+  position: fixed;
+  background: #fff;
+  width: 1050px;
+  top: 0;
+  left: 50%;
+  margin-top: 130px;
+  margin-left: -525px;
+  z-index: 1006;
+  padding: 40px 40px 24px 40px;
+}
+.header-hover-inner-ul li {
+  width: 31.333%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+}
+.header-hover-inner-ul li a {
+  display: block;
+  transition: .5s;
+}
+.header-hover-inner-ul li:nth-child(3n) {
+  margin-right: 0%;
+}
+.header-hover-inner-ul li img {
+  width: 100%;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
@@ -845,6 +884,11 @@
   top: 60px;
   border-bottom: 1px solid #c0c0c0;
 }
+.kinyu-header-top .kinyu-top-search {
+  top: 20px;
+  left: 20px;
+  padding: 0px 4px;
+}
 .kinyu-top-search input.search {
   font-family: "FontAwesome";
   display: inline-block;
@@ -855,6 +899,9 @@
   height: 30px;
   margin-right: 5px;
   font-size: 12px;
+}
+.kinyu-header-top .kinyu-top-search input.search {
+  width: 180px;
 }
 .kinyu-top-search input[type="text"]:focus {
   background: none;
@@ -1001,7 +1048,7 @@
 .kinyu-main-block .inner {
   background: #fff;
   width: 1000px;
-  padding: 80px 0px;
+  padding: 70px 0px 80px;
   margin: 0 auto;
 }
 /* 記事のイントロダクション */
@@ -1165,6 +1212,191 @@
   line-height: 16px;
   color: #a09f9f;
 }
+/* レポートチェック部分 */
+#check-report {
+  position: fixed;
+  right: 8px;
+  z-index: 1006;
+  bottom: 16px;
+  transition: .5s;
+}
+#report-chack-img {
+  width: 90px;
+  margin-bottom: 4px;
+  opacity: 1;
+  transition: .5s;
+}
+#report-chack-img.img-checked {
+  opacity: 0;
+}
+.report-chack-logo-img {
+  width: 100%;
+}
+#check-report a {
+  background-repeat: no-repeat;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+  transition: .5s;
+  background: #ececec;
+}
+#check-report.checked a {
+  background: rgba(141, 220, 209, 1.0);
+}
+
+/* レポートチェック機能ダミー */
+.check-report-dummy {
+  position: fixed;
+  right: 8px;
+  z-index: 1004;
+  bottom: 16px;
+  transition: .5s;
+}
+.report-chack-img-dummy {
+  width: 90px;
+  margin-bottom: 4px;
+  opacity: 1;
+  transition: .5s;
+}
+.report-chack-logo-img-dummy {
+  width: 100%;
+}
+.check-report-dummy p {
+  background-repeat: no-repeat;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 55px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+  transition: .5s;
+  background: #ececec;
+}
+
+/* メンバー限定レポート */
+.no-member-report-block {
+  text-align: center;
+}
+.no-member-report-block p {
+  margin-bottom: 24px;
+}
+.no-member-report-block .button-block button {
+  margin-right: 20px;
+}
+.no-member-report-block .button-block button:last-child  {
+  background: none;
+  border: 1px solid #8ddcd1;
+  color: #77cbc0;
+}
+
+/* チェック機能のモダルウィンドウ */
+.check-report-modal {
+  background: rgba(247, 247, 247, 0.95);
+  /*z-index: 1005;*/
+}
+.check-report-modal .modal-dialog {
+  margin: 80px auto;
+}
+.check-report-modal .modal-body {
+  padding: 60px 40px;
+}
+.check-report-modal .main-title {
+  font-size: 24px;
+  line-height: 38px;
+  color: #77cbc0;
+  text-align: center;
+}
+.check-report-modal .main-description {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 26px;
+}
+.check-report-modal .main-description span {
+  font-weight: bold;
+}
+.check-report-modal button.close {
+  margin-top: -50px;
+  margin-right: -32px;
+}
+.check-report-modal .check-flow {
+  display: block;
+  width: 55%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+.check-report-modal .text-close {
+  position: relative;
+  float: none;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 13px;
+  display: block;
+  width: 120px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 12px 20px;
+  color: #444444;
+  opacity: 1;
+  background: rgb(239, 239, 239);
+}
+
+/* ダミー */
+#check-report-modal-dummy {
+  display: none;
+  background: rgba(247, 247, 247, 0.95);
+  position: fixed;
+  z-index: 1005;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#check-report-modal-dummy .main-description {
+  padding: 32px 0px;
+}
+.check-report-modal-dummy-ul {
+  
+}
+.check-report-modal-dummy-ul li {
+  width: 100%;
+  margin-bottom: 16px;
+  transition: .5s;
+}
+.check-report-modal-dummy-ul li:last-child {
+  margin-bottom: 0px;
+}
+.check-report-modal-dummy-ul li a {
+  display: block;
+  padding: 12px 0px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #8ddcd1;
+  color: #77cbc0;
+  font-weight: bold;
+}
+.check-report-modal-dummy-ul li:last-child a {
+  color: #fff;
+  background: #8ddcd1;
+  font-weight: normal;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　記事・サイドバー
@@ -1350,6 +1582,10 @@
   height: 100%;
   display: table-cell;
   vertical-align: middle;
+}
+
+.report-detail-sidebar-inner .kinyu-top-banner-area {
+  padding-bottom: 70px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1935,6 +2171,9 @@
   border-left: 4px solid #8ddcd1;
 }
 .joshikai-detail-el-info li.date .info-detail {
+}
+.joshikai-detail-el-info li.place .info-detail {
+  color: #5499d8;
 }
 .joshikai-detail-el-info li .info-title {
   font-size: 13px;
@@ -2949,7 +3188,110 @@ input[type=checkbox]:checked + .checkbox:before {
   　ABOUTページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 /* indexページ */
-.kinyu-about-block {
+
+.about-kinyu-top-container {
+  width: 1050px;
+}
+.about-kinyu-el-block {
+  margin-bottom: 2%;
+}
+.about-kinyu-top-container li {
+  position: relative;
+  overflow: hidden;
+}
+.about-kinyu-top-container li a {
+  display: block;
+}
+.about-kinyu-top-container li a:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,.3);
+  z-index: 1001;
+}
+.about-kinyu-top-container .about-kinyu-el-block1 li a:after {
+  background: rgba(224, 224, 224, 0.3);
+}
+.about-kinyu-el-inner {
+  width: 80%;
+  background: rgba(255,255,255,.9);
+  line-height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 250px;
+  height: 116px;
+  z-index: 1002;
+}
+.about-kinyu-el-inner img {
+  width: 100%;
+}
+
+/* block1 */
+.about-kinyu-el-block1 li .about-kinyu-el-img {
+  height: 300px;
+}
+
+/* block2 */
+.about-kinyu-el-block2 li {
+  width: 49%;
+  margin-right: 2%;
+  float: left;
+}
+.about-kinyu-el-block2 li .about-kinyu-el-img {
+  height: 250px;
+}
+.about-kinyu-el-block2 li:nth-child(2n) {
+  margin-right: 0%;
+}
+
+/* block3 */
+.about-kinyu-el-block3 li {
+  width: 32%;
+  margin-right: 2%;
+  float: left;
+}
+.about-kinyu-el-block3 li .about-kinyu-el-img {
+  height: 250px;
+}
+.about-kinyu-el-block3 li:nth-child(3n) {
+  margin-right: 0%;
+}
+
+/* ホバーイベント */
+.about-kinyu-top-container li .about-kinyu-el-img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+.about-kinyu-top-container li:hover .about-kinyu-el-img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: .5;
+}
+.about-kinyu-top-container li:hover {
+  background: rgba(255,255,255,.95);
+  cursor: pointer;
+}
+
+/* history部分 */
+.about-kinyu-history-block img {
+  width: 100%;
+}
+
+
+/*.kinyu-about-block {
   background: #f7f7f7;
 }
 .about-kinyu-header-contetns {
@@ -2994,9 +3336,6 @@ input[type=checkbox]:checked + .checkbox:before {
   width: 100%;
   height: 100%;
 }
-/*.about-kinyu-header-contetns-list-el:nth-child(even) .title-box-inner {
-  border-right: none;
-}*/
 .about-kinyu-header-contetns-list-el .title-box-inner p {
   height: 100%;
   display: table-cell;
@@ -3010,7 +3349,7 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .about-kinyu-header-contetns-list-el p {
   font-size: 14px;
-}
+}*/
 
 /* detailページ */
 .about-kinyu-container {
@@ -3030,7 +3369,7 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .about-kinyu-container-left {
   float: left;
-  width: 155px;
+  width: 175px;
   padding-top: 24px;
   height: 400px;
 }
@@ -3057,7 +3396,7 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .about-kinyu-container-right {
   float: right;
-  width: 814px;
+  width: 794px;
   padding-left: 30px;
   border-left: 1px solid #e0dede;
   box-sizing: content-box;
@@ -3168,38 +3507,20 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 
 /* 下部のリスト */
-.about-kinyu-detail-list {
-  padding-top: 50px;
-  border-top: 1px solid #e0dede;
+.about-contents-after-container {
+  width: 1000px;
+  margin-top: 24px;
 }
-.about-kinyu-detail-list ul {
-  font-size: 0;
-  letter-spacing: -40px;
+.about-contents-after-container li .about-kinyu-el-img {
+  height: 200px;
 }
-.about-kinyu-detail-list li {
-  display: inline-block;
-  letter-spacing: normal;
-  width: 33.3333%;
-  border-right: 1px solid #f0f0f0;
-  transition: .5s;
-  box-sizing: border-box;
+.about-kinyu-top-container li:first-child a:after {
+  background: rgba(224, 224, 224, 0.3);
 }
-.about-kinyu-detail-list li a {
-  display: block;
-  line-height: 0;
+.about-contents-after-container .about-kinyu-el-block3 li {
+  margin-bottom: 2%;
 }
-.about-kinyu-detail-list li:last-child {
-  border-right: none;
-}
-.about-kinyu-detail-list li img {
-  width: 100%;
-}
-.about-kinyu-detail-list p {
-  text-align: center;
-  font-size: 16px;
-  margin-bottom: 24px;
-  color: #77cbc0;
-}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   会社関連の情報
@@ -3403,6 +3724,25 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .select-area .regist-selectarea p {
   display: inline-block;
+}
+
+/* complete */
+.after-regist-kinjo-check {
+  text-align: center;
+  margin: 40px 0px;
+}
+.after-regist-kinjo-check .kinjo-check-sub {
+  width: 300px;
+}
+.after-regist-kinjo-check a {
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 8px;
+  border: 1px solid #8ddcd1;
+}
+.after-regist-kinjo-check a img {
+  width: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -4840,6 +5180,9 @@ footer {
 .kinyu-error-container a:hover {
   opacity: .5;
 }
+#check-report a:hover {
+  opacity: .5;
+}
 .header-profile-block:hover {
   opacity: .5;
 }
@@ -4854,8 +5197,16 @@ footer {
 .new_area a:hover {
   opacity: .5;
 }
-.message-top:hover {
+.message-top:hover,
+.check-report-modal-dummy-ul li:hover {
+  opacity: .5;
+}
+.check-report-dummy p:hover {
+  cursor: pointer;
   opacity: .5;
 }
 
 }
+
+
+

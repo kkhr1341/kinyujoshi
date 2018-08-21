@@ -1,4 +1,4 @@
-<div class="admin-normal-container">
+<div class="admin-normal-container kinjo-check01">
   <div class="admin-normal-inner clear">
 
     {$my_side}
@@ -17,22 +17,24 @@
             >
           </div>
         </div>
-        <p class="profile-name">{$profile.nickname}</p>
-        <p class="profile-catchcopy">{$profile.catchcopy}</p>
+        <div class="text-box">
+          <p class="profile-name">{$profile.nickname}</p>
+          <p class="profile-catchcopy">{$profile.catchcopy}</p>
+        </div>
       </div>
+
+      {$kinjo_check}
 
       <div class="main-menu-list sp">
         <ul>
           <li class="main-li"><a href="/my/kinjo">myきん女。<br><span>（参加予定の女子会）</span></a></li>
           <li class="main-li"><a href="/my/passport">きん女。パスポート</a></li>
+          <li class="main-li"><a href="/my/report">チェックしたレポート</a></li>
           <li class="main-li"><a href="/my/profile">プロフィール編集</a></li>
           <li class="main-li"><a href="/my/account">アカウント情報</a></li>
           <li class="sub-li"><a href="/logout">ログアウト</a></li>
         </ul>
-
-
       </div>
-
       
       <div class="admin-normal-joshikai">
         <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>

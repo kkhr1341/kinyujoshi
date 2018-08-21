@@ -360,7 +360,8 @@ class Blogs extends Base
 
     public static function getByCodeWithProfile($code)
     {
-        $result = \DB::select('*')->from('blogs')
+        $result = \DB::select(\DB::expr('profiles.*, blogs.*'))
+            ->from('blogs')
             ->where('blogs.code', '=', $code)
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')

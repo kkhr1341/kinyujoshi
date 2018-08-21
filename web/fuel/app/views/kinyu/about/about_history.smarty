@@ -1,0 +1,46 @@
+<div class="kinyu-single-block">
+  <div class="about-kinyu-container">
+    
+    <div class="about-kinyu-container-inner clear">
+      
+      <div class="about-kinyu-container-left">
+        <ul>
+          <li><a href="/about_main">きんゆう女子。って？</a></li>
+          <li><a href="/about_story">生まれたストーリー</a></li>
+          <li class="active"><a href="/about_history">これまでの歩み</a></li>
+          <li><a href="/about_design">デザインについて</a></li>
+          <li><a href="/about_community">コミュニティマネジメント</a></li>
+          <li><a href="/about_insight">インサイトポリシー</a></li>
+        </ul>
+      </div>
+
+      <div class="about-kinyu-container-right">
+
+        <!-- <div class="about-kinyu-bgarea" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div> -->
+        <div class="sp" style="text-align: center;">
+          <h2>これまでの歩み</h2>
+        </div>
+
+        <div class="about-kinyu-history-block">
+          <img src="/images/about/history/history_01.png">
+        </div>
+
+      </div>
+    </div>
+
+    {$about_contents_after}
+
+  </div>
+</div>
+
+<style>
+.about-kinyu-container-right h2 {
+    letter-spacing: .05em;
+    display: inline-block;
+    border-bottom: 1px solid #8ddcd1;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 4px;
+    margin-bottom: 24px;
+  }
+</style>

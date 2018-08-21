@@ -1112,6 +1112,22 @@
   color: #a09f9f;
 }
 
+/* メンバー限定レポート */
+.no-member-report-block {
+}
+.no-member-report-block p {
+  margin-bottom: 20px;
+}
+.no-member-report-block .button-block button {
+  margin-right: 20px;
+  display: inline-block;
+}
+.no-member-report-block .button-block button:last-child  {
+  background: none;
+  border: 1px solid #8ddcd1;
+  color: #77cbc0;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ニュース一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/

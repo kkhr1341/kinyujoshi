@@ -650,3 +650,18 @@ $(function(){
         return false;
     })
 });
+
+//ヘッダー検索窓（スマホ）
+$(function(){
+
+  $("#kinyu-sp-header-search-open").click(function() {
+    $(".kinyu-sp-header-search").fadeIn(500);
+  });
+  $(".kinyu-sp-header-search .close-block").click(function() {
+    $(".kinyu-sp-header-search").fadeOut(500);
+  });
+});
+
+
+
+

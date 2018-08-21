@@ -11,12 +11,12 @@
 	{Asset::render('layout')}
   
   <!-- 紙吹雪 -->
-  <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
-  <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
+  <!-- <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
+  <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script> -->
 
 </head>
 <body class="drawer drawer--left">
-  <canvas id="canvas"></canvas>
+  <!-- <canvas id="canvas"></canvas> -->
 
 {$pc_header}
 
@@ -49,9 +49,10 @@
       <li class="item navi_kinyu-menu-li01"><a href="/my">マイページ・トップ</a></li>
       <li class="item navi_kinyu-menu-li02"><a href="/my/kinjo">myきん女。</a></li>
       <li class="item navi_kinyu-menu-li03"><a href="/my/passport">きん女。パスポート</a></li>
-      <li class="item navi_kinyu-menu-li04"><a href="/my/profile">プロフィール編集</a></li>
-      <li class="item navi_kinyu-menu-li05"><a href="/my/account">アカウント情報</a></li>
-      <li class="item navi_kinyu-menu-li06"><a href="/logout">ログアウト</a></li>
+      <li class="item navi_kinyu-menu-li04"><a href="/my/report">チェックしたレポート</a></li>
+      <li class="item navi_kinyu-menu-li05"><a href="/my/profile">プロフィール編集</a></li>
+      <li class="item navi_kinyu-menu-li06"><a href="/my/account">アカウント情報</a></li>
+      <li class="item navi_kinyu-menu-li07"><a href="/logout">ログアウト</a></li>
 
       <!-- <li class="active"><a href="/my">トップ</a></li>
       <li><a href="/my/profile">プロフィール編集</a></li>
@@ -60,7 +61,9 @@
   </div>
 </div>
 
-{$contents}
+<div class="my-container kinjo-check01">
+  {$contents}
+</div>
 {$sp_footer}
 
 <script>

@@ -27,6 +27,9 @@ return array(
 	// はじめての方へ
 	'start'   => 'kinyu/start/index',
 
+	// きんじょ。キャラクター
+	'character'   => 'kinyu/character/index',
+
 	//aboutページ
 	'about' => 'kinyu/about/index',
 	'about_main' => 'kinyu/about/about_main',
@@ -34,7 +37,10 @@ return array(
 	'about_story' => 'kinyu/about/about_story',
 	'about_policy' => 'kinyu/about/about_policy',
 	'about_design' => 'kinyu/about/about_design',
+	'about_community' => 'kinyu/about/about_community',
+	'about_insight' => 'kinyu/about/about_insight',
 	'about_hensyubu' => 'kinyu/about/about_hensyubu',
+	'about_history' => 'kinyu/about/about_history',
 
 	'report'   => 'kinyu/blog/index',
 	'report/search'   => 'kinyu/blog/search',
@@ -47,6 +53,10 @@ return array(
 
 	//myplan
 	'myway' => 'kinyu/myway/index',
+
+    //diagnostic_chart
+    'kinjo_check' => 'kinyu/diagnosticchart/index',
+	'kinjo_type' => 'kinyu/diagnosticchart/kinjo_type',
 
 	//未公開
 	'gallery' => 'kinyu/gallery/index',
@@ -136,6 +146,7 @@ return array(
 	'my'   => 'my/top',
 	//マイページ - プロフィール、女子会リスト
 	'my/profile'   => 'my/profile/index',
+    'my/report'   => 'my/blog/index',
 	'my/account'   => 'my/account/index',
 	'my/joshikai' => 'my/events/joshikailist',
 	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
