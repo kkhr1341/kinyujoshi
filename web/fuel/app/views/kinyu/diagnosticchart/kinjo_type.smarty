@@ -123,6 +123,9 @@
 }
 	
 @media screen and (max-width: 480px) {
+.type-title {
+	padding: 40px 0 20px;
+}
 .A {
 	background: #f7fdf5;
 }
@@ -150,6 +153,10 @@
     background-color: #fff;
 }
 	
+.type-description {
+	font-size: 11px;
+	line-height: 20px;
+}
 .kinjo_type {
 	background: #fff;
 }
