@@ -2,8 +2,8 @@
 return array(
 	'_root_'  => 'kinyu/top',  // The default route
 	//'_root_'  => 'maintenance/top',
-	'_404_'   => '/404',    // The main 404 route
-	'_500_'   => '/500',    // The main 404 route
+	'_404_'   => '/errors/404',    // The main 404 route
+	'_500_'   => '/errors/500',    // The main 404 route
 	'page/(:any)'   => 'page/top/$1',
 
 	//メンテナンス
