@@ -1,11 +1,9 @@
 <!-- 管理者用 -->
   <div class="my-top-cotainer">
     <div class="message">
-      <p class="name">{$profile.nickname}さん</p>
-      <p></p>
     </div>
 
-    {if in_array('admin', $roles)}
+    <!-- {if in_array('admin', $roles)}
       <div class="my-top-menu">
         <p class="title">管理メニュー</p>
         <ul class="clear">
@@ -13,9 +11,10 @@
           <li><a href="/admin/report">記事の追加</a></li>
         </ul>
       </div>
-    {/if}
+    {/if} -->
   </div>
 
+<!-- チャート関連 -->
 {if in_array('admin', $roles)}
 {literal}
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -79,8 +78,15 @@
 </script>
 {/literal}
 
-<div id="chart_div1"></div>
-<div id="chart_div2"></div>
-<div id="chart_div3"></div>
-<div id="chart_div4"></div>
+<div class="admin-main-el">
+  <p class="admin-main-el-title">現在のメンバー属性</p>
+  <div class="kinjo-member-chart-container clear">
+    <div id="chart_div1" class="chart-el"></div>
+    <div id="chart_div2" class="chart-el"></div>
+    <div id="chart_div3" class="chart-el"></div>
+    <div id="chart_div4" class="chart-el"></div>
+  </div>
+</div>
+
+
 {/if}

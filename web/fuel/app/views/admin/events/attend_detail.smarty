@@ -11,16 +11,12 @@
   </div>
 
   <div class="joshikai-attend-el-block">
-    <p>参加者一覧</p>
 
-    <div class="clearw float_right" style="margin-bottom: 10px;">
+    <div class="clearw float_right" style="margin-bottom: 24px;">
     	<a class="btn btn-primary" id="broadcast_mail" href="#" role="button">メールを一斉送信する</a>
     	<a class="btn btn-primary" id="download_csv" href="/admin/joshikai/memberlist/{$events.code}" role="button">CSVダウンロード</a>
     </div>
 
-    {foreach from=$applications item=application name=loopname}
-      <p>{$application.email}</p>
-    {/foreach}
     <table class="table joshikai-attend-detail-table">
 
       <!-- 参加者のループ -->
@@ -79,7 +75,7 @@
   </div>
 
   <div class="joshikai-attend-el-block">
-    <p>キャンセル一覧</p>
+    <p>◆キャンセル一覧</p>
 
     <table class="table joshikai-attend-detail-table">
 
