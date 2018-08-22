@@ -483,7 +483,8 @@ footer {
     display: block;
     padding: 10px 12px;
     color: #444444;
-    text-align: center;
+    text-align: center;]
+    font-size: 12px;
 }
 
 .form_ul {
@@ -1561,6 +1562,29 @@ footer {
 .js-tab_content.active {
     display: block;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　管理画面
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.admin-main-el {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.kinjo-member-chart-container .chart-el {
+  width: 50%;
+  float: left;
+}
+.admin-main-el-title {
+  color: #77cbc0;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  border-left: 2px solid #8ddcd1;
+  padding-left: 10px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合

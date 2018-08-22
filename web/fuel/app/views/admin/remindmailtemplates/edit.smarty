@@ -34,11 +34,11 @@
                     <label class="form-group-event-label">本文</label>
                     <p>動的に変わる部分には以下を設定してください。</p>
                     <p>
-                    {'{% name %}'|escape}: 氏名<br>
-                    {'{% event_title %}'|escape}: イベント名<br>
-                    {'{% event_place %}'|escape}: イベント開催場所<br>
+                    ◆{'{% name %}'|escape}: 氏名<br>
+                    ◆{'{% event_title %}'|escape}: イベント名<br>
+                    ◆{'{% event_place %}'|escape}: イベント開催場所<br>
                     </p>
-                    <textarea name="body" style="border: 1px solid #d9d8d8; width: 500px; height: 200px;">{$event_remind_mail_template['body']}</textarea>
+                    <textarea name="body" style="border: 1px solid #d9d8d8; width: 100%; height: 500px;padding:24px;font-size:14px;margin-top: 24px;">{$event_remind_mail_template['body']}</textarea>
                 </div>
 			</div>
 			<div class="form-right">
