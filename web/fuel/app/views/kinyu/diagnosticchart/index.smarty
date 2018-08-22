@@ -2,7 +2,7 @@
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 
 <div class="kinyu-single-block joshikai-main-block kinjo_check">
-<p class="diagnosticchart-subtitle">診断チャート</p>
+
   <div class="inner">
 
     <!--<h2 class="kinyu-top-main-title">診断チャート</h2>-->
@@ -14,30 +14,46 @@
 		<div class="diagnosticchart-intro-image sp"><img src="/images/diagnosticchart/chart_main_sp.jpg"></div>
 		<div class="diagnosticchart-intro-text">
 			<p class="diagnosticchart-intro-text-title"><img src="/images/diagnosticchart/type_ttl.png"></p>
-			<p class="diagnosticchart-intro-text-description">豊かに生きるための第一歩は「自分を知ること」です。<br>どんな風になりたい？<br>どんな人生を送りたい？<br>そして、わたしはどんな人なの？<br>そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。<br>自分がどのタイプなのか、診断してみましょう。</p>
+			<p class="diagnosticchart-intro-text-description">
+				豊かに生きるための第一歩は「自分を知ること」が大切です。<br>
+				わたしはどんな女性になりたい？<br>
+				これから人生を送っていきたい？<br>
+				そして、わたしは実際にどんな人なのだろう...？<br><br>
+
+				そういった、自分自身のことを分かってくると、<br>
+				自分に本当に合ったお金の使い方や増やし方も見えてくるし、<br>
+				自信を持って、選ぶこともできます。<br><br>
+
+				自分がどのきん女。タイプなのか、<br>
+				5〜6問の質問に答えて診断してみましょう♪</p>
 		</div>
         <div class="diagnosticchart-intro-start">
             <button class="btn btn-primary ripple" data-is_diagnosed="{$is_diagnosed}">診断スタート♪<span class="ripple__effect is-white"></span></button>
+<!--
             {if $is_diagnosed == true}
                 <div class="reset-timer" data-reset_time="{$reset_time}">
                   <span class="reset-timer-text">のこり</span>
                   <span class="reset-timer-time"></span>
                 </div>
             {/if}
+-->
         </div>
-	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"> </div>
+	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"></div>
 	<div class="diagnosticchart-intro-start">
             <button class="btn btn-primary ripple" data-is_diagnosed="{$is_diagnosed}">診断スタート♪<span class="ripple__effect is-white"></span></button>
+<!--
             {if $is_diagnosed == true}
                 <div class="reset-timer" data-reset_time="{$reset_time}">
                   <span class="reset-timer-text">のこり</span>
                   <span class="reset-timer-time"></span>
                 </div>
             {/if}
+-->
         </div>
     </div>
 
     <div class="diagnosticchart-question-container">
+		<div class="diagnosticchart-check-logo"><img src="/images/diagnosticchart/check_logo.png"></div>
 		<div class="diagnosticchart-question-el">
         <div class="diagnosticchart-question">
 			<div class="diagnosticchart-question-number"></div>
@@ -58,7 +74,7 @@
         <div class="diagnosticchart-answer-charactor"></div>
 		<div class="diagnosticchart-answer-type"></div>
         <div class="diagnosticchart-answer-description"></div>
-		<a href="/kinjo_type" class="diagnosticchart-answer-to-link-mypage">他のタイプを見る</a>
+		<a href="/kinjo_type" class="diagnosticchart-answer-to-link-typepage">他のタイプを見る</a>
 		<a href="/my" class="diagnosticchart-answer-to-link-mypage">マイページへ</a>
 		
     </div>
@@ -89,24 +105,64 @@
 	
 .btn-yes {
 	color: #fff;
-    background-color: #ff9494;
+    background-color: #8ddcd1;
     border: none;
     font-weight: normal;
 	width: 200px;
 	padding: 15px;
 	font-size: 14px;
 	margin-right: 20px;
+	transition: all .2s;
 }
-	
+.btn-yes::after {
+  position: absolute;
+  top: 50%;
+  right: .2em;
+  content: '';
+  margin-top: -5px;
+  border: 7px solid transparent;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-color: #fff;
+  transition: all .2s;
+}
+.btn-yes:hover::after {
+  right: -.05em;
+}
 .btn-no {
 	color: #fff;
-    background-color: #7eb2ff;
+    background-color: #8ddcd1;
     border: none;
     font-weight: normal;
 	padding: 15px;
 	font-size: 14px;
 	width: 200px;
+	transition: all .2s;
 }
+	
+.btn-no::after {
+  position: absolute;
+  top: 50%;
+  right: .2em;
+  content: '';
+  margin-top: -5px;
+  border: 7px solid transparent;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-color: #fff;
+  transition: all .2s;
+}
+.btn-no:hover::after {
+  right: -.05em;
+}
+
+.btn-yes:hover {
+	opacity: 0.8;
+}
+.btn-no:hover {
+	opacity: 0.8;
+}
+
 
 .kinyu-single-block.joshikai-main-block.kinjo_check {
     background: #f8f8f8;
@@ -126,18 +182,18 @@
 .diagnosticchart-intro-text {
 	width: 100%;
 	max-width: 650px;
-	margin: 50px auto;
+	margin: 32px auto;
 }
 .diagnosticchart-intro-text-title {
 	text-align: center;
 }
 .diagnosticchart-intro-text-title img {
 	width: 100%;
-	max-width: 300px;
+	max-width: 550px;
 }
 .diagnosticchart-intro-text-description {
 	text-align: center;
-    margin-top: 16px;
+    margin-top: 26px;
     font-size: 13px;
     line-height: 24px;
 }
@@ -145,23 +201,29 @@
     text-align: center;
 }
 .diagnosticchart-intro-start .btn-primary {
-    width: 100%;
+	width: 100%;
 	margin: 0px 0 30px;
-	padding: 20px;
-	font-size: 18px;
+	padding: 18px;
+	font-size: 16px;
 	font-weight: normal;
-	max-width: 300px;
+	max-width: 380px;
 }
-	.diagnosticchart-intro-type-img {
-		text-align: center;
-		margin: 30px 0;
-	}
+.diagnosticchart-intro-type-img {
+	text-align: center;
+	margin: 30px 0;
+}
 .diagnosticchart-intro-type-img img {
 	width: 100%;
-	max-width: 500px;
+	max-width: 650px;
 	margin: 0 auto;
 }
-		
+.diagnosticchart-check-logo {
+	max-width: 350px;
+	margin: 0 auto 20px;
+}
+.diagnosticchart-check-logo img {
+	width: 100%;
+}
 .diagnosticchart-question-container {
     display: none;
 }
@@ -195,15 +257,16 @@
 .diagnosticchart-question-text {
 	display: table-cell;
 	height: 120px;
+	font-size: 19px;
   	vertical-align: middle;
 }
 .diagnosticchart-question-number {
 	font-family: 'Dancing Script', cursive;
-	position: absolute;
-	font-size: 28px;
+	font-size: 43px;
+    letter-spacing: 4px;
 	color: #8ddcd1;
-	top: 10px;
-    left: 20px;
+	line-height: 1;
+	margin-bottom: 20px;
 }
 .diagnosticchart-answer {
     text-align: center;
@@ -214,17 +277,17 @@
 }
 .diagnosticchart-answer-container {
     display: none;
-	padding: 20px 20px 30px;
+	padding: 50px 0;
 }
 .diagnosticchart-answer-catchcopy {
     text-align: center;
-	margin: 30px 0 20px;
+	margin: 0 0 10px;
 }
 .diagnosticchart-answer-charactor {
     text-align: center;
 }
 .diagnosticchart-answer-charactor img {
-    width: 100px;
+    width: 160px;
 	padding: 15px;
     background: #fff;
     border-radius: 50%;
@@ -271,18 +334,16 @@
 }
 
 .diagnosticchart-answer-container.type-A {
-    background-color: #eff7ed;
+    background-color: #f7fdf5;
 }
 .diagnosticchart-answer-container.type-B {
-    background-color: #fdf5f9;
+    background-color: #fffafc;
 }
-
 .diagnosticchart-answer-container.type-C {
-    background-color: #EFF8F9;
+    background-color: #f9fcfd;
 }
-
 .diagnosticchart-answer-container.type-D {
-    background-color: #F7F0F0;
+    background-color: #fdf7f4;
 }
 .diagnosticchart-answer-to-link-mypage {
 	display: block;
@@ -296,8 +357,24 @@
     color: #fff;
     transition: .5s;
 }
-	
 .diagnosticchart-answer-to-link-mypage:hover {
+	opacity: .8;
+}
+
+.diagnosticchart-answer-to-link-typepage {
+	display: block;
+	width: 200px;
+	border: 1px solid #8ddcd1;
+    padding: 13px 0px;
+    margin: 0 auto;
+    margin-top: 16px;
+    text-align: center;
+    height: auto;
+    background-color: #fff;
+    color: #8ddcd1;
+    transition: .5s;
+}	
+.diagnosticchart-answer-to-link-typepage:hover {
 	opacity: .8;
 }
 
@@ -316,8 +393,11 @@
 		width: 88%;
 		margin: 0 auto;
 	}
+	.diagnosticchart-answer-charactor img {
+		width: 130px;
+	}
 	.diagnosticchart-intro-text-title img {
-		max-width: 200px;
+		max-width: 320px;
 	}
 	.diagnosticchart-intro-text-title {
 		font-size: 18px;
@@ -336,6 +416,12 @@
 		font-size: 16px;
 		max-width: 100%;
 		width: 88%;
+	}
+	.diagnosticchart-answer-type img {
+		width: 88%;
+	}
+	.diagnosticchart-question-container {
+		padding: 40px 0;
 	}
 	.btn-yes {
 		width: 88%;
@@ -358,7 +444,7 @@
     position: relative;
 }
 	
-.ripple::after {
+/*.ripple::after {
   position: absolute;
   top: 50%;
   right: .2em;
@@ -373,7 +459,7 @@
 .ripple:hover::after {
   right: -.05em;
 }
-
+*/
 /* エフェクト要素 */
 .ripple__effect {
     /* 値の変更はエフェクト形体・サイズ・スピードに影響する */
@@ -606,16 +692,16 @@ $(function(){
   // 診断の実行可否処理
   // 診断の実行ができる状態であれば「診断スタート」ボタンクリック可
   // 診断の実行ができない状態であれば「診断スタート」ボタンクリック不可・カウントダウン実行
-  var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
-  $startButton.prop('disabled', is_diagnosed);
-  if (is_diagnosed == true) {
-    $('.reset-timer').each(function() {
-      var endDate = $(this).data('reset_time');
-      countDown($(this), endDate, function() {
-        $startButton.prop('disabled', false);
-      });
-    })
-  }
+//  var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
+//  $startButton.prop('disabled', is_diagnosed);
+//  if (is_diagnosed == true) {
+//    $('.reset-timer').each(function() {
+//      var endDate = $(this).data('reset_time');
+//      countDown($(this), endDate, function() {
+//        $startButton.prop('disabled', false);
+//      });
+//    })
+//  }
 });
 {/literal}
 </script>
