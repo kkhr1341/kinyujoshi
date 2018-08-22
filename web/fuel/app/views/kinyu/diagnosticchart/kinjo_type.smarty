@@ -5,34 +5,38 @@
 	  <div class="type-title"><img src="/images/diagnosticchart/4type_ttl.png"></div>
 		
 	  <ul class="type-wrapper">
-		  <li class="clear">
+		  <li class="A">
 			  <div class="img-wrapper"><img src="/images/diagnosticchart/A.png" class="typeA"></div>
 			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/typeA.png">
+				  <img src="/images/diagnosticchart/t_typeA.png" class="pc">
+				  <img src="/images/diagnosticchart/typeA.png" class="sp">
 				  <p class="type-description">金融？何のこと？<br>自分が何がワカラナイかそれすらワカラナイ•••<br>金融とか投資とか自分には関係ない？<br>でもそろそろお金の整理からはじめたい！</p>
 			  </div>
 		  </li>
 		  
-		  <li class="clear">
+		  <li class="B">
 			  <div class="img-wrapper"><img src="/images/diagnosticchart/B.png" class="typeB"></div>
 			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/typeB.png">
+				  <img src="/images/diagnosticchart/t_typeB.png" class="pc">
+				  <img src="/images/diagnosticchart/typeB.png" class="sp">
 				  <p class="type-description">お金のコト大事ってわかったケド<br>何したらいいかな・・・？<br>みんなどうしてるの？<br>怖いから迷って、いつのまにか時間が経ってる・・・</p>
 			  </div>
 		  </li>
 		  
-		  <li class="clear">
+		  <li class="C">
 			  <div class="img-wrapper"><img src="/images/diagnosticchart/C.png" class="typeC"></div>
 			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/typeC.png">
+				  <img src="/images/diagnosticchart/t_typeC.png" class="pc">
+				  <img src="/images/diagnosticchart/typeC.png" class="sp">
 				  <p class="type-description">貯金あんまりないです•••<br>がんばって働いてはいるけどその分使ってる！汗<br>あんまり心配してなかったけど<br>このままで大丈夫かな、ワタシ。</p>
 			  </div>
 		  </li>
 		  
-		  <li class="clear">
+		  <li class="D">
 			  <div class="img-wrapper"><img src="/images/diagnosticchart/D.png" class="typeD"></div>
 			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/typeD.png">
+				  <img src="/images/diagnosticchart/t_typeD.png" class="pc">
+				  <img src="/images/diagnosticchart/typeD.png" class="sp">
 				  <p class="type-description">金融に強くなって<br>自分に自信をつけたい！<br>仕事もプライベートも<br>もっとレベル UP したい！</p>
 			  </div>
 		  </li>
@@ -45,37 +49,30 @@
   </div>
 
 <style>
-.clearfix:after {
-  content: "";
-  clear: both;
-  display: block;
-}
+
 .kinjo_type {
 	background: #f8f8f8;
 }
 .type-title {
 	text-align: center;
-	padding: 50px 0;
+	padding: 40px 0;
 }
 .type-title img{
 	width: 100%;
 	margin: 0 auto;
 	max-width: 400px;
-	ackground: #fff;
 }
 .type-wrapper {
-	max-width: 650px;
+	max-width: 1050px;
 	margin: 0 auto;
 	
 }
 .type-wrapper li {
-	background: #fff;
-	padding: 15px;
-	margin-bottom: 5px;
+	padding: 24px;
+	margin-bottom: 10px;
 }
 .type-wrapper .img-wrapper {
-	background: #fff;
-display: table-cell;
+	display: table-cell;
     vertical-align: middle;
 
 }
@@ -93,30 +90,82 @@ display: table-cell;
 	vertical-align: middle;
 	padding-left: 30px;
 }
-
-	
+.A {
+	background: #fff;
+}
+.B {
+	background: #fff;
+}
+.C {
+	background: #fff;
+}
+.D {
+	background: #fff;
+}	
 .type-wrapper .img-wrapper .typeA {
-	background: #eff7ed;
-
+	background-color: #f7fdf5;
 }
 .type-wrapper .img-wrapper .typeB {
-    background-color: #fdf5f9;
+    background-color: #fffafc;
 }
 
 .type-wrapper .img-wrapper .typeC {
-    background-color: #EFF8F9;
+    background-color: #f9fcfd;
 }
 
 .type-wrapper .img-wrapper .typeD {
-    background-color: #F7F0F0;
+    background-color: #fdf7f4;
 }
 	
 .diagnosticchart-intro-image img {
 	width: 100%;
-	margin-top: 30px;
+	margin: 30px 0;
 }
 	
 @media screen and (max-width: 480px) {
+.A {
+	background: #f7fdf5;
+}
+.B {
+	background: #fffafc;
+}
+.C {
+	background: #f9fcfd;
+}
+.D {
+	background: #fdf7f4;
+}
+.type-wrapper .img-wrapper .typeA {
+	background-color: #fff;
+}
+.type-wrapper .img-wrapper .typeB {
+    background-color: #fff;
+}
+
+.type-wrapper .img-wrapper .typeC {
+    background-color: #fff;
+}
+
+.type-wrapper .img-wrapper .typeD {
+    background-color: #fff;
+}
+	
+.kinjo_type {
+	background: #fff;
+}
+.type-wrapper li {
+    text-align: center;
+}
+.type-wrapper .img-wrapper {
+    display: block;
+}
+.type-wrapper .text-wrapper {
+    display: block;
+    padding-left: 0;
+}
+.type-wrapper .text-wrapper img {
+    padding: 10px 0;
+}
 
 }
 </style>
