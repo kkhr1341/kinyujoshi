@@ -3216,7 +3216,6 @@ input[type=checkbox]:checked + .checkbox:before {
   background: rgba(224, 224, 224, 0.3);
 }
 .about-kinyu-el-inner {
-  width: 80%;
   background: rgba(255,255,255,.9);
   line-height: 0;
   position: absolute;
@@ -3237,12 +3236,20 @@ input[type=checkbox]:checked + .checkbox:before {
 .about-kinyu-el-block1 li .about-kinyu-el-img {
   height: 300px;
 }
+.about-kinyu-el-block1 .about-kinyu-el-inner {
+  width: 300px;
+  height: 138px;
+}
 
 /* block2 */
 .about-kinyu-el-block2 li {
   width: 49%;
   margin-right: 2%;
   float: left;
+}
+.about-kinyu-el-block2 .about-kinyu-el-inner {
+  width: 280px;
+  height: 128px;
 }
 .about-kinyu-el-block2 li .about-kinyu-el-img {
   height: 250px;

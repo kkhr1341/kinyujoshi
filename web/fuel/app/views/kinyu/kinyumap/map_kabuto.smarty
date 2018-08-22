@@ -1,5 +1,4 @@
 <!-- リロード時アニメーション -->
-<script src="/assets/js/kinyu/topanimation.js"></script>
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
 
 <div class="kinyu-main-animation">
