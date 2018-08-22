@@ -39,7 +39,7 @@
 -->
         </div>
 	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"></div>
-            <a href="/kinjo_type" class="diagnosticchart-answer-to-link-typepage">他のタイプを見る</a>
+            <a href="/kinjo_type" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</a>
     </div>
 
     <div class="diagnosticchart-question-container">
@@ -65,7 +65,7 @@
 		<div class="diagnosticchart-answer-type"></div>
         <div class="diagnosticchart-answer-description"></div>
 		<div class="diagnosticchart-answer-description-btn-wrapper">
-			<a href="/kinjo_type" class="diagnosticchart-answer-to-link-typepage">他のタイプを見る</a>
+			<a href="/kinjo_type" class="diagnosticchart-answer-to-link-typepage">4つのタイプを見る</a>
 			<a href="/my" class="diagnosticchart-answer-to-link-mypage">マイページへ</a>
 		</div>
     </div>
@@ -76,7 +76,8 @@
 <style>
 .kinjo_check .inner {
 	margin-top: 0;
-	min-height: 400px;
+	min-height: 616px;
+	width: 100%;
 }	
 
 .diagnosticchart-intro-container {
@@ -90,9 +91,13 @@
 	background: #8ddcd1;
 	color: #fff;
 }
+.diagnosticchart-intro-image {
+    margin: 0 auto;
+	max-width: 1050px;
+}
 .diagnosticchart-intro-image img {
 	width: 100%;
-	margin-top: 50px;
+    margin-top: 50px
 }
 	
 .btn-yes {
@@ -105,7 +110,7 @@
 	padding: 15px;
 	font-size: 14px;
 	margin-right: 20px;
-	transition: all .2s;
+	transition: all .5s;
 }
 .btn-yes::after {
   position: absolute;
@@ -117,7 +122,7 @@
   border-top-width: 5px;
   border-bottom-width: 5px;
   border-left-color: #fff;
-  transition: all .2s;
+  transition: all .5s;
 }
 .btn-yes:hover::after {
   right: -.05em;
@@ -131,7 +136,7 @@
 	padding: 15px;
 	font-size: 14px;
 	width: 200px;
-	transition: all .2s;
+	transition: all .5s;
 }
 	
 .btn-no::after {
@@ -144,17 +149,17 @@
   border-top-width: 5px;
   border-bottom-width: 5px;
   border-left-color: #fff;
-  transition: all .2s;
+  transition: all .5s;
 }
 .btn-no:hover::after {
   right: -.05em;
 }
 
 .btn-yes:hover {
-	opacity: 0.8;
+	opacity: 0.5;
 }
 .btn-no:hover {
-	opacity: 0.8;
+	opacity: 0.5;
 }
 
 
@@ -176,7 +181,7 @@
 .diagnosticchart-intro-text {
 	width: 100%;
 	max-width: 650px;
-	margin: 50px auto;
+	margin: 50px auto 30px;
 }
 .diagnosticchart-intro-text-title {
 	text-align: center;
@@ -204,7 +209,7 @@
 }
 .diagnosticchart-intro-type-img {
 	text-align: center;
-	margin: 30px 0;
+	margin: 50px 0;
 }
 .diagnosticchart-intro-type-img img {
 	width: 100%;
@@ -268,6 +273,8 @@
 }
 .diagnosticchart-answer-loading-container {
     display: none;
+	background-image: url(/images/diagnosticchart/kingyo_bg.png);
+	background-repeat: repeat;
 }
 .diagnosticchart-answer-container {
     display: none;
@@ -312,8 +319,7 @@
 }	
 .diagnosticchart-answer-loading-container {
 	text-align: center;
-	padding: 80px 0;
-	height: 432px;
+	padding: 0;
 }
 .diagnosticchart-answer-loading-container img {
 	width: 100%;
@@ -324,6 +330,19 @@
 .diagnosticchart-answer-description-btn-wrapper {
 	text-align: center;
 }
+.diagnosticchart-answer-to-link-top-typepage {
+	display: block;
+	width: 200px;
+	border: 1px solid #8ddcd1;
+    padding: 13px 0px;
+    margin: 16px auto 52px;
+    text-align: center;
+    height: auto;
+    background-color: #fff;
+    color: #8ddcd1;
+    transition: .5s;
+}	
+	
 .diagnosticchart-answer-to-link-mypage {
 	display: inline-block;
 	width: 200px;
@@ -406,7 +425,7 @@
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
 	
 	.kinyu-single-block.joshikai-main-block.kinjo_check {
 		background: #fff;
@@ -486,6 +505,12 @@
 	}
 	.diagnosticchart-intro-text {
 		margin: 40px auto;
+	}
+	.diagnosticchart-answer-to-link-top-typepage {
+		width: 70%;
+		line-height: 1;
+		display: block;
+		margin: 0 auto 20px;
 	}
 	.diagnosticchart-answer-to-link-typepage {
 		width: 70%;
