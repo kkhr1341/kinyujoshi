@@ -42,8 +42,19 @@
 		  </li>
 	  </ul>
 	  	
-	<div class="diagnosticchart-intro-image pc"><img src="/images/diagnosticchart/chart_main.jpg"></div>
-	<div class="diagnosticchart-intro-image sp"><img src="/images/diagnosticchart/chart_main_sp.jpg"></div>
+	<div class="diagnosticchart-intro-image pc">
+		<a href="/kinjo_check">
+			<img class="kinjo-check-texticon" src="/images/kinjo-check.png">
+			<img class="kinjo-check-img" src="/images/diagnosticchart/chart_main.jpg">
+		</a>
+	</div>
+
+	<div class="diagnosticchart-intro-image sp">
+		<a href="/kinjo_check">
+			<img class="kinjo-check-texticon" src="/images/kinjo-check.png">
+			<img class="kinjo-check-img" src="/images/diagnosticchart/chart_main_sp.jpg">
+		</a>
+	</div>
 		
     </div>
   </div>
@@ -63,13 +74,13 @@
 	max-width: 400px;
 }
 .type-wrapper {
-	max-width: 1050px;
+	max-width: 920px;
 	margin: 0 auto;
 	
 }
 .type-wrapper li {
-	padding: 24px;
-	margin-bottom: 10px;
+	padding: 36px;
+	margin-bottom: 16px;
 }
 .type-wrapper .img-wrapper {
 	display: table-cell;
@@ -77,7 +88,7 @@
 
 }
 .type-wrapper .img-wrapper img {
-	width: 90px;
+	width: 120px;
 	border-radius: 50%;
 	padding: 15px;
 }
@@ -89,6 +100,9 @@
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: 30px;
+}
+.type-description {
+	margin-top: 12px;
 }
 .A {
 	background: #fff;
@@ -116,13 +130,28 @@
 .type-wrapper .img-wrapper .typeD {
     background-color: #fdf7f4;
 }
-	
-.diagnosticchart-intro-image img {
+.diagnosticchart-intro-image {
+	width: 650px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 50px;
+	padding-bottom: 60px;
+}
+.diagnosticchart-intro-image .kinjo-check-texticon {
+	width: 350px;
+	margin-bottom: 12px;
+}
+.diagnosticchart-intro-image .kinjo-check-img {
 	width: 100%;
-	margin: 30px 0;
+}
+.diagnosticchart-intro-image a {
+	transition: .5s;
+}
+.diagnosticchart-intro-image a:hover {
+	opacity: .5;
 }
 	
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
 .type-title {
 	padding: 40px 0 20px;
 }
@@ -156,11 +185,13 @@
 .type-description {
 	font-size: 11px;
 	line-height: 20px;
+	margin-top: 4px;
 }
 .kinjo_type {
 	background: #fff;
 }
 .type-wrapper li {
+	padding: 24px;
     text-align: center;
 }
 .type-wrapper .img-wrapper {
@@ -172,6 +203,18 @@
 }
 .type-wrapper .text-wrapper img {
     padding: 10px 0;
+}
+.diagnosticchart-intro-image {
+	width: 100%;
+	margin-top: 50px;
+	padding-bottom: 60px;
+}
+.diagnosticchart-intro-image .kinjo-check-texticon {
+	width: 75%;
+	margin-bottom: 4px;
+}
+.diagnosticchart-intro-image .kinjo-check-img {
+	width: 100%;
 }
 
 }

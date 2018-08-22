@@ -3746,7 +3746,6 @@ input[type=checkbox]:checked + .checkbox:before {
   width: 600px;
   margin: 0 auto;
   margin-top: 8px;
-  border: 1px solid #8ddcd1;
 }
 .after-regist-kinjo-check a img {
   width: 100%;
