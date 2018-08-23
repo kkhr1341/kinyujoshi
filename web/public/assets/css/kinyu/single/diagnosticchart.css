@@ -1,0 +1,646 @@
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+}
+	
+/* ソーシャルのシェア部分 */
+.check-detail-share {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  height: 180px;
+  margin-top: 36px;
+}
+.check-detail-share-el {
+  position: relative;
+}
+.check-detail-share-el h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.check-detail-share-box {
+  float: none;
+  margin: 0 auto;
+  width: 700px;
+  background: #fff;
+  padding-top: 40px;
+}
+.check-detail-share .social-list {
+  text-align: center;
+  margin-top: 12px;
+}
+.check-detail-share .social-list li {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+  transition: .5s;
+}
+.check-detail-share .social-list li:last-child {
+  margin-right: 0px;
+}
+.check-detail-share .share-this-title {
+  width: 55%;
+  display: block;
+  margin: 0 auto;
+}
+.check-detail-share .share-this-page {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+.check-detail-share .social-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.check-detail-share .social-list li a .social-logo {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.check-detail-share .social-list li .facebook {
+  background: #708fe5;
+}
+.check-detail-share .social-list li .twitter {
+  background: #87e1f9; 
+}	
+.diagnosticchart-answer-container .check-detail-share {
+	margin-top: 70px;
+}
+.kinjo_check .inner {
+	margin-top: 0;
+	min-height: 616px;
+	width: 100%;
+}	
+.diagnosticchart-intro-container {
+    padding-bottom: 70px;
+}	
+.diagnosticchart-subtitle {
+	font-size: 18px;
+	padding: 12px 0;
+	text-align: center;
+	background: #8ddcd1;
+	color: #fff;
+}
+.diagnosticchart-intro-image {
+    margin: 0 auto;
+	max-width: 1050px;
+}
+.diagnosticchart-intro-image img {
+	width: 100%;
+    margin-top: 50px
+}
+	
+.btn-yes {
+	line-height: 1;
+	color: #444;
+    background-color: #f3f3f3;
+    border: none;
+    font-weight: normal;
+	width: 200px;
+	padding: 15px;
+	font-size: 14px;
+	margin-right: 20px;
+	transition: all .5s;
+}
+.btn-yes::after {
+  position: absolute;
+  top: 50%;
+  right: .2em;
+  content: '';
+  margin-top: -5px;
+  border: 7px solid transparent;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-color: #ccc;
+  transition: all .5s;
+}
+.btn-yes:hover::after {
+  right: -.05em;
+  border-left-color: #fff;
+}
+.btn-no {
+	line-height: 1;
+    color: #444;
+    background-color: #f3f3f3;
+    border: none;
+    font-weight: normal;
+	padding: 15px;
+	font-size: 14px;
+	width: 200px;
+	transition: all .5s;
+}
+	
+.btn-no::after {
+  position: absolute;
+  top: 50%;
+  right: .2em;
+  content: '';
+  margin-top: -5px;
+  border: 7px solid transparent;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-color: #ccc;
+  transition: all .5s;
+}
+.btn-no:hover::after {
+  right: -.05em;
+  border-left-color: #fff;
+}
+
+.btn-yes:hover {
+	background: #8ddcd1;
+	color: #fff;
+}
+.btn-no:hover {
+	background: #8ddcd1;
+	color: #fff;
+}
+
+
+.kinyu-single-block.joshikai-main-block.kinjo_check {
+    background: #f8f8f8;
+}
+	
+.diagnosticchart-question-container {
+    padding: 60px 0;
+}
+	
+.diagnosticchart-intro-message {
+    text-align: center;
+    border: 1px solid #bababa;
+    padding: 15px;
+    width: 80%;
+    margin:0px auto 20px auto;
+}
+.diagnosticchart-intro-text {
+	width: 100%;
+	max-width: 650px;
+	margin: 50px auto 30px;
+}
+.diagnosticchart-intro-text-title {
+	text-align: center;
+}
+.diagnosticchart-intro-text-title img {
+	width: 100%;
+	max-width: 550px;
+}
+.diagnosticchart-intro-text-description {
+	text-align: center;
+    margin-top: 26px;
+    font-size: 13px;
+    line-height: 24px;
+}
+.diagnosticchart-intro-start {
+    text-align: center;
+}
+.diagnosticchart-intro-start .btn-primary {
+	width: 100%;
+	margin: 0;
+	padding: 18px;
+	font-size: 16px;
+	font-weight: normal;
+	max-width: 380px;
+}
+.diagnosticchart-intro-type-img {
+	text-align: center;
+	margin: 70px 0 30px;
+}
+.diagnosticchart-intro-type-img img {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+}
+.diagnosticchart-check-logo {
+	max-width: 350px;
+	margin: 0 auto 20px;
+}
+.diagnosticchart-check-logo img {
+	width: 100%;
+}
+.diagnosticchart-question-container {
+    display: none;
+}
+.diagnosticchart-question {
+    text-align: center;
+	width: 100%;
+    padding: 50px 15px;
+	line-height: 1.7;
+    margin: 0 auto;
+	font-size: 18px;
+    height: 230px;
+	position: relative;
+    background: #ffffff;
+	display: table;
+	border: solid 1px #8ddcd1;
+  	outline: solid 1px #fff;
+}
+.diagnosticchart-question-el {
+	border: solid 2px #8ddcd1;
+	padding: 2px;
+	width: 88%;
+	max-width: 700px;
+	margin: 0 auto;
+}
+	
+.diagnosticchart-question-text-wrapper {
+	height: 100px;
+	display: inline-block;
+    text-align: center;
+}
+.diagnosticchart-question-text {
+	display: table-cell;
+	height: 120px;
+	font-size: 16px;
+  	vertical-align: middle;
+}
+.diagnosticchart-question-number {
+	font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+    letter-spacing: 4px;
+	color: #8ddcd1;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+.diagnosticchart-answer {
+    text-align: center;
+	margin-top: 50px;
+}
+.diagnosticchart-answer-loading-container {
+    display: none;
+	background-image: url(/images/diagnosticchart/kingyo_bg.png);
+	background-repeat: repeat;
+}
+.diagnosticchart-answer-container {
+    display: none;
+	padding: 50px 0;
+}
+.diagnosticchart-answer-catchcopy {
+    text-align: center;
+	margin: 0 0 10px;
+}
+.diagnosticchart-answer-charactor {
+    text-align: center;
+}
+.diagnosticchart-answer-charactor img {
+    width: 160px;
+	padding: 15px;
+    background: #fff;
+    border-radius: 50%;
+}
+.diagnosticchart-answer-type {
+    font-weight: bold;
+    text-align: center;
+	margin: 20px 0 0;
+}	
+.diagnosticchart-answer-type img {
+	width: 100%;
+    max-width: 500px;
+}
+.diagnosticchart-answer-title {
+    text-align: center;
+}
+.diagnosticchart-answer-description {
+    text-align: center;
+    padding: 15px;
+    width: 80%;
+	font-size: 13px;
+	line-height: 1.6;
+    margin:0px auto 20px auto;
+}
+
+.diagnosticchart-answer-top {
+    text-align: center;
+}	
+.diagnosticchart-answer-loading-container {
+	text-align: center;
+	padding: 0;
+}
+.diagnosticchart-answer-loading-container img {
+	width: 100%;
+	max-width: 250px;
+}
+	
+/* each type style */
+.diagnosticchart-answer-description-btn-wrapper {
+	text-align: center;
+}
+.diagnosticchart-answer-to-link-top-typepage {
+	display: block;
+	width: 250px;
+	border: 1px solid #8ddcd1;
+    padding: 13px 0px;
+    margin: 0px auto 70px;
+    text-align: center;
+    height: auto;
+    background-color: #fff;
+    color: #8ddcd1;
+    transition: .5s;
+}	
+	
+.diagnosticchart-answer-to-link-mypage {
+	display: inline-block;
+	width: 200px;
+    padding: 13px 0px;
+    margin: 0 auto;
+    margin-top: 16px;
+    text-align: center;
+    height: auto;
+    background-color: #8ddcd1;
+    color: #fff;
+    transition: .5s;
+}
+.diagnosticchart-answer-to-link-typepage {
+	display: inline-block;
+	width: 200px;
+	border: 1px solid #8ddcd1;
+    padding: 13px 0px;
+    margin: 0 auto;
+    margin-top: 16px;
+    text-align: center;
+    height: auto;
+    background-color: #fff;
+    color: #8ddcd1;
+    transition: .5s;
+	margin-right: 15px;
+}
+
+.diagnosticchart-answer-container.type-A .diagnosticchart-answer-to-link-mypage {
+    background-color: #90c57f;
+}
+.diagnosticchart-answer-container.type-A .diagnosticchart-answer-to-link-typepage {
+    border: 1px solid #90c57f;
+    background-color: #fff;
+    color: #90c57f;
+}
+.diagnosticchart-answer-container.type-B .diagnosticchart-answer-to-link-mypage {
+    background-color: #d98fb7;
+}
+.diagnosticchart-answer-container.type-B .diagnosticchart-answer-to-link-typepage {
+    border: 1px solid #d98fb7;
+    background-color: #fff;
+    color: #d98fb7;
+}
+.diagnosticchart-answer-container.type-C .diagnosticchart-answer-to-link-mypage {
+    background-color: ##95c8ce;
+}
+.diagnosticchart-answer-container.type-C .diagnosticchart-answer-to-link-typepage {
+    border: 1px solid ##95c8ce;
+    background-color: #fff;
+    color: ##95c8ce;
+}
+.diagnosticchart-answer-container.type-D .diagnosticchart-answer-to-link-mypage {
+    background-color: #fcb497;
+}
+.diagnosticchart-answer-container.type-D .diagnosticchart-answer-to-link-typepage {
+    border: 1px solid #fcb497;
+    background-color: #fff;
+    color: #fcb497;
+}
+.diagnosticchart-answer-container.type-A {
+    background-color: #f7fdf5;
+}
+.diagnosticchart-answer-container.type-B {
+    background-color: #fffafc;
+}
+.diagnosticchart-answer-container.type-C {
+    background-color: #f9fcfd;
+}
+
+.diagnosticchart-answer-container.type-D {
+    background-color: #fdf7f4;
+}
+
+.diagnosticchart-answer-to-link-mypage:hover {
+	opacity: .8;
+}
+
+.diagnosticchart-answer-to-link-typepage:hover {
+	opacity: .8;
+}
+
+
+@media screen and (max-width: 1024px) {
+	.diagnosticchart-intro-container {
+		padding-bottom: 50px;
+	}
+	.diagnosticchart-intro-type-img {
+    	margin: 60px 0 20px;
+	}
+	.kinjo_check .inner {
+		min-height: 592px;
+	}	
+	.kinyu-single-block.joshikai-main-block.kinjo_check {
+		background: #fff;
+	}
+	.diagnosticchart-subtitle {
+		font-size: 16px;
+		padding: 10px;
+	}
+	.diagnosticchart-intro-image img {
+		margin-top: 0px;
+	}
+	.diagnosticchart-intro-type-img img {
+		width: 88%;
+		margin: 0 auto;
+	}
+	.diagnosticchart-answer-charactor img {
+		width: 130px;
+	}
+	.diagnosticchart-intro-text-title img {
+		max-width: 320px;
+	}
+	.diagnosticchart-intro-text-title {
+		font-size: 18px;
+	}
+	.diagnosticchart-question-text {
+		font-size: 16px;
+	}
+	.diagnosticchart-intro-text-description {
+		width: 88%;
+		margin: 20px auto 0;
+		font-size: 11px;
+   		line-height: 20px;
+	}
+	.kinjo_check .inner {
+		width: 100%;
+	}
+	.diagnosticchart-question-number {
+		font-size: 36px;
+	}
+	.diagnosticchart-intro-start .btn-primary {
+		max-width: 100%;
+		font-size: 12px;
+		max-width: 100%;
+		padding: 14px;
+		width: 70%;
+	}
+	.diagnosticchart-question {
+		padding: 40px 15px;
+	}
+	.diagnosticchart-check-logo {
+		margin: 20px auto;
+		text-align: center;
+	}
+	.diagnosticchart-check-logo img {
+		width: 75%;
+	}
+	.diagnosticchart-answer-type img {
+		width: 88%;
+	}
+	.diagnosticchart-question-container {
+		padding: 20px 0 40px;
+	}
+	.diagnosticchart-answer {
+		margin-top: 40px;
+	}
+	.btn-yes {
+		width: 88%;
+		padding: 14px;
+    	font-size: 12px;
+		margin-right: 0px;
+	}
+	.btn-no {
+		width: 88%;
+		padding: 14px;
+    	font-size: 12px;
+		margin-top: 20px;
+	}
+	.diagnosticchart-intro-text {
+		margin: 40px auto 24px;
+	}
+	.diagnosticchart-answer-to-link-top-typepage {
+		width: 70%;
+		line-height: 1;
+		display: block;
+		margin: 0 auto 20px;
+	}
+	.diagnosticchart-answer-to-link-typepage {
+		width: 70%;
+		line-height: 1;
+		display: block;
+		margin: 0 auto;
+	}
+	.diagnosticchart-answer-to-link-mypage {
+		width: 70%;
+		line-height: 1;
+		display: block;
+		margin: 15px auto 0;
+	}
+	.check-detail-share {
+  		width: 88%;
+	}
+	 .check-detail-share {
+        border-radius: 5px;
+        height: auto;
+        margin-top: 50px;
+        height: 112px;
+    }
+
+    .check-detail-share-box {
+        float: none;
+        width: 100%;
+        background: #f7f7f7;
+        border-radius: 0px 0px 0px 0px;
+        padding-top: 0px;
+        padding: 24px 0px 16px
+    }
+
+	.diagnosticchart-answer-container .check-detail-share-box {
+		background: #fff;
+	}
+	.diagnosticchart-answer-container .check-detail-share {
+        margin-top: 35px;
+    }
+
+    .check-detail-share .social-list {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .check-detail-share .social-list li {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 12px;
+    }
+
+    .check-detail-share .social-list li a .social-logo {
+        padding: 8px;
+    }
+
+    .check-detail-share-el .share-this-title {
+        width: 90%;
+        margin-bottom: 0px;
+    }
+
+    .check-detail-share-el .share-this-page {
+        width: 35%;
+    }
+}
+
+	/* タブレット */
+@media screen and (max-width: 1025px) and (min-width: 480px) {
+	.check-detail-sidebar-el-title {
+	  font-size: 14px;
+	  line-height: 14px;
+	}
+	.check-detail-share {
+	  height: 150px;
+	}
+	.check-detail-share-box {
+	  width: 50%;
+	  padding-top: 36px;
+	}
+	.check-detail-share-el .share-this-title {
+	  width: 80%;
+	}
+}
+	
+/* クリックできる要素 */
+.ripple {
+    /* 必須 */
+    overflow: hidden;
+    position: relative;
+}
+	
+/* エフェクト要素 */
+.ripple__effect {
+    /* 値の変更はエフェクト形体・サイズ・スピードに影響する */
+    width: 150px;
+    height: 150px;
+
+    /* 必須 */
+    position: absolute;
+    border-radius: 100%;
+    pointer-events: none;
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* エフェクト要素の色を指定 */
+.ripple__effect.is-orange { background: #f1c40f;}
+.ripple__effect.is-white   { background: #fff;}
+.ripple__effect.is-black  { background: #999;}
+
+/* classが付与されたらアニメーションを実行 */
+.ripple__effect.is-show {
+    animation: ripple 0.75s ease-out;
+}
+
+/* アニメーションの定義 */
+@keyframes ripple {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}	
+	
