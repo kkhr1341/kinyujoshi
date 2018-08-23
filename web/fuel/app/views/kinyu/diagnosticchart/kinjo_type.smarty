@@ -155,6 +155,9 @@
 .type-title {
 	padding: 40px 0 20px;
 }
+.type-title img {
+	width: 80%;
+}
 .A {
 	background: #f7fdf5;
 }
