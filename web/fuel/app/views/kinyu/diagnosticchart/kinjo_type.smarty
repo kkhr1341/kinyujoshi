@@ -1,5 +1,6 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/single/diagnosticchart.css" />
 <div class="kinyu-single-block joshikai-main-block kinjo_type">
-<!--<p class="diagnosticchart-subtitle">診断チャート</p>-->
   <div class="inner">
 		
 	  <div class="type-title"><img src="/images/diagnosticchart/4type_ttl.png"></div>
@@ -42,14 +43,14 @@
 		  </li>
 	  </ul>
 	  	
-	<div class="diagnosticchart-intro-image pc">
+	<div class="diagnosticchart-type-intro-image pc">
 		<a href="/kinjo_check">
 			<img class="kinjo-check-texticon" src="/images/kinjo-check.png">
 			<img class="kinjo-check-img" src="/images/diagnosticchart/chart_main.jpg">
 		</a>
 	</div>
 
-	<div class="diagnosticchart-intro-image sp">
+	<div class="diagnosticchart-type-intro-image sp">
 		<a href="/kinjo_check">
 			<img class="kinjo-check-texticon" src="/images/kinjo-check.png">
 			<img class="kinjo-check-img" src="/images/diagnosticchart/chart_main_sp.jpg">
@@ -61,164 +62,4 @@
 
 <style>
 
-.kinjo_type {
-	background: #f8f8f8;
-}
-.type-title {
-	text-align: center;
-	padding: 40px 0;
-}
-.type-title img{
-	width: 100%;
-	margin: 0 auto;
-	max-width: 400px;
-}
-.type-wrapper {
-	max-width: 920px;
-	margin: 0 auto;
-	
-}
-.type-wrapper li {
-	padding: 36px;
-	margin-bottom: 16px;
-}
-.type-wrapper .img-wrapper {
-	display: table-cell;
-    vertical-align: middle;
-
-}
-.type-wrapper .img-wrapper img {
-	width: 120px;
-	border-radius: 50%;
-	padding: 15px;
-}
-.type-wrapper .text-wrapper img{
-	width: 100%;
-	max-width: 400px;
-}
-.type-wrapper .text-wrapper {
-	display: table-cell;
-	vertical-align: middle;
-	padding-left: 30px;
-}
-.type-description {
-	margin-top: 12px;
-}
-.A {
-	background: #fff;
-}
-.B {
-	background: #fff;
-}
-.C {
-	background: #fff;
-}
-.D {
-	background: #fff;
-}	
-.type-wrapper .img-wrapper .typeA {
-	background-color: #f7fdf5;
-}
-.type-wrapper .img-wrapper .typeB {
-    background-color: #fffafc;
-}
-
-.type-wrapper .img-wrapper .typeC {
-    background-color: #f9fcfd;
-}
-
-.type-wrapper .img-wrapper .typeD {
-    background-color: #fdf7f4;
-}
-.diagnosticchart-intro-image {
-	width: 650px;
-	margin: 0 auto;
-	text-align: center;
-	margin-top: 50px;
-	padding-bottom: 60px;
-}
-.diagnosticchart-intro-image .kinjo-check-texticon {
-	width: 350px;
-	margin-bottom: 12px;
-}
-.diagnosticchart-intro-image .kinjo-check-img {
-	width: 100%;
-}
-.diagnosticchart-intro-image a {
-	transition: .5s;
-}
-.diagnosticchart-intro-image a:hover {
-	opacity: .5;
-}
-	
-@media screen and (max-width: 1024px) {
-.type-title {
-	padding: 40px 0 20px;
-}
-.type-title img {
-	width: 80%;
-}
-.A {
-	background: #f7fdf5;
-}
-.B {
-	background: #fffafc;
-}
-.C {
-	background: #f9fcfd;
-}
-.D {
-	background: #fdf7f4;
-}
-.type-wrapper .img-wrapper .typeA {
-	background-color: #fff;
-}
-.type-wrapper .img-wrapper .typeB {
-    background-color: #fff;
-}
-
-.type-wrapper .img-wrapper .typeC {
-    background-color: #fff;
-}
-
-.type-wrapper .img-wrapper .typeD {
-    background-color: #fff;
-}
-	
-.type-description {
-	font-size: 11px;
-	line-height: 20px;
-	margin-top: 4px;
-}
-.kinjo_type {
-	background: #fff;
-}
-.type-wrapper li {
-	padding: 24px;
-    text-align: center;
-}
-.type-wrapper .img-wrapper {
-    display: block;
-}
-.type-wrapper .text-wrapper {
-    display: block;
-    padding-left: 0;
-}
-.type-wrapper .text-wrapper img {
-    padding: 10px 0;
-}
-.diagnosticchart-intro-image {
-	width: 100%;
-	margin-top: 50px;
-	padding-bottom: 60px;
-}
-.diagnosticchart-intro-image .kinjo-check-texticon {
-	width: 75%;
-	margin-bottom: 4px;
-}
-.diagnosticchart-intro-image .kinjo-check-img {
-	width: 100%;
-}
-
-}
 </style>

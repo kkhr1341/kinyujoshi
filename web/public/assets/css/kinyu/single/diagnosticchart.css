@@ -27,7 +27,7 @@
   margin: 0 auto;
   width: 700px;
   background: #fff;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 .check-detail-share .social-list {
   text-align: center;
@@ -642,5 +642,173 @@
         transform: scale(2);
         opacity: 0;
     }
+}
+
+
+
+
+/*------------------------------------------
+
+		4つのタイプページ css
+
+------------------------------------------*/
+
+.kinjo_type {
+	background: #f8f8f8;
+}
+.type-title {
+	text-align: center;
+	padding: 40px 0;
+}
+.type-title img{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 400px;
+}
+.type-wrapper {
+	max-width: 920px;
+	margin: 0 auto;
+	
+}
+.type-wrapper li {
+	padding: 36px;
+	margin-bottom: 16px;
+}
+.type-wrapper .img-wrapper {
+	display: table-cell;
+    vertical-align: middle;
+
+}
+.type-wrapper .img-wrapper img {
+	width: 120px;
+	border-radius: 50%;
+	padding: 15px;
+}
+.type-wrapper .text-wrapper img{
+	width: 100%;
+	max-width: 400px;
+}
+.type-wrapper .text-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 30px;
+}
+.type-description {
+	margin-top: 12px;
+}
+.A {
+	background: #fff;
+}
+.B {
+	background: #fff;
+}
+.C {
+	background: #fff;
+}
+.D {
+	background: #fff;
 }	
+.type-wrapper .img-wrapper .typeA {
+	background-color: #f7fdf5;
+}
+.type-wrapper .img-wrapper .typeB {
+    background-color: #fffafc;
+}
+
+.type-wrapper .img-wrapper .typeC {
+    background-color: #f9fcfd;
+}
+
+.type-wrapper .img-wrapper .typeD {
+    background-color: #fdf7f4;
+}
+.diagnosticchart-type-intro-image {
+	width: 650px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 50px;
+	padding-bottom: 60px;
+}
+.diagnosticchart-type-intro-image .kinjo-check-texticon {
+	width: 350px;
+	margin-bottom: 12px;
+}
+.diagnosticchart-type-intro-image .kinjo-check-img {
+	width: 100%;
+}
+.diagnosticchart-type-intro-image a {
+	transition: .5s;
+}
+.diagnosticchart-type-intro-image a:hover {
+	opacity: .5;
+}
+	
+@media screen and (max-width: 1024px) {
+.type-title {
+	padding: 40px 0 20px;
+}
+.type-title img {
+	width: 80%;
+}
+.A {
+	background: #f7fdf5;
+}
+.B {
+	background: #fffafc;
+}
+.C {
+	background: #f9fcfd;
+}
+.D {
+	background: #fdf7f4;
+}
+.type-wrapper .img-wrapper .typeA {
+	background-color: #fff;
+}
+.type-wrapper .img-wrapper .typeB {
+    background-color: #fff;
+}
+.type-wrapper .img-wrapper .typeC {
+    background-color: #fff;
+}
+.type-wrapper .img-wrapper .typeD {
+    background-color: #fff;
+}
+.type-description {
+	font-size: 11px;
+	line-height: 20px;
+	margin-top: 4px;
+}
+.kinjo_type {
+	background: #fff;
+}
+.type-wrapper li {
+	padding: 24px;
+    text-align: center;
+}
+.type-wrapper .img-wrapper {
+    display: block;
+}
+.type-wrapper .text-wrapper {
+    display: block;
+    padding-left: 0;
+}
+.type-wrapper .text-wrapper img {
+    padding: 10px 0;
+}
+.diagnosticchart-intro-image {
+	width: 100%;
+	margin-top: 50px;
+	padding-bottom: 60px;
+}
+.diagnosticchart-intro-image .kinjo-check-texticon {
+	width: 75%;
+	margin-bottom: 4px;
+}
+.diagnosticchart-intro-image .kinjo-check-img {
+	width: 100%;
+}
+
+}
+
 	
