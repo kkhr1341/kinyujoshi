@@ -172,6 +172,16 @@
 					</div>
 				</div>
 
+                <div class="form-group">
+                    <label class="form-group-event-label">認証ユーザー名</label>
+                    <input type="text" id="authentication_user" class="form-control" placeholder="" value="">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">認証パスワード</label>
+                    <input type="text" id="authentication_password" class="form-control" placeholder="" value="">
+                </div>
+
 			</div>
 			<div class="form-right">
 				<div class="edit-block-menu">
@@ -230,6 +240,8 @@ $(function(){
 		params.open_date = $('#open_date').val();
 		params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 1;
+        params.authentication_user = $('#authentication_user').val();
+        params.authentication_password = $('#authentication_password').val();
 
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");
@@ -299,6 +311,8 @@ $(function(){
 		params.open_date = $('#open_date').val();
     	params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
 		params.status = 0;
+        params.authentication_user = $('#authentication_user').val();
+        params.authentication_password = $('#authentication_password').val();
 
 		if (params.event_category == "") {
 			ts.error("女子会のカテゴリーを選択してください");

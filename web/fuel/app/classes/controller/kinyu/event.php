@@ -66,6 +66,23 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
 
+        if ($this->data['event']['status'] == 0) {
+
+            if ($this->data['event']['authentication_user'] && $this->data['event']['authentication_password']) {
+                $authentication_user     = $this->data['event']['authentication_user'];
+                $authentication_password = $this->data['event']['authentication_password'];
+
+                switch (true) {
+                    case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+                    case $_SERVER['PHP_AUTH_USER'] !== $authentication_user:
+                    case $_SERVER['PHP_AUTH_PW'] !== $authentication_password:
+                        header('WWW-Authenticate: Basic realm="Enter username and password."');
+                        header('Content-Type: text/plain; charset=utf-8');
+                        die('このページを見るにはログインが必要です');
+                }
+            }
+        }
+
         $this->template->title = $this->data['event']['title'];
         $this->data['join_status'] = Applications::join_status($code);
         $this->data['event_row'] = Events::getByCode('events', $code);

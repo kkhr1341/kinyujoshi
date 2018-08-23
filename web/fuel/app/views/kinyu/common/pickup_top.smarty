@@ -1,10 +1,5 @@
-<div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
-  <a href="/kinyu_sanpo">
-    <div class="kinyu-top-list-kind">
-    </div>
-  </a>
-</div>
 
+<!-- 女子会TOP表示 -->
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
 
@@ -22,6 +17,20 @@
     </a>
 </div>
 {/if}
+	
+<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/742171292585845/images/2018080220342122.png) center center / cover no-repeat;">
+  <a href="https://kinyu-joshi.jp/news/51kDr7">
+    <div class="kinyu-top-list-kind">
+    </div>
+  </a>
+</div>
+
+<div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
+  <a href="/kinyu_sanpo">
+    <div class="kinyu-top-list-kind">
+    </div>
+  </a>
+</div>
 
 {foreach from=$blogs_pick item=blog name=loopname}
 

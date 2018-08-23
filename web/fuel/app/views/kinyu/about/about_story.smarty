@@ -57,7 +57,7 @@
 
             </p>
 
-            <div class="profile">
+            {*<div class="profile">
               <p class="profile-text">ー Profile ー</p>
               <div class="profile-block clear">
                 <div class="img-box story-img-box" style="background:url(/images/about/profile/mariko_suzuki.jpg) center center / cover no-repeat;"></div>
@@ -67,7 +67,7 @@
                   <p class="detail-text">H.I.S.に入社し、法人営業としてオーダーメイドの団体旅行の企画・営業・手配・添乗を担当。旅行サービス立ち上げを目的に起業を目指し、2015年、金融系ベンチャーに転職。金融業界で自身の金融知識のなさと一般女性と業界との隔たりに衝撃を受け、女性は誰でも正しい金融知識が必要だと感じる。同じように悩む女性に対し金融・経済情報を等身大で中立にシェアする場：「きんゆう女子。」を立ち上げる。2016年3月、TOE THE LINE起業。</p>
                 </div>
               </div>
-            </div>
+            </div>*}
 
           </div>
         </div>

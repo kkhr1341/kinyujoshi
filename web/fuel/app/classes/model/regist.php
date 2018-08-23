@@ -259,6 +259,8 @@ class Regist extends Base
             ->from('member_regist')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'member_regist.username')
+            ->join('users', 'LEFT')
+            ->on('users.username', '=', 'member_regist.username')
             ->where('member_regist.disable', '=', 1);
 
         if (isset($params['username']) && $params['username']) {
@@ -272,6 +274,12 @@ class Regist extends Base
         }
         if (isset($params['introduction']) && $params['introduction']) {
             $total->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
+        }
+        if (isset($params['group']) && $params['group']) {
+            $total->and_where_open()
+                ->where('users.group', 'in', $params['group'])
+                ->or_where('users.group', 'is', null)
+                ->and_where_close();
         }
 
         $total = $total->execute()->current();
@@ -321,6 +329,8 @@ class Regist extends Base
             ->from('member_regist')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'member_regist.username')
+            ->join('users', 'LEFT')
+            ->on('users.username', '=', 'member_regist.username')
             ->where('member_regist.disable', '=', 1);
 
         if (isset($params['username']) && $params['username']) {
@@ -334,6 +344,12 @@ class Regist extends Base
         }
         if (isset($params['introduction']) && $params['introduction']) {
             $datas['datas']->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
+        }
+        if (isset($params['group']) && $params['group']) {
+            $datas['datas']->and_where_open()
+                ->where('users.group', 'in', $params['group'])
+                ->or_where('users.group', 'is', null)
+                ->and_where_close();
         }
 
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)

@@ -8,7 +8,7 @@
       <form name="form1">
         <div class="singlepage-form-block">
 
-          <div class="admin-normal-profile">
+          <div class="my-profile-edit-block">
             <div class="edit-profile-img img-box-block">
               <div class="img-box"
                 {if $profile.profile_image == ''}

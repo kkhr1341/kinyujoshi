@@ -391,6 +391,10 @@
 footer {
     position: relative;
     z-index: 1001;
+    background: #fff;
+}
+.navi_kinyu-submenu-copy {
+    background: #fff;
 }
 
 #footer_menu {
@@ -1015,6 +1019,10 @@ footer {
     background-color: #8ddcd1 !important;
     color: #fff;
     font-weight: bold;
+    border-top: 2px solid #f9f9f9!important;
+}
+.admin-profile-table td {
+    border-top: 2px solid #f9f9f9!important;
 }
 
 /* チェックしたレポート関連 */
@@ -1055,6 +1063,66 @@ footer {
     font-weight: bold;
     transition: .5s;
 }
+
+/* プロフィール編集部分のみ */
+.my-profile-edit-block {
+  text-align: center;
+  padding-bottom: 24px;
+}
+.my-profile-edit-block .img-box-block {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  position: relative;
+}
+.my-profile-edit-block .img-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1000;
+}
+.my-profile-edit-block .profile-name {
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: #77cbc0;
+}
+.my-profile-edit-block .edit-profile-img2 {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1002;
+  background: #8ddcd1;
+  transition: .5s;
+  display: table;
+}
+.my-profile-edit-block .edit-profile-img2 p {
+  height: 100%;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0px 20px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 18px;
+}
+.my-profile-edit-block .profile-catchcopy {
+  margin: 20px 0px 50px;
+}
+.my-profile-edit-block .profile-catchcopy .form-control {
+  width: 70%;
+  margin: 0 auto;
+}
+
+
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   女子会部分

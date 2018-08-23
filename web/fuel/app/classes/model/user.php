@@ -67,6 +67,10 @@ class User extends Base
             'email' => $params['email']
         ))->where('username', '=', $username)->execute();
 
+        \DB::update('member_regist')->set(array(
+            'email' => $params['email']
+        ))->where('username', '=', $username)->execute();
+
         if ($params['new_password']) {
             $old_password = \Auth::reset_password($username);
             \Auth::change_password($old_password, $params['new_password'], $username);

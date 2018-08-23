@@ -34,7 +34,7 @@
   width: 82%;
 }
 .mykinjo-block .request-block textarea {
-  background: #f9f9f9;
+  background: #fff;
 }
 .admin-normal-container .mypage-content-mainimg {
   height: 200px;
@@ -219,32 +219,9 @@
   font-size: 11px;
 }
 
-/*.admin-normal-profile {
-  padding-bottom: 24px;
-}
-.admin-normal-profile .img-box-block {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto;
-  position: relative;
-}
-.admin-normal-profile .profile-name {
-  font-size: 14px;
-  line-height: 14px;
-  margin-top: 32px;
-  margin-bottom: 16px;
-  font-weight: 400;
-  color: #77cbc0;
-}
-.admin-normal-profile .profile-catchcopy {
-  font-size: 12px;
-  line-height: 20px;
-  width: 100%;
-  margin: 0 auto;
-}*/
-
 .admin-normal-joshikai {
   padding-top: 32px;
+  border-top: 1px solid #dedede;
 }
 .joshikailist-main {
   padding-top: 0px;
@@ -253,7 +230,7 @@
 }
 .admin-normal-joshikai li a {
   height: 82px;
-  background: #f9f9f9;
+  background: #fff;
 }
 .admin-normal-joshikai li .to-link-joshikai {
   font-weight: normal;
@@ -342,7 +319,6 @@
   width: 72%;
 }
 
-
 .admin-joshikai-detail-el-header .main-image {
   height: 180px;
 }
@@ -382,7 +358,7 @@
   border-top: 2px solid #fff;
 }
 .singlepage-form-block .form-control {
-  background: #f9f9f9;
+  background: #fff;
   box-shadow: none;
   font-size: 12px;
 }
@@ -425,22 +401,33 @@
   font-size: 11px;
   line-height: 15px;
 }
-.admin-normal-profile .img-box {
+
+/* プロフィール編集部分のみ */
+.my-profile-edit-block .img-box-block {
+  width: 130px;
+  height: 130px;
+}
+.my-profile-edit-block .img-box {
   overflow: hidden;
 }
-.edit-profile-img .edit-profile-img2 {
+.my-profile-edit-block .profile-catchcopy {
+  margin: 4px 0px 24px;
+}
+.my-profile-edit-block .edit-profile-img2 {
   border-radius: 0px;
   opacity: .9;
-  top: 70px;
+  top: auto;
+  bottom: 0;
   height: 50px;
 }
-.edit-profile-img .edit-profile-img2 p {
+.my-profile-edit-block .edit-profile-img2 p {
   font-size: 10px;
   line-height: 15px;
   display: block;
   padding-top: 6px;
   font-weight: 400;
 }
+
 
 /* アカウント情報 */
 .admin-account-el {
@@ -483,6 +470,8 @@
   width: 50px;
   height: 50px;
 }
+
+
 
 /*ログイン部分 */
 .login-edit-block {
