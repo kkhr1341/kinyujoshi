@@ -34,7 +34,7 @@
                 </div>
                 <style>
                   .diagnosticchart-intro-start .btn-primary {
-                    opacity: ,3;
+                    opacity: .3;
                   }
                 </style>
             {/if}
