@@ -103,8 +103,8 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <p class="main-title">レポートを"チェック"するには<br>マイページへのログインが必要です。</p>
 
-        <p class="main-description pc">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、<br>自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪</p>
-        <p class="main-description sp">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪</p>
+        <!-- <p class="main-description pc">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、<br>自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪</p>
+        <p class="main-description sp">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪</p> -->
         <ul class="check-report-modal-dummy-ul">
           <li><a href="/login_regist">新規メンバー登録</a></li>
           <li><a href="/my">マイページへログイン</a></li>

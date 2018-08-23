@@ -38,6 +38,9 @@
 .kinyu-sp-navi {
   display: none;
 }
+.modal-backdrop {
+  z-index: 1005;
+}
 
 /* 文字省略 */
 
