@@ -32,6 +32,11 @@
                   <span class="reset-timer-text">のこり</span>
                   <span class="reset-timer-time"></span>
                 </div>
+                <style>
+                  .diagnosticchart-intro-start .btn-primary {
+                    opacity: ,3;
+                  }
+                </style>
             {/if}
 
         </div>
