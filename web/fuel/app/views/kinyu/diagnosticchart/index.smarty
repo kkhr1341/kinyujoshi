@@ -4,12 +4,8 @@
 <div class="kinyu-single-block joshikai-main-block kinjo_check">
 
   <div class="inner">
-
-    <!--<h2 class="kinyu-top-main-title">診断チャート</h2>-->
-
+	<!--▼診断スタートページ▼-->
     <div class="diagnosticchart-intro-container">
-
-        <!--<div class="diagnosticchart-intro-message">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</div>-->
 		<div class="diagnosticchart-intro-image pc"><img src="/images/diagnosticchart/chart_main.jpg"></div>
 		<div class="diagnosticchart-intro-image sp"><img src="/images/diagnosticchart/chart_main_sp.jpg"></div>
 		<div class="diagnosticchart-intro-text">
@@ -40,8 +36,33 @@
         </div>
 	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"></div>
             <a href="/kinjo_type" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</a>
+		
+	<!--▼ソーシャルシェア▼-->
+		<div class="check-detail-share clear">
+        <div class="check-detail-share-el check-detail-share-box">
+          <img class="share-this-title" src="/images/detail-title/kinyu-share-check.png">
+          <img class="share-this-page" src="/images/social/social-this-page.png">
+          <div class="social-list">
+            <ul>
+              <li>
+				  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdev.kinyu-joshi.jp%2Freport%2FoFMM8e" target="_blank" class="facebook">
+					  <img class="social-logo" src="/images/social/facebook_white01.png">
+				  </a>
+			  </li>
+			  <li>
+				  <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fdev.kinyu-joshi.jp%2Freport%2FoFMM8e" target="_blank" class="twitter">
+					  <img class="social-logo" src="/images/social/twitter_white01.png">
+				  </a>
+			  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+	<!--▲ソーシャルシェア▲-->
     </div>
-
+	<!--▲診断スタートページ▲-->
+	  
+	<!--▼回答ページ▼-->  
     <div class="diagnosticchart-question-container">
 		<div class="diagnosticchart-check-logo"><img src="/images/diagnosticchart/check_logo.png"></div>
 		<div class="diagnosticchart-question-el">
@@ -56,12 +77,16 @@
 			</div>
 		</div>
     </div>
-
-	<div class="diagnosticchart-answer-loading-container">
-		<div class="pc"><img src="/images/diagnosticchart/kingyo_pc.gif"></div>
-		<div class="sp"><img src="/images/diagnosticchart/kingyo_sp.gif"></div>
-	  </div>
+	<!--▲回答ページ▲-->
 	  
+	<!--▼診断中アニメーション▼-->   
+	<div class="diagnosticchart-answer-loading-container">
+		<div class="pc"><img src="/images/diagnosticchart/kingyo.gif"></div>
+		<div class="sp"><img src="/images/diagnosticchart/kingyo.gif"></div>
+	  </div>
+	<!--▲診断中アニメーション▲-->
+	  
+	<!--▼診断結果ページ▼-->
     <div class="diagnosticchart-answer-container">
         <div class="diagnosticchart-answer-catchcopy"></div>
         <div class="diagnosticchart-answer-charactor"></div>
@@ -71,12 +96,118 @@
 			<a href="/kinjo_type" class="diagnosticchart-answer-to-link-typepage">4つのタイプを見る</a>
 			<a href="/my" class="diagnosticchart-answer-to-link-mypage">マイページへ</a>
 		</div>
+		<!--▼ソーシャルシェア▼-->
+		<div class="check-detail-share clear">
+		<div class="check-detail-share-el check-detail-share-box">
+		  <img class="share-this-title" src="/images/detail-title/kinyu-share-check.png">
+		  <img class="share-this-page" src="/images/social/social-this-page.png">
+		  <div class="social-list">
+			<ul>
+			  <li>
+				  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdev.kinyu-joshi.jp%2Freport%2FoFMM8e" target="_blank" class="facebook">
+					  <img class="social-logo" src="/images/social/facebook_white01.png">
+				  </a>
+			  </li>
+			  <li>
+				  <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fdev.kinyu-joshi.jp%2Freport%2FoFMM8e" target="_blank" class="twitter">
+					  <img class="social-logo" src="/images/social/twitter_white01.png">
+				  </a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	<!--▲ソーシャルシェア▲-->
     </div>
+	<!--▲診断結果ページ▲-->
   </div>
 </div>
 
 
 <style>
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+}
+	
+/* ソーシャルのシェア部分 */
+.check-detail-share {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  height: 180px;
+  margin-top: 36px;
+}
+.check-detail-share-el {
+  position: relative;
+  height: 100%;
+}
+.check-detail-share-el h3 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.check-detail-share-box {
+  float: none;
+  margin: 0 auto;
+  width: 60%;
+  background: #fff;
+  padding-top: 40px;
+}
+.check-detail-share .social-list {
+  text-align: center;
+  margin-top: 12px;
+}
+.check-detail-share .social-list li {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+  transition: .5s;
+}
+.check-detail-share .social-list li:last-child {
+  margin-right: 0px;
+}
+.check-detail-share .share-this-title {
+  width: 55%;
+  display: block;
+  margin: 0 auto;
+}
+.check-detail-share .share-this-page {
+  width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+.check-detail-share .social-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.check-detail-share .social-list li a .social-logo {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.check-detail-share .social-list li .facebook {
+  background: #708fe5;
+}
+.check-detail-share .social-list li .twitter {
+  background: #87e1f9; 
+}	
+.diagnosticchart-answer-container .check-detail-share {
+	margin-top: 70px;
+}
+	
+	
+	
+	
+	
+	
+	
+	
 .kinjo_check .inner {
 	margin-top: 0;
 	min-height: 616px;
@@ -84,7 +215,7 @@
 }	
 
 .diagnosticchart-intro-container {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }	
 	
 .diagnosticchart-subtitle {
@@ -105,8 +236,8 @@
 	
 .btn-yes {
 	line-height: 1;
-	color: #fff;
-    background-color: #8ddcd1;
+	color: #444;
+    background-color: #f3f3f3;
     border: none;
     font-weight: normal;
 	width: 200px;
@@ -124,17 +255,18 @@
   border: 7px solid transparent;
   border-top-width: 5px;
   border-bottom-width: 5px;
-  border-left-color: #fff;
+  border-left-color: #ccc;
   transition: all .5s;
 }
 .btn-yes:hover::after {
   right: -.05em;
+  border-left-color: #fff;
 }
 .btn-no {
 	line-height: 1;
-    color: #8ddcd1;
-    background-color: #fff;
-    border: 1px solid #8ddcd1;
+    color: #444;
+    background-color: #f3f3f3;
+    border: none;
     font-weight: normal;
 	padding: 15px;
 	font-size: 14px;
@@ -151,18 +283,21 @@
   border: 7px solid transparent;
   border-top-width: 5px;
   border-bottom-width: 5px;
-  border-left-color: #8ddcd1;
+  border-left-color: #ccc;
   transition: all .5s;
 }
 .btn-no:hover::after {
   right: -.05em;
+  border-left-color: #fff;
 }
 
 .btn-yes:hover {
-	opacity: 0.5;
+	background: #8ddcd1;
+	color: #fff;
 }
 .btn-no:hover {
-	opacity: 0.5;
+	background: #8ddcd1;
+	color: #fff;
 }
 
 
@@ -204,7 +339,7 @@
 }
 .diagnosticchart-intro-start .btn-primary {
 	width: 100%;
-	margin: 0px 0 30px;
+	margin: 0;
 	padding: 18px;
 	font-size: 16px;
 	font-weight: normal;
@@ -212,7 +347,7 @@
 }
 .diagnosticchart-intro-type-img {
 	text-align: center;
-	margin: 50px 0;
+	margin: 70px 0 30px;
 }
 .diagnosticchart-intro-type-img img {
 	width: 100%;
@@ -338,7 +473,7 @@
 	width: 200px;
 	border: 1px solid #8ddcd1;
     padding: 13px 0px;
-    margin: 16px auto 52px;
+    margin: 16px auto 70px;
     text-align: center;
     height: auto;
     background-color: #fff;
@@ -529,9 +664,75 @@
 		display: block;
 		margin: 15px auto 0;
 	}
+	.check-detail-share {
+  		width: 88%;
+	}
+	 .check-detail-share {
+        border-radius: 5px;
+        height: auto;
+        margin-top: 50px;
+        height: 112px;
+    }
+
+    .check-detail-share-box {
+        float: none;
+        width: 70%;
+        background: #f7f7f7;
+        border-radius: 0px 0px 0px 0px;
+        padding-top: 0px;
+        padding: 24px 0px 16px
+    }
+
+	.diagnosticchart-answer-container .check-detail-share-box {
+		background: #fff;
+	}
+	.diagnosticchart-answer-container .check-detail-share {
+        margin-top: 35px;
+    }
+
+    .check-detail-share .social-list {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .check-detail-share .social-list li {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 12px;
+    }
+
+    .check-detail-share .social-list li a .social-logo {
+        padding: 8px;
+    }
+
+    .check-detail-share-el .share-this-title {
+        width: 90%;
+        margin-bottom: 0px;
+    }
+
+    .check-detail-share-el .share-this-page {
+        width: 35%;
+    }
 }
 
-	
+	/* タブレット */
+@media screen and (max-width: 1025px) and (min-width: 480px) {
+	.check-detail-sidebar-el-title {
+	  font-size: 14px;
+	  line-height: 14px;
+	}
+	.check-detail-share {
+	  height: 150px;
+	}
+	.check-detail-share-box {
+	  width: 50%;
+	  padding-top: 36px;
+	}
+	.check-detail-share-el .share-this-title {
+	  width: 80%;
+	}
+}
 	
 /* クリックできる要素 */
 .ripple {
@@ -540,22 +741,6 @@
     position: relative;
 }
 	
-/*.ripple::after {
-  position: absolute;
-  top: 50%;
-  right: .2em;
-  content: '';
-  margin-top: -5px;
-  border: 7px solid transparent;
-  border-top-width: 5px;
-  border-bottom-width: 5px;
-  border-left-color: #fff;
-  transition: all .2s;
-}
-.ripple:hover::after {
-  right: -.05em;
-}
-*/
 /* エフェクト要素 */
 .ripple__effect {
     /* 値の変更はエフェクト形体・サイズ・スピードに影響する */
