@@ -56,7 +56,7 @@
               おかねの勉強やアクションを通してわたしらしいライフスタイルを見つけるためのはじめのちいさなちいさな一歩に「きんゆう女子。」がありますように。
             </p>
 
-            <div class="profile">
+            {*<div class="profile">
               <p class="profile-text">ー Profile ー</p>
               <div class="profile-block clear">
                 <div class="img-box story-img-box" style="background:url(/images/about/profile/keita_komori.jpg) center center / cover no-repeat;"></div>
@@ -66,7 +66,7 @@
                   <p class="detail-text">シンクタンクで金融系システムの保守・運用・サポート窓口などに携わる。2016年10月にきんゆう女子。会に参加したことがきっかけで、2017年4月からコミュニティマネージャーに就任。女子会に参加するメンバーが、いつでも安心して楽しく学べる環境を整えながら、20〜30代女性の生き方に寄り添うパーソナルファイナンシャルプランナー（2012年AFP取得）。CFP取得のため勉強中で、パラレルワーカーや新しい働き方を実現する女性に寄り添うファイナンシャルプランナーを目指す。</p>
                 </div>
               </div>
-            </div>
+            </div>*}
 
           </div>
         </div>

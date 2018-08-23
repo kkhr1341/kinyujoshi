@@ -64,7 +64,7 @@
               本物のより良いライフスタイルに繋がっていくと、私たちは信じています。<br><br>
             </p>
 
-            <div class="profile">
+            {*<div class="profile">
               <p class="profile-text">ー Profile ー</p>
               <div class="profile-block clear">
                 <div class="img-box story-img-box" style="background:url(/images/about/profile/keita_komori.jpg) center center / cover no-repeat;"></div>
@@ -74,7 +74,7 @@
                   <p class="detail-text">旅行代理店でWEBシステム部にてプロモーション施策の立案やシステム開発などに従事。専門的なシステム開発を行うことを目的に、2008年WEB系開発会社へ転職。7年間自社ECパッケージや基幹システム、スマホアプリを中心に開発を行う。本質的なユーザーへの価値をデータの側面から届けたいという思いとともにAI・機械学習のプロジェクトに参画。また、プライベートで続けている株式投資や暗号化通貨などへの興味を通じ「きんゆう女子。」を知り、2018年 テクノロジー ×データ ×金融の未来を信じTOE THE LINEへ参画。インサイト研究チームを発足し金融への悩みを解決してもらうためのデータ分析を行っている。</p>
                 </div>
               </div>
-            </div>
+            </div>*}
 
           </div>
         </div>

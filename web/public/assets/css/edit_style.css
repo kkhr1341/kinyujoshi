@@ -1372,7 +1372,9 @@
   padding: 32px 0px;
 }
 .check-report-modal-dummy-ul {
-  
+  width: 72%;
+  margin: 0 auto;
+  margin-top: 32px;
 }
 .check-report-modal-dummy-ul li {
   width: 100%;
@@ -3425,7 +3427,6 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .about-kinyu-description {
   margin-top: 28px;
-  padding-bottom: 36px;
 }
 .about-kinyu-description .main-catchcopy {
   font-size: 15px;
@@ -3445,7 +3446,7 @@ input[type=checkbox]:checked + .checkbox:before {
   width: 80%;
 }
 .about-kinyu-description .afterword {
-  width: 64%;
+  width: 70%;
   margin: 0 auto;
   margin-top: 42px;
   font-size: 12px;

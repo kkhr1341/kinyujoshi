@@ -51,7 +51,7 @@
               「きんゆう女子。」が、多くの女性に寄り添い、日常生活のパートナーのような存在になっていくように....
             </p>
 
-            <div class="profile">
+            {*<div class="profile">
               <p class="profile-text">ー Profile ー</p>
               <div class="profile-block clear">
                 <div class="img-box story-img-box" style="background:url(/images/about/profile/keita_komori.jpg) center center / cover no-repeat;"></div>
@@ -61,7 +61,7 @@
                   <p class="detail-text">大学2年の時、ITべンチャー企業にインターンとして入ったことがきっかけで、WEBに興味を持ち、独学でプログラミングやWEBデザイン・グラフィックデザインを学ぶ。卒業後、フリーランス期間を挟んで、株式会社TOE THE LINEに入社。「きんゆう女子。」のWEBサイトの制作やデザインを行う。尊敬するデザイナーは「ディーター・ラムス」、「深澤直人」。「控えめでシンプル、でも彩（いろ）を放つ」をコンセプトに存在感あるデザインを目指している。</p>
                 </div>
               </div>
-            </div>
+            </div>*}
 
           </div>
         </div>
