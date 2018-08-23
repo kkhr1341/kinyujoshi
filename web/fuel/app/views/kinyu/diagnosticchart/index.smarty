@@ -57,7 +57,10 @@
 		</div>
     </div>
 
-	<div class="diagnosticchart-answer-loading-container"><img src="/images/diagnosticchart/kingyo.gif"></div>
+	<div class="diagnosticchart-answer-loading-container">
+		<div class="pc"><img src="/images/diagnosticchart/kingyo_pc.gif"></div>
+		<div class="sp"><img src="/images/diagnosticchart/kingyo_sp.gif"></div>
+	  </div>
 	  
     <div class="diagnosticchart-answer-container">
         <div class="diagnosticchart-answer-catchcopy"></div>
@@ -129,9 +132,9 @@
 }
 .btn-no {
 	line-height: 1;
-	color: #fff;
-    background-color: #8ddcd1;
-    border: none;
+    color: #8ddcd1;
+    background-color: #fff;
+    border: 1px solid #8ddcd1;
     font-weight: normal;
 	padding: 15px;
 	font-size: 14px;
@@ -148,7 +151,7 @@
   border: 7px solid transparent;
   border-top-width: 5px;
   border-bottom-width: 5px;
-  border-left-color: #fff;
+  border-left-color: #8ddcd1;
   transition: all .5s;
 }
 .btn-no:hover::after {
@@ -426,7 +429,9 @@
 
 
 @media screen and (max-width: 1024px) {
-	
+	.kinjo_check .inner {
+		min-height: 592px;
+	}	
 	.kinyu-single-block.joshikai-main-block.kinjo_check {
 		background: #fff;
 	}
