@@ -26,14 +26,14 @@
 		</div>
         <div class="diagnosticchart-intro-start">
             <button class="btn btn-primary ripple" data-is_diagnosed="{$is_diagnosed}">診断スタート♪<span class="ripple__effect is-white"></span></button>
-<!--
+
             {if $is_diagnosed == true}
                 <div class="reset-timer" data-reset_time="{$reset_time}">
                   <span class="reset-timer-text">のこり</span>
                   <span class="reset-timer-time"></span>
                 </div>
             {/if}
--->
+
         </div>
 	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"></div>
             <a href="/kinjo_type" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</a>
@@ -125,16 +125,13 @@
 </div>
 
 
-<div id="check-report-modal-dummy" class="check-report-modal">
+<div id="kinjo-check-modal" class="check-report-modal" style="display: block;">
   <div class="modal-dialog">
     <div class="modal-content">
       <!-- dialog body -->
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <p class="main-title">レポートを"チェック"するには<br>マイページへのログインが必要です。</p>
-
-        <!-- <p class="main-description pc">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、<br>自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪</p>
-        <p class="main-description sp">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪</p> -->
+        <p class="main-title">"きん女。診断"に進むには<br>マイページへのログインが必要です♪</p>
         <ul class="check-report-modal-dummy-ul">
           <li><a href="/login_regist">新規メンバー登録</a></li>
           <li><a href="/my">マイページへログイン</a></li>
@@ -144,8 +141,17 @@
   </div>
 </div>
 
+
 <script>
 $(function() {
+
+
+    //ログインしていない時に表示されるコンテンツん処理
+
+    $("#kinjo-check-modal .close").click(function() {
+      $("#kinjo-check-modal").fadeOut(500);
+    });
+
     var $clickable = $('.ripple');
 
     /* mousedownだと直ぐに発動し、clickだとマウスボタンを離した時に発動する */

@@ -1361,7 +1361,7 @@
 }
 
 /* ダミー */
-#check-report-modal-dummy {
+.check-report-modal {
   display: none;
   background: rgba(247, 247, 247, 0.95);
   position: fixed;
@@ -1371,7 +1371,7 @@
   top: 0;
   left: 0;
 }
-#check-report-modal-dummy .main-description {
+.check-report-modal .main-description {
   padding: 32px 0px;
 }
 .check-report-modal-dummy-ul {

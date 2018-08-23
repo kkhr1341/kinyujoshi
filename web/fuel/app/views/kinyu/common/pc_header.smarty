@@ -82,6 +82,15 @@
       <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a></li>
     </ul>
   </div>
+
+  <!-- レポート検索 -->
+  <div class="kinyu-top-search pc">
+    <form action="/report/search" method="get">
+      <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+      <button>&#xf002; </button>
+    </form>
+  </div>
+
 </header>
 
 <div class="header-hover-content-block"></div>
