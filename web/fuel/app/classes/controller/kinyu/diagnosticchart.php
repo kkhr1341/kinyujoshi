@@ -1,6 +1,9 @@
 <?php
 
 use \Model\DiagnosticChartTypeUsers;
+use \Model\DiagnosticChartTypes;
+use \Model\DiagnosticChartRouteTypeHashTags;
+use \Model\DiagnosticChartRouteTypeActionLists;
 
 class Controller_Kinyu_Diagnosticchart extends Controller_Kinyubase
 {
@@ -37,6 +40,15 @@ class Controller_Kinyu_Diagnosticchart extends Controller_Kinyubase
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        $types = DiagnosticChartTypes::getList();
+
+        $this->data['chart_types'] = array();
+        foreach ($types as $key => $type) {
+            $this->data['chart_types'][$key] = $type;
+            $this->data['chart_types'][$key]['hash_tags'] = DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($type['code']);
+            $this->data['chart_types'][$key]['action_list'] = DiagnosticChartRouteTypeActionLists::getContentByTypeCode($type['code']);
+        }
 
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
