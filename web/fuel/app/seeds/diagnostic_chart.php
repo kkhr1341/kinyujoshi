@@ -131,13 +131,13 @@ $seeds = array(
     array('id' => '1', 'type_code' => 'RgKLhu', 'content' => "1.お金について考えてみる！と誰かに宣言してみよう\n2.おしゃべり女子会にお友達とゆるりと参加してみよう\n3.きん女。のゲストやFPとお財布を整理整頓しよう♪", 'created_at' => \DB::expr('now()')),
     
     //B
-    array('id' => '2', 'type_code' => 'pttyS2', 'content' => "1.みんなどうしているかレポートを読んでみよう\2.finbeeやZaimをつかってお金のこと誰かとシェアしよう\n3.アクションする女子会でみんなと一緒に前に進もう", 'created_at' => \DB::expr('now()')),
+    array('id' => '2', 'type_code' => 'pttyS2', 'content' => "1.みんなどうしているかレポートを読んでみよう\n2.finbeeやZaimをつかってお金のこと誰かとシェアしよう\n3.アクションする女子会でみんなと一緒に前に進もう", 'created_at' => \DB::expr('now()')),
     
     //C
-    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "1.ラクサスXで眠っているバックを運用。投資の練習してみよう！\2.自動で貯金。「しらたま」や「マメタス」を使ってみよう\n3.貯まっているポイントでつみたて運用を始めてみる？", 'created_at' => \DB::expr('now()')),
+    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "1.ラクサスXで眠っているバックを運用。投資の練習してみよう！\n2.自動で貯金。「しらたま」や「マメタス」を使ってみよう\n3.貯まっているポイントでつみたて運用を始めてみる？", 'created_at' => \DB::expr('now()')),
     
     //D
-    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "1.ニュースやアナリストの話に慣れるよう、きんゆう単語を学ぼう！\2.OneTapBUYやトラノコで本当の投資にチャレンジ。\n3.現金派からキャッシュレス派に。カードやスマホ決済でミニマムライフ♪", 'created_at' => \DB::expr('now()')),
+    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "1.ニュースやアナリストの話に慣れるよう、きんゆう単語を学ぼう！\n2.OneTapBUYやトラノコで本当の投資にチャレンジ。\n3.現金派からキャッシュレス派に。カードやスマホ決済でミニマムライフ♪", 'created_at' => \DB::expr('now()')),
 );
 
 foreach ($seeds as $key => $seed) {
