@@ -3,7 +3,7 @@
 $seeds = array(
     array('id' => '1',  'code' => '3nCQWo', 'question' => "社会人になって\n5年目以上\nそろそろ、いい大人です！", 'created_at' => \DB::expr('now()')),
     array('id' => '2',  'code' => 'ZwKusw', 'question' => "家族や友達とお金の話が\nオープンにできる関係。", 'created_at' => \DB::expr('now()')),
-    array('id' => '3',  'code' => '7XEwlR', 'question' => "漠然とした未来への\nもやもや不安がある•••\n私のミライって大丈夫？", 'created_at' => \DB::expr('now()')),
+    array('id' => '3',  'code' => '7XEwlR', 'question' => "私のミライって大丈夫？\n漠然とした未来への\nもやもや不安がある•••", 'created_at' => \DB::expr('now()')),
     array('id' => '4',  'code' => 'A4pHeO', 'question' => "きんゆうとか投資と\n聞くと”ん？”って思う！\nでも不安だから気になる•••", 'created_at' => \DB::expr('now()')),
     array('id' => '5',  'code' => 'Hx3wbd', 'question' => "もう少し\n毎月の収入上げたい！\n転職とかフリーランスとか\n副業って気になる！", 'created_at' => \DB::expr('now()')),
     array('id' => '6',  'code' => 'nUNq1B', 'question' => "ひとりでいるより\n女子会とかおともだちと\n会うのが楽しい！\nおしゃべりが好き。", 'created_at' => \DB::expr('now()')),
