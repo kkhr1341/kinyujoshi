@@ -201,7 +201,8 @@ $(function() {
 // 診断が有効化されるまでのカウントダウン処理
 function countDown($element, endDate, callback) {
     var startDateTime = new Date();
-    var endDateTime = new Date(endDate);
+    var endDateTime = new Date(endDate.replace(/-/g, '/'));
+
     var left = endDateTime - startDateTime;
 
     if (left <= 0) {
