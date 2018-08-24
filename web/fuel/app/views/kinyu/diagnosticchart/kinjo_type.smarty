@@ -6,41 +6,26 @@
 	  <div class="type-title"><img src="/images/diagnosticchart/4type_ttl.png"></div>
 		
 	  <ul class="type-wrapper">
-		  <li class="A">
-			  <div class="img-wrapper"><img src="/images/diagnosticchart/A.png" class="typeA"></div>
+	      {foreach from=$chart_types item=type}
+		  <li class="{$type['type']}">
+			  <div class="img-wrapper"><img src="{$type['character_image']}" class="type{$type['type']}"></div>
 			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/t_typeA.png" class="pc">
-				  <img src="/images/diagnosticchart/typeA.png" class="sp">
-				  <p class="type-description">金融？何のこと？<br>自分が何がワカラナイかそれすらワカラナイ•••<br>金融とか投資とか自分には関係ない？<br>でもそろそろお金の整理からはじめたい！</p>
+				  <img src="/images/diagnosticchart/t_type{$type['type']}.png" class="pc">
+				  <img src="{$type['type_image']}" class="sp">
+				  <p class="type-catchcopy">{$type['catch_copy']}</p>
+				  <p class="type-description">{$type['description']|nl2br}</p>
+				  <p class="type-description-tag">
+				  {foreach from=$type['hash_tags'] item=tag}
+                      <span>{$tag}</span>
+				  {/foreach}
+				  </p>
+				  <p class="action-list-ttl"><span>＊</span>アクションリスト<span>＊</span></p>
+				  <p class="action-list">
+					{$type['action_list']|nl2br}
+				  </p>
 			  </div>
 		  </li>
-		  
-		  <li class="B">
-			  <div class="img-wrapper"><img src="/images/diagnosticchart/B.png" class="typeB"></div>
-			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/t_typeB.png" class="pc">
-				  <img src="/images/diagnosticchart/typeB.png" class="sp">
-				  <p class="type-description">お金のコト大事ってわかったケド<br>何したらいいかな・・・？<br>みんなどうしてるの？<br>怖いから迷って、いつのまにか時間が経ってる・・・</p>
-			  </div>
-		  </li>
-		  
-		  <li class="C">
-			  <div class="img-wrapper"><img src="/images/diagnosticchart/C.png" class="typeC"></div>
-			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/t_typeC.png" class="pc">
-				  <img src="/images/diagnosticchart/typeC.png" class="sp">
-				  <p class="type-description">貯金あんまりないです•••<br>がんばって働いてはいるけどその分使ってる！汗<br>あんまり心配してなかったけど<br>このままで大丈夫かな、ワタシ。</p>
-			  </div>
-		  </li>
-		  
-		  <li class="D">
-			  <div class="img-wrapper"><img src="/images/diagnosticchart/D.png" class="typeD"></div>
-			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/t_typeD.png" class="pc">
-				  <img src="/images/diagnosticchart/typeD.png" class="sp">
-				  <p class="type-description">金融に強くなって<br>自分に自信をつけたい！<br>仕事もプライベートも<br>もっとレベル UP したい！</p>
-			  </div>
-		  </li>
+		  {/foreach}
 	  </ul>
 	  	
 	<div class="diagnosticchart-type-intro-image pc">

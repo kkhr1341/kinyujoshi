@@ -305,7 +305,36 @@
 .kinjo-check-block_sp .text-box .kinjo-check-description {
   font-size: 11px;
   line-height: 20px;
+  margin-top: 10px;
 }
+
+.my-kinjo-check-copy {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 0px;
+}
+.my-kinjo-check-tags {
+  margin-top: 4px;
+}
+.my-kinjo-check-tags li {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  color: #77cbc0;
+}
+.my-kinjo-check-action {
+  margin-top: 12px;
+}
+.my-kinjo-check-action p {
+  font-size: 11px;
+  line-height: 20px;
+  margin-top: 0px;
+}
+.my-kinjo-check-action p.title {
+  font-weight: bold;
+  margin-top: 12px;
+}
+
 .kinjo-check-block_sp .text-box .to-kinjo-type {
   display: block;
   text-align: right;

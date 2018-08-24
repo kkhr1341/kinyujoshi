@@ -910,7 +910,7 @@ footer {
 .kinjo-check-block {
   display: table;
   background: #fff;
-  padding: 16px 20px;
+  padding: 32px 24px 20px;
   margin: 24px 0px 32px;
 }
 .kinjo-check-block .icon-box {
@@ -929,18 +929,42 @@ footer {
   padding-left: 24px;
 }
 .kinjo-check-block .kinjo-check-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
 }
 .kinjo-check-block .kinjo-check-description {
   font-size: 12px;
-  margin: 4px 0px;
+  margin: 12px 0px;
 }
 .kinjo-check-block .to-kinjo-type {
   font-size: 12px;
   display: block;
   text-align: right;
   color: #5499d8;
+}
+
+.my-kinjo-check-copy {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 8px;
+}
+.my-kinjo-check-tags li {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  color: #77cbc0;
+}
+.my-kinjo-check-action {
+  margin-top: 12px;
+}
+.my-kinjo-check-action p {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 2px;
+}
+.my-kinjo-check-action p.title {
+  font-weight: bold;
+  margin-top: 12px;
 }
 
 /* checkしていない場合 */

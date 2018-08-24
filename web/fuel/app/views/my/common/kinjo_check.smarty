@@ -11,7 +11,25 @@
       </div>
       <div class="text-box">
         <p class="kinjo-check-title kinjo-check-title01">{$user_type['character_name']}</p>
+        <!-- キャッチコピー -->
+        <p class="my-kinjo-check-copy">ー 
+          <!-- ここにキャッチコピーを -->
+          人生100人時代です！</p>
         <p class="kinjo-check-description">{$user_type['description']|nl2br}</p>
+
+        <!-- #タグ -->
+        <ul class="my-kinjo-check-tags">
+        {foreach from=$hash_tags item=tag}
+            <li>{$tag}</li>
+        {/foreach}
+        </ul>
+
+        <!-- アクション -->
+        <div class="my-kinjo-check-action">
+          <p class="title">▼アクションリスト（3つのベビーステップ♪）</p>
+          <p class="details">{$action_list|nl2br}</p>
+        </div>
+
         <a class="to-kinjo-type" href="/kinjo_type">他のタイプも見てみる</a>
       </div>
     </div>
@@ -41,7 +59,25 @@
         <p class="kinjo-check-title kinjo-check-title01">{$user_type['character_name']}</p>
       </div>
       <div class="text-box" id="kinjo_check_open_content">
+        <!-- キャッチコピー -->
+        <p class="my-kinjo-check-copy">ー 
+          <!-- ここにキャッチコピーを -->
+          人生100人時代です！</p>
+          
         <p class="kinjo-check-description">{$user_type['description']|nl2br}</p>
+
+        <ul class="my-kinjo-check-tags">
+        {foreach from=$hash_tags item=tag}
+            <li>{$tag}</li>
+        {/foreach}
+        </ul>
+
+        <!-- アクション -->
+        <div class="my-kinjo-check-action">
+          <p class="title">▼アクションリスト（3つのベビーステップ♪）</p>
+          <p class="details">{$action_list|nl2br}</p>
+        </div>
+
         <a class="to-kinjo-type" href="/kinjo_type">他のタイプも見てみる</a>
       </div>
     </div>

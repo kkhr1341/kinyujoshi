@@ -97,10 +97,13 @@
 	  
 	<!--▼診断結果ページ▼-->
     <div class="diagnosticchart-answer-container">
-        <div class="diagnosticchart-answer-catchcopy"></div>
         <div class="diagnosticchart-answer-charactor"></div>
 		<div class="diagnosticchart-answer-type"></div>
+		<div class="diagnosticchart-answer-catchcopy"></div>
         <div class="diagnosticchart-answer-description"></div>
+        <div class="diagnosticchart-answer-hash-tags"></div>
+		<div class="diagnosticchart-answer-action-list-title"><span>＊</span>アクションリスト<span>＊</span></div>
+        <div class="diagnosticchart-answer-action-list"></div>
 		<div class="diagnosticchart-answer-description-btn-wrapper">
 			<a href="/kinjo_type" class="diagnosticchart-answer-to-link-typepage">4つのタイプを見る</a>
 			<a href="/my" class="diagnosticchart-answer-to-link-mypage">マイページへ</a>
@@ -242,12 +245,6 @@ $(function(){
     var $yesButton = $('.diagnosticchart-answer .btn-yes');
     var $noButton  = $('.diagnosticchart-answer .btn-no');
 
-    var $answerCatchcopy   = $('.diagnosticchart-answer-catchcopy');
-    var $answerCharactor   = $('.diagnosticchart-answer-charactor');
-    var $answerType        = $('.diagnosticchart-answer-type');
-    var $answerTitle       = $('.diagnosticchart-answer-title');
-    var $answerDescription = $('.diagnosticchart-answer-description');
-
     var routes = [];
 
     // 回答
@@ -324,6 +321,15 @@ $(function(){
 
     // 完了画面表示
     function completed(type_code) {
+
+        var $answerCatchcopy   = $('.diagnosticchart-answer-catchcopy');
+        var $answerCharactor   = $('.diagnosticchart-answer-charactor');
+        var $answerType        = $('.diagnosticchart-answer-type');
+        var $answerTitle       = $('.diagnosticchart-answer-title');
+        var $answerDescription = $('.diagnosticchart-answer-description');
+        var $answerHashTags    = $('.diagnosticchart-answer-hash-tags');
+        var $answerActionList  = $('.diagnosticchart-answer-action-list');
+
         // スクロールトップへ
         $(window).scrollTop(0);
         $answerLoadingContainer.fadeOut();
@@ -345,12 +351,18 @@ $(function(){
                 var type = value.data.type || '';
                 var title = value.data.title || '';
                 var description = value.data.description || '';
+                var action_list = value.data.action_list || '';
+                var hash_tags = value.data.hash_tags || [];
 
                 $answerCatchcopy.html(catch_copy);
                 $answerCharactor.html($('<img>', {src:character_image}));
                 $answerType.html($('<img>', {src:type_image}));
                 $answerTitle.html(title);
                 $answerDescription.html(description.replace(/\r|\n/g, '<br />'));
+                $answerHashTags.html(hash_tags.map(function(t) {
+                    return '<span>' + t + '</span>';
+                }))
+                $answerActionList.html(action_list.replace(/\r|\n/g, '<br />'));
 
                 $answerContainer.addClass('type-' + type);
 
@@ -374,20 +386,20 @@ $(function(){
   // 診断の実行可否処理
   // 診断の実行ができる状態であれば「診断スタート」ボタンクリック可
   // 診断の実行ができない状態であれば「診断スタート」ボタンクリック不可・カウントダウン実行
-  var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
-  var authenticated = $startButton.data('authenticated') == '1' ? true : false;
-
-  $startButton.prop('disabled', is_diagnosed === false || authenticated === false ? false: true);
-
-  $('.time-count-block').hide();
-  if (is_diagnosed && authenticated) {
-    $('.time-count-block').show().each(function() {
-      var endDate = $(this).find('.reset-timer').data('reset_time');
-      countDown($(this), endDate, function() {
-        $startButton.prop('disabled', false);
-      });
-    })
-  }
+//  var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
+//  var authenticated = $startButton.data('authenticated') == '1' ? true : false;
+//
+//  $startButton.prop('disabled', is_diagnosed === false || authenticated === false ? false: true);
+//
+//  $('.time-count-block').hide();
+//  if (is_diagnosed && authenticated) {
+//    $('.time-count-block').show().each(function() {
+//      var endDate = $(this).find('.reset-timer').data('reset_time');
+//      countDown($(this), endDate, function() {
+//        $startButton.prop('disabled', false);
+//      });
+//    })
+//  }
 });
 {/literal}
 </script>

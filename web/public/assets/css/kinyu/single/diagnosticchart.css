@@ -305,7 +305,7 @@
 }
 .diagnosticchart-answer-catchcopy {
     text-align: center;
-	margin: 0 0 10px;
+	margin: 20px 0 10px;
 }
 .diagnosticchart-answer-charactor {
     text-align: center;
@@ -330,7 +330,7 @@
 }
 .diagnosticchart-answer-description {
     text-align: center;
-    padding: 15px;
+    padding: 15px 15px 0;
     width: 80%;
 	font-size: 13px;
 	line-height: 1.6;
@@ -445,6 +445,40 @@
 
 .diagnosticchart-answer-to-link-typepage:hover {
 	opacity: .8;
+}
+
+.diagnosticchart-answer-hash-tags {
+    font-size: 12px;
+	margin: 40px 0;
+	text-align: center;
+}
+.diagnosticchart-answer-hash-tags span {
+    padding: 0 5px;
+}
+.diagnosticchart-answer-container.type-A .diagnosticchart-answer-hash-tags {
+    color: #90c57f;
+}
+.diagnosticchart-answer-container.type-B .diagnosticchart-answer-hash-tags {
+    color: #dda2c0;
+}
+.diagnosticchart-answer-container.type-C .diagnosticchart-answer-hash-tags {
+    color: #95c8ce;
+}
+.diagnosticchart-answer-container.type-D .diagnosticchart-answer-hash-tags {
+    color: #eab692;
+}
+
+.diagnosticchart-answer-action-list-title {
+	font-size: 15px;
+	text-align: center;
+	margin: 0 0 10px;
+}
+.diagnosticchart-answer-action-list {
+    width: 100%;
+    max-width: 600px;
+    margin: 15px auto 50px;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
 
@@ -616,6 +650,29 @@
     .check-detail-share-el .share-this-page {
         width: 35%;
     }
+	.diagnosticchart-answer-action-list-title {
+    	 font-size: 12px;
+   		 font-weight: 400;
+	}
+	.diagnosticchart-answer-catchcopy {
+		font-size: 12px;
+   	    font-weight: 400;
+	}
+	.diagnosticchart-answer-action-list {
+		width: 80%;
+		max-width: 600px;
+		margin: 10px auto 50px;
+		font-size: 12px;
+   		line-height: 1.6;
+	}
+	.diagnosticchart-answer-description {
+		text-align: left;
+		width: 80%;
+		font-size: 12px;
+		line-height: 1.6;
+		padding: 0;
+		margin: 20px auto;
+	}
 }
 
 	/* タブレット */
@@ -633,6 +690,9 @@
 	}
 	.check-detail-share-el .share-this-title {
 	  width: 80%;
+	}
+	.diagnosticchart-answer-description {
+    	text-align: center;
 	}
 }
 	
@@ -704,13 +764,13 @@
 	margin: 0 auto;
 	
 }
-.type-wrapper li {
+.type-wrapper>li {
 	padding: 36px;
 	margin-bottom: 16px;
 }
 .type-wrapper .img-wrapper {
 	display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 
 }
 .type-wrapper .img-wrapper img {
@@ -726,6 +786,11 @@
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: 30px;
+}
+.type-catchcopy {
+    font-size: 16px;
+    margin: 10px 0;
+	line-height: 26px;
 }
 .type-description {
 	margin-top: 12px;
@@ -745,6 +810,38 @@
 .type-wrapper .img-wrapper .typeA {
 	background-color: #f7fdf5;
 }
+
+.type-description-tag {
+    font-size: 12px;
+	margin: 40px 0;
+}
+
+.type-description-tag span {
+    padding: 0 5px;
+}
+.A .type-description-tag {
+    color: #90c57f;
+}
+.B .type-description-tag {
+    color: #dda2c0;
+}
+.C .type-description-tag {
+    color: #95c8ce;
+}
+.D .type-description-tag {
+    color: #eab692;
+}
+
+.action-list {
+	line-height: 20px;
+}
+.action-list-ttl {
+	font-size: 15px;
+	margin: 0 0 10px;
+}
+
+
+
 .type-wrapper .img-wrapper .typeB {
     background-color: #fffafc;
 }
@@ -842,28 +939,52 @@
 .diagnosticchart-intro-image .kinjo-check-img {
 	width: 100%;
 }
+.type-wrapper .text-wrapper img {
+	width: 100%;
+	margin: 0 auto;
+}
+.diagnosticchart-type-intro-image {
+	width: 100%;
+}
+.diagnosticchart-type-intro-image .kinjo-check-texticon {
+	width: 80%;
+}
+.type-description {
+	font-size: 11px;
+	text-align: left;
+}
+.type-description-tag {
+	font-size: 10px;
+}
+.type-catchcopy {
+	font-weight: 400;
+	font-size: 12px;
+}
+.action-list-ttl {
+	font-size: 12px;
+	font-weight: 400;
+}
+.action-list {
+	font-size: 11px;
+	text-align: left;
+}
 }
 
-@media screen and (max-width: 1024px) {
-	.type-wrapper .text-wrapper img {
-		width: 100%;
-		margin: 0 auto;
-	}
-	.diagnosticchart-type-intro-image {
-    	width: 100%;
-	}
-	.diagnosticchart-type-intro-image .kinjo-check-texticon {
-		width: 80%;
-	}
-}
 
 /* タブレット */
 @media screen and (max-width: 1025px) and (min-width: 480px) {
+	.type-wrapper li {
+		padding: 40px;
+	}
 	.diagnosticchart-type-intro-image {
     	width: 70%;
 	}
 	.diagnosticchart-type-intro-image .kinjo-check-texticon {
 		width: 60%;
+	}
+	.type-description {
+		font-size: 11px;
+		text-align: center;
 	}
 }
 

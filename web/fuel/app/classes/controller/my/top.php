@@ -2,6 +2,8 @@
 
 use \Model\Applications;
 use \Model\DiagnosticChartTypeUsers;
+use \Model\DiagnosticChartRouteTypeHashTags;
+use \Model\DiagnosticChartRouteTypeActionLists;
 
 class Controller_My_Top extends Controller_Mybase
 {
@@ -18,8 +20,11 @@ class Controller_My_Top extends Controller_Mybase
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
+        $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
         $this->template->kinjo_check = View::forge('my/common/kinjo_check.smarty', array(
-            'user_type' => DiagnosticChartTypeUsers::get_last_user_type($username)
+            'user_type' => $user_type,
+            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
+            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
         ));
 
     }
