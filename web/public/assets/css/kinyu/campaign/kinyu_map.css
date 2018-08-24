@@ -293,9 +293,6 @@
   background: #f57d80;
 }
 
-
-
-
 /* ----------------------------------
     スマートフォン＆タブレット
 ---------------------------------- */
@@ -329,7 +326,7 @@
 .sub-map-description {
   text-align: center;
   margin-top: 12px;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 20px;
   padding: 0px 20% 0px 20px;
   text-align: left;

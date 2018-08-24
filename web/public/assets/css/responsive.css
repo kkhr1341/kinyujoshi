@@ -3584,6 +3584,11 @@ footer {
         animation: example 0.5s ease 0.9s 1 forwards;
     }
 
+    .item:nth-child(7) {
+        -webkit-animation: example 0.5s ease 1.0s 1 forwards;
+        animation: example 0.5s ease 0.9s 1 forwards;
+    }
+
     @-webkit-keyframes example {
         100% {
             opacity: 1;

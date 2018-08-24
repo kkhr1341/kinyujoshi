@@ -6,15 +6,16 @@ $(function() {
   var toolheight04 = $(".kinyu-main-menu li:nth-child(4n) .tool-chip").innerHeight();
   var toolheight05 = $(".kinyu-main-menu li:nth-child(5n) .tool-chip").innerHeight();
   var toolheight06 = $(".kinyu-main-menu li:nth-child(6n) .tool-chip").innerHeight();
+  var toolheight07 = $(".kinyu-main-menu li:nth-child(7n) .tool-chip").innerHeight();
 
   // メニュー部分のコンテンツ
   var menucontentheight01 = $(".navi_kinyu-menu-li01 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(1n) p").innerHeight();
-  var menucontentheight02 = $(".navi_kinyu-menu-li01 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(2n) p").innerHeight();
-  var menucontentheight03 = $(".navi_kinyu-menu-li01 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(3n) p").innerHeight();
-  var menucontentheight04 = $(".navi_kinyu-menu-li01 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(4n) p").innerHeight();
-  var menucontentheight05 = $(".navi_kinyu-menu-li02 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(1n) p").innerHeight();
-  var menucontentheight06 = $(".navi_kinyu-menu-li02 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(2n) p").innerHeight();
-  var menucontentheight07 = $(".navi_kinyu-menu-li02 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(3n) p").innerHeight();
+  var menucontentheight02 = $(".navi_kinyu-menu-li02 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(2n) p").innerHeight();
+  var menucontentheight03 = $(".navi_kinyu-menu-li03 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(3n) p").innerHeight();
+  var menucontentheight04 = $(".navi_kinyu-menu-li04 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(4n) p").innerHeight();
+  var menucontentheight05 = $(".navi_kinyu-menu-li05 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(5n) p").innerHeight();
+  var menucontentheight06 = $(".navi_kinyu-menu-li06 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(6n) p").innerHeight();
+  var menucontentheight07 = $(".navi_kinyu-menu-li07 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(7n) p").innerHeight();
 
   // css
   $(".kinyu-main-menu li:nth-child(1n) .tool-chip").css('margin-top',-toolheight01 / 2);
@@ -23,6 +24,7 @@ $(function() {
   $(".kinyu-main-menu li:nth-child(4n) .tool-chip").css('margin-top',-toolheight04 / 2);
   $(".kinyu-main-menu li:nth-child(5n) .tool-chip").css('margin-top',-toolheight05 / 2);
   $(".kinyu-main-menu li:nth-child(6n) .tool-chip").css('margin-top',-toolheight06 / 2);
+  $(".kinyu-main-menu li:nth-child(7n) .tool-chip").css('margin-top',-toolheight07 / 2);
 
   $(".navi_kinyu-menu-li01 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(1n) p").css('margin-top',-menucontentheight01 / 2);
   $(".navi_kinyu-menu-li01 .navi_kinyu-menu-block .navi_kinyu-menu-block-el:nth-child(2n) p").css('margin-top',-menucontentheight02 / 2);
