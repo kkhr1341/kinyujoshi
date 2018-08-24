@@ -842,11 +842,33 @@
 .diagnosticchart-intro-image .kinjo-check-img {
 	width: 100%;
 }
-	
-.diagnosticchart-type-intro-image {
-    width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+	.type-wrapper .text-wrapper img {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.diagnosticchart-type-intro-image {
+    	width: 100%;
+	}
+	.diagnosticchart-type-intro-image .kinjo-check-texticon {
+		width: 80%;
+	}
 }
+
+/* タブレット */
+@media screen and (max-width: 1025px) and (min-width: 480px) {
+	.diagnosticchart-type-intro-image {
+    	width: 70%;
+	}
+	.diagnosticchart-type-intro-image .kinjo-check-texticon {
+		width: 60%;
+	}
+}
+
+
+
+
 
 	
