@@ -252,6 +252,7 @@ $(function(){
 
     // 回答
     function answer(route_id, number) {
+
         // スクロールトップへ
         $(window).scrollTop(0);
 
@@ -270,11 +271,14 @@ $(function(){
             var no_route_code = response.data.no_route_code || '';
 
             $questionNumber.text('Step' + number);
-            $questionText.html(question.replace(/\\n/g, '<br>'));
+            $questionText.html(question.replace(/\r|\n/g, '<br />'));
 
             routes.push(current_route_code);
 
             $yesButton.off('click').on('click', function() {
+                // 回答ボタン無効（連続タップを禁止）
+                $yesButton.prop('disabled', true);
+                $noButton.prop('disabled', true);
                 if(yes_type_code) {
                     // complete
                     answerLoading(yes_type_code);
@@ -284,6 +288,9 @@ $(function(){
                 }
             });
             $noButton.off('click').on('click', function() {
+                // 回答ボタン無効（連続タップを禁止）
+                $yesButton.prop('disabled', true);
+                $noButton.prop('disabled', true);
                 if(no_type_code) {
                     // complete
                     answerLoading(no_type_code);
@@ -293,6 +300,10 @@ $(function(){
                 }
             });
             $questionText.fadeIn();
+
+            // 回答ボタン無効解除
+            $yesButton.prop('disabled', false);
+            $noButton.prop('disabled', false);
         });
     }
 
@@ -339,7 +350,7 @@ $(function(){
                 $answerCharactor.html($('<img>', {src:character_image}));
                 $answerType.html($('<img>', {src:type_image}));
                 $answerTitle.html(title);
-                $answerDescription.html(description.replace(/\\n/g, '<br>'));
+                $answerDescription.html(description.replace(/\r|\n/g, '<br />'));
 
                 $answerContainer.addClass('type-' + type);
 
