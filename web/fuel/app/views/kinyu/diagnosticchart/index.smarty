@@ -25,14 +25,19 @@
 				3〜7問の質問に答えて診断してみましょう♪</p>
 		</div>
         <div class="diagnosticchart-intro-start">
-            <button class="btn btn-primary ripple" data-is_diagnosed="{$is_diagnosed}">診断スタート♪<span class="ripple__effect is-white"></span></button>
+            <button
+                class="btn btn-primary ripple"
+                data-is_diagnosed="{$is_diagnosed}"
+                data-authenticated="{$authenticated}"
+            >
+                診断スタート♪
+                <span class="ripple__effect is-white"></span>
+            </button>
 
-            {if $is_diagnosed == true}
-                <div class="reset-timer" data-reset_time="{$reset_time}">
-                  <span class="reset-timer-text">のこり</span>
-                  <span class="reset-timer-time"></span>
-                </div>
-            {/if}
+            <div class="reset-timer" data-reset_time="{$reset_time}" style="display: none;">
+                <span class="reset-timer-text">のこり</span>
+                <span class="reset-timer-time"></span>
+            </div>
 
         </div>
 	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"></div>
@@ -124,8 +129,7 @@
   </div>
 </div>
 
-
-<div id="kinjo-check-modal" class="check-report-modal" style="display: block;">
+<div id="kinjo-check-modal" class="check-report-modal" style="display: none;">
   <div class="modal-dialog">
     <div class="modal-content">
       <!-- dialog body -->
@@ -141,15 +145,13 @@
   </div>
 </div>
 
-
 <script>
 $(function() {
 
-
-    //ログインしていない時に表示されるコンテンツん処理
+    //ログインしていない時に表示されるコンテンツ処理
 
     $("#kinjo-check-modal .close").click(function() {
-      $("#kinjo-check-modal").fadeOut(500);
+        $("#kinjo-check-modal").fadeOut(500);
     });
 
     var $clickable = $('.ripple');
@@ -195,165 +197,177 @@ $(function() {
 
 // 診断が有効化されるまでのカウントダウン処理
 function countDown($element, endDate, callback) {
-  var startDateTime = new Date();
-  var endDateTime = new Date(endDate);
-  var left = endDateTime - startDateTime;
+    var startDateTime = new Date();
+    var endDateTime = new Date(endDate);
+    var left = endDateTime - startDateTime;
 
-  if (left <= 0) {
-    $element.text('');
-    callback();
-    return;
-  }
+    if (left <= 0) {
+        $element.text('');
+        callback();
+        return;
+    }
 
-  var a_day = 24 * 60 * 60 * 1000;
+    var a_day = 24 * 60 * 60 * 1000;
 
-  var d = Math.floor(left / a_day) 
+    var d = Math.floor(left / a_day)
 
-  var h = Math.floor((left % a_day) / (60 * 60 * 1000)) 
+    var h = Math.floor((left % a_day) / (60 * 60 * 1000))
 
-  var m = Math.floor((left % a_day) / (60 * 1000)) % 60 
+    var m = Math.floor((left % a_day) / (60 * 1000)) % 60
 
-  var s = Math.floor((left % a_day) / 1000) % 60 % 60 
+    var s = Math.floor((left % a_day) / 1000) % 60 % 60
 
-  $element.find('.reset-timer-time').text(d + '日' + h + '時間' + m + '分' + s + '秒');
-  setTimeout(function() {
-    countDown($element, endDate, callback);
-  }, 1000);
+    $element.find('.reset-timer-time').text(d + '日' + h + '時間' + m + '分' + s + '秒');
+    setTimeout(function() {
+        countDown($element, endDate, callback);
+    }, 1000);
 }
 
 $(function(){
 
-  var $introContainer  = $('.diagnosticchart-intro-container');
-  var $questionContainer  = $('.diagnosticchart-question-container');
-  var $answerLoadingContainer  = $('.diagnosticchart-answer-loading-container');
-  var $answerContainer  = $('.diagnosticchart-answer-container');
+    var $introContainer  = $('.diagnosticchart-intro-container');
+    var $questionContainer  = $('.diagnosticchart-question-container');
+    var $answerLoadingContainer  = $('.diagnosticchart-answer-loading-container');
+    var $answerContainer  = $('.diagnosticchart-answer-container');
 
-  var $startButton  = $introContainer.find('button');
+    var $startButton  = $introContainer.find('button');
 
-  var $questionNumber  = $('.diagnosticchart-question-number');
-  var $questionText  = $('.diagnosticchart-question-text');
-  var $yesButton = $('.diagnosticchart-answer .btn-yes');
-  var $noButton  = $('.diagnosticchart-answer .btn-no');
+    var $questionNumber  = $('.diagnosticchart-question-number');
+    var $questionText  = $('.diagnosticchart-question-text');
+    var $yesButton = $('.diagnosticchart-answer .btn-yes');
+    var $noButton  = $('.diagnosticchart-answer .btn-no');
 
-  var $answerCatchcopy   = $('.diagnosticchart-answer-catchcopy');
-  var $answerCharactor   = $('.diagnosticchart-answer-charactor');
-  var $answerType        = $('.diagnosticchart-answer-type');
-  var $answerTitle       = $('.diagnosticchart-answer-title');
-  var $answerDescription = $('.diagnosticchart-answer-description');
+    var $answerCatchcopy   = $('.diagnosticchart-answer-catchcopy');
+    var $answerCharactor   = $('.diagnosticchart-answer-charactor');
+    var $answerType        = $('.diagnosticchart-answer-type');
+    var $answerTitle       = $('.diagnosticchart-answer-title');
+    var $answerDescription = $('.diagnosticchart-answer-description');
 
-  var routes = [];
+    var routes = [];
 
-  // 回答
-  function answer(route_id, number) {
-    var route_id = route_id || '';
-    var number = number || 1;
+    // 回答
+    function answer(route_id, number) {
+        // スクロールトップへ
+        $(window).scrollTop(0);
 
-    $questionText.fadeOut();
+        var route_id = route_id || '';
+        var number = number || 1;
 
-    $.getJSON('/api/diagnosticchart/route/' + route_id, function(response) {
-      var current_route_code = response.data.current_route_code;
-      var question = response.data.question;
+        $questionText.fadeOut();
 
-      var yes_type_code = response.data.yes_type_code || '';
-      var yes_route_code = response.data.yes_route_code || '';
-      var no_type_code = response.data.no_type_code || '';
-      var no_route_code = response.data.no_route_code || '';
+        $.getJSON('/api/diagnosticchart/route/' + route_id, function(response) {
+            var current_route_code = response.data.current_route_code;
+            var question = response.data.question;
 
-      $questionNumber.text('Step' + number);
-      $questionText.html(question.replace(/\\n/g, '<br>'));
+            var yes_type_code = response.data.yes_type_code || '';
+            var yes_route_code = response.data.yes_route_code || '';
+            var no_type_code = response.data.no_type_code || '';
+            var no_route_code = response.data.no_route_code || '';
 
-      routes.push(current_route_code);
+            $questionNumber.text('Step' + number);
+            $questionText.html(question.replace(/\\n/g, '<br>'));
 
-      $yesButton.off('click').on('click', function() {
-        if(yes_type_code) {
-          // complete
-          answerLoading(yes_type_code);
-        } else if(yes_route_code) {
-          // answer
-          answer(yes_route_code, ++number);
+            routes.push(current_route_code);
+
+            $yesButton.off('click').on('click', function() {
+                if(yes_type_code) {
+                    // complete
+                    answerLoading(yes_type_code);
+                } else if(yes_route_code) {
+                    // answer
+                    answer(yes_route_code, ++number);
+                }
+            });
+            $noButton.off('click').on('click', function() {
+                if(no_type_code) {
+                    // complete
+                    answerLoading(no_type_code);
+                } else if(no_route_code) {
+                    // answer
+                    answer(no_route_code, ++number);
+                }
+            });
+            $questionText.fadeIn();
+        });
+    }
+
+    // 完了画面表示
+    function answerLoading(type_code) {
+        // スクロールトップへ
+        $(window).scrollTop(0);
+        $questionContainer.fadeOut(1500, function() {
+  		  setTimeout(function() {
+  			  $answerLoadingContainer.fadeIn(1000, function() {
+  				  setTimeout(function() {
+  				  	completed(type_code);
+  				  }, 3000)
+  			  });
+  		   }, 500)
+  	  });
+    }
+
+    // 完了画面表示
+    function completed(type_code) {
+        // スクロールトップへ
+        $(window).scrollTop(0);
+        $answerLoadingContainer.fadeOut();
+
+        $.ajax({
+            type: "POST",
+            url: "/api/diagnosticchart/type/",
+            data: {
+                "type_code": type_code,
+                "routes": routes
+            },
+            success: function(response){
+
+                var value = JSON.parse(response);
+
+                var catch_copy = value.data.catch_copy || '';
+                var type_image = value.data.type_image || '';
+                var character_image = value.data.character_image || '';
+                var type = value.data.type || '';
+                var title = value.data.title || '';
+                var description = value.data.description || '';
+
+                $answerCatchcopy.html(catch_copy);
+                $answerCharactor.html($('<img>', {src:character_image}));
+                $answerType.html($('<img>', {src:type_image}));
+                $answerTitle.html(title);
+                $answerDescription.html(description.replace(/\\n/g, '<br>'));
+
+                $answerContainer.addClass('type-' + type);
+
+                $answerContainer.fadeIn(3000);
+            }
+        });
+    }
+
+    // START ボタン
+    $startButton.on('click', function() {
+        var authenticated = $(this).data('authenticated');
+        if (authenticated == 0) {
+            $("#kinjo-check-modal").fadeIn(100);
+        } else {
+            $introContainer.fadeOut();
+            $questionContainer.fadeIn();
+            answer();
         }
-      });
-      $noButton.off('click').on('click', function() {
-        if(no_type_code) {
-          // complete
-          answerLoading(no_type_code);
-        } else if(no_route_code) {
-          // answer
-          answer(no_route_code, ++number);
-        }
-       });
-       $questionText.fadeIn();
-    });
-  }
-
-  // 完了画面表示
-  function answerLoading(type_code) {
-      $questionContainer.fadeOut(1500, function() {
-		  setTimeout(function() {
-			  $answerLoadingContainer.fadeIn(1000, function() {
-				  setTimeout(function() {
-				  	completed(type_code);
-				  }, 3000)
-			  });
-		   }, 500)
-	  });
-  }
-	  
-  // 完了画面表示
-  function completed(type_code) {
-    $answerLoadingContainer.fadeOut();
-
-    $.ajax({
-      type: "POST",
-      url: "/api/diagnosticchart/type/",
-      data: {
-          "type_code": type_code,
-          "routes": routes
-      },
-      success: function(response){
-
-        var value = JSON.parse(response);
-
-        var catch_copy = value.data.catch_copy || '';
-        var type_image = value.data.type_image || '';
-        var character_image = value.data.character_image || '';
-        var type = value.data.type || '';
-        var title = value.data.title || '';
-        var description = value.data.description || '';
-
-        $answerCatchcopy.html(catch_copy);
-        $answerCharactor.html($('<img>', {src:character_image}));
-        $answerType.html($('<img>', {src:type_image}));
-        $answerTitle.html(title);
-        $answerDescription.html(description.replace(/\\n/g, '<br>'));
-
-        $answerContainer.addClass('type-' + type);
-
-        $answerContainer.fadeIn(3000);
-      }
-    });
-  }
-
-  // START ボタン
-  $startButton.on('click', function() {
-    $introContainer.fadeOut();
-    $questionContainer.fadeIn();
-    answer();
-  })
+    })
  
   // 診断の実行可否処理
   // 診断の実行ができる状態であれば「診断スタート」ボタンクリック可
   // 診断の実行ができない状態であれば「診断スタート」ボタンクリック不可・カウントダウン実行
-//  var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
-//  $startButton.prop('disabled', is_diagnosed);
-//  if (is_diagnosed == true) {
-//    $('.reset-timer').each(function() {
-//      var endDate = $(this).data('reset_time');
-//      countDown($(this), endDate, function() {
-//        $startButton.prop('disabled', false);
-//      });
-//    })
-//  }
+  var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
+  $startButton.prop('disabled', is_diagnosed);
+  if (is_diagnosed == true) {
+    $('.reset-timer').show().each(function() {
+      var endDate = $(this).data('reset_time');
+      countDown($(this), endDate, function() {
+        $startButton.prop('disabled', false);
+      });
+    })
+  }
 });
 {/literal}
 </script>
