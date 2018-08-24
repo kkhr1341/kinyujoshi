@@ -305,7 +305,9 @@
 }
 .diagnosticchart-answer-catchcopy {
     text-align: center;
-	margin: 20px 0 10px;
+	width: 80%;
+    line-height: 1.7;
+    margin: 20px auto 10px;
 }
 .diagnosticchart-answer-charactor {
     text-align: center;
@@ -470,17 +472,25 @@
     color: #eab692;
 }
 
+
 .diagnosticchart-answer-action-list-title {
 	font-size: 15px;
 	text-align: center;
 	margin: 0 0 10px;
 }
+
+.action-list-center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+
 .diagnosticchart-answer-action-list {
-    width: 100%;
-    max-width: 500px;
+	display: inline-block;
+	text-align: left;
     margin: 15px auto 50px;
     font-size: 13px;
-    line-height: 1.7;an
+    line-height: 1.7;
 }
 
 
@@ -661,11 +671,9 @@
    	    font-weight: 400;
 	}
 	.diagnosticchart-answer-action-list {
-		width: 80%;
-		max-width: 600px;
 		margin: 10px auto 50px;
 		font-size: 12px;
-   		line-height: 1.6;
+		line-height: 1.6;
 	}
 	.diagnosticchart-answer-description {
 		text-align: left;
@@ -674,6 +682,16 @@
 		line-height: 1.6;
 		padding: 0;
 		margin: 20px auto;
+	}
+	.type-description-tag {
+		font-size: 10px;
+	}
+	.diagnosticchart-answer-hash-tags {
+		font-size: 12px;
+		width: 80%;
+		margin: 40px auto;
+		line-height: 1.6;
+		text-align: center;
 	}
 }
 
@@ -767,7 +785,7 @@
 	
 }
 .type-wrapper>li {
-	padding: 36px;
+	padding: 45px 36px;
 	margin-bottom: 16px;
 }
 .type-wrapper .img-wrapper {
@@ -815,7 +833,7 @@
 
 .type-description-tag {
     font-size: 12px;
-	margin: 40px 0;
+	margin: 16px 0;
 }
 
 .type-description-tag span {
@@ -838,8 +856,8 @@
 	line-height: 20px;
 }
 .action-list-ttl {
-	font-size: 15px;
-	margin: 0 0 10px;
+	font-size: 14px;
+	margin: 0 0 4px;
 }
 
 
