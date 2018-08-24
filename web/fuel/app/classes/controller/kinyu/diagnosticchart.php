@@ -9,9 +9,9 @@ class Controller_Kinyu_Diagnosticchart extends Controller_Kinyubase
 {
     public function action_index()
     {
-        $this->template->title = '女子会ページ｜きんゆう女子。';
-        $this->template->description = "きんゆう女子。では、お金に関する様々な情報を学ぶことができるイベントを開催しています。みなさんでお金に関するあれこれをたくさんおしゃべりしましょう！";
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-jyoshikai.jpg';
+        $this->template->title = 'きん女。診断｜きんゆう女子。';
+        $this->template->description = "豊かに生きるための第一歩は「自分を知ること」が大切です。わたしはどんな女性になりたい？これから人生を送っていきたい？そして、わたしは実際にどんな人なのだろう...？そういった、自分自身のことを分かってくると、自分に本当に合ったお金の使い方や増やし方も見えてくるし、自信を持って、選ぶこともできます。自分がどのきん女。タイプなのか、3〜6問の質問に答えて診断してみましょう♪";
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/diagnosticchart/og-main.jpg';
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
