@@ -97,14 +97,14 @@
 	  
 	<!--▼診断結果ページ▼-->
     <div class="diagnosticchart-answer-container">
-        <div class="diagnosticchart-answer-catchcopy"></div>
         <div class="diagnosticchart-answer-charactor"></div>
 		<div class="diagnosticchart-answer-type"></div>
+		<div class="diagnosticchart-answer-catchcopy"></div>
         <div class="diagnosticchart-answer-description"></div>
         <div class="diagnosticchart-answer-hash-tags"></div>
+		<div class="diagnosticchart-answer-action-list-title"><span>＊</span>アクションリスト<span>＊</span></div>
         <div class="diagnosticchart-answer-action-list"></div>
 		<div class="diagnosticchart-answer-description-btn-wrapper">
-			金融？何のこと？\n自分が何がワカラナイか\nそれすらワカラナイ•••\n金融とか投資とか自分には関係ない？\nでもそろそろお金の整理からはじめたい！
 			<a href="/kinjo_type" class="diagnosticchart-answer-to-link-typepage">4つのタイプを見る</a>
 			<a href="/my" class="diagnosticchart-answer-to-link-mypage">マイページへ</a>
 		</div>

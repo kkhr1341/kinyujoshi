@@ -10,4 +10,15 @@ class DiagnosticChartTypes extends Base
     {
         return parent::getByCode('diagnostic_chart_types', $code);
     }
+
+    public static function getList()
+    {
+        $result = \DB::select('*')
+            ->from('diagnostic_chart_types')
+            ->execute();
+        if (empty($result)) {
+            return false;
+        }
+        return $result;
+    }
 }

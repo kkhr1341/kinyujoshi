@@ -6,98 +6,26 @@
 	  <div class="type-title"><img src="/images/diagnosticchart/4type_ttl.png"></div>
 		
 	  <ul class="type-wrapper">
-		  <li class="A">
-			  <div class="img-wrapper"><img src="/images/diagnosticchart/A.png" class="typeA"></div>
+	      {foreach from=$chart_types item=type}
+		  <li class="{$type['type']}">
+			  <div class="img-wrapper"><img src="{$type['character_image']}" class="type{$type['type']}"></div>
 			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/t_typeA.png" class="pc">
-				  <img src="/images/diagnosticchart/typeA.png" class="sp">
-				  <p class="type-catchcopy">人生100年って言われたけどどうすればいいの？</p>
-				  <p class="type-description">気づいたら何もワカラナイ・・・どうしよう（涙）<br>きんゆう？何のこと？お菓子？そもそも、何がワカラナイかそれすらワカラナイ・・・。<br>そもそもわたしってどういう人生を送っていきたいのかな？<br>金融とか投資とか自分には関係ない？でも、そろそろきちんとやらなきゃ？！</p>
-				  <p class="type-description-tag"><span>#ワカラナイ、でも大丈夫</span><span>#お金に向き合う宣言しよう</span><span>#ワカラナイまま生きるのは卒業</span><span>#お金を意識しよう</span></p>
+				  <img src="/images/diagnosticchart/t_type{$type['type']}.png" class="pc">
+				  <img src="{$type['type_image']}" class="sp">
+				  <p class="type-catchcopy">{$type['catch_copy']}</p>
+				  <p class="type-description">{$type['description']|nl2br}</p>
+				  <p class="type-description-tag">
+				  {foreach from=$type['hash_tags'] item=tag}
+                      <span>{$tag}</span>
+				  {/foreach}
+				  </p>
 				  <p class="action-list-ttl"><span>＊</span>アクションリスト<span>＊</span></p>
 				  <p class="action-list">
-					まだ若いけど、そろそろきちんとやらなきゃ！と漠然と思っているあなたに・・・<br>
-					3つのベビーステップ！<br><br>
-
-					１：お金について考えてみる！と誰かに宣言してみよう <br>
-					２：おしゃべり女子会にお友達とゆるりと参加してみよう<br>
-					３：きん女。のゲストやFPとお財布を整理整頓しよう♪ <br><br>
-
-					小さなアクションの積み重ねで、自分自身との信頼関係を作っていける！金融は信頼の積み重ね。
-					</p>
+					{$type['action_list']|nl2br}
+				  </p>
 			  </div>
 		  </li>
-		  
-		  <li class="B">
-			  <div class="img-wrapper"><img src="/images/diagnosticchart/B.png" class="typeB"></div>
-			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/t_typeB.png" class="pc">
-				  <img src="/images/diagnosticchart/typeB.png" class="sp">
-				  <p class="type-catchcopy">みんなのリアル、教えてほしい！</p>
-				  <p class="type-description">お金のこと大事ってわかったケド、何からはじめればいいのかな？みんなはどうしてるの？ <br>
-まだ、これからのこと迷っているからもう少し先でもいいかな。あれ、いつのまにか時間がたってる・・・。ふぅ。行動するのって大変だなぁ・・・。とりあえず、貯金は多少ある。
-</p>
-				  <p class="type-description-tag"><span>#意志はあるんです</span><span>#今できることをやろう</span><span>#みんなと一緒にチャレンジ</span><span>#迷うのもいいこと</span></p>
-				  <p class="action-list-ttl"><span>＊</span>アクションリスト<span>＊</span</p>
-				  <p class="action-list">
-					みんなのことがワカラナイと怖い！でも、前に進みたい。と思っているあなたに・・・<br>
-					3つのベビーステップ！<br><br>
-
-					１：みんなどうしているかレポートを読んでみよう<br>
-					２：finbeeやZaimをつかってお金のこと誰かとシェアしよう<br>
-					３：アクションする女子会でみんなと一緒に前に進もう<br><br>
-
-					みんなと一緒に始めてみたら、以外に自分一人でも進めることに気付いたりして♪
-					</p>
-			  </div>
-		  </li>
-		  
-		  <li class="C">
-			  <div class="img-wrapper"><img src="/images/diagnosticchart/C.png" class="typeC"></div>
-			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/t_typeC.png" class="pc">
-				  <img src="/images/diagnosticchart/typeC.png" class="sp">
-				  <p class="type-catchcopy">自分への投資が欠かせない！<br>『どうにかなるよね！！？（・・・なってない）』</p>
-				  <p class="type-description">実は、お金の管理、苦手。貯金あんまりないです・・・。もっとお金を作りたい！<br>
-欲しいものたくさんあるし、がんばって働いてはいるけど、ついつい使ってしまう。汗<br>
-あんまり考えてこなかったけど、このままで大丈夫かな？！ワタシ。
-</p>
-				  <p class="type-description-tag"><span>#仕事大好き</span><span>#新しいものも好き</span><span>#いろんなこと興味がある</span><span>#バイタリティがあるってこと</span></p>
-				  <p class="action-list-ttl"><span>＊</span>アクションリスト<span>＊</span></p>
-				  <p class="action-list">
-					どうにかなるなんて思ってたけどちゃんとお金の整理を始めなきゃ！と思っているあなたに・・・<br>
-					3つのステップ！<br><br>
-
-					１：ラクサスXで眠っているバックを運用。投資の練習してみよう！<br>
-					２：自動で貯金。「しらたま」や「マメタス」を使ってみよう<br>
-					３：貯まっているポイントでつみたて運用を始めてみる？<br><br>
-
-					お金の管理を始めてもっとたくさん欲しいものをゲットしちゃいましょう！
-					</p>
-			  </div>
-		  </li>
-		  
-		  <li class="D">
-			  <div class="img-wrapper"><img src="/images/diagnosticchart/D.png" class="typeD"></div>
-			  <div class="text-wrapper">
-				  <img src="/images/diagnosticchart/t_typeD.png" class="pc">
-				  <img src="/images/diagnosticchart/typeD.png" class="sp">
-				  <p class="type-catchcopy">人生もっと自由に楽しみたい！<br>『夢は大きく！私、もっともっと幸せになる！』</p>
-				  <p class="type-description">金融に強くなって自分にもっと自信をつけたい！もちろん、迷ったり失敗したりすることはあるけれど、人生の自分の軸は見えてきた。だから、仕事もプライベートも、もっとレベルUPさせたいな。<br>せっかくの1回の人生だから、思い切り楽しまなくちゃ♪</p>
-				  <p class="type-description-tag"><span>#もっと自由になりたい</span><span>#いつもワクワクしたい</span><span>#ある程度自信がついた</span><span>#磨きをかけよう</span></p>
-				  <p class="action-list-ttl"><span>＊</span>アクションリスト<span>＊</span></p>
-				  <p class="action-list">
-					もっとレベルアップさせたい！自分に磨きをかけて人生謳歌したいと思っているあなたに・・・<br>
-					3つのステップ！<br><br>
-
-					１：ニュースやアナリストの話に慣れるよう、きんゆう単語を学ぼう！<br>
-					２：OneTapBUYやトラノコで本当の投資にチャレンジ。<br>
-					３：現金派からキャッシュレス派に。カードやスマホ決済でミニマムライフ♪<br><br>
-
-					自分の金融の流れをコントロールして素敵なライフスタイルを目指そう！
-					</p>
-			  </div>
-		  </li>
+		  {/foreach}
 	  </ul>
 	  	
 	<div class="diagnosticchart-type-intro-image pc">
