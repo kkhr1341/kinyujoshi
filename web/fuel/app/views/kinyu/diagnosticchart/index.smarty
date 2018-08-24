@@ -256,7 +256,7 @@ $(function(){
         var route_id = route_id || '';
         var number = number || 1;
 
-        $questionText.fadeOut();
+        $questionText.hide();
 
         $.getJSON('/api/diagnosticchart/route/' + route_id, function(response) {
             var current_route_code = response.data.current_route_code;
