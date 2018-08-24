@@ -20,11 +20,14 @@ foreach ($seeds as $key => $seed) {
     \DB::insert('diagnostic_chart_routes')->set($seed)->execute();
 }
 
+//キャッチコピー
+//catch_copy → キャッチコピー
+//description → 説明文
 $seeds = array(
-    array('id' => '1', 'code' => 'RgKLhu', 'type' => 'A', 'character_name' => 'そろそろきちんとやらなきゃさん', 'catch_copy' => ' \ 人生100年時代に備えたい /', 'description' => "金融？何のこと？\n自分が何がワカラナイか\nそれすらワカラナイ•••\n金融とか投資とか自分には関係ない？\nでもそろそろお金の整理からはじめたい！", 'character_image' => '/images/diagnosticchart/A.png', 'type_image' => '/images/diagnosticchart/typeA.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '2', 'code' => 'pttyS2', 'type' => 'B', 'character_name' => '先延ばしなまよい子さん', 'catch_copy' => '\ みんなのリアルを教えて欲しい /', 'description' => "お金のコト大事ってわかったケド\n何したらいいかな・・・？\nみんなどうしてるの？\n怖いから迷って、いつのまにか\n時間が経ってる・・・", 'character_image' => '/images/diagnosticchart/B.png', 'type_image' => '/images/diagnosticchart/typeB.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '3', 'code' => 'pT8Xsz', 'type' => 'C', 'character_name' => 'ついついなんとかなる ? 子さん', 'catch_copy' => '\ 自分への投資が欠かせない /', 'description' => "貯金あんまりないです•••\nがんばって働いてはいるけど\nその分使ってる！汗\nあんまり心配してなかったけど\nこのままで大丈夫かな、ワタシ。", 'character_image' => '/images/diagnosticchart/C.png', 'type_image' => '/images/diagnosticchart/typeC.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '4', 'code' => 'GT7f0Q', 'type' => 'D', 'character_name' => 'わくわく冒険したい子さん', 'catch_copy' => '\ 人生もっと自由に楽しみたい！ /', 'description' => "金融に強くなって\n自分に自信をつけたい！\n仕事もプライベートも\nもっとレベル UP したい！", 'character_image' => '/images/diagnosticchart/D.png', 'type_image' => '/images/diagnosticchart/typeD.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '1', 'code' => 'RgKLhu', 'type' => 'A', 'character_name' => 'そろそろきちんとやらなきゃ！さん', 'catch_copy' => '人生100年って言われたけどどうすればいいの？', 'description' => "気づいたら何もワカラナイ・・・どうしよう（涙）きんゆう？何のこと？お菓子？そもそも、何がワカラナイかそれすらワカラナイ・・・。そもそもわたしってどういう人生を送っていきたいのかな？金融とか投資とか自分には関係ない？でも、そろそろきちんとやらなきゃ？！", 'character_image' => '/images/diagnosticchart/A.png', 'type_image' => '/images/diagnosticchart/typeA.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '2', 'code' => 'pttyS2', 'type' => 'B', 'character_name' => 'さきのばし…な、まよい子さん', 'catch_copy' => 'みんなのリアル、教えてほしい！', 'description' => "お金のこと大事ってわかったケド、何からはじめればいいのかな？みんなはどうしてるの？まだ、これからのこと迷っているからもう少し先でもいいかな。あれ、いつのまにか時間がたってる・・・。ふぅ。行動するのって大変だなぁ・・・。とりあえず、貯金は多少ある。", 'character_image' => '/images/diagnosticchart/B.png', 'type_image' => '/images/diagnosticchart/typeB.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '3', 'code' => 'pT8Xsz', 'type' => 'C', 'character_name' => 'ついついなんとかなる？子さん', 'catch_copy' => '自分への投資が欠かせない！『どうにかなるよね！！？（・・・なってない）』', 'description' => "実は、お金の管理、苦手。貯金あんまりないです・・・。もっとお金を作りたい！欲しいものたくさんあるし、がんばって働いてはいるけど、ついつい使ってしまう。汗あんまり考えてこなかったけど、このままで大丈夫かな？！ワタシ。", 'character_image' => '/images/diagnosticchart/C.png', 'type_image' => '/images/diagnosticchart/typeC.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '4', 'code' => 'GT7f0Q', 'type' => 'D', 'character_name' => 'わくわく冒険したい子さん', 'catch_copy' => '人生もっと自由に楽しみたい！『夢は大きく！私、もっともっと幸せになる！』', 'description' => "金融に強くなって自分にもっと自信をつけたい！もちろん、迷ったり失敗したりすることはあるけれど、人生の自分の軸は見えてきた。だから、仕事もプライベートも、もっとレベルUPさせたいな。せっかくの1回の人生だから、思い切り楽しまなくちゃ♪", 'character_image' => '/images/diagnosticchart/D.png', 'type_image' => '/images/diagnosticchart/typeD.png', 'created_at' => \DB::expr('now()')),
 );
 
 foreach ($seeds as $key => $seed) {
@@ -72,26 +75,49 @@ foreach ($seeds as $key => $seed) {
     \DB::insert('diagnostic_chart_route_paths')->set($seed)->execute();
 }
 
+//#タグ
 $seeds = array(
-    array('id' => '1',  'type_code' => 'RgKLhu', 'hash_tag' => "#aa", 'created_at' => \DB::expr('now()')),
-    array('id' => '2',  'type_code' => 'RgKLhu', 'hash_tag' => "#bb", 'created_at' => \DB::expr('now()')),
-    array('id' => '3',  'type_code' => 'RgKLhu', 'hash_tag' => "#cc", 'created_at' => \DB::expr('now()')),
-    array('id' => '4',  'type_code' => 'RgKLhu', 'hash_tag' => "#dd", 'created_at' => \DB::expr('now()')),
 
-    array('id' => '5',  'type_code' => 'pttyS2', 'hash_tag' => "#hh", 'created_at' => \DB::expr('now()')),
-    array('id' => '6',  'type_code' => 'pttyS2', 'hash_tag' => "#ah", 'created_at' => \DB::expr('now()')),
-    array('id' => '7',  'type_code' => 'pttyS2', 'hash_tag' => "#cc", 'created_at' => \DB::expr('now()')),
-    array('id' => '8',  'type_code' => 'pttyS2', 'hash_tag' => "#ha", 'created_at' => \DB::expr('now()')),
 
-    array('id' => '9',  'type_code' => 'pT8Xsz', 'hash_tag' => "#te", 'created_at' => \DB::expr('now()')),
-    array('id' => '10', 'type_code' => 'pT8Xsz', 'hash_tag' => "#te", 'created_at' => \DB::expr('now()')),
-    array('id' => '11', 'type_code' => 'pT8Xsz', 'hash_tag' => "#ae", 'created_at' => \DB::expr('now()')),
-    array('id' => '12', 'type_code' => 'pT8Xsz', 'hash_tag' => "#4t", 'created_at' => \DB::expr('now()')),
+    //A
+    #ワカラナイ、でも大丈夫
+    #お金に向き合う宣言しよう
+    #ワカラナイまま生きるのは卒業
+    #お金を意識しよう
+    array('id' => '1',  'type_code' => 'RgKLhu', 'hash_tag' => "#ワカラナイ、でも大丈夫", 'created_at' => \DB::expr('now()')),
+    array('id' => '2',  'type_code' => 'RgKLhu', 'hash_tag' => "#お金に向き合う宣言しよう", 'created_at' => \DB::expr('now()')),
+    array('id' => '3',  'type_code' => 'RgKLhu', 'hash_tag' => "#ワカラナイまま生きるのは卒業", 'created_at' => \DB::expr('now()')),
+    array('id' => '4',  'type_code' => 'RgKLhu', 'hash_tag' => "#お金を意識しよう", 'created_at' => \DB::expr('now()')),
 
-    array('id' => '13', 'type_code' => 'GT7f0Q', 'hash_tag' => "#ta", 'created_at' => \DB::expr('now()')),
-    array('id' => '14', 'type_code' => 'GT7f0Q', 'hash_tag' => "#t4", 'created_at' => \DB::expr('now()')),
-    array('id' => '15', 'type_code' => 'GT7f0Q', 'hash_tag' => "#h4", 'created_at' => \DB::expr('now()')),
-    array('id' => '16', 'type_code' => 'GT7f0Q', 'hash_tag' => "#h4", 'created_at' => \DB::expr('now()')),
+    //B
+    #意志はあるんです
+    #今できることをやろう
+    #みんなと一緒にチャレンジ
+    #迷うのもいいこと
+    array('id' => '5',  'type_code' => 'pttyS2', 'hash_tag' => "#意志はあるんです", 'created_at' => \DB::expr('now()')),
+    array('id' => '6',  'type_code' => 'pttyS2', 'hash_tag' => "#今できることをやろう", 'created_at' => \DB::expr('now()')),
+    array('id' => '7',  'type_code' => 'pttyS2', 'hash_tag' => "#みんなと一緒にチャレンジ", 'created_at' => \DB::expr('now()')),
+    array('id' => '8',  'type_code' => 'pttyS2', 'hash_tag' => "#迷うのもいいこと", 'created_at' => \DB::expr('now()')),
+
+    //C
+    #仕事大好き
+    #新しいものも好き
+    #いろんなこと興味がある
+    #バイタリティがあるってこと
+    array('id' => '9',  'type_code' => 'pT8Xsz', 'hash_tag' => "#仕事大好き", 'created_at' => \DB::expr('now()')),
+    array('id' => '10', 'type_code' => 'pT8Xsz', 'hash_tag' => "#新しいものも好き", 'created_at' => \DB::expr('now()')),
+    array('id' => '11', 'type_code' => 'pT8Xsz', 'hash_tag' => "#いろんなこと興味がある", 'created_at' => \DB::expr('now()')),
+    array('id' => '12', 'type_code' => 'pT8Xsz', 'hash_tag' => "#バイタリティがあるってこと", 'created_at' => \DB::expr('now()')),
+
+    //D
+    #もっと自由になりたい
+    #いつもワクワクしたい
+    #ある程度自信がついた
+    #磨きをかけよう
+    array('id' => '13', 'type_code' => 'GT7f0Q', 'hash_tag' => "#もっと自由になりたい", 'created_at' => \DB::expr('now()')),
+    array('id' => '14', 'type_code' => 'GT7f0Q', 'hash_tag' => "#いつもワクワクしたい", 'created_at' => \DB::expr('now()')),
+    array('id' => '15', 'type_code' => 'GT7f0Q', 'hash_tag' => "#ある程度自信がついた", 'created_at' => \DB::expr('now()')),
+    array('id' => '16', 'type_code' => 'GT7f0Q', 'hash_tag' => "#磨きをかけよう", 'created_at' => \DB::expr('now()')),
 );
 
 foreach ($seeds as $key => $seed) {
@@ -99,11 +125,19 @@ foreach ($seeds as $key => $seed) {
     \DB::insert('diagnostic_chart_type_hash_tags')->set($seed)->execute();
 }
 
+//アクション
 $seeds = array(
-    array('id' => '1', 'type_code' => 'RgKLhu', 'content' => "ああああ\nううううう\n\nななんああ", 'created_at' => \DB::expr('now()')),
-    array('id' => '2', 'type_code' => 'pttyS2', 'content' => "ああああ\nううううう\n\nななんああ", 'created_at' => \DB::expr('now()')),
-    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "ああああ\nううううう\n\nななんああ", 'created_at' => \DB::expr('now()')),
-    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "ああああ\nううううう\n\nななんああ", 'created_at' => \DB::expr('now()')),
+    //A
+    array('id' => '1', 'type_code' => 'RgKLhu', 'content' => "1.お金について考えてみる！と誰かに宣言してみよう\n2.おしゃべり女子会にお友達とゆるりと参加してみよう\n3.きん女。のゲストやFPとお財布を整理整頓しよう♪", 'created_at' => \DB::expr('now()')),
+    
+    //B
+    array('id' => '2', 'type_code' => 'pttyS2', 'content' => "1.みんなどうしているかレポートを読んでみよう\2.finbeeやZaimをつかってお金のこと誰かとシェアしよう\n3.アクションする女子会でみんなと一緒に前に進もう", 'created_at' => \DB::expr('now()')),
+    
+    //C
+    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "1.ラクサスXで眠っているバックを運用。投資の練習してみよう！\2.自動で貯金。「しらたま」や「マメタス」を使ってみよう\n3.貯まっているポイントでつみたて運用を始めてみる？", 'created_at' => \DB::expr('now()')),
+    
+    //D
+    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "1.ニュースやアナリストの話に慣れるよう、きんゆう単語を学ぼう！\2.OneTapBUYやトラノコで本当の投資にチャレンジ。\n3.現金派からキャッシュレス派に。カードやスマホ決済でミニマムライフ♪", 'created_at' => \DB::expr('now()')),
 );
 
 foreach ($seeds as $key => $seed) {
