@@ -704,13 +704,13 @@
 	margin: 0 auto;
 	
 }
-.type-wrapper li {
+.type-wrapper>li {
 	padding: 36px;
 	margin-bottom: 16px;
 }
 .type-wrapper .img-wrapper {
 	display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 
 }
 .type-wrapper .img-wrapper img {
@@ -726,6 +726,11 @@
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: 30px;
+}
+.type-catchcopy {
+    font-size: 16px;
+    margin: 10px 0;
+	line-height: 26px;
 }
 .type-description {
 	margin-top: 12px;
@@ -745,6 +750,36 @@
 .type-wrapper .img-wrapper .typeA {
 	background-color: #f7fdf5;
 }
+
+.type-description-tag {
+    font-size: 12px;
+	margin: 40px 0;
+}
+.type-description-tag span {
+    padding: 0 5px;
+}
+
+.action-list {
+	line-height: 20px;
+}
+.action-list-ttl {
+	font-size: 15px;
+	margin: 0 0 10px;
+}
+
+.A .type-description-tag {
+    color: #90c57f;
+}
+.B .type-description-tag {
+    color: #dda2c0;
+}
+.C .type-description-tag {
+    color: #95c8ce;
+}
+.D .type-description-tag {
+    color: #eab692;
+}
+
 .type-wrapper .img-wrapper .typeB {
     background-color: #fffafc;
 }
@@ -842,28 +877,52 @@
 .diagnosticchart-intro-image .kinjo-check-img {
 	width: 100%;
 }
+.type-wrapper .text-wrapper img {
+	width: 100%;
+	margin: 0 auto;
+}
+.diagnosticchart-type-intro-image {
+	width: 100%;
+}
+.diagnosticchart-type-intro-image .kinjo-check-texticon {
+	width: 80%;
+}
+.type-description {
+	font-size: 11px;
+	text-align: left;
+}
+.type-description-tag {
+	font-size: 10px;
+}
+.type-catchcopy {
+	font-weight: 400;
+	font-size: 12px;
+}
+.action-list-ttl {
+	font-size: 12px;
+	font-weight: 400;
+}
+.action-list {
+	font-size: 11px;
+	text-align: left;
+}
 }
 
-@media screen and (max-width: 1024px) {
-	.type-wrapper .text-wrapper img {
-		width: 100%;
-		margin: 0 auto;
-	}
-	.diagnosticchart-type-intro-image {
-    	width: 100%;
-	}
-	.diagnosticchart-type-intro-image .kinjo-check-texticon {
-		width: 80%;
-	}
-}
 
 /* タブレット */
 @media screen and (max-width: 1025px) and (min-width: 480px) {
+	.type-wrapper li {
+		padding: 40px;
+	}
 	.diagnosticchart-type-intro-image {
     	width: 70%;
 	}
 	.diagnosticchart-type-intro-image .kinjo-check-texticon {
 		width: 60%;
+	}
+	.type-description {
+		font-size: 11px;
+		text-align: center;
 	}
 }
 
