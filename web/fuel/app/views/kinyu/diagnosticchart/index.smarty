@@ -24,6 +24,7 @@
 				自分がどのきん女。タイプなのか、<br>
 				3〜7問の質問に答えて診断してみましょう♪</p>
 		</div>
+
         <div class="diagnosticchart-intro-start">
             <button
                 class="btn btn-primary ripple"
@@ -34,12 +35,15 @@
                 <span class="ripple__effect is-white"></span>
             </button>
 
-            <div class="reset-timer" data-reset_time="{$reset_time}" style="display: none;">
-                <span class="reset-timer-text">のこり</span>
-                <span class="reset-timer-time"></span>
-            </div>
-
         </div>
+
+        <div class="time-count-block">
+            <div class="reset-timer" data-reset_time="{$reset_time}" style="display: none;">
+                <p>きん女。診断は1ヶ月に1回できます♪</p>
+                <p><span class="reset-timer-text">あと</span><span class="reset-timer-time"></span></p>
+            </div>
+        </div>
+        
 	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"></div>
             <a href="/kinjo_type" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</a>
 		
@@ -217,7 +221,8 @@ function countDown($element, endDate, callback) {
 
     var s = Math.floor((left % a_day) / 1000) % 60 % 60
 
-    $element.find('.reset-timer-time').text(d + '日' + h + '時間' + m + '分' + s + '秒');
+    //$element.find('.reset-timer-time').text(d + '日' + h + '時間' + m + '分' + s + '秒');
+    $element.find('.reset-timer-time').text(d + 'days');
     setTimeout(function() {
         countDown($element, endDate, callback);
     }, 1000);
