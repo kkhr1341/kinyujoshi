@@ -87,46 +87,8 @@
 			</div>
 
 			<div class="kinyu-start-content-block">
-				<div class="kinyu-start-content-inner">
-					<h3 class="main-title">「きん女。ストーリー」</h3>
-					<div class="about-kinyu-header-contetns-list">
-
-		        <div class="about-kinyu-header-contetns-list-el">
-		          <a class="clear" href="/about_main">
-		            <div class="img-box" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
-		            <div class="title-box">
-		              <div class="title-box-inner">
-		                <p><img class="pc" src="/images/about/title_about.png"><img class="sp" src="/images/about/sp_title_about.png"></p>
-		              </div>
-		            </div>
-		          </a>
-		        </div>
-
-		        <div class="about-kinyu-header-contetns-list-el">
-		          <a class="clear" href="/about_story">
-		            <div class="img-box" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
-		            <div class="title-box">
-		              <div class="title-box-inner">
-		                <p><img class="pc" src="/images/about/title_story.png"><img class="sp" src="/images/about/sp_title_story.png"></p>
-		              </div>
-		            </div>
-		          </a>
-		        </div>
-
-		        <div class="about-kinyu-header-contetns-list-el">
-		          <a class="clear" href="/about_design">
-		            <div class="img-box" style="background:url(/images/about/about-design.jpg) top center / cover no-repeat;"></div>
-		            <div class="title-box">
-		              <div class="title-box-inner">
-		                <p><img class="pc" src="/images/about/title_design.png"><img class="sp" src="/images/about/sp_title_design.png"></p>
-		              </div>
-		            </div>
-		          </a>
-		        </div>
-
-
-		      </div>
-				</div>
+				<h3 class="main-title">「きん女。ストーリー」</h3>
+				{$about_contents_after}
 			</div>
 
 		</div>

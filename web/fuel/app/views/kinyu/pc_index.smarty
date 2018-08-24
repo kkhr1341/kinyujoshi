@@ -273,6 +273,12 @@
       <div class="kinyu-top-maincontent-block-el">     
         <div class="kinyu-top-banner-area">
           <ul class="clear">
+            <!-- きん女。診断 -->
+            <li>
+              <a target="_blank" href="/kinjo_check">
+                <img class="" src="/images/diagnosticchart/og-main.jpg">
+              </a>
+            </li>
             <!-- きんゆう散歩 -->
             <li>
               <a target="_blank" href="/kinyu_sanpo">

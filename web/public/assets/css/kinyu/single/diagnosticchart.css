@@ -196,6 +196,29 @@
     font-size: 13px;
     line-height: 24px;
 }
+
+/* カウントダウン */
+.kinjo_check .time-count-block {
+	text-align: center;
+	margin: 0 auto;
+}
+.kinjo_check .time-count-block .reset-timer {
+	display: inline-block;
+	border-left: 1px solid #f5aaaa; 
+	border-right: 1px solid #f5aaaa; 
+	padding: 4px 24px;
+	margin-top: 16px;
+}
+.kinjo_check .time-count-block .reset-timer p {
+	font-size: 12px;
+    line-height: 20px;
+}
+.kinjo_check .time-count-block .reset-timer p .reset-timer-time {
+	font-weight: bold;
+	color: #de8282;
+}
+
+
 .diagnosticchart-intro-start {
     text-align: center;
 }
@@ -478,7 +501,7 @@
 		font-size: 12px;
 		max-width: 100%;
 		padding: 14px;
-		width: 70%;
+		width: 75%;
 	}
 	.diagnosticchart-question {
 		padding: 40px 15px;
@@ -514,6 +537,17 @@
 	.diagnosticchart-intro-text {
 		margin: 40px auto 24px;
 	}
+
+	/* カウントダウン */
+	.kinjo_check .time-count-block .reset-timer {
+		padding: 2px 20px;
+		margin-top: 12px;
+	}
+	.kinjo_check .time-count-block .reset-timer p {
+		font-size: 10px;
+	    line-height: 16px;
+	}
+
 	.diagnosticchart-answer-to-link-top-typepage {
 		width: 70%;
 		line-height: 1;
@@ -798,8 +832,8 @@
 }
 .diagnosticchart-intro-image {
 	width: 100%;
-	margin-top: 50px;
-	padding-bottom: 60px;
+	margin-top: 0px;
+	padding-bottom: 0px;
 }
 .diagnosticchart-intro-image .kinjo-check-texticon {
 	width: 75%;
@@ -807,6 +841,10 @@
 }
 .diagnosticchart-intro-image .kinjo-check-img {
 	width: 100%;
+}
+	
+.diagnosticchart-type-intro-image {
+    width: 100%;
 }
 
 }

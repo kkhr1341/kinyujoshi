@@ -4703,8 +4703,10 @@ footer {
     }
 
     .check-report-modal .main-description {
-        font-size: 12px;
+        font-size: 11px;
         line-height: 20px;
+        padding: 0px 0px;
+        width: 92%;
     }
 
     .check-report-modal .main-description a {
@@ -4853,6 +4855,14 @@ footer {
     }
 
     .about-kinyu-el-inner {
+        width: 65%;
+        height: 103px;
+    }
+    .about-kinyu-el-block1 .about-kinyu-el-inner {
+        width: 65%;
+        height: 103px;
+    }
+    .about-kinyu-el-block2 .about-kinyu-el-inner {
         width: 65%;
         height: 103px;
     }
