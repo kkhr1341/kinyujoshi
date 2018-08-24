@@ -26,8 +26,8 @@
   margin: 0 auto;
   text-align: center;
   font-size: 11px;
-  padding-bottom: 32px;
-  margin-bottom: 32px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
   border-bottom: 1px solid #ececec;
 }
 .mykinjo-block .request-block .request-title {
@@ -221,7 +221,6 @@
 
 .admin-normal-joshikai {
   padding-top: 32px;
-  border-top: 1px solid #dedede;
 }
 .joshikailist-main {
   padding-top: 0px;
@@ -528,9 +527,13 @@
 }
 
 .admin-normal-joshikai li .joshikai-no {
-  font-size: 10px;
+  font-size: 11px;
   padding: 16px 0px;
-  background: #f9f9f9;
+  background: #fff;
+}
+.admin-normal-check-joshikai .check-no {
+  font-size: 11px;
+  padding: 16px 0px;
 }
 .kinyu-top-member_joshikai ul {
   padding-top: 8px;

@@ -47,7 +47,7 @@
     <p>マイページ・メニュー</p>
     <ul>
       <li class="item navi_kinyu-menu-li01"><a href="/my">マイページ・トップ</a></li>
-      <li class="item navi_kinyu-menu-li02"><a href="/my/kinjo">myきん女。</a></li>
+      <li class="item navi_kinyu-menu-li02"><a href="/my/kinjo">参加予定の女子会</a></li>
       <li class="item navi_kinyu-menu-li03"><a href="/my/passport">きん女。パスポート</a></li>
       <li class="item navi_kinyu-menu-li04"><a href="/my/report">チェックしたレポート</a></li>
       <li class="item navi_kinyu-menu-li05"><a href="/my/profile">プロフィール編集</a></li>

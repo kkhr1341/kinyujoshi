@@ -996,10 +996,10 @@
   float: left;
   width: 31%;
   margin-right: 3.5%;
-  margin-bottom: 24px;
+  margin-bottom: 3.5%;
   transition: .5s;
 }
-.kinyu-top-banner-area li:last-child {
+.kinyu-top-banner-area li:nth-child(3n) {
   margin-right: 0%;
 }
 .kinyu-top-banner-area li a {
@@ -4541,6 +4541,18 @@ input::-webkit-input-placeholder {
   font-size: 12px;
   color: #77cbc0;
   transition: .5s;
+}
+.kinyu-start-content-block .about-contents-after-container {
+  width: 1050px;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+.kinyu-start-content-block h3 {
+  font-size: 22px;
+  line-height: 22px;
+  color: #77cbc0;
+  text-align: center;
+  margin-bottom: 24px;
 }
 /* きん女。ストーリー */
 .kinyu-start-content-contaner .about-kinyu-header-contetns-list-el .title-box-inner p {

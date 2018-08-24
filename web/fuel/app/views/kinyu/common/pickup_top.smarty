@@ -1,3 +1,10 @@
+<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20180815152624image.jpg) center center / cover no-repeat;">
+  <a href="https://kinyu-joshi.jp/joshikai/qniTUJ">
+    <div class="kinyu-top-introlist-title">
+        <h3 class="kinyu-top-list-title">初！きん女。@マルイファミリー海老名♪「きんゆう女子。」って何してるのを話す女子会</h3>
+    </div>
+  </a>
+</div>
 
 <!-- 女子会TOP表示 -->
 {if $display_top_event}
