@@ -9,7 +9,7 @@ class DiagnosticChartTypeUsers extends Base
     const EXPIRE = 30;
 
     // 最新のユーザー診断タイプ情報取得
-    public static function get_last_user_type($username)
+    public static function getLastUserType($username)
     {
         $user = \DB::select()
             ->from('diagnostic_chart_type_users')
