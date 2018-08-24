@@ -37,7 +37,7 @@
         </div>
 
         <div class="time-count-block">
-            <div class="reset-timer" data-reset_time="{$reset_time}" style="display: none;">
+            <div class="reset-timer" data-reset_time="{$reset_time}">
                 <p>きん女。診断は1ヶ月に1回できます♪</p>
                 <p><span class="reset-timer-text">あと</span><span class="reset-timer-time"></span></p>
             </div>
@@ -375,9 +375,10 @@ $(function(){
   // 診断の実行ができない状態であれば「診断スタート」ボタンクリック不可・カウントダウン実行
   var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
   $startButton.prop('disabled', is_diagnosed);
+  $('.time-count-block').hide();
   if (is_diagnosed == true) {
-    $('.reset-timer').show().each(function() {
-      var endDate = $(this).data('reset_time');
+    $('.time-count-block').show().each(function() {
+      var endDate = $(this).find('.reset-timer').data('reset_time');
       countDown($(this), endDate, function() {
         $startButton.prop('disabled', false);
       });
