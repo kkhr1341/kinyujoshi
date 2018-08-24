@@ -38,6 +38,8 @@ class Controller_Kinyubase extends Controller_Template
         $this->data['roles'] = $group->get_roles();
         $this->template->roles = $this->data['roles'];
 
+        $this->template->authenticated = Auth::check() ? 1 : 0;
+
         // ログイン後のリダイレクトURL
         if ($after_login_url = Input::get("after_login_url")) {
             \Session::set('after_login_url', $after_login_url);

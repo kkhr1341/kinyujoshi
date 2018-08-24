@@ -52,7 +52,7 @@ class DiagnosticChartTypeUsers extends Base
             ))
             ->execute();
 
-        $id = $result[1];
+        $id = $result[0];
 
         foreach ($routes as $route_code)
         {
