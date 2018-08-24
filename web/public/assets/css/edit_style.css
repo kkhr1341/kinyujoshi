@@ -39,7 +39,7 @@
   display: none;
 }
 .modal-backdrop {
-  z-index: 1005;
+  z-index: 1004;
 }
 
 /* 文字省略 */
