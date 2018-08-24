@@ -10,6 +10,7 @@ return array(
 	'maintenance'  => 'maintenance/top',
 
 	//◆メンバー登録/ログイン部分
+	'regist'   => 'login/regist',
 	'login_regist'   => 'login/regist',
 	'regist_email'   => 'login/regist_email',
 	'regist_sns'   => 'login/regist_sns',
@@ -87,10 +88,6 @@ return array(
 
     //退会完了ページ
     'withdrawal/complete' => 'kinyu/withdrawal/complete',
-
-	//会員登録
-	'regist' => 'kinyu/regist',
-	'regist/complete' => 'kinyu/regist/complete',
 
 	//きんゆうのワカラナイをリクエスト
 	'request' => 'kinyu/kuchikomi',
