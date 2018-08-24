@@ -8,6 +8,23 @@ class DiagnosticChartTypeUsers extends Base
 
     const EXPIRE = 30;
 
+    // 最新のユーザー診断タイプ情報取得
+    public static function get_last_user_type($username)
+    {
+        $user = \DB::select()
+            ->from('diagnostic_chart_type_users')
+            ->join('diagnostic_chart_types')
+            ->on('diagnostic_chart_types.code', '=', 'diagnostic_chart_type_users.type_code')
+            ->where('diagnostic_chart_type_users.username', '=', $username)
+            ->order_by('diagnostic_chart_type_users.created_at', 'desc')
+            ->limit(1);
+
+        if (!$row = $user->execute()->current()) {
+            return false;
+        }
+        return $row;
+    }
+
     // 最終診断日から30日以上経過している診断データがある場合にtrueを
     // それ以外の場合にfalseを返すメソッド
     public static function is_diagnosed($username)

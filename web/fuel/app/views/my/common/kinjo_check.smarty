@@ -4,19 +4,49 @@
 <div class="pc">
 
   <!-- 診断チャートをしている場合 -->
-  <div class="kinjo-check-block clear">
-    <div class="icon-box">
-      <img src="/images/diagnosticchart/A.png">
+  {if $user_type}
+    <div class="kinjo-check-block clear">
+      <div class="icon-box">
+        <img src="{$user_type['character_image']}">
+      </div>
+      <div class="text-box">
+        <p class="kinjo-check-title kinjo-check-title01">{$user_type['character_name']}</p>
+        <p class="kinjo-check-description">{$user_type['description']|nl2br}</p>
+        <a class="to-kinjo-type" href="/kinjo_type">他のタイプも見てみる</a>
+      </div>
     </div>
-    <div class="text-box">
-      <p class="kinjo-check-title kinjo-check-title01">テキストテキストテキスト</p>
-      <p class="kinjo-check-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <a class="to-kinjo-type" href="">他のタイプも見てみる</a>
+  {else}
+    <!-- 診断チャートをしていない場合 -->
+    <div class="">
+      <div class="after-regist-kinjo-check">
+        <img class="kinjo-check-sub" src="/images/kinjo-check.png">
+        <a href="/kinjo_check">
+          <img class="pc" src="/images/diagnosticchart/chart_main.jpg">
+          <img class="sp" src="/images/diagnosticchart/chart_main.jpg">
+        </a>
+      </div>
     </div>
-  </div>  
+  {/if}
+</div>
 
-  <!-- 診断チャートをしていない場合 -->
-  <div class="">
+<!--=================== 
+　　スマホ
+=====================-->
+<div class="sp">
+  {if $user_type}
+    <!-- 診断チャートをしている場合 -->
+    <div class="kinjo-check-block_sp clear">
+      <div class="open-area" id="kinjo_check_btn">
+        <img class="icon-img" src="{$user_type['character_image']}">
+        <p class="kinjo-check-title kinjo-check-title01">{$user_type['character_name']}</p>
+      </div>
+      <div class="text-box" id="kinjo_check_open_content">
+        <p class="kinjo-check-description">{$user_type['description']|nl2br}</p>
+        <a class="to-kinjo-type" href="/kinjo_type">他のタイプも見てみる</a>
+      </div>
+    </div>
+  {else}
+    <!-- 診断チャートをしていない場合 -->
     <div class="after-regist-kinjo-check">
       <img class="kinjo-check-sub" src="/images/kinjo-check.png">
       <a href="/kinjo_check">
@@ -24,35 +54,7 @@
         <img class="sp" src="/images/diagnosticchart/chart_main.jpg">
       </a>
     </div>
-  </div>
-</div>
-
-<!--=================== 
-　　スマホ
-=====================-->
-<div class="sp">
-
-  <!-- 診断チャートをしている場合 -->
-  <div class="kinjo-check-block_sp clear">
-    <div class="open-area" id="kinjo_check_btn">
-      <img class="icon-img" src="/images/diagnosticchart/A.png">
-      <p class="kinjo-check-title kinjo-check-title01">テキストテキストテキスト</p>
-    </div>
-    <div class="text-box" id="kinjo_check_open_content">
-      <p class="kinjo-check-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-      <a class="to-kinjo-type" href="">他のタイプも見てみる</a>
-    </div>
-  </div>
-
-  <!-- 診断チャートをしていない場合 -->
-  <div class="after-regist-kinjo-check">
-    <img class="kinjo-check-sub" src="/images/kinjo-check.png">
-    <a href="/kinjo_check">
-      <img class="pc" src="/images/diagnosticchart/chart_main.jpg">
-      <img class="sp" src="/images/diagnosticchart/chart_main.jpg">
-    </a>
-  </div>
-
+  {/if}
 </div>
 
 <script>
