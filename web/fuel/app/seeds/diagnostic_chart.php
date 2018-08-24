@@ -9,7 +9,7 @@ $seeds = array(
     array('id' => '6',  'code' => 'nUNq1B', 'question' => "ひとりでいるより\n女子会とかおともだちと\n会うのが楽しい！\nおしゃべりが好き。", 'created_at' => \DB::expr('now()')),
     array('id' => '7',  'code' => 'VgE5Mu', 'question' => "何かを始める時、友だち\nとかの後押しが無いと\n前に進めない！\nでも結構下調べする派。", 'created_at' => \DB::expr('now()')),
     array('id' => '8',  'code' => 'mTLaun', 'question' => "よく悩みがなさそう\n幸せそうだネ★と言われる•••\nそんなつもりじゃないケド•••", 'created_at' => \DB::expr('now()')),
-    array('id' => '9',  'code' => 'JkvoS5', 'question' => "ライブイベントを想定して\nある程度お金を貯めている！\n1～3 ヶ月分くらい", 'created_at' => \DB::expr('now()')),
+    array('id' => '9',  'code' => 'JkvoS5', 'question' => "ライフイベントを想定して\nある程度お金を貯めている！\n1～3 ヶ月分くらい", 'created_at' => \DB::expr('now()')),
     array('id' => '10', 'code' => 'JXBiGW', 'question' => "お財布がパンパン！\n美容・食事は結構お金を\nかけているかも。", 'created_at' => \DB::expr('now()')),
     array('id' => '11', 'code' => 'EuYdha', 'question' => "TVとか雑誌よりキュレーションメディア派。\nアンテナをはって新しく\nいろんな情報を得たい！", 'created_at' => \DB::expr('now()')),
     array('id' => '12', 'code' => '7nuMaT', 'question' => "人とは違う経験や\n旅行が好き！", 'created_at' => \DB::expr('now()')),
