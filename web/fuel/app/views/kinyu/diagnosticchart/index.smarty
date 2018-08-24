@@ -101,6 +101,8 @@
         <div class="diagnosticchart-answer-charactor"></div>
 		<div class="diagnosticchart-answer-type"></div>
         <div class="diagnosticchart-answer-description"></div>
+        <div class="diagnosticchart-answer-hash-tags"></div>
+        <div class="diagnosticchart-answer-action-list"></div>
 		<div class="diagnosticchart-answer-description-btn-wrapper">
 			金融？何のこと？\n自分が何がワカラナイか\nそれすらワカラナイ•••\n金融とか投資とか自分には関係ない？\nでもそろそろお金の整理からはじめたい！
 			<a href="/kinjo_type" class="diagnosticchart-answer-to-link-typepage">4つのタイプを見る</a>
@@ -243,12 +245,6 @@ $(function(){
     var $yesButton = $('.diagnosticchart-answer .btn-yes');
     var $noButton  = $('.diagnosticchart-answer .btn-no');
 
-    var $answerCatchcopy   = $('.diagnosticchart-answer-catchcopy');
-    var $answerCharactor   = $('.diagnosticchart-answer-charactor');
-    var $answerType        = $('.diagnosticchart-answer-type');
-    var $answerTitle       = $('.diagnosticchart-answer-title');
-    var $answerDescription = $('.diagnosticchart-answer-description');
-
     var routes = [];
 
     // 回答
@@ -325,6 +321,15 @@ $(function(){
 
     // 完了画面表示
     function completed(type_code) {
+
+        var $answerCatchcopy   = $('.diagnosticchart-answer-catchcopy');
+        var $answerCharactor   = $('.diagnosticchart-answer-charactor');
+        var $answerType        = $('.diagnosticchart-answer-type');
+        var $answerTitle       = $('.diagnosticchart-answer-title');
+        var $answerDescription = $('.diagnosticchart-answer-description');
+        var $answerHashTags    = $('.diagnosticchart-answer-hash-tags');
+        var $answerActionList  = $('.diagnosticchart-answer-action-list');
+
         // スクロールトップへ
         $(window).scrollTop(0);
         $answerLoadingContainer.fadeOut();
@@ -346,12 +351,18 @@ $(function(){
                 var type = value.data.type || '';
                 var title = value.data.title || '';
                 var description = value.data.description || '';
+                var action_list = value.data.action_list || '';
+                var hash_tags = value.data.hash_tags || [];
 
                 $answerCatchcopy.html(catch_copy);
                 $answerCharactor.html($('<img>', {src:character_image}));
                 $answerType.html($('<img>', {src:type_image}));
                 $answerTitle.html(title);
                 $answerDescription.html(description.replace(/\r|\n/g, '<br />'));
+                $answerHashTags.html(hash_tags.map(function(t) {
+                    return '<span>' + t + '</span>';
+                }))
+                $answerActionList.html(action_list.replace(/\r|\n/g, '<br />'));
 
                 $answerContainer.addClass('type-' + type);
 

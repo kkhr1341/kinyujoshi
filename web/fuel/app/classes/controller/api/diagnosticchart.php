@@ -11,6 +11,8 @@ use \Model\DiagnosticChartRoutes;
 use \Model\DiagnosticChartRouteTypes;
 use \Model\DiagnosticChartTypes;
 use \Model\DiagnosticChartTypeUsers;
+use \Model\DiagnosticChartRouteTypeHashTags;
+use \Model\DiagnosticChartRouteTypeActionLists;
 
 class Controller_Api_Diagnosticchart extends Controller_Apibase
 {
@@ -44,6 +46,8 @@ class Controller_Api_Diagnosticchart extends Controller_Apibase
                 'catch_copy' => $chart_type['catch_copy'],
                 'description' => $chart_type['description'],
                 'character_image' => $chart_type['character_image'],
+                'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode(\Input::post('type_code')),
+                'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode(\Input::post('type_code')),
             ));
         } catch (\Exception $e) {
             $db->rollback_transaction();

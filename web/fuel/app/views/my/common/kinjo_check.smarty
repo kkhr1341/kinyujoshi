@@ -12,6 +12,15 @@
       <div class="text-box">
         <p class="kinjo-check-title kinjo-check-title01">{$user_type['character_name']}</p>
         <p class="kinjo-check-description">{$user_type['description']|nl2br}</p>
+
+        <ul>
+        {foreach from=$hash_tags item=tag}
+            <li>{$tag}</li>
+        {/foreach}
+        </ul>
+
+        <p>{$action_list|nl2br}</p>
+
         <a class="to-kinjo-type" href="/kinjo_type">他のタイプも見てみる</a>
       </div>
     </div>
@@ -42,6 +51,15 @@
       </div>
       <div class="text-box" id="kinjo_check_open_content">
         <p class="kinjo-check-description">{$user_type['description']|nl2br}</p>
+
+        <ul>
+        {foreach from=$hash_tags item=tag}
+            <li>{$tag}</li>
+        {/foreach}
+        </ul>
+
+        <p>{$action_list|nl2br}</p>
+
         <a class="to-kinjo-type" href="/kinjo_type">他のタイプも見てみる</a>
       </div>
     </div>

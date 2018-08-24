@@ -72,6 +72,43 @@ foreach ($seeds as $key => $seed) {
     \DB::insert('diagnostic_chart_route_paths')->set($seed)->execute();
 }
 
+$seeds = array(
+    array('id' => '1',  'type_code' => 'RgKLhu', 'hash_tag' => "#aa", 'created_at' => \DB::expr('now()')),
+    array('id' => '2',  'type_code' => 'RgKLhu', 'hash_tag' => "#bb", 'created_at' => \DB::expr('now()')),
+    array('id' => '3',  'type_code' => 'RgKLhu', 'hash_tag' => "#cc", 'created_at' => \DB::expr('now()')),
+    array('id' => '4',  'type_code' => 'RgKLhu', 'hash_tag' => "#dd", 'created_at' => \DB::expr('now()')),
 
+    array('id' => '5',  'type_code' => 'pttyS2', 'hash_tag' => "#hh", 'created_at' => \DB::expr('now()')),
+    array('id' => '6',  'type_code' => 'pttyS2', 'hash_tag' => "#ah", 'created_at' => \DB::expr('now()')),
+    array('id' => '7',  'type_code' => 'pttyS2', 'hash_tag' => "#cc", 'created_at' => \DB::expr('now()')),
+    array('id' => '8',  'type_code' => 'pttyS2', 'hash_tag' => "#ha", 'created_at' => \DB::expr('now()')),
+
+    array('id' => '9',  'type_code' => 'pT8Xsz', 'hash_tag' => "#te", 'created_at' => \DB::expr('now()')),
+    array('id' => '10', 'type_code' => 'pT8Xsz', 'hash_tag' => "#te", 'created_at' => \DB::expr('now()')),
+    array('id' => '11', 'type_code' => 'pT8Xsz', 'hash_tag' => "#ae", 'created_at' => \DB::expr('now()')),
+    array('id' => '12', 'type_code' => 'pT8Xsz', 'hash_tag' => "#4t", 'created_at' => \DB::expr('now()')),
+
+    array('id' => '13', 'type_code' => 'GT7f0Q', 'hash_tag' => "#ta", 'created_at' => \DB::expr('now()')),
+    array('id' => '14', 'type_code' => 'GT7f0Q', 'hash_tag' => "#t4", 'created_at' => \DB::expr('now()')),
+    array('id' => '15', 'type_code' => 'GT7f0Q', 'hash_tag' => "#h4", 'created_at' => \DB::expr('now()')),
+    array('id' => '16', 'type_code' => 'GT7f0Q', 'hash_tag' => "#h4", 'created_at' => \DB::expr('now()')),
+);
+
+foreach ($seeds as $key => $seed) {
+    \DB::delete('diagnostic_chart_type_hash_tags')->where(array('id' => $seed['id']))->execute();
+    \DB::insert('diagnostic_chart_type_hash_tags')->set($seed)->execute();
+}
+
+$seeds = array(
+    array('id' => '1', 'type_code' => 'RgKLhu', 'content' => "ああああ\nううううう\n\nななんああ", 'created_at' => \DB::expr('now()')),
+    array('id' => '2', 'type_code' => 'pttyS2', 'content' => "ああああ\nううううう\n\nななんああ", 'created_at' => \DB::expr('now()')),
+    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "ああああ\nううううう\n\nななんああ", 'created_at' => \DB::expr('now()')),
+    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "ああああ\nううううう\n\nななんああ", 'created_at' => \DB::expr('now()')),
+);
+
+foreach ($seeds as $key => $seed) {
+    \DB::delete('diagnostic_chart_type_action_lists')->where(array('id' => $seed['id']))->execute();
+    \DB::insert('diagnostic_chart_type_action_lists')->set($seed)->execute();
+}
 
 
