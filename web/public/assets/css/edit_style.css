@@ -2175,11 +2175,6 @@
   padding-top: 0px;
   border-left: 4px solid #8ddcd1;
 }
-.joshikai-detail-el-info li.date .info-detail {
-}
-.joshikai-detail-el-info li.place .info-detail {
-  color: #5499d8;
-}
 .joshikai-detail-el-info li .info-title {
   font-size: 13px;
   line-height: 13px;
@@ -2192,6 +2187,7 @@
 }
 .joshikai-detail-el-info li .info-detail a {
   transition: .5s;
+  color: #5499d8;
 }
 .joshikai-detail-el-info .joinus-block {
   margin-left: 20px;
@@ -4329,7 +4325,7 @@ input::-webkit-input-placeholder {
 
 /* メンバーになると...？ */
 .about-member-block {
-  width: 650px;
+  width: 700px;
   margin: 0 auto;
   margin-top: 42px;
   padding: 36px 50px;
