@@ -3,10 +3,10 @@
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
-      <li><a href="/news">お知らせ</a></li>
-      <li><a href="/joshikai">女子会</a></li>
-      <li><a href="/report">レポート</a></li>
-      <li><a href="/kinyu_sanpo">きんゆう散歩</a></li>
+      <li><a href="javascript:void(0)" onClick="ga('send', 'event', 'pc-header-link', 'click', 'news', 1);">お知らせ</a></li>
+      <li><a href="/joshikai" onClick="ga('send', 'event', 'pc-header-link', 'click', 'joshikai', 1);">女子会</a></li>
+      <li><a href="/report" onClick="ga('send', 'event', 'pc-header-link', 'click', 'report', 1);">レポート</a></li>
+      <li><a href="/kinyu_sanpo" onClick="ga('send', 'event', 'pc-header-link', 'click', 'kinyu_sanpo', 1);">きんゆう散歩</a></li>
       <!-- <li class="header-hover01">
         <a href="/kinyu_sanpo">コレクション</a>
         <div class="header-hover-inner">
@@ -44,9 +44,9 @@
           </ul>
         </div>
       </li> -->
-      <li><a href="/myway">「わたし」を知る。</a></li>
-      <li><a href="/about">ストーリー</a></li>
-      <li><a href="/kinjo_check">きん女。診断<span style="color:red;">*</span></a></li>
+      <li><a href="/myway" onClick="ga('send', 'event', 'pc-header-link', 'click', 'myway', 1);">「わたし」を知る。</a></li>
+      <li><a href="/about" onClick="ga('send', 'event', 'pc-header-link', 'click', 'about', 1);">ストーリー</a></li>
+      <li><a href="/kinjo_check" onClick="ga('send', 'event', 'pc-header-link', 'click', 'kinjo_check', 1);">きん女。診断<span style="color:red;">*</span></a></li>
     </ul>
   </nav>
   {if in_array('user', $roles) || in_array('admin', $roles)}
@@ -70,16 +70,16 @@
   {else}
     <div class="header-login-area">
       <ul>
-        <li><a href="/login_regist">新規メンバー登録</a></li>
-        <li><a href="/login">ログイン</a></li>
+        <li><a href="/login_regist" onClick="ga('send', 'event', 'pc-header-link', 'click', 'login_regist', 1);">新規メンバー登録</a></li>
+        <li><a href="/login" onClick="ga('send', 'event', 'pc-header-link', 'click', 'login', 1);">ログイン</a></li>
       </ul>
     </div>
   {/if}
   <div class="kinyu-header-social-list">
     <ul>
-      <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img src="/images/social/instagram_icon.png"></a></li>
-      <li><a href="https://twitter.com/kinyu_joshi" target="_blank"><img src="/images/social/twitter_icon.png"></a></li>
-      <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank"><img src="/images/social/fb_icon.png"></a></li>
+      <li><a href="https://www.instagram.com/kinyu_joshi/" target="_blank" onClick="ga('send', 'event', 'pc-header-link', 'click', 'instagram', 1);"><img src="/images/social/instagram_icon.png"></a></li>
+      <li><a href="https://twitter.com/kinyu_joshi" target="_blank" onClick="ga('send', 'event', 'pc-header-link', 'click', 'twitter', 1);"><img src="/images/social/twitter_icon.png"></a></li>
+      <li><a href="https://www.facebook.com/kinyujyoshi/" target="_blank" onClick="ga('send', 'event', 'pc-header-link', 'click', 'facebook', 1);"><img src="/images/social/fb_icon.png"></a></li>
     </ul>
   </div>
 
@@ -87,7 +87,7 @@
   <div class="kinyu-top-search pc">
     <form action="/report/search" method="get">
       <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
-      <button>&#xf002; </button>
+      <button onClick="ga('send', 'event', 'pc-header-link', 'click', 'search', 1);">&#xf002; </button>
     </form>
   </div>
 

@@ -30,7 +30,7 @@
           <h2><img class="main-intro-img" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
           <div class="main-title-border"></div>
           <p class="main-intro-description">素直に生きよう。<br>小さなアクションの<br>つみかさねで、<br>信頼をつくる。</p>
-          <a class="main-intro-link" href="/about">きん女。ストーリー　〉</a>
+          <a class="main-intro-link" href="/about" onClick="ga('send', 'event', 'pc-top-link', 'click', 'about', 1);">きん女。ストーリー　〉</a>
         </div>
         
         <div class="kinyu-top-introlist-right">
@@ -38,7 +38,7 @@
           <!-- news -->
           <!-- <div class="kinyu-top-introlist-news clear">
             {foreach from=$news item=new name=foo}
-            <a href="/news/{$new.code}">
+            <a href="/news/{$new.code}" onClick="ga('send', 'event', 'pc-top-link', 'click', 'introlist-news-detail', 1);">
               <div class="title-area">
                 <p>NEWS</p>
               </div>
@@ -63,7 +63,7 @@
       <!-- news -->
       <div class="kinyu-top-introlist-news">
         {foreach from=$news item=new name=foo}
-        <a href="/news/{$new.code}" class="kinyu-top-introlist-news-link">
+        <a href="/news/{$new.code}" class="kinyu-top-introlist-news-link" onClick="ga('send', 'event', 'pc-top-link', 'click', 'introlist-news-detail', 1);">
           <div class="title-area">
             <p>お知らせ</p>
           </div>
@@ -74,7 +74,7 @@
         </a>
         {/foreach}
         <div class="sidebar-more-link">
-          <a href="/news">お知らせをもっと見る ></a>
+          <a href="/news" onClick="ga('send', 'event', 'pc-top-link', 'click', 'introlist-news-more-read', 1);">お知らせをもっと見る ></a>
         </div>
       </div>
 
@@ -96,7 +96,7 @@
         <div class="kinyu-top-banner-area kiinyu-top-mainarea-bottom">
           <ul>
             <li>
-              <a href="/start">
+              <a href="/start" onClick="ga('send', 'event', 'pc-top-link', 'click', 'banner-start', 1);">
                 <img class="" src="/images/banner/firsttime_pc.jpg">
               </a>
             </li>
@@ -120,7 +120,7 @@
             {if $smarty.foreach.loopname.index == 6}
             </ul>
               <div class="sidebar-more-link">
-                <a href="/joshikai">女子会をもっと見る ></a>
+                <a href="/joshikai" onClick="ga('send', 'event', 'pc-top-link', 'click', 'joshikai-more-read', 1);">女子会をもっと見る ></a>
               </div>
             {break}
             {/if}
@@ -130,9 +130,9 @@
 
             <li>
               {if empty($event.specific_link)}
-              <a href="/joshikai/{$event.code}">
+              <a href="/joshikai/{$event.code}" onClick="ga('send', 'event', 'pc-top-link', 'click', 'joshikai-detail', 1);">
               {else}
-              <a href="{$event.specific_link}" target="_blank">
+              <a href="{$event.specific_link}" target="_blank" onClick="ga('send', 'event', 'pc-top-link', 'click', 'joshikai-more-read', 1);">
               {/if}
                 <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
                 <div class="text-box">
@@ -181,7 +181,7 @@
               <div class="border-top"></div>
               <p class="main-title">同世代で「きんゆう」についてゆる〜くおしゃべりしませんか？</p>
               <p class="description">メンバーになると、特別女子会やミニツアーに参加できたり、新しいサービスをいち早く体験できたりします。私たち自ら情報を取りに行き、感想をシェアしながら自分の生きる道をみつけましょう。お金について語れるお友だちができるかも！</p>
-              <a class="link-to" href="/login_regist">メンバー登録はこちら</a>
+              <a class="link-to" href="/login_regist" onClick="ga('send', 'event', 'pc-top-link', 'click', 'login_regist', 1);">メンバー登録はこちら</a>
             </div>
           </div>
         </div>
@@ -198,7 +198,7 @@
             {if $smarty.foreach.loopname.index == 9}
             </ul>
               <div class="sidebar-more-link">
-                <a href="/report">レポートをもっと見る ></a>
+                <a href="/report" onClick="ga('send', 'event', 'pc-top-link', 'click', 'report-more-read', 1);">レポートをもっと見る ></a>
               </div>
             {break}
             {/if}
@@ -207,7 +207,7 @@
             {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
             <li>
-              <a href="/report/{$blog.code}">
+              <a href="/report/{$blog.code}" onClick="ga('send', 'event', 'pc-top-link', 'click', 'report-detail', 1);">
               <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
                 <!-- <div class="kinyu-top-list-kind">
                   {if $blog.kind == "女子会レポート"}
@@ -255,7 +255,7 @@
         <div class="insta-block">
         <div class="insta-block-inner">
           <h3 class="kinyu-main-title" style="text-align: center;">
-            <a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank">
+            <a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank" onClick="ga('send', 'event', 'pc-top-link', 'click', 'instagram-tag', 1);">
               - #きんゆう女子 -
             </a>
           </h3>
@@ -264,7 +264,7 @@
             <a class="insta-link" href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ</a>
           </div> -->
           <div class="sidebar-more-link">
-            <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ ></a>
+            <a href="https://www.instagram.com/kinyu_joshi/" target="_blank" onClick="ga('send', 'event', 'pc-top-link', 'click', 'instagram-page', 1);">Instagramページへ ></a>
           </div>
         </div>
         </div>
@@ -275,25 +275,25 @@
           <ul class="clear">
             <!-- きん女。診断 -->
             <li>
-              <a target="_blank" href="/kinjo_check">
+              <a target="_blank" href="/kinjo_check" onClick="ga('send', 'event', 'pc-top-link', 'click', 'kinjo_check', 1);">
                 <img class="" src="/images/diagnosticchart/og-main.jpg">
               </a>
             </li>
             <!-- きんゆう散歩 -->
             <li>
-              <a target="_blank" href="/kinyu_sanpo">
+              <a target="_blank" href="/kinyu_sanpo" onClick="ga('send', 'event', 'pc-top-link', 'click', 'kinyu_sanpo', 1);">
                 <img class="" src="/images/kinyu_map/og/og-main.jpg">
               </a>
             </li>
             <!-- わたしを知る -->
             <li>
-              <a target="_blank" href="/myway">
+              <a target="_blank" href="/myway" onClick="ga('send', 'event', 'pc-top-link', 'click', 'myway', 1);">
                 <img class="" src="/images/myway/og_myway.jpg">
               </a>
             </li>
             <!-- 朝日デジタル -->
             <li>
-              <a target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
+              <a target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html" onClick="ga('send', 'event', 'pc-top-link', 'click', 'asahi', 1);">
                 <img class="" src="/images/banner/asahi_&w_og.jpg">
               </a>
             </li>
