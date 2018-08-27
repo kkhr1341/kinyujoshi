@@ -3,7 +3,7 @@
   <h1 class="main-logo"><a href="/"><img src="/images/kinyu-logo-top.png" alt="きんゆう女子。"></a></h1>
   <nav>
     <ul class="kinyu-header-nav">
-      <li><a href="javascript:void(0)" onClick="ga('send', 'event', 'pc-header-link', 'click', 'news', 1);">お知らせ</a></li>
+      <li><a href="/news" onClick="ga('send', 'event', 'pc-header-link', 'click', 'news', 1);">お知らせ</a></li>
       <li><a href="/joshikai" onClick="ga('send', 'event', 'pc-header-link', 'click', 'joshikai', 1);">女子会</a></li>
       <li><a href="/report" onClick="ga('send', 'event', 'pc-header-link', 'click', 'report', 1);">レポート</a></li>
       <li><a href="/kinyu_sanpo" onClick="ga('send', 'event', 'pc-header-link', 'click', 'kinyu_sanpo', 1);">きんゆう散歩</a></li>
