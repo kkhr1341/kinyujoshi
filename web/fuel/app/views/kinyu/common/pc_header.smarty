@@ -86,7 +86,7 @@
   <!-- レポート検索 -->
   <div class="kinyu-top-search pc">
     <form action="/report/search" method="get">
-      <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+      <input type="text" name="search_text" class="search" placeholder="気になるレポートはこちら♪" autocomplete="off">
       <button onClick="ga('send', 'event', 'pc-header-link', 'click', 'search', 1);">&#xf002; </button>
     </form>
   </div>
