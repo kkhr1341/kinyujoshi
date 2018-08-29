@@ -42,12 +42,12 @@ class Blogstocks extends Base
 
     public static function lists()
     {
-        $username = \Auth::get('username');
+        $username = \Auth::get('username'); //追加
         return \DB::select(\DB::expr('blogs.*'))
             ->from('blogs')
             ->join('blog_stocks')
             ->on('blogs.code', '=', 'blog_stocks.blog_code')
-            ->where('blog_stocks.username', '=', $username)
+            ->where('blog_stocks.username', '=', $username) //追加
             ->where('blogs.status', '=', 1)
             ->where('blogs.disable', '=', 0)
             ->execute()
