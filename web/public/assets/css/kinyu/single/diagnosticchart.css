@@ -990,6 +990,10 @@
 }
 }
 
+.diagnosticchart-answer-to-link-top-typepage:hover {
+	cursor: pointer;
+}
+
 
 /* タブレット */
 @media screen and (max-width: 1025px) and (min-width: 480px) {

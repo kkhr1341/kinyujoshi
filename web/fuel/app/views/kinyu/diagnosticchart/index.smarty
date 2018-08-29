@@ -12,17 +12,19 @@
 		<div class="diagnosticchart-intro-text">
 			<p class="diagnosticchart-intro-text-title"><img src="/images/diagnosticchart/type_ttl.png"></p>
 			<p class="diagnosticchart-intro-text-description">
-				豊かに生きるための第一歩は「自分を知ること」が大切です。<br>
-				わたしはどんな女性になりたい？<br>
-				これから人生を送っていきたい？<br>
-				そして、わたしは実際にどんな人なのだろう...？<br><br>
+                豊かに生きるための第一歩は「自分を知ること」。<br>
+                わたしはどんな人になりたい？<br>
+                これから人生を送っていきたい？<br>
+                今のわたしはどんな人...？<br><br>
 
-				そういった、自分自身のことを分かってくると、<br>
-				自分に本当に合ったお金の使い方や増やし方も見えてくるし、<br>
-				自信を持って、選ぶこともできます。<br><br>
+                自分自身が見えてくると<br>
+                自分に合うお金の使い方や増やし方が見えてくる。<br><br>
 
-				自分がどのきん女。タイプなのか、<br>
-				3〜6問の質問に答えて診断してみましょう♪</p>
+                もっと自信を持って、選ぶことができる。<br><br>
+
+                3〜6問の質問に答えて、<br>
+                あなた自身のことを知るヒントにしましょう♪
+
 		</div>
 
         <div class="diagnosticchart-intro-start">
@@ -44,7 +46,12 @@
         </div>
         
 	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"></div>
-            <a href="/kinjo_type" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</a>
+    
+    {if in_array('user', $roles) || in_array('admin', $roles)}
+        <a href="/kinjo_type" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</a>
+    {else}
+        <p id="diagnosticchart-open" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</p>
+    {/if}
 		
 	<!--▼ソーシャルシェア▼-->
 		<div class="check-detail-share clear">
@@ -160,6 +167,10 @@ $(function() {
 
     $("#kinjo-check-modal .close").click(function() {
         $("#kinjo-check-modal").fadeOut(500);
+    });
+
+    $("#diagnosticchart-open").click(function() {
+        $("#kinjo-check-modal").fadeIn(500);
     });
 
     var $clickable = $('.ripple');
