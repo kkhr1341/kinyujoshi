@@ -30,7 +30,7 @@
       {foreach from=$news item=new name=foo}
       <a href="/news/{$new.code}" onClick="ga('send', 'event', 'sp-top-link', 'click', 'about', 1);" class="kinyu-top-introlist-news-link">
         <div class="title-area">
-          <p>お知らせa</p>
+          <p>お知らせ</p>
         </div>
         <div class="text-area">
           <p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
