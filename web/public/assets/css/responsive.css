@@ -3,7 +3,6 @@
 ---------------------------------- */
 @media screen and (max-width: 1024px) {
 
-<<<<<<< HEAD
 .video-container iframe {
   width: 100%;
   height: 190px;
@@ -6482,6 +6481,7 @@ footer {
         margin: 0 auto;
         padding: 42px 0px;
         border-top: 1px solid #8ddcd1;
+        border-bottom: 1px solid #eaeaea;
     }
 
     .kinyu-start-content-inner .main-title {
@@ -6555,6 +6555,20 @@ footer {
         margin-top: 20px;
         font-size: 11px;
         margin-top: 16px;
+    }
+    .kinyu-start-content-block h3 {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+    .kinyu-start-about {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      width: 92%;
+      margin: 0 auto;
+    }
+    .kinyu-start-content-block .about-contents-after-container {
+      width: 100%;
     }
 
     /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -6884,7 +6898,6 @@ footer {
         padding: 10px 0px;
         font-weight: 400;
     }
->>>>>>> develop8.25
 
 }
 

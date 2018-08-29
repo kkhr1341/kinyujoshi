@@ -86,7 +86,7 @@
 				</div>
 			</div>
 
-			<div class="kinyu-start-content-block">
+			<div class="kinyu-start-about kinyu-start-content-block">
 				<h3 class="main-title">「きん女。ストーリー」</h3>
 				{$about_contents_after}
 			</div>
