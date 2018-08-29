@@ -155,7 +155,7 @@
               {if $smarty.foreach.loopname.index == 10}
               </ul>
                 <div class="sidebar-more-link">
-                  <a href="/report">レポートをもっと見る onClick="ga('send', 'event', 'sp-top-link', 'click', 'report-more-read', 1);"></a>
+                  <a href="/report" onClick="ga('send', 'event', 'sp-top-link', 'click', 'report-more-read', 1);">レポートをもっと見る</a>
                 </div>
               {break}
               {/if}

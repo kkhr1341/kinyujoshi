@@ -12,9 +12,8 @@
       <div class="text-box">
         <p class="kinjo-check-title kinjo-check-title01">{$user_type['character_name']}</p>
         <!-- キャッチコピー -->
-        <p class="my-kinjo-check-copy">ー 
-          <!-- ここにキャッチコピーを -->
-          人生100人時代です！</p>
+        <p class="my-kinjo-check-copy">ー
+          {$user_type['catch_copy']}</p>
         <p class="kinjo-check-description">{$user_type['description']|nl2br}</p>
 
         <!-- #タグ -->
@@ -59,10 +58,9 @@
         <p class="kinjo-check-title kinjo-check-title01">{$user_type['character_name']}</p>
       </div>
       <div class="text-box" id="kinjo_check_open_content">
-        <!-- キャッチコピー -->
         <p class="my-kinjo-check-copy">ー 
           <!-- ここにキャッチコピーを -->
-          人生100人時代です！</p>
+          {$user_type['catch_copy']}</p>
           
         <p class="kinjo-check-description">{$user_type['description']|nl2br}</p>
 
