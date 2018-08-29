@@ -59,7 +59,7 @@ $(function() {
                 e.preventDefault();
                 e.stopPropagation();
                 var code = $(this).data('code');
-                bootbox.confirm("チェックしたレポートを削除してもよろしいですか？", function(result) {
+                bootbox.confirm("レポートのチェックを外しますか？", function(result) {
                     if(result) {
                         unCheck(code, function() {
                             li.remove();
