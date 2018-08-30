@@ -6,6 +6,14 @@
   </a>
 </div>
 
+<div class="swiper-slide" style="background: url(/images/diagnosticchart/og-main.jpg) center center / cover no-repeat;">
+  <a href="https://kinyu-joshi.jp/kinjo_check">
+    <div class="kinyu-top-introlist-title">
+        <h3 class="kinyu-top-list-title">あなたはどのタイプ？きん女。診断♪</h3>
+    </div>
+  </a>
+</div>
+
 <!-- 女子会TOP表示 -->
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
