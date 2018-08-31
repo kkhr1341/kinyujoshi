@@ -99,10 +99,10 @@
         var result3 = [['Date', 'A', 'B', 'C', 'D']].concat(result2)
         var data = google.visualization.arrayToDataTable(result3);
         var options = {
-          title: 'Graph Sample',
+          title: '診断チャート登録推移',
           chartArea: {'width':'100%', 'height':'65%', 'left':65 },
-          hAxis: { title:'Year/Month', titleTextStyle:{italic:false} },
-          vAxis: { title:'Random Values',  titleTextStyle:{italic:false} },
+          hAxis: { title:'登録日', titleTextStyle:{italic:false} },
+          vAxis: { title:'登録者数',  titleTextStyle:{italic:false} },
           crosshair: { trigger: 'both' }
         };
         var chart = new google.visualization.LineChart(document.getElementById('chart_div7'));
