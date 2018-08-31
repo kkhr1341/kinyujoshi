@@ -28,8 +28,8 @@ class Controller_Api_Analysis extends Controller_Base
         if (!$attr = \Input::get('attr')) {
             return $this->error('invalid argument');
         }
-
-        $this->ok(Registlist::member_attribute($attr));
+        $attr_name = \Input::get('attr_name', '');
+        $this->ok(Registlist::member_attribute($attr, $attr_name));
     }
     public function action_diagnostic_chart_types()
     {
