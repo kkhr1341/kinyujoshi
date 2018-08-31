@@ -82,4 +82,23 @@ class DiagnosticChartTypeUsers extends Base
                 ->execute();
         }
     }
+
+    // ユーザーのタイプを集計
+    public static function get_aggregate_type()
+    {
+        $user = \DB::select(\DB::expr('diagnostic_chart_types.type as label, count(diagnostic_chart_types.type) as cnt'))
+            ->from('diagnostic_chart_type_users')
+            ->join('users')
+            ->on('users.username', '=', 'diagnostic_chart_type_users.username')
+            ->join('diagnostic_chart_types')
+            ->on('diagnostic_chart_types.code', '=', 'diagnostic_chart_type_users.type_code')
+            ->where('users.group', '=', 1)
+            ->group_by('diagnostic_chart_types.type');
+
+        if (!$row = $user->execute()->as_array()) {
+            return false;
+        }
+        return $row;
+    }
+
 }

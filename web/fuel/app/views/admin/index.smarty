@@ -24,25 +24,11 @@
 
   google.charts.setOnLoadCallback(drawChart);
 
-  function pie(json, key, title, dom) {
-
+  function pie(data, key, title, dom) {
 
      var values = {};
-     var results = json
-     .filter(function(value){
-        return value[key] != null && value[key] != ''
-     })
-     .map(function(value){
-        return value[key]
-     })
-
-     console.log( results );
-
-     $.each(results, function(key, val) {
-        if(values[val] == undefined) {
-            values[val] = 0;
-        }
-        values[val]++;
+     data.forEach(function(d) {
+         values[d.label] = parseInt(d.cnt);
      })
 
      var resultValue = [];
@@ -65,14 +51,25 @@
 
   function drawChart() {
 
-    $.getJSON( "/api/analysis/member", function( json ) {
-
+    $.getJSON( "/api/analysis/member?attr=not_know", function( json ) {
         pie(json.data, 'not_know', 'きんゆうワカラナイ度', document.getElementById('chart_div1'));
+    });
+
+    $.getJSON( "/api/analysis/member?attr=job_kind", function( json ) {
         pie(json.data, 'job_kind', '金融機関で働いていますか？ ', document.getElementById('chart_div2'));
+    });
+
+    $.getJSON( "/api/analysis/member?attr=transmission", function( json ) {
         pie(json.data, 'transmission', 'きんゆう女子。で情報発信したいですか？', document.getElementById('chart_div3'));
+    });
+
+    $.getJSON( "/api/analysis/member?attr=where_from", function( json ) {
         pie(json.data, 'where_from', 'どこで、きんゆう女子。を知りましたか？', document.getElementById('chart_div4'));
     });
 
+    $.getJSON( "/api/analysis/diagnostic_chart_types", function( json ) {
+        pie(json.data, 'where_from', '診断チャート', document.getElementById('chart_div5'));
+    });
 
   }
 </script>
@@ -85,6 +82,7 @@
     <div id="chart_div2" class="chart-el"></div>
     <div id="chart_div3" class="chart-el"></div>
     <div id="chart_div4" class="chart-el"></div>
+    <div id="chart_div5" class="chart-el"></div>
   </div>
 </div>
 

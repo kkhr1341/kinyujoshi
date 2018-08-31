@@ -6,11 +6,13 @@ require_once(dirname(__FILE__) . "/base.php");
 class Registlist extends Base
 {
 
-    public static function member_attribute()
+    public static function member_attribute($attr)
     {
-        return \DB::select("age", "not_know", "interest", "ask", "income", "transmission", "introduction", "user_agent", "where_from", "where_from_other", "job_kind", "industry", "industry_other")
+        return \DB::select(\DB::expr($attr . ' as label, count(' . $attr . ') as cnt'))
+//        return \DB::select($attr)
             ->from('member_regist')
             ->where('member_regist.disable', '=', 1)
+            ->group_by($attr)
             ->execute()
             ->as_array();
     }
