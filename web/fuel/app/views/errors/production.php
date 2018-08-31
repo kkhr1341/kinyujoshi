@@ -42,7 +42,16 @@
 		<script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyCZqIv_Xh0iQ1XOI1n1Q821t94SNTf0oeQ"></script>
 		<meta name="google-site-verification" content="bt-Z1O8HWo_rQ3TlPedxm8q3q1xV9ky7hWlxAqisA2w" />
 		<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
-		<!-- <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" /> -->
+		<!-- <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" /> -->{literal}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72608536-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-72608536-2');
+        </script>
 	</head>
 
 
@@ -242,18 +251,6 @@
         </div>
       </div>
     </div>
-
-  	<!-- 解析コード -->
-  	<script type="text/javascript">
-  		var _gaq = _gaq || [];
-  		_gaq.push(['_setAccount', 'UA-72608536-2']);
-  		_gaq.push(['_trackPageview']);
-  		(function() {
-    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  		})();
-		</script>
 
   	<script src="/assets/js/kinyu/swiper.js"></script>
   </body>

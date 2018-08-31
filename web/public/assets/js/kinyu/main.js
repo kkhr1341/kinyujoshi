@@ -664,6 +664,13 @@ $(function(){
   });
 });
 
-
-
-
+$(function(){
+    $('.js-track').click(function(e) {
+        gtag('event', 'click', {
+            'event_category': $(this).data('category'),
+            'event_label': $(this).attr('href'),
+            'event_action': $(this).attr('action'),
+            'event_value': $(this).attr('value'),
+        });
+    });
+});

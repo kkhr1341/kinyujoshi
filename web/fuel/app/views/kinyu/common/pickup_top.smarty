@@ -1,5 +1,5 @@
 <div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20180815152624image.jpg) center center / cover no-repeat;">
-  <a href="https://kinyu-joshi.jp/joshikai/qniTUJ">
+  <a class="js-track" href="https://kinyu-joshi.jp/joshikai/qniTUJ" data-category="slide-link" data-action="click" data-value="1">
     <div class="kinyu-top-introlist-title">
         <h3 class="kinyu-top-list-title">初！きん女。@マルイファミリー海老名♪「きんゆう女子。」って何してるのを話す女子会</h3>
     </div>
@@ -7,7 +7,7 @@
 </div>
 
 <div class="swiper-slide" style="background: url(/images/diagnosticchart/og-main.jpg) center center / cover no-repeat;">
-  <a href="https://kinyu-joshi.jp/kinjo_check">
+  <a class="js-track" href="https://kinyu-joshi.jp/kinjo_check" data-category="slide-link" data-action="click" data-value="2">
     <div class="kinyu-top-list-kind">
     </div>
   </a>
@@ -18,9 +18,9 @@
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
 
     {if empty($display_top_event.specific_link)}
-    <a target="_blank" href="/joshikai/{$display_top_event.code}">
+    <a class="js-track" target="_blank" href="/joshikai/{$display_top_event.code}" data-category="slide-link" data-action="click" data-value="3">
     {else}
-    <a target="_blank" href="{$display_top_event.specific_link}">
+    <a class="js-track" target="_blank" href="{$display_top_event.specific_link}" data-category="slide-link" data-action="click" data-value="3">
     {/if}
 
         <div class="kinyu-top-list-kind">
@@ -33,7 +33,7 @@
 {/if}
 
 <div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
-  <a href="/kinyu_sanpo">
+  <a class="js-track" href="/kinyu_sanpo" data-category="slide-link" data-action="click" data-value="4">
     <div class="kinyu-top-list-kind">
     </div>
   </a>
@@ -42,7 +42,7 @@
 {foreach from=$blogs_pick item=blog name=loopname}
 
   <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
-    <a href="/report/{$blog.code}">
+    <a class="js-track" href="/report/{$blog.code}" data-category="slide-link" data-action="click" data-value="5">
       <div class="kinyu-top-introlist-title">
         <h3 class="kinyu-top-list-title">{$blog.title}</h3>
       </div>

@@ -1,30 +1,30 @@
 <!-- <footer class="singlepage-footer">
   <img class="sp footer-icon" src="/images/new/footer-icon.png" class="footer-icon">
   <div class="footer-logo">
-    <a href="/about"><img src="/images/kinyu-logo-top.png"></a>
+    <a class="js-track" href="/about" data-category="pc-top-link" data-action="click" data-value="1"><img src="/images/kinyu-logo-top.png"></a>
   </div>
   <a class="sp navi-link-top" href="/">トップページへ</a>
   <div class="footer-menu">
     <div class="navi_kinyu-submenu-el clear">
-      <a href="/company">運営会社</a>
+      <a class="js-track" href="/company">運営会社</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
-      <a href="/faq">よくあるご質問</a>
+      <a class="js-track" href="/faq">よくあるご質問</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
-      <a href="/privacy">プライバシーポリシー</a>
+      <a class="js-track" href="/privacy">プライバシーポリシー</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
-      <a href="/legal">特定商取引法に基づく表記</a>
+      <a class="js-track" href="/legal">特定商取引法に基づく表記</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
-      <a href="/service">会員規約</a>
+      <a class="js-track" href="/service">会員規約</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
-      <a href="/link_policy">リンクポリシー</a>
+      <a class="js-track" href="/link_policy">リンクポリシー</a>
     </div>
     <div class="navi_kinyu-submenu-el clear">
-      <a href="/contact">お問い合わせ</a>
+      <a class="js-track" href="/contact">お問い合わせ</a>
     </div>
   </div>
   <p class="navi_kinyu-submenu-copy">
@@ -39,49 +39,49 @@
       <img src="/images/top-circle-logo.png">
     </div>
     <div class="new_area">
-      <a href="/start"><img src="/images/banner/firsttime_sp.jpg"></a>
+      <a class="js-track" href="/start" data-category="common-footer-link" data-action="click" data-value="1"><img src="/images/banner/firsttime_sp.jpg"></a>
     </div>
 
     <div class="link-to-top sp">
-      <a href="/">きんゆう女子。トップ</a>
+      <a class="js-track" href="/" data-category="sp-footer-link" data-action="click" data-value="1">きんゆう女子。トップ</a>
     </div>
 
     <div class="footer-menu pc">
       <p class="footer-menu-title"><span>きんゆう女子。について</span></p>
       <ul>
-        <li><a href="/faq">よくあるご質問</a></li>
-        <li><a href="/contact">お問い合わせ</a></li>
-        <li><a href="/service">会員規約</a></li>
+        <li><a class="js-track" href="/faq" data-category="pc-footer-link" data-action="click" data-value="1">よくあるご質問</a></li>
+        <li><a class="js-track" href="/contact" data-category="pc-footer-link" data-action="click" data-value="1">お問い合わせ</a></li>
+        <li><a class="js-track" href="/service" data-category="pc-footer-link" data-action="click" data-value="1">会員規約</a></li>
       </ul>
       <ul>
-        <li><a href="/joshikai_policy">女子会規約</a></li>
-        <li><a href="/privacy">プライバシーポリシー</a></li>
-        <li><a href="/link_policy">リンクポリシー</a></li>
+        <li><a class="js-track" href="/joshikai_policy" data-category="pc-footer-link" data-action="click" data-value="1">女子会規約</a></li>
+        <li><a class="js-track" href="/privacy" data-category="pc-footer-link" data-action="click" data-value="1">プライバシーポリシー</a></li>
+        <li><a class="js-track" href="/link_policy" data-category="pc-footer-link" data-action="click" data-value="1">リンクポリシー</a></li>
       </ul>
       <ul>
         <!-- <li><a href="">企業の方はこちら</a></li> -->
-        <li><a href="/legal">特定商取引法に基づく表記</a></li>
-        <li><a href="/company">運営会社</a></li>
+        <li><a class="js-track" href="/legal" data-category="pc-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
+        <li><a class="js-track" href="/company" data-category="pc-footer-link" data-action="click" data-value="1">運営会社</a></li>
       </ul>
     </div>
 
     <div class="footer-menu sp">
       <p class="footer-menu-title"><span>きんゆう女子。について</span></p>
       <ul>
-        <li><a href="/faq">よくあるご質問</a></li>
-        <li><a href="/contact">お問い合わせ</a></li>
-        <li><a href="/service">会員規約</a></li>
-        <li><a href="/joshikai_policy">女子会規約</a></li>
-        <li><a href="/privacy">プライバシーポリシー</a></li>
-        <li><a href="/link_policy">リンクポリシー</a></li>
+        <li><a class="js-track" href="/faq" data-category="sp-footer-link" data-action="click" data-value="1">よくあるご質問</a></li>
+        <li><a class="js-track" href="/contact" data-category="sp-footer-link" data-action="click" data-value="1">お問い合わせ</a></li>
+        <li><a class="js-track" href="/service" data-category="sp-footer-link" data-action="click" data-value="1">会員規約</a></li>
+        <li><a class="js-track" href="/joshikai_policy" data-category="sp-footer-link" data-action="click" data-value="1">女子会規約</a></li>
+        <li><a class="js-track" href="/privacy" data-category="sp-footer-link" data-action="click" data-value="1">プライバシーポリシー</a></li>
+        <li><a class="js-track" href="/link_policy" data-category="sp-footer-link" data-action="click" data-value="1">リンクポリシー</a></li>
         <!-- <li><a href="">企業の方はこちら</a></li> -->
-        <li><a href="/legal">特定商取引法に基づく表記</a></li>
-        <li><a href="/company">運営会社</a></li>
+        <li><a class="js-track" href="/legal" data-category="sp-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
+        <li><a class="js-track" href="/company" data-category="sp-footer-link" data-action="click" data-value="1">運営会社</a></li>
       </ul>
     </div>
 
   </div>
 </footer>
 <p class="navi_kinyu-submenu-copy">
-  <span>© TOE THE LINE Inc. 2018　All rights reserved.
+  <span>© TOE THE LINE Inc. 2018　All rights reserved.</span>
 </p>
