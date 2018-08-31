@@ -112,7 +112,8 @@ class Controller_Admin_Events extends Controller_Adminbase
             "名前",
             "年齢",
             "ワカラナイド",
-            "参加回数"
+            "参加回数",
+            "メールアドレス",
         );
         foreach ($applications as $application) {
 
@@ -131,6 +132,7 @@ class Controller_Admin_Events extends Controller_Adminbase
                 $application["birthday"],
                 $application["not_know"],
                 $application["application_count"],
+                $application["email"],
             );
         }
 
