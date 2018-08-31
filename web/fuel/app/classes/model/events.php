@@ -120,7 +120,7 @@ class Events extends Base
         return $data['cnt'];
     }
 
-    public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc", $display=1)
+    public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc", $display=1, $username = null)
     {
         $select = '*';
         $select .= ', events.code';
@@ -131,7 +131,12 @@ class Events extends Base
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
             ->where('events.disable', '=', 0);
-        
+
+        if ($username === null) {
+        } else {
+            $datas = $datas->where('events.username', '=', $username);
+        }
+
         if ($display === null) {
         } else {
             $datas = $datas->where('display', '=', $display);
@@ -152,13 +157,6 @@ class Events extends Base
             $datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
         }
 
-        // if ($section_code === null) {
-        // }
-        // else {
-        // 	$datas = $datas->where('section_code', '=', $section_code);
-        // }
-
-        //$datas = $datas->order_by('events.id', 'desc');
         $datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
         $datas = $datas->order_by('event_date', $sort);
 

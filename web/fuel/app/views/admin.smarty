@@ -45,7 +45,7 @@
               </li>
               {/if}
 
-              {if (Auth::has_access('events.read'))}
+              {if (Auth::has_access('applications.read'))}
               <li>
                 <a href="/admin/joshikai/attend">女子会参加者の管理</a>
               </li>

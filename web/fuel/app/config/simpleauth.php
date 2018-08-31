@@ -97,6 +97,7 @@ return array(
             'applications' => array('read'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
+            'applications' => array('read', 'create', 'edit', 'delete'),
             'inquiries' => array('read'),
             'news' => array('read', 'create', 'edit', 'delete'),
             'registlist' => array('read', 'create'),
@@ -105,6 +106,7 @@ return array(
         'editor' => array(
             'top' => array('read'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
+            'events' => array('read', 'create', 'edit', 'delete'),
         ),
 		
 		/**
