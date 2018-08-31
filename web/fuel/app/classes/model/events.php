@@ -499,7 +499,7 @@ class Events extends Base
 
     private static function is_applicable_by_event_date($event_date)
     {
-        $applicableTime = strtotime(date('Y-m-d 13:00:00', strtotime($event_date)));
+        $applicableTime = strtotime(date('Y-m-d 18:00:00', strtotime($event_date)));
         if (time() < $applicableTime) {
             return true;
         } 
