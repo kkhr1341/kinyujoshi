@@ -434,12 +434,15 @@ class Regist extends Base
             "profiles.prefecture", 
             "member_regist.created_at", 
             "member_regist.updated_at",
+            \DB::expr("prefectures.name as prefecture_name"),
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
             \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
             )
             ->from('member_regist')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'member_regist.username')
+            ->join('prefectures', 'LEFT')
+            ->on('prefectures.code', '=', 'profiles.prefecture')
             ->where('member_regist.code', '=', $code)
             ->execute()->current();
         if (empty($result)) {

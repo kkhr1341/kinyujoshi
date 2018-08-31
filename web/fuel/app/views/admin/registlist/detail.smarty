@@ -23,10 +23,10 @@
 
           <div class="form-group">
             <label class="form-title">お住まい <span class="label label-danger">必須</span></label>
-            {if $registel.prefecture == ""}
+            {if $registel.prefecture_name == ""}
               <p>登録なし</p>
             {else}
-              <p>{$registel.prefecture}</p>
+              <p>{$registel.prefecture_name}</p>
             {/if}
           </div>
 
