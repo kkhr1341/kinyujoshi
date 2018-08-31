@@ -1599,6 +1599,10 @@ footer {
   width: 50%;
   float: left;
 }
+.kinjo-member-chart-container .line-chart-el {
+    width: 100%;
+    float: left;
+}
 .admin-main-el-title {
   color: #77cbc0;
   margin-top: 32px;

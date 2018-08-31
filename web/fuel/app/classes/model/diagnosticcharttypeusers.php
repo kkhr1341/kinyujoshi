@@ -86,16 +86,22 @@ class DiagnosticChartTypeUsers extends Base
     // ユーザーのタイプを集計
     public static function get_aggregate_type()
     {
-        $user = \DB::select(\DB::expr('diagnostic_chart_types.type as label, count(diagnostic_chart_types.type) as cnt'))
+        $select = 'diagnostic_chart_types.type as label, ';
+        $select .= 'DATE_FORMAT(`diagnostic_chart_type_users`.`created_at`, "%Y-%m-%d") as created_at, ';
+        $select .= 'count(diagnostic_chart_types.type) as cnt';
+
+        $user = \DB::select(\DB::expr($select))
             ->from('diagnostic_chart_type_users')
             ->join('users')
             ->on('users.username', '=', 'diagnostic_chart_type_users.username')
             ->join('diagnostic_chart_types')
             ->on('diagnostic_chart_types.code', '=', 'diagnostic_chart_type_users.type_code')
-            ->where('users.group', '=', 1)
-            ->group_by('diagnostic_chart_types.type');
+//            ->where('users.group', '=', 1)
+            ->group_by('diagnostic_chart_types.type', \DB::expr('DATE_FORMAT(`diagnostic_chart_type_users`.`created_at`, "%Y-%m-%d")'));
+
 
         if (!$row = $user->execute()->as_array()) {
+            echo \DB::last_query();
             return false;
         }
         return $row;

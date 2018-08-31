@@ -67,12 +67,46 @@
         pie(json.data, 'where_from', 'どこで、きんゆう女子。を知りましたか？', document.getElementById('chart_div4'));
     });
 
-    $.getJSON( "/api/analysis/diagnostic_chart_types", function( json ) {
-        pie(json.data, 'where_from', '診断チャート', document.getElementById('chart_div5'));
+    $.getJSON( "/api/analysis/member?attr=prefecture&attr_name=prefectures.name", function( json ) {
+        pie(json.data, 'where_from', '都道府県', document.getElementById('chart_div5'));
     });
 
-    $.getJSON( "/api/analysis/member?attr=prefecture&attr_name=prefectures.name", function( json ) {
-        pie(json.data, 'where_from', '都道府県', document.getElementById('chart_div6'));
+    $.getJSON( "/api/analysis/diagnostic_chart_types", function( json ) {
+        // 円グラフ
+        var result = {};
+        json.data.forEach(function(data){
+            if (!(data.label in result)) {
+                result[data.label] = 0;
+            }
+            result[data.label] += parseInt(data.cnt, 10);
+        })
+        var list = Object.keys(result).map(function(i) {
+            return {label: i, cnt: result[i]};
+        })
+        pie(list, 'where_from', '診断チャート', document.getElementById('chart_div6'));
+
+        // 折れ線グラフ
+        var result1 = {};
+        json.data.forEach(function(data){
+            if (!(data.created_at in result1)) {
+                result1[data.created_at] = {A: 0, B: 0, C: 0, D: 0};
+            }
+            result1[data.created_at][data.label] = parseInt(data.cnt, 10);
+        })
+        var result2 = Object.keys(result1).map(function(key) {
+            return [key, result1[key].A, result1[key].B, result1[key].C, result1[key].D];
+        })
+        var result3 = [['Date', 'A', 'B', 'C', 'D']].concat(result2)
+        var data = google.visualization.arrayToDataTable(result3);
+        var options = {
+          title: 'Graph Sample',
+          chartArea: {'width':'100%', 'height':'65%', 'left':65 },
+          hAxis: { title:'Year/Month', titleTextStyle:{italic:false} },
+          vAxis: { title:'Random Values',  titleTextStyle:{italic:false} },
+          crosshair: { trigger: 'both' }
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div7'));
+        chart.draw(data, options);
     });
   }
 </script>
@@ -87,6 +121,7 @@
     <div id="chart_div4" class="chart-el"></div>
     <div id="chart_div5" class="chart-el"></div>
     <div id="chart_div6" class="chart-el"></div>
+    <div id="chart_div7" class="line-chart-el"></div>
   </div>
 </div>
 
