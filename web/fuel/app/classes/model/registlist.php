@@ -21,6 +21,7 @@ class Registlist extends Base
                 ->on('prefectures.code', '=', 'profiles.prefecture')
             ->where('member_regist.disable', '=', 1)
             ->where($attr, '!=', null)
+            ->where($attr, '!=', '-')
             ->group_by($attr)
             ->execute()
             ->as_array();
