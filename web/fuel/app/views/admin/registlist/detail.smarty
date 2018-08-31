@@ -139,7 +139,7 @@
             <label class="form-title">参加イベント一覧</label>
             <ul>
             {foreach from=$participated_events item=participated_event name=loop}
-            <li>・{$participated_event.created_at} {$participated_event.title}</li>
+            <li>・{$participated_event.event_date|date_format: "%Y年%m月%d日"} {$participated_event.title}</li>
             {/foreach}
             </ul>
           </div>
