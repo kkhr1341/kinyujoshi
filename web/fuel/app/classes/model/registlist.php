@@ -13,6 +13,8 @@ class Registlist extends Base
         }
         return \DB::select(\DB::expr($attr_name . ' as label, count(' . $attr . ') as cnt'))
             ->from('member_regist')
+            ->join('users', 'left')
+            ->on('users.username', '=', 'member_regist.username')
             ->join('profiles', 'left')
             ->on('profiles.username', '=', 'profiles.username')
             ->join('prefectures', 'left')

@@ -72,7 +72,7 @@
     });
 
     $.getJSON( "/api/analysis/member?attr=prefecture&attr_name=prefectures.name", function( json ) {
-        pie(json.data, 'where_from', '都道府県', document.getElementById('chart_div4'));
+        pie(json.data, 'where_from', '都道府県', document.getElementById('chart_div6'));
     });
   }
 </script>
@@ -86,6 +86,7 @@
     <div id="chart_div3" class="chart-el"></div>
     <div id="chart_div4" class="chart-el"></div>
     <div id="chart_div5" class="chart-el"></div>
+    <div id="chart_div6" class="chart-el"></div>
   </div>
 </div>
 

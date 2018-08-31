@@ -17,7 +17,7 @@ class Controller_Api_Analysis extends Controller_Base
     }
 
     /**
-     * ログイン
+     * メンバー属性取得
      */
     public function action_member()
     {
@@ -31,13 +31,16 @@ class Controller_Api_Analysis extends Controller_Base
         $attr_name = \Input::get('attr_name', '');
         $this->ok(Registlist::member_attribute($attr, $attr_name));
     }
+
+    /**
+     * 診断チャート
+     */
     public function action_diagnostic_chart_types()
     {
         $group = Auth::group();
         if (!in_array('admin', $group->get_roles())) {
             return $this->error('no administrator');
         }
-
         $this->ok(DiagnosticChartTypeUsers::get_aggregate_type());
     }
 }
