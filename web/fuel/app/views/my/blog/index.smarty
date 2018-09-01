@@ -64,6 +64,13 @@ $(function() {
                         unCheck(code, function() {
                             li.remove();
                             ts.success('チェックを外しました。');
+                            // event tracking
+                            gtag('event', 'click', {
+                                'event_category': 'blog-stock',
+                                'event_label': 'mypage-blog-page',
+                                'event_action': 'remove',
+                                'event_value': code,
+                            });
                         });
                     }
                 })

@@ -14,6 +14,17 @@
   <!-- <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
   <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script> -->
 
+  {literal}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72608536-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-72608536-2');
+  </script>
+  {/literal}
 </head>
 <body class="drawer drawer--left">
   <!-- <canvas id="canvas"></canvas> -->
