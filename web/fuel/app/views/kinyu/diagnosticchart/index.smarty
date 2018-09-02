@@ -367,6 +367,14 @@ $(function(){
         $(window).scrollTop(0);
         $answerLoadingContainer.fadeOut();
 
+        // event tracking
+        gtag('event', 'click', {
+            'event_category': 'diagnostic-chart',
+            'event_label': 'click',
+            'event_action': 'complete',
+            'event_value': '1',
+        });
+
         $.ajax({
             type: "POST",
             url: "/api/diagnosticchart/type/",
@@ -414,25 +422,32 @@ $(function(){
             $questionContainer.fadeIn();
             answer();
         }
+        // event tracking
+        gtag('event', 'click', {
+            'event_category': 'diagnostic-chart',
+            'event_label': 'click',
+            'event_action': 'start',
+            'event_value': '1',
+        });
     })
  
-  // 診断の実行可否処理
-  // 診断の実行ができる状態であれば「診断スタート」ボタンクリック可
-  // 診断の実行ができない状態であれば「診断スタート」ボタンクリック不可・カウントダウン実行
-  var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
-  var authenticated = $startButton.data('authenticated') == '1' ? true : false;
+    // 診断の実行可否処理
+    // 診断の実行ができる状態であれば「診断スタート」ボタンクリック可
+    // 診断の実行ができない状態であれば「診断スタート」ボタンクリック不可・カウントダウン実行
+    var is_diagnosed = $startButton.data('is_diagnosed') == '1' ? true : false;
+    var authenticated = $startButton.data('authenticated') == '1' ? true : false;
 
-  $startButton.prop('disabled', is_diagnosed === false || authenticated === false ? false: true);
+    $startButton.prop('disabled', is_diagnosed === false || authenticated === false ? false: true);
 
-  $('.time-count-block').hide();
-  if (is_diagnosed && authenticated) {
-    $('.time-count-block').show().each(function() {
-      var endDate = $(this).find('.reset-timer').data('reset_time');
-      countDown($(this), endDate, function() {
-        $startButton.prop('disabled', false);
-      });
-    })
-  }
+    $('.time-count-block').hide();
+    if (is_diagnosed && authenticated) {
+        $('.time-count-block').show().each(function() {
+            var endDate = $(this).find('.reset-timer').data('reset_time');
+            countDown($(this), endDate, function() {
+                $startButton.prop('disabled', false);
+            });
+        })
+    }
 });
 {/literal}
 </script>
