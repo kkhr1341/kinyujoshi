@@ -19,11 +19,11 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
 
-  google.charts.load('current', {'packages':['corechart']});
+  google.charts.load('current', {'packages':['corechart', 'table']});
 
   google.charts.setOnLoadCallback(drawChart);
 
-  function pie(data, key, title, dom) {
+  function pie(data, title, dom) {
 
      var values = {};
      data.forEach(function(d) {
@@ -48,28 +48,66 @@
      chart.draw(data, options);
   }
 
+  function table(data, title, dom) {
+
+      var values = [];
+      data.forEach(function(d) {
+          values.push([d.label, parseInt(d.cnt)]);
+      })
+
+      var data = new google.visualization.DataTable();
+
+      // Declare columns
+      data.addColumn('string', 'Label');
+      data.addColumn('number', 'Count');
+
+      // Add data.
+      data.addRows(values);
+
+     var options = {
+        'title':title,
+        'width':400,
+        'height':300,
+        'showRowNumber':true,
+    };
+
+     var table = new google.visualization.Table(dom);
+     table.draw(data, options);
+  }
+
   function drawChart() {
 
-    $.getJSON( "/api/analysis/member?attr=not_know", function( json ) {
-        pie(json.data, 'not_know', 'きんゆうワカラナイ度', document.getElementById('chart_div1'));
+    // きんゆうワカラナイ度
+    $.getJSON( "/api/analysis/member_attr_count?attr=not_know", function( json ) {
+        pie(json.data, 'きんゆうワカラナイ度', document.getElementById('chart_div1'));
     });
 
-    $.getJSON( "/api/analysis/member?attr=job_kind", function( json ) {
-        pie(json.data, 'job_kind', '金融機関で働いていますか？ ', document.getElementById('chart_div2'));
+    // 金融機関で働いていますか？
+    $.getJSON( "/api/analysis/member_attr_count?attr=job_kind", function( json ) {
+        pie(json.data, '金融機関で働いていますか？ ', document.getElementById('chart_div2'));
     });
 
-    $.getJSON( "/api/analysis/member?attr=transmission", function( json ) {
-        pie(json.data, 'transmission', 'きんゆう女子。で情報発信したいですか？', document.getElementById('chart_div3'));
+    // きんゆう女子。で情報発信したいですか？
+    $.getJSON( "/api/analysis/member_attr_count?attr=transmission", function( json ) {
+        pie(json.data, 'きんゆう女子。で情報発信したいですか？', document.getElementById('chart_div3'));
     });
 
-    $.getJSON( "/api/analysis/member?attr=where_from", function( json ) {
-        pie(json.data, 'where_from', 'どこで、きんゆう女子。を知りましたか？', document.getElementById('chart_div4'));
+    // どこで、きんゆう女子。を知りましたか？
+    $.getJSON( "/api/analysis/member_attr_count?attr=where_from", function( json ) {
+        pie(json.data, 'どこで、きんゆう女子。を知りましたか？', document.getElementById('chart_div4'));
     });
 
-    $.getJSON( "/api/analysis/member?attr=prefecture&attr_name=prefectures.name", function( json ) {
-        pie(json.data, 'where_from', '都道府県', document.getElementById('chart_div5'));
+    // どこで、きんゆう女子。を知りましたか？その他
+    $.getJSON( "/api/analysis/member_attr_count?attr=where_from_other", function( json ) {
+        table(json.data, 'どこで、きんゆう女子。を知りましたか？その他', document.getElementById('chart_div4_other'));
     });
 
+    // 都道府県
+    $.getJSON( "/api/analysis/member_attr_count?attr=prefectures.name", function( json ) {
+        pie(json.data, '都道府県', document.getElementById('chart_div5'));
+    });
+
+    // 診断チャート
     $.getJSON( "/api/analysis/diagnostic_chart_types", function( json ) {
         // 円グラフ
         var result = {};
@@ -82,7 +120,7 @@
         var list = Object.keys(result).map(function(i) {
             return {label: i, cnt: result[i]};
         })
-        pie(list, 'where_from', '診断チャート', document.getElementById('chart_div6'));
+        pie(list, '診断チャート', document.getElementById('chart_div6'));
 
         // 折れ線グラフ
         var result1 = {};
@@ -116,10 +154,16 @@
   <div class="kinjo-member-chart-container clear">
     <div id="chart_div1" class="chart-el"></div>
     <div id="chart_div2" class="chart-el"></div>
+
     <div id="chart_div3" class="chart-el"></div>
-    <div id="chart_div4" class="chart-el"></div>
     <div id="chart_div5" class="chart-el"></div>
+
+    <div id="chart_div4" class="chart-el"></div>
+    <div id="chart_div4_other" class="chart-el"></div>
+
     <div id="chart_div6" class="chart-el"></div>
+    <div style="clear: both;"></div>
+
     <div id="chart_div7" class="line-chart-el"></div>
   </div>
 </div>

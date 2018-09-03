@@ -18,13 +18,12 @@ class Controller_Api_Analysis extends Controller_Base
     /**
      * メンバー属性取得
      */
-    public function action_member()
+    public function action_member_attr_count()
     {
         if (!$attr = \Input::get('attr')) {
             return $this->error('invalid argument');
         }
-        $attr_name = \Input::get('attr_name', '');
-        $this->ok(Registlist::member_attribute($attr, $attr_name));
+        $this->ok(Registlist::member_attribute_count($attr));
     }
 
     /**

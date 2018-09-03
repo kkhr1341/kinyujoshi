@@ -6,12 +6,9 @@ require_once(dirname(__FILE__) . "/base.php");
 class Registlist extends Base
 {
 
-    public static function member_attribute($attr, $attr_name='')
+    public static function member_attribute_count($attr)
     {
-        if (!$attr_name) {
-            $attr_name = $attr;
-        }
-        return \DB::select(\DB::expr($attr_name . ' as label, count(' . $attr . ') as cnt'))
+        return \DB::select(\DB::expr($attr . ' as label, count(' . $attr . ') as cnt'))
             ->from('member_regist')
             ->join('users', 'left')
                 ->on('users.username', '=', 'member_regist.username')
