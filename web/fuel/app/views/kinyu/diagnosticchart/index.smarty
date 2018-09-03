@@ -370,8 +370,8 @@ $(function(){
         // event tracking
         gtag('event', 'click', {
             'event_category': 'diagnostic-chart',
-            'event_label': 'click',
-            'event_action': 'complete',
+            'event_action': 'click',
+            'event_label': 'complete',
             'event_value': '1',
         });
 
@@ -425,8 +425,8 @@ $(function(){
         // event tracking
         gtag('event', 'click', {
             'event_category': 'diagnostic-chart',
-            'event_label': 'click',
-            'event_action': 'start',
+            'event_action': 'click',
+            'event_label': 'start',
             'event_value': '1',
         });
     })
