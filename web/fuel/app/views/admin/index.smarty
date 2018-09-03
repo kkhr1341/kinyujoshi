@@ -69,10 +69,37 @@
         'width':400,
         'height':300,
         'showRowNumber':true,
+     };
+  }
+
+  function bar(data, title, dom) {
+
+      var values = [];
+      data.forEach(function(d) {
+          values.push([d.label, parseInt(d.cnt)]);
+      })
+
+      var data = new google.visualization.DataTable();
+
+      // Declare columns
+      data.addColumn('string', 'Label');
+      data.addColumn('number', 'Count');
+
+      // Add data.
+      data.addRows(values);
+
+     var options = {
+        'title':title,
+        'width':400,
+        'height':300,
+        'showRowNumber':true,
     };
 
      var table = new google.visualization.Table(dom);
      table.draw(data, options);
+
+     var chart = new google.visualization.ColumnChart(dom);
+     chart.draw(data, options);
   }
 
   function drawChart() {
@@ -109,7 +136,12 @@
 
     // 年齢
     $.getJSON( "/api/analysis/member_attr_count?attr=age", function( json ) {
-        pie(json.data, '年齢', document.getElementById('chart_div8'));
+        var data = json.data.sort(function(a,b){
+           if( a.label < b.label ) return -1;
+           if( a.label > b.label ) return 1;
+           return 0;
+       });
+        bar(data, '年齢', document.getElementById('chart_div8'));
     });
 
     // 診断チャート
