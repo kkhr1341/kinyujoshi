@@ -19,6 +19,7 @@ class Registlist extends Base
             ->where('member_regist.disable', '=', 1)
             ->where($attr, '!=', null)
             ->where($attr, '!=', '-')
+            ->where($attr, '!=', '')
             ->group_by($attr)
             ->execute()
             ->as_array();
