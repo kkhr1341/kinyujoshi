@@ -143,28 +143,35 @@
            if( a.label < b.label ) return -1;
            if( a.label > b.label ) return 1;
            return 0;
-        })
-        .map(function(value) {
+        });
+        var result = {};
+        data.forEach(function(value) {
             if(value.label <= 20) {
-                value.label = '20歳以下';
+                var label = '20歳以下';
             } else if(value.label >= 21 && value.label <= 25) {
-                value.label = '21〜25歳';
+                var label = '21〜25歳';
             } else if(value.label >= 26 && value.label <= 30) {
-                value.label = '26〜30歳';
+                var label = '26〜30歳';
             } else if(value.label >= 31 && value.label <= 35) {
-               value.label = '31〜35歳';
+               var label = '31〜35歳';
             } else if(value.label >= 36 && value.label <= 40) {
-               value.label = '36〜40歳';
+               var label = '36〜40歳';
             } else if(value.label >= 41 && value.label <= 45) {
-               value.label = '41〜45歳';
+               var label = '41〜45歳';
             } else if(value.label >= 46 && value.label <= 50) {
-               value.label = '46〜50歳';
+               var label = '46〜50歳';
             } else if(value.label >= 51) {
-               value.label = '51歳以上';
+               var label = '51歳以上';
             }
-            return value;
+            if (!(label in result)) {
+                result[label] = 0;
+            }
+            result[label] += parseInt(value.cnt, 10);
         })
-        bar(data, '年齢', document.getElementById('chart_div8'));
+        var list = Object.keys(result).map(function(i) {
+            return {label: i, cnt: result[i]};
+        })
+        bar(list, '年齢', document.getElementById('chart_div8'));
     });
 
     // 診断チャート
