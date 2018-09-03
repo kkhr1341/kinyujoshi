@@ -28,7 +28,7 @@ class Registlist extends Base
             ->where($attr, '!=', '-')
             ->where($attr, '!=', '')
             ->group_by($attr)
-            ->order_by(\DB::expr('count(' . $attr . ')'), 'desc');
+            ->order_by(\DB::expr('count(' . $attr_name . ')'), 'desc');
 
         if ($attr == 'age') {
             $select->where(\DB::expr('DAYOFYEAR(cast(birthday as date)) IS NOT NULL'));
