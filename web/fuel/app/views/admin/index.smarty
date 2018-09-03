@@ -148,15 +148,17 @@
             if(value.label <= 20) {
                 value.label = '20歳以下';
             } else if(value.label >= 21 && value.label <= 25) {
-                value.label = '21〜25歳以上';
+                value.label = '21〜25歳';
             } else if(value.label >= 26 && value.label <= 30) {
-                value.label = '26〜30歳以上';
+                value.label = '26〜30歳';
             } else if(value.label >= 31 && value.label <= 35) {
-               value.label = '31〜35歳以上';
-            } else if(value.label >= 40 && value.label <= 45) {
-               value.label = '40〜45歳以上';
+               value.label = '31〜35歳';
+            } else if(value.label >= 36 && value.label <= 40) {
+               value.label = '36〜40歳';
+            } else if(value.label >= 41 && value.label <= 45) {
+               value.label = '41〜45歳';
             } else if(value.label >= 46 && value.label <= 50) {
-               value.label = '46〜50歳以上';
+               value.label = '46〜50歳';
             } else if(value.label >= 51) {
                value.label = '51歳以上';
             }
