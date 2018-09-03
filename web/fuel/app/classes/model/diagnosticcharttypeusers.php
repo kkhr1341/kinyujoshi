@@ -98,7 +98,7 @@ class DiagnosticChartTypeUsers extends Base
             ->on('diagnostic_chart_types.code', '=', 'diagnostic_chart_type_users.type_code')
 //            ->where('users.group', '=', 1)
             ->group_by('diagnostic_chart_types.type', \DB::expr('DATE_FORMAT(`diagnostic_chart_type_users`.`created_at`, "%Y-%m-%d")'))
-            ->order_by(\DB::expr('count(diagnostic_chart_types.type)'), 'asc');
+            ->order_by('diagnostic_chart_type_users.created_at', 'asc');
 
 
         if (!$row = $user->execute()->as_array()) {
