@@ -21,6 +21,7 @@ class Registlist extends Base
             ->where($attr, '!=', '-')
             ->where($attr, '!=', '')
             ->group_by($attr)
+            ->order_by(\DB::expr('count(' . $attr . ')'), 'desc')
             ->execute()
             ->as_array();
     }
