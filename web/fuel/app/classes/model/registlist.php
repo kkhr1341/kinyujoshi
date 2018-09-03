@@ -27,7 +27,7 @@ class Registlist extends Base
             ->where($attr, '!=', null)
             ->where($attr, '!=', '-')
             ->where($attr, '!=', '')
-            ->group_by($attr_name)
+            ->group_by(\DB::expr($attr_name))
             ->order_by(\DB::expr('count(' . $attr_name . ')'), 'desc');
 
         if ($attr == 'age') {
