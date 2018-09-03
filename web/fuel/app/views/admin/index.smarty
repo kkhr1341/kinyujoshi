@@ -70,6 +70,9 @@
         'height':300,
         'showRowNumber':true,
      };
+
+     var table = new google.visualization.Table(dom);
+     table.draw(data, options);
   }
 
   function bar(data, title, dom) {
@@ -140,7 +143,25 @@
            if( a.label < b.label ) return -1;
            if( a.label > b.label ) return 1;
            return 0;
-       });
+        })
+        .map(function(value) {
+            if(value.label <= 20) {
+                value.label = '20歳以下';
+            } else if(value.label >= 21 && value.label <= 25) {
+                value.label = '21〜25歳以上';
+            } else if(value.label >= 26 && value.label <= 30) {
+                value.label = '26〜30歳以上';
+            } else if(value.label >= 31 && value.label <= 35) {
+               value.label = '31〜35歳以上';
+            } else if(value.label >= 40 && value.label <= 45) {
+               value.label = '40〜45歳以上';
+            } else if(value.label >= 46 && value.label <= 50) {
+               value.label = '46〜50歳以上';
+            } else if(value.label >= 51) {
+               value.label = '51歳以上';
+            }
+            return value;
+        })
         bar(data, '年齢', document.getElementById('chart_div8'));
     });
 
@@ -170,7 +191,7 @@
         var result2 = Object.keys(result1).map(function(key) {
             return [key, result1[key].A, result1[key].B, result1[key].C, result1[key].D];
         })
-        var result3 = [['Date', 'A', 'B', 'C', 'D']].concat(result2)
+        var result3 = [['Date', 'A', 'B', 'C', 'D']].concat(result2);
         var data = google.visualization.arrayToDataTable(result3);
         var options = {
           title: '診断チャート登録推移',
@@ -189,6 +210,7 @@
 <div class="admin-main-el">
   <p class="admin-main-el-title">現在のメンバー属性</p>
   <div class="kinjo-member-chart-container clear">
+
     <div id="chart_div1" class="chart-el"></div>
     <div id="chart_div2" class="chart-el"></div>
 
