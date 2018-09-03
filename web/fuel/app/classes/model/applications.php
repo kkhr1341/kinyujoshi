@@ -100,6 +100,7 @@ class Applications extends Base
         $select .= 'member_regist.not_know, ';
         $select .= 'applications.*, ';
         $select .= 'application_credit_payments.sale, ';
+        $select .= 'prefecture.name as prefecture_name, ';
         $select .= 'application_credit_payments.cancel as payment_cancel, ';
         $select .= '(select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at, ';
         $select .= '(select pa.created_at from participated_applications as pa where pa.application_code = applications.code) as participated, ';
@@ -115,6 +116,8 @@ class Applications extends Base
             ->on('profiles.username', '=', 'users.username')
             ->join('application_credit_payments', 'LEFT')
             ->on('applications.code', '=', 'application_credit_payments.application_code')
+            ->join('prefectures', 'LEFT')
+            ->on('prefectures.code', '=', 'profiles.prefecture')
             ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->where('applications.cancel', '=', 0)

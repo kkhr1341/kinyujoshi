@@ -392,11 +392,14 @@ class Regist extends Base
             "member_regist.updated_at",
             \DB::expr("exists(select * from users where users.username = member_regist.username) as is_user"),
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
-            \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
-            )
+            \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana"),
+            \DB::expr("prefectures.name as prefecture_name")
+        )
             ->from('member_regist')
             ->join('profiles', 'LEFT')
-            ->on('profiles.username', '=', 'member_regist.username');
+            ->on('profiles.username', '=', 'member_regist.username')
+            ->join('prefectures', 'LEFT')
+            ->on('prefectures.code', '=', 'profiles.prefecture');
 
         $datas = $datas->order_by('member_regist.created_at', 'desc');
         //$datas = $datas->array_unique($input);
