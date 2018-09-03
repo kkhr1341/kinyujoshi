@@ -10,9 +10,8 @@ class Controller_Api_Analysis extends Controller_Base
     {
         parent::before();
 
-        $group = Auth::group();
-        if (!in_array('admin', $group->get_roles())) {
-            return $this->error('no administrator');
+        if (!Auth::has_access('analysis.read')) {
+            return $this->error('permission denied');
         }
     }
 
@@ -21,10 +20,6 @@ class Controller_Api_Analysis extends Controller_Base
      */
     public function action_member()
     {
-        $group = Auth::group();
-        if (!in_array('admin', $group->get_roles())) {
-            return $this->error('no administrator');
-        }
         if (!$attr = \Input::get('attr')) {
             return $this->error('invalid argument');
         }
@@ -37,10 +32,6 @@ class Controller_Api_Analysis extends Controller_Base
      */
     public function action_diagnostic_chart_types()
     {
-        $group = Auth::group();
-        if (!in_array('admin', $group->get_roles())) {
-            return $this->error('no administrator');
-        }
         $this->ok(DiagnosticChartTypeUsers::get_aggregate_type());
     }
 }

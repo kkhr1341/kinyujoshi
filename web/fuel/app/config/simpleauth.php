@@ -93,7 +93,7 @@ return array(
 	 */
 	'roles' => array(
 		'admin' => array(
-            'top' => array('read'),
+            'analysis' => array('read'),
             'applications' => array('read'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
@@ -104,7 +104,7 @@ return array(
             'remindmailtemplates' => array('read', 'edit'),
         ),
         'editor' => array(
-            'top' => array('read'),
+            'analysis' => array('read'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
         ),

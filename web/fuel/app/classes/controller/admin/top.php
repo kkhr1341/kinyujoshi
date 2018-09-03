@@ -7,7 +7,7 @@ class Controller_Admin_Top extends Controller_Adminbase
 
     public function action_index()
     {
-        if (!Auth::has_access('top.read')) {
+        if (!Auth::has_access('analysis.read')) {
             throw new HttpNoAccessException;
         }
         $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);

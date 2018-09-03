@@ -15,7 +15,6 @@
   </div>
 
 <!-- チャート関連 -->
-{if in_array('admin', $roles)}
 {literal}
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
@@ -124,6 +123,3 @@
     <div id="chart_div7" class="line-chart-el"></div>
   </div>
 </div>
-
-
-{/if}
