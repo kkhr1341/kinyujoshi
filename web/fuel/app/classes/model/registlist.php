@@ -8,7 +8,14 @@ class Registlist extends Base
 
     public static function member_attribute_count($attr)
     {
-        return \DB::select(\DB::expr($attr . ' as label, count(' . $attr . ') as cnt'))
+        if ($attr == 'age') {
+            $attr = 'birthday';
+            $attr_name = 'TIMESTAMPDIFF(YEAR, `birthday`, CURDATE())';
+        } else {
+            $attr_name = $attr;
+        }
+
+        $select = \DB::select(\DB::expr($attr_name . ' as label, count(' . $attr_name . ') as cnt'))
             ->from('member_regist')
             ->join('users', 'left')
                 ->on('users.username', '=', 'member_regist.username')
@@ -21,8 +28,13 @@ class Registlist extends Base
             ->where($attr, '!=', '-')
             ->where($attr, '!=', '')
             ->group_by($attr)
-            ->order_by(\DB::expr('count(' . $attr . ')'), 'desc')
-            ->execute()
+            ->order_by(\DB::expr('count(' . $attr . ')'), 'desc');
+
+        if ($attr == 'age') {
+            $select->where(\DB::expr('DAYOFYEAR(cast(birthday as date)) IS NOT NULL'));
+        }
+
+        return $select->execute()
             ->as_array();
     }
 

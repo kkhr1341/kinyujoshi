@@ -107,6 +107,11 @@
         pie(json.data, '都道府県', document.getElementById('chart_div5'));
     });
 
+    // 年齢
+    $.getJSON( "/api/analysis/member_attr_count?attr=age", function( json ) {
+        pie(json.data, '年齢', document.getElementById('chart_div8'));
+    });
+
     // 診断チャート
     $.getJSON( "/api/analysis/diagnostic_chart_types", function( json ) {
         // 円グラフ
@@ -162,7 +167,7 @@
     <div id="chart_div4_other" class="chart-el"></div>
 
     <div id="chart_div6" class="chart-el"></div>
-    <div style="clear: both;"></div>
+    <div id="chart_div8" class="chart-el"></div>
 
     <div id="chart_div7" class="line-chart-el"></div>
   </div>

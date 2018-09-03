@@ -86,7 +86,7 @@ class DiagnosticChartTypeUsers extends Base
     // ユーザーのタイプを集計
     public static function get_aggregate_type()
     {
-        $select = 'diagnostic_chart_types.type as label, ';
+        $select = 'CONCAT(diagnostic_chart_types.type, "タイプ（", diagnostic_chart_types.character_name, "）") as label, ';
         $select .= 'DATE_FORMAT(`diagnostic_chart_type_users`.`created_at`, "%Y-%m-%d") as created_at, ';
         $select .= 'count(diagnostic_chart_types.type) as cnt';
 
