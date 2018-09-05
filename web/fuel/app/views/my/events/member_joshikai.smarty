@@ -2,29 +2,106 @@
   <div class="admin-normal-inner clear">
     
     {$my_side}
+
+    <style>
+      .admin-normal-main .kinyu-event-list li {
+        width: 48%;
+        margin-right: 4%;
+      }
+      .admin-normal-main .kinyu-event-list {
+        border-bottom: none;
+      }
+      .admin-normal-main .kinyu-event-list li:nth-last-child(-n+3) {
+        margin-bottom: auto;
+      }
+      .admin-normal-main .kinyu-event-list li:nth-child(3n) {
+        margin-right: auto;
+      }
+      .admin-normal-main .kinyu-event-list li:nth-child(2n) {
+        margin-right: 0%;
+      }
+      .admin-normal-main .kinyu-event-list .kinyu-event-list-right {
+        background: #fff;
+      }
+      @media screen and (max-width: 1024px) {
+        .admin-normal-main .kinyu-event-list li {
+          width: 100%;
+          margin-right: 0%;
+          margin-bottom: 24px!important;
+        }
+        .admin-normal-main .kinyu-event-list .kinyu-event-list-right {
+          background: #fff!important;
+        }
+        .admin-normal-main .kinyu-event-list {
+          padding-bottom: 0px;
+        }
+        .admin-normal-main .kinyu-event-list li:last-child {
+          margin-bottom: 0%!important;
+        }
+      }
+    </style>
     
     <div class="admin-normal-main">
+      <div class="kinyu-event-list">
 
-      <div class="kinyu-top-list kinyu-top-member_joshikai">
-        <!-- h3 class="kinyu-top-main-title"><span>myきん女。</span></h3> -->
-
-        <div class="mykinjo-block">
+        <p class="kinyu-event-info-title">メンバー限定女子会</p>
+        <ul>
+          {foreach from=$events key="key" item=event name=loopname}
+          {$fooo = $event.main_image}
+          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
           
-          <div class="mykinjo-thub" style="background: gray;"></div>
-          
-          <div class="text-box">
-            <p class="title">テキストテキストテキストテキストテキスト<br>テキストテキストテキストテキスト</p>
-            <p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          </div>
-
-          <div class="request-block">
-            <img class="request-title" src="/images/my/mykinjo-textarea.png">
-            <textarea id="message" name="message" class="form-control" rows="10"></textarea>
-            <button class="btn btn-primary" type="button" id="save">送信する</button>
-          </div>
-
-        </div>
-      
+          <li>
+            {if $event.event_category == "女子会"}
+              <div class="bg-joshikai"></div>
+            {else if $event.event_category == "スペシャル"}
+              <div class="bg-special-joshikai"></div>
+            {else}
+              <div class="bg-joshikai"></div>
+            {/if}
+            <div class="kinyu-event-list-el">
+              {if empty($event.specific_link)}
+              <a href="/joshikai/{$event.code}">
+              {else}
+              <a href="{$event.specific_link}" target="_blank">
+              {/if}
+                <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
+                </div>
+                
+                {if $event.event_category == "女子会"}
+                  <div class="kinyu-event-list-right">
+                {else if $event.event_category == "スペシャル"}
+                  <div class="kinyu-event-list-right special">
+                {else}
+                  <div class="kinyu-event-list-right">
+                {/if}
+                  <div class="kinyu-top-list-kind kinyu-top-event-kind">
+                    <p>
+                    <span class="date-box">
+                      {if $event.display_event_date}
+                        <span class="date">{$event.display_event_date}</span>
+                      {else}
+                        <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
+                        {$event.event_date|date_format:"(%a)"|replace:"Sun":">日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
+                      {/if}
+                    </span>
+                    </p>
+                    {if $event.applicable eq false}
+                      <p class="joshikai-applicable">＊受付終了</p>
+                    {else if $event.full eq true}
+                      <p class="joshikai-applicable">＊満席</p>
+                    {/if}
+                  </div>
+                  <h3 class="event-title">{$event.title}</h3>
+                  <div class="event-subbox">
+                    <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    <p class="event-subbox-el">場所：{$event.place}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+          {/foreach}
+        </ul>
       </div>
     </div>
   </div>
