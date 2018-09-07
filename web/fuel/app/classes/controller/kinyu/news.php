@@ -36,7 +36,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
     public function action_detail($code)
     {
         $this->data['news'] = News::getByCodeWithProfile($code);
-        $this->data['top_events'] = Events::lists(1, 7, true);
+        $this->data['top_events'] = Events::lists(1, 7, true, 0);
 
         if ($this->data['news'] === false) {
             Response::redirect('error/404');
