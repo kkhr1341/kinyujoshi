@@ -54,7 +54,7 @@
      data.addRows(resultValue);
 
      var options = {'title':title,
-                    'width':400,
+                    'width':'100%',
                     'height':300};
 
      var chart = new google.visualization.PieChart(dom);
@@ -79,13 +79,43 @@
 
      var options = {
         'title':title,
-        'width':400,
+        'width':'100%',
+        'height':300,
+        'showRowNumber':true,
+     };
+
+     var table = new google.visualization.Table(dom);
+     table.draw(data, options);
+  }
+
+  function bar(data, title, dom) {
+
+      var values = [];
+      data.forEach(function(d) {
+          values.push([d.label, parseInt(d.cnt)]);
+      })
+
+      var data = new google.visualization.DataTable();
+
+      // Declare columns
+      data.addColumn('string', 'Label');
+      data.addColumn('number', 'Count');
+
+      // Add data.
+      data.addRows(values);
+
+     var options = {
+        'title':title,
+        'width':'100%',
         'height':300,
         'showRowNumber':true,
     };
 
      var table = new google.visualization.Table(dom);
      table.draw(data, options);
+
+     var chart = new google.visualization.ColumnChart(dom);
+     chart.draw(data, options);
   }
 
   function drawChart(start_at, end_at) {
@@ -121,6 +151,43 @@
         pie(json.data, '都道府県', document.getElementById('chart_div5'));
     });
 
+    // 年齢
+    $.getJSON( "/api/analysis/member_attr_count?attr=age", function( json ) {
+        var data = json.data.sort(function(a,b){
+           if( a.label < b.label ) return -1;
+           if( a.label > b.label ) return 1;
+           return 0;
+        });
+        var result = {};
+        data.forEach(function(value) {
+            if(value.label <= 20) {
+                var label = '20歳以下';
+            } else if(value.label >= 21 && value.label <= 25) {
+                var label = '21〜25歳';
+            } else if(value.label >= 26 && value.label <= 30) {
+                var label = '26〜30歳';
+            } else if(value.label >= 31 && value.label <= 35) {
+               var label = '31〜35歳';
+            } else if(value.label >= 36 && value.label <= 40) {
+               var label = '36〜40歳';
+            } else if(value.label >= 41 && value.label <= 45) {
+               var label = '41〜45歳';
+            } else if(value.label >= 46 && value.label <= 50) {
+               var label = '46〜50歳';
+            } else if(value.label >= 51) {
+               var label = '51歳以上';
+            }
+            if (!(label in result)) {
+                result[label] = 0;
+            }
+            result[label] += parseInt(value.cnt, 10);
+        })
+        var list = Object.keys(result).map(function(i) {
+            return {label: i, cnt: result[i]};
+        })
+        bar(list, '年齢', document.getElementById('chart_div8'));
+    });
+
     // 診断チャート
     $.getJSON( "/api/analysis/diagnostic_chart_types?start_at=" + start_at + "&end_at=" + end_at, function( json ) {
         // 円グラフ
@@ -147,7 +214,7 @@
         var result2 = Object.keys(result1).map(function(key) {
             return [key, result1[key].A, result1[key].B, result1[key].C, result1[key].D];
         })
-        var result3 = [['Date', 'A', 'B', 'C', 'D']].concat(result2)
+        var result3 = [['Date', 'A', 'B', 'C', 'D']].concat(result2);
         var data = google.visualization.arrayToDataTable(result3);
         var options = {
           title: '診断チャート登録推移',
@@ -180,8 +247,8 @@
     <div id="chart_div4_other" class="chart-el"></div>
 
     <div id="chart_div6" class="chart-el"></div>
-    <div style="clear: both;"></div>
+    <div id="chart_div8" class="wide-chart-el"></div>
 
-    <div id="chart_div7" class="line-chart-el"></div>
+    <div id="chart_div7" class="wide-chart-el"></div>
   </div>
 </div>
