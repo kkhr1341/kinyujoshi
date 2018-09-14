@@ -12,6 +12,21 @@
 
   <div class="joshikai-attend-el-block">
 
+    <div class="kinjo-member-chart-container clear" data-event_code="{$events.code}">
+      <div id="chart_div1" class="chart-el"></div>
+      <div id="chart_div2" class="chart-el"></div>
+
+      <div id="chart_div3" class="chart-el"></div>
+      <div id="chart_div5" class="chart-el"></div>
+
+      <div id="chart_div4" class="chart-el"></div>
+      <div id="chart_div4_other" class="chart-el"></div>
+
+      <div id="chart_div6" class="chart-el"></div>
+      <div id="chart_div8" class="wide-chart-el"></div>
+    </div>
+
+
     <div class="clearw float_right" style="margin-bottom: 24px;">
     	<a class="btn btn-primary" id="broadcast_mail" href="#" role="button">メールを一斉送信する</a>
     	<a class="btn btn-primary" id="download_csv" href="/admin/joshikai/memberlist/{$events.code}" role="button">CSVダウンロード</a>
@@ -305,4 +320,174 @@ $(function(){
             });
         });
 });
+
 </script>
+
+<!-- チャート関連 -->
+{literal}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+$(function(){
+
+  google.charts.load('current', {'packages':['corechart', 'table']});
+
+  google.charts.setOnLoadCallback(function() {
+      var event_code = $('.kinjo-member-chart-container').data('event_code');
+      drawChart(event_code);
+  });
+
+  function pie(data, title, dom) {
+
+     var values = {};
+     data.forEach(function(d) {
+         values[d.label] = parseInt(d.cnt);
+     })
+
+     var resultValue = [];
+     Object.keys(values).forEach(function (key) {
+       resultValue.push([key, values[key]]);
+     });
+
+     var data = new google.visualization.DataTable();
+     data.addColumn('string', 'Topping');
+     data.addColumn('number', 'Slices');
+     data.addRows(resultValue);
+
+     var options = {'title':title,
+                    'width':'100%',
+                    'height':300};
+
+     var chart = new google.visualization.PieChart(dom);
+     chart.draw(data, options);
+  }
+
+  function table(data, title, dom) {
+
+      var values = [];
+      data.forEach(function(d) {
+          values.push([d.label, parseInt(d.cnt)]);
+      })
+
+      var data = new google.visualization.DataTable();
+
+      // Declare columns
+      data.addColumn('string', 'Label');
+      data.addColumn('number', 'Count');
+
+      // Add data.
+      data.addRows(values);
+
+     var options = {
+        'title':title,
+        'width':'100%',
+        'height':300,
+        'showRowNumber':true,
+     };
+
+     var table = new google.visualization.Table(dom);
+     table.draw(data, options);
+  }
+
+  function bar(data, title, dom) {
+
+      var values = [];
+      data.forEach(function(d) {
+          values.push([d.label, parseInt(d.cnt)]);
+      })
+
+      var data = new google.visualization.DataTable();
+
+      // Declare columns
+      data.addColumn('string', 'Label');
+      data.addColumn('number', 'Count');
+
+      // Add data.
+      data.addRows(values);
+
+     var options = {
+        'title':title,
+        'width':'100%',
+        'height':300,
+        'showRowNumber':true,
+    };
+
+     var table = new google.visualization.Table(dom);
+     table.draw(data, options);
+
+     var chart = new google.visualization.ColumnChart(dom);
+     chart.draw(data, options);
+  }
+
+  function drawChart(event_code) {
+
+    // きんゆうワカラナイ度
+    $.getJSON( "/api/analysis/member_attr_count?attr=not_know&event_code=" + event_code, function( json ) {
+        pie(json.data, 'きんゆうワカラナイ度', document.getElementById('chart_div1'));
+
+    });
+
+    // 金融機関で働いていますか？
+    $.getJSON( "/api/analysis/member_attr_count?attr=job_kind&event_code=" + event_code, function( json ) {
+        pie(json.data, '金融機関で働いていますか？ ', document.getElementById('chart_div2'));
+    });
+
+    // きんゆう女子。で情報発信したいですか？
+    $.getJSON( "/api/analysis/member_attr_count?attr=transmission&event_code=" + event_code, function( json ) {
+        pie(json.data, 'きんゆう女子。で情報発信したいですか？', document.getElementById('chart_div3'));
+    });
+
+    // どこで、きんゆう女子。を知りましたか？
+    $.getJSON( "/api/analysis/member_attr_count?attr=where_from&event_code=" + event_code, function( json ) {
+        pie(json.data, 'どこで、きんゆう女子。を知りましたか？', document.getElementById('chart_div4'));
+    });
+
+    // どこで、きんゆう女子。を知りましたか？その他
+    $.getJSON( "/api/analysis/member_attr_count?attr=where_from_other&event_code=" + event_code, function( json ) {
+        table(json.data, 'どこで、きんゆう女子。を知りましたか？その他', document.getElementById('chart_div4_other'));
+    });
+
+    // 都道府県
+    $.getJSON( "/api/analysis/member_attr_count?attr=prefectures.name&event_code=" + event_code, function( json ) {
+        pie(json.data, '都道府県', document.getElementById('chart_div5'));
+    });
+
+    // 年齢
+    $.getJSON( "/api/analysis/member_attr_count?attr=age&event_code=" + event_code, function( json ) {
+        var data = json.data.sort(function(a,b){
+           if( a.label < b.label ) return -1;
+           if( a.label > b.label ) return 1;
+           return 0;
+        });
+        var result = {};
+        data.forEach(function(value) {
+            if(value.label <= 20) {
+                var label = '20歳以下';
+            } else if(value.label >= 21 && value.label <= 25) {
+                var label = '21〜25歳';
+            } else if(value.label >= 26 && value.label <= 30) {
+                var label = '26〜30歳';
+            } else if(value.label >= 31 && value.label <= 35) {
+               var label = '31〜35歳';
+            } else if(value.label >= 36 && value.label <= 40) {
+               var label = '36〜40歳';
+            } else if(value.label >= 41 && value.label <= 45) {
+               var label = '41〜45歳';
+            } else if(value.label >= 46 && value.label <= 50) {
+               var label = '46〜50歳';
+            } else if(value.label >= 51) {
+               var label = '51歳以上';
+            }
+            if (!(label in result)) {
+                result[label] = 0;
+            }
+            result[label] += parseInt(value.cnt, 10);
+        })
+        var list = Object.keys(result).map(function(i) {
+            return {label: i, cnt: result[i]};
+        })
+        bar(list, '年齢', document.getElementById('chart_div8'));
+    });
+  }
+});
+</script>
+{/literal}

@@ -14,10 +14,35 @@
     {/if} -->
   </div>
 
+<div class="admin-main-el">
+  <p class="admin-main-el-title">現在のメンバー属性</p>
+  <div class="kinjo-member-chart-container clear">
+
+    <input type="text" placeholder="開始日付" name="start_at" style="border:1px solid #000;">〜
+    <input type="text" placeholder="終了日付" name="end_at" style="border:1px solid #000;">
+
+    <div id="chart_div1" class="chart-el"></div>
+    <div id="chart_div2" class="chart-el"></div>
+
+    <div id="chart_div3" class="chart-el"></div>
+    <div id="chart_div5" class="chart-el"></div>
+
+    <div id="chart_div4" class="chart-el"></div>
+    <div id="chart_div4_other" class="chart-el"></div>
+
+    <div id="chart_div6" class="chart-el"></div>
+    <div id="chart_div8" class="wide-chart-el"></div>
+
+    <div id="chart_div7" class="wide-chart-el"></div>
+  </div>
+</div>
+
+
 <!-- チャート関連 -->
 {literal}
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
+$(function(){
 
   google.charts.load('current', {'packages':['corechart', 'table']});
 
@@ -227,28 +252,6 @@
         chart.draw(data, options);
     });
   }
+});
 </script>
 {/literal}
-
-<div class="admin-main-el">
-  <p class="admin-main-el-title">現在のメンバー属性</p>
-  <div class="kinjo-member-chart-container clear">
-
-    <input type="text" placeholder="開始日付" name="start_at" style="border:1px solid #000;">〜
-    <input type="text" placeholder="終了日付" name="end_at" style="border:1px solid #000;">
-
-    <div id="chart_div1" class="chart-el"></div>
-    <div id="chart_div2" class="chart-el"></div>
-
-    <div id="chart_div3" class="chart-el"></div>
-    <div id="chart_div5" class="chart-el"></div>
-
-    <div id="chart_div4" class="chart-el"></div>
-    <div id="chart_div4_other" class="chart-el"></div>
-
-    <div id="chart_div6" class="chart-el"></div>
-    <div id="chart_div8" class="wide-chart-el"></div>
-
-    <div id="chart_div7" class="wide-chart-el"></div>
-  </div>
-</div>

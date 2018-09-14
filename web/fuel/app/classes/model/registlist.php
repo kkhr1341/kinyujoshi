@@ -6,7 +6,7 @@ require_once(dirname(__FILE__) . "/base.php");
 class Registlist extends Base
 {
 
-    public static function member_attribute_count($attr, $start_at="", $end_at="")
+    public static function member_attribute_count($attr, $options)
     {
         if ($attr == 'age') {
             $attr = 'birthday';
@@ -34,12 +34,16 @@ class Registlist extends Base
             $select->where(\DB::expr('DAYOFYEAR(cast(birthday as date)) IS NOT NULL'));
         }
 
-        if ($start_at) {
-            $select->where('member_regist.created_at', '>=', $start_at . ' 00:00:00');
+        if (isset($options['start_at']) && $options['start_at']) {
+            $select->where('member_regist.created_at', '>=', $options['start_at'] . ' 00:00:00');
         }
 
-        if ($end_at) {
-            $select->where('member_regist.created_at', '<=', $end_at . ' 23:59:59');
+        if (isset($options['end_at']) && $options['end_at']) {
+            $select->where('member_regist.created_at', '<=', $options['end_at'] . ' 23:59:59');
+        }
+
+        if (isset($options['event_code']) && $options['event_code']) {
+            $select->where(\DB::expr('exists(select * from applications where applications.username = users.username and applications.event_code = "' .  $options['event_code']. '")'));
         }
 
         if (!$row = $select->execute()->as_array()) {
