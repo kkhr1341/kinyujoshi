@@ -6,7 +6,7 @@ require_once(dirname(__FILE__) . "/base.php");
 class Registlist extends Base
 {
 
-    public static function member_attribute_count($attr)
+    public static function member_attribute_count($attr, $options)
     {
         if ($attr == 'age') {
             $attr = 'birthday';
@@ -18,11 +18,11 @@ class Registlist extends Base
         $select = \DB::select(\DB::expr($attr_name . ' as label, count(' . $attr_name . ') as cnt'))
             ->from('member_regist')
             ->join('users', 'left')
-                ->on('users.username', '=', 'member_regist.username')
+            ->on('users.username', '=', 'member_regist.username')
             ->join('profiles', 'left')
-                ->on('profiles.username', '=', 'users.username')
+            ->on('profiles.username', '=', 'users.username')
             ->join('prefectures', 'left')
-                ->on('prefectures.code', '=', 'profiles.prefecture')
+            ->on('prefectures.code', '=', 'profiles.prefecture')
             ->where('member_regist.disable', '=', 1)
             ->where($attr, '!=', null)
             ->where($attr, '!=', '-')
@@ -34,8 +34,22 @@ class Registlist extends Base
             $select->where(\DB::expr('DAYOFYEAR(cast(birthday as date)) IS NOT NULL'));
         }
 
-        return $select->execute()
-            ->as_array();
+        if (isset($options['start_at']) && $options['start_at']) {
+            $select->where('member_regist.created_at', '>=', $options['start_at'] . ' 00:00:00');
+        }
+
+        if (isset($options['end_at']) && $options['end_at']) {
+            $select->where('member_regist.created_at', '<=', $options['end_at'] . ' 23:59:59');
+        }
+
+        if (isset($options['event_code']) && $options['event_code']) {
+            $select->where(\DB::expr('exists(select * from applications where applications.username = users.username and applications.event_code = "' .  $options['event_code']. '")'));
+        }
+
+        if (!$row = $select->execute()->as_array()) {
+            return array();
+        }
+        return $row;
     }
 
     public static function create($params)

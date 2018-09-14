@@ -84,7 +84,7 @@ class DiagnosticChartTypeUsers extends Base
     }
 
     // ユーザーのタイプを集計
-    public static function get_aggregate_type()
+    public static function get_aggregate_type($options)
     {
         $select = 'diagnostic_chart_types.type as label, ';
         $select .= 'DATE_FORMAT(`diagnostic_chart_type_users`.`created_at`, "%Y-%m-%d") as created_at, ';
@@ -100,10 +100,20 @@ class DiagnosticChartTypeUsers extends Base
             ->group_by('diagnostic_chart_types.type', \DB::expr('DATE_FORMAT(`diagnostic_chart_type_users`.`created_at`, "%Y-%m-%d")'))
             ->order_by('diagnostic_chart_type_users.created_at', 'asc');
 
+        if (isset($options['start_at']) && $options['start_at']) {
+            $user->where('diagnostic_chart_type_users.created_at', '>=', $options['start_at'] . ' 00:00:00');
+        }
+
+        if (isset($options['end_at']) && $options['end_at']) {
+            $user->where('diagnostic_chart_type_users.created_at', '<=', $options['end_at'] . ' 23:59:59');
+        }
+
+        if (isset($options['event_code']) && $options['event_code']) {
+            $user->where(\DB::expr('exists(select * from applications where applications.username = users.username and applications.event_code = "' .  $options['event_code']. '")'));
+        }
 
         if (!$row = $user->execute()->as_array()) {
-            echo \DB::last_query();
-            return false;
+            return array();
         }
         return $row;
     }

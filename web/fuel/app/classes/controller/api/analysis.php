@@ -23,7 +23,12 @@ class Controller_Api_Analysis extends Controller_Base
         if (!$attr = \Input::get('attr')) {
             return $this->error('invalid argument');
         }
-        $this->ok(Registlist::member_attribute_count($attr));
+
+        $this->ok(Registlist::member_attribute_count($attr, array(
+            'start_at' => \Input::get('start_at', ''),
+            'end_at' => \Input::get('end_at', ''),
+            'event_code' => \Input::get('event_code', ''),
+        )));
     }
 
     /**
@@ -31,6 +36,10 @@ class Controller_Api_Analysis extends Controller_Base
      */
     public function action_diagnostic_chart_types()
     {
-        $this->ok(DiagnosticChartTypeUsers::get_aggregate_type());
+        $this->ok(DiagnosticChartTypeUsers::get_aggregate_type(array(
+            'start_at' => \Input::get('start_at', ''),
+            'end_at' => \Input::get('end_at', ''),
+            'event_code' => \Input::get('event_code', ''),
+        )));
     }
 }
