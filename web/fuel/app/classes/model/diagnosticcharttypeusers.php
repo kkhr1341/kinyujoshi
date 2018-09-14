@@ -84,7 +84,7 @@ class DiagnosticChartTypeUsers extends Base
     }
 
     // ユーザーのタイプを集計
-    public static function get_aggregate_type()
+    public static function get_aggregate_type($start_at="", $end_at="")
     {
         $select = 'diagnostic_chart_types.type as label, ';
         $select .= 'DATE_FORMAT(`diagnostic_chart_type_users`.`created_at`, "%Y-%m-%d") as created_at, ';
@@ -99,10 +99,16 @@ class DiagnosticChartTypeUsers extends Base
 //            ->where('users.group', '=', 1)
             ->group_by('diagnostic_chart_types.type', \DB::expr('DATE_FORMAT(`diagnostic_chart_type_users`.`created_at`, "%Y-%m-%d")'));
 
+        if ($start_at) {
+            $user->where('diagnostic_chart_type_users.created_at', '>=', $start_at . ' 00:00:00');
+        }
+
+        if ($end_at) {
+            $user->where('diagnostic_chart_type_users.created_at', '<=', $end_at . ' 23:59:59');
+        }
 
         if (!$row = $user->execute()->as_array()) {
-            echo \DB::last_query();
-            return false;
+            return array();
         }
         return $row;
     }

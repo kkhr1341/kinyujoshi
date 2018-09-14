@@ -6,22 +6,33 @@ require_once(dirname(__FILE__) . "/base.php");
 class Registlist extends Base
 {
 
-    public static function member_attribute_count($attr)
+    public static function member_attribute_count($attr, $start_at="", $end_at="")
     {
-        return \DB::select(\DB::expr($attr . ' as label, count(' . $attr . ') as cnt'))
+        $select = \DB::select(\DB::expr($attr . ' as label, count(' . $attr . ') as cnt'))
             ->from('member_regist')
             ->join('users', 'left')
-                ->on('users.username', '=', 'member_regist.username')
+            ->on('users.username', '=', 'member_regist.username')
             ->join('profiles', 'left')
-                ->on('profiles.username', '=', 'users.username')
+            ->on('profiles.username', '=', 'users.username')
             ->join('prefectures', 'left')
-                ->on('prefectures.code', '=', 'profiles.prefecture')
+            ->on('prefectures.code', '=', 'profiles.prefecture')
             ->where('member_regist.disable', '=', 1)
             ->where($attr, '!=', null)
             ->where($attr, '!=', '-')
-            ->group_by($attr)
-            ->execute()
-            ->as_array();
+            ->group_by($attr);
+
+        if ($start_at) {
+            $select->where('member_regist.created_at', '>=', $start_at . ' 00:00:00');
+        }
+
+        if ($end_at) {
+            $select->where('member_regist.created_at', '<=', $end_at . ' 23:59:59');
+        }
+
+        if (!$row = $select->execute()->as_array()) {
+            return array();
+        }
+        return $row;
     }
 
     public static function create($params)
