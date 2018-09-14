@@ -152,7 +152,7 @@
     });
 
     // 年齢
-    $.getJSON( "/api/analysis/member_attr_count?attr=age", function( json ) {
+    $.getJSON( "/api/analysis/member_attr_count?attr=age&start_at=" + start_at + "&end_at=" + end_at, function( json ) {
         var data = json.data.sort(function(a,b){
            if( a.label < b.label ) return -1;
            if( a.label > b.label ) return 1;
