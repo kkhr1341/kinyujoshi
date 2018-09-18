@@ -632,7 +632,7 @@ $(document).ready(function() {
     limit: 9, //取得する画像数を設定
     resolution: 'standard_resolution', //画像サイズを設定
     template: '<li><a href="{{link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"><p><span>❤︎ {{likes}}</span></p></a></li>',
-    accessToken: '3007140595.4aea834.84f04adc27f44a67b15eaa3272ed0db0' //アクセストークン(ローカル)
+    accessToken: '3007140595.196d16b.a5a24b6446904e8da973b17ae9f25e21' //アクセストークン(ローカル)
   });
   userFeed.run();
 });
