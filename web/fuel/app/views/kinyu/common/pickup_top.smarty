@@ -1,17 +1,4 @@
-<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20180830141735image.jpg) center center / cover no-repeat;">
-  <a class="js-track" href="https://kinyu-joshi.jp/joshikai/XINcic" data-category="slide-link" data-action="click" data-value="1">
-    <div class="kinyu-top-introlist-title">
-        <h3 class="kinyu-top-list-title">かぞくのための資産づくり 〜金融商品のきほん〜 with東京証券取引所</h3>
-    </div>
-  </a>
-</div>
 
-<div class="swiper-slide" style="background: url(/images/diagnosticchart/og-main.jpg) center center / cover no-repeat;">
-  <a class="js-track" href="https://kinyu-joshi.jp/kinjo_check" data-category="slide-link" data-action="click" data-value="2">
-    <div class="kinyu-top-list-kind">
-    </div>
-  </a>
-</div>
 
 <!-- 女子会TOP表示 -->
 {if $display_top_event}
@@ -32,6 +19,13 @@
 </div>
 {/if}
 
+<div class="swiper-slide" style="background: url(/images/diagnosticchart/og-main.jpg) center center / cover no-repeat;">
+  <a class="js-track" href="https://kinyu-joshi.jp/kinjo_check" data-category="slide-link" data-action="click" data-value="2">
+    <div class="kinyu-top-list-kind">
+    </div>
+  </a>
+</div>
+	
 <div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
   <a class="js-track" href="/kinyu_sanpo" data-category="slide-link" data-action="click" data-value="4">
     <div class="kinyu-top-list-kind">
