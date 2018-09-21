@@ -46,7 +46,7 @@
                 margin-bottom: 30px!important;
               }
             </style>
-
+            <p><?php echo $email; ?></p>
           </td>
         </tr>
       </table>
