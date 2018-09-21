@@ -39,6 +39,7 @@
       <th>登録日</th>
       <th>名前</th>
       <th>会員ID</th>
+      <th>診断チャートタイプ</th>
       <th style="display:none;">かな</th>
       <!-- メールアドレス -->
       <th>Email</th>
@@ -65,6 +66,7 @@
       <td>{$email.created_at|date_format:"Y.m.d"}</td>
       <td>{$email.name}</td>
       <td>{$email.username}</td>
+      <td>{$email.type}</td>
       <td style="display:none;">{$email.name_kana}</td>
       <td>{$email.email}</td>
       <!-- <td>{$email.age}</td> -->

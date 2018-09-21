@@ -324,13 +324,16 @@ class Regist extends Base
                 "member_regist.updated_at",
                 \DB::expr("exists(select * from users where users.username = member_regist.username) as is_user"),
                 \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
-                \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
+                \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana"),
+                \DB::expr("(select diagnostic_chart_types.type from diagnostic_chart_type_users inner join diagnostic_chart_types on diagnostic_chart_types.code = diagnostic_chart_type_users.type_code where diagnostic_chart_type_users.id = types.id) as type")
             )
             ->from('member_regist')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'member_regist.username')
             ->join('users', 'LEFT')
             ->on('users.username', '=', 'member_regist.username')
+            ->join(array(\DB::expr('select max(id) as id, username from diagnostic_chart_type_users group by username'), 'types'), 'LEFT')
+            ->on('types.username', '=', 'member_regist.username')
             ->where('member_regist.disable', '=', 1);
 
         if (isset($params['username']) && $params['username']) {
