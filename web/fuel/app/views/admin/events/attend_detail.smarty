@@ -46,6 +46,7 @@
         </td>
         <td>{$application.username}</td>
         <td>{$application.name}</td>
+        <td>{$application.type}</td>
         <td>
         {if $application.birthday != '' && $application.birthday != '0000-00-00'}
         {((date('Ymd') - ($application.birthday|replace:"-":""))/10000)|floor}歳
@@ -486,6 +487,22 @@ $(function(){
             return {label: i, cnt: result[i]};
         })
         bar(list, '年齢', document.getElementById('chart_div8'));
+    });
+
+    // 診断チャート
+    $.getJSON( "/api/analysis/diagnostic_chart_types?event_code=" + event_code, function( json ) {
+        // 円グラフ
+        var result = {};
+        json.data.forEach(function(data){
+            if (!(data.label in result)) {
+                result[data.label] = 0;
+            }
+            result[data.label] += parseInt(data.cnt, 10);
+        })
+        var list = Object.keys(result).map(function(i) {
+            return {label: i, cnt: result[i]};
+        })
+        pie(list, '診断チャート', document.getElementById('chart_div6'));
     });
   }
 });

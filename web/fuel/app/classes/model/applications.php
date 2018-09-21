@@ -103,7 +103,8 @@ class Applications extends Base
         $select .= 'application_credit_payments.cancel as payment_cancel, ';
         $select .= '(select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at, ';
         $select .= '(select pa.created_at from participated_applications as pa where pa.application_code = applications.code) as participated, ';
-        $select .= '(select count(*) from applications as tp inner join participated_applications as pa on pa.application_code = tp.code where applications.username != "guest" and applications.username = tp.username) as application_count';
+        $select .= '(select count(*) from applications as tp inner join participated_applications as pa on pa.application_code = tp.code where applications.username != "guest" and applications.username = tp.username) as application_count,';
+        $select .= '(select diagnostic_chart_types.type from diagnostic_chart_type_users inner join diagnostic_chart_types on diagnostic_chart_types.code = diagnostic_chart_type_users.type_code where diagnostic_chart_type_users.id = types.id) as type';
 
         $datas = \DB::select(\DB::expr($select))
             ->from('applications')
@@ -115,6 +116,8 @@ class Applications extends Base
             ->on('profiles.username', '=', 'users.username')
             ->join('application_credit_payments', 'LEFT')
             ->on('applications.code', '=', 'application_credit_payments.application_code')
+            ->join(array(\DB::expr('select max(id) as id, username from diagnostic_chart_type_users group by username'), 'types'), 'LEFT')
+            ->on('types.username', '=', 'member_regist.username')
             ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->where('applications.cancel', '=', 0)

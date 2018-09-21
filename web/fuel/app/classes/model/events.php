@@ -190,11 +190,12 @@ class Events extends Base
         $select = '*';
         $select .= ', events.code';
         $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
-
         $datas = \DB::select(\DB::expr($select))
             ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
+            ->join(array(\DB::expr('select max(id) as id, username from diagnostic_chart_type_users group by username'), 'types'), 'LEFT')
+            ->on('types.username', '=', 'profiles.username')
             ->where('events.disable', '=', 0);
 
         if ($display === null) {
