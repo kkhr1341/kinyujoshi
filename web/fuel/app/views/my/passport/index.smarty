@@ -9,29 +9,108 @@
       <div class="admin-normal-joshikai joshikailist-main">
         <div class="mypage-content-mainimg" style="background:url(/images/my/my_passport_img.jpg) center center / cover no-repeat;"><div class="white-modal"></div></div>
 
-         <h3 class="mypage-content-title"><span>きん女。パスポート</span></h3>
-         <p class="mypage-content-description pc">
-          きん女。パスポートでは、メンバーさんだけが使えるすてきなコンテンツを揃える予定です。<br>
-          現在、編集部一同、企画を練っているところなので、いましばらくお待ちください♪
-          <span style="display: block;height:12px;"></span>
-          どんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、<br>
-          よかろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
-          もしかしたら採用されるかも！？
-         </p>
-         <p class="mypage-content-description sp">
-          きん女。パスポートでは、メンバーさんだけが使えるすてきなコンテンツを揃える予定です。
-          現在、編集部一同、企画を練っているところなので、いましばらくお待ちください♪
-          <span style="display: block;height:12px;"></span>
-          どんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、
-          よかろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
-          もしかしたら採用されるかも！？
-         </p>
+        <h3 class="mypage-content-title"><span>きん女。パスポート</span></h3>
+        <p class="mypage-content-description passport-exist pc">
+        きん女。パスポートでは、メンバーさんだけが使えるすてきなコンテンツを揃える予定です。<br>
+        日々企画を考えているので、これからもどんどん増えていく予定です♪
+        <span style="display: block;height:12px;"></span>
+        どんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、<br>
+        よろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
+        もしかしたら採用されるかも！？
+        </p>
+        <p class="mypage-content-description passport-exist sp">
+        きん女。パスポートでは、メンバーさんだけが使えるすてきなコンテンツを揃える予定です。
+        日々企画を考えているので、これからもどんどん増えていく予定です♪
+        <span style="display: block;height:12px;"></span>
+        どんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、
+        よろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
+        もしかしたら採用されるかも！？
+        </p>
+
+        <div class="passport-list">
+
+          <h3 class="passport-main-title">いまの特典リスト</h3>
+          
+          <!-- ラクサス|Laxus -->
+          <div class="passport-list-el passport-laxus">
+            <div class="passport-list-el-inner clear">
+              <div class="passport-img-box" style="background:url(/images/my/passport/laxus/laxus_img01.jpg) left center / cover no-repeat;"></div>
+              <div class="passport-text-box">
+                <div class="passport-text-box-inner">
+                  <img class="logo-img-laxus" src="/images/my/passport/laxus/logo_laxus.png">
+                  <p class="logo-sub-laxus">シーンにあわせてバッグを交換<br>ブランドバッグをスマートシェア</p>
+                  <div class="privilege-detail">
+                    <div class="privilege-detail-laxus">
+                      <p>月額利用料<br>
+                        6,800円
+                        <span class="passport-small">(税込)</span> →
+                        <span class="passport-attention">6,120</span>円
+                        <span class="passport-small">(税込)</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="passport-link laxus-link">ご利用方法はこちら</a>
+            <div class="passport-link-utilization laxus-link-utilization">
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow01.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step1</p>
+                  <p class="text-description">"<span>右下のアイコン</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow02.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step2</p>
+                  <p class="text-description">"<span>招待コード</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow03.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step3</p>
+                  <p class="text-description">"<span>招待コードを入力</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow04.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step4</p>
+                  <p class="text-description">招待コードに「<span>kinjo55</span>」を入れ、"<span>登録する</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow05.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step5</p>
+                  <p class="text-description">月額利用料が10%offに（6,800円→6,120円）</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <script>
+          $(".passport-list-el .passport-link").click(function() {
+            $(".passport-list-el .passport-link-utilization").slideToggle(500);
+          });
+        </script>
 
         <div class="request-block">
           <img class="request-title" src="/images/my/mykinjo-textarea.png">
           <textarea id="message" name="message" class="form-control" rows="10"></textarea>
           <button class="btn btn-primary" type="button" id="save">送信する</button>
         </div>
+
       </div>
     </div>
   </div>

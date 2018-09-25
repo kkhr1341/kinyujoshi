@@ -1003,10 +1003,10 @@ footer {
 }
 
 .mypage-content-description {
-    margin-bottom: 32px;
+    margin-bottom: 50px;
     text-align: center;
     font-size: 12px;
-    padding-bottom: 32px;
+    padding-bottom: 50px;
     border-bottom: 1px solid #ececec;
 }
 .admin-normal-main .profile-alert-block {
@@ -1145,6 +1145,121 @@ footer {
   width: 70%;
   margin: 0 auto;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - パスポート（TOP）
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.mypage-content-description.passport-exist {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+.passport-list {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 12px;
+  padding: 40px 50px 50px;
+  background: #fff;
+}
+.passport-main-title {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 26px;
+  color: #77cbc0;
+  text-align: center;
+}
+.passport-img-box {
+  width: 50%;
+  height: 250px;
+  float: left;
+}
+.passport-text-box {
+  width: 50%;
+  float: right;
+  padding-left: 32px;
+  height: 250px;
+  display: table;
+}
+.passport-text-box-inner {
+  display: table-cell;
+  vertical-align: middle;  
+}
+.privilege-detail {
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  margin-top: 24px;
+  padding: 20px 0px;
+}
+.passport-link {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 10px 0px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+/* 利用の流れ */
+.passport-link-utilization {
+  display: none;
+  padding: 20px 32px; 
+}
+.passport-link-utilization-el {
+  padding: 16px 0px;
+}
+.passport-link-utilization-el img {
+  width: 120px;
+  display: block;
+  float: left;
+}
+.passport-link-utilization-el .link-utilization-text-box {
+  float: left;
+  text-align: left;
+  padding: 20px 0px 0px 20px; 
+}
+.passport-link-utilization-el .text-step {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 12px;
+  border-left: 2px solid #b5884a;
+  padding-left: 8px;
+}
+.passport-link-utilization-el .text-description {
+  font-size: 14px;
+  line-height: 24px;
+}
+.passport-link-utilization-el .text-description span {
+  font-weight: bold;
+}
+/* Laxus|ラクサス */
+.logo-img-laxus {
+  width: 150px;
+}
+.logo-sub-laxus {
+  font-size: 11px;
+  line-height: 15px;
+  margin-top: 8px;
+}
+.laxus-link {
+  background: #b5884a;
+}
+.laxus-link-utilization {
+  background: rgba(181, 136, 74, 0.15);
+}
+.privilege-detail-laxus .passport-small {
+  font-size: 10px;
+}
+.privilege-detail-laxus .passport-attention {
+  color: #ff5555;
+  font-weight: bold;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - パスポート（詳細）
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+
 
 
 
