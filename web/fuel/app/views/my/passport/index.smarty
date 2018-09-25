@@ -54,6 +54,7 @@
             </div>
             <p class="passport-link laxus-link">ご利用方法はこちら</a>
             <div class="passport-link-utilization laxus-link-utilization">
+              <p class="passport-link-utilization-alert"><span>＊</span>特典のご利用は、Laxus（ラクサス）のアプリでのみ可能です。</p>
               <div class="passport-link-utilization-el clear">
                 <img src="/images/my/passport/laxus/flow01.png">
                 <div class="link-utilization-text-box">

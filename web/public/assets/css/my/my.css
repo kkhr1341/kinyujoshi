@@ -1204,6 +1204,13 @@ footer {
   display: none;
   padding: 20px 32px; 
 }
+.passport-link-utilization-alert {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.passport-link-utilization-alert span {
+  color: red;
+}
 .passport-link-utilization-el {
   padding: 16px 0px;
 }
