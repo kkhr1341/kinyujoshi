@@ -1238,6 +1238,19 @@ footer {
 .passport-link-utilization-el .text-description span {
   font-weight: bold;
 }
+.passport-link-utilization-link {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-align: center;
+    background: #a2a2a2;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
 /* Laxus|ラクサス */
 .logo-img-laxus {
   width: 150px;
