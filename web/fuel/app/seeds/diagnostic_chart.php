@@ -134,10 +134,10 @@ $seeds = array(
     array('id' => '2', 'type_code' => 'pttyS2', 'content' => "1.みんなどうしているかレポートを読んでみよう\n2.finbeeやZaimをつかってお金のこと誰かとシェアしよう\n3.アクションする女子会でみんなと一緒に前に進もう", 'created_at' => \DB::expr('now()')),
     
     //C
-    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "1.ラクサスXで眠っているバックを運用。投資の練習してみよう！\n2.自動で貯金。「しらたま」や「マメタス」を使ってみよう\n3.貯まっているポイントでつみたて運用を始めてみる？", 'created_at' => \DB::expr('now()')),
+    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "1.ラクサスXで眠っているバックを運用。投資の練習してみよう！\n2.キャッシュレスにしてお金の出入りを見えるようにしよう！Suica、デビットカード、pringなど♪\n3.貯まっているポイントでつみたて運用を始めてみる？", 'created_at' => \DB::expr('now()')),
     
     //D
-    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "1.ニュースやアナリストの話に慣れるよう、きんゆう単語を学ぼう！\n2.OneTapBUYやトラノコで本当の投資にチャレンジ。\n3.現金派からキャッシュレス派に。カードやスマホ決済でミニマムライフ♪", 'created_at' => \DB::expr('now()')),
+    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "1.ニュースやアナリストの話に慣れるよう、きんゆう単語を学ぼう！\n2.つみたてNISAやNISAで、本当の投資にチャレンジ！\n3.現金派からキャッシュレス派に。カードやスマホ決済でミニマムライフ♪", 'created_at' => \DB::expr('now()')),
 );
 
 foreach ($seeds as $key => $seed) {
