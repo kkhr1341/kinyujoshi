@@ -396,17 +396,27 @@ class Regist extends Base
             \DB::expr("exists(select * from users where users.username = member_regist.username) as is_user"),
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
             \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana"),
-            \DB::expr("prefectures.name as prefecture_name")
+            \DB::expr("prefectures.name as prefecture_name"),
+            \DB::expr("(select diagnostic_chart_types.type from diagnostic_chart_type_users inner join diagnostic_chart_types on diagnostic_chart_types.code = diagnostic_chart_type_users.type_code where diagnostic_chart_type_users.id = types.id) as type")
         )
             ->from('member_regist')
+            ->join('users', 'LEFT')
+            ->on('member_regist.username', '=', 'users.username')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'member_regist.username')
             ->join('prefectures', 'LEFT')
-            ->on('prefectures.code', '=', 'profiles.prefecture');
+            ->on('prefectures.code', '=', 'profiles.prefecture')
+            ->join(array(\DB::expr('select max(id) as id, username from diagnostic_chart_type_users group by username'), 'types'), 'LEFT')
+            ->on('types.username', '=', 'member_regist.username')
+            ->where('member_regist.disable', '=', 1)
+            ->and_where_open()
+            ->where('users.group', 'in', array('1'))
+            ->or_where('users.group', 'is', null)
+            ->and_where_close();
 
         $datas = $datas->order_by('member_regist.created_at', 'desc');
         //$datas = $datas->array_unique($input);
-        $datas = $datas->where('member_regist.disable', '=', 1)->execute()->as_array();
+        $datas = $datas->execute()->as_array();
 //        header('Content-type: text/html; charset=UTF-8');
         return $datas;
 
