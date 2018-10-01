@@ -7,6 +7,10 @@ use \Model\Events;
 class Controller_Kinyu_News extends Controller_Kinyubase
 {
 
+    const AUTHENTICATION_USER = 'kinyu-news';
+
+    const AUTHENTICATION_PASSWORD = 'iYszQGhE';
+
     public function action_index($page = 1)
     {
         $this->data['news'] = News::all('news', '/news/', $page, 2, 10);
@@ -43,11 +47,19 @@ class Controller_Kinyu_News extends Controller_Kinyubase
         }
 
         if ($this->data['news']['status'] == 0) {
-            $iddate = $this->data['blog']['code'];
+
+            if ($this->data['news']['authentication_user'] && $this->data['news']['authentication_password']) {
+                $authentication_user     = $this->data['news']['authentication_user'];
+                $authentication_password = $this->data['news']['authentication_password'];
+            } else {
+                $authentication_user     = self::AUTHENTICATION_USER;
+                $authentication_password = self::AUTHENTICATION_PASSWORD;
+            }
+
             switch (true) {
                 case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-                case $_SERVER['PHP_AUTH_USER'] !== 'kinyu-news':
-                case $_SERVER['PHP_AUTH_PW'] !== 'iYszQGhE':
+                case $_SERVER['PHP_AUTH_USER'] !== $authentication_user:
+                case $_SERVER['PHP_AUTH_PW'] !== $authentication_password:
                     header('WWW-Authenticate: Basic realm="Enter username and password."');
                     header('Content-Type: text/plain; charset=utf-8');
                     die('このページを見るにはログインが必要です');
