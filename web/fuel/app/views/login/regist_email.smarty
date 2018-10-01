@@ -116,8 +116,8 @@
             <input type="radio" value="検索して" name="where_from" id="where_from1" class="form-radio" placeholder="">
             <label for="where_from1">検索して</label>
             
-			 <input type="radio" value="新聞・雑誌の記事を見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
-            <label for="where_from8">新聞・雑誌の記事を見て</label> 
+			 <input type="radio" value="新聞・雑誌の記事を見て" name="where_from" id="where_from9" class="form-radio" placeholder="">
+            <label for="where_from9">新聞・雑誌の記事を見て</label> 
 			 
             <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
             <label for="where_from3">Facebookを見て</label>
