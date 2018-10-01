@@ -2,7 +2,7 @@
   <div class="login-add-contents-block">
     
     <p class="main-title">メンバー登録</p>
-    <p class="message">追加でみなさまの「きんゆう」のことも教えてください♪<br><span style="color:red;">＊</span>メンバー登録は女性限定になります♪</p>
+    <p class="message">追加でみなさまの「きんゆう」のことも教えてください♪<br>「<span style="color:red;">*</span>」は必須項目となります。</p>
 
     <form name="form1">
       <input type="hidden" id="after_login_url" value="{$after_login_url}">
@@ -166,7 +166,6 @@
           </div>
         </div>
 
-
         <div class="regist-add-form-edit-el regist-add-form-edit-el02">
           <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。<span style="color:red; font-weight: normal;">*</span></label>
           <p class="regist-add-form-edit-subtitle">トライしてみたいこと、夢や目標、知りたいことや、おかねの"もやもや"など</p>
@@ -174,6 +173,7 @@
         </div>
         
         <div class="form-btn tx-center">
+		 <p class="pc" style="margin:20px 0;text-align:center;"><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
           <button class="btn btn-kinyu" type="button" id="save">メンバー登録</button>
         </div>
 

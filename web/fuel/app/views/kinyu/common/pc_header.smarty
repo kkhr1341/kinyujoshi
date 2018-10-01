@@ -9,7 +9,7 @@
       <li><a class="js-track" href="/kinyu_sanpo" data-category="pc-header-link" data-action="click" data-value="1">きんゆう散歩</a></li>
       <li><a class="js-track" href="/myway" data-category="pc-header-link" data-action="click" data-value="1">「わたし」を知る。</a></li>
       <li><a class="js-track" href="/about" data-category="pc-header-link" data-action="click" data-value="1">ストーリー</a></li>
-      <li><a class="js-track" href="/kinjo_check" data-category="pc-header-link" data-action="click" data-value="1">きん女。診断<span style="color:red;">*</span></a></li>
+      <li><a class="js-track" href="/kinjo_check" data-category="pc-header-link" data-action="click" data-value="1">きん女。診断</a></li>
     </ul>
   </nav>
   {if in_array('user', $roles) || in_array('admin', $roles)}

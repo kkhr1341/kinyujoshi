@@ -22,7 +22,7 @@
           </div>
 
           <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
-		  <p class="regist-sub-description" style="margin-top: 10px;"><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
+		  <p class="regist-sub-description" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
 
           <!-- <div class="login-contents login-email-container">
             <label class="title">ソーシャルアカウントで登録</label>
