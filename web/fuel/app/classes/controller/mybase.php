@@ -29,8 +29,11 @@ class Controller_Mybase extends Controller_Template
         parent::before();
 
         if (!Auth::check()) {
+
+            $after_login_url = \Uri::current() ? \Uri::current() : '/my';
+
             \Auth::logout();
-            Response::redirect('/login');
+            Response::redirect('/login?after_login_url=' . $after_login_url);
             exit();
         }
         $this->profile();
