@@ -11,25 +11,25 @@
 
         <h3 class="mypage-content-title"><span>きん女。パスポート</span></h3>
         <p class="mypage-content-description passport-exist pc">
-        きん女。パスポートでは、メンバーさんだけが使えるすてきなコンテンツを揃える予定です。<br>
+        きん女。パスポートは、メンバーさんだけが使えるすてきな特典です<br>
         日々企画を考えているので、これからもどんどん増えていく予定です♪
         <span style="display: block;height:12px;"></span>
-        どんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、<br>
+        きん女。パスポートにどんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、<br>
         よろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
         もしかしたら採用されるかも！？
         </p>
         <p class="mypage-content-description passport-exist sp">
-        きん女。パスポートでは、メンバーさんだけが使えるすてきなコンテンツを揃える予定です。
+        きん女。パスポートは、メンバーさんだけが使えるすてきな特典です。
         日々企画を考えているので、これからもどんどん増えていく予定です♪
         <span style="display: block;height:12px;"></span>
-        どんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、
+        きん女。パスポートにどんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、
         よろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
         もしかしたら採用されるかも！？
         </p>
 
         <div class="passport-list">
 
-          <h3 class="passport-main-title">いまの特典リスト</h3>
+          <h3 class="passport-main-title">現在の特典リスト</h3>
           
           <!-- ラクサス|Laxus -->
           <div class="passport-list-el passport-laxus">
@@ -95,9 +95,24 @@
                 </div>
               </div>
 
+              <div class="passport-link-utilization-notes">
+                <p class="notes-main-title"><span>＊</span>確認事項<span>＊</span></p>
+                <ul>
+                  <li><p>割引期間は1年間です。2年目からは6,800円（税別）になります。</p></li>
+                  <li><p>第三者への案内や、SNSで招待コードを拡散することはご遠慮ください。</p></li>
+                  <li><p>もし他の方へお伝えしたい場合は、「きんゆう女子。メンバーの特典として、割引が受けられるよ」とお伝えください♪</p></li>
+                </ul>
+              </div>
+
               <a class="passport-link-utilization-link" href="https://laxus.co/" target="_blank">
                 Laxus（ラクサス）のWEBサイトへ
               </a>
+
+              <div class="service-contact">
+                <p class="service-contact-title">サービスに関するお問い合わせ</p>
+                <a class="service-contact-link" href="mailto:info@laxus.co" target="_blank">info@laxus.co</a>
+                <p class="service-contact-sub"><span>＊</span>[アプリ]→[右下アイコン]→[トークでお問い合わせ]よりチャットでもお問い合わせ可能です。</p>
+              </div>
 
             </div>
           </div>

@@ -1202,7 +1202,7 @@ footer {
 /* 利用の流れ */
 .passport-link-utilization {
   display: none;
-  padding: 20px 32px; 
+  padding: 20px 32px 32px; 
 }
 .passport-link-utilization-alert {
   margin-top: 8px;
@@ -1239,16 +1239,69 @@ footer {
   font-weight: bold;
 }
 .passport-link-utilization-link {
-    display: block;
-    width: 400px;
-    margin: 0 auto;
-    padding: 10px 0px;
-    text-align: center;
-    background: #a2a2a2;
-    font-size: 12px;
-    margin-top: 20px;
-    margin-bottom: 24px;
-    color: #fff;
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px 0px;
+  text-align: center;
+  background: #a2a2a2;
+  font-size: 12px;
+  margin-top: 36px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+/* 注意事項部分 */
+.passport-link-utilization-notes {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+.passport-link-utilization-notes .notes-main-title {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.passport-link-utilization-notes .notes-main-title span {
+  color: #ec6161;
+}
+.passport-link-utilization-notes ul li {
+  margin-bottom: 8px;
+  text-align: left;
+}
+.passport-link-utilization-notes ul li p {
+  font-size: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+.passport-link-utilization-notes ul li p:before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+/* サービスに関するお問い合わせ */
+.service-contact {
+  
+}
+.service-contact-title {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+}
+.service-contact-link {
+  color: #81b3e0;
+  margin-top: 2px;
+}
+.service-contact-sub {
+  font-size: 10px;
+  line-height: 15px;
+  width: 48%;
+  margin: 0 auto;
+  margin-top: 2px;
+}
+.service-contact-sub span {
+  color: #ec6161;
 }
 
 /* Laxus|ラクサス */
@@ -1273,16 +1326,6 @@ footer {
   color: #ff5555;
   font-weight: bold;
 }
-
-
-/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  マイページ - パスポート（詳細）
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-
-
-
-
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   女子会部分
@@ -1762,10 +1805,6 @@ footer {
     .admin-normal-side a:hover {
         background: #8ddcd1;
         color: #fff;
-    }
-
-    .admin-normal-joshikai li:hover {
-        opacity: .5;
     }
 
     .admin-normal-profile-btn a:hover {
