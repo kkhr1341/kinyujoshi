@@ -57,7 +57,7 @@
             もしご参加が難しくなった場合はお早めにご連絡いただけますと嬉しいです。<br><br>
 
             ◆女子会の取消方法<br>
-            <a href="https://kinyu-joshi.jp/my" target="_blank">マイページ</a> → 参加予定の女子会 → キャンセルする女子会を選択 → 「女子会をキャンセルする」<br><br>
+            <a href="https://kinyu-joshi.jp/my" target="_blank">マイページ</a> → 参加予定の女子会 → 取り消す女子会を選択 → 「女子会の参加を取り消す」<br><br>
             <span style="color:#d9534f;">＊</span>メンバー登録をされていない方は<a href="https://kinyu-joshi.jp/contact" target="_blank">お問い合わせフォーム</a>よりご連絡くださいませ。<br><br>
             それでは、<?php echo $name; ?>さんにお会いできるのを楽しみにしております♪<br><br>
             ▼SNSでも活動報告しています！<br>
