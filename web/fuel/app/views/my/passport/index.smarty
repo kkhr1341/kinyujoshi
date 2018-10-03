@@ -32,7 +32,179 @@
           <h3 class="passport-main-title">現在の特典リスト</h3>
           
           <!-- ラクサス|Laxus -->
-          <div class="passport-list-el passport-laxus">
+          <div class="passport-list-el passport-list-el1 passport-laxus">
+            <div class="passport-list-el-inner clear">
+              <div class="passport-img-box" style="background:url(/images/my/passport/laxus/laxus_img01.jpg) left center / cover no-repeat;"></div>
+              <div class="passport-text-box">
+                <div class="passport-text-box-inner">
+                  <img class="logo-img-laxus" src="/images/my/passport/laxus/logo_laxus.png">
+                  <p class="logo-sub-laxus">シーンにあわせてバッグを交換<br>ブランドバッグをスマートシェア</p>
+                  <div class="privilege-detail">
+                    <div class="privilege-detail-laxus">
+                      <p>月額利用料<br>
+                        6,800円
+                        <span class="passport-small">(税抜)</span> →
+                        <span class="passport-attention">6,120</span>円
+                        <span class="passport-small">(税抜)</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="passport-link laxus-link">ご利用方法はこちら</a>
+            <div class="passport-link-utilization laxus-link-utilization">
+              <p class="passport-link-utilization-alert"><span>＊</span>特典のご利用は、Laxus（ラクサス）のアプリでのみ可能です。</p>
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow01.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step1</p>
+                  <p class="text-description">"<span>右下のアイコン</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow02.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step2</p>
+                  <p class="text-description">"<span>招待コード</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow03.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step3</p>
+                  <p class="text-description">"<span>招待コードを入力</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow04.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step4</p>
+                  <p class="text-description">招待コードに「<span>kinjo55</span>」を入れ、"<span>登録する</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow05.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step5</p>
+                  <p class="text-description">月額利用料が10%offに（6,800円→6,120円）</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-notes">
+                <p class="notes-main-title"><span>＊</span>確認事項<span>＊</span></p>
+                <ul>
+                  <li><p>割引期間は1年間です。2年目からは6,800円（税別）になります。</p></li>
+                  <li><p>第三者への案内や、SNSで招待コードを拡散することはご遠慮ください。</p></li>
+                  <li><p>もし他の方へお伝えしたい場合は、「きんゆう女子。メンバーの特典として、割引が受けられるよ」とお伝えください♪</p></li>
+                </ul>
+              </div>
+
+              <a class="passport-link-utilization-link" href="https://laxus.co/" target="_blank">
+                Laxus（ラクサス）のWEBサイトへ
+              </a>
+
+              <div class="service-contact">
+                <p class="service-contact-title">サービスに関するお問い合わせ</p>
+                <a class="service-contact-link" href="mailto:info@laxus.co" target="_blank">info@laxus.co</a>
+                <p class="service-contact-sub"><span>＊</span>[アプリ]→[右下アイコン]→[トークでお問い合わせ]よりチャットでもお問い合わせ可能です。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ラクサス|Laxus -->
+          <div class="passport-list-el passport-list-el2 passport-laxus">
+            <div class="passport-list-el-inner clear">
+              <div class="passport-img-box" style="background:url(/images/my/passport/laxus/laxus_img01.jpg) left center / cover no-repeat;"></div>
+              <div class="passport-text-box">
+                <div class="passport-text-box-inner">
+                  <img class="logo-img-laxus" src="/images/my/passport/laxus/logo_laxus.png">
+                  <p class="logo-sub-laxus">シーンにあわせてバッグを交換<br>ブランドバッグをスマートシェア</p>
+                  <div class="privilege-detail">
+                    <div class="privilege-detail-laxus">
+                      <p>月額利用料<br>
+                        6,800円
+                        <span class="passport-small">(税抜)</span> →
+                        <span class="passport-attention">6,120</span>円
+                        <span class="passport-small">(税抜)</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="passport-link laxus-link">ご利用方法はこちら</a>
+            <div class="passport-link-utilization laxus-link-utilization">
+              <p class="passport-link-utilization-alert"><span>＊</span>特典のご利用は、Laxus（ラクサス）のアプリでのみ可能です。</p>
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow01.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step1</p>
+                  <p class="text-description">"<span>右下のアイコン</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow02.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step2</p>
+                  <p class="text-description">"<span>招待コード</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow03.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step3</p>
+                  <p class="text-description">"<span>招待コードを入力</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow04.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step4</p>
+                  <p class="text-description">招待コードに「<span>kinjo55</span>」を入れ、"<span>登録する</span>"をクリック</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-el clear">
+                <img src="/images/my/passport/laxus/flow05.png">
+                <div class="link-utilization-text-box">
+                  <p class="text-step">Step5</p>
+                  <p class="text-description">月額利用料が10%offに（6,800円→6,120円）</p>
+                </div>
+              </div>
+
+              <div class="passport-link-utilization-notes">
+                <p class="notes-main-title"><span>＊</span>確認事項<span>＊</span></p>
+                <ul>
+                  <li><p>割引期間は1年間です。2年目からは6,800円（税別）になります。</p></li>
+                  <li><p>第三者への案内や、SNSで招待コードを拡散することはご遠慮ください。</p></li>
+                  <li><p>もし他の方へお伝えしたい場合は、「きんゆう女子。メンバーの特典として、割引が受けられるよ」とお伝えください♪</p></li>
+                </ul>
+              </div>
+
+              <a class="passport-link-utilization-link" href="https://laxus.co/" target="_blank">
+                Laxus（ラクサス）のWEBサイトへ
+              </a>
+
+              <div class="service-contact">
+                <p class="service-contact-title">サービスに関するお問い合わせ</p>
+                <a class="service-contact-link" href="mailto:info@laxus.co" target="_blank">info@laxus.co</a>
+                <p class="service-contact-sub"><span>＊</span>[アプリ]→[右下アイコン]→[トークでお問い合わせ]よりチャットでもお問い合わせ可能です。</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ラクサス|Laxus -->
+          <div class="passport-list-el passport-list-el3 passport-laxus">
             <div class="passport-list-el-inner clear">
               <div class="passport-img-box" style="background:url(/images/my/passport/laxus/laxus_img01.jpg) left center / cover no-repeat;"></div>
               <div class="passport-text-box">
@@ -120,8 +292,14 @@
         </div>
 
         <script>
-          $(".passport-list-el .passport-link").click(function() {
-            $(".passport-list-el .passport-link-utilization").slideToggle(500);
+          $(".passport-list-el1 .passport-link").click(function() {
+            $(".passport-list-el1 .passport-link-utilization").slideToggle(500);
+          });
+          $(".passport-list-el2 .passport-link").click(function() {
+            $(".passport-list-el2 .passport-link-utilization").slideToggle(500);
+          });
+          $(".passport-list-el3 .passport-link").click(function() {
+            $(".passport-list-el3 .passport-link-utilization").slideToggle(500);
           });
         </script>
 
