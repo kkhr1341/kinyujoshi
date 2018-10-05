@@ -25,10 +25,6 @@
     margin: 0 auto;
 }
 
-.mykinjo-block .request-block {
-
-}
-
 .mykinjo-block .request-block .request-title {
     width: 360px;
     display: block;
@@ -1160,6 +1156,11 @@ footer {
   padding: 40px 50px 50px;
   background: #fff;
 }
+.passport-main-img {
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+}
 .passport-list-el {
   padding: 40px 0px;
   border-top: 1px solid #e0e0e0;
@@ -1172,7 +1173,7 @@ footer {
   margin-top: 40px;
 }
 .passport-list .passport-list-el:last-of-type {
-  padding: 40px 0px 0px;
+  /*padding: 40px 0px 0px;*/
 }
 .passport-main-title {
   font-size: 18px;
@@ -1211,6 +1212,7 @@ footer {
   text-align: center;
   color: #fff;
   font-size: 12px;
+  transition: .5s;
 }
 
 /* 利用の流れ */
@@ -1263,6 +1265,7 @@ footer {
   margin-top: 36px;
   margin-bottom: 24px;
   color: #fff;
+  transition: .5s;
 }
 /* 注意事項部分 */
 .passport-link-utilization-notes {
@@ -1339,6 +1342,12 @@ footer {
 .privilege-detail-laxus .passport-attention {
   color: #ff5555;
   font-weight: bold;
+}
+
+.passport-link:hover,
+.passport-link-utilization-link:hover {
+  opacity: .5;
+  cursor: pointer;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
