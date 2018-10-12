@@ -171,6 +171,8 @@ class Userwithdrawal extends Base
                 'name' => $profile["name"]
             )));
             $email->to($user['email']); //送り先
+
+            $email->return_path('support@kinyu-joshi.jp');
             $email->send();
 
             $email02 = \Email::forge('jis');
@@ -181,6 +183,8 @@ class Userwithdrawal extends Base
                 'email' => $user["email"]
             )));
             $email02->to('system@sundaylunch.jp'); //送り先
+
+            $email02->return_path('support@kinyu-joshi.jp');
             $email02->send();
 
             return true;

@@ -268,6 +268,8 @@ class Applications extends Base
                 'name' => $application['name']
             )));
             $mail->to($application['email']); //送り先
+
+            $mail->return_path('support@kinyu-joshi.jp');
             $mail->send();
 
             return true;
@@ -352,6 +354,8 @@ class Applications extends Base
                 'name' => $application['name']
             )));
             $mail->to($application['email']); //送り先
+
+            $mail->return_path('support@kinyu-joshi.jp');
             $mail->send();
 
             return true;
@@ -535,6 +539,8 @@ class Applications extends Base
                     'event' => $event
                 )));
             $mail->to($email); //送り先
+
+            $mail->return_path('support@kinyu-joshi.jp');
             $mail->send();
 
             return true;

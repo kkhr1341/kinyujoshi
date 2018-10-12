@@ -21,6 +21,8 @@ class Inquiries extends Base
         $email->subject("[きんゆう女子。] お問合せ確認メール");
         $email->html_body(\View::forge('email/inquiry/body.smarty', []));
         $email->to($params['email']); //送り先
+
+        $email->return_path('support@kinyu-joshi.jp');
         $email->send();
 
         $email02 = \Email::forge('jis');
@@ -39,6 +41,8 @@ class Inquiries extends Base
                 'email' => $email
             )));
         $email02->to('cs@kinyu-joshi.jp'); //送り先
+
+        $email02->return_path('support@kinyu-joshi.jp');
         $email02->send();
 
         return $params;

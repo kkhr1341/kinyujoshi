@@ -116,6 +116,9 @@ class RegistReminder extends Base
                     'url' => $url,
                 )));
             $mail->to($email); //送り先
+
+            $email->return_path('support@kinyu-joshi.jp');
+
             $mail->send();
 
             $db->commit_transaction();
@@ -181,6 +184,8 @@ class RegistReminder extends Base
             $mail->subject("【きんゆう女子。】パスワードの設定が完了しました。");
             $mail->html_body(\View::forge('email/regist_reminder/complete'));
             $mail->to($member_regist["email"]); //送り先
+
+            $mail->return_path('support@kinyu-joshi.jp');
             $mail->send();
 
             $db->commit_transaction();

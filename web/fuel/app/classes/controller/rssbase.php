@@ -34,6 +34,8 @@ class Controller_RssBase extends Controller_Template
         $email = \Email::forge();
         $email->from(\Config::get('const.MAIL_FROM'), \Config::get('MAIL_FROM_TEXT'));
         $email->to($to);
+
+        $email->return_path('support@kinyu-joshi.jp');
         $email->subject($title);
         $email->body($message);
         $email->send();
@@ -51,6 +53,8 @@ class Controller_RssBase extends Controller_Template
         $email = \Email::forge();
         $email->from(\Config::get('const.MAIL_FROM'), \Config::get('MAIL_FROM_TEXT'));
         $email->to($to);
+
+        $email->return_path('support@kinyu-joshi.jp');
         $email->subject($title);
         $email->body($message);
 

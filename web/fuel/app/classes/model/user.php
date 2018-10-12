@@ -99,6 +99,9 @@ class User extends Base
                     'after_email'  => $params['email'],
                 )));
             $mail->to('support@kinyu-joshi.jp'); //送り先
+
+            $mail->return_path('support@kinyu-joshi.jp');
+
             $mail->send();
         }
 
