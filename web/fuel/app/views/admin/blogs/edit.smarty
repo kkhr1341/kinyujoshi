@@ -128,18 +128,14 @@
                         <button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button>
                     </li>
                     {/if}
-                    {if in_array('admin', $roles) || in_array('editor', $roles)}
                     <li>
                         <button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button>
                     </li>
-                    {/if}
-                    {if in_array('admin', $roles) || in_array('editor', $roles)}
                     <li>
                         <button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー
                         </button>
                     </li>
-                    {/if}
-                    {if in_array('admin', $roles) || in_array('editor', $roles)}
+                    {if in_array('admin', $roles)}
                     <li>
                         <button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button>
                     </li>

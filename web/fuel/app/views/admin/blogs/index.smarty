@@ -9,20 +9,13 @@
 
 
 <ul class="nav nav-tabs">
-    {if in_array('admin', $roles)}
-	    <li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
-	{/if}
-    {if in_array('admin', $roles)}
-	    <li><a href="#tab1" data-toggle="tab">公開</a></li>
-	{/if}
+    <li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
+    <li><a href="#tab1" data-toggle="tab">公開</a></li>
 	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
-    {if in_array('admin', $roles)}
-	    <li><a href="#tab3" data-toggle="tab">すべて</a></li>
-	{/if}
+    <li><a href="#tab3" data-toggle="tab">すべて</a></li>
 </ul>
 <div class="tab-content">
 
-    {if in_array('admin', $roles)}
 	<div class="tab-pane" id="tab4">
 		{if sizeof($open_blogs) == 0}
 		<div class="alert alert-warning mt20" role="alert">公開中の記事はありません</div>
@@ -55,9 +48,7 @@
 		</table>
 		{/if}
 	</div>
-    {/if}
 
-    {if in_array('admin', $roles)}
 	<div class="tab-pane" id="tab1">
 		{if sizeof($open_blogs) == 0}
 		<div class="alert alert-warning mt20" role="alert">公開中の記事はありません</div>
@@ -90,7 +81,6 @@
 		</table>
 		{/if}
 	</div>
-    {/if}
 
 	<div class="tab-pane" id="tab2">
 		{if sizeof($closed_blogs) == 0}
@@ -125,7 +115,6 @@
 		{/if}
 	</div>
 
-    {if in_array('admin', $roles)}
 	<div class="tab-pane" id="tab3">
 		{if sizeof($all_blogs) == 0}
 		<div class="alert alert-warning mt20" role="alert">記事はありません</div>
@@ -156,7 +145,6 @@
 		</table>
 		{/if}
 	</div>
-    {/if}
 </div>
 
 <script>
