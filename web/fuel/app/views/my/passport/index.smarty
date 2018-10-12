@@ -28,6 +28,7 @@
         もしかしたら採用されるかも！？
         </p>
 
+        {*
         <div class="passport-list">
 
           <h3 class="passport-main-title">現在の特典リスト</h3>
@@ -117,6 +118,7 @@
 
             </div>
           </div>
+        *}
 
         </div>
 

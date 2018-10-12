@@ -11,21 +11,14 @@
 
 
 <ul class="nav nav-tabs">
-    {if in_array('admin', $roles)}
-	    <li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
-	{/if}
+    <li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
     <li><a href="#tab2" data-toggle="tab">下書き</a></li>
-    {if in_array('admin', $roles)}
-	    <li><a href="#tab3" data-toggle="tab">過去の女子会</a></li>
-	{/if}
-    {if in_array('admin', $roles)}
-	    <li><a href="#tab4" data-toggle="tab">TOPバナー設定</a></li>
-	{/if}
+    <li><a href="#tab3" data-toggle="tab">過去の女子会</a></li>
+    <li><a href="#tab4" data-toggle="tab">TOPバナー設定</a></li>
 </ul>
 <div class="tab-content">
 
 	<!-- 公開 -->
-    {if in_array('admin', $roles)}
 	<div class="tab-pane active" id="tab1">
 		{if sizeof($open_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">公開中のイベントはありません</div>
@@ -57,7 +50,6 @@
 		</table>
 		{/if}
 	</div>
-    {/if}
 
 	<!-- 下書き -->
 	<div class="tab-pane" id="tab2">
@@ -86,7 +78,6 @@
 	</div>
 
 	<!-- 過去 -->
-    {if in_array('admin', $roles)}
 	<div class="tab-pane" id="tab3">
 		{if sizeof($past_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">イベントはありません</div>
@@ -118,10 +109,8 @@
 		</table>
 		{/if}
 	</div>
-    {/if}
 
 	<!-- TOPバナー設定 -->
-    {if in_array('admin', $roles)}
 	<div class="tab-pane" id="tab4">
 		{if sizeof($all_events) == 0}
 		<div class="alert alert-warning mt20" role="alert">イベントはありません</div>
@@ -161,7 +150,6 @@
         </div>
 		{/if}
 	</div>
-    {/if}
 </div>
 
 

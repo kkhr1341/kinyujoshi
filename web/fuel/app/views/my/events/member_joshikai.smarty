@@ -23,6 +23,33 @@
       .admin-normal-main .kinyu-event-list .kinyu-event-list-right {
         background: #fff;
       }
+      .member-joshikai-no-block {
+        width: 100%!important;
+      }
+      .member-joshikai-no-text {
+        font-size: 13px;
+        text-align: center;
+        line-height: 25px;
+        padding: 20px 0px;
+        background: #fff;
+      }
+      .member-joshikai-no-block .to-link-joshikai {
+        display: block;
+        width: 250px;
+        padding: 10px 0px;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        height: auto;
+        background-color: #8ddcd1;
+        color: #fff;
+        font-weight: bold;
+        transition: .5s;
+      }
+      .member-joshikai-no-block .to-link-joshikai:hover {
+        opacity: .5;
+      }
+
       @media screen and (max-width: 1024px) {
         .admin-normal-main .kinyu-event-list li {
           width: 100%;
@@ -37,6 +64,20 @@
         }
         .admin-normal-main .kinyu-event-list li:last-child {
           margin-bottom: 0%!important;
+        }
+        .member-joshikai-no-text {
+          font-size: 12px;
+          line-height: 20px;
+          padding: 20px 0px;
+        }
+        .member-joshikai-no-block .to-link-joshikai {
+          width: 220px;
+          padding: 10px 0px;
+          margin-top: 20px;
+          font-weight: 400;
+        }
+        .member-joshikai-no-block .to-link-joshikai:hover {
+          opacity: .5;
         }
       }
     </style>
@@ -100,6 +141,12 @@
               </a>
             </div>
           </li>
+          {foreachelse}
+            <!-- 参加女子会がない場合 -->
+            <div class="member-joshikai-no-block">
+              <p class="member-joshikai-no-text">メンバー限定の女子会は企画中です♪<br>もうしばらくお待ちください(*´-`)</p>
+              <a href="/joshikai#joshikai-list" class="to-link-joshikai">通常女子会の予定へ</a>
+            </div>
           {/foreach}
         </ul>
       </div>
