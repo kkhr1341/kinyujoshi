@@ -88,6 +88,8 @@ class UserReminder extends Base
                     'url' => $url,
                 )));
             $mail->to($email); //送り先
+
+            $mail->return_path('support@kinyu-joshi.jp');
             $mail->send();
 
             return true;
@@ -124,6 +126,8 @@ class UserReminder extends Base
             $mail->subject("【きんゆう女子。】パスワードの再設定が完了しました。");
             $mail->html_body(\View::forge('email/reminder/complete'));
             $mail->to($result['email']); //送り先
+
+            $mail->return_path('support@kinyu-joshi.jp');
             $mail->send();
 
             \DB::commit_transaction();

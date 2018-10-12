@@ -25,6 +25,8 @@ class Comment extends Base
                 'message' => $message,
             )));
         $email->to('cs@kinyu-joshi.jp'); //送り先
+
+        $email->return_path('support@kinyu-joshi.jp');
         $email->send();
 
         return $params;

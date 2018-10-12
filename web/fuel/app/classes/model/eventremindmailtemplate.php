@@ -66,6 +66,8 @@ class EventRemindMailTemplate extends Base
 
         $email->body($body);
         $email->to($mail); //送り先
+
+        $email->return_path('support@kinyu-joshi.jp');
         $email->send();
     }
 
@@ -83,6 +85,8 @@ class EventRemindMailTemplate extends Base
 
         $email->body($body);
         $email->to('cs@kinyu-joshi.jp');
+
+        $email->return_path('support@kinyu-joshi.jp');
         $email->send();
     }
 }

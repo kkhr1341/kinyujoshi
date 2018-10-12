@@ -187,6 +187,8 @@ class Regist extends Base
                 'name' => $name
             )));
         $email->to($params['email']); //送り先
+
+        $email->return_path('support@kinyu-joshi.jp');
         $email->send();
 
         $email02 = \Email::forge('jis');
@@ -228,6 +230,8 @@ class Regist extends Base
                 'introduction' => $introduction
             )));
         $email02->to('cs@kinyu-joshi.jp'); //送り先
+
+        $email02->return_path('support@kinyu-joshi.jp');
         $email02->send();
 
         return $params;
@@ -491,6 +495,8 @@ class Regist extends Base
                 'email' => $email
             )));
         $email03->to('cs@kinyu-joshi.jp'); //送り先
+
+        $email03->return_path('support@kinyu-joshi.jp');
         $email03->send();
 
         return $params;
