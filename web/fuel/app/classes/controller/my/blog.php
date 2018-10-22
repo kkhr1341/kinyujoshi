@@ -8,7 +8,8 @@ class Controller_My_Blog extends Controller_Mybase
     public function action_index()
     {
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->data['blogs'] = Blogstocks::lists();
+        $username = \Auth::get('username'); //追加
+        $this->data['blogs'] = Blogstocks::lists($username);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->title = '参加予定の女子会｜きん女。マイページ';
