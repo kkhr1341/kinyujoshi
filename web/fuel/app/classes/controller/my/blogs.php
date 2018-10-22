@@ -19,7 +19,7 @@ class Controller_My_Blogs extends Controller_Mybase
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     }
-
+	
     public function action_create()
     {
         $this->data['sections'] = Sections::lists();

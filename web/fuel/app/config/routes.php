@@ -149,6 +149,7 @@ return array(
 	'my/joshikai/(:any)' => 'my/events/joshikaidetail/$1',
 	'my/member_joshikai' => 'my/events/member_joshikai',
 	'my/kinjo'   => 'my/mykinjo/index',
+	'my/member_report' => 'my/blog/member_report',
 	
 	//パスポート
 	'my/passport'   => 'my/passport/index',
