@@ -267,7 +267,7 @@ $(function(){
         var list = Object.keys(result).map(function(i) {
             return {label: i, cnt: result[i]};
         })
-        pie(list, 'レポートチェック内訳', document.getElementById('chart_div9'));
+        table(list, 'どこで、きんゆう女子。を知りましたか？その他', document.getElementById('chart_div9'));
     });
   }
 });
