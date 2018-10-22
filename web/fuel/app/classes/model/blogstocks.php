@@ -52,4 +52,27 @@ class Blogstocks extends Base
             ->as_array();
     }
 
+    public static function count($options)
+    {
+        $select =  \DB::select('blogs.title', 'blog_stocks.created_at')
+            ->from('blogs')
+            ->join('blog_stocks')
+            ->on('blogs.code', '=', 'blog_stocks.blog_code')
+            ->where('blogs.status', '=', 1)
+            ->where('blogs.disable', '=', 0);
+
+        if (isset($options['start_at']) && $options['start_at']) {
+            $select->where('blog_stocks.created_at', '>=', $options['start_at'] . ' 00:00:00');
+        }
+
+        if (isset($options['end_at']) && $options['end_at']) {
+            $select->where('blog_stocks.created_at', '<=', $options['end_at'] . ' 23:59:59');
+        }
+
+        if (!$row = $select->execute()->as_array()) {
+            return array();
+        }
+        return $row;
+    }
+
 }
