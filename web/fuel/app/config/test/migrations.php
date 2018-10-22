@@ -95,6 +95,8 @@ return array(
         86 => '092_create_passports',
         87 => '093_create_diagnostic_chart_routes',
         88 => '093_create_index_code_in_blogs',
+        89 => '094_create_blog_stocks',
+        90 => '094_create_diagnostic_chart_route_paths',
       ),
     ),
     'module' => 
