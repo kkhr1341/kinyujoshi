@@ -253,7 +253,7 @@ $(function(){
         chart.draw(data, options);
     });
 
-    // ブログチェック内訳
+    // レポートチェック内訳
     $.getJSON( "/api/analysis/blog_stock_count?start_at=" + start_at + "&end_at=" + end_at, function( json ) {
         // 円グラフ
         var result = {};
@@ -267,7 +267,7 @@ $(function(){
         var list = Object.keys(result).map(function(i) {
             return {label: i, cnt: result[i]};
         })
-        pie(list, 'ブログチェック内訳', document.getElementById('chart_div9'));
+        pie(list, 'レポートチェック内訳', document.getElementById('chart_div9'));
     });
   }
 });
