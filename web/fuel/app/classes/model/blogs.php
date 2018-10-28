@@ -80,7 +80,9 @@ class Blogs extends Base
             $datas = $datas->where('section_code', '=', $section_code);
         }
 
-        if ($is_secret === false) {
+        if ($is_secret === true) {
+            $datas = $datas->where('secret', '=', 1);
+        } else {
             $datas = $datas->where('secret', '=', 0);
         }
 
