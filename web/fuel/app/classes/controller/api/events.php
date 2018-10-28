@@ -60,7 +60,7 @@ class Controller_Api_Events extends Controller_Apibase
             } else {
                 EventCoupons::delete($coupon['code']);
             }
-        } else {
+        } elseif($val->validated('coupon_code')) {
             EventCoupons::create(
                 $val->validated('coupon_code'),
                 $val->validated('code'),
