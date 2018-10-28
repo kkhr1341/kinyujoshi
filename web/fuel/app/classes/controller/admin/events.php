@@ -1,6 +1,7 @@
 <?php
 
 use \Model\Events;
+use \Model\EventCoupons;
 use \Model\EventDisplayTopPages;
 use \Model\Applications;
 use \Model\Sections;
@@ -44,6 +45,10 @@ class Controller_Admin_Events extends Controller_Adminbase
         $this->data['events'] = Events::getByCode('events', $code);
         $this->data['past'] = Events::isPast($code);
         $this->data['sections'] = Sections::lists();
+
+        // 将来的に複数登録できるようにしたいが今はとりあえず1個だけしか登録できない仕様
+        $coupons = EventCoupons::getRowsByEventCode($code);
+        $this->data['coupon'] = $coupons ? $coupons[0] : array('coupon_code' => '', 'discount' => '');
 
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';

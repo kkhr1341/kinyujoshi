@@ -1,6 +1,7 @@
 <?php
 
 use \Model\Events;
+use \Model\EventCoupons;
 
 class Controller_Api_Events extends Controller_Apibase
 {
@@ -16,7 +17,16 @@ class Controller_Api_Events extends Controller_Apibase
             return $this->error($message);
         }
         try {
-            return $this->ok(Events::create($val->validated()));
+            $event = Events::create($val->validated());
+            if ($val->validated('coupon_code')) {
+                EventCoupons::create(
+                    $val->validated('coupon_code'),
+                    $event['code'],
+                    $val->validated('discount')
+                );
+            }
+
+            return $this->ok();
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         } 
@@ -34,7 +44,31 @@ class Controller_Api_Events extends Controller_Apibase
             $message = reset($error_messages);
             return $this->error($message);
         }
-        return $this->ok(Events::save($val->validated()));
+
+        // 将来的に複数登録できるようにしたいが今はとりあえず1個だけしか登録できない仕様
+        $coupons = EventCoupons::getRowsByEventCode($val->validated('code'));
+        $coupon = $coupons ? $coupons[0]: '';
+
+        Events::save($val->validated());
+        if ($coupon) {
+            if ($val->validated('coupon_code')) {
+                EventCoupons::save(
+                    $coupon['code'],
+                    $val->validated('coupon_code'),
+                    $val->validated('discount')
+                );
+            } else {
+                EventCoupons::delete($coupon['code']);
+            }
+        } else {
+            EventCoupons::create(
+                $val->validated('coupon_code'),
+                $val->validated('code'),
+                $val->validated('discount')
+            );
+        }
+
+        return $this->ok();
     }
 
     public function action_delete()

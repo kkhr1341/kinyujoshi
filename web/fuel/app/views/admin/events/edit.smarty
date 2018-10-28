@@ -134,6 +134,16 @@
 					<input type="text" id="fee" class="form-control" placeholder="(例)1000、2000、15000" value="{$events.fee}">
 				</div>
 
+                <div class="form-group">
+                    <label class="form-group-event-label">クーポンコード</label>
+                    <input type="text" id="coupon_code" class="form-control" placeholder="" value={$coupon.coupon_code}>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">割引金額</label>
+                    <input type="text" id="discount" class="form-control" placeholder="" value={$coupon.discount}>
+                </div>
+
 				<div class="form-group">
 					<label class="form-group-event-label">定員</label>
 					<p class="form-group-sub"><span style="color:red;">＊</span>半角英数字のみでお願いします。</p>
@@ -264,6 +274,8 @@ $(function(){
                 params.place = $('#place').val();
                 params.place_url = $('#place_url').val();
                 params.fee = $('#fee').val();
+                params.coupon_code = $('#coupon_code').val();
+                params.discount = $('#discount').val();
                 params.event_date = $('#event_date').val();
                 params.display_event_date = $('#display_event_date').val();
                 params.event_start_datetime = $('#event_start_datetime').val();
@@ -345,6 +357,8 @@ $(function(){
 		params.place = $('#place').val();
 		params.place_url = $('#place_url').val();
 		params.fee = $('#fee').val();
+        params.coupon_code = $('#coupon_code').val();
+        params.discount = $('#discount').val();
 		params.event_date = $('#event_date').val();
 		params.display_event_date = $('#display_event_date').val();
 		params.event_start_datetime = $('#event_start_datetime').val();
@@ -435,6 +449,8 @@ $(function(){
                 params.place = $('#place').val();
                 params.place_url = $('#place_url').val();
                 params.fee = $('#fee').val();
+                params.coupon_code = $('#coupon_code').val();
+                params.discount = $('#discount').val();
                 params.display_event_date = $('#display_event_date').val();
                 params.event_date = $('#event_date').val();
                 params.event_start_datetime = $('#event_start_datetime').val();

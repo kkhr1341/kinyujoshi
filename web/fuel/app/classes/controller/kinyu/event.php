@@ -1,6 +1,7 @@
 <?php
 
 use \Model\Events;
+use \Model\EventCoupons;
 use \Model\Blogs;
 use \Model\Profiles;
 use \Model\Applications;
@@ -144,10 +145,18 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     public function action_tickets_card($code)
     {
         \Config::load('payjp', true);
+        $this->data['coupon_code'] = \Input::get('coupon_code', '');
         $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
+
+        // クーポン割引金額
+        if ($this->data['coupon_code']) {
+            $this->data['discount'] = EventCoupons::getDiscount($code, $this->data['coupon_code']);
+        } else {
+            $this->data['discount'] = 0;
+        }
 
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code);

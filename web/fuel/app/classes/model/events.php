@@ -53,6 +53,13 @@ class Events extends Base
             ->add_rule('valid_string','numeric')
             ->add_rule('numeric_between',50, 9999999);
 
+        $val->add('coupon_code', 'クーポンコード')
+            ->add_rule('required_with', 'discount');
+
+        $val->add('discount', '割引金額')
+            ->add_rule('required_with', 'coupon_code')
+            ->add_rule('valid_string','numeric');
+
         $val->add('limit', '定員')
             ->add_rule('valid_string', 'numeric')
             ->add_rule('numeric_between',0, 1000);
@@ -294,6 +301,7 @@ class Events extends Base
         $data['code'] = $code;
         $data['created_at'] = \DB::expr('now()');
         \DB::insert('events')->set($data)->execute();
+
         return $data;
     }
 

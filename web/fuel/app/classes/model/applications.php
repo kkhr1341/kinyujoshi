@@ -23,6 +23,8 @@ class Applications extends Base
 
         $val->add('token', '決済トークン');
 
+        $val->add('coupon_code', 'クーポンコード');
+
         // 新規カード登録 or 会員登録をせずに申し込みの場合は以下必須
         if ($cardselect === '0') {
 
@@ -125,7 +127,9 @@ class Applications extends Base
             ->execute()
             ->as_array();
 
-        return $datas;
+        echo \DB::last_query();
+
+//        return $datas;
     }
 
     public static function get_cancel_applications_by_code($code)
@@ -420,7 +424,7 @@ class Applications extends Base
      * @return bool
      * @throws \Exception
      */
-    public static function create(\Model\Payment $payment, $event_code, $cardselect, $name, $email, $token = '')
+    public static function create(\Model\Payment $payment, $event_code, $cardselect, $name, $email, $token='', $coupon=array())
     {
         $db = \Database_Connection::instance();
         $db->start_transaction();
@@ -453,24 +457,44 @@ class Applications extends Base
             // 申し込みイベンドコード生成
             $application_code = self::getNewCode('applications');
 
+            // クーポン情報の初期値設定
+            $discount = $coupon ? $coupon['discount']: 0;
+            $coupon_code = $coupon ? $coupon['coupon_code']: '';
+            $event_coupon_code = $coupon ? $coupon['code']: '';
+
+            $amount = $event['fee'] - $discount; // 支払金額
+
             // 申し込みイベントデータ作成
             \DB::insert('applications')->set(array(
                 'code' => $application_code,
                 'event_code' => $event_code,
                 'username' => $username,
-                'amount' => $event['fee'],
+                'amount' => $amount,
+                'fee' => $event['fee'],
+                'discount' => $discount,
+                'coupon_code' => $coupon_code,
                 'payment_method' => 1,
                 'name' => $name,
                 'email' => $email,
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
+            // 申し込み割引イベントデータ作成
+            if ($event_coupon_code) {
+                \DB::insert('application_coupons')->set(array(
+                    'application_code' => $application_code,
+                    'event_coupon_code' => $event_coupon_code,
+                    'discount' => $discount,
+                    'created_at' => \DB::expr('now()'),
+                ))->execute();
+            }
+
             // 非会員決済 *********************
             if (!$username || $username == 'guest') {
 
                 // 登録カードで決済
                 $charge = $payment->chargeByToken(
-                    $event['fee'],
+                    $amount,
                     $token,
                     $application_code,
                     $name,
@@ -498,7 +522,7 @@ class Applications extends Base
                         'created_at' => \DB::expr('now()'),
                     ))->execute();
                     $charge = $payment->chargeByNewCard(
-                        $event['fee'],
+                        $amount,
                         $customer,
                         $new_card,
                         $application_code,
@@ -510,7 +534,7 @@ class Applications extends Base
                     $customer = $payment->getCustomer($username);
                     $payment->updateCustomer($customer, $name, $email);
                     $charge = $payment->chargeByRegistCard(
-                        $event['fee'],
+                        $amount,
                         $customer,
                         $cardselect,
                         $application_code,
