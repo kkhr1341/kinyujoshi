@@ -2,8 +2,25 @@
 
 class Controller_Kinyu_Business extends Controller_Kinyubase
 {
+    const AUTHENTICATION_USER = 'kinyu';
+
+    const AUTHENTICATION_PASSWORD = 'business';
+	
     public function action_index()
     {
+		
+		$authentication_user     = self::AUTHENTICATION_USER;
+		$authentication_password = self::AUTHENTICATION_PASSWORD;
+
+		switch (true) {
+			case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+			case $_SERVER['PHP_AUTH_USER'] !== $authentication_user:
+			case $_SERVER['PHP_AUTH_PW'] !== $authentication_password:
+				header('WWW-Authenticate: Basic realm="Enter username and password."');
+				header('Content-Type: text/plain; charset=utf-8');
+				die('このページを見るにはログインが必要です');
+		}
+		
         $this->template->title = 'きんゆう女子。コミュニティパートナーをご検討の企業様へ｜きんゆう女子。';
         $this->template->description = "";
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/diagnosticchart/og-main.jpg';
