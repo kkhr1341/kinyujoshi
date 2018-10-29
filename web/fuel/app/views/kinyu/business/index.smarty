@@ -8,11 +8,11 @@
 	<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
 	<nav>
 		<ul>
-			<li>提供サービス</li>
-			<li>コミュニティ概要</li>
-			<li>事例</li>
-			<li>ミッション</li>
-			<li>お問い合わせ</li>
+			<li><a href="#business-service">提供サービス</a></li>
+			<li><a href="#business-about">コミュニティ概要</a></li>
+			<li><a href="#business-works">事例</a></li>
+			<li><a href="#business-mission">ミッション</a></li>
+			<li><a href="#business-contact">お問い合わせ</a></li>
 		</ul>
 	</nav>
 </div>
@@ -20,11 +20,11 @@
 	<div class="business-main">
 		  <div class="main-copy-wrapper">
 			  <img src="/images/business/business-copy.png">
-		  	  <p class="business-contact-btn">きんゆう女子。のパートナーになる</p>
+			  <p class="business-contact-btn"><a href="#">きんゆう女子。のパートナーになる</a></p>
 		</div>
 	</div>
 
-	<div class="business-service business-section">
+	<div id="business-service" class="business-service business-section">
 		<div class="section-title-wrapper">
 			<h2 class="section-title">コミュニティパートナー向け提供サービス</h2>
 			<p>〜 資産形成をしたい女性たちに寄り添う 3STEP 〜</p>
@@ -58,15 +58,23 @@
 		
 	</div>
 	
-	<div class="business-about clear">
+	<div id="business-about" class="business-about clear">
 		<div class="section-title-wrapper">
 			<h2 class="section-title">コミュニティ概要</h2>
 		</div>
-		
+		<div class="about-business-wrapper">
+			<ul>
+				<li><img src="/images/business/about1.png"></li>
+				<li><img src="/images/business/about2.png"></li>
+				<li><img src="/images/business/about3.png"></li>
+				<li class="mt30"><img src="/images/business/about4.png"></li>
+				<li class="mt30"><img src="/images/business/about5.png"></li>
+			</ul>
+		</div>
 		
 	</div>
 	
-	<div class="business-works clear">
+	<div id="business-works" class="business-works clear">
 		<div class="section-title-wrapper">
 			<h2 class="section-title">アンケート調査、イベント企画・運営、各種制作　事例</h2>
 		</div>
@@ -114,11 +122,20 @@
 				</li>
 			</ul>
 		</div>
-		<div class="memberpage-link-btn"><a href="https://kinyu-joshi.jp/">その他の活動を見る</a></div>
+		<div class="business-works-btn"><a href="https://kinyu-joshi.jp/">その他の活動を見る</a></div>
+	</div>
+	
+		<div id="business-contact" class="business-contact clear">
+		<div class="section-title-wrapper">
+			<h2 class="section-title">お問い合わせ</h2>
+		</div>
+		<div class="contact-business-wrapper">
+			<div class="business-contact-btn2"><a href="#">お問い合わせはこちら</a></div>
+		</div>
 	</div>
 	
 
-	<div class="business-mission clear">
+	<div id="business-mission" class="business-mission clear">
 		<div class="business-mission-img-wrapper"></div>
 		<div class="business-mission-text-wrapper">
 			<img src="/images/business/mission.png">
@@ -134,6 +151,56 @@
 
 
 <style>
+/*------------------------------
+お問い合わせ
+-------------------------------*/	
+	.business-contact {
+		text-align: center;
+		padding: 80px 0;
+		background: #f9f9f9;
+	}
+	.business-contact-btn {
+		
+	}
+	.business-contact-btn2 a:hover {
+		opacity: 0.6;
+	}
+	.business-contact-btn2 a {
+		background: #e0dc5f;
+		padding:14px 24px;
+		color: #fff;
+		font-size: 15px;
+		transition: .5s;
+		width: 300px;
+		margin: 30px auto 0;
+	}
+/*------------------------------
+概要（about）
+-------------------------------*/
+	.business-about {
+		width: 100%;
+		background: #f9f9f9;
+		padding: 80px 0;
+		text-align: center;
+	}
+	.about-business-wrapper {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.about-business-wrapper li {
+		display: inline-block;
+		margin: 0 10px;
+		width: 300px; 
+		background: #fff;
+		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+	}
+	.about-business-wrapper li img {
+		width: 100%;
+	}
+	.about-business-wrapper .mt30 {
+		margin-top: 30px;
+	}
+
 /*------------------------------
 事例（works）
 -------------------------------*/
@@ -341,16 +408,16 @@
 		overflow: hidden;
 		position: relative;
 	}
-	.memberpage-link-btn {
+	.business-works-btn {
 		text-align: center;
 	}
-	.memberpage-link-btn a:hover {
+	.business-works-btn a:hover {
 		opacity: 0.6;
 	}
-	.memberpage-link-btn a {
+	.business-works-btn a {
 		display: block;
 		background: #8ddcd1;
-		padding: 20px 24px;
+		padding: 14px 24px;
 		color: #fff;
 		font-size: 15px;
 		border: 1px solid #8ddcd1;
@@ -365,10 +432,11 @@
 	.business-mission {
 		width: 1000px;
 		margin: 0 auto;
+		padding: 80px 0;
 	}
 	.business-mission-img-wrapper {
 		float: left;
-		background: url(/images/business/business-main-bg.jpeg);
+		background: url(/images/business/business-service-img.jpeg);
 		background-size: cover;
 		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
 		width: 500px;
@@ -397,7 +465,7 @@
 	}
 	.memberpage-link-btn a {
 		background: #8ddcd1;
-		padding: 20px 24px;
+		padding:14px 24px;
 		color: #fff;
 		font-size: 15px;
 		border: 1px solid #8ddcd1;
@@ -436,7 +504,7 @@
 		position: relative;
 		padding: 15px;
 		float: left;
-		margin: 0 12px;
+		margin: 0 15px;
 	}
 	
 	.business-step {
@@ -506,7 +574,31 @@
 		font-size: 14px;
 		display: inline-block;
 		padding: 0 10px;
+		transition: .5s;
+		 position: relative;
 	}
+/*	 .business-header nav li:hover{
+		border-bottom: 1px solid #8ddcd1;
+	}*/
+	.business-header nav li::after{	
+	  position: absolute;
+	  bottom: 1px;
+	  left: 0;
+	  content: '';
+	  width: 100%;
+	  height: 1px;
+	  background: #8ddcd1;
+	  opacity: 0;
+	  visibility: hidden;
+	  transition: .3s;
+	}
+	
+.business-header nav li:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+	
 /*------------------------------
 メインビジュアル
 -------------------------------*/	
@@ -515,16 +607,16 @@
 		width: 100%;
 		position: relative;
 		text-align: center;
-		background: url(/images/business/business-main-bg.jpeg);
+		background: url(/images/business/business-main-bg.png) top center;
 		background-size: cover;
 	}
 	.business-main img {
-		max-width: 500px;
+		max-width: 530px;
 	}
-	.business-contact-btn {
+	.business-contact-btn a{
 		display: block;
 		background: #8ddcd1;
-		padding: 20px 16px;
+		padding: 14px 16px;
 		color: #fff;
 		font-size: 16px;
 		line-height: 13px;
@@ -535,7 +627,7 @@
 	}
 	.main-copy-wrapper {
 		position: relative;
-		top: 35%;
+		top: 50%;
 	}
 	
 </style>
