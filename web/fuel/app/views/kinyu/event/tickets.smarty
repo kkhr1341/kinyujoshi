@@ -43,8 +43,9 @@ var $resArray02 = $resArray[1];
         <p class="ticket-title">クーポンコードを入力</p>
         <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
         <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="クーポンコード" value="">
-
-        <p class="ticket-title">お支払い方法</p>
+		<button class="coupon-apply-btn">クーポンを適用</button>
+        
+		  <p class="ticket-title">お支払い方法</p>
 
         <div class="kinyu-joshikai-tickets-payment-list">
 

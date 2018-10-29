@@ -2474,13 +2474,31 @@
   background: #f1f1f1;
   border: 1px solid #f1f1f1;
 }
-
+.coupon-apply-btn {
+	padding: 8px 10px;
+	display: inline-block;
+	font-size: 12px;
+    color: #444;
+	background: #eee;
+	margin-left: 15px;
+	transition: .5s;
+}
+.coupon-apply-btn:hover{
+    background:#8ddcd1;
+    color:#fff;
+}
 #coupon_code {
     border: 1px solid #ccc;
     padding: 4px 10px;
     font-size: 14px;
     color: #444;
     margin-bottom: 24px;
+	display: inline-block;
+}
+
+.discount-span {
+	color: red;!important
+	font-weight: normal;
 }
 
 /* 決済画面 */
