@@ -25,11 +25,8 @@
                 </div>
               </div>
             </a>
-            <button class="delete-button" data-code="{$blog.code}">×</button>
+
           </li>
-        {foreachelse}
-          <p class="check-no"> スト        ￿￿<br>チェックしてくださいね♪</p>
-          <a href="/report" class="to-link-report">レポート一覧へ</a>
         {/foreach}
 
         </ul>

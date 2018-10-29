@@ -1,0 +1,671 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/single/business.css" />
+
+<div class="joshikai-main-block">
+	
+<div class="business-header clear">
+	<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
+	<nav>
+		<ul>
+			<li><a href="#business-service">提供サービス</a></li>
+			<li><a href="#business-about">コミュニティ概要</a></li>
+			<li><a href="#business-works">事例</a></li>
+			<li><a href="#business-mission">ミッション</a></li>
+			<li><a href="#business-contact">お問い合わせ</a></li>
+		</ul>
+	</nav>
+</div>
+
+	<div class="business-main">
+		  <div class="main-copy-wrapper">
+			  <img src="/images/business/business-copy.png">
+			  <p class="business-contact-btn"><a href="#">きんゆう女子。のパートナーになる</a></p>
+		</div>
+	</div>
+
+	<div id="business-service" class="business-service business-section">
+		<div class="section-title-wrapper">
+			<h2 class="section-title">コミュニティパートナー向け提供サービス</h2>
+			<p>〜 資産形成をしたい女性たちに寄り添う 3STEP 〜</p>
+		</div>
+		<div class="business-service-wrapper clear">
+			<div class="service-box">
+				<img src="/images/business/step1.png" class="business-step">
+				<div class="service-icon"><img src="/images/business/icon1.png" class="business-icon"></div>
+				<div class="service-type"><img src="/images/business/type1.png"></div>
+				<div class="gray-line"></div>
+				<p>資産づくりの大切さを感じつつも踏み出せない20~40代女性たちのリアルな声や気持ちを聞くことができます。（座談会・アンケートなど）</p>
+			</div>
+			<div class="service-box">
+				<img src="/images/business/step2.png" class="business-step">
+				<div class="service-icon"><img src="/images/business/icon2.png" class="business-icon"></div>
+				<div class="service-type"><img src="/images/business/type2.png"></div>
+				<div class="gray-line"></div>
+				<p>Q&Aの結果を元に、リテラシー向上・サービス理解につながるコンテンツを企画・制作を行います。</p>
+			</div>
+			<div class="service-box">
+				<img src="/images/business/step3.png" class="business-step">
+				<div class="service-icon"><img src="/images/business/icon3.png" class="business-icon"></div>
+				<div class="service-type"><img src="/images/business/type3.png"></div>
+				<div class="gray-line"></div>
+				<p>写真素材・イラスト素材販売、WEBデザイン・パンフレット・ノベルティ制作を企画立案から制作まで行います。リクエストに応じて出張撮影も可能です。</p>
+				<p class="service-caution"><span style="color: red;">＊</span>アフィリエイトプログラムは受け付けておりません。</p>
+			</div>				 
+		</div>
+		
+		<p class="business-caution">お取引には審査がございます。どこにも属さないコミュニティのため、直接勧誘・営業販売につながるような企画や広告はできません。ご理解いただける企業様のみ取引いたします。</p>
+		
+	</div>
+	
+	<div id="business-about" class="business-about clear">
+		<div class="section-title-wrapper">
+			<h2 class="section-title">コミュニティ概要</h2>
+		</div>
+		<div class="about-business-wrapper">
+			<ul>
+				<li><img src="/images/business/about1.png"></li>
+				<li><img src="/images/business/about2.png"></li>
+				<li><img src="/images/business/about3.png"></li>
+				<li class="mt30"><img src="/images/business/about4.png"></li>
+				<li class="mt30"><img src="/images/business/about5.png"></li>
+			</ul>
+		</div>
+		
+	</div>
+	
+	<div id="business-works" class="business-works clear">
+		<div class="section-title-wrapper">
+			<h2 class="section-title">アンケート調査、イベント企画・運営、各種制作　事例</h2>
+		</div>
+		<div class="business-works-wrapper clear">
+			<ul>
+				<li class="work1">
+					<div class="mask">
+						<div class="caption">ノベルティ・パンフレット制作</div>
+					</div>
+				</li>
+				<li class="work2">
+					<div class="mask">
+						<div class="caption">2017/2018<br>資産運用会社 IR企画支援</div>
+					</div>
+				</li>
+				<li class="work3">
+					<div class="mask">
+						<div class="caption">2017/2018<br>JPX＊マネースクール</div>
+					</div>
+				</li>
+				<li class="work4">
+					<div class="mask">
+						<div class="caption">2016~毎週開催<br>金融リテラシー向上・資産形成のためのイベント</div>
+					</div>
+				</li>
+				<li class="work5">
+					<div class="mask">
+						<div class="caption">2017<br>お金と私をアップデート 日経BP社主催イベント協力</div>
+					</div>
+				</li>
+				<li class="work6">
+					<div class="mask">
+						<div class="caption">2017/2018<br>WEBデザイン企画・制作</div>
+					</div>
+				</li>
+				<li class="work7">
+					<div class="mask">
+						<div class="caption">2018<br>ライフ＆マネーFesta 日経BP社主催イベント協力</div>
+					</div>
+				</li>
+				<li class="work8">
+					<div class="mask">
+						<div class="caption">コピーライティング</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="business-works-btn"><a href="https://kinyu-joshi.jp/joshikai_past" target="_blank">その他の活動を見る</a></div>
+	</div>
+	
+		<div id="business-contact" class="business-contact clear">
+		<div class="section-title-wrapper">
+			<h2 class="section-title">お問い合わせ</h2>
+		</div>
+		<div class="contact-business-wrapper">
+			<div class="business-contact-btn2"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform?edit_requested=true" target="_blank">お問い合わせはこちら</a></div>
+		</div>
+	</div>
+	
+
+	<div id="business-mission" class="business-mission clear">
+		<div class="business-mission-img-wrapper"></div>
+		<div class="business-mission-text-wrapper">
+			<img src="/images/business/mission.png">
+			<div class="gray-line"></div>
+			<p>〜目標を叶え、心豊かに生きるために〜<br><br>ミレニアル世代女性に必要な金融・情報リテラシー向上と<br>アクションをサポートする</p>
+			<div class="memberpage-link-btn"><a href="https://kinyu-joshi.jp/">メンバー向けページはこちら</a></div>
+		</div>
+	</div>
+	
+	<div id="business-partner" class="business-partner">
+			<div class="partner-link-btn"><a href="#">金融ワカラナイ女子を応援したい方はこちら</a></div>
+		</div>
+	</div>
+	
+	
+</div>
+
+
+<style>
+/*------------------------------
+パートナー
+-------------------------------*/		
+	.business-partner {
+		width: 100%;
+		padding: 180px 0;
+		text-align: center;
+		background: url(/images/business/partner.png) center center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.partner-link-btn {
+		
+	}
+	.partner-link-btn a:hover {
+		opacity: 0.6;
+	}
+	.partner-link-btn a {
+		background: #e0dc5f;
+		padding:14px 24px;
+		color: #fff;
+		font-size: 15px;
+		transition: .5s;
+		width: 300px;
+		position: relative;
+    	left: 200px;
+	}
+	
+/*------------------------------
+お問い合わせ
+-------------------------------*/	
+	.business-contact {
+		text-align: center;
+		padding: 80px 0;
+		background: #f9f9f9;
+	}
+	.business-contact-btn {
+		
+	}
+	.business-contact-btn2 a:hover {
+		opacity: 0.6;
+	}
+	.business-contact-btn2 a {
+		background: #e0dc5f;
+		padding:16px 24px;
+		color: #fff;
+		font-size: 15px;
+		transition: .5s;
+		width: 350px;
+		margin: 30px auto 0;
+	}
+/*------------------------------
+概要（about）
+-------------------------------*/
+	.business-about {
+		width: 100%;
+		background: #f9f9f9;
+		padding: 80px 0;
+		text-align: center;
+	}
+	.about-business-wrapper {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.about-business-wrapper li {
+		display: inline-block;
+		margin: 0 10px;
+		width: 300px; 
+		background: #fff;
+		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+	}
+	.about-business-wrapper li img {
+		width: 100%;
+	}
+	.about-business-wrapper .mt30 {
+		margin-top: 30px;
+	}
+
+/*------------------------------
+事例（works）
+-------------------------------*/
+	.business-works {
+		padding: 80px 0;
+	}
+	.business-works-wrapper {
+		width: 100%;
+		min-width: 1200px;
+	}
+	.business-works-wrapper li {
+		float: left;
+		width: 25%;
+		height: 250px;
+		background: #eee;
+		vertical-align: bottom;
+		line-height: 1.7;
+		transition: .3s;
+
+	}
+	.business-works-wrapper li:hover{
+		transform:scale(1.05);
+		position: relative;
+		z-index: 2;
+	}	
+
+	.business-works-wrapper .caption {
+		color: #fff;
+	}
+	.work1 .mask {
+		width: 100%;
+		height:	 100%;
+		position: absolute;
+		padding: 25px;
+		top: 0;
+		left: 0;
+		opacity: 0;	/* マスクを表示しない */
+		background-color: rgba(0,0,0,0.4);
+		-webkit-transition:	all 0.6s ease;
+		transition:	all 0.6s ease;
+	}
+	.work1:hover .mask {
+		opacity: 1;	/* マスクを表示する */
+		padding-top: 80px;
+	}
+	.work2 .mask {
+		width: 100%;
+		height:	 100%;
+		position: absolute;
+		padding: 25px;
+		top: 0;
+		left: 0;
+		opacity: 0;	/* マスクを表示しない */
+		background-color: rgba(0,0,0,0.4);
+		-webkit-transition:	all 0.6s ease;
+		transition:	all 0.6s ease;
+	}
+	.work2:hover .mask {
+		opacity: 1;	/* マスクを表示する */
+		padding-top: 80px;
+	}
+	.work3 .mask {
+		width: 100%;
+		height:	 100%;
+		position: absolute;
+		padding: 25px;
+		top: 0;
+		left: 0;
+		opacity: 0;	/* マスクを表示しない */
+		background-color: rgba(0,0,0,0.4);
+		-webkit-transition:	all 0.6s ease;
+		transition:	all 0.6s ease;
+	}
+	.work3:hover .mask {
+		opacity: 1;	/* マスクを表示する */
+		padding-top: 80px;
+	}
+	.work4 .mask {
+		width: 100%;
+		height:	 100%;
+		position: absolute;
+		padding: 25px;
+		top: 0;
+		left: 0;
+		opacity: 0;	/* マスクを表示しない */
+		background-color: rgba(0,0,0,0.4);
+		-webkit-transition:	all 0.6s ease;
+		transition:	all 0.6s ease;
+	}
+	.work4:hover .mask {
+		opacity: 1;	/* マスクを表示する */
+		padding-top: 80px;
+	}
+	.work5 .mask {
+		width: 100%;
+		height:	 100%;
+		position: absolute;
+		padding: 25px;
+		top: 0;
+		left: 0;
+		opacity: 0;	/* マスクを表示しない */
+		background-color: rgba(0,0,0,0.4);
+		-webkit-transition:	all 0.6s ease;
+		transition:	all 0.6s ease;
+	}
+	.work5:hover .mask {
+		opacity: 1;	/* マスクを表示する */
+		padding-top: 80px;
+	}
+	.work6 .mask {
+		width: 100%;
+		height:	 100%;
+		position: absolute;
+		padding: 25px;
+		top: 0;
+		left: 0;
+		opacity: 0;	/* マスクを表示しない */
+		background-color: rgba(0,0,0,0.4);
+		-webkit-transition:	all 0.6s ease;
+		transition:	all 0.6s ease;
+	}
+	.work6:hover .mask {
+		opacity: 1;	/* マスクを表示する */
+		padding-top: 80px;
+	}
+	.work7 .mask {
+		width: 100%;
+		height:	 100%;
+		position: absolute;
+		padding: 25px;
+		top: 0;
+		left: 0;
+		opacity: 0;	/* マスクを表示しない */
+		background-color: rgba(0,0,0,0.4);
+		-webkit-transition:	all 0.6s ease;
+		transition:	all 0.6s ease;
+	}
+	.work7:hover .mask {
+		opacity: 1;	/* マスクを表示する */
+		padding-top: 80px;
+	}
+	.work8 .mask {
+		width: 100%;
+		height:	 100%;
+		position: absolute;
+		padding: 25px;
+		top: 0;
+		left: 0;
+		opacity: 0;	/* マスクを表示しない */
+		background-color: rgba(0,0,0,0.4);
+		-webkit-transition:	all 0.6s ease;
+		transition:	all 0.6s ease;
+	}
+	.work8:hover .mask {
+		opacity: 1;	/* マスクを表示する */
+		padding-top: 80px;
+	}
+	
+
+	.business-works-wrapper .work1 {
+		background: url(/images/business/1.png) top center;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+	}
+	.business-works-wrapper .work2 {
+		background: url(/images/business/2.jpg) top center;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+	}
+	.business-works-wrapper .work3 {
+		background: url(/images/business/3.png) top center;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+	}
+	.business-works-wrapper .work4 {
+		background: url(/images/business/4.jpg) top center;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+	}
+	.business-works-wrapper .work5 {
+		background: url(/images/business/5.JPG) top center;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+	}
+	.business-works-wrapper .work6 {
+		background: url(/images/business/6.png) top center;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+	}
+	.business-works-wrapper .work7 {
+		background: url(/images/business/7.jpg) top center;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+	}
+	.business-works-wrapper .work8 {
+		background: url(/images/business/8.jpg) top center;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+	}
+	.business-works-btn {
+		text-align: center;
+	}
+	.business-works-btn a:hover {
+		opacity: 0.6;
+	}
+	.business-works-btn a {
+		display: block;
+		background: #8ddcd1;
+		padding: 14px 24px;
+		color: #fff;
+		font-size: 15px;
+		border: 1px solid #8ddcd1;
+		transition: .5s;
+		width: 200px;
+		margin: 40px auto 0;
+	}
+	
+/*------------------------------
+ミッション
+-------------------------------*/
+	.business-mission {
+		width: 1000px;
+		margin: 0 auto;
+		padding: 80px 0;
+	}
+	.business-mission-img-wrapper {
+		float: left;
+		background: url(/images/business/business-service-img.jpeg);
+		background-size: cover;
+		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+		width: 500px;
+		height: 350px;
+		opacity: .9;
+	}
+	.business-mission-text-wrapper {
+		float: right;
+		width: 450px;
+		text-align: center;
+		padding-top: 30px;
+	}
+	.business-mission-text-wrapper  img{
+		display: block;
+		width: 150px;
+		margin: 0 auto;
+	}
+	.business-mission-text-wrapper  p{
+		font-size: 16px;
+		line-height: 1.7;
+		padding-top: 30px;
+		margin-bottom: 40px;
+	}
+
+	.memberpage-link-btn a:hover {
+		opacity: 0.6;
+	}
+	.memberpage-link-btn a {
+		background: #8ddcd1;
+		padding:14px 24px;
+		color: #fff;
+		font-size: 15px;
+		border: 1px solid #8ddcd1;
+		transition: .5s;
+		width: 350px;
+		margin: 30px auto 0;
+	}
+	
+	
+	
+.business-mission-text-wrapper .gray-line {
+		padding-top: 0;
+	}
+	
+	
+/*------------------------------
+提供サービス
+-------------------------------*/	
+	.gray-line {
+		border-bottom: 1px solid #eee;
+		width: 50%;
+		margin: 10px auto 20px;
+	}
+	.business-service {
+		width: 100%;
+	}
+	.business-service-wrapper {
+		margin: 0 auto;	
+		width: 900px;
+	}
+	
+	.service-box {
+		width: 270px;
+		height: 420px;
+		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+		position: relative;
+		padding: 15px;
+		float: left;
+		margin: 0 15px;
+	}
+	
+	.business-step {
+		max-width: 80px;
+		position: absolute;
+		top: -47px;
+		left: 20px;
+	}
+	
+	.service-icon img {
+		margin: 0 auto;
+		display: block;
+		max-width: 80%;
+	}
+	.service-type img {
+		max-width: 100%;
+	}
+	.service-caution {
+		font-size: 12px;
+	}
+	
+	
+	.business-caution {
+		font-size: 12px;
+		margin-top: 30px;
+		text-align: center;
+	}
+	
+/*-----------------
+見出し
+-------------------*/
+	.business-section {
+		padding: 80px 0;
+	}
+	.section-title-wrapper {
+		padding-bottom: 60px;	
+		text-align: center;
+	}
+	.section-title {
+		font-size: 28px;
+		color: #444;
+	}
+	.section-title-wrapper p {
+		margin-top: 20px;
+		font-size: 15px;
+	}
+/*-----------------
+ヘッダー
+-------------------*/	
+	.business-header {
+		width:100%;
+		padding: 20px;
+	}
+	.business-logo-wrapper {
+		float: left;
+	}
+	.business-logo-wrapper img{
+		width: 420px;
+	}
+	.business-header nav {
+		float: right;
+	}
+	.business-header nav ul{
+		margin-top: 10px;
+	}
+	 .business-header nav li{
+		font-size: 14px;
+		display: inline-block;
+		padding: 0 10px;
+		transition: .5s;
+		 position: relative;
+	}
+/*	 .business-header nav li:hover{
+		border-bottom: 1px solid #8ddcd1;
+	}*/
+	.business-header nav li::after{	
+	  position: absolute;
+	  bottom: 1px;
+	  left: 0;
+	  content: '';
+	  width: 100%;
+	  height: 1px;
+	  background: #8ddcd1;
+	  opacity: 0;
+	  visibility: hidden;
+	  transition: .3s;
+	}
+	
+.business-header nav li:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+	
+/*------------------------------
+メインビジュアル
+-------------------------------*/	
+	.business-main {
+		height: 80vh;
+		width: 100%;
+		position: relative;
+		text-align: center;
+		background: url(/images/business/business-main-bg.png) top center;
+		background-size: cover;
+	}
+	.business-main img {
+		max-width: 530px;
+	}
+	.business-contact-btn a{
+		display: block;
+		background: #8ddcd1;
+		padding: 16px 16px;
+		color: #fff;
+		font-size: 16px;
+		line-height: 13px;
+		border: 1px solid #8ddcd1;
+		transition: .5s;
+		width: 350px;
+		margin: 30px auto;
+		opacity: 0.9;
+	}
+		.business-contact-btn a:hover{
+		opacity:0.7;
+	}
+	.main-copy-wrapper {
+		position: relative;
+		top: 50%;
+	}
+	
+</style>
