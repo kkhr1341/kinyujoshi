@@ -130,7 +130,7 @@
 			<h2 class="section-title">お問い合わせ</h2>
 		</div>
 		<div class="contact-business-wrapper">
-			<div class="business-contact-btn2"><a href="#">お問い合わせはこちら</a></div>
+			<div class="business-contact-btn2"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform?edit_requested=true" target="_blank">お問い合わせはこちら</a></div>
 		</div>
 	</div>
 	
@@ -145,12 +145,45 @@
 		</div>
 	</div>
 	
+	<div id="business-partner" class="business-partner">
+			<div class="partner-link-btn"><a href="#">金融ワカラナイ女子を応援したい方はこちら</a></div>
+		</div>
+	</div>
 	
 	
 </div>
 
 
 <style>
+/*------------------------------
+パートナー
+-------------------------------*/		
+	.business-partner {
+		width: 100%;
+		padding: 180px 0;
+		text-align: center;
+		background: url(/images/business/partner.png) center center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.partner-link-btn {
+		
+	}
+	.partner-link-btn a:hover {
+		opacity: 0.6;
+	}
+	.partner-link-btn a {
+		background: #e0dc5f;
+		padding:14px 24px;
+		color: #fff;
+		font-size: 15px;
+		transition: .5s;
+		width: 300px;
+		position: relative;
+    	left: 200px;
+	}
+	
 /*------------------------------
 お問い合わせ
 -------------------------------*/	
@@ -167,11 +200,11 @@
 	}
 	.business-contact-btn2 a {
 		background: #e0dc5f;
-		padding:14px 24px;
+		padding:16px 24px;
 		color: #fff;
 		font-size: 15px;
 		transition: .5s;
-		width: 300px;
+		width: 350px;
 		margin: 30px auto 0;
 	}
 /*------------------------------
@@ -423,7 +456,7 @@
 		border: 1px solid #8ddcd1;
 		transition: .5s;
 		width: 200px;
-		margin: 30px auto 0;
+		margin: 40px auto 0;
 	}
 	
 /*------------------------------
@@ -441,6 +474,7 @@
 		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
 		width: 500px;
 		height: 350px;
+		opacity: .9;
 	}
 	.business-mission-text-wrapper {
 		float: right;
@@ -470,7 +504,7 @@
 		font-size: 15px;
 		border: 1px solid #8ddcd1;
 		transition: .5s;
-		width: 300px;
+		width: 350px;
 		margin: 30px auto 0;
 	}
 	
@@ -616,14 +650,18 @@
 	.business-contact-btn a{
 		display: block;
 		background: #8ddcd1;
-		padding: 14px 16px;
+		padding: 16px 16px;
 		color: #fff;
 		font-size: 16px;
 		line-height: 13px;
 		border: 1px solid #8ddcd1;
 		transition: .5s;
-		width: 300px;
+		width: 350px;
 		margin: 30px auto;
+		opacity: 0.9;
+	}
+		.business-contact-btn a:hover{
+		opacity:0.7;
 	}
 	.main-copy-wrapper {
 		position: relative;
