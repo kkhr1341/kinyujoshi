@@ -20,7 +20,7 @@ class Controller_My_Blog extends Controller_Mybase
 	
 	public function action_member_report()
     {
-        $this->data['blogs'] = Blogs::lists(null, null, 1, null, null, true);
+        $this->data['blogs'] = Blogs::lists(1, null, 1, null, null, true);
         $this->template->contents = View::forge('my/blog/member_report.smarty', $this->data);
         $this->template->description = 'マイページ・ブログ';
         $this->template->title = 'メンバー限定レポート｜きん女。マイページ';
