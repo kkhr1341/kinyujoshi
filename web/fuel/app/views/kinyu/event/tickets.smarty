@@ -33,16 +33,16 @@ var $resArray02 = $resArray[1];
 
         <div class="info-coupon" style="display: none;">
             <p><span>参加費</span>：<span class="fee"></span></p>
-            <p><span>クーポン適用後の金額</span>：<span class="amount"></span></p>
-            <p><span>割引金額</span>：<span class="discount"></span></p>
+            <p><span>クーポン適用後の金額</span>：<span class="amount" style="color: red;"></span></p>
+            <!--<p><span>割引金額</span>：<span class="discount"></span></p>-->
         </div>
       </div>
 
       <div class="kinyu-joshikai-tickets-payment">
 
-        <p class="ticket-title">クーポンコード</p>
+        <p class="ticket-title">クーポンコードを入力</p>
         <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
-        <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="" value="" style="border: 1px solid #000;">
+        <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="クーポンコード" value="">
 
         <p class="ticket-title">お支払い方法</p>
 

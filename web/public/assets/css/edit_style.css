@@ -2450,6 +2450,7 @@
 .kinyu-joshikai-tickets-payment {
   padding-top: 24px;
   border-top: 1px solid #e9e9e9;
+  transition: .5s;
 }
 .kinyu-joshikai-tickets-payment a {
   width: 100%;
@@ -2472,6 +2473,14 @@
 .kinyu-joshikai-tickets-payment .fee-cash {
   background: #f1f1f1;
   border: 1px solid #f1f1f1;
+}
+
+#coupon_code {
+    border: 1px solid #ccc;
+    padding: 4px 10px;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 24px;
 }
 
 /* 決済画面 */
