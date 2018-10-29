@@ -1,9 +1,12 @@
 
 
 <!-- 女子会TOP表示 -->
-<div class="swiper-slide" style="background: url(/images/diagnosticchart/og-main.jpg) center center / cover no-repeat;">
-  <a class="js-track" href="https://kinyu-joshi.jp/kinjo_check" data-category="slide-link" data-action="click" data-value="2">
+<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20180920105406image.jpg) center center / cover no-repeat;">
+  <a class="js-track" href="https://kinyu-joshi.jp/joshikai/S1kM7o" data-category="slide-link" data-action="click" data-value="2">
     <div class="kinyu-top-list-kind">
+    </div>
+    <div class="kinyu-top-introlist-title">
+        <h3 class="kinyu-top-list-title">きん女。おしゃべり会♪ 〜スポーツとおかねの秋。〜　supported by 住友生命「Vitality」</h3>
     </div>
   </a>
 </div>
@@ -26,14 +29,16 @@
 </div>
 {/if}
 
-<!--<div class="swiper-slide" style="background: url(/images/kinyu_map/og/og-main.jpg) center center / cover no-repeat;">
-  <a class="js-track" href="/kinyu_sanpo" data-category="slide-link" data-action="click" data-value="4">
-    <div class="kinyu-top-list-kind">
-    </div>
-  </a>
-</div>-->
-
 {foreach from=$blogs_pick item=blog name=loopname}
+
+  {if $smarty.foreach.loopname.index == 1}
+    <div class="swiper-slide" style="background: url(/images/diagnosticchart/og-main.jpg) center center / cover no-repeat;">
+      <a class="js-track" href="https://kinyu-joshi.jp/kinjo_check" data-category="slide-link" data-action="click" data-value="2">
+        <div class="kinyu-top-list-kind">
+        </div>
+      </a>
+    </div>
+  {/if}
 
   <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
     <a class="js-track" href="/report/{$blog.code}" data-category="slide-link" data-action="click" data-value="5">

@@ -34,6 +34,7 @@
     <div id="chart_div8" class="wide-chart-el"></div>
 
     <div id="chart_div7" class="wide-chart-el"></div>
+    <div id="chart_div9" class="wide-chart-el"></div>
   </div>
 </div>
 
@@ -250,6 +251,23 @@ $(function(){
         };
         var chart = new google.visualization.LineChart(document.getElementById('chart_div7'));
         chart.draw(data, options);
+    });
+
+    // レポートチェック内訳
+    $.getJSON( "/api/analysis/blog_stock_count?start_at=" + start_at + "&end_at=" + end_at, function( json ) {
+        // 円グラフ
+        var result = {};
+        json.data.forEach(function(data) {
+            if (!(data.title in result)) {
+                result[data.title] = 0;
+            }
+            result[data.title] += 1;
+        })
+
+        var list = Object.keys(result).map(function(i) {
+            return {label: i, cnt: result[i]};
+        })
+        table(list, 'どこで、きんゆう女子。を知りましたか？その他', document.getElementById('chart_div9'));
     });
   }
 });

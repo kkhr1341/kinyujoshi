@@ -82,7 +82,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         // 最新を取得
         $this->data['blogs'] = Blogs::all('kinyu', '/kinyu/blog/', 1, 3, 5);
         $this->data['blog'] = Blogs::getByCodeWithProfile($code);
-        $this->data['stocked'] = Blogstocks::stocked($code);
+        $username = \Auth::get('username');
+        $this->data['stocked'] = Blogstocks::stocked($code, $username);
         $this->data['viewable'] = $this->viewable($code);
         $this->data['top_events'] = Events::lists(1, 7, true);
 
