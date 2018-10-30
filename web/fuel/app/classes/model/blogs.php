@@ -86,7 +86,7 @@ class Blogs extends Base
             $datas = $datas->where('secret', '=', 0);
         }
 
-        $datas = $datas->order_by(\DB::expr('RAND()'));
+        $datas = $datas->order_by('blogs.created_at', 'desc');
 
         if ($limit === null) {
         } else {
