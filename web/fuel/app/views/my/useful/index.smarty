@@ -5,7 +5,6 @@
     
     <div class="admin-normal-main">
       <div class="admin-normal-joshikai joshikailist-main">
-
 				<!-- 画像イメージこちらに入ります。 -->
         <img class="passport-main-img" src="/images/my/passport/passport_kinyu_top.jpg">
         <h3 class="mypage-content-title"><span>きん女。お役立ちツール</span></h3>
@@ -17,23 +16,36 @@
         よろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
         もしかしたら採用されるかも！？
         </p>
-        <p class="mypage-content-description passport-exist sp">
-        きん女。パスポートは、メンバーさんだけが使えるすてきな特典です。
-        日々企画を考えているので、これからもどんどん増えていく予定です♪
-        <span style="display: block;height:12px;"></span>
-        きん女。パスポートにどんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、
-        よろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
-        もしかしたら採用されるかも！？
-        </p>
-
       </div>
 
 			<!-- お役立ちコンテンツ・メイン部分 -->
 			<div class="useful-main-box">
-				
+
+        <div class="useful-main-box-el">
+          <div class="useful-main-box-el-inner clear">
+            <div class="img-box" style="background: gray;"></div>
+            <div class="text-main-box">
+              <p class="text-main-title">お金に強くなるノート</p>
+              <p class="text-main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="text-main-company">提供会社：<a href="">アライアンス・バーンスタイン株式会社</a></p>
+            </div>
+          </div>
+          <a class="useful-main-link" href="http://okane-abc.jp/#introduction01">テキストテキストテキストテキスト</a>
+        </div>
+
+        <div class="useful-main-box-el">
+          <div class="useful-main-box-el-inner clear">
+            <div class="img-box" style="background: gray;"></div>
+            <div class="text-main-box">
+              <p class="text-main-title">テキストテキストテキスト</p>
+              <p class="text-main-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="text-main-company">提供会社：<a href="">アライアンス・バーンスタイン株式会社</a></p>
+            </div>
+          </div>
+          <a class="useful-main-link" href="/">テキストテキストテキストテキスト</a>
+        </div>
 				
 			</div>
-
     </div>
   </div>
 </div>
@@ -41,9 +53,58 @@
 
 
 <!-- stylesheet -->
-<style>
-	
-
+<style>	
+.useful-main-box {
+}
+.useful-main-box-el {
+  background: #fff;
+  margin-bottom: 40px;
+  padding: 50px;
+}
+.useful-main-box-el-inner {
+}
+.useful-main-box-el-inner .img-box {
+  width: 30%;
+  height: 200px;
+  float: left;
+}
+.useful-main-box-el-inner .text-main-box {
+  width: 70%;
+  float: right;
+  padding-left: 24px;
+}
+.useful-main-box-el-inner .text-main-box .text-main-title {
+  font-size: 18px;
+  line-height: 18px;
+  padding-left: 12px;
+  border-left: 2px solid gray;
+  margin-top: 8px;
+}
+.useful-main-box-el-inner .text-main-box .text-main-description {
+  margin-top: 12px;
+}
+.useful-main-box-el-inner .text-main-box .text-main-company {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 16px;
+}
+.useful-main-box-el-inner .text-main-box .text-main-company a {
+  font-size: 11px;
+  line-height: 16px;
+  color: #5499d8;
+}
+.useful-main-box-el .useful-main-link {
+  display: block;
+  width: 350px;
+  background: gray;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 24px;
+}
 
 
 </style>
+
+
+
