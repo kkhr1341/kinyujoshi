@@ -86,7 +86,7 @@ class Blogs extends Base
             $datas = $datas->where('secret', '=', 0);
         }
 
-        $datas = $datas->order_by('blogs.created_at', 'desc');
+        $datas = $datas->order_by('blogs.open_date', 'desc');
 
         if ($limit === null) {
         } else {
