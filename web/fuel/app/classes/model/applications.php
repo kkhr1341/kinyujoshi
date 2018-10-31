@@ -127,9 +127,7 @@ class Applications extends Base
             ->execute()
             ->as_array();
 
-        echo \DB::last_query();
-
-//        return $datas;
+        return $datas;
     }
 
     public static function get_cancel_applications_by_code($code)
