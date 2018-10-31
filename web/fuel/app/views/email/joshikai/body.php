@@ -61,7 +61,7 @@
             <span style="color:#d9534f;">＊</span>メンバー登録をされていない方は<a href="https://kinyu-joshi.jp/contact" target="_blank">お問い合わせフォーム</a>よりご連絡くださいませ。<br><br>
             それでは、<?php echo $name; ?>さんにお会いできるのを楽しみにしております♪<br><br>
             ▼SNSでも活動報告しています！<br>
-            <img src="/images/og-top.jpg" style="display:block;width: 500px;margin:20px 0px;">
+            <img src="/images/og-top.png" style="display:block;width: 500px;margin:20px 0px;">
             <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">Facebook</a><br>
             <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagram</a><br>
           </td>

@@ -17,7 +17,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '女子会｜きんゆう女子。';
         $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.jpg';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->today = date("Y年n月");
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -41,7 +41,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '過去の女子会｜きんゆう女子。';
         $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.jpg';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->today = date("Y年n月");
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -227,7 +227,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     {
         $this->template->title = '女子会のご予約ありがとうございます。｜きんゆう女子。';
         $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.jpg';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->today = date("Y年n月");
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
