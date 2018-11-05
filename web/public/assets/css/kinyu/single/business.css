@@ -22,7 +22,7 @@
 	}
 	.partner-link-btn a {
 		background: #e0dc5f;
-		padding:14px 24px;
+		padding:16px 24px;
 		color: #fff;
 		font-size: 15px;
 		transition: .5s;
@@ -39,13 +39,11 @@
 		padding: 80px 0;
 		background: #f9f9f9;
 	}
-	.business-contact-btn {
-
-	}
 	.business-contact-btn2 a:hover {
 		opacity: 0.6;
 	}
 	.business-contact-btn2 a {
+		display: block;
 		background: #e0dc5f;
 		padding:16px 24px;
 		color: #fff;
@@ -63,6 +61,25 @@
 		padding: 80px 0;
 		text-align: center;
 	}
+.business-about-text {
+	width: 870px;
+	text-align: left;
+	margin: 0 auto 30px;
+	padding: 20px;
+	border: 1px solid #8ddcd1;
+}
+.business-about-text .left-wrapper {
+	float: left;
+	margin-right: 20px;
+}
+.business-about-text .left-wrapper img {
+	width: 80px;
+}
+.business-about-text .right-wrapper {
+	float: left;
+	width: 705px;
+	padding-top: 15px;
+}
 	.about-business-wrapper {
 		width: 1000px;
 		margin: 0 auto;
@@ -124,7 +141,7 @@
 	}
 	.work1:hover .mask {
 		opacity: 1;	/* マスクを表示する */
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.work2 .mask {
 		width: 100%;
@@ -140,7 +157,7 @@
 	}
 	.work2:hover .mask {
 		opacity: 1;	/* マスクを表示する */
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.work3 .mask {
 		width: 100%;
@@ -156,7 +173,7 @@
 	}
 	.work3:hover .mask {
 		opacity: 1;	/* マスクを表示する */
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.work4 .mask {
 		width: 100%;
@@ -172,7 +189,7 @@
 	}
 	.work4:hover .mask {
 		opacity: 1;	/* マスクを表示する */
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.work5 .mask {
 		width: 100%;
@@ -188,7 +205,7 @@
 	}
 	.work5:hover .mask {
 		opacity: 1;	/* マスクを表示する */
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.work6 .mask {
 		width: 100%;
@@ -204,7 +221,7 @@
 	}
 	.work6:hover .mask {
 		opacity: 1;	/* マスクを表示する */
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.work7 .mask {
 		width: 100%;
@@ -220,7 +237,7 @@
 	}
 	.work7:hover .mask {
 		opacity: 1;	/* マスクを表示する */
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 	.work8 .mask {
 		width: 100%;
@@ -236,7 +253,7 @@
 	}
 	.work8:hover .mask {
 		opacity: 1;	/* マスクを表示する */
-		padding-top: 80px;
+		padding-top: 60px;
 	}
 
 
@@ -297,7 +314,7 @@
 	.business-works-btn a {
 		display: block;
 		background: #8ddcd1;
-		padding: 14px 24px;
+		padding: 16px 24px;
 		color: #fff;
 		font-size: 15px;
 		border: 1px solid #8ddcd1;
@@ -313,6 +330,10 @@
 		width: 1000px;
 		margin: 0 auto;
 		padding: 80px 0;
+	}
+	.three-step img{
+		width: 400px;
+		margin: 30px auto 0;
 	}
 	.business-mission-img-wrapper {
 		float: left;
@@ -375,12 +396,12 @@
 	}
 	.business-service-wrapper {
 		margin: 0 auto;
-		width: 900px;
+		width: 1050px;
 	}
 
 	.service-box {
-		width: 270px;
-		height: 420px;
+		width: 320px;
+		height: 459px;
 		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
 		position: relative;
 		padding: 15px;
@@ -398,13 +419,14 @@
 	.service-icon img {
 		margin: 0 auto;
 		display: block;
-		max-width: 80%;
+		max-width: 70%;
 	}
 	.service-type img {
 		max-width: 100%;
 	}
 	.service-caution {
 		font-size: 12px;
+		padding-top: 10px;
 	}
 
 
@@ -492,7 +514,7 @@
 		background-size: cover;
 	}
 	.business-main img {
-		max-width: 530px;
+		max-width: 700px;
 	}
 	.business-contact-btn a{
 		display: block;
@@ -505,7 +527,6 @@
 		transition: .5s;
 		width: 350px;
 		margin: 30px auto;
-		opacity: 0.9;
 	}
 		.business-contact-btn a:hover{
 		opacity:0.7;
