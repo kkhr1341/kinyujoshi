@@ -20,14 +20,15 @@
 	<div class="business-main">
 		  <div class="main-copy-wrapper">
 			  <img src="/images/business/business-copy.png">
-			  <p class="business-contact-btn"><a href="#">きんゆう女子。のパートナーになる</a></p>
+			  <p class="business-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/edit?edit_requested=true" target="_blank">コミュ二ティパートナーになる</a></p>
 		</div>
 	</div>
 
 	<div id="business-service" class="business-service business-section">
 		<div class="section-title-wrapper">
 			<h2 class="section-title">コミュニティパートナー向け提供サービス</h2>
-			<p>〜 資産形成をしたい女性たちに寄り添う 3STEP 〜</p>
+			<p>〜家計の管理から世界経済、資産づくりに高い意識があるけれど、もやもやする。〜</p>
+			<p class="three-step"><img src="/images/business/3step.png"></p>
 		</div>
 		<div class="business-service-wrapper clear">
 			<div class="service-box">
@@ -35,26 +36,33 @@
 				<div class="service-icon"><img src="/images/business/icon1.png" class="business-icon"></div>
 				<div class="service-type"><img src="/images/business/type1.png"></div>
 				<div class="gray-line"></div>
-				<p>資産づくりの大切さを感じつつも踏み出せない20~40代女性たちのリアルな声や気持ちを聞くことができます。（座談会・アンケートなど）</p>
+				<p>webサイトやメルマガ、フリーペーパーなどでプロモーション・ブランディングをすることができます。また、女子会でテストマーケティングを行うことができます。</p>
+					<p class="service-caution"><span style="color: red;">＊</span>きんゆう女子。コミュニティのプロモーション審査基準を満たしている内容のみ取り扱いいたします。</p>
+
 			</div>
 			<div class="service-box">
 				<img src="/images/business/step2.png" class="business-step">
 				<div class="service-icon"><img src="/images/business/icon2.png" class="business-icon"></div>
 				<div class="service-type"><img src="/images/business/type2.png"></div>
 				<div class="gray-line"></div>
-				<p>Q&Aの結果を元に、リテラシー向上・サービス理解につながるコンテンツを企画・制作を行います。</p>
+				<p>メルマガや女子会、SNSでつながるメンバーに、リアルな声や認知度、好き嫌いの感情を聞くことができます。オンラインとリアルの両軸から本音が集まっています。</p>
 			</div>
 			<div class="service-box">
 				<img src="/images/business/step3.png" class="business-step">
 				<div class="service-icon"><img src="/images/business/icon3.png" class="business-icon"></div>
 				<div class="service-type"><img src="/images/business/type3.png"></div>
 				<div class="gray-line"></div>
-				<p>写真素材・イラスト素材販売、WEBデザイン・パンフレット・ノベルティ制作を企画立案から制作まで行います。リクエストに応じて出張撮影も可能です。</p>
-				<p class="service-caution"><span style="color: red;">＊</span>アフィリエイトプログラムは受け付けておりません。</p>
+				<p>リクエストを元に、20~30代女性たちに寄り添うコンテンツを企画・制作から運営まで行います。（イベント・写真素材・）</p>
+					<p class="service-caution">＋α 以下コンテンツはすぐに提供可能です。<br>
+					・出張女子会（10種類の女子会プログラム）<br>
+					・出張モデレーター（司会・講演）<br>
+					・出張きん女。FP（司会・講演）</p>
+
+
 			</div>
 		</div>
 
-		<p class="business-caution">お取引には審査がございます。どこにも属さないコミュニティのため、直接勧誘・営業販売につながるような企画や広告はできません。ご理解いただける企業様のみ取引いたします。</p>
+		<p class="business-caution"><span style="color: red;">＊</span>お取引には審査がございます。どの金融機関にも属さないコミュニティのため、金融商品にの勧誘・営業・販売につながるような内容は対応できません。<br>アフィリエイトプログラムは受け付けておりません。ご理解いただける企業様のみお取引いたします。</p>
 
 	</div>
 
@@ -62,6 +70,13 @@
 		<div class="section-title-wrapper">
 			<h2 class="section-title">コミュニティ概要</h2>
 		</div>
+	<div class="business-about-text clear">
+		<div class="left-wrapper"><img src="/images/business/kinjo-chan.png"></div>
+		<p class="right-wrapper">“ライフイベント前後の20~30代、人生をしっかり生きていきたい、金融に興味関心のある働きざかりの世代。<br>
+		週末は、ヨガに英語にゆるりと関心がある。もっと確かな自信がほしい…不安やワカラナイことがいっぱいだから。知らない新しい世界を知っていつも右肩上がりに成長していたい、好奇心旺盛な私たち。”</p>
+
+</div>
+
 		<div class="about-business-wrapper">
 			<ul>
 				<li><img src="/images/business/about1.png"></li>
@@ -76,48 +91,82 @@
 
 	<div id="business-works" class="business-works clear">
 		<div class="section-title-wrapper">
-			<h2 class="section-title">アンケート調査、イベント企画・運営、各種制作　事例</h2>
+			<h2 class="section-title">取り組み事例</h2>
 		</div>
 		<div class="business-works-wrapper clear">
 			<ul>
 				<li class="work1">
 					<div class="mask">
-						<div class="caption">ノベルティ・パンフレット制作</div>
+						<div class="caption">＜コンテンツ制作＞<br>
+						・WEBデザイン<br>
+						・コピーライティング<br>
+						・ノベルティ、グッズ制作<br>
+						・パンフレット制作
+						</div>
 					</div>
 				</li>
 				<li class="work2">
 					<div class="mask">
-						<div class="caption">2017/2018<br>資産運用会社 IR企画支援</div>
+						<div class="caption">＜IR/PRイベント企画運営＞<br>
+						・取引所<br>
+						・資産運用会社<br>
+						・上場企業　など
+						</div>
 					</div>
 				</li>
 				<li class="work3">
 					<div class="mask">
-						<div class="caption">2017/2018<br>JPX＊マネースクール</div>
+						<div class="caption">＜イベント企画・運営協力 ＞<br>
+						・JPX＊マネースクール<br>
+						2018<br>
+						2017<br>
+						</div>
 					</div>
 				</li>
 				<li class="work4">
 					<div class="mask">
-						<div class="caption">2016~毎週開催<br>金融リテラシー向上・資産形成のためのイベント</div>
+						<div class="caption">＜出張女子会・プログラム提供＞<br>
+						・東京証券取引所<br>
+						・名古屋証券取引所　ほか
+						</div>
 					</div>
 				</li>
 				<li class="work5">
 					<div class="mask">
-						<div class="caption">2017<br>お金と私をアップデート 日経BP社主催イベント協力</div>
+						<div class="caption">＜イベント企画・運営協力＞<br>
+						・日経BP社<br>
+						2017 spring<br>
+						2018 autumn<br>
+						ライフ＆マネー Festa
+						</div>
 					</div>
 				</li>
 				<li class="work6">
 					<div class="mask">
-						<div class="caption">2017/2018<br>WEBデザイン企画・制作</div>
+						<div class="caption">＜オンラインアンケート・インタビュー＞<br>
+						・上場企業<br>
+						・取引所<br>
+						・銀行　など
+						</div>
 					</div>
 				</li>
 				<li class="work7">
 					<div class="mask">
-						<div class="caption">2018<br>ライフ＆マネーFesta 日経BP社主催イベント協力</div>
+						<div class="caption">＜少人数座談会＞<br>
+						・銀行<br>
+						・資産運用会社<br>
+						・保険会社<br>
+						・上場会社　など
+						</div>
 					</div>
 				</li>
 				<li class="work8">
 					<div class="mask">
-						<div class="caption">コピーライティング</div>
+						<div class="caption">＜SNS・WEBプロモーション＞<br>
+						・化粧品、ヘルスケア関連<br>
+						・資産運用会社<br>
+						・不動産会社（まちづくり関連）
+						</div>
 					</div>
 				</li>
 			</ul>
@@ -146,11 +195,10 @@
 	</div>
 
 	<div id="business-partner" class="business-partner">
-			<div class="partner-link-btn"><a href="#">金融ワカラナイ女子を応援したい方はこちら</a></div>
+			<!-- <div class="partner-link-btn"><a href="#">金融ワカラナイ女子を応援したい方はこちら</a></div> -->
+			<div class="partner-link-btn"><a href="https://www.instagram.com/kinyu_joshi/">きんゆう女子。の活動をみる</a></div>
 		</div>
 	</div>
-
-
 </div>
 
 
