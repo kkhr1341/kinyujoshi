@@ -326,9 +326,9 @@
 	}
 	.business-works-btn a {
 		display: block;
-		background: #8ddcd1;
+		background: #fff;
 		padding: 16px 24px;
-		color: #fff;
+		color: #8ddcd1;
 		font-size: 15px;
 		border: 1px solid #8ddcd1;
 		transition: .5s;
