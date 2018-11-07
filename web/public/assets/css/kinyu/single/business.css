@@ -13,7 +13,7 @@
 		text-align: center;
 		background: url(/images/business/partner.jpg) center center;
 		background-size: cover;
-		/* background-attachment: fixed; */
+		 background-attachment: fixed;
 	}
 	/* .partner-link-btn  {
 		padding: 80px 40px;
@@ -31,8 +31,7 @@
 		font-size: 15px;
 		transition: .5s;
 		width: 300px;
-		 position: relative;
-    top: 50px;
+
 	}
 
 /*------------------------------
@@ -350,7 +349,7 @@
 		padding: 80px 0;
 	}
 	.three-step img{
-		width: 400px;
+		width: 370px;
 		margin: 30px auto 0;
 	}
 	.business-mission-img-wrapper {
@@ -421,7 +420,7 @@
 
 	.service-box {
 		width: 320px;
-		height: 459px;
+		height: 390px;
 		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
 		position: relative;
 		padding: 15px;
@@ -447,6 +446,8 @@
 	.service-caution {
 		font-size: 12px;
 		padding-top: 10px;
+		margin: 20px auto;
+		width: 256px;
 	}
 	.service-img img{
 		width: 100%;
