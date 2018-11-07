@@ -6,28 +6,29 @@
 
 <div class="business-header clear">
 	<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
-	<nav>
+	<nav class="clear">
 		<ul>
 			<li><a href="#business-service">提供サービス</a></li>
 			<li><a href="#business-about">コミュニティ概要</a></li>
 			<li><a href="#business-works">事例</a></li>
+			<!-- <li><a href="#business-contact">お問い合わせ</a></li> -->
 			<li><a href="#business-mission">ミッション</a></li>
-			<li><a href="#business-contact">お問い合わせ</a></li>
 		</ul>
+		<p class="header-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせ</a></p>
 	</nav>
 </div>
 
 	<div class="business-main">
 		  <div class="main-copy-wrapper">
 			  <img src="/images/business/business-copy.png">
-			  <p class="business-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/edit?edit_requested=true" target="_blank">コミュ二ティパートナーになる</a></p>
+			  <p class="business-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">コミュニティパートナーになる</a></p>
 		</div>
 	</div>
 
 	<div id="business-service" class="business-service business-section">
 		<div class="section-title-wrapper">
 			<h2 class="section-title">コミュニティパートナー向け提供サービス</h2>
-			<p>〜家計の管理から世界経済、資産づくりに高い意識があるけれど、もやもやする。〜</p>
+			<p>〜家計の管理から世界経済、資産づくりに高い意識があるけれど、もやもやする。〜<br>そんな女性の声をいかしませんか？</p>
 			<p class="three-step"><img src="/images/business/3step.png"></p>
 		</div>
 		<div class="business-service-wrapper clear">
@@ -38,7 +39,7 @@
 				<div class="gray-line"></div>
 				<p>webサイトやメルマガ、フリーペーパーなどでプロモーション・ブランディングをすることができます。また、女子会でテストマーケティングを行うことができます。</p>
 					<p class="service-caution"><span style="color: red;">＊</span>きんゆう女子。コミュニティのプロモーション審査基準を満たしている内容のみ取り扱いいたします。</p>
-
+			<!-- <div class="service-img"><img src="/images/business/step1_img.JPG"></div> -->
 			</div>
 			<div class="service-box">
 				<img src="/images/business/step2.png" class="business-step">
@@ -46,7 +47,9 @@
 				<div class="service-type"><img src="/images/business/type2.png"></div>
 				<div class="gray-line"></div>
 				<p>メルマガや女子会、SNSでつながるメンバーに、リアルな声や認知度、好き嫌いの感情を聞くことができます。オンラインとリアルの両軸から本音が集まっています。</p>
+				<!-- <div class="service-img"><img src="/images/business/step2_img.jpeg"></div> -->
 			</div>
+
 			<div class="service-box">
 				<img src="/images/business/step3.png" class="business-step">
 				<div class="service-icon"><img src="/images/business/icon3.png" class="business-icon"></div>
@@ -57,9 +60,9 @@
 					・出張女子会（10種類の女子会プログラム）<br>
 					・出張モデレーター（司会・講演）<br>
 					・出張きん女。FP（司会・講演）</p>
-
-
+					<!-- <div class="service-img"><img src="/images/business/step3_img.jpeg"></div> -->
 			</div>
+
 		</div>
 
 		<p class="business-caution"><span style="color: red;">＊</span>お取引には審査がございます。どの金融機関にも属さないコミュニティのため、金融商品にの勧誘・営業・販売につながるような内容は対応できません。<br>アフィリエイトプログラムは受け付けておりません。ご理解いただける企業様のみお取引いたします。</p>
@@ -71,10 +74,12 @@
 			<h2 class="section-title">コミュニティ概要</h2>
 		</div>
 	<div class="business-about-text clear">
-		<div class="left-wrapper"><img src="/images/business/kinjo-chan.png"></div>
-		<p class="right-wrapper">“ライフイベント前後の20~30代、人生をしっかり生きていきたい、金融に興味関心のある働きざかりの世代。<br>
+		<div class="kingjo-chan"><img src="/images/business/kinjo-chan.png"></div>
+		<div class="clear">
+			<div class="left-wrapper"><img src="/images/business/community_img.jpeg"></div>
+			<p class="right-wrapper">“ライフイベント前後の20~30代、人生をしっかり生きていきたい、金融に興味関心のある働きざかりの世代。<br>
 		週末は、ヨガに英語にゆるりと関心がある。もっと確かな自信がほしい…不安やワカラナイことがいっぱいだから。知らない新しい世界を知っていつも右肩上がりに成長していたい、好奇心旺盛な私たち。”</p>
-
+		</div>
 </div>
 
 		<div class="about-business-wrapper">
@@ -116,10 +121,9 @@
 				</li>
 				<li class="work3">
 					<div class="mask">
-						<div class="caption">＜イベント企画・運営協力 ＞<br>
+						<div class="caption">＜イベント企画・運営協力＞<br>
 						・JPX＊マネースクール<br>
-						2018<br>
-						2017<br>
+								　2018<br>　2017<br>
 						</div>
 					</div>
 				</li>
@@ -134,10 +138,10 @@
 				<li class="work5">
 					<div class="mask">
 						<div class="caption">＜イベント企画・運営協力＞<br>
-						・日経BP社<br>
-						2017 spring<br>
-						2018 autumn<br>
-						ライフ＆マネー Festa
+・日経BP社<br>
+　　お金と私をアップデート<br>　　　2017 spring<br>　　　2018 autumn<br>
+    　ライフ＆マネーFesta<br>　　　2018
+
 						</div>
 					</div>
 				</li>
@@ -179,7 +183,7 @@
 			<h2 class="section-title">お問い合わせ</h2>
 		</div>
 		<div class="contact-business-wrapper">
-			<div class="business-contact-btn2"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform?edit_requested=true" target="_blank">お問い合わせはこちら</a></div>
+			<div class="business-contact-btn2"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせはこちら</a></div>
 		</div>
 	</div>
 
@@ -190,18 +194,33 @@
 			<img src="/images/business/mission.png">
 			<div class="gray-line"></div>
 			<p>〜目標を叶え、心豊かに生きるために〜<br><br>ミレニアル世代女性に必要な金融・情報リテラシー向上と<br>アクションをサポートする</p>
-			<div class="memberpage-link-btn"><a href="https://kinyu-joshi.jp/">メンバー向けページはこちら</a></div>
+			<div class="memberpage-link-btn"><a href="https://kinyu-joshi.jp/" target="_blank">メンバー向けページはこちら</a></div>
 		</div>
 	</div>
 
 	<div id="business-partner" class="business-partner">
 			<!-- <div class="partner-link-btn"><a href="#">金融ワカラナイ女子を応援したい方はこちら</a></div> -->
-			<div class="partner-link-btn"><a href="https://www.instagram.com/kinyu_joshi/">きんゆう女子。の活動をみる</a></div>
+			<div class="partner-link-btn"><a href="https://www.instagram.com/kinyu_joshi/" target="_blank">きんゆう女子。の活動をみる</a></div>
 		</div>
 	</div>
 </div>
 
 
-<style>
 
-</style>
+<script>
+$(function() {
+    var topBtn = $('.fixed-btn');
+    topBtn.hide();
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+        //ボタンの表示方法
+            topBtn.fadeIn();
+        } else {
+        //ボタンの非表示方法
+            topBtn.fadeOut();
+        }
+    });
+
+});
+</script>
