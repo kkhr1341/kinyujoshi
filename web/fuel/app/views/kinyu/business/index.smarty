@@ -55,14 +55,15 @@
 				<div class="service-icon"><img src="/images/business/icon3.png" class="business-icon"></div>
 				<div class="service-type"><img src="/images/business/type3.png"></div>
 				<div class="gray-line"></div>
-				<p>リクエストを元に、20~30代女性たちに寄り添うコンテンツを企画・制作から運営まで行います。（イベント・写真素材・）</p>
-					<p class="service-caution">＋α 以下コンテンツはすぐに提供可能です。<br>
-					・出張女子会（10種類の女子会プログラム）<br>
-					・出張モデレーター（司会・講演）<br>
-					・出張きん女。FP（司会・講演）</p>
+				<p>リクエストを元に、20~30代女性たちに寄り添うコンテンツを企画・制作から運営まで行います。（イベント・写真素材・デザイン）</p>
 					<!-- <div class="service-img"><img src="/images/business/step3_img.jpeg"></div> -->
 			</div>
-
+		</div>
+		<div class="text-align: center;">
+			<p class="service-caution">以下コンテンツはすぐに提供可能です。<br>
+		・出張女子会（10種類の女子会プログラム）<br>
+		・出張モデレーター（司会・講演）<br>
+		・出張きん女。FP（司会・講演）</p>
 		</div>
 
 
