@@ -62,7 +62,7 @@
         <!-- <li><a href="">企業の方はこちら</a></li> -->
         <li><a class="js-track" href="/legal" data-category="pc-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
         <li><a class="js-track" href="/company" data-category="pc-footer-link" data-action="click" data-value="1">運営会社</a></li>
-        <li><a class="js-track" href="/business" data-category="pc-footer-link" data-action="click" data-value="1">コミュニティパートナーをご検討の企業様へ</a></li>
+        <!-- <li><a class="js-track" href="/business" data-category="pc-footer-link" data-action="click" data-value="1">コミュニティパートナーをご検討の企業様へ</a></li> -->
       </ul>
     </div>
 
