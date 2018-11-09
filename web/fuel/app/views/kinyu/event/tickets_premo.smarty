@@ -1,0 +1,210 @@
+<div class="joshikai-payment-block">
+  <div class="day-card-open fee-open">
+    <div class="inner">
+      <form method="POST" action="/pay" id="charge-form">
+        <input type="hidden" name="coupon_code" value="{$coupon_code}" />
+        <input type="hidden" name="event_code" value="{$event.code}" />
+        <span class="charge-errors"></span>
+
+        <h2 class="main-title"><span style="color:#77cbc0;">＊</span> カードでお支払い <span style="color:#77cbc0;">＊</span></h2>
+
+        <div class="kinyu-credit-list-block">
+          <p>- 対応カード -</p>
+          <ul class="kinyu-credit-list clear">
+            <li><img src="/images/event/credit/kinyu-credit-visa.png"></li>
+          </ul>
+        </div>
+
+        <div class="credit-illust">
+          <img src="/images/event/credit_illust.png">
+        </div>
+
+        <div class="fee-open-el">
+          <label>カード番号</label>
+          <input type="hidden" id="cardselect" name="cardselect" value="0">
+          <input type="text" class="number" name="number" maxlength="16" placeholder="">
+        </div>
+
+        <div class="no-regist-el">
+          <div class="fee-open-el">
+            <label>セキュリティコード</label>
+            <input type="text" class="cvc" name="cvc" maxlength="4" placeholder="">
+          </div>
+
+          <div class="fee-open-el">
+            <label>有効期限</label>
+            <div class="exp-date-block">
+              <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="（月）＊03、12など2桁">
+              <input type="text" class="exp_year" name="exp_year" maxlength="2" placeholder="（年）＊20など2桁">
+            </div>
+          </div>
+          <div class="fee-open-el">
+            <label>お名前（フルネーム）</label>
+            <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
+          </div>
+          <div class="fee-open-el">
+            <label>メールアドレス</label>
+            <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
+          </div>
+        </div>
+
+        <div class="cancel-block">
+
+          <p class="cancel-title">女子会のお約束事</p>
+
+          <ul class="cancel-block-list">
+            <li>きんゆう女子。のコンセプトは、「前向きに経済に関わることで、おかねにとらわれず自由で等身大に生きる」ことです。みなさま一人一人が「おかね」に関するリテラシーを向上させ、自分らしい生活を送れるようになることを目指したコミュニティです。</li>
+            <li>どなたでも安心して女子会に参加することができるように、ゲストや参加者同士での営業・勧誘行為は固くお断りしております。</li>
+            <li>きんゆう女子。会は、個人のための女子会です。企業としてのの見学・視察目的などでのご参加はご遠慮ください。</li>
+            <li>きんゆう女子では、特定の企業の商品の勧誘やアフィリエイトと呼ばれる成果報酬型の広告宣伝を行わないポリシーです。その代わりに女子会の参加費をいただいたり、みなさまの声や気持ちをアンケートなどで集約することで匿名で企業さまへ提供することがあります。真摯にサービス提供に取り組まれている企業を積極的に応援し、今後の経済や金融業界の発展に寄与することで、みなさまが安心して交流・勉強する場を提供しています。</li>
+            <li>女子会の際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
+            {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != "0000-00-00 00:00:00"}
+              <li>お席や食事、ゲスト手配のため、<span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
+            {else}
+              <li>お席や食事、ゲスト手配のため、<span>女子会開催日の3日前</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
+            {/if}
+          </ul>
+
+          <p class="cancel-button-area">
+            <input type="checkbox" name="cancel_check" id="cancel_check">
+            <label for="cancel_check" class="checkbox"></label>
+            <span>女子会のお約束事に同意する。</span>
+          </p>
+        </div>
+
+        <div class="kinyu-credit-fee-area">
+          {if $discount}
+            <p><span>参加費</span>：{$event.fee-$discount|number_format}円</p>
+            <p><span>割引額</span>：<span class="discount-span" style="font-weight: normal;color: red;!important">{$discount|number_format}円</span></p>
+          {else}
+            <p><span>参加費</span>：{$event.fee|number_format}円</p>
+          {/if}
+        </div>
+
+        <button class="day-cash-submit" type="submit">お支払いする</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script>
+    (function() {
+
+
+        $('.cancel-button-area').click(function() {
+          // もしチェックが入っていたら
+          if ($('input[name="cancel_check"]').prop('checked')) {
+            // チェックを外す
+            $('input[name="cancel_check"]').prop('checked', false);
+            $(".cancel-button-area").removeClass("checked-input");
+          // もしチェックが外れていたら
+          } else {
+            // チェックを入れる
+            $('input[name="cancel_check"]').prop('checked', true);
+            $(".cancel-button-area").addClass("checked-input");
+          }
+        });
+ 
+
+
+        // 新しいクレジットカード番号入力の表示・非表示切り替え
+        function toggleNewCardNumber(cat) {
+            if(cat=="0") {
+                $(".no-regist-el").slideDown(500);
+                $(".newcards").show();
+            } else {
+                $(".no-regist-el").hide();
+                $(".newcards").hide();
+            }
+        }
+        $('#cardselect').on('change', function(){
+            var cat = $(this).val(); //選択された項目のvalueを取得
+            toggleNewCardNumber(cat);
+        });
+        var cat = $('#cardselect').val(); //選択された項目のvalueを取得
+        toggleNewCardNumber(cat);
+
+        var form = $("#charge-form"),
+            coupon_code = form.find('[name="coupon_code"]'),
+            number = form.find('[name="number"]'),
+            cardselect = form.find('[name="cardselect"]'),
+            cvc = form.find('[name="cvc"]'),
+            exp_month = form.find('[name="exp_month"]'),
+            exp_year = form.find('[name="exp_year"]'),
+            event_code = form.find('[name="event_code"]'),
+            name = form.find('[name="name"]'),
+            email = form.find('[name="email"]');
+
+        form.submit(function(e) {
+            e.preventDefault();
+            var promise;
+            var card = {
+                number: number.val(),
+                cvc: cvc.val(),
+                exp_month: exp_month.val(),
+                exp_year: '20' + exp_year.val(),
+                name: name.val()
+            };
+
+            if ($("[name=cancel_check]:checked").val() == undefined) {
+              ts.error("「女子会のお約束事に同意する。」のご確認をお願いします。");
+              return false;
+            }
+
+            if (cardselect.val() === '0') {
+                if (!card.number) {
+                    ts.error("カード番号を入力してください");
+                    return false;
+                }
+                if (!card.cvc) {
+                    ts.error("セキュリティコードを入力してください");
+                    return false;
+                }
+                if (!card.exp_month) {
+                    ts.error("有効期限（月）を入力してください");
+                    return false;
+                }
+                if (!card.exp_year) {
+                    ts.error("有効期限（年）を入力してください");
+                    return false;
+                }
+                if (!name.val()) {
+                    ts.error("お名前（フルネーム）を入力してください");
+                    return false;
+                }
+                if (!email.val()) {
+                    ts.error("メールアドレスを入力してください");
+                    return false;
+                }
+                promise = chargeByNewCard(
+                    card,
+                    event_code.val(),
+                    name.val(),
+                    email.val(),
+                    coupon_code.val()
+                )
+            } else {
+                promise = chargeByRegisterCard(
+                    event_code.val(),
+                    cardselect.val(),
+                    name.val(),
+                    email.val(),
+                    coupon_code.val()
+                )
+            }
+
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(200);
+            promise
+                .then(function(data) {
+                    $(".loader-block").fadeOut(500);
+                    location.href = "/joshikai_complete";
+                })
+                .catch(function(error) {
+                    $(".loader-block").fadeOut(500);
+                    ts.error(error);
+                })
+        });
+    })();
+</script>
