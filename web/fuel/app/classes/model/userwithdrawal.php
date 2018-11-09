@@ -179,6 +179,7 @@ class Userwithdrawal extends Base
             $email->return_path('support@kinyu-joshi.jp');
             $email->send();
 
+            // 退会メール通知
             $email02 = \Email::forge('jis');
             $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
             $email02->subject("【きんゆう女子。】メンバー退会がありました");
@@ -186,7 +187,7 @@ class Userwithdrawal extends Base
             $email02->html_body(\View::forge('email/withdrawal/return', array(
                 'email' => $user["email"]
             )));
-            $email02->to('system@sundaylunch.jp'); //送り先
+            $email02->to('support@kinyu-joshi.jp'); //送り先
 
             $email02->return_path('support@kinyu-joshi.jp');
             $email02->send();
