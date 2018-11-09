@@ -116,6 +116,7 @@ class Regist_mails
         $member_regist = \DB::select('*')
             ->from('member_regist')
             ->where('id', '=', $member_regist_id)
+            ->where(\DB::expr('not exists(select "x" from users where users.email = member_regist.email)'))
             ->execute()
             ->current();
 

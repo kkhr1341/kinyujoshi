@@ -107,7 +107,7 @@ class RegistReminder extends Base
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
             $mail->subject("【きんゆう女子。】WEBアップデート♪ パスワード設定のお願い。");
 
-            $mail->attach(DOCROOT.'public/images/kinyu-logo.png', true);
+            $mail->attach(DOCROOT.'images/kinyu-logo.png', true);
 
             $url = \Uri::base() . 'login/resetting_pass_exuser?access_token=' . $access_token;
 
@@ -117,7 +117,7 @@ class RegistReminder extends Base
                 )));
             $mail->to($email); //送り先
 
-            $email->return_path('support@kinyu-joshi.jp');
+            $mail->return_path('support@kinyu-joshi.jp');
 
             $mail->send();
 

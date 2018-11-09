@@ -502,4 +502,13 @@ class Regist extends Base
         return $params;
     }
 
+    public static function has_account($member_regist_code)
+    {
+        return \DB::select('*')
+            ->from('member_regist')
+            ->where('code', '=', $member_regist_code)
+            ->where(\DB::expr('exists(select "x" from users where users.email = member_regist.email)'))
+            ->execute()
+            ->current();
+    }
 }
