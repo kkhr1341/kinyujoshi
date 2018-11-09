@@ -50,7 +50,7 @@
                                 {/foreach}
                             </select>
                         </div>
-                        
+
                         {*
                         <div class="form-group">
                             <label class="form-title"><span class="color-kinyu-color">◆</span> 件名
