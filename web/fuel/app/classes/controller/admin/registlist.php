@@ -111,6 +111,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             "パス設定有",
             "自己紹介",
             "編集部記入欄",
+            "参加女子会",
         );
 
         foreach ($registlist as $application) {
@@ -122,6 +123,14 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             } else {
                 $application["birthday"] = $application["age"];
             }
+
+            // 過去に参加した女子会
+            $prev_applications = ParticipatedApplications::lists($application["username"]);
+            $prev_applications_str = '';
+            foreach($prev_applications as $prev_application) {
+                $prev_applications_str .= date('Y年m月d日', strtotime($prev_application['event_date'])) . ' ' . $prev_application['title'] . "\n";
+            }
+
             $data[] = array(
                 $application["created_at"],
                 $application["name"],
@@ -141,6 +150,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
                 $application["username"] ? '○': '',
                 $application["introduction"],
                 $application["edit_inner"],
+                $prev_applications_str,
             );
         }
         // CSVを出力
