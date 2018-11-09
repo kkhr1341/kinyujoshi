@@ -112,7 +112,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     public function action_tickets($code)
     {
         \Config::load('payjp', true);
-        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
+        $this->data['payjp_public_key'] = \Config::get('payjp.public_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
@@ -146,7 +146,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     {
         \Config::load('payjp', true);
         $this->data['coupon_code'] = \Input::get('coupon_code', '');
-        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
+        $this->data['payjp_public_key'] = \Config::get('payjp.public_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
@@ -194,7 +194,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     public function action_tickets_cash($code)
     {
         \Config::load('payjp', true);
-        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
+        $this->data['payjp_public_key'] = \Config::get('payjp.public_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
