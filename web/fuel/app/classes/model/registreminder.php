@@ -103,23 +103,32 @@ class RegistReminder extends Base
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
-            $mail = \Email::forge('jis');
-            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
-            $mail->subject("【きんゆう女子。】WEBアップデート♪ パスワード設定のお願い。");
-
-            $mail->attach(DOCROOT.'images/kinyu-logo.png', true);
-
             $url = \Uri::base() . 'login/resetting_pass_exuser?access_token=' . $access_token;
 
-            $mail->html_body(\View::forge('email/regist_reminder/body_201806',
+            // ユーザー宛にメール送信
+            $mail = \Email::forge('jis');
+            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $mail->subject("【きんゆう女子。】アカウント設定のメールのお送りします");
+            $mail->attach(DOCROOT.'images/kinyu-logo.png', true);
+            $mail->html_body(\View::forge('email/regist_reminder/body',
                 array(
                     'url' => $url,
                 )));
             $mail->to($email); //送り先
-
             $mail->return_path('support@kinyu-joshi.jp');
-
             $mail->send();
+
+            // 関係者に送信通知メール
+            $email02 = \Email::forge('jis');
+            $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $email02->subject("【きんゆう女子。】パスワード設定メールが送信されました");
+            $email02->html_body(\View::forge('email/regist_reminder/return',
+                array(
+                    'url' => $url,
+                )));
+            $email02->to('support@kinyu-joshi.jp'); //送り先
+            $email02->return_path('support@kinyu-joshi.jp');
+            $email02->send();
 
             $db->commit_transaction();
 
@@ -178,7 +187,7 @@ class RegistReminder extends Base
                 'username' => $username,
             ))->where('id', '=', $member_regist_id)->execute();
 
-            // サンクスメール
+            // ユーザー宛にメール送信
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
             $mail->subject("【きんゆう女子。】パスワードの設定が完了しました。");
