@@ -247,9 +247,9 @@
 												<!-- <span class="label label-danger">必須</span> --></label>
 												<p style="text-align: left;">2~3つの候補日時を記載ください。ご希望に添えない場合もありますのでご了承くださいませ。</p>
 										<div class="appointment-date-wrapper">
-										<p>候補1</p><input type="text" id="appointment-date" class="form-control datepicker" placeholder="">
-										<p>候補2</p><input type="text" id="appointment-date" class="form-control datepicker" placeholder="">
-										<p>候補3</p><input type="text" id="appointment-date" class="form-control datepicker" placeholder="">
+										<p>候補1</p><input type="text" id="appointment-date1" class="form-control datepicker" placeholder="">
+										<p>候補2</p><input type="text" id="appointment-date2" class="form-control datepicker" placeholder="">
+										<p>候補3</p><input type="text" id="appointment-date3" class="form-control datepicker" placeholder="">
 										</div>
 								</div>
 
