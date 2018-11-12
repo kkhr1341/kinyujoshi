@@ -1,191 +1,270 @@
-<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/single/business.css" />
-
-<div class="joshikai-main-block">
-
-<div class="business-header clear">
-	<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
-	<nav class="clear">
-		<ul>
-			<li><a href="#business-service">提供サービス</a></li>
-			<li><a href="#business-about">コミュニティ概要</a></li>
-			<li><a href="#business-works">事例</a></li>
-			<!-- <li><a href="#business-contact">お問い合わせ</a></li> -->
-			<li><a href="#business-mission">ミッション</a></li>
-		</ul>
-		<p class="header-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせ</a></p>
-	</nav>
-</div>
-
-	<div class="business-main">
-		  <div class="main-copy-wrapper">
-			  <img src="/images/business/business-copy.png">
-			  <p class="business-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせはこちら</a></p>
-		</div>
-	</div>
-
-	<div id="business-service" class="business-service business-section">
-		<div class="section-title-wrapper">
-			<h2 class="section-title">提供サービス</h2>
-			<p>〜家計の管理から世界経済、資産づくりに高い意識があるけれど、もやもやする。〜<br>そんな女性の声を活かしませんか？</p>
-			<p class="three-step"><img src="/images/business/3step.png"></p>
-		</div>
-		<div class="business-service-wrapper clear">
-			<div class="service-box">
-				<img src="/images/business/step1.png" class="business-step">
-				<div class="service-icon"><img src="/images/business/icon1.png" class="business-icon"></div>
-				<div class="service-type"><img src="/images/business/type1.png"></div>
-				<div class="gray-line"></div>
-				<p>webサイトやメルマガ、フリーペーパーなどでプロモーション・ブランディングをすることができます。また、女子会でテストマーケティングを行うことができます。</p>
-					<!-- <p class="service-caution"><span style="color: red;">＊</span>きんゆう女子。コミュニティのプロモーション審査基準を満たしている内容のみ取り扱いいたします。</p> -->
-			<!-- <div class="service-img"><img src="/images/business/step1_img.JPG"></div> -->
-			</div>
-			<div class="service-box">
-				<img src="/images/business/step2.png" class="business-step">
-				<div class="service-icon"><img src="/images/business/icon2.png" class="business-icon"></div>
-				<div class="service-type"><img src="/images/business/type2.png"></div>
-				<div class="gray-line"></div>
-				<p>メルマガや女子会、SNSでつながるメンバーに、リアルな声や認知度、好き嫌いの感情を聞くことができます。オンラインとリアルの両軸から本音が集まっています。</p>
-				<!-- <div class="service-img"><img src="/images/business/step2_img.jpeg"></div> -->
-			</div>
-
-			<div class="service-box">
-				<img src="/images/business/step3.png" class="business-step">
-				<div class="service-icon"><img src="/images/business/icon3.png" class="business-icon"></div>
-				<div class="service-type"><img src="/images/business/type3.png"></div>
-				<div class="gray-line"></div>
-				<p>リクエストを元に、20~30代女性たちに寄り添うコンテンツを企画・制作から運営まで行います。（イベント・写真素材・デザイン）</p>
-					<!-- <div class="service-img"><img src="/images/business/step3_img.jpeg"></div> -->
-			</div>
-		</div>
-		<div class="text-align: center;">
-			<p class="service-caution">以下コンテンツはすぐに提供可能です。<br>
-		・出張女子会（10種類の女子会プログラム）<br>
-		・出張モデレーター（司会・講演）<br>
-		・出張きん女。FP（司会・講演）</p>
-		</div>
+	<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/single/business.css" />
+	<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/single/owldatepicker.css" />
+	<script type="text/javascript" src="/assets/js/kinyu/jquery.owldatepicker.js"></script>
 
 
+	<div class="joshikai-main-block">
 
-	</div>
-
-	<div id="business-about" class="business-about clear">
-		<div class="section-title-wrapper">
-			<h2 class="section-title">コミュニティ概要</h2>
-		</div>
-	<div class="business-about-text clear">
-		<div class="kingjo-chan"><img src="/images/business/kinjo-chan.png"></div>
-		<div class="clear">
-			<div class="left-wrapper"><img src="/images/business/community_img.jpeg"></div>
-			<p class="right-wrapper">“ライフイベント前後の20~30代、人生をしっかり生きていきたい、金融に興味関心のある働きざかりの世代。<br>
-		週末は、ヨガに英語にゆるりと関心がある。もっと確かな自信がほしい…不安やワカラナイことがいっぱいだから。知らない新しい世界を知っていつも右肩上がりに成長していたい、好奇心旺盛な私たち。”</p>
-		</div>
-</div>
-
-		<div class="about-business-wrapper">
+	<div class="business-header clear">
+		<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
+		<nav class="clear">
 			<ul>
-				<li><img src="/images/business/about1.png"></li>
-				<li><img src="/images/business/about2.png"></li>
-				<li><img src="/images/business/about3.png"></li>
-				<li class="mt30"><img src="/images/business/about4.png"></li>
-				<li class="mt30"><img src="/images/business/about5.png"></li>
+				<li><a href="#business-service">提供サービス</a></li>
+				<li><a href="#business-about">コミュニティ概要</a></li>
+				<li><a href="#business-works">事例</a></li>
+				<!-- <li><a href="#business-contact">お問い合わせ</a></li> -->
+				<li><a href="#business-mission">ミッション</a></li>
 			</ul>
-		</div>
-
+			<p class="header-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせ</a></p>
+		</nav>
 	</div>
 
-	<div id="business-works" class="business-works clear">
-		<div class="section-title-wrapper">
-			<h2 class="section-title">取り組み事例</h2>
+		<div class="business-main">
+			  <div class="main-copy-wrapper">
+				  <img src="/images/business/business-copy.png">
+				  <p class="business-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせはこちら</a></p>
+			</div>
 		</div>
-		<div class="business-works-wrapper clear">
-			<ul>
-				<li class="work1">
-					<div class="mask">
-						<div class="caption">＜コンテンツ制作＞<br>
-						・WEBデザイン<br>
-						・コピーライティング<br>
-						・ノベルティ、グッズ制作<br>
-						・パンフレット制作
-						</div>
-					</div>
-				</li>
-				<li class="work2">
-					<div class="mask">
-						<div class="caption">＜IR/PRイベント企画運営＞<br>
-						・取引所<br>
-						・資産運用会社<br>
-						・上場企業　など
-						</div>
-					</div>
-				</li>
-				<li class="work3">
-					<div class="mask">
-						<div class="caption">＜イベント企画・運営協力＞<br>
-						・JPX＊マネースクール<br>
-								　2017<br>　2018<br>
-						</div>
-					</div>
-				</li>
-				<li class="work4">
-					<div class="mask">
-						<div class="caption">＜出張女子会・プログラム提供＞<br>
-						・東京証券取引所<br>
-						・名古屋証券取引所　ほか
-						</div>
-					</div>
-				</li>
-				<li class="work5">
-					<div class="mask">
-						<div class="caption">＜イベント企画・運営協力＞<br>
-・日経BP社<br>
-　　お金と私をアップデート<br>　　　2017 spring<br>　　　2018 autumn<br>
-    　ライフ＆マネーFesta<br>　　　2018
 
-						</div>
-					</div>
-				</li>
-				<li class="work6">
-					<div class="mask">
-						<div class="caption">＜オンラインアンケート・インタビュー＞<br>
-						・上場企業<br>
-						・取引所<br>
-						・銀行　など
-						</div>
-					</div>
-				</li>
-				<li class="work7">
-					<div class="mask">
-						<div class="caption">＜少人数座談会＞<br>
-						・銀行<br>
-						・資産運用会社<br>
-						・保険会社<br>
-						・上場会社　など
-						</div>
-					</div>
-				</li>
-				<li class="work8">
-					<div class="mask">
-						<div class="caption">＜SNS・WEBプロモーション＞<br>
-						・化粧品、ヘルスケア関連<br>
-						・資産運用会社<br>
-						・不動産会社（まちづくり関連）
-						</div>
-					</div>
-				</li>
-			</ul>
+		<div id="business-service" class="business-service business-section">
+			<div class="section-title-wrapper">
+				<h2 class="section-title">提供サービス</h2>
+				<p>〜家計の管理から世界経済、資産づくりに高い意識があるけれど、もやもやする。〜<br>そんな女性の声を活かしませんか？</p>
+				<p class="three-step"><img src="/images/business/3step.png"></p>
+			</div>
+			<div class="business-service-wrapper clear">
+				<div class="service-box">
+					<img src="/images/business/step1.png" class="business-step">
+					<div class="service-icon"><img src="/images/business/icon1.png" class="business-icon"></div>
+					<div class="service-type"><img src="/images/business/type1.png"></div>
+					<div class="gray-line"></div>
+					<p>webサイトやメルマガ、フリーペーパーなどでプロモーション・ブランディングをすることができます。また、女子会でテストマーケティングを行うことができます。</p>
+						<!-- <p class="service-caution"><span style="color: red;">＊</span>きんゆう女子。コミュニティのプロモーション審査基準を満たしている内容のみ取り扱いいたします。</p> -->
+				<!-- <div class="service-img"><img src="/images/business/step1_img.JPG"></div> -->
+				</div>
+				<div class="service-box">
+					<img src="/images/business/step2.png" class="business-step">
+					<div class="service-icon"><img src="/images/business/icon2.png" class="business-icon"></div>
+					<div class="service-type"><img src="/images/business/type2.png"></div>
+					<div class="gray-line"></div>
+					<p>メルマガや女子会、SNSでつながるメンバーに、リアルな声や認知度、好き嫌いの感情を聞くことができます。オンラインとリアルの両軸から本音が集まっています。</p>
+					<!-- <div class="service-img"><img src="/images/business/step2_img.jpeg"></div> -->
+				</div>
+
+				<div class="service-box">
+					<img src="/images/business/step3.png" class="business-step">
+					<div class="service-icon"><img src="/images/business/icon3.png" class="business-icon"></div>
+					<div class="service-type"><img src="/images/business/type3.png"></div>
+					<div class="gray-line"></div>
+					<p>リクエストを元に、20~30代女性たちに寄り添うコンテンツを企画・制作から運営まで行います。（イベント・写真素材・デザイン）</p>
+						<!-- <div class="service-img"><img src="/images/business/step3_img.jpeg"></div> -->
+				</div>
+			</div>
+			<div class="text-align: center;">
+				<p class="service-caution">以下コンテンツはすぐに提供可能です。<br>
+			・出張女子会（10種類の女子会プログラム）<br>
+			・出張モデレーター（司会・講演）<br>
+			・出張きん女。FP（司会・講演）</p>
+			</div>
+
+
+
 		</div>
-		<div class="business-works-btn"><a href="https://kinyu-joshi.jp/joshikai_past" target="_blank">その他の活動を見る</a></div>
+
+		<div id="business-about" class="business-about clear">
+			<div class="section-title-wrapper">
+				<h2 class="section-title">コミュニティ概要</h2>
+			</div>
+		<div class="business-about-text clear">
+			<div class="kingjo-chan"><img src="/images/business/kinjo-chan.png"></div>
+			<div class="clear">
+				<div class="left-wrapper"><img src="/images/business/community_img.jpeg"></div>
+				<p class="right-wrapper">“ライフイベント前後の20~30代、人生をしっかり生きていきたい、金融に興味関心のある働きざかりの世代。<br>
+			週末は、ヨガに英語にゆるりと関心がある。もっと確かな自信がほしい…不安やワカラナイことがいっぱいだから。知らない新しい世界を知っていつも右肩上がりに成長していたい、好奇心旺盛な私たち。”</p>
+			</div>
 	</div>
 
-		<div id="business-contact" class="business-contact clear">
-		<div class="section-title-wrapper">
-			<h2 class="section-title">お問い合わせ</h2>
+			<div class="about-business-wrapper">
+				<ul>
+					<li><img src="/images/business/about1.png"></li>
+					<li><img src="/images/business/about2.png"></li>
+					<li><img src="/images/business/about3.png"></li>
+					<li class="mt30"><img src="/images/business/about4.png"></li>
+					<li class="mt30"><img src="/images/business/about5.png"></li>
+				</ul>
+			</div>
+
 		</div>
-		<div class="contact-business-wrapper">
-			<p>こちらのフォームよりお問い合わせください。</p>
-			<div class="business-contact-btn2"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせはこちら</a></div>
+
+		<div id="business-works" class="business-works clear">
+			<div class="section-title-wrapper">
+				<h2 class="section-title">取り組み事例</h2>
+			</div>
+			<div class="business-works-wrapper clear">
+				<ul>
+					<li class="work1">
+						<div class="mask">
+							<div class="caption">＜コンテンツ制作＞<br>
+							・WEBデザイン<br>
+							・コピーライティング<br>
+							・ノベルティ、グッズ制作<br>
+							・パンフレット制作
+							</div>
+						</div>
+					</li>
+					<li class="work2">
+						<div class="mask">
+							<div class="caption">＜IR/PRイベント企画運営＞<br>
+							・取引所<br>
+							・資産運用会社<br>
+							・上場企業　など
+							</div>
+						</div>
+					</li>
+					<li class="work3">
+						<div class="mask">
+							<div class="caption">＜イベント企画・運営協力＞<br>
+							・JPX＊マネースクール<br>
+									　2017<br>　2018<br>
+							</div>
+						</div>
+					</li>
+					<li class="work4">
+						<div class="mask">
+							<div class="caption">＜出張女子会・プログラム提供＞<br>
+							・東京証券取引所<br>
+							・名古屋証券取引所　ほか
+							</div>
+						</div>
+					</li>
+					<li class="work5">
+						<div class="mask">
+							<div class="caption">＜イベント企画・運営協力＞<br>
+	・日経BP社<br>
+	　　お金と私をアップデート<br>　　　2017 spring<br>　　　2018 autumn<br>
+	    　ライフ＆マネーFesta<br>　　　2018
+
+							</div>
+						</div>
+					</li>
+					<li class="work6">
+						<div class="mask">
+							<div class="caption">＜オンラインアンケート・インタビュー＞<br>
+							・上場企業<br>
+							・取引所<br>
+							・銀行　など
+							</div>
+						</div>
+					</li>
+					<li class="work7">
+						<div class="mask">
+							<div class="caption">＜少人数座談会＞<br>
+							・銀行<br>
+							・資産運用会社<br>
+							・保険会社<br>
+							・上場会社　など
+							</div>
+						</div>
+					</li>
+					<li class="work8">
+						<div class="mask">
+							<div class="caption">＜SNS・WEBプロモーション＞<br>
+							・化粧品、ヘルスケア関連<br>
+							・資産運用会社<br>
+							・不動産会社（まちづくり関連）
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="business-works-btn"><a href="https://kinyu-joshi.jp/joshikai_past" target="_blank">その他の活動を見る</a></div>
+		</div>
+
+			<div id="business-contact" class="business-contact clear">
+			<div class="section-title-wrapper">
+				<h2 class="section-title">お問い合わせ</h2>
+			</div>
+			<div class="contact-business-wrapper">
+				<!-- <p>こちらのフォームよりお問い合わせください。</p>
+				<div class="business-contact-btn2"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせはこちら</a></div> -->
+				<form>
+						<div class="singlepage-form-block">
+									<div class="form-group">
+											<label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ種別
+													<!-- <span class="label label-danger">必須</span> --></label>
+											<select id="category_code" class='form-control'>
+													<option value="">選択してください</option>
+													<option value="座談会・アンケートを実施したい">座談会・アンケートを実施したい</option>
+													<option value="女子会・イベントを開催したい">女子会・イベントを開催したい</option>
+													<option value="WEBサイトやLPの企画・デザイン制作をお願いしたい">WEBサイトやLPの企画・デザイン制作をお願いしたい</option>
+													<option value="パンフレットやノベルティグッズの企画・デザイン制作をお願いしたい">パンフレットやノベルティグッズの企画・デザイン制作をお願いしたい</option>
+													<option value="写真・イラスト・データなど素材を使いたい">写真・イラスト・データなど素材を使いたい</option>
+													<option value="メルマガ配信、サンプリングなど広告を行いたい">メルマガ配信、サンプリングなど広告を行いたい</option>
+													<option value="出張女子会を開催してほしい">出張女子会を開催してほしい</option>
+													<option value="司会、モデレーターを派遣してほしい">司会、モデレーターを派遣してほしい</option>
+													<option value="その他">その他</option>
+											</select>
+									</div>
+
+								<div class="form-group">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> 会社名</label>
+										<input type="text" id="company-name" class="form-control" placeholder="">
+								</div>
+
+								<div class="form-group">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> 部署名
+												<!-- <span class="label label-danger">必須</span> --></label>
+										<input type="text" id="department-name" class="form-control" placeholder="">
+								</div>
+
+								<div class="form-group">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> お名前
+												<!-- <span class="label label-danger">必須</span> --></label>
+										<input type="text" id="name" class="form-control" placeholder="">
+								</div>
+
+								<div class="form-group">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> 電話番号
+												<!-- <span class="label label-danger">必須</span> --></label>
+										<input type="text" id="tel-no" class="form-control" placeholder="">
+								</div>
+
+								<div class="form-group">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス
+												<!-- <span class="label label-danger">必須</span> --></label>
+										<input type="text" id="email" class="form-control" placeholder="">
+								</div>
+
+								<div class="form-group">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> きんゆう女子。を知ったきっかけ
+												<!-- <span class="label label-danger">必須</span> --></label>
+										<input type="text" id="get-into" class="form-control" placeholder="">
+								</div>
+								<div class="form-group">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> アポイントご希望の日時(任意)
+												<!-- <span class="label label-danger">必須</span> --></label>
+												<p style="text-align: left;">2~3つの候補日時を記載ください。ご希望に添えない場合もありますのでご了承くださいませ。</p>
+										<div class="appointment-date-wrapper">
+										<p>候補1</p><input type="text" id="appointment-date" class="form-control datepicker" placeholder="">
+										<p>候補2</p><input type="text" id="appointment-date" class="form-control datepicker" placeholder="">
+										<p>候補3</p><input type="text" id="appointment-date" class="form-control datepicker" placeholder="">
+										</div>
+								</div>
+
+								<div class="form-group form-group02">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> 具体的なお問い合わせ内容をご記入ください
+												<!-- <span class="label label-danger">必須</span> --></label>
+										<textarea id="message" name="message" class='form-control' rows="10"></textarea>
+								</div>
+
+								<div class="form-btn tx-center">
+										<button class="btn btn-primary" type="button" id="save">送信する</button>
+								</div>
+
+						</div>
+				</form>
 			<p class="business-caution"><span style="color: red;">＊</span>お取引には審査がございます。どの金融機関にも属さないコミュニティのため、金融商品の勧誘・営業・販売につながるような内容は対応できません。<br>アフィリエイトプログラムは受け付けておりません。ご理解いただける企業様のみお取引いたします。</p>
 		</div>
 	</div>
@@ -208,7 +287,16 @@
 	</div>
 </div>
 
-
+<script>
+	$(function() {
+	$('.datepicker').owldatepicker({
+			dayClick: function (year, month, day) {
+					var date = year + '-' + month + '-' + day;
+					$(this).val(date);
+			}
+	});
+	});
+</script>
 
 <script>
 $(function() {
