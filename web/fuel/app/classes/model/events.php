@@ -108,7 +108,7 @@ class Events extends Base
     public static function getByCode($table, $code)
     {
         $event = parent::getByCode($table, $code);
-        $event['applicable'] = self::is_applicable_by_event_date($event['event_date']);
+        $event['applicable'] = self::is_applicable_by_event_date($event['event_date'], $event['event_start_datetime']);
         $application_num = self::getApplicationNum($code);
 
         $event['full'] = $application_num >= $event['limit'] ? true: false;
@@ -174,7 +174,7 @@ class Events extends Base
         $datas = $datas->execute()
             ->as_array();
         foreach($datas as $key => $data){
-            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
             $datas[$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
 
         }
@@ -235,7 +235,7 @@ class Events extends Base
         $datas = $datas->execute()
             ->as_array();
         foreach($datas as $key => $data){
-            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
             $datas[$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
         }
 
@@ -471,7 +471,7 @@ class Events extends Base
             ->execute()
             ->as_array();
         foreach($datas['datas'] as $key => $data){
-            $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
             $datas['datas'][$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
         }
         $datas['pagination'] = $pagination;
@@ -501,12 +501,12 @@ class Events extends Base
     public static function applicable($code)
     {
         $event = self::getByCode('events', $code);
-        return self::is_applicable_by_event_date($event['event_date']);
+        return self::is_applicable_by_event_date($event['event_date'], $event['event_start_datetime']);
     }
 
-    private static function is_applicable_by_event_date($event_date)
+    private static function is_applicable_by_event_date($event_date, $start_time)
     {
-        $applicableTime = strtotime(date('Y-m-d 18:00:00', strtotime($event_date)));
+        $applicableTime = strtotime(date('Y-m-d ' . $start_time . ':00', strtotime($event_date)));
         if (time() < $applicableTime) {
             return true;
         } 
