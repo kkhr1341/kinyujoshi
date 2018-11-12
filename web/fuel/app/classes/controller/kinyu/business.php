@@ -34,9 +34,9 @@ class Controller_Kinyu_Business extends Controller_Kinyubase
 
         }
 
-        $this->template->title = 'きんゆう女子。コミュニティパートナーをご検討の企業様へ｜きんゆう女子。';
-        $this->template->description = "";
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/diagnosticchart/og-main.jpg';
+        $this->template->title = 'きんゆう女子。for Business｜きんゆう女子。';
+        $this->template->description = "20~30代を中心にした金融ワカラナイ女子のためのコミュニティ「きんゆう女子。」では、企業様向けに、一人一人に寄り添うためのサービスを提供しています。";
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/business/og-main.jpg';
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
