@@ -109,6 +109,9 @@ return array(
         100 => '104_create_event_coupons',
         101 => '105_add_discount_to_applications',
         102 => '106_create_application_coupons',
+        103 => '107_create_business_inquiries',
+        104 => '108_create_business_inquiry_appointment_dates',
+        105 => '109_create_business_inquiry_categories',
       ),
     ),
     'module' => 
