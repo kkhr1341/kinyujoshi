@@ -45,7 +45,7 @@
 
             <div class="form-mail-p">
               <p>◼お問い合わせ種別</p>
-              <?php echo $category_name; ?><br>
+              <?php echo $category_code; ?><br>
             </div>
             <div class="form-mail-p">
               <p>◼会社名</p>
