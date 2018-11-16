@@ -90,9 +90,9 @@ class BusinessInquiries extends Base
         // お問い合わせ種別
         $result = \DB::select('name')->from('business_inquiry_categories')->where('code', '=', $data['category_code'])->execute()->current();
         if (empty($result)) {
-            $data['category_name'] = $result['name'];
-        } else {
             $data['category_name'] = "";
+        } else {
+            $data['category_name'] = $result['name'];
         }
 
         $email = \Email::forge('jis');
