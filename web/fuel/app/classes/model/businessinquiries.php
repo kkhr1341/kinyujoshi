@@ -98,7 +98,7 @@ class BusinessInquiries extends Base
         $email = \Email::forge('jis');
         $email->from("service@kinyu-joshi.jp", ''); //送り元
         $email->subject("【きんゆう女子。】お問い合せありがとうございました。");
-        $email->html_body(\View::forge('email/business_inquiry/body.smarty', $data));
+        $email->html_body(\View::forge('email/business_inquiry/body', $data));
         $email->to($params['email']); //送り先
 
         $email->return_path('support@kinyu-joshi.jp');
