@@ -32,31 +32,38 @@
 
     <div class="report-detail-main">
 
-      <!--
       {if $viewable == true}
         {$blog.content|nofilter}
-      {else}
-        <p>not view</p>
-      {/if}
-      -->
 
-      {$blog.content|nofilter}
-
-      <!-- ソーシャルシェア -->
-      {$fooo = $blog.main_image}
-      {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-      <div class="report-detail-share clear">
-        <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
-        <div class="report-detail-share-el report-detail-share-right">
-          <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
-          <img class="share-this-page" src="/images/social/social-this-page.png">
-          <div class="social-list">
-            <ul>
-              {$social_share}
-            </ul>
+        <!-- ソーシャルシェア -->
+        {$fooo = $blog.main_image}
+        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+        <div class="report-detail-share clear">
+          <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+          <div class="report-detail-share-el report-detail-share-right">
+            <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
+            <img class="share-this-page" src="/images/social/social-this-page.png">
+            <div class="social-list">
+              <ul>
+                {$social_share}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
+      {else}
+        <div style="text-align: center;" class="no-member-report-block">
+          <p>
+            <span style="color:#ff8861;">＊</span>レポートについて<span style="color:#ff8861;">＊</span>
+            <span style="display: block;height: 12px;"></span>
+            チェックボタンができたことに伴い、<br>レポートはメンバーさん限定になりました。<br>ログインするとお読みすることができます。
+            <span style="display: block;height: 12px;"></span>
+            <a target="_blank" href="https://kinyu-joshi.jp/news/vpRlRZ" style="color: #44a6e0;">チェックボタンって？</a></p>
+          <div class="button-block">
+            <button class="btn btn-kinyu" type="button" onClick="location.href='/login_regist'">メンバー登録</button>
+            <button class="btn btn-kinyu" type="button" onClick="location.href='/login'">ログイン</button>
+          </div>
+        </div>
+      {/if}
     </div>
   </div>
   <div class="report-detail-sidebar">
