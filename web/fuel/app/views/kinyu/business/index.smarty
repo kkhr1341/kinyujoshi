@@ -193,70 +193,57 @@
 						<div class="singlepage-form-block">
 									<div class="form-group">
 											<label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ種別
-													<!-- <span class="label label-danger">必須</span> --></label>
-											<select id="category_code" class='form-control'>
-													<option value="">選択してください</option>
-													<option value="座談会・アンケートを実施したい">座談会・アンケートを実施したい</option>
-													<option value="女子会・イベントを開催したい">女子会・イベントを開催したい</option>
-													<option value="WEBサイトやLPの企画・デザイン制作をお願いしたい">WEBサイトやLPの企画・デザイン制作をお願いしたい</option>
-													<option value="パンフレットやノベルティグッズの企画・デザイン制作をお願いしたい">パンフレットやノベルティグッズの企画・デザイン制作をお願いしたい</option>
-													<option value="写真・イラスト・データなど素材を使いたい">写真・イラスト・データなど素材を使いたい</option>
-													<option value="メルマガ配信、サンプリングなど広告を行いたい">メルマガ配信、サンプリングなど広告を行いたい</option>
-													<option value="出張女子会を開催してほしい">出張女子会を開催してほしい</option>
-													<option value="司会、モデレーターを派遣してほしい">司会、モデレーターを派遣してほしい</option>
-													<option value="その他">その他</option>
+											<select id="category_code" class='form-control' name="category_code">
+                                                <option value="">選択してください</option>
+                                                {foreach from=$categories item=category}
+                                                　　<option value="{$category.code}">{$category.name}</option>
+                                              　{/foreach}
 											</select>
 									</div>
 
 								<div class="form-group">
 										<label class="form-title"><span class="color-kinyu-color">◆</span> 会社名</label>
-										<input type="text" id="company-name" class="form-control" placeholder="">
+										<input type="text" id="company" class="form-control" placeholder="">
 								</div>
 
 								<div class="form-group">
 										<label class="form-title"><span class="color-kinyu-color">◆</span> 部署名
 												<!-- <span class="label label-danger">必須</span> --></label>
-										<input type="text" id="department-name" class="form-control" placeholder="">
+										<input type="text" id="department" class="form-control" placeholder="">
 								</div>
 
 								<div class="form-group">
-										<label class="form-title"><span class="color-kinyu-color">◆</span> お名前
-												<!-- <span class="label label-danger">必須</span> --></label>
+										<label class="form-title"><span class="color-kinyu-color">◆</span> お名前</label>
 										<input type="text" id="name" class="form-control" placeholder="">
 								</div>
 
 								<div class="form-group">
-										<label class="form-title"><span class="color-kinyu-color">◆</span> 電話番号
-												<!-- <span class="label label-danger">必須</span> --></label>
-										<input type="text" id="tel-no" class="form-control" placeholder="">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> 電話番号</label>
+										<input type="text" id="tel" class="form-control" placeholder="">
 								</div>
 
 								<div class="form-group">
-										<label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス
-												<!-- <span class="label label-danger">必須</span> --></label>
+										<label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス</label>
 										<input type="text" id="email" class="form-control" placeholder="">
 								</div>
 
 								<div class="form-group">
-										<label class="form-title"><span class="color-kinyu-color">◆</span> きんゆう女子。を知ったきっかけ
-												<!-- <span class="label label-danger">必須</span> --></label>
-										<input type="text" id="get-into" class="form-control" placeholder="">
+										<label class="form-title"><span class="color-kinyu-color">◆</span> きんゆう女子。を知ったきっかけ</label>
+										<input type="text" id="transmission" class="form-control" placeholder="">
 								</div>
 								<div class="form-group">
-										<label class="form-title"><span class="color-kinyu-color">◆</span> アポイントご希望の日時(任意)
-												<!-- <span class="label label-danger">必須</span> --></label>
+										<label class="form-title"><span class="color-kinyu-color">◆</span> アポイントご希望の日時(任意)</label>
 												<p style="text-align: left;">2~3つの候補日時を記載ください。ご希望に添えない場合もありますのでご了承くださいませ。</p>
 										<div class="appointment-date-wrapper">
-										<p>候補1</p><input type="text" id="appointment-date1" class="form-control datepicker" placeholder="">
-										<p>候補2</p><input type="text" id="appointment-date2" class="form-control datepicker" placeholder="">
-										<p>候補3</p><input type="text" id="appointment-date3" class="form-control datepicker" placeholder="">
+										<p>候補1</p><input type="text" id="appointment_date1" class="form-control datepicker" placeholder="" name="appointment_date1">
+										<p>候補2</p><input type="text" id="appointment_date2" class="form-control datepicker" placeholder="" name="appointment_date2">
+										<p>候補3</p><input type="text" id="appointment_date3" class="form-control datepicker" placeholder="" name="appointment_date3">
 										</div>
 								</div>
 
 								<div class="form-group form-group02">
-										<label class="form-title"><span class="color-kinyu-color">◆</span> 具体的なお問い合わせ内容をご記入ください
-												<!-- <span class="label label-danger">必須</span> --></label>
-										<textarea id="message" name="message" class='form-control' rows="10"></textarea>
+										<label class="form-title"><span class="color-kinyu-color">◆</span> 具体的なお問い合わせ内容をご記入ください</label>
+										<textarea id="message" name="message" class='form-control' rows="10" name="message"></textarea>
 								</div>
 
 								<div class="form-btn tx-center">
@@ -314,4 +301,75 @@ $(function() {
     });
 
 });
+</script>
+<script>
+    {literal}
+    $(function () {
+        $('#save').click(function () {
+            var url = "/api/businessinquiries/create";
+            var params = {};
+
+            params.category_code = $('#category_code').val();
+            params.company = $('#company').val();
+            params.department = $('#department').val();
+            params.name = $('#name').val();
+            params.tel = $('#tel').val();
+            params.email = $('#email').val();
+            params.transmission = $('#transmission').val();
+            params.appointment_date1 = $('#appointment_date1').val();
+            params.appointment_date2 = $('#appointment_date2').val();
+            params.appointment_date3 = $('#appointment_date3').val();
+            params.message = $('#message').val();
+
+            if (params.category_code == "") {
+                ts.error("お問い合わせ種別を選択してください");
+                return false;
+            }
+            if (params.company == "") {
+                ts.error("会社名を入力してください");
+                return false;
+            }
+            if (params.department == "") {
+                ts.error("部署名を入力してください");
+                return false;
+            }
+            if (params.name == "") {
+                ts.error("お名前を選択してください");
+                return false;
+            }
+            if (params.tel == "") {
+                ts.error("電話番号を入力してください");
+                return false;
+            }
+            if (params.email == "") {
+                ts.error("メールアドレスを入力してください");
+                return false;
+            }
+            if (params.message == "") {
+                ts.error("お問い合わせ内容を入力してください");
+                return false;
+            }
+
+            bootbox.confirm("お問合せを送信しますか？", function (result) {
+                if (result) {
+                    //ローディングアニメーション
+                    $(".loader-block").fadeIn(200);
+                    ajax.post(url, params, function (data) {
+                            ts.success("送信完了しました")
+                        })
+                        .done(function(data) {
+                            $(".loader-block").fadeOut(500);
+                        })
+                        .fail(function(error) {
+                            $(".loader-block").fadeOut(500);
+                        })
+                }
+                else {
+                    ts.info("キャンセルしました");
+                }
+            });
+
+        });
+    });
+    {/literal}
 </script>

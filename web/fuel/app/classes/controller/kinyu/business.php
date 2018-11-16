@@ -1,5 +1,7 @@
 <?php
 
+use \Model\Businessinquirycategories;
+
 class Controller_Kinyu_Business extends Controller_Kinyubase
 {
 //    const AUTHENTICATION_USER = 'kinyu';
@@ -34,6 +36,7 @@ class Controller_Kinyu_Business extends Controller_Kinyubase
 
         }
 
+        $this->data['categories'] = Businessinquirycategories::lists();
         $this->template->title = 'きんゆう女子。for Business｜きんゆう女子。';
         $this->template->description = "20~30代を中心にした金融ワカラナイ女子のためのコミュニティ「きんゆう女子。」では、企業様向けに、一人一人に寄り添うためのサービスを提供しています。";
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/business/og-main.jpg';
