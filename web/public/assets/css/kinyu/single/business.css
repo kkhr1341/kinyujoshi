@@ -584,3 +584,23 @@
 		position: relative;
 		top: 50%;
 	}
+
+select {
+	position: relative;
+}
+	select:before {
+    content: ""!important;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    display: block;
+    width: 0;
+    height: 0;
+    margin: -2px 0 0 0;
+    border: 5px solid transparent !important;
+    border-top: 7px solid #f69;
+}
+
+::-ms-expand {	/* select要素のデザインを無効にする（IE用） */
+display: none;
+}

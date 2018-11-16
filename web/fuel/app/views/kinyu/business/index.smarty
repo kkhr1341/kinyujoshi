@@ -17,7 +17,7 @@
 				<!-- <li><a href="#business-contact">お問い合わせ</a></li> -->
 				<li><a href="#business-mission">ミッション</a></li>
 			</ul>
-			<p class="header-contact-btn"><a href="https://docs.google.com/forms/d/1LR040hnh4_ThtCiL3g7cA_y3Ewd6REtpx-KIWi6vSSE/viewform" target="_blank">お問い合わせ</a></p>
+			<p class="header-contact-btn"><a href="#business-contact" target="_blank">お問い合わせ</a></p>
 		</nav>
 	</div>
 
@@ -192,7 +192,7 @@
 				<form>
 						<div class="singlepage-form-block">
 									<div class="form-group">
-											<label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ種別
+											<label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ種別</label>
 											<select id="category_code" class='form-control' name="category_code">
                                                 <option value="">選択してください</option>
                                                 {foreach from=$categories item=category}
