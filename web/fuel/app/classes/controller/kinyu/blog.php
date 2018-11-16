@@ -91,10 +91,6 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             Response::redirect('error/404');
         }
 
-        if (!$this->viewable($code)) {
-            Response::redirect('login?after_login_url=/report/' . $code);
-        }
-
         if ($this->data['blog']['status'] == 0) {
 
             if ($this->data['blog']['authentication_user'] && $this->data['blog']['authentication_password']) {
