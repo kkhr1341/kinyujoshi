@@ -10,7 +10,7 @@
 <!-- <link rel="stylesheet" type="text/css" href="https://irodori.fund/assets/css/irodori/email.css" /> -->
 
 </head>
- 
+
 <body bgcolor="#FFFFFF">
 
 <!-- HEADER -->
@@ -40,7 +40,7 @@
       <table>
         <tr>
           <td>
-            <h3>きんゆう女子。にお問い合わせがありました。</h3>
+            <h3>きんゆう女子。for Businessにお問い合わせがありました。</h3>
             <p>以下、お問い合わせ内容です。</p>
 
             <div class="form-mail-p">
@@ -92,7 +92,7 @@
         </tr>
       </table>
       </div>
-                  
+
     </td>
     <td></td>
   </tr>
@@ -104,7 +104,7 @@
   <tr>
     <td></td>
     <td class="container">
-      
+
         <!-- content -->
         <div class="content">
         <table>
@@ -118,7 +118,7 @@
         </tr>
       </table>
         </div><!-- /content -->
-        
+
     </td>
     <td></td>
   </tr>
