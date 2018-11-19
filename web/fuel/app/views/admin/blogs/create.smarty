@@ -64,6 +64,9 @@
                         <input type="radio" value="わたしを知る" name="kind" id="kind6" class="form-radio" placeholder="">
                         <label for="kind6" class="form-long" style="border:1px solid #89e2d1;box-sizing: border-box;">「わたし」を知る</label>
 
+                        <input type="radio" value="きんゆう散歩" name="kind" id="kind7" class="form-radio" placeholder="">
+                        <label for="kind7" class="form-long">きんゆう散歩</label>
+
 
                     </div>
                 </div>

@@ -237,6 +237,8 @@
                       <p>イベント告知</p>
                     {else if $blog.kind == "コラム"}
                       <p>コラム</p>
+                    {else if $blog.kind == "きんゆう散歩"}
+                        <p>きんゆう散歩</p>
                     {else}
                       <p>レポート</p>
                     {/if}
