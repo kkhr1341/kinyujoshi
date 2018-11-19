@@ -2,7 +2,7 @@
   <div class="login-add-contents-block">
 
     <p class="main-title">メンバー登録</p>
-    <p class="message">追加でみなさまの「きんゆう」のことも教えてください♪<br>「<span style="color:red;">*</span>」は必須項目となります。</p>
+    <p class="message">追加でみなさまの「きんゆう」のことも教えてください♪<br>「<span style="color:red;">*</span>」は必須項目となります。<br><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
 
     <form name="form1">
       <input type="hidden" id="after_login_url" value="{$after_login_url}">
@@ -66,7 +66,7 @@
         </div>
 
         <div class="regist-add-form-edit-el select-area">
-          <label class="regist-add-form-edit-title">お住まいの地域<span style="color:red; font-weight: normal;">*</span></label>
+          <label class="regist-add-form-edit-title">お住まいの地域を教えてください♪<span style="color:red; font-weight: normal;">*</span></label>
           <p class="regist-add-form-edit-subtitle">あなたの街で女子会ができるかも♪</p>
           <div class="regist-selectarea">
             <select id="prefecture" name="prefecture" class='form-control'>
@@ -94,7 +94,7 @@
         </div>
 
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">きんゆう女子。で何を学びたい？<span style="color:red; font-weight: normal;">*</span></label>
+          <label class="regist-add-form-edit-title">きんゆう女子。で何を学びたい？(複数選択可)<span style="color:red; font-weight: normal;">*</span></label>
 
          <div class="checkbox-list">
            <div class="checkbox-list-item">
@@ -110,7 +110,7 @@
            <div class="checkbox-list-item">
              <input type="checkbox" name="want_to_learn[]" id="want_to_learn3" value="">
              <label for="want_to_learn3" class="checkbox"></label>
-             <span>働き方編（新しい働き方・副業・起業・個人事業主）</span>
+             <span>働き方（新しい働き方・副業・起業・個人事業主）</span>
            </div>
             <div class="checkbox-list-item">
              <input type="checkbox" name="want_to_learn[]" id="want_to_learn4" value="">
@@ -142,7 +142,7 @@
              <label for="want_to_learn9" class="checkbox"></label>
              <span>その他</span>
              <!-- ↓その他の時に表示テキストエリア↓ -->
-              <input type="text" style="padding-top:10px;" name="want_to_learn_messages[]" class="form-control" placeholder=その他の方はこちら value=""  style="margin-top:10px;">
+              <input type="text" style="padding-top:10px;" name="want_to_learn_messages[]" class="form-control" placeholder="その他の方はこちら" value=""  style="margin-top:10px;">
             <!-- ↑その他の時に表示テキストエリア↑ -->
            </div>
         </div>
@@ -151,7 +151,7 @@
 
 
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">きんゆう女子。でどんな人と会いたい？<span style="color:red; font-weight: normal;">*</span></label>
+          <label class="regist-add-form-edit-title">きんゆう女子。でどんな人と会いたい？(複数選択可)<span style="color:red; font-weight: normal;">*</span></label>
           <!-- <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間"> -->
            <div class="checkbox-list">
              <div class="checkbox-list-item">
@@ -194,7 +194,7 @@
                <label for="want_to_meet8" class="checkbox"></label>
                <span>その他</span>
                <!-- ↓その他の時に表示テキストエリア↓ -->
-                <input type="text" name="want_to_meet_messages[]" class="form-control" placeholder=その他の方はこちら value="" style="margin-top:10px;">
+                <input type="text" name="want_to_meet_messages[]" class="form-control" placeholder="その他の方はこちら" value="" style="margin-top: 10px;">
               <!-- ↑その他の時に表示テキストエリア↑ -->
              </div>
           </div>
@@ -203,7 +203,7 @@
 
         <div class="regist-add-form-edit-el">
           <label class="regist-add-form-edit-title">3年後の自分の年収をどのくらいにしたいですか？<span style="color:red; font-weight: normal;">*</span></label>
-          <input type="text" id="income" class="form-control" placeholder="">
+          <input type="text" id="income" class="form-control form-control-income" placeholder="" style="width: 120px;display: inline-block;"> <span style="font-size:12px;">万円</span>
         </div>
 
         <div class="regist-add-form-edit-el form_where_from">
@@ -214,7 +214,7 @@
             <input type="radio" value="検索して" name="where_from" id="where_from1" class="form-radio" placeholder="">
             <label for="where_from1">検索して</label>
 
-			 <input type="radio" value="新聞・雑誌の記事を見て" name="where_from" id="where_from9" class="form-radio" placeholder="">
+			     <input type="radio" value="新聞・雑誌の記事を見て" name="where_from" id="where_from9" class="form-radio" placeholder="">
             <label for="where_from9">新聞・雑誌の記事を見て</label>
 
             <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
@@ -227,7 +227,10 @@
             <label for="where_from4">知人のご紹介</label>
 
             <input type="radio" value="他サイトで紹介されていた。" name="where_from" id="where_from6" class="form-radio" placeholder="">
-            <label for="where_from6">他サイトで紹介されていた。</label>
+            <label for="where_from6">他サイトで紹介されていた</label>
+            <div class="othet_input">
+              <input type="text" id="where_from_other_site" class="form-control" placeholder="良かったらサイト名を教えてください♪" style="margin-top:10px;">
+            </div>
 
             <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="">
             <label for="where_from7">その他</label>
@@ -239,7 +242,7 @@
 
 
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">きんゆう女子。メンバーになろうと思ったきっかけ<span style="color:red; font-weight: normal;">*</span></label>
+          <label class="regist-add-form-edit-title">きんゆう女子。メンバーになろうと思ったきっかけ(複数選択可)<span style="color:red; font-weight: normal;">*</span></label>
           <!-- <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間"> -->
            <div class="checkbox-list">
              <div class="checkbox-list-item">
@@ -333,7 +336,7 @@
         </div>
 
         <div class="form-btn tx-center">
-		 <p class="pc" style="margin:20px 0;text-align:center;"><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
+
           <button class="btn btn-kinyu" type="button" id="save">メンバー登録</button>
         </div>
 
