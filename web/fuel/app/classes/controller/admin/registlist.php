@@ -7,13 +7,12 @@ use \Model\ParticipatedApplications;
 
 class Controller_Admin_Registlist extends Controller_Adminbase
 {
-    // csv出力を会社内IPからのみにするため、IPアドレスを取得
-    private function is_from_company()
+    public function before()
     {
-        if (\Input::real_ip() == "202.241.184.23") {
-            return TRUE;
-        } else {
-            return FALSE;
+        parent::before();
+
+        if ($this->is_from_company() == FALSE) {
+            throw new HttpNoAccessException;
         }
     }
 
@@ -29,8 +28,6 @@ class Controller_Admin_Registlist extends Controller_Adminbase
 
         // 一般ユーザーのみを対象とする
         $params['group'] = array(1);
-
-        $this->data['from_company'] = $this->is_from_company();
 
         $this->data['registlist'] = Regist::all('/admin/registlist/?' . http_build_query($params), Input::get('page', 1), 'page', 30, $params);
         $pagination = $this->data['registlist']['pagination'];
@@ -84,10 +81,6 @@ class Controller_Admin_Registlist extends Controller_Adminbase
     public function action_memberlist()
     {
         if (!Auth::has_access('registlist.read')) {
-            throw new HttpNoAccessException;
-        }
-
-        if ($this->is_from_company() == FALSE) {
             throw new HttpNoAccessException;
         }
 

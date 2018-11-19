@@ -38,6 +38,8 @@ class Controller_Adminbase extends Controller_Template
         $group = Auth::group();
         $this->data['roles'] = $group->get_roles();
 
+        $this->template->from_company = $this->is_from_company();
+
         $this->template->roles = $this->data['roles'];
 
         Asset::add_path('assets/css', 'css');
@@ -122,5 +124,15 @@ class Controller_Adminbase extends Controller_Template
 
         echo json_encode($response);
         exit();
+    }
+
+    // csv出力を会社内IPからのみにするため、IPアドレスを取得
+    private function is_from_company()
+    {
+        if (\Input::real_ip() == "202.241.184.23") {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     }
 }
