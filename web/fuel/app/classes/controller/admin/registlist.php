@@ -10,7 +10,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
     // csv出力を会社内IPからのみにするため、IPアドレスを取得
     private function is_from_company()
     {
-        if ($_SERVER["REMOTE_ADDR"] == "202.241.184.23") {
+        if (\Input::real_ip() == "202.241.184.23") {
             return TRUE;
         } else {
             return FALSE;
