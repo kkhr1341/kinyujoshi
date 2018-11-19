@@ -142,7 +142,7 @@
              <label for="want_to_learn9" class="checkbox"></label>
              <span>その他</span>
              <!-- ↓その他の時に表示テキストエリア↓ -->
-              <input type="text" style="padding-top:10px;" name="want_to_learn_messages[]" class="form-control" placeholder=その他の方はこちら value="">
+              <input type="text" style="padding-top:10px;" name="want_to_learn_messages[]" class="form-control" placeholder=その他の方はこちら value=""  style="margin-top:10px;">
             <!-- ↑その他の時に表示テキストエリア↑ -->
            </div>
         </div>
@@ -155,9 +155,9 @@
           <!-- <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間"> -->
            <div class="checkbox-list">
              <div class="checkbox-list-item">
-               <input type="checkbox" name="want_to_meet[]" id="want_to_meet" value="">
-               <label for="want_to_meet1" class="checkbox"></label>
-               <span>お友達が欲しい</span>
+                <input type="checkbox" name="want_to_meet[]" id="want_to_meet1" value="">
+                <label for="want_to_meet1" class="checkbox"></label>
+                <span>お友達が欲しい</span>
              </div>
              <div class="checkbox-list-item">
                <input type="checkbox" name="want_to_meet[]" id="want_to_meet2" value="">
@@ -194,7 +194,7 @@
                <label for="want_to_meet8" class="checkbox"></label>
                <span>その他</span>
                <!-- ↓その他の時に表示テキストエリア↓ -->
-                <input type="text" name="want_to_meet_messages[]" class="form-control" placeholder=その他の方はこちら value="">
+                <input type="text" name="want_to_meet_messages[]" class="form-control" placeholder=その他の方はこちら value="" style="margin-top:10px;">
               <!-- ↑その他の時に表示テキストエリア↑ -->
              </div>
           </div>
@@ -232,9 +232,70 @@
             <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="">
             <label for="where_from7">その他</label>
             <div class="othet_input">
-              <input type="text" id="where_from_other" class="form-control" placeholder="その他の方はこちら">
+              <input type="text" id="where_from_other" class="form-control" placeholder="その他の方はこちら" style="margin-top:10px;">
             </div>
           </div>
+        </div>
+
+
+        <div class="regist-add-form-edit-el">
+          <label class="regist-add-form-edit-title">きんゆう女子。メンバーになろうと思ったきっかけ<span style="color:red; font-weight: normal;">*</span></label>
+          <!-- <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間"> -->
+           <div class="checkbox-list">
+             <div class="checkbox-list-item">
+               <input type="checkbox" name="cue[]" id="cue" value="">
+               <label for="cue1" class="checkbox"></label>
+               <span>女性目線でお金のことを勉強できると思ったから</span>
+             </div>
+             <div class="checkbox-list-item">
+               <input type="checkbox" name="cue[]" id="cue2" value="">
+               <label for="cue2" class="checkbox"></label>
+               <span>やりたいことがあってそれを叶えるためのマネープランニングしたい</span>
+             </div>
+             <div class="checkbox-list-item">
+               <input type="checkbox" name="cue[]" id="cue3" value="">
+               <label for="cue3" class="checkbox"></label>
+               <span>働き方・ライフスタイルを見直したいと思ったから</span>
+             </div>
+              <div class="checkbox-list-item">
+               <input type="checkbox" name="cue[]" id="cue4" value="">
+               <label for="cue4" class="checkbox"></label>
+               <span>ずっと投資を勉強したいと思ってた</span>
+             </div>
+             <div class="checkbox-list-item">
+               <input type="checkbox" name="cue[]" id="cue5" value="">
+               <label for="cue5" class="checkbox"></label>
+               <span>おかねについて困ってるから</span>
+             </div>
+             <div class="checkbox-list-item">
+               <input type="checkbox" name="cue[]" id="cue6" value="">
+               <label for="cue6" class="checkbox"></label>
+               <span>将来が心配で</span>
+             </div>
+             <div class="checkbox-list-item">
+                <input type="checkbox" name="cue[]" id="cue7" value="">
+                <label for="cue7" class="checkbox"></label>
+                <span>みんながどうしているか知りたいから</span>
+              </div>
+              <div class="checkbox-list-item">
+                 <input type="checkbox" name="cue[]" id="cue8" value="">
+                 <label for="cue8" class="checkbox"></label>
+                 <span>きん女。診断が気になったから</span>
+              </div>
+              <div class="checkbox-list-item">
+               <input type="checkbox" name="cue[]" id="cue9" value="">
+               <label for="cue9" class="checkbox"></label>
+               <span>その他</span>
+               <!-- ↓その他の時に表示テキストエリア↓ -->
+                <input type="text" name="want_to_meet_messages[]" class="form-control" placeholder=その他の方はこちら value="" style="margin-top:10px;">
+              <!-- ↑その他の時に表示テキストエリア↑ -->
+             </div>
+          </div>
+        </div>
+
+        <div class="regist-add-form-edit-el">
+          <label class="regist-add-form-edit-title">きんゆう女子。を通してどんな自分になりたい？<span style="color:red; font-weight: normal;">*</span></label>
+          <input type="text" id="future" class="form-control" placeholder="">
         </div>
 
         <div class="regist-add-form-edit-el form-radio-block">
@@ -247,6 +308,7 @@
             <label for="transmission2">いいえ、したくないです。</label>
           </div>
         </div>
+
         <div class="regist-add-form-edit-el">
           <label class="regist-add-form-edit-title">個人で発信しているブログなど<span class="label label-primary">任意</span></label>
           <p class="regist-add-form-edit-subtitle">もしありましたら、ご入力をお願いします♪</p>
@@ -295,7 +357,7 @@ $(function(){
         })
 
         // その他テキストフォーカスにその他のチェックボックスにチェックを入れる
-        $(this).find('input[name="withdrawal_reason_messages[]"]').on('click', function() {
+        $(this).find('input[name="want_tolearn_messages[]"]').on('click', function() {
             input.prop("checked",true);
         })
     })
