@@ -4645,13 +4645,16 @@ input::-webkit-input-placeholder {
     margin-top: -10px;
     width: 12px;
     height: 12px;
-    border: 2px solid #bbb;
+    border: 1px solid #bbb;
     content: '';
 }
 .checkbox-list-item span {
     cursor: pointer;
 }
 
+.regist-add-form-edit-el .checkbox-list {
+    padding: 0px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　フッター
