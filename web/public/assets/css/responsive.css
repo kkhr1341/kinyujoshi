@@ -664,7 +664,7 @@ mark, .mark {
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
-  text-align: center; 
+  text-align: center;
 }
 .kinyu-sp-introduction p {
   font-size: 11px;
@@ -1037,6 +1037,11 @@ mark, .mark {
 .kinyu-top-banner-area li img {
   width: 100%;
 }
+
+.kinyu-top-banner-area li:nth-child(3n) {
+    margin-right: auto;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　記事詳細
@@ -1592,7 +1597,7 @@ mark, .mark {
   margin-bottom: 6%;
 }
 .kinyu-event-list li:nth-last-child(-n+3) {
-  margin-bottom: 6%; 
+  margin-bottom: 6%;
 }
 .kinyu-event-list li:last-child {
   margin-bottom: 0px;
@@ -1862,7 +1867,7 @@ mark, .mark {
   display: block;
   font-size: 14px;
   line-height: 22px;
-  padding: 16px 0px 0px; 
+  padding: 16px 0px 0px;
 }
 .kinyu-joshikai-tickets-fee {
   padding: 16px 0px;
@@ -2144,7 +2149,7 @@ input::-webkit-input-placeholder {
   margin-bottom: 12px;
 }
 .cancel-block-list li:last-child {
-  margin-bottom: 0px; 
+  margin-bottom: 0px;
 }
 .cancel-block-list li:before {
   content: "◆";
@@ -2270,8 +2275,8 @@ input::-webkit-input-placeholder {
   padding: 0px 4%;
   box-sizing: border-box;
 }
-.gcarender { 
-  width: 100%; 
+.gcarender {
+  width: 100%;
   height: 500px;
 }
 .event-introduction {
@@ -2427,7 +2432,7 @@ input::-webkit-input-placeholder {
   padding-left: 24px;
 }
 .about-member-list li:last-child {
-  margin-bottom: 4px; 
+  margin-bottom: 4px;
 }
 .about-member-list li span {
   position: absolute;
@@ -2546,7 +2551,7 @@ input::-webkit-input-placeholder {
 }
 .company-details-block {
   width: 100%;
-  padding: 8px 0px 50px; 
+  padding: 8px 0px 50px;
 }
 .company-details-menu {
   display: none;
@@ -2555,7 +2560,7 @@ input::-webkit-input-placeholder {
   width: 84%;
   padding-left: 0px;
   float: none;
-  margin: 0 auto; 
+  margin: 0 auto;
   border-left: none;
 }
 .company-details .first-description {
@@ -2643,7 +2648,7 @@ input::-webkit-input-placeholder {
   top: 20px;
   margin-top: 0px;
   left: -10px;
-} 
+}
 .kinyu-start-intro-block {
   background: #f7f7f7;
   padding-top: 32px;
@@ -2673,7 +2678,7 @@ input::-webkit-input-placeholder {
   float: none;
   text-align: center;
 }
-.kinyu-start-intro-inner .description-box p { 
+.kinyu-start-intro-inner .description-box p {
   font-size: 11px;
   line-height: 20px;
 }
@@ -3746,6 +3751,7 @@ footer {
         width: 100%;
     }
 
+
     /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
       　ピックアップ
     *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -3975,6 +3981,7 @@ footer {
         padding: 5px 20px;
         box-shadow: none;
     }
+
 
     /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
       　トップ・リスト部分
@@ -4904,7 +4911,7 @@ footer {
     .about-kinyu-el-block3 li .about-kinyu-el-img {
       height: 180px;
     }
-    
+
     .about-kinyu-container {
         width: 92%;
         padding: 24px 0px 50px;

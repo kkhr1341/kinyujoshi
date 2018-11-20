@@ -153,10 +153,10 @@
   margin-right: 0%;
 }
 .kinyu-top-list li:nth-child(3n) {
-  margin-right: 4%; 
+  margin-right: 4%;
 }
 .kinyu-top-list li:nth-child(6n) {
-  margin-right: 0%; 
+  margin-right: 0%;
 }
 .sidebar-more-link {
   margin-top: 0px;
@@ -203,7 +203,11 @@
   margin-right: 4%;
 }
 .kinyu-top-banner-area li:nth-child(2n) {
-  margin-right: 0%;  
+  margin-right: 0%;
+}
+
+.kinyu-top-banner-area li:nth-child(3n) {
+    margin-right: 4%;
 }
 
 /* ----------------------------------
@@ -266,10 +270,10 @@
   margin-right: 0%;
 }
 .kinyu-event-list li:nth-child(3n) {
-  margin-right: 4%; 
+  margin-right: 4%;
 }
 .kinyu-event-list li:nth-child(6n) {
-  margin-right: 0%; 
+  margin-right: 0%;
 }
 .sidebar-more-link {
   margin-top: 0px;
@@ -455,7 +459,7 @@
   line-height: 28px;
 }
 .kinyu-details-introdauction .text-box .text-box-inner {
-  padding-top: 4px;  
+  padding-top: 4px;
 }
 .report-detail-main p {
   font-size: 14px;
@@ -502,10 +506,10 @@
   margin-right: 0%;
 }
 .report-sidebar-event-list li:nth-child(3n) {
-  margin-right: 4%; 
+  margin-right: 4%;
 }
 .report-sidebar-event-list li:nth-child(6n) {
-  margin-right: 0%; 
+  margin-right: 0%;
 }
 .sidebar-more-link {
   margin-top: 0px;
@@ -560,7 +564,7 @@
   margin-right: 4%;
 }
 .report-detail-sidebar-el .banner-list li:nth-child(2n) {
-  margin-right: 0%;  
+  margin-right: 0%;
 }
 
 /* ----------------------------------
@@ -643,7 +647,7 @@
   margin-left: -36%!important;
 }
 .about-member-block {
-  width: 70%;  
+  width: 70%;
 }
 
 
