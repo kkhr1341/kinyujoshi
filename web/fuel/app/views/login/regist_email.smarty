@@ -1,8 +1,9 @@
 <div class="kinyu-single-block">
   <div class="login-add-contents-block">
 
-    <p class="main-title">メンバー登録</p>
-    <p class="message">追加でみなさまの「きんゆう」のことも教えてください♪<br>「<span style="color:red;">*</span>」は必須項目となります。<br><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
+    <p class="main-title">一緒に学びや声をシェアするメンバーになろう！</p>
+    <p class="message">きんゆう女子。メンバーになるとより楽しく学んだり、<br>あなたの声を届けることでみんなどうしてる？をシェアしたりすることができます♪<br>
+      「<span style="color:red; padding-top: 10px; display:inline-block;">*</span>」は必須項目となります。<br><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
 
     <form name="form1">
       <input type="hidden" id="after_login_url" value="{$after_login_url}">
@@ -21,7 +22,7 @@
         </div>
 
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">お名前<span style="color:red; font-weight: normal;">*</span></label>
+          <label class="regist-add-form-edit-title">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
           <p class="regist-add-form-edit-subtitle">漢字フルネームで入力してください。</p>
           <input type="text" id="name" class="form-control" placeholder="" value="">
         </div>
@@ -33,7 +34,7 @@
 
         <div class="regist-add-form-edit-el select-area">
           <label class="regist-add-form-edit-title">生年月日<span style="color:red; font-weight: normal;">*</span></label>
-
+          <p class="regist-add-form-edit-subtitle">ちょっとしたサプライズがあるかも？</p>
           <div class="regist-selectarea">
             <select id="age1" class='form-control'>
               <option>-</option>
@@ -67,7 +68,7 @@
 
         <div class="regist-add-form-edit-el select-area">
           <label class="regist-add-form-edit-title">お住まいの地域を教えてください♪<span style="color:red; font-weight: normal;">*</span></label>
-          <p class="regist-add-form-edit-subtitle">あなたの街で女子会ができるかも♪</p>
+          <p class="regist-add-form-edit-subtitle">あなたの街で女子会ができるかも!?</p>
           <div class="regist-selectarea">
             <select id="prefecture" name="prefecture" class='form-control'>
               <option>-</option>
@@ -93,53 +94,74 @@
           </div>
         </div>
 
+        <div class="regist-add-form-edit-el form-radio-block">
+          <label class="regist-add-form-edit-title">金融機関で働いていますか？<span style="color:red; font-weight: normal;">*</span></label>
+          <p class="regist-add-form-edit-subtitle">金融ワカラナイ女子のためのコミュニティなので、簡単すぎたらゴメンなさい...。(;_;)</p>
+          <div class="radio_box_03 clear">
+            <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
+            <label for="job_kind1">はい</label>
+            <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
+            <label for="job_kind2">いいえ</label>
+          </div>
+        </div>
+
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">きんゆう女子。で何を学びたい？(複数選択可)<span style="color:red; font-weight: normal;">*</span></label>
+          <label class="regist-add-form-edit-title">きんゆう女子。コミュニティで何を学んだり知りたい？(いくつか選択してもok)<span style="color:red; font-weight: normal;">*</span></label>
 
          <div class="checkbox-list">
            <div class="checkbox-list-item">
-             <input type="checkbox" name="want_to_learn[]" id="want_to_learn1" value="">
-             <label for="want_to_learn1" class="checkbox"></label>
-             <span>金融サービスについて（Fintech・投資信託・株式投資・仮想通貨・外貨預金・貯蓄型保険・FX）</span>
-           </div>
-           <div class="checkbox-list-item">
+            <input type="checkbox" name="want_to_learn[]" id="want_to_learn1" value="">
+            <label for="want_to_learn1" class="checkbox"></label>
+            <span>お金のことみんなどうしてるの？が知りたい！</span>
+          </div>
+          <div class="checkbox-list-item">
              <input type="checkbox" name="want_to_learn[]" id="want_to_learn2" value="">
              <label for="want_to_learn2" class="checkbox"></label>
-             <span>経済知識（ニュースが理解できる程度の知識）</span>
-           </div>
-           <div class="checkbox-list-item">
+             <span>かしこいお金の管理や使い方の方法がきになる</span>
+          </div>
+          <div class="checkbox-list-item">
              <input type="checkbox" name="want_to_learn[]" id="want_to_learn3" value="">
              <label for="want_to_learn3" class="checkbox"></label>
-             <span>働き方（新しい働き方・副業・起業・個人事業主）</span>
+             <span>豊かな人生にする計画をたてたい！</span>
            </div>
-            <div class="checkbox-list-item">
+           <div class="checkbox-list-item">
              <input type="checkbox" name="want_to_learn[]" id="want_to_learn4" value="">
              <label for="want_to_learn4" class="checkbox"></label>
-             <span>みんなどうしてる？（自分にあった投資額は？・少額からできる商品は？）</span>
-           </div>
-            <div class="checkbox-list-item">
-             <input type="checkbox" name="want_to_learn[]" id="want_to_learn5" value="">
-             <label for="want_to_learn5" class="checkbox"></label>
-             <span>制度について（NISA・つみたてNISA・iDeCo）</span>
+             <span>税金について (ふるさと納税・や消費税など）</span>
            </div>
            <div class="checkbox-list-item">
-             <input type="checkbox" name="want_to_learn[]" id="want_to_learn6" value="">
-             <label for="want_to_learn6" class="checkbox"></label>
-             <span>税金について (ふるさと納税・控除できる制度は？・確定申告）</span>
+            <input type="checkbox" name="want_to_learn[]" id="want_to_learn5" value="">
+            <label for="want_to_learn5" class="checkbox"></label>
+            <span>制度について（NISA・つみたてNISA・iDeCo）</span>
+          </div>
+          <div class="checkbox-list-item">
+            <input type="checkbox" name="want_to_learn[]" id="want_to_learn6" value="">
+            <label for="want_to_learn6" class="checkbox"></label>
+            <span>金融・経済そのものについて</span>
+          </div>
+           <div class="checkbox-list-item">
+             <input type="checkbox" name="want_to_learn[]" id="want_to_learn7" value="">
+             <label for="want_to_learn7" class="checkbox"></label>
+             <span>新しい金融サービスについて（貯金アプリ・キャッシュレス）</span>
            </div>
            <div class="checkbox-list-item">
-              <input type="checkbox" name="want_to_learn[]" id="want_to_learn7" value="">
-              <label for="want_to_learn7" class="checkbox"></label>
-              <span>ライフプランニングについて（人生100年時代のために必要なお金・年金について）</span>
-            </div>
-            <div class="checkbox-list-item">
-               <input type="checkbox" name="want_to_learn[]" id="want_to_learn8" value="">
-               <label for="want_to_learn8" class="checkbox"></label>
-               <span>家計管理について（節約方法・価値あるお金の使い方・カードの有効的な使い方）</span>
-            </div>
-            <div class="checkbox-list-item">
+             <input type="checkbox" name="want_to_learn[]" id="want_to_learn8" value="">
+             <label for="want_to_learn8" class="checkbox"></label>
+             <span>働き方（新しい働き方・副業・起業・個人事業主）</span>
+           </div>
+           <div class="checkbox-list-item">
              <input type="checkbox" name="want_to_learn[]" id="want_to_learn9" value="">
              <label for="want_to_learn9" class="checkbox"></label>
+             <span>色々な金融商品についての一般知識</span>
+           </div>
+           <div class="checkbox-list-item">
+             <input type="checkbox" name="want_to_learn[]" id="want_to_learn10" value="">
+             <label for="want_to_learn10" class="checkbox"></label>
+             <span>悪い情報から自分の身を自分で守る方法</span>
+           </div>
+            <div class="checkbox-list-item">
+             <input type="checkbox" name="want_to_learn[]" id="want_to_learn11" value="">
+             <label for="want_to_learn11" class="checkbox"></label>
              <span>その他</span>
              <!-- ↓その他の時に表示テキストエリア↓ -->
               <input type="text" style="padding-top:10px;" name="want_to_learn_messages[]" class="form-control" placeholder="その他の方はこちら" value=""  style="margin-top:10px;">
@@ -148,10 +170,8 @@
         </div>
     </div>
 
-
-
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">きんゆう女子。でどんな人と会いたい？(複数選択可)<span style="color:red; font-weight: normal;">*</span></label>
+          <label class="regist-add-form-edit-title">きんゆう女子。でどんな人と会いたい？(いくつか選択してもok)<span style="color:red; font-weight: normal;">*</span></label>
           <!-- <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間"> -->
            <div class="checkbox-list">
              <div class="checkbox-list-item">
@@ -202,8 +222,9 @@
 
 
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">3年後の自分の年収をどのくらいにしたいですか？<span style="color:red; font-weight: normal;">*</span></label>
-          <input type="text" id="income" class="form-control form-control-income" placeholder="" style="width: 120px;display: inline-block;"> <span style="font-size:12px;">万円</span>
+          <label class="regist-add-form-edit-title">3年後に欲しいものは何ですか？<span style="color:red; font-weight: normal;">*</span></label>
+          <p class="regist-add-form-edit-subtitle">そこを目指して成長していきましょう♪</p>
+          <input type="text" id="income" class="form-control form-control-income" placeholder="" style="width: 120px;display: inline-block;"> <span style="font-size:12px;"></span>
         </div>
 
         <div class="regist-add-form-edit-el form_where_from">
@@ -222,6 +243,9 @@
 
             <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
             <label for="where_from8">Instagramを見て</label>
+
+            <input type="radio" value="Twitterを見て" name="where_from" id="where_from9" class="form-radio" placeholder="">
+            <label for="where_from9">Twitterを見て</label>
 
             <input type="radio" value="友人のご紹介" name="where_from" id="where_from4" class="form-radio" placeholder="">
             <label for="where_from4">知人のご紹介</label>
@@ -242,7 +266,7 @@
 
 
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">きんゆう女子。メンバーになろうと思ったきっかけ(複数選択可)<span style="color:red; font-weight: normal;">*</span></label>
+          <label class="regist-add-form-edit-title">きんゆう女子。メンバーになろうと思ったきっかけ(いくつか選択してもok)<span style="color:red; font-weight: normal;">*</span></label>
           <!-- <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間"> -->
            <div class="checkbox-list">
              <div class="checkbox-list-item">
@@ -309,11 +333,13 @@
             <label for="transmission1">はい、ぜひしたいです。</label>
             <input type="radio" value="いいえ、したくないです。" name="transmission" id="transmission2" class="form-radio" placeholder="">
             <label for="transmission2">いいえ、したくないです。</label>
+            <input type="radio" value="写真なしだったらok♪" name="transmission" id="transmission2" class="form-radio" placeholder="">
+            <label for="transmission2">写真なしだったらok♪</label>
           </div>
         </div>
 
         <div class="regist-add-form-edit-el">
-          <label class="regist-add-form-edit-title">個人で発信しているブログなど<span class="label label-primary">任意</span></label>
+          <label class="regist-add-form-edit-title">個人で発信しているブログやSNSなど<span class="label label-primary">任意</span></label>
           <p class="regist-add-form-edit-subtitle">もしありましたら、ご入力をお願いします♪</p>
           <input type="text" id="url" class="form-control" placeholder="">
         </div>
@@ -337,7 +363,7 @@
 
         <div class="form-btn tx-center">
 
-          <button class="btn btn-kinyu" type="button" id="save">メンバー登録</button>
+          <button class="btn btn-kinyu" type="button" id="save">登録する！</button>
         </div>
 
         <p class="pc" style="margin-top:20px;text-align:center;"><span style="color:#f3626c;">※</span>新規会員登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
