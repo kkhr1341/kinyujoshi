@@ -339,6 +339,12 @@
 		width: 200px;
 		margin: 40px auto 0;
 	}
+	.business-works .caption a{
+		transition:.2s;
+	}
+	.business-works .caption a:hover {
+		border-bottom: 1px solid #fffed3;
+	}
 
 /*------------------------------
 ミッション
