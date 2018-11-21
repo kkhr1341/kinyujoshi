@@ -2,10 +2,10 @@
   <div class="admin-normal-inner clear">
 
     {$my_side}
-    
+
     <div class="admin-normal-main">
-      
-      <div class="admin-normal-profile">
+
+      <!-- <div class="admin-normal-profile">
         <div class="img-box-block">
           <div class="img-box"
             {if $profile.profile_image == ''}
@@ -21,23 +21,32 @@
           <p class="profile-name">{$profile.nickname}</p>
           <p class="profile-catchcopy">{$profile.catchcopy}</p>
         </div>
-      </div>
+      </div> -->
 
       {$kinjo_check}
 
       <div class="main-menu-list sp">
+        <div class="member-profile">
+
+        </div>
         <ul>
-          <li class="main-li"><a href="/my/kinjo">参加予定の女子会</span></a></li>
+          <li class="main-li"><a href="/my">マイページトップ</a></li>
+          <li class="main-li"><a href="/tell_me_kinjo">教えて！きん女。</a></li>
+          <li class="main-li"><a href="/tell_me_kinjo">お気に入り</a></li>
+          <li class="main-li"><a href="/pick_up">Pick up!</a></li>
+          <li class="main-li"><a href="/my/settings">設定</a></li>
+
+          <!-- <li class="main-li"><a href="/my/kinjo">参加予定の女子会</span></a></li>
           <li class="main-li"><a href="/my/passport">きん女。パスポート</a></li>
           <li class="main-li"><a href="/my/member_joshikai">メンバー限定女子会</a></li>
 		  <li class="main-li"><a href="/my/member_report">メンバー限定レポート</a></li>
           <li class="main-li"><a href="/my/report">チェックしたレポート</a></li>
           <li class="main-li"><a href="/my/profile">プロフィール編集</a></li>
           <li class="main-li"><a href="/my/account">アカウント情報</a></li>
-          <li class="sub-li"><a href="/logout">ログアウト</a></li>
+          <li class="sub-li"><a href="/logout">ログアウト</a></li> -->
         </ul>
       </div>
-      
+
       <div class="admin-normal-joshikai">
         <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
         <ul class="clear">
@@ -46,10 +55,10 @@
 
             {$fooo = $application.main_image}
             {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-            
+
             <!-- 女子会 -->
             <!-- 現状、全ての女子会を表示 -->
-            <li>  
+            <li>
               <a href="/my/joshikai/{$application.application_code}" class="clear">
                 <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
                 <div class="text-box">
@@ -77,9 +86,7 @@
 
         </ul>
       </div>
-      
+
     </div>
   </div>
 </div>
-
-
