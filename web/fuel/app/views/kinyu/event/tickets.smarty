@@ -42,14 +42,26 @@ var $resArray02 = $resArray[1];
 
         <p class="ticket-title" style="display:none;">>クーポンコードを入力</p>
         <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
-        <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="クーポンコード" value="" style="display:none;">
-		<!--<button class="coupon-apply-btn">クーポンを適用</button>-->
-        
-		  <p class="ticket-title">お支払い方法</p>
+        <input type="hidden" id="name" name="name" class="" placeholder="" value="{$user.name}">
+        <input type="hidden" id="email" name="email" class="" placeholder="" value="{$user.email}">
 
-        <div class="kinyu-joshikai-tickets-payment-list">
+        <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="クーポンコード" value="" style="display:none;">
+
+		<!--<button class="coupon-apply-btn">クーポンを適用</button>-->
+
+        <div class="payment-button-container"{if $event.fee == 0} style="display: none;"{/if}>
+          <p class="ticket-title">お支払い方法</p>
+          <div class="kinyu-joshikai-tickets-payment-list">
             <a href="/joshikai_payment_premo/{$urlcode}" class="info-link fee-card day-card-btn">きんじょカードで決済する（JCB プレモ）</a>
             <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
+          </div>
+        </div>
+
+        <div class="free-payment-button-container"{if $event.fee > 0} style="display: none;"{/if}>
+          <p class="ticket-title">お申し込み</p>
+          <div class="kinyu-joshikai-tickets-payment-list">
+            <a href="/joshikai_payment_premo/{$urlcode}" class="info-link fee-application day-card-btn">申し込む</a>
+          </div>
         </div>
 
       </div>
@@ -75,6 +87,33 @@ var $resArray02 = $resArray[1];
             location.href = url;
         })
 
+        $('.fee-application').on('click', function(e) {
+            e.preventDefault();
+            var event_code = $('#event_code').val();
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var coupon_code = $('#coupon_code').val();
+            var url = "/api/applications/create";
+            var params = {
+                event_code: event_code,
+                name: name,
+                email: email,
+                coupon_code: coupon_code
+            };
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(200);
+            return ajax.post(url, params, function(data) {
+                    $(".loader-block").fadeOut(500);
+                    location.href = "/joshikai_complete";
+                })
+                .done(function(data) {
+                    $(".loader-block").fadeOut(500);
+                })
+                .fail(function(error) {
+                    $(".loader-block").fadeOut(500);
+                })
+        })
+
         $('#coupon_code').on('blur', function() {
             var event_code = $('#event_code').val();
             var coupon_code = $('#coupon_code').val();
@@ -86,9 +125,15 @@ var $resArray02 = $resArray[1];
                     $('.info-coupon').find('.discount').text(convertYen(result.data.discount));
                     $('.info-coupon').show();
                     $('.info-no-coupon').hide();
+
+                    $('.payment-button-container').show();
+                    $('.free-payment-button-container').hide();
                 } else {
                     $('.info-coupon').hide();
                     $('.info-no-coupon').show();
+
+                    $('.payment-button-container').hide();
+                    $('.free-payment-button-container').show();
                 }
             });
         })

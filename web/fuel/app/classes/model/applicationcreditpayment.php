@@ -3,6 +3,9 @@
 namespace Model;
 require_once(dirname(__FILE__) . "/base.php");
 
+use \Model\PaymentPayjp;
+use \Model\Payment\Payjp;
+
 class ApplicationCreditPayment extends Base
 {
     /**
@@ -48,7 +51,9 @@ class ApplicationCreditPayment extends Base
                 'created_at' => \DB::expr('now()'),
             ))->execute();
 
-            $payment = new Payment(\Config::get('payjp.private_key'));
+
+            \Config::load('payjp', true);
+            $payment = new PaymentPayjp(new Payjp(\Config::get('payjp.private_key')));
             $payment->sale($charge_id);
 
             $db->commit_transaction();

@@ -3,10 +3,13 @@
 namespace Model;
 require_once(dirname(__FILE__) . "/base.php");
 
+use \Model\PaymentPayjp;
+use \Model\Payment\Payjp;
+
 class Applications extends Base
 {
 
-    public static function validate($cardselect)
+    public static function validate()
     {
         $val = \Validation::forge();
         $val->add_callable('myvalidation');
@@ -14,8 +17,7 @@ class Applications extends Base
         $val->add('event_code')
             ->add_rule('required');
 
-        $val->add('cardselect')
-            ->add_rule('required');
+        $val->add('cardselect');
 
         $val->add('name', 'お名前（フルネーム）');
 
@@ -26,17 +28,14 @@ class Applications extends Base
         $val->add('coupon_code', 'クーポンコード');
 
         // 新規カード登録 or 会員登録をせずに申し込みの場合は以下必須
-        if ($cardselect === '0') {
+        $val->field('name')
+            ->add_rule('required');
 
-            $val->field('name')
-                ->add_rule('required');
+        $val->field('email')
+            ->add_rule('required');
 
-            $val->field('email')
-                ->add_rule('required');
+        $val->field('token');
 
-            $val->field('token')
-                ->add_rule('required');
-        }
         return $val;
     }
 
@@ -255,8 +254,9 @@ class Applications extends Base
                     'application_code' => $code,
                     'created_at' => \DB::expr('now()'),
                 ))->execute();
-            
-                $payment = new Payment(\Config::get('payjp.private_key'));
+
+                \Config::load('payjp', true);
+                $payment = new PaymentPayjp(new Payjp(\Config::get('payjp.private_key')));
                 $payment->cancel($charge_id);
             }
 
@@ -413,34 +413,35 @@ class Applications extends Base
 
     /**
      * 参加申し込み
-     * @param \Model\Payment $payment
-     * @param $event_code   イベントコード
-     * @param $name         ふりがな
-     * @param $email        メールアドレス
-     * @param $cardselect   カードID※新規登録時は0
-     * @param string $token 決済トークン※新規登録時に必須。カード登録に使用
+     * @param string $username     ユーザーネーム
+     * @param string $event_code   イベントコード
+     * @param string $name         ふりがな
+     * @param string $email        メールアドレス
+     * @param string $coupon_code  クーポンコード
      * @return bool
      * @throws \Exception
      */
-    public static function create(\Model\Payment $payment, $event_code, $cardselect, $name, $email, $token='', $coupon=array())
-    {
-        $db = \Database_Connection::instance();
-        $db->start_transaction();
+    public static function create(
+        $username,
+        $event_code,
+        $name,
+        $email,
+        $coupon_code=''
+    ) {
         try {
-            $username = \Auth::get('username');
 
             $event = self::getByCode('events', $event_code);
 
             // 下書き
             if (empty($event) || $event['status'] != 1) {
-                return "イベントが見つかりませんでした";
+                throw new \Exception("イベントが見つかりませんでした");
             }
 
             // 申し込み人数
             $application_num = self::getApplicationCount($event_code);
 
             if (intval($event['limit']) <= intval($application_num)) {
-                return "このイベントは満席です";
+                throw new \Exception("このイベントは満席です");
             }
 
             //		// 終了チェック
@@ -449,217 +450,75 @@ class Applications extends Base
             //		}
 
             if (self::completed($event_code, $username, $email)) {
-                return "この女子会は、すでにお申込みいただいております。";
+                throw new \Exception("この女子会は、すでにお申込みいただいております");
             }
 
             // 申し込みイベンドコード生成
             $application_code = self::getNewCode('applications');
 
-            // クーポン情報の初期値設定
-            $discount = $coupon ? $coupon['discount']: 0;
-            $coupon_code = $coupon ? $coupon['coupon_code']: '';
-            $event_coupon_code = $coupon ? $coupon['code']: '';
+            // クーポン情報情報
+            $coupon = self::getByEventCodeAndCouponCode(
+                $event_code,
+                $coupon_code
+            );
 
-            $amount = $event['fee'] - $discount; // 支払金額
+            // 支払金額
+            $amount = $event['fee'] - $coupon['discount'];
 
-            // 申し込みイベントデータ作成
-            \DB::insert('applications')->set(array(
+            $params = array(
                 'code' => $application_code,
                 'event_code' => $event_code,
                 'username' => $username,
                 'amount' => $amount,
                 'fee' => $event['fee'],
-                'discount' => $discount,
-                'coupon_code' => $coupon_code,
+                'discount' => $coupon['discount'],
+                'coupon_code' => $coupon['coupon_code'],
                 'payment_method' => 1,
                 'name' => $name,
                 'email' => $email,
                 'created_at' => \DB::expr('now()'),
-            ))->execute();
+            );
+
+            // 申し込みイベントデータ作成
+            \DB::insert('applications')->set($params)->execute();
 
             // 申し込み割引イベントデータ作成
-            if ($event_coupon_code) {
+            if ($coupon['code']) {
                 \DB::insert('application_coupons')->set(array(
                     'application_code' => $application_code,
-                    'event_coupon_code' => $event_coupon_code,
-                    'discount' => $discount,
+                    'event_coupon_code' => $coupon['code'],
+                    'discount' => $coupon['discount'],
                     'created_at' => \DB::expr('now()'),
                 ))->execute();
             }
 
-            // 非会員決済 *********************
-            if (!$username || $username == 'guest') {
-
-                // 登録カードで決済
-                $charge = $payment->chargeByToken(
-                    $amount,
-                    $token,
-                    $application_code,
-                    $name,
-                    $email
-                );
-            } // 会員決済 *********************
-            else {
-                // payjp会員情報取得
-                // 該当会員がいない場合は作成、いる場合は更新
-                if (!$customer = $payment->getCustomer($username)) {
-                    $customer = $payment->createCustomer($username, $name, $email);
-                    // トランザクション失敗時の登録取り消し用
-                    $new_customer = $customer;
-                } else {
-                    $payment->updateCustomer($customer, $name, $email);
-                }
-
-                // 新しいカードで決済
-                if ($cardselect === '0') {
-                    $new_card = $payment->createCard($customer, $token, $name);
-                    // 登録カードリソースデータ作成（二回目にカードを使う用）
-                    \DB::insert('user_credit_cards')->set(array(
-                        'username' => $username,
-                        'card_id' => $new_card->id,
-                        'created_at' => \DB::expr('now()'),
-                    ))->execute();
-                    $charge = $payment->chargeByNewCard(
-                        $amount,
-                        $customer,
-                        $new_card,
-                        $application_code,
-                        $name,
-                        $email
-                    );
-                } // 登録カードで決済
-                else {
-                    $customer = $payment->getCustomer($username);
-                    $payment->updateCustomer($customer, $name, $email);
-                    $charge = $payment->chargeByRegistCard(
-                        $amount,
-                        $customer,
-                        $cardselect,
-                        $application_code,
-                        $name,
-                        $email
-                    );
-                }
-            }
-
-            // クレジット決済イベントデータ作成
-            \DB::insert('application_credit_payments')->set(array(
-                'application_code' => $application_code,
-                'charge_id' => $charge->id,
-                'created_at' => \DB::expr('now()'),
-            ))->execute();
-
-            $db->commit_transaction();
-
-            // サンクスメール
-            $mail = \Email::forge('jis');
-            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
-            $mail->subject("【きんゆう女子。】女子会のお申込みありがとうございます。");
-            $mail->html_body(\View::forge('email/joshikai/body',
-                array(
-                    'name' => $name,
-                    'event' => $event
-                )));
-            $mail->to($email); //送り先
-
-            $mail->return_path('support@kinyu-joshi.jp');
-            $mail->send();
-
-            return true;
+            return $params;
         } catch (\Exception $e) {
-            $db->rollback_transaction();
-
-            if (isset($new_customer)) {
-                $new_customer->delete();
-            }
-
-            if (isset($new_card)) {
-                $new_card->delete();
-            }
 
             throw $e;
         }
     }
 
-    public static function force_cancel($code)
+    /**
+     * クーポン情報取得
+     * @param string $event_code  イベントコード
+     * @param string $coupon_code クーポンコード
+     * @return array
+     */
+    public static function getByEventCodeAndCouponCode($event_code, $coupon_code)
     {
-        \Config::load('payjp', true);
+        $total = \DB::select('*')
+            ->from('event_coupons')
+            ->where('disable', '=', 0)
+            ->where('coupon_code', '=', $coupon_code)
+            ->where('event_code', '=', $event_code);
 
-        // 参加状態取得
-        $application = \DB::select(\DB::expr('users.email, applications.event_code, applications.cancel, applications.username, profiles.name'))
-            ->from('applications')
-            ->join('users')
-            ->on('applications.username', '=', 'users.username')
-            ->join('profiles')
-            ->on('applications.username', '=', 'profiles.username')
-            ->where('applications.code', '=', $code)
-            ->where('applications.disable', '=', 0)
-            ->execute()
-            ->current();
+        $coupon = $total->execute()->current() ?: array();
 
-        // 存在チェック
-        if (empty($application)) {
-            return "該当の参加申込が見つかりませんでした";
-        }
-
-        // キャンセル状況確認
-        if ($application['cancel'] != 0) {
-            return "この参加申し込みは既にキャンセル済みです";
-        }
-
-        $db = \Database_Connection::instance();
-        $db->start_transaction();
-        try {
-            // キャンセルする
-            \DB::update('applications')->set(
-                array(
-                    'cancel' => 1,
-                    'updated_at' => \DB::expr('now()'),
-                )
-            )->where('code', '=', $code)->execute();
-
-            // 申し込みキャンセルデータ作成
-            \DB::insert('application_cancels')->set(array(
-                'application_code' => $code,
-                'created_at' => \DB::expr('now()'),
-            ))->execute();
-
-            // 参加人数を減らす
-            \DB::update('events')->set(array(
-                'application_num' => \DB::expr('application_num-1')
-            ))
-                ->where('application_num', '>', 0)
-                ->where('code', '=', $application['event_code'])
-                ->execute();
-
-            // クレジット決済の場合決済取り消し
-            if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($code)) {
-                // 決済データをキャンセル状態に
-                \DB::update('application_credit_payments')->set(array(
-                    'cancel' => 1,
-                    'updated_at' => \DB::expr('now()'),
-                ))
-                    ->where('application_code', '=', $code)
-                    ->execute();
-
-                // 決済キャンセルデータ作成
-                \DB::insert('application_credit_payment_cancels')->set(array(
-                    'application_code' => $code,
-                    'created_at' => \DB::expr('now()'),
-                ))->execute();
-
-                $payment = new Payment(\Config::get('payjp.private_key'));
-                $payment->cancel($charge_id);
-            }
-
-            $db->commit_transaction();
-
-            return true;
-        } catch (\Exception $e) {
-            $db->rollback_transaction();
-
-            throw $e;
-        }
+        return array_merge(array(
+            'discount' => 0,
+            'coupon_code' => '',
+            'code' => '',
+        ), $coupon);
     }
-
 }

@@ -51,7 +51,7 @@ class Events extends Base
 
         $val->add('fee', '女子会参加費')
             ->add_rule('valid_string','numeric')
-            ->add_rule('numeric_between',50, 9999999);
+            ->add_rule('numeric_between', 0, 9999999);
 
         $val->add('coupon_code', 'クーポンコード')
             ->add_rule('required_with', 'discount');
@@ -62,7 +62,7 @@ class Events extends Base
 
         $val->add('limit', '定員')
             ->add_rule('valid_string', 'numeric')
-            ->add_rule('numeric_between',0, 1000);
+            ->add_rule('numeric_between', 0, 1000);
 
         $val->add('creditch', '決済方法');
 
