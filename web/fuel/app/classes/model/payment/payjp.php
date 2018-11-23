@@ -1,10 +1,8 @@
 <?php
 
-namespace Model;
+namespace Model\Payment;
 
-require_once(dirname(__FILE__) . "/base.php");
-
-class Payment extends Base
+class Payjp
 {
 
     /**

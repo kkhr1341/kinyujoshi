@@ -1,7 +1,8 @@
 <?php
 
 use \Model\UserCreditCard;
-use \Model\Payment;
+use \Model\PaymentPayjp;
+use \Model\Payment\Payjp;
 use \Model\Withdrawalreasons;
 
 class Controller_My_Account extends Controller_Mybase
@@ -43,13 +44,16 @@ class Controller_My_Account extends Controller_Mybase
         }
         if (!$cardIds = UserCreditCard::lists($username)) {
         }
-        $payment = new Payment($private_key);
-        if (!$customer = $payment->getCustomer($username)) {
-            return array();
-        }
+
+        \Config::load('payjp', true);
+        $payment = new PaymentPayjp(new Payjp(\Config::get('payjp.private_key')));
+
+//        if (!$customer = $payment->getCustomer($username)) {
+//            return array();
+//        }
         $cards = array();
         foreach ($cardIds as $cardId) {
-            if ($card = $payment->getCard($customer, $cardId)) {
+            if ($card = $payment->getCard($username, $cardId)) {
                 $cards[] = $card;
             }
         }

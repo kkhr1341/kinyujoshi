@@ -51,16 +51,16 @@ class EventCoupons extends Base
         return $total->execute()->as_array();
     }
 
-    public static function getByEventCodeAndCouponCode($event_code, $coupon_code)
-    {
-        $total = \DB::select('*')
-            ->from('event_coupons')
-            ->where('disable', '=', 0)
-            ->where('coupon_code', '=', $coupon_code)
-            ->where('event_code', '=', $event_code);
-
-        return $total->execute()->current();
-    }
+//    public static function getByEventCodeAndCouponCode($event_code, $coupon_code)
+//    {
+//        $total = \DB::select('*')
+//            ->from('event_coupons')
+//            ->where('disable', '=', 0)
+//            ->where('coupon_code', '=', $coupon_code)
+//            ->where('event_code', '=', $event_code);
+//
+//        return $total->execute()->current();
+//    }
 
     public static function getDiscount($event_code, $coupon_code)
     {

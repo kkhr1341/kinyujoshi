@@ -6,7 +6,8 @@ use \Model\Blogs;
 use \Model\Profiles;
 use \Model\Applications;
 use \Model\UserCreditCard;
-use \Model\Payment;
+use \Model\PaymentPayjp;
+use \Model\Payment\Payjp;
 
 class Controller_Kinyu_Event extends Controller_Kinyubase
 {
@@ -116,6 +117,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
+
+        $username = \Auth::get('username');
+        $profile = Profiles::get($username);
+        $this->data['user'] = array(
+            'name' => $profile['name'],
+            'email' => \Auth::get('email'),
+        );
 
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code);
@@ -299,13 +307,15 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         }
         if (!$cardIds = UserCreditCard::lists($username)) {
         }
-        $payment = new Payment($private_key);
-        if (!$customer = $payment->getCustomer($username)) {
-            return array();
-        }
+        \Config::load('payjp', true);
+        $payment = new PaymentPayjp(new Payjp(\Config::get('payjp.private_key')));
+
+//        if (!$customer = $payment->getCustomer($username)) {
+//            return array();
+//        }
         $cards = array();
         foreach ($cardIds as $cardId) {
-            if ($card = $payment->getCard($customer, $cardId)) {
+            if ($card = $payment->getCard($username, $cardId)) {
                 $cards[] = $card;
             }
         }

@@ -1,6 +1,6 @@
 <?php
 
-use \Model\Payment;
+use \Model\Payment\Payjp;
 
 class Controller_Api_Creditcards extends Controller_Apibase
 {
@@ -11,7 +11,7 @@ class Controller_Api_Creditcards extends Controller_Apibase
         // 与信
         \Config::load('payjp', true);
 
-        $payment = new Payment(\Config::get('payjp.private_key'));
+        $payment = new Payjp(\Config::get('payjp.private_key'));
         if (!$username = \Auth::get('username')) {
             return $this->error("削除に失敗しました。");
         }
