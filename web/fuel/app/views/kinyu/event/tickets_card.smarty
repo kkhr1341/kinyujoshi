@@ -26,22 +26,17 @@
 
         <div class="fee-open-el">
           <label>カード番号</label>
-          {if (in_array('user', $roles) || in_array('admin', $roles)) && count($cards) > 0}
-            <p class="select-before-title">・利用可能なクレジットカード</p>
-            <select id="cardselect" name="cardselect">
-                {foreach from=$cards key="key" item=card name=loopname}
-                  <option value="{$card.id}">{$card.label}</option>
-                {/foreach}
-              <option value="0">新しいカードで決済する</option>
-            </select>
-            <div class="newcards">
-              <p class="select-before-title">・新しいカード番号を入力してください</p>
-              <input type="text" class="number" name="number" maxlength="16" placeholder="">
-            </div>
-          {else}
-            <input type="hidden" id="cardselect" name="cardselect" value="0">
+          <p class="select-before-title">・利用可能なクレジットカード</p>
+          <select id="cardselect" name="cardselect">
+              {foreach from=$cards key="key" item=card name=loopname}
+                <option value="{$card.id}">{$card.label}</option>
+              {/foreach}
+            <option value="0">新しいカードで決済する</option>
+          </select>
+          <div class="newcards">
+            <p class="select-before-title">・新しいカード番号を入力してください</p>
             <input type="text" class="number" name="number" maxlength="16" placeholder="">
-          {/if}
+          </div>
         </div>
 
         <div class="no-regist-el">
@@ -112,7 +107,6 @@
 <script>
     (function() {
 
-
         $('.cancel-button-area').click(function() {
           // もしチェックが入っていたら
           if ($('input[name="cancel_check"]').prop('checked')) {
@@ -126,8 +120,6 @@
             $(".cancel-button-area").addClass("checked-input");
           }
         });
-
-
 
         // 新しいクレジットカード番号入力の表示・非表示切り替え
         function toggleNewCardNumber(cat) {
