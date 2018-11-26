@@ -48,9 +48,10 @@ class Controller_Admin_Registlist extends Controller_Adminbase
 
     public function action_detail($code)
     {
-        if (!Auth::has_access('registlist.read')) {
+        if (!Auth::has_access('registlist.read') || !$this->is_from_company()) {
             throw new HttpNoAccessException;
         }
+
         $this->data['registlist'] = Regist::lists();
 
         $username = Registlist::getUsername($code);
@@ -80,7 +81,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
 
     public function action_memberlist()
     {
-        if (!Auth::has_access('registlist.read')) {
+        if (!Auth::has_access('registlist.read') || !$this->is_from_company()) {
             throw new HttpNoAccessException;
         }
 
