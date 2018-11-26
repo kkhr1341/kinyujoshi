@@ -18,7 +18,31 @@
 {/if}
 
 
-<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20181023232128image.jpg) center center / cover no-repeat;">
+<div class="swiper-slide pc" style="background: url(/images/advertisement/PC.png) center center / cover no-repeat;">
+  <a class="js-track" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank" data-category="slide-link" data-action="click" data-value="2">
+    <div class="kinyu-top-list-kind">
+    </div>
+    <div class="kinyu-top-promotion-label">
+        <img src="/images/pr_label_pc.png">
+    </div>
+  </a>
+</div>
+
+<div class="swiper-slide sp" style="background: url(/images/advertisement/SP.png) center center / cover no-repeat;">
+  <a class="js-track" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"  data-category="slide-link" data-action="click" data-value="2">
+    <div class="kinyu-top-list-kind">
+    </div>
+    <div class="kinyu-top-promotion-label">
+        <img src="/images/pr_label_pc.png">
+    </div>
+  </a>
+</div>
+
+
+
+
+
+<!-- <div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20181023232128image.jpg) center center / cover no-repeat;">
   <a class="js-track" href="https://kinyu-joshi.jp/joshikai/Ig4Xnz" data-category="slide-link" data-action="click" data-value="2">
     <div class="kinyu-top-list-kind">
     </div>
@@ -26,7 +50,7 @@
         <h3 class="kinyu-top-list-title">きんゆうヨガ　〜お金とわたしと向き合う時間〜</h3>
     </div>
   </a>
-</div>
+</div> -->
 
 {foreach from=$blogs_pick item=blog name=loopname}
 
@@ -48,3 +72,22 @@
   </div>
 
 {/foreach}
+
+
+<style>
+  .kinyu-top-promotion-label {
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .kinyu-top-promotion-label img {
+    width: 200px;
+  }
+
+@media screen and (min-width:800px) {
+  .kinyu-top-promotion-label img {
+    width: 170px;
+  }
+}
+
+</style>
