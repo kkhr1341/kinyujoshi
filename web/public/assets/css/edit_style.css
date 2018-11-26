@@ -4860,7 +4860,7 @@ footer {
   z-index: 1007;
 }
 .celebration-message {
-  display: none;
+  display: block;
   width: 100%;
   height: 100%;
   background: rgba(238, 233, 223, .9);
@@ -4950,7 +4950,106 @@ footer {
   opacity: .5;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　広告ポップアップ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#canvas.active {
+  z-index: 1007;
+}
+.ad-popup {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(238, 233, 223, .9);
+  /*background: rgba(255, 255, 255, .9);*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+.ad-popup-main-block-container {
+  display: block;
+  position: relative;
+  z-index: 1010;
+}
+.ad-popup-main-block {
+  width: 600px;
+  height: 550px;
+  background: #fff;
+  padding: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -300px;
+  display: table;
+  box-shadow:
+}
+.ad-popup-main-block .main-block-inner {
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid #8ddcd1;
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  background: rgba(255,255,255,1);
+  position: relative;
+}
+.ad-popup-main-block .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 35px;
+}
+.ad-popup-main-block .close-btn img {
+  width: 100%;
+}
+.ad-popup-main-block .message01 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+.ad-popup-main-block .message02 {
+  width: 50%;
+}
+.ad-popup-description {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0px;
+  border-top: 1px solid #ddd2c0;
+  border-bottom: 1px solid #ddd2c0;
+  margin-top: 12px;
+  margin-bottom: 36px;
+  background: rgba(248, 246, 242, 0.5);
+}
+.ad-popup-description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.ad-popup-main-block .message03 {
+  width: 70%;
+}
+.ad-popup1206-to-link-top {
+  display: block;
+  width: 50%;
+  font-size: 13px;
+  padding: 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  background: #8ddcd1;
+  color: #fff;
+  font-weight: bold;
+  transition: .8s;
+}
+.celebration1206-to-link-top;hover {
+  opacity: .5;
+}
 
+.ad-img {
+  width: 100%;
+}
 
 @media screen and (min-width: 640px) {
 

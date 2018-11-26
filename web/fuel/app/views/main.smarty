@@ -81,7 +81,45 @@
       </div>
     </div> -->
 
+    <!-- 広告ポップアップ-->
+       <div class="ad-popup"></div>
+       <div class="ad-popup-main-block-container">
+         <div class="ad-popup-main-block">
+           <div class="main-block-inner">
+             <a class="" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"><img class="pc ad-img" src="/images/advertisement/PC.png"></a>
+             <a class="" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"><img class="sp ad-img" src="/images/advertisement/SP.png"></a>
+             <p id="ad-popup-message-close" class="close-btn"><img src="/images/close-btn.png"></p>
+           </div>
+         </div>
+       </div>
+
     {literal}
+<!-- ポップアップ広告-js -->
+    <script type="text/javascript">
+      $(function() {
+        $("#ad-popup-message-close").click(function() {
+          $(".ad-popup").fadeOut(500);
+          $(".ad-popup-main-block-container").fadeOut(500);
+          $('#canvas').removeClass("active");
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(function(){
+        if($.cookie("access")){
+        }else{
+          $('#canvas').addClass("active");
+          setTimeout(function(){
+            $('.ad-popup').fadeIn(1000);
+            $('.ad-popup-main-block-container').fadeIn(1000);
+          },3000);
+
+        }
+        $(window).load(function(){
+          $.cookie("access","foo", { expires: 2 });
+        })
+      });
+    </script>
 
     <!-- 1500人達成イベント-js -->
     <!-- <script type="text/javascript">
