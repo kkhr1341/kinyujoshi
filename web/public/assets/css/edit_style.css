@@ -617,9 +617,6 @@
 .kinyu-top-introlist-pickup .swiper-wrapper {
   transition: .5s;
 }
-.kinyu-top-introlist-pickup .swiper-slide {
-  transition: .5s;
-}
 .kinyu-top-introlist-pickup .swiper-arrow {
   position: absolute;
   bottom: 50%;
