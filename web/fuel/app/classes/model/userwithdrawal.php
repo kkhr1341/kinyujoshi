@@ -199,4 +199,24 @@ class Userwithdrawal extends Base
             throw $e;
         }
     }
+
+    public static function list01()
+    {
+        $select = '';
+        $select .= 'user_withdrawal_reasons.created_at,';
+        $select .= 'GROUP_CONCAT(ifnull ((select reason_text from user_withdrawal_reason_texts where user_withdrawal_reason_texts.user_withdrawal_reason_code = user_withdrawal_reasons.code), withdrawal_reasons.name)) as message';
+
+        $datas = \DB::select(\DB::expr($select))
+            ->from('user_withdrawal')
+            ->join('user_withdrawal_reasons')
+            ->on('user_withdrawal_reasons.user_withdrawal_code', '=', 'user_withdrawal.code')
+            ->join('withdrawal_reasons')
+            ->on('withdrawal_reasons.code', '=', 'user_withdrawal_reasons.withdrawal_reason_code')
+            ->group_by('user_withdrawal.code')
+            ->execute()
+            ->as_array();
+
+        return $datas;
+    }
+
 }
