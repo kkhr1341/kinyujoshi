@@ -55,13 +55,21 @@ class Applications extends Base
      */
     public static function get_next_events_applications($username)
     {
-        $datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, applications.event_code, events.*'))->from('applications')
+
+        $select = '';
+        $select .= 'applications.code as application_code, ';
+        $select .= 'exists(select "x" from application_cancels where applications.code = application_cancels.application_code) as cancel,';
+        $select .= 'applications.event_code, ';
+        $select .= 'events.*';
+
+        $datas = \DB::select(\DB::expr($select))
+            ->from('applications')
             ->join('events')
             ->on('applications.event_code', '=', 'events.code')
             ->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'))
             ->where('applications.username', '=', $username)
             ->where('applications.disable', '=', 0)
-            ->where('applications.cancel', '=', 0)
+            ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->order_by('event_date', 'asc')
             ->execute()
             ->as_array();
@@ -75,13 +83,19 @@ class Applications extends Base
      */
     public static function get_prev_events_applications($username)
     {
-        $datas = \DB::select(\DB::expr('applications.code as application_code, applications.cancel, applications.event_code, events.*'))->from('applications')
+        $select = '';
+        $select .= 'applications.code as application_code,';
+        $select .= 'exists(select "x" from application_cancels where applications.code = application_cancels.application_code) as cancel,';
+        $select .= 'applications.event_code,';
+        $select .= 'events.*';
+
+        $datas = \DB::select(\DB::expr($select))->from('applications')
             ->join('events')
             ->on('applications.event_code', '=', 'events.code')
             ->where('event_date', '<', \DB::expr('NOW() - INTERVAL 1 DAY'))
             ->where('applications.username', '=', $username)
             ->where('applications.disable', '=', 0)
-            ->where('applications.cancel', '=', 0)
+            ->where(\DB::expr('not exists(select "x" from application_credit_payment_cancels where applications.code = application_credit_payment_cancels.application_code)'))
             ->order_by('event_date', 'asc')
             ->execute()
             ->as_array();
@@ -100,8 +114,8 @@ class Applications extends Base
         $select .= 'member_regist.code as member_regist_code, ';
         $select .= 'member_regist.not_know, ';
         $select .= 'applications.*, ';
-        $select .= 'application_credit_payments.sale, ';
-        $select .= 'application_credit_payments.cancel as payment_cancel, ';
+        $select .= 'exists(select "x" from application_credit_payment_sales where applications.code = application_credit_payment_sales.application_code) as sale,';
+        $select .= 'exists(select "x" from application_credit_payment_cancels where applications.code = application_credit_payment_cancels.application_code) as payment_cancel,';
         $select .= '(select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at, ';
         $select .= '(select pa.created_at from participated_applications as pa where pa.application_code = applications.code) as participated, ';
         $select .= '(select count(*) from applications as tp inner join participated_applications as pa on pa.application_code = tp.code where applications.username != "guest" and applications.username = tp.username) as application_count,';
@@ -115,13 +129,11 @@ class Applications extends Base
             ->on('member_regist.username', '=', 'users.username')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'users.username')
-            ->join('application_credit_payments', 'LEFT')
-            ->on('applications.code', '=', 'application_credit_payments.application_code')
             ->join(array(\DB::expr('select max(id) as id, username from diagnostic_chart_type_users group by username'), 'types'), 'LEFT')
             ->on('types.username', '=', 'member_regist.username')
             ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
-            ->where('applications.cancel', '=', 0)
+            ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->order_by('applications.created_at','asc')
             ->execute()
             ->as_array();
@@ -131,7 +143,20 @@ class Applications extends Base
 
     public static function get_cancel_applications_by_code($code)
     {
-        $datas = \DB::select(\DB::expr('ifnull(profiles.name, applications.name)as name, profiles.profile_image, ifnull(users.email, applications.email) as email, profiles.birthday, member_regist.code as member_regist_code, applications.*, application_credit_payments.sale, application_credit_payments.cancel as payment_cancel, (select ac.created_at from application_cancels as ac where ac.application_code = applications.code) as cancel_at, (select acpc.created_at from application_credit_payment_cancels as acpc where acpc.application_code = applications.code) as payment_cancel_at'))
+
+        $select = '';
+        $select .= 'ifnull(profiles.name, applications.name)as name, ';
+        $select .= 'profiles.profile_image, ';
+        $select .= 'ifnull(users.email, applications.email) as email, ';
+        $select .= 'profiles.birthday, ';
+        $select .= 'member_regist.code as member_regist_code, ';
+        $select .= 'applications.*, ';
+        $select .= 'exists(select "x" from application_credit_payment_sales where applications.code = application_credit_payment_sales.application_code) as sale,';
+        $select .= 'exists(select "x" from application_credit_payment_cancels where applications.code = application_credit_payment_cancels.application_code) as payment_cancel,';
+        $select .= '(select ac.created_at from application_cancels as ac where ac.application_code = applications.code) as cancel_at, ';
+        $select .= '(select acpc.created_at from application_credit_payment_cancels as acpc where acpc.application_code = applications.code) as payment_cancel_at';
+
+        $datas = \DB::select(\DB::expr($select))
             ->from('applications')
             ->join('users', 'LEFT')
             ->on('applications.username', '=', 'users.username')
@@ -139,11 +164,9 @@ class Applications extends Base
             ->on('member_regist.username', '=', 'users.username')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'users.username')
-            ->join('application_credit_payments', 'LEFT')
-            ->on('applications.code', '=', 'application_credit_payments.application_code')
             ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
-            ->where('applications.cancel', '=', 1)
+            ->where(\DB::expr('exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->order_by('applications.created_at','asc')
             ->execute()
             ->as_array();
@@ -156,16 +179,14 @@ class Applications extends Base
      * @param unknown $code
      * @return boolean
      */
-    public static function join_status($code)
+    public static function join_status($code, $username)
     {
-
-        $username = \Auth::get('username');
-
-        $data = \DB::select('*')->from('applications')
-            ->where('event_code', '=', $code)
-            ->where('username', '=', $username)
-            ->where('cancel', '=', 0)
-            ->where('disable', '=', 0)
+        $data = \DB::select('*')
+            ->from('applications')
+            ->where('applications.event_code', '=', $code)
+            ->where('applications.username', '=', $username)
+            ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
+            ->where('applications.disable', '=', 0)
             ->execute()
             ->current();
 
@@ -183,7 +204,7 @@ class Applications extends Base
         $select = '';
         $select .= 'ifnull(users.email, applications.email) as email,';
         $select .= 'applications.event_code,';
-        $select .= 'applications.cancel,';
+        $select .= 'exists(select "x" from application_cancels where applications.code = application_cancels.application_code) as cancel,';
         $select .= 'applications.username,';
         $select .= 'profiles.name';
 
@@ -289,7 +310,7 @@ class Applications extends Base
         $select = '';
         $select .= 'ifnull(users.email, applications.email) as email,';
         $select .= 'applications.event_code,';
-        $select .= 'applications.cancel,';
+        $select .= 'exists(select "x" from application_cancels where applications.code = application_cancels.application_code) as cancel,';
         $select .= 'applications.username,';
         $select .= 'profiles.name';
 
@@ -373,20 +394,19 @@ class Applications extends Base
      */
     private static function completed($event_code, $username, $email = '')
     {
-
         if ($username == 'guest') {
             // 既存のデータがないか確認
             $data = \DB::select('*')->from('applications')
-                ->where('event_code', '=', $event_code)
-                ->where('username', '=', $username)
-                ->where('email', '=', $email)
-                ->where('cancel', '=', 0)
-                ->where('disable', '=', 0)
+                ->where('applications.event_code', '=', $event_code)
+                ->where('applications.username', '=', $username)
+                ->where('applications.email', '=', $email)
+                ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
+                ->where('applications.disable', '=', 0)
                 ->execute()
                 ->current();
         } else {
             // 既存のデータがないか確認
-            $data = self::join_status($event_code);
+            $data = self::join_status($event_code, $username);
         }
         if (empty($data)) {
             return false;
@@ -403,9 +423,9 @@ class Applications extends Base
     {
         $result = \DB::select(\DB::expr('COUNT(*) as count'))
             ->from('applications')
-            ->where('event_code', '=', $event_code)
-            ->where('cancel', '=', 0)
-            ->where('disable', '=', 0)
+            ->where('applications.event_code', '=', $event_code)
+            ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
+            ->where('applications.disable', '=', 0)
             ->execute();
         $result_arr = $result->current();
         return $result_arr['count'];

@@ -109,18 +109,18 @@ class Events extends Base
     {
         $event = parent::getByCode($table, $code);
         $event['applicable'] = self::is_applicable_by_event_date($event['event_date'], $event['event_start_datetime']);
-        $application_num = self::getApplicationNum($code);
+        $application_num = self::get_application_num($code);
 
         $event['full'] = $application_num >= $event['limit'] ? true: false;
         return $event;
     }
 
-    private static function getApplicationNum($code)
+    private static function get_application_num($code)
     {
         $total = \DB::select(\DB::expr('count(*) as cnt'))
             ->from('applications')
             ->where('event_code', '=', $code)
-            ->where('cancel', '=', 0)
+            ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->where('disable', '=', 0);
 
         $data = $total->execute()->current();
@@ -129,9 +129,18 @@ class Events extends Base
 
     public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc", $display=1, $username = null)
     {
-        $select = '*';
-        $select .= ', events.code';
-        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+        $select = '*, ';
+        $select .= 'events.code, ';
+        $select .= '(
+                select 
+                        count(*) 
+                    from 
+                        applications 
+                    where 
+                        applications.event_code = events.code and 
+                        applications.disable = 0 and 
+                        not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+                    ) as application_num';
 
         $datas = \DB::select(\DB::expr($select))
             ->from('events')
@@ -194,9 +203,18 @@ class Events extends Base
      */
     public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1, $sort="asc")
     {
-        $select = '*';
-        $select .= ', events.code';
-        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+        $select = '*, ';
+        $select .= 'events.code, ';
+        $select .= '(
+                select 
+                        count(*) 
+                    from 
+                        applications 
+                    where 
+                        applications.event_code = events.code and 
+                        applications.disable = 0 and
+                        not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+                ) as application_num';
         $datas = \DB::select(\DB::expr($select))
             ->from('events')
             ->join('profiles', 'left')
@@ -254,9 +272,19 @@ class Events extends Base
      */
     public static function lists03()
     {
-        $select = '*';
-        $select .= ', events.code';
-        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+        $select = '*, ';
+        $select .= 'events.code, ';
+
+        $select .= '(
+            select 
+                    count(*) 
+                from 
+                    applications 
+                where 
+                    applications.event_code = events.code and 
+                    applications.disable = 0 and 
+                    not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+        ) as application_num';
 
         return \DB::select(\DB::expr($select))
             ->from('events')
@@ -305,7 +333,6 @@ class Events extends Base
         return $data;
     }
 
-
     public static function save($params)
     {
         $data = array();
@@ -346,8 +373,6 @@ class Events extends Base
 
     public static function delete($params)
     {
-
-//        $username = \Auth::get('username');
         \DB::update('events')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
 
         return $params;
@@ -437,9 +462,17 @@ class Events extends Base
 
         $pagination = \Pagination::forge('mypagination', $config);
 
-        $select = '*';
-        $select .= ', events.code';
-        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+        $select = 'events.*, ';
+        $select .= '(
+                select 
+                        count(*) 
+                    from 
+                        applications 
+                    where 
+                        applications.event_code = events.code and 
+                        applications.disable = 0 and 
+                        not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+                ) as application_num';
 
         $datas['datas'] = \DB::select(\DB::expr($select))
             ->from('events')

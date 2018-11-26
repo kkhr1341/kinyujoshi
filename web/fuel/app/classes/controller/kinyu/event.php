@@ -84,9 +84,10 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
                 }
             }
         }
+        $username = \Auth::get('username');
 
         $this->template->title = $this->data['event']['title'];
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->data['event_row'] = Events::getByCode('events', $code);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -126,7 +127,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         );
 
         $this->template->title = 'イベント詳細｜きんゆう女子。';
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->data['event_row'] = Events::getByCode('events', $code);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -173,7 +174,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         );
 
         $this->template->title = 'イベント詳細｜きんゆう女子。';
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
@@ -210,9 +211,10 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         } else {
             $this->data['discount'] = 0;
         }
+        $username = \Auth::get('username');
 
         $this->template->title = 'イベント詳細｜きんゆう女子。';
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
@@ -247,12 +249,14 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     public function action_tickets_cash($code)
     {
         \Config::load('payjp', true);
+        $username = \Auth::get('username');
+
         $this->data['payjp_public_key'] = \Config::get('payjp.public_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
         $this->template->title = 'イベント詳細｜きんゆう女子。';
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->data['event_row'] = Events::getByCode('events', $code);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);

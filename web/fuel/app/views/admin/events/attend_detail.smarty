@@ -44,7 +44,6 @@
                 <div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat">
             {/if}
         </td>
-        <td>{$application.username}</td>
         <td>{$application.name}</td>
         <td>{$application.type}</td>
         <td>
