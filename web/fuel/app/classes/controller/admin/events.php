@@ -87,7 +87,7 @@ class Controller_Admin_Events extends Controller_Adminbase
 
     public function action_memberlist($code)
     {
-        if (!Auth::has_access('applications.read')) {
+        if (!Auth::has_access('applications.read') || !$this->is_from_company()) {
             throw new HttpNoAccessException;
         }
         $csv_name = Date("Y-m-d") . '.csv';

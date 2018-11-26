@@ -29,7 +29,9 @@
 
     <div class="clearw float_right" style="margin-bottom: 24px;">
     	<a class="btn btn-primary" id="broadcast_mail" href="#" role="button">メールを一斉送信する</a>
+    	{if $from_company==TRUE}
     	<a class="btn btn-primary" id="download_csv" href="/admin/joshikai/memberlist/{$events.code}" role="button">CSVダウンロード</a>
+        {/if}
     </div>
 
     <table class="table joshikai-attend-detail-table">
@@ -61,7 +63,7 @@
         <td class="link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
 
-          {if $application.username != 'guest'}
+          {if $application.username != 'guest' && $from_company==TRUE}
             <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
 
@@ -120,7 +122,7 @@
         </td>
         <td class="link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
-          {if $application.username != 'guest'}
+          {if $application.username != 'guest' && $from_company==TRUE}
           <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
           {if $application.sale neq '1' && $application.payment_cancel eq '0'}
