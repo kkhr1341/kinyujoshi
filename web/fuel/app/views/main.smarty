@@ -76,9 +76,10 @@
              <a class="" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"><img class="pc ad-img" src="/images/advertisement/PC.png"></a>
              <a class="" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"><img class="sp ad-img" src="/images/advertisement/SP.png"></a>
              <div class="kinyu-top-promotion-label"><img src="/images/pr_label_pc.png"></div>
+             <p class="pr-text">[PR]</p>
            </div>
 
-             <p id="ad-popup-message-close" class="close-btn"><img src="/images/close-btn.png"></p>
+             <p id="ad-popup-message-close" class="close-btn" style="cursor:pointer;"><img src="/images/ad-close-btn.png"></p>
            </div>
          </div>
        </div>
