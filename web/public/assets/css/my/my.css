@@ -18,6 +18,15 @@
   margin-bottom: 36px;
 }
 
+.my-maincontent-last {
+  margin-bottom: 0px;
+}
+
+.my-side-edit {
+  width: 20px;
+  height: 20px;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   マイページ - メンバー限定女子会
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -67,6 +76,113 @@
   font-weight: bold;
   margin-top: 8px;
 }
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - お役立ちコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/* トップのみ */
+.my-top-content .useful-main-box-el {
+  background: #f9f9f9;
+  padding: 30px;
+  margin-bottom: 0px;
+}
+.my-top-content .useful-main-box-el-inner .text-main-box .text-main-description {
+  font-size: 11px;
+  line-height: 18px;
+}
+.my-top-content .ab-moneynote .useful-main-link {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.my-useful .mypage-content-title {
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+.useful-main-box-el {
+  background: #fff;
+  margin-bottom: 40px;
+  padding: 42px;
+}
+.useful-main-box-el-inner {
+}
+.useful-main-box-el-inner .img-box {
+  width: 32%;
+  /*height: 200px;*/
+  float: left;
+}
+.useful-main-box-el-inner .img-box img {
+  width: 100%;
+}
+.useful-main-box-el-inner .text-main-box {
+  width: 64%;
+  float: right;
+  padding-left: 24px;
+  /*border-left: 1px solid #ececec;*/
+}
+.useful-main-box-el-inner .text-main-box .sub-title {
+  font-family: 'Allura', cursive;
+  font-size: 16px;
+  line-height: 16px;
+  color: gray;
+}
+.useful-main-box-el-inner .text-main-box .text-main-title {
+  font-size: 18px;
+  line-height: 18px;
+  padding: 8px 0px 12px;
+  font-weight: bold;
+}
+.useful-main-box-el-inner .text-main-box .text-main-description {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.useful-main-box-el-inner .text-main-box .text-main-company {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 16px;
+}
+.useful-main-box-el-inner .text-main-box .text-main-company a {
+  font-size: 11px;
+  line-height: 16px;
+  color: #5499d8;
+}
+.useful-main-box-el .useful-main-link {
+  display: block;
+  width: 350px;
+  background: gray;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 24px;
+  position: relative;
+}
+.useful-main-box-el .useful-main-link:after {
+  content: "〉";
+  position: absolute;
+  right: 0;
+
+}
+/* ユニーク・セレクタ */
+.ab-moneynote .useful-main-link {
+  background: #edf1f0;
+}
+.ab-moneynote .text-main-title {
+  color: #e64699;
+}
+.ab-moneynote .text-main-box {
+  border-left: 1px solid #fb0081;
+}
+
+
+
+
+
+
+
 
 
 .mykinjo-block .text-box {
@@ -883,6 +999,22 @@ footer {
   background: #fff;
   margin-bottom: 24px;
   padding: 20px;
+  position: relative;
+}
+.side-profile-block .my-side-edit {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transition: .5s;
+}
+.side-profile-block .my-side-edit:hover {
+  background: #fff;
+  opacity: .5;
+}
+.side-profile-block .my-side-edit img {
+  width: 100%;
 }
 .side-profile-block .img-box {
   display: block;
@@ -908,11 +1040,24 @@ footer {
     text-align: center;
     margin-bottom: 8px;
     position: relative;
+    position: relative;
+    transition: .5s;
 }
 .admin-normal-side .menu-list li a {
     display: block;
     padding: 8px 0px;
     transition: .5s;
+}
+.admin-normal-side .menu-list li p {
+    display: block;
+    padding: 8px 0px;
+    transition: .5s;
+}
+.admin-normal-side .menu-list li.no-btn:hover {
+  cursor: not-allowed;
+}
+.admin-normal-side .menu-list li.no-btn:hover p {
+  opacity: .3;
 }
 
 .admin-normal-side .menu-list li a span {
@@ -932,6 +1077,31 @@ footer {
 
 .admin-normal-side .menu-list li.active {
     background: #a6e9d9;
+}
+
+/* カミングスーン */
+.admin-normal-side .menu-list li .comming{
+  display: none;
+  background: #8ddcd1;
+  position: absolute;
+  right: -20px;
+  top: -10px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #fff;
+}
+.admin-normal-side .menu-list li .comming:after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: -10px;
+  margin-top: -15px;
+  border: 8px solid transparent;
+  border-top: 12px solid #8ddcd1;
+  z-index: 0;
+  -ms-transform: rotate(48deg);
+  -webkit-transform: rotate(48deg);
+  transform: rotate(48deg);
 }
 
 .side-check-block {

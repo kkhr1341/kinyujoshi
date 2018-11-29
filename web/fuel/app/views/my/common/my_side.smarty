@@ -25,6 +25,8 @@
 
   <div class="side-profile-block">
 
+    <a class="my-side-edit" href="/my/profile"><img src="/images/my/edit.png"></a>
+
     <!-- プロフィール画像 -->
     <div class="img-box"
       {if $profile.profile_image == ''}
@@ -35,7 +37,7 @@
       {/if}
     ></div>
     <p class="name">{$profile.nickname}</p>
-    <p class="copy">一言キャッチコピー</p>
+    <p class="copy">{$profile.catchcopy}</p>
 
     <!-- きん女。チェック部分 -->
     {if $user_type}
@@ -54,11 +56,25 @@
   </div>
 
   <ul class="menu-list">
-    <!-- <li><a href="/my">マイページ・トップ</a></li> -->
-    <li><a href="/my">教えて！きん女。</a></li>
+    <li><a href="/my">マイページ・トップ</a></li>
     <li><a href="/my/report">お気に入り</a></li>
-    <li><a href="/my">Pick up!</a></li>
+    <li><a href="/my/useful">お役立ちツール</a></li>
+    <li class="no-btn"><p>教えて！きん女。</p><div class="comming">comming soon...</div></li>
+    <li class="no-btn"><p>Pick up!</p><div class="comming">comming soon...</div></li>
     <li><a href="/my/account">設定</a></li>
     <li><a href="/logout">ログアウト</a></li>
   </ul>
 </div>
+
+<script>
+  $(function(){
+
+    $(".admin-normal-side .menu-list li.no-btn").hover(function() {
+       $(this).children("div").fadeToggle();
+    });
+  });
+
+//$("#parent").children('img');
+
+
+</script>

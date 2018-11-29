@@ -1,5 +1,10 @@
 <?php
 
+use \Model\Applications;
+use \Model\DiagnosticChartTypeUsers;
+use \Model\DiagnosticChartRouteTypeHashTags;
+use \Model\DiagnosticChartRouteTypeActionLists;
+
 class Controller_My_Profile extends Controller_Mybase
 {
 

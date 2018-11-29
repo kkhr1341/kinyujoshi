@@ -3,6 +3,9 @@
 use \Model\Events;
 use \Model\Sections;
 use \Model\Applications;
+use \Model\DiagnosticChartTypeUsers;
+use \Model\DiagnosticChartRouteTypeHashTags;
+use \Model\DiagnosticChartRouteTypeActionLists;
 
 class Controller_My_Useful extends Controller_Mybase
 {
@@ -18,8 +21,13 @@ class Controller_My_Useful extends Controller_Mybase
         $this->template->description = 'お役立ちツール｜きん女。マイページ';
         $this->template->title = 'お役立ちツール｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->contents = View::forge('my/useful/index.smarty', $this->data);
+        $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+        $this->template->my_side = View::forge('my/common/my_side.smarty', array(
+            'user_type' => $user_type,
+            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
+            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+        ));
     }
 
 

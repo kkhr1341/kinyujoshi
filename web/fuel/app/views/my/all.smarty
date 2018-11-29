@@ -1,9 +1,10 @@
+
 <div class="admin-normal-container kinjo-check01">
   <div class="admin-normal-inner clear">
 
     {$my_side}
 
-    <div class="admin-normal-main">
+    <div class="admin-normal-main my-top-content">
 
       {*
       {$kinjo_check}
@@ -19,7 +20,7 @@
               {$fooo = $application.main_image}
               {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
                 <li>
-                  <a href="/my/joshikai/{$application.application_code}" class="clear">
+                  <a href="/my/joshikai/{$application.application_code}" class="clear" target="_blank">
                     <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
                     <div class="text-box">
                       <div class="text-box-inner">
@@ -46,18 +47,18 @@
         </div>
 
         <!-- メンバー限定レポート -->
-        <div class="my-maincontent-block my-member-report-block">
+        <div class="my-maincontent-block  my-member-report-block">
           <p class="my-content-title">メンバー限定レポート</p>
           <ul>
             {foreach from=$blogs item=blog name=loopname}
 
             {if $smarty.foreach.loopname.index == 3}
             </ul>
-              <a class="my-more-link" href="/joshikai">もっと見る ></a>
+              <a class="my-more-link" href="/joshikai" target="_blank">もっと見る ></a>
               {break}
             {/if}
             <li class="clear">
-              <a href="/report/{$blog.code}" class="clear">
+              <a href="/report/{$blog.code}" class="clear" target="_blank">
                 <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
                 <div class="text-box">
                   <div class="category-text">
@@ -87,8 +88,26 @@
         </div>
 
         <!-- お役立ちコンテンツ -->
-        <div class="my-maincontent-block">
-          <p class="my-content-title">お役立ちコンテンツ</p>
+        <div class="my-maincontent-block my-maincontent-last">
+          <p class="my-content-title">お役立ちツール</p>
+          <div class="useful-main-box">
+
+            <div class="useful-main-box-el ab-moneynote">
+              <div class="useful-main-box-el-inner clear">
+                <div class="img-box">
+                  <img src="/images/my/useful/okane-note-ab-useful1.png">
+                </div>
+                <div class="text-main-box">
+                  <p class="sub-title">useful contents1</p>
+                  <p class="text-main-title">お金に強くなるノート</p>
+                  <p class="text-main-description">お金を増やすためのキホンを1歩ずつステップアップしながら学べるノートです。全部で3冊あり、内容も深いものですが、例え話を含まれているので、分かりやすくスマホでも読みやすいようになっています。「1日1つずつ、あわてずコツコツと!」をコンセプトに少しずつ自分のペースで読んでいくことがおすすめとのこと♪</p>
+                  <p class="text-main-company">提供会社：<a href="https://www.alliancebernstein.co.jp/" target="_blank">アライアンス・バーンスタイン株式会社</a></p>
+                </div>
+              </div>
+              <a class="useful-main-link" href="http://okane-abc.jp/#textbooks" target="_blank">お金に強くなるノートはこちら</a>
+            </div>
+          </div>
+
         </div>
 
       </div>
