@@ -72,22 +72,3 @@
   </div>
 
 {/foreach}
-
-
-<style>
-  .kinyu-top-promotion-label {
-    position: absolute;
-    bottom: 30px;
-  }
-
-  .kinyu-top-promotion-label img {
-    width: 200px;
-  }
-
-@media screen and (min-width:800px) {
-  .kinyu-top-promotion-label img {
-    width: 170px;
-  }
-}
-
-</style>
