@@ -4,8 +4,8 @@
     {$my_side}
 
     <div class="admin-normal-main">
-      <div class="admin-normal-joshikai joshikailist-main admin-normal-check-joshikai">
-        <p class="admin-normal-joshikai-title">チェックしたレポート</p>
+      <div class="my-member-report-block my-member-report-block-detail">
+        <p class="my-content-title"><span>チェックしたレポート</span></p>
 
         <ul class="clear">
 
@@ -18,10 +18,29 @@
               <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
               <div class="text-box">
                 <div class="text-box-inner">
-                  <p class="date-text">
+                  <!-- <p class="date-text">
                     {$blog.open_date|date_format:"Y年m月d日"}
                   </p>
+                  <p class="title-text">{$blog.title}</p> -->
+                  <div class="category-text">
+                    {if $blog.kind == "女子会レポート"}
+                      <p>女子会レポート</p>
+                    {else if $blog.kind == "イベントレポート"}
+                      <p>イベントレポート</p>
+                    {else if $blog.kind == "取材レポート"}
+                      <p>取材レポート</p>
+                    {else if $blog.kind == "イベント告知"}
+                      <p>イベント告知</p>
+                    {else if $blog.kind == "コラム"}
+                      <p>コラム</p>
+                    {else if $blog.kind == "きんゆう散歩"}
+                      <p>きんゆう散歩</p>
+                    {else}
+                      <p>レポート</p>
+                    {/if}
+                  </div>
                   <p class="title-text">{$blog.title}</p>
+                  <p class="description-text">{$blog.description}</p>
                 </div>
               </div>
             </a>

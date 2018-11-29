@@ -14,7 +14,7 @@
 
         <!-- 参加予定の女子会 -->
         <div class="my-maincontent-block my-joshikai-join">
-          <p class="my-content-title"><!-- {$profile.nickname}さんの -->参加予定の女子会</p>
+          <p class="my-content-title"><span>参加予定の女子会</span></p>
           <ul class="clear">
             {foreach from=$applications item=application name=loopname}
               {$fooo = $application.main_image}
@@ -48,7 +48,7 @@
 
         <!-- メンバー限定レポート -->
         <div class="my-maincontent-block  my-member-report-block">
-          <p class="my-content-title">メンバー限定レポート</p>
+          <p class="my-content-title"><span>メンバー限定レポート</span></p>
           <ul>
             {foreach from=$blogs item=blog name=loopname}
 
@@ -89,7 +89,7 @@
 
         <!-- お役立ちコンテンツ -->
         <div class="my-maincontent-block my-maincontent-last">
-          <p class="my-content-title">お役立ちツール</p>
+          <p class="my-content-title"><span>お役立ちツール</span></p>
           <div class="useful-main-box">
 
             <div class="useful-main-box-el ab-moneynote">

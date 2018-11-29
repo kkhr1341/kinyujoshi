@@ -25,7 +25,7 @@
 
   <div class="side-profile-block">
 
-    <a class="my-side-edit" href="/my/profile"><img src="/images/my/edit.png"></a>
+    <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
 
     <!-- プロフィール画像 -->
     <div class="img-box"
