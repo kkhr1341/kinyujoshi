@@ -15,7 +15,7 @@
 }
 
 .my-maincontent-block {
-  margin-bottom: 36px;
+  margin-bottom: 45px;
 }
 
 .my-maincontent-last {
@@ -764,6 +764,30 @@ footer {
   padding-top: 12px;
   display: inline-block;
 }
+.non-message {
+  padding: 30px 0px;
+  background: #f9f9f9;
+}
+.non-message p {
+  text-align: center;
+  font-size: 14px;
+}
+.non-message a {
+  display: block;
+  width: 220px;
+  background: #8ddcd1;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 0px;
+  margin-top: 16px;
+  position: relative;
+  font-size: 12px;
+  color: #fff;
+}
+/* 詳細ページのみ */
+.my-member-report-block-detail .non-message {
+  background: #fff;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1036,6 +1060,7 @@ footer {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  border: 1px solid #f5f5f5;
   box-shadow: 0 0 2px 2px #fff inset;
 }
 .side-profile-block .name {
@@ -1148,6 +1173,21 @@ footer {
   line-height: 18px;
   padding-right: 16px;
   padding-left: 4px;
+}
+/* ない場合 */
+.side-check-no-block {
+  margin-top: 16px;
+}
+.side-check-no-block .check-no-title {
+  width: 92%;
+  display: block;
+  margin: 0 auto;
+}
+.side-check-no-block .check-no-link {
+  width: 92%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 8px;
 }
 
 .admin-normal-main {

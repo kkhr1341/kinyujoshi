@@ -38,10 +38,10 @@
                 </li>
               {foreachelse}
               <!-- 参加女子会がない場合 -->
-              <li>
+              <div class="non-message">
                 <p class="joshikai-no">女子会のご参加いつでもお待ちしています♪</p>
-                <a href="/joshikai#joshikai-list" class="to-link-joshikai">女子会の予定へ</a>
-              </li>
+                <a href="/joshikai" class="to-link-joshikai">女子会の予定へ</a>
+              </div>
             {/foreach}
           </ul>
         </div>

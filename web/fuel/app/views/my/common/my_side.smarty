@@ -50,7 +50,12 @@
         </a>
       </div>
     {else}
-      チェックしよう！
+      <div class="side-check-no-block">
+        <img class="check-no-title" src="/images/kinjo-check.png">
+        <a href="/kinjo_check" target="_blank">
+          <img class="check-no-link" src="/images/diagnosticchart/chart_main.jpg">
+        </a>
+      </div>
     {/if}
 
   </div>
@@ -61,7 +66,7 @@
     <li><a href="/my/useful">お役立ちツール</a></li>
     <li class="no-btn"><p>教えて！きん女。</p><div class="comming">comming soon...</div></li>
     <li class="no-btn"><p>Pick up!</p><div class="comming">comming soon...</div></li>
-    <li><a href="/my/account">設定</a></li>
+    <li><a href="/my/account">アカウント設定</a></li>
     <li><a href="/logout">ログアウト</a></li>
   </ul>
 </div>
