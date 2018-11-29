@@ -292,11 +292,11 @@
   display: none;
   width: 380px;
 }
-.fixed {
+/* .fixed {
   position: fixed;
   width: 100%;
   height: 100%;
-}
+} */
 .pc-kinyu-logo {
   width: 150px;
   display: block;
@@ -356,11 +356,11 @@
   width: 420px;
   margin-top: -10px;
 }
-.fixed {
+/* .fixed {
   position: fixed;
   width: 100%;
   height: 100%;
-}
+} */
 .pc-kinyu-logo {
   width: 150px;
   display: block;

@@ -67,7 +67,7 @@
     </div>
 
     <!-- 広告ポップアップ-->
-    <div class="ad-popup"></div>
+    <div class="ad-popup">
     <div class="ad-popup-main-block-container">
       <div class="ad-popup-main-block">
         <div class="main-block-inner">
@@ -88,6 +88,7 @@
         </div>
       </div>
     </div>
+    </div>
 
     {literal}
     <!-- ポップアップ広告-js -->
@@ -100,6 +101,7 @@
         });
       });
     </script>
+
     <script type="text/javascript">
       $(function(){
         if($.cookie("hoshino_resort_popup")){
