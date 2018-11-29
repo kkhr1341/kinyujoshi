@@ -202,7 +202,7 @@
         z-index: 1010;
       }
       .ad-popup .main-block {
-        width: 600px;
+        width: 700px;
         height: 550px;
         background: #fff;
         padding: 6px;
@@ -250,6 +250,11 @@
       }
       .ad-popup .message03 {
         width: 70%;
+      }
+      .pr-text {
+         position: absolute;
+         top:-30px;
+         left:0px;
       }
       .celebration1206-to-link-top {
         display: block;
