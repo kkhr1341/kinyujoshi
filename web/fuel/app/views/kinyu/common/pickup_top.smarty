@@ -19,7 +19,7 @@
 
 
 <div class="swiper-slide pc" style="background: url(/images/advertisement/PC.png) center center / cover no-repeat;">
-  <a class="js-track" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank" data-category="slide-link" data-action="click" data-value="2">
+  <a class="js-track js-slide-hoshino-pc" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank" data-category="slide-link" data-action="click" data-value="2">
     <div class="kinyu-top-list-kind">
     </div>
     <div class="kinyu-top-promotion-label">
@@ -29,7 +29,7 @@
 </div>
 
 <div class="swiper-slide sp" style="background: url(/images/advertisement/SP.png) center center / cover no-repeat;">
-  <a class="js-track" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"  data-category="slide-link" data-action="click" data-value="2">
+  <a class="js-track js-slide-hoshino-sp" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"  data-category="slide-link" data-action="click" data-value="2">
     <div class="kinyu-top-list-kind">
     </div>
     <div class="kinyu-top-promotion-label">
@@ -72,3 +72,26 @@
   </div>
 
 {/foreach}
+
+{literal}
+<script type="text/javascript">
+$(function(){
+  $('.js-slide-hoshino-pc').click(function() {
+    gtag('event', 'click', {
+        'event_category': 'pr',
+        'event_label': 'hoshino-slide-pc',
+        'event_action': 'link',
+        'event_value': 1,
+    });
+  });
+  $('.js-slide-hoshino-sp').click(function() {
+    gtag('event', 'click', {
+        'event_category': 'pr',
+        'event_label': 'hoshino-slide-sp',
+        'event_action': 'link',
+        'event_value': 1,
+    });
+  });
+});
+</script>
+{/literal}
