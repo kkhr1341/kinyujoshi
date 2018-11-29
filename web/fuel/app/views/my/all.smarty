@@ -5,88 +5,93 @@
 
     <div class="admin-normal-main">
 
-      <!-- <div class="admin-normal-profile">
-        <div class="img-box-block">
-          <div class="img-box"
-            {if $profile.profile_image == ''}
-              style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
-            {else}
-              style="background:url({$profile.profile_image}) center center / cover no-repeat;"
-            }
-            {/if}
-            >
-          </div>
-        </div>
-        <div class="text-box">
-          <p class="profile-name">{$profile.nickname}</p>
-          <p class="profile-catchcopy">{$profile.catchcopy}</p>
-        </div>
-      </div> -->
-
+      {*
       {$kinjo_check}
+      *}
 
-      <div class="main-menu-list sp">
-        <div class="member-profile">
+      <div class="inner">
 
+        <!-- 参加予定の女子会 -->
+        <div class="my-maincontent-block my-joshikai-join">
+          <p class="my-content-title"><!-- {$profile.nickname}さんの -->参加予定の女子会</p>
+          <ul class="clear">
+            {foreach from=$applications item=application name=loopname}
+              {$fooo = $application.main_image}
+              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+                <li>
+                  <a href="/my/joshikai/{$application.application_code}" class="clear">
+                    <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+                    <div class="text-box">
+                      <div class="text-box-inner">
+                        <p class="date-text">
+                          {if $application.display_event_date}
+                            {$application.display_event_date}
+                          {else}
+                            {$application.event_date|date_format:"Y.m.d"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+                          {/if}
+                        </p>
+                        <p class="title-text">{$application.title}</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              {foreachelse}
+              <!-- 参加女子会がない場合 -->
+              <li>
+                <p class="joshikai-no">女子会のご参加いつでもお待ちしています♪</p>
+                <a href="/joshikai#joshikai-list" class="to-link-joshikai">女子会の予定へ</a>
+              </li>
+            {/foreach}
+          </ul>
         </div>
-        <ul>
-          <li class="main-li"><a href="/my">マイページトップ</a></li>
-          <li class="main-li"><a href="/tell_me_kinjo">教えて！きん女。</a></li>
-          <li class="main-li"><a href="/tell_me_kinjo">お気に入り</a></li>
-          <li class="main-li"><a href="/pick_up">Pick up!</a></li>
-          <li class="main-li"><a href="/my/settings">設定</a></li>
 
-          <!-- <li class="main-li"><a href="/my/kinjo">参加予定の女子会</span></a></li>
-          <li class="main-li"><a href="/my/passport">きん女。パスポート</a></li>
-          <li class="main-li"><a href="/my/member_joshikai">メンバー限定女子会</a></li>
-		  <li class="main-li"><a href="/my/member_report">メンバー限定レポート</a></li>
-          <li class="main-li"><a href="/my/report">チェックしたレポート</a></li>
-          <li class="main-li"><a href="/my/profile">プロフィール編集</a></li>
-          <li class="main-li"><a href="/my/account">アカウント情報</a></li>
-          <li class="sub-li"><a href="/logout">ログアウト</a></li> -->
-        </ul>
-      </div>
+        <!-- メンバー限定レポート -->
+        <div class="my-maincontent-block my-member-report-block">
+          <p class="my-content-title">メンバー限定レポート</p>
+          <ul>
+            {foreach from=$blogs item=blog name=loopname}
 
-      <div class="admin-normal-joshikai">
-        <p class="admin-normal-joshikai-title">{$profile.nickname}さんの参加予定の女子会</p>
-        <ul class="clear">
-
-          {foreach from=$applications item=application name=loopname}
-
-            {$fooo = $application.main_image}
-            {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
-            <!-- 女子会 -->
-            <!-- 現状、全ての女子会を表示 -->
-            <li>
-              <a href="/my/joshikai/{$application.application_code}" class="clear">
-                <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+            {if $smarty.foreach.loopname.index == 3}
+            </ul>
+              <a class="my-more-link" href="/joshikai">もっと見る ></a>
+              {break}
+            {/if}
+            <li class="clear">
+              <a href="/report/{$blog.code}" class="clear">
+                <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
                 <div class="text-box">
-                  <div class="text-box-inner">
-                    <p class="date-text">
-                      {if $application.display_event_date}
-                        {$application.display_event_date}
-                      {else}
-                        {$application.event_date|date_format:"Y.m.d"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
-                      {/if}
-                    </p>
-                    <p class="title-text">{$application.title}</p>
+                  <div class="category-text">
+                    {if $blog.kind == "女子会レポート"}
+                      <p>女子会レポート</p>
+                    {else if $blog.kind == "イベントレポート"}
+                      <p>イベントレポート</p>
+                    {else if $blog.kind == "取材レポート"}
+                      <p>取材レポート</p>
+                    {else if $blog.kind == "イベント告知"}
+                      <p>イベント告知</p>
+                    {else if $blog.kind == "コラム"}
+                      <p>コラム</p>
+                    {else if $blog.kind == "きんゆう散歩"}
+                      <p>きんゆう散歩</p>
+                    {else}
+                      <p>レポート</p>
+                    {/if}
                   </div>
+                  <p class="title-text">{$blog.title}</p>
+                  <p class="description-text">{$blog.description}</p>
                 </div>
               </a>
             </li>
+            {/foreach}
+          </ul>
+        </div>
 
-          {foreachelse}
-            <!-- 参加女子会がない場合 -->
-            <li>
-              <p class="joshikai-no">女子会のご参加いつでもお待ちしています♪</p>
-              <a href="/joshikai#joshikai-list" class="to-link-joshikai">女子会の予定へ</a>
-            </li>
-          {/foreach}
+        <!-- お役立ちコンテンツ -->
+        <div class="my-maincontent-block">
+          <p class="my-content-title">お役立ちコンテンツ</p>
+        </div>
 
-        </ul>
       </div>
-
     </div>
   </div>
 </div>

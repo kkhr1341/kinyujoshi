@@ -3,6 +3,9 @@
 use \Model\Events;
 use \Model\Sections;
 use \Model\Applications;
+use \Model\DiagnosticChartTypeUsers;
+use \Model\DiagnosticChartRouteTypeHashTags;
+use \Model\DiagnosticChartRouteTypeActionLists;
 
 class Controller_My_Events extends Controller_Mybase
 {
@@ -15,7 +18,7 @@ class Controller_My_Events extends Controller_Mybase
             Response::redirect('/');
             exit();
         }
-
+        $username = \Auth::get('username');
         $this->data['sections'] = Sections::lists();
         $this->data['all_events'] = Events::lists02();
         $this->data['closed_events'] = Events::lists(0);
@@ -24,8 +27,13 @@ class Controller_My_Events extends Controller_Mybase
         $this->template->description = 'マイページ・イベント';
         $this->template->title = '参加予定の女子会｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->contents = View::forge('my/events/index.smarty', $this->data);
+        $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+        $this->template->my_side = View::forge('my/common/my_side.smarty', array(
+            'user_type' => $user_type,
+            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
+            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+        ));
     }
 
     public function action_create()
@@ -36,13 +44,18 @@ class Controller_My_Events extends Controller_Mybase
             Response::redirect('/');
             exit();
         }
-
+        $username = \Auth::get('username');
         $this->data['sections'] = Sections::lists();
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->contents = View::forge('my/events/create.smarty', $this->data);
+        $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+        $this->template->my_side = View::forge('my/common/my_side.smarty', array(
+            'user_type' => $user_type,
+            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
+            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+        ));
     }
 
     public function action_edit($code)
@@ -52,14 +65,19 @@ class Controller_My_Events extends Controller_Mybase
             Response::redirect('/');
             exit();
         }
-
+        $username = \Auth::get('username');
         $this->data['events'] = Events::getByCode('events', $code);
         $this->data['sections'] = Sections::lists();
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->contents = View::forge('my/events/edit.smarty', $this->data);
+        $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+        $this->template->my_side = View::forge('my/common/my_side.smarty', array(
+            'user_type' => $user_type,
+            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
+            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+        ));
     }
 
     public function action_joshikailist()
@@ -77,12 +95,18 @@ class Controller_My_Events extends Controller_Mybase
         $this->template->description = '女子会リスト';
         $this->template->title = '参加予定の女子会｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->contents = View::forge('my/events/joshikailist.smarty', $this->data);
+        $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+        $this->template->my_side = View::forge('my/common/my_side.smarty', array(
+            'user_type' => $user_type,
+            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
+            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+        ));
     }
 
     public function action_joshikaidetail($application_code)
     {
+        $username = \Auth::get('username');
         $application = Applications::getByCode("applications", $application_code);
         $this->data['application_code'] = $application_code;
         $code = $application['event_code']; // event code
@@ -98,8 +122,13 @@ class Controller_My_Events extends Controller_Mybase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->contents = View::forge('my/events/joshikaidetail.smarty', $this->data);
+        $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+        $this->template->my_side = View::forge('my/common/my_side.smarty', array(
+            'user_type' => $user_type,
+            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
+            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+        ));
     }
 
     public function action_member_joshikai()
@@ -116,7 +145,12 @@ class Controller_My_Events extends Controller_Mybase
         $this->template->description = '女子会リスト';
         $this->template->title = 'myきん女。｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->my_side = View::forge('my/common/my_side.smarty', $this->data);
         $this->template->contents = View::forge('my/events/member_joshikai.smarty', $this->data);
+        $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+        $this->template->my_side = View::forge('my/common/my_side.smarty', array(
+            'user_type' => $user_type,
+            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
+            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+        ));
     }
 }

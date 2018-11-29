@@ -7,6 +7,68 @@
     height: 250px;
 }
 
+.my-pagetitle {
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.my-maincontent-block {
+  margin-bottom: 36px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - メンバー限定女子会
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.my-member-report-block li {
+  width: 100%;
+  height: 136px;
+  margin-bottom: 3%;
+}
+.my-member-report-block li:last-child {
+  margin-bottom: 0%; 
+}
+.my-member-report-block li .img-box {
+  width: 28%;
+  height: 100%;
+  float: left;
+}
+.my-member-report-block li .text-box {
+  width: 72%;
+  height: 100%;
+  float: right;
+  background: #f9f9f9;
+  padding: 20px;
+}
+.my-member-report-block li .text-box .category-text p { 
+  font-size: 12px;
+  line-height: 12px;
+  color: #77cbc0;
+}
+.my-member-report-block li .text-box .title-text { 
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 8px;
+}
+.my-member-report-block li .text-box .description-text { 
+  color: gray;
+  font-size: 10px;
+  line-height: 13px;
+  margin-top: 6px;
+  height: 26px;
+  overflow: hidden;
+}
+.my-more-link {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  color: #77cbc0;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+
 .mykinjo-block .text-box {
     margin-top: 24px;
     margin-bottom: 42px;
@@ -566,6 +628,16 @@ footer {
     color: #fff;
 }
 
+.my-content-title {
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 16px;
+    border-left: 2px solid #8ddcd1;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   管理画面 - 女子会参加者管理部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -776,7 +848,8 @@ footer {
 .my-container {
     padding-top: 130px;
     /*background: #c5e9e4;*/
-    background: #f9f9f9;
+    /*background: #f9f9f9;*/
+    background: #f6f9f8;
 }
 
 /* 診断結果による色分け */
@@ -796,65 +869,113 @@ footer {
   background: #E285AB;
 }*/
 .admin-normal-container .admin-normal-inner {
-    width: 1000px;
+    width: 1050px;
     margin: 0 auto;
     padding: 70px 0px;
 }
 
 .admin-normal-side {
-    width: 190px;
+    width: 26%;
     float: left;
-    padding-right: 20px;
+    padding-right: 32px;
+}
+.side-profile-block {
+  background: #fff;
+  margin-bottom: 24px;
+  padding: 20px;
+}
+.side-profile-block .img-box {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px #fff inset;
+}
+.side-profile-block .name {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 16px;
+}
+.side-profile-block .copy {
+  text-align: center;
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 15px;
 }
 
-.admin-normal-side li {
+.admin-normal-side .menu-list li {
     text-align: center;
     margin-bottom: 8px;
     position: relative;
 }
-
-/*.admin-normal-side li:nth-child(2):before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-top: 5px solid #efcab4;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid #efcab4;
-}*/
-.admin-normal-side li a {
+.admin-normal-side .menu-list li a {
     display: block;
     padding: 8px 0px;
     transition: .5s;
 }
 
-.admin-normal-side li a span {
+.admin-normal-side .menu-list li a span {
     font-size: 11px;
 }
 
-.admin-normal-side li:last-child {
+.admin-normal-side .menu-list li:last-child {
     border-top: 1px dotted #dcdcdc;
     margin-top: 16px;
 }
 
-.admin-normal-side li:last-child a {
+.admin-normal-side .menu-list li:last-child a {
     font-size: 12px;
+    color: gray;
+
 }
 
-.admin-normal-side li.active {
+.admin-normal-side .menu-list li.active {
     background: #a6e9d9;
 }
 
-.admin-normal-side li.active a {
+.side-check-block {
+  margin-top: 12px;
+  border-top: 1px solid #ececec;
+}
+.side-check-block .inner {
+  display: table;
+  height: 40px;
+  position: relative;
+  padding-top: 12px;
+}
+.side-check-block .inner:before {
+  content: "〉";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  margin-top: -8px;
+  color: #cacaca;
+}
+.side-check-block .icon-img {
+  width: 40px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.side-check-block .kinjo-check-title {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 11px;
+  line-height: 18px;
+  padding-right: 16px;
+  padding-left: 4px;
 }
 
 .admin-normal-main {
-    width: 810px;
+    width: 74%;
     float: right;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 0px 0px 31px;
     border-left: 1px solid #ececec;
     min-height: 200px;
+}
+.admin-normal-main .inner {
+  padding: 40px;
+  background: #fff;
 }
 
 /* プロフィール部分 */
@@ -907,7 +1028,7 @@ footer {
   display: table;
   background: #fff;
   padding: 32px 24px 20px;
-  margin: 24px 0px 32px;
+  margin: 0px 0px 32px;
 }
 .kinjo-check-block .icon-box {
   display: table-cell;
@@ -1353,8 +1474,42 @@ footer {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   女子会部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.admin-normal-joshikai {
-    /*border-top: 1px solid #ececec;*/
+
+/* 参加予定の女子会 */
+.my-joshikai-join {
+
+}
+.my-joshikai-join li {
+  width: 31.333%;
+  margin-right: 3%;
+  background: #f9f9f9;
+  float: left;
+}
+.my-joshikai-join li:nth-child(3n) {
+  margin-right: 0%;
+}
+.my-joshikai-join li .img-box {
+  height: 130px;
+}
+.my-joshikai-join li .text-box {
+  padding: 20px 16px;
+}
+.my-joshikai-join li .text-box .date-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: #77cbc0;
+  margin-bottom: 6px;
+}
+.my-joshikai-join li .text-box .title-text {
+  font-size: 12px;
+  line-height: 18px;
+  height: 36px;
+  overflow: hidden;
+}
+
+
+/*.admin-normal-joshikai {
+    border-top: 1px solid #ececec;
 }
 
 .joshikailist-main {
@@ -1415,7 +1570,7 @@ footer {
     font-size: 13px;
     text-align: center;
     padding: 20px 0px;
-    background: #fff;
+    background: #f9f9f9;
 }
 
 .admin-normal-joshikai li .to-link-joshikai {
@@ -1429,15 +1584,7 @@ footer {
     color: #fff;
     font-weight: bold;
     transition: .5s;
-}
-
-.admin-normal-joshikai-title {
-    font-size: 12px;
-    line-height: 15px;
-    margin-bottom: 10px;
-    border-left: 2px solid #8ddcd1;
-    padding-left: 10px;
-}
+}*/
 
 /* 女子会詳細 */
 .admin-joshikai-detail-el-header {

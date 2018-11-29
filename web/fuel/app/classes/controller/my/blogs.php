@@ -2,6 +2,9 @@
 
 use \Model\Blogs;
 use \Model\Sections;
+use \Model\DiagnosticChartTypeUsers;
+use \Model\DiagnosticChartRouteTypeHashTags;
+use \Model\DiagnosticChartRouteTypeActionLists;
 
 class Controller_My_Blogs extends Controller_Mybase
 {
