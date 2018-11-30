@@ -4,6 +4,53 @@
 
     {$my_side}
 
+    
+    <!-- プロフィール部分 -->
+    <div class="my-profile-block-sp sp">
+
+      <div class="side-profile-block">
+
+        <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
+
+        <!-- プロフィール画像 -->
+        <div class="img-block">
+          <div class="img-box"
+            {if $profile.profile_image == ''}
+              style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
+            {else}
+              style="background:url({$profile.profile_image}) center center / cover no-repeat;"
+            }
+            {/if}
+          ></div>
+          <div class="text-block">
+            <p class="name">{$profile.nickname}</p>
+            <p class="copy">{$profile.catchcopy}</p>
+          </div>
+        </div>
+
+        <!-- きん女。チェック部分 -->
+        {if $user_type}
+          <div class="side-check-block clear">
+            <a href="/kinjo_type" target="_blank">
+              <div class="inner clear">
+                <img class="icon-img" src="{$user_type['character_image']}">
+                <p class="kinjo-check-title">{$user_type['character_name']}</p>
+              </div>
+            </a>
+          </div>
+        {else}
+          <div class="side-check-no-block">
+            <img class="check-no-title" src="/images/kinjo-check.png">
+            <a href="/kinjo_check" target="_blank">
+              <img class="check-no-link" src="/images/diagnosticchart/chart_main.jpg">
+            </a>
+          </div>
+        {/if}
+
+      </div>
+    </div>
+
+
     <div class="admin-normal-main my-top-content">
 
       {*
@@ -91,21 +138,7 @@
         <div class="my-maincontent-block my-maincontent-last">
           <p class="my-content-title"><span>お役立ちツール</span></p>
           <div class="useful-main-box">
-
-            <div class="useful-main-box-el ab-moneynote">
-              <div class="useful-main-box-el-inner clear">
-                <div class="img-box">
-                  <img src="/images/my/useful/okane-note-ab-useful1.png">
-                </div>
-                <div class="text-main-box">
-                  <p class="sub-title">useful contents1</p>
-                  <p class="text-main-title">お金に強くなるノート</p>
-                  <p class="text-main-description">お金を増やすためのキホンを1歩ずつステップアップしながら学べるノートです。全部で3冊あり、内容も深いものですが、例え話を含まれているので、分かりやすくスマホでも読みやすいようになっています。「1日1つずつ、あわてずコツコツと!」をコンセプトに少しずつ自分のペースで読んでいくことがおすすめとのこと♪</p>
-                  <p class="text-main-company">提供会社：<a href="https://www.alliancebernstein.co.jp/" target="_blank">アライアンス・バーンスタイン株式会社</a></p>
-                </div>
-              </div>
-              <a class="useful-main-link" href="http://okane-abc.jp/#textbooks" target="_blank">お金に強くなるノートはこちら</a>
-            </div>
+            {$useful_content}
           </div>
 
         </div>

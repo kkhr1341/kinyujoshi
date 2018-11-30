@@ -22,6 +22,14 @@ class Controller_My_Useful extends Controller_Mybase
         $this->template->title = 'お役立ちツール｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->contents = View::forge('my/useful/index.smarty', $this->data);
+        
+        //お役立ちコンテンツ
+        if (Agent::is_mobiledevice()) {
+            $this->template->useful_content = View::forge('my/useful/useful_content_sp.smarty', $this->data);
+        } else {
+            $this->template->useful_content = View::forge('my/useful/useful_content.smarty', $this->data);
+        }
+        
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
         $this->template->my_side = View::forge('my/common/my_side.smarty', array(
             'user_type' => $user_type,
