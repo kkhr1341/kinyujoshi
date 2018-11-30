@@ -155,7 +155,11 @@
                   </div>
                   <h3 class="kinyu-top-list-title">{$event.title}</h3>
                   <div class="event-subbox">
-                    <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    {if $event.fee == 0}
+                      <p class="event-subbox-el">参加費：無料</p>
+                    {else}
+                      <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    {/if}
                     <p class="event-subbox-el">場所：{$event.place}</p>
                   </div>
                 </div>

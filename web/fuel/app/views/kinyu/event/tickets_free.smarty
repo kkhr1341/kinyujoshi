@@ -62,30 +62,6 @@
           </div>
         </div>
 
-        <div class="cancel-block">
-
-          <p class="cancel-title">女子会のお約束事</p>
-
-          <ul class="cancel-block-list">
-            <li>きんゆう女子。のコンセプトは、「前向きに経済に関わることで、おかねにとらわれず自由で等身大に生きる」ことです。みなさま一人一人が「おかね」に関するリテラシーを向上させ、自分らしい生活を送れるようになることを目指したコミュニティです。</li>
-            <li>どなたでも安心して女子会に参加することができるように、ゲストや参加者同士での営業・勧誘行為は固くお断りしております。</li>
-            <li>きんゆう女子。会は、個人のための女子会です。企業としてのの見学・視察目的などでのご参加はご遠慮ください。</li>
-            <li>きんゆう女子。では、特定の企業の商品の勧誘やアフィリエイトと呼ばれる成果報酬型の広告宣伝を行わないポリシーです。その代わりに女子会の参加費をいただいたり、みなさまの声や気持ちをアンケートなどで集約することで匿名で企業さまへ提供することがあります。真摯にサービス提供に取り組まれている企業を積極的に応援し、今後の経済や金融業界の発展に寄与することで、みなさまが安心して交流・勉強する場を提供しています。</li>
-            <li>女子会の際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
-            {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != "0000-00-00 00:00:00"}
-              <li>お席や食事、ゲスト手配のため、<span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
-            {else}
-              <li>お席や食事、ゲスト手配のため、<span>女子会開催日の3日前</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
-            {/if}
-          </ul>
-
-          <p class="cancel-button-area">
-            <input type="checkbox" name="cancel_check" id="cancel_check">
-            <label for="cancel_check" class="checkbox"></label>
-            <span>女子会のお約束事に同意する。</span>
-          </p>
-        </div>
-
         <div class="kinyu-credit-fee-area">
           {if $discount}
             <p><span>参加費</span>：{$event.fee-$discount|number_format}円</p>
