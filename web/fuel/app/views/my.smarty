@@ -90,11 +90,6 @@ $(function(){
     $(".admin-normal-navigation").fadeToggle();
   });
 });
-$(function(){
-  $(".admin-normal-side .menu-list li.no-btn").hover(function() {
-     $(this).children("div").fadeToggle();
-  });
-});
 </script>
 </body>
 </html>
