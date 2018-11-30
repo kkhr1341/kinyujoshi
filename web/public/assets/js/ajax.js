@@ -1,18 +1,21 @@
 new function () {
 	ajax = {
-		post: function(url, data, callback, show_ld) {
+		post: function(url, data, callback, error) {
 			if (typeof ld == 'undefined' && (typeof show_ld == 'undefined' || show_ld)) {
 				var loader_overlay = loader.show('body');
 			}
 			var excallback = function(data) {
+                loader.hide(loader_overlay);
 				if (data.api_status == "error") {
-					loader.hide(loader_overlay);
-					ts.error(data.message);
-				}
-				else if (data.data == "login") {
+					if (error && typeof error == 'function') {
+                        error(data);
+					} else {
+                        ts.error(data.message);
+					}
+				} else if (data.data == "login") {
+					debugger;
 					location.href = "/login";
-				}
-				else {
+				} else {
 					loader.hide(loader_overlay);
 					callback(data);
 				}

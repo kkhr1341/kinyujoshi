@@ -216,7 +216,7 @@
                 })
                 .catch(function(error) {
                     $(".loader-block").fadeOut(500);
-                    ts.error(error);
+                    ts.error(error.message);
                 })
         });
     })();

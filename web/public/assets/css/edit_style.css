@@ -2467,6 +2467,12 @@
   color: #fff;1
   font-weight: bold;
 }
+.kinyu-joshikai-tickets-payment .fee-free {
+  background: #8ddcd1;
+  border: 1px solid #8ddcd1;
+  color: #fff;1
+font-weight: bold;
+}
 .kinyu-joshikai-tickets-payment .fee-cash {
   background: #f1f1f1;
   border: 1px solid #f1f1f1;

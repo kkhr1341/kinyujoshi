@@ -203,7 +203,11 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['payjp_public_key'] = \Config::get('payjp.public_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
-        $this->data['event'] = Events::getByCode('events', $code);
+        $this->data['event'] = Events::getByCode('events', $code, $this->data['coupon_code']);
+
+        if (!$this->paynable($this->data['event'])) {
+            throw new HttpNoAccessException;
+        }
 
         // クーポン割引金額
         if ($this->data['coupon_code']) {
@@ -342,5 +346,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
             return true;
         }
         return false;
+    }
+
+    private function paynable($event)
+    {
+        if ($event['fee'] <= 0) {
+            return false;
+        }
+        return true;
     }
 }

@@ -26,20 +26,21 @@ class PaymentPayjp extends Base
         $cardselect='0'
     ) {
         if ($cardselect === '0') {
-            $new_customer = $this->createCreditCustomer($username, $name, $email);
+            if (!$new_customer = $this->getCustomer($username)) {
+                $new_customer = $this->createCreditCustomer($username, $name, $email);
+            } else {
+                $new_customer = $this->updateCreditCustomer($username, $name, $email);
+            }
             $new_card = $this->registNewCreditCard(
                 $new_customer,
                 $token,
                 $username,
-                $amount,
-                $application_code,
-                $name,
-                $email
+                $name
             );
             $charge = $this->paymentByNewCreditCard(
-                $amount,
                 $new_customer,
                 $new_card,
+                $amount,
                 $application_code,
                 $name,
                 $email

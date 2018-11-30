@@ -105,13 +105,30 @@ class Events extends Base
         return $val;
     }
    
-    public static function getByCode($table, $code)
+    public static function getByCode($table, $code, $coupon_code='')
     {
         $event = parent::getByCode($table, $code);
         $event['applicable'] = self::is_applicable_by_event_date($event['event_date'], $event['event_start_datetime']);
         $application_num = self::get_application_num($code);
 
         $event['full'] = $application_num >= $event['limit'] ? true: false;
+
+        if ($coupon_code) {
+            $coupon = \DB::select('*')
+                ->from('event_coupons')
+                ->where('disable', '=', 0)
+                ->where('coupon_code', '=', $coupon_code)
+                ->where('event_code', '=', $code)
+                ->execute()
+                ->current();
+            if ($coupon) {
+                $event['fee'] = (int)$event['fee'] - (int)$coupon['discount'];
+            }
+        }
+        if ($event['fee'] < 0){
+            $event['fee'] = 0;
+        }
+
         return $event;
     }
 
