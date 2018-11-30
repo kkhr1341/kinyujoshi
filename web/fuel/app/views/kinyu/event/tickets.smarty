@@ -66,10 +66,13 @@ var $resArray02 = $resArray[1];
             <li>きんゆう女子。会は、個人のための女子会です。企業としてのの見学・視察目的などでのご参加はご遠慮ください。</li>
             <li>きんゆう女子。では、特定の企業の商品の勧誘やアフィリエイトと呼ばれる成果報酬型の広告宣伝を行わないポリシーです。その代わりに女子会の参加費をいただいたり、みなさまの声や気持ちをアンケートなどで集約することで匿名で企業さまへ提供することがあります。真摯にサービス提供に取り組まれている企業を積極的に応援し、今後の経済や金融業界の発展に寄与することで、みなさまが安心して交流・勉強する場を提供しています。</li>
             <li>女子会の際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
-            {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != "0000-00-00 00:00:00"}
-              <li>お席や食事、ゲスト手配のため、<span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
-            {else}
-              <li>お席や食事、ゲスト手配のため、<span>女子会開催日の3日前</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
+
+            {if $event.fee > 0}
+              {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != "0000-00-00 00:00:00"}
+                <li>お席や食事、ゲスト手配のため、<span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
+              {else}
+                <li>お席や食事、ゲスト手配のため、<span>女子会開催日の3日前</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
+              {/if}
             {/if}
           </ul>
 
