@@ -86,7 +86,7 @@ class Controller_Api_Redactor extends Controller_Apibase
                     $tmp_file_path = "/tmp/thumb_{$file_name}";
 
                     $thumbImg = clone $image;
-                    $thumbImg->thumbnailImage(300, 0);
+                    $thumbImg->thumbnailImage(750, 0);
                     $thumbImg->writeImage($tmp_file_path);
 
 
