@@ -34,13 +34,14 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-        $this->template->pickup_top = View::forge('kinyu/common/pickup_top.smarty', $this->data);
 
         if (Agent::is_mobiledevice()) {
             $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
             $this->template->contents = View::forge('kinyu/index.smarty', $this->data);
+            $this->template->pickup_top = View::forge('kinyu/common/sp_pickup_top.smarty', $this->data);
         } else {
             $this->template->contents = View::forge('kinyu/pc_index.smarty', $this->data);
+            $this->template->pickup_top = View::forge('kinyu/common/pc_pickup_top.smarty', $this->data);
         }
     }
 }
