@@ -5,7 +5,7 @@
 
     <div class="admin-normal-main">
       <div class="my-member-report-block my-member-report-block-detail">
-        <p class="my-content-title"><span>チェックしたレポート</span></p>
+        <p class="my-content-title"><span>お気に入りしたレポート</span></p>
 
         <ul class="clear">
 
@@ -48,7 +48,7 @@
           </li>
         {foreachelse}
           <div class="non-message">
-            <p class="joshikai-no">気になるレポートがあったらチェックしてくださいね♪</p>
+            <p class="joshikai-no">気になるレポートがあったら"お気に入り"してくださいね♪</p>
             <a href="/report" class="to-link-joshikai">レポート一覧へ</a>
           </div>
         {/foreach}

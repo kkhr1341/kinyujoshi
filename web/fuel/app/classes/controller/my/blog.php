@@ -17,7 +17,7 @@ class Controller_My_Blog extends Controller_Mybase
         $this->data['blogs'] = Blogstocks::lists($username);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
-        $this->template->title = '参加予定の女子会｜きん女。マイページ';
+        $this->template->title = 'お気に入り｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->contents = View::forge('my/blog/index.smarty', $this->data);
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);

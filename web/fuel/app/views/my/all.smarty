@@ -101,7 +101,9 @@
 
             {if $smarty.foreach.loopname.index == 3}
             </ul>
-              <a class="my-more-link" href="/joshikai" target="_blank">もっと見る ></a>
+              <div class="my-more-link">
+                <a href="/my/member_report">もっと見る ></a>
+              </div>
               {break}
             {/if}
             <li class="clear">

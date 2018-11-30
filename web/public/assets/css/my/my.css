@@ -51,6 +51,9 @@
   background: #f9f9f9;
   padding: 20px;
 }
+.my-member-report-block-detail li .text-box {
+  background: #fff;
+}
 /* 詳細ページのみ */
 .my-member-report-block-detail li .text-box {
   background: #fff;
@@ -75,12 +78,14 @@
   overflow: hidden;
 }
 .my-more-link {
-  display: block;
+  text-align: right;
+  margin-top: 8px;
+}
+.my-more-link a {
   text-align: right;
   font-size: 11px;
   color: #77cbc0;
   font-weight: bold;
-  margin-top: 8px;
 }
 
 
@@ -2253,6 +2258,24 @@ footer {
 
     .admin-normal-check-joshikai .to-link-report:hover {
         opacity: .5;
+    }
+
+    .my-joshikai-join li,
+    .my-member-report-block li,
+    .my-top-content .ab-moneynote .useful-main-link,
+    .side-check-block,
+    .my-more-link a {
+      transition: .5s;
+    }
+    .my-joshikai-join li:hover,
+    .my-member-report-block li:hover,
+    .side-check-block:hover,
+    .my-more-link a:hover {
+      opacity: .5;
+    }
+    .my-top-content .ab-moneynote .useful-main-link:hover {
+      background: #8ddcd1;
+      color: #fff;
     }
 
 }

@@ -167,6 +167,20 @@
   line-height: 16px;
 }
 
+/* non-メッセージ */
+.non-message {
+  padding: 20px 0px;
+  background: #fff;
+}
+.non-message p {
+  font-size: 12px;
+}
+.non-message a {
+  width: 160px;
+  padding: 8px 0px;
+  margin-top: 16px;
+  font-size: 11px;
+}
 
 
 .btn {
@@ -185,7 +199,8 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container .mypage-content-title {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
 .mypage-content-description {
   width: 92%;

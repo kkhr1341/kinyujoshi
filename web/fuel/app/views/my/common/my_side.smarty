@@ -1,24 +1,6 @@
 {$menu_array = $smarty.server.REQUEST_URI}
 {assign var="menu_parts" value="/"|explode:$menu_array}
 
-<!-- <div class="admin-normal-side">
-  <ul>
-    {if in_array('admin', $roles) || in_array('editor', $roles)}
-      <li class="main-li"><a href="/admin" target="_blank">＜＜管理画面＞＞</span></a></li>
-    {/if}
-    <li><a href="/my">マイページ・トップ</a></li>
-    <li><a href="/my/kinjo">参加予定の女子会</span></a></li>
-    <li><a href="/my/passport">きん女。パスポート</a></li>
-    <li><a href="/my/member_joshikai">メンバー限定女子会</a></li>
-    <li><a href="/my/member_report">メンバー限定レポート</a></li>
-    <li><a href="/my/report">チェックしたレポート</a></li>
-    <li><a href="/my/profile">プロフィール編集</a></li>
-    <li><a href="/my/account">きんぎょ。ちゃん</a></li>
-    <li><a href="/my/account">アカウント情報</a></li>
-    <li><a href="/logout">ログアウト</a></li>
-  </ul>
-</div> -->
-
 <div class="admin-normal-side">
 
   <a href="/my"><img class="my-pagetitle" src="/images/my/mypage-title.png"></a>
@@ -62,6 +44,7 @@
 
   <ul class="menu-list">
     <li><a href="/my">マイページ・トップ</a></li>
+    <li><a href="/my/member_report">メンバー限定レポート</a></li>
     <li><a href="/my/report">お気に入り</a></li>
     <li><a href="/my/useful">お役立ちツール</a></li>
     <li class="no-btn"><p>教えて！きん女。</p><div class="comming">comming soon...</div></li>
