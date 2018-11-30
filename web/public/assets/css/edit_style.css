@@ -264,7 +264,7 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-#kinyu-main-animation {
+/* #kinyu-main-animation {
   width: 100%;
   height: 100vh;
   background: rgba(255,255,255,.99);
@@ -282,7 +282,7 @@
   margin-top: -47.5px;
   margin-left: -190px;
   z-index: 1007;
-}
+} */
 #kinyu-main-animation-sub {
   margin-bottom: 8px;
   display: none;
@@ -292,11 +292,11 @@
   display: none;
   width: 380px;
 }
-.fixed {
+/* .fixed {
   position: fixed;
   width: 100%;
   height: 100%;
-}
+} */
 .pc-kinyu-logo {
   width: 150px;
   display: block;
@@ -356,11 +356,11 @@
   width: 420px;
   margin-top: -10px;
 }
-.fixed {
+/* .fixed {
   position: fixed;
   width: 100%;
   height: 100%;
-}
+} */
 .pc-kinyu-logo {
   width: 150px;
   display: block;
@@ -4860,7 +4860,7 @@ footer {
   z-index: 1007;
 }
 .celebration-message {
-  display: none;
+  display: block;
   width: 100%;
   height: 100%;
   background: rgba(238, 233, 223, .9);
@@ -4950,6 +4950,167 @@ footer {
   opacity: .5;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　広告ポップアップ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#canvas.active {
+  z-index: 1007;
+}
+.ad-popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .9);
+  /*background: rgba(255, 255, 255, .9);*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+.ad-popup-main-block-container {
+  display: none;
+  position: relative;
+  z-index: 1010;
+}
+.ad-popup-main-block {
+  width: 700px;
+  height: 550px;
+  /* background: #fff; */
+  padding: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -300px;
+  display: table;
+  box-shadow:
+}
+.ad-popup-main-block .main-block-inner {
+  display: table-cell;
+  vertical-align: middle;
+  /* border: 1px solid #8ddcd1; */
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  /* background: rgba(255,255,255,1); */
+  position: relative;
+}
+
+.ad-image-wrapper {
+  position: relative;
+}
+
+.ad-popup-main-block .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  width: 25px;
+}
+.ad-popup-main-block .close-btn img {
+  width: 100%;
+}
+.ad-popup-main-block .message01 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+.ad-popup-main-block .message02 {
+  width: 50%;
+}
+.ad-popup-description {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0px;
+  border-top: 1px solid #ddd2c0;
+  border-bottom: 1px solid #ddd2c0;
+  margin-top: 12px;
+  margin-bottom: 36px;
+  background: rgba(248, 246, 242, 0.5);
+}
+.ad-popup-description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.ad-popup-main-block .message03 {
+  width: 70%;
+}
+.ad-popup1206-to-link-top {
+  display: block;
+  width: 50%;
+  font-size: 13px;
+  padding: 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  background: #8ddcd1;
+  color: #fff;
+  font-weight: bold;
+  transition: .8s;
+}
+.celebration1206-to-link-top;hover {
+  opacity: .5;
+}
+
+.ad-img {
+  width: 100%;
+}
+
+.kinyu-top-promotion-label {
+  position: absolute;
+  bottom: 30px;
+}
+
+.kinyu-top-promotion-label img {
+  width: 200px;
+}
+
+.pr-text {
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .ad-popup-main-block {
+    width: 100%;
+    height: 550px;
+    /* background: #fff; */
+    padding: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -275px;
+    margin-left: -300px;
+    display: table;
+    box-shadow:
+  }
+
+  .ad-popup-main-block {
+      width: 100%;
+      height: auto;
+      /* background: #fff; */
+      padding: 6px;
+      position: fixed;
+      top: 28%;
+      left: 0%;
+      margin-top: 0px;
+       margin-left: 0px;
+      display: table;
+      box-shadow: ;
+  }
+  .ad-popup-main-block .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 97%;
+    width: 25px;
+}
+.kinyu-top-promotion-label img {
+  width: 170px;
+}
+}
 
 
 @media screen and (min-width: 640px) {

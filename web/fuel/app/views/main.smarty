@@ -35,8 +35,8 @@
     <meta name="google-site-verification" content="bt-Z1O8HWo_rQ3TlPedxm8q3q1xV9ky7hWlxAqisA2w" />
     <!-- <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" /> -->
     <!-- 紙吹雪 -->
-    <!-- <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
-    <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script> -->
+    <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
 
   </head>
 
@@ -66,49 +66,86 @@
       </div>
     </div>
 
-    <!-- 1500人達成イベントメッセージ -->
-    <!-- <div class="celebration-message"></div>
-    <div class="celebration-main-block-container">
-      <div class="celebration-main-block">
+    <!-- 広告ポップアップ-->
+    <div class="ad-popup">
+    <div class="ad-popup-main-block-container">
+      <div class="ad-popup-main-block">
         <div class="main-block-inner">
-          <img class="message01" src="/images/celebration/kinjo1500.png">
-          <div class="celebration-message-description">
-            <p>きんゆう女子。メンバー<br>1500名に♪</p>
+          <div class="ad-image-wrapper">
+            <a class="js-popup-hoshino-pc" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank">
+              <img class="pc ad-img" src="/images/advertisement/PC.png">
+            </a>
+            <a class="js-popup-hoshino-sp" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank">
+              <img class="sp ad-img" src="/images/advertisement/SP.png">
+            </a>
+            <div class="kinyu-top-promotion-label"><img src="/images/pr_label_pc.png"></div>
+            <p class="pr-text">[PR]</p>
           </div>
-          <a class="celebration1206-to-link-top" href="https://kinyu-joshi.jp/news/Au43Ih">お知らせはこちら</a>
-          <p id="celebration-message-close" class="close-btn"><img src="/images/close-btn.png"></p>
+
+          <p id="ad-popup-message-close" class="js-popup-hoshino-close close-btn" style="cursor:pointer;">
+            <img src="/images/ad-close-btn.png">
+          </p>
         </div>
       </div>
-    </div> -->
+    </div>
+    </div>
 
     {literal}
-
-    <!-- 1500人達成イベント-js -->
-    <!-- <script type="text/javascript">
+    <!-- ポップアップ広告-js -->
+    <script type="text/javascript">
       $(function() {
-        $("#celebration-message-close").click(function() {
-          $(".celebration-message").fadeOut(500);
-          $(".celebration-main-block-container").fadeOut(500);
+        $("#ad-popup-message-close").click(function() {
+          $(".ad-popup").fadeOut(500);
+          $(".ad-popup-main-block-container").fadeOut(500);
           $('#canvas').removeClass("active");
         });
       });
     </script>
+
     <script type="text/javascript">
       $(function(){
-        if($.cookie("access")){
+        if($.cookie("hoshino_resort_popup")){
         }else{
           $('#canvas').addClass("active");
           setTimeout(function(){
-            $('.celebration-message').fadeIn(1000);
-            $('.celebration-main-block-container').fadeIn(1000);
+            $('.ad-popup').fadeIn(1000);
+            $('.ad-popup-main-block-container').fadeIn(1000);
           },3000);
-
         }
         $(window).load(function(){
-          $.cookie("access","foo", { expires: 2 });
+          $.cookie("hoshino_resort_popup","access", { expires: 1 });
         })
       });
-    </script> -->
+    </script>
+
+    <script type="text/javascript">
+      $(function(){
+        $('.js-popup-hoshino-pc').click(function() {
+          gtag('event', 'click', {
+              'event_category': 'pr',
+              'event_label': 'hoshino-popup-pc',
+              'event_action': 'link',
+              'event_value': 1,
+          });
+        });
+        $('.js-popup-hoshino-sp').click(function() {
+          gtag('event', 'click', {
+              'event_category': 'pr',
+              'event_label': 'hoshino-popup-sp',
+              'event_action': 'link',
+              'event_value': 1,
+          });
+        });
+        $('.js-popup-hoshino-close').click(function() {
+          gtag('event', 'click', {
+              'event_category': 'pr',
+              'event_label': 'hoshino-popup-sp',
+              'event_action': 'close',
+              'event_value': 1,
+          });
+        });
+      });
+    </script>
 
     <script src="/assets/js/kinyu/swiper.js"></script>
     {/literal}
