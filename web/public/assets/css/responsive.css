@@ -2173,7 +2173,9 @@ input::-webkit-input-placeholder {
   font-size: 12px;
 }
 
-
+.free-payment-input {
+    width: 100%;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ニュース部分

@@ -2818,10 +2818,25 @@ input[type=checkbox]:checked + .checkbox:before {
     font-size: 13px;
     padding: 6px 0;
 }
+.fee-open-el label{
+  display: block;
+  margin-bottom: 10px;
+}
+.fee-open-el input{
+  display: block;
+}
 
 .mb30 {
     margin-bottom: 30px;
 }
+.free-payment-input {
+    border: 1px solid #eee;
+    padding: 5px 8px;
+    width: 260px;
+    box-sizing: border-box;
+}
+
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/

@@ -87,11 +87,11 @@ var $resArray02 = $resArray[1];
           {if $event.fee == 0}
             <div class="fee-open-el">
               <label>お名前（フルネーム）</label>
-              <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
+              <input type="text" id="name" name="name" class="free-payment-input" placeholder="" value="{$user.name}">
             </div>
             <div class="fee-open-el mb30">
               <label>メールアドレス</label>
-              <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
+              <input type="text" id="email" name="email" class="free-payment-input" placeholder="" value="{$user.email}">
             </div>
           {/if}
 
