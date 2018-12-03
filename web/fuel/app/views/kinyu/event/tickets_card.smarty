@@ -22,17 +22,25 @@
 
         <div class="fee-open-el">
           <label>カード番号</label>
-          <p class="select-before-title">・利用可能なクレジットカード</p>
-          <select id="cardselect" name="cardselect">
-              {foreach from=$cards key="key" item=card name=loopname}
-                <option value="{$card.id}">{$card.label}</option>
-              {/foreach}
-            <option value="0">新しいカードで決済する</option>
-          </select>
-          <div class="newcards">
-            <p class="select-before-title">・新しいカード番号を入力してください</p>
-            <input type="text" class="number" name="number" maxlength="16" placeholder="">
-          </div>
+          {if $authenticated == true}
+            <p class="select-before-title">・利用可能なクレジットカード</p>
+            <select id="cardselect" name="cardselect">
+                {foreach from=$cards key="key" item=card name=loopname}
+                  <option value="{$card.id}">{$card.label}</option>
+                {/foreach}
+              <option value="0">新しいカードで決済する</option>
+            </select>
+            <div class="newcards">
+              <p class="select-before-title">・新しいカード番号を入力してください</p>
+              <input type="text" class="number" name="number" maxlength="16" placeholder="">
+            </div>
+          {else}
+            <input type="hidden" id="cardselect" name="cardselect" value="0">
+            <div class="newcards">
+              <p class="select-before-title">・カード番号を入力してください</p>
+              <input type="text" class="number" name="number" maxlength="16" placeholder="">
+            </div>
+          {/if}
         </div>
 
         <div class="no-regist-el">

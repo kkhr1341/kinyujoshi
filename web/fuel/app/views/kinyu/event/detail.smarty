@@ -115,6 +115,11 @@ console.log($resArray02);
         <a class="login" href="/login?after_login_url=/joshikai_tickets/{$urlcode}">ログインして参加</a>
         <a class="login_regist" href="/login_regist?after_login_url=/joshikai_tickets/{$urlcode}">メンバー登録をして参加</a>
       </div>
+
+      <div class="first-login-block">
+        <p>＼ まずは、雰囲気を見たい...という方へ ／</p>
+        <a href="/joshikai_tickets/{$urlcode}">メンバー登録をせずに参加（初回のみ）</a>
+      </div>
     </form>
   </div>
 </div>
