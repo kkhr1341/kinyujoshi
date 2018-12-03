@@ -2814,6 +2814,14 @@ input[type=checkbox]:checked + .checkbox:before {
   font-weight: bold;
 }
 
+.fee-open-el {
+    font-size: 13px;
+    padding: 6px 0;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
