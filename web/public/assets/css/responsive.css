@@ -3991,7 +3991,7 @@ footer {
     .kinyu-top-list {
         width: 100%;
         padding: 0%;
-        margin: 0 auto;
+        margin: 20px auto 0;
         box-sizing: border-box;
     }
 
@@ -4030,6 +4030,13 @@ footer {
     .kinyu-top-joshikai-list .kinyu-top-list-title {
         padding: 12px 0px 12px;
     }
+
+    .kinyu-top-joshikai-list .kinyu-top-list-fuki {
+    width: 115px;
+    position: absolute;
+    top: 23px;
+    left: 67%;
+}
 
     .list-kind-img {
         position: absolute;

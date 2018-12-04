@@ -777,6 +777,19 @@
   padding: 4px 2px 0px;
 }
 
+.kinyu-top-joshikai-list .kinyu-top-main-title{
+  position: relative;
+}
+
+.kinyu-top-joshikai-list .kinyu-top-list-fuki{
+  width: 160px;
+  position: absolute;
+  top: -45px;
+  left: 63%;
+}
+
+
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・メンバー登録部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -876,6 +889,8 @@
   margin-bottom: 18px;
   text-align: center;
 }
+
+
 
 /* 検索フォーム関連 */
 .kinyu-top-search {
