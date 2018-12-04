@@ -78,10 +78,10 @@
   </div>
 {/if}
 
-<div id="myModal" class="modal check-report-modal fade">
+<!-- <div id="myModal" class="modal check-report-modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
-      <!-- dialog body -->
+
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <p class="main-title">レポートページに<br>チェックボタンができました。</p>
@@ -93,7 +93,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <div id="check-report-modal-dummy" class="check-report-modal">
   <div class="modal-dialog">
