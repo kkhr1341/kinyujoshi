@@ -64,8 +64,9 @@
         <!-- きんゆう女子。会 -->
         <div class="kinyu-top-maincontent-block-el">
           <div class="kinyu-top-list kinyu-top-joshikai-list">
-            <h3 class="kinyu-top-main-title">女子会の予定</h3>
-            <p class="kinyu-top-main-sub">「おかね」についてゆるりと話そう。</p>
+          <img class="kinyu-top-list-fuki" src="/images/member_regist_fuki.png">
+            <h3 class="kinyu-top-main-title">ワカラナイ…から卒業しよう♪</h3>
+            <p class="kinyu-top-main-sub">女子会でみんなどうしてる？を知ったり勉強したり。<br>頼れるきん女。FPには、ワカラナイことを聞いてみよう</p>
             <ul class="clear">
             {foreach from=$events key="key" item=event name=loopname}
 

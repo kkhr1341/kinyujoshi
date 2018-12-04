@@ -32,7 +32,7 @@
           <p class="main-intro-description">素直に生きよう。<br>小さなアクションの<br>つみかさねで、<br>信頼をつくる。</p>
           <a class="main-intro-link js-track" href="/about" data-category="pc-top-link" data-action="click" data-value="1">きん女。ストーリー　〉</a>
         </div>
-        
+
         <div class="kinyu-top-introlist-right">
 
           <!-- news -->
@@ -49,7 +49,7 @@
             </a>
             {/foreach}
           </div> -->
-          
+
           <!-- pickup -->
           <div class="swiper-container02 kinyu-top-introlist-pickup">
             <div class="swiper-wrapper">
@@ -112,8 +112,9 @@
       <div class="kinyu-top-maincontent-block-el">
 
         <div class="kinyu-top-list kinyu-top-joshikai-list">
-          <h3 class="kinyu-top-main-title">女子会の予定</h3>
-          <p class="kinyu-top-main-sub">「おかね」についてゆるりと話そう。</p>
+
+          <h3 class="kinyu-top-main-title"><img class="kinyu-top-list-fuki" src="/images/member_regist_fuki.png">ワカラナイ…から卒業しよう♪</h3>
+          <p class="kinyu-top-main-sub">女子会でみんなどうしてる？を知ったり勉強したり。<br>頼れるきん女。FPには、ワカラナイことを聞いてみよう</p>
           <ul class="clear">
           {foreach from=$events key="key" item=event name=loopname}
 
@@ -164,8 +165,8 @@
                   </div>
                 </div>
               </a>
-            </li>   
-          {/foreach}    
+            </li>
+          {/foreach}
           </ul>
         </div>
       </div>
@@ -251,8 +252,8 @@
                 </div>
               </a>
             </li>
-              
-          {/foreach}    
+
+          {/foreach}
           </ul>
         </div>
       </div>
@@ -276,7 +277,7 @@
         </div>
       </div>
 
-      <div class="kinyu-top-maincontent-block-el">     
+      <div class="kinyu-top-maincontent-block-el">
         <div class="kinyu-top-banner-area">
           <ul class="clear">
             <!-- きん女。診断 -->
