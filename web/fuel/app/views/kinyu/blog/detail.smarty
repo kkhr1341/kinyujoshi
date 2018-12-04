@@ -78,10 +78,10 @@
   </div>
 {/if}
 
-<!-- <div id="myModal" class="modal check-report-modal fade">
+<div id="myModal" class="modal check-report-modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
-
+      <!-- dialog body -->
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <p class="main-title">レポートページに<br>チェックボタンができました。</p>
@@ -93,23 +93,28 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
-<div id="check-report-modal-dummy" class="check-report-modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- dialog body -->
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <p class="main-title">レポートを"チェック"するには<br>マイページへのログインが必要です。</p>
-        <ul class="check-report-modal-dummy-ul">
-          <li><a href="/login_regist">新規メンバー登録</a></li>
-          <li><a href="/my">マイページへログイン</a></li>
-        </ul>
+{if in_array('user', $roles) || in_array('admin', $roles)}
+  <div id="check-report-modal-dummy" class="check-report-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- dialog body -->
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <p class="main-title">レポートを"チェック"するには<br>マイページへのログインが必要です。</p>
+
+          <!-- <p class="main-description pc">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、<br>自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪</p>
+          <p class="main-description sp">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪</p> -->
+          <ul class="check-report-modal-dummy-ul">
+            <li><a href="/login_regist">新規メンバー登録</a></li>
+            <li><a href="/my">マイページへログイン</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
+{/if}
 
 <script>
 $(function(){
@@ -179,26 +184,12 @@ $(function() {
                     button.removeClass('checked');
                     $("#report-chack-img").removeClass('img-checked');
                     ts.success('チェックを外しました。');
-                    // event tracking
-                    gtag('event', 'click', {
-                        'event_category': 'blog-stock',
-                        'event_label': 'blog-page',
-                        'event_action': 'remove',
-                        'event_value': $(this).data('code'),
-                    });
                 });
             } else {
                 check($(this).data('code'), function() {
                     button.addClass('checked');
                     $("#report-chack-img").addClass('img-checked');
                     ts.success('チェックが完了しました。');
-                    // event tracking
-                    gtag('event', 'click', {
-                        'event_category': 'blog-stock',
-                        'event_label': 'blog-page',
-                        'event_action': 'create',
-                        'event_value': $(this).data('code'),
-                    });
                 });
             }
         })
