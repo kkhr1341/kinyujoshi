@@ -113,7 +113,7 @@
 
         <div class="kinyu-top-list kinyu-top-joshikai-list">
 
-          <h3 class="kinyu-top-main-title"><img class="kinyu-top-list-fuki" src="/images/member_regist_fuki.png">ワカラナイ…から卒業しよう♪</h3>
+          <h3 class="kinyu-top-main-title"><img class="kinyu-top-list-fuki" src="/images/member_regist_fuki_pc.png">ワカラナイ…から卒業しよう♪</h3>
           <p class="kinyu-top-main-sub">女子会でみんなどうしてる？を知ったり勉強したり。<br>頼れるきん女。FPには、ワカラナイことを聞いてみよう</p>
           <ul class="clear">
           {foreach from=$events key="key" item=event name=loopname}
