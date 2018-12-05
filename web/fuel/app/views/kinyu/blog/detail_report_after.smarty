@@ -81,7 +81,7 @@
 
   <!-- 編集部へのコメント -->
   <div class="report-detail-sidebar-el">
-    <p class="report-detail-sidebar-el-title">編集部へひとこと</p>
+    <p class="report-detail-sidebar-el-title">あなたのワカラナイこと、教えてください！</p>
     <div class="">
       <form>
         <textarea id="message" name="message" class='' rows="10"></textarea>
@@ -118,7 +118,7 @@
         </li>
       </ul>
     </div> -->
-  
+
     <div class="kinyu-top-banner-area">
       <ul class="clear">
         <!-- きん女。診断 -->
@@ -163,16 +163,16 @@ $(window).load(function(){
 $(function(){
   // var title_frame_height = $('#title_frame').height();
   // var page_title_height = $('.page_title').height();
-  
+
   // var padding_top = (title_frame_height / 2) - (page_title_height / 2);
   // $('.page_title').css('padding-top', padding_top);
-  
+
   $('#save').click(function(){
     var url = "/api/comment/create";
     var params = {};
 
     params.message = $('#message').val();
-    
+
     if (params.message == "") {
       ts.error("編集部へのコメントを記入してください。");
       return false;
@@ -190,7 +190,7 @@ $(function(){
           },2500);
 
           setTimeout(function(){
-            $('.report-detail-comment-popup').fadeIn(800);  
+            $('.report-detail-comment-popup').fadeIn(800);
           },3000);
         });
       }
@@ -217,6 +217,3 @@ $(function(){
     <p class="last-message">きんゆう女子。編集部より</p>
   </div>
 </div>
-
-
-

@@ -98,7 +98,7 @@
 
   <!-- 編集部へのコメント -->
   <div class="report-detail-sidebar-el">
-    <p class="report-detail-sidebar-el-title">編集部へひとこと</p>
+    <p class="report-detail-sidebar-el-title">あなたのワカラナイこと、教えてください！</p>
     <div class="">
       <form>
         <textarea id="message" name="message" class='' rows="10"></textarea>
@@ -120,7 +120,7 @@
         <a href="/event">もっと見る ></a>
       </div>
     </div>
-    
+
     <div class="kinyu-top-banner-area">
       <ul class="clear">
         <!-- きん女。診断 -->
@@ -162,13 +162,13 @@ $(window).load(function(){
 });
 
 $(function(){
-  
+
   $('#save').click(function(){
     var url = "/api/comment/create";
     var params = {};
 
     params.message = $('#message').val();
-    
+
     if (params.message == "") {
       ts.error("編集部へのコメントを記入してください。");
       return false;
@@ -186,8 +186,8 @@ $(function(){
           },2500);
 
           setTimeout(function(){
-            $('.report-detail-comment-popup').fadeIn(800);  
-          },3000);     
+            $('.report-detail-comment-popup').fadeIn(800);
+          },3000);
         });
       }
       else {
