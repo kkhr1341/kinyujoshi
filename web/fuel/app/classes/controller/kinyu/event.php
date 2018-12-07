@@ -108,6 +108,66 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         } else {
             $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         }
+
+        $this->template->meta = array(
+            array(
+                'name' => 'description',
+                'content' => $this->data['event']['description'],
+            ),
+            array(
+                'property' => 'og:locale',
+                'content' => 'ja_JP',
+            ),
+            array(
+                'property' => 'og:type',
+                'content' => 'article',
+            ),
+            array(
+                'property' => 'og:title',
+                'content' => $this->data['event']['title'],
+            ),
+            array(
+                'property' => 'og:description',
+                'content' => $this->data['event']['description'],
+            ),
+            array(
+                'property' => 'og:url',
+                'content' => Uri::current(),
+            ),
+            array(
+                'property' => 'og:site_name',
+                'content' => 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ',
+            ),
+            array(
+                'property' => 'article:publisher',
+                'content' => 'https://www.facebook.com/kinyujyoshi/',
+            ),
+            array(
+                'property' => 'fb:app_id',
+                'content' => '831295686992946',
+            ),
+            array(
+                'property' => 'og:image',
+                'content' => preg_replace("/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/", "$1/thumb_$2", $this->data['event']['main_image'])
+            ),
+            array(
+                'property' => 'og:image:width',
+                'content' => '1200'
+            ),
+            array(
+                'property' => 'og:image:height',
+                'content' => '630'
+            ),
+            array(
+                'property' => 'twitter:card',
+                'content' => 'summary_large_image',
+            ),
+            array(
+                'property' => 'twitter:site',
+                'content' => '@kinyu_joshi',
+            ),
+        );
+
         $this->template->contents = View::forge('kinyu/event/detail.smarty', $this->data);
     }
 
