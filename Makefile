@@ -39,6 +39,13 @@ down:
 	docker-compose down
 .PHONY: down
 
+sleep10:
+	sleep 10
+.PHONY: sleep10
+
+reset: clean up sleep10 migrate seed
+.PHONY: reset
+
 clean:
 	docker-compose down
 	docker volume rm kinyujoshi_db-data
