@@ -85,7 +85,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $username = \Auth::get('username');
         $this->data['stocked'] = Blogstocks::stocked($code, $username);
         $this->data['viewable'] = $this->viewable($code);
-        $this->data['top_events'] = Events::lists(1, 7, true);
+        $this->data['top_events'] = Events::lists(1, 7, true, false);
 
         if ($this->data['blog'] === false) {
             Response::redirect('error/404');
