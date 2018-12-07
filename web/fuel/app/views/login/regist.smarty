@@ -1,17 +1,15 @@
 <div class="kinyu-single-block">
 
-    <div class="title-wrapper" style="padding:30px 0; background: url(/images/business/step3_img.jpeg) no-repeat center center; background-size: cover; text-align: center;">
-        <p class="main-title">一緒に学びや声をシェアするメンバーになろう！</p>
-        <p class="message">きんゆう女子。メンバーになるとより楽しく学んだり、<br>あなたの声を届けることでみんなどうしてる？をシェアしたりすることができます♪<br>
-            「<span style="color:red; padding-top: 10px; display:inline-block;">*</span>」は必須項目となります。<br><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
+    <div class="title-wrapper">
+        <img  src="/images/member-regist/member_regist_title.png" class="member-regist-title-text">
     </div>
 
 
     <div class="login-add-contents-block">
 
-        <p class="main-title">一緒に学びや声をシェアするメンバーになろう！</p>
+        <!-- <p class="main-title">一緒に学びや声をシェアするメンバーになろう！</p>
         <p class="message">きんゆう女子。メンバーになるとより楽しく学んだり、<br>あなたの声を届けることでみんなどうしてる？をシェアしたりすることができます♪<br>
-            「<span style="color:red; padding-top: 10px; display:inline-block;">*</span>」は必須項目となります。<br><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
+            「<span style="color:red; padding-top: 10px; display:inline-block;">*</span>」は必須項目となります。<br><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p> -->
 
         <form name="form1">
             <input type="hidden" id="uid" value="{$userdata.uid}">
@@ -252,10 +250,11 @@
 
                         <input type="radio" value="先輩上司から" name="where_from" id="where_from6" class="form-radio" placeholder="">
                         <label for="where_from6">先輩上司から</label>
-
+                        <p class="regist-add-form-edit-subtitle">他サイトで紹介されていた</p>
                         <div class="othet_input">
                             <input type="text" id="where_from_site" name="where_from_site" class="form-control" placeholder="良かったらサイト名を教えてください♪" style="margin-top:10px;">
                         </div>
+                        <p class="regist-add-form-edit-subtitle">その他</p>
                         <div class="othet_input">
                             <input type="text" id="where_from_other" name="where_from_other" class="form-control" placeholder="その他の方はこちら" style="margin-top:10px;">
                         </div>
