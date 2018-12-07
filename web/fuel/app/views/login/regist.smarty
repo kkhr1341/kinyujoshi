@@ -226,7 +226,7 @@
                 <div class="regist-add-form-edit-el form_where_from">
                     <label class="regist-add-form-edit-title">きんゆう女子。に最初に出会ったのはどこ？<span style="color:red; font-weight: normal;">*</span></label>
                     <div class="radio_box_03 clear">
-
+                    <div class="clear">
                         <input type="radio" value="検索して" name="where_from" id="where_from1" class="form-radio" placeholder="">
                         <label for="where_from1">検索して</label>
 
@@ -239,8 +239,8 @@
                         <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
                         <label for="where_from8">Instagramを見て</label>
 
-                        <input type="radio" value="Twitterを見て" name="where_from" id="where_from9" class="form-radio" placeholder="">
-                        <label for="where_from9">Twitterを見て</label>
+                        <input type="radio" value="Twitterを見て" name="where_from" id="where_from2" class="form-radio" placeholder="">
+                        <label for="where_from2">Twitterを見て</label>
 
                         <input type="radio" value="お友達から" name="where_from" id="where_from4" class="form-radio" placeholder="">
                         <label for="where_from4">お友達から</label>
@@ -250,14 +250,19 @@
 
                         <input type="radio" value="先輩上司から" name="where_from" id="where_from6" class="form-radio" placeholder="">
                         <label for="where_from6">先輩上司から</label>
+
+                          </div>
+
                         <p class="regist-add-form-edit-subtitle">他サイトで紹介されていた</p>
                         <div class="othet_input">
                             <input type="text" id="where_from_site" name="where_from_site" class="form-control" placeholder="良かったらサイト名を教えてください♪" style="margin-top:10px;">
                         </div>
-                        <p class="regist-add-form-edit-subtitle">その他</p>
+
+                        <p class="regist-add-form-edit-subtitle" style="margin-top:10px;">その他</p>
                         <div class="othet_input">
                             <input type="text" id="where_from_other" name="where_from_other" class="form-control" placeholder="その他の方はこちら" style="margin-top:10px;">
                         </div>
+
                     </div>
                 </div>
 
