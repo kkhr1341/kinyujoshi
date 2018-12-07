@@ -70,10 +70,10 @@ class Regist extends Base
 //        $val->add('income', '「3年後の自分の年収をどのくらいにしたいですか？」')
 //            ->add_rule('required');
 
-        $val->add('where_from', '「どこできんゆう女子。を知りましたか？」')
+        $val->add('where_from', '「きんゆう女子。に最初に出会ったのはどこ？」')
             ->add_rule('required');
         $val->add('where_from_site', '良かったらサイト名を教えてください♪');
-        $val->add('where_from_other', '「どこできんゆう女子。を知りましたか？その他」');
+        $val->add('where_from_other', '「きんゆう女子。に最初に出会ったのはどこ？その他」');
 
         $val->add('regist_triggers', 'メンバーになろうと思ったきっかけ')
             ->add_rule('required');
@@ -432,30 +432,30 @@ class Regist extends Base
     public static function getByCodeWithurl($code)
     {
         $result = \DB::select(
-            "member_regist.id", 
-            "member_regist.code", 
-            "member_regist.username", 
-            "member_regist.age", 
+            "member_regist.id",
+            "member_regist.code",
+            "member_regist.username",
+            "member_regist.age",
             "member_regist.not_know",
-            "member_regist.interest", 
-            "member_regist.ask", 
-            "member_regist.income", 
-            "member_regist.transmission", 
-            "member_regist.email", 
-            "member_regist.facebook", 
-            "member_regist.other_sns", 
-            "member_regist.introduction", 
-            "member_regist.user_agent", 
-            "member_regist.where_from", 
-            "member_regist.where_from_other", 
-            "member_regist.job_kind", 
-            "member_regist.id_name", 
-            "member_regist.disable", 
-            "member_regist.edit_inner", 
-            "member_regist.industry", 
-            "member_regist.industry_other", 
-            "profiles.prefecture", 
-            "member_regist.created_at", 
+            "member_regist.interest",
+            "member_regist.ask",
+            "member_regist.income",
+            "member_regist.transmission",
+            "member_regist.email",
+            "member_regist.facebook",
+            "member_regist.other_sns",
+            "member_regist.introduction",
+            "member_regist.user_agent",
+            "member_regist.where_from",
+            "member_regist.where_from_other",
+            "member_regist.job_kind",
+            "member_regist.id_name",
+            "member_regist.disable",
+            "member_regist.edit_inner",
+            "member_regist.industry",
+            "member_regist.industry_other",
+            "profiles.prefecture",
+            "member_regist.created_at",
             "member_regist.updated_at",
             \DB::expr("prefectures.name as prefecture_name"),
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
