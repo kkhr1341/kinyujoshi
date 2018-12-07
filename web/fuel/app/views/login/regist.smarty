@@ -36,12 +36,12 @@
                 <div class="regist-add-form-edit-el">
                     <label class="regist-add-form-edit-title">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
                     <p class="regist-add-form-edit-subtitle">漢字フルネームで入力してください。</p>
-                    <input type="text" id="name" class="form-control" placeholder="" value="">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="" value="">
                 </div>
 
                 <div class="regist-add-form-edit-el">
                     <label class="regist-add-form-edit-title">ふりがな（お名前）<span style="color:red; font-weight: normal;">*</span></label>
-                    <input type="text" id="name_kana" class="form-control" placeholder="">
+                    <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="">
                 </div>
 
                 <div class="regist-add-form-edit-el select-area">
