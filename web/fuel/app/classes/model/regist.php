@@ -52,39 +52,42 @@ class Regist extends Base
             ->add_rule('max_length', 255)
             ->add_rule('alphanum');
 
-
         $val->add('not_know', 'きんゆうワカラナイ度')
             ->add_rule('required');
 
-        $val->add('interest', '「お金について知りたいこと・興味のあること」')
+        $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
             ->add_rule('required');
 
-        $val->add('ask', '「きんゆう女子。でどんな出会いや発見がほしいですか？」')
+        $val->add('want_to_learns', 'きんゆう女子。コミュニティで何を学んだり知りたい？')
             ->add_rule('required');
 
-        $val->add('income', '「3年後の自分の年収をどのくらいにしたいですか？」')
+        $val->add('want_to_meets', 'きんゆう女子。コミュニティではどんな発見や出会いがほしい？')
             ->add_rule('required');
 
-        $val->add('where_from', '「どこできんゆう女子。を知りましたか？」')
+        $val->add('want_to_something', '金融に向き合い学び、3年後には何がほしいですか？')
             ->add_rule('required');
 
-        $val->add('where_from_other', '「どこできんゆう女子。を知りましたか？その他」');
+//        $val->add('income', '「3年後の自分の年収をどのくらいにしたいですか？」')
+//            ->add_rule('required');
 
-        $val->add('transmission', '「きんゆう女子。で情報発信したいですか？」')
+        $val->add('where_from', '「きんゆう女子。に最初に出会ったのはどこ？」')
+            ->add_rule('required');
+        $val->add('where_from_site', '良かったらサイト名を教えてください♪');
+        $val->add('where_from_other', '「きんゆう女子。に最初に出会ったのはどこ？その他」');
+
+        $val->add('regist_triggers', 'メンバーになろうと思ったきっかけ')
+            ->add_rule('required');
+
+        $val->add('future', 'きんゆう女子。を通してどんな自分になりたい？')
+            ->add_rule('required');
+
+        $val->add('transmission', 'きんゆう女子。で情報発信したいですか？')
             ->add_rule('required');
 
         $val->add('url', '「個人で発信しているブログなど」');
 
-        $val->add('job_kind', '「金融機関で働いていますか？」')
-            ->add_rule('required');
-
         $val->add('introduction', '自己紹介')
             ->add_rule('required');
-
-//        $val->add('confirm_password', 'パスワード（確認用）')
-//            ->add_rule('trim')
-//            ->add_rule('match_validated_field', 'password')
-//            ->set_error_message('match_validated_field', 'パスワード（確認用）は、パスワードと異なっています');
 
         return $val;
     }
@@ -149,12 +152,15 @@ class Regist extends Base
                 'name' => $params['name'],
                 'name_kana' => $params['name_kana'],
                 'not_know' => $params['not_know'],
-                'interest' => $params['interest'],
-                'ask' => $params['ask'],
-                'email' => $params['email'],
-                'income' => $params['income'],
+                'interest' => '',
+                'ask' => '',
+                'email' => '',
+                'income' => '',
                 'where_from' => $params['where_from'],
+                'where_from_site' => $params['where_from_site'],
                 'where_from_other' => $params['where_from_other'],
+                'want_to_something' => $params['want_to_something'],
+                'future' => $params['future'],
                 'transmission' => $params['transmission'],
                 'job_kind' => $params['job_kind'],
                 'age' => $params['birthday'],
@@ -165,6 +171,36 @@ class Regist extends Base
                 'created_at' => \DB::expr('now()'),
                 'user_agent' => @$_SERVER['HTTP_USER_AGENT'],
             ))->execute();
+
+            if ($params['want_to_learns']) {
+                foreach($params['want_to_learns'] as $value) {
+                    \DB::insert('user_want_to_learns')->set(array(
+                        'username' => $username,
+                        'value' => $value,
+                        'created_at' => \DB::expr('now()'),
+                    ))->execute();
+                }
+            }
+
+            if ($params['want_to_meets']) {
+                foreach($params['want_to_meets'] as $value) {
+                    \DB::insert('user_want_to_meets')->set(array(
+                        'username' => $username,
+                        'value' => $value,
+                        'created_at' => \DB::expr('now()'),
+                    ))->execute();
+                }
+            }
+
+            if ($params['regist_triggers']) {
+                foreach($params['regist_triggers'] as $value) {
+                    \DB::insert('user_regist_triggers')->set(array(
+                        'username' => $username,
+                        'value' => $value,
+                        'created_at' => \DB::expr('now()'),
+                    ))->execute();
+                }
+            }
 
             $db->commit_transaction();
 
@@ -195,40 +231,7 @@ class Regist extends Base
         $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
         $email02->subject("【きんゆう女子。】メンバー登録がありました！");
 
-        $name = $params['name'];
-        $name_kana = $params['name_kana'];
-        $age = $params['birthday'];
-        $prefecture = $params['prefecture'];
-        $not_know = $params['not_know'];
-        $interest = $params['interest'];
-        $ask = $params['ask'];
-        $income = $params['income'];
-        $where_from = $params['where_from'];
-        $where_from_other = $params['where_from_other'];
-        $transmission = $params['transmission'];
-        $email = $params['email'];
-        $facebook = "";
-        $job_kind = $params['job_kind'];
-        $introduction = $params['introduction'];
-
-        $email02->html_body(\View::forge('email/regist/return',
-            array(
-                'name' => $name,
-                'name_kana' => $name_kana,
-                'age' => $age,
-                'prefecture' => $prefecture,
-                'not_know' => $not_know,
-                'interest' => $interest,
-                'ask' => $ask,
-                'income' => $income,
-                'where_from' => $where_from,
-                'where_from_other' => $where_from_other,
-                'transmission' => $transmission,
-                'email' => $email,
-                'facebook' => $facebook,
-                'job_kind' => $job_kind,
-                'introduction' => $introduction
-            )));
+        $email02->html_body(\View::forge('email/regist/return', array()));
         $email02->to('cs@kinyu-joshi.jp'); //送り先
 
         $email02->return_path('support@kinyu-joshi.jp');
@@ -239,7 +242,7 @@ class Regist extends Base
 
     public static function save($params)
     {
-        $username = \Auth::get('username');
+//        $username = \Auth::get('username');
         \DB::update('member_regist')->set($params)->where('code', '=', $params['code'])->execute();
         return $params;
     }
@@ -429,30 +432,30 @@ class Regist extends Base
     public static function getByCodeWithurl($code)
     {
         $result = \DB::select(
-            "member_regist.id", 
-            "member_regist.code", 
-            "member_regist.username", 
-            "member_regist.age", 
+            "member_regist.id",
+            "member_regist.code",
+            "member_regist.username",
+            "member_regist.age",
             "member_regist.not_know",
-            "member_regist.interest", 
-            "member_regist.ask", 
-            "member_regist.income", 
-            "member_regist.transmission", 
-            "member_regist.email", 
-            "member_regist.facebook", 
-            "member_regist.other_sns", 
-            "member_regist.introduction", 
-            "member_regist.user_agent", 
-            "member_regist.where_from", 
-            "member_regist.where_from_other", 
-            "member_regist.job_kind", 
-            "member_regist.id_name", 
-            "member_regist.disable", 
-            "member_regist.edit_inner", 
-            "member_regist.industry", 
-            "member_regist.industry_other", 
-            "profiles.prefecture", 
-            "member_regist.created_at", 
+            "member_regist.interest",
+            "member_regist.ask",
+            "member_regist.income",
+            "member_regist.transmission",
+            "member_regist.email",
+            "member_regist.facebook",
+            "member_regist.other_sns",
+            "member_regist.introduction",
+            "member_regist.user_agent",
+            "member_regist.where_from",
+            "member_regist.where_from_other",
+            "member_regist.job_kind",
+            "member_regist.id_name",
+            "member_regist.disable",
+            "member_regist.edit_inner",
+            "member_regist.industry",
+            "member_regist.industry_other",
+            "profiles.prefecture",
+            "member_regist.created_at",
             "member_regist.updated_at",
             \DB::expr("prefectures.name as prefecture_name"),
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
