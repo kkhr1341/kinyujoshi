@@ -146,7 +146,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             ),
             array(
                 'property' => 'og:type',
-                'content' => 'website',
+                'content' => 'article',
             ),
             array(
                 'property' => 'og:title',
@@ -174,7 +174,15 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             ),
             array(
                 'property' => 'og:image',
-                'content' => $this->data['blog']['main_image'],
+                'content' => preg_replace("/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/", "$1/thumb_$2", $this->data['blog']['main_image'])
+            ),
+            array(
+                'property' => 'og:image:width',
+                'content' => '1200' 
+            ),
+            array(
+                'property' => 'og:image:height',
+                'content' => '630' 
             ),
             array(
                 'property' => 'twitter:card',
