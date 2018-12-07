@@ -6031,6 +6031,15 @@ footer {
       ログイン・メンバー登録の部分
     *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
     /* 登録部分 */
+.member-regist-title-text {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+
     .regist-btn-list {
         width: 100%;
     }

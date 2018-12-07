@@ -796,6 +796,26 @@
 .kinyu-top-member-block {
 
 }
+.member-regist-title-text {
+  width: 500px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.after-regist-kinjo-check a {
+  display: block;
+  width: 100%;
+   margin: 0 auto;
+  margin-top: 8px;
+}
+
+.title-wrapper {
+background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209, 0.3)),url(/images/business/step3_img.jpeg);
+ padding: 30px 0;
+ background-size: cover;
+ background-position: 50% 47%;
+ text-align: center;
+}
 .kinyu-top-member-list {
   height: 350px;
   margin-top: 24px;
