@@ -23,6 +23,65 @@ class Controller_Kinyu_Diagnosticchart extends Controller_Kinyubase
             $this->data['reset_time'] = 0;
         }
 
+        $this->template->meta = array(
+            array(
+                'name' => 'description',
+                'content' => '豊かに生きるための第一歩は「自分を知ること」が大切です。わたしはどんな女性になりたい？これから人生を送っていきたい？そして、わたしは実際にどんな人なのだろう...？そういった、自分自身のことを分かってくると、自分に本当に合ったお金の使い方や増やし方も見えてくるし、自信を持って、選ぶこともできます。自分がどのきん女。タイプなのか、3〜6問の質問に答えて診断してみましょう♪',
+            ),
+            array(
+                'property' => 'og:locale',
+                'content' => 'ja_JP',
+            ),
+            array(
+                'property' => 'og:type',
+                'content' => 'article',
+            ),
+            array(
+                'property' => 'og:title',
+                'content' => 'きん女。診断｜きんゆう女子。',
+            ),
+            array(
+                'property' => 'og:description',
+                'content' => '豊かに生きるための第一歩は「自分を知ること」が大切です。わたしはどんな女性になりたい？これから人生を送っていきたい？そして、わたしは実際にどんな人なのだろう...？そういった、自分自身のことを分かってくると、自分に本当に合ったお金の使い方や増やし方も見えてくるし、自信を持って、選ぶこともできます。自分がどのきん女。タイプなのか、3〜6問の質問に答えて診断してみましょう♪',
+            ),
+            array(
+                'property' => 'og:url',
+                'content' => Uri::current(),
+            ),
+            array(
+                'property' => 'og:site_name',
+                'content' => 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ',
+            ),
+            array(
+                'property' => 'article:publisher',
+                'content' => 'https://www.facebook.com/kinyujyoshi/',
+            ),
+            array(
+                'property' => 'fb:app_id',
+                'content' => '831295686992946',
+            ),
+            array(
+                'property' => 'og:image',
+                'content' => 'https://kinyu-joshi.jp/images/diagnosticchart/chart_main_sp.jpg'
+            ),
+            array(
+                'property' => 'og:image:width',
+                'content' => '1200'
+            ),
+            array(
+                'property' => 'og:image:height',
+                'content' => '630'
+            ),
+            array(
+                'property' => 'twitter:card',
+                'content' => 'summary_large_image',
+            ),
+            array(
+                'property' => 'twitter:site',
+                'content' => '@kinyu_joshi',
+            ),
+        );
+
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
             $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);

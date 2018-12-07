@@ -134,7 +134,6 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             $this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
         }
 
-
         $this->template->meta = array(
             array(
                 'name' => 'description',
