@@ -1,0 +1,41 @@
+<!-- <link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+
+<div class="admin-normal-container mykinjo-block">
+  <div class="admin-normal-inner clear">
+    
+    {$my_side}
+    
+    <div class="admin-normal-main my-useful">
+      <div class="admin-normal-joshikai joshikailist-main">
+				<!-- 画像イメージこちらに入ります。 -->
+        <img class="pc passport-main-img" src="/images/my/useful/useful_kinyu.jpg">
+        <img class="sp passport-main-img" src="/images/my/useful/useful_kinyu_og.jpg">
+        <h3 class="mypage-content-title">私にとってプラスになる<br>素敵なきんゆうコンテンツ♪</h3>
+        <p class="mypage-content-description passport-exist pc">
+        きん女。パスポートは、メンバーさんだけが使えるすてきな特典です。<br>
+        日々企画を考えているので、これからもどんどん増えていく予定です♪
+        <span style="display: block;height:12px;"></span>
+        きん女。パスポートにどんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、<br>
+        よろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
+        もしかしたら採用されるかも！？
+        </p>
+        <p class="mypage-content-description passport-exist sp">
+        きん女。パスポートは、メンバーさんだけが使えるすてきな特典です。
+        日々企画を考えているので、これからもどんどん増えていく予定です♪
+        <span style="display: block;height:12px;"></span>
+        きん女。パスポートにどんなことがあったら嬉しいか、みなさんと一緒に決めていきたいので、よろしければ、みなさんの声もお聞かせいただけると嬉しいです(*´꒳`*)<br>
+        もしかしたら採用されるかも！？
+        </p>
+      </div>
+
+			<!-- お役立ちコンテンツ・メイン部分 -->
+			<div class="useful-main-box">
+
+        {$useful_content}
+				
+			</div>
+    </div>
+  </div>
+</div>
+

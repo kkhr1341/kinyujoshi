@@ -151,6 +151,9 @@ return array(
 	'my/member_joshikai' => 'my/events/member_joshikai',
 	'my/kinjo'   => 'my/mykinjo/index',
 	'my/member_report' => 'my/blog/member_report',
+
+	//お役立ちツール
+	'my/useful'   => 'my/useful/index',
 	
 	//パスポート
 	'my/passport'   => 'my/passport/index',

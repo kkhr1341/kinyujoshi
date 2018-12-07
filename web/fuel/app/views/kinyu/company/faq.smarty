@@ -62,7 +62,7 @@
       <p class="question-text">女子会のキャンセルはどこからできますか？</p>
       <p class="answer-text">
         ◆メンバー登録している場合<br>
-        <a href="/my" target="_blank">マイページ</a>へログイン後、下の方に進んでいただくと「参加予定の女子会」が表示されます。該当の女子会を押していただき「女子をキャンセルする」より、参加を取り消すことができます。<br><br>
+        <a href="/my" target="_blank">マイページ</a>へログイン後、「参加予定の女子会」が表示されます。該当の女子会を押していただき「女子会をキャンセルする」より、参加を取り消すことができます。<br><br>
         ◆メンバー登録していない場合<br>
         お手数おかけいたしますが、<a href="/contact" target="_blank">お問い合わせページ</a>より、参加取り消しのご連絡をお願いいたします。
       </p>
@@ -75,13 +75,13 @@
 
     <li>
       <p class="question-text">登録したメールアドレスやパスワードを変更したいです。</p>
-      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「ログイン情報の設定」より、変更することができます。<br>また、Facebook・Googleでご登録された方は、パスワードを設定することでメールアドレスでもログインすることできるようになります。
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「ログイン情報の設定」より、変更することができます。<br>また、Facebook・Googleでご登録された方は、パスワードを設定することでメールアドレスでもログインすることできるようになります。
       </p>
     </li>
 
     <li>
       <p class="question-text">パスワードの変更はどこからできますか？</p>
-      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「<ログイン情報の設定」より、変更することができます。</p>
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「ログイン情報の設定」より、変更することができます。</p>
     </li>
 
     <li>
@@ -97,13 +97,13 @@
 
     <li>
       <p class="question-text">退会したいです。</p>
-      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント情報</a>」→「<a href="/my/account/withdrawal" target="_blank">メンバー退会</a>」より、退会を行うことができます。また、退会後の情報は<a href="/privacy" target="_blank">プライバシーポリシー</a>に従って管理・削除いたします。<br>2018年3月3日にマイページ機能ができました。それ以前にご登録いただいていた方はお手数おかけいたしますが、<a href="/contact" target="_blank">お問い合わせフォーム</a>または、きんゆう女子。編集部（support@kinyu-joshi.jp）までご連絡ください。</p>
+      <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「<a href="/my/account/withdrawal" target="_blank">メンバー退会</a>」より、退会を行うことができます。また、退会後の情報は<a href="/privacy" target="_blank">プライバシーポリシー</a>に従って管理・削除いたします。<br>2018年3月3日にマイページ機能ができました。それ以前にご登録いただいていた方はお手数おかけいたしますが、<a href="/contact" target="_blank">お問い合わせフォーム</a>または、きんゆう女子。編集部（support@kinyu-joshi.jp）までご連絡ください。</p>
     </li>
 
     <li>
       <p class="question-text">プロフィール画像の変更はできますか？</p>
-      <p class="answer-text pc"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/profile" target="_blank">プロフィール編集</a>」→「プロフィールを編集する」より、イラスト部分（FacebookもしくはGoogleでご登録された方はそれぞれのアカウントにて設定されている画像が表示されます。）にカーソルを合わせると、「プロフィール画像を変更する」と表示されます。そのままイラスト部分を押していただき、変更したい画像をアップロードするとプロフィール画像を変更することができます。</p>
-      <p class="answer-text sp"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/profile" target="_blank">プロフィール編集</a>」→「プロフィールを編集する」より、イラスト部分（FacebookもしくはGoogleでご登録された方はそれぞれのアカウントにて設定されている画像が表示されます。）を押していただき、変更したい画像をアップロードするとプロフィール画像を変更することができます。</p>
+      <p class="answer-text pc"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「<a href="/my/profile" target="_blank">プロフィールの設定</a>」→「プロフィールを編集する」より、イラスト部分（FacebookもしくはGoogleでご登録された方はそれぞれのアカウントにて設定されている画像が表示されます。）にカーソルを合わせると、「プロフィール画像を変更する」と表示されます。そのままイラスト部分を押していただき、変更したい画像をアップロードするとプロフィール画像を変更することができます。</p>
+      <p class="answer-text sp"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「<a href="/my/profile" target="_blank">プロフィールの設定</a>」→「プロフィールを編集する」より、イラスト部分（FacebookもしくはGoogleでご登録された方はそれぞれのアカウントにて設定されている画像が表示されます。）を押していただき、変更したい画像をアップロードするとプロフィール画像を変更することができます。</p>
     </li>
 
     <li>
@@ -134,7 +134,7 @@
 $(function(){
   var title_frame_height = $('#title_frame').height();
   var page_title_height = $('.page_title').height();
-  
+
   var padding_top = (title_frame_height / 2) - (page_title_height / 2);
   $('.page_title').css('padding-top', padding_top);
 });

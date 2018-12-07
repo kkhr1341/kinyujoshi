@@ -3,6 +3,186 @@
 ---------------------------------- */
 @media screen and (max-width: 1023px) {
 
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - 新しい部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/* メニュー・サイドバー */
+.admin-normal-side .menu-list li a {
+  text-align: left;
+}
+.admin-normal-navigation p {
+  font-size: 12px;
+  color: #444444;
+  font-weight: normal;
+  text-align: left;
+  font-weight: 300;
+}
+.admin-normal-navigation .admin-menu-title {
+  font-weight: 400;
+  font-size: 13px;
+  border-left: 2px solid #8ddcd1;
+  padding-left: 8px;
+  margin-bottom: 12px;
+}
+
+/* プロフィール部分 */
+.side-profile-block {
+  width: 88%;
+  margin: 0 auto;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+.side-check-block .inner {
+  width: 100%;
+  background: #f9f9f9;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+}
+.side-check-block {
+  margin-top: 16px;
+}
+.side-check-block .inner:before {
+  right: 0px;
+}
+
+.my-maincontent-block {
+  margin-bottom: 40px;
+}
+.my-maincontent-last {
+  margin-bottom: 0px;
+}
+.admin-normal-main .inner {
+  padding: 0px;
+  background: none;
+}
+.my-joshikai-join {
+  margin-bottom: 32px;
+}
+.my-joshikai-join li {
+  width: 48.5%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+}
+.my-joshikai-join li:nth-child(2n) {
+  margin-right: 0%;
+}
+.my-joshikai-join li:nth-child(3n) {
+  margin-right: 3%;
+}
+.my-joshikai-join li:nth-child(6n) {
+  margin-right: 0%;
+}
+.my-joshikai-join li .text-box {
+  background: #fff;
+  padding: 16px 12px;
+}
+.my-joshikai-join li .img-box {
+  height: 100px;
+}
+.my-content-title {
+  font-size: 13px;
+  line-height: 13px;
+  margin-bottom: 16px;
+}
+.my-content-title span {
+  border-top: 2px solid #8ddcd1;
+  padding-top: 10px;
+  display: inline-block;
+}
+.my-joshikai-join li .text-box .date-text {
+  font-size: 11px;
+  line-height: 11px;
+}
+.my-joshikai-join li .text-box .title-text {
+  font-size: 11px;
+  line-height: 16px;
+  height: 32px;
+}
+
+/* メンバー限定レポート */
+.my-member-report-block li .text-box {
+  background: #fff;
+  padding: 16px;
+}
+.my-member-report-block li .text-box .title-text {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 8px;
+}
+.my-member-report-block li .text-box .description-text {
+  display: none;
+}
+.my-member-report-block li .text-box .category-text p {
+  font-size: 11px;
+  line-height: 11px;
+}
+.my-member-report-block li {
+  height: 105px;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - お役立ちコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.useful-main-box .useful-main-box-el {
+  background: #fff;
+}
+.useful-main-box .text-main-box {
+  width: 100%;
+  float: none;
+  padding-left: 20px;
+}
+.useful-main-box .img-box-sp {
+  width: 80%;
+}
+.useful-main-box .img-box-sp img {
+  width: 100%;
+}
+.useful-main-box-el {
+  padding: 24px;
+}
+.useful-main-box .text-main-box .sub-title {
+  font-size: 12px;
+  line-height: 12px;
+}
+.useful-main-box .text-main-box .text-main-title {
+  font-size: 15px;
+  line-height: 15px;
+  padding: 8px 0px 4px;
+}
+.useful-main-box .text-main-box .text-main-description {
+  font-size: 10px;
+  line-height: 16px;
+  margin-top: 16px;
+}
+.useful-main-box .text-main-box .text-main-company a {
+  font-size: 10px;
+}
+.useful-main-box .ab-moneynote .useful-main-link {
+  width: 80%;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+/* non-メッセージ */
+.non-message {
+  padding: 20px 0px;
+  background: #fff;
+}
+.non-message p {
+  font-size: 12px;
+}
+.non-message a {
+  width: 160px;
+  padding: 8px 0px;
+  margin-top: 16px;
+  font-size: 11px;
+}
+
+
 .btn {
   font-size: 12px;
   line-height: inherit;
@@ -19,7 +199,8 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .admin-normal-container .mypage-content-title {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
 }
 .mypage-content-description {
   width: 92%;
@@ -52,12 +233,14 @@
 .admin-normal-container .admin-normal-inner {
   width: 100%;
   padding: 36px 0px 50px;
+  max-width: 100%;
+  min-width: 100%;
 }
 .admin-normal-side {
   display: none;
 }
 .admin-normal-main {
-  width: 92%;
+  width: 88%;
   float: none;
   margin: 0 auto;
   padding: 0px;
@@ -170,11 +353,6 @@
   z-index: 1004;
   background-color: rgba(255,255,255,.9);
   padding: 50px 36px 0px; 
-}
-.admin-normal-navigation p {
-  font-size: 16px;
-  color: #77bfb5;
-  font-weight: normal;
 }
 .admin-normal-navigation li {
   text-align: left;

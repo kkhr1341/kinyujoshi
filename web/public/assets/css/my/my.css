@@ -7,6 +7,189 @@
     height: 250px;
 }
 
+.my-pagetitle {
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.my-maincontent-block {
+  margin-bottom: 45px;
+}
+
+.my-maincontent-last {
+  margin-bottom: 0px;
+}
+
+.my-side-edit {
+  width: 20px;
+  height: 20px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - メンバー限定女子会
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.my-member-report-block li {
+  width: 100%;
+  height: 136px;
+  margin-bottom: 3%;
+  position: relative;
+}
+.my-member-report-block li:last-child {
+  margin-bottom: 0%; 
+}
+.my-member-report-block li .img-box {
+  width: 28%;
+  height: 100%;
+  float: left;
+}
+.my-member-report-block li .text-box {
+  width: 72%;
+  height: 100%;
+  float: right;
+  background: #f9f9f9;
+  padding: 20px;
+}
+.my-member-report-block-detail li .text-box {
+  background: #fff;
+}
+/* 詳細ページのみ */
+.my-member-report-block-detail li .text-box {
+  background: #fff;
+}
+
+.my-member-report-block li .text-box .category-text p { 
+  font-size: 12px;
+  line-height: 12px;
+  color: #77cbc0;
+}
+.my-member-report-block li .text-box .title-text { 
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 8px;
+}
+.my-member-report-block li .text-box .description-text { 
+  color: gray;
+  font-size: 10px;
+  line-height: 13px;
+  margin-top: 6px;
+  height: 26px;
+  overflow: hidden;
+}
+.my-more-link {
+  text-align: right;
+  margin-top: 8px;
+}
+.my-more-link a {
+  text-align: right;
+  font-size: 11px;
+  color: #77cbc0;
+  font-weight: bold;
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - お役立ちコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/* トップのみ */
+.my-top-content .useful-main-box-el {
+  background: #f9f9f9;
+  padding: 30px;
+  margin-bottom: 0px;
+}
+.my-top-content .useful-main-box-el-inner .text-main-box .text-main-description {
+  font-size: 11px;
+  line-height: 18px;
+}
+.my-top-content .ab-moneynote .useful-main-link {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.my-useful .mypage-content-title {
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+.useful-main-box-el {
+  background: #fff;
+  margin-bottom: 40px;
+  padding: 42px;
+}
+.useful-main-box-el-inner {
+}
+.useful-main-box-el-inner .img-box {
+  width: 32%;
+  /*height: 200px;*/
+  float: left;
+}
+.useful-main-box-el-inner .img-box img {
+  width: 100%;
+}
+.useful-main-box-el-inner .text-main-box {
+  width: 64%;
+  float: right;
+  padding-left: 24px;
+  /*border-left: 1px solid #ececec;*/
+}
+.useful-main-box-el-inner .text-main-box .sub-title {
+  font-family: 'Allura', cursive;
+  font-size: 16px;
+  line-height: 16px;
+  color: gray;
+}
+.useful-main-box-el-inner .text-main-box .text-main-title {
+  font-size: 18px;
+  line-height: 18px;
+  padding: 8px 0px 12px;
+  font-weight: bold;
+}
+.useful-main-box-el-inner .text-main-box .text-main-description {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.useful-main-box-el-inner .text-main-box .text-main-company {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 16px;
+}
+.useful-main-box-el-inner .text-main-box .text-main-company a {
+  font-size: 11px;
+  line-height: 16px;
+  color: #5499d8;
+}
+.useful-main-box-el .useful-main-link {
+  display: block;
+  width: 350px;
+  background: gray;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 24px;
+  position: relative;
+}
+.useful-main-box-el .useful-main-link:after {
+  content: "〉";
+  position: absolute;
+  right: 0;
+
+}
+/* ユニーク・セレクタ */
+.ab-moneynote .useful-main-link {
+  background: #edf1f0;
+}
+.ab-moneynote .text-main-title {
+  color: #e64699;
+}
+.ab-moneynote .text-main-box {
+  border-left: 1px solid #fb0081;
+}
+
+
+
 .mykinjo-block .text-box {
     margin-top: 24px;
     margin-bottom: 42px;
@@ -22,7 +205,7 @@
 .mykinjo-block .text-box .description {
     text-align: center;
     width: 65%;
-    margin: 0 auto;
+    margin: 0 auto;animation: 
 }
 
 .mykinjo-block .request-block .request-title {
@@ -114,6 +297,7 @@
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     font-size: 13px;
+    background: #fff;
 }
 
 .form-left {
@@ -566,6 +750,88 @@ footer {
     color: #fff;
 }
 
+.my-content-title {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 12px;
+    /*border-left: 2px solid #8ddcd1;*/
+    /*padding-left: 12px;*/
+    /*font-weight: bold;*/
+}
+.my-content-title span {
+  border-top: 2px solid #8ddcd1;
+  padding-top: 12px;
+  display: inline-block;
+}
+.non-message {
+  padding: 30px 0px;
+  background: #f9f9f9;
+}
+.non-message p {
+  text-align: center;
+  font-size: 14px;
+}
+.non-message a {
+  display: block;
+  width: 220px;
+  background: #8ddcd1;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 0px;
+  margin-top: 16px;
+  position: relative;
+  font-size: 12px;
+  color: #fff;
+}
+/* 詳細ページのみ */
+.my-member-report-block-detail .non-message {
+  background: #fff;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  管理画面 - 参加予定の女子会部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.join-joshikai-block {
+
+}
+.join-joshikai-block .my-joshikai-join li {
+  background: #fff;
+}
+.js-tab {
+  margin-bottom: 20px;
+}
+
+.js-tab::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.js-tab > div {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: .5s;
+  font-size: 14px;
+  opacity: .5;
+  padding-right: 20px;
+  font-weight: normal;
+  color: #77cbc0;
+}
+
+.js-tab > div.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.js-tab_content {
+  display: none;
+}
+
+.js-tab_content.active {
+  display: block;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   管理画面 - 女子会参加者管理部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -776,7 +1042,8 @@ footer {
 .my-container {
     padding-top: 130px;
     /*background: #c5e9e4;*/
-    background: #f9f9f9;
+    /*background: #f9f9f9;*/
+    background: #f6f9f8;
 }
 
 /* 診断結果による色分け */
@@ -796,65 +1063,185 @@ footer {
   background: #E285AB;
 }*/
 .admin-normal-container .admin-normal-inner {
-    width: 1000px;
+    width: 82%;
     margin: 0 auto;
     padding: 70px 0px;
+    max-width: 1200px;
+    min-width: 1000px;
 }
 
 .admin-normal-side {
-    width: 190px;
+    width: 26%;
     float: left;
-    padding-right: 20px;
+    padding-right: 32px;
+}
+.side-profile-block {
+  background: #fff;
+  margin-bottom: 24px;
+  padding: 20px;
+  position: relative;
+}
+.side-profile-block .my-side-edit {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  transition: .5s;
+}
+.side-profile-block .my-side-edit:hover {
+  background: #fff;
+  opacity: .5;
+}
+.side-profile-block .my-side-edit img {
+  width: 100%;
+}
+.side-profile-block .img-box {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+  box-shadow: 0 0 2px 2px #fff inset;
+}
+.side-profile-block .name {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 16px;
+}
+.side-profile-block .copy {
+  text-align: center;
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 15px;
 }
 
-.admin-normal-side li {
+.admin-normal-side .menu-list li {
     text-align: center;
     margin-bottom: 8px;
     position: relative;
+    position: relative;
+    transition: .5s;
 }
-
-/*.admin-normal-side li:nth-child(2):before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-top: 5px solid #efcab4;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid #efcab4;
-}*/
-.admin-normal-side li a {
+.admin-normal-side .menu-list li a {
     display: block;
     padding: 8px 0px;
     transition: .5s;
 }
+.admin-normal-side .menu-list li p {
+    display: block;
+    padding: 8px 0px;
+    transition: .5s;
+}
+.admin-normal-side .menu-list li.no-btn:hover {
+  cursor: not-allowed;
+}
+.admin-normal-side .menu-list li.no-btn:hover p {
+  opacity: .3;
+}
 
-.admin-normal-side li a span {
+.admin-normal-side .menu-list li a span {
     font-size: 11px;
 }
 
-.admin-normal-side li:last-child {
+.admin-normal-side .menu-list li:last-child {
     border-top: 1px dotted #dcdcdc;
     margin-top: 16px;
 }
 
-.admin-normal-side li:last-child a {
+.admin-normal-side .menu-list li:last-child a {
     font-size: 12px;
+    color: gray;
+
 }
 
-.admin-normal-side li.active {
+.admin-normal-side .menu-list li.active {
     background: #a6e9d9;
 }
 
-.admin-normal-side li.active a {
+/* カミングスーン */
+.admin-normal-side .menu-list li .comming{
+  display: none;
+  background: #8ddcd1;
+  position: absolute;
+  right: -20px;
+  top: -10px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #fff;
+}
+.admin-normal-side .menu-list li .comming:after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: -10px;
+  margin-top: -15px;
+  border: 8px solid transparent;
+  border-top: 12px solid #8ddcd1;
+  z-index: 0;
+  -ms-transform: rotate(48deg);
+  -webkit-transform: rotate(48deg);
+  transform: rotate(48deg);
+}
+
+.side-check-block {
+  margin-top: 12px;
+  border-top: 1px solid #ececec;
+}
+.side-check-block .inner {
+  display: table;
+  height: 40px;
+  position: relative;
+  padding-top: 12px;
+}
+.side-check-block .inner:before {
+  content: "〉";
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  margin-top: -8px;
+  color: #cacaca;
+}
+.side-check-block .icon-img {
+  width: 40px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.side-check-block .kinjo-check-title {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 11px;
+  line-height: 18px;
+  padding-right: 16px;
+  padding-left: 4px;
+}
+/* ない場合 */
+.side-check-no-block {
+  margin-top: 16px;
+}
+.side-check-no-block .check-no-title {
+  width: 92%;
+  display: block;
+  margin: 0 auto;
+}
+.side-check-no-block .check-no-link {
+  width: 92%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 8px;
 }
 
 .admin-normal-main {
-    width: 810px;
+    width: 74%;
     float: right;
-    padding: 0px 0px 0px 50px;
+    padding: 0px 0px 0px 31px;
     border-left: 1px solid #ececec;
     min-height: 200px;
+}
+.admin-normal-main .inner {
+  padding: 50px;
+  background: #fff;
 }
 
 /* プロフィール部分 */
@@ -907,7 +1294,7 @@ footer {
   display: table;
   background: #fff;
   padding: 32px 24px 20px;
-  margin: 24px 0px 32px;
+  margin: 0px 0px 32px;
 }
 .kinjo-check-block .icon-box {
   display: table-cell;
@@ -1040,10 +1427,10 @@ footer {
     background-color: #8ddcd1 !important;
     color: #fff;
     font-weight: bold;
-    border-top: 2px solid #f9f9f9!important;
+    border-top: 2px solid #f6f9f8!important;
 }
 .admin-profile-table td {
-    border-top: 2px solid #f9f9f9!important;
+    border-top: 2px solid #f6f9f8!important;
 }
 
 /* チェックしたレポート関連 */
@@ -1353,8 +1740,42 @@ footer {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   女子会部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.admin-normal-joshikai {
-    /*border-top: 1px solid #ececec;*/
+
+/* 参加予定の女子会 */
+.my-joshikai-join {
+
+}
+.my-joshikai-join li {
+  width: 31.333%;
+  margin-right: 3%;
+  background: #f9f9f9;
+  float: left;
+}
+.my-joshikai-join li:nth-child(3n) {
+  margin-right: 0%;
+}
+.my-joshikai-join li .img-box {
+  height: 130px;
+}
+.my-joshikai-join li .text-box {
+  padding: 20px 16px;
+}
+.my-joshikai-join li .text-box .date-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: #77cbc0;
+  margin-bottom: 6px;
+}
+.my-joshikai-join li .text-box .title-text {
+  font-size: 12px;
+  line-height: 18px;
+  height: 36px;
+  overflow: hidden;
+}
+
+
+/*.admin-normal-joshikai {
+    border-top: 1px solid #ececec;
 }
 
 .joshikailist-main {
@@ -1415,7 +1836,7 @@ footer {
     font-size: 13px;
     text-align: center;
     padding: 20px 0px;
-    background: #fff;
+    background: #f9f9f9;
 }
 
 .admin-normal-joshikai li .to-link-joshikai {
@@ -1429,15 +1850,7 @@ footer {
     color: #fff;
     font-weight: bold;
     transition: .5s;
-}
-
-.admin-normal-joshikai-title {
-    font-size: 12px;
-    line-height: 15px;
-    margin-bottom: 10px;
-    border-left: 2px solid #8ddcd1;
-    padding-left: 10px;
-}
+}*/
 
 /* 女子会詳細 */
 .admin-joshikai-detail-el-header {
@@ -1625,6 +2038,9 @@ footer {
 
 .admin-normal-container .regist-add-form-edit-title {
     margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 13px;
+    margin-bottom: 12px;
 }
 
 .regist-add-form-edit-el textarea.form-control {
@@ -1755,40 +2171,6 @@ footer {
     margin: 1px 0 0;
 }
 
-.js-tab {
-    margin-bottom: 20px;
-}
-
-.js-tab::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.js-tab > div {
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    transition: .5s;
-    font-size: 14px;
-    opacity: .5;
-    padding-right: 20px;
-    font-weight: normal;
-    color: #77cbc0;
-}
-
-.js-tab > div.active {
-    opacity: 1;
-}
-
-.js-tab_content {
-    display: none;
-}
-
-.js-tab_content.active {
-    display: block;
-}
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　管理画面
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -1879,6 +2261,24 @@ footer {
 
     .admin-normal-check-joshikai .to-link-report:hover {
         opacity: .5;
+    }
+
+    .my-joshikai-join li,
+    .my-member-report-block li,
+    .my-top-content .ab-moneynote .useful-main-link,
+    .side-check-block,
+    .my-more-link a {
+      transition: .5s;
+    }
+    .my-joshikai-join li:hover,
+    .my-member-report-block li:hover,
+    .side-check-block:hover,
+    .my-more-link a:hover {
+      opacity: .5;
+    }
+    .my-top-content .ab-moneynote .useful-main-link:hover {
+      background: #8ddcd1;
+      color: #fff;
     }
 
 }

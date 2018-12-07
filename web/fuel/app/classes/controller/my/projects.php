@@ -4,6 +4,9 @@ use \Model\Blogs;
 use \Model\Projects;
 use \Model\Courses;
 use \Model\Sections;
+use \Model\DiagnosticChartTypeUsers;
+use \Model\DiagnosticChartRouteTypeHashTags;
+use \Model\DiagnosticChartRouteTypeActionLists;
 
 class Controller_My_Projects extends Controller_Mybase
 {

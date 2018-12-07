@@ -84,11 +84,11 @@
 
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <p class="main-title">レポートページに<br>チェックボタンができました。</p>
+        <p class="main-title">レポートページに<br>お気に入りボタンができました。</p>
 
         <img class="check-flow" src="/images/report/check-flow.png">
-        <p class="main-description pc">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、<br>自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪<span style="display:block;height:12px;"></span></p>
-        <p class="main-description sp">レポートページの右下にある"<span>チェックボタン</span>"をクリックすると、自分のチェックしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪<span style="display:block;height:12px;"></span></p>
+        <p class="main-description pc">レポートページの右下にある"<span>お気に入りボタン</span>"をクリックすると、<br>お気に入りしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪<span style="display:block;height:12px;"></span></p>
+        <p class="main-description sp">レポートページの右下にある"<span>お気に入りボタン</span>"をクリックすると、お気に入りしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪<span style="display:block;height:12px;"></span></p>
         <p class="close text-close" data-dismiss="modal">閉じる</p>
       </div>
     </div>
@@ -101,7 +101,7 @@
       <!-- dialog body -->
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <p class="main-title">レポートを"チェック"するには<br>マイページへのログインが必要です。</p>
+        <p class="main-title">お気に入りに追加するには<br>マイページへのログインが必要です。</p>
         <ul class="check-report-modal-dummy-ul">
           <li><a href="/login_regist">新規メンバー登録</a></li>
           <li><a href="/my">マイページへログイン</a></li>
@@ -178,7 +178,7 @@ $(function() {
                 unCheck($(this).data('code'), function() {
                     button.removeClass('checked');
                     $("#report-chack-img").removeClass('img-checked');
-                    ts.success('チェックを外しました。');
+                    ts.success('お気に入りから外しました。');
                     // event tracking
                     gtag('event', 'click', {
                         'event_category': 'blog-stock',
@@ -191,7 +191,7 @@ $(function() {
                 check($(this).data('code'), function() {
                     button.addClass('checked');
                     $("#report-chack-img").addClass('img-checked');
-                    ts.success('チェックが完了しました。');
+                    ts.success('お気に入りに追加しました。');
                     // event tracking
                     gtag('event', 'click', {
                         'event_category': 'blog-stock',
