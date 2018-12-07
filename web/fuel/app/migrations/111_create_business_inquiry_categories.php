@@ -20,7 +20,7 @@ class Create_business_inquiry_categories
         \DBUtil::create_index(
             'business_inquiry_categories',
             'code',
-            'idx_business_inquiries_code_1',
+            'idx_business_inquiry_categories_code_1',
             'UNIQUE'
         );
 	}
