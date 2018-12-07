@@ -360,10 +360,6 @@
             $(this).find('span').on('click', function() {
                 input.trigger('click');
             })
-            // その他テキストフォーカスにその他のチェックボックスにチェックを入れる
-            $(this).find('input[name="want_to_learn_messages[]"]').on('click', function() {
-                input.prop("checked",true);
-            })
         })
     })
 
@@ -374,24 +370,34 @@
             $(this).find('span').on('click', function() {
                 input.trigger('click');
             })
-            // その他テキストフォーカスにその他のチェックボックスにチェックを入れる
-            $(this).find('input[name="want_to_meet_messages[]"]').on('click', function() {
-                input.prop("checked",true);
-            })
         })
     })
 
     $(function(){
         $('.checkbox-list-item').each(function() {
-            var input = $(this).find('input[name="cue[]"]');
+            var input = $(this).find('input[name="regist_triggers[]"]');
             // ラベルクリック時にチェックボックスにチェックをいれる
             $(this).find('span').on('click', function() {
                 input.trigger('click');
             })
-            // その他テキストフォーカスにその他のチェックボックスにチェックを入れる
-            $(this).find('input[name="cue[]"]').on('click', function() {
-                input.prop("checked",true);
-            })
+        })
+    })
+
+    $(function(){
+        var $from  = $('input[name="where_from"]');
+        var $site  = $('input[name="where_from_site"]');
+        var $other = $('input[name="where_from_other"]');
+        $from.click(function() {
+            $site.val('');
+            $other.val('');
+        })
+        $site.click(function() {
+            $from.prop('checked', false);
+            $other.val('');
+        })
+        $other.click(function() {
+            $from.prop('checked', false);
+            $site.val('');
         })
     })
 </script>
