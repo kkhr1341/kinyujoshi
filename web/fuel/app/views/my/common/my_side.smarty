@@ -48,7 +48,7 @@
     <li><a href="/my/report">お気に入り</a></li>
     <li><a href="/my/useful">お役立ちツール</a></li>
     <li class="no-btn"><p>教えて！きん女。</p><div class="comming">comming soon...</div></li>
-    <li class="no-btn"><p>Pick up!</p><div class="comming">comming soon...</div></li>
+    <li class="no-btn"><p>トレンド</p><div class="comming">comming soon...</div></li>
     <li><a href="/my/account">アカウント設定</a></li>
     <li><a href="/logout">ログアウト</a></li>
   </ul>

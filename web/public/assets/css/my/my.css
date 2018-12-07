@@ -190,12 +190,6 @@
 
 
 
-
-
-
-
-
-
 .mykinjo-block .text-box {
     margin-top: 24px;
     margin-bottom: 42px;
@@ -794,6 +788,49 @@ footer {
   background: #fff;
 }
 
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  管理画面 - 参加予定の女子会部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.join-joshikai-block {
+
+}
+.join-joshikai-block .my-joshikai-join li {
+  background: #fff;
+}
+.js-tab {
+  margin-bottom: 20px;
+}
+
+.js-tab::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.js-tab > div {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: .5s;
+  font-size: 14px;
+  opacity: .5;
+  padding-right: 20px;
+  font-weight: normal;
+  color: #77cbc0;
+}
+
+.js-tab > div.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.js-tab_content {
+  display: none;
+}
+
+.js-tab_content.active {
+  display: block;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   管理画面 - 女子会参加者管理部分
@@ -2132,40 +2169,6 @@ footer {
     position: absolute;
     left: 0;
     margin: 1px 0 0;
-}
-
-.js-tab {
-    margin-bottom: 20px;
-}
-
-.js-tab::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.js-tab > div {
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    transition: .5s;
-    font-size: 14px;
-    opacity: .5;
-    padding-right: 20px;
-    font-weight: normal;
-    color: #77cbc0;
-}
-
-.js-tab > div.active {
-    opacity: 1;
-}
-
-.js-tab_content {
-    display: none;
-}
-
-.js-tab_content.active {
-    display: block;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
