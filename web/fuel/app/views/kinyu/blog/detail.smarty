@@ -178,7 +178,7 @@ $(function() {
                 unCheck($(this).data('code'), function() {
                     button.removeClass('checked');
                     $("#report-chack-img").removeClass('img-checked');
-                    ts.success('チェックを外しました。');
+                    ts.success('お気に入りから外しました。');
                     // event tracking
                     gtag('event', 'click', {
                         'event_category': 'blog-stock',
@@ -191,7 +191,7 @@ $(function() {
                 check($(this).data('code'), function() {
                     button.addClass('checked');
                     $("#report-chack-img").addClass('img-checked');
-                    ts.success('チェックが完了しました。');
+                    ts.success('お気に入りに追加しました。');
                     // event tracking
                     gtag('event', 'click', {
                         'event_category': 'blog-stock',
