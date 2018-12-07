@@ -30,7 +30,7 @@
                     <label class="regist-add-form-edit-title">パスワード<span style="color:red; font-weight: normal;">*</span></label>
                     <p class="regist-add-form-edit-subtitle">半角英数字6文字以上で入力してください。</p>
                     <input type="password" name="password" id="password" class="form-control" placeholder="">
-                    <input type="password" name="confirm_password" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
+                    <input type="password" name="password_conf" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
                 </div>
 
                 <div class="regist-add-form-edit-el">
@@ -419,8 +419,9 @@
             }
 
             // パスワード入力チェック
-            var password = $("#password").val();
-            var password_conf = $("#password_conf").val();
+            var password = $("[name='password']").val();
+            var password_conf = $("[name='password_conf']").val();
+
             if (password_conf == "") {
                 ts.error("確認用のパスワードをご入力してください。");
                 return false;
@@ -451,14 +452,14 @@
 
             var params = {};
 
-            params.email = $('#email').val(); //メールアドレス
-            params.password = $('#password').val(); //パスワード
-            params.name = $('#name').val(); //お名前
-            params.name_kana = $('#name_kana').val(); //ふりがな
+            params.email = $('[name="email"]').val(); //メールアドレス
+            params.password = password; //パスワード
+            params.name = $('[name="name"]').val(); //お名前
+            params.name_kana = $('[name="name_kana"]').val(); //ふりがな
             params.birthday = (age01+age02+age03); //生年月日
-            params.prefecture = $("[name=prefecture]").val(); //都道府県
-            params.not_know = $("[name=not_know]:checked").val(); //金融ワカラナイ度
-            params.job_kind = $("[name=job_kind]:checked").val();
+            params.prefecture = $('[name="prefecture"]').val(); //都道府県
+            params.not_know = $('[name="not_know"]:checked').val(); //金融ワカラナイ度
+            params.job_kind = $('[name="job_kind"]:checked').val();
 
             // きんゆう女子。コミュニティで何を学んだり知りたい？
             params.want_to_learns = $('[name="want_to_learns[]"]:checked').map(function(){

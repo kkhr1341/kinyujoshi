@@ -33,7 +33,7 @@ class Controller_Login extends Controller_KinyuBase
         }
     }
 
-    public function action_regist()
+    public function action_login_regist()
     {
 
         if (!Auth::check()) {
@@ -49,7 +49,7 @@ class Controller_Login extends Controller_KinyuBase
                 $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
                 $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
             }
-            $this->template->contents = View::forge('login/regist.smarty', $this->data);
+            $this->template->contents = View::forge('login/login_regist.smarty', $this->data);
 
         } else {
             Response::redirect('/my');

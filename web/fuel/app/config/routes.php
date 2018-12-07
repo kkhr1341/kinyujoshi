@@ -11,7 +11,7 @@ return array(
 
 	//◆メンバー登録/ログイン部分
 	'regist'   => 'login/regist',
-	'login_regist'   => 'login/regist',
+	'login_regist'   => 'login/login_regist',
 	'regist_email'   => 'login/regist_email',
 	'regist_sns'   => 'login/regist_sns',
 	'resetting_pass' => 'login/resetting_pass',
