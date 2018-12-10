@@ -151,7 +151,7 @@ var $resArray02 = $resArray[1];
               return false;
             }
 
-            $('.fee-card-fm').submit();
+            $('.credit-payment-fm').submit();
         })
 
         // 0円決済申し込み
@@ -198,19 +198,21 @@ var $resArray02 = $resArray[1];
             $(".loader-block").fadeIn(200);
             $.getJSON(url, function(result){
                 $(".loader-block").hide();
-                if (result.data && result.data.amount == 0) {
+                if (result.data && result.data.discount > 0) {
                     $('.info-coupon').find('.amount').text(convertYen(result.data.amount));
                     $('.info-coupon').find('.fee').text(convertYen(result.data.fee));
                     $('.info-coupon').find('.discount').text(convertYen(result.data.discount));
                     $('.info-coupon').fadeIn(1000);
                     $('.info-no-coupon').hide();
-
-                    $('.js-credit-payment-container').hide();
-                    $('.js-free-payment-container').show();
                 } else {
                     $('.info-coupon').hide();
                     $('.info-no-coupon').show();
+                }
 
+                if (result.data && result.data.amount == 0) {
+                    $('.js-credit-payment-container').hide();
+                    $('.js-free-payment-container').show();
+                } else {
                     $('.js-credit-payment-container').show();
                     $('.js-free-payment-container').hide();
                 }

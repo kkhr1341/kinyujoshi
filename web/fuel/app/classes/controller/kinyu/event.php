@@ -224,13 +224,6 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         if (!$this->paynable($this->data['event'])) {
             throw new HttpNoAccessException;
         }
-
-        // クーポン割引金額
-        if ($this->data['coupon_code']) {
-            $this->data['discount'] = EventCoupons::getDiscount($code, $this->data['coupon_code']);
-        } else {
-            $this->data['discount'] = 0;
-        }
         $username = \Auth::get('username');
 
         $this->template->title = 'イベント詳細｜きんゆう女子。';

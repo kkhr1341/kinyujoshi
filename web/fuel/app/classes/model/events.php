@@ -113,6 +113,8 @@ class Events extends Base
 
         $event['full'] = $application_num >= $event['limit'] ? true: false;
 
+        $event['discount'] = 0;
+
         if ($coupon_code) {
             $coupon = \DB::select('*')
                 ->from('event_coupons')
@@ -123,6 +125,7 @@ class Events extends Base
                 ->current();
             if ($coupon) {
                 $event['fee'] = (int)$event['fee'] - (int)$coupon['discount'];
+                $event['discount'] = (int)$coupon['discount'];
             }
         }
         if ($event['fee'] < 0){

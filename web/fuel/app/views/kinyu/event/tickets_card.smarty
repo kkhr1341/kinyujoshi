@@ -68,9 +68,9 @@
         </div>
 
         <div class="kinyu-credit-fee-area">
-          {if $discount}
-            <p><span>参加費</span>：{$event.fee-$discount|number_format}円</p>
-            <p><span>割引額</span>：<span class="discount-span" style="font-weight: normal;color: red;!important">{$discount|number_format}円</span></p>
+          {if $event.discount > 0}
+            <p><span>参加費</span>：{$event.fee|number_format}円</p>
+            <p><span>割引額</span>：<span class="discount-span" style="font-weight: normal;color: red;!important">{$event.discount|number_format}円</span></p>
           {else}
             <p><span>参加費</span>：{$event.fee|number_format}円</p>
           {/if}
