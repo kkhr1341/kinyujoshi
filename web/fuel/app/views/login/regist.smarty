@@ -12,26 +12,35 @@
             「<span style="color:red; padding-top: 10px; display:inline-block;">*</span>」は必須項目となります。<br><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p> -->
 
         <form name="form1">
-            <input type="hidden" id="uid" value="{$userdata.uid}">
-            <input type="hidden" id="password" value="{$userdata.uid}">
-            <input type="hidden" id="profile_image" value="{$userdata.image}">
-            <input type="hidden" id="provider" value="{$userdata.provider}">
-            <input type="hidden" id="access_token" value="{$userdata.access_token}">
-            <input type="hidden" id="expires" value="{$userdata.expires}">
+            {if $userdata.uid}
+                <input type="hidden" name="uid" value="{$userdata.uid}">
+                <input type="hidden" name="password" value="{$userdata.uid}">
+                <input type="hidden" name="profile_image" value="{$userdata.image}">
+                <input type="hidden" name="provider" value="{$userdata.provider}">
+                <input type="hidden" name="access_token" value="{$userdata.access_token}">
+                <input type="hidden" name="expires" value="{$userdata.expires}">
+            {/if}
+
             <input type="hidden" id="after_login_url" value="{$after_login_url}">
+
             <div class="singlepage-form-block">
 
                 <div class="regist-add-form-edit-el">
                     <label class="regist-add-form-edit-title">メールアドレス<span style="color:red; font-weight: normal;">*</span></label>
-                    <input type="text" name="email" id="email" class="form-control" placeholder="">
+                    {if $userdata && isset($userdata.email)}
+                        <input type="text" name="email" id="email" class="form-control" placeholder="" value="{$userdata.email}">
+                    {else}
+                        <input type="text" name="email" id="email" class="form-control" placeholder="" value="">
+                    {/if}
                 </div>
-
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">パスワード<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">半角英数字6文字以上で入力してください。</p>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="">
-                    <input type="password" name="password_conf" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
-                </div>
+                {if $userdata.uid eq ''}
+                    <div class="regist-add-form-edit-el">
+                        <label class="regist-add-form-edit-title">パスワード<span style="color:red; font-weight: normal;">*</span></label>
+                        <p class="regist-add-form-edit-subtitle">半角英数字6文字以上で入力してください。</p>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="">
+                        <input type="password" name="password_conf" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
+                    </div>
+                {/if}
 
                 <div class="regist-add-form-edit-el">
                     <label class="regist-add-form-edit-title">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
@@ -431,11 +440,14 @@
 
             var params = {};
 
-            params.uid = $('#uid').val();
-            params.provider = $('#provider').val();
+            params.uid = $('[name="uid"]').val();
+            params.profile_image = $('[name="profile_image"]').val();
+            params.provider = $('[name="provider"]').val();
+            params.access_token = $('[name="access_token"]').val();
 
             params.email = $('[name="email"]').val(); //メールアドレス
             params.password = password; //パスワード
+
             params.name = $('[name="name"]').val(); //お名前
             params.name_kana = $('[name="name_kana"]').val(); //ふりがな
             params.birthday = (age01+age02+age03); //生年月日
@@ -479,7 +491,7 @@
             params.url = $('[name="url"]').val();
 
             // ぜひメンバーさんや編集部に向けて自己紹介をお願いいたします♪
-            params.introduction = $('#introduction').val();
+            params.introduction = $('[name="introduction"]').val();
 
             if (params.email == "") {
                 ts.error("メールアドレスを入力してください。");
@@ -493,24 +505,26 @@
                 return false;
             }
 
-            if (params.password == "") {
-                ts.error("パスワードを入力してください。");
-                return false;
-            }
+            if (params.uid == "") {
+                if (params.password == "") {
+                    ts.error("パスワードを入力してください。");
+                    return false;
+                }
 
-            // パスワード正規表現 - 半角英数字のみ
-            if(params.password.match(/[A-Za-z0-9]+/)) {
-            } else {
-                ts.error("パスワードは半角英数字のみで入力してください。");
-                return false;
-            }
+                // パスワード正規表現 - 半角英数字のみ
+                if(params.password.match(/[A-Za-z0-9]+/)) {
+                } else {
+                    ts.error("パスワードは半角英数字のみで入力してください。");
+                    return false;
+                }
 
-            if (password_conf == "") {
-                ts.error("確認用のパスワードをご入力してください。");
-                return false;
-            } else if (params.password != password_conf) {
-                ts.error("確認用のパスワードが違うようです...。再度ご入力をお願いいたします。");
-                return false;
+                if (password_conf == "") {
+                    ts.error("確認用のパスワードをご入力してください。");
+                    return false;
+                } else if (params.password != password_conf) {
+                    ts.error("確認用のパスワードが違うようです...。再度ご入力をお願いいたします。");
+                    return false;
+                }
             }
 
             if (params.name == "") {
