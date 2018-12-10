@@ -54,6 +54,18 @@ class Userwithdrawal extends Base
             ->where(array('parent_id' => $user['id']))
             ->execute();
 
+        \DB::delete('user_regist_triggers')
+            ->where(array('username' => $username))
+            ->execute();
+
+        \DB::delete('user_want_to_learns')
+            ->where(array('username' => $username))
+            ->execute();
+
+        \DB::delete('user_want_to_meets')
+            ->where(array('username' => $username))
+            ->execute();
+
         // 女子会参加履歴削除
         $applications = \DB::select("*")->from('applications')
             ->where(array('username' => $username))
