@@ -314,7 +314,7 @@ class Regist extends Base
                 "member_regist.ask",
                 "member_regist.income",
                 "member_regist.transmission",
-                "member_regist.email",
+                \DB::expr("ifnull(users.email, member_regist.email) as email"),
                 "member_regist.facebook",
                 "member_regist.other_sns",
                 "member_regist.introduction",
@@ -385,7 +385,7 @@ class Regist extends Base
             "member_regist.ask",
             "member_regist.income",
             "member_regist.transmission",
-            "member_regist.email",
+            \DB::expr("ifnull(users.email, member_regist.email) as email"),
             "member_regist.facebook",
             "member_regist.other_sns",
             "member_regist.introduction",
@@ -441,7 +441,7 @@ class Regist extends Base
             "member_regist.ask",
             "member_regist.income",
             "member_regist.transmission",
-            "member_regist.email",
+            \DB::expr("ifnull(users.email, member_regist.email) as email"),
             "member_regist.facebook",
             "member_regist.other_sns",
             "member_regist.introduction",
@@ -462,6 +462,8 @@ class Regist extends Base
             \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
             )
             ->from('member_regist')
+            ->join('users', 'LEFT')
+            ->on('member_regist.username', '=', 'users.username')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'member_regist.username')
             ->join('prefectures', 'LEFT')
