@@ -459,13 +459,19 @@
             params.want_to_learns = $('[name="want_to_learns[]"]:checked').map(function(){
               return $(this).val();
             }).get();
-            params.want_to_learns.push($('[name="want_to_learn_etc"]').val());
+            var want_to_learn_etc = $('[name="want_to_learn_etc"]').val();
+            if (want_to_learn_etc) {
+                params.want_to_learns.push(want_to_learn_etc);
+            }
 
             // きんゆう女子。コミュニティではどんな発見や出会いがほしい？
             params.want_to_meets = $('[name="want_to_meets[]"]:checked').map(function(){
               return $(this).val();
             }).get();
-            params.want_to_meets.push($('[name="want_to_meet_etc"]').val());
+            var want_to_meet_etc = $('[name="want_to_meet_etc"]').val();
+            if (want_to_meet_etc) {
+                params.want_to_meets.push(want_to_meet_etc);
+            }
 
             // 金融に向き合い学び、3年後には何がほしいですか？
             params.want_to_something = $('[name="want_to_something"]').val();
@@ -479,7 +485,10 @@
             params.regist_triggers = $('[name="regist_triggers[]"]:checked').map(function(){
               return $(this).val();
             }).get();
-            params.regist_triggers.push($('[name="regist_trigger_etc"]').val());
+            var regist_trigger_etc = $('[name="regist_trigger_etc"]').val();
+            if (regist_trigger_etc) {
+                params.regist_triggers.push(regist_trigger_etc);
+            }
 
             // きんゆう女子。を通してどんな自分になりたい？
             params.future = $('[name="future"]').val();
