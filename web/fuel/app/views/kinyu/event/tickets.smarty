@@ -98,7 +98,7 @@ var $resArray02 = $resArray[1];
           <input type="text" class="coupon_code" name="coupon_code" value="" placeholder="ギフトコード">
 
           <div class="fee-open-el mb30">
-            <p class="ticket-title">質問したいことやリクエストがありましたらご記入ください♪</p>
+            <p class="ticket-title"><span style="color: #ec8787;">＊当日質問したいことや相談予約日時リクエスト、応援メッセージなどがありましたらご記入ください♪</span></p>
             <textarea name="message" class="request-textarea" rows="10" placeholder="" ></textarea>
           </div>
 
