@@ -94,6 +94,7 @@ var $resArray02 = $resArray[1];
             </div>
           </div>
           <p class="ticket-title">クーポンコードを入力</p>
+          <p>ギフトコードを持っている場合は入力してね♪ コードがマッチした場合は、ほんの気持ちですが割引になります。</p>
           <input type="text" class="coupon_code" name="coupon_code" value="" placeholder="クーポンコード">
 
           <div class="fee-open-el mb30">
