@@ -2525,7 +2525,7 @@ font-weight: bold;
     background:#8ddcd1;
     color:#fff;
 }
-#coupon_code {
+.coupon_code {
     border: 1px solid #ccc;
     margin-bottom: 24px;
 	display: inline-block;
