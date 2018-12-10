@@ -55,11 +55,16 @@
             {/if}
         </td>
         <td>{$application.type}</td>
-        <td>{$application.amount}円</td>
         <td>
-        {if $application.birthday != '' && $application.birthday != '0000-00-00'}
-        {((date('Ymd') - ($application.birthday|replace:"-":""))/10000)|floor}歳
-        {/if}
+          <p>支払額：<span style="font-weight:bold; font-size:18px;">{$application.amount}円</span><p>
+          {if $application.discount}
+          <p style="font-weight:bold; color:#ff0000;">割引額：{$application.discount|number_format}円</p>
+          {/if}
+        </td>
+        <td>
+          {if $application.birthday != '' && $application.birthday != '0000-00-00'}
+            {((date('Ymd') - ($application.birthday|replace:"-":""))/10000)|floor}歳
+          {/if}
         </td>
         <td>
           <p>申し込み日時：<br/>{$application.created_at}</p>
@@ -69,7 +74,6 @@
         </td>
         <td class="link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
-
           {if $application.username != 'guest' && $from_company==TRUE}
             <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
