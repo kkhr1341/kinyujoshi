@@ -4780,6 +4780,11 @@ footer {
 .footer-logo img {
   width: 100%;
 }
+
+.footer-logo a:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
 .new_area {
   display: inline-block;
   float: left;
