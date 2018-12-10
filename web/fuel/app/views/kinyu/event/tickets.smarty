@@ -38,7 +38,7 @@ var $resArray02 = $resArray[1];
 
         <div class="info-coupon" style="display: none;">
             <p><span>参加費</span>：<span class="fee"></span></p>
-            <p><span>クーポン適用後の金額</span>：<span class="amount" style="color: red;"></span></p>
+            <p><span>ギフトコードがマッチしました☆</span>：<span class="amount" style="color: red;"></span></p>
         </div>
       </div>
 
@@ -90,12 +90,12 @@ var $resArray02 = $resArray[1];
 
             <div class="info-coupon" style="display: none;">
               <p><span>参加費</span>：<span class="fee"></span></p>
-              <p><span>クーポン適用後の金額</span>：<span class="amount" style="color: red;"></span></p>
+              <p><span>ギフトコードがマッチしました☆</span>：<span class="amount" style="color: red;"></span></p>
             </div>
           </div>
-          <p class="ticket-title">クーポンコードを入力</p>
+          <p class="ticket-title">ギフトコードを入力</p>
           <p>ギフトコードを持っている場合は入力してね♪ コードがマッチした場合は、ほんの気持ちですが割引になります。</p>
-          <input type="text" class="coupon_code" name="coupon_code" value="" placeholder="クーポンコード">
+          <input type="text" class="coupon_code" name="coupon_code" value="" placeholder="ギフトコード">
 
           <div class="fee-open-el mb30">
             <p class="ticket-title">質問したいことやリクエストがありましたらご記入ください♪</p>
