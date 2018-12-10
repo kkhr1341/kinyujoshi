@@ -27,6 +27,8 @@ class Applications extends Base
 
         $val->add('coupon_code', 'クーポンコード');
 
+        $val->add('message');
+
         // 新規カード登録 or 会員登録をせずに申し込みの場合は以下必須
         $val->field('name')
             ->add_rule('required');
@@ -263,10 +265,11 @@ class Applications extends Base
             // クレジット決済の場合決済取り消し
             if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($code)) {
                 // 決済データをキャンセル状態に
-                \DB::update('application_credit_payments')->set(array(
-                    'cancel' => 1,
-                    'updated_at' => \DB::expr('now()'),
-                ))
+                \DB::update('application_credit_payments')
+                    ->set(array(
+                        'cancel' => 1,
+                        'updated_at' => \DB::expr('now()'),
+                    ))
                     ->where('application_code', '=', $code)
                     ->execute();
 
@@ -446,7 +449,8 @@ class Applications extends Base
         $event_code,
         $name,
         $email,
-        $coupon_code=''
+        $coupon_code='',
+        $message=''
     ) {
         try {
 
@@ -494,6 +498,7 @@ class Applications extends Base
                 'discount' => $coupon['discount'],
                 'coupon_code' => $coupon['coupon_code'],
                 'payment_method' => 1,
+                'message' => $message,
                 'name' => $name,
                 'email' => $email,
                 'created_at' => \DB::expr('now()'),

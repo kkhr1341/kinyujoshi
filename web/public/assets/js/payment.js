@@ -5,9 +5,10 @@
  * @param name        String お名前
  * @param email       String メールアドレス
  * @param coupon_code String イベントクーポンコード
+ * @param message     String 問い合わせ内容
  * @returns {Promise}
  */
-function chargeByNewCard(card, event_code, name, email, coupon_code) {
+function chargeByNewCard(card, event_code, name, email, coupon_code, message) {
     var paymentErrorMessage = '決済ができませんでした...。カード情報を再度ご確認いただけますと幸いです。';
     return new Promise(function(resolve, reject) {
         Payjp.createToken(card, function (s, response) {
@@ -26,7 +27,8 @@ function chargeByNewCard(card, event_code, name, email, coupon_code) {
                     email: email,
                     token: token,
                     cardselect: 0,
-                    coupon_code: coupon_code
+                    coupon_code: coupon_code,
+                    message: message
                 };
                 // $.postが独自カスタマイズされているためコールバック関数orエラーハンドリングが特殊なかたちに。。。
                 return ajax.post(
@@ -59,9 +61,10 @@ function chargeByNewCard(card, event_code, name, email, coupon_code) {
  * @param name        String お名前
  * @param email       String メールアドレス
  * @param coupon_code String イベントクーポンコード
+ * @param message     String 問い合わせ内容
  * @returns {Promise}
  */
-function chargeByRegisterCard(event_code, cardselect, name, email, coupon_code) {
+function chargeByRegisterCard(event_code, cardselect, name, email, coupon_code, message) {
     // var paymentErrorMessage = '決済ができませんでした...。カード情報を再度ご確認いただけますと幸いです。';
     return new Promise(function(resolve, reject) {
         var url = "/api/applications/create";
@@ -70,7 +73,8 @@ function chargeByRegisterCard(event_code, cardselect, name, email, coupon_code) 
             cardselect: cardselect,
             name: name,
             email: email,
-            coupon_code: coupon_code
+            coupon_code: coupon_code,
+            message: message
         };
         return ajax.post(
             url,

@@ -118,6 +118,7 @@ return array(
         109 => '115_add_where_from_site_to_member_regist',
         110 => '116_add_future_to_member_regist',
         111 => '117_add_want_to_something_to_member_regist',
+        112 => '118_add_message_to_applications',
       ),
     ),
     'module' => 

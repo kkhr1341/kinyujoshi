@@ -46,7 +46,14 @@
                 <div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat">
             {/if}
         </td>
-        <td>{$application.name}</td>
+        <td>
+            <p>{$application.name}</p>
+
+            {if $application.message}
+            <br/>
+            <p>お問い合わせ内容：<br/>{$application.message|nl2br}</p>
+            {/if}
+        </td>
         <td>{$application.type}</td>
         <td>{$application.amount}円</td>
         <td>
