@@ -104,23 +104,8 @@ var $resArray02 = $resArray[1];
 
         <div class="fee-open-el mb30">
           <label>ご希望の相談日時や質問したいことをご記入ください♪</label>
-          <input type="textarea" id="request" name="request" class="request-textarea" placeholder="" >
+          <textarea id="request" name="request" class="request-textarea" rows="10" placeholder="" ></textarea>
         </div>
-
-        <style>
-          .request-textarea{
-            display: block;
-            width: 100%;
-            max-width: 380px;
-            height: 200px;
-            max-height: 200px;
-            padding: 8px;
-            box-sizing: border-box;
-            line-height: 20px;
-            border: 1px  solid #eee;
-          }
-        </style>
-
 
         <div class="payment-button-container"{if $event.fee == 0} style="display: none;"{/if}>
           <p class="ticket-title">お支払い方法</p>
