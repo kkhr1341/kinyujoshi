@@ -94,7 +94,7 @@ var $resArray02 = $resArray[1];
           </div>
 
           <div class="fee-open-el mb30">
-            <label>ご希望の相談日時や質問したいことをご記入ください♪</label>
+          <p class="ticket-title">ご希望の相談日時や質問したいことをご記入ください♪</p>
 
             <textarea name="message" class="request-textarea" rows="10" placeholder="" ></textarea>
           </div>
@@ -109,11 +109,11 @@ var $resArray02 = $resArray[1];
         <div class="js-credit-payment-container"{if $event.fee == 0} style="display: none;"{/if}>
           <form class="fee-card-fm" action="/joshikai_payment_card/{$urlcode}" method="post">
 
-            <p class="ticket-title" style="display:none;">>クーポンコードを入力</p>
-            <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="クーポンコード" value="" style="display:none;">
+            <p class="ticket-title">クーポンコードを入力</p>
+            <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="クーポンコード" value="" >
 
             <div class="fee-open-el mb30">
-              <label>ご希望の相談日時や質問したいことをご記入ください♪</label>
+              <p class="ticket-title">ご希望の相談日時や質問したいことがありましたらご記入ください♪</p>
               <textarea name="message" class="request-textarea" rows="10" placeholder="" ></textarea>
             </div>
             <p class="ticket-title">お支払い方法</p>
