@@ -55,3 +55,7 @@ clean:
 mysql:
 	docker-compose exec db mysql -uroot -ppass -Dkinyujoshi_development
 .PHONY: mysql
+
+change_administrator:
+	docker-compose run --rm web php oil r change_administrator
+.PHONY: change_administrator
