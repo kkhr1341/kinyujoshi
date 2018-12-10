@@ -4,6 +4,7 @@
         <img  src="/images/member-regist/member_regist_title.png" class="member-regist-title-text">
     </div>
 
+<p class="message" style="text-align:center; padding: 20px 0 0;">「<span style="color:red; padding-top: 10px; display:inline-block;">*</span>」は必須項目となります。</p>
 
     <div class="login-add-contents-block">
 
@@ -229,7 +230,7 @@
                 <div class="regist-add-form-edit-el">
                     <label class="regist-add-form-edit-title">金融に向き合い学び、3年後には何がほしいですか？<span style="color:red; font-weight: normal;">*</span></label>
                     <p class="regist-add-form-edit-subtitle">そこを目指して成長していきましょう♪</p>
-                    <input type="text" id="want_to_something" name="want_to_something" class="form-control form-control-income" placeholder="" style="width: 120px;display: inline-block;"> <span style="font-size:12px;"></span>
+                    <input type="text" id="want_to_something" name="want_to_something" class="form-control form-control-income" placeholder="" style="width: 100%; max-width: 400px; display: inline-block;"> <span style="font-size:12px;"></span>
                 </div>
 
                 <div class="regist-add-form-edit-el form_where_from">
