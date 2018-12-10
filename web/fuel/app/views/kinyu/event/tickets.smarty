@@ -79,6 +79,20 @@ var $resArray02 = $resArray[1];
 
         <form class="credit-payment-fm" action="/joshikai_payment_card/{$urlcode}" method="post">
 
+          <div class="kinyu-joshikai-tickets-fee">
+            <div class="info-no-coupon">
+              {if $event.fee == 0}
+                <p><span>参加費</span>：<span>無料</p>
+              {else}
+                <p><span>参加費</span>：<span>{$event.fee|number_format}円</p>
+              {/if}
+            </div>
+
+            <div class="info-coupon" style="display: none;">
+              <p><span>参加費</span>：<span class="fee"></span></p>
+              <p><span>クーポン適用後の金額</span>：<span class="amount" style="color: red;"></span></p>
+            </div>
+          </div>
           <p class="ticket-title">クーポンコードを入力</p>
           <input type="text" class="coupon_code" name="coupon_code" value="" placeholder="クーポンコード">
 
@@ -180,12 +194,15 @@ var $resArray02 = $resArray[1];
             var event_code = $('#event_code').val();
             var coupon_code = $(this).val();
             var url = '/api/eventcoupons/detail?event_code=' + event_code + '&coupon_code=' + coupon_code;
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(200);
             $.getJSON(url, function(result){
+                $(".loader-block").hide();
                 if (result.data && result.data.amount == 0) {
                     $('.info-coupon').find('.amount').text(convertYen(result.data.amount));
                     $('.info-coupon').find('.fee').text(convertYen(result.data.fee));
                     $('.info-coupon').find('.discount').text(convertYen(result.data.discount));
-                    $('.info-coupon').show();
+                    $('.info-coupon').fadeIn(1000);
                     $('.info-no-coupon').hide();
 
                     $('.js-credit-payment-container').hide();
