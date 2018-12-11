@@ -3,6 +3,7 @@
     <div class="inner">
       <form method="POST" action="/pay" id="charge-form">
         <input type="hidden" name="coupon_code" value="{$coupon_code}" />
+        <input type="hidden" name="message" value="{$message}" />
         <input type="hidden" name="event_code" value="{$event.code}" />
         <span class="charge-errors"></span>
 
@@ -67,9 +68,9 @@
         </div>
 
         <div class="kinyu-credit-fee-area">
-          {if $discount}
-            <p><span>参加費</span>：{$event.fee-$discount|number_format}円</p>
-            <p><span>割引額</span>：<span class="discount-span" style="font-weight: normal;color: red;!important">{$discount|number_format}円</span></p>
+          {if $event.discount > 0}
+            <p><span>参加費</span>：{$event.fee|number_format}円</p>
+            <p><span>割引額</span>：<span class="discount-span" style="font-weight: normal;color: red;!important">{$event.discount|number_format}円</span></p>
           {else}
             <p><span>参加費</span>：{$event.fee|number_format}円</p>
           {/if}
@@ -120,6 +121,7 @@
 
         var form = $("#charge-form"),
             coupon_code = form.find('[name="coupon_code"]'),
+            message = form.find('[name="message"]'),
             number = form.find('[name="number"]'),
             cardselect = form.find('[name="cardselect"]'),
             cvc = form.find('[name="cvc"]'),
@@ -170,7 +172,8 @@
                     event_code.val(),
                     name.val(),
                     email.val(),
-                    coupon_code.val()
+                    coupon_code.val(),
+                    message.val(),
                 )
             } else {
                 promise = chargeByRegisterCard(
@@ -178,7 +181,8 @@
                     cardselect.val(),
                     name.val(),
                     email.val(),
-                    coupon_code.val()
+                    coupon_code.val(),
+                    message.val()
                 )
             }
 

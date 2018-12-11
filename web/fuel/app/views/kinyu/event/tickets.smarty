@@ -10,6 +10,7 @@ var $resArray02 = $resArray[1];
   <div class="kinyu-joshikai-detail-inner">
 
     <div class="kinyu-joshikai-tickets-block">
+      <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
 
       <div class="kinyu-joshikai-tickets-main">
         <div class="kinyu-joshikai-tickets-main-inner">
@@ -37,16 +38,11 @@ var $resArray02 = $resArray[1];
 
         <div class="info-coupon" style="display: none;">
             <p><span>参加費</span>：<span class="fee"></span></p>
-            <p><span>クーポン適用後の金額</span>：<span class="amount" style="color: red;"></span></p>
+            <p><span>ギフトコードがマッチしました☆</span>：<span class="amount" style="color: red;"></span></p>
         </div>
       </div>
 
       <div class="kinyu-joshikai-tickets-payment">
-
-        <p class="ticket-title" style="display:none;">>クーポンコードを入力</p>
-        <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
-
-        <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="クーポンコード" value="" style="display:none;">
 
 		<!--<button class="coupon-apply-btn">クーポンを適用</button>-->
 
@@ -81,10 +77,34 @@ var $resArray02 = $resArray[1];
           </p>
         </div>
 
-        <div class="free-payment-button-container"{if $event.fee > 0} style="display: none;"{/if}>
-          <p class="ticket-title">お申し込み</p>
+        <form class="credit-payment-fm" action="/joshikai_payment_card/{$urlcode}" method="post">
 
-          {if $event.fee == 0}
+          <div class="kinyu-joshikai-tickets-fee">
+            <div class="info-no-coupon">
+              {if $event.fee == 0}
+                <p><span>参加費</span>：<span>無料</p>
+              {else}
+                <p><span>参加費</span>：<span>{$event.fee|number_format}円</p>
+              {/if}
+            </div>
+
+            <div class="info-coupon" style="display: none;">
+              <p><span>参加費</span>：<span class="fee"></span></p>
+              <p><span>ギフトコードがマッチしました☆</span>：<span class="amount" style="color: red;"></span></p>
+            </div>
+          </div>
+          <p class="ticket-title">ギフトコードを入力</p>
+          <p>ギフトコードを持っている場合は入力してね♪ コードがマッチした場合は、ほんの気持ちですが割引になります。</p>
+          <input type="text" class="coupon_code" name="coupon_code" value="" placeholder="ギフトコード">
+
+          <div class="fee-open-el mb30">
+            <p class="ticket-title"><span style="color: #ec8787;">＊当日質問したいことや相談予約日時リクエスト、応援メッセージなどがありましたらご記入ください♪</span></p>
+            <textarea name="message" class="request-textarea" rows="10" placeholder="" ></textarea>
+          </div>
+
+          <!-- 0円決済の時に表示されるフォーム -->
+          <div class="js-free-payment-container"{if $event.fee > 0} style="display: none;"{/if}>
+
             <div class="fee-open-el">
               <label>お名前（フルネーム）</label>
               <input type="text" id="name" name="name" class="free-payment-input" placeholder="" value="{$user.name}">
@@ -93,20 +113,23 @@ var $resArray02 = $resArray[1];
               <label>メールアドレス</label>
               <input type="text" id="email" name="email" class="free-payment-input" placeholder="" value="{$user.email}">
             </div>
-          {/if}
 
-          <div class="kinyu-joshikai-tickets-payment-list">
-            <a href="#" class="info-link fee-free day-card-btn">申し込む</a>
+            <div class="kinyu-joshikai-tickets-payment-list">
+              <a href="#" class="info-link fee-free day-card-btn">申し込む</a>
+            </div>
           </div>
-        </div>
+          <!-- 0円決済の時に表示されるフォーム -->
 
-        <div class="payment-button-container"{if $event.fee == 0} style="display: none;"{/if}>
-          <p class="ticket-title">お支払い方法</p>
-          <div class="kinyu-joshikai-tickets-payment-list">
-            <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
+          <!-- クレジット決済の時に表示されるフォーム -->
+          <div class="js-credit-payment-container"{if $event.fee == 0} style="display: none;"{/if}>
+            <p class="ticket-title">お支払い方法</p>
+            <div class="kinyu-joshikai-tickets-payment-list">
+              <a href="javascript:void(0)" class="info-link fee-card day-card-btn">カードでお支払い</a>
+            </div>
           </div>
-        </div>
+          <!-- クレジット決済の時に表示されるフォーム -->
 
+        </form>
       </div>
     </div>
   </div>
@@ -120,7 +143,8 @@ var $resArray02 = $resArray[1];
             return str + '円';
         }
 
-        $('.fee-card, .fee-cash').on('click', function(e) {
+        // クレジット決済申し込みボタン
+        $('.fee-card').on('click', function(e) {
             e.preventDefault();
 
             if ($("[name=cancel_check]:checked").val() == undefined) {
@@ -128,26 +152,24 @@ var $resArray02 = $resArray[1];
               return false;
             }
 
-            var code = $('#coupon_code').val();
-            var url = $(this).attr('href');
-            if (code) {
-                url = url.match(/(.*\?.*)/) ? url + "&coupon_code=" + code : url + "?coupon_code=" + code;
-            }
-            location.href = url;
+            $('.credit-payment-fm').submit();
         })
 
+        // 0円決済申し込み
         $('.fee-free').on('click', function(e) {
             e.preventDefault();
             var event_code = $('#event_code').val();
-            var name = $('#name').val();
-            var email = $('#email').val();
-            var coupon_code = $('#coupon_code').val();
+            var name = $('[name="name"]').val();
+            var email = $('[name="email"]').val();
+            var coupon_code = $('[name="coupon_code"]').val();
+            var message = $('[name="message"]').val();
             var url = "/api/applications/create";
             var params = {
                 event_code: event_code,
                 name: name,
                 email: email,
-                coupon_code: coupon_code
+                coupon_code: coupon_code,
+                message: message
             };
 
             if ($("[name=cancel_check]:checked").val() == undefined) {
@@ -169,26 +191,31 @@ var $resArray02 = $resArray[1];
                 })
         })
 
-        $('#coupon_code').on('blur', function() {
+        $('[name="coupon_code"]').on('blur', function() {
             var event_code = $('#event_code').val();
-            var coupon_code = $('#coupon_code').val();
+            var coupon_code = $(this).val();
             var url = '/api/eventcoupons/detail?event_code=' + event_code + '&coupon_code=' + coupon_code;
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(200);
             $.getJSON(url, function(result){
-                if (result.data) {
+                $(".loader-block").hide();
+                if (result.data && result.data.discount > 0) {
                     $('.info-coupon').find('.amount').text(convertYen(result.data.amount));
                     $('.info-coupon').find('.fee').text(convertYen(result.data.fee));
                     $('.info-coupon').find('.discount').text(convertYen(result.data.discount));
-                    $('.info-coupon').show();
+                    $('.info-coupon').fadeIn(1000);
                     $('.info-no-coupon').hide();
-
-                    $('.payment-button-container').show();
-                    $('.free-payment-button-container').hide();
                 } else {
                     $('.info-coupon').hide();
                     $('.info-no-coupon').show();
+                }
 
-                    $('.payment-button-container').hide();
-                    $('.free-payment-button-container').show();
+                if (result.data && result.data.amount == 0) {
+                    $('.js-credit-payment-container').hide();
+                    $('.js-free-payment-container').show();
+                } else {
+                    $('.js-credit-payment-container').show();
+                    $('.js-free-payment-container').hide();
                 }
             });
         })

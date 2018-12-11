@@ -57,7 +57,8 @@ class Controller_Api_Applications extends Controller_Apibase
                 $val->validated('event_code'),
                 $val->validated('name'),
                 $val->validated('email'),
-                $val->validated('coupon_code')
+                $val->validated('coupon_code'),
+                $val->validated('message')
             );
 
             // クレジットカード処理
