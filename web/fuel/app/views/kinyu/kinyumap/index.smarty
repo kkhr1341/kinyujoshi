@@ -178,7 +178,7 @@
             icon: pin,
         });
         var infoWindow3 = new google.maps.InfoWindow({
-            content: '<div class="sample map-point"><a href="/map_ooedoito" target="_blank"><img src="/images/kinyu_map/kinyu_sanpo_nagoya.jpg"><p class="map-el-title">きんゆう散歩@名古屋</p><p class="map-decription">伊東にある大江戸温泉物語の施設「伊東ホテルニュー岡部」は、大江戸温泉リートの投資先の7.2%を占めています。</p></a></div>'
+            content: '<div class="sample map-point"><a href="https://kinyu-joshi.jp/report/LOJyjO" target="_blank"><img src="/images/kinyu_map/kinyu_sanpo_nagoya.jpg"><p class="map-el-title">きんゆう散歩@名古屋</p><p class="map-decription">名古屋で金運も気分も上がるお散歩スポットを紹介します(๑˃̵ᴗ˂̵)！名古屋にはしゃちほこ以外にも”金”にまつわるモノや場所がたくさんあるんです♪</p></a></div>'
         });
         marker3.addListener( "click", function ( argument ) {
             infoWindow3.open(map, marker3);
