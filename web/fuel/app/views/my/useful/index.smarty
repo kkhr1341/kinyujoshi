@@ -9,8 +9,7 @@
     <div class="admin-normal-main my-useful">
       <div class="admin-normal-joshikai joshikailist-main">
 				<!-- 画像イメージこちらに入ります。 -->
-        <img class="pc passport-main-img" src="/images/my/useful/useful_kinyu.jpg">
-        <img class="sp passport-main-img" src="/images/my/useful/useful_kinyu_og.jpg">
+        <img class="passport-main-img" src="/images/my/useful/useful_kinyu.jpg">
         <h3 class="mypage-content-title">みんなにとってプラスになる！<br>ステキな金融コンテンツ♪</h3>
 
         <p class="mypage-content-description passport-exist pc">

@@ -1372,6 +1372,9 @@ footer {
     color: #77cbc0;
     text-align: center;
 }
+.my-useful .mypage-content-title {
+  line-height: 32px;
+}
 
 .admin-normal-container .mypage-content-title span {
     padding: 4px 40px;

@@ -18,8 +18,8 @@ class Controller_My_Useful extends Controller_Mybase
         $this->data['sections'] = Sections::lists();
         $this->data['applications'] = Applications::get_next_events_applications($username);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/my/useful/useful_kinyu_og.jpg';
-        $this->template->description = 'お役立ちツール｜きん女。マイページ';
-        $this->template->title = 'お役立ちツール｜きん女。マイページ';
+        $this->template->description = 'お役立ちコンテンツ｜きん女。マイページ';
+        $this->template->title = 'お役立ちコンテンツ｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->contents = View::forge('my/useful/index.smarty', $this->data);
         

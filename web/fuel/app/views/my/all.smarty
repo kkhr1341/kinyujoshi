@@ -138,7 +138,7 @@
 
         <!-- お役立ちコンテンツ -->
         <div class="my-maincontent-block my-maincontent-last">
-          <p class="my-content-title"><span>お役立ちツール</span></p>
+          <p class="my-content-title"><span>お役立ちコンテンツ</span></p>
           <div class="useful-main-box">
             {$useful_content}
           </div>
