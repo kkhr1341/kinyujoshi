@@ -37,7 +37,7 @@
   position: relative;
 }
 .my-member-report-block li:last-child {
-  margin-bottom: 0%; 
+  margin-bottom: 0%;
 }
 .my-member-report-block li .img-box {
   width: 28%;
@@ -59,17 +59,17 @@
   background: #fff;
 }
 
-.my-member-report-block li .text-box .category-text p { 
+.my-member-report-block li .text-box .category-text p {
   font-size: 12px;
   line-height: 12px;
   color: #77cbc0;
 }
-.my-member-report-block li .text-box .title-text { 
+.my-member-report-block li .text-box .title-text {
   font-size: 14px;
   line-height: 22px;
   margin-top: 8px;
 }
-.my-member-report-block li .text-box .description-text { 
+.my-member-report-block li .text-box .description-text {
   color: gray;
   font-size: 10px;
   line-height: 13px;
@@ -205,7 +205,7 @@
 .mykinjo-block .text-box .description {
     text-align: center;
     width: 65%;
-    margin: 0 auto;animation: 
+    margin: 0 auto;animation:
 }
 
 .mykinjo-block .request-block .request-title {
@@ -1532,6 +1532,7 @@ footer {
   margin: 0 auto;
 }
 
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   マイページ - パスポート（TOP）
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -1586,7 +1587,7 @@ footer {
 }
 .passport-text-box-inner {
   display: table-cell;
-  vertical-align: middle;  
+  vertical-align: middle;
 }
 .privilege-detail {
   border-top: 1px solid #ececec;
@@ -1608,7 +1609,7 @@ footer {
 /* 利用の流れ */
 .passport-link-utilization {
   display: none;
-  padding: 20px 32px 32px; 
+  padding: 20px 32px 32px;
 }
 .passport-link-utilization-alert {
   margin-top: 8px;
@@ -1628,7 +1629,7 @@ footer {
 .passport-link-utilization-el .link-utilization-text-box {
   float: left;
   text-align: left;
-  padding: 20px 0px 0px 20px; 
+  padding: 20px 0px 0px 20px;
 }
 .passport-link-utilization-el .text-step {
   font-size: 18px;
@@ -1687,9 +1688,176 @@ footer {
   position: absolute;
   left: 0;
 }
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - トレンド
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.mypage-content-description.trend-exist {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+.trend-list {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 12px;
+  padding: 40px 50px 50px;
+  background: #fff;
+}
+.trend-main-img {
+  display: block;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.trend-list-el {
+  padding: 0;
+  border-top: none;
+}
+.trend-list .trend-list-el:first-of-type {
+  padding:  0px;
+  border-top: none;
+}
+.trend-list .trend-list-el:nth-of-type(2) {
+  margin-top: 40px;
+}
+.trend-list .trend-list-el:last-of-type {
+  /*padding: 40px 0px 0px;*/
+}
+.trend-main-title {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 26px;
+  color: #77cbc0;
+  text-align: center;
+}
+.trend-img-box {
+  width: 50%;
+  height: 250px;
+  float: left;
+  position: relative;
+}
+.trend-img-box a {
+  position: absolute;
+  width: 100%;
+  height:100%;
+}
+
+.trend-img-box :hover {
+  opacity: .5;
+  transition: .5s;
+}
+
+.trend-text-box {
+  width: 50%;
+  float: right;
+  padding: 24px;
+  height: 250px;
+  display: table;
+}
+.trend-text-box-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+.privilege-detail {
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  margin-top: 12px;
+  padding: 18px 0px;
+}
+.trend-link {
+  display: block;
+  width: 100%;
+  margin-top: 0px;
+  padding: 10px 0px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  transition: .5s;
+}
+
+/* 利用の流れ */
+.trend-link-utilization {
+  display: none;
+  padding: 20px 32px 32px;
+}
+.trend-link-utilization-alert {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.trend-link-utilization-alert span {
+  color: red;
+}
+.trend-link-utilization-el {
+  padding: 16px 0px;
+}
+.trend-link-utilization-el img {
+  width: 180px;
+  display: block;
+  float: left;
+}
+.trend-link-utilization-el .link-utilization-text-box {
+  float: left;
+  text-align: left;
+  padding: 20px 0px 0px 20px;
+}
+.trend-link-utilization-el .text-step {
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 12px;
+  border-left: 2px solid #b5884a;
+  padding-left: 8px;
+}
+.trend-link-utilization-el .text-description {
+  font-size: 14px;
+  line-height: 24px;
+}
+.trend-link-utilization-el .text-description span {
+  font-weight: bold;
+}
+.trend-link-utilization-link {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px 0px;
+  text-align: center;
+  background: #a2a2a2;
+  font-size: 12px;
+  margin-top: 36px;
+  margin-bottom: 24px;
+  color: #fff;
+  transition: .5s;
+}
+/* 注意事項部分 */
+.trend-link-utilization-notes {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+.trend-link-utilization-notes .notes-main-title {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.trend-link-utilization-notes .notes-main-title span {
+  color: #ec6161;
+}
+.trend-link-utilization-notes ul li {
+  margin-bottom: 8px;
+  text-align: left;
+}
+.trend-link-utilization-notes ul li p {
+  font-size: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+.trend-link-utilization-notes ul li p:before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
 /* サービスに関するお問い合わせ */
 .service-contact {
-  
+
 }
 .service-contact-title {
   font-weight: bold;
@@ -1713,12 +1881,15 @@ footer {
 
 /* Laxus|ラクサス */
 .logo-img-laxus {
-  width: 150px;
+  width: 150px!important;
+  margin: 0 auto;
+  display: block;
 }
 .logo-sub-laxus {
   font-size: 11px;
   line-height: 15px;
   margin-top: 8px;
+  text-align: center;;
 }
 .laxus-link {
   background: #b5884a;
@@ -1726,16 +1897,18 @@ footer {
 .laxus-link-utilization {
   background: rgba(181, 136, 74, 0.15);
 }
-.privilege-detail-laxus .passport-small {
+.privilege-detail-laxus .trend-small {
   font-size: 10px;
 }
-.privilege-detail-laxus .passport-attention {
+.privilege-detail-laxus .trend-attention {
   color: #ff5555;
   font-weight: bold;
 }
-
-.passport-link:hover,
-.passport-link-utilization-link:hover {
+.privilege-detail-laxus {
+  text-align: center;
+}
+.trend-link:hover,
+.trend-link-utilization-link:hover {
   opacity: .5;
   cursor: pointer;
 }
@@ -2285,6 +2458,3 @@ footer {
     }
 
 }
-
-
-

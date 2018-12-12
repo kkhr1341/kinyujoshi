@@ -1,0 +1,38 @@
+<!-- <link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+
+<div class="admin-normal-container mykinjo-block">
+  <div class="admin-normal-inner clear">
+
+    {$my_side}
+
+    <div class="admin-normal-main my-trend">
+
+        <p class="my-content-title"><span>教えて!きん女。</span></p>
+
+
+			<!-- 教えて!きん女。メイン部分 -->
+			<div class="oshiete-main-box">
+        <img src="/images/my/oshiete/oshiete1.jpg">
+        <img src="/images/my/oshiete/oshiete2.jpg">
+        <img src="/images/my/oshiete/oshiete3.jpg">
+        <img src="/images/my/oshiete/oshiete4.jpg">
+
+			</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .oshiete-main-box  {
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+  }
+.oshiete-main-box img {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+</style>

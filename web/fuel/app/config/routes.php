@@ -154,7 +154,11 @@ return array(
 
 	//お役立ちツール
 	'my/useful'   => 'my/useful/index',
-	
+	//トレンド
+	'my/trend'   => 'my/trend/index',
+	//教えて！きん女。
+	'my/oshiete'   => 'my/oshiete/index',
+
 	//パスポート
 	'my/passport'   => 'my/passport/index',
 	'my/passport_laxus'   => 'my/passport/passport_laxus',

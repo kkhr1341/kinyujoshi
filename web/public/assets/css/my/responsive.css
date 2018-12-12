@@ -352,7 +352,7 @@
   height: 100%;
   z-index: 1004;
   background-color: rgba(255,255,255,.9);
-  padding: 50px 36px 0px; 
+  padding: 50px 36px 0px;
 }
 .admin-normal-navigation li {
   text-align: left;
@@ -822,7 +822,7 @@
 }
 .passport-img-box {
     width: 100%;
-    height: 150px;
+    height: 180px;
     float: none;
 }
 .passport-text-box {
@@ -916,7 +916,113 @@
   font-weight: 400;
 }
 
-
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  マイページ - トレンド
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.trend-list {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 12px;
+  padding: 24px 24px 32px;
+  background: #fff;
+}
+.trend-main-title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.trend-img-box {
+    width: 100%;
+    height: 150px;
+    float: none;
+}
+.trend-text-box {
+  width: 100%;
+  float: none;
+  height: auto;
+  display: block;
+}
+.logo-img-laxus {
+  width: 120px!important;
+}
+.privilege-detail {
+  margin-top: 20px;
+  padding: 12px 0px;
+}
+.trend-text-box-inner {
+  display: block;
+  /* margin-top: 24px; */
+}
+.trend-link {
+  display: block;
+  width: 100%;
+  padding: 8px 0px;
+  font-size: 12px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.trend-link-utilization {
+  display: none;
+  padding: 20px 20px 24px;
+}
+.trend-link-utilization-el img {
+  width: 35%;
+  display: block;
+  float: left;
+}
+.trend-link-utilization-el .link-utilization-text-box {
+  width: 65%;
+  float: right;
+  padding: 16px 0px 0px 12px;
+}
+.trend-link-utilization-alert {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 11px;
+  line-height: 16px;
+}
+.trend-link-utilization-el .text-step {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 12px;
+    padding-left: 8px;
+    font-weight: 300;
+}
+.trend-link-utilization-el .text-description {
+    font-size: 12px;
+    line-height: 20px;
+}
+.trend-link-utilization-el .text-description span {
+    font-weight: 400;
+}
+.trend-link-utilization-notes {
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px 8px;
+}
+.trend-link-utilization-notes ul li p {
+  font-size: 11px;
+  line-height: 18px;
+}
+.trend-link-utilization-link {
+  width: 100%;
+  padding: 8px 0px;
+  font-size: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+.service-contact-sub {
+  font-size: 10px;
+  line-height: 15px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 4px;
+}
+.trend-link-utilization-notes .notes-main-title {
+  font-weight: 400;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合
@@ -930,7 +1036,3 @@
 
 
 }
-
-
-
-

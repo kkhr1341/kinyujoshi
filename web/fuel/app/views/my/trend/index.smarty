@@ -1,0 +1,123 @@
+<!-- <link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+
+<div class="admin-normal-container mykinjo-block">
+  <div class="admin-normal-inner clear">
+
+    {$my_side}
+
+    <div class="admin-normal-main my-trend">
+      <p class="my-content-title"><span>トレンド</span></p>
+      <p style="margin-bottom: 16px;">このページでは、いま話題のイベントや嬉しい特典を紹介していきます。</p>
+
+
+
+			<!-- トレンド・メイン部分 -->
+			<div class="trend-main-box">
+        <!-- <a href="https://fair.nomura-ir.co.jp/ja/index.html"><img src="/images/my/trend/trend1.jpg"></a>
+        <p class="trend-link"><a href="https://fair.nomura-ir.co.jp/ja/index.html">野村IR 資産運用フェア2019【新春】</a></p> -->
+
+        <!-- 野村IR 2019 -->
+         <div class="trend-list-el trend-list-el1 trend-laxus">
+          <div class="trend-list-el-inner clear">
+            <div class="trend-img-box"><a style="background:url(/images/my/trend/trend2.jpg) left center / cover no-repeat;" href="https://fair.nomura-ir.co.jp/ja/index.html"></a></div>
+            <div class="trend-text-box">
+              <div class="trend-text-box-inner">
+                <p class="trend-title-text" style="text-align:center;"><a href="https://fair.nomura-ir.co.jp/ja/index.html" target="_blank">野村IR 資産運用フェア2019【新春】</a></p>
+                <!-- <img class="logo-img-laxus" src="/images/my/trend/laxus/logo_laxus.png"> -->
+                <p class="logo-sub-laxus">*外部リンクに移動します。</p>
+                <!-- <div class="privilege-detail">
+                  <div class="privilege-detail-laxus">
+                    <p>月額利用料<br>
+                      6,800円
+                      <span class="trend-small">(税抜)</span> →
+                      <span class="trend-attention">6,120</span>円
+                      <span class="trend-small">(税抜)</span>
+                    </p>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+        <!-- ラクサス -->
+         <div class="trend-list-el trend-list-el1 trend-laxus">
+          <div class="trend-list-el-inner clear">
+            <div class="trend-img-box"><a href="https://laxus.co" target="_blank" style="background:url(/images/my/trend/laxus/laxus_img01.jpg) left center / cover no-repeat;"></a></div>
+            <div class="trend-text-box">
+              <div class="trend-text-box-inner">
+                <a href="https://laxus.co" target="_blank"><img class="logo-img-laxus" src="/images/my/trend/laxus/logo_laxus.png"></a>
+                <p class="logo-sub-laxus">シーンにあわせてバッグを交換<br>ブランドバッグをスマートシェア</p>
+                <div class="privilege-detail">
+                  <div class="privilege-detail-laxus">
+                    <p>月額利用料<br>
+                      6,800円
+                      <span class="trend-small">(税抜)</span> →
+                      <span class="trend-attention">6,120</span>円
+                      <span class="trend-small">(税抜)</span><br>
+                      <span class="trend-small">アプリ内の招待コードに「<span style="font-weight: bold; font-size: 12px;">kinjo55</span>」と入力してください♪<br>
+                      *割引期間は1年間です。</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+			</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".trend-list-el1 .trend-link").click(function() {
+    $(".trend-list-el1 .trend-link-utilization").slideToggle(500);
+  });
+  $(".trend-list-el2 .trend-link").click(function() {
+    $(".trend-list-el2 .trend-link-utilization").slideToggle(500);
+  });
+  $(".trend-list-el3 .trend-link").click(function() {
+    $(".trend-list-el3 .trend-link-utilization").slideToggle(500);
+  });
+</script>
+
+<style>
+  .trend-main-box  {
+    box-sizing: border-box;
+    padding: 20px;
+    background: #fff;
+  }
+
+.trend-link a:hover{
+  text-align: center;
+  color: #77cbc0；
+}
+
+.trend-list-el-inner.clear {
+    background: #f7f9f8;
+    margin-bottom: 20px;
+}
+
+.trend-title-text {
+  text-align: center;
+}
+.trend-title-text a {
+  font-size: 16px;
+}
+.trend-title-text a:hover {
+  opacity:.5;
+  transition:.5s;
+}
+
+</style>
