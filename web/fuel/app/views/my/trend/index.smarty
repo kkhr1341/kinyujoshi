@@ -20,7 +20,7 @@
         <!-- 野村IR 2019 -->
          <div class="trend-list-el trend-list-el1 trend-laxus">
           <div class="trend-list-el-inner clear">
-            <div class="trend-img-box"><a style="background:url(/images/my/trend/trend2.jpg) left center / cover no-repeat;" href="https://fair.nomura-ir.co.jp/ja/index.html"></a></div>
+            <div class="trend-img-box"><a style="background:url(/images/my/trend/trend2.jpg) left center / cover no-repeat;" href="https://fair.nomura-ir.co.jp/ja/index.html" target="_blank"></a></div>
             <div class="trend-text-box">
               <div class="trend-text-box-inner">
                 <p class="trend-title-text" style="text-align:center;"><a href="https://fair.nomura-ir.co.jp/ja/index.html" target="_blank">野村IR 資産運用フェア2019【新春】</a></p>
