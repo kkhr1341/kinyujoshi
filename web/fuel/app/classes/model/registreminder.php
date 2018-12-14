@@ -34,6 +34,7 @@ class RegistReminder extends Base
         $access_token = \Input::post('access_token');
 
         $val->add('email', 'メールアドレス')
+            ->add_rule('valid_email')
             ->add_rule(
                 function($email) use ($access_token) {
 
