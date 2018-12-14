@@ -3,6 +3,15 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   マイページ - myきん女。
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-top-search button {
+  font-family: "FontAwesome";
+  display: inline-block;
+  /*background: #eaeaea;*/
+  font-size: 12px;
+  padding: 8px 2px;
+  transition: .5s;
+}
+
 .mykinjo-thub {
     height: 250px;
 }

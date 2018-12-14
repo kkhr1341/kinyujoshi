@@ -50,7 +50,7 @@ class Controller_Mybase extends Controller_Template
             'kinyu/bootstrap01.css',
             'kinyu/animate.css',
             'kinyu/redactor.css',
-            //'kinyu/font-awesome.min.css',
+            'kinyu/font-awesome.min.css',
             'kinyu/bootstrap-datetimepicker.min.css',
             'kinyu/toastr.css',
             //'kinyu/bootstrap-select.min.css',
