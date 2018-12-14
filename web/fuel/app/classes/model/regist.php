@@ -282,6 +282,9 @@ class Regist extends Base
         if (isset($params['introduction']) && $params['introduction']) {
             $total->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
         }
+        if (isset($params['edit_inner']) && $params['edit_inner']) {
+            $total->where('member_regist.edit_inner', 'like', '%' . $params['edit_inner'] . '%');
+        }
         if (isset($params['group']) && $params['group']) {
             $total->and_where_open()
                 ->where('users.group', 'in', $params['group'])
@@ -354,6 +357,9 @@ class Regist extends Base
         }
         if (isset($params['introduction']) && $params['introduction']) {
             $datas['datas']->where('member_regist.introduction', 'like', '%' . $params['introduction'] . '%');
+        }
+        if (isset($params['edit_inner']) && $params['edit_inner']) {
+            $datas['datas']->where('member_regist.edit_inner', 'like', '%' . $params['edit_inner'] . '%');
         }
         if (isset($params['group']) && $params['group']) {
             $datas['datas']->and_where_open()

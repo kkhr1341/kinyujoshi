@@ -37,6 +37,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             'name' => Input::get('name', ''),
             'email' => Input::get('email', ''),
             'introduction' => Input::get('introduction', ''),
+            'edit_inner' => Input::get('edit_inner', ''),
         );
 
         $this->template->total = $this->data['registlist']['total'];
