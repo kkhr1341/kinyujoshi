@@ -11,6 +11,7 @@ class Login extends Base
         $val = \Validation::forge();
 
         $val->add('email', 'メールアドレス')
+            ->add_rule('valid_email')
             ->add_rule('required');
 
         $val->add('password', 'パスワード')
