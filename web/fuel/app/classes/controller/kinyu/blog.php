@@ -122,7 +122,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->data['top_blogs'] = Blogs::lists(1, 6, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
-        $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
+        $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data + array('title' => $this->data['blog']['title']));
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
