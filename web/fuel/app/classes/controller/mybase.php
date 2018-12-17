@@ -105,13 +105,14 @@ class Controller_Mybase extends Controller_Template
             'tool.js',
             'uploader.js',
             'kinyu/drawer.min.js',
+            'kinyu/swiper.js',
             // 'kinyu/main.js',
             'my/main.js'
         ), array(), 'layout', false);
 
-        set_exception_handler(function ($e) {
-            $this->error($e->getMessage());
-        });
+//        set_exception_handler(function ($e) {
+//            $this->error($e->getMessage());
+//        });
 
     }
 
