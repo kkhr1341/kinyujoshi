@@ -54,12 +54,12 @@
             {/if}
             </p>
             {if $application.type}
-            <p>{$application.type}タイプ</p>
+              <p>{$application.type}タイプ</p>
             {/if}
 
             {if $application.message}
-            <br/>
-            <p style="font-size:9px;">お問い合わせ内容：<br/>{$application.message|nl2br}</p>
+              <br/>
+              <p style="font-size:9px;">お問い合わせ内容：<br/>{$application.message|nl2br}</p>
             {/if}
         </td>
         <td class="subject3">
@@ -138,7 +138,7 @@
             <p>支払いキャンセル日時：<br/>{$application.payment_cancel_at}</p> 
           {/if}
         </td>
-        <td class="subject4">
+        <td class="subject4 link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
           {if $application.username != 'guest' && $from_company==TRUE}
           <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
