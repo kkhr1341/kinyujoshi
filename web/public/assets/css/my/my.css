@@ -947,19 +947,36 @@ footer {
 }
 
 .joshikai-attend-detail-table .main-img {
-    width: 150px;
 }
 
 .joshikai-attend-detail-table .member-img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: relative;
 }
 
+.joshikai-attend-detail-table .subject1 {
+    width: 20%;
+}
+
+.joshikai-attend-detail-table .subject2 {
+    width: 40%;
+}
+
+.joshikai-attend-detail-table .subject3 {
+    width: 20%;
+}
+
+.joshikai-attend-detail-table .subject4 {
+    width: 20%;
+}
+
+/*
 .joshikai-attend-detail-table .link-area {
     width: 150px;
 }
+*/
 
 .joshikai-attend-detail-table .link-area a {
     width: 100%;
