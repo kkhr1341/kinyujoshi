@@ -79,11 +79,6 @@
           {if $application.payment_sale_at}
           <p>支払い確定日時：<br/>{$application.payment_sale_at}</p>
           {/if}
-
-          {if $application.charge_id}
-          <br>
-          <p>PAYJP課金ID：<br>{$application.charge_id}</p>
-          {/if}
         </td>
         <td class="subject4 link-area">
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
@@ -146,6 +141,11 @@
           <p>キャンセル日時：<br/>{$application.cancel_at}</p> 
           {if $application.payment_cancel_at}
             <p>支払いキャンセル日時：<br/>{$application.payment_cancel_at}</p> 
+          {/if}
+
+          {if $application.charge_id}
+          <br>
+          <p>PAYJP課金ID：<br>{$application.charge_id}</p>
           {/if}
         </td>
         <td class="subject4 link-area">
