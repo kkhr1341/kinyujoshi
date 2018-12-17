@@ -156,6 +156,7 @@ class Applications extends Base
         $select .= 'profiles.birthday, ';
         $select .= 'member_regist.code as member_regist_code, ';
         $select .= 'applications.*, ';
+        $select .= 'application_credit_payments.charge_id, ';
         $select .= 'exists(select "x" from application_credit_payment_sales where applications.code = application_credit_payment_sales.application_code) as sale,';
         $select .= 'exists(select "x" from application_credit_payment_cancels where applications.code = application_credit_payment_cancels.application_code) as payment_cancel,';
         $select .= '(select ac.created_at from application_cancels as ac where ac.application_code = applications.code) as cancel_at, ';
@@ -169,6 +170,8 @@ class Applications extends Base
             ->on('member_regist.username', '=', 'users.username')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'users.username')
+            ->join('application_credit_payments', 'LEFT')
+            ->on('application_credit_payments.application_code', '=', 'applications.code')
             ->where('applications.event_code', '=', $code)
             ->where('applications.disable', '=', 0)
             ->where(\DB::expr('exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
