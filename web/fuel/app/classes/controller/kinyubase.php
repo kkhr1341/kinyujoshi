@@ -7,9 +7,13 @@
  */
 
 use \Model\Profiles;
+use \Model\InsightQuestions;
+use \Model\InsightQuestionLabels;
 
 class Controller_Kinyubase extends Controller_Template
 {
+
+    const INSIGHT_QUESTION_ID = '1'; // インサイト取得質問ID
 
     public $template = 'main.smarty';
     public $data;
@@ -39,6 +43,14 @@ class Controller_Kinyubase extends Controller_Template
         $this->template->roles = $this->data['roles'];
 
         $this->template->authenticated = Auth::check() ? 1 : 0;
+
+        // ポップアップ広告
+        $question = InsightQuestions::findById(self::INSIGHT_QUESTION_ID);
+        $question_labels = InsightQuestionLabels::lists(self::INSIGHT_QUESTION_ID);
+        $this->template->insight_correct_popup = View::forge('kinyu/common/insight_correct_popup.smarty', array(
+            'question' => $question,
+            'labels' => $question_labels,
+        ));
 
         // ログイン後のリダイレクトURL
         if ($after_login_url = Input::get("after_login_url")) {
@@ -111,6 +123,8 @@ class Controller_Kinyubase extends Controller_Template
             'kinyu/main.js',
             // 必要
             'kinyu/swiper.min.js',
+            // ポップアップ広告
+//            'kinyu/popup.js',
             'kinyu/jquery.bxslider.min.js',
             //'https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js'
             //'kinyu/drawer.min.js'

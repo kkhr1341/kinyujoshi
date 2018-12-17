@@ -1,0 +1,76 @@
+<div class="ad-popup js-insight-question" data-expires="{$question['expires']}" data-id="{$question['id']}">
+  <div class="ad-popup-main-block-container">
+    <div class="ad-popup-main-block">
+      <div class="main-block-inner">
+        <div class="ad-image-wrapper">
+          <p>{$question['name']}</p>
+
+          <ul>
+          {foreach from=$labels item=label name=loopname}
+            <li class="js-insight-question-label" data-id="{$label['id']}">・{$label['id']}: {$label['name']}</li>
+          {/foreach}
+          </ul>
+        </div>
+        <p id="ad-popup-message-close" class="js-popup-hoshino-close close-btn" style="cursor:pointer;">
+          <img src="/images/ad-close-btn.png">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{literal}
+<script>
+$(function() {
+
+    $('.js-insight-question').each(function() {
+        var id = "insight-" + $(this).data('id');
+        var expires = $(this).data('expires');
+        // 広告の表示/非表示期限設定
+        if($.cookie(id)){
+        }else{
+            $('#canvas').addClass("active");
+            setTimeout(function(){
+                $('.ad-popup').fadeIn(1000);
+                $('.ad-popup-main-block-container').fadeIn(1000);
+                $.cookie("hoshino_resort_popup","access", { expires: expires });
+            },3000);
+        }
+    });
+
+    // ポップアップクローズ時の処理
+    $("#ad-popup-message-close").click(function() {
+        $(".ad-popup").fadeOut(500);
+        $(".ad-popup-main-block-container").fadeOut(500);
+        $('#canvas').removeClass("active");
+    });
+
+    // PC版の広告クリックイベントトラッキング
+    $('.js-insight-question .js-insight-question-label').click(function() {
+
+        var insight_question_label_id = $(this).data('id');
+
+        var url = "/api/insightquestions/create";
+        var params = {
+            insight_question_label_id: insight_question_label_id,
+        };
+        return ajax.post(
+            url,
+            params,
+            function(data) {
+            	$(".ad-popup").fadeOut(500);
+                $(".ad-popup-main-block-container").fadeOut(500);
+                $('#canvas').removeClass("active");
+
+                ts.success('ご回答ありがとうございます');
+            },
+            function(data) {
+            	$(".ad-popup").fadeOut(500);
+                $(".ad-popup-main-block-container").fadeOut(500);
+                $('#canvas').removeClass("active");
+            }
+        );
+    });
+});
+</script>
+{/literal}

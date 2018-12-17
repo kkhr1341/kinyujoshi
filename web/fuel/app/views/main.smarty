@@ -69,89 +69,10 @@
       </div>
     </div>
 
-    <!-- 広告ポップアップ-->
-    <div class="ad-popup">
-    <div class="ad-popup-main-block-container">
-      <div class="ad-popup-main-block">
-        <div class="main-block-inner">
-          <div class="ad-image-wrapper">
-            <a class="js-popup-hoshino-pc" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank">
-              <img class="pc ad-img" src="/images/advertisement/PC.png">
-            </a>
-            <a class="js-popup-hoshino-sp" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank">
-              <img class="sp ad-img" src="/images/advertisement/SP.png">
-            </a>
-            <div class="kinyu-top-promotion-label"><img src="/images/pr_label_pc.png"></div>
-            <p class="pr-text">[PR]</p>
-          </div>
+    <!-- インサイトデータ取得用ポップアップ-->
+    {$insight_correct_popup}
+    <!-- インサイトデータ取得用ポップアップ-->
 
-          <p id="ad-popup-message-close" class="js-popup-hoshino-close close-btn" style="cursor:pointer;">
-            <img src="/images/ad-close-btn.png">
-          </p>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    {literal}
-    <!-- ポップアップ広告-js -->
-    <script type="text/javascript">
-      $(function() {
-        $("#ad-popup-message-close").click(function() {
-          $(".ad-popup").fadeOut(500);
-          $(".ad-popup-main-block-container").fadeOut(500);
-          $('#canvas').removeClass("active");
-        });
-      });
-    </script>
-
-    <script type="text/javascript">
-      $(function(){
-        if($.cookie("hoshino_resort_popup")){
-        }else{
-          $('#canvas').addClass("active");
-          setTimeout(function(){
-            $('.ad-popup').fadeIn(1000);
-            $('.ad-popup-main-block-container').fadeIn(1000);
-          },3000);
-        }
-        $(window).load(function(){
-          $.cookie("hoshino_resort_popup","access", { expires: 1 });
-        })
-      });
-    </script>
-
-    <script type="text/javascript">
-      $(function(){
-        $('.js-popup-hoshino-pc').click(function() {
-          gtag('event', 'click', {
-              'event_category': 'pr',
-              'event_label': 'hoshino-popup-pc',
-              'event_action': 'link',
-              'event_value': 1,
-          });
-        });
-        $('.js-popup-hoshino-sp').click(function() {
-          gtag('event', 'click', {
-              'event_category': 'pr',
-              'event_label': 'hoshino-popup-sp',
-              'event_action': 'link',
-              'event_value': 1,
-          });
-        });
-        $('.js-popup-hoshino-close').click(function() {
-          gtag('event', 'click', {
-              'event_category': 'pr',
-              'event_label': 'hoshino-popup-sp',
-              'event_action': 'close',
-              'event_value': 1,
-          });
-        });
-      });
-    </script>
-
-    <script src="/assets/js/kinyu/swiper.js"></script>
-    {/literal}
   </body>
 
 </html>
