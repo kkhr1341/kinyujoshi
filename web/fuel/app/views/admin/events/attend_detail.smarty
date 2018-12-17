@@ -135,17 +135,17 @@
             ({((date('Ymd') - ($application.birthday|replace:"-":""))/10000)|floor}歳)
           {/if}
           </p>
+
+          {if $application.charge_id}
+          <br>
+          <p>PAYJP課金ID：<br>{$application.charge_id}</p>
+          {/if}
         </td>
         <td class="subject3">
           <p>申し込み日時：<br/>{$application.created_at}</p>
           <p>キャンセル日時：<br/>{$application.cancel_at}</p> 
           {if $application.payment_cancel_at}
             <p>支払いキャンセル日時：<br/>{$application.payment_cancel_at}</p> 
-          {/if}
-
-          {if $application.charge_id}
-          <br>
-          <p>PAYJP課金ID：<br>{$application.charge_id}</p>
           {/if}
         </td>
         <td class="subject4 link-area">
