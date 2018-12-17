@@ -102,10 +102,9 @@ class Controller_Adminbase extends Controller_Template
             'my/main.js'
         ), array(), 'layout', false);
 
-        set_exception_handler(function ($e) {
-            $this->error($e->getMessage());
-        });
-
+//        set_exception_handler(function ($e) {
+//            $this->error($e->getMessage());
+//        });
     }
 
     public function after($response)
