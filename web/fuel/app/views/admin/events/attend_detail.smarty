@@ -53,6 +53,11 @@
             <br/>
             <p>お問い合わせ内容：<br/>{$application.message|nl2br}</p>
             {/if}
+
+            {if $application.charge_id}
+            <br>
+            <p>PAYJP課金ID：<br>{$application.charge_id}</p>
+            {/if}
         </td>
         <td>{$application.type}</td>
         <td>

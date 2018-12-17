@@ -116,6 +116,7 @@ class Applications extends Base
         $select .= 'member_regist.code as member_regist_code, ';
         $select .= 'member_regist.not_know, ';
         $select .= 'applications.*, ';
+        $select .= 'application_credit_payments.charge_id, ';
         $select .= 'exists(select "x" from application_credit_payment_sales where applications.code = application_credit_payment_sales.application_code) as sale,';
         $select .= 'exists(select "x" from application_credit_payment_cancels where applications.code = application_credit_payment_cancels.application_code) as payment_cancel,';
         $select .= '(select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at, ';
@@ -131,6 +132,8 @@ class Applications extends Base
             ->on('member_regist.username', '=', 'users.username')
             ->join('profiles', 'LEFT')
             ->on('profiles.username', '=', 'users.username')
+            ->join('application_credit_payments', 'LEFT')
+            ->on('application_credit_payments.application_code', '=', 'applications.code')
             ->join(array(\DB::expr('select max(id) as id, username from diagnostic_chart_type_users group by username'), 'types'), 'LEFT')
             ->on('types.username', '=', 'member_regist.username')
             ->where('applications.event_code', '=', $code)
