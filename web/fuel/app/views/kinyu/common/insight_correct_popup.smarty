@@ -7,7 +7,7 @@
 
           <ul>
           {foreach from=$labels item=label name=loopname}
-            <li class="js-insight-question-label" data-id="{$label['id']}">・{$label['id']}: {$label['name']}</li>
+            <li class="js-insight-question-label ripple " data-id="{$label['id']}"><span class="ripple__effect is-white">{$label['id']}: {$label['name']}</span></li>
           {/foreach}
           </ul>
         </div>
@@ -20,6 +20,71 @@
 </div>
 
 {literal}
+
+<style>
+#toast-container {
+    top: 48%;
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+    li.js-insight-question-label {
+        background: #ff9d74;
+        font-size: 16px;
+        margin: 10px 0;
+        padding: 12px 20px;
+        display: inline-block;
+        color: #fff;
+        cursor: pointer;
+        /* width: 200px; */
+    }
+    /* クリックできる要素 */
+    .ripple {
+        /* 必須 */
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* エフェクト要素 */
+    .ripple__effect {
+        /* 値の変更はエフェクト形体・サイズ・スピードに影響する */
+        width: 150px;
+        height: 150px;
+
+        /* 必須 */
+        position: absolute;
+        border-radius: 100%;
+        pointer-events: none;
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    /* エフェクト要素の色を指定 */
+    .ripple__effect.is-orange { background: #f1c40f;}
+    .ripple__effect.is-white   { background: #fff;}
+    .ripple__effect.is-black  { background: #999;}
+
+    /* classが付与されたらアニメーションを実行 */
+    .ripple__effect.is-show {
+        animation: ripple 0.75s ease-out;
+    }
+
+    /* アニメーションの定義 */
+    @keyframes ripple {
+        from {
+            opacity: 1;
+        }
+        to {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+</style>
+
 <script>
 $(function() {
 
