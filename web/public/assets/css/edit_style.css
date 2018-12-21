@@ -882,6 +882,96 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   margin: 24px 0px;
 }
 
+.kinyu-top-report-list .img-box {
+  position: relative;
+}
+
+/* .kinyu-top-report-list .img-box .member-regist-label {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  background:-webkit-linear-gradient(top left, rgba(216, 194, 88, 0.8) 0%, rgba(208, 216, 88, 0.8) 1%, rgba(219, 164, 81, 0.8) 100%);
+  background:-o-linear-gradient(top left, rgba(216, 194, 88, 0.8) 0%, rgba(208, 216, 88, 0.8) 1%, rgba(219, 164, 81, 0.8) 100%);
+  background:linear-gradient(to bottom right, rgba(216, 194, 88, 0.8) 0%, rgba(208, 216, 88, 0.8) 1%, rgba(219, 164, 81, 0.8) 100%);
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 12px;
+} */
+
+.ribbon_area  {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 89px;
+    height: 91px;
+    overflow: hidden;
+  }
+
+.member-regist-label  {
+  display: inline-block;
+  position: absolute;
+  padding: 3px 0;
+  left: -23px;
+  top: 22px;
+  width: 160px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 16px;
+  background: linear-gradient(to right, #f1806eeb 0%,#f3b559 100%);
+  color: #fff;
+  text-shadow: 0 2px 2px #de6e4e;
+  letter-spacing: 0.05em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.member-regist-label:before,.member-regist-label:after{
+    position: absolute;
+    content: "";
+    border-top: 4px solid #de6e4e;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    bottom: -4px;
+}
+
+.member-regist-label:before{
+    left: 22px;
+}
+
+.member-regist-label:after{
+   right: 25px;
+}
+
+ribbon_area-sp {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+  }
+
+.member-regist-label-sp  {
+  display: inline-block;
+  position: absolute;
+  padding: 1px 6px;
+  left: 0px;
+  top: 10px;
+  text-align: center;
+  font-size: 9px;
+  line-height: 16px;
+  background: linear-gradient(to right, #f1806eeb 0%,#f3b559 100%);
+  color: #fff;
+  text-shadow: 0 2px 2px #de6e4e;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
 /*-- 記事一覧部分 --*/
 .kinyu-list-block {
   background: #f9f9f9;

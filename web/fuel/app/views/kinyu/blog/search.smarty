@@ -25,7 +25,14 @@
           <li>
             <a href="/report/{$blog.code}">
               <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
-              {if $blog.secret == 1}<p>会員限定</p>{/if}
+              {if $blog.secret == 1}
+              <div class="ribbon_area pc">
+                  <span class="member-regist-label">メンバー限定</span>
+              </div>
+              <div class="ribbon_area-sp sp">
+                  <span class="member-regist-label-sp">メンバー限定</span>
+              </div>
+              {/if}
               </div>
               <div class="text-box">
                 <div class="kinyu-top-list-kind">
@@ -47,7 +54,7 @@
               </div>
             </a>
           </li>
-        {foreachelse}  
+        {foreachelse}
           <p class="none-hit-report">該当するレポートはありませんでした...。</p>
         {/foreach}
       </ul>
