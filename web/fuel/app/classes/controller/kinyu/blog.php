@@ -48,9 +48,9 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     {
 
         if (Agent::is_mobiledevice()) {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 30, Input::get('search_text'));
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 30, Input::get('search_text'), null);
         } else {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 60, Input::get('search_text'));
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 60, Input::get('search_text'), null);
         }
         $pagination = $this->data['blogs']['pagination'];
         $this->template->search_text = Input::get('search_text');
