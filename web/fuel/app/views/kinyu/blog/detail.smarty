@@ -55,9 +55,9 @@
           <p>
             <span style="color:#ff8861;">＊</span>レポートについて<span style="color:#ff8861;">＊</span>
             <span style="display: block;height: 12px;"></span>
-            チェックボタンができたことに伴い、<br>レポートはメンバーさん限定になりました。<br>ログインするとお読みすることができます。
+            レポートのお気に入りボタンができたことに伴い、<br>レポートはメンバーさん限定になりました。<br>ログインすると読むことができます。
             <span style="display: block;height: 12px;"></span>
-            <a target="_blank" href="https://kinyu-joshi.jp/news/vpRlRZ" style="color: #44a6e0;">チェックボタンって？</a></p>
+          </p>
           <div class="button-block">
             <button class="btn btn-kinyu" type="button" onClick="location.href='/login_regist'">メンバー登録</button>
             <button class="btn btn-kinyu" type="button" onClick="location.href='/login'">ログイン</button>
