@@ -30,9 +30,10 @@
            　　　{/if}
            　　　{if $blog.pr == 1}
            　　　  <!-- PR用イメージ挿入箇所 -->
-                       <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+                  <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
            　　　{/if}
           　　 </div>
+              {if $blog.secret == 1}<p>会員限定</p>{/if}
               <div class="text-box">
                 <div class="kinyu-top-list-kind">
                   {if $blog.kind == "女子会レポート"}
