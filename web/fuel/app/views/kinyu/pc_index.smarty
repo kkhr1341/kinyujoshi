@@ -213,23 +213,11 @@
 
             <li>
               <a class="js-track" href="/report/{$blog.code}" data-category="pc-top-link" data-action="click" data-value="1">
-              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
-                <!-- <div class="kinyu-top-list-kind">
-                  {if $blog.kind == "女子会レポート"}
-                    <p>女子会レポート</p>
-                  {else if $blog.kind == "イベントレポート"}
-                    <p>イベントレポート</p>
-                  {else if $blog.kind == "取材レポート"}
-                    <p>取材レポート</p>
-                  {else if $blog.kind == "イベント告知"}
-                    <p>イベント告知</p>
-                  {else if $blog.kind == "コラム"}
-                    <p>コラム</p>
-                  {else}
-                    <p>レポート</p>
-                  {/if}
+              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
+                {if $blog.new == true}
+                  <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
+                {/if}
                 </div>
-                <h3 class="kinyu-top-list-title">{$blog.title}</h3> -->
                 <div class="text-box">
                   <div class="kinyu-top-list-kind">
                     {if $blog.kind == "女子会レポート"}

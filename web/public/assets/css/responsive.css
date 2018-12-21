@@ -863,6 +863,16 @@ mark, .mark {
   width: 30%;
   height: 100%;
 }
+
+.new-icon img {
+  width: 40px;
+}
+
+.kinyu-top-report-list .img-box .new-icon {
+  top: -10px;
+  left: -10px;
+}
+
 .kinyu-top-report-list li .text-box {
   float: right;
   width: 70%;
