@@ -27,6 +27,9 @@
           <li>
             <a href="/report/{$blog.code}">
               <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+              {if $blog.new == true}
+                <p>New</p>
+              {/if}
               <div class="text-box">
                 <div class="kinyu-top-list-kind">
                   {if $blog.kind == "女子会レポート"}
