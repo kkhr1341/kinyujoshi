@@ -882,15 +882,16 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   margin: 24px 0px;
 }
 
-.kinyu-top-report-list .img-box {
+.img-box {
   position: relative;
 }
 
-.kinyu-top-report-list .img-box .new-icon {
+.img-box .new-icon {
   position: absolute;
   top: 7px;
   left: 7px;
 }
+
 .new-icon img {
   width: 45px;
 }
