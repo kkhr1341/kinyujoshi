@@ -888,8 +888,8 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 
 .img-box .new-icon {
   position: absolute;
-  top: 7px;
-  left: 7px;
+  top: -15px;
+  left: -14px;
 }
 
 .new-icon img {
