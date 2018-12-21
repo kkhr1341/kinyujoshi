@@ -31,6 +31,10 @@ test:
 	docker-compose run --rm web php oil test --group=App
 .PHONY: test
 
+console:
+	docker-compose run --rm web php oil console
+.PHONY: console
+
 composer:
 	docker-compose run --rm composer install
 .PHONY: composer
