@@ -117,7 +117,7 @@ class Regist extends Base
                 'nickname' => $params['name'],
                 'birthday' => $params['birthday'],
                 'prefecture' => $params['prefecture'],
-                'url' => $params['url'],
+//                'url' => $params['url'],
                 'introduction' => $params['introduction'],
 //              'gender' => $params['gender']
             );
@@ -156,6 +156,7 @@ class Regist extends Base
                 'ask' => '',
                 'email' => '',
                 'income' => '',
+                'url' => $params['url'],
                 'where_from' => $params['where_from'],
                 'where_from_site' => $params['where_from_site'],
                 'where_from_other' => $params['where_from_other'],
@@ -394,10 +395,14 @@ class Regist extends Base
             \DB::expr("ifnull(users.email, member_regist.email) as email"),
             "member_regist.facebook",
             "member_regist.other_sns",
+            "member_regist.url",
             "member_regist.introduction",
             "member_regist.user_agent",
             "member_regist.where_from",
             "member_regist.where_from_other",
+            "member_regist.where_from_site",
+            "member_regist.want_to_something",
+            "member_regist.future",
             "member_regist.job_kind",
             "member_regist.id_name",
             "member_regist.disable",
@@ -410,7 +415,11 @@ class Regist extends Base
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
             \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana"),
             \DB::expr("prefectures.name as prefecture_name"),
-            \DB::expr("(select diagnostic_chart_types.type from diagnostic_chart_type_users inner join diagnostic_chart_types on diagnostic_chart_types.code = diagnostic_chart_type_users.type_code where diagnostic_chart_type_users.id = types.id) as type")
+            \DB::expr("(select diagnostic_chart_types.type from diagnostic_chart_type_users inner join diagnostic_chart_types on diagnostic_chart_types.code = diagnostic_chart_type_users.type_code where diagnostic_chart_type_users.id = types.id) as type"),
+            \DB::expr("(select GROUP_CONCAT(uwm.value) from user_want_to_meets as uwm where uwm.username = users.username) as user_want_to_meet_values"),
+            \DB::expr("(select GROUP_CONCAT(uwl.value) from user_want_to_learns as uwl where uwl.username = users.username) as user_want_to_learn_values"),
+            \DB::expr("(select GROUP_CONCAT(urt.value) from user_regist_triggers as urt where urt.username = users.username) as user_regist_trigger_values"),
+            \DB::expr("(CASE WHEN member_regist.where_from THEN member_regist.where_from WHEN member_regist.where_from_other THEN member_regist.where_from_other WHEN member_regist.where_from_site THEN member_regist.where_from_site END) as where_from")
         )
             ->from('member_regist')
             ->join('users', 'LEFT')
@@ -427,12 +436,10 @@ class Regist extends Base
             ->or_where('users.group', 'is', null)
             ->and_where_close();
 
-        $datas = $datas->order_by('member_regist.created_at', 'desc');
-        //$datas = $datas->array_unique($input);
-        $datas = $datas->execute()->as_array();
-//        header('Content-type: text/html; charset=UTF-8');
-        return $datas;
-
+        return $datas
+            ->order_by('member_regist.created_at', 'desc')
+            ->execute()
+            ->as_array();
     }
 
     public static function getByCodeWithurl($code)

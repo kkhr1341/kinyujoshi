@@ -119,6 +119,10 @@ return array(
         110 => '116_add_future_to_member_regist',
         111 => '117_add_want_to_something_to_member_regist',
         112 => '118_add_message_to_applications',
+        113 => '119_add_url_to_member_regist',
+        114 => '120_create_insight_questions',
+        115 => '121_create_insight_question_labels',
+        116 => '122_create_insight_question_answers',
       ),
     ),
     'module' => 
