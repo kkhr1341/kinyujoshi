@@ -3,16 +3,19 @@
     <div class="ad-popup-main-block">
       <div class="main-block-inner">
         <div class="ad-image-wrapper">
-          <p>{$question['name']}</p>
-
+          <div class="clear">
+          <div class="question-name balloon4"><p>{$question['name']}</p></div>
+          <img class="kingyo-image" src="/images/insight_popup/kingyo.png">
+          </div>
           <ul>
           {foreach from=$labels item=label name=loopname}
-            <li class="js-insight-question-label ripple " data-id="{$label['id']}"><span class="ripple__effect is-white">{$label['id']}: {$label['name']}</span></li>
+            <li class="js-insight-question-label ripple" data-id="{$label['id']}"><span class="ripple__effect is-white">{$label['id']}: {$label['name']}</span></li>
           {/foreach}
           </ul>
         </div>
         <p id="ad-popup-message-close" class="js-popup-hoshino-close close-btn" style="cursor:pointer;">
-          <img src="/images/ad-close-btn.png">
+          <!-- <img src="/images/ad-close-btn.png"> -->
+          CLOSE
         </p>
       </div>
     </div>
@@ -22,66 +25,70 @@
 {literal}
 
 <style>
-#toast-container {
-    top: 48%;
-    background: #fff;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    background: #fff;
+  .ad-popup-main-block .main-block-inner {
+      background: url(/images/insight_popup/popup_bg.jpg) center center no-repeat;
+      background-size: cover;
   }
 
     li.js-insight-question-label {
-        background: #ff9d74;
+        background: #fff;
         font-size: 16px;
         margin: 10px 0;
-        padding: 12px 20px;
+        padding: 25px 20px;
         display: inline-block;
-        color: #fff;
+        color: #deb03f;
         cursor: pointer;
-        /* width: 200px; */
-    }
-    /* クリックできる要素 */
-    .ripple {
-        /* 必須 */
-        overflow: hidden;
-        position: relative;
+        width: 300px;
     }
 
-    /* エフェクト要素 */
-    .ripple__effect {
-        /* 値の変更はエフェクト形体・サイズ・スピードに影響する */
-        width: 150px;
-        height: 150px;
 
-        /* 必須 */
-        position: absolute;
-        border-radius: 100%;
-        pointer-events: none;
-        transform: scale(0);
-        opacity: 0;
-    }
+.question-name {
+  float: left;
+    display: inline-block;
+    width: 70%;
+    position: relative;
+    top: -60px;
+    margin: 2em 0 2em 40px;
+    padding: 15px;
+    background: #ecf9f6;
+    border-radius: 50px;
+}
 
-    /* エフェクト要素の色を指定 */
-    .ripple__effect.is-orange { background: #f1c40f;}
-    .ripple__effect.is-white   { background: #fff;}
-    .ripple__effect.is-black  { background: #999;}
+.question-name:before{
+    content: "";
+    position: absolute;
+    right: -42px;
+    width: 13px;
+    height: 12px;
+    bottom: 0;
+    background: #ecf9f6;
+    border-radius: 50%;
+}
 
-    /* classが付与されたらアニメーションを実行 */
-    .ripple__effect.is-show {
-        animation: ripple 0.75s ease-out;
-    }
+.question-name:after{
+    content: "";
+    position: absolute;
+    right: -24px;
+    width: 18px;
+    height: 16px;
+    bottom: 3px;
+    background: #ecf9f6;
+    border-radius: 50%;
+}
+.question-name p {
+    margin: 0;
+    padding: 0;
+}
 
-    /* アニメーションの定義 */
-    @keyframes ripple {
-        from {
-            opacity: 1;
-        }
-        to {
-            transform: scale(2);
-            opacity: 0;
-        }
-    }
+
+
+
+.kingyo-image {
+  width: 90px;
+  display: block;
+  float: right;
+}
+
 
 </style>
 
