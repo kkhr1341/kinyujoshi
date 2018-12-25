@@ -19,7 +19,8 @@
 </div>
 {/if}
 
-<div class="swiper-slide pc" style="background: url(/images/advertisement/PC.png) center center / cover no-repeat;">
+<!-- スライド広告枠↓ -->
+<!-- <div class="swiper-slide pc" style="background: url(/images/advertisement/PC.png) center center / cover no-repeat;">
     <a class="js-track js-slide-hoshino-pc" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank" data-category="slide-link" data-action="click" data-value="2">
         <div class="kinyu-top-list-kind"></div>
         <div class="kinyu-top-promotion-label">
@@ -35,7 +36,7 @@
             <img src="/images/pr_label_pc.png">
         </div>
     </a>
-</div>
+</div> -->
 
 {foreach from=$blogs_pick item=blog name=loopname}
     {if $smarty.foreach.loopname.index == 1}
