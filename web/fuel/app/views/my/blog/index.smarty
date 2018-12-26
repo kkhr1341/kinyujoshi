@@ -72,7 +72,7 @@ $(function() {
     }
 
     var button = $('#check-report');
-    $('.joshikailist-main ul li').each(function() {
+    $('.my-member-report-block ul li').each(function() {
         var li = $(this);
         $(this).find('.delete-button')
             .off('click')
