@@ -1584,6 +1584,108 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   margin-bottom: 16px;
   padding: 2px 0px 2px 8px;
 }
+/*このレポートを書いた人*/
+.report-writer {
+  padding: 45px 20px 20px;
+  border: 1px solid #eee;
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
+}
+.report-writer p {
+  font-size: 12px;
+}
+.report-writer h3 {
+  position: absolute;
+  top: -25px;
+  left: 25px;
+  color: #444;
+  padding: 6px 23px;
+  border: 5px solid #fff;
+  background: #EFF3F2;
+  font-weight: normal;
+  font-size: 14px;
+}
+.report-writer h3:before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border: 7px solid transparent;
+  border-top: 14px solid #EFF3F2;
+}
+
+.report-writer .left-box {
+  float: left;
+  width: 14%;
+  min-width:120px;
+}
+
+.report-writer-img-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;/*角丸*/
+  box-shadow : 0 0 0 2px #8ddcd1;
+  border: 1px solid #fff;
+}
+
+.report-writer-profile-wrapper {
+  float: left;
+  width: 84%;
+  padding-left: 2%;
+}
+.writer-profile-top {
+  border-bottom: 1px solid #e3eae8;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+}
+.writer-position {
+  font-size: 10px;
+  color: #999;
+  padding-right: 10px;
+}
+.writer-name {
+  font-size: 14px;
+}
+/*レポートを書いた人タブレット・スマホ*/
+@media screen and (max-width:900px) {
+  .report-writer {
+    padding: 55px 20px 20px;
+  }
+  .report-writer .left-box {
+    float: none;
+    width:100%;
+    margin: 0 auto;
+  }
+  .report-writer h3 {
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 250px;
+    padding: 10px 0!important;
+    font-size: 13px!important;
+  }
+  .report-writer-img-wrapper {
+    margin: 0 auto;
+  }
+  .report-writer-profile-wrapper {
+    width:100%;
+    float: none;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .writer-profile-top {
+      text-align: center;
+      margin: 20px 0;
+      border-bottom: 0;
+      padding-bottom: 0;
+  }
+}
+
+
+
 /* 直近の女子会 */
 .report-sidebar-event-list li {
   width: 32%;

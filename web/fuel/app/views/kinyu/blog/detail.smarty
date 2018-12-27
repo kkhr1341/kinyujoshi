@@ -35,6 +35,23 @@
       {if $viewable == true}
         {$blog.content|nofilter}
 
+
+        <!-- このレポートを書いた人 -->
+        <div class="report-writer clear">
+          <h3 class="">このレポートを書いた人</h3>
+          <div class="left-box">
+            <div class="report-writer-img-wrapper" style="background-image: url(/images/og-top3.png); background-position: center center; background-size: cover;">
+          </div>
+          </div>
+          <div class="report-writer-profile-wrapper">
+          <p class="writer-profile-top"><span class="writer-position">編集部</span><span class="writer-name">玉木大道</span></p>
+          <p class="writer-profile-text">ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。ライタープロフィールが入ります。</p>
+          </div>
+        </div>
+
+
+
+
         <!-- ソーシャルシェア -->
         {$fooo = $blog.main_image}
         {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
