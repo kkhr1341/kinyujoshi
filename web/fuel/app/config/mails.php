@@ -59,6 +59,7 @@ return array(
             'name' => '女子会キャンセルメール（スタッフ宛て）',
             'view' => 'joshikai/cancel',
             'params' => array(
+                'name' => 'てすと　太郎',
             )
         ),
         9 => array(
