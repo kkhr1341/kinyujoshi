@@ -20,7 +20,7 @@
       <td>{$inquiry.email}</td>
       <td>{$inquiry.message|nl2br}</td>
       <td>
-        <a class="admin-registlist-more js-open-send-modal" href="#" data-code="{$inquiry.code}">編集</a>
+        <a class="admin-registlist-more js-open-send-modal" href="#" data-code="{$inquiry.code}">送信</a>
       </td>
     </tr>
     {/foreach}
