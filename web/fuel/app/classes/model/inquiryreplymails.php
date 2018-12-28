@@ -39,6 +39,7 @@ class Inquiryreplymails extends Base
 
         $email->body($params['body']);
         $email->to($mail); //送り先
+        $email->bcc('cs@kinyu-joshi.jp');
 
         $email->return_path('support@kinyu-joshi.jp');
         $email->send();
