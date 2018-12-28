@@ -113,6 +113,14 @@
     </table>
   </div>
 
+  <div class="clear">
+    <p style="font-weight: bold;">女子会メモ</p>
+    <textarea id="memo" style="border: 1px solid #f1f1f1; width: 100%; height: 100px;">{$events.memo}</textarea>
+    <div class="clearw float_right" style="margin-bottom: 24px;">
+        <a id="update-memo" class="btn btn-primary" data-event_code="{$events.code}" href="#" role="button">メモする</a>
+    </div>
+  </div>
+
   <div class="joshikai-attend-el-block">
     <p>◆キャンセル一覧</p>
 
@@ -214,144 +222,167 @@
 </div>
 
 <script>
-$(function(){
-        $('.sales-link').click(function(){
-                self = this;
-                var url = "/api/applicationpayments/sale";
-                var params = {};
-                params.code = $(this).data('application_code');
+$(function () {
 
-                bootbox.confirm("売り上げを確定しますか？", function(result) {
-                        if (result) {
-                                ajax.post(url, params, function(data){
-                                        ts.success("売り上げ確定しました", function(){
-                                             $(self).remove(); 
-                                        });
-                                });
-                        }
-                        else {
-                                ts.info("キャンセルしました");
-                        }
+    // 「支払い確定」ボタンクリック時の処理
+    $('.sales-link').click(function () {
+        self = this;
+        var url = "/api/applicationpayments/sale";
+        var params = {};
+        params.code = $(this).data('application_code');
+
+        bootbox.confirm("売り上げを確定しますか？", function (result) {
+            if (result) {
+                ajax.post(url, params, function (data) {
+                    ts.success("売り上げ確定しました", function () {
+                        $(self).remove();
+                    });
                 });
+            }
+            else {
+                ts.info("キャンセルしました");
+            }
         });
+    });
 
-        $('.cancel-link').click(function(){
-                self = this;
-                var url = "/api/applications/force_delete";
-                var event_code = $(this).data('event_code');
-                var params = {};
-                params.code = $(this).data('application_code');
+    // 「キャンセルする」ボタンクリック時の処理
+    $('.cancel-link').click(function () {
+        self = this;
+        var url = "/api/applications/force_delete";
+        var event_code = $(this).data('event_code');
+        var params = {};
+        params.code = $(this).data('application_code');
 
-                bootbox.confirm("キャンセルを確定しますか？", function(result) {
-                        if (result) {
-                                ajax.post(url, params, function(data){
-                                        ts.success("キャンセル確定しました", function(){
-                                             location.href = '/admin/joshikai/attend/' + event_code;
-                                        });
-                                });
-                        }
-                        else {
-                            ts.info("キャンセルしました");
-                        }
+        bootbox.confirm("キャンセルを確定しますか？", function (result) {
+            if (result) {
+                ajax.post(url, params, function (data) {
+                    ts.success("キャンセル確定しました", function () {
+                        location.href = '/admin/joshikai/attend/' + event_code;
+                    });
                 });
+            }
+            else {
+                ts.info("キャンセルしました");
+            }
         });
+    });
 
-        $('.participated-link').click(function(){
-                self = this;
-                var url = "/api/participatedapplications/create";
-                var params = {};
-                params.application_code = $(this).data('application_code');
+    // 「参加済み」ボタンクリック時の処理
+    $('.participated-link').click(function () {
+        self = this;
+        var url = "/api/participatedapplications/create";
+        var params = {};
+        params.application_code = $(this).data('application_code');
 
-                bootbox.confirm("参加確定をしますか？", function(result) {
-                        if (result) {
-                                ajax.post(url, params, function(data){
-                                    $(self).remove();
-                                });
-                        }
-                        else {
-                            ts.info("キャンセルしました");
-                        }
+        bootbox.confirm("参加確定をしますか？", function (result) {
+            if (result) {
+                ajax.post(url, params, function (data) {
+                    $(self).remove();
                 });
+            }
+            else {
+                ts.info("キャンセルしました");
+            }
         });
+    });
 
-        // メール一斉送信用モーダル
-        var $modal = $("#myModal");
+    // 「メモする」ボタンクリック時の処理
+    $('#update-memo').click(function (e) {
+        e.preventDefault();
+        self = this;
+        var url = "/api/eventmemos/update";
+        var params = {};
+        params.memo = $('#memo').val();
+        params.code = $(this).data('event_code');
 
-        $("#broadcast_mail").on("click", function() {
-            $modal.modal({
-              "backdrop"  : "static",
-              "keyboard"  : true,
-              "show"      : true
-            });
-        })
-
-        $modal.find(".send-btn").on("click", function(e) {
-
-            var params = {};
-            params.code = $modal.find("[name='code']").val();
-            params.subject = $modal.find("[name='subject']").val();
-            params.body = $modal.find("[name='body']").val();
-
-            if (!params.subject) {
-                ts.error("件名が入力されておりません。");
-                return true;
-            }
-
-            if (!params.body) {
-                ts.error("本文が入力されておりません。");
-                return true;
-            }
-
-            if (!confirm('メールを送信します。よろしいですか？')) {
-                return true;
-            }
-
-            var url = "/api/eventbroadcastmails/send";
-
-            ajax.post(url, params, function(data){
-                ts.success("送信完了しました", function(){
-                     $modal.modal('hide');
+        bootbox.confirm("メモの更新を確定をしますか？", function (result) {
+            if (result) {
+                ajax.post(url, params, function (data) {
+                  ts.success("更新が完了しました");
                 });
-            });
+            } else {
+                ts.info("キャンセルしました");
+            }
         });
-
-        $modal.find(".test-btn").on("click", function(e) {
-
-            var params = {};
-            params.code = $modal.find("[name='code']").val();
-            params.subject = $modal.find("[name='subject']").val();
-            params.body = $modal.find("[name='body']").val();
-            params.email = $modal.find("[name='email']").val();
-
-            if (!params.subject) {
-                ts.error("件名が入力されておりません。");
-                return true;
-            }
-
-            if (!params.body) {
-                ts.error("本文が入力されておりません。");
-                return true;
-            }
-
-            if (!params.email) {
-                ts.error("メールアドレスが入力されておりません。");
-                return true;
-            }
-
-            if (!confirm('メールを送信します。よろしいですか？')) {
-                return true;
-            }
-
-            var url = "/api/eventbroadcastmails/testsend";
-
-            ajax.post(url, params, function(data){
-                ts.success("テストメールを送信完了しました", function(){
-                     $modal.modal('hide');
-                });
-            });
-        });
+    });
 });
 
+$(function () {
+    // メール一斉送信
+    var $modal = $("#myModal");
+    $("#broadcast_mail").on("click", function () {
+        $modal.modal({
+            "backdrop": "static",
+            "keyboard": true,
+            "show": true
+        });
+    })
+    $modal.find(".send-btn").on("click", function (e) {
+
+        var params = {};
+        params.code = $modal.find("[name='code']").val();
+        params.subject = $modal.find("[name='subject']").val();
+        params.body = $modal.find("[name='body']").val();
+
+        if (!params.subject) {
+            ts.error("件名が入力されておりません。");
+            return true;
+        }
+
+        if (!params.body) {
+            ts.error("本文が入力されておりません。");
+            return true;
+        }
+
+        if (!confirm('メールを送信します。よろしいですか？')) {
+            return true;
+        }
+
+        var url = "/api/eventbroadcastmails/send";
+
+        ajax.post(url, params, function (data) {
+            ts.success("送信完了しました", function () {
+                $modal.modal('hide');
+            });
+        });
+    });
+
+    $modal.find(".test-btn").on("click", function (e) {
+
+        var params = {};
+        params.code = $modal.find("[name='code']").val();
+        params.subject = $modal.find("[name='subject']").val();
+        params.body = $modal.find("[name='body']").val();
+        params.email = $modal.find("[name='email']").val();
+
+        if (!params.subject) {
+            ts.error("件名が入力されておりません。");
+            return true;
+        }
+
+        if (!params.body) {
+            ts.error("本文が入力されておりません。");
+            return true;
+        }
+
+        if (!params.email) {
+            ts.error("メールアドレスが入力されておりません。");
+            return true;
+        }
+
+        if (!confirm('メールを送信します。よろしいですか？')) {
+            return true;
+        }
+
+        var url = "/api/eventbroadcastmails/testsend";
+
+        ajax.post(url, params, function (data) {
+            ts.success("テストメールを送信完了しました", function () {
+                $modal.modal('hide');
+            });
+        });
+    });
+});
 </script>
 
 <!-- チャート関連 -->

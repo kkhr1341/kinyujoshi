@@ -123,6 +123,7 @@ return array(
         114 => '120_create_insight_questions',
         115 => '121_create_insight_question_labels',
         116 => '122_create_insight_question_answers',
+        117 => '125_add_memo_to_events',
       ),
     ),
     'module' => 
