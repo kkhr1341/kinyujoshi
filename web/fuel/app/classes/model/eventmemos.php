@@ -13,8 +13,7 @@ class Eventmemos extends Base
         $val->add('code', 'イベントコード')
             ->add_rule('required');
  
-        $val->add('memo', 'メモ')
-            ->add_rule('required');
+        $val->add('memo', 'メモ');
 
         return $val;
     }
