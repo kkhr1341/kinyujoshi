@@ -63,3 +63,7 @@ mysql:
 change_administrator:
 	docker-compose run --rm web php oil r change_administrator
 .PHONY: change_administrator
+
+bash:
+	docker-compose run --rm web bash
+.PHONY: bash
