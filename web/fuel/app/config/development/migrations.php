@@ -124,6 +124,7 @@ return array(
         115 => '121_create_insight_question_labels',
         116 => '122_create_insight_question_answers',
         117 => '125_add_memo_to_events',
+        118 => '126_create_inquiry_reply_mails',
       ),
     ),
     'module' => 

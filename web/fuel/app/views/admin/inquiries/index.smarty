@@ -6,7 +6,8 @@
       <th style="width:10%;">登録日</th>
       <th style="width:10%;">名前</th>
       <th style="width:10%;">メールアドレス</th>
-      <th style="width:60%;">本文</th>
+      <th style="width:50%;">本文</th>
+      <th style="width:10%;"></th>
     </tr>
   </thead>
 
@@ -18,10 +19,44 @@
       <td>{$inquiry.name}</td>
       <td>{$inquiry.email}</td>
       <td>{$inquiry.message|nl2br}</td>
+      <td>
+        <a class="admin-registlist-more js-open-send-modal" href="#" data-code="{$inquiry.code}">編集</a>
+      </td>
     </tr>
     {/foreach}
   </tbody>
 </table>
+
+
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <input type="hidden" name="code" value="">
+      <!-- dialog body -->
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <div class="form-group">
+            <label class="form-group-event-label">件名</label>
+            <div class='input-group'>
+                <input type='text' class="form-control" name="subject" value="" style="width: 500px;" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group-event-label">本文</label>
+            <div class='input-group date datetimepicker'>
+                <textarea name="body" style="border: 1px solid #d9d8d8; width: 500px; height: 200px;"></textarea>
+            </div>
+        </div>
+      </div>
+      <!-- dialog buttons -->
+      <div class="modal-footer">
+        <button type="button" class="btn send-btn btn-primary">送信</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <style>
 .sample_01{
@@ -71,3 +106,54 @@
   padding-bottom: 2px;
 }
 </style>
+
+<script>
+$(function () {
+    // メール一斉送信
+    var $modal = $("#myModal");
+    $(".js-open-send-modal").on("click", function (e) {
+        e.preventDefault();
+        var code = $(this).data('code');
+        $modal.modal({
+            "backdrop": "static",
+            "keyboard": true,
+            "show": true
+        });
+        $modal.find('[name="code"]').val(code);
+    })
+    $modal.find(".send-btn").on("click", function (e) {
+
+        var params = {};
+        params.code = $modal.find("[name='code']").val();
+        params.subject = $modal.find("[name='subject']").val();
+        params.body = $modal.find("[name='body']").val();
+
+        if (!params.subject) {
+            ts.error("件名が入力されておりません。");
+            return true;
+        }
+
+        if (!params.body) {
+            ts.error("本文が入力されておりません。");
+            return true;
+        }
+
+        if (!confirm('メールを送信します。よろしいですか？')) {
+            return true;
+        }
+
+        var url = "/api/inquiryreplymails/send";
+
+        ajax.post(url, params, function (data) {
+            ts.success("送信完了しました", function () {
+                $modal.find("[name='code']").val('');
+                $modal.find("[name='subject']").val('');
+                $modal.find("[name='body']").val('');
+                $modal.find("[name='email']").val('');
+
+                $modal.modal('hide');
+            });
+        });
+    });
+});
+</script>

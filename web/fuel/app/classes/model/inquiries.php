@@ -56,4 +56,13 @@ class Inquiries extends Base
             ->execute()
             ->as_array();
     }
+
+    public static function findByCode($code)
+    {
+        return \DB::select(\DB::expr('*'))
+            ->from('inquiries')
+            ->where('code', '=', $code)
+            ->execute()
+            ->current();
+    }
 }

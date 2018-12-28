@@ -356,9 +356,6 @@ class Events extends Base
     public static function save($params)
     {
         $data = array();
-//        $username = \Auth::get('username');
-//        $params['main_image'] = self::get_main_image($params);
-//        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
         $data['incur_cancellation_fee_date'] = !$params['incur_cancellation_fee_date']? '0000-00-00 00:00:00': $params['incur_cancellation_fee_date'];
 
         $data['event_category'] = $params['event_category'];
