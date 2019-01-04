@@ -74,6 +74,7 @@ class Inquiries extends Base
     {
         return \DB::select(\DB::expr('*'))
             ->from('inquiries')
+            ->where('disable', '=', 0)
             ->order_by('created_at', 'desc')
             ->execute()
             ->as_array();
@@ -84,6 +85,7 @@ class Inquiries extends Base
         return \DB::select(\DB::expr('*'))
             ->from('inquiries')
             ->where('code', '=', $code)
+            ->where('disable', '=', 0)
             ->execute()
             ->current();
     }
