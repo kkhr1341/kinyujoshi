@@ -14,7 +14,7 @@ seed:
 	docker-compose run --rm web php oil r seed:all
 .PHONY: seed
 
-install:
+install: setup sleep10 migrate
 	docker-compose build
 	git submodule init
 	docker-compose run --rm composer install
@@ -22,6 +22,15 @@ install:
 	git submodule update
 	docker-compose run --rm createbuckets
 .PHONY: install
+
+setup:
+	docker-compose build
+	git submodule init
+	docker-compose run --rm composer install
+	git submodule init
+	git submodule update
+	docker-compose run --rm createbuckets
+.PHONY: setup
 
 build:
 	docker-compose build --no-cache
