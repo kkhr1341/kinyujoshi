@@ -5,12 +5,34 @@ require_once(dirname(__FILE__) . "/base.php");
 
 class Inquiries extends Base
 {
+    public static function validate()
+    {
+        $val = \Validation::forge();
+        $val->add_callable('myvalidation');
 
-    public static function create($params)
+        $val->add('name', 'お名前')
+            ->add_rule('required');
+
+        $val->add('name_kana', 'お名前(カナ)')
+            ->add_rule('required');
+
+        $val->add('email', 'メールアドレス')
+            ->add_rule('required');
+
+        $val->add('category_code', 'お問い合わせ種別')
+            ->add_rule('required');
+
+        $val->add('message', 'お問い合わせ内容')
+            ->add_rule('required');
+
+        return $val;
+    }
+
+    public static function create($params, $username)
     {
 
         $code = self::getNewCode('inquiries');
-        $params['username'] = \Auth::get('username');
+        $params['username'] = $username;
         $params['code'] = $code;
         $params['created_at'] = \DB::expr('now()');
         $params['user_agent'] = @$_SERVER['HTTP_USER_AGENT'];
