@@ -5,6 +5,24 @@ require_once(dirname(__FILE__) . "/base.php");
 
 class News extends Base
 {
+    public static function validate()
+    {
+        $val = \Validation::forge();
+        $val->add_callable('myvalidation');
+
+        $val->add('code');
+        $val->add('status');
+        $val->add('open_date');
+        $val->add('title');
+        $val->add('content');
+        $val->add('main_image');
+        $val->add('authentication_user', '認証ユーザー名')
+            ->add_rule('required_with', 'authentication_password');
+        $val->add('authentication_password', '認証パスワード')
+            ->add_rule('required_with', 'authentication_user');
+
+        return $val;
+    }
 
     public static function lists($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null)
     {
@@ -48,12 +66,12 @@ class News extends Base
 
     public static function create($params)
     {
-
         $code = self::getNewCode('news');
         $params['code'] = $code;
+        $params['section_code'] = '';
         $params['username'] = \Auth::get('username');
         $params['created_at'] = \DB::expr('now()');
-        $params['main_image'] = self::get_main_image($params);
+//        $params['main_image'] = self::get_main_image($params);
         \DB::insert('news')->set($params)->execute();
 
         return $params;
@@ -61,13 +79,10 @@ class News extends Base
 
     public static function save($params)
     {
-
-        $username = \Auth::get('username');
-        $params['main_image'] = self::get_main_image($params);
-
-        //\DB::update('news')->set($params)->where('code', '=', $params['code'])->where('username', '=', $username)->execute();
-        //\DB::update('news')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
-        \DB::update('news')->set($params)->where('code', '=', $params['code'])->execute();
+        \DB::update('news')
+            ->set($params)
+            ->where('code', '=', $params['code'])
+            ->execute();
         return $params;
     }
 
