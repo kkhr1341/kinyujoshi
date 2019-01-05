@@ -38,6 +38,8 @@ class Controller_Kinyubase extends Controller_Template
         $this->data['roles'] = $group->get_roles();
         $this->template->roles = $this->data['roles'];
 
+        $this->template->ga = View::forge('parts/ga.smarty');
+
         $this->template->authenticated = Auth::check() ? 1 : 0;
 
         // ログイン後のリダイレクトURL

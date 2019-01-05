@@ -43,6 +43,8 @@ class Controller_Mybase extends Controller_Template
 
         $this->template->roles = $this->data['roles'];
 
+        $this->template->ga = View::forge('parts/ga.smarty');
+
         Asset::add_path('assets/css', 'css');
         Asset::add_path('assets/js', 'js');
         Asset::css(array(
