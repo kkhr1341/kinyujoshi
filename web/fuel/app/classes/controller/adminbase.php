@@ -42,7 +42,11 @@ class Controller_Adminbase extends Controller_Template
 
         $this->template->roles = $this->data['roles'];
 
-        $this->template->ga = View::forge('parts/ga.smarty');
+        list(, $userid) = Auth::get_user_id();
+
+        $this->template->ga = View::forge('parts/ga', array(
+            'userid' => $userid
+        ));
 
         Asset::add_path('assets/css', 'css');
         Asset::add_path('assets/js', 'js');

@@ -38,7 +38,11 @@ class Controller_Kinyubase extends Controller_Template
         $this->data['roles'] = $group->get_roles();
         $this->template->roles = $this->data['roles'];
 
-        $this->template->ga = View::forge('parts/ga.smarty');
+        list(, $userid) = Auth::get_user_id();
+
+        $this->template->ga = View::forge('parts/ga', array(
+            'userid' => $userid
+        ));
 
         $this->template->authenticated = Auth::check() ? 1 : 0;
 
