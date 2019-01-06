@@ -21,7 +21,7 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
 //        $feed->setChannelElement( "pubDate" , date( \DATE_RSS , strtotime("2014-11-23 15:30") ) ) ;	// フィードの変更時刻
         $feed->setChannelElement( "category" , "Blog" ) ;
 
-        $blogs = Blogs::lists(1);
+        $blogs = Blogs::lists(1, 20);
         foreach($blogs as $blog) {
 
             $item = $feed->createNewItem() ;
