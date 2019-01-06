@@ -38,7 +38,19 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
         }
 
         // コードの生成
-        $xml = $feed->generateFeed() ;
-        return $xml;
+        $xml = $feed->generateFeed();
+
+        $response = new Response();
+
+        // XML を出力します
+        $response->set_header('Content-Type', 'text/xml');
+
+        // キャッシュをなしにします
+        $response->set_header('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
+        $response->set_header('Expires', 'Mon, 26 Jul 1997 05:00:00 GMT');
+        $response->set_header('Pragma', 'no-cache');
+
+        $response->body($xml);
+        return $response;
     }
 }
