@@ -43,7 +43,7 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
         $response = new Response();
 
         // XML を出力します
-        $response->set_header('Content-Type', 'text/xml');
+        $response->set_header('Content-Type', $feed->getMIMEType() . "; charset=utf-8");
 
         // キャッシュをなしにします
         $response->set_header('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
