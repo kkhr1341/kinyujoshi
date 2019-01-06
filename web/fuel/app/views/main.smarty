@@ -140,8 +140,14 @@
       });
     </script>
 
-    <script src="/assets/js/kinyu/swiper.js"></script>
     {/literal}
+    <script src="https://sdk.push7.jp/v2/p7sdk.js"></script>
+    <script>
+    p7.init("c41df7e83cd041a2b308ccf410b82668",{
+      mode:"native",
+      subscribe:"auto"
+    });
+    </script>
   </body>
 
 </html>
