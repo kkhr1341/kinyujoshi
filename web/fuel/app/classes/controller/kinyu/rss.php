@@ -2,42 +2,43 @@
 
 use \Model\Blogs;
 
+use \FeedWriter\RSS2;
+
 class Controller_Kinyu_Rss extends Controller_Rssbase
 {
 
     public function action_index()
     {
-        // 最新を取得
-        $this->data['rss'] = Blogs::lists02(1, 20, true, 'kinyu' + 'investment');
-        $this->data['blog'] = Blogs::getByCodeWithurl($code);
-        $this->template->title = $this->data['blog']['title'];
-        $this->template->description = $this->data['blog']['description'];
-        $this->template->ogimg = $this->data['blog']['main_image'];
-        //template
-        $this->data['top_blogs'] = Blogs::lists(1, 5, true);
-        $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
-        $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
-        $this->template->contents_after_area = View::forge('kinyu/template/contents-after.smarty', $this->data);
-        $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
-        $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
-        $this->template->contents = View::forge('kinyu/rss/index.smarty', $this->data);
-    }
+        $feed = new RSS2;
 
-    public function action_detail($code)
-    {
-        // 最新を取得
-        $this->data['rss'] = Blogs::lists02(1, 20, true, 'kinyu' + 'investment');
-        $this->data['blog'] = Blogs::getByCodeWithurl($code);
-        $this->template->title = $this->data['blog']['title'];
-        $this->template->description = $this->data['blog']['description'];
-        $this->template->ogimg = $this->data['blog']['main_image'];
-        //template
-        $this->data['top_blogs'] = Blogs::lists(1, 5, true);
-        $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
-        $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
-        $this->template->contents_after_area = View::forge('kinyu/template/contents-after.smarty', $this->data);
-        $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
-        $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
-        $this->template->contents = View::forge('kinyu/rss/rss.smarty', $this->data);
+        // チャンネル情報の登録
+        $feed->setTitle( "きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ" ) ;			// チャンネル名
+        $feed->setLink( \Uri::base() ) ;		// URLアドレス
+        $feed->setDescription( "きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！" ) ;	// チャンネル紹介テキスト
+//        $feed->setImage( \Uri::base() , "きんゆう女子。" ,  \Uri::base() . "images/kinyu-logo-top.png" ) ;	// ロゴなどの画像
+        $feed->setDate( date( DATE_RSS , time() ) ) ;	// フィードの更新時刻
+        $feed->setChannelElement( "language" , "ja-JP" ) ;	// 言語
+//        $feed->setChannelElement( "pubDate" , date( \DATE_RSS , strtotime("2014-11-23 15:30") ) ) ;	// フィードの変更時刻
+        $feed->setChannelElement( "category" , "Blog" ) ;
+
+        $blogs = Blogs::lists(1);
+        foreach($blogs as $blog) {
+
+            $item = $feed->createNewItem() ;
+
+            $item->setTitle( $blog['title']) ;	// タイトル
+            $item->setLink( \Uri::base() . 'report/' . $blog['code'] ) ;	// リンク
+            $item->setDescription( $blog['description'] ) ;	// 紹介テキスト
+            $item->setDate( strtotime($blog['updated_at']) ) ;	// 更新日時
+//            $item->addEnclosure( $blog['main_image'], 500, 'image/jpeg' );
+//$item->setAuthor( "あらゆ" , "info@syncer.jp" ) ;	// 著者の連絡先(E-mail)
+            $item->setId( \Uri::base() . 'report/' . $blog['code'] , true ) ;	// 一意のID(第1引数にURLアドレス、第2引数にtrueで通常は大丈夫)
+
+            $feed->addItem( $item ) ;
+        }
+
+        // コードの生成
+        $xml = $feed->generateFeed() ;
+        return $xml;
     }
 }

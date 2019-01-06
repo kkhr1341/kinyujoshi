@@ -48,9 +48,9 @@ return array(
 	'report/(:num)'   => 'kinyu/blog/index/$1',
 	'report/(:any)'   => 'kinyu/blog/detail/$1',
 	'welcome/blog/(:any)'   => 'kinyu/blog/welcome/$1',
-	'rsss'   => 'kinyu/rss/index',
-	'rss/(:num)'   => 'kinyu/rss/index/$1',
-	'rss/(:any)'   => 'kinyu/rss/detail/$1',
+	'rss'   => 'kinyu/rss/index',
+//	'rss/(:num)'   => 'kinyu/rss/index/$1',
+//	'rss/(:any)'   => 'kinyu/rss/detail/$1',
 
 	//myplan
 	'myway' => 'kinyu/myway/index',

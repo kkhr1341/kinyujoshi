@@ -18,7 +18,8 @@
         "aws/aws-sdk-php": "^3.82",
         "opauth/opauth": "0.4.4",
         "payjp/payjp-php": "0.0.8",
-        "maxbanton/cwh": "^1.1"
+        "maxbanton/cwh": "^1.1",
+        "mibe/feedwriter": "v1.1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "5.7.*",
