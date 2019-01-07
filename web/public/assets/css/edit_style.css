@@ -5030,14 +5030,17 @@ to {
 .report-detail-main figure {
   position: relative;
 }
-/*.report-detail-main figure:after {
+.report-detail-main figure:after {
   content: "© きんゆう女子。 2018";
   position: absolute;
   right: 12px;
   bottom: 12px;
   font-size: 13px;
   color: #fff;
-}*/
+}
+.report-detail-main figure.no-copy:after {
+  content: none;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合
