@@ -110,6 +110,7 @@ class Controller_Kinyubase extends Controller_Template
             'kinyu/instafeed.min.js',
             'kinyu/main.js',
             // 必要
+            'kinyu/swiper.js',
             'kinyu/swiper.min.js',
             'kinyu/jquery.bxslider.min.js',
             //'https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js'
