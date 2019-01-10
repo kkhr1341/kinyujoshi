@@ -5,6 +5,12 @@
 
         <div class="admin-normal-main">
 
+            <p class="my-content-title"><span>アカウント設定</span></p>
+
+            <div class="admin-account-el">
+                <a class="admin-account-title" href="/my/profile">プロフィールの設定</a>
+            </div>
+
             <div class="admin-account-el">
                 <p class="admin-account-title admin-account-title1">使用したクレジットカードの管理</p>
                 <div class="admin-account-el-open admin-account-el-open1 credit-list-area" style="display: none;">

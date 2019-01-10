@@ -1,0 +1,50 @@
+<!-- <link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
+
+<div class="admin-normal-container mykinjo-block">
+  <div class="admin-normal-inner clear">
+
+    {$my_side}
+
+    <div class="admin-normal-main my-useful">
+      <p class="my-content-title"><span>お役立ちコンテンツ</span></p>
+      <div class="admin-normal-joshikai joshikailist-main">
+				<!-- 画像イメージこちらに入ります。 -->
+        <!-- <img class="passport-main-img" src="/images/my/useful/useful_kinyu.jpg">
+        <h3 class="mypage-content-title">みんなにとってプラスになる！<br>ステキな金融コンテンツ♪</h3>
+
+        <p class="mypage-content-description passport-exist pc">
+        このページでは、編集部が選んだ金融ワカラナイ女子にとって<br>
+        やさしく、役に立つ、ステキな金融コンテンツをまとめていきます。
+        <span style="display: block;height:12px;"></span>
+        皆さんも素敵なサイトや役に立った！というページがあれば、ぜひ教えてくださいね。
+        </p>-->
+
+        <p class="mypage-content-description pc" style="text-align: left; border:0; margin-bottom:0;">
+        みんなにとってプラスになる！<br>ステキな金融コンテンツ♪
+        このページでは、編集部が選んだ金融ワカラナイ女子にとって<br>
+        やさしく、役に立つ、ステキな金融コンテンツをまとめていきます。<br>
+        皆さんも素敵なサイトや役に立った！というページがあれば、ぜひ教えてくださいね。
+        </p>
+
+
+
+
+        <p class="mypage-content-description passport-exist sp">
+        このページでは、編集部が選んだ金融ワカラナイ女子にとって<br>
+        やさしく、役に立つ、ステキな金融コンテンツをまとめていきます。
+        <span style="display: block;height:12px;"></span>
+        皆さんも素敵なサイトや役に立った！というページがあれば、ぜひ教えてくださいね。
+        </p>
+
+      </div>
+
+			<!-- お役立ちコンテンツ・メイン部分 -->
+			<div class="useful-main-box">
+
+        {$useful_content}
+
+			</div>
+    </div>
+  </div>
+</div>

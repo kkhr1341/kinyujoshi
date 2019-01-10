@@ -9,3 +9,5 @@ web/fuel/app/cache/*/*
 web/fuel/app/config/crypt.php
 web/fuel/app/config/production/*
 web/fuel/app/tmp/*
+
+deploy.sh

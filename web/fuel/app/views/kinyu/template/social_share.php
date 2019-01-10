@@ -2,12 +2,17 @@
 
 $url = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 
+$title = isset($title) ? $title: '';
+
 // URLにリンクを貼る
 //echo '<a href="' . $url . '">' . htmlspecialchars($url) . '</a>';
 
 //Facebook
 $fbhref = 'https://www.facebook.com/sharer/sharer.php?u=' . rawurlencode( $url );
-$twhref = 'https://twitter.com/intent/tweet?url=' . rawurlencode( $url );
+$twhref = 'https://twitter.com/intent/tweet?url=' . rawurlencode( $url ) . '&via=kinyu_joshi';
+if ($title) {
+    $twhref .= '&text=' . rawurldecode($title);
+}
 $linehref = 'http://line.me/R/msg/text/?' . rawurlencode( $url );
 //twitter
 //$twtext = "Syncer 知識と感動を同期(Sync)するブログ" ;

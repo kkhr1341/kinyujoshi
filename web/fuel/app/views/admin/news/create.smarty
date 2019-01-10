@@ -26,10 +26,22 @@
 					<label>タイトル <span class="label label-danger">必須</span></label>
 					<input type="text" id="title" class="form-control" placeholder="">
 				</div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">サムネイル画像</label>
+                    <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+                    <input type="hidden" id="main_image">
+
+                    <!-- サムネイル画像を投稿するとここに表示される！ -->
+                    <div class="thumbnail-img"></div>
+                    {*<div class="thumbnail-img" style="background:url(https://s3-ap-northeast-1.amazonaws.com/sunday-lunch/stock/742171292585845/images/201707062104170V9C6213.JPG) center center / cover no-repeat;"></div>*}
+                </div>
+
 				<div class="form-group">
 					<label>本文 <span class="label label-danger">必須</span></label>
 					<textarea id="content" name="content"></textarea>
 				</div>
+
 				<div class="form-group">
 					<label>公開日時 <span class="label label-danger">必須</span></label>
 
@@ -62,6 +74,19 @@
 </form>
 <script>
 $(function(){
+    $('.thumbnail-img-block')
+        .uploader('/api/redactor/upload/image', {
+            success: function (response) {
+                var url = response.data.url;
+                $('#main_image').val(url);
+                $('.thumbnail-img').css({
+                    'background-image': 'url(' + url + ')',
+                    'background-position': 'center center',
+                    'background-repeat': 'no-repeat',
+                    'background-size': 'cover'
+                });
+            }
+        });
 	$('.datetimepicker').datetimepicker({
 		format : 'YYYY/MM/DD HH:mm'
 	});
@@ -71,6 +96,7 @@ $(function(){
 		var params = {};
 		params.section_code = "news";
 		params.title = $('#title').val();
+        params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.open_date = $('#open_date').val();
         params.authentication_user = $('#authentication_user').val();
@@ -97,6 +123,7 @@ $(function(){
 		var params = {};
 		params.section_code = "news";
 		params.title = $('#title').val();
+        params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.open_date = $('#open_date').val();
         params.authentication_user = $('#authentication_user').val();

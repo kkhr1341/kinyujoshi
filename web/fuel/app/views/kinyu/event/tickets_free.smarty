@@ -1,0 +1,199 @@
+<div class="joshikai-payment-block">
+  <div class="day-card-open fee-open">
+    <div class="inner">
+      <form method="POST" action="/pay" id="charge-form">
+        <input type="hidden" name="coupon_code" value="{$coupon_code}" />
+        <input type="hidden" name="event_code" value="{$event.code}" />
+        <span class="charge-errors"></span>
+
+        <h2 class="main-title"><span style="color:#77cbc0;">＊</span> カードでお支払い <span style="color:#77cbc0;">＊</span></h2>
+
+        <div class="kinyu-credit-list-block">
+          <p>- 対応カード -</p>
+          <ul class="kinyu-credit-list clear">
+            <li><img src="/images/event/credit/kinyu-credit-visa.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-master.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-jcb.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-amex.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-diners.png"></li>
+            <li><img src="/images/event/credit/kinyu-credit-discover.png"></li>
+          </ul>
+        </div>
+
+        <div class="credit-illust">
+          <img src="/images/event/credit_illust.png">
+        </div>
+
+        <div class="fee-open-el">
+          <label>カード番号</label>
+          <p class="select-before-title">・利用可能なクレジットカード</p>
+          <select id="cardselect" name="cardselect">
+              {foreach from=$cards key="key" item=card name=loopname}
+                <option value="{$card.id}">{$card.label}</option>
+              {/foreach}
+            <option value="0">新しいカードで決済する</option>
+          </select>
+          <div class="newcards">
+            <p class="select-before-title">・新しいカード番号を入力してください</p>
+            <input type="text" class="number" name="number" maxlength="16" placeholder="">
+          </div>
+        </div>
+
+        <div class="no-regist-el">
+          <div class="fee-open-el">
+            <label>セキュリティコード</label>
+            <input type="text" class="cvc" name="cvc" maxlength="4" placeholder="">
+          </div>
+
+          <div class="fee-open-el">
+            <label>有効期限</label>
+            <div class="exp-date-block">
+              <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="（月）＊03、12など2桁">
+              <input type="text" class="exp_year" name="exp_year" maxlength="2" placeholder="（年）＊20など2桁">
+            </div>
+          </div>
+          <div class="fee-open-el">
+            <label>お名前（フルネーム）</label>
+            <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
+          </div>
+          <div class="fee-open-el">
+            <label>メールアドレス</label>
+            <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
+          </div>
+        </div>
+
+        <div class="kinyu-credit-fee-area">
+          {if $discount}
+            <p><span>参加費</span>：{$event.fee-$discount|number_format}円</p>
+            <p><span>割引額</span>：<span class="discount-span" style="font-weight: normal;color: red;!important">{$discount|number_format}円</span></p>
+          {else}
+            <p><span>参加費</span>：{$event.fee|number_format}円</p>
+          {/if}
+        </div>
+
+        <button class="day-cash-submit" type="submit">お支払いする</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="https://js.pay.jp/"></script>
+<script type="text/javascript">Payjp.setPublicKey('{$payjp_public_key}');</script>
+<script>
+    (function() {
+
+        $('.cancel-button-area').click(function() {
+          // もしチェックが入っていたら
+          if ($('input[name="cancel_check"]').prop('checked')) {
+            // チェックを外す
+            $('input[name="cancel_check"]').prop('checked', false);
+            $(".cancel-button-area").removeClass("checked-input");
+          // もしチェックが外れていたら
+          } else {
+            // チェックを入れる
+            $('input[name="cancel_check"]').prop('checked', true);
+            $(".cancel-button-area").addClass("checked-input");
+          }
+        });
+
+        // 新しいクレジットカード番号入力の表示・非表示切り替え
+        function toggleNewCardNumber(cat) {
+            if(cat=="0") {
+                $(".no-regist-el").slideDown(500);
+                $(".newcards").show();
+            } else {
+                $(".no-regist-el").hide();
+                $(".newcards").hide();
+            }
+        }
+        $('#cardselect').on('change', function(){
+            var cat = $(this).val(); //選択された項目のvalueを取得
+            toggleNewCardNumber(cat);
+        });
+        var cat = $('#cardselect').val(); //選択された項目のvalueを取得
+        toggleNewCardNumber(cat);
+
+        var form = $("#charge-form"),
+            coupon_code = form.find('[name="coupon_code"]'),
+            number = form.find('[name="number"]'),
+            cardselect = form.find('[name="cardselect"]'),
+            cvc = form.find('[name="cvc"]'),
+            exp_month = form.find('[name="exp_month"]'),
+            exp_year = form.find('[name="exp_year"]'),
+            event_code = form.find('[name="event_code"]'),
+            name = form.find('[name="name"]'),
+            email = form.find('[name="email"]');
+
+        form.submit(function(e) {
+            e.preventDefault();
+            var promise;
+            var card = {
+                number: number.val(),
+                cvc: cvc.val(),
+                exp_month: exp_month.val(),
+                exp_year: '20' + exp_year.val(),
+                name: name.val()
+            };
+
+            if ($("[name=cancel_check]:checked").val() == undefined) {
+              ts.error("「女子会のお約束事に同意する。」のご確認をお願いします。");
+              return false;
+            }
+
+            if (cardselect.val() === '0') {
+                if (!card.number) {
+                    ts.error("カード番号を入力してください");
+                    return false;
+                }
+                if (!card.cvc) {
+                    ts.error("セキュリティコードを入力してください");
+                    return false;
+                }
+                if (!card.exp_month) {
+                    ts.error("有効期限（月）を入力してください");
+                    return false;
+                }
+                if (!card.exp_year) {
+                    ts.error("有効期限（年）を入力してください");
+                    return false;
+                }
+                if (!name.val()) {
+                    ts.error("お名前（フルネーム）を入力してください");
+                    return false;
+                }
+                if (!email.val()) {
+                    ts.error("メールアドレスを入力してください");
+                    return false;
+                }
+                promise = chargeByNewCard(
+                    card,
+                    event_code.val(),
+                    name.val(),
+                    email.val(),
+                    coupon_code.val()
+                )
+            } else {
+                promise = chargeByRegisterCard(
+                    event_code.val(),
+                    cardselect.val(),
+                    name.val(),
+                    email.val(),
+                    coupon_code.val()
+                )
+            }
+
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(200);
+            promise
+                .then(function(data) {
+                    $(".loader-block").fadeOut(500);
+                    location.href = "/joshikai_complete";
+                })
+                .catch(function(error) {
+                    $(".loader-block").fadeOut(500);
+                    ts.error(error.message);
+                })
+        });
+    })();
+</script>

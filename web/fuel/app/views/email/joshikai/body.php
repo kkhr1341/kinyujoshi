@@ -50,11 +50,11 @@
             <a href="https://kinyu-joshi.jp/my" target="_blank">マイページはこちら</a><br><br>
             女子会が近づきましたら、再度リマインドメールをお送りいたします。<br><br>
             <?php if ($event['incur_cancellation_fee_date'] && $event['incur_cancellation_fee_date'] != "0000-00-00 00:00:00"): ?>
-            また、<?php echo date('Y年m月d日', strtotime($event['incur_cancellation_fee_date'])) ?>より全額のお取消料が発生してしまいますので、<br>
+            また、参加費がかかる女子会の場合は、<?php echo date('Y年m月d日', strtotime($event['incur_cancellation_fee_date'])) ?>より全額のお取消料が発生してしまいますので、<br>
             <?php else: ?>
-            また、開催日3日前より全額のお取消料が発生してしまいますので、<br>
+            また、参加費がかかる女子会の場合は、開催日3日前より全額のお取消料が発生いたしますので、<br>
             <?php endif; ?>
-            もしご参加が難しくなった場合はお早めにご連絡いただけますと嬉しいです。<br><br>
+            もしご参加が難しくなった場合はお早めに取消しのお手続きをお願いします。<br><br>
 
             ◆女子会の取消方法<br>
             <a href="https://kinyu-joshi.jp/my" target="_blank">マイページ</a> → 参加予定の女子会 → 取り消す女子会を選択 → 「女子会の参加を取り消す」<br><br>

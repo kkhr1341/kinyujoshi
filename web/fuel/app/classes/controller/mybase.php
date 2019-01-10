@@ -43,6 +43,12 @@ class Controller_Mybase extends Controller_Template
 
         $this->template->roles = $this->data['roles'];
 
+        list(, $userid) = Auth::get_user_id();
+
+        $this->template->ga = View::forge('parts/ga', array(
+            'userid' => $userid
+        ));
+
         Asset::add_path('assets/css', 'css');
         Asset::add_path('assets/js', 'js');
         Asset::css(array(
@@ -50,7 +56,7 @@ class Controller_Mybase extends Controller_Template
             'kinyu/bootstrap01.css',
             'kinyu/animate.css',
             'kinyu/redactor.css',
-            //'kinyu/font-awesome.min.css',
+            'kinyu/font-awesome.min.css',
             'kinyu/bootstrap-datetimepicker.min.css',
             'kinyu/toastr.css',
             //'kinyu/bootstrap-select.min.css',

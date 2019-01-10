@@ -92,3 +92,8 @@ docker-compose run --rm web php oil refine regist_mails:resend_nomembers
 ```
 docker-compose run --rm web php oil refine regist_mails:send_member {ID}
 ```
+
+#### 管理者権限に変更するコマンド
+```
+make change_administrator
+```

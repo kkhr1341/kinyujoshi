@@ -36,7 +36,7 @@
 <footer>
   <div class="footer-inner clear">
     <div class="footer-logo">
-      <img src="/images/top-circle-logo.png">
+      <a href="/"><img src="/images/top-circle-logo.png"></a>
     </div>
     <div class="new_area">
       <a class="js-track" href="/start" data-category="common-footer-link" data-action="click" data-value="1"><img src="/images/banner/firsttime_sp.jpg"></a>
@@ -51,7 +51,7 @@
       <ul>
         <li><a class="js-track" href="/faq" data-category="pc-footer-link" data-action="click" data-value="1">よくあるご質問</a></li>
         <li><a class="js-track" href="/contact" data-category="pc-footer-link" data-action="click" data-value="1">お問い合わせ</a></li>
-        <li><a class="js-track" href="/service" data-category="pc-footer-link" data-action="click" data-value="1">会員規約</a></li>
+        <li><a class="js-track" href="/service" data-category="pc-footer-link" data-action="click" data-value="1">個人会員規約</a></li>
       </ul>
       <ul>
         <li><a class="js-track" href="/joshikai_policy" data-category="pc-footer-link" data-action="click" data-value="1">女子会規約</a></li>
@@ -62,6 +62,7 @@
         <!-- <li><a href="">企業の方はこちら</a></li> -->
         <li><a class="js-track" href="/legal" data-category="pc-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
         <li><a class="js-track" href="/company" data-category="pc-footer-link" data-action="click" data-value="1">運営会社</a></li>
+        <li><a class="js-track" href="/business" data-category="pc-footer-link" data-action="click" data-value="1">きんゆう女子。for Business</a></li>
       </ul>
     </div>
 
@@ -70,7 +71,7 @@
       <ul>
         <li><a class="js-track" href="/faq" data-category="sp-footer-link" data-action="click" data-value="1">よくあるご質問</a></li>
         <li><a class="js-track" href="/contact" data-category="sp-footer-link" data-action="click" data-value="1">お問い合わせ</a></li>
-        <li><a class="js-track" href="/service" data-category="sp-footer-link" data-action="click" data-value="1">会員規約</a></li>
+        <li><a class="js-track" href="/service" data-category="sp-footer-link" data-action="click" data-value="1">個人会員規約</a></li>
         <li><a class="js-track" href="/joshikai_policy" data-category="sp-footer-link" data-action="click" data-value="1">女子会規約</a></li>
         <li><a class="js-track" href="/privacy" data-category="sp-footer-link" data-action="click" data-value="1">プライバシーポリシー</a></li>
         <li><a class="js-track" href="/link_policy" data-category="sp-footer-link" data-action="click" data-value="1">リンクポリシー</a></li>
@@ -83,5 +84,5 @@
   </div>
 </footer>
 <p class="navi_kinyu-submenu-copy">
-  <span>© TOE THE LINE Inc. 2018　All rights reserved.</span>
+  <span>© <a href="https://toetheline.jp/" style="font-size:11px;">TOE THE LINE Inc. 2019</a>　All rights reserved.</span>
 </p>

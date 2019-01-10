@@ -7,6 +7,14 @@ use \Model\ParticipatedApplications;
 
 class Controller_Admin_Registlist extends Controller_Adminbase
 {
+    public function before()
+    {
+        parent::before();
+
+        if ($this->is_from_company() == FALSE) {
+            throw new HttpNoAccessException;
+        }
+    }
 
     public function action_index()
     {
@@ -29,6 +37,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             'name' => Input::get('name', ''),
             'email' => Input::get('email', ''),
             'introduction' => Input::get('introduction', ''),
+            'edit_inner' => Input::get('edit_inner', ''),
         );
 
         $this->template->total = $this->data['registlist']['total'];
@@ -40,9 +49,10 @@ class Controller_Admin_Registlist extends Controller_Adminbase
 
     public function action_detail($code)
     {
-        if (!Auth::has_access('registlist.read')) {
+        if (!Auth::has_access('registlist.read') || !$this->is_from_company()) {
             throw new HttpNoAccessException;
         }
+
         $this->data['registlist'] = Regist::lists();
 
         $username = Registlist::getUsername($code);
@@ -72,9 +82,10 @@ class Controller_Admin_Registlist extends Controller_Adminbase
 
     public function action_memberlist()
     {
-        if (!Auth::has_access('registlist.read')) {
+        if (!Auth::has_access('registlist.read') || !$this->is_from_company()) {
             throw new HttpNoAccessException;
         }
+
         $csv_name = Date("Y-m-d") . '.csv';
         $response = new Response();
 
@@ -107,10 +118,18 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             "3年後の自分の年収をどのくらいにしたいですか？",
             "どこで、きんゆう女子。を知りましたか？",
             "きんゆう女子。で情報発信したいですか？",
-            "金融機関の方ですか？",
+            "金融機関で働いていたり、仕事上金融に関わっていますか？",
+            "きんゆう女子。コミュニティではどんな発見や出会いがほしい？",
+            "きんゆう女子。コミュニティで何を学んだり知りたい？",
+            "メンバーになろうと思ったきっかけ",
+            "金融に向き合い学び、3年後には何がほしいですか？",
+            "facebook",
+            "その他のSNSアカウント",
+            "個人で発信しているブログやSNSなど",
             "パス設定有",
             "自己紹介",
             "編集部記入欄",
+            "参加女子会",
         );
 
         foreach ($registlist as $application) {
@@ -122,6 +141,14 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             } else {
                 $application["birthday"] = $application["age"];
             }
+
+            // 過去に参加した女子会
+            $prev_applications = ParticipatedApplications::lists($application["username"]);
+            $prev_applications_str = '';
+            foreach($prev_applications as $prev_application) {
+                $prev_applications_str .= date('Y年m月d日', strtotime($prev_application['event_date'])) . ' ' . $prev_application['title'] . "\n";
+            }
+
             $data[] = array(
                 $application["created_at"],
                 $application["name"],
@@ -138,9 +165,17 @@ class Controller_Admin_Registlist extends Controller_Adminbase
                 $application["where_from"],
                 $application["transmission"],
                 $application["job_kind"],
+                $application["user_want_to_meet_values"],
+                $application["user_want_to_learn_values"],
+                $application["user_regist_trigger_values"],
+                $application["future"],
+                $application["facebook"],
+                $application["other_sns"],
+                $application["url"],
                 $application["username"] ? '○': '',
                 $application["introduction"],
                 $application["edit_inner"],
+                $prev_applications_str,
             );
         }
         // CSVを出力

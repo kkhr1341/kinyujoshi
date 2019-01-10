@@ -51,7 +51,7 @@
               </li>
               {/if}
 
-              {if (Auth::has_access('registlist.read'))}
+              {if (Auth::has_access('registlist.read') && $from_company==TRUE)}
               <li>
                 <a href="/admin/registlist">会員リスト一覧</a>
               </li>
@@ -69,6 +69,9 @@
               </li>
               {/if}
 
+              <li>
+                <a href="/admin/mails">メールテンプレート一覧</a>
+              </li>
             </ul>
           </div>
           <div class="my-content-block admin-content-info">

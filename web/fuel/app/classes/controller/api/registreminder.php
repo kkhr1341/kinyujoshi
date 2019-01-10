@@ -7,6 +7,7 @@
  */
 
 use \Model\RegistReminder;
+use \Model\Regist;
 
 class Controller_Api_Registreminder extends Controller_Apibase
 {
@@ -31,6 +32,40 @@ class Controller_Api_Registreminder extends Controller_Apibase
                 echo $e;
                 return $this->error(array('設定に失敗しました。'));
             }
+        }
+    }
+
+    public function action_send()
+    {
+        parent::before();
+
+        if (!Auth::has_access('registreminder.send')) {
+            return $this->error('permission denied');
+        }
+
+        if (!\Input::post('code')) {
+            return $this->error('invalid parameter');
+        }
+
+
+        if (Regist::has_account(\Input::post('code'))) {
+            return $this->error('already has account');
+        }
+
+        try {
+            $member_regist = \DB::select('*')
+                ->from('member_regist')
+                ->where('code', '=', \Input::post('code'))
+                ->where(\DB::expr('not exists(select "x" from users where users.email = member_regist.email)'))
+                ->execute()
+                ->current();
+
+            RegistReminder::send($member_regist['id'], $member_regist['email']);
+
+            return $this->ok();
+        } catch (\Exception $e) {
+            \Log::error('regist reminder error::' . $e->getMessage());
+            throw $e;
         }
     }
 }

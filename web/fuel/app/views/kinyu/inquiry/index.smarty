@@ -50,7 +50,7 @@
                                 {/foreach}
                             </select>
                         </div>
-                        
+
                         {*
                         <div class="form-group">
                             <label class="form-title"><span class="color-kinyu-color">◆</span> 件名
@@ -85,7 +85,8 @@
         var padding_top = (title_frame_height / 2) - (page_title_height / 2);
         $('.page_title').css('padding-top', padding_top);
 
-        $('#save').click(function () {
+        $('#save').click(function (e) {
+            e.preventDefault();
             var url = "/api/inquiries/create";
             var params = {};
 
@@ -93,7 +94,6 @@
             params.name_kana = $('#name_kana').val();
             params.email = $('#email').val();
             params.category_code = $('#category_code').val();
-            // params.title = $('#title').val();
             params.message = $('#message').val();
 
             if (params.name == "") {
@@ -112,10 +112,6 @@
                 ts.error("お問合せ種別を選択してください");
                 return false;
             }
-            // if (params.title == "") {
-            //     ts.error("件名を入力してください");
-            //     return false;
-            // }
             if (params.message == "") {
                 ts.error("お問合せ内容を入力してください");
                 return false;

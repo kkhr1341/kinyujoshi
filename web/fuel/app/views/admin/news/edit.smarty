@@ -25,6 +25,20 @@
 					<label>タイトル <span class="label label-danger">必須</span></label>
 					<input type="text" id="title" class="form-control" placeholder="" value="{$news.title}">
 				</div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">サムネイル画像</label>
+                    <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+                    <input type="hidden" id="main_image" value="{$news.main_image}">
+
+                    <!-- サムネイル画像を投稿するとここに表示される！ -->
+                    {if $news.main_image}
+                    <div class="thumbnail-img"
+                         style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+                    {else}
+                    <div class="thumbnail-img"></div>
+                    {/if}
+                </div>
 				
 				<div class="form-group">
 					<label>本文 <span class="label label-danger">必須</span></label>
@@ -65,8 +79,22 @@
 </form>
 <script>
 
-var code = "{$news.code}";
 $(function(){
+    var code = "{$news.code}";
+
+    $('.thumbnail-img-block')
+        .uploader('/api/redactor/upload/image', {
+            success: function (response) {
+                var url = response.data.url;
+                $('#main_image').val(url);
+                $('.thumbnail-img').css({
+                    'background-image': 'url(' + url + ')',
+                    'background-position': 'center center',
+                    'background-repeat': 'no-repeat',
+                    'background-size': 'cover'
+                });
+            }
+        });
 
 	$('.datetimepicker').datetimepicker({
 		format : 'YYYY/MM/DD HH:mm'
@@ -78,6 +106,7 @@ $(function(){
 		params.section_code = "news";
 		params.code = code;
 		params.title = $('#title').val();
+        params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.open_date = $('#open_date').val();
         params.authentication_user = $('#authentication_user').val();
@@ -106,6 +135,7 @@ $(function(){
 		params.code = code;
 		params.section_code = "news";
 		params.title = $('#title').val();
+        params.main_image = $('#main_image').val();
 		params.content = $('#content').val();
 		params.open_date = $('#open_date').val();
         params.authentication_user = $('#authentication_user').val();

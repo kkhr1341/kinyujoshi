@@ -9,7 +9,17 @@ class Controller_Api_News extends Controller_Apibase
         if (!Auth::has_access('news.create')) {
             exit();
         }
-        return $this->ok(News::create(\Input::all()));
+        $val = News::validate();
+        if (!$val->run()) {
+            $error_messages = $val->error_message();
+            $message = reset($error_messages);
+            return $this->error($message);
+        }
+        try {
+            return $this->ok(News::create($val->validated()));
+        } catch(Exception $e) {
+            return $this->error("保存に失敗しました。");
+        }
     }
 
     public function action_save()
@@ -17,7 +27,17 @@ class Controller_Api_News extends Controller_Apibase
         if (!Auth::has_access('news.edit')) {
             exit();
         }
-        return $this->ok(News::save(\Input::all()));
+        $val = News::validate();
+        if (!$val->run()) {
+            $error_messages = $val->error_message();
+            $message = reset($error_messages);
+            return $this->error($message);
+        }
+        try {
+            return $this->ok(News::save($val->validated()));
+        } catch(Exception $e) {
+            return $this->error("保存に失敗しました。");
+        }
     }
 
     public function action_delete()

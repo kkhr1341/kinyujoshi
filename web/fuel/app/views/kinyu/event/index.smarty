@@ -21,12 +21,12 @@
 
       <div id="joshikai-list" class="kinyu-event-list joshiakai-now-list joshikai-main-el">
 
-        <p class="kinyu-event-info-title">女子会一覧</p>
+        <p class="kinyu-event-info-title">ワカラナイ…から卒業しよう♪</p>
         <ul>
           {foreach from=$events.datas key="key" item=event name=loopname}
           {$fooo = $event.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-          
+
           <li>
             {if $event.event_category == "女子会"}
               <div class="bg-joshikai"></div>
@@ -43,7 +43,7 @@
               {/if}
                 <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
                 </div>
-                
+
                 {if $event.event_category == "女子会"}
                   <div class="kinyu-event-list-right">
                 {else if $event.event_category == "スペシャル"}
@@ -75,7 +75,11 @@
                   </div>
                   <h3 class="event-title">{$event.title}</h3>
                   <div class="event-subbox">
-                    <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    {if $event.fee == 0}
+                      <p class="event-subbox-el">参加費：無料</p>
+                    {else}
+                      <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                    {/if}
                     <p class="event-subbox-el">場所：{$event.place}</p>
                   </div>
                 </div>
@@ -111,10 +115,10 @@
             </div>
           </div>
         </div>
-        
+
         {*
         <div class="joshikai-held-area">
-          <p class="joshikai-held-area-title">ー 主に女子会を開催している場所 ー</p>          
+          <p class="joshikai-held-area-title">ー 主に女子会を開催している場所 ー</p>
           <div class="joshikai-held-el-block">
             <div class="joshikai-held-el sarvador-held clear">
               <div class="img-block" style="background:url(/images/event/joshikai-held-CAFE_SARVADOR_BUSINESS_SALON.jpg) center center / cover no-repeat"></div>
@@ -176,7 +180,7 @@
               <div class="text-area"><p>東証ひみつの大女子会♪ 2018</p></div>
             </a>
           </li>
-          
+
           <li>
             <a href="/school_jpx02" target="_blank">
               <div class="bg-area" style="background:url(/images/content/school_public/og-school_public02.jpg) left top / cover no-repeat"></div>
@@ -190,7 +194,7 @@
               <div class="text-area"><p>Kinjo1000 Celebration - メンバー1000名達成女子会♪</p></div>
             </a>
           </li>
-          
+
           <li>
             <a href="http://ac.nikkeibp.co.jp/2017z1105finw/" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special7.jpg) left center / cover no-repeat"></div>
@@ -245,5 +249,3 @@
     </div>
   </div>
 </div>
-
-

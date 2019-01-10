@@ -26,7 +26,11 @@
 
           <li>
             <a href="/report/{$blog.code}">
-              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
+              {if $blog.new == true}
+                <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
+              {/if}
+              </div>
               <div class="text-box">
                 <div class="kinyu-top-list-kind">
                   {if $blog.kind == "女子会レポート"}
@@ -39,6 +43,8 @@
                     <p>イベント告知</p>
                   {else if $blog.kind == "コラム"}
                     <p>コラム</p>
+                  {else if $blog.kind == "きんゆう散歩"}
+                    <p>きんゆう散歩</p>
                   {else}
                     <p>レポート</p>
                   {/if}
@@ -47,7 +53,7 @@
               </div>
             </a>
           </li>
-        {/foreach}    
+        {/foreach}
       </ul>
     </div>
     <div class="blog-pagenation tx-center">

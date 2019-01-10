@@ -10,14 +10,15 @@ var $resArray02 = $resArray[1];
   <div class="kinyu-joshikai-detail-inner">
 
     <div class="kinyu-joshikai-tickets-block">
-      
+      <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
+
       <div class="kinyu-joshikai-tickets-main">
         <div class="kinyu-joshikai-tickets-main-inner">
           <div class="tickets-img" style="background:url({$event.main_image}) center center / cover no-repeat;"></div>
           <h2>{$event.title}</h2>
         </div>
       </div>
-      
+
       <div class="kinyu-joshikai-tickets-fee">
         <p class="info-detail">
         　{if $event.display_event_date}
@@ -28,56 +29,107 @@ var $resArray02 = $resArray[1];
         </p>
 
         <div class="info-no-coupon">
+          {if $event.fee == 0}
+            <p><span>参加費</span>：<span>無料</p>
+          {else}
             <p><span>参加費</span>：<span>{$event.fee|number_format}円</p>
+          {/if}
         </div>
 
         <div class="info-coupon" style="display: none;">
             <p><span>参加費</span>：<span class="fee"></span></p>
-            <p><span>クーポン適用後の金額</span>：<span class="amount" style="color: red;"></span></p>
-            <!--<p><span>割引金額</span>：<span class="discount"></span></p>-->
+            <p><span>ギフトコードがマッチしました☆</span>：<span class="amount" style="color: red;"></span></p>
         </div>
       </div>
 
       <div class="kinyu-joshikai-tickets-payment">
 
-        <p class="ticket-title" style="display:none;">>クーポンコードを入力</p>
-        <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
-        <input type="text" id="coupon_code" name="coupon_code" class="" placeholder="クーポンコード" value="" style="display:none;">
 		<!--<button class="coupon-apply-btn">クーポンを適用</button>-->
-        
-		  <p class="ticket-title">お支払い方法</p>
 
-        <div class="kinyu-joshikai-tickets-payment-list">
-
-          <!-- ログインチェック -->
-          {if in_array('user', $roles) || in_array('admin', $roles)}
-            <!-- ログインユーザー -->
-            {if $event.creditch == 1}
-              <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-              <a href="/joshikai_payment_cash/{$urlcode}" class="info-link fee-cash day-cash-btn">当日でお支払い</a>
-            {else if $event.creditch == 0}
-              <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-              <p><span style="color:red;">＊</span>お席の予約が必要なため、クレジットカードのみとなります。</p>
-            {else}
-              <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-              <a href="/joshikai_payment_cash/{$urlcode}" class="info-link fee-cash day-cash-btn">当日でお支払い</a>
-            {/if}
-          {else}
-            <!-- ログインしていないユーザー -->
-            {if $event.creditch == 1}
-              <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-              <a href="/joshikai_payment_cash/{$urlcode}" class="info-link fee-cash day-cash-btn">当日でお支払い</a>
-            {else if $event.creditch == 0}
-              <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-              <p><span style="color:red;">＊</span>お席の予約が必要なため、クレジットカードのみとなります。</p>
-            {else}
-              <a href="/joshikai_payment_card/{$urlcode}" class="info-link fee-card day-card-btn">カードでお支払い</a>
-              <a href="/joshikai_payment_cash/{$urlcode}" class="info-link fee-cash day-cash-btn">当日でお支払い</a>
-            {/if}
-          {/if}
-
+        <div class="credit-illust">
+          <img src="/images/event/credit_illust.png">
         </div>
 
+        <div class="cancel-block">
+
+          <p class="cancel-title">女子会のお約束事</p>
+
+          <ul class="cancel-block-list">
+            <li>きんゆう女子。のコンセプトは、「前向きに経済に関わることで、おかねにとらわれず自由で等身大に生きる」ことです。みなさま一人一人が「おかね」に関するリテラシーを向上させ、自分らしい生活を送れるようになることを目指したコミュニティです。</li>
+            <li>どなたでも安心して女子会に参加することができるように、ゲストや参加者同士での営業・勧誘行為は固くお断りしております。</li>
+            <li>きんゆう女子。会は、個人のための女子会です。企業としてのの見学・視察目的などでのご参加はご遠慮ください。</li>
+            <li>きんゆう女子。では、特定の企業の商品の勧誘やアフィリエイトと呼ばれる成果報酬型の広告宣伝を行わないポリシーです。その代わりに女子会の参加費をいただいたり、みなさまの声や気持ちをアンケートなどで集約することで匿名で企業さまへ提供することがあります。真摯にサービス提供に取り組まれている企業を積極的に応援し、今後の経済や金融業界の発展に寄与することで、みなさまが安心して交流・勉強する場を提供しています。</li>
+            <li>女子会の際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
+
+            {if $event.fee > 0}
+              {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != "0000-00-00 00:00:00"}
+                <li>お席や食事、ゲスト手配のため、<span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
+              {else}
+                <li>お席や食事、ゲスト手配のため、<span>女子会開催日の3日前</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
+              {/if}
+            {/if}
+          </ul>
+
+          <p class="cancel-button-area">
+            <input type="checkbox" name="cancel_check" id="cancel_check">
+            <label for="cancel_check" class="checkbox"></label>
+            <span>女子会のお約束事に同意する。</span>
+          </p>
+        </div>
+
+        <form class="credit-payment-fm" action="/joshikai_payment_card/{$urlcode}" method="post">
+
+          <div class="kinyu-joshikai-tickets-fee">
+            <div class="info-no-coupon">
+              {if $event.fee == 0}
+                <p><span>参加費</span>：<span>無料</p>
+              {else}
+                <p><span>参加費</span>：<span>{$event.fee|number_format}円</p>
+              {/if}
+            </div>
+
+            <div class="info-coupon" style="display: none;">
+              <p><span>参加費</span>：<span class="fee"></span></p>
+              <p><span>ギフトコードがマッチしました☆</span>：<span class="amount" style="color: red;"></span></p>
+            </div>
+          </div>
+          <p class="ticket-title">ギフトコードを入力</p>
+          <p>ギフトコードを持っている場合は入力してね♪ コードがマッチした場合は、ほんの気持ちですが割引になります。</p>
+          <input type="text" class="coupon_code" name="coupon_code" value="" placeholder="ギフトコード">
+
+          <div class="fee-open-el mb30">
+            <p class="ticket-title"><span style="color: #ec8787;">＊当日質問したいことや相談予約日時リクエスト、応援メッセージなどがありましたらご記入ください♪</span></p>
+            <textarea name="message" class="request-textarea" rows="10" placeholder="" ></textarea>
+          </div>
+
+          <!-- 0円決済の時に表示されるフォーム -->
+          <div class="js-free-payment-container"{if $event.fee > 0} style="display: none;"{/if}>
+
+            <div class="fee-open-el">
+              <label>お名前（フルネーム）</label>
+              <input type="text" id="name" name="name" class="free-payment-input" placeholder="" value="{$user.name}">
+            </div>
+            <div class="fee-open-el mb30">
+              <label>メールアドレス</label>
+              <input type="text" id="email" name="email" class="free-payment-input" placeholder="" value="{$user.email}">
+            </div>
+
+            <div class="kinyu-joshikai-tickets-payment-list">
+              <a href="#" class="info-link fee-free day-card-btn">申し込む</a>
+            </div>
+          </div>
+          <!-- 0円決済の時に表示されるフォーム -->
+
+          <!-- クレジット決済の時に表示されるフォーム -->
+          <div class="js-credit-payment-container"{if $event.fee == 0} style="display: none;"{/if}>
+            <p class="ticket-title">お支払い方法</p>
+            <div class="kinyu-joshikai-tickets-payment-list">
+              <a href="javascript:void(0)" class="info-link fee-card day-card-btn">カードでお支払い</a>
+            </div>
+          </div>
+          <!-- クレジット決済の時に表示されるフォーム -->
+
+        </form>
       </div>
     </div>
   </div>
@@ -91,30 +143,79 @@ var $resArray02 = $resArray[1];
             return str + '円';
         }
 
-        $('.fee-card, .fee-cash').on('click', function(e) {
+        // クレジット決済申し込みボタン
+        $('.fee-card').on('click', function(e) {
             e.preventDefault();
-            var code = $('#coupon_code').val();
-            var url = $(this).attr('href');
-            if (code) {
-                url = url.match(/(.*\?.*)/) ? url + "&coupon_code=" + code : url + "?coupon_code=" + code;
+
+            if ($("[name=cancel_check]:checked").val() == undefined) {
+              ts.error("「女子会のお約束事に同意する。」のご確認をお願いします。");
+              return false;
             }
-            location.href = url;
+
+            $('.credit-payment-fm').submit();
         })
 
-        $('#coupon_code').on('blur', function() {
+        // 0円決済申し込み
+        $('.fee-free').on('click', function(e) {
+            e.preventDefault();
             var event_code = $('#event_code').val();
-            var coupon_code = $('#coupon_code').val();
+            var name = $('[name="name"]').val();
+            var email = $('[name="email"]').val();
+            var coupon_code = $('[name="coupon_code"]').val();
+            var message = $('[name="message"]').val();
+            var url = "/api/applications/create";
+            var params = {
+                event_code: event_code,
+                name: name,
+                email: email,
+                coupon_code: coupon_code,
+                message: message
+            };
+
+            if ($("[name=cancel_check]:checked").val() == undefined) {
+              ts.error("「女子会のお約束事に同意する。」のご確認をお願いします。");
+              return false;
+            }
+
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(200);
+            return ajax.post(url, params, function(data) {
+                    $(".loader-block").fadeOut(500);
+                    location.href = "/joshikai_complete";
+                })
+                .done(function(data) {
+                    $(".loader-block").fadeOut(500);
+                })
+                .fail(function(error) {
+                    $(".loader-block").fadeOut(500);
+                })
+        })
+
+        $('[name="coupon_code"]').on('blur', function() {
+            var event_code = $('#event_code').val();
+            var coupon_code = $(this).val();
             var url = '/api/eventcoupons/detail?event_code=' + event_code + '&coupon_code=' + coupon_code;
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(200);
             $.getJSON(url, function(result){
-                if (result.data) {
+                $(".loader-block").hide();
+                if (result.data && result.data.discount > 0) {
                     $('.info-coupon').find('.amount').text(convertYen(result.data.amount));
                     $('.info-coupon').find('.fee').text(convertYen(result.data.fee));
                     $('.info-coupon').find('.discount').text(convertYen(result.data.discount));
-                    $('.info-coupon').show();
+                    $('.info-coupon').fadeIn(1000);
                     $('.info-no-coupon').hide();
                 } else {
                     $('.info-coupon').hide();
                     $('.info-no-coupon').show();
+                }
+
+                if (result.data && result.data.amount == 0) {
+                    $('.js-credit-payment-container').hide();
+                    $('.js-free-payment-container').show();
+                } else {
+                    $('.js-credit-payment-container').show();
+                    $('.js-free-payment-container').hide();
                 }
             });
         })

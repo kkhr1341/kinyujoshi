@@ -23,18 +23,30 @@
 
     <div id="chart_div1" class="chart-el"></div>
     <div id="chart_div2" class="chart-el"></div>
+    <div style="clear:both;">&nbsp;</div>
 
     <div id="chart_div3" class="chart-el"></div>
     <div id="chart_div5" class="chart-el"></div>
+    <div style="clear:both;">&nbsp;</div>
 
     <div id="chart_div4" class="chart-el"></div>
     <div id="chart_div4_other" class="chart-el"></div>
+    <div style="clear:both;">&nbsp;</div>
 
     <div id="chart_div6" class="chart-el"></div>
     <div id="chart_div8" class="wide-chart-el"></div>
+    <div style="clear:both;">&nbsp;</div>
 
     <div id="chart_div7" class="wide-chart-el"></div>
+    <div style="clear:both;">&nbsp;</div>
+
+    <div><p>どこで、きんゆう女子。を知りましたか？その他</p></div>
     <div id="chart_div9" class="wide-chart-el"></div>
+    <div style="clear:both;">&nbsp;</div>
+
+    <div><p>退会理由</p></div>
+    <div id="chart_div10" class="wide-chart-el"></div>
+    <div style="clear:both;">&nbsp;</div>
   </div>
 </div>
 
@@ -88,21 +100,6 @@ $(function(){
   }
 
   function table(data, title, dom) {
-
-      var values = [];
-      data.forEach(function(d) {
-          values.push([d.label, parseInt(d.cnt)]);
-      })
-
-      var data = new google.visualization.DataTable();
-
-      // Declare columns
-      data.addColumn('string', 'Label');
-      data.addColumn('number', 'Count');
-
-      // Add data.
-      data.addRows(values);
-
      var options = {
         'title':title,
         'width':'100%',
@@ -169,7 +166,18 @@ $(function(){
 
     // どこで、きんゆう女子。を知りましたか？その他
     $.getJSON( "/api/analysis/member_attr_count?attr=where_from_other&start_at=" + start_at + "&end_at=" + end_at, function( json ) {
-        table(json.data, 'どこで、きんゆう女子。を知りましたか？その他', document.getElementById('chart_div4_other'));
+
+       var values = [];
+       json.data.forEach(function(d) {
+           values.push([d.label, parseInt(d.cnt)]);
+       })
+
+       var data = new google.visualization.DataTable();
+       data.addColumn('string', 'Label');
+       data.addColumn('number', 'Count');
+       data.addRows(values);
+
+        table(data, 'どこで、きんゆう女子。を知りましたか？その他', document.getElementById('chart_div4_other'));
     });
 
     // 都道府県
@@ -264,10 +272,31 @@ $(function(){
             result[data.title] += 1;
         })
 
-        var list = Object.keys(result).map(function(i) {
-            return {label: i, cnt: result[i]};
+        var values = Object.keys(result).map(function(i) {
+            return [i, result[i]];
         })
-        table(list, 'どこで、きんゆう女子。を知りましたか？その他', document.getElementById('chart_div9'));
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Label');
+        data.addColumn('number', 'Count');
+        data.addRows(values);
+
+        table(data, '', document.getElementById('chart_div9'));
+    });
+
+    $.getJSON( "/api/analysis/user_withdrawal", function( json ) {
+        // 円グラフ
+        var values = [];
+        json.data.forEach(function(data) {
+            values.push([data.message, data.created_at]);
+        })
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', '退会理由');
+        data.addColumn('string', '作成日時');
+        data.addRows(values);
+
+        table(data, '', document.getElementById('chart_div10'));
     });
   }
 });

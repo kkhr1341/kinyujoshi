@@ -85,14 +85,10 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $username = \Auth::get('username');
         $this->data['stocked'] = Blogstocks::stocked($code, $username);
         $this->data['viewable'] = $this->viewable($code);
-        $this->data['top_events'] = Events::lists(1, 7, true);
+        $this->data['top_events'] = Events::lists(1, 7, true, false);
 
         if ($this->data['blog'] === false) {
             Response::redirect('error/404');
-        }
-
-        if (!$this->viewable($code)) {
-            Response::redirect('login?after_login_url=/report/' . $code);
         }
 
         if ($this->data['blog']['status'] == 0) {
@@ -122,7 +118,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->data['top_blogs'] = Blogs::lists(1, 6, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
-        $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
+        $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data + array('title' => $this->data['blog']['title']));
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
@@ -133,6 +129,65 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         } else {
             $this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
         }
+
+        $this->template->meta = array(
+            array(
+                'name' => 'description',
+                'content' => $this->data['blog']['description'],
+            ),
+            array(
+                'property' => 'og:locale',
+                'content' => 'ja_JP',
+            ),
+            array(
+                'property' => 'og:type',
+                'content' => 'article',
+            ),
+            array(
+                'property' => 'og:title',
+                'content' => $this->data['blog']['title'],
+            ),
+            array(
+                'property' => 'og:description',
+                'content' => $this->data['blog']['description'],
+            ),
+            array(
+                'property' => 'og:url',
+                'content' => Uri::current(),
+            ),
+            array(
+                'property' => 'og:site_name',
+                'content' => 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ',
+            ),
+            array(
+                'property' => 'article:publisher',
+                'content' => 'https://www.facebook.com/kinyujyoshi/',
+            ),
+            array(
+                'property' => 'fb:app_id',
+                'content' => '831295686992946',
+            ),
+            array(
+                'property' => 'og:image',
+                'content' => preg_replace("/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/", "$1/thumb_$2", $this->data['blog']['main_image'])
+            ),
+            array(
+                'property' => 'og:image:width',
+                'content' => '1200' 
+            ),
+            array(
+                'property' => 'og:image:height',
+                'content' => '630' 
+            ),
+            array(
+                'property' => 'twitter:card',
+                'content' => 'summary_large_image',
+            ),
+            array(
+                'property' => 'twitter:site',
+                'content' => '@kinyu_joshi',
+            ),
+        );
 
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);

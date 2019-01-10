@@ -13,6 +13,7 @@ class User extends Base
 
         $val->add('email', 'メールアドレス')
             ->add_rule('required')
+            ->add_rule('valid_email')
             ->add_rule(
                 function($email) use($username) {
                     $select = \DB::select("email")

@@ -36,7 +36,6 @@ class Controller_Api_Blogs extends Controller_Base
         try {
             return $this->ok(Blogs::save($val->validated()));
         } catch(Exception $e) {
-            var_dump($e->getMessage());
             return $this->error("保存に失敗しました。");
         }
     }

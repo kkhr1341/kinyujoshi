@@ -1,9 +1,10 @@
 <?php
 
 use \Model\Applications;
-use \Model\Payment;
+use \Model\PaymentPayjp;
+use \Model\Payment\Payjp;
 use \Model\Events;
-use \Model\EventCoupons;
+//use \Model\EventCoupons;
 
 class Controller_Api_Applications extends Controller_Apibase
 {
@@ -31,37 +32,71 @@ class Controller_Api_Applications extends Controller_Apibase
 
     public function action_create()
     {
+        if (!Events::applicable(\Input::post('event_code'))) {
+            return $this->error('イベントの受付を終了いたしました。');
+        }
+        $val = Applications::validate();
+        if (!$val->run(\Input::post())) {
+            $error_messages = $val->error_message();
+            $message = reset($error_messages);
+            return $this->error($message);
+        }
+
+        $db = \Database_Connection::instance();
+        $db->start_transaction();
+
         try {
-            if (!Events::applicable(\Input::post('event_code'))) {
-                return $this->error('イベントの受付を終了いたしました。');
-            }
-            $val = Applications::validate(\Input::post('cardselect'));
-            if (!$val->run(\Input::post())) {
-                $error_messages = $val->error_message();
-                $message = reset($error_messages);
-                return $this->error($message);
-            }
 
-            // 割引金額
-            $coupon = EventCoupons::getByEventCodeAndCouponCode($val->validated('event_code'), $val->validated('coupon_code'));
+            $event = Events::getByCode('events', $val->validated('event_code'));
 
-            // 与信
-            \Config::load('payjp', true);
-            $payment = new Payment(\Config::get('payjp.private_key'));
-            $res = Applications::create(
-                $payment,
+            // ユーザーネーム
+            $username = \Auth::get('username');
+
+            $application = Applications::create(
+                $username,
                 $val->validated('event_code'),
-                $val->validated('cardselect'),
                 $val->validated('name'),
                 $val->validated('email'),
-                $val->validated('token'),
-                $coupon
+                $val->validated('coupon_code'),
+                $val->validated('message')
             );
-            if (is_string($res)) {
-                return $this->error($res);
+
+            // クレジットカード処理
+            // 与信
+            if ($application['amount'] > 0) {
+                \Config::load('payjp', true);
+                $payment = new PaymentPayjp(new Payjp(\Config::get('payjp.private_key')));
+                $payment->charge(
+                    $username,
+                    $val->validated('name'),
+                    $val->validated('email'),
+                    $val->validated('token'),
+                    $application['amount'],
+                    $application['code'],
+                    $val->validated('cardselect')
+                );
             }
-            return $this->ok($res);
+
+            // サンクスメール
+            $mail = \Email::forge('jis');
+            $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
+            $mail->subject("【きんゆう女子。】女子会のお申込みありがとうございます。");
+            $mail->html_body(\View::forge('email/joshikai/body',
+                array(
+                    'name' => $val->validated('name'),
+                    'event' => $event
+                )));
+            $mail->to($val->validated('email')); //送り先
+
+            $mail->return_path('support@kinyu-joshi.jp');
+            $mail->send();
+
+            $db->commit_transaction();
+
+            return $this->ok();
         } catch (Exception $e) {
+            $db->rollback_transaction();
+
             return $this->error($e->getMessage());
         }
     }

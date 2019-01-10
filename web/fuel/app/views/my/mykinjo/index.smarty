@@ -6,8 +6,9 @@
     <div class="admin-normal-main">
 
 
-      <div class="admin-normal-joshikai joshikailist-main">
-        <div class="mypage-content-mainimg" style="background:url(/images/my/my_kinjo_img.jpg) center center / cover no-repeat;"><div class="white-modal"></div></div>
+      <div class="joshikailist-main join-joshikai-block">
+        
+        <!-- <div class="mypage-content-mainimg" style="background:url(/images/my/my_kinjo_img.jpg) center center / cover no-repeat;"><div class="white-modal"></div></div>
          <h3 class="mypage-content-title"><span>参加予定の女子会</span></h3>
          <p class="mypage-content-description pc">
           このページでは、これから参加する女子会や、<br>
@@ -15,15 +16,17 @@
          <p class="mypage-content-description sp">
            このページでは、これから参加する女子会や、
           今までに参加した女子会などをチェックすることができます。
-         </p>
+         </p> -->
+
+
         <div class="js-tab">
 
-        <div class="tab1 active">参加予定の女子会</div>
-        <div class="tab2">過去に参加した女子会</div>
+          <div class="tab1 active">参加予定の女子会</div>
+          <div class="tab2">過去に参加した女子会</div>
 
         </div>
 
-        <ul class="clear js-tab_content tab1 active">
+        <ul class="my-maincontent-block my-joshikai-join clear js-tab_content tab1 active">
 
           {foreach from=$applications item=application name=loopname}
 
@@ -51,15 +54,14 @@
           </li>
 
         {foreachelse}
-          <!-- 参加女子会がない場合 -->
-          <li>
+          <div class="non-message">
             <p class="joshikai-no">女子会のご参加いつでもお待ちしています♪</p>
-            <a href="/joshikai" class="to-link-joshikai">今後の女子会の予定へ</a>
-          </li>
+            <a href="/joshikai" class="to-link-joshikai">女子会の予定へ</a>
+          </div>
         {/foreach}
         </ul>
 
-        <ul class="clear js-tab_content tab2" style="display: none;">
+        <ul class="my-maincontent-block my-joshikai-join clear js-tab_content tab2" style="display: none;">
 
           {foreach from=$prev_applications item=application name=loopname}
 

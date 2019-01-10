@@ -6,7 +6,8 @@ use \Model\Blogs;
 use \Model\Profiles;
 use \Model\Applications;
 use \Model\UserCreditCard;
-use \Model\Payment;
+use \Model\PaymentPayjp;
+use \Model\Payment\Payjp;
 
 class Controller_Kinyu_Event extends Controller_Kinyubase
 {
@@ -83,9 +84,10 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
                 }
             }
         }
+        $username = \Auth::get('username');
 
         $this->template->title = $this->data['event']['title'];
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->data['event_row'] = Events::getByCode('events', $code);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -106,19 +108,86 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         } else {
             $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         }
+
+        $this->template->meta = array(
+            array(
+                'name' => 'description',
+                'content' => $this->data['event']['description'],
+            ),
+            array(
+                'property' => 'og:locale',
+                'content' => 'ja_JP',
+            ),
+            array(
+                'property' => 'og:type',
+                'content' => 'article',
+            ),
+            array(
+                'property' => 'og:title',
+                'content' => $this->data['event']['title'],
+            ),
+            array(
+                'property' => 'og:description',
+                'content' => $this->data['event']['description'],
+            ),
+            array(
+                'property' => 'og:url',
+                'content' => Uri::current(),
+            ),
+            array(
+                'property' => 'og:site_name',
+                'content' => 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ',
+            ),
+            array(
+                'property' => 'article:publisher',
+                'content' => 'https://www.facebook.com/kinyujyoshi/',
+            ),
+            array(
+                'property' => 'fb:app_id',
+                'content' => '831295686992946',
+            ),
+            array(
+                'property' => 'og:image',
+                'content' => preg_replace("/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/", "$1/thumb_$2", $this->data['event']['main_image'])
+            ),
+            array(
+                'property' => 'og:image:width',
+                'content' => '1200'
+            ),
+            array(
+                'property' => 'og:image:height',
+                'content' => '630'
+            ),
+            array(
+                'property' => 'twitter:card',
+                'content' => 'summary_large_image',
+            ),
+            array(
+                'property' => 'twitter:site',
+                'content' => '@kinyu_joshi',
+            ),
+        );
+
         $this->template->contents = View::forge('kinyu/event/detail.smarty', $this->data);
     }
 
     public function action_tickets($code)
     {
         \Config::load('payjp', true);
-        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
+        $this->data['payjp_public_key'] = \Config::get('payjp.public_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
 
+        $username = \Auth::get('username');
+        $profile = Profiles::get($username);
+        $this->data['user'] = array(
+            'name' => $profile['name'],
+            'email' => \Auth::get('email'),
+        );
+
         $this->template->title = 'イベント詳細｜きんゆう女子。';
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->data['event_row'] = Events::getByCode('events', $code);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -142,24 +211,23 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/event/tickets.smarty', $this->data);
     }
 
-    public function action_tickets_card($code)
+    public function post_tickets_card($code)
     {
         \Config::load('payjp', true);
-        $this->data['coupon_code'] = \Input::get('coupon_code', '');
-        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
+        $this->data['coupon_code'] = \Input::post('coupon_code', '');
+        $this->data['message'] = \Input::post('message', '');
+        $this->data['payjp_public_key'] = \Config::get('payjp.public_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
-        $this->data['event'] = Events::getByCode('events', $code);
+        $this->data['event'] = Events::getByCode('events', $code, $this->data['coupon_code']);
 
-        // クーポン割引金額
-        if ($this->data['coupon_code']) {
-            $this->data['discount'] = EventCoupons::getDiscount($code, $this->data['coupon_code']);
-        } else {
-            $this->data['discount'] = 0;
+        if (!$this->paynable($this->data['event'])) {
+            throw new HttpNoAccessException;
         }
+        $username = \Auth::get('username');
 
         $this->template->title = 'イベント詳細｜きんゆう女子。';
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
@@ -194,12 +262,14 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     public function action_tickets_cash($code)
     {
         \Config::load('payjp', true);
-        $this->data['payjp_public_key'] = \Config::get('payjp.private_key');
+        $username = \Auth::get('username');
+
+        $this->data['payjp_public_key'] = \Config::get('payjp.public_key');
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
         $this->template->title = 'イベント詳細｜きんゆう女子。';
-        $this->data['join_status'] = Applications::join_status($code);
+        $this->data['join_status'] = Applications::join_status($code, $username);
         $this->data['event_row'] = Events::getByCode('events', $code);
         $this->template->ogimg = $this->data['event']['main_image'];
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -254,13 +324,15 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         }
         if (!$cardIds = UserCreditCard::lists($username)) {
         }
-        $payment = new Payment($private_key);
-        if (!$customer = $payment->getCustomer($username)) {
-            return array();
-        }
+        \Config::load('payjp', true);
+        $payment = new PaymentPayjp(new Payjp(\Config::get('payjp.private_key')));
+
+//        if (!$customer = $payment->getCustomer($username)) {
+//            return array();
+//        }
         $cards = array();
         foreach ($cardIds as $cardId) {
-            if ($card = $payment->getCard($customer, $cardId)) {
+            if ($card = $payment->getCard($username, $cardId)) {
                 $cards[] = $card;
             }
         }
@@ -283,5 +355,13 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
             return true;
         }
         return false;
+    }
+
+    private function paynable($event)
+    {
+        if ($event['fee'] <= 0) {
+            return false;
+        }
+        return true;
     }
 }

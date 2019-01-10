@@ -2,8 +2,8 @@
 return array(
 	'_root_'  => 'kinyu/top',  // The default route
 	//'_root_'  => 'maintenance/top',
-	'_404_'   => '/errors/404',    // The main 404 route
-	'_500_'   => '/errors/500',    // The main 404 route
+	'_404_'   => 'error/404',    // The main 404 route
+	'_500_'   => 'error/500',    // The main 404 route
 	'page/(:any)'   => 'page/top/$1',
 
 	//メンテナンス
@@ -11,7 +11,7 @@ return array(
 
 	//◆メンバー登録/ログイン部分
 	'regist'   => 'login/regist',
-	'login_regist'   => 'login/regist',
+	'login_regist'   => 'login/login_regist',
 	'regist_email'   => 'login/regist_email',
 	'regist_sns'   => 'login/regist_sns',
 	'resetting_pass' => 'login/resetting_pass',
@@ -48,9 +48,9 @@ return array(
 	'report/(:num)'   => 'kinyu/blog/index/$1',
 	'report/(:any)'   => 'kinyu/blog/detail/$1',
 	'welcome/blog/(:any)'   => 'kinyu/blog/welcome/$1',
-	'rsss'   => 'kinyu/rss/index',
-	'rss/(:num)'   => 'kinyu/rss/index/$1',
-	'rss/(:any)'   => 'kinyu/rss/detail/$1',
+	'rss'   => 'kinyu/rss/index',
+//	'rss/(:num)'   => 'kinyu/rss/index/$1',
+//	'rss/(:any)'   => 'kinyu/rss/detail/$1',
 
 	//myplan
 	'myway' => 'kinyu/myway/index',
@@ -72,6 +72,7 @@ return array(
 	'joshikai_past'   => 'kinyu/event/past',
 	'joshikai/(:any)'   => 'kinyu/event/detail/$1',
 	'joshikai_tickets/(:any)'   => 'kinyu/event/tickets/$1',
+	'joshikai_payment_premo/(:any)'   => 'kinyu/event/tickets_premo/$1',
 	'joshikai_payment_card/(:any)'   => 'kinyu/event/tickets_card/$1',
 	'joshikai_payment_cash/(:any)'   => 'kinyu/event/tickets_cash/$1',
 	'joshikai_complete'   => 'kinyu/event/complete',
@@ -150,7 +151,14 @@ return array(
 	'my/member_joshikai' => 'my/events/member_joshikai',
 	'my/kinjo'   => 'my/mykinjo/index',
 	'my/member_report' => 'my/blog/member_report',
-	
+
+	//お役立ちツール
+	'my/useful'   => 'my/useful/index',
+	//トレンド
+	'my/trend'   => 'my/trend/index',
+	//教えて！きん女。
+	'my/oshiete'   => 'my/oshiete/index',
+
 	//パスポート
 	'my/passport'   => 'my/passport/index',
 	'my/passport_laxus'   => 'my/passport/passport_laxus',

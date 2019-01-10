@@ -101,6 +101,7 @@ return array(
             'inquiries' => array('read'),
             'news' => array('read', 'create', 'edit', 'delete'),
             'registlist' => array('read', 'create'),
+            'registreminder' => array('send'),
             'remindmailtemplates' => array('read', 'edit'),
         ),
         'editor' => array(

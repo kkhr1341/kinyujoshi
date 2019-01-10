@@ -2,16 +2,70 @@
 {assign var="menu_parts" value="/"|explode:$menu_array}
 
 <div class="admin-normal-side">
-  <ul>
+
+  <a href="/my"><img class="my-pagetitle" src="/images/my/mypage-title.png"></a>
+
+  <div class="side-profile-block">
+
+    <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
+
+    <!-- プロフィール画像 -->
+    <div class="img-box"
+      {if $profile.profile_image == ''}
+        style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
+      {else}
+        style="background:url({$profile.profile_image}) center center / cover no-repeat;"
+      }
+      {/if}
+    ></div>
+    <p class="name">{$profile.nickname}</p>
+    <p class="copy">{$profile.catchcopy}</p>
+
+    <!-- きん女。チェック部分 -->
+    {if $user_type}
+      <div class="side-check-block clear">
+        <a href="/kinjo_type" target="_blank">
+          <div class="inner clear">
+            <img class="icon-img" src="{$user_type['character_image']}">
+            <p class="kinjo-check-title">{$user_type['character_name']}</p>
+          </div>
+        </a>
+      </div>
+    {else}
+      <div class="side-check-no-block">
+        <img class="check-no-title" src="/images/kinjo-check.png">
+        <a href="/kinjo_check" target="_blank">
+          <img class="check-no-link" src="/images/diagnosticchart/chart_main.jpg">
+        </a>
+      </div>
+    {/if}
+
+  </div>
+
+  <ul class="menu-list">
+    {if in_array('admin', $roles) || in_array('editor', $roles)}
+      <li class="main-li"><a href="/admin" target="_blank">＜＜管理画面＞＞</span></a></li>
+    {/if}
     <li><a href="/my">マイページ・トップ</a></li>
-    <li><a href="/my/kinjo">参加予定の女子会</span></a></li>
-    <li><a href="/my/passport">きん女。パスポート</a></li>
-    <li><a href="/my/member_joshikai">メンバー限定女子会</a></li>
-	<li><a href="/my/member_report">メンバー限定レポート</a></li>
-    <li><a href="/my/report">チェックしたレポート</a></li>
-    <li><a href="/my/profile">プロフィール編集</a></li>
-    <!--<li><a href="/my/account">きんぎょ。ちゃん</a></li>-->
-    <li><a href="/my/account">アカウント情報</a></li>
+    <li><a href="/my/member_report">メンバー限定レポート</a></li>
+    <li><a href="/my/report">お気に入り</a></li>
+    <li><a href="/my/useful">お役立ちコンテンツ</a></li>
+    <li><a href="/my/oshiete">教えて！きん女。</a></li>
+    <li><a href="/my/trend">トレンド</a></li>
+    <li><a href="/my/account">アカウント設定</a></li>
     <li><a href="/logout">ログアウト</a></li>
   </ul>
 </div>
+
+<script>
+  $(function(){
+
+    $(".admin-normal-side .menu-list li.no-btn").hover(function() {
+       $(this).children("div").fadeToggle();
+    });
+  });
+
+//$("#parent").children('img');
+
+
+</script>

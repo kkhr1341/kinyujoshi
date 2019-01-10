@@ -1,74 +1,53 @@
-<div class="error-block">
-  <div class="inner">
-    <h2 class="sp error-block-title">大変申し訳ございません...<br>このページは存在<br>しないようです(´・ω・`)</h2>
-    <h2 class="pc error-block-title">大変申し訳ございません...<br>このページは存在しないようです(´・ω・`)</h2>
-    <p class="btn btn-primary"><a href="#" onClick="history.back(); return false;">前のページに戻る</a></p>
-  </div>
+<div class="kinyu-main">
+
+    <!-- ここにエラーのコンテンツが入る -->
+    <div class="kinyu-error-container">
+        <p>申し訳ありません...。<br>このページは存在しないようです(´・ω・`)</p>
+        <a href="/">トップページへ</a>
+    </div>
+
+    <style>
+        .kinyu-error-container {
+            padding: 210px 0px 80px;
+            background: #f7f7f7;
+        }
+
+        .kinyu-error-container p {
+            font-size: 20px;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .kinyu-error-container a {
+            display: block;
+            width: 200px;
+            color: #fff;
+            margin: 0 auto;
+            margin-top: 24px;
+            font-size: 13px;
+            padding: 10px 0px;
+            background: #8ddcd1;
+            font-weight: bold;
+            transition: .5s;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .kinyu-error-container {
+                padding: 50px 0px 50px;
+                background: #fff;
+            }
+
+            .kinyu-error-container p {
+                font-size: 15px;
+                line-height: 22px;
+                padding: 0px 4%;
+            }
+
+            .kinyu-error-container a {
+                font-size: 12px;
+                padding: 8px 0px;
+            }
+        }
+    </style>
 </div>
-
-<style>
-.pc {
-  display: block;
-}
-.sp {
-  display: none;
-}
-
-.error-block {
-  height: 500px;
-  width: 100%;
-  display: table;
-}
-
-.error-block .inner {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-.error-block-title {
-  font-size: 2.6rem;
-  line-height: 4rem;
-  margin-bottom: 30px;
-}
-
-.error-block .inner a{
-  color: #fff;
-}
-.error-block .inner a:hover {
-  opacity: 0.7;
-}
-
-@media screen and (max-width: 480px) {
-
-.pc {
-  display: none;
-}
-.sp {
-  display: block;
-}
-
-.error-block {
-  height: 400px;
-}
-
-.error-block-title {
-  font-size: 2.2rem;
-  line-height: 3.2rem;
-}
-
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-
-.error-block {
-  height: 500px;
-}
-
-.error-block-title {
-  font-size: 2.2rem;
-  line-height: 3.6rem;
-}
-
-}
-
-</style>

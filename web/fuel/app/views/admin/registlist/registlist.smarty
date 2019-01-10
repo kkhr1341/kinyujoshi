@@ -19,11 +19,17 @@
         <td><input type="text" name="name" class="form-control" placeholder="" value="{$params.name}"></td>
       </tr>
       <tr>
-          <th>Email</th>
-          <td><input type="text" name="email" class="form-control" placeholder="" value="{$params.email}"></td>
-          <th>自己紹介</th>
-          <td><input type="text" name="introduction" class="form-control" placeholder="" value="{$params.introduction}"></td>
-        </tr>
+        <th>Email</th>
+        <td><input type="text" name="email" class="form-control" placeholder="" value="{$params.email}"></td>
+        <th>自己紹介</th>
+        <td><input type="text" name="introduction" class="form-control" placeholder="" value="{$params.introduction}"></td>
+      </tr>
+      <tr>
+        <th>編集部コメント</th>
+        <td><input type="text" name="edit_inner" class="form-control" placeholder="" value="{$params.edit_inner}"></td>
+        <th></th>
+        <td></td>
+      </tr>
       </tbody>
     </table>
 
@@ -86,10 +92,10 @@
       <td style="display:none;">{$email.where_from}</td>
       <td style="display:none;">{$email.transmission}</td>
       <td style="display:none;">{$email.job_kind}</td>
-      {if $email.is_user == 1}
+      {if $email.is_user == 0}
         <td style="width:70px;">
           ○<br>
-          <a class="admin-registlist-more" href="/admin/registlist/{$email.code}" style="font-size: 8px;">リマインド</a>
+          <a class="admin-regist-remind" href="#" data-code="{$email.code}" style="font-size: 8px;">リマインド</a>
         </td>
       {else}
         <td style="width:70px;"></td>
@@ -214,12 +220,28 @@ word-break: break-word;
 
 
 <script>
-window.onload = function(){
-  document.getElementById('download').addEventListener('click', function (e){
-    e.preventDefault();
-    location.href = '/admin/registlist/memberlist';
-    return;
-  });
-}
+$(function(){
 
+   document.getElementById('download').addEventListener('click', function (e){
+     e.preventDefault();
+     location.href = '/admin/registlist/memberlist';
+     return;
+   });
+
+  $('.admin-regist-remind').click(function(){
+    var url = "/api/registreminder/send";
+    var params = {};
+    params.code = $(this).data('code');
+
+    bootbox.confirm("ユーザー登録リマインドメールを送信します。よろしいですか？", function(result) {
+      if (result) {
+        ajax.post(url, params, function(data){
+          ts.success("送信しました");
+        });
+      } else {
+        ts.info("キャンセルしました");
+      }
+    });
+  });
+});
 </script>

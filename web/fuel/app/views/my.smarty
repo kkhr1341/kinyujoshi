@@ -9,22 +9,12 @@
 	<title>{$title}</title>
   <link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet" />
 	{Asset::render('layout')}
-  
+
   <!-- 紙吹雪 -->
   <!-- <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
   <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script> -->
 
-  {literal}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72608536-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-72608536-2');
-  </script>
-  {/literal}
+  {$ga}
 </head>
 <body class="drawer drawer--left">
   <!-- <canvas id="canvas"></canvas> -->
@@ -54,21 +44,28 @@
 </div>
 
 <div class="sp">
-  <div class="admin-normal-navigation">
-    <p>マイページ・メニュー</p>
-    <ul>
-      <li class="item navi_kinyu-menu-li01"><a href="/my">マイページ・トップ</a></li>
+  <div class="admin-normal-navigation admin-normal-side">
+    <p class="admin-menu-title">マイページ・メニュー</p>
+    <ul class="menu-list">
+      <!-- <li class="item navi_kinyu-menu-li01"><a href="/my">マイページ・トップ</a></li>
       <li class="item navi_kinyu-menu-li02"><a href="/my/kinjo">参加予定の女子会</a></li>
       <li class="item navi_kinyu-menu-li03"><a href="/my/passport">きん女。パスポート</a></li>
       <li class="item navi_kinyu-menu-li04"><a href="/my/member_joshikai">メンバー限定女子会</a></li>
       <li class="item navi_kinyu-menu-li05"><a href="/my/report">チェックしたレポート</a></li>
       <li class="item navi_kinyu-menu-li06"><a href="/my/profile">プロフィール編集</a></li>
       <li class="item navi_kinyu-menu-li07"><a href="/my/account">アカウント情報</a></li>
-      <li class="item navi_kinyu-menu-li08"><a href="/logout">ログアウト</a></li>
+      <li class="item navi_kinyu-menu-li08"><a href="/logout">ログアウト</a></li> -->
 
-      <!-- <li class="active"><a href="/my">トップ</a></li>
-      <li><a href="/my/profile">プロフィール編集</a></li>
-      <li><a href="/my/joshikai">参加予定の女子会</a></li> -->
+      <li><a href="/my">マイページ・トップ</a></li>
+      <li><a href="/my/member_report">メンバー限定レポート</a></li>
+      <li><a href="/my/report">お気に入り</a></li>
+      <li><a href="/my/kinjo">参加予定の女子会</a></li>
+      <li><a href="/my/useful">お役立ちコンテンツ</a></li>
+      <li><a href="/my/oshiete">教えて！きん女。</a></li>
+      <li><a href="/my/trend">トレンド</a></li>
+      <li><a href="/my/account">アカウント設定</a></li>
+      <li><a href="/logout">ログアウト</a></li>
+
     </ul>
   </div>
 </div>

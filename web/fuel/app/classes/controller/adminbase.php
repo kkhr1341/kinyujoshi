@@ -38,7 +38,15 @@ class Controller_Adminbase extends Controller_Template
         $group = Auth::group();
         $this->data['roles'] = $group->get_roles();
 
+        $this->template->from_company = $this->is_from_company();
+
         $this->template->roles = $this->data['roles'];
+
+        list(, $userid) = Auth::get_user_id();
+
+        $this->template->ga = View::forge('parts/ga', array(
+            'userid' => $userid
+        ));
 
         Asset::add_path('assets/css', 'css');
         Asset::add_path('assets/js', 'js');
@@ -100,10 +108,9 @@ class Controller_Adminbase extends Controller_Template
             'my/main.js'
         ), array(), 'layout', false);
 
-        set_exception_handler(function ($e) {
-            $this->error($e->getMessage());
-        });
-
+//        set_exception_handler(function ($e) {
+//            $this->error($e->getMessage());
+//        });
     }
 
     public function after($response)
@@ -122,5 +129,20 @@ class Controller_Adminbase extends Controller_Template
 
         echo json_encode($response);
         exit();
+    }
+
+    // csv出力を会社内IPからのみにするため、IPアドレスを取得
+    protected function is_from_company()
+    {
+        if (preg_match('/^192\.168/', \Input::ip())) {
+            return true;
+        }
+        switch(\Input::real_ip())
+        {
+            case '202.241.184.23':
+                return true;
+            default:
+                return false;
+        }
     }
 }

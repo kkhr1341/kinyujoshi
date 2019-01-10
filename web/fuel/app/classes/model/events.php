@@ -51,7 +51,7 @@ class Events extends Base
 
         $val->add('fee', '女子会参加費')
             ->add_rule('valid_string','numeric')
-            ->add_rule('numeric_between',50, 9999999);
+            ->add_rule('numeric_between', 0, 9999999);
 
         $val->add('coupon_code', 'クーポンコード')
             ->add_rule('required_with', 'discount');
@@ -62,7 +62,7 @@ class Events extends Base
 
         $val->add('limit', '定員')
             ->add_rule('valid_string', 'numeric')
-            ->add_rule('numeric_between',0, 1000);
+            ->add_rule('numeric_between', 0, 1000);
 
         $val->add('creditch', '決済方法');
 
@@ -105,22 +105,42 @@ class Events extends Base
         return $val;
     }
    
-    public static function getByCode($table, $code)
+    public static function getByCode($table, $code, $coupon_code='')
     {
         $event = parent::getByCode($table, $code);
-        $event['applicable'] = self::is_applicable_by_event_date($event['event_date']);
-        $application_num = self::getApplicationNum($code);
+        $event['applicable'] = self::is_applicable_by_event_date($event['event_date'], $event['event_start_datetime']);
+        $application_num = self::get_application_num($code);
 
         $event['full'] = $application_num >= $event['limit'] ? true: false;
+
+        $event['discount'] = 0;
+
+        if ($coupon_code) {
+            $coupon = \DB::select('*')
+                ->from('event_coupons')
+                ->where('disable', '=', 0)
+                ->where('coupon_code', '=', $coupon_code)
+                ->where('event_code', '=', $code)
+                ->execute()
+                ->current();
+            if ($coupon) {
+                $event['fee'] = (int)$event['fee'] - (int)$coupon['discount'];
+                $event['discount'] = (int)$coupon['discount'];
+            }
+        }
+        if ($event['fee'] < 0){
+            $event['fee'] = 0;
+        }
+
         return $event;
     }
 
-    private static function getApplicationNum($code)
+    private static function get_application_num($code)
     {
         $total = \DB::select(\DB::expr('count(*) as cnt'))
             ->from('applications')
             ->where('event_code', '=', $code)
-            ->where('cancel', '=', 0)
+            ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->where('disable', '=', 0);
 
         $data = $total->execute()->current();
@@ -129,9 +149,18 @@ class Events extends Base
 
     public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc", $display=1, $username = null)
     {
-        $select = '*';
-        $select .= ', events.code';
-        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+        $select = '*, ';
+        $select .= 'events.code, ';
+        $select .= '(
+                select 
+                        count(*) 
+                    from 
+                        applications 
+                    where 
+                        applications.event_code = events.code and 
+                        applications.disable = 0 and 
+                        not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+                    ) as application_num';
 
         $datas = \DB::select(\DB::expr($select))
             ->from('events')
@@ -174,7 +203,7 @@ class Events extends Base
         $datas = $datas->execute()
             ->as_array();
         foreach($datas as $key => $data){
-            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
             $datas[$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
 
         }
@@ -194,9 +223,18 @@ class Events extends Base
      */
     public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1, $sort="asc")
     {
-        $select = '*';
-        $select .= ', events.code';
-        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+        $select = '*, ';
+        $select .= 'events.code, ';
+        $select .= '(
+                select 
+                        count(*) 
+                    from 
+                        applications 
+                    where 
+                        applications.event_code = events.code and 
+                        applications.disable = 0 and
+                        not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+                ) as application_num';
         $datas = \DB::select(\DB::expr($select))
             ->from('events')
             ->join('profiles', 'left')
@@ -235,7 +273,7 @@ class Events extends Base
         $datas = $datas->execute()
             ->as_array();
         foreach($datas as $key => $data){
-            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
             $datas[$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
         }
 
@@ -254,9 +292,19 @@ class Events extends Base
      */
     public static function lists03()
     {
-        $select = '*';
-        $select .= ', events.code';
-        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+        $select = '*, ';
+        $select .= 'events.code, ';
+
+        $select .= '(
+            select 
+                    count(*) 
+                from 
+                    applications 
+                where 
+                    applications.event_code = events.code and 
+                    applications.disable = 0 and 
+                    not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+        ) as application_num';
 
         return \DB::select(\DB::expr($select))
             ->from('events')
@@ -305,13 +353,9 @@ class Events extends Base
         return $data;
     }
 
-
     public static function save($params)
     {
         $data = array();
-//        $username = \Auth::get('username');
-//        $params['main_image'] = self::get_main_image($params);
-//        if(!$params['incur_cancellation_fee_date']) $params['incur_cancellation_fee_date'] = '0000-00-00 00:00:00';
         $data['incur_cancellation_fee_date'] = !$params['incur_cancellation_fee_date']? '0000-00-00 00:00:00': $params['incur_cancellation_fee_date'];
 
         $data['event_category'] = $params['event_category'];
@@ -346,8 +390,6 @@ class Events extends Base
 
     public static function delete($params)
     {
-
-//        $username = \Auth::get('username');
         \DB::update('events')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
 
         return $params;
@@ -437,9 +479,17 @@ class Events extends Base
 
         $pagination = \Pagination::forge('mypagination', $config);
 
-        $select = '*';
-        $select .= ', events.code';
-        $select .= ', (select count(*) from applications where applications.event_code = events.code and applications.disable = 0 and applications.cancel = 0) as application_num';
+        $select = 'events.*, ';
+        $select .= '(
+                select 
+                        count(*) 
+                    from 
+                        applications 
+                    where 
+                        applications.event_code = events.code and 
+                        applications.disable = 0 and 
+                        not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+                ) as application_num';
 
         $datas['datas'] = \DB::select(\DB::expr($select))
             ->from('events')
@@ -471,7 +521,7 @@ class Events extends Base
             ->execute()
             ->as_array();
         foreach($datas['datas'] as $key => $data){
-            $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date']);
+            $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
             $datas['datas'][$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
         }
         $datas['pagination'] = $pagination;
@@ -501,12 +551,12 @@ class Events extends Base
     public static function applicable($code)
     {
         $event = self::getByCode('events', $code);
-        return self::is_applicable_by_event_date($event['event_date']);
+        return self::is_applicable_by_event_date($event['event_date'], $event['event_start_datetime']);
     }
 
-    private static function is_applicable_by_event_date($event_date)
+    private static function is_applicable_by_event_date($event_date, $start_time)
     {
-        $applicableTime = strtotime(date('Y-m-d 18:00:00', strtotime($event_date)));
+        $applicableTime = strtotime(date('Y-m-d ' . $start_time . ':00', strtotime($event_date)));
         if (time() < $applicableTime) {
             return true;
         } 

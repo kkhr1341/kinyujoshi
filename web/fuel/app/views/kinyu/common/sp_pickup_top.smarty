@@ -1,0 +1,71 @@
+<!-- 女子会TOP表示 -->
+{if $display_top_event}
+<div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
+    {if empty($display_top_event.specific_link)}
+    <a class="js-track" target="_blank" href="/joshikai/{$display_top_event.code}" data-category="slide-link" data-action="click" data-value="1">
+       <div class="kinyu-top-list-kind"></div>
+       <div class="kinyu-top-introlist-title">
+          <h3 class="kinyu-top-list-title">{$display_top_event.title}</h3>
+       </div>
+    </a>
+    {else}
+    <a class="js-track" target="_blank" href="{$display_top_event.specific_link}" data-category="slide-link" data-action="click" data-value="1">
+        <div class="kinyu-top-list-kind"></div>
+        <div class="kinyu-top-introlist-title">
+            <h3 class="kinyu-top-list-title">{$display_top_event.title}</h3>
+        </div>
+    </a>
+    {/if}
+</div>
+{/if}
+
+<!-- スライド広告枠↓ -->
+<!-- <div class="swiper-slide" style="background: url(/images/advertisement/SP.png) center center / cover no-repeat;">
+    <a class="js-track js-slide-hoshino-sp" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"  data-category="slide-link" data-action="click" data-value="2">
+        <div class="kinyu-top-list-kind"></div>
+        <div class="kinyu-top-promotion-label">
+            <img src="/images/pr_label_pc.png">
+        </div>
+    </a>
+</div> -->
+
+
+{foreach from=$blogs_pick item=blog name=loopname}
+    {if $smarty.foreach.loopname.index == 1}
+        <div class="swiper-slide" style="background: url(/images/diagnosticchart/og-main.jpg) center center / cover no-repeat;">
+            <a class="js-track" href="https://kinyu-joshi.jp/kinjo_check" data-category="slide-link" data-action="click" data-value="3">
+              <div class="kinyu-top-list-kind"></div>
+            </a>
+        </div>
+    {/if}
+    <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
+        <a class="js-track" href="/report/{$blog.code}" data-category="slide-link" data-action="click" data-value="4">
+            <div class="kinyu-top-introlist-title">
+                <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+            </div>
+        </a>
+    </div>
+{/foreach}
+
+{literal}
+<script type="text/javascript">
+$(function(){
+  $('.js-slide-hoshino-pc').click(function() {
+    gtag('event', 'click', {
+        'event_category': 'pr',
+        'event_label': 'hoshino-slide-pc',
+        'event_action': 'link',
+        'event_value': 1,
+    });
+  });
+  $('.js-slide-hoshino-sp').click(function() {
+    gtag('event', 'click', {
+        'event_category': 'pr',
+        'event_label': 'hoshino-slide-sp',
+        'event_action': 'link',
+        'event_value': 1,
+    });
+  });
+});
+</script>
+{/literal}

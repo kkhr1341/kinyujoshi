@@ -64,8 +64,9 @@
         <!-- きんゆう女子。会 -->
         <div class="kinyu-top-maincontent-block-el">
           <div class="kinyu-top-list kinyu-top-joshikai-list">
-            <h3 class="kinyu-top-main-title">女子会の予定</h3>
-            <p class="kinyu-top-main-sub">「おかね」についてゆるりと話そう。</p>
+          <img class="kinyu-top-list-fuki" src="/images/member_regist_fuki_sp.png">
+            <h3 class="kinyu-top-main-title">ワカラナイ…から卒業しよう♪</h3>
+            <p class="kinyu-top-main-sub">女子会でみんなどうしてる？を知ったり勉強したり。<br>頼れるきん女。FPには、ワカラナイことを聞いてみよう</p>
             <ul class="clear">
             {foreach from=$events key="key" item=event name=loopname}
 
@@ -112,7 +113,11 @@
                     </div>
                     <h3 class="kinyu-top-list-title">{$event.title}</h3>
                     <div class="event-subbox">
-                      <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                      {if $event.fee == 0}
+                        <p class="event-subbox-el">参加費：無料</p>
+                      {else}
+                        <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                      {/if}
                       <p class="event-subbox-el">場所：{$event.place}</p>
                     </div>
                   </div>
@@ -165,7 +170,11 @@
 
               <li>
                 <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
-                <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;""></div>
+                <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
+                {if $blog.new == true}
+                  <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
+                {/if}
+                </div>
                   <div class="text-box">
                     <div class="kinyu-top-list-kind">
                       {if $blog.kind == "女子会レポート"}
@@ -178,6 +187,8 @@
                         <p>イベント告知</p>
                       {else if $blog.kind == "コラム"}
                         <p>コラム</p>
+                      {else if $blog.kind == "きんゆう散歩"}
+                        <p>きんゆう散歩</p>
                       {else}
                         <p>レポート</p>
                       {/if}

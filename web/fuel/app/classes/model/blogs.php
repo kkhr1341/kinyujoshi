@@ -5,6 +5,7 @@ require_once(dirname(__FILE__) . "/base.php");
 
 class Blogs extends Base
 {
+
     public static function validate()
     {
         $val = \Validation::forge();
@@ -53,8 +54,15 @@ class Blogs extends Base
 
     public static function lists($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $is_secret=false)
     {
+        \Config::load('blog', true);
 
-        $datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
+        $datas = \DB::select(
+                \DB::expr('profiles.*'),
+                \DB::expr('blogs.*'),
+                \DB::expr('blogs.code'),
+                \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+            )
+            ->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
             ->where('blogs.kind', '!=', 'わたしを知る')
@@ -99,8 +107,15 @@ class Blogs extends Base
 
     public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $username = null, $is_secret=false)
     {
+        \Config::load('blog', true);
 
-        $datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
+        $datas = \DB::select(
+                \DB::expr('profiles.*'),
+                \DB::expr('blogs.*'),
+                \DB::expr('blogs.code'),
+                \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+            )
+            ->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
             ->where('blogs.disable', '=', 0);
@@ -147,8 +162,15 @@ class Blogs extends Base
 
     public static function listspick($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $is_secret=false)
     {
+        \Config::load('blog', true);
 
-        $datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
+        $datas = \DB::select(
+                \DB::expr('profiles.*'),
+                \DB::expr('blogs.*'),
+                \DB::expr('blogs.code'),
+                \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+            )
+            ->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
             ->where('blogs.pickup', '=', 1)
@@ -191,8 +213,15 @@ class Blogs extends Base
 
     public static function lists_picks($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null)
     {
+        \Config::load('blog', true);
 
-        $datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
+        $datas = \DB::select(
+                \DB::expr('profiles.*'),
+                \DB::expr('blogs.*'),
+                \DB::expr('blogs.code'),
+                \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+            )
+            ->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
             ->where('blogs.pickup', '=', 1)
@@ -288,6 +317,7 @@ class Blogs extends Base
 
     public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $search_text='', $is_secret=false)
     {
+        \Config::load('blog', true);
 
         $total = \DB::select(\DB::expr('count(*) as cnt'))
             ->from('blogs')
@@ -325,7 +355,12 @@ class Blogs extends Base
 
         $pagination = \Pagination::forge('mypagination', $config);
 
-        $datas['datas'] = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
+        $datas['datas'] = \DB::select(
+                \DB::expr('blogs.*'),
+                \DB::expr('profiles.*'),
+                \DB::expr('blogs.code'),
+                \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+            )->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
             ->where('blogs.kind', '!=', 'わたしを知る')
@@ -362,7 +397,13 @@ class Blogs extends Base
 
     public static function getByCodeWithProfile($code)
     {
-        $result = \DB::select(\DB::expr('profiles.*, blogs.*'))
+        \Config::load('blog', true);
+
+        $result = \DB::select(
+                \DB::expr('profiles.*'),
+                \DB::expr('blogs.*'),
+                \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+            )
             ->from('blogs')
             ->where('blogs.code', '=', $code)
             ->join('profiles', 'left')
@@ -377,7 +418,13 @@ class Blogs extends Base
 
     public static function getByCodeWithurl($code)
     {
-        $result = \DB::select('*')->from('blogs')
+        \Config::load('blog', true);
+
+        $result = \DB::select(
+                '*',
+            \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+            )
+            ->from('blogs')
             ->where('blogs.code', '=', $code)
             ->execute()->current();
         if (empty($result)) {

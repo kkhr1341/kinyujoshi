@@ -3,6 +3,7 @@
 use \Model\Registlist;
 use \Model\Blogstocks;
 use \Model\DiagnosticChartTypeUsers;
+use \Model\Userwithdrawal;
 
 class Controller_Api_Analysis extends Controller_Base
 {
@@ -57,5 +58,13 @@ class Controller_Api_Analysis extends Controller_Base
             'end_at' => \Input::get('end_at', ''),
             'event_code' => \Input::get('event_code', ''),
         )));
+    }
+
+    /**
+     * 退会理由
+     */
+    public function action_user_withdrawal()
+    {
+        $this->ok(Userwithdrawal::list01());
     }
 }

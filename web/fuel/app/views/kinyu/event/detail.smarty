@@ -18,13 +18,13 @@ console.log($resArray02);
           <!-- <h2 class="">{$event.title}</h2> -->
         </div>
         <div class="pc joshikai-detail-el-content-box">
-          <p class="info-title">女子会詳細</p>
+          <p class="info-title">詳細</p>
           <div class="kinyu-joshikai-detail-content img_area">
             {$event.content|nofilter}
           </div>
         </div>
       </div>
-    
+
       <div class="joshikai-sidebar">
         <div class="joshikai-detail-el-info">
           <ul>
@@ -55,7 +55,11 @@ console.log($resArray02);
             <li>
               <p class="info-title">参加費</p>
               {if is_numeric($event.fee)}
-              <p class="info-detail">{$event.fee|number_format}円</p>
+                {if $event.fee == 0}
+                  <p class="info-detail">無料</p>
+                {else}
+                  <p class="info-detail">{$event.fee|number_format}円</p>
+                {/if}
               {else}
               <p class="info-detail">{$event.fee}</p>
               {/if}
@@ -64,21 +68,21 @@ console.log($resArray02);
 
           {if $event.applicable eq false}
             <div class="joinus-block joinus-block-finish">
-              <div class="applicable-link">女子会のお申込みはこちら</div>
+              <div class="applicable-link">お申込みはこちら</div>
               <div class="applicable-title"><span style="color:red;">＊</span>お申込みの受付は終了しました</div>
             </div>
           {else if $event.full eq true}
             <div class="joinus-block joinus-block-finish">
-              <div class="applicable-link">女子会のお申込みはこちら</div>
+              <div class="applicable-link">お申込みはこちら</div>
               <div class="applicable-title"><span style="color:red;">＊</span>満席のため受付終了しました</div>
             </div>
           {else}
             <!-- ログインユーザー -->
             <div class="joinus-block">
             {if in_array('user', $roles) || in_array('admin', $roles)}
-              <a href="/joshikai_tickets/{$urlcode}">女子会のお申込みはこちら</a>
+              <a href="/joshikai_tickets/{$urlcode}">お申込みはこちら</a>
             {else}
-              <p id="joinus-open">女子会のお申込みはこちら</p>
+              <p id="joinus-open">お申込みはこちら</p>
             {/if}
             </div>
           {/if}
@@ -87,7 +91,7 @@ console.log($resArray02);
 
       <!-- sp -->
       <div class="sp joshikai-detail-el-content-box">
-        <p class="info-title">女子会詳細</p>
+        <p class="info-title">詳細</p>
         <div class="kinyu-joshikai-detail-content img_area">
           {$event.content|nofilter}
         </div>
@@ -100,11 +104,11 @@ console.log($resArray02);
 <!-- カード払い（メンバー登録なしのモーダル） -->
 <div id="joinus-open-block" class="joinus-open-block">
   <div id="joinus-open-close" class="day-cash-close"><img src="/images/close-btn.png"></div>
-  <div class="inner">  
+  <div class="inner">
     <form method="POST" action="/pay" id="no-member-charge-form">
       <input type="hidden" name="event_code" value="{$event.code}" />
       <span class="charge-errors"></span>
-      <p class="main-title">女子会のご参加には、<br>メンバー登録が必要です。</p>
+      <p class="main-title">ご参加には、<br>メンバー登録が必要です。</p>
       <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
 
       <div class="login-block">
@@ -123,7 +127,7 @@ console.log($resArray02);
 
 <script>
   $(function() {
-    
+
     $("#joinus-open").click(function() {
       $("#joinus-open-block").fadeIn(500);
     });

@@ -71,7 +71,7 @@
   box-shadow: 0px 0px 2px #d5d3d3;
 }
 .kinyu-header h1.main-logo {
-  padding: 28px 0px 16px; 
+  padding: 28px 0px 16px;
 }
 .kinyu-header h1.main-logo a,
 .kinyu-header-top .main-logo a {
@@ -264,7 +264,7 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-#kinyu-main-animation {
+/* #kinyu-main-animation {
   width: 100%;
   height: 100vh;
   background: rgba(255,255,255,.99);
@@ -282,21 +282,21 @@
   margin-top: -47.5px;
   margin-left: -190px;
   z-index: 1007;
-}
+} */
 #kinyu-main-animation-sub {
   margin-bottom: 8px;
   display: none;
   width: 380px;
 }
 #kinyu-main-animation-title {
-  display: none; 
+  display: none;
   width: 380px;
 }
-.fixed {
+/* .fixed {
   position: fixed;
   width: 100%;
   height: 100%;
-}
+} */
 .pc-kinyu-logo {
   width: 150px;
   display: block;
@@ -305,7 +305,7 @@
 }
 #kinyu-main-animation video {
   /*background: url('/video_bg.jpg') no-repeat;*/
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   left: 0;
@@ -352,15 +352,15 @@
   width: 420px;
 }
 #kinyu-season-animation-title {
-  display: none; 
+  display: none;
   width: 420px;
   margin-top: -10px;
 }
-.fixed {
+/* .fixed {
   position: fixed;
   width: 100%;
   height: 100%;
-}
+} */
 .pc-kinyu-logo {
   width: 150px;
   display: block;
@@ -370,7 +370,7 @@
 #kinyu-season-animation video {
   display: none;
   /*background: url('/video_bg.jpg') no-repeat;*/
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   left: 0;
@@ -617,9 +617,6 @@
 .kinyu-top-introlist-pickup .swiper-wrapper {
   transition: .5s;
 }
-.kinyu-top-introlist-pickup .swiper-slide {
-  transition: .5s;
-}
 .kinyu-top-introlist-pickup .swiper-arrow {
   position: absolute;
   bottom: 50%;
@@ -732,7 +729,7 @@
 /*.introduction-list li {
   width: 23.5%;
   height: 150px;
-  float: left;  
+  float: left;
   background-color: gray;
   margin-right: 2%;
   position: relative;
@@ -780,11 +777,44 @@
   padding: 4px 2px 0px;
 }
 
+.kinyu-top-joshikai-list .kinyu-top-main-title{
+  position: relative;
+}
+
+.kinyu-top-joshikai-list .kinyu-top-list-fuki{
+  width: 160px;
+  position: absolute;
+  top: -45px;
+  left: 63%;
+}
+
+
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・メンバー登録部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-top-member-block {
 
+}
+.member-regist-title-text {
+  width: 500px;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.after-regist-kinjo-check a {
+  display: block;
+  width: 100%;
+   margin: 0 auto;
+  margin-top: 8px;
+}
+
+.title-wrapper {
+background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209, 0.3)),url(/images/business/step3_img.jpeg);
+ padding: 30px 0;
+ background-size: cover;
+ background-position: 50% 47%;
+ text-align: center;
 }
 .kinyu-top-member-list {
   height: 350px;
@@ -852,6 +882,104 @@
   margin: 24px 0px;
 }
 
+.img-box {
+  position: relative;
+}
+
+.img-box .new-icon {
+  position: absolute;
+  top: -15px;
+  left: -14px;
+}
+
+.new-icon img {
+  width: 45px;
+}
+
+
+/* .kinyu-top-report-list .img-box .member-regist-label {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  background:-webkit-linear-gradient(top left, rgba(216, 194, 88, 0.8) 0%, rgba(208, 216, 88, 0.8) 1%, rgba(219, 164, 81, 0.8) 100%);
+  background:-o-linear-gradient(top left, rgba(216, 194, 88, 0.8) 0%, rgba(208, 216, 88, 0.8) 1%, rgba(219, 164, 81, 0.8) 100%);
+  background:linear-gradient(to bottom right, rgba(216, 194, 88, 0.8) 0%, rgba(208, 216, 88, 0.8) 1%, rgba(219, 164, 81, 0.8) 100%);
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 12px;
+} */
+
+.ribbon_area  {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 89px;
+    height: 91px;
+    overflow: hidden;
+  }
+
+.member-regist-label  {
+  display: inline-block;
+  position: absolute;
+  padding: 3px 0;
+  left: -23px;
+  top: 22px;
+  width: 160px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 16px;
+  background: linear-gradient(to right, #f1806eeb 0%,#f3b559 100%);
+  color: #fff;
+  text-shadow: 0 2px 2px #de6e4e;
+  letter-spacing: 0.05em;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.member-regist-label:before,.member-regist-label:after{
+    position: absolute;
+    content: "";
+    border-top: 4px solid #de6e4e;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    bottom: -4px;
+}
+
+.member-regist-label:before{
+    left: 22px;
+}
+
+.member-regist-label:after{
+   right: 25px;
+}
+
+.ribbon_area-sp {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+  }
+
+.member-regist-label-sp  {
+  display: inline-block;
+  position: absolute;
+  padding: 1px 6px;
+  left: 0px;
+  top: 10px;
+  text-align: center;
+  font-size: 9px;
+  line-height: 16px;
+  background: linear-gradient(to right, #f1806eeb 0%,#f3b559 100%);
+  color: #fff;
+  text-shadow: 0 2px 2px #de6e4e;
+  letter-spacing: 0.05em;
+  box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+
 /*-- 記事一覧部分 --*/
 .kinyu-list-block {
   background: #f9f9f9;
@@ -879,6 +1007,8 @@
   margin-bottom: 18px;
   text-align: center;
 }
+
+
 
 /* 検索フォーム関連 */
 .kinyu-top-search {
@@ -1005,7 +1135,7 @@
 .kinyu-top-banner-area li a {
   display: block;
   line-height: 0;
-} 
+}
 .kinyu-top-banner-area li img {
   border: 1px solid #f0f0f0;
   width: 100%;
@@ -1445,7 +1575,7 @@
   margin-top: 16px;
   font-size: 13px;
   padding:12px 0px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 .report-detail-sidebar-el-title {
   font-size: 14px;
@@ -1611,7 +1741,7 @@
   transition: .5s;
 }
 .kinyu-news-list .kinyu-news-list-li:nth-child(2n) {
-  margin-right: 0%; 
+  margin-right: 0%;
 }
 .kinyu-news-list .kinyu-news-title {
   width: 300px;
@@ -2470,6 +2600,12 @@
   color: #fff;1
   font-weight: bold;
 }
+.kinyu-joshikai-tickets-payment .fee-free {
+  background: #8ddcd1;
+  border: 1px solid #8ddcd1;
+  color: #fff;1
+font-weight: bold;
+}
 .kinyu-joshikai-tickets-payment .fee-cash {
   background: #f1f1f1;
   border: 1px solid #f1f1f1;
@@ -2487,13 +2623,25 @@
     background:#8ddcd1;
     color:#fff;
 }
-#coupon_code {
+.coupon_code {
     border: 1px solid #ccc;
-    padding: 4px 10px;
-    font-size: 14px;
-    color: #444;
     margin-bottom: 24px;
 	display: inline-block;
+  box-sizing: border-box;
+  line-height: 20px;
+  border: 1px  solid #eee;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 .discount-span {
@@ -2668,7 +2816,7 @@
   margin-bottom: 8px;
 }
 .kinyu-credit-list-block p.sub-credit {
-  margin-bottom: 0px; 
+  margin-bottom: 0px;
   margin-top: 12px;
   font-size: 12px;
   line-height: 12px;
@@ -2710,6 +2858,7 @@
   margin-top: 40px;
   margin-bottom: 36px;
   padding: 20px;
+  text-align: center;
 }
 .cancel-block .cancel-title {
   color: #77cbc0;
@@ -2795,7 +2944,7 @@ input[type=checkbox]:checked + .checkbox:before {
   margin-bottom: 12px;
 }
 .cancel-block-list li:last-child {
-  margin-bottom: 0px; 
+  margin-bottom: 0px;
 }
 .cancel-block-list li:before {
   content: "◆";
@@ -2809,6 +2958,55 @@ input[type=checkbox]:checked + .checkbox:before {
   color: #ff9595;
   font-weight: bold;
 }
+
+.fee-open-el {
+    font-size: 13px;
+    padding: 6px 0;
+}
+.fee-open-el label{
+  display: block;
+  margin-bottom: 10px;
+}
+.fee-open-el input{
+  display: block;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+.free-payment-input {
+    border: 1px solid #eee;
+    padding: 5px 8px;
+    width: 260px;
+    box-sizing: border-box;
+}
+
+.request-textarea{
+   display: block;
+   width: 100%;
+   height: 100px;
+   max-height: 200px;
+   box-sizing: border-box;
+   line-height: 20px;
+   border: 1px  solid #eee;
+
+   padding: 6px 12px;
+   font-size: 13px;
+   line-height: 1.42857143;
+   color: #555;
+   box-sizing: border-box;
+   background-color: #fff;
+   background-image: none;
+   border: none;
+   border-radius: 0px;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+ }
+
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　コンテンツアフター
@@ -2897,7 +3095,7 @@ input[type=checkbox]:checked + .checkbox:before {
   background: #708fe5;
 }
 .report-detail-share .social-list li .twitter {
-  background: #87e1f9; 
+  background: #87e1f9;
 }
 
 /* おすすめPick Up! */
@@ -2946,7 +3144,7 @@ input[type=checkbox]:checked + .checkbox:before {
   padding: 6px 24px;
   font-size: 20px;
   background: #eafffb;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 
 /* きんゆう女子。のメニュー */
@@ -3340,7 +3538,7 @@ input[type=checkbox]:checked + .checkbox:before {
   padding: 24px 0px;
 }
 .about-kinyu-header-contetns-list-el:first-child {
-  border-top: none; 
+  border-top: none;
   padding: 0px 0px 24px;
 }
 .about-kinyu-header-contetns-list-el a {
@@ -3437,7 +3635,7 @@ input[type=checkbox]:checked + .checkbox:before {
   box-sizing: content-box;
 }
 .about-kinyu-bgarea {
-  height: 400px;  
+  height: 400px;
 }
 .about-kinyu-details-area {
   text-align: center;
@@ -3449,7 +3647,7 @@ input[type=checkbox]:checked + .checkbox:before {
   letter-spacing: .05em;
   display: inline-block;
   border-bottom: 1px solid #8ddcd1;
-  padding-bottom: 2px; 
+  padding-bottom: 2px;
 }
 .about-kinyu-description {
   margin-top: 28px;
@@ -3562,7 +3760,7 @@ input[type=checkbox]:checked + .checkbox:before {
 .company-details-block {
   width: 800px;
   margin: 0 auto;
-  padding: 40px 0px 60px; 
+  padding: 40px 0px 60px;
 }
 .company-details-block a {
   color: #5499d8;
@@ -3588,7 +3786,7 @@ input[type=checkbox]:checked + .checkbox:before {
   display: block;
   color: #444444;
   text-align: center;
-  padding: 12px 0px; 
+  padding: 12px 0px;
   font-size: 13px;
 }
 .company-details {
@@ -3898,7 +4096,7 @@ input[type=checkbox]:checked + .checkbox:before {
   margin: 0 auto;
 }
 .login-contents-sidearea {
-  box-sizing: content-box;  
+  box-sizing: content-box;
   width: 226px;
   float: left;
   margin-right: 36px;
@@ -4374,7 +4572,7 @@ input::-webkit-input-placeholder {
   padding-left: 30px;
 }
 .about-member-list li:last-child {
-  margin-bottom: 4px; 
+  margin-bottom: 4px;
 }
 .about-member-list li span {
   position: absolute;
@@ -4645,13 +4843,16 @@ input::-webkit-input-placeholder {
     margin-top: -10px;
     width: 12px;
     height: 12px;
-    border: 2px solid #bbb;
+    border: 1px solid #bbb;
     content: '';
 }
 .checkbox-list-item span {
     cursor: pointer;
 }
 
+.regist-add-form-edit-el .checkbox-list {
+    padding: 0px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　フッター
@@ -4671,17 +4872,22 @@ footer {
   display: inline-block;
   float: left;
   width: 120px;
-  margin-right: 65px;
+  margin-right: 15px;
   letter-spacing: normal;
 }
 .footer-logo img {
   width: 100%;
 }
+
+.footer-logo a:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
 .new_area {
   display: inline-block;
   float: left;
   letter-spacing: normal;
-  margin-right: 50px;
+  margin-right: 30px;
   vertical-align: top;
   width: 320px;
   box-shadow: 0px 0px 1px 0px #e8e8e8;
@@ -4824,14 +5030,17 @@ to {
 .report-detail-main figure {
   position: relative;
 }
-/*.report-detail-main figure:after {
+.report-detail-main figure:after {
   content: "© きんゆう女子。 2018";
   position: absolute;
   right: 12px;
   bottom: 12px;
   font-size: 13px;
   color: #fff;
-}*/
+}
+.report-detail-main figure.no-copy:after {
+  content: none;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合
@@ -4863,7 +5072,7 @@ footer {
   z-index: 1007;
 }
 .celebration-message {
-  display: none;
+  display: block;
   width: 100%;
   height: 100%;
   background: rgba(238, 233, 223, .9);
@@ -4889,7 +5098,7 @@ footer {
   margin-top: -275px;
   margin-left: -300px;
   display: table;
-  box-shadow: 
+  box-shadow:
 }
 .celebration-main-block .main-block-inner {
   display: table-cell;
@@ -4953,12 +5162,173 @@ footer {
   opacity: .5;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　広告ポップアップ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#canvas.active {
+  z-index: 1007;
+}
+.ad-popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .9);
+  /*background: rgba(255, 255, 255, .9);*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+.ad-popup-main-block-container {
+  display: none;
+  position: relative;
+  z-index: 1010;
+}
+.ad-popup-main-block {
+  width: 700px;
+  height: 550px;
+  /* background: #fff; */
+  padding: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -300px;
+  display: table;
+  box-shadow:
+}
+.ad-popup-main-block .main-block-inner {
+  display: table-cell;
+  vertical-align: middle;
+  /* border: 1px solid #8ddcd1; */
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  /* background: rgba(255,255,255,1); */
+  position: relative;
+}
+
+.ad-image-wrapper {
+  position: relative;
+}
+
+.ad-popup-main-block .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  width: 25px;
+}
+.ad-popup-main-block .close-btn img {
+  width: 100%;
+}
+.ad-popup-main-block .message01 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+.ad-popup-main-block .message02 {
+  width: 50%;
+}
+.ad-popup-description {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0px;
+  border-top: 1px solid #ddd2c0;
+  border-bottom: 1px solid #ddd2c0;
+  margin-top: 12px;
+  margin-bottom: 36px;
+  background: rgba(248, 246, 242, 0.5);
+}
+.ad-popup-description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.ad-popup-main-block .message03 {
+  width: 70%;
+}
+.ad-popup1206-to-link-top {
+  display: block;
+  width: 50%;
+  font-size: 13px;
+  padding: 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  background: #8ddcd1;
+  color: #fff;
+  font-weight: bold;
+  transition: .8s;
+}
+.celebration1206-to-link-top;hover {
+  opacity: .5;
+}
+
+.ad-img {
+  width: 100%;
+}
+
+.kinyu-top-promotion-label {
+  position: absolute;
+  bottom: 30px;
+}
+
+.kinyu-top-promotion-label img {
+  width: 200px;
+}
+
+.pr-text {
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .ad-popup-main-block {
+    width: 100%;
+    height: 550px;
+    /* background: #fff; */
+    padding: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -275px;
+    margin-left: -300px;
+    display: table;
+    box-shadow:
+  }
+
+  .ad-popup-main-block {
+      width: 100%;
+      height: auto;
+      /* background: #fff; */
+      padding: 6px;
+      position: fixed;
+      top: 28%;
+      left: 0%;
+      margin-top: 0px;
+       margin-left: 0px;
+      display: table;
+      box-shadow: ;
+  }
+  .ad-popup-main-block .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 97%;
+    width: 25px;
+}
+.kinyu-top-promotion-label img {
+  width: 170px;
+}
+}
 
 
 @media screen and (min-width: 640px) {
 
 .btn-kinyu:hover {
-  opacity: .5; 
+  opacity: .5;
 }
 .social-menu li:hover {
   opacity: .5;
@@ -5135,10 +5505,10 @@ footer {
   opacity: .5;
 }
 .kinyu-news-list .kinyu-news-list-li:hover {
-  opacity: .5; 
+  opacity: .5;
 }
 .report-sidebar-event-list li:hover {
-  opacity: .5; 
+  opacity: .5;
 }
 .kinyu-sidebar-news-list li:hover {
   opacity: .5;
@@ -5197,7 +5567,7 @@ footer {
   opacity: .5;
 }
 .kinyu-top-banner-area li:hover {
-  opacity: .5; 
+  opacity: .5;
 }
 .kinyu-event-list-subdescription:hover {
   background: #f9aaa0;
@@ -5207,7 +5577,7 @@ footer {
   opacity: .5;
 }
 .special-event-list li:hover .text-area p {
-  color: #77cbc0; 
+  color: #77cbc0;
 }
 .report-sidebar-report-list li:hover {
   opacity: .5;
@@ -5252,6 +5622,3 @@ footer {
 }
 
 }
-
-
-
