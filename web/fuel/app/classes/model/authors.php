@@ -19,6 +19,9 @@ class Authors extends Base
 
         $val->add('code', 'CODE');
 
+        $val->add('position', '役職')
+            ->add_rule('required');
+
         $val->add('name', '名前')
             ->add_rule('required');
 

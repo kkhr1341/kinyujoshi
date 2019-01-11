@@ -127,6 +127,7 @@ return array(
         118 => '126_create_inquiry_reply_mails',
         119 => '127_create_authors',
         120 => '128_add_author_code_to_blogs',
+        121 => '129_add_position_to_authors',
       ),
     ),
     'module' => 

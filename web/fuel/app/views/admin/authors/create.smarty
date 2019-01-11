@@ -10,6 +10,10 @@
         <div class="my-form-container clear">
             <div class="form-left">
                 <div class="form-group">
+                    <label class="form-group-event-label">役職</label>
+                    <input type="text" id="position" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
                     <label class="form-group-event-label">名前</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
                     <input type="text" id="name" class="form-control" placeholder="">
@@ -61,10 +65,15 @@
         $('#save').click(function () {
             var url = "/api/authors/create";
             var params = {};
+            params.position = $('#position').val();
             params.name = $('#name').val();
             params.profile_image = $('#profile_image').val();
             params.introduction = $('#introduction').val();
 
+            if (params.position == "") {
+                ts.error("役職を入力してください");
+                return false;
+            }
             if (params.name == "") {
                 ts.error("名前を入力してください");
                 return false;

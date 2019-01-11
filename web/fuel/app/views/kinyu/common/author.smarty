@@ -6,7 +6,7 @@
   </div>
   </div>
   <div class="report-writer-profile-wrapper">
-  <p class="writer-profile-top"><span class="writer-position">編集部</span><span class="writer-name">{$name}</span></p>
+  <p class="writer-profile-top"><span class="writer-position">{$position}</span><span class="writer-name">{$name}</span></p>
   <p class="writer-profile-text">{$introduction|nl2br}</p>
   </div>
 </div>
