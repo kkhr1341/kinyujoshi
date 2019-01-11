@@ -24,8 +24,10 @@ class Blogs extends Base
 //        $val->add('disable');
         $val->add('description');
 //        $val->add('section_name');
-        $val->add('pickup');
-        $val->add('kind');
+        $val->add('pickup', 'ピックアップ')
+            ->add_rule('required');
+        $val->add('kind', 'レポートの種類')
+            ->add_rule('required');
         $val->add('keyword');
         $val->add('where_from');
         $val->add('where_from_other');
@@ -269,14 +271,13 @@ class Blogs extends Base
         $params['created_at'] = \DB::expr('now()');
 
         \DB::insert('blogs')->set($params)->execute();
-
         return $params;
+
     }
 
 
     public static function save($params)
     {
-
 //        $username = \Auth::get('username');
 
         \DB::update('blogs')->set($params)->where('code', '=', $params['code'])->execute();

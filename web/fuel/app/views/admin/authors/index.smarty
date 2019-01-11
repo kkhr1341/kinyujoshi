@@ -1,0 +1,160 @@
+<ol class="my-header-menu">
+	<li><a href="/">ホーム</a></li>
+	<li><a href="/admin">マイページ</a></li>
+	<li class="active">記事の管理</li>
+</ol>
+<div class='clearw'>
+	<a class="btn btn-primary float_right" href="/admin/report/create" role="button">記事を書く</a>
+</div>
+
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
+    <li><a href="#tab1" data-toggle="tab">公開</a></li>
+	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
+    <li><a href="#tab3" data-toggle="tab">すべて</a></li>
+</ul>
+<div class="tab-content">
+
+	<div class="tab-pane" id="tab4">
+		{if sizeof($open_blogs) == 0}
+		<div class="alert alert-warning mt20" role="alert">公開中の記事はありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>pick!</th>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日</th>
+				</tr>
+			</thead>
+			{foreach from=$pick_blogs item=blogs_item}
+			<tr class="blogs pointer" code="{$blogs_item.code}">
+				<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
+				<td>
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+					{if $blogs_item.status == 0}下書き{/if}
+				</td>
+				<td>
+					{$blogs_item.section_code}
+				</td>
+				<td>{$blogs_item.title}</td>
+				<td>{$blogs_item.open_date|date_format:"%Y/%m/%d"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+
+	<div class="tab-pane" id="tab1">
+		{if sizeof($open_blogs) == 0}
+		<div class="alert alert-warning mt20" role="alert">公開中の記事はありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>pick!</th>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$open_blogs item=blogs_item}
+			<tr class="blogs pointer" code="{$blogs_item.code}">
+				<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
+				<td>
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+					{if $blogs_item.status == 0}下書き{/if}
+				</td>
+				<td>
+					{$blogs_item.section_code}
+				</td>
+				<td>{$blogs_item.title}</td>
+				<td>{$blogs_item.open_date|date_format:"%Y/%m/%d"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+
+	<div class="tab-pane" id="tab2">
+		{if sizeof($closed_blogs) == 0}
+		<div class="alert alert-warning mt20" role="alert">下書き状態の記事はありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>pick!</th>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$closed_blogs item=blogs_item}
+			<tr class="blogs pointer" code="{$blogs_item.code}">
+				<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
+				<td>
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+					{if $blogs_item.status == 0}下書き{/if}
+				</td>
+				<td>
+					{$blogs_item.section_code}
+				</td>
+				<td>{$blogs_item.title}</td>
+				<td>{$blogs_item.open_date|date_format:"%Y/%m/%d"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+
+	<div class="tab-pane" id="tab3">
+		{if sizeof($all_blogs) == 0}
+		<div class="alert alert-warning mt20" role="alert">記事はありません</div>
+		{else}
+		<table class="table table-hover mt20">
+			<thead>
+				<tr>
+					<th>pick!</th>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+			</thead>
+			{foreach from=$all_blogs item=blogs_item}
+			<tr class="blogs pointer" code="{$blogs_item.code}">
+				<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
+				<td>
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+					{if $blogs_item.status == 0}下書き{/if}
+				</td>
+				<td>{$blogs_item.section_code}</td>
+				<td>{$blogs_item.title}</td>
+				<td>{$blogs_item.open_date|date_format:"%Y/%m/%d"}</td>
+			</tr>
+			{/foreach}
+		</table>
+		{/if}
+	</div>
+</div>
+
+<script>
+$(function(){
+	$('.blogs').click(function(){
+		var code = $(this).attr('code');
+		location.href = "/admin/report/edit/"+code;
+	});
+
+	// 一番目のタブをアクティブにする
+	$('.nav-tabs li:first a').trigger('click')
+});
+</script>

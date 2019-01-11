@@ -1,0 +1,206 @@
+<ol class="breadcrumb">
+    <li><a href="/">ホーム</a></li>
+    <li><a href="/admin">マイページ</a></li>
+    <li><a href="/admin/report">記事の管理</a></li>
+    <li class="active">記事を編集する</li>
+</ol>
+
+<form>
+    <fieldset>
+        <div class="my-form-container clear">
+            <div class="form-left">
+
+                <div class="form-group">
+                    <label class="form-group-event-label">タイトル</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
+                    <input style="height: 40px;" type="text" id="title" class="form-control" placeholder=""
+                           value="{$blogs.title}">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">サムネイル画像</label>
+                    <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+                    <input type="hidden" id="main_image" value="{$blogs.main_image}">
+
+                    <!-- サムネイル画像を投稿するとここに表示される！ -->
+                    {if $blogs.main_image}
+                    <div class="thumbnail-img"
+                         style="background:url({$author.main_image}) center center / cover no-repeat;"></div>
+                    {else}
+                    <div class="thumbnail-img"></div>
+                    {/if}
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">説明文</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
+                    <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
+                              placeholder="">{$author.introduction}</textarea>
+                </div>
+            </div>
+            <div class="form-right">
+                <div class="edit-block-menu">
+                    <li>
+                        <button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<script>
+
+    var code = "{$blogs.code}";
+    // $(function(){
+    // 	$('.preview-blog').click(function(){
+    // 		location.href = window.open("/blog/"+code);
+    // 	});
+    // });
+
+    $('.thumbnail-img-block')
+        .uploader('/api/redactor/upload/image', {
+            success: function (response) {
+                var url = response.data.url;
+                $('#main_image').val(url);
+                $('.thumbnail-img').css({
+                    'background-image': 'url(' + url + ')',
+                    'background-position': 'center center',
+                    'background-repeat': 'no-repeat',
+                    'background-size': 'cover'
+                });
+            }
+        });
+
+    $(function () {
+
+        $('.datetimepicker').datetimepicker({
+            format: 'YYYY/MM/DD HH:mm'
+        });
+
+        $('#save').click(function () {
+            var url = "/api/blogs/save";
+            var params = {};
+            params.code = code;
+
+            params.section_code = $('#section_code').val();
+            //params.section_name = $('#section_name').val();
+
+            params.section_code = $("[name=section_code]:checked").val();
+            params.kind = $("[name=kind]:checked").val();
+            //params.keyword = $("[name=keyword]:checked").val();
+            params.pickup = $("[name=pickup]:checked").val();
+            params.secret = $("[name=secret]:checked").val();
+            params.title = $('#title').val();
+            params.main_image = $('#main_image').val();
+            params.description = $('#description').val();
+            params.content = $('#content').val();
+            params.open_date = $('#open_date').val();
+            params.authentication_user = $('#authentication_user').val();
+            params.authentication_password = $('#authentication_password').val();
+            params.status = 1;
+
+            // if (params.section_code == "") {
+            // 	ts.error("カテゴリを選択してください");
+            // 	return false;
+            // }
+            // if (params.kind == "") {
+            // 	ts.error("種別");
+            // 	return false;
+            // }
+            if (params.title == "") {
+                ts.error("タイトルを入力してください");
+                return false;
+            }
+            if (params.description == "") {
+                ts.error("説明文を入力してください");
+                return false;
+            }
+            if (strip_tags(params.content) == "") {
+                ts.error("本文を入力してください");
+                return false;
+            }
+
+            ajax.post(url, params, function (data) {
+                ts.success("公開しました", function () {
+                    //location.href = "/admin/blogs";
+                });
+            });
+        });
+
+        $('#preview').click(function () {
+            window.open("/report/" + code);
+        });
+
+        $('#save_closed').click(function () {
+            var url = "/api/blogs/save";
+            var params = {};
+            params.code = code;
+
+            params.section_code = $('#section_code').val();
+            //params.section_name = $('#section_name').val();
+
+            params.section_code = $("[name=section_code]:checked").val();
+            params.kind = $("[name=kind]:checked").val();
+            //params.keyword = $("[name=keyword]:checked").val();
+            params.pickup = $("[name=pickup]:checked").val();
+
+            params.secret = $("[name=secret]:checked").val();
+            params.title = $('#title').val();
+            params.main_image = $('#main_image').val();
+            params.description = $('#description').val();
+            params.content = $('#content').val();
+            params.open_date = $('#open_date').val();
+            params.authentication_user = $('#authentication_user').val();
+            params.authentication_password = $('#authentication_password').val();
+            params.status = 0;
+
+            if (params.title == "") {
+                params.title = "タイトル未設定";
+            }
+
+            ajax.post(url, params, function (data) {
+                ts.success("下書き保存しました");
+            });
+        });
+
+        $('#delete').click(function () {
+            var url = "/api/blogs/delete";
+            var params = {};
+            params.code = code;
+            bootbox.confirm("この記事を削除しますか？", function (result) {
+                if (result) {
+                    ajax.post(url, params, function (data) {
+                        ts.success("削除しました", function () {
+                            location.href = "/admin/blogs";
+                        });
+                    });
+                }
+                else {
+                    ts.info("キャンセルしました");
+                }
+            });
+        });
+
+        $('#content').redactor({
+            focus: false,
+            lang: 'en',
+            plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
+            imageUpload: '/api/redactor/upload/image',
+            imageManagerJson: '/api/redactor/list/image',
+            fileUpload: '/api/redactor/upload/file',
+            fileManagerJson: '/api/redactor/list/file',
+            callbacks: {
+                imageUpload: function ($img, json) {
+                    $img.attr('src', json.data.url);
+                },
+                fileUploadError: function (json) {
+                    alert(json.message);
+                },
+                imageUploadError: function (json) {
+                    alert(json.message);
+                },
+            }
+        });
+    });
+</script>
