@@ -31,6 +31,7 @@ class Blogs extends Base
         $val->add('keyword');
         $val->add('where_from');
         $val->add('where_from_other');
+        $val->add('author_code', '作成者');
         $val->add('authentication_user', '認証ユーザー名')
             ->add_rule('required_with', 'authentication_password');
         $val->add('authentication_password', '認証パスワード')

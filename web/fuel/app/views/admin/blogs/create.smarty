@@ -32,6 +32,16 @@
                     <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
                               placeholder=""></textarea>
                 </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">作成者</label>
+                    <select id="author_code" class='form-control'>
+                    <option value="">選択してください</option>
+                    {foreach from=$authors item=author}
+                    <option value="{$author.code}">{$author.name}</option>
+                    {/foreach}
+                    </select>
+                </div>
             </div>
             <div class="form-right">
                 <div class="edit-block-menu">
@@ -72,6 +82,7 @@
             params.description = $('#description').val();
             params.content = $('#content').val();
             params.open_date = $('#open_date').val();
+            params.author_code = $('#author_code').val();
             params.authentication_user = $('#authentication_user').val();
             params.authentication_password = $('#authentication_password').val();
             params.status = 1;

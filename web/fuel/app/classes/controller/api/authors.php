@@ -1,22 +1,22 @@
 <?php
 
-use \Model\BlogAuthors;
+use \Model\Authors;
 
-class Controller_Api_BlogAuthors extends Controller_Base
+class Controller_Api_Authors extends Controller_Base
 {
     public function action_create()
     {
-        if (!Auth::has_access('blogauthors.create')) {
+        if (!Auth::has_access('authors.create')) {
             return $this->error('permission denied');
         }
-        $val = BlogAuthors::validate();
+        $val = Authors::validate();
         if (!$val->run()) {
             $error_messages = $val->error_message();
             $message = reset($error_messages);
             return $this->error($message);
         }
         try {
-            return $this->ok(BlogAuthors::create($val->validated()));
+            return $this->ok(Authors::create($val->validated()));
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }
@@ -24,17 +24,17 @@ class Controller_Api_BlogAuthors extends Controller_Base
 
     public function action_save()
     {
-        if (!Auth::has_access('blogauthors.edit')) {
+        if (!Auth::has_access('authors.edit')) {
             return $this->error('permission denied');
         }
-        $val = BlogAuthors::validate();
+        $val = Authors::validate();
         if (!$val->run()) {
             $error_messages = $val->error_message();
             $message = reset($error_messages);
             return $this->error($message);
         }
         try {
-            return $this->ok(BlogAuthors::save($val->validated()));
+            return $this->ok(Authors::save($val->validated()));
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }
@@ -42,9 +42,9 @@ class Controller_Api_BlogAuthors extends Controller_Base
 
     public function action_delete()
     {
-        if (!Auth::has_access('blogauthors.delete')) {
+        if (!Auth::has_access('authors.delete')) {
             return $this->error('permission denied');
         }
-        $this->ok(BlogAuthors::delete(\Input::all()));
+        $this->ok(Authors::delete(\Input::all()));
     }
 }

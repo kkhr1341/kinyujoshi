@@ -2,6 +2,7 @@
 
 use \Model\Blogs;
 use \Model\Sections;
+use \Model\Authors;
 
 class Controller_Admin_Blogs extends Controller_Adminbase
 {
@@ -27,6 +28,7 @@ class Controller_Admin_Blogs extends Controller_Adminbase
         if (!Auth::has_access('blogs.read')) {
             throw new HttpNoAccessException;
         }
+        $this->data['authors'] = Authors::lists();
         $this->data['sections'] = Sections::lists();
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・ブログ';
@@ -38,6 +40,7 @@ class Controller_Admin_Blogs extends Controller_Adminbase
         if (!Auth::has_access('blogs.read')) {
             throw new HttpNoAccessException;
         }
+        $this->data['authors'] = Authors::lists();
         $this->data['blogs'] = Blogs::getByCode('blogs', $code);
         $this->data['sections'] = Sections::lists();
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';

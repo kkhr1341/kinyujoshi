@@ -1,0 +1,12 @@
+<!-- このレポートを書いた人 -->
+<div class="report-writer clear">
+  <h3 class="">このレポートを書いた人</h3>
+  <div class="left-box">
+    <div class="report-writer-img-wrapper" style="background-image: url({$profile_image}); background-position: center center; background-size: cover;">
+  </div>
+  </div>
+  <div class="report-writer-profile-wrapper">
+  <p class="writer-profile-top"><span class="writer-position">編集部</span><span class="writer-name">{$name}</span></p>
+  <p class="writer-profile-text">{$introduction|nl2br}</p>
+  </div>
+</div>

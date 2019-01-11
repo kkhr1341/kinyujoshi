@@ -72,6 +72,12 @@
               <li>
                 <a href="/admin/mails">メールテンプレート一覧</a>
               </li>
+
+              {if (Auth::has_access('authors.read'))}
+              <li>
+                <a href="/admin/authors">作成者の管理</a>
+              </li>
+              {/if}
             </ul>
           </div>
           <div class="my-content-block admin-content-info">

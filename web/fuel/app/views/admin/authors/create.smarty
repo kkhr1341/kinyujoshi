@@ -9,127 +9,16 @@
     <fieldset>
         <div class="my-form-container clear">
             <div class="form-left">
-
-
-                <!--<div class="form-group mb50">
-                    <label>カテゴリ<span class="label label-danger">必須</span></label>
-                    <select id="section_code" class='form-control'>
-                        <option value="">選択してください</option>
-                        {foreach from=$sections item=section}
-                            <option value="{$section.code}">{$section.name}</option>
-                        {/foreach}
-                    </select>
-                </div>-->
-
-                {*
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">カテゴリー</label>
-                    <div class="radio_box clear">
-                        <input type="radio" value="lifestyle" name="section_code" id="section_code1" class="form-radio"
-                               placeholder="">
-                        <label for="section_code1" class="form-long">ライフスタイル</label>
-                        <input type="radio" value="carrier" name="section_code" id="section_code2" class="form-radio"
-                               placeholder="">
-                        <label for="section_code2" class="form-long">キャリア</label>
-                        <input type="radio" value="independence" name="section_code" id="section_code3"
-                               class="form-radio" placeholder="">
-                        <label for="section_code3" class="form-long">どくりつ&きぎょう</label>
-                        <input type="radio" value="parallel" name="section_code" id="section_code4" class="form-radio"
-                               placeholder="">
-                        <label for="section_code4" class="form-long">パラレル</label>
-                    </div>
-                </div>
-                *}
-
-
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">レポートの種類</label>
-
-                    <div class="radio_box clear">
-                        <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="">
-                        <label for="kind1" class="form-long">女子会レポ</label>
-
-                        <input type="radio" value="イベントレポート" name="kind" id="kind2" class="form-radio" placeholder="">
-                        <label for="kind2" class="form-long">イベントレポ</label>
-
-                        <input type="radio" value="取材レポート" name="kind" id="kind3" class="form-radio" placeholder="">
-                        <label for="kind3" class="form-long">取材レポ</label>
-
-                        <input type="radio" value="イベント告知" name="kind" id="kind4" class="form-radio" placeholder="">
-                        <label for="kind4" class="form-long">イベント告知</label>
-
-                        <input type="radio" value="コラム" name="kind" id="kind5" class="form-radio" placeholder="">
-                        <label for="kind5" class="form-long">コラム</label>
-
-                        <input type="radio" value="わたしを知る" name="kind" id="kind6" class="form-radio" placeholder="">
-                        <label for="kind6" class="form-long" style="border:1px solid #89e2d1;box-sizing: border-box;">「わたし」を知る</label>
-
-                        <input type="radio" value="きんゆう散歩" name="kind" id="kind7" class="form-radio" placeholder="">
-                        <label for="kind7" class="form-long">きんゆう散歩</label>
-
-
-                    </div>
-                </div>
-
-                {*
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">キーワード</label>
-
-                    <div class="radio_box clear">
-                        <input type="radio" value="ためる" name="keyword" id="keyword01" class="form-radio" placeholder="">
-                        <label for="keyword01" class="form-long">ためる</label>
-
-                        <input type="radio" value="つかう" name="keyword" id="keyword02" class="form-radio" placeholder="">
-                        <label for="keyword02" class="form-long">つかう</label>
-
-                        <input type="radio" value="ふやす" name="keyword" id="keyword03" class="form-radio" placeholder="">
-                        <label for="keyword03" class="form-long">ふやす</label>
-
-                        <input type="radio" value="まもる" name="keyword" id="keyword04" class="form-radio" placeholder="">
-                        <label for="keyword04" class="form-long">まもる</label>
-
-                        <input type="radio" value="かせぐ" name="keyword" id="keyword05" class="form-radio" placeholder="">
-                        <label for="keyword05" class="form-long">かせぐ</label>
-
-                    </div>
-                </div>
-                *}
-
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">ピックアップ</label>
-
-                    <div class="radio_box clear">
-                        <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="">
-                        <label for="pickup01" class="form-long">yes</label>
-
-                        <input type="radio" value="0" name="pickup" id="pickup02" class="form-radio" placeholder="">
-                        <label for="pickup02" class="form-long">no!</label>
-
-                    </div>
-                </div>
-
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">メンバー限定レポート</label>
-                    <div class="radio_box clear">
-                        <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="">
-                        <label for="secret01" class="form-long">YES!</label>
-
-                        <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder=""
-                               checked>
-                        <label for="secret02" class="form-long">NO!</label>
-                    </div>
-                </div>
-
                 <div class="form-group">
-                    <label class="form-group-event-label">タイトル</label>
+                    <label class="form-group-event-label">名前</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
-                    <input type="text" id="title" class="form-control" placeholder="">
+                    <input type="text" id="name" class="form-control" placeholder="">
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">サムネイル画像</label>
                     <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
-                    <input type="hidden" id="main_image">
+                    <input type="hidden" id="profile_image">
 
                     <!-- サムネイル画像を投稿するとここに表示される！ -->
                     <div class="thumbnail-img"></div>
@@ -137,45 +26,18 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-group-event-label">説明文</label>
+                    <label class="form-group-event-label">自己紹介</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
-                    <textarea style="height: 80px;" type="text" id="description" class="form-control"
+                    <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
                               placeholder=""></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group-event-label">本文</label>
-                    <textarea id="content" name="content"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group-event-label">公開日時</label>
-
-                    <div class='input-group date datetimepicker'>
-                        <input type='text' class="form-control" id="open_date" value="{date('YY/mm/dd HH:ii')}"/>
-                        <span class="input-group-addon">
-							<span class="glyphicon glyphicon-calendar"></span>
-						</span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group-event-label">認証ユーザー名</label>
-                    <input type="text" id="authentication_user" class="form-control" placeholder="">
-                </div>
-
-                <div class="form-group">
-                    <label class="form-group-event-label">認証パスワード</label>
-                    <input type="text" id="authentication_password" class="form-control" placeholder="">
                 </div>
             </div>
             <div class="form-right">
                 <div class="edit-block-menu">
                     <li>
-                        <button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button>
+                        <button class="edit-block-menu-btn release-btn" type="button" id="save">保存</button>
                     </li>
                 </div>
-                <p class="sub-description"><span style="red">※</span>公開する場合は、一度下書き保存してから公開してください。</p>
             </div>
         </div>
     </fieldset>
@@ -186,7 +48,7 @@
             .uploader('/api/redactor/upload/image', {
                 success: function (response) {
                     var url = response.data.url;
-                    $('#main_image').val(url);
+                    $('#profile_image').val(url);
                     $('.thumbnail-img').css({
                         'background-image': 'url(' + url + ')',
                         'background-position': 'center center',
@@ -196,106 +58,30 @@
                 }
             });
 
-        $('.datetimepicker').datetimepicker({
-            format: 'YYYY/MM/DD HH:mm'
-        });
-
         $('#save').click(function () {
-            var url = "/api/blogs/create";
+            var url = "/api/authors/create";
             var params = {};
-            params.section_code = $("[name=section_code]:checked").val();
-            params.kind = $("[name=kind]:checked").val();
-            //params.keyword = $("[name=keyword]:checked").val();
-            params.pickup = $("[name=pickup]:checked").val();
-            params.secret = $("[name=secret]:checked").val();
-            params.title = $('#title').val();
-            params.main_image = $('#main_image').val();
-            params.description = $('#description').val();
-            params.content = $('#content').val();
-            params.open_date = $('#open_date').val();
-            params.authentication_user = $('#authentication_user').val();
-            params.authentication_password = $('#authentication_password').val();
-            params.status = 1;
+            params.name = $('#name').val();
+            params.profile_image = $('#profile_image').val();
+            params.introduction = $('#introduction').val();
 
-            if (params.kind == "") {
-                ts.error("レポートの種類を選択してください");
+            if (params.name == "") {
+                ts.error("名前を入力してください");
                 return false;
             }
-            if (params.section_code == "") {
-                ts.error("カテゴリを選択してください");
+            if (params.profile_image == "") {
+                ts.error("プロフィール画像を入力してください");
                 return false;
             }
-            if (params.kind == "") {
-                ts.error("種別");
-                return false;
-            }
-            if (params.title == "") {
-                ts.error("タイトルを入力してください");
-                return false;
-            }
-            if (params.description == "") {
-                ts.error("説明文を入力してください");
-                return false;
-            }
-            if (strip_tags(params.content) == "") {
-                ts.error("本文を入力してください");
+            if (params.introduction == "") {
+                ts.error("自己紹介を入力してください");
                 return false;
             }
             ajax.post(url, params, function (data) {
-                ts.success("公開しました", function () {
-                    location.href = "/admin/blogs";
+                ts.success("追加が完了しました", function () {
+                    location.href = "/admin/authors";
                 });
             });
         });
-
-        $('#save_closed').click(function () {
-            var url = "/api/blogs/create";
-            var params = {};
-            params.section_code = $("[name=section_code]:checked").val();
-            params.kind = $("[name=kind]:checked").val();
-            //params.keyword = $("[name=keyword]:checked").val();
-            params.pickup = $("[name=pickup]:checked").val();
-            params.secret = $("[name=secret]:checked").val();
-            params.title = $('#title').val();
-            params.main_image = $('#main_image').val();
-            params.description = $('#description').val();
-            params.content = $('#content').val();
-            params.open_date = $('#open_date').val();
-            params.authentication_user = $('#authentication_user').val();
-            params.authentication_password = $('#authentication_password').val();
-            params.status = 0;
-
-            if (params.title == "") {
-                params.title = "タイトル未設定";
-            }
-            ajax.post(url, params, function (data) {
-                ts.success("下書き保存しました", function () {
-                    location.href = "/admin/blogs";
-                });
-            });
-        });
-
-        $('#content').redactor({
-            focus: false,
-            lang: 'en',
-            plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
-            imageUpload: '/api/redactor/upload/image',
-            imageManagerJson: '/api/redactor/list/image',
-            fileUpload: '/api/redactor/upload/file',
-            fileManagerJson: '/api/redactor/list/file',
-            callbacks: {
-                imageUpload: function ($img, json) {
-                    $img.attr('src', json.data.url);
-                },
-                fileUploadError: function (json) {
-                    alert(json.message);
-                },
-                imageUploadError: function (json) {
-                    alert(json.message);
-                },
-            }
-        });
-
-
     });
 </script>
