@@ -7,7 +7,7 @@
 
 	<div class="joshikai-main-block">
 
-	<div class="business-header clear">
+	<div class="pc-business-header clear">
 		<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
 		<nav class="clear">
 			<ul>
@@ -20,6 +20,13 @@
 			<p class="header-contact-btn"><a href="#business-contact" target="_blank">お問い合わせ</a></p>
 		</nav>
 	</div>
+
+	<div class="sp-business-header clear">
+		<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
+	</div>
+
+
+
 
 		<div class="business-main">
 			  <div class="main-copy-wrapper">

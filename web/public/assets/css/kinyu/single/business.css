@@ -2,493 +2,10 @@
 	display: none;
 }
 
-/*------------------------------
-パートナー
--------------------------------*/
-	.business-partner {
-		width: 100%;
-		min-width: 1050px;
-    margin: 0 auto;
-		padding: 180px 0;
-		text-align: center;
-		background: url(/images/business/partner.jpg) center center;
-		background-size: cover;
-		 background-attachment: fixed;
-	}
-	/* .partner-link-btn  {
-		padding: 80px 40px;
-		width: 450px;
-		background: rgba(255,255,255,0.8);
-		margin: 0 auto;
-	} */
-	.partner-link-btn a:hover {
-		opacity: 0.7;
-	}
-	.partner-link-btn a {
-		background: #e0dc5f;
-		padding:16px 24px;
-		color: #fff;
-		font-size: 15px;
-		transition: .5s;
-		width: 300px;
-
-	}
-
-/*------------------------------
-お問い合わせ
--------------------------------*/
-	.business-contact {
-		text-align: center;
-		min-width: 1050px;
-    margin: 0 auto;
-		padding: 80px 0;
-		background: #f9f9f9;
-	}
-	.business-contact-btn2 a:hover {
-		opacity: 0.6;
-	}
-	.business-contact-btn2 a {
-		display: block;
-		background: #e0dc5f;
-		padding:16px 24px;
-		color: #fff;
-		font-size: 15px;
-		transition: .5s;
-		width: 350px;
-		margin: 30px auto 0;
-	}
-/*------------------------------
-概要（about）
--------------------------------*/
-	.business-about {
-		width: 100%;
-		min-width: 1050px;
-    margin: 0 auto;
-		background: #f9f9f9;
-		padding: 80px 0;
-		text-align: center;
-	}
-.business-about-text {
-	width: 870px;
-	text-align: left;
-	margin: 0 auto 30px;
-	padding: 20px;
-}
-.business-about-text .left-wrapper {
-	float: left;
-	margin-right: 20px;
-}
-.business-about-text .left-wrapper img {
-	width: 180px;
-}
-.business-about-text .right-wrapper {
-	float: left;
-	width: 628px;
-	padding-top: 15px;
-}
-.about-business-wrapper {
-	width: 1000px;
-	margin: 0 auto;
-}
-.about-business-wrapper li {
-	display: inline-block;
-	margin: 0 10px;
-	width: 300px;
-	background: #fff;
-	box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
-}
-.about-business-wrapper li img {
-	width: 100%;
-}
-.about-business-wrapper .mt30 {
-	margin-top: 30px;
-}
-.kingjo-chan {
-	float: none;
-	margin: 0 auto 20px;
-	text-align: center;
-}
-.kingjo-chan img {
-	width: 50%;
-}
-
-/*------------------------------
-事例（works）
--------------------------------*/
-	.business-works {
-		padding: 80px 0;
-		min-width: 1050px;
-    margin: 0 auto;
-	}
-	.business-works-wrapper {
-		width: 100%;
-		min-width: 1200px;
-	}
-	.business-works-wrapper li {
-		float: left;
-		width: 25%;
-		height: 250px;
-		background: #eee;
-		vertical-align: bottom;
-		line-height: 1.7;
-		transition: .3s;
-
-	}
-	.business-works-wrapper li:hover{
-		transform:scale(1.05);
-		position: relative;
-		z-index: 2;
-	}
-
-	.business-works-wrapper .caption {
-		color: #fff;
-		font-size: 13px;
-	}
-	.work1 .mask {
-		width: 100%;
-		height:	 100%;
-		position: absolute;
-		padding: 25px;
-		top: 0;
-		left: 0;
-		opacity: 0;	/* マスクを表示しない */
-		background-color: rgba(0,0,0,0.4);
-		-webkit-transition:	all 0.6s ease;
-		transition:	all 0.6s ease;
-	}
-	.work1:hover .mask {
-		opacity: 1;	/* マスクを表示する */
-		padding-top: 60px;
-	}
-	.work2 .mask {
-		width: 100%;
-		height:	 100%;
-		position: absolute;
-		padding: 25px;
-		top: 0;
-		left: 0;
-		opacity: 0;	/* マスクを表示しない */
-		background-color: rgba(0,0,0,0.4);
-		-webkit-transition:	all 0.6s ease;
-		transition:	all 0.6s ease;
-	}
-	.work2:hover .mask {
-		opacity: 1;	/* マスクを表示する */
-		padding-top: 60px;
-	}
-	.work3 .mask {
-		width: 100%;
-		height:	 100%;
-		position: absolute;
-		padding: 25px;
-		top: 0;
-		left: 0;
-		opacity: 0;	/* マスクを表示しない */
-		background-color: rgba(0,0,0,0.4);
-		-webkit-transition:	all 0.6s ease;
-		transition:	all 0.6s ease;
-	}
-	.work3:hover .mask {
-		opacity: 1;	/* マスクを表示する */
-		padding-top: 60px;
-	}
-	.work4 .mask {
-		width: 100%;
-		height:	 100%;
-		position: absolute;
-		padding: 25px;
-		top: 0;
-		left: 0;
-		opacity: 0;	/* マスクを表示しない */
-		background-color: rgba(0,0,0,0.4);
-		-webkit-transition:	all 0.6s ease;
-		transition:	all 0.6s ease;
-	}
-	.work4:hover .mask {
-		opacity: 1;	/* マスクを表示する */
-		padding-top: 60px;
-	}
-	.work5 .mask {
-		width: 100%;
-		height:	 100%;
-		position: absolute;
-		padding: 25px;
-		top: 0;
-		left: 0;
-		opacity: 0;	/* マスクを表示しない */
-		background-color: rgba(0,0,0,0.4);
-		-webkit-transition:	all 0.6s ease;
-		transition:	all 0.6s ease;
-	}
-	.work5:hover .mask {
-		opacity: 1;	/* マスクを表示する */
-		padding-top: 45px;
-	}
-	.work6 .mask {
-		width: 100%;
-		height:	 100%;
-		position: absolute;
-		padding: 25px;
-		top: 0;
-		left: 0;
-		opacity: 0;	/* マスクを表示しない */
-		background-color: rgba(0,0,0,0.4);
-		-webkit-transition:	all 0.6s ease;
-		transition:	all 0.6s ease;
-	}
-	.work6:hover .mask {
-		opacity: 1;	/* マスクを表示する */
-		padding-top: 60px;
-	}
-	.work7 .mask {
-		width: 100%;
-		height:	 100%;
-		position: absolute;
-		padding: 25px;
-		top: 0;
-		left: 0;
-		opacity: 0;	/* マスクを表示しない */
-		background-color: rgba(0,0,0,0.4);
-		-webkit-transition:	all 0.6s ease;
-		transition:	all 0.6s ease;
-	}
-	.work7:hover .mask {
-		opacity: 1;	/* マスクを表示する */
-		padding-top: 60px;
-	}
-	.work8 .mask {
-		width: 100%;
-		height:	 100%;
-		position: absolute;
-		padding: 25px;
-		top: 0;
-		left: 0;
-		opacity: 0;	/* マスクを表示しない */
-		background-color: rgba(0,0,0,0.4);
-		-webkit-transition:	all 0.6s ease;
-		transition:	all 0.6s ease;
-	}
-	.work8:hover .mask {
-		opacity: 1;	/* マスクを表示する */
-		padding-top: 60px;
-	}
-
-
-	.business-works-wrapper .work1 {
-		background: url(/images/business/1.png) top center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-	}
-	.business-works-wrapper .work2 {
-		background: url(/images/business/2.jpeg) top center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-	}
-	.business-works-wrapper .work3 {
-		background: url(/images/business/3.png) top center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-	}
-	.business-works-wrapper .work4 {
-		background: url(/images/business/4.jpg) top center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-	}
-	.business-works-wrapper .work5 {
-		background: url(/images/business/5.JPG) top center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-	}
-	.business-works-wrapper .work6 {
-		background: url(/images/business/6.png) top center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-	}
-	.business-works-wrapper .work7 {
-		background: url(/images/business/7.jpg) top center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-	}
-	.business-works-wrapper .work8 {
-		background: url(/images/business/8.jpg) top center;
-		background-size: cover;
-		overflow: hidden;
-		position: relative;
-	}
-	.business-works-btn {
-		text-align: center;
-	}
-	.business-works-btn a:hover {
-		opacity: 0.6;
-	}
-	.business-works-btn a {
-		display: block;
-		background: #fff;
-		padding: 16px 24px;
-		color: #8ddcd1;
-		font-size: 15px;
-		border: 1px solid #8ddcd1;
-		transition: .5s;
-		width: 200px;
-		margin: 40px auto 0;
-	}
-	.business-works .caption a{
-		transition:.2s;
-	}
-	.business-works .caption a:hover {
-		border-bottom: 1px solid #fffed3;
-	}
-
-/*------------------------------
-ミッション
--------------------------------*/
-	.business-mission {
-		width: 1000px;
-		margin: 0 auto;
-		padding: 80px 0;
-	}
-	.three-step img{
-		width: 370px;
-		margin: 30px auto 0;
-	}
-	.business-mission-img-wrapper {
-		float: left;
-		background: url(/images/business/business-service-img.jpeg);
-		background-size: cover;
-		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
-		width: 500px;
-		height: 350px;
-		opacity: .9;
-	}
-	.business-mission-text-wrapper {
-		float: right;
-		width: 450px;
-		text-align: center;
-		padding-top: 30px;
-	}
-	.business-mission-text-wrapper  img{
-		display: block;
-		width: 150px;
-		margin: 0 auto;
-	}
-	.business-mission-text-wrapper  p{
-		font-size: 16px;
-		line-height: 1.7;
-		padding-top: 30px;
-		margin-bottom: 40px;
-	}
-
-	.memberpage-link-btn a:hover {
-		opacity: 0.6;
-	}
-	.memberpage-link-btn a {
-		background: #8ddcd1;
-		padding:14px 24px;
-		color: #fff;
-		font-size: 15px;
-		border: 1px solid #8ddcd1;
-		transition: .5s;
-		width: 350px;
-		margin: 30px auto 0;
-	}
-
-
-
-.business-mission-text-wrapper .gray-line {
-		padding-top: 0;
-	}
-
-
-/*------------------------------
-提供サービス
--------------------------------*/
-	.gray-line {
-		border-bottom: 1px solid #eee;
-		width: 50%;
-		margin: 10px auto 20px;
-	}
-	.business-service {
-		width: 100%;
-		min-width: 1050px;
-    margin: 0 auto;
-	}
-	.business-service-wrapper {
-		margin: 0 auto;
-		width: 1050px;
-	}
-
-	.service-box {
-		width: 320px;
-		height: 390px;
-		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
-		position: relative;
-		padding: 15px;
-		float: left;
-		margin: 0 15px;
-	}
-
-	.business-step {
-		max-width: 80px;
-		position: absolute;
-		top: -47px;
-		left: 20px;
-	}
-
-	.service-icon img {
-		margin: 0 auto;
-		display: block;
-		max-width: 70%;
-	}
-	.service-type img {
-		max-width: 100%;
-	}
-	.service-caution {
-		font-size: 12px;
-		padding-top: 10px;
-		margin: 20px auto;
-		width: 256px;
-	}
-	.service-img img{
-		width: 100%;
-		margin-top: 20px;
-	}
-
-
-	.business-caution {
-		font-size: 12px;
-		margin-top: 30px;
-		text-align: center;
-	}
-
-/*-----------------
-見出し
--------------------*/
-	.business-section {
-		padding: 80px 0 15px;
-	}
-	.section-title-wrapper {
-		padding-bottom: 60px;
-		text-align: center;
-	}
-	.section-title {
-		font-size: 28px;
-		color: #444;
-	}
-	.section-title-wrapper p {
-		margin-top: 20px;
-		font-size: 14px;
-	}
 /*-----------------
 ヘッダー
 -------------------*/
-	.business-header {
+	.pc-business-header {
 		width:100%;
 		min-width: 1050px;
 		padding: 15px 20px;
@@ -504,22 +21,21 @@
 		width: 380px;
 		margin-top:1px;
 	}
-	.business-header nav {
+	.pc-business-header nav {
 		float: right;
 	}
-	.business-header nav ul{
+	.pc-business-header nav ul{
 		margin: 15px 10px 0 0;
 		float: left;
 	}
-	 .business-header nav li{
+	 .pc-business-header nav li{
 		font-size: 14px;
 		display: inline-block;
 		padding: 0 10px;
 		transition: .5s;
 		 position: relative;
 	}
-
-	.business-header nav li::after{
+	.pc-business-header nav li::after{
 	  position: absolute;
 	  bottom: 1px;
 	  left: 0;
@@ -532,7 +48,7 @@
 	  transition: .3s;
 	}
 
-.business-header nav li:hover::after {
+.pc-business-header nav li:hover::after {
   bottom: -4px;
   opacity: 1;
   visibility: visible;
@@ -550,6 +66,64 @@
 }
 .header-contact-btn a:hover{
 	opacity:0.6;
+}
+.sp-business-header  {
+		display: none;
+}
+
+/* タブレット */
+@media screen and (max-width: 1024px) {
+	/* toCのヘッダーやロゴを非表示 */
+	.kinyu-sp-header {
+		display: none;
+	}
+	.pc-business-header {
+		padding: 14px 20px;
+		display: block;
+		min-width: 0;
+	}
+	.fix-header-sp {
+		display: none;
+	}
+	.header-profile-block {
+		display: none;
+	}
+	.header-contact-btn a {
+	    padding: 8px 12px;
+	    background: #8ddcd1;
+	    cursor: pointer;
+	    color: #fff;
+	    transition: .5s;
+	}
+	.business-logo-wrapper img {
+    width: 240px;
+    margin-top: 7px;
+	}
+}
+
+/* スマホ */
+@media screen and (max-width: 480px) {
+	.pc-business-header  {
+			display: none;
+	}
+	.sp-business-header  {
+			display: block;
+			width:100%;
+			padding: 10px 20px;
+			position: fixed;
+			z-index: 999;
+			background: rgba(255,255,255,0.9);
+			top: 0;
+			text-align: center;
+	}
+	.business-logo-wrapper {
+		float: none;
+	}
+	.business-logo-wrapper img {
+    width: 220px;
+		margin: 0 auto;
+    margin-top: 1px;
+	}
 }
 
 /*------------------------------
@@ -609,4 +183,919 @@ select {
 
 ::-ms-expand {	/* select要素のデザインを無効にする（IE用） */
 display: none;
+}
+
+/* スマホ */
+@media screen and (max-width: 1024px) {
+	.business-main {
+		background: url(/images/business/business-main-bg.png) 81% 65%;
+		background-size:cover;
+		margin-top: 3px;
+	}
+	.business-main img {
+    max-width: 500px;
+	}
+	.main-copy-wrapper {
+    padding: 20px;
+	}
+	.business-contact-btn a{
+		width: 350px;
+		font-size: 14px;
+		box-sizing: border-box;
+	}
+	.main-copy-wrapper {
+		top: 57%;
+	}
+}
+
+/* スマホ */
+@media screen and (max-width: 480px) {
+	.business-main {
+		background: url(/images/business/business-main-bg.png) 81% 65%;
+		background-size:cover;
+		margin-top:  5px;
+	}
+}
+/*-----------------
+見出し
+-------------------*/
+	.business-section {
+		padding: 80px 0 15px;
+	}
+	.section-title-wrapper {
+		padding-bottom: 60px;
+		text-align: center;
+	}
+	.section-title {
+		font-size: 28px;
+		color: #444;
+	}
+	.section-title-wrapper p {
+		margin-top: 20px;
+		font-size: 14px;
+	}
+
+
+	/* タブレット */
+	@media screen and (max-width: 1024px) {
+		.section-title {
+			font-size: 22px;
+			color: #444;
+		}
+		.section-title-wrapper {
+			padding-bottom: 40px;
+			text-align: center;
+		}
+		.section-title-wrapper p {
+	    margin-top: 20px;
+	    font-size: 12px;
+		}
+	}
+
+	/* スマホ */
+	@media screen and (max-width: 480px) {
+		.section-title {
+			font-size: 18px;
+			color: #444;
+		}
+		.section-title-wrapper {
+			padding-bottom: 40px;
+			text-align: center;
+		}
+		.section-title-wrapper p {
+	    margin-top: 20px;
+	    font-size: 12px;
+		}
+	}
+
+/*------------------------------
+提供サービス
+-------------------------------*/
+	.gray-line {
+		border-bottom: 1px solid #eee;
+		width: 50%;
+		margin: 10px auto 20px;
+	}
+	.business-service {
+		width: 100%;
+		min-width: 1050px;
+    margin: 0 auto;
+	}
+	.business-service-wrapper {
+		margin: 0 auto;
+		width: 1050px;
+	}
+	.service-box {
+		width: 320px;
+		height: 390px;
+		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+		position: relative;
+		padding: 15px;
+		float: left;
+		margin: 0 15px;
+	}
+	.business-step {
+		max-width: 80px;
+		position: absolute;
+		top: -47px;
+		left: 20px;
+	}
+	.service-icon img {
+		margin: 0 auto;
+		display: block;
+		max-width: 70%;
+	}
+	.service-type img {
+		max-width: 100%;
+	}
+	.service-caution {
+		font-size: 12px;
+		padding-top: 10px;
+		margin: 20px auto;
+		width: 256px;
+	}
+	.service-img img{
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.business-caution {
+		font-size: 12px;
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	.three-step img{
+		width: 370px;
+		margin: 30px auto 0;
+	}
+
+	/* タブレット */
+	@media screen and (max-width: 1024px) {
+		.business-section {
+			padding: 60px 0 40px;
+		}
+		.business-service {
+			min-width: auto;
+		}
+		.business-service-wrapper {
+			margin: 0 auto;
+			width: 100%;
+		}
+		.service-box {
+		    width: 29%;
+		    height: 330px;
+		    box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+		    position: relative;
+		    padding: 15px;
+		    float: left;
+		    margin: 0 15px;
+		}
+		.three-step img {
+	    width: 300px;
+	    margin: 30px auto 0;
+		}
+	}
+
+
+	/* スマホ */
+	@media screen and (max-width: 480px) {
+		.business-service {
+		    width: 100%;
+		    min-width: 100%;
+		    margin: 0 auto;
+		}
+		.business-section {
+	    padding: 60px 20px;
+	}
+		.three-step img {
+	    width: 270px;
+	    margin: 30px auto 0;
+		}
+		.business-service-wrapper {
+		    margin: 0 auto;
+		    width: 100%;
+		}
+		.service-box {
+		    width: 80%;
+		    height: auto;
+		    box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+		    position: relative;
+		    padding: 15px;
+		    float: none;
+		    margin: 0 auto 50px;
+		}
+		.service-caution {
+	    font-size: 12px;
+	     padding-top: 0px;
+	    margin: 0px auto;
+	    width: 256px;
+	}
+	}
+
+
+/*------------------------------
+パートナー
+-------------------------------*/
+	.business-partner {
+		width: 100%;
+		min-width: 1050px;
+    margin: 0 auto;
+		padding: 180px 0;
+		text-align: center;
+		background: url(/images/business/partner.jpg) center center;
+		background-size: cover;
+		 background-attachment: fixed;
+	}
+	/* .partner-link-btn  {
+		padding: 80px 40px;
+		width: 450px;
+		background: rgba(255,255,255,0.8);
+		margin: 0 auto;
+	} */
+	.partner-link-btn a:hover {
+		opacity: 0.7;
+	}
+	.partner-link-btn a {
+		background: #e0dc5f;
+		padding:16px 24px;
+		color: #fff;
+		font-size: 15px;
+		transition: .5s;
+		width: 300px;
+	}
+
+	/* スマホ */
+	@media screen and (max-width: 1024px) {
+		.business-partner {
+	    width: 100%;
+	    min-width: auto;
+	}
+}
+
+
+
+	/*------------------------------
+	概要（about）
+	-------------------------------*/
+		.business-about {
+			width: 100%;
+			min-width: 1050px;
+	    margin: 0 auto;
+			background: #f9f9f9;
+			padding: 80px 0;
+			text-align: center;
+		}
+	.business-about-text {
+		width: 870px;
+		text-align: left;
+		margin: 0 auto 30px;
+		padding: 20px;
+	}
+	.business-about-text .left-wrapper {
+		float: left;
+		margin-right: 20px;
+	}
+	.business-about-text .left-wrapper img {
+		width: 180px;
+	}
+	.business-about-text .right-wrapper {
+		float: left;
+		width: 628px;
+		padding-top: 15px;
+	}
+	.about-business-wrapper {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.about-business-wrapper li {
+		display: inline-block;
+		margin: 0 10px;
+		width: 300px;
+		background: #fff;
+		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+	}
+	.about-business-wrapper li img {
+		width: 100%;
+	}
+	.about-business-wrapper .mt30 {
+		margin-top: 30px;
+	}
+	.kingjo-chan {
+		float: none;
+		margin: 0 auto 20px;
+		text-align: center;
+	}
+	.kingjo-chan img {
+		width: 50%;
+	}
+
+	/* タブレット */
+	@media screen and (max-width: 1024px) {
+	.business-about {
+	    width: 100%;
+	    min-width: auto;
+	    margin: 0 auto;
+	    background: #f9f9f9;
+	    padding: 60px 0;
+	    text-align: center;
+	}
+	.about-business-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+	.business-about-text {
+	    width: 100%;
+	    text-align: left;
+	    margin: 0 auto 30px;
+	    padding: 20px;
+		}
+	.business-about-text .right-wrapper {
+	    float: left;
+	    width: 500px;
+	    padding-top: 15px;
+	}
+	.about-business-wrapper li {
+	    width: 220px;
+	}
+}
+
+	/* スマホ */
+	@media screen and (max-width: 480px) {
+		.business-about {
+				width: 100%;
+				min-width: 100%;
+				margin: 0 auto;
+				padding: 60px 20px;
+		}
+		.business-about-text {
+		    width: 100%;
+		    text-align: left;
+				padding: 0;
+		    margin: 0 auto 30px;
+		}
+		.kingjo-chan img {
+			    width: 80%;
+			}
+			.business-about-text .left-wrapper {
+				float: none;
+				margin-right: 0px;
+			}
+			.business-about-text .left-wrapper img {
+				width: 100%;
+			}
+			.business-about-text .right-wrapper {
+				float: none;
+				width: 100%;
+				padding-top: 15px;
+			}
+			.about-business-wrapper {
+			    width: 100%;
+			}
+			.about-business-wrapper .mt30 {
+				margin-top: 10px;
+			}
+			.about-business-wrapper li {
+			    display: inline-block;
+			    margin: 10px 10px;
+			    width: 68%;
+			    background: #fff;
+			    box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+			}
+	}
+
+	/*------------------------------
+	事例（works）
+	-------------------------------*/
+		.business-works {
+			padding: 80px 0;
+			min-width: 1050px;
+	    margin: 0 auto;
+		}
+		.business-works-wrapper {
+			width: 100%;
+			min-width: 1200px;
+		}
+		.business-works-wrapper li {
+			float: left;
+			width: 25%;
+			height: 250px;
+			background: #eee;
+			vertical-align: bottom;
+			line-height: 1.7;
+			transition: .3s;
+
+		}
+		.business-works-wrapper li:hover{
+			transform:scale(1.05);
+			position: relative;
+			z-index: 2;
+		}
+
+		.business-works-wrapper .caption {
+			color: #fff;
+			font-size: 13px;
+		}
+		.work1 .mask {
+			width: 100%;
+			height:	 100%;
+			position: absolute;
+			padding: 25px;
+			top: 0;
+			left: 0;
+			opacity: 0;	/* マスクを表示しない */
+			background-color: rgba(0,0,0,0.4);
+			-webkit-transition:	all 0.6s ease;
+			transition:	all 0.6s ease;
+		}
+		.work1:hover .mask {
+			opacity: 1;	/* マスクを表示する */
+			padding-top: 60px;
+		}
+		.work2 .mask {
+			width: 100%;
+			height:	 100%;
+			position: absolute;
+			padding: 25px;
+			top: 0;
+			left: 0;
+			opacity: 0;	/* マスクを表示しない */
+			background-color: rgba(0,0,0,0.4);
+			-webkit-transition:	all 0.6s ease;
+			transition:	all 0.6s ease;
+		}
+		.work2:hover .mask {
+			opacity: 1;	/* マスクを表示する */
+			padding-top: 60px;
+		}
+		.work3 .mask {
+			width: 100%;
+			height:	 100%;
+			position: absolute;
+			padding: 25px;
+			top: 0;
+			left: 0;
+			opacity: 0;	/* マスクを表示しない */
+			background-color: rgba(0,0,0,0.4);
+			-webkit-transition:	all 0.6s ease;
+			transition:	all 0.6s ease;
+		}
+		.work3:hover .mask {
+			opacity: 1;	/* マスクを表示する */
+			padding-top: 60px;
+		}
+		.work4 .mask {
+			width: 100%;
+			height:	 100%;
+			position: absolute;
+			padding: 25px;
+			top: 0;
+			left: 0;
+			opacity: 0;	/* マスクを表示しない */
+			background-color: rgba(0,0,0,0.4);
+			-webkit-transition:	all 0.6s ease;
+			transition:	all 0.6s ease;
+		}
+		.work4:hover .mask {
+			opacity: 1;	/* マスクを表示する */
+			padding-top: 60px;
+		}
+		.work5 .mask {
+			width: 100%;
+			height:	 100%;
+			position: absolute;
+			padding: 25px;
+			top: 0;
+			left: 0;
+			opacity: 0;	/* マスクを表示しない */
+			background-color: rgba(0,0,0,0.4);
+			-webkit-transition:	all 0.6s ease;
+			transition:	all 0.6s ease;
+		}
+		.work5:hover .mask {
+			opacity: 1;	/* マスクを表示する */
+			padding-top: 45px;
+		}
+		.work6 .mask {
+			width: 100%;
+			height:	 100%;
+			position: absolute;
+			padding: 25px;
+			top: 0;
+			left: 0;
+			opacity: 0;	/* マスクを表示しない */
+			background-color: rgba(0,0,0,0.4);
+			-webkit-transition:	all 0.6s ease;
+			transition:	all 0.6s ease;
+		}
+		.work6:hover .mask {
+			opacity: 1;	/* マスクを表示する */
+			padding-top: 60px;
+		}
+		.work7 .mask {
+			width: 100%;
+			height:	 100%;
+			position: absolute;
+			padding: 25px;
+			top: 0;
+			left: 0;
+			opacity: 0;	/* マスクを表示しない */
+			background-color: rgba(0,0,0,0.4);
+			-webkit-transition:	all 0.6s ease;
+			transition:	all 0.6s ease;
+		}
+		.work7:hover .mask {
+			opacity: 1;	/* マスクを表示する */
+			padding-top: 60px;
+		}
+		.work8 .mask {
+			width: 100%;
+			height:	 100%;
+			position: absolute;
+			padding: 25px;
+			top: 0;
+			left: 0;
+			opacity: 0;	/* マスクを表示しない */
+			background-color: rgba(0,0,0,0.4);
+			-webkit-transition:	all 0.6s ease;
+			transition:	all 0.6s ease;
+		}
+		.work8:hover .mask {
+			opacity: 1;	/* マスクを表示する */
+			padding-top: 60px;
+		}
+
+
+		.business-works-wrapper .work1 {
+			background: url(/images/business/1.png) top center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+		}
+		.business-works-wrapper .work2 {
+			background: url(/images/business/2.jpeg) top center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+		}
+		.business-works-wrapper .work3 {
+			background: url(/images/business/3.png) top center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+		}
+		.business-works-wrapper .work4 {
+			background: url(/images/business/4.jpg) top center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+		}
+		.business-works-wrapper .work5 {
+			background: url(/images/business/5.JPG) top center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+		}
+		.business-works-wrapper .work6 {
+			background: url(/images/business/6.png) top center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+		}
+		.business-works-wrapper .work7 {
+			background: url(/images/business/7.jpg) top center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+		}
+		.business-works-wrapper .work8 {
+			background: url(/images/business/8.jpg) top center;
+			background-size: cover;
+			overflow: hidden;
+			position: relative;
+		}
+		.business-works-btn {
+			text-align: center;
+		}
+		.business-works-btn a:hover {
+			opacity: 0.6;
+		}
+		.business-works-btn a {
+			display: block;
+			background: #fff;
+			padding: 16px 24px;
+			color: #8ddcd1;
+			font-size: 15px;
+			border: 1px solid #8ddcd1;
+			transition: .5s;
+			width: 200px;
+			margin: 40px auto 0;
+		}
+		.business-works .caption a{
+			transition:.2s;
+		}
+		.business-works .caption a:hover {
+			border-bottom: 1px solid #fffed3;
+		}
+
+		/* タブレット */
+		@media screen and (max-width: 1024px) {
+		.business-works {
+		    padding: 60px 0;
+		    min-width: auto;
+		    margin: 0 auto;
+		}
+		.business-works-wrapper {
+		    width: 100%;
+		    min-width: auto;
+		}
+		.business-works-wrapper li {
+				height: 150px;
+		}
+		.business-works-wrapper .caption {
+				color: #fff;
+				font-size: 10px;
+		}
+		.work1:hover .mask {
+			padding-top: 10px;
+		}
+		.work2:hover .mask {
+			padding-top: 10px;
+		}
+		.work3:hover .mask {
+			padding-top: 10px;
+		}
+		.work4:hover .mask {
+			padding-top: 10px;
+		}
+		.work5:hover .mask {
+			padding-top: 10px;
+		}
+		.work6:hover .mask {
+			padding-top: 10px;
+		}
+		.work7:hover .mask {
+			padding-top: 10px;
+		}
+		.work8:hover .mask {
+			padding-top: 10px;
+		}
+	}
+
+		/* スマホ */
+		@media screen and (max-width: 480px) {
+			.business-works {
+					width: 100%;
+					min-width: 100%;
+					margin: 0 auto;
+					padding: 60px 0px;
+			}
+			.business-works-wrapper {
+    			width: 100%;
+			    min-width: 0;
+			}
+			.business-works-wrapper li {
+			    float: left;
+			    width: 50%;
+			    height: 120px;
+			    background: #eee;
+			    vertical-align: bottom;
+			    line-height: 1.7;
+			    transition: .3s;
+			}
+			.business-works-wrapper .caption {
+			    color: #fff;
+			    font-size: 10px;
+			}
+			.work1:hover .mask {
+				padding-top: 10px;
+			}
+			.work2:hover .mask {
+				padding-top: 10px;
+			}
+			.work3:hover .mask {
+				padding-top: 10px;
+			}
+			.work4:hover .mask {
+				padding-top: 10px;
+			}
+			.work5:hover .mask {
+				padding-top: 10px;
+			}
+			.work6:hover .mask {
+				padding-top: 10px;
+			}
+			.work7:hover .mask {
+				padding-top: 10px;
+			}
+			.work8:hover .mask {
+				padding-top: 10px;
+			}
+			.business-works .caption a {
+			    transition: .2s;
+			    font-size: 9px;
+			}
+			.mask {
+				padding: 15px!important;
+			}
+			.business-works-btn a {
+			    padding: 14px 24px;
+			    font-size: 12px;
+			}
+		}
+
+/*------------------------------
+お問い合わせ
+-------------------------------*/
+	.business-contact {
+		text-align: center;
+		min-width: 1050px;
+    margin: 0 auto;
+		padding: 80px 0;
+		background: #f9f9f9;
+	}
+	.business-contact-btn2 a:hover {
+		opacity: 0.6;
+	}
+	.business-contact-btn2 a {
+		display: block;
+		background: #e0dc5f;
+		padding:16px 24px;
+		color: #fff;
+		font-size: 15px;
+		transition: .5s;
+		width: 350px;
+		margin: 30px auto 0;
+	}
+	/* タブレット */
+	@media screen and (max-width: 1024px) {
+	.business-contact {
+	    text-align: center;
+	    min-width: auto;
+	    margin: 0 auto;
+	    padding: 60px 0;
+	    background: #f9f9f9;
+	}
+	.singlepage-form-block {
+    width: 100%;
+	}
+	.business-caution {
+    padding: 0 40px;
+		margin-top: 0;
+	}
+}
+
+	/* スマホ */
+	@media screen and (max-width: 480px) {
+		.business-contact {
+		    min-width: 0;
+		    padding: 60px 0;
+		}
+		.datepicker {
+		    width: 100%!important;
+		    display: block!important;
+		    text-align: left!important;
+		}
+		.appointment-date-wrapper p {
+		    display: inline-block;
+		    font-size: 12px;
+		    padding: 0!important;
+		    margin: 10px 0 5px!important;
+		}
+		.business-caution {
+		    font-size: 12px;
+		    padding: 0 20px;
+		    margin-top: 30px;
+		    text-align: left;
+		}
+
+}
+
+/*------------------------------
+ミッション
+-------------------------------*/
+	.business-mission {
+		width: 1000px;
+		margin: 0 auto;
+		padding: 80px 0;
+	}
+
+	.business-mission-img-wrapper {
+		float: left;
+		background: url(/images/business/business-service-img.jpeg);
+		background-size: cover;
+		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
+		width: 500px;
+		height: 350px;
+		opacity: .9;
+	}
+	.business-mission-text-wrapper {
+		float: right;
+		width: 450px;
+		text-align: center;
+		padding-top: 30px;
+	}
+	.business-mission-text-wrapper  img{
+		display: block;
+		width: 150px;
+		margin: 0 auto;
+	}
+	.business-mission-text-wrapper  p{
+		font-size: 16px;
+		line-height: 1.7;
+		padding-top: 30px;
+		margin-bottom: 40px;
+	}
+	.memberpage-link-btn a:hover {
+		opacity: 0.6;
+	}
+	.memberpage-link-btn a {
+		background: #8ddcd1;
+		padding:14px 24px;
+		color: #fff;
+		font-size: 15px;
+		border: 1px solid #8ddcd1;
+		transition: .5s;
+		width: 350px;
+		margin: 30px auto 0;
+	}
+.business-mission-text-wrapper .gray-line {
+		padding-top: 0;
+}
+/* タブレット */
+@media screen and (max-width: 1024px) {
+	.business-mission {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 0 60px;
+	}
+	.business-mission-img-wrapper {
+		box-shadow: none;
+		width: 100%;
+		height: 200px;
+}
+	.business-mission-img-wrapper {
+	    background: url(/images/business/business-service-img.jpeg) 50% 23%;
+	    background-size: cover;
+	    width: 100%;
+	    height: 280px;
+	    opacity: .9;
+		}
+		.business-mission-text-wrapper {
+		    width: 100%;
+		}
+}
+	/* スマホ */
+	@media screen and (max-width: 480px) {
+
+	.business-mission-text-wrapper {
+			float: right;
+			width: 100%;
+			text-align: center;
+			padding-top: 30px;
+	}
+	.business-mission-text-wrapper img {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+	}
+	.gray-line {
+	    border-bottom: 1px solid #eee;
+	    width: 50%;
+	    margin: 5px auto 0px;
+	}
+	.business-mission-text-wrapper p{
+		font-size: 12px!important;
+	  padding: 20px;
+		margin-bottom: 20px;
+	}
+	.memberpage-link-btn a {
+	    background: #8ddcd1;
+	    padding: 12px 24px;
+	    color: #fff;
+	    font-size: 12px;
+	    border: 1px solid #8ddcd1;
+	    transition: .5s;
+	    width: 350px;
+	    margin: 30px auto 0;
+	}
+	.business-partner {
+    width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 180px 0;
+    text-align: center;
+    background: url(/images/business/partner.jpg) center center;
+    background-size: cover;
+    background-attachment: fixed;
+	}
+	.partner-link-btn a {
+
+	    padding: 12px 24px;
+	    color: #fff;
+	    font-size: 12px;
+	    transition: .5s;
+	    width: 300px;
+	}
+
 }
