@@ -439,8 +439,13 @@ display: none;
 /* スマホ */
 @media screen and (max-width: 480px) {
 	.business-partner {
-		padding: 150px 0;
-}
+			width: 100%;
+			padding: 150px 0;
+			min-width: 0;
+			background: url(/images/business/partner1.jpg) center center;
+			background-size: cover;
+			background-attachment: scroll;
+	}
 }
 
 	/*------------------------------
