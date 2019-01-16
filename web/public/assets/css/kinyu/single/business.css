@@ -215,6 +215,14 @@ display: none;
 		background-size:cover;
 		margin-top:  5px;
 	}
+	.business-main img {
+    max-width: 100%;
+	}
+	.business-contact-btn a{
+		width: 100%;
+		font-size: 14px;
+		box-sizing: border-box;
+	}
 }
 /*-----------------
 見出し
@@ -433,7 +441,12 @@ display: none;
 	}
 }
 
-
+/* スマホ */
+@media screen and (max-width: 480px) {
+	.business-partner {
+		padding: 150px 0;
+}
+}
 
 	/*------------------------------
 	概要（about）
@@ -535,7 +548,7 @@ display: none;
 		    margin: 0 auto 30px;
 		}
 		.kingjo-chan img {
-			    width: 80%;
+			    width: 70%;
 			}
 			.business-about-text .left-wrapper {
 				float: none;
