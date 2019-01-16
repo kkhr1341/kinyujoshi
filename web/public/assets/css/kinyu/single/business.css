@@ -411,16 +411,11 @@ display: none;
     margin: 0 auto;
 		padding: 180px 0;
 		text-align: center;
-		background: url(/images/business/partner.jpg) center center;
+		background: url(/images/business/partner1.jpg) center center;
 		background-size: cover;
 		 background-attachment: fixed;
 	}
-	/* .partner-link-btn  {
-		padding: 80px 40px;
-		width: 450px;
-		background: rgba(255,255,255,0.8);
-		margin: 0 auto;
-	} */
+
 	.partner-link-btn a:hover {
 		opacity: 0.7;
 	}
