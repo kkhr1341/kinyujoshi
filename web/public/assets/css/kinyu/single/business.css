@@ -185,7 +185,7 @@ select {
 display: none;
 }
 
-/* スマホ */
+/* タブレット */
 @media screen and (max-width: 1024px) {
 	.business-main {
 		background: url(/images/business/business-main-bg.png) 81% 65%;
@@ -211,6 +211,7 @@ display: none;
 /* スマホ */
 @media screen and (max-width: 480px) {
 	.business-main {
+		height: 70vh;
 		background: url(/images/business/business-main-bg.png) 81% 65%;
 		background-size:cover;
 		margin-top:  5px;
@@ -411,9 +412,9 @@ display: none;
     margin: 0 auto;
 		padding: 180px 0;
 		text-align: center;
-		background: url(/images/business/partner1.jpg) center center;
+		background: url(/images/business/partner.jpg) center center;
 		background-size: cover;
-		 background-attachment: fixed;
+		background-attachment: fixed;
 	}
 
 	.partner-link-btn a:hover {
@@ -428,7 +429,7 @@ display: none;
 		width: 300px;
 	}
 
-	/* スマホ */
+	/* タブレット */
 	@media screen and (max-width: 1024px) {
 		.business-partner {
 	    width: 100%;
@@ -442,9 +443,6 @@ display: none;
 			width: 100%;
 			padding: 150px 0;
 			min-width: 0;
-			background: url(/images/business/partner1.jpg) center center;
-			background-size: cover;
-			background-attachment: scroll;
 	}
 }
 
