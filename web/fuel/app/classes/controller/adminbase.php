@@ -134,9 +134,10 @@ class Controller_Adminbase extends Controller_Template
     // csv出力を会社内IPからのみにするため、IPアドレスを取得
     protected function is_from_company()
     {
-        if (preg_match('/^192\.168/', \Input::ip())) {
+        if ($_SERVER['SERVER_NAME'] == 'localhost') {
             return true;
         }
+
         switch(\Input::real_ip())
         {
             case '202.241.184.23':
