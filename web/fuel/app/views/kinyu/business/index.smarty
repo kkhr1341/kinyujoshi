@@ -11,7 +11,7 @@
 		<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
 		<nav class="clear">
 			<ul>
-				<li><a href="#business-service">提供サービス</a></li>
+				<li><a href="#business-service">タイアッププラン</a></li>
 				<li><a href="#business-about">コミュニティ概要</a></li>
 				<li><a href="#business-works">事例</a></li>
 				<!-- <li><a href="#business-contact">お問い合わせ</a></li> -->
@@ -37,46 +37,38 @@
 
 		<div id="business-service" class="business-service business-section">
 			<div class="section-title-wrapper">
-				<h2 class="section-title">提供サービス</h2>
-				<p>〜家計の管理から世界経済、資産づくりに高い意識があるけれど、もやもやする。〜<br>そんな女性の声を活かしませんか？</p>
-				<p class="three-step"><img src="/images/business/3step.png"></p>
+				<h2 class="section-title">タイアッププラン</h2>
+				<p>〜女性たちのフィードバックをお届けします〜</p>
+				<!-- <p class="three-step"><img src="/images/business/3step.png"></p> -->
 			</div>
 			<div class="business-service-wrapper clear">
 				<div class="service-box">
-					<img src="/images/business/step1.png" class="business-step">
+					<!-- <img src="/images/business/step1.png" class="business-step"> -->
 					<div class="service-icon"><img src="/images/business/icon1.png" class="business-icon"></div>
 					<div class="service-type"><img src="/images/business/type1.png"></div>
 					<div class="gray-line"></div>
-					<p>webサイトやメルマガ、フリーペーパーなどでプロモーション・ブランディングをすることができます。また、女子会でテストマーケティングを行うことができます。</p>
+					<p>メンバーがサービスについて楽しく理解したり体験したりするイベントを開催。なかなかリーチできない層のリアルな感想や反応を知ることができます。</p>
 						<!-- <p class="service-caution"><span style="color: red;">＊</span>きんゆう女子。コミュニティのプロモーション審査基準を満たしている内容のみ取り扱いいたします。</p> -->
 				<!-- <div class="service-img"><img src="/images/business/step1_img.JPG"></div> -->
 				</div>
 				<div class="service-box">
-					<img src="/images/business/step2.png" class="business-step">
+					<!-- <img src="/images/business/step2.png" class="business-step"> -->
 					<div class="service-icon"><img src="/images/business/icon2.png" class="business-icon"></div>
 					<div class="service-type"><img src="/images/business/type2.png"></div>
 					<div class="gray-line"></div>
-					<p>メルマガや女子会、SNSでつながるメンバーに、リアルな声や認知度、好き嫌いの感情を聞くことができます。オンラインとリアルの両軸から本音が集まっています。</p>
+					<p>webサイトやパンフレット、ノベルティ等を女性たちに親しまれる柔らかい表現やデザイン・写真に刷新いたします。</p>
 					<!-- <div class="service-img"><img src="/images/business/step2_img.jpeg"></div> -->
 				</div>
 
-				<div class="service-box">
-					<img src="/images/business/step3.png" class="business-step">
+				<div class="service-box mb0">
+					<!-- <img src="/images/business/step3.png" class="business-step"> -->
 					<div class="service-icon"><img src="/images/business/icon3.png" class="business-icon"></div>
 					<div class="service-type"><img src="/images/business/type3.png"></div>
 					<div class="gray-line"></div>
-					<p>リクエストを元に、20~30代女性たちに寄り添うコンテンツを企画・制作から運営まで行います。（イベント・写真素材・デザイン）<br>きん女。ストックフォトは<a style="color:#7fcec3" href="http://30d.jp/kinyu-joshi/1" target="_blank">こちら</a></p>
+					<p>メンバーが意見やアイディアを積極的に提案する参加型座談会を開催。顧客目線の斬新な声を企画や広報戦略に役立てることができます。</p>
 						<!-- <div class="service-img"><img src="/images/business/step3_img.jpeg"></div> -->
 				</div>
 			</div>
-			<div class="text-align: center;">
-				<p class="service-caution">以下コンテンツはすぐに提供可能です。<br>
-			・出張女子会（10種類の女子会プログラム）<br>
-			・出張モデレーター（司会・講演）<br>
-			・出張きん女。FP（司会・講演）</p>
-			</div>
-
-
 
 		</div>
 
@@ -96,7 +88,7 @@
 			<div class="about-business-wrapper">
 				<ul>
 					<li><img src="/images/business/about1.png"></li>
-					<li><img src="/images/business/about2.png"></li>
+					<!-- <li><img src="/images/business/about2.png"></li> -->
 					<li><img src="/images/business/about3.png"></li>
 					<li class="mt30"><img src="/images/business/about4.png"></li>
 					<li class="mt30"><img src="/images/business/about5.png"></li>
@@ -107,7 +99,7 @@
 
 		<div id="business-works" class="business-works clear">
 			<div class="section-title-wrapper">
-				<h2 class="section-title">取り組み事例</h2>
+				<h2 class="section-title">タイアップ事例</h2>
 			</div>
 			<div class="business-works-wrapper clear">
 				<ul>
@@ -191,7 +183,7 @@
 
 			<div id="business-contact" class="business-contact clear">
 			<div class="section-title-wrapper">
-				<h2 class="section-title">お問い合わせ</h2>
+				<h2 class="section-title">お問い合わせ・コミュニティ資料請求はこちら</h2>
 			</div>
 			<div class="contact-business-wrapper">
 				<!-- <p>こちらのフォームよりお問い合わせください。</p>
