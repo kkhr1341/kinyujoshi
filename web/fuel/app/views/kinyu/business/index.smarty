@@ -468,10 +468,15 @@ $(function() {
                           dataType: 'json'
                         })
                         .done(function(data) {
-                            ts.success("送信完了しました");
+                            if (data.api_status == 'error') {
+                                ts.error("エラーで送信に失敗しました");
+                            } else {
+                                ts.success("送信完了しました");
+                            }
                             $(".loader-block").fadeOut(500);
                         })
                         .fail(function(error) {
+                            ts.error("エラーで送信に失敗しました");
                             $(".loader-block").fadeOut(500);
                         })
                 }
