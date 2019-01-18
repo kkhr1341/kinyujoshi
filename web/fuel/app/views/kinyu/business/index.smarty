@@ -101,7 +101,7 @@
 			<div class="section-title-wrapper">
 				<h2 class="section-title">タイアップ事例</h2>
 			</div>
-			<div class="business-works-wrapper clear">
+			<div class="business-works-wrapper clear pc">
 				<ul>
 					<li class="work1">
 						<div class="mask">
@@ -176,6 +176,85 @@
 							</div>
 						</div>
 					</li>
+				</ul>
+			</div>
+			<div class="business-works-wrapper clear sp">
+				<ul>
+					<li class="works">
+						<div class="work1-img"></div>
+						<div class="work-description">
+							＜コンテンツ制作＞<br>
+							・WEBデザイン<br>
+							・コピーライティング<br>
+							・ノベルティ、グッズ制作<br>
+							・パンフレット制作
+							</div>
+					</li>
+					<li class="works">
+						<div class="work2-img"></div>
+						<div class="work-description">
+							＜IR/PRイベント企画運営＞<br>
+							・取引所<br>
+							・資産運用会社<br>
+							・上場企業　など
+							</div>
+					</li>
+					<li class="works">
+						<div class="work3-img"></div>
+						<div class="work-description">
+							＜イベント企画・運営協力＞<br>
+							・JPX＊マネースクール<br>
+									　<a href="https://jpx-moneyschool.com/2017/"target="_blank" style="color:#fffed3;">2017</a><br>　<a href="https://jpx-moneyschool.com/"target="_blank" style="color:#fffed3;">2018</a><br>
+							</div>
+					</li>
+					<li class="works">
+						<div class="work4-img"></div>
+						<div class="work-description">
+							＜出張女子会・プログラム提供＞<br>
+							・東京証券取引所<br>
+							・名古屋証券取引所　ほか
+							</div>
+					</li>
+					<li class="works">
+						<div class="work5-img"></div>
+						<div class="work-description">
+							＜イベント企画・運営協力＞<br>
+	・日経BP社<br>
+	お金と私をアップデート<br>
+	<a href="http://ac.nikkeibp.co.jp/2017x0422finw/" target="_blank">2017 spring</a>　
+	<a href="http://ac.nikkeibp.co.jp/2017z1105finw/"target="_blank">2017 autumn</a><br>
+ライフ＆マネーFesta<br>2018
+
+							</div>
+					</li>
+					<li class="works">
+						<div class="work6-img"></div>
+						<div class="work-description">
+							＜オンラインアンケート・インタビュー＞<br>
+							・上場企業<br>
+							・取引所<br>
+							・銀行　など
+							</div>
+					</li>
+					<li class="works">
+						<div class="work7-img"></div>
+						<div class="work-description">
+							＜少人数座談会＞<br>
+						・銀行<br>
+						・資産運用会社<br>
+						・保険会社<br>
+						・上場会社　など</div>
+					</li>
+					<li class="works">
+						<div class="work8-img"></div>
+						<div class="work-description">
+							＜SNS・WEBプロモーション＞<br>
+							・化粧品、ヘルスケア関連<br>
+							・資産運用会社<br>
+							・不動産会社（まちづくり関連）
+							</div>
+					</li>
+
 				</ul>
 			</div>
 			<div class="business-works-btn"><a href="https://kinyu-joshi.jp/joshikai_past" target="_blank">その他の活動を見る</a></div>

@@ -862,56 +862,99 @@ display: none;
 					width: 100%;
 					min-width: 100%;
 					margin: 0 auto;
-					padding: 60px 0px;
+					padding: 60px 20px;
 			}
 			.business-works-wrapper {
     			width: 100%;
 			    min-width: 0;
 			}
 			.business-works-wrapper li {
-			    float: left;
-			    width: 50%;
-			    height: 120px;
-			    background: #eee;
+			    float: none;
+			    width: 100%;
+			    height: auto;
+			    background: #fff;
 			    vertical-align: bottom;
 			    line-height: 1.7;
+					margin-bottom: 20px;
 			    transition: .3s;
 			}
-			.business-works-wrapper .caption {
-			    color: #fff;
-			    font-size: 10px;
+			.business-works-wrapper .works {
+					display: table;
 			}
-			.work1:hover .mask {
-				padding-top: 10px;
+			.business-works-wrapper .works .work1-img {
+					display: table-cell;
+					width: 120px;
+					height: 100px;
+					background: url(/images/business/1.png) top center;
+					background-size: cover;
+					overflow: hidden;
 			}
-			.work2:hover .mask {
-				padding-top: 10px;
+			.business-works-wrapper .works .work2-img {
+					display: table-cell;
+					width: 120px;
+					height: 100px;
+					background: url(/images/business/2.jpeg) top center;
+					background-size: cover;
+					overflow: hidden;
 			}
-			.work3:hover .mask {
-				padding-top: 10px;
+			.business-works-wrapper .works .work3-img {
+					display: table-cell;
+					width: 120px;
+					height: 100px;
+					background: url(/images/business/3.png) top center;
+					background-size: cover;
+					overflow: hidden;
 			}
-			.work4:hover .mask {
-				padding-top: 10px;
+			.business-works-wrapper .works .work4-img {
+					display: table-cell;
+					width: 120px;
+					height: 100px;
+					background: url(/images/business/4.jpg) top center;
+					background-size: cover;
+					overflow: hidden;
 			}
-			.work5:hover .mask {
-				padding-top: 10px;
+			.business-works-wrapper .works .work5-img {
+					display: table-cell;
+					width: 120px;
+					height: 100px;
+					background: url(/images/business/5.JPG) top center;
+					background-size: cover;
+					overflow: hidden;
 			}
-			.work6:hover .mask {
-				padding-top: 10px;
+			.business-works-wrapper .works .work6-img {
+					display: table-cell;
+					width: 120px;
+					height: 100px;
+					background: url(/images/business/6.png) top center;
+					background-size: cover;
+					overflow: hidden;
 			}
-			.work7:hover .mask {
-				padding-top: 10px;
+			.business-works-wrapper .works .work7-img {
+					display: table-cell;
+					width: 120px;
+					height: 100px;
+					background: url(/images/business/7.jpg) top center;
+					background-size: cover;
+					overflow: hidden;
 			}
-			.work8:hover .mask {
-				padding-top: 10px;
+			.business-works-wrapper .works .work8-img {
+					display: table-cell;
+					width: 120px;
+					height: 100px;
+					background: url(/images/business/8.jpg) top center;
+					background-size: cover;
+					overflow: hidden;
 			}
-			.business-works .caption a {
-			    transition: .2s;
-			    font-size: 9px;
+			.business-works-wrapper .works .work-description {
+					display: table-cell;
+					font-size: 11px;
+					padding-left: 15px;
 			}
-			.mask {
-				padding: 15px!important;
+
+			.work-description a{
+				color: #8ddcd1;
 			}
+
 			.business-works-btn a {
 			    padding: 14px 24px;
 			    font-size: 12px;
@@ -964,6 +1007,9 @@ display: none;
 		.business-contact {
 		    min-width: 0;
 		    padding: 60px 0;
+		}
+		.business-contact .section-title {
+				font-size: 16px;
 		}
 		.datepicker {
 		    width: 100%!important;
