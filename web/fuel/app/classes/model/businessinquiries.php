@@ -113,7 +113,8 @@ class BusinessInquiries extends Base
 
         // 添付ファイル
         if(isset($files['attachment_file'])) {
-            $email02->attach($files['attachment_file']['tmp_name']);
+            $file = $files['attachment_file'];
+            $email02->attach($file['tmp_name'], false, null, $file['type'], $file['name']);
         }
 
         $email02->return_path('support@kinyu-joshi.jp');
