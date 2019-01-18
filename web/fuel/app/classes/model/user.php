@@ -121,7 +121,8 @@ class User extends Base
             ->on('users.username', '=', 'profiles.username')
             ->where('users.group', '>=', 30);
 
-        $datas = $datas->order_by('users.created_at', 'desc');
+        $datas = $datas->order_by('group', 'desc');
+        $datas = $datas->order_by('id', 'asc');
 
         $users = $datas->execute()->as_array();
 
