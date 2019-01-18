@@ -25,18 +25,16 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
         foreach($blogs as $blog) {
 
             $item = $feed->createNewItem() ;
-
             $item->setTitle( $blog['title']) ;	// タイトル
             $item->setLink( \Uri::base() . 'report/' . $blog['code'] ) ;	// リンク
             $item->setDescription( $blog['description'] ) ;	// 紹介テキスト
             $item->setDate( strtotime($blog['updated_at']) ) ;	// 更新日時
-//            $item->addEnclosure( $blog['main_image'], 500, 'image/jpeg' );
-//$item->setAuthor( "あらゆ" , "info@syncer.jp" ) ;	// 著者の連絡先(E-mail)
+//            $item->addEnclosure( $blog['main_image'], 500, 'image/jpeg');
+//            $item->setAuthor( "あらゆ" , "info@syncer.jp" ) ;	// 著者の連絡先(E-mail)
             $item->setId( \Uri::base() . 'report/' . $blog['code'] , true ) ;	// 一意のID(第1引数にURLアドレス、第2引数にtrueで通常は大丈夫)
-
             $feed->addItem( $item ) ;
         }
-
+        
         // コードの生成
         $xml = $feed->generateFeed();
 

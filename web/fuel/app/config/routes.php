@@ -50,6 +50,7 @@ return array(
 	'report/(:any)'   => 'kinyu/blog/detail/$1',
 	'welcome/blog/(:any)'   => 'kinyu/blog/welcome/$1',
 	'rss'   => 'kinyu/rss/index',
+    'sitemap' => 'kinyu/sitemap/sitemap',
 //	'rss/(:num)'   => 'kinyu/rss/index/$1',
 //	'rss/(:any)'   => 'kinyu/rss/detail/$1',
 
