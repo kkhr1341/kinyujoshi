@@ -82,10 +82,10 @@ return array(
 	'groups' => array(
 		-1   => array('name' => 'Banned', 'roles' => array('banned')),
 		0    => array('name' => 'Guests', 'roles' => array()),
-		1    => array('name' => 'Users', 'roles' => array('user')),
-		30   => array('name' => 'Editors', 'roles' => array('user', 'editor')),
-		50   => array('name' => 'Moderators', 'roles' => array('user', 'moderator')),
-		100  => array('name' => 'Administrators', 'roles' => array('user', 'moderator', 'admin')),
+		1    => array('name' => 'メンバー', 'roles' => array('user')),
+		30   => array('name' => '編集者', 'roles' => array('user', 'editor')),
+		50   => array('name' => 'モデレーター', 'roles' => array('user', 'moderator')),
+		100  => array('name' => '管理者', 'roles' => array('user', 'moderator', 'admin')),
 	),
 
 	/**

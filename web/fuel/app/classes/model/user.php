@@ -111,6 +111,8 @@ class User extends Base
 
     public static function staff_list()
     {
+        \Config::load('simpleauth', true);
+
         $datas = \DB::select(
                 \DB::expr('users.*'),
                 \DB::expr('profiles.name'),
@@ -126,21 +128,11 @@ class User extends Base
 
         $users = $datas->execute()->as_array();
 
+        $groups = \Config::get('simpleauth.groups');
+
         foreach($users as $key => $user) {
-            switch ($users[$key]['group']) {
-                case 100:
-                    $users[$key]['group_name'] = '管理者';
-                    break;
-                case 50:
-                    $users[$key]['group_name'] = 'モデレーター';
-                    break;
-                case 30:
-                    $users[$key]['group_name'] = '編集者';
-                    break;
-                default:
-                    $users[$key]['group_name'] = 'ゲスト';
-                    break;
-            }
+            $group = $users[$key]['group'];
+            $users[$key]['group_name'] = $groups[$group]['name'];
         }
         return $users;
     }
