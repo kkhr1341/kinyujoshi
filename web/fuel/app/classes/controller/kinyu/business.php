@@ -23,18 +23,18 @@ class Controller_Kinyu_Business extends Controller_Kinyubase
 //				die('このページを見るにはログインが必要です');
 //		}
 
-        if (Agent::is_mobiledevice()) {
-
-          switch (true) {
-             case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-             case $_SERVER['PHP_AUTH_USER'] !== 'kinyu':
-             case $_SERVER['PHP_AUTH_PW']   !== 'business':
-             header('WWW-Authenticate: Basic realm="Enter username and password."');
-             header('Content-Type: text/plain; charset=utf-8');
-             die('このページを見るにはログインが必要です');
-          }
-
-        }
+        // if (Agent::is_mobiledevice()) {
+        //
+        //   switch (true) {
+        //      case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+        //      case $_SERVER['PHP_AUTH_USER'] !== 'kinyu':
+        //      case $_SERVER['PHP_AUTH_PW']   !== 'business':
+        //      header('WWW-Authenticate: Basic realm="Enter username and password."');
+        //      header('Content-Type: text/plain; charset=utf-8');
+        //      die('このページを見るにはログインが必要です');
+        //   }
+        //
+        // }
 
         $this->data['categories'] = Businessinquirycategories::lists();
         $this->template->title = 'きんゆう女子。for Business｜きんゆう女子。';
