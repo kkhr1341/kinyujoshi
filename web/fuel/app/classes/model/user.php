@@ -108,4 +108,39 @@ class User extends Base
 
         return true;
     }
+
+    public static function staff_list()
+    {
+        $datas = \DB::select(
+                \DB::expr('users.*'),
+                \DB::expr('profiles.name'),
+                \DB::expr('profiles.name_kana')
+            )
+            ->from('users')
+            ->join('profiles')
+            ->on('users.username', '=', 'profiles.username')
+            ->where('users.group', '>=', 30);
+
+        $datas = $datas->order_by('users.created_at', 'desc');
+
+        $users = $datas->execute()->as_array();
+
+        foreach($users as $key => $user) {
+            switch ($users[$key]['group']) {
+                case 100:
+                    $users[$key]['group_name'] = '管理者';
+                    break;
+                case 50:
+                    $users[$key]['group_name'] = 'モデレーター';
+                    break;
+                case 30:
+                    $users[$key]['group_name'] = '編集者';
+                    break;
+                default:
+                    $users[$key]['group_name'] = 'ゲスト';
+                    break;
+            }
+        }
+        return $users;
+    }
 }

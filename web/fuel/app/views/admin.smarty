@@ -78,6 +78,11 @@
                 <a href="/admin/authors">作成者の管理</a>
               </li>
               {/if}
+              {if (in_array('admin', $roles) && $from_company==TRUE)}
+              <li>
+                <a href="/admin/staffs">スタッフ一覧</a>
+              </li>
+              {/if}
             </ul>
           </div>
           <div class="my-content-block admin-content-info">
