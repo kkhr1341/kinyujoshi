@@ -471,7 +471,7 @@ $(function() {
                         })
                         .done(function(data) {
                             if (data.api_status == 'error') {
-                                ts.error("エラーで送信に失敗しました");
+                                ts.error(data.message);
                             } else {
                                 ts.success("送信完了しました");
                             }

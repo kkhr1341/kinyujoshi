@@ -6,14 +6,14 @@ class Controller_Api_Businessinquiries extends Controller_Apibase
 {
     public function action_create()
     {
-//        $config = array(
-//            'max_size'    => 1,
-//        );
-//        // $_FILES 内のアップロードされたファイルを処理する
-//        Upload::process($config);
+        $config = array(
+            'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png', 'pdf'),
+        );
+        // $_FILES 内のアップロードされたファイルを処理する
+        Upload::process($config);
 
-        if (Upload::get_errors()) {
-            return $this->error("添付ファイルのアップロードでエラーが発生しました");
+        if ($errors = Upload::get_errors()) {
+            return $this->error(Upload::get_errors()[0]['errors'][0]['message']);
         }
         $val = BusinessInquiries::validate();
         if (!$val->run()) {
@@ -24,7 +24,6 @@ class Controller_Api_Businessinquiries extends Controller_Apibase
         try {
             return $this->ok(BusinessInquiries::create($val->validated(), Upload::get_files()));
         } catch(Exception $e) {
-            var_dump($e->getMessage());
             return $this->error("保存に失敗しました。");
         }
     }
