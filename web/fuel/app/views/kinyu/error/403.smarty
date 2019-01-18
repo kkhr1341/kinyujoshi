@@ -1,0 +1,53 @@
+<div class="kinyu-main">
+
+    <!-- ここにエラーのコンテンツが入る -->
+    <div class="kinyu-error-container">
+        <p>申し訳ありません...。<br>このページを表示する権限がないようです(´・ω・`)</p>
+        <a href="/">トップページへ</a>
+    </div>
+
+    <style>
+        .kinyu-error-container {
+            padding: 210px 0px 80px;
+            background: #f7f7f7;
+        }
+
+        .kinyu-error-container p {
+            font-size: 20px;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .kinyu-error-container a {
+            display: block;
+            width: 200px;
+            color: #fff;
+            margin: 0 auto;
+            margin-top: 24px;
+            font-size: 13px;
+            padding: 10px 0px;
+            background: #8ddcd1;
+            font-weight: bold;
+            transition: .5s;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .kinyu-error-container {
+                padding: 50px 0px 50px;
+                background: #fff;
+            }
+
+            .kinyu-error-container p {
+                font-size: 15px;
+                line-height: 22px;
+                padding: 0px 4%;
+            }
+
+            .kinyu-error-container a {
+                font-size: 12px;
+                padding: 8px 0px;
+            }
+        }
+    </style>
+</div>
