@@ -282,7 +282,7 @@
 
 									<div class="form-group attachment_file_container">
 										<label class="form-title"><span class="color-kinyu-color">◆</span> ファイルの添付</label>
-										<input type="file" name="attachment_file" style="font-size: 13px;">
+										<input type="file" id="attachment_file" name="attachment_file" style="font-size: 13px;">
 										<p style="text-align:left; margin-top: 10px;"><span style="color:red;">＊</span>コミュニティのフィードバックを入れて10日以内にお戻しいたします。</p>
 									</div>
 
@@ -407,6 +407,7 @@ $(function() {
     $(function () {
         $('#save').click(function () {
             var url = "/api/businessinquiries/create";
+
             var params = {};
 
             params.category_code = $('#category_code').val();
@@ -449,13 +450,24 @@ $(function() {
                 ts.error("お問い合わせ内容を入力してください");
                 return false;
             }
+            var fd = new FormData();
+            Object.keys(params).forEach(function(key) {
+                fd.append(key, params[key]);
+            })
+
+            fd.append( "attachment_file", $("#attachment_file").prop("files")[0] );
 
             bootbox.confirm("お問合せを送信しますか？", function (result) {
                 if (result) {
                     //ローディングアニメーション
                     $(".loader-block").fadeIn(200);
-                    ajax.post(url, params, function (data) {
-                            ts.success("送信完了しました")
+                    $.ajax({
+                          type: 'POST',
+                          url: url,
+                          data: fd,
+                          processData: false,
+                          contentType: false,
+                          dataType: 'json'
                         })
                         .done(function(data) {
                             if (data.api_status == 'error') {
