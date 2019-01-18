@@ -13,7 +13,7 @@ class Controller_Api_Businessinquiries extends Controller_Apibase
             return $this->error($message);
         }
         try {
-            return $this->ok(BusinessInquiries::create($val->validated()));
+            return $this->ok(BusinessInquiries::create($val->validated(), $_FILES));
         } catch(Exception $e) {
             var_dump($e->getMessage());
             return $this->error("保存に失敗しました。");

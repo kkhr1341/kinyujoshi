@@ -3,8 +3,6 @@
 namespace Model;
 require_once(dirname(__FILE__) . "/base.php");
 
-use \Model\Businessinquirycategories;
-
 class BusinessInquiries extends Base
 {
 
@@ -17,6 +15,8 @@ class BusinessInquiries extends Base
 
         $val->add('category_code', 'お問い合わせ種別')
             ->add_rule('required');
+
+//        $val->add('attachment_file', 'ファイルの添付');
 
         $val->add('company', '会社名');
 
@@ -39,7 +39,7 @@ class BusinessInquiries extends Base
         return $val;
     }
 
-    public static function create($params)
+    public static function create($params, $files=array())
     {
         $data = array();
 
@@ -110,6 +110,11 @@ class BusinessInquiries extends Base
         $email02->html_body(\View::forge('email/business_inquiry/return', $data));
         $email02->to('service@kinyu-joshi.jp'); //送り先
         $email02->cc('cs@kinyu-joshi.jp');
+
+        // 添付ファイル
+        if(isset($files['attachment_file'])) {
+            $email02->attach($files['attachment_file']['tmp_name']);
+        }
 
         $email02->return_path('support@kinyu-joshi.jp');
         $email02->send();
