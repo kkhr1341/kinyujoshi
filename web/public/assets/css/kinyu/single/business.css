@@ -229,7 +229,7 @@ display: none;
 見出し
 -------------------*/
 	.business-section {
-		padding: 80px 0 15px;
+		padding: 80px 0;
 	}
 	.section-title-wrapper {
 		padding-bottom: 60px;
@@ -342,7 +342,7 @@ display: none;
 	/* タブレット */
 	@media screen and (max-width: 1024px) {
 		.business-section {
-			padding: 60px 0 40px;
+			padding: 60px 0;
 		}
 		.business-service {
 			min-width: auto;
@@ -393,6 +393,9 @@ display: none;
 		    padding: 15px;
 		    float: none;
 		    margin: 0 auto 50px;
+		}
+		.mb0 {
+			margin-bottom: 0;
 		}
 		.service-caution {
 	    font-size: 12px;
@@ -482,7 +485,7 @@ display: none;
 	.about-business-wrapper li {
 		display: inline-block;
 		margin: 0 10px;
-		width: 300px;
+		width: 226px;
 		background: #fff;
 		box-shadow: 0px 0px 10px rgba(57,101,91,0.1);
 	}
@@ -1073,7 +1076,7 @@ display: none;
 	.gray-line {
 	    border-bottom: 1px solid #eee;
 	    width: 50%;
-	    margin: 5px auto 0px;
+	    margin: 5px auto 15px;
 	}
 	.business-mission-text-wrapper p{
 		font-size: 12px!important;
@@ -1094,11 +1097,9 @@ display: none;
     width: 100%;
     min-width: 0;
     margin: 0 auto;
-    padding: 180px 0;
+    padding: 150px 0;
     text-align: center;
-    background: url(/images/business/partner.jpg) center center;
-    background-size: cover;
-    background-attachment: fixed;
+    background: none;
 	}
 	.partner-link-btn a {
 
