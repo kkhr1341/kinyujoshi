@@ -101,7 +101,7 @@
 			<div class="section-title-wrapper">
 				<h2 class="section-title">タイアップ事例</h2>
 			</div>
-			<div class="business-works-wrapper clear pc">
+			<div class="business-works-wrapper clear">
 				<ul>
 					<li class="work1">
 						<div class="mask">
@@ -178,7 +178,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="business-works-wrapper clear sp">
+			<div class="sp-business-works-wrapper clear">
 				<ul>
 					<li class="works">
 						<div class="work1-img"></div>
@@ -277,11 +277,13 @@
                                                 　　<option value="{$category.code}">{$category.name}</option>
                                               　{/foreach}
 											</select>
+
 									</div>
 
-									<div class="form-group attachment_file_container">
+									<div class="form-group">
 										<label class="form-title"><span class="color-kinyu-color">◆</span> ファイルの添付</label>
-										<input type="file" id="attachment_file" name="attachment_file" style="font-size: 13px;">
+										<input type="file" name="attachment_file" style="font-size: 13px;">
+										<p style="text-align:left; margin-top: 10px;"><span style="color:red;">＊</span>コミュニティのフィードバックを入れて10日以内にお戻しいたします。</p>
 									</div>
 
 								<div class="form-group">
@@ -387,25 +389,9 @@ $(function() {
 </script>
 <script>
     {literal}
-
-    $(function () {
-        var toggleAttachmentFileUploader = function(category_code) {
-            if (category_code == '9IUE08') { // コミュニティからフィードバックをもらいたい
-                $('.attachment_file_container').show();
-            } else {
-                $('.attachment_file_container').hide();
-            }
-        };
-        $('#category_code').change(function () {
-            toggleAttachmentFileUploader($(this).val());
-        });
-        toggleAttachmentFileUploader($('#category_code').val());
-    });
-
     $(function () {
         $('#save').click(function () {
             var url = "/api/businessinquiries/create";
-
             var params = {};
 
             params.category_code = $('#category_code').val();
@@ -448,24 +434,13 @@ $(function() {
                 ts.error("お問い合わせ内容を入力してください");
                 return false;
             }
-            var fd = new FormData();
-            Object.keys(params).forEach(function(key) {
-                fd.append(key, params[key]);
-            })
-
-            fd.append( "attachment_file", $("#attachment_file").prop("files")[0] );
 
             bootbox.confirm("お問合せを送信しますか？", function (result) {
                 if (result) {
                     //ローディングアニメーション
                     $(".loader-block").fadeIn(200);
-                    $.ajax({
-                          type: 'POST',
-                          url: url,
-                          data: fd,
-                          processData: false,
-                          contentType: false,
-                          dataType: 'json'
+                    ajax.post(url, params, function (data) {
+                            ts.success("送信完了しました")
                         })
                         .done(function(data) {
                             if (data.api_status == 'error') {
