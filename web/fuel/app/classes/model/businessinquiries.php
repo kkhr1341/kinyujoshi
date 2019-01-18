@@ -113,9 +113,7 @@ class BusinessInquiries extends Base
 
         // 添付ファイル
         foreach ($files as $key => $file) {
-            $mimetypes = explode('/', $file['mimetype']);
-            $extention = $mimetypes[1];
-            $filename = 'file' . ($key + 1) . '.' . $extention;
+            $filename = 'file' . ($key + 1) . '.' . $file['extension'];
             $email02->attach($file['file'], false, null, $file['mimetype'], $filename);
         }
 
