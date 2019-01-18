@@ -33,14 +33,16 @@
     <div class="report-detail-main">
 
       {if $viewable == true}
+        <script>
+          var secretBlog = '{$blog.secret}';
+          {literal}
+          gtag('set', {'secretBlog': secretBlog});
+          {/literal}
+        </script>
         {$blog.content|nofilter}
-
 
         <!-- このレポートを書いた人 -->
         {$author}
-
-
-
 
         <!-- ソーシャルシェア -->
         {$fooo = $blog.main_image}
@@ -94,23 +96,6 @@
   </div>
 {/if}
 
-<!-- <div id="myModal" class="modal check-report-modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <p class="main-title">レポートページに<br>お気に入りボタンができました。</p>
-
-        <img class="check-flow" src="/images/report/check-flow.png">
-        <p class="main-description pc">レポートページの右下にある"<span>お気に入りボタン</span>"をクリックすると、<br>お気に入りしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>で<br>いつでも確認することができます♪<span style="display:block;height:12px;"></span></p>
-        <p class="main-description sp">レポートページの右下にある"<span>お気に入りボタン</span>"をクリックすると、お気に入りしたレポートが<a href="/my" style="color:#44a6e0;">マイページ</a>でいつでも確認することができます♪<span style="display:block;height:12px;"></span></p>
-        <p class="close text-close" data-dismiss="modal">閉じる</p>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <div id="check-report-modal-dummy" class="check-report-modal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -140,18 +125,6 @@ $(function(){
       "show"      : true
     });
 });
-
-// $(function() {
-//     var $win = $(window);
-//     $win.on('load scroll', function() {
-//         var value = $(this).scrollTop();
-//         if ( value > 100 ) {
-//             $('#check-report').fadeIn(500);
-//         } else {
-//             $('#check-report').fadeOut(500);
-//         }
-//     });
-// });
 
 $(function() {
 

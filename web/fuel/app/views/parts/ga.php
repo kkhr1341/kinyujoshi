@@ -7,7 +7,8 @@
 
   gtag('config', 'UA-72608536-2', {
       'custom_map': {
-          'dimension1': 'clientId'
+          'dimension1': 'clientId',
+          'dimension2': 'secretBlog',
       }
   });
   gtag('set', {'user_id': <?php echo $userid ?>});
