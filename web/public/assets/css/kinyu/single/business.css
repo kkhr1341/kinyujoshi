@@ -971,6 +971,7 @@ display: none;
 		padding: 80px 0;
 		background: #f9f9f9;
 	}
+
 	.business-contact-btn2 a:hover {
 		opacity: 0.6;
 	}
@@ -1007,6 +1008,9 @@ display: none;
 		.business-contact {
 		    min-width: 0;
 		    padding: 60px 0;
+		}
+		.business-contact .btn {
+			width: 100%;
 		}
 		.business-contact .section-title {
 				font-size: 16px;
@@ -1145,10 +1149,11 @@ display: none;
     margin: 0 auto;
     padding: 150px 0;
     text-align: center;
-    background: none;
+    background: url(/images/business/partner1.jpg) no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll;
 	}
 	.partner-link-btn a {
-
 	    padding: 12px 24px;
 	    color: #fff;
 	    font-size: 12px;
