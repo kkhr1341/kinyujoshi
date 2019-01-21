@@ -1,10 +1,8 @@
 <?php
-class Site_Map_Data {
 
+class Controller_Kinyu_SiteData {
     public function get_site_data() {
-
-        $today = date('Y-m-d');
-        return $site_data = array(
+       return $site_data = array(
             array(
                 'loc'=>'https://kinyu-joshi.jp/',
                 'lastmod'=>$today,
@@ -61,6 +59,6 @@ class Site_Map_Data {
             )
 
         );
-    } 
+    }
 }
 ?>

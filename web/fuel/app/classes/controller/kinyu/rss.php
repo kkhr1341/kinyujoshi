@@ -10,7 +10,6 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
     public function action_index()
     {
         $feed = new RSS2;
-
         // チャンネル情報の登録
         $feed->setTitle( "きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ" ) ;			// チャンネル名
         $feed->setLink( \Uri::base() ) ;		// URLアドレス
