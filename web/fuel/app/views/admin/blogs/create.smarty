@@ -10,38 +10,6 @@
         <div class="my-form-container clear">
             <div class="form-left">
 
-
-                <!--<div class="form-group mb50">
-                    <label>カテゴリ<span class="label label-danger">必須</span></label>
-                    <select id="section_code" class='form-control'>
-                        <option value="">選択してください</option>
-                        {foreach from=$sections item=section}
-                            <option value="{$section.code}">{$section.name}</option>
-                        {/foreach}
-                    </select>
-                </div>-->
-
-                {*
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">カテゴリー</label>
-                    <div class="radio_box clear">
-                        <input type="radio" value="lifestyle" name="section_code" id="section_code1" class="form-radio"
-                               placeholder="">
-                        <label for="section_code1" class="form-long">ライフスタイル</label>
-                        <input type="radio" value="carrier" name="section_code" id="section_code2" class="form-radio"
-                               placeholder="">
-                        <label for="section_code2" class="form-long">キャリア</label>
-                        <input type="radio" value="independence" name="section_code" id="section_code3"
-                               class="form-radio" placeholder="">
-                        <label for="section_code3" class="form-long">どくりつ&きぎょう</label>
-                        <input type="radio" value="parallel" name="section_code" id="section_code4" class="form-radio"
-                               placeholder="">
-                        <label for="section_code4" class="form-long">パラレル</label>
-                    </div>
-                </div>
-                *}
-
-
                 <div class="form-group mb50">
                     <label class="form-group-event-label">レポートの種類</label>
 
@@ -71,39 +39,28 @@
                     </div>
                 </div>
 
-                {*
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">キーワード</label>
-
-                    <div class="radio_box clear">
-                        <input type="radio" value="ためる" name="keyword" id="keyword01" class="form-radio" placeholder="">
-                        <label for="keyword01" class="form-long">ためる</label>
-
-                        <input type="radio" value="つかう" name="keyword" id="keyword02" class="form-radio" placeholder="">
-                        <label for="keyword02" class="form-long">つかう</label>
-
-                        <input type="radio" value="ふやす" name="keyword" id="keyword03" class="form-radio" placeholder="">
-                        <label for="keyword03" class="form-long">ふやす</label>
-
-                        <input type="radio" value="まもる" name="keyword" id="keyword04" class="form-radio" placeholder="">
-                        <label for="keyword04" class="form-long">まもる</label>
-
-                        <input type="radio" value="かせぐ" name="keyword" id="keyword05" class="form-radio" placeholder="">
-                        <label for="keyword05" class="form-long">かせぐ</label>
-
-                    </div>
-                </div>
-                *}
-
                 <div class="form-group mb50">
                     <label class="form-group-event-label">ピックアップ</label>
 
                     <div class="radio_box clear">
                         <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="">
-                        <label for="pickup01" class="form-long">yes</label>
+                        <label for="pickup01" class="form-long">YES!</label>
 
-                        <input type="radio" value="0" name="pickup" id="pickup02" class="form-radio" placeholder="">
-                        <label for="pickup02" class="form-long">no!</label>
+                        <input type="radio" value="0" name="pickup" id="pickup02" class="form-radio" placeholder="" checked>
+                        <label for="pickup02" class="form-long">NO!</label>
+
+                    </div>
+                </div>
+
+                <div class="form-group mb50">
+                    <label class="form-group-event-label">PR</label>
+
+                    <div class="radio_box clear">
+                        <input type="radio" value="1" name="pr" id="pr01" class="form-radio" placeholder="">
+                        <label for="pr01" class="form-long">YES!</label>
+
+                        <input type="radio" value="0" name="pr" id="pr02" class="form-radio" placeholder="" checked>
+                        <label for="pr02" class="form-long">NO!</label>
 
                     </div>
                 </div>
@@ -217,6 +174,7 @@
             params.kind = $("[name=kind]:checked").val();
             //params.keyword = $("[name=keyword]:checked").val();
             params.pickup = $("[name=pickup]:checked").val();
+            params.pr = $("[name=pr]:checked").val();
             params.secret = $("[name=secret]:checked").val();
             params.title = $('#title').val();
             params.main_image = $('#main_image').val();
@@ -266,6 +224,7 @@
             params.kind = $("[name=kind]:checked").val();
             //params.keyword = $("[name=keyword]:checked").val();
             params.pickup = $("[name=pickup]:checked").val();
+            params.pr = $("[name=pr]:checked").val();
             params.secret = $("[name=secret]:checked").val();
             params.title = $('#title').val();
             params.main_image = $('#main_image').val();

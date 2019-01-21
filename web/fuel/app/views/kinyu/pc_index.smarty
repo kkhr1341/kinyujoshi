@@ -211,11 +211,14 @@
             {$fooo = $blog.main_image}
             {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-            <li>
+            <li{if $blog.pr == 1} class="pr"{/if}>
               <a class="js-track" href="/report/{$blog.code}" data-category="pc-top-link" data-action="click" data-value="1">
               <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
                 {if $blog.new == true}
                   <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
+                {/if}
+                {if $blog.pr == 1}
+                  <!-- PR用イメージ挿入箇所 -->
                 {/if}
                 </div>
                 <div class="text-box">

@@ -128,6 +128,7 @@ return array(
         119 => '127_create_authors',
         120 => '128_add_author_code_to_blogs',
         121 => '129_add_position_to_authors',
+        122 => '130_add_pr_to_blogs',
       ),
     ),
     'module' => 
