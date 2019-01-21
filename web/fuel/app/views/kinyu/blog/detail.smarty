@@ -2,7 +2,12 @@
 
   <div class="kinyu-details-introdauction">
     <div class="kinyu-details-introdauction-inner clear">
-      <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
+      <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;">
+        {if $blog.pr == 1}
+        <!-- PR用イメージ挿入箇所 -->
+        <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+      {/if}
+      </div>
       <div class="text-box">
         <div class="text-box-inner">
           {if $blog.kind == "女子会レポート"}
