@@ -1,48 +1,90 @@
 <?php
-include 'mock_site_data.php';
-
-class Controller_SiteMap extends Controller_Rssbase
+//include 'mock_site_data.php';
+class Controller_Kinyu_SiteMap extends Controller_Rssbase
 {
     public function action_index()
     {
-        $document = new DOMDocument();
-        $Site_Map_Data = new Site_Map_Data;
-        $site_data = $Site_Map_Data::get_site_data();
-        $document->formatOutput = true;
         $cnt = 0;
+        $today = date('Y-m-d');
+        $site_data = array(
+             array(
+                'loc'=>'https://kinyu-joshi.jp/',
+                'lastmod'=>$today,
+                 'changefreq'=>'always',
+                 'priority'=>1
+             ),
+             array(
+                 'loc'=>'https://kinyu-joshi.jp/news',
+                 'lastmod'=>$today,
+                 'changefreq'=>'hourly',
+                 'priority'=>0.9
+             ),
+             array(
+                 'loc'=>'https://kinyu-joshi.jp/joshikai',
+                 'lastmod'=>$today,
+                 'changefreq'=>'always',
+                 'priority'=>0.9
+             ),
+             array(
+                 'loc'=>'https://kinyu-joshi.jp/report',
+                 'lastmod'=>$today,
+                 'changefreq'=>'hourly',
+                 'priority'=>0.9
+             ),
+             array(
+                 'loc'=>'https://kinyu-joshi.jp/kinyu_sanpo',
+                 'lastmod'=>$today,
+                 'changefreq'=>'weekly',
+                 'priority'=>0.5
+             ),
+             array(
+                 'loc'=>'https://kinyu-joshi.jp/myway',
+                 'lastmod'=>$today,
+                 'changefreq'=>'monthly',
+                 'priority'=>0.5
+             ),
+             array(
+                 'loc'=>'https://kinyu-joshi.jp/about',
+                 'lastmod'=>$today,
+                 'changefreq'=>'monthly',
+                 'priority'=>0.5
+             ),
+            array(
+                 'loc'=>'https://kinyu-joshi.jp/kinjo_check',
+                 'lastmod'=>$today,
+                 'changefreq'=>'monthly',
+                 'priority'=>0.5
+             ),
+             array(
+                 'loc'=>'https://www.asahi.com/and_w/kinyujoshi_list.html',
+                 'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                 'priority'=>0.5
+             )
+        
+         );
 
-        while ($cnt < count($site_data)) {
+        $rootNode = new SimpleXMLElement( "<?xml version='1.0' encoding='UTF8' standalone='yes'?><items></items>" );
 
-            $loc = $document->createElement('loc');
-            $loc->appendChild($document->createTextNode($site_data[$cnt]['loc']));
-            $lastMod = $document->createElement('lastmod');
-            $lastMod->appendChild($document->createTextNode($site_data[$cnt]['lastmod']));
-            $changeFreq = $document->createElement('changefreq');
-            $changeFreq->appendChild($document->createTextNode($site_data[$cnt]['changefreq']));
-            $priority = $document->createElement('priority');
-            $priority->appendChild($document->createTextNode($site_data[$cnt]['priority']));
-            $item = $document->createElement('item');
-            $item->appendChild($loc);
-            $item->appendChild($lastMod);
-            $item->appendChild($priority);
-            $document->appendChild($item);
-            $document->saveXML();
+        // ノードの追加
+        while($cnt < count($site_data)) {
+            $itemNode = $rootNode->addChild('item');
+            $itemNode->addChild( 'loc', $site_data[$cnt]['loc']);
+            $itemNode->addChild( 'lastmod', $site_data[$cnt]['lastmod']);
+            $itemNode->addChild( 'changefreq', $site_data[$cnt]['changefreq']);
+            $itemNode->addChild( 'prioriry', $site_data[$cnt]['priority']);
             $cnt++;
-
         }
 
-        // コードの生成
+        // 作ったxmlツリーを出力する
+        $dom = new DOMDocument( '1.0' );
+        $dom->loadXML( $rootNode->asXML() );
+        $dom->formatOutput = true;
         $response = new Response();
-
-        // XML を出力します
         $response->set_header('Content-Type', "xml; charset=utf-8");
-
-        // キャッシュをなしにします
-        $response->set_header('Cache-Control', 'no-cache, no-store, max-age=0, must-revalidate');
-        $response->set_header('Expires', 'Mon, 26 Jul 1997 05:00:00 GMT');
-        $response->set_header('Pragma', 'no-cache');
-
-        $response->body($document->savaXML());
+        echo $dom->saveXML();
         return $response;
+
+
     }
 }
