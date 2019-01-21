@@ -65,13 +65,6 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
                  'changefreq'=>'monthly',
                  'priority'=>0.5
              ),
-             array(
-                 'loc'=>'https://www.asahi.com/and_w/kinyujoshi_list.html',
-                 'lastmod'=>$today,
-                'changefreq'=>'monthly',
-                 'priority'=>0.5
-             )
-        
          );
 
         // レポート
