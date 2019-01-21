@@ -96,11 +96,11 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
             ));
         }
 
-        $rootNode = new SimpleXMLElement( "<?xml version='1.0' encoding='UTF8' standalone='yes'?><items></items>" );
+        $rootNode = new SimpleXMLElement( "<?xml version='1.0' encoding='UTF8' standalone='yes'?><urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'></urlset>" );
 
         // ノードの追加
         while($cnt < count($site_data)) {
-            $itemNode = $rootNode->addChild('item');
+            $itemNode = $rootNode->addChild('url');
             $itemNode->addChild( 'loc', $site_data[$cnt]['loc']);
             $itemNode->addChild( 'lastmod', $site_data[$cnt]['lastmod']);
             $itemNode->addChild( 'changefreq', $site_data[$cnt]['changefreq']);
