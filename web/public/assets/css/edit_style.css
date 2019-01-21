@@ -896,6 +896,28 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   width: 45px;
 }
 
+.pr {
+  position: relative;
+}
+
+.report-pr-label  {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+}
+
+.report-pr-label img {
+  width: 30px;
+}
+
+@media screen and (max-width: 769px) {
+  /* PRアイコン */
+  .report-pr-label img {
+    width: 25px;
+  }
+}
+
+
 
 /* .kinyu-top-report-list .img-box .member-regist-label {
   position: absolute;

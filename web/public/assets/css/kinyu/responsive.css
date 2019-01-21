@@ -32,10 +32,10 @@
   margin-bottom: 20px;
 }
 .hnavi-nav .category-menu li:first-child {
-  margin-top: 8px; 
+  margin-top: 8px;
 }
 .hnavi-nav .category-menu li:last-child {
-  margin-bottom: 0px; 
+  margin-bottom: 0px;
 }
 .hnavi-brand {
   font-size: 1.5rem;
@@ -182,7 +182,7 @@
   text-align: right;
   color: #fff;
   padding: 6px 10px 6px 0px;
-  background-color: #74afa5; 
+  background-color: #74afa5;
 }
 .category-menu {
   border-bottom: 1px solid #d8d8d8;
@@ -199,7 +199,7 @@
 }
 .hnavi-menu .sub-menu li {
   padding: 5px 0px 5px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 .hnavi-menu .sub-menu li:last-child {
   margin-bottom: 0px;
@@ -214,7 +214,7 @@
   opacity: 0.5;
   width: 50px;
   height: 50px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -273,7 +273,7 @@
   margin-bottom: 20px;
 }
 .singlepage-theree-cicle-list li:last-child {
- margin-bottom: 0px; 
+ margin-bottom: 0px;
 }
 .singlepage-theree-cicle-list li .inner {
   display: table;
@@ -331,7 +331,7 @@
   float: left;
   text-align: center;
   box-sizing: border-box;
-  border-right: 
+  border-right:
 }
 .kinyu-top-main-slide-bottom .right-block li .img-box {
   background-color: gray;
@@ -365,6 +365,7 @@
 }
 .kinyu-top-main-slide-bottom .right-block li img {
 }
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   インスタグラムのギャラリーページ
@@ -469,7 +470,7 @@
   margin-right: 16px;
 }
 .kinyu-follow-sns li:last-child {
-  margin-right: 0px; 
+  margin-right: 0px;
 }
 .kinyu-follow-sns li a {
   display: block;
@@ -490,8 +491,8 @@
   padding: 0px 4%;
   box-sizing: border-box;
 }
-.gcarender { 
-  width: 100%; 
+.gcarender {
+  width: 100%;
   height: 500px;
 }
 .event-introduction {
@@ -518,7 +519,7 @@
 .request-introduction-img {
   width: 90%;
   margin: 0 auto;
-  padding: 50px 0px;  
+  padding: 50px 0px;
 }
 .request-sub {
   position: relative;
@@ -531,7 +532,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .company-details-block {
   width: 100%;
-  padding: 24px 0px; 
+  padding: 24px 0px;
 }
 .company-details-menu {
   display: none;
@@ -540,7 +541,7 @@
   width: 84%;
   padding-left: 0px;
   float: none;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 .company-details .first-description {
   padding-bottom: 0px;

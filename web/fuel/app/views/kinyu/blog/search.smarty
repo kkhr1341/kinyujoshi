@@ -30,6 +30,7 @@
            　　　{/if}
            　　　{if $blog.pr == 1}
            　　　  <!-- PR用イメージ挿入箇所 -->
+                       <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
            　　　{/if}
           　　 </div>
               <div class="text-box">
@@ -52,7 +53,7 @@
               </div>
             </a>
           </li>
-        {foreachelse}  
+        {foreachelse}
           <p class="none-hit-report">該当するレポートはありませんでした...。</p>
         {/foreach}
       </ul>
