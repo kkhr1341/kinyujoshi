@@ -12,59 +12,107 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
         $today = date('Y-m-d');
         $site_data = array(
              array(
-                'loc'=>'https://kinyu-joshi.jp/',
+                'loc'=>\Uri::base(false),
                 'lastmod'=>$today,
                  'changefreq'=>'always',
                  'priority'=>1
              ),
             array(
-                'loc'=>'https://kinyu-joshi.jp/business',
+                'loc'=>\Uri::base(false) . 'business',
                 'lastmod'=>$today,
                 'changefreq'=>'hourly',
                 'priority'=>0.9
             ),
              array(
-                 'loc'=>'https://kinyu-joshi.jp/news',
+                 'loc'=>\Uri::base(false) . 'news',
                  'lastmod'=>$today,
                  'changefreq'=>'hourly',
                  'priority'=>0.9
              ),
              array(
-                 'loc'=>'https://kinyu-joshi.jp/joshikai',
+                 'loc'=>\Uri::base(false) . 'joshikai',
                  'lastmod'=>$today,
                  'changefreq'=>'always',
                  'priority'=>0.9
              ),
              array(
-                 'loc'=>'https://kinyu-joshi.jp/report',
+                 'loc'=>\Uri::base(false) . 'report',
                  'lastmod'=>$today,
                  'changefreq'=>'hourly',
                  'priority'=>0.9
              ),
              array(
-                 'loc'=>'https://kinyu-joshi.jp/kinyu_sanpo',
+                 'loc'=>\Uri::base(false) . 'kinyu_sanpo',
                  'lastmod'=>$today,
                  'changefreq'=>'weekly',
                  'priority'=>0.5
              ),
              array(
-                 'loc'=>'https://kinyu-joshi.jp/myway',
+                 'loc'=>\Uri::base(false) . 'myway',
                  'lastmod'=>$today,
                  'changefreq'=>'monthly',
                  'priority'=>0.5
              ),
              array(
-                 'loc'=>'https://kinyu-joshi.jp/about',
+                 'loc'=>\Uri::base(false) . 'about',
                  'lastmod'=>$today,
                  'changefreq'=>'monthly',
                  'priority'=>0.5
              ),
             array(
-                 'loc'=>'https://kinyu-joshi.jp/kinjo_check',
+                 'loc'=>\Uri::base(false) . 'kinjo_check',
                  'lastmod'=>$today,
                  'changefreq'=>'monthly',
                  'priority'=>0.5
              ),
+            array(
+                'loc'=>\Uri::base(false) . 'faq',
+                'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                'priority'=>0.5
+            ),
+            array(
+                'loc'=>\Uri::base(false) . 'contact',
+                'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                'priority'=>0.5
+            ),
+            array(
+                'loc'=>\Uri::base(false) . 'service',
+                'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                'priority'=>0.5
+            ),
+            array(
+                'loc'=>\Uri::base(false) . 'joshikai_policy',
+                'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                'priority'=>0.5
+            ),
+            array(
+                'loc'=>\Uri::base(false) . 'privacy',
+                'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                'priority'=>0.5
+            ),
+            array(
+                'loc'=>\Uri::base(false) . 'link_policy',
+                'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                'priority'=>0.5
+            ),
+            array(
+                'loc'=>\Uri::base(false) . 'legal',
+                'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                'priority'=>0.5
+            ),
+            array(
+                'loc'=>\Uri::base(false) . 'company',
+                'lastmod'=>$today,
+                'changefreq'=>'monthly',
+                'priority'=>0.5
+            ),
          );
 
         // レポート
