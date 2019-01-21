@@ -1,5 +1,9 @@
 <?php
 //include 'mock_site_data.php';
+
+use \Model\Blogs;
+use \Model\Events;
+
 class Controller_Kinyu_SiteMap extends Controller_Rssbase
 {
     public function action_index()
@@ -13,6 +17,12 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
                  'changefreq'=>'always',
                  'priority'=>1
              ),
+            array(
+                'loc'=>'https://kinyu-joshi.jp/business',
+                'lastmod'=>$today,
+                'changefreq'=>'hourly',
+                'priority'=>0.9
+            ),
              array(
                  'loc'=>'https://kinyu-joshi.jp/news',
                  'lastmod'=>$today,
@@ -64,6 +74,28 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
         
          );
 
+        // レポート
+        $blogs = Blogs::lists(1, null, 1);
+        foreach ($blogs as $blog) {
+            array_push($site_data, array(
+                'loc'=>'https://kinyu-joshi.jp/report/' . $blog['code'],
+                'lastmod'=>date_format(date_create($blog['updated_at']), 'Y-m-d'),
+                'changefreq'=>'always',
+                'priority'=>0.8
+            ));
+        }
+
+        // 女子会
+        $events = Events::lists(1, null, 1);
+        foreach ($events as $event) {
+            array_push($site_data, array(
+                'loc'=>'https://kinyu-joshi.jp/joshikai/' . $event['code'],
+                'lastmod'=>date_format(date_create($event['updated_at']), 'Y-m-d'),
+                'changefreq'=>'always',
+                'priority'=>0.8
+            ));
+        }
+
         $rootNode = new SimpleXMLElement( "<?xml version='1.0' encoding='UTF8' standalone='yes'?><items></items>" );
 
         // ノードの追加
@@ -84,7 +116,5 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
         $response->set_header('Content-Type', "xml; charset=utf-8");
         echo $dom->saveXML();
         return $response;
-
-
     }
 }
