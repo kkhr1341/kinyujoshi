@@ -68,7 +68,7 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
          );
 
         // レポート
-        $blogs = Blogs::lists(1, null, 1);
+        $blogs = Blogs::lists(1, 50, 1);
         foreach ($blogs as $blog) {
             array_push($site_data, array(
                 'loc'=>'https://kinyu-joshi.jp/report/' . $blog['code'],
@@ -79,7 +79,7 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
         }
 
         // 女子会
-        $events = Events::lists(1, null, 1);
+        $events = Events::lists(1, 50, 1);
         foreach ($events as $event) {
             array_push($site_data, array(
                 'loc'=>'https://kinyu-joshi.jp/joshikai/' . $event['code'],
