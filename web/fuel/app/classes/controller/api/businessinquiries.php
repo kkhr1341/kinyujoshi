@@ -6,15 +6,22 @@ class Controller_Api_Businessinquiries extends Controller_Apibase
 {
     public function action_create()
     {
-        $config = array(
-            'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png', 'pdf'),
-        );
-        // $_FILES 内のアップロードされたファイルを処理する
-        Upload::process($config);
+        if  (count($_FILES)){
 
-        if ($errors = Upload::get_errors()) {
-            return $this->error(Upload::get_errors()[0]['errors'][0]['message']);
+            $config = array(
+                'ext_whitelist' => array('img', 'jpg', 'jpeg', 'gif', 'png', 'pdf'),
+            );
+            // $_FILES 内のアップロードされたファイルを処理する
+            Upload::process($config);
+
+            if ($errors = Upload::get_errors()) {
+                return $this->error(Upload::get_errors()[0]['errors'][0]['message']);
+            }
+            $files = Upload::get_files();
+        } else {
+            $files = array();
         }
+
         $val = BusinessInquiries::validate();
         if (!$val->run()) {
             $error_messages = $val->error_message();
@@ -22,7 +29,7 @@ class Controller_Api_Businessinquiries extends Controller_Apibase
             return $this->error($message);
         }
         try {
-            return $this->ok(BusinessInquiries::create($val->validated(), Upload::get_files()));
+            return $this->ok(BusinessInquiries::create($val->validated(), $files));
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }

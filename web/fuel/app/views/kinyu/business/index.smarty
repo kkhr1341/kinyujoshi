@@ -455,7 +455,9 @@ $(function() {
                 fd.append(key, params[key]);
             })
 
-            fd.append( "attachment_file", $("#attachment_file").prop("files")[0] );
+            if ($("#attachment_file").prop("files").length > 0) {
+                fd.append( "attachment_file", $("#attachment_file").prop("files")[0] );
+            }
 
             bootbox.confirm("お問合せを送信しますか？", function (result) {
                 if (result) {
