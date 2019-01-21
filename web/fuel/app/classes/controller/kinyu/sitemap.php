@@ -97,7 +97,7 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
             $itemNode->addChild( 'loc', $site_data[$cnt]['loc']);
             $itemNode->addChild( 'lastmod', $site_data[$cnt]['lastmod']);
             $itemNode->addChild( 'changefreq', $site_data[$cnt]['changefreq']);
-            $itemNode->addChild( 'prioriry', $site_data[$cnt]['priority']);
+            $itemNode->addChild( 'priority', $site_data[$cnt]['priority']);
             $cnt++;
         }
 
