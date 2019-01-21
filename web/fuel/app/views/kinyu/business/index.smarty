@@ -44,7 +44,7 @@
 			<div class="business-service-wrapper clear">
 				<div class="service-box">
 					<!-- <img src="/images/business/step1.png" class="business-step"> -->
-					<div class="service-icon"><img src="/images/business/icon1.png" class="business-icon"></div>
+					<div class="service-icon"><img src="/images/business/icon1.jpg" class="business-icon"></div>
 					<div class="service-type"><img src="/images/business/type1.png"></div>
 					<div class="gray-line"></div>
 					<p>メンバーがサービスについて楽しく理解したり体験したりするイベントを開催。なかなかリーチできない層のリアルな感想や反応を知ることができます。</p>
@@ -53,7 +53,7 @@
 				</div>
 				<div class="service-box">
 					<!-- <img src="/images/business/step2.png" class="business-step"> -->
-					<div class="service-icon"><img src="/images/business/icon2.png" class="business-icon"></div>
+					<div class="service-icon"><img src="/images/business/icon2.jpg" class="business-icon"></div>
 					<div class="service-type"><img src="/images/business/type2.png"></div>
 					<div class="gray-line"></div>
 					<p>webサイトやパンフレット、ノベルティ等を女性たちに親しまれる柔らかい表現やデザイン・写真に刷新いたします。</p>
@@ -62,7 +62,7 @@
 
 				<div class="service-box mb0">
 					<!-- <img src="/images/business/step3.png" class="business-step"> -->
-					<div class="service-icon"><img src="/images/business/icon3.png" class="business-icon"></div>
+					<div class="service-icon"><img src="/images/business/icon3.jpg" class="business-icon"></div>
 					<div class="service-type"><img src="/images/business/type3.png"></div>
 					<div class="gray-line"></div>
 					<p>メンバーが意見やアイディアを積極的に提案する参加型座談会を開催。顧客目線の斬新な声を企画や広報戦略に役立てることができます。</p>
