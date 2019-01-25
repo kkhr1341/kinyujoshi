@@ -29,6 +29,8 @@ class Events extends Base
 
         $val->add('secret', 'メンバー限定女子会');
 
+        $val->add('pr', 'PR');
+
         $val->add('display', '表示/非表示');
 
         $val->add('display_past', '過去の女子会への表示/非表示');
@@ -326,6 +328,7 @@ class Events extends Base
         $data['event_category'] = $params['event_category'];
         $data['section_code'] = $params['section_code'];
         $data['secret'] = $params['secret'];
+        $data['pr'] = $params['pr'];
         $data['display'] = $params['display'];
         $data['display_past'] = $params['display_past'];
         $data['specific_link'] = $params['specific_link'];
@@ -361,6 +364,7 @@ class Events extends Base
         $data['event_category'] = $params['event_category'];
         $data['section_code'] = $params['section_code'];
         $data['secret'] = $params['secret'];
+        $data['pr'] = $params['pr'];
         $data['display'] = $params['display'];
         $data['display_past'] = $params['display_past'];
         $data['specific_link'] = $params['specific_link'];

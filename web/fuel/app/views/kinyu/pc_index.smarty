@@ -129,13 +129,18 @@
             {$fooo = $event.main_image}
             {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-            <li>
+            <li{if $event.pr == 1} class="pr"{/if}>
               {if empty($event.specific_link)}
               <a class="js-track" href="/joshikai/{$event.code}" data-category="pc-top-link" data-action="click" data-value="1">
               {else}
               <a class="js-track" href="{$event.specific_link}" data-category="pc-top-link" data-action="click" data-value="1" target="_blank">
               {/if}
-                <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;">
+                  {if $event.pr == 1}
+                    <!-- PR用イメージ挿入箇所 -->
+                    <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+                  {/if}
+                </div>
                 <div class="text-box">
                   <div class="kinyu-top-list-kind kinyu-top-event-kind">
                     <p>

@@ -27,7 +27,7 @@
           {$fooo = $event.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-          <li>
+          <li{if $event.pr == 1} class="pr"{/if}>
             {if $event.event_category == "女子会"}
               <div class="bg-joshikai"></div>
             {else if $event.event_category == "スペシャル"}
@@ -42,6 +42,10 @@
               <a href="{$event.specific_link}" target="_blank">
               {/if}
                 <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
+                  {if $event.pr == 1}
+                    <!-- PR用イメージ挿入箇所 -->
+                    <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+                  {/if}
                 </div>
 
                 {if $event.event_category == "女子会"}
@@ -115,45 +119,6 @@
             </div>
           </div>
         </div>
-
-        {*
-        <div class="joshikai-held-area">
-          <p class="joshikai-held-area-title">ー 主に女子会を開催している場所 ー</p>
-          <div class="joshikai-held-el-block">
-            <div class="joshikai-held-el sarvador-held clear">
-              <div class="img-block" style="background:url(/images/event/joshikai-held-CAFE_SARVADOR_BUSINESS_SALON.jpg) center center / cover no-repeat"></div>
-              <div class="text-block">
-                <div class="text-block-inner">
-                  <p class="joshikai-held-place-area kabutocho">ー 兜町 ー</p>
-                  <p class="joshikai-held-place-title kabutocho">CAFE SARVADOR BUSINESS SALON</p>
-                  <p class="joshikai-held-place-sub-title">カフェ・サルバトル</p>
-                  <p class="place-description">きんゆう女子。誕生当初から拠点となっていた、カフェ・サルバトル。金融発祥の地「日本橋兜町・茅場町」にあり、本棚には金融関連の書籍が並ぶなど、金融街ならではのカフェスペースになっています♪ カレーが美味しい...！</p>
-                  <p class="joshikai-held-place-address">住所：東京都中央区日本橋茅場町1-5-8 東京証券会館1階</p>
-                  <div class="place-link-block">
-                    <a class="place-link kabutocho" href="http://cafe-salvador.com/" target="_blank">詳細はこちら</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="joshikai-held-el sarvador-held clear">
-              <div class="img-block" style="background:url(/images/event/joshikai-held-RAMO_FRUTAS_CAFE.jpg) center center / cover no-repeat"></div>
-              <div class="text-block">
-                <div class="text-block-inner">
-                  <p class="joshikai-held-place-area ginza">ー 銀座 ー</p>
-                  <p class="joshikai-held-place-title ginza">RAMO FRUTAS CAFE</p>
-                  <p class="joshikai-held-place-sub-title">ラモ・フルータス・カフェ</p>
-                  <p class="place-description">きんゆう女子。会 @銀座の拠点は、GINZA PLACE 3F common ginza、「RAMO FRUTAS CAFE」。カラフルでフレッシュな旬のフルーツを使ったメニューが特徴的なカフェです。開放感のあるカフェで、ガラス張りの店内からの銀座の眺めがすてき！</p>
-                  <p class="joshikai-held-place-address">住所：東京都中央区銀座五5-8-1 GINZA PLACE 3F</p>
-                  <div class="place-link-block">
-                    <a class="place-link ginza" href="https://ginzaplace.jp/commonginza/" target="_blank">詳細はこちら</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        *}
-
       </div>
 
       <div class="special-event-list joshikai-main-el">
