@@ -24,44 +24,61 @@ class News extends Base
         return $val;
     }
 
-    public static function lists($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null)
+    public static function fetch($options=array())
     {
-
-        $datas = \DB::select(\DB::expr('*, news.code'))->from('news')
+        $datas = \DB::select(\DB::expr('*, news.code'))
+            ->from('news')
             ->join('profiles', 'left')
             ->on('news.username', '=', 'profiles.username')
             ->where('news.disable', '=', 0);
 
-        if ($mode === null) {
+        if (!isset($options['mode']) || is_null($options['mode'])) {
         } else {
-            $datas = $datas->where('status', '=', $mode);
+            $datas = $datas->where('status', '=', $options['mode']);
         }
 
-        if ($open === null) {
+        if (!isset($options['open']) || is_null($options['open'])) {
         } else {
             $datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
         }
 
-        if ($section_code === null) {
+        if (!isset($options['section_code']) || is_null($options['section_code'])) {
         } else {
-            $datas = $datas->where('section_code', '=', $section_code);
+            $datas = $datas->where('section_code', '=', $options['section_code']);
+        }
+
+        if (!isset($options['username']) || is_null($options['username'])) {
+        } else {
+            $datas = $datas->where('news.username', '=', $options['username']);
         }
 
         $datas = $datas->order_by('open_date', 'desc');
 
-        // if ($offset === null) {
-        // }
-        // else {
-        // 	$datas = $datas->offset($offset);
-        // }
-
-        if ($limit === null) {
+        if (!isset($options['limit']) || is_null($options['limit'])) {
         } else {
-            $datas = $datas->limit($limit);
+            $datas = $datas->limit($options['limit']);
         }
         $datas = $datas->execute()
             ->as_array();
         return $datas;
+    }
+
+    public static function lists($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null)
+    {
+        return self::fetch(array(
+            'mode' => $mode,
+            'limit' => $limit,
+            'open' => $open,
+            'section_code' => $section_code,
+            'project_code' => $project_code,
+        ));
+    }
+
+    public static function list_of_user($mode = null, $username) {
+        return self::fetch(array(
+            'mode' => $mode,
+            'username' => $username,
+        ));
     }
 
     public static function create($params)

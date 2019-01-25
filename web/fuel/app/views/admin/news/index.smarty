@@ -9,16 +9,20 @@
 	<a class="btn btn-primary float_right" href="/admin/news/create" role="button">お知らせを書く</a>
 </div>
 
-
 <ul class="nav nav-tabs">
-	<li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
+    {if (Auth::has_access('news.publish'))}
+	    <li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
+	{/if}
 	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
-	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
+	{if (Auth::has_access('news.publish'))}
+	    <li><a href="#tab3" data-toggle="tab">すべて</a></li>
+	{/if}
 </ul>
 <div class="tab-content">
+    {if (Auth::has_access('news.publish'))}
 	<div class="tab-pane active" id="tab1">
 		{if sizeof($open_news) == 0}
-		<div class="alert alert-warning mt20" role="alert">公開中のお知らせはありません</div>
+		    <div class="alert alert-warning mt20" role="alert">公開中のお知らせはありません</div>
 		{else}
 		<table class="table table-hover mt20">
 			<thead>
@@ -42,60 +46,64 @@
 		</table>
 		{/if}
 	</div>
+	{/if}
+
 	<div class="tab-pane" id="tab2">
 		{if sizeof($closed_news) == 0}
-		<div class="alert alert-warning mt20" role="alert">下書き状態のお知らせはありません</div>
+		    <div class="alert alert-warning mt20" role="alert">下書き状態のお知らせはありません</div>
 		{else}
-		<table class="table table-hover mt20">
-			<thead>
-				<tr>
-					<th>状態</th>
-					<th>タイトル</th>
-					<th>公開日時</th>
-				</tr>
-			</thead>
-			{foreach from=$closed_news item=news_item}
-			<tr class="news pointer" code="{$news_item.code}">
-				<td>
-					{if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
-					{if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
-					{if $news_item.status == 0}下書き{/if}
-				</td>
-				<td>{$news_item.title}</td>
-				<td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
-			</tr>
-			{/foreach}
-		</table>
+            <table class="table table-hover mt20">
+                <thead>
+                    <tr>
+                        <th>状態</th>
+                        <th>タイトル</th>
+                        <th>公開日時</th>
+                    </tr>
+                </thead>
+                {foreach from=$closed_news item=news_item}
+                <tr class="news pointer" code="{$news_item.code}">
+                    <td>
+                        {if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
+                        {if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
+                        {if $news_item.status == 0}下書き{/if}
+                    </td>
+                    <td>{$news_item.title}</td>
+                    <td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+                </tr>
+                {/foreach}
+            </table>
 		{/if}
 	</div>
-	<div class="tab-pane" id="tab3">
-		{if sizeof($all_news) == 0}
-		<div class="alert alert-warning mt20" role="alert">お知らせはありません</div>
-		{else}
-		<table class="table table-hover mt20">
-			<thead>
-				<tr>
-					<th>状態</th>
-					<th>タイトル</th>
-					<th>公開日時</th>
-				</tr>
-			</thead>
-			{foreach from=$all_news item=news_item}
-			<tr class="news pointer" code="{$news_item.code}">
-				<td>
-					{if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
-					{if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
-					{if $news_item.status == 0}下書き{/if}
-				</td>
-				<td>{$news_item.title}</td>
-				<td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
-			</tr>
-			{/foreach}
-		</table>
-		{/if}
-	</div>
-</div>
 
+	{if (Auth::has_access('news.publish'))}
+        <div class="tab-pane" id="tab3">
+            {if sizeof($all_news) == 0}
+                <div class="alert alert-warning mt20" role="alert">お知らせはありません</div>
+            {else}
+                <table class="table table-hover mt20">
+                    <thead>
+                        <tr>
+                            <th>状態</th>
+                            <th>タイトル</th>
+                            <th>公開日時</th>
+                        </tr>
+                    </thead>
+                    {foreach from=$all_news item=news_item}
+                    <tr class="news pointer" code="{$news_item.code}">
+                        <td>
+                            {if $news_item.status == 1 && strtotime($news_item.open_date) < time()}公開{/if}
+                            {if $news_item.status == 1 && strtotime($news_item.open_date) > time()}公開待ち{/if}
+                            {if $news_item.status == 0}下書き{/if}
+                        </td>
+                        <td>{$news_item.title}</td>
+                        <td>{$news_item.open_date|date_format:"%Y/%m/%d %H:%M"}</td>
+                    </tr>
+                    {/foreach}
+                </table>
+            {/if}
+        </div>
+	{/if}
+</div>
 
 <script>
 $(function(){
@@ -103,5 +111,8 @@ $(function(){
 		var code = $(this).attr('code');
 		location.href = "/admin/news/edit/"+code;
 	});
+
+	// 一番目のタブをアクティブにする
+	$('.nav-tabs li:first a').trigger('click')
 });
 </script>

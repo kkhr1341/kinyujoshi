@@ -15,6 +15,9 @@ class Controller_Api_News extends Controller_Apibase
             $message = reset($error_messages);
             return $this->error($message);
         }
+        if ($val->validated('status') == 1 && !Auth::has_access('news.publish')) {
+            return $this->error('公開の権限がありません');
+        }
         try {
             return $this->ok(News::create($val->validated()));
         } catch(Exception $e) {
@@ -32,6 +35,9 @@ class Controller_Api_News extends Controller_Apibase
             $error_messages = $val->error_message();
             $message = reset($error_messages);
             return $this->error($message);
+        }
+        if ($val->validated('status') == 1 && !Auth::has_access('news.publish')) {
+            return $this->error('公開の権限がありません');
         }
         try {
             return $this->ok(News::save($val->validated()));

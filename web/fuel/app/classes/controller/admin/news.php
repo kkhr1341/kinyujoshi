@@ -5,7 +5,6 @@ use \Model\Sections;
 
 class Controller_Admin_News extends Controller_Adminbase
 {
-
     public function action_index()
     {
         if (!Auth::has_access('news.read')) {
@@ -13,7 +12,14 @@ class Controller_Admin_News extends Controller_Adminbase
         }
         $this->data['sections'] = Sections::lists();
         $this->data['all_news'] = News::lists();
-        $this->data['closed_news'] = News::lists(0);
+
+        if (Auth::has_access('blogs.publish')) {
+            $this->data['closed_news'] = News::lists(0);
+        } else {
+            $username = Auth::get('username');
+            $this->data['closed_news'] = News::list_of_user(0, $username);
+        }
+
         $this->data['open_news'] = News::lists(1);
         $this->template->contents = View::forge('admin/news/index.smarty', $this->data);
         $this->template->description = 'マイページ・ニュース';

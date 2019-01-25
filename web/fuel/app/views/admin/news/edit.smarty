@@ -68,10 +68,14 @@
 			</div>
 			<div class="form-right">
 				<div class="edit-block-menu">
-					<li><button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button></li>
+                    {if (Auth::has_access('news.publish'))}
+					    <li><button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button></li>
+					{/if}
 					<li><button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button></li>
 					<li><button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button></li>
-					<li><button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button></li>
+					{if (Auth::has_access('news.delete'))}
+					    <li><button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button></li>
+					{/if}
 				</div>
 			</div>
 		</div>

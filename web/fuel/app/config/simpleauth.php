@@ -100,7 +100,7 @@ return array(
             'events' => array('read', 'create', 'edit', 'delete'),
             'applications' => array('read', 'create', 'edit', 'delete'),
             'inquiries' => array('read'),
-            'news' => array('read', 'create', 'edit', 'delete'),
+            'news' => array('read', 'create', 'edit', 'delete', 'publish'),
             'registlist' => array('read', 'create'),
             'registreminder' => array('send'),
             'remindmailtemplates' => array('read', 'edit'),
@@ -109,6 +109,7 @@ return array(
             'analysis' => array('read'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
+            'news' => array('read', 'create', 'edit', 'delete'),
         ),
 		
 		/**
