@@ -1,5 +1,16 @@
 <div class="report-detail-sidebar-inner">
 
+  <!-- 編集部へのコメント -->
+  <div class="report-detail-sidebar-el">
+    <p class="report-detail-sidebar-el-title">あなたのワカラナイこと、教えてください！</p>
+    <div class="">
+      <form>
+        <textarea id="message" name="message" class='' rows="10"></textarea>
+        <button class="btn btn-kinyu" type="button" id="save" data-code="{$blog.code}">送信する</button>
+      </form>
+    </div>
+  </div>
+
   <!-- 編集部のおすすめレポート -->
   <div class="report-detail-sidebar-el">
     <p class="report-detail-sidebar-el-title">編集部のおすすめレポート</p>
@@ -95,18 +106,6 @@
 
     </div>
   </div>
-
-  <!-- 編集部へのコメント -->
-  <div class="report-detail-sidebar-el">
-    <p class="report-detail-sidebar-el-title">あなたのワカラナイこと、教えてください！</p>
-    <div class="">
-      <form>
-        <textarea id="message" name="message" class='' rows="10"></textarea>
-        <button class="btn btn-kinyu" type="button" id="save" data-code="{$blog.code}">送信する</button>
-      </form>
-    </div>
-  </div>
-
 </div>
 
 <div class="report-detail-sidebar2">
