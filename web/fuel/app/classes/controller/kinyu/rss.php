@@ -63,11 +63,9 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
 
     private function getS3Key($url)
     {
-        \Config::load('s3', true);
-        $bucket = \Config::get('s3.bucket');
-        preg_match('/(.+)' . $bucket . '\/(.+)/', $url, $matches);
+        preg_match('/(.+)\/stock\/(.+)/', $url, $matches);
         if (isset($matches[2])) {
-            return $matches[2];
+            return 'stock/' . $matches[2];
         }
         return false;
     }
