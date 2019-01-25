@@ -4,6 +4,11 @@ use \Model\Blogs;
 
 use \FeedWriter\RSS2;
 
+use Aws\S3\S3Client;
+use Aws\Credentials\Credentials;
+
+//use \Model\Files;
+
 class Controller_Kinyu_Rss extends Controller_Rssbase
 {
 
@@ -28,7 +33,8 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
             $item->setLink( \Uri::base() . 'report/' . $blog['code'] ) ;	// リンク
             $item->setDescription( $blog['description'] ) ;	// 紹介テキスト
             $item->setDate( strtotime($blog['updated_at']) ) ;	// 更新日時
-//            $item->addEnclosure( $blog['main_image'], 500, 'image/jpeg');
+            $metas = $this->getImageMeta($blog['main_image']);
+            $item->addEnclosure( $blog['main_image'], $metas['ContentLength'], $metas['ContentType']);
 //            $item->setAuthor( "あらゆ" , "info@syncer.jp" ) ;	// 著者の連絡先(E-mail)
             $item->setId( \Uri::base() . 'report/' . $blog['code'] , true ) ;	// 一意のID(第1引数にURLアドレス、第2引数にtrueで通常は大丈夫)
             $feed->addItem( $item ) ;
@@ -49,5 +55,37 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
 
         $response->body($xml);
         return $response;
+    }
+
+    private function getImageMeta($url)
+    {
+        \Config::load('s3', true);
+
+        $credentials = new Credentials(\Config::get('s3.access_key'), \Config::get('s3.secret_key'));
+
+        $params = array(
+            'signature' => 'v4',
+            'credentials' => $credentials,
+            'region' => 'ap-northeast-1',
+            'version' => "latest",
+        );
+        if (\Config::get('s3.endpoint')) {
+            $params['endpoint'] = \Config::get('s3.endpoint');
+            $params['use_path_style_endpoint'] = true;
+        }
+        $s3 = S3Client::factory($params);
+
+        preg_match('/(.+)sunday-lunch\/(.+)/', $url, $matches);
+        $key = $matches[2];
+
+        $response = $s3->getObject(array(
+            'Bucket' => 'sunday-lunch',
+            'Key'    => $key
+        ));
+
+        return array(
+            'ContentType' => $response->get('ContentType'),
+            'ContentLength' => $response->get('ContentLength'),
+        );
     }
 }
