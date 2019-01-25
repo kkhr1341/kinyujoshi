@@ -130,6 +130,7 @@ return array(
         121 => '129_add_position_to_authors',
         122 => '130_add_pr_to_blogs',
         123 => '131_add_pr_to_events',
+        124 => '132_create_blog_comments',
       ),
     ),
     'module' => 

@@ -102,7 +102,7 @@
     <div class="">
       <form>
         <textarea id="message" name="message" class='' rows="10"></textarea>
-        <button class="btn btn-kinyu" type="button" id="save">送信する</button>
+        <button class="btn btn-kinyu" type="button" id="save" data-code="{$blog.code}">送信する</button>
       </form>
     </div>
   </div>
@@ -164,8 +164,11 @@ $(window).load(function(){
 $(function(){
 
   $('#save').click(function(){
-    var url = "/api/comment/create";
-    var params = {};
+    var url = "/api/blogcomments/create";
+    var blog_code = $(this).data('code');
+    var params = {
+      "blog_code": blog_code
+    };
 
     params.message = $('#message').val();
 
