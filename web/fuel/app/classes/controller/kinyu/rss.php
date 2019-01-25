@@ -35,9 +35,10 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
             $item->setDate( strtotime($blog['updated_at']) ) ;	// 更新日時
 
             // サムネイルが存在するか確認
-            if ($key = $this->getS3Key($blog['main_image'])) {
+            $thumbnail = $this->toThumbnail($blog['main_image']);
+            if ($key = $this->getS3Key($thumbnail)) {
                 $metas = $this->getImageMeta($key);
-                $item->addEnclosure( $blog['main_image'], $metas['ContentLength'], $metas['ContentType']);
+                $item->addEnclosure($thumbnail, $metas['ContentLength'], $metas['ContentType']);
             }
 //            $item->setAuthor( "あらゆ" , "info@syncer.jp" ) ;	// 著者の連絡先(E-mail)
             $item->setId( \Uri::base() . 'report/' . $blog['code'] , true ) ;	// 一意のID(第1引数にURLアドレス、第2引数にtrueで通常は大丈夫)
@@ -59,6 +60,11 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
 
         $response->body($xml);
         return $response;
+    }
+
+    private function toThumbnail($url)
+    {
+        return preg_replace("/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/", "$1/thumb_$2", $url);
     }
 
     private function getS3Key($url)
