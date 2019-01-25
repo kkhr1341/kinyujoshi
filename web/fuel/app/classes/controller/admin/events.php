@@ -15,8 +15,8 @@ class Controller_Admin_Events extends Controller_Adminbase
             throw new HttpNoAccessException;
         }
         $this->data['sections'] = Sections::lists();
-        $this->data['past_events'] = Events::lists02();
 
+        $this->data['past_events'] = Events::lists02(null, null, null, null, "desc", null);
         $this->data['closed_events'] = Events::lists(0, null, null, null, "desc", null);
         $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
         $this->data['all_events'] = Events::lists03();
