@@ -71,6 +71,23 @@ services:
        - 8080:80
     volumes:
        - /sessions
+  oil:
+    build: ./php
+    environment:
+      TZ: "Asia/Tokyo"
+    ports:
+      - '80:80'
+    volumes:
+      - ./web:/var/www/html
+    working_dir: /var/www/html
+    environment:
+      FUEL_ENV: development
+    entrypoint:
+      - php
+      - oil
+    depends_on:
+      - db
+      - smtp
 
   minio:
     image: minio/minio
