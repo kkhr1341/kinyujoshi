@@ -4,6 +4,19 @@ use \Model\Blogs;
 
 class Controller_Api_Blogs extends Controller_Base
 {
+
+    public function action_index()
+    {
+        $kind = \Input::get('kind', '');
+        $blogs = Blogs::fetch(array(
+            'mode' => 1,
+            'kind' => $kind,
+            'open' => true,
+            'limit' => 20,
+        ));
+        return $this->ok($blogs);
+    }
+
     public function action_create()
     {
         if (!Auth::has_access('blogs.create')) {

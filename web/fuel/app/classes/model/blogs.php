@@ -41,6 +41,63 @@ class Blogs extends Base
         return $val;
     }
 
+    public static function fetch($options=array())
+    {
+        \Config::load('blog', true);
+
+        $datas = \DB::select(
+            \DB::expr('profiles.*'),
+            \DB::expr('blogs.*'),
+            \DB::expr('blogs.code'),
+            \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+        )
+            ->from('blogs')
+            ->join('profiles', 'left')
+            ->on('blogs.username', '=', 'profiles.username')
+            ->where('blogs.disable', '=', 0);
+
+        if (!isset($options['mode']) || is_null($options['mode'])) {
+        } else {
+            $datas = $datas->where('status', '=', $options['mode']);
+        }
+
+        if (!isset($options['kind']) || is_null($options['kind'])) {
+        } else {
+            $datas = $datas->where('kind', '=', $options['kind']);
+        }
+
+        if (!isset($options['open']) || is_null($options['open'])) {
+        } else {
+            $datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
+        }
+
+        if (!isset($options['project_code']) || is_null($options['project_code'])) {
+        } else {
+            $datas = $datas->where('project_code', '=', $options['project_code']);
+        }
+
+        if (!isset($options['section_code']) || is_null($options['section_code'])) {
+        } else {
+            $datas = $datas->where('section_code', '=', $options['section_code']);
+        }
+
+        if (!isset($options['is_secret']) || is_null($options['is_secret']) || $options['is_secret'] === false) {
+            $datas = $datas->where('secret', '=', 1);
+        } else {
+            $datas = $datas->where('secret', '=', 0);
+        }
+
+        $datas = $datas->order_by('blogs.open_date', 'desc');
+
+        if (!isset($options['limit']) || is_null($options['limit'])) {
+        } else {
+            $datas = $datas->limit($options['limit']);
+        }
+        $datas = $datas->execute()
+            ->as_array();
+        return $datas;
+    }
+
     /**
      * 指定のプロジェクトの活動報告を取得する
      * public static function reports($project_code) {
