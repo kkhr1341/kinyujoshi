@@ -61,7 +61,7 @@ class Blogs extends Base
             $datas = $datas->where('status', '=', $options['mode']);
         }
 
-        if (!isset($options['kind']) || is_null($options['kind'])) {
+        if (!isset($options['kind']) || is_null($options['kind']) || !$options['kind']) {
         } else {
             $datas = $datas->where('kind', '=', $options['kind']);
         }
