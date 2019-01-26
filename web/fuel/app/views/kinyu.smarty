@@ -12,6 +12,7 @@
     <meta name="apple-mobile-web-app-title" content="きんゆう女子。">
     <meta property="og:image" content="{$ogimg}">
 
+    <link rel="alternate" type="application/rss+xml" href="https://kinyu-joshi.jp/rss" title="RSS2.0" />
     {Asset::render('layout')}
     <script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyCZqIv_Xh0iQ1XOI1n1Q821t94SNTf0oeQ"></script>
     <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
