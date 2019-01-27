@@ -196,4 +196,8 @@ return array(
 	'my/projects/blog/edit/(:any)'   => 'my/projects/blog_edit/$1',
 	//管理画面admin - お問い合わせリスト
 	'admin/inquiries' => 'admin/inquiries/index',
+
+    // API
+    'api/reports'   => 'api/blogs/index',
+    'api/reports/(:any)'   => 'api/blogs/detail/$1',
 );

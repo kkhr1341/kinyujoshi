@@ -5,7 +5,7 @@ use \Model\Blogs;
 class Controller_Api_Blogs extends Controller_Base
 {
 
-    public function action_index()
+    public function get_index()
     {
         $kind = \Input::get('kind', '');
         $blogs = Blogs::fetch(array(
@@ -15,6 +15,12 @@ class Controller_Api_Blogs extends Controller_Base
             'limit' => 20,
         ));
         return $this->ok($blogs);
+    }
+
+    public function get_detail($code)
+    {
+        $blog = Blogs::getByCodeWithProfile($code);
+        return $this->ok($blog);
     }
 
     public function action_create()
