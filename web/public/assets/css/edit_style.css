@@ -5884,16 +5884,6 @@ footer {
     top: -11%;
   }
 
-  li.js-insight-question-label {
-      font-size: 16px;
-      margin: 10px 0;
-      padding: 25px 20px;
-      display: inline-block;
-      color: #deb03f;
-      cursor: pointer;
-      width: 100%;
-  }
-
   .question-name {
     float: left;
       display: inline-block;

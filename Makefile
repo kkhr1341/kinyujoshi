@@ -15,12 +15,6 @@ seed:
 .PHONY: seed
 
 install: setup sleep10 migrate
-	docker-compose build
-	git submodule init
-	docker-compose run --rm composer install
-	git submodule init
-	git submodule update
-	docker-compose run --rm createbuckets
 .PHONY: install
 
 setup:

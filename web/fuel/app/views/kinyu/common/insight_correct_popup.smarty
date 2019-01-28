@@ -5,9 +5,11 @@
       <div class="main-block-inner">
         <div class="insight-image-wrapper">
           <ul>
-            <li><img src="/images/insight_popup/good.png"></li>
-            <li><img src="/images/insight_popup/soso.png"></li>
-            <li><img src="/images/insight_popup/bad.png"></li>
+            {foreach from=$labels item=label name=loopname}
+              <li class="js-insight-question-label" data-id="{$label['id']}">
+                <img src="/images/insight_popup/{$label['id']}.png">
+              </li>
+            {/foreach}
           </ul>
         </div>
         <p id="insight-popup-message-close" class="js-popup-hoshino-close close-btn" style="cursor:pointer;">× CLOSE</p>
@@ -48,7 +50,13 @@ $(function() {
     });
 
     // PC版の広告クリックイベントトラッキング
-    $('.js-insight-question .js-insight-question-label').click(function() {
+    var sended = false; // 送信済みフラグ
+    $('.js-insight-question .js-insight-question-label').click(function(e) {
+
+        if (sended == true) {
+            return false;
+        }
+        sended = true;
 
         var insight_question_label_id = $(this).data('id');
 
