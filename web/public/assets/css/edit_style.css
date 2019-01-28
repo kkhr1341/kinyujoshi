@@ -5749,6 +5749,7 @@ footer {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　インサイトポップアップ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 414px) {
 #canvas.active {
   z-index: 1007;
 }
@@ -5868,7 +5869,7 @@ footer {
 }
 
 
-@media screen and (max-width: 640px) {
+
 
   .insight-popup-main-block .main-block-inner {
       background: url(/images/insight_popup/insight_popup_winter.png) no-repeat center center;
@@ -5885,7 +5886,7 @@ footer {
   }
 
   .question-name {
-    float: left;
+      float: left;
       display: inline-block;
       width: 58%;
       position: relative;
@@ -5962,5 +5963,15 @@ footer {
 }
 .kinyu-top-promotion-label img {
   width: 170px;
+}
+}
+/* iphone5用 */
+@media screen and (max-width: 320px) {
+.insight-image-wrapper ul {
+    position: relative;
+    top: 9px;
+}
+.insight-image-wrapper li img {
+    width: 48px;
 }
 }
