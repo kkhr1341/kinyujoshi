@@ -49,11 +49,14 @@ class Blogs extends Base
             \DB::expr('profiles.*'),
             \DB::expr('blogs.*'),
             \DB::expr('blogs.code'),
+            \DB::expr('views_blog_views.views'),
             \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
         )
             ->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
+            ->join('views_blog_views', 'left')
+            ->on('blogs.code', '=', 'views_blog_views.blog_code')
             ->where('blogs.disable', '=', 0);
 
         if (!isset($options['mode']) || is_null($options['mode'])) {
