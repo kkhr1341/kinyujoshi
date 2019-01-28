@@ -1,25 +1,16 @@
-<div class="ad-popup js-insight-question" data-expires="{$question['expires']}" data-id="{$question['id']}">
-  <div class="ad-popup-main-block-container">
-    <div class="ad-popup-main-block">
+<div class="insight-popup js-insight-question" data-expires="{$question['expires']}" data-id="{$question['id']}">
+  <div class="insight-popup-main-block-container">
+    <div class="insight-popup-main-block">
+      <!-- <img class="insight-popup-bg" src="/images/insight_popup/insight_popup_winter.png"> -->
       <div class="main-block-inner">
-        <div class="ad-image-wrapper">
-          <div class="clear">
-            <div class="question-name balloon4"><p>{$question['name']}</p></div>
-              <img class="kingyo-image" src="/images/insight_popup/kingyo.png">
-            </div>
+        <div class="insight-image-wrapper">
           <ul>
-          <!-- {foreach from=$labels item=label name=loopname}
-            <li class="js-insight-question-label ripple" data-id="{$label['id']}"><span class="ripple__effect">{$label['id']}: {$label['name']}</span></li>
-          {/foreach} -->
-          <li><img src="/images/insight_popup/good.png"></li>
-          <li><img src="/images/insight_popup/normal.png"></li>
-          <li><img src="/images/insight_popup/bad.png"></li>
+            <li><img src="/images/insight_popup/good.png"></li>
+            <li><img src="/images/insight_popup/soso.png"></li>
+            <li><img src="/images/insight_popup/bad.png"></li>
           </ul>
         </div>
-        <p id="ad-popup-message-close" class="js-popup-hoshino-close close-btn" style="cursor:pointer;">
-          <!-- <img src="/images/ad-close-btn.png"> -->
-          CLOSE
-        </p>
+        <p id="insight-popup-message-close" class="js-popup-hoshino-close close-btn" style="cursor:pointer;">× CLOSE</p>
       </div>
     </div>
   </div>
@@ -28,72 +19,7 @@
 {literal}
 
 <style>
-.ad-popup-main-block .main-block-inner {
-    /* background: url(/images/insight_popup/popup_bg.jpg) center center no-repeat;
-    background-size: cover;*/
-    background: #fff;
-    box-shadow:  0px 0px 5px rgba(0,0,0,0.1);
-}
 
-li.js-insight-question-label {
-    font-size: 16px;
-    margin: 10px 0;
-    padding: 25px 20px;
-    display: inline-block;
-    color: #deb03f;
-    cursor: pointer;
-    width: 100%;
-}
-
-.question-name {
-  float: left;
-    display: inline-block;
-    width: 58%;
-    position: relative;
-    top: 0px;
-    margin: 0 0 2em 0px;
-    padding: 11px;
-    background: #ecf9f6;
-    border-radius: 50px;
-}
-
-.question-name:before{
-    content: "";
-    position: absolute;
-    right: -42px;
-    width: 9px;
-    height: 9px;
-    bottom: 0px;
-    background: #ecf9f6;
-    border-radius: 50%;
-}
-.question-name:after{
-    content: "";
-    position: absolute;
-    right: -24px;
-    width: 13px;
-    height: 14px;
-    bottom: 3px;
-    background: #ecf9f6;
-    border-radius: 50%;
-}
-.question-name p {
-    margin: 0;
-    padding: 0;
-}
-.kingyo-image {
-  width: 50px;
-  display: block;
-  margin: 20px 0 0 50px;
-  float: left;
-}
-.ad-image-wrapper li{
-  display: inline-block;
-  padding: 0 15px;
-}
-.ad-image-wrapper li img{
-  width: 50px;
-}
 </style>
 
 <script>
@@ -107,17 +33,17 @@ $(function() {
         }else{
             $('#canvas').addClass("active");
             setTimeout(function(){
-                $('.ad-popup').fadeIn(1000);
-                $('.ad-popup-main-block-container').fadeIn(1000);
+                $('.insight-popup').fadeIn(1000);
+                $('.insight-popup-main-block-container').fadeIn(1000);
                 $.cookie("hoshino_resort_popup","access", { expires: expires });
             },3000);
         }
     });
 
     // ポップアップクローズ時の処理
-    $("#ad-popup-message-close").click(function() {
-        $(".ad-popup").fadeOut(500);
-        $(".ad-popup-main-block-container").fadeOut(500);
+    $("#insight-popup-message-close").click(function() {
+        $(".insight-popup").fadeOut(500);
+        $(".insight-popup-main-block-container").fadeOut(500);
         $('#canvas').removeClass("active");
     });
 
@@ -134,15 +60,15 @@ $(function() {
             url,
             params,
             function(data) {
-            	$(".ad-popup").fadeOut(500);
-                $(".ad-popup-main-block-container").fadeOut(500);
+            	$(".insight-popup").fadeOut(500);
+                $(".insight-popup-main-block-container").fadeOut(500);
                 $('#canvas').removeClass("active");
 
                 ts.success('ご回答ありがとうございます');
             },
             function(data) {
-            	$(".ad-popup").fadeOut(500);
-                $(".ad-popup-main-block-container").fadeOut(500);
+            	$(".insight-popup").fadeOut(500);
+                $(".insight-popup-main-block-container").fadeOut(500);
                 $('#canvas').removeClass("active");
             }
         );

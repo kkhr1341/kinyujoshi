@@ -5744,5 +5744,233 @@ footer {
   cursor: pointer;
   opacity: .5;
 }
+}
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　インサイトポップアップ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#canvas.active {
+  z-index: 1007;
+}
+.insight-popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .9);
+  /*background: rgba(255, 255, 255, .9);*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+.insight-popup-main-block-container {
+  display: none;
+  position: relative;
+  z-index: 1010;
+}
+.insight-popup-main-block {
+  width: 700px;
+  height: 550px;
+  /* background: #fff; */
+  padding: 6px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -275px;
+  margin-left: -300px;
+  display: table;
+  box-shadow:
+}
+.insight-popup-main-block .main-block-inner {
+  display: table-cell;
+  vertical-align: middle;
+  /* border: 1px solid #8ddcd1; */
+  height: 100%;
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  /* background: rgba(255,255,255,1); */
+  position: relative;
+}
+
+.insight-image-wrapper {
+  position: relative;
+}
+
+.insight-popup-main-block .close-btn {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  width: 25px;
+}
+.insight-popup-main-block .close-btn img {
+  width: 100%;
+}
+.insight-popup-main-block .message01 {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 36px;
+}
+.insight-popup-main-block .message02 {
+  width: 50%;
+}
+.insight-popup-description {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0px;
+  border-top: 1px solid #ddd2c0;
+  border-bottom: 1px solid #ddd2c0;
+  margin-top: 12px;
+  margin-bottom: 36px;
+  background: rgba(248, 246, 242, 0.5);
+}
+.insight-popup-description p {
+  font-size: 18px;
+  line-height: 26px;
+}
+.insight-popup-main-block .message03 {
+  width: 70%;
+}
+.insight-popup1206-to-link-top {
+  display: block;
+  width: 50%;
+  font-size: 13px;
+  padding: 10px 0px;
+  text-align: center;
+  margin: 0 auto;
+  background: #8ddcd1;
+  color: #fff;
+  font-weight: bold;
+  transition: .8s;
+}
+.celebration1206-to-link-top;hover {
+  opacity: .5;
+}
+
+.ad-img {
+  width: 100%;
+}
+
+.kinyu-top-promotion-label {
+  position: absolute;
+  bottom: 30px;
+}
+
+.kinyu-top-promotion-label img {
+  width: 200px;
+}
+
+.pr-text {
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .insight-popup-main-block .main-block-inner {
+      background: url(/images/insight_popup/insight_popup_winter.png) no-repeat center center;
+      background-size: cover;
+      height: 0;
+      width: 100%;
+      padding-top: 76%;
+  }
+
+  .insight-popup-bg {
+    position: absolute;
+    width: 97%;
+    top: -11%;
+  }
+
+  li.js-insight-question-label {
+      font-size: 16px;
+      margin: 10px 0;
+      padding: 25px 20px;
+      display: inline-block;
+      color: #deb03f;
+      cursor: pointer;
+      width: 100%;
+  }
+
+  .question-name {
+    float: left;
+      display: inline-block;
+      width: 58%;
+      position: relative;
+      top: 0px;
+      margin: 0 0 2em 0px;
+      padding: 11px;
+      background: #ecf9f6;
+      border-radius: 50px;
+  }
+
+  .question-name:before{
+      content: "";
+      position: absolute;
+      right: -42px;
+      width: 9px;
+      height: 9px;
+      bottom: 0px;
+      background: #ecf9f6;
+      border-radius: 50%;
+  }
+  .question-name:after{
+      content: "";
+      position: absolute;
+      right: -24px;
+      width: 13px;
+      height: 14px;
+      bottom: 3px;
+      background: #ecf9f6;
+      border-radius: 50%;
+  }
+  .insight-image-wrapper ul {
+      position: relative;
+      top: -7px;
+  }
+  .insight-image-wrapper li{
+    display: inline-block;
+    padding: 0 15px;
+  }
+  .insight-image-wrapper li img{
+    width: 60px;
+  }
+
+
+  .insight-popup-main-block {
+    width: 100%;
+    height: 550px;
+    /* background: #fff; */
+    padding: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -275px;
+    margin-left: -300px;
+    display: table;
+    box-shadow:
+  }
+
+  .insight-popup-main-block {
+      width: 100%;
+      height: 375px;;
+      padding: 15px;
+      position: fixed;
+      top: 20%;
+      left: 0%;
+      margin-top: 0px;
+       margin-left: 0px;
+      display: table;
+  }
+  .insight-popup-main-block .close-btn {
+    position: relative;
+    right: 0px;
+    top: 56px;
+    width: auto;
+}
+.kinyu-top-promotion-label img {
+  width: 170px;
+}
 }
