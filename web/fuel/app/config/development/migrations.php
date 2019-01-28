@@ -132,7 +132,7 @@ return array(
         123 => '131_add_pr_to_events',
         124 => '132_create_blog_comments',
         125 => '133_create_page_views',
-        126 => '134_create_views_page_views',
+        126 => '134_create_views_blog_views',
       ),
     ),
     'module' => 
