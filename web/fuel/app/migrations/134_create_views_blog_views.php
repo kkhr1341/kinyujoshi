@@ -15,6 +15,7 @@ class Create_views_blog_views
 
 	public function down()
 	{
-		\DBUtil::drop_table('views_blog_views');
+        \DB::query('DROP VIEW views_blog_views')
+            ->execute();
 	}
 }
