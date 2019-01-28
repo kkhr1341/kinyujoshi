@@ -37,7 +37,7 @@ $(function() {
             setTimeout(function(){
                 $('.insight-popup').fadeIn(1000);
                 $('.insight-popup-main-block-container').fadeIn(1000);
-                $.cookie("hoshino_resort_popup","access", { expires: expires });
+                $.cookie(id,"access", { expires: expires });
             },3000);
         }
     });
