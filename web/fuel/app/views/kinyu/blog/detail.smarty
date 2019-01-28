@@ -38,12 +38,6 @@
     <div class="report-detail-main">
 
       {if $viewable == true}
-        <script>
-          var secretBlog = '{$blog.secret}';
-          {literal}
-          gtag('set', {'secretBlog': secretBlog});
-          {/literal}
-        </script>
         {$blog.content|nofilter}
 
         <!-- このレポートを書いた人 -->
