@@ -82,9 +82,8 @@ class Blogs extends Base
         }
 
         if (!isset($options['is_secret']) || is_null($options['is_secret']) || $options['is_secret'] === false) {
-            $datas = $datas->where('secret', '=', 1);
         } else {
-            $datas = $datas->where('secret', '=', 0);
+            $datas = $datas->where('secret', '=', $options['is_secret'] === true ? 1: 0);
         }
 
         $datas = $datas->order_by('blogs.open_date', 'desc');
