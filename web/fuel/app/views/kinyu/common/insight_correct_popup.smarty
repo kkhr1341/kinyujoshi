@@ -27,59 +27,93 @@
 <script>
 $(function() {
 
+    var expired = function(question_id) {
+        if($.cookie("insight-" + question_id)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    var update_expire = function(question_id, expires) {
+        $.cookie("insight-" + question_id, "access", { expires: expires });
+    }
+
     $('.js-insight-question').each(function() {
-        var id = "insight-" + $(this).data('id');
+        var question_id = $(this).data('id');
         var expires = $(this).data('expires');
+
         // 広告の表示/非表示期限設定
-        if($.cookie(id)){
+        if(expired(question_id)){
         }else{
             $('#canvas').addClass("active");
             setTimeout(function(){
                 $('.insight-popup').fadeIn(1000);
                 $('.insight-popup-main-block-container').fadeIn(1000);
-                $.cookie(id,"access", { expires: expires });
-            },3000);
+            }, 1000);
         }
-    });
 
-    // ポップアップクローズ時の処理
-    $("#insight-popup-message-close").click(function() {
-        $(".insight-popup").fadeOut(500);
-        $(".insight-popup-main-block-container").fadeOut(500);
-        $('#canvas').removeClass("active");
-    });
+        // ポップアップクローズ時の処理
+        $(this).find("#insight-popup-message-close").click(function() {
 
-    // PC版の広告クリックイベントトラッキング
-    var sended = false; // 送信済みフラグ
-    $('.js-insight-question .js-insight-question-label').click(function(e) {
+            update_expire(question_id, expires);
 
-        if (sended == true) {
-            return false;
-        }
-        sended = true;
+            $(".insight-popup").fadeOut(500);
+            $(".insight-popup-main-block-container").fadeOut(500);
+            $('#canvas').removeClass("active");
 
-        var insight_question_label_id = $(this).data('id');
+            // google analytics tracking
+            gtag('event', 'click', {
+                'event_category': 'insight',
+                'event_label': 'question-' + question_id,
+                'event_action': 'close',
+                'event_value': 1,
+            });
+        });
 
-        var url = "/api/insightquestions/create";
-        var params = {
-            insight_question_label_id: insight_question_label_id,
-        };
-        return ajax.post(
-            url,
-            params,
-            function(data) {
-            	$(".insight-popup").fadeOut(500);
-                $(".insight-popup-main-block-container").fadeOut(500);
-                $('#canvas').removeClass("active");
+        var sended = false; // 送信済みフラグ　二重クリック防止
+        $(this).find('.js-insight-question-label').click(function(e) {
 
-                ts.success('ご回答ありがとうございます');
-            },
-            function(data) {
-            	$(".insight-popup").fadeOut(500);
-                $(".insight-popup-main-block-container").fadeOut(500);
-                $('#canvas').removeClass("active");
+            if (sended == true) {
+                return false;
             }
-        );
+            sended = true;
+
+            var insight_question_label_id = $(this).data('id');
+            var url = "/api/insightquestions/create";
+            var params = {
+                insight_question_label_id: insight_question_label_id,
+            };
+
+            update_expire(question_id, expires);
+
+            return ajax.post(
+                url,
+                params,
+                function(data) {
+
+                    $(".insight-popup").fadeOut(500);
+                    $(".insight-popup-main-block-container").fadeOut(500);
+                    $('#canvas').removeClass("active");
+
+                    ts.success('ご回答ありがとうございます');
+
+                    // google analytics tracking
+                    gtag('event', 'click', {
+                        'event_category': 'insight',
+                        'event_label': 'question-' + question_id,
+                        'event_action': 'click',
+                        'event_value': 1,
+                    });
+                },
+                function(data) {
+
+                    $(".insight-popup").fadeOut(500);
+                    $(".insight-popup-main-block-container").fadeOut(500);
+                    $('#canvas').removeClass("active");
+                }
+            );
+        });
     });
 });
 </script>
