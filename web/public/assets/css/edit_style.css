@@ -5747,9 +5747,9 @@ footer {
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  　インサイトポップアップ
+  　インサイトポップアップ スマホのみ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 425px) {
 #canvas.active {
   z-index: 1007;
 }
@@ -5881,8 +5881,8 @@ footer {
 
   .insight-popup-bg {
     position: absolute;
-    width: 97%;
-    top: -11%;
+    width: 100%;
+    top: 19%;
   }
 
   .question-name {
@@ -5966,7 +5966,7 @@ footer {
 }
 }
 /* iphone5用 */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
 .insight-image-wrapper ul {
     position: relative;
     top: 9px;
