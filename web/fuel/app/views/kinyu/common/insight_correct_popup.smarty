@@ -1,4 +1,5 @@
 <div class="insight-popup js-insight-question" data-expires="{$question['expires']}" data-id="{$question['id']}">
+  <!-- 質問画面 -->
   <div class="insight-popup-main-block-container">
     <div class="insight-popup-main-block">
       <!-- <img class="insight-popup-bg" src="/images/insight_popup/insight_popup_winter.png"> -->
@@ -16,16 +17,20 @@
       </div>
     </div>
   </div>
+  <!-- 質問画面 -->
+  <!-- 完了画面 -->
+  <div class="insight-popup-complete-block-container">
+    <img class="insight-popup-bg" src="/images/insight_popup/complete.png">
+  </div>
+  <!-- 完了画面 -->
 </div>
 
 {literal}
 
-<style>
-
-</style>
-
 <script>
 $(function() {
+
+    $(".insight-popup-complete-block-container").hide();
 
     var expired = function(question_id) {
         if($.cookie("insight-" + question_id)){
@@ -58,9 +63,9 @@ $(function() {
 
             update_expire(question_id, expires);
 
-            $(".insight-popup").fadeOut(500);
-            $(".insight-popup-main-block-container").fadeOut(500);
-            $('#canvas').removeClass("active");
+            $(".insight-popup-main-block-container").fadeOut(500, function() {
+                $(".insight-popup-complete-block").fadeIn(500);
+            });
 
             // google analytics tracking
             gtag('event', 'click', {
@@ -87,16 +92,16 @@ $(function() {
 
             update_expire(question_id, expires);
 
+            //ローディングアニメーション
+            $(".loader-block").fadeIn(200);
+            $(".insight-popup-main-block-container").hide();
             return ajax.post(
                 url,
                 params,
                 function(data) {
+                    $(".loader-block").fadeOut(500);
 
-                    $(".insight-popup").fadeOut(500);
-                    $(".insight-popup-main-block-container").fadeOut(500);
-                    $('#canvas').removeClass("active");
-
-                    ts.success('ご回答ありがとうございます');
+                    $(".insight-popup-complete-block-container").show();
 
                     // google analytics tracking
                     gtag('event', 'click', {
@@ -108,9 +113,7 @@ $(function() {
                 },
                 function(data) {
 
-                    $(".insight-popup").fadeOut(500);
-                    $(".insight-popup-main-block-container").fadeOut(500);
-                    $('#canvas').removeClass("active");
+                    $(".insight-popup-complete-block-container").show();
                 }
             );
         });
