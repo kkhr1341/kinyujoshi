@@ -103,7 +103,7 @@ $(function() {
                         'event_category': 'insight',
                         'event_label': 'question-' + question_id,
                         'event_action': 'click',
-                        'event_value': 1,
+                        'event_value': insight_question_label_id,
                     });
                 },
                 function(data) {
