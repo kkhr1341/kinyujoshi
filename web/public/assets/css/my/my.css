@@ -578,6 +578,7 @@
 }
 
 footer {
+    display: none;
     position: relative;
     z-index: 1001;
     background: #fff;
