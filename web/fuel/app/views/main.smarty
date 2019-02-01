@@ -58,5 +58,15 @@
         </div>
       </div>
     </div>
+
+    <!-- PUSH7 -->
+    <script src="https://sdk.push7.jp/v2/p7sdk.js"></script>
+    <script>
+    p7.init("c41df7e83cd041a2b308ccf410b82668",{
+      mode:"native",
+      subscribe:"auto"
+    });
+    </script>
+    <!-- PUSH7 -->
   </body>
 </html>
