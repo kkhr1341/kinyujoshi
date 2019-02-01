@@ -106,6 +106,7 @@ class Controller_Mybase extends Controller_Template
             'uploader.js',
             'kinyu/drawer.min.js',
             'kinyu/swiper.js',
+            'kinyu/swiper.min.js',
             // 'kinyu/main.js',
             'my/main.js'
         ), array(), 'layout', false);
