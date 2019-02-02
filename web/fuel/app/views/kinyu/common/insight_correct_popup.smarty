@@ -102,9 +102,7 @@ $(function() {
                     $(".loader-block").fadeOut(500);
 
                     $(".insight-popup-complete-block-container").show(function() {
-                        setTimeout(function() {
-                            $(".insight-popup").fadeOut(1000);
-                        }, 2000)
+                        $(".insight-popup").fadeOut(1000);
                     });
 
                     // google analytics tracking
@@ -119,9 +117,7 @@ $(function() {
                     $(".loader-block").fadeOut(500);
 
                     $(".insight-popup-complete-block-container").show(function() {
-                        setTimeout(function() {
-                            $(".insight-popup").fadeOut(1000);
-                        }, 2000)
+                        $(".insight-popup").fadeOut(1000);
                     });
                 }
             );
