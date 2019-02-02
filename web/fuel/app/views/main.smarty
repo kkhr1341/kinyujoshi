@@ -59,6 +59,7 @@
       </div>
     </div>
 
+    {if \Fuel::$env === 'production'}
     <!-- PUSH7 -->
     <script src="https://sdk.push7.jp/v2/p7sdk.js"></script>
     <script>
@@ -68,5 +69,6 @@
     });
     </script>
     <!-- PUSH7 -->
+    {/if}
   </body>
 </html>
