@@ -37,7 +37,7 @@ class Create_application_coupons
         \DBUtil::create_index(
             'application_coupons',
             'application_code',
-            'idx_event_coupons_code_1',
+            'idx_application_coupons_code_1',
             'UNIQUE'
         );
 	}
