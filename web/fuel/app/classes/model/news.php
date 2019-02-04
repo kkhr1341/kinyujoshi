@@ -139,9 +139,9 @@ class News extends Base
     {
 
         $total = \DB::select(\DB::expr('count(*) as cnt'))
+            ->from('news')
             ->where('status', '=', 1)
             ->where('open_date', '<', \DB::expr('NOW()'))
-            ->from('news')
             ->where('news.disable', '=', 0);
 
         if ($section_code !== null) {
@@ -162,13 +162,13 @@ class News extends Base
 
         $pagination = \Pagination::forge('mypagination', $config);
 
-        $datas['datas'] = \DB::select(\DB::expr('*, news.code'))->from('news')
+        $datas['datas'] = \DB::select(\DB::expr('*, news.code'))
+            ->from('news')
             ->join('profiles', 'left')
             ->on('news.username', '=', 'profiles.username')
             ->where('news.status', '=', 1)
             ->where('news.open_date', '<', \DB::expr('NOW()'))
             ->where('news.disable', '=', 0);
-
 
         if ($section_code !== null) {
             $datas['datas'] = $datas['datas']->where('section_code', '=', $section_code);
@@ -185,12 +185,11 @@ class News extends Base
         return $datas;
     }
 
-    public static function getByCodeWithProfile($code)
+    public static function findByCode($code)
     {
-        $result = \DB::select('*')->from('news')
+        $result = \DB::select('*')
+            ->from('news')
             ->where('news.code', '=', $code)
-            ->join('profiles', 'left')
-            ->on('news.username', '=', 'profiles.username')
             ->where('news.disable', '=', 0)
             ->execute()->current();
         if (empty($result)) {
