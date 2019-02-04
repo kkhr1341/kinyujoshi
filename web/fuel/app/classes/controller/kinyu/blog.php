@@ -198,6 +198,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             ),
         );
 
+        $this->template->canonical = \Uri::base() . 'report/' . $this->data['blog']['code'];
+
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
             $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_spafter.smarty', $this->data);

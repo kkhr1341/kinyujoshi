@@ -167,6 +167,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
                 'content' => '@kinyu_joshi',
             ),
         );
+        $this->template->canonical = \Uri::base() . 'joshikai/' . $this->data['event']['code'];
 
         $this->template->contents = View::forge('kinyu/event/detail.smarty', $this->data);
     }

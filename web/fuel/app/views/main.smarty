@@ -14,7 +14,9 @@
     {if isset($meta)}
     {Html::meta($meta)}
     {/if}
-    <!-- <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" /> -->
+    {if isset($canonical)}
+    <link href="{$canonical}" rel="canonical" />
+    {/if}
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet" />
     {$ga}
 

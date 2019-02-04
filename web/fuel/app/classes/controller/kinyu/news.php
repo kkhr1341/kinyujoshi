@@ -80,6 +80,8 @@ class Controller_Kinyu_News extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/news/detail.smarty', $this->data);
         $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
+        $this->template->canonical = \Uri::base() . 'news/' . $this->data['news']['code'];
+
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
             $this->template->detail_news_after = View::forge('kinyu/news/detail_news_spafter.smarty', $this->data);
