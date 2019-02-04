@@ -13,7 +13,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 
     public function action_index($page = 1)
     {
-        $this->data['news'] = News::all('news', '/news/', $page, 2, 10);
+        $this->data['news'] = News::all(null, '/news/', $page, 2, 10);
         $pagination = $this->data['news']['pagination'];
         $this->template->title = 'お知らせ｜きんゆう女子。';
         $this->template->description = "きんゆう女子。のニュースでは、きんゆう女子。に関する様々なニュースを配信しています。";
@@ -39,7 +39,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 
     public function action_detail($code)
     {
-        $this->data['news'] = News::getByCodeWithProfile($code);
+        $this->data['news'] = News::findByCode($code);
         $this->data['top_events'] = Events::lists(1, 7, true, 0);
 
         if ($this->data['news'] === false) {
