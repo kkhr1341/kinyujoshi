@@ -50,9 +50,14 @@ class Inquiryreplymails extends Base
     public static function lists($inquiry_code)
     {
         return \DB::select(
-                \DB::expr('inquiry_reply_mails.*')
+                \DB::expr('inquiry_reply_mails.*'),
+                \DB::expr('ifnull(profiles.name, users.username) as reply_name')
             )
             ->from('inquiry_reply_mails')
+            ->join('users', 'inner')
+            ->on('users.username', '=', 'inquiry_reply_mails.username')
+            ->join('profiles', 'left')
+            ->on('profiles.username', '=', 'users.username')
             ->where('inquiry_reply_mails.inquiry_code', '=', $inquiry_code)
             ->execute()
             ->as_array();
