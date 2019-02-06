@@ -139,18 +139,22 @@ $(function () {
         $.getJSON(url, function(data){
             var list = data.data.map(function(value) {
                 var li = '<li>';
-                li += '<table>';
+                li += '<table class="sample_01" style="width: 100%;">';
                 li += '<tr>';
-                li += '<th>返信日時：</th>';
+                li += '<th>返信日時</th>';
                 li += '<td>' + value.created_at + '</td>';
                 li += '</tr>';
                 li += '<tr>';
-                li += '<th>件名：</th>';
+                li += '<th>件名</th>';
                 li += '<td>' + value.subject + '</td>';
                 li += '</tr>';
                 li += '<tr>';
-                li += '<th>本文：</th>';
-                li += '<td>' + value.body + '</td>';
+                li += '<th>本文</th>';
+                li += '<td>' + value.body.replace(/[\n\r]/g, "<br />") + '</td>';
+                li += '</tr>';
+                li += '<tr>';
+                li += '<th>送信元</th>';
+                li += '<td>' + value.email + '</td>';
                 li += '</tr>';
                 li += '</table>';
                 li += '<hr />';
