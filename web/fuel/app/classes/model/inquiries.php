@@ -72,20 +72,25 @@ class Inquiries extends Base
 
     public static function lists()
     {
-        return \DB::select(\DB::expr('*'))
+        return \DB::select(
+                \DB::expr('inquiries.*'),
+                \DB::expr('(select count(*) from inquiry_reply_mails where inquiry_reply_mails.inquiry_code = inquiries.code) as reply_num')
+            )
             ->from('inquiries')
-            ->where('disable', '=', 0)
-            ->order_by('created_at', 'desc')
+            ->where('inquiries.disable', '=', 0)
+            ->order_by('inquiries.created_at', 'desc')
             ->execute()
             ->as_array();
     }
 
     public static function findByCode($code)
     {
-        return \DB::select(\DB::expr('*'))
+        return \DB::select(
+                \DB::expr('inquiries.*')
+            )
             ->from('inquiries')
-            ->where('code', '=', $code)
-            ->where('disable', '=', 0)
+            ->where('inquiries.code', '=', $code)
+            ->where('inquiries.disable', '=', 0)
             ->execute()
             ->current();
     }

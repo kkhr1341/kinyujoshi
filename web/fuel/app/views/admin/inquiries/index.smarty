@@ -5,7 +5,8 @@
       <th style="width:10%;">ID</th>
       <th style="width:20%;">登録日</th>
       <th style="width:20%;">名前</th>
-      <th style="width:40%;">本文</th>
+      <th style="width:30%;">本文</th>
+      <th style="width:10%;">返信件数</th>
       <th style="width:10%;"></th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
       <td>{$inquiry.created_at|date_format:"Y.m.d H:i:s"}</td>
       <td>{$inquiry.name}</td>
       <td>{$inquiry.message|nl2br}</td>
+      <td>{$inquiry.reply_num}</td>
       <td>
         <a class="admin-registlist-more js-open-send-modal" data-id="{$inquiry.id}" data-name="{$inquiry.name}" data-code="{$inquiry.code}" href="#">送信</a>
       </td>
@@ -24,7 +26,6 @@
     {/foreach}
   </tbody>
 </table>
-
 
 <div id="myModal" class="modal fade">
   <div class="modal-dialog">
@@ -57,6 +58,13 @@
                 <textarea name="body" style="border: 1px solid #d9d8d8; width: 500px; height: 200px;"></textarea>
             </div>
         </div>
+
+        <div class="form-group">
+            <label class="form-group-event-label">履歴</label>
+            <div class='input-group js-main-reply-history'>
+            </div>
+        </div>
+
       </div>
       <!-- dialog buttons -->
       <div class="modal-footer">
@@ -121,20 +129,48 @@ $(function () {
     var $modal = $("#myModal");
     $(".js-open-send-modal").on("click", function (e) {
         e.preventDefault();
+
         var id   = $(this).data('id');
         var name = $(this).data('name');
         var code = $(this).data('code');
+        var url = "/api/inquiryreplymails/" + code;
+
+        $modal.find('.js-main-reply-history').html('');
+        $.getJSON(url, function(data){
+            var list = data.data.map(function(value) {
+                var li = '<li>';
+                li += '<table>';
+                li += '<tr>';
+                li += '<th>返信日時：</th>';
+                li += '<td>' + value.created_at + '</td>';
+                li += '</tr>';
+                li += '<tr>';
+                li += '<th>件名：</th>';
+                li += '<td>' + value.subject + '</td>';
+                li += '</tr>';
+                li += '<tr>';
+                li += '<th>本文：</th>';
+                li += '<td>' + value.body + '</td>';
+                li += '</tr>';
+                li += '</table>';
+                li += '<hr />';
+                li += '</li>';
+                return li;
+            }).join('');
+            $modal.find('.js-main-reply-history').html('<ul>' + list + '</ul>');
+        });
+
+        $modal.find('.js-id').text(id);
+        $modal.find('.js-name').text(name);
+        $modal.find('[name="code"]').val(code);
+
         $modal.modal({
             "backdrop": "static",
             "keyboard": true,
             "show": true
         });
-        $modal.find('.js-id').text(id);
-        $modal.find('.js-name').text(name);
-        $modal.find('[name="code"]').val(code);
     })
     $modal.find(".send-btn").on("click", function (e) {
-
         var params = {};
         params.code = $modal.find("[name='code']").val();
         params.subject = $modal.find("[name='subject']").val();

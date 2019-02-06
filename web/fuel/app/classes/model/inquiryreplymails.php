@@ -46,4 +46,15 @@ class Inquiryreplymails extends Base
 
         return $params;
     }
+
+    public static function lists($inquiry_code)
+    {
+        return \DB::select(
+                \DB::expr('inquiry_reply_mails.*')
+            )
+            ->from('inquiry_reply_mails')
+            ->where('inquiry_reply_mails.inquiry_code', '=', $inquiry_code)
+            ->execute()
+            ->as_array();
+    }
 }

@@ -200,4 +200,7 @@ return array(
     // API
     'api/reports'   => 'api/blogs/index',
     'api/reports/(:any)'   => 'api/blogs/detail/$1',
+
+    'api/inquiryreplymails/send'   => 'api/inquiryreplymails/send',
+    'api/inquiryreplymails/(:any)'   => 'api/inquiryreplymails/index/$1',
 );

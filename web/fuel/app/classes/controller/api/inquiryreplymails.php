@@ -5,7 +5,15 @@ use \Model\Inquiryreplymails;
 
 class Controller_Api_Inquiryreplymails extends Controller_Apibase
 {
-    public function action_send()
+    public function get_index($inquiry_code)
+    {
+        if (!Auth::check()) {
+            return $this->error('no administrator');
+        }
+
+        return $this->ok(Inquiryreplymails::lists($inquiry_code));
+    }
+    public function post_send()
     {
         if (!Auth::check()) {
             return $this->error('no administrator');
