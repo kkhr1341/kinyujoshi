@@ -73,7 +73,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
         //$this->template->ogimg = $this->data['news']['main_image'];
 
         if ($this->data['news']['main_image'] == '') {
-            $this->template->ogimg = 'https://kinyu-joshi.jp/images/images/submain.png';
+            $this->template->ogimg = 'https://kinyu-joshi.jp/images/submain.png';
         } else {
             $this->template->ogimg = $this->data['news']['main_image'];
         } 
