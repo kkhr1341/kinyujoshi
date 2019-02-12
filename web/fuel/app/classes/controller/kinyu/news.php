@@ -68,7 +68,12 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 
         $this->template->title = $this->data['news']['title'];
         $this->template->description = $this->data['news']['title'];
-        $this->template->ogimg = $this->data['news']['main_image'];
+
+        if ($this->data['news']['main_image'] == "") {
+            $this->template->ogimg = 'https://kinyu-joshi.jp/images/submain.png';
+        } else if {
+            $this->template->ogimg = $this->data['news']['main_image'];
+        }
         $this->data['top_news'] = News::lists(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
