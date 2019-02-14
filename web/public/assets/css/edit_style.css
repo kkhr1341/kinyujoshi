@@ -1202,7 +1202,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 }
 .kinyu-main-block .inner {
   background: #fff;
-  width: 1000px;
+  width: 850px;
   padding: 70px 0px 80px;
   margin: 0 auto;
 }
@@ -1308,7 +1308,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 
 /* 本文 */
 .report-detail-main {
-  width: 1000px;
+  width: 850px;
   margin: 0 auto;
   /*border-left: 1px solid #f3f3f3;
   border-right: 1px solid #f3f3f3;
