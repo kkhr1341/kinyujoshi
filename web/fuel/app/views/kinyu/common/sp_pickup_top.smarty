@@ -19,19 +19,22 @@
 </div>
 {/if}
 
-<!-- スライド広告枠↓ -->
- <div class="swiper-slide" style="background: url(/images/advertisement/SP.png) center center / cover no-repeat;">
-    <a class="js-track js-slide-fundsi-sp" href="https://funds-i.jp/special/imadeki/" target="_blank"  data-category="slide-link" data-action="click" data-value="2">
-        <div class="kinyu-top-list-kind"></div>
-        <div class="kinyu-top-promotion-label">
-            <img src="/images/pr_label_pc.png">
-        </div>
-    </a>
-</div>
-
 
 {foreach from=$blogs_pick item=blog name=loopname}
+
+    <!-- スライド広告枠↓ -->
     {if $smarty.foreach.loopname.index == 1}
+     <div class="swiper-slide" style="background: url(/images/advertisement/SP.png) center center / cover no-repeat;">
+        <a class="js-track js-slide-fundsi-sp" href="https://funds-i.jp/special/imadeki/" target="_blank"  data-category="slide-link" data-action="click" data-value="2">
+            <div class="kinyu-top-list-kind"></div>
+            <div class="kinyu-top-promotion-label">
+                <img src="/images/pr_label_pc.png">
+            </div>
+        </a>
+    </div>
+    {/if}
+
+    {if $smarty.foreach.loopname.index == 3}
         <div class="swiper-slide" style="background: url(/images/diagnosticchart/og-main.jpg) center center / cover no-repeat;">
             <a class="js-track" href="https://kinyu-joshi.jp/kinjo_check" data-category="slide-link" data-action="click" data-value="3">
               <div class="kinyu-top-list-kind"></div>
