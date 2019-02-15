@@ -5394,11 +5394,11 @@ footer {
 
 .kinyu-top-promotion-label {
   position: absolute;
-  bottom: 30px;
+  top: 20px;
 }
 
 .kinyu-top-promotion-label img {
-  width: 200px;
+  width:80px;
 }
 
 .pr-text {
