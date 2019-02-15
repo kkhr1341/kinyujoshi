@@ -20,14 +20,14 @@
 {/if}
 
 <!-- スライド広告枠↓ -->
-<!-- <div class="swiper-slide" style="background: url(/images/advertisement/SP.png) center center / cover no-repeat;">
-    <a class="js-track js-slide-hoshino-sp" href="https://candle.karuizawachurch.org/?utm_source=kyj&utm_medium=banner&utm_campaign=XmasCN2018" target="_blank"  data-category="slide-link" data-action="click" data-value="2">
+ <div class="swiper-slide" style="background: url(/images/advertisement/SP.png) center center / cover no-repeat;">
+    <a class="js-track js-slide-hoshino-sp" href="https://funds-i.jp/special/imadeki/" target="_blank"  data-category="slide-link" data-action="click" data-value="2">
         <div class="kinyu-top-list-kind"></div>
         <div class="kinyu-top-promotion-label">
             <img src="/images/pr_label_pc.png">
         </div>
     </a>
-</div> -->
+</div>
 
 
 {foreach from=$blogs_pick item=blog name=loopname}
