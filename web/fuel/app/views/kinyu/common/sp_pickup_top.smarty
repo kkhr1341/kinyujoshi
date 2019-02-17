@@ -46,26 +46,3 @@
         </a>
     </div>
 {/foreach}
-
-{literal}
-<script type="text/javascript">
-$(function(){
-  $('.js-slide-fundsi-pc').click(function() {
-    gtag('event', 'click', {
-        'event_category': 'pr',
-        'event_label': 'fundsi-slide-pc',
-        'event_action': 'link',
-        'event_value': 1,
-    });
-  });
-  $('.js-slide-fundsi-sp').click(function() {
-    gtag('event', 'click', {
-        'event_category': 'pr',
-        'event_label': 'fundsi-slide-sp',
-        'event_action': 'link',
-        'event_value': 1,
-    });
-  });
-});
-</script>
-{/literal}

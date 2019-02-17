@@ -14,16 +14,6 @@ $(function () {
             prevButton: '.swiper-button-prev01',
         });
 
-        new Swiper('.swiper-container02', {
-            pagination: '.swiper-pagination02',
-            slidesPerView: 1,
-            paginationClickable: true,
-            autoplay: 8000,
-            speed: 800,
-            nextButton: '.swiper-button-next02',
-            prevButton: '.swiper-button-prev02',
-            spaceBetween: 0
-        });
         // var swiper = new Swiper('.swiper-container03', {
         //     pagination: '.swiper-pagination03',
         //     slidesPerView: 3,
@@ -44,6 +34,41 @@ $(function () {
             spaceBetween: 0
         });
 
+        new Swiper('.swiper-container02', {
+            pagination: '.swiper-pagination02',
+            slidesPerView: 1,
+            paginationClickable: true,
+            autoplay: 3000,
+            speed: 800,
+            nextButton: '.swiper-button-next02',
+            prevButton: '.swiper-button-prev02',
+            spaceBetween: 0,
+            onSlideChangeEnd: function (a) {
+                var slider = $(".swiper-container02");
+                // 広告が半分でもユーザーに表示されていたら表示トラッキング
+                var displayPosition = slider.offset().top + (slider.height() / 2) - $('.sp header').height();
+                if (window.scrollY >= 0 && displayPosition >= window.scrollY) {
+                    var index = a.snapIndex;
+                    var link = $(a.slides[index]).find('.js-track').attr('href');
+                    if (link == 'https://funds-i.jp/special/imadeki/') {
+                        gtag('event', 'click', {
+                            'event_category': 'pr',
+                            'event_label': 'fundsi-slide-sp',
+                            'event_action': 'view',
+                            'event_value': 1,
+                        });
+                    }
+                }
+            }
+        });
+        $('.js-slide-fundsi-sp').click(function () {
+            gtag('event', 'click', {
+                'event_category': 'pr',
+                'event_label': 'fundsi-slide-sp',
+                'event_action': 'link',
+                'event_value': 1,
+            });
+        });
     } else {
 
         //　PC
@@ -56,18 +81,6 @@ $(function () {
         //     nextButton: '.swiper-button-next01',
         //     prevButton: '.swiper-button-prev01',
         // });
-
-        new Swiper('.swiper-container02', {
-            effect: 'fade',
-            pagination: '.swiper-pagination02',
-            slidesPerView: 1,
-            autoplay: 6000,
-            speed: 1000,
-            paginationClickable: true,
-            nextButton: '.swiper-button-next02',
-            prevButton: '.swiper-button-prev02',
-            spaceBetween: 0
-        });
 
         new Swiper('.swiper-container03', {
             slidesPerView: 'auto',
@@ -84,6 +97,42 @@ $(function () {
             spaceBetween: 0
         });
 
+        new Swiper('.swiper-container02', {
+            effect: 'fade',
+            pagination: '.swiper-pagination02',
+            slidesPerView: 1,
+            autoplay: 3000,
+            speed: 1000,
+            paginationClickable: true,
+            nextButton: '.swiper-button-next02',
+            prevButton: '.swiper-button-prev02',
+            spaceBetween: 0,
+            onSlideChangeEnd: function (a) {
+                var slider = $(".swiper-container02");
+                // 広告が半分でもユーザーに表示されていたら表示トラッキング
+                var displayPosition = slider.offset().top + (slider.height() / 2) - $('header').height();
+                if (window.scrollY >= 0 && displayPosition >= window.scrollY) {
+                    var index = a.snapIndex;
+                    var link = $(a.slides[index]).find('.js-track').attr('href');
+                    if (link == 'https://funds-i.jp/special/imadeki/') {
+                        gtag('event', 'click', {
+                            'event_category': 'pr',
+                            'event_label': 'fundsi-slide-pc',
+                            'event_action': 'view',
+                            'event_value': 1,
+                        });
+                    }
+                }
+            }
+        });
+        $('.js-slide-fundsi-pc').click(function () {
+            gtag('event', 'click', {
+                'event_category': 'pr',
+                'event_label': 'fundsi-slide-pc',
+                'event_action': 'link',
+                'event_value': 1,
+            });
+        });
     }
 
 });
