@@ -1,16 +1,4 @@
 <div class="report-detail-sidebar-inner">
-
-  <!-- 編集部へのコメント -->
-  <div class="report-detail-sidebar-el">
-    <p class="report-detail-sidebar-el-title">あなたのワカラナイこと、教えてください！</p>
-    <div class="">
-      <form>
-        <textarea id="message" name="message" class='' rows="10"></textarea>
-        <button class="btn btn-kinyu" type="button" id="save" data-code="{$blog.code}">送信する</button>
-      </form>
-    </div>
-  </div>
-
   <!-- 編集部のおすすめレポート -->
   <div class="report-detail-sidebar-el">
     <p class="report-detail-sidebar-el-title">編集部のおすすめレポート</p>
@@ -82,23 +70,22 @@
           {else}
           <a href="{$event.specific_link}" target="_blank">
           {/if}
-            <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
-            <div class="text-box">
-              <!-- <p class="date">{$event.event_date|date_format:"Y.m.d"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</p> -->
-              <div class="kinyu-top-list-kind kinyu-top-event-kind">
-                <p>
-                  <span class="date-box">
-                    {if $event.display_event_date}
-                      <span class="date">{$event.display_event_date}</span>
-                    {else}
-                      <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
-                      {$event.event_date|date_format:"(%a)"|replace:"Sun":">日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
-                    {/if}
-                  </span>
-                </p>
-              </div>
-              <p class="title">{$event.title}</p>
+          <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+          <div class="text-box">
+            <div class="kinyu-top-list-kind kinyu-top-event-kind">
+              <p>
+                <span class="date-box">
+                  {if $event.display_event_date}
+                    <span class="date">{$event.display_event_date}</span>
+                  {else}
+                    <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
+                    {$event.event_date|date_format:"(%a)"|replace:"Sun":">日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
+                  {/if}
+                </span>
+              </p>
             </div>
+            <p class="title">{$event.title}</p>
+          </div>
           </a>
         </li>
         {/foreach}
@@ -154,64 +141,20 @@
 
 {literal}
 <script>
-
 $(window).load(function(){
-  var ddd = $(".report-detail-sidebar-el .insta-el li").innerWidth();
-  $('.report-detail-sidebar-el .insta-el li').height(ddd);
+    var ddd = $(".report-detail-sidebar-el .insta-el li").innerWidth();
+    $('.report-detail-sidebar-el .insta-el li').height(ddd);
 });
 
-$(function(){
-
-  $('#save').click(function(){
-    var url = "/api/blogcomments/create";
-    var blog_code = $(this).data('code');
-    var params = {
-      "blog_code": blog_code
-    };
-
-    params.message = $('#message').val();
-
-    if (params.message == "") {
-      ts.error("編集部へのコメントを記入してください。");
-      return false;
-    }
-
-    bootbox.confirm("編集部へのコメントを送信しますか？", function(result) {
-      if (result) {
-        ajax.post(url, params, function(data){
-          document.getElementById("message").value="";
-
-          $(".loader-block").fadeIn(500);
-
-          setTimeout(function(){
-            $(".loader-block").fadeOut(500);
-          },2500);
-
-          setTimeout(function(){
-            $('.report-detail-comment-popup').fadeIn(800);
-          },3000);
+// 関連記事のクリック数
+$('.report-sidebar-report-list ul li > a')
+    .on('click', function(e) {
+        gtag('event', 'click', {
+            'event_category': 'article',
+            'event_action': 'link',
+            'event_label': 'relation',
+            'event_value': $(this).attr('href'),
         });
-      }
-      else {
-        ts.info("キャンセルしました");
-      }
-    });
-  });
-  $(".report-detail-comment-popup-close").click(function() {
-    $(".report-detail-comment-popup").fadeOut(800);
-  });
-});
+    })
 </script>
 {/literal}
-
-<!-- コメント -->
-<div class="report-detail-comment-popup">
-  <div class="inner">
-    <div class="report-detail-comment-popup-close"><img src="/images/new/sp-header-close.png"></div>
-    <p class="main-message">きんゆう女子。編集部にコメントしていただき、誠にありがとうございます！</p>
-    <p>
-    みなさまからいただいたコメントを参考に「きんゆう女子。」をさらにブラッシュアップしてまいりますので、今後ともよろしくお願いいたします♪
-    </p>
-    <p class="last-message">きんゆう女子。編集部より</p>
-  </div>
-</div>
