@@ -190,10 +190,10 @@ return array(
 	'admin/remindmailtemplates' => 'admin/remindmailtemplates/index',
 	'admin/remindmailtemplates/edit/(:any)' => 'admin/remindmailtemplates/edit/$1',
 	//管理画面admin - 会員リスト
-	'my/projects/courses/create/(:any)'   => 'my/projects/courses_create/$1',
-	'my/projects/courses/edit/(:any)'   => 'my/projects/courses_edit/$1',
-	'my/projects/blog/create/(:any)'   => 'my/projects/blog_create/$1',
-	'my/projects/blog/edit/(:any)'   => 'my/projects/blog_edit/$1',
+//	'my/projects/courses/create/(:any)'   => 'my/projects/courses_create/$1',
+//	'my/projects/courses/edit/(:any)'   => 'my/projects/courses_edit/$1',
+//	'my/projects/blog/create/(:any)'   => 'my/projects/blog_create/$1',
+//	'my/projects/blog/edit/(:any)'   => 'my/projects/blog_edit/$1',
 	//管理画面admin - お問い合わせリスト
 	'admin/inquiries' => 'admin/inquiries/index',
 
