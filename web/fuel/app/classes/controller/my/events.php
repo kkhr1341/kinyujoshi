@@ -37,6 +37,9 @@ class Controller_My_Events extends Controller_Mybase
     {
         $username = \Auth::get('username');
         $application = Applications::getByCode("applications", $application_code);
+        if ($application['username'] != $username) {
+            throw new HttpNoAccessException;
+        }
         $this->data['application_code'] = $application_code;
         $code = $application['event_code']; // event code
         $this->data['event'] = Events::getByCodeWithProfile($code);
