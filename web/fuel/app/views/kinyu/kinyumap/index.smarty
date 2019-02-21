@@ -147,7 +147,7 @@
             infoWindow2.open(map, marker2);
         } ) ;
 
-        // きんゆう散歩
+        // きんゆう散歩@名古屋
         var marker3 = new google.maps.Marker({
             position: new google.maps.LatLng(35.1801394,136.9035763),
             map: map,
@@ -158,6 +158,19 @@
         });
         marker3.addListener( "click", function ( argument ) {
             infoWindow3.open(map, marker3);
+        } ) ;
+
+        // きんゆう散歩@岐阜
+        var marker4 = new google.maps.Marker({
+            position: new google.maps.LatLng(35.4234398,136.760513),
+            map: map,
+            icon: pin,
+        });
+        var infoWindow4 = new google.maps.InfoWindow({
+            content: '<div class="sample map-point"><a href="https://kinyu-joshi.jp/report/J8jKHz" target="_blank"><img src="/images/kinyu_map/kinyu_sanpo_gifu.jpg"><p class="map-el-title">きんゆう散歩@岐阜</p><p class="map-decription">岐阜県のお金にまつわるスポットや観光スポット、グルメ情報などをご紹介♪ 自然の中でココロもカラダもリフレッシュ♡</p></a></div>'
+        });
+        marker4.addListener( "click", function ( argument ) {
+            infoWindow4.open(map, marker4);
         } ) ;
     }
 </script>
