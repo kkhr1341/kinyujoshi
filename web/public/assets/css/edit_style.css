@@ -585,6 +585,7 @@
 .kinyu-top-introlist-right {
   width: 72%;
   float: left;
+  transition: .5s;
 }
 .kinyu-top-introlist-pickup {
   height: 400px;
@@ -594,7 +595,6 @@
   height: 100%;
   display: block;
   position: relative;
-  transition: .5s;
 }
 .kinyu-top-introlist-title {
   position: absolute;
@@ -5473,9 +5473,9 @@ footer {
 .category-menu li:hover  {
   background: #eafffb;
 }
-/*.kinyu-top-introlist-right a:hover {
+.kinyu-top-introlist-right:hover {
   opacity: .5;
-}*/
+}
 .kinyu-top-list li a:hover {
   background: rgba(255,255,255,.5);
 }
@@ -5555,9 +5555,9 @@ footer {
 .kinyu-top-maincontent li a:hover {
   opacity: .5;
 }
-.kinyu-top-introlist-pickup .swiper-wrapper:hover {
+/*.kinyu-top-introlist-pickup .swiper-wrapper:hover {
   opacity: .5!important;
-}
+}*/
 .pc-menu-trigger-close img:hover {
   opacity: .5;
   cursor: pointer;
@@ -5709,9 +5709,9 @@ footer {
 .kinyu-header-social-list li:hover {
   opacity: .5;
 }
-.kinyu-top-introlist-right a:hover {
+/*.kinyu-top-introlist-right a:hover {
   opacity: .5;
-}
+}*/
 .joshikai-detail-el-info li .info-detail a:hover {
   color: #77cbc0;
   opacity: .5;
