@@ -22,7 +22,7 @@
 
 {foreach from=$blogs_pick item=blog name=loopname}
 
-    {if $smarty.foreach.loopname.index == 1}
+    {if $smarty.foreach.loopname.index == 0}
         <!-- スライド広告枠↓ -->
         <div class="swiper-slide" style="background: url(/images/advertisement/PC.png) center center / cover no-repeat;">
             <a class="js-track js-slide-fundsi-pc" href="https://funds-i.jp/special/imadeki/" target="_blank" data-category="slide-link" data-action="click" data-value="2">
