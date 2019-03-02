@@ -50,7 +50,8 @@ $(function () {
                 if (window.scrollY >= 0 && displayPosition >= window.scrollY) {
                     var index = a.snapIndex;
                     var link = $(a.slides[index]).find('.js-track').attr('href');
-                    if (link == 'https://funds-i.jp/special/imadeki/') {
+                    var matches = link.match('^https://funds-i.jp/special/imadeki/');
+                    if (matches && matches.length > 0) {
                         gtag('event', 'click', {
                             'event_category': 'pr',
                             'event_label': 'fundsi-slide-sp',
