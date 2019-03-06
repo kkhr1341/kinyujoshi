@@ -30,14 +30,14 @@
     <meta name="google-site-verification" content="bt-Z1O8HWo_rQ3TlPedxm8q3q1xV9ky7hWlxAqisA2w" />
     <!-- <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" /> -->
     <!-- 紙吹雪 -->
-    <!-- <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script> -->
+    <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
     <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
 
   </head>
 
   <!-- <body class="drawer drawer--left" onCopy="return false;"> -->
     <body class="drawer drawer--left">
-    <!-- <canvas id="canvas"></canvas> -->
+    <canvas id="canvas"></canvas>
 
     {$pc_header}
 
