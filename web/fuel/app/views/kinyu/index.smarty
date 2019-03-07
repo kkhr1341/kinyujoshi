@@ -254,6 +254,12 @@
                   <img class="" src="/images/banner/asahi_&w_og.jpg">
                 </a>
               </li>
+              <!-- かぶと町マップ -->
+              <li>
+                <a class="js-track" target="_blank" href="https://kinyu-joshi.jp/map_kabuto" data-category="pc-top-link" data-action="click" data-value="1">
+                  <img class="" src="/images/banner/kabutochomap.jpg">
+                </a>
+              </li>
             </ul>
           </div>
         </div>

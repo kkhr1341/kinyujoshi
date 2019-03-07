@@ -133,6 +133,12 @@
             <img class="" src="/images/banner/asahi_&w_og.jpg">
           </a>
         </li>
+        <!-- かぶと町マップ -->
+        <li>
+          <a target="_blank" href="https://kinyu-joshi.jp/map_kabuto">
+            <img class="" src="/images/banner/kabutochomap.jpg">
+          </a>
+        </li>
       </ul>
     </div>
 
