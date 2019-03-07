@@ -257,7 +257,7 @@
 
       <div class="kinyu-top-maincontent-block-el">
         <div class="insta-block">
-        <div class="insta-block-inner">
+        <div class="finsta-block-inner">
           <h3 class="kinyu-main-title" style="text-align: center;">
             <a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank" onClick="ga('send', 'event', 'pc-top-link', 'click', 'instagram-tag', 1);">
               - #きんゆう女子 -
@@ -299,6 +299,12 @@
             <li>
               <a class="js-track" target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html" data-category="pc-top-link" data-action="click" data-value="1">
                 <img class="" src="/images/banner/asahi_&w_og.jpg">
+              </a>
+            </li>
+            <!-- かぶと町マップ -->
+            <li>
+              <a class="js-track" target="_blank" href="https://kinyu-joshi.jp/map_kabuto" data-category="pc-top-link" data-action="click" data-value="1">
+                <img class="" src="/images/banner/kabutochomap.jpg">
               </a>
             </li>
           </ul>
