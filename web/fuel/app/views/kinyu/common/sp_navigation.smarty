@@ -68,7 +68,7 @@
           </div>
         </div>
       </li>
-      
+
       <li class="item navi_banner_area navi_kinyu-menu-li03">
         <a class="navi_banner_area_el" href="/kinyu_sanpo">
           <img class="" src="/images/kinyu_map/og/og-main.jpg">
@@ -85,7 +85,12 @@
         <a target="_blank" class="navi_banner_area_el" href="http://www.asahi.com/and_w/kinyujoshi_list.html">
           <img class="" src="/images/banner/asahi_&w_og.jpg">
         </a>
-      </li>        
+      </li>
+      <li class="item navi_banner_area navi_kinyu-menu-li06">
+        <a target="_blank" class="navi_banner_area_el" href="https://kinyu-joshi.jp/map_kabuto">
+          <img class="" src="/images/banner/kabutochimap.jpg">
+        </a>
+      </li>
 
     </ul>
   </div>
