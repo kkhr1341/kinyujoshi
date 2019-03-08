@@ -24,14 +24,14 @@
 
     {if $smarty.foreach.loopname.index == 0}
         <!-- スライド広告枠↓ -->
-        <div class="swiper-slide" style="background: url(/images/advertisement/PC.png) center center / cover no-repeat;">
+        <!-- <div class="swiper-slide" style="background: url(/images/advertisement/PC.png) center center / cover no-repeat;">
             <a class="js-track js-slide-fundsi-pc" href="https://funds-i.jp/special/imadeki/?utm_source=kj&utm_campaign=imadeki" target="_blank" data-category="slide-link" data-action="click" data-value="2">
             <div class="kinyu-top-list-kind"></div>
             <div class="kinyu-top-promotion-label">
                 <img src="/images/pr_label_pc.png">
             </div>
             </a>
-        </div>
+        </div> -->
     {/if}
 
     <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
