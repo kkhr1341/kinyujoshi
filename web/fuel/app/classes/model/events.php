@@ -36,6 +36,7 @@ class Events extends Base
         $val->add('display_past', '過去の女子会への表示/非表示');
 
         $val->add('specific_link', '特定のリンク');
+        $val->add('specific_application_link', '特定の申し込みリンク');
 
         $val->add('event_date', '日付')
             ->add_rule('required')
@@ -332,6 +333,7 @@ class Events extends Base
         $data['display'] = $params['display'];
         $data['display_past'] = $params['display_past'];
         $data['specific_link'] = $params['specific_link'];
+        $data['specific_application_link'] = $params['specific_application_link'];
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];
@@ -368,6 +370,7 @@ class Events extends Base
         $data['display'] = $params['display'];
         $data['display_past'] = $params['display_past'];
         $data['specific_link'] = $params['specific_link'];
+        $data['specific_application_link'] = $params['specific_application_link'];
         $data['title'] = $params['title'];
         $data['main_image'] = $params['main_image'];
         $data['content'] = $params['content'];

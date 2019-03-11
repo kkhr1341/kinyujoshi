@@ -7,7 +7,6 @@ up:
 
 migrate:
 	docker-compose run --rm web php oil refine migrate:current
-	docker-compose run --rm -e FUEL_ENV=test web php oil refine migrate:current
 .PHONY: migrate
 
 seed:
@@ -56,7 +55,6 @@ reset: clean up sleep10 migrate seed
 clean:
 	docker-compose down
 	docker volume rm kinyujoshi_db-data
-	docker volume rm kinyujoshi_test-db-data
 .PHONY: clean
 
 mysql:

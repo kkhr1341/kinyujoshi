@@ -133,6 +133,7 @@ return array(
         124 => '132_create_blog_comments',
         125 => '133_create_page_views',
         126 => '134_create_views_blog_views',
+        127 => '135_add_specific_application_link_to_events',
       ),
     ),
     'module' => 

@@ -93,6 +93,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="form-group-event-label">特定の申し込みリンク</label>
+                    <input type="text" id="specific_application_link" class="form-control" placeholder="">
+                </div>
+
+                <div class="form-group">
                     <label class="form-group-event-label">サムネイル画像</label>
                     <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
                     <input type="hidden" id="main_image">
@@ -246,6 +251,7 @@
             params.display_past = $("[name=display_past]:checked").val();
             params.title = $('#title').val();
             params.specific_link = $('#specific_link').val();
+            params.specific_application_link = $('#specific_application_link').val();
             params.main_image = $('#main_image').val();
             params.content = $('#content').val();
             params.place = $('#place').val();
@@ -319,6 +325,7 @@
             params.display_past = $("[name=display_past]:checked").val();
             params.title = $('#title').val();
             params.specific_link = $('#specific_link').val();
+            params.specific_application_link = $('#specific_application_link').val();
             params.main_image = $('#main_image').val();
             params.content = $('#content').val();
             params.place = $('#place').val();

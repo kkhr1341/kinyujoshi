@@ -80,12 +80,18 @@ var $resArray02 = $resArray[1];
               <div class="applicable-title"><span style="color:red;">＊</span>満席のため受付終了しました</div>
             </div>
           {else}
-            <!-- ログインユーザー -->
             <div class="joinus-block">
-            {if in_array('user', $roles) || in_array('admin', $roles)}
-              <a href="/joshikai_tickets/{$urlcode}">お申込みはこちら</a>
+            {if $event.specific_application_link}
+              <!-- 特定の申し込みリンク -->
+              <a href="{$event.specific_application_link}" target="_blank">お申込みはこちら</a>
             {else}
-              <p id="joinus-open">お申込みはこちら</p>
+              {if $authenticated eq 1}
+                <!-- ログインユーザー -->
+                <a href="/joshikai_tickets/{$urlcode}">お申込みはこちら</a>
+              {else}
+                <!-- 非ログインユーザー -->
+                <p id="joinus-open">お申込みはこちら</p>
+              {/if}
             {/if}
             </div>
           {/if}
