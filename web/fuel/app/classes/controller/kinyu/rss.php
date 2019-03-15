@@ -30,9 +30,9 @@ class Controller_Kinyu_Rss extends Controller_Rssbase
 
             $item = $feed->createNewItem() ;
             $item->setTitle( $blog['title']) ;	// タイトル
-            $item->setLink( \Uri::base() . 'report/' . $blog['code'] ) ;	// リンク
-            $item->setDescription( $blog['description'] ) ;	// 紹介テキスト
-            $item->setDate( strtotime($blog['updated_at']) ) ;	// 更新日時
+            $item->setLink( \Uri::base() . 'report/' . $blog['code'] );
+            $item->setDescription( $blog['description'] );
+            $item->setDate( strtotime($blog['open_date']) + (60 * 60));
 
             // サムネイルが存在するか確認
             $thumbnail = $this->toThumbnail($blog['main_image']);
