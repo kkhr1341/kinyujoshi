@@ -860,6 +860,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   transition: .5s;
 }
 
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・記事リスト
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -1738,6 +1739,27 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 .sidebar-more-link {
   text-align: right;
 }
+.joshikai-more-link {
+  display: block;
+  background: #8ddcd1;
+  width: 200px;
+  text-align: center;
+  padding: 8px 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  transition: .5s;
+}
+.joshikai-more-link a {
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
 .report-detail-sidebar .sidebar-more-link {
   margin-top: 16px;
 }
