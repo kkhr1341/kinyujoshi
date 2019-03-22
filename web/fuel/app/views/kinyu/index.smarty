@@ -72,7 +72,7 @@
 
               {if $smarty.foreach.loopname.index == 6}
               </ul>
-                <div class="sidebar-more-link">
+                <div class="joshikai-more-link">
                   <a class="js-track" href="/joshikai" data-category="sp-top-link" data-action="click" data-value="1">女子会をもっと見る ></a>
                 </div>
               {break}
