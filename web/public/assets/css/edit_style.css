@@ -1743,8 +1743,9 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   display: block;
   background: #8ddcd1;
   width: 200px;
+  margin: 0 auto;
   text-align: center;
-  padding: 8px 20px;
+  padding: 12px 20px;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
