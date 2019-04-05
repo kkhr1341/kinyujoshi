@@ -7,6 +7,21 @@
   width: 100%;
   height: 190px;
 }
+  /**
+  主要ボタン
+   */
+  .primary-button a {
+    font-size: 10px;
+    font-weight: 300;
+  }
+
+  /**
+  サブボタン
+   */
+  .secondary-button a {
+    font-size: 10px;
+    font-weight: 300;
+  }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマホのみ

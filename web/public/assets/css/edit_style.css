@@ -42,6 +42,51 @@
   z-index: 1004;
 }
 
+/**
+主要ボタン
+ */
+.primary-button {
+  text-align:center;
+  margin: 12px 0px;
+  transition: .5s;
+}
+
+.primary-button a {
+  background: #8ddcd1;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 12px 40px;
+  font-size: 13px;
+  transition: .5s;
+}
+
+.primary-button a:hover {
+  opacity: .5;
+}
+
+
+/**
+サブボタン
+ */
+.secondary-button {
+text-align:center;
+margin: 12px 0px;
+transition: .5s;
+}
+
+.secondary-button a {
+display: inline-block;
+background: #f9f9f9;
+text-align: center;
+padding: 12px 20px;
+font-size: 13px;
+transition: .5s;
+}
+
+.secondary-button a:hover {
+opacity: .5;
+}
 /* 文字省略 */
 
 
