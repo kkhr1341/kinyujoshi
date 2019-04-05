@@ -130,7 +130,12 @@
               </li>
             {/foreach}
             </ul>
-            <div class="link-to">
+          　{if count($events) > $event_display_limit}
+            <div class="primary-button">
+              <a style="background:#8ddcd1; color: #fff;" href="/joshikai">もっと見る</a>
+            </div>
+            {/if}
+            <div class="secondary-button">
               <a href="/joshikai_past">過去の女子会一覧へ</a>
             </div>
           </div>
