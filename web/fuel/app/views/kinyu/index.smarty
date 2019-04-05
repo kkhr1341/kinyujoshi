@@ -130,6 +130,9 @@
               </li>
             {/foreach}
             </ul>
+            <div class="link-to">
+              <a href="/joshikai_past">過去の女子会一覧へ</a>
+            </div>
           </div>
         </div>
 

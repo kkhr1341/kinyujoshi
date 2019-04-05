@@ -3059,7 +3059,6 @@ footer {
   padding: 10px 0px;
   font-weight: 400;
 }
-=======
     .video-container iframe {
         width: 100%;
         height: 190px;
@@ -4124,9 +4123,21 @@ footer {
         background: #f7f7f7;
     }
 
-    /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-      　トップ - 記事リスト
-    *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+    .kinyu-top-list .link-to {
+      width: 250px;
+      margin-top: 12px;
+    }
+
+    .kinyu-top-list .link-to a {
+      padding: 8px 12px;
+      font-size: 10px;
+    }
+
+
+  /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+    　トップ - 記事リスト
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
     .kinyu-top-report-list li {
         height: 88px;
         background-color: #f9f9f9;
