@@ -8,6 +8,8 @@ use \Model\Projects;
 
 class Controller_Kinyu_Top extends Controller_Kinyubase
 {
+    const EVENT_DISPLAY_LIMIT = 9;
+
     public function action_index($page = 1)
     {
         $this->data['projects'] = Projects::lists(1, 3, true, 'kinyu');
@@ -19,7 +21,10 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         }
         $pagination = $this->data['blogs']['pagination'];
         $this->data['pagination'] = $pagination::instance('mypagination');
-        $this->data['events'] = Events::lists(1, 10, true, 0, 'asc');
+
+        $this->data['event_display_limit'] = self::EVENT_DISPLAY_LIMIT;
+        $this->data['events'] = Events::lists(1, self::EVENT_DISPLAY_LIMIT, true, 0, 'asc');
+
         $this->template->title = 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
@@ -35,7 +40,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
-        if (Agent::is_mobiledevice()) {
+        if (Agent::is_smartphone()) {
             $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
             $this->template->contents = View::forge('kinyu/index.smarty', $this->data);
             $this->template->pickup_top = View::forge('kinyu/common/sp_pickup_top.smarty', $this->data);

@@ -42,6 +42,51 @@
   z-index: 1004;
 }
 
+/**
+主要ボタン
+ */
+.primary-button {
+  text-align:center;
+  margin: 12px 0px;
+  transition: .5s;
+}
+
+.primary-button a {
+  background: #8ddcd1;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 12px 40px;
+  font-size: 13px;
+  transition: .5s;
+}
+
+.primary-button a:hover {
+  opacity: .5;
+}
+
+
+/**
+サブボタン
+ */
+.secondary-button {
+text-align:center;
+margin: 12px 0px;
+transition: .5s;
+}
+
+.secondary-button a {
+display: inline-block;
+background: #f9f9f9;
+text-align: center;
+padding: 12px 20px;
+font-size: 13px;
+transition: .5s;
+}
+
+.secondary-button a:hover {
+opacity: .5;
+}
 /* 文字省略 */
 
 
@@ -2744,14 +2789,14 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 .kinyu-joshikai-tickets-payment .fee-card {
   background: #8ddcd1;
   border: 1px solid #8ddcd1;
-  color: #fff;1
+  color: #fff;
   font-weight: bold;
 }
 .kinyu-joshikai-tickets-payment .fee-free {
   background: #8ddcd1;
   border: 1px solid #8ddcd1;
-  color: #fff;1
-font-weight: bold;
+  color: #fff;
+  font-weight: bold;
 }
 .kinyu-joshikai-tickets-payment .fee-cash {
   background: #f1f1f1;
@@ -5245,7 +5290,7 @@ footer {
   margin-top: -275px;
   margin-left: -300px;
   display: table;
-  box-shadow:
+  /*box-shadow:*/
 }
 .celebration-main-block .main-block-inner {
   display: table-cell;
@@ -5305,7 +5350,7 @@ footer {
   font-weight: bold;
   transition: .8s;
 }
-.celebration1206-to-link-top;hover {
+.celebration1206-to-link-top:hover {
   opacity: .5;
 }
 
@@ -5342,7 +5387,7 @@ footer {
   margin-top: -275px;
   margin-left: -300px;
   display: table;
-  box-shadow:
+  /*box-shadow:*/
 }
 .ad-popup-main-block .main-block-inner {
   display: table-cell;
@@ -5407,7 +5452,7 @@ footer {
   font-weight: bold;
   transition: .8s;
 }
-.celebration1206-to-link-top;hover {
+.celebration1206-to-link-top:hover {
   opacity: .5;
 }
 
@@ -5444,7 +5489,7 @@ footer {
     margin-top: -275px;
     margin-left: -300px;
     display: table;
-    box-shadow:
+    /*box-shadow:*/
   }
 
   .ad-popup-main-block {
@@ -5458,7 +5503,7 @@ footer {
       margin-top: 0px;
        margin-left: 0px;
       display: table;
-      box-shadow: ;
+      /*box-shadow: ;*/
   }
   .ad-popup-main-block .close-btn {
     position: absolute;
@@ -5803,7 +5848,7 @@ footer {
   margin-top: -275px;
   margin-left: -300px;
   display: table;
-  box-shadow:
+  /*box-shadow:*/
 }
 .insight-popup-main-block .main-block-inner {
   display: table-cell;
@@ -5868,7 +5913,7 @@ footer {
   font-weight: bold;
   transition: .8s;
 }
-.celebration1206-to-link-top;hover {
+.celebration1206-to-link-top:hover {
   opacity: .5;
 }
 
@@ -5964,7 +6009,7 @@ footer {
     margin-top: -275px;
     margin-left: -300px;
     display: table;
-    box-shadow:
+    /*box-shadow:*/
   }
 
   .insight-popup-main-block {

@@ -173,6 +173,14 @@
             </li>
           {/foreach}
           </ul>
+          {if count($events) > $event_display_limit}
+          <div class="primary-button">
+            <a style="background:#8ddcd1; color: #fff;" href="/joshikai">もっと見る</a>
+          </div>
+          {/if}
+          <div class="secondary-button">
+            <a href="/joshikai_past">過去の女子会一覧へ</a>
+          </div>
         </div>
       </div>
 
@@ -259,8 +267,8 @@
         <div class="insta-block">
         <div class="insta-block-inner">
           <h3 class="kinyu-main-title" style="text-align: center;">
-            <a href="https://www.instagram.com/explore/tags/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90/" target="_blank" onClick="ga('send', 'event', 'pc-top-link', 'click', 'instagram-tag', 1);">
-              - #きんゆう女子 -
+            <a href="https://www.instagram.com/kinyu_joshi/ " target="_blank" onClick="ga('send', 'event', 'pc-top-link', 'click', 'instagram-tag', 1);">
+              ＼きんゆう女子。をフォロー／<br> ＠kinyu_joshi 
             </a>
           </h3>
           <div class="insta-el clear" id="instafeed"></div>
