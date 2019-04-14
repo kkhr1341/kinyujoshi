@@ -6,6 +6,8 @@ return array(
         'cookie_name'  =>  'fueldid',
         'database'  =>  null,
         'table'  =>  'sessions',
-        'gc_probability'  =>  5
+        'gc_probability'  =>  5,
+        'cookie_domain'  =>  'localhost',
+        'encrypt_cookie'    => false,
     )
 );
