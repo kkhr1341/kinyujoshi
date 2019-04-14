@@ -18,8 +18,8 @@ RUN a2enmod rewrite
 
 WORKDIR /var/www/html
 
-ADD composer.json .
+#ADD app/composer.json .
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filena
 
-RUN composer.phar install
+#RUN composer.phar install

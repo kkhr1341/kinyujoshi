@@ -14,7 +14,7 @@
     $send_param["room"] = $room;
 
     ?>
-    var conn = new WebSocket('ws://192.168.1.24:8080?<?php echo(http_build_query($send_param))?>');
+    var conn = new WebSocket('ws://localhost:8080?<?php echo(http_build_query($send_param))?>');
 
     //接続できた
     conn.onopen = function(e) {

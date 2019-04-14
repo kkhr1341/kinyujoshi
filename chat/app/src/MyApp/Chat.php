@@ -2,7 +2,7 @@
 namespace MyApp;
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
- 
+
 class Chat implements MessageComponentInterface {
     protected $clients;
  
@@ -25,6 +25,11 @@ class Chat implements MessageComponentInterface {
     }
  
     public function onMessage(ConnectionInterface $from, $msg) {
+
+        $session = $from->Session;
+        var_dump("ooooooooooooooooooooooo");
+        var_dump($session->get("username"));
+        var_dump("nyoo");
 
         $from_param = $this->parse_url_param($from->httpRequest->getRequestTarget());
         
