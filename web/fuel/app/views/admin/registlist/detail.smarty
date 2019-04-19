@@ -35,67 +35,83 @@
             <p class="form-sub-title">あなたのきんゆうワカラナイ度を教えてください(^ ^)!</p>
             <div class="radio_box clear">
               <input type="radio" value="軽度" name="not_know" id="not_know1" class="form-radio" placeholder="" {if $registel.not_know == "軽度"}checked{/if}>
-              <label for="not_know1" class="form-long">軽度</label>
+              <label for="not_know1">軽度</label>
               <input type="radio" value="中度" name="not_know" id="not_know2" class="form-radio" placeholder="" {if $registel.not_know == "中度"}checked{/if}>
-              <label for="not_know2" class="form-long">中度</label>
+              <label for="not_know2">中度</label>
               <input type="radio" value="重度" name="not_know" id="not_know3" class="form-radio" placeholder="" {if $registel.not_know == "重度"}checked{/if}>
-              <label for="not_know3" class="form-long">重度</label>
+              <label for="not_know3">重度</label>
               <input type="radio" value="それすらワカラナイ" name="not_know" id="not_know4" class="form-radio" placeholder="" {if $registel.not_know == "それすらワカラナイ"}checked{/if}>
               <label for="not_know4">それすらワカラナイ</label>
-              <!-- <input type="radio" value="プロフェッショナル" name="not_know" id="not_know5" class="form-radio" placeholder="">
-              <label for="not_know5">プロフェッショナル</label> -->
+              <input type="radio" value="プロレベル" name="not_know" id="not_know5" class="form-radio" placeholder="" {if $registel.not_know == "プロレベル"}checked{/if}>
+              <label for="not_know5">プロレベル</label>
             </div>
           </div>
 
-          <div class="form-group">
-            <label class="form-title">お金について知りたいこと・興味のあること <span class="label label-danger">必須</span></label>
-            <input type="text" id="interest" class="form-control" placeholder="(例)投資？個人事業主のこと？お年玉？" value="{$registel.interest}">
-          </div>
-          <div class="form-group">
-            <label class="form-title">きんゆう女子。でどんな出会いや発見がほしいですか？ <span class="label label-danger">必須</span></label>
-            <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間" value="{$registel.ask}">
-          </div>
           <div class="form-group">
             <label class="form-title">メールアドレス <span class="label label-danger">必須</span></label>
             <p class="form-sub-title">連絡がとりやすいアドレスを入力してください。</p>
             <input type="text" id="email" class="form-control" placeholder="" value="{$registel.email}">
           </div>
-          <div class="form-group">
-            <label class="form-title">3年後の自分の年収をどのくらいにしたいですか？ <span class="label label-danger">必須</span></label>
-            <input type="text" id="income" class="form-control" placeholder="" value="{$registel.income}">
-          </div>
 
           <div class="form-group form_where_from">
             <label class="form-title">どこで、きんゆう女子。を知りましたか？ <span class="label label-danger">必須</span></label>
+
+
             <div class="radio_box_03 clear">
-              
-              <input type="radio" value="ホームページを見て" name="where_from" id="where_from1" class="form-radio" placeholder="" {if $registel.where_from == "ホームページを見て"}checked{/if}>
-              <label for="where_from1" class="form-long">検索して</label>
-              
-              <!-- <input type="radio" value="雑誌を見て" name="where_from" id="where_from2" class="form-radio" placeholder="">
-              <label for="where_from2" class="form-long">雑誌を見て</label> -->
+              <div class="clear">
+                <input type="radio" value="検索して" name="where_from" id="where_from1" class="form-radio" placeholder="" {if $registel.where_from == "検索して"}checked{/if}>
+                <label for="where_from1">検索して</label>
 
-              <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="" {if $registel.where_from == "Facebookを見て"}checked{/if}>
-              <label for="where_from3">Facebookを見て</label>
+                <input type="radio" value="新聞・雑誌の記事を見て" name="where_from" id="where_from9" class="form-radio" placeholder="" {if $registel.where_from == "新聞・雑誌の記事を見て"}checked{/if}>
+                <label for="where_from9">新聞・雑誌の記事を見て</label>
 
-              <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="" {if $registel.where_from == "Instagramを見て"}checked{/if}>
-              <label for="where_from8">Instagramを見て</label>
-              
-              <input type="radio" value="友人のご紹介" name="where_from" id="where_from4" class="form-radio" placeholder="" {if $registel.where_from == "友人のご紹介"}checked{/if}>
-              <label for="where_from4" class="form-long">友人のご紹介</label>
-              
-              <input type="radio" value="他サイトで紹介されていた。" name="where_from" id="where_from6" class="form-radio" placeholder="" {if $registel.where_from == "他サイトで紹介されていた。"}checked{/if}>
-              <label for="where_from6">他サイトで紹介されていた。</label>
+                <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="" {if $registel.where_from == "Facebookを見て"}checked{/if}>
+                <label for="where_from3">Facebookを見て</label>
 
-              <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="" {if $registel.where_from == "その他"}checked{/if}>
-              <label for="where_from7">その他</label>
-              <div class="othet_input">
-                <input type="text" id="where_from_other" class="form-control" placeholder="その他の方はこちら" value="{$registel.where_from_other}">
+                <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="" {if $registel.where_from == "Instagramを見て"}checked{/if}>
+                <label for="where_from8">Instagramを見て</label>
+
+                <input type="radio" value="Twitterを見て" name="where_from" id="where_from2" class="form-radio" placeholder="" {if $registel.where_from == "Twitterを見て"}checked{/if}>
+                <label for="where_from2">Twitterを見て</label>
+
+                <input type="radio" value="お友達から" name="where_from" id="where_from4" class="form-radio" placeholder="" {if $registel.where_from == "お友達から"}checked{/if}>
+                <label for="where_from4">お友達から</label>
+
+                <input type="radio" value="お母さんから" name="where_from" id="where_from5" class="form-radio" placeholder="" {if $registel.where_from == "お母さんから"}checked{/if}>
+                <label for="where_from5">お母さんから</label>
+
+                <input type="radio" value="先輩上司から" name="where_from" id="where_from6" class="form-radio" placeholder="" {if $registel.where_from == "先輩上司から"}checked{/if}>
+                <label for="where_from6">先輩上司から</label>
+
               </div>
 
+              <p class="regist-add-form-edit-subtitle">他サイトで紹介されていた</p>
+              <div class="othet_input">
+                <input type="text" id="where_from_site" name="where_from_site" class="form-control" placeholder="良かったらサイト名を教えてください♪" style="margin-top:10px;" value="{$registel.where_from_site}">
+              </div>
+
+              <p class="regist-add-form-edit-subtitle" style="margin-top:10px;">その他</p>
+              <div class="othet_input">
+                <input type="text" id="where_from_other" name="where_from_other" class="form-control" placeholder="その他の方はこちら" style="margin-top:10px;" value="{$registel.where_from_other}">
+              </div>
             </div>
           </div>
 
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">メンバーになろうと思ったきっかけ(いくつか選択してもok)<span style="color:red; font-weight: normal;">*</span></label>
+            <div class="checkbox-list">
+              {foreach from=$regist_triggers item=value}
+              <div class="checkbox-list-item">
+                <span>{$value}</span>
+              </div>
+              {/foreach}
+
+            </div>
+          </div>
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">きんゆう女子。を通してどんな自分になりたい？<span style="color:red; font-weight: normal;">*</span></label>
+            <input type="text" id="future" name="future" class="form-control" placeholder="" value="{$registel.future}">
+          </div>
           <div class="form-group form-radio-block">
             <label class="form-title">きんゆう女子。で情報発信したいですか？ <span class="label label-danger">必須</span></label>
             <p class="form-sub-title">成長日記、記事寄稿、SNS、企業さんとコラボ(商品企画・モニター)など</p>
@@ -104,26 +120,14 @@
               <label for="transmission1">はい、ぜひしたいです。</label>
               <input type="radio" value="いいえ、したくないです。" name="transmission" id="transmission2" class="form-radio" placeholder="" {if $registel.transmission == "いいえ、したくないです。"}checked{/if}>
               <label for="transmission2">いいえ、したくないです。</label>
+              <input type="radio" value="写真なしだったらok♪" name="transmission" id="transmission3" class="form-radio" placeholder="" {if $registel.transmission == "写真なしだったらok♪"}checked{/if}>
+              <label for="transmission3">写真なしだったらok♪</label>
             </div>
           </div>
           <div class="form-group">
-            <label class="form-title">FacebookのURL <span class="label label-primary">任意</span></label>
-            <input type="text" id="facebook" class="form-control" placeholder="" value="{$registel.facebook}">
+            <label class="form-title">個人で発信しているブログやSNSなど <span class="label label-primary">任意</span></label>
+            <input type="text" id="url" class="form-control" placeholder="" name="url" value="{$registel.url}">
           </div>
-
-          <div class="form-group form-radio-block">
-            <label class="form-title">金融機関で働いていますか？ <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">金融についてワカラナイ女性のためのコミュニティなのでご注意くださいませ( ´ ▽ ` )ﾉ</p>
-            <div class="radio_box_03 clear">
-              <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="" {if $registel.job_kind == "はい"}checked{/if}>
-              <label for="job_kind1" class="form-long">はい</label>
-              <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="" {if $registel.job_kind == "いいえ"}checked{/if}>
-              <label for="job_kind2" class="form-long">いいえ</label>
-              <input type="radio" value="不明" name="job_kind" id="job_kind3" class="form-radio" placeholder="" {if $registel.job_kind == "不明"}checked{/if}>
-              <label for="job_kind3" class="form-long">不明</label>
-            </div>
-          </div>
-
 
           <div class="form-group form-group02">
             <label class="form-title">簡単な自己紹介をお願いいたします。 <span class="label label-danger">必須</span></label>
@@ -218,19 +222,22 @@ $(function(){
     params.name_kana = $('#name_kana').val();
     params.age = $('#age').val();
     params.not_know = $("[name=not_know]:checked").val();
-    params.interest = $('#interest').val();
-    params.ask = $('#ask').val();
-    params.income = $('#income').val();
+    // params.interest = $('#interest').val();
+    // params.ask = $('#ask').val();
+    // params.income = $('#income').val();
     params.where_from = $("[name=where_from]:checked").val();
+    params.where_from_site = $('#where_from_site').val();
     params.where_from_other = $('#where_from_other').val();
     params.transmission = $("[name=transmission]:checked").val();
     params.email = $('#email').val();
-    params.facebook = $('#facebook').val();
-    params.other_sns = $('#other_sns').val();
-    params.job_kind = $("[name=job_kind]:checked").val();
+    params.url = $('#url').val();
+    // params.facebook = $('#facebook').val();
+    // params.other_sns = $('#other_sns').val();
+    // params.job_kind = $("[name=job_kind]:checked").val();
+    params.future = $('#future').val();
     params.introduction = $('#introduction').val();
     params.edit_inner = $('#edit_inner').val();
-    
+
     if (params.name == "") {
       ts.error("お名前を入力してください");
       return false;
@@ -243,10 +250,10 @@ $(function(){
       ts.error("きんゆうワカラナイ度を入力してください。");
       return false;
     }
-    if (params.interest == "") {
-      ts.error("「お金について知りたいこと・興味のあること」を入力してください");
-      return false;
-    }
+    // if (params.interest == "") {
+    //   ts.error("「お金について知りたいこと・興味のあること」を入力してください");
+    //   return false;
+    // }
     if (params.ask == "") {
       ts.error("「きんゆう女子。でどんな出会いや発見がほしいですか？」を入力してください");
       return false;

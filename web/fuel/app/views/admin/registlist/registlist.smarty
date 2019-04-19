@@ -41,25 +41,12 @@
 <table id="tbl" class="sample_01 registlist-block-admin">
   <thead>
     <tr>
-      <!-- お名前 -->
       <th>登録日</th>
       <th>名前</th>
       <th>会員ID</th>
       <th>診断チャートタイプ</th>
-      <th style="display:none;">かな</th>
-      <!-- メールアドレス -->
       <th>Email</th>
-      <!-- 年齢 -->
       <th>年齢</th>
-      <th style="display:none;">きんゆうワカラナイ度</th>
-      <th style="display:none;">お金について知りたいこと・興味のあること</th>
-      <th style="display:none;">きんゆう女子。でどんな出会いや発見がほしいですか？</th>
-      <th style="display:none;">3年後の自分の年収をどのくらいにしたいですか？</th>
-      <th style="display:none;">どこで、きんゆう女子。を知りましたか？</th>
-      <th style="display:none;">きんゆう女子。で情報発信したいですか？</th>
-      <th style="display:none;">金融機関の方ですか？</th>
-      <th style="width:70px;">パス<br>設定有</th>
-      <th style="width:300px;">自己紹介</th>
       <th>編集部記入欄</th>
       <th>詳細</th>
       <th>pass済</th>
@@ -73,36 +60,18 @@
       <td>{$email.name}</td>
       <td>{$email.username}</td>
       <td>{$email.type}</td>
-      <td style="display:none;">{$email.name_kana}</td>
       <td>{$email.email}</td>
-      <!-- <td>{$email.age}</td> -->
+      <td>
       {if $email.age > 1000}
-        <td>{floor(($smarty.now|date_format:"Ymd"-$email.age)/10000)}</td>
+        {floor(($smarty.now|date_format:"Ymd"-$email.age)/10000)}</td>
       {else if $email.age < 1000}
-        <td>{$email.age}</td>
+        {$email.age}
       {else if $email.age = ""}
-        <td></td>
       {else}
-        <td>{$email.age}</td>
+        {$email.age}
       {/if}
-      <td style="display:none;">{$email.not_know}</td>
-      <td style="display:none;">{$email.interest}</td>
-      <td style="display:none;">{$email.ask}</td>
-      <td style="display:none;">{$email.income}</td>
-      <td style="display:none;">{$email.where_from}</td>
-      <td style="display:none;">{$email.transmission}</td>
-      <td style="display:none;">{$email.job_kind}</td>
-      {if $email.is_user == 0}
-        <td style="width:70px;">
-          ○<br>
-          <a class="admin-regist-remind" href="#" data-code="{$email.code}" style="font-size: 8px;">リマインド</a>
-        </td>
-      {else}
-        <td style="width:70px;"></td>
-      {/if}
-      <td style="width:300px;">{$email.introduction}</td>
-      <!-- 備考欄 -->
-      <td style="background: #dbfffa;">{$email.edit_inner}</td>
+      </td>
+      <td>{$email.edit_inner}</td>
       <td><a class="admin-registlist-more" href="/admin/registlist/{$email.code}">編集</a></td>
       <td>
       {if $email.username}
