@@ -397,24 +397,6 @@
             })
         })
     })
-
-    $(function(){
-        var $from  = $('input[name="where_from"]');
-        var $site  = $('input[name="where_from_site"]');
-        var $other = $('input[name="where_from_other"]');
-        $from.click(function() {
-            $site.val('');
-            $other.val('');
-        })
-        $site.click(function() {
-            $from.prop('checked', false);
-            $other.val('');
-        })
-        $other.click(function() {
-            $from.prop('checked', false);
-            $site.val('');
-        })
-    })
 </script>
 
 <script>

@@ -4,6 +4,7 @@ use \Model\Sections;
 use \Model\Regist;
 use \Model\Registlist;
 use \Model\ParticipatedApplications;
+use \Model\UserRegistTriggers;
 
 class Controller_Admin_Registlist extends Controller_Adminbase
 {
@@ -58,8 +59,10 @@ class Controller_Admin_Registlist extends Controller_Adminbase
         $username = Registlist::getUsername($code);
         if ($username) {
             $this->data['participated_events'] = ParticipatedApplications::lists($username);
+            $this->data['regist_triggers'] = UserRegistTriggers::lists($username);
         } else {
             $this->data['participated_events'] = array();
+            $this->data['regist_triggers'] = array();
         }
 
         $this->data['registel'] = Regist::getByCodeWithurl($code);
@@ -113,18 +116,19 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             "年齢",
             "都道府県",
             "きんゆうワカラナイ度",
-            "お金について知りたいこと・興味のあること",
-            "きんゆう女子。でどんな出会いや発見がほしいですか？",
-            "3年後の自分の年収をどのくらいにしたいですか？",
+//            "お金について知りたいこと・興味のあること",
+//            "きんゆう女子。でどんな出会いや発見がほしいですか？",
+//            "3年後の自分の年収をどのくらいにしたいですか？",
             "どこで、きんゆう女子。を知りましたか？",
             "きんゆう女子。で情報発信したいですか？",
-            "金融機関で働いていたり、仕事上金融に関わっていますか？",
+//            "金融機関で働いていたり、仕事上金融に関わっていますか？",
             "きんゆう女子。コミュニティではどんな発見や出会いがほしい？",
             "きんゆう女子。コミュニティで何を学んだり知りたい？",
             "メンバーになろうと思ったきっかけ",
             "金融に向き合い学び、3年後には何がほしいですか？",
-            "facebook",
-            "その他のSNSアカウント",
+            "個人で発信しているブログやSNSなど",
+//            "facebook",
+//            "その他のSNSアカウント",
             "個人で発信しているブログやSNSなど",
             "パス設定有",
             "自己紹介",
@@ -159,18 +163,18 @@ class Controller_Admin_Registlist extends Controller_Adminbase
                 $application["birthday"],
                 $application["prefecture_name"],
                 $application["not_know"],
-                $application["interest"],
-                $application["ask"],
-                $application["income"],
+//                $application["interest"],
+//                $application["ask"],
+//                $application["income"],
                 $application["where_from"],
                 $application["transmission"],
-                $application["job_kind"],
+//                $application["job_kind"],
                 $application["user_want_to_meet_values"],
                 $application["user_want_to_learn_values"],
                 $application["user_regist_trigger_values"],
                 $application["future"],
-                $application["facebook"],
-                $application["other_sns"],
+//                $application["facebook"],
+//                $application["other_sns"],
                 $application["url"],
                 $application["username"] ? '○': '',
                 $application["introduction"],
