@@ -2,21 +2,21 @@
 use Ratchet\Server\IoServer;
 use Ratchet\Http\HttpServer;
 use Ratchet\WebSocket\WsServer;
-//use Ratchet\Session\SessionProvider;
 use Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler;
 use MyApp\Chat;
 use MyApp\MySessionProvider;
 use MyApp\PhpSerializeHandler;
 
-define('DB_HOST',     'db');
-define('DB_NAME',     'kinyujoshi_development');
-define('DB_USER',     'root');
-define('DB_PASSWORD', 'pass');
+define('DB_HOST',       getenv('DB_HOST'));
+define('DB_NAME',       getenv('DB_NAME'));
+define('DB_USER',       getenv('DB_USER'));
+define('DB_PASSWORD',   getenv('DB_PASSWORD'));
+define('COOKIE_DOMAIN', getenv('COOKIE_DOMAIN'));
 
 require_once 'vendor/autoload.php';
 
 ini_set('session.serialize_handler', 'php_binary');
-ini_set('session.cookie_domain','localhost');
+ini_set('session.cookie_domain',COOKIE_DOMAIN);
 ini_set('session.name', 'fueldid');
 
 $pdo = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME, DB_USER, DB_PASSWORD);
@@ -43,7 +43,7 @@ $server = IoServer::factory(
             new PhpSerializeHandler()
         )
     ),
-    8080
+    80
 );
 
 $server->run();

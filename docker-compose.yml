@@ -4,9 +4,9 @@ services:
   db:
     build: ./mysql
     environment:
-      MYSQL_DATABASE: kinyujoshi_development
-      MYSQL_ROOT_PASSWORD: pass
-      TZ: "Asia/Tokyo"
+      - MYSQL_DATABASE=kinyujoshi_development
+      - MYSQL_ROOT_PASSWORD=pass
+      - TZ=Asia/Tokyo
     ports:
       - '3307:3306'
     volumes:
@@ -15,7 +15,7 @@ services:
   web:
     build: ./php
     environment:
-      TZ: "Asia/Tokyo"
+      - TZ=Asia/Tokyo
     ports:
       - '80:80'
     volumes:
@@ -31,13 +31,18 @@ services:
   chat:
     build: ./chat
     environment:
-      TZ: "Asia/Tokyo"
+      - TZ=Asia/Tokyo
+      - DB_HOST=db
+      - DB_NAME=kinyujoshi_development
+      - DB_USER=root
+      - DB_PASSWORD=pass
+      - COOKIE_DOMAIN=localhost
     ports:
-      - '8080:8080'
-    volumes:
-      - ./chat/app:/var/www/html
-    working_dir: /var/www/html
-    command: php bin/chat-server.php
+      - '8080:80'
+#    volumes:
+#      - ./chat/app:/var/www/html
+#    working_dir: /var/www/html
+#    command: php bin/chat-server.php
     depends_on:
       - db
 
@@ -75,7 +80,7 @@ services:
   oil:
     build: ./php
     environment:
-      TZ: "Asia/Tokyo"
+      - TZ=Asia/Tokyo
     volumes:
       - ./web:/var/www/html
     working_dir: /var/www/html
