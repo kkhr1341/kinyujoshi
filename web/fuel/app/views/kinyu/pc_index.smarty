@@ -318,7 +318,7 @@
             </li>
             <!-- 朝日デジタル -->
             <li>
-              <a class="js-track" target="_blank" href="http://www.asahi.com/and_w/kinyujoshi_list.html" data-category="pc-top-link" data-action="click" data-value="1">
+              <a class="js-track" target="_blank" href="https://www.asahi.com/and_w/seriese/kinyujoshi/" data-category="pc-top-link" data-action="click" data-value="1">
                 <img class="" src="/images/banner/asahi_&w_og.jpg">
               </a>
             </li>
