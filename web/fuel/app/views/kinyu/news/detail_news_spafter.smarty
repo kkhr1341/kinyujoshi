@@ -143,6 +143,12 @@
             <img class="" src="/images/banner/kabutochomap.jpg">
           </a>
         </li>
+        <!-- 桐谷さん相談所 -->
+        <li>
+          <a class="js-track" target="_blank" href="https://froggy.smbcnikko.co.jp/series-name/yutai-sodanjo/" data-category="pc-top-link" data-action="click" data-value="1">
+            <img class="" src="/images/banner/kiritanisan.png">
+          </a>
+        </li>
       </ul>
     </div>
   </div>

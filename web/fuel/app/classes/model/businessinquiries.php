@@ -96,20 +96,19 @@ class BusinessInquiries extends Base
         }
 
         $email = \Email::forge('jis');
-        $email->from("service@kinyu-joshi.jp", ''); //送り元
+        $email->from("cs@kinyu-joshi.jp", ''); //送り元
         $email->subject("【きんゆう女子。】お問い合せありがとうございました。");
         $email->html_body(\View::forge('email/business_inquiry/body', $data));
         $email->to($params['email']); //送り先
 
-        $email->return_path('support@kinyu-joshi.jp');
+        $email->return_path('cs@kinyu-joshi.jp');
         $email->send();
 
         $email02 = \Email::forge('jis');
         $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
         $email02->subject("【きんゆう女子。for Business】お問合せがありました。");
         $email02->html_body(\View::forge('email/business_inquiry/return', $data));
-        $email02->to('service@kinyu-joshi.jp'); //送り先
-        $email02->cc('cs@kinyu-joshi.jp');
+        $email02->to('cs@kinyu-joshi.jp'); //送り先
 
         // 添付ファイル
         foreach ($files as $key => $file) {
