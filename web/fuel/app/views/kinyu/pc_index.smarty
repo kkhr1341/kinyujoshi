@@ -263,12 +263,25 @@
         </div>
       </div>
 
+
+<!-- SPECIAL CONTENT -->
+    <div class="special-content-wrapper">
+      <h3 class="kinyu-top-main-title">
+        <img class="special_title" src="/images/special_title.png">
+      </h3>
+      <p>スペシャルコンテンツ</p>
+      <div class="video">
+      <iframe class="special-content-video"src="https://player.vimeo.com/video/328099799"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+    </div>
+
+
       <div class="kinyu-top-maincontent-block-el">
         <div class="insta-block">
         <div class="insta-block-inner">
           <h3 class="kinyu-main-title" style="text-align: center;">
             <a href="https://www.instagram.com/kinyu_joshi/ " target="_blank" onClick="ga('send', 'event', 'pc-top-link', 'click', 'instagram-tag', 1);">
-              ＼きんゆう女子。をフォロー／<br> ＠kinyu_joshi 
+              ＼きんゆう女子。をフォロー／<br> ＠kinyu_joshi
             </a>
           </h3>
           <div class="insta-el clear" id="instafeed"></div>
