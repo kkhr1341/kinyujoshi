@@ -47,6 +47,19 @@
             </div>
           </div>
 
+          <div class="form-group form-radio-block">
+            <label class="form-title">金融機関で働いていますか？ <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">金融についてワカラナイ女性のためのコミュニティなのでご注意くださいませ( ´ ▽ ` )ﾉ</p>
+            <div class="radio_box_03 clear">
+              <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="" {if $registel.job_kind == "はい"}checked{/if}>
+              <label for="job_kind1" class="form-long">はい</label>
+              <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="" {if $registel.job_kind == "いいえ"}checked{/if}>
+              <label for="job_kind2" class="form-long">いいえ</label>
+              <input type="radio" value="不明" name="job_kind" id="job_kind3" class="form-radio" placeholder="" {if $registel.job_kind == "不明"}checked{/if}>
+              <label for="job_kind3" class="form-long">不明</label>
+            </div>
+          </div>
+
           <div class="form-group">
             <label class="form-title">メールアドレス <span class="label label-danger">必須</span></label>
             <p class="form-sub-title">連絡がとりやすいアドレスを入力してください。</p>
@@ -222,18 +235,13 @@ $(function(){
     params.name_kana = $('#name_kana').val();
     params.age = $('#age').val();
     params.not_know = $("[name=not_know]:checked").val();
-    // params.interest = $('#interest').val();
-    // params.ask = $('#ask').val();
-    // params.income = $('#income').val();
     params.where_from = $("[name=where_from]:checked").val();
     params.where_from_site = $('#where_from_site').val();
     params.where_from_other = $('#where_from_other').val();
     params.transmission = $("[name=transmission]:checked").val();
     params.email = $('#email').val();
     params.url = $('#url').val();
-    // params.facebook = $('#facebook').val();
-    // params.other_sns = $('#other_sns').val();
-    // params.job_kind = $("[name=job_kind]:checked").val();
+    params.job_kind = $("[name=job_kind]:checked").val();
     params.future = $('#future').val();
     params.introduction = $('#introduction').val();
     params.edit_inner = $('#edit_inner').val();
