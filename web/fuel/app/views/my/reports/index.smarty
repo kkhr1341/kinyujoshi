@@ -1,0 +1,17 @@
+<br>
+<br>
+<br>
+<br>
+
+
+<form method="post">
+  <textarea id="summernote" name="editordata"></textarea>
+</form>
+
+<script>
+    $(function() {
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
+    });
+</script>
