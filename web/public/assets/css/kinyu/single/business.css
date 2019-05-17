@@ -8,7 +8,7 @@
 	.pc-business-header {
 		width:100%;
 		min-width: 1050px;
-		padding: 15px 20px;
+		padding: 10px 20px;
 		position: fixed;
 		z-index: 999;
 		background: rgba(255,255,255,0.9);
@@ -18,7 +18,7 @@
 		float: left;
 	}
 	.business-logo-wrapper img{
-		width: 380px;
+		width: 320px;
 		margin-top:1px;
 	}
 	.pc-business-header nav {
@@ -134,9 +134,9 @@
 		width: 100%;
 		position: relative;
 		text-align: center;
-		background: url(/images/business/business-main-bg.png) center 75%;
+		background: url(/images/business/business-main-bg.jpg) center 42%;
 		background-size: cover;
-		margin-top: 77px;
+		margin-top: 64px;
 	}
 	.business-main img {
 		max-width: 700px;
@@ -188,7 +188,7 @@ display: none;
 /* タブレット */
 @media screen and (max-width: 1024px) {
 	.business-main {
-		background: url(/images/business/business-main-bg.png) 81% 65%;
+		background: url(/images/business/business-main-bg.jpg) center 65%;
 		background-size:cover;
 		margin-top: 3px;
 	}
@@ -212,7 +212,7 @@ display: none;
 @media screen and (max-width: 480px) {
 	.business-main {
 		height: 70vh;
-		background: url(/images/business/business-main-bg.png) 81% 65%;
+		background: url(/images/business/business-main-bg.jpg) 81% 65%;
 		background-size:cover;
 		margin-top:  5px;
 	}
