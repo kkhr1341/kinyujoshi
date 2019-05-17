@@ -443,7 +443,7 @@ class Regist extends Base
             ->and_where_close();
 
         if ($show_deleted == 0) {
-            $datas->where('member_regist.disable', '=', 1)
+            $datas->where('member_regist.disable', '=', 1);
         }
 
         return $datas
