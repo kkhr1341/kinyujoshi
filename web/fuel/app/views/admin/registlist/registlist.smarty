@@ -75,7 +75,9 @@
       <td><a class="admin-registlist-more" href="/admin/registlist/{$email.code}">編集</a></td>
       <td>
       {if $email.username}
-      ○     
+        ○
+      {else}
+        <a class="admin-regist-remind" href="#" data-code="{$email.code}" style="font-size: 8px;">リマインド</a>
       {/if}
       </td>
     </tr>
