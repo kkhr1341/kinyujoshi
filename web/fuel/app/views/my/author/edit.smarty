@@ -7,7 +7,7 @@
       <form name="form1">
         <div class="singlepage-form-block">
 
-          <p class="withdrawal-title">投稿申請</p>
+          <p class="withdrawal-title">退会フォーム</p>
 
           <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">タイトル</label>
