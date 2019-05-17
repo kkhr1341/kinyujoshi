@@ -133,6 +133,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
             "パス設定有",
             "自己紹介",
             "編集部記入欄",
+            "削除フラグ",
             "参加女子会",
         );
 
@@ -179,6 +180,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
                 $application["username"] ? '○': '',
                 $application["introduction"],
                 $application["edit_inner"],
+                $application["disable"] == 0 ? '○': '',
                 $prev_applications_str,
             );
         }
