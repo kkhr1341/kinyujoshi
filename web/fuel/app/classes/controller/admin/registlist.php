@@ -103,7 +103,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
         $response->set_header('Expires', 'Mon, 26 Jul 1997 05:00:00 GMT');
         $response->set_header('Pragma', 'no-cache');
 
-        $registlist = Regist::lists();
+        $registlist = Regist::lists(1);
 
         $data = array();
         $data[] = array(
