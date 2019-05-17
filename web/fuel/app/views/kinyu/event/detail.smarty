@@ -117,17 +117,17 @@ var $resArray02 = $resArray[1];
     <form method="POST" action="/pay" id="no-member-charge-form">
       <input type="hidden" name="event_code" value="{$event.code}" />
       <span class="charge-errors"></span>
-      <p class="main-title">ご参加には、<br>メンバー登録が必要です。</p>
+      <p class="main-title">メンバーになって参加すると<br>事前に質問をリクエストしたり、ギフトコードが使えます♪</p>
       <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
 
       <div class="login-block">
-        <a class="login" href="/login?after_login_url=/joshikai_tickets/{$urlcode}">ログインして参加</a>
-        <a class="login_regist" href="/login_regist?after_login_url=/joshikai_tickets/{$urlcode}">メンバー登録をして参加</a>
+        <a class="login" href="/login?after_login_url=/joshikai_tickets/{$urlcode}">メンバーの方はログインして参加</a>
+        <a class="login_regist" href="/login_regist?after_login_url=/joshikai_tickets/{$urlcode}">メンバーになって参加</a>
       </div>
 
       <div class="first-login-block">
         <p>＼ まずは、雰囲気を見たい...という方へ ／</p>
-        <a href="/joshikai_tickets/{$urlcode}">メンバー登録をせずに参加（初回のみ）</a>
+        <a href="/joshikai_tickets/{$urlcode}">気軽に参加（初回のみ）</a>
       </div>
     </form>
   </div>
