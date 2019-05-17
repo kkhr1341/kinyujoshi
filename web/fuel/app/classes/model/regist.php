@@ -381,7 +381,11 @@ class Regist extends Base
         return $datas;
     }
 
-    public static function lists()
+    /**
+     * @param int $show_deleted 1: 無効データも表示させる, 0: 無効データは表示させない
+     * @return mixed
+     */
+    public static function lists($show_deleted=0)
     {
         \DB::set_charset('utf8');
         $datas = \DB::select(
@@ -433,11 +437,14 @@ class Regist extends Base
             ->on('prefectures.code', '=', 'profiles.prefecture')
             ->join(array(\DB::expr('select max(id) as id, username from diagnostic_chart_type_users group by username'), 'types'), 'LEFT')
             ->on('types.username', '=', 'member_regist.username')
-            ->where('member_regist.disable', '=', 1)
             ->and_where_open()
             ->where('users.group', 'in', array('1'))
             ->or_where('users.group', 'is', null)
             ->and_where_close();
+
+        if ($show_deleted == 0) {
+            $datas->where('member_regist.disable', '=', 1)
+        }
 
         return $datas
             ->order_by('member_regist.created_at', 'desc')
