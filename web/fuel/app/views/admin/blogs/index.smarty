@@ -12,7 +12,12 @@
     <li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
     <li><a href="#tab1" data-toggle="tab">公開</a></li>
 	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
-    <li><a href="#tab3" data-toggle="tab">すべて</a></li>
+	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
+
+    <li><a href="#tab5" data-toggle="tab">申請中</a></li>
+    <li><a href="#tab6" data-toggle="tab">更新依頼中</a></li>
+	<li><a href="#tab7" data-toggle="tab">削除依頼中</a></li>
+
 </ul>
 <div class="tab-content">
 
@@ -37,6 +42,9 @@
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
 					{if $blogs_item.status == 0}下書き{/if}
+					{if $blogs_item.status == 2}申請中{/if}
+					{if $blogs_item.status == 3}更新依頼中{/if}
+					{if $blogs_item.status == 4}削除依頼中{/if}
 				</td>
 				<td>
 					{$blogs_item.section_code}
@@ -70,6 +78,9 @@
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
 					{if $blogs_item.status == 0}下書き{/if}
+					{if $blogs_item.status == 2}申請中{/if}
+					{if $blogs_item.status == 3}更新依頼中{/if}
+					{if $blogs_item.status == 4}削除依頼中{/if}
 				</td>
 				<td>
 					{$blogs_item.section_code}
@@ -103,6 +114,9 @@
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
 					{if $blogs_item.status == 0}下書き{/if}
+					{if $blogs_item.status == 2}申請中{/if}
+					{if $blogs_item.status == 3}更新依頼中{/if}
+					{if $blogs_item.status == 4}削除依頼中{/if}
 				</td>
 				<td>
 					{$blogs_item.section_code}
@@ -136,6 +150,9 @@
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
 					{if $blogs_item.status == 0}下書き{/if}
+					{if $blogs_item.status == 2}申請中{/if}
+					{if $blogs_item.status == 3}更新依頼中{/if}
+					{if $blogs_item.status == 4}削除依頼中{/if}
 				</td>
 				<td>{$blogs_item.section_code}</td>
 				<td>{$blogs_item.title}</td>
@@ -145,6 +162,109 @@
 		</table>
 		{/if}
 	</div>
+
+	<div class="tab-pane" id="tab5">
+		{if sizeof($apply_blogs) == 0}
+			<div class="alert alert-warning mt20" role="alert">記事はありません</div>
+		{else}
+			<table class="table table-hover mt20">
+				<thead>
+				<tr>
+					<th>pick!</th>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+				</thead>
+				{foreach from=$apply_blogs item=blogs_item}
+					<tr class="blogs pointer" code="{$blogs_item.code}">
+						<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
+						<td>
+							{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+							{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+							{if $blogs_item.status == 0}下書き{/if}
+							{if $blogs_item.status == 2}申請中{/if}
+							{if $blogs_item.status == 3}更新依頼中{/if}
+							{if $blogs_item.status == 4}削除依頼中{/if}
+						</td>
+						<td>{$blogs_item.section_code}</td>
+						<td>{$blogs_item.title}</td>
+						<td>{$blogs_item.open_date|date_format:"%Y/%m/%d"}</td>
+					</tr>
+				{/foreach}
+			</table>
+		{/if}
+	</div>
+
+	<div class="tab-pane" id="tab6">
+		{if sizeof($update_blogs) == 0}
+			<div class="alert alert-warning mt20" role="alert">記事はありません</div>
+		{else}
+			<table class="table table-hover mt20">
+				<thead>
+				<tr>
+					<th>pick!</th>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+				</thead>
+				{foreach from=$update_blogs item=blogs_item}
+					<tr class="blogs pointer" code="{$blogs_item.code}">
+						<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
+						<td>
+							{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+							{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+							{if $blogs_item.status == 0}下書き{/if}
+							{if $blogs_item.status == 2}申請中{/if}
+							{if $blogs_item.status == 3}更新依頼中{/if}
+							{if $blogs_item.status == 4}削除依頼中{/if}
+						</td>
+						<td>{$blogs_item.section_code}</td>
+						<td>{$blogs_item.title}</td>
+						<td>{$blogs_item.open_date|date_format:"%Y/%m/%d"}</td>
+					</tr>
+				{/foreach}
+			</table>
+		{/if}
+	</div>
+
+	<div class="tab-pane" id="tab7">
+		{if sizeof($delete_blogs) == 0}
+			<div class="alert alert-warning mt20" role="alert">記事はありません</div>
+		{else}
+			<table class="table table-hover mt20">
+				<thead>
+				<tr>
+					<th>pick!</th>
+					<th>状態</th>
+					<th>カテゴリ</th>
+					<th>タイトル</th>
+					<th>公開日時</th>
+				</tr>
+				</thead>
+				{foreach from=$delete_blogs item=blogs_item}
+					<tr class="blogs pointer" code="{$blogs_item.code}">
+						<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
+						<td>
+							{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
+							{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
+							{if $blogs_item.status == 0}下書き{/if}
+							{if $blogs_item.status == 2}申請中{/if}
+							{if $blogs_item.status == 3}更新依頼中{/if}
+							{if $blogs_item.status == 4}削除依頼中{/if}
+						</td>
+						<td>{$blogs_item.section_code}</td>
+						<td>{$blogs_item.title}</td>
+						<td>{$blogs_item.open_date|date_format:"%Y/%m/%d"}</td>
+					</tr>
+				{/foreach}
+			</table>
+		{/if}
+	</div>
+
 </div>
 
 <script>

@@ -1,0 +1,186 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+
+    {$my_side}
+
+    <div class="admin-normal-main">
+      <form name="form1">
+        <div class="singlepage-form-block">
+
+          <p class="withdrawal-title">投稿申請</p>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">レポートの種類</label>
+            <div class="radio_box clear">
+              <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="" {if
+              $blogs.kind|default:'' == "女子会レポート"}checked{/if}>
+              <label for="kind1" class="form-long">女子会レポ</label>
+
+              <input type="radio" value="イベントレポート" name="kind" id="kind2" class="form-radio" placeholder=""
+                     {if $blogs.kind|default:'' == "イベントレポート"}checked{/if}>
+              <label for="kind2" class="form-long">イベントレポ</label>
+
+              <input type="radio" value="取材レポート" name="kind" id="kind3" class="form-radio" placeholder="" {if
+              $blogs.kind|default:'' == "取材レポート"}checked{/if}>
+              <label for="kind3" class="form-long">取材レポ</label>
+
+              <input type="radio" value="イベント告知" name="kind" id="kind4" class="form-radio" placeholder="" {if
+              $blogs.kind|default:'' == "イベント告知"}checked{/if}>
+              <label for="kind4" class="form-long">イベント告知</label>
+
+              <input type="radio" value="コラム" name="kind" id="kind5" class="form-radio" placeholder="" {if
+              $blogs.kind|default:'' == "コラム"}checked{/if}>
+              <label for="kind5" class="form-long">コラム</label>
+
+              <input type="radio" value="わたしを知る" name="kind" id="kind6" class="form-radio" placeholder="" {if
+              $blogs.kind|default:'' == "わたしを知る"}checked{/if}>
+              <label for="kind6" class="form-long" style="border:1px solid #89e2d1;box-sizing: border-box;">「わたし」を知る</label>
+
+              <input type="radio" value="きんゆう散歩" name="kind" id="kind7" class="form-radio" placeholder="" {if
+              $blogs.kind|default:'' == "きんゆう散歩"}checked{/if}>
+              <label for="kind7" class="form-long">きんゆう散歩</label>
+            </div>
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">タイトル</label>
+            <input type="text" name="title" class="form-control" value="{$blog.title|default:''}" />
+          </div>
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">本文</label>
+            <textarea name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
+          </div>
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">投稿画像</label>
+            <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+            <input type="hidden" name="main_image" value="{$blog.main_image|default:''}">
+
+            <!-- サムネイル画像を投稿するとここに表示される！ -->
+            {if $blog.main_image|default:''}
+              <div class="thumbnail-img"
+                   style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
+            {else}
+              <div class="thumbnail-img"
+                   style="background:url('/images/my/report/sample.png') center center / cover no-repeat;"></div>
+            {/if}
+
+          </div>
+
+          <div class="form-group">
+            <label class="form-group-event-label">希望公開日時</label>
+
+            <div class='input-group date datetimepicker'>
+              <input type='text' class="form-control" name="open_date" value="{$blog.open_date|default:''}" />
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="form-btn tx-center">
+            <button id="save_closed" class="btn btn-kinyu" type="button" data-status="0" data-code="{$blog.code|default:''}">下書きする</button>
+            <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
+
+            {if $blog.status|default:'' == 0}
+              <button id="delete" class="btn btn-kinyu" type="button" data-status="4" data-code="{$blog.code|default:''}">削除</button>
+            {else}
+              <button id="apply_delete" class="btn btn-kinyu" type="button" data-status="4" data-code="{$blog.code|default:''}">削除依頼</button>
+            {/if}
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    $(function () {
+        $('.thumbnail-img-block')
+            .uploader('/api/redactor/upload/image', {
+                success: function (response) {
+                    var url = response.data.url;
+                    $('[name="main_image"]').val(url);
+                    $('.thumbnail-img').css({
+                        'background-image': 'url(' + url + ')',
+                        'background-position': 'center center',
+                        'background-repeat': 'no-repeat',
+                        'background-size': 'cover'
+                    });
+                }
+            });
+
+        $('.datetimepicker').datetimepicker({
+            format: 'YYYY/MM/DD HH:mm'
+        });
+
+        $('#apply_delete').click(function () {
+            if (confirm('この記事を削除申請をします。よろしいですか？')) {
+                var code = $(this).data('code');
+                var url = "/api/applyblogs/delete/" + code;
+                ajax.post(url, [], function (data) {
+                    ts.success("削除申請が完了しました", function () {
+                        location.href = "/my/reports";
+                    });
+                });
+            }
+        });
+
+        $('#delete').click(function () {
+            if (confirm('この記事を削除をします。よろしいですか？')) {
+                var code = $(this).data('code');
+                var url = "/api/applyblogs/delete/" + code;
+                ajax.post(url, [], function (data) {
+                    ts.success("削除が完了しました", function () {
+                        location.href = "/my/reports";
+                    });
+                });
+            }
+        });
+
+
+        $('#apply, #save_closed').click(function () {
+
+            var code = $(this).data('code');
+            var status = $(this).data('status');
+
+            var url = code ? "/api/applyblogs/save": "/api/applyblogs/create";
+
+            var params = {
+                "code": code,
+                "title": $('[name="title"]').val(),
+                "main_image": $('[name="main_image"]').val(),
+                "content": $('[name="content"]').val(),
+                "open_date": $('[name="open_date"]').val(),
+                "kind": $('[name="kind"]').val(),
+                "pickup": 0,
+                "pr": 0,
+                "secret": 0,
+                "description": "",
+                "status": status
+            };
+
+            if (params.kind == "") {
+                ts.error("レポートの種類を選択してください");
+                return false;
+            }
+            if (params.title == "") {
+                ts.error("タイトルを入力してください");
+                return false;
+            }
+            if (params.content == "") {
+                ts.error("本文を入力してください");
+                return false;
+            }
+            if (params.open_date == "") {
+                ts.error("希望公開日時");
+                return false;
+            }
+
+            ajax.post(url, params, function (data) {
+                ts.success("申請が完了しました", function () {
+                    location.href = "/my/reports";
+                });
+            });
+        });
+    });
+</script>

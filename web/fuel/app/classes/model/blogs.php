@@ -349,32 +349,32 @@ class Blogs extends Base
     public static function delete($params)
     {
 
-        $username = \Auth::get('username');
+//        $username = \Auth::get('username');
         \DB::update('blogs')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
 
         return $params;
     }
 
-    private static function get_main_image($params)
-    {
-
-        $content = $params['content'];
-        preg_match_all("/src=\"(.*?)\"/", $content, $result);
-        $url = "";
-        if (isset($result[1]) && isset($result[1][0])) {
-
-            $url = $result[1][0];
-            if (strpos($url, "youtube.com") !== false) {
-                preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $url, $matches);
-                if (isset($matches[2]) && $matches[2] != '') {
-                    $YoutubeCode = $matches[2];
-                }
-                $url = "//img.youtube.com/vi/{$YoutubeCode}/0.jpg";
-            }
-        }
-
-        return $url;
-    }
+//    private static function get_main_image($params)
+//    {
+//
+//        $content = $params['content'];
+//        preg_match_all("/src=\"(.*?)\"/", $content, $result);
+//        $url = "";
+//        if (isset($result[1]) && isset($result[1][0])) {
+//
+//            $url = $result[1][0];
+//            if (strpos($url, "youtube.com") !== false) {
+//                preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $url, $matches);
+//                if (isset($matches[2]) && $matches[2] != '') {
+//                    $YoutubeCode = $matches[2];
+//                }
+//                $url = "//img.youtube.com/vi/{$YoutubeCode}/0.jpg";
+//            }
+//        }
+//
+//        return $url;
+//    }
 
 
     public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $search_text='', $is_secret=false)
@@ -506,5 +506,19 @@ class Blogs extends Base
     //    ->order_by(\DB::expr('RAND()'))
     //    ->execute();
     // }
+
+    public static function getByCodeAndUsername($code, $username)
+    {
+        $result = \DB::select('*')
+            ->from('blogs')
+            ->where('blogs.code', '=', $code)
+            ->where('blogs.username', '=', $username)
+            ->where('blogs.disable', '=', 0)
+            ->execute()->current();
+        if (empty($result)) {
+            return false;
+        }
+        return $result;
+    }
 
 }

@@ -13,11 +13,13 @@ class Controller_Admin_Blogs extends Controller_Adminbase
             throw new HttpNoAccessException;
         }
         $this->data['sections'] = Sections::lists();
-        $this->data['all_blogs'] = Blogs::lists02(null, null, null, null, null, null, true);
         $this->data['pick_blogs'] = Blogs::listspick(null, null, null, null, null, true);
-
         $this->data['closed_blogs'] = Blogs::lists02(0, null, null, null, null, null, true);
         $this->data['open_blogs'] = Blogs::lists02(1, null, null, null, null, null, true);
+        $this->data['apply_blogs'] = Blogs::lists02(2, null, null, null, null, null, true);
+        $this->data['update_blogs'] = Blogs::lists02(3, null, null, null, null, null, true);
+        $this->data['delete_blogs'] = Blogs::lists02(4, null, null, null, null, null, true);
+        $this->data['all_blogs'] = Blogs::lists02(null, null, null, null, null, null, true);
         $this->template->contents = View::forge('admin/blogs/index.smarty', $this->data);
         $this->template->description = 'マイページ・ブログ';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';

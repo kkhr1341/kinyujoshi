@@ -4,28 +4,27 @@
     {$my_side}
 
     <div class="admin-normal-main">
-      <form name="form1">
-        <div class="singlepage-form-block">
-
-          <p class="withdrawal-title">投稿申請</p>
-
-          <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">タイトル</label>
-            <input type="text" name="title" class="form-control" />
-          </div>
-          <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">本文</label>
-            <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
-          </div>
-          <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">投稿画像</label>
-            <img src="/images/my/report/sample.png">
-          </div>
-          <div class="form-btn tx-center">
-            <button class="btn btn-kinyu" type="button" id="save">保存する</button>
-          </div>
-        </div>
-      </form>
+        <p class="withdrawal-title">投稿申請一覧</p>
+        <table>
+          <tr>
+            <td>タイトル</td>
+            <td>ステータス</td>
+            <td>作成日時</td>
+          </tr>
+          {foreach from=$blogs item=blog name=loopname}
+          <tr onclick="location.href='/my/reports/edit/{$blog.code}'">
+            <td>{$blog.title}</td>
+            <td>
+              {if $blog.status == 1}公開中{/if}
+              {if $blog.status == 0}下書き{/if}
+              {if $blog.status == 2}申請中{/if}
+              {if $blog.status == 3}更新依頼中{/if}
+              {if $blog.status == 4}削除依頼中{/if}
+            </td>
+            <td>{$blog.created_at}</td>
+          </tr>
+          {/foreach}
+        </table>
     </div>
   </div>
 </div>
