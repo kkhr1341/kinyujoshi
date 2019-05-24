@@ -196,13 +196,6 @@
           </li>
 
           <li>
-            <a href="/conference" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-special1.png) center center / cover no-repeat"></div>
-              <div class="text-area"><p>第1回 週末投資宣言♪</p></div>
-            </a>
-          </li>
-
-          <li>
             <a href="/school" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special2.png) center center / cover no-repeat"></div>
               <div class="text-area"><p>私立きんゆう女子。学院</p></div>
