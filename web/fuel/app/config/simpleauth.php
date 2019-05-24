@@ -95,6 +95,7 @@ return array(
 		'admin' => array(
             'analysis' => array('read'),
             'applications' => array('read'),
+            'authors' => array('read', 'create', 'edit', 'delete'),
             'otherauthors' => array('read', 'create', 'edit', 'delete'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
@@ -110,6 +111,11 @@ return array(
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
             'news' => array('read', 'create', 'edit', 'delete'),
+            'authors' => array('read', 'create', 'edit', 'delete'),
+        ),
+
+        'user' => array(
+            'authors' => array('read', 'create', 'edit', 'delete'),
         ),
 		
 		/**

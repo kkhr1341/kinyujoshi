@@ -54,8 +54,6 @@
 
 <script>
 
-    var code = "{$author.code|default:''}";
-
     $('.thumbnail-img-block')
         .uploader('/api/redactor/upload/image', {
             success: function (response) {
@@ -75,7 +73,6 @@
         $('#save').click(function () {
             var url = "/api/authors/save";
             var params = {
-                "code": code,
                 "position": $('#position').val(),
                 "name": $('#name').val(),
                 "profile_image": $('#profile_image').val(),
@@ -100,7 +97,7 @@
             }
 
             ajax.post(url, params, function (data) {
-                ts.success("公開しました");
+                ts.success("更新が完了しました");
             });
         });
     });

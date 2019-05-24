@@ -37,8 +37,15 @@ class Controller_Api_Authors extends Controller_Base
         }
         try {
             $params = $val->validated();
-            $params['username'] = \Auth::get('username');
-            return $this->ok(Authors::save($params));
+
+            if ($author = Authors::get_by_username(\Auth::get('username'))) {
+                $params['code'] = $author['code'];
+                return $this->ok(Authors::save($params));
+
+            } else {
+                $params['username'] = \Auth::get('username');
+                return $this->ok(Authors::create($params));
+            }
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }
