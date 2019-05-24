@@ -2,7 +2,7 @@
 
   <!-- ニュース -->
   <div class="report-detail-sidebar-el">
-    <p class="report-detail-sidebar-el-title">最新ニュース</p>
+    <p class="report-detail-sidebar-el-title">最新のお知らせ</p>
     <div class="kinyu-sidebar-news-list">
       <ul class="clear">
         {foreach from=$top_news item=news name=loopname}
@@ -10,7 +10,7 @@
         {if $smarty.foreach.loopname.index == 3}
         </ul>
           <div class="sidebar-more-link">
-            <a href="/news">ニュースをもっと見る >
+            <a href="/news">お知らせをもっと見る >
             </a>
           </div>
           {break}
