@@ -114,7 +114,6 @@ class Blogs extends Base
      * ->execute()->as_array();
      * }
      */
-
     public static function lists($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $is_secret=false)
     {
         \Config::load('blog', true);
@@ -323,7 +322,6 @@ class Blogs extends Base
 
     public static function create($params)
     {
-
         $code = self::getNewCode('blogs');
         $params['username'] = \Auth::get('username');
         $params['code'] = $code;
@@ -333,14 +331,10 @@ class Blogs extends Base
 
         \DB::insert('blogs')->set($params)->execute();
         return $params;
-
     }
-
 
     public static function save($params)
     {
-//        $username = \Auth::get('username');
-
         \DB::update('blogs')->set($params)->where('code', '=', $params['code'])->execute();
 
         return $params;
@@ -348,34 +342,10 @@ class Blogs extends Base
 
     public static function delete($params)
     {
-
-//        $username = \Auth::get('username');
         \DB::update('blogs')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
 
         return $params;
     }
-
-//    private static function get_main_image($params)
-//    {
-//
-//        $content = $params['content'];
-//        preg_match_all("/src=\"(.*?)\"/", $content, $result);
-//        $url = "";
-//        if (isset($result[1]) && isset($result[1][0])) {
-//
-//            $url = $result[1][0];
-//            if (strpos($url, "youtube.com") !== false) {
-//                preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $url, $matches);
-//                if (isset($matches[2]) && $matches[2] != '') {
-//                    $YoutubeCode = $matches[2];
-//                }
-//                $url = "//img.youtube.com/vi/{$YoutubeCode}/0.jpg";
-//            }
-//        }
-//
-//        return $url;
-//    }
-
 
     public static function all($section_code = null, $pagination_url, $page, $uri_segment = 3, $per_page = 5, $search_text='', $is_secret=false)
     {
@@ -383,7 +353,7 @@ class Blogs extends Base
 
         $total = \DB::select(\DB::expr('count(*) as cnt'))
             ->from('blogs')
-            ->where('status', '=', 1)
+            ->where('status', 'in', array(1, 3, 4)) // 公開中, 更新依頼中, 削除依頼中
             ->where('open_date', '<', \DB::expr('NOW()'))
             ->where('blogs.disable', '=', 0);
 
@@ -426,7 +396,7 @@ class Blogs extends Base
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
             ->where('blogs.kind', '!=', 'わたしを知る')
-            ->where('blogs.status', '=', 1)
+            ->where('blogs.status', 'in', array(1, 3, 4)) // 公開中, 更新依頼中, 削除依頼中
             ->where('blogs.open_date', '<', \DB::expr('NOW()'))
             ->where('blogs.disable', '=', 0);
 
@@ -495,18 +465,6 @@ class Blogs extends Base
         return $result;
     }
 
-    // public static function random($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null) {
-
-    // 	$datas = \DB::select(\DB::expr('*, blogs.code'))->from('blogs')
-    //        ->join('profiles', 'left')
-    //        ->on('blogs.username', '=', 'profiles.username')
-    //        ->where('blogs.disable', '=', 0)
-
-    //    ->limit(4)
-    //    ->order_by(\DB::expr('RAND()'))
-    //    ->execute();
-    // }
-
     public static function getByCodeAndUsername($code, $username)
     {
         $result = \DB::select('*')
@@ -520,5 +478,4 @@ class Blogs extends Base
         }
         return $result;
     }
-
 }

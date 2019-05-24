@@ -47,6 +47,10 @@
             <input type="text" name="title" class="form-control" value="{$blog.title|default:''}" />
           </div>
           <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">説明文</label>
+            <textarea name="description" class='form-control' rows="10">{$blog.description|default:''}</textarea>
+          </div>
+          <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">本文</label>
             <textarea name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
           </div>
@@ -148,6 +152,7 @@
             var params = {
                 "code": code,
                 "title": $('[name="title"]').val(),
+                "description": $('[name="description"]').val(),
                 "main_image": $('[name="main_image"]').val(),
                 "content": $('[name="content"]').val(),
                 "open_date": $('[name="open_date"]').val(),
@@ -155,7 +160,6 @@
                 "pickup": 0,
                 "pr": 0,
                 "secret": 0,
-                "description": "",
                 "status": status
             };
 
