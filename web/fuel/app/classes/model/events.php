@@ -44,9 +44,11 @@ class Events extends Base
 
         $val->add('display_event_date', '表示用日付');
 
-        $val->add('event_start_datetime', '開催開始時間');
+        $val->add('event_start_datetime', '開催開始時間')
+            ->add_rule('valid_time');
 
-        $val->add('event_end_datetime', '開催終了時間');
+        $val->add('event_end_datetime', '開催終了時間')
+            ->add_rule('valid_time');
 
         $val->add('place', '場所');
 

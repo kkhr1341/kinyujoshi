@@ -18,6 +18,7 @@ return array(
         'checkbox_require' => ':labelは1つ以上選択する必要があります',
         'required_with' => ':labelは入力必須項目です。',
         'valid_date' => ':labelの形式が正しくありません。',
+        'valid_time' => ':labelの形式はH:i（例：07:12）の形式で入力してください。',
         'numeric_between' => ':labelは:param:1以上:param:2以下で入力する必要があります',
     
         # 自作
