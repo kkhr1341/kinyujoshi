@@ -4,7 +4,6 @@ namespace Model;
 
 class Base extends \Model
 {
-
     public static function emp($params, $key)
     {
 
@@ -28,16 +27,11 @@ class Base extends \Model
 
     public static function getByCode($table_name, $code)
     {
-        $result = \DB::select('*')->from($table_name)->where('code', '=', $code)->execute()->current();
-        if (empty($result)) {
-            return false;
-        }
-        return $result;
-    }
-
-    public static function getByiCode($table_name, $code)
-    {
-        $result = \DB::select('*')->from($table_name)->where('code', '=', $code)->execute()->current();
+        $result = \DB::select('*')
+            ->from($table_name)
+            ->where('code', '=', $code)
+            ->execute()
+            ->current();
         if (empty($result)) {
             return false;
         }
@@ -46,7 +40,11 @@ class Base extends \Model
 
     public static function getById($table_name, $id)
     {
-        $result = \DB::select('*')->from($table_name)->where('id', '=', $id)->execute()->current();
+        $result = \DB::select('*')
+            ->from($table_name)
+            ->where('id', '=', $id)
+            ->execute()
+            ->current();
         if (empty($result)) {
             return false;
         }
@@ -55,7 +53,11 @@ class Base extends \Model
 
     public static function getByKey($table_name, $key, $value)
     {
-        $result = \DB::select('*')->from($table_name)->where($key, '=', $value)->execute()->current();
+        $result = \DB::select('*')
+            ->from($table_name)
+            ->where($key, '=', $value)
+            ->execute()
+            ->current();
         if (empty($result)) {
             return false;
         }
@@ -83,5 +85,4 @@ class Base extends \Model
         }
         return $sRes;
     }
-
 }

@@ -52,7 +52,7 @@ class Controller_Adminbase extends Controller_Template
         Asset::add_path('assets/js', 'js');
         Asset::css(array(
             'kinyu/font.css',
-            'http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css',
+            'kinyu/bootstrap01.css',
             'kinyu/animate.css',
             'kinyu/redactor.css',
             'kinyu/font-awesome.min.css',
@@ -81,8 +81,8 @@ class Controller_Adminbase extends Controller_Template
         ), array(), 'layout', false);
 
         Asset::js(array(
-            'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js',
-            'https://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js',
+            'jquery-2.1.4.min.js',
+            'bootstrap.min.js',
             'moment.js',
             'bootstrap-datetimepicker.min.js',
             'bootcards.min.js',

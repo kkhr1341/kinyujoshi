@@ -2,11 +2,11 @@
 
 use \Model\Authors;
 
-class Controller_Api_Authors extends Controller_Base
+class Controller_Api_Otherauthors extends Controller_Base
 {
     public function action_create()
     {
-        if (!Auth::has_access('authors.create')) {
+        if (!Auth::has_access('otherauthors.create')) {
             return $this->error('permission denied');
         }
         $val = Authors::validate();
@@ -16,9 +16,7 @@ class Controller_Api_Authors extends Controller_Base
             return $this->error($message);
         }
         try {
-            $params = $val->validated();
-            $params['username'] = \Auth::get('username');
-            return $this->ok(Authors::create($params));
+            return $this->ok(Authors::create($val->validated()));
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }
@@ -26,7 +24,7 @@ class Controller_Api_Authors extends Controller_Base
 
     public function action_save()
     {
-        if (!Auth::has_access('authors.edit')) {
+        if (!Auth::has_access('otherauthors.edit')) {
             return $this->error('permission denied');
         }
         $val = Authors::validate();
@@ -36,9 +34,7 @@ class Controller_Api_Authors extends Controller_Base
             return $this->error($message);
         }
         try {
-            $params = $val->validated();
-            $params['username'] = \Auth::get('username');
-            return $this->ok(Authors::save($params));
+            return $this->ok(Authors::save($val->validated()));
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }
@@ -46,7 +42,7 @@ class Controller_Api_Authors extends Controller_Base
 
     public function action_delete()
     {
-        if (!Auth::has_access('authors.delete')) {
+        if (!Auth::has_access('otherauthors.delete')) {
             return $this->error('permission denied');
         }
         $this->ok(Authors::delete(\Input::all()));

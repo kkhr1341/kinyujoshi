@@ -4,7 +4,7 @@
 	<li class="active">作成者の管理</li>
 </ol>
 <div class='clearw'>
-	<a class="btn btn-primary float_right" href="/admin/authors/create" role="button">作成者を追加する</a>
+	<a class="btn btn-primary float_right" href="/admin/otherauthors/create" role="button">作成者を追加する</a>
 </div>
 
 <div class="tab-content">
@@ -35,7 +35,7 @@
 $(function(){
 	$('.authors').click(function(){
 		var code = $(this).attr('code');
-		location.href = "/admin/authors/edit/"+code;
+		location.href = "/admin/otherauthors/edit/"+code;
 	});
 
 	// 一番目のタブをアクティブにする

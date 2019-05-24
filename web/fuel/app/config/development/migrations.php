@@ -135,6 +135,7 @@ return array(
         126 => '134_create_views_blog_views',
         127 => '135_add_specific_application_link_to_events',
         128 => '136_create_sessions',
+        129 => '137_add_username_to_authors',
       ),
     ),
     'module' => 
