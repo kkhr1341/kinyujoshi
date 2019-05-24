@@ -225,4 +225,26 @@ class MyValidation
         }
         return true;
     }
+
+    /**
+     * Match specific other submitted field string value
+     * (must be both strings, check is type sensitive)
+     *
+     * @param
+     *            string
+     * @param
+     *            string
+     * @return bool
+     */
+    public static function _validation_valid_time($val)
+    {
+        if (!$val) {
+            return true;
+        }
+
+        if (preg_match('/^(\d{2}):(\d{2})$/', $val)) {
+            return true;
+        }
+        return false;
+    }
 }
