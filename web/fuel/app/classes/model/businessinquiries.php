@@ -106,7 +106,7 @@ class BusinessInquiries extends Base
 
         $email02 = \Email::forge('jis');
         $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
-        $email02->subject("【きんゆう女子。for Business】お問合せがありました。");
+        $email02->subject("【きんゆう女子。with コーポレート】お問合せがありました。");
         $email02->html_body(\View::forge('email/business_inquiry/return', $data));
         $email02->to('cs@kinyu-joshi.jp'); //送り先
 

@@ -11,7 +11,7 @@
 		<div class="business-logo-wrapper"><img src="/images/business/business-logo.png"></div>
 		<nav class="clear">
 			<ul>
-				<li><a href="#business-service">タイアッププラン</a></li>
+				<li><a href="#business-service">提供サービス</a></li>
 				<li><a href="#business-about">コミュニティ概要</a></li>
 				<li><a href="#business-works">事例</a></li>
 				<!-- <li><a href="#business-contact">お問い合わせ</a></li> -->
@@ -37,7 +37,7 @@
 
 		<div id="business-service" class="business-service business-section">
 			<div class="section-title-wrapper">
-				<h2 class="section-title">タイアッププラン</h2>
+				<h2 class="section-title">提供サービス</h2>
 				<p>〜女性たちのフィードバックをお届けします〜</p>
 				<!-- <p class="three-step"><img src="/images/business/3step.png"></p> -->
 			</div>
