@@ -212,7 +212,7 @@ display: none;
 @media screen and (max-width: 480px) {
 	.business-main {
 		height: 70vh;
-		background: url(/images/business/business-main-bg.jpg) 81% 65%;
+		background: url(/images/business/business-main-bg.jpg) 50% 65%;
 		background-size:cover;
 		margin-top:  5px;
 	}
