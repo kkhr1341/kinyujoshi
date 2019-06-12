@@ -9,7 +9,9 @@ class Businessinquirycategories extends Base
     public static function lists()
     {
 
-        $categories = \DB::select("*")->from('business_inquiry_categories')
+        $categories = \DB::select("*")
+            ->from('business_inquiry_categories')
+            ->where('disable', '=', 0)
             ->order_by('sort', 'asc')
             ->execute()
             ->as_array();
