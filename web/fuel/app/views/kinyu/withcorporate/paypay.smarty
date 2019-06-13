@@ -1,3 +1,122 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/withcorporate.css">
 
-テストペイペイ
+<div class="withcorporate-container">
+	<div class="withcorporate-main-logo">
+		<img src="/images/withcorporate/paypay/logo.png">
+	</div>
+
+	<div class="withcorporate-intro">
+		<img class="intro-title" src="/images/withcorporate/paypay/intro-title.png">
+		<div class="bg-area">
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img01.jpg) center center / cover no-repeat;"></div>
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img02.jpg) left 65% center / cover no-repeat;"></div>
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img03.jpg) center center / cover no-repeat;"></div>
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img04.jpg) left 55% center / cover no-repeat;"></div>
+		</div>
+	</div>
+
+
+	<div class="withcorporate-block-el bg-lightblue">
+		<div class="withcorporate-inner message-block">
+			<p class="main-copy">
+				<img src="/images/withcorporate/paypay/main-copy.png">
+			</p>
+
+			<div class="message-main-area">
+				<div class="message-main-area-el text-block">
+					<p class="message-text">
+						時代は現金がいらないキャッシュレス社会へ・・・<br><br>
+						女性たちがなかなかキャッシュレスに<br>
+						前向きになれないのは、なぜなのだろう<br><br>
+						<span>ーーたぶん、わたしたちは忙しすぎる。</span>
+						仕事に、家庭に、自分自身のケアも色々な役割を担って生きている。<br><br>
+						新しいことは、好きだし、変身願望はあるけれど<br>
+						思い切っていつもと違うことをするってやっぱり勇気がいる<br><br>
+						だから新しいお金のことだって、勇気がいる<br>
+						“お金”が見えない数字になるってなんとなく怖い…<br><br>
+						かんたんに、考えずにお金を扱うことって、<br>
+						脳が退化してしまいそうだし。<br><br>
+						でも、お金や時間の余裕をつくることができて<br>
+						考えなくて済む分、今までできていなかったことや<br>
+						新しいことに頭を使えるなら、いいのかも？<br><br>
+						キャッシュレスでできた余裕で、チャレンジしよう。
+					</p>
+				</div>
+
+				<div class="message-main-area-el img-block">
+					<div class="img-box" style="background: url(/images/withcorporate/paypay/copy_img.jpg) left 30% center / cover no-repeat;"></div>
+					<img src="/images/withcorporate/paypay/challenge.png" class="text-challenge">
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="withcorporate-block-el cashless-description">
+		<div class="withcorporate-cashless-block">
+			<h3 class="withcorporate-cashless-title"><img src="/images/withcorporate/paypay/title_cashless.png"></h3>
+			<p>現金ではなくカードやアプリなどで決済すること。<br>
+				キャッシュレス社会は、現金をほとんど使用せず、<br>
+			クレジットカードや電子マネーなどを利用した電子決済が広く普及した社会。</p>
+		</div>
+
+		<div class="withcorporate-cashlessgraph-block">
+			<h3 class="withcorporate-cashlessgraph-title">
+				<img src="/images/withcorporate/paypay/title_cashlessgraph.png">
+			</h3>
+			<p class="graph-question">近い将来、紙幣や硬貨などの現金を使う必要がない「キャッシュレス社会」になるのではないかと言われています。あなたご自身のお気持ちは「キャッシュレス社会」に「なった方がよい」「ならない方がよい」のどちらに近いですか？（単一回答）</p>
+			<img class="cashless-graph-date" src="/images/withcorporate/paypay/cashless_graph_date.png">
+			<p class="graph-sub">経済産業省　キャッシュレスビジョン　キャッシュレス社会への期待と不安 より引用</p>
+		</div>
+
+		<div class="withcorporate-cashlesslife-block">
+			<h3 class="withcorporate-cashlesslife-title">
+				<img src="/images/withcorporate/paypay/title_cashlesslife.png">
+			</h3>
+			<img class="cashless-life-content" src="/images/withcorporate/paypay/content.png">
+			<img class="cashless-life-comingsoon" src="/images/withcorporate/paypay/coming_soon.png">
+		</div>
+	</div>
+
+	<div class="withcorporate-block-el bg-lightblue">
+		<div class="withcorporate-cashlessstudy-block">
+			<h3 class="withcorporate-cashlessstudy-title">
+				<img src="/images/withcorporate/paypay/title_cashlessmore.png">
+			</h3>
+
+			<div class="withcorporate-cashlessstudy-list">
+				<ul>
+					<li>
+						<a href="">
+							<div class="img-box" style="background:gray;"></div>
+							<div class="text-box">
+								<p>テキストテキストテキストテキストテキストテキストテキスト</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="img-box" style="background:gray;"></div>
+							<div class="text-box">
+								<p>テキストテキストテキストテキストテキストテキストテキスト</p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<div class="img-box" style="background:gray;"></div>
+							<div class="text-box">
+								<p>テキストテキストテキストテキストテキストテキストテキスト</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<footer class="withcorporate-footer">
+	<p>© TOE THE LINE Inc. 2019　All rights reserved.</p>
+</footer>
