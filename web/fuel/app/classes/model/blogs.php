@@ -37,6 +37,7 @@ class Blogs extends Base
             ->add_rule('required_with', 'authentication_password');
         $val->add('authentication_password', '認証パスワード')
             ->add_rule('required_with', 'authentication_user');
+//        $val->add('blog_contents');
 
         return $val;
     }
@@ -333,16 +334,35 @@ class Blogs extends Base
         return $params;
     }
 
-    public static function save($params)
+    public static function save($params, $blog_contents=array())
     {
-        \DB::update('blogs')->set($params)->where('code', '=', $params['code'])->execute();
-
+        \DB::update('blogs')
+            ->set($params)
+            ->where('code', '=', $params['code'])
+            ->execute();
         return $params;
     }
 
     public static function delete($params)
     {
-        \DB::update('blogs')->set(array('disable' => 1))->where('code', '=', $params['code'])->execute();
+        $result = \DB::select(
+                \DB::expr('blog_user_blogs.*')
+            )
+            ->from('blog_user_blogs')
+            ->where('blog_user_blogs.blog_code', '=', $params['code'])
+            ->execute()
+            ->current();
+        if ($result) {
+            \DB::update('user_blogs')
+                ->set(array('disable' => 1))
+                ->where('code', '=', $result['user_blog_code'])
+                ->execute();
+        }
+
+        \DB::update('blogs')
+            ->set(array('disable' => 1))
+            ->where('code', '=', $params['code'])
+            ->execute();
 
         return $params;
     }

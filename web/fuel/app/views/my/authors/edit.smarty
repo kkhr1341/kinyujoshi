@@ -23,7 +23,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-group-event-label">サムネイル画像</label>
+            <label class="form-group-event-label">プロフィール画像</label>
             <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
             <input type="hidden" id="profile_image" value="{$author.profile_image|default:''}">
 
@@ -37,7 +37,7 @@
           </div>
 
           <div class="form-group">
-            <label class="form-group-event-label">説明文</label>
+            <label class="form-group-event-label">自己紹介</label>
             <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
             <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
                       placeholder="">{$author.introduction|default:''}</textarea>

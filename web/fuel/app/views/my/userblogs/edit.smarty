@@ -1,0 +1,165 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+
+    {$my_side}
+
+    <div class="admin-normal-main">
+      <form name="form1">
+        <div class="singlepage-form-block">
+
+          <p class="withdrawal-title">投稿申請</p>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">タイトル</label>
+            <input type="text" name="title" class="form-control" value="{$blog.title|default:''}" />
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">投稿画像</label>
+            <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+            <input type="hidden" name="main_image" value="{$blog.main_image|default:''}">
+            {if $blog.main_image|default:''}
+              <div class="thumbnail-img"
+                   style="background:url({$blog.main_image}) center center / cover no-repeat;"></div>
+            {else}
+              <div class="thumbnail-img"
+                   style="background:url('/images/my/report/sample.png') center center / cover no-repeat;"></div>
+            {/if}
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">本文</label>
+            <textarea data-type="text" name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
+          </div>
+
+          <div class="form-btn tx-center">
+
+            {if $blog.code|default:'' != ''}
+
+              {if $blog.blog_code|default:'' == ''}
+                <button id="delete" class="btn btn-kinyu" type="button" data-status="4" data-code="{$blog.code|default:''}">削除</button>
+              {else}
+                <button id="apply_delete" class="btn btn-kinyu" type="button" data-status="4" data-code="{$blog.code|default:''}">削除依頼</button>
+              {/if}
+
+              {if $blog.status|default:'' == 0}
+                <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
+              {else}
+                <button id="apply" class="btn btn-kinyu" type="button" data-status="3" data-code="{$blog.code|default:''}">更新依頼する</button>
+              {/if}
+            {else}
+              <button id="save_closed" class="btn btn-kinyu" type="button" data-status="0" data-code="{$blog.code|default:''}">下書きする</button>
+              <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
+            {/if}
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+    $(function () {
+        $('.thumbnail-img-block')
+            .uploader('/api/redactor/upload/image', {
+                success: function (response) {
+                    var url = response.data.url;
+                    $('[name="main_image"]').val(url);
+                    $('.thumbnail-img').css({
+                        'background-image': 'url(' + url + ')',
+                        'background-position': 'center center',
+                        'background-repeat': 'no-repeat',
+                        'background-size': 'cover'
+                    });
+                }
+            });
+
+        $('.datetimepicker').datetimepicker({
+            format: 'YYYY/MM/DD HH:mm'
+        });
+
+        $('#apply_delete').click(function () {
+            if (confirm('この記事を削除申請をします。よろしいですか？')) {
+                var code = $(this).data('code');
+                var url = "/api/userblogs/delete/" + code;
+                ajax.post(url, [], function (data) {
+                    ts.success("削除申請が完了しました", function () {
+                        location.href = "/my/userblogs";
+                    });
+                });
+            }
+        });
+
+        $('#delete').click(function () {
+            if (confirm('この記事を削除をします。よろしいですか？')) {
+                var code = $(this).data('code');
+                var url = "/api/userblogs/delete/" + code;
+                ajax.post(url, [], function (data) {
+                    ts.success("削除が完了しました", function () {
+                        location.href = "/my/userblogs";
+                    });
+                });
+            }
+        });
+
+        $('#apply').click(function () {
+
+            var code = $(this).data('code');
+            var status = $(this).data('status');
+
+            var url = code ? "/api/userblogs/save": "/api/userblogs/create";
+
+            var params = {
+                "code": code,
+                "title": $('[name="title"]').val(),
+                "main_image": $('[name="main_image"]').val(),
+                "content": $('[name="content"]').val(),
+                "status": status
+            };
+
+            if (params.title == "") {
+                ts.error("タイトルを入力してください");
+                return false;
+            }
+            if (params.content == "") {
+                ts.error("本文を入力してください");
+                return false;
+            }
+            ajax.post(url, params, function (data) {
+                ts.success("申請が完了しました", function () {
+                    location.href = "/my/userblogs";
+                });
+            });
+        });
+
+        $('#save_closed').click(function () {
+
+            var code = $(this).data('code');
+            var status = $(this).data('status');
+
+            var url = code ? "/api/userblogs/save": "/api/userblogs/create";
+
+            var params = {
+                "code": code,
+                "title": $('[name="title"]').val(),
+                "main_image": $('[name="main_image"]').val(),
+                "content": $('[name="content"]').val(),
+                "status": status
+            };
+
+            if (params.title == "") {
+                ts.error("タイトルを入力してください");
+                return false;
+            }
+            if (params.content == "") {
+                ts.error("本文を入力してください");
+                return false;
+            }
+            ajax.post(url, params, function (data) {
+                ts.success("下書き保存が完了しました", function () {
+                    location.href = "/my/userblogs";
+                });
+            });
+        });
+    });
+</script>

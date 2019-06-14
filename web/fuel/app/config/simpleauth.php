@@ -84,6 +84,7 @@ return array(
 		0    => array('name' => 'Guests', 'roles' => array()),
 		1    => array('name' => 'メンバー', 'roles' => array('user')),
 		30   => array('name' => '編集者', 'roles' => array('user', 'editor')),
+		40   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'official_member')),
 		50   => array('name' => 'モデレーター', 'roles' => array('user', 'moderator')),
 		100  => array('name' => '管理者', 'roles' => array('user', 'moderator', 'admin')),
 	),
@@ -105,6 +106,7 @@ return array(
             'registlist' => array('read', 'create'),
             'registreminder' => array('send'),
             'remindmailtemplates' => array('read', 'edit'),
+            'userblogs' => array('read', 'create', 'edit', 'delete'),
         ),
         'editor' => array(
             'analysis' => array('read'),
@@ -112,6 +114,12 @@ return array(
             'events' => array('read', 'create', 'edit', 'delete'),
             'news' => array('read', 'create', 'edit', 'delete'),
             'authors' => array('read', 'create', 'edit', 'delete'),
+            'userblogs' => array('read', 'create', 'edit', 'delete'),
+        ),
+
+        'official_member' => array(
+            'authors' => array('read', 'create', 'edit', 'delete'),
+            'userblogs' => array('read', 'create', 'edit', 'delete'),
         ),
 
         'user' => array(

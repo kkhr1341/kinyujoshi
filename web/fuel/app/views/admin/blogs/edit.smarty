@@ -168,6 +168,7 @@
             </div>
         </div>
     </fieldset>
+    <input type="hidden" id="user_blog_code" value="{$blogs.user_blog_code|default:''}">
 </form>
 
 <script>
@@ -222,6 +223,7 @@
             params.authentication_user = $('#authentication_user').val();
             params.authentication_password = $('#authentication_password').val();
             params.status = 1;
+            params.user_blog_code = $('#user_blog_code').val();
 
             // if (params.section_code == "") {
             // 	ts.error("カテゴリを選択してください");
@@ -278,6 +280,7 @@
             params.authentication_user = $('#authentication_user').val();
             params.authentication_password = $('#authentication_password').val();
             params.status = 0;
+            params.user_blog_code = $('#user_blog_code').val();
 
             if (params.title == "") {
                 params.title = "タイトル未設定";
