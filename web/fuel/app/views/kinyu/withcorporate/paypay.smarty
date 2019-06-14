@@ -8,10 +8,10 @@
 	<div class="withcorporate-intro">
 		<img class="intro-title" src="/images/withcorporate/paypay/intro-title.png">
 		<div class="bg-area">
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img01-2.png) left 26% center / cover no-repeat;"></div>
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img04.png) left 32% center / cover no-repeat;"></div>
 			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img02.png) left 65% center / cover no-repeat;"></div>
 			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img03.jpg) center center / cover no-repeat;"></div>
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img04.png) left 32% center / cover no-repeat;"></div>
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img01.png) right 10% center / cover no-repeat;"></div>
 		</div>
 	</div>
 
@@ -79,7 +79,7 @@
 		</div>
 	</div>
 
-	<div class="withcorporate-block-el bg-lightblue">
+	<!-- <div class="withcorporate-block-el bg-lightblue">
 		<div class="withcorporate-cashlessstudy-block">
 			<h3 class="withcorporate-cashlessstudy-title">
 				<img src="/images/withcorporate/paypay/title_cashlessmore.png">
@@ -115,7 +115,7 @@
 			</div>
 
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <footer class="withcorporate-footer">
