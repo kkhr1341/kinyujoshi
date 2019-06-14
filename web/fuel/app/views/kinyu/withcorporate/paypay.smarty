@@ -8,10 +8,10 @@
 	<div class="withcorporate-intro">
 		<img class="intro-title" src="/images/withcorporate/paypay/intro-title.png">
 		<div class="bg-area">
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img01.jpg) center center / cover no-repeat;"></div>
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img02.jpg) left 65% center / cover no-repeat;"></div>
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img01-2.png) left 26% center / cover no-repeat;"></div>
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img02.png) left 65% center / cover no-repeat;"></div>
 			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img03.jpg) center center / cover no-repeat;"></div>
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img04.jpg) left 55% center / cover no-repeat;"></div>
+			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img04.png) left 32% center / cover no-repeat;"></div>
 		</div>
 	</div>
 
@@ -28,7 +28,7 @@
 						時代は現金がいらないキャッシュレス社会へ・・・<br><br>
 						女性たちがなかなかキャッシュレスに<br>
 						前向きになれないのは、なぜなのだろう<br><br>
-						<span>ーーたぶん、わたしたちは忙しすぎる。</span>
+						<span>-たぶん、わたしたちは忙しすぎる。</span>
 						仕事に、家庭に、自分自身のケアも色々な役割を担って生きている。<br><br>
 						新しいことは、好きだし、変身願望はあるけれど<br>
 						思い切っていつもと違うことをするってやっぱり勇気がいる<br><br>
@@ -44,7 +44,7 @@
 				</div>
 
 				<div class="message-main-area-el img-block">
-					<div class="img-box" style="background: url(/images/withcorporate/paypay/copy_img.jpg) left 30% center / cover no-repeat;"></div>
+					<div class="img-box" style="background: url(/images/withcorporate/paypay/copy_img.png) left 20% center / cover no-repeat;"></div>
 					<img src="/images/withcorporate/paypay/challenge.png" class="text-challenge">
 				</div>
 
@@ -55,8 +55,8 @@
 	<div class="withcorporate-block-el cashless-description">
 		<div class="withcorporate-cashless-block">
 			<h3 class="withcorporate-cashless-title"><img src="/images/withcorporate/paypay/title_cashless.png"></h3>
-			<p>現金ではなくカードやアプリなどで決済すること。<br>
-				キャッシュレス社会は、現金をほとんど使用せず、<br>
+			<p>現金ではなくカードやアプリなどで決済すること。<br class="pc">
+				キャッシュレス社会は、現金をほとんど使用せず、<br class="pc">
 			クレジットカードや電子マネーなどを利用した電子決済が広く普及した社会。</p>
 		</div>
 
@@ -65,7 +65,8 @@
 				<img src="/images/withcorporate/paypay/title_cashlessgraph.png">
 			</h3>
 			<p class="graph-question">近い将来、紙幣や硬貨などの現金を使う必要がない「キャッシュレス社会」になるのではないかと言われています。あなたご自身のお気持ちは「キャッシュレス社会」に「なった方がよい」「ならない方がよい」のどちらに近いですか？（単一回答）</p>
-			<img class="cashless-graph-date" src="/images/withcorporate/paypay/cashless_graph_date.png">
+			<img class="cashless-graph-date pc" src="/images/withcorporate/paypay/cashless_graph_date.png">
+			<img class="cashless-graph-date sp" src="/images/withcorporate/paypay/cashless_graph_date_sp.png">
 			<p class="graph-sub">経済産業省　キャッシュレスビジョン　キャッシュレス社会への期待と不安 より引用</p>
 		</div>
 
