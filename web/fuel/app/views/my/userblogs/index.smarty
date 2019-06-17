@@ -6,13 +6,52 @@
     <div class="admin-normal-main">
         <p class="withdrawal-title">投稿申請一覧</p>
 
+        <div class="form-btn tx-center">
+          <button type="button" onclick="location.href='userblogs/create'" class="member-blog-btn ">新規作成</button>
+          <button type="button" onclick="location.href='/my/authors/edit'" class="member-blog-btn ">書いた人編集</button>
+        </div>
+
+
         <table>
+          <tr class="head-text">
+            <td>タイトル</td>
+            <td>画像</td>
+            <td>ステータス</td>
+            <td>作成日時</td>
+          </tr>
+
           <tr>
             <td>タイトル</td>
             <td>画像</td>
             <td>ステータス</td>
             <td>作成日時</td>
           </tr>
+
+          <tr>
+            <td>タイトル</td>
+            <td>画像</td>
+            <td>ステータス</td>
+            <td>作成日時</td>
+          </tr>
+          <tr>
+            <td>タイトル</td>
+            <td>画像</td>
+            <td>ステータス</td>
+            <td>作成日時</td>
+          </tr>
+          <tr>
+            <td>タイトル</td>
+            <td>画像</td>
+            <td>ステータス</td>
+            <td>作成日時</td>
+          </tr>
+          <tr>
+            <td>タイトル</td>
+            <td>画像</td>
+            <td>ステータス</td>
+            <td>作成日時</td>
+          </tr>
+
           {foreach from=$blogs item=blog name=loopname}
           <tr onclick="location.href='/my/userblogs/edit/{$blog.code}'">
             <td>{$blog.title}</td>
@@ -29,12 +68,8 @@
           {/foreach}
         </table>
 
-        <div class="form-btn tx-center">
-          <button type="button" onclick="location.href='userblogs/create'">新規作成</button>
-          <button type="button" onclick="location.href='/my/authors/edit'">書いた人編集</button>
-        </div>
+
 
     </div>
   </div>
 </div>
-
