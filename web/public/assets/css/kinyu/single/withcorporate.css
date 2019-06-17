@@ -36,7 +36,7 @@ footer,
 	text-align: center;
 }
 .withcorporate-main-logo img {
-	width: 180px;
+	width: 200px;
 	margin: 0 auto;
 }
 
@@ -67,7 +67,7 @@ footer,
 	width: 25%;
 }
 .withcorporate-intro:after {
-	content: "";
+	/*content: "";*/
 	width: 100%;
 	height: 100%;
   background: linear-gradient(135deg, #eb4040 0%,#4bc4f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -151,7 +151,7 @@ footer,
 }
 .withcorporate-cashless-block {
 	width: 800px;
-	border: 1px solid #8ddcd1;
+	border: 1px solid #a8d6d9;
 	position: relative;
 	margin: 0 auto;
 	padding: 50px;
@@ -210,15 +210,20 @@ footer,
 .withcorporate-cashlessgraph-title img {
 	width: 100%;
 }
-.cashless-graph-date {
+.withcorporate-cashlessgraph-block .cashless-graph-date {
 	width: 80%;
 	display: block;
 	margin: 0 auto;
 }
-.graph-sub {
+.withcorporate-cashlessgraph-block .graph-sub {
 	text-align: center;
-	font-size: 12px;
+	font-size: 11px;
 	margin-top: 24px;
+}
+.withcorporate-cashlessgraph-block .graph-sub a {
+	color: #1d97bb;
+	font-size: 11px;
+	transition: .5s;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -327,7 +332,7 @@ footer,
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -21px;
+  margin-top: -31px;
   margin-left: -160px;
 }
 
@@ -470,4 +475,8 @@ footer,
   font-size: 10px;
 }
 
+}
+
+.withcorporate-cashlessgraph-block .graph-sub a:hover {
+	opacity: .5;
 }
