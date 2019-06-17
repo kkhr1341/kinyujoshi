@@ -29,10 +29,10 @@
 
             <!-- サムネイル画像を投稿するとここに表示される！ -->
             {if $author.profile_image|default:''}
-              <div class="thumbnail-img"
+              <div class="author-thumbnail-img"
                    style="background:url({$author.profile_image}) center center / cover no-repeat;"></div>
             {else}
-              <div class="thumbnail-img"></div>
+              <div class="author-thumbnail-img"></div>
             {/if}
           </div>
 
@@ -102,4 +102,3 @@
         });
     });
 </script>
-

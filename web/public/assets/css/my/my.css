@@ -2405,11 +2405,9 @@ footer {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   レポート投稿申請機能
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.admin-normal-main table {
-  width: 100%;
-}
 
 .admin-normal-main tr {
+width: 100%;
 font-size: 14px;
 background:#fff;
 border-bottom: 1px solid #dbf1ee;
@@ -2418,10 +2416,6 @@ border-bottom: 1px solid #dbf1ee;
 .admin-normal-main td {
   padding: 10px;
 }
-
-/* .admin-normal-main tr:nth-child(even){
-  background: #dbf1ee;
-} */
 
  .admin-normal-main tr:first-child{
   border-bottom: none;
@@ -2433,7 +2427,6 @@ border-bottom: 1px solid #dbf1ee;
 .admin-normal-main .head-text {
   background: #dbf1ee;
 }
-
 
 .member-blog-btn {
     display: inline-block;
@@ -2448,8 +2441,22 @@ border-bottom: 1px solid #dbf1ee;
     transition: .5s;
 }
 
+.member-blog-title {
+  max-width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  オーサー設定（書いた人）
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.author-thumbnail-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 12px;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

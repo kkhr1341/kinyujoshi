@@ -14,43 +14,37 @@
 
         <table>
           <tr class="head-text">
-            <td>タイトル</td>
-            <td>画像</td>
-            <td>ステータス</td>
-            <td>作成日時</td>
+            <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
+            <td class="member-blog-thumbnail-img">画像</td>
+            <td class="member-blog-status">ステータス</td>
+            <td class="member-blog-date">作成日時</td>
           </tr>
+        <tr>
+          <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
+          <td class="member-blog-thumbnail-img">画像</td>
+          <td class="member-blog-status">ステータス</td>
+          <td class="member-blog-date">作成日時</td>
+        </tr>
 
-          <tr>
-            <td>タイトル</td>
-            <td>画像</td>
-            <td>ステータス</td>
-            <td>作成日時</td>
-          </tr>
+        <tr>
+          <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
+          <td class="member-blog-thumbnail-img">画像</td>
+          <td class="member-blog-status">ステータス</td>
+          <td class="member-blog-date">作成日時</td>
+        </tr>
+        <tr>
+          <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
+          <td class="member-blog-thumbnail-img">画像</td>
+          <td class="member-blog-status">ステータス</td>
+          <td class="member-blog-date">作成日時</td>
+        </tr>
+        <tr>
+          <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
+          <td class="member-blog-thumbnail-img">画像</td>
+          <td class="member-blog-status">ステータス</td>
+          <td class="member-blog-date">作成日時</td>
+        </tr>
 
-          <tr>
-            <td>タイトル</td>
-            <td>画像</td>
-            <td>ステータス</td>
-            <td>作成日時</td>
-          </tr>
-          <tr>
-            <td>タイトル</td>
-            <td>画像</td>
-            <td>ステータス</td>
-            <td>作成日時</td>
-          </tr>
-          <tr>
-            <td>タイトル</td>
-            <td>画像</td>
-            <td>ステータス</td>
-            <td>作成日時</td>
-          </tr>
-          <tr>
-            <td>タイトル</td>
-            <td>画像</td>
-            <td>ステータス</td>
-            <td>作成日時</td>
-          </tr>
 
           {foreach from=$blogs item=blog name=loopname}
           <tr onclick="location.href='/my/userblogs/edit/{$blog.code}'">
