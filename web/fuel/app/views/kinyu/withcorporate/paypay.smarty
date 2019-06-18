@@ -1,28 +1,29 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/withcorporate.css">
+<script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
 
 <div class="withcorporate-container">
-	<div class="withcorporate-main-logo">
+	<div class="withcorporate-main-logo logo-animation">
 		<img src="/images/withcorporate/paypay/logo.png">
 	</div>
 
 	<div class="withcorporate-intro">
-		<img class="intro-title" src="/images/withcorporate/paypay/intro-title2.png">
+		<img class="intro-title intro-title-animation" src="/images/withcorporate/paypay/intro-title2.png">
 		<div class="bg-area">
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img04.png) left 32% center / cover no-repeat;"></div>
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img03.jpg) center center / cover no-repeat;"></div>
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img01.jpg) center center / cover no-repeat;"></div>
-			<div class="bg-area-el" style="background: url(/images/withcorporate/paypay/bg-img02.jpg) center center / cover no-repeat;"></div>
+			<div class="bg-area-el intro-bg1" style="background: url(/images/withcorporate/paypay/bg-img04.png) left 32% center / cover no-repeat;"></div>
+			<div class="bg-area-el intro-bg2" style="background: url(/images/withcorporate/paypay/bg-img03.jpg) center center / cover no-repeat;"></div>
+			<div class="bg-area-el intro-bg3" style="background: url(/images/withcorporate/paypay/bg-img01.jpg) center center / cover no-repeat;"></div>
+			<div class="bg-area-el intro-bg4" style="background: url(/images/withcorporate/paypay/bg-img02.jpg) center center / cover no-repeat;"></div>
 		</div>
 	</div>
 
 
 	<div class="withcorporate-block-el bg-lightblue">
 		<div class="withcorporate-inner message-block">
-			<p class="main-copy">
+			<p class="main-copy message-animation1">
 				<img src="/images/withcorporate/paypay/main-copy.png">
 			</p>
 
-			<div class="message-main-area">
+			<div class="message-main-area message-animation2">
 				<div class="message-main-area-el text-block">
 					<p class="message-text">
 						時代は現金がいらないキャッシュレス社会へ・・・<br><br>
@@ -44,8 +45,8 @@
 				</div>
 
 				<div class="message-main-area-el img-block">
-					<div class="img-box" style="background: url(/images/withcorporate/paypay/copy_img.png) left 20% center / cover no-repeat;"></div>
-					<img src="/images/withcorporate/paypay/challenge.png" class="text-challenge">
+					<div class="img-box message-animation3" style="background: url(/images/withcorporate/paypay/copy_img.png) left 20% center / cover no-repeat;"></div>
+					<img src="/images/withcorporate/paypay/challenge.png" class="text-challenge message-animation4">
 				</div>
 
 			</div>
@@ -53,14 +54,14 @@
 	</div>
 
 	<div class="withcorporate-block-el cashless-description">
-		<div class="withcorporate-cashless-block">
+		<div class="withcorporate-cashless-block cashless-animation1">
 			<h3 class="withcorporate-cashless-title"><img src="/images/withcorporate/paypay/title_cashless.png"></h3>
 			<p>現金ではなくカードやアプリなどで決済すること。<br class="pc">
 				キャッシュレス社会は、現金をほとんど使用せず、<br class="pc">
 			クレジットカードや電子マネーなどを利用した電子決済が広く普及した社会。</p>
 		</div>
 
-		<div class="withcorporate-cashlessgraph-block">
+		<div class="withcorporate-cashlessgraph-block cashless-animation1">
 			<h3 class="withcorporate-cashlessgraph-title">
 				<img src="/images/withcorporate/paypay/title_cashlessgraph.png">
 			</h3>
@@ -71,11 +72,11 @@
 		</div>
 
 		<div class="withcorporate-cashlesslife-block">
-			<h3 class="withcorporate-cashlesslife-title">
+			<h3 class="withcorporate-cashlesslife-title cashless-animation1">
 				<img src="/images/withcorporate/paypay/title_cashlesslife.png">
 			</h3>
-			<img class="cashless-life-content" src="/images/withcorporate/paypay/content.png">
-			<img class="cashless-life-comingsoon" src="/images/withcorporate/paypay/coming_soon.png">
+			<img class="cashless-life-content cashless-animation1" src="/images/withcorporate/paypay/content.png">
+			<img class="cashless-life-comingsoon cashless-animation1" src="/images/withcorporate/paypay/coming_soon.png">
 		</div>
 	</div>
 
@@ -118,6 +119,14 @@
 	</div> -->
 </div>
 
+<div class="page-announce cashless-animation1">
+	<p>本サイトは、パートナーとともに、きんゆう女子。コミュニティが企画・制作しているページです。<br>
+		運営会社:TOE THE LINE（きんゆう女子。） https://toetheline.jp/<br>
+		パートナー:PayPay株式会社 https://paypay.ne.jp/
+	</p>
+</div>
 <footer class="withcorporate-footer">
 	<p>© TOE THE LINE Inc. 2019　All rights reserved.</p>
 </footer>
+
+<script type='text/javascript' src="/assets/js/kinyu/scrollanimation.js"></script>
