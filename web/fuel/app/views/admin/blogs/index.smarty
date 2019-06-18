@@ -12,7 +12,12 @@
     <li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
     <li><a href="#tab1" data-toggle="tab">公開</a></li>
 	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
-    <li><a href="#tab3" data-toggle="tab">すべて</a></li>
+	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
+
+    <li><a href="#tab5" data-toggle="tab"><span>{$apply_blogs|@count}</span>申請中</a></li>
+    <li><a href="#tab6" data-toggle="tab"><span>{$update_blogs|@count}</span>更新依頼中</a></li>
+	<li><a href="#tab7" data-toggle="tab"><span>{$delete_blogs|@count}</span>削除依頼中</a></li>
+
 </ul>
 <div class="tab-content">
 
@@ -31,12 +36,15 @@
 				</tr>
 			</thead>
 			{foreach from=$pick_blogs item=blogs_item}
-			<tr class="blogs pointer" code="{$blogs_item.code}">
+				<tr class="blogs pointer" code="{$blogs_item.code}" onclick="location.href='report/edit/{$blogs_item.code}'">
 				<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
 				<td>
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
 					{if $blogs_item.status == 0}下書き{/if}
+					{if $blogs_item.status == 2}申請中{/if}
+					{if $blogs_item.status == 3}更新依頼中{/if}
+					{if $blogs_item.status == 4}削除依頼中{/if}
 				</td>
 				<td>
 					{$blogs_item.section_code}
@@ -64,12 +72,15 @@
 				</tr>
 			</thead>
 			{foreach from=$open_blogs item=blogs_item}
-			<tr class="blogs pointer" code="{$blogs_item.code}">
+			<tr class="blogs pointer" code="{$blogs_item.code}" onclick="location.href='report/edit/{$blogs_item.code}'">
 				<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
 				<td>
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
 					{if $blogs_item.status == 0}下書き{/if}
+					{if $blogs_item.status == 2}申請中{/if}
+					{if $blogs_item.status == 3}更新依頼中{/if}
+					{if $blogs_item.status == 4}削除依頼中{/if}
 				</td>
 				<td>
 					{$blogs_item.section_code}
@@ -97,12 +108,15 @@
 				</tr>
 			</thead>
 			{foreach from=$closed_blogs item=blogs_item}
-			<tr class="blogs pointer" code="{$blogs_item.code}">
+				<tr class="blogs pointer" code="{$blogs_item.code}" onclick="location.href='report/edit/{$blogs_item.code}'">
 				<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
 				<td>
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
 					{if $blogs_item.status == 0}下書き{/if}
+					{if $blogs_item.status == 2}申請中{/if}
+					{if $blogs_item.status == 3}更新依頼中{/if}
+					{if $blogs_item.status == 4}削除依頼中{/if}
 				</td>
 				<td>
 					{$blogs_item.section_code}
@@ -130,12 +144,15 @@
 				</tr>
 			</thead>
 			{foreach from=$all_blogs item=blogs_item}
-			<tr class="blogs pointer" code="{$blogs_item.code}">
+				<tr class="blogs pointer" code="{$blogs_item.code}" onclick="location.href='report/edit/{$blogs_item.code}'">
 				<td>{if $blogs_item.pickup == 1}<span style="color:#82ffe1;text-shadow:0px 0px 3px rgb(0, 255, 194);">●</span>{/if}</td>
 				<td>
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) < time()}公開{/if}
 					{if $blogs_item.status == 1 && strtotime($blogs_item.open_date) > time()}公開待ち{/if}
 					{if $blogs_item.status == 0}下書き{/if}
+					{if $blogs_item.status == 2}申請中{/if}
+					{if $blogs_item.status == 3}更新依頼中{/if}
+					{if $blogs_item.status == 4}削除依頼中{/if}
 				</td>
 				<td>{$blogs_item.section_code}</td>
 				<td>{$blogs_item.title}</td>
@@ -145,14 +162,103 @@
 		</table>
 		{/if}
 	</div>
+
+	<div class="tab-pane" id="tab5">
+		{if sizeof($apply_blogs) == 0}
+			<div class="alert alert-warning mt20" role="alert">記事はありません</div>
+		{else}
+			<table class="table table-hover mt20">
+				<thead>
+				<tr>
+					<th>状態</th>
+					<th>タイトル</th>
+					<th>作成日時</th>
+					<th>更新日時</th>
+				</tr>
+				</thead>
+				{foreach from=$apply_blogs item=user_blogs_item}
+					<tr class="blogs pointer" code="{$user_blogs_item.code}" onclick="location.href='report/create?user_blog_code={$user_blogs_item.code}'">
+						<td>
+							{if $user_blogs_item.status == 0}下書き{/if}
+							{if $user_blogs_item.status == 2}申請中{/if}
+							{if $user_blogs_item.status == 3}更新依頼中{/if}
+							{if $user_blogs_item.status == 4}削除依頼中{/if}
+						</td>
+						<td>{$user_blogs_item.title}</td>
+						<td>{$user_blogs_item.created_at|date_format:"%Y/%m/%d"}</td>
+						<td>{$user_blogs_item.updated_at|date_format:"%Y/%m/%d"}</td>
+					</tr>
+				{/foreach}
+			</table>
+		{/if}
+	</div>
+
+	<div class="tab-pane" id="tab6">
+		{if sizeof($update_blogs) == 0}
+			<div class="alert alert-warning mt20" role="alert">記事はありません</div>
+		{else}
+			<table class="table table-hover mt20">
+				<thead>
+				<tr>
+					<th>状態</th>
+					<th>タイトル</th>
+					<th>作成日時</th>
+					<th>更新日時</th>
+				</tr>
+				</thead>
+				{foreach from=$update_blogs item=user_blogs_item}
+					<tr class="blogs pointer" code="{$user_blogs_item.code}" onclick="location.href='report/edit/{$user_blogs_item.blog_code}?user_blog_code={$user_blogs_item.code}'">
+						<td>
+							{if $user_blogs_item.status == 1 && strtotime($user_blogs_item.open_date) < time()}公開{/if}
+							{if $user_blogs_item.status == 1 && strtotime($user_blogs_item.open_date) > time()}公開待ち{/if}
+							{if $user_blogs_item.status == 0}下書き{/if}
+							{if $user_blogs_item.status == 2}申請中{/if}
+							{if $user_blogs_item.status == 3}更新依頼中{/if}
+							{if $user_blogs_item.status == 4}削除依頼中{/if}
+						</td>
+						<td>{$user_blogs_item.title}</td>
+						<td>{$user_blogs_item.created_at|date_format:"%Y/%m/%d"}</td>
+						<td>{$user_blogs_item.updated_at|date_format:"%Y/%m/%d"}</td>
+					</tr>
+				{/foreach}
+			</table>
+		{/if}
+	</div>
+
+	<div class="tab-pane" id="tab7">
+		{if sizeof($delete_blogs) == 0}
+			<div class="alert alert-warning mt20" role="alert">記事はありません</div>
+		{else}
+			<table class="table table-hover mt20">
+				<thead>
+				<tr>
+					<th>状態</th>
+					<th>タイトル</th>
+					<th>作成日時</th>
+					<th>更新日時</th>
+				</tr>
+				</thead>
+				{foreach from=$delete_blogs item=user_blogs_item}
+					<tr class="blogs pointer" code="{$user_blogs_item.code}" onclick="location.href='report/edit/{$user_blogs_item.blog_code}?user_blog_code={$user_blogs_item.code}'">
+						<td>
+							{if $user_blogs_item.status == 0}下書き{/if}
+							{if $user_blogs_item.status == 2}申請中{/if}
+							{if $user_blogs_item.status == 3}更新依頼中{/if}
+							{if $user_blogs_item.status == 4}削除依頼中{/if}
+						</td>
+						<td>{$user_blogs_item.title}</td>
+						<td>{$user_blogs_item.created_at|date_format:"%Y/%m/%d"}</td>
+						<td>{$user_blogs_item.updated_at|date_format:"%Y/%m/%d"}</td>
+					</tr>
+				{/foreach}
+			</table>
+		{/if}
+	</div>
+
 </div>
 
 <script>
 $(function(){
-	$('.blogs').click(function(){
-		var code = $(this).attr('code');
-		location.href = "/admin/report/edit/"+code;
-	});
 
 	// 一番目のタブをアクティブにする
 	$('.nav-tabs li:first a').trigger('click')

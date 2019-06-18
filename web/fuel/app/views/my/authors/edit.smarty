@@ -1,0 +1,104 @@
+<div class="admin-normal-container">
+  <div class="admin-normal-inner clear">
+
+    {$my_side}
+
+    <div class="admin-normal-main">
+      <form name="form1">
+        <div class="singlepage-form-block">
+
+          <p class="withdrawal-title">オーサー</p>
+
+          <div class="form-group">
+            <label class="form-group-event-label">役職</label>
+            <input style="height: 40px;" type="text" id="position" class="form-control" placeholder=""
+                   value="{$author.position|default:''}">
+          </div>
+
+          <div class="form-group">
+            <label class="form-group-event-label">名前</label>
+            <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
+            <input style="height: 40px;" type="text" id="name" class="form-control" placeholder=""
+                   value="{$author.name|default:''}">
+          </div>
+
+          <div class="form-group">
+            <label class="form-group-event-label">プロフィール画像</label>
+            <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+            <input type="hidden" id="profile_image" value="{$author.profile_image|default:''}">
+
+            <!-- サムネイル画像を投稿するとここに表示される！ -->
+            {if $author.profile_image|default:''}
+              <div class="author-thumbnail-img"
+                   style="background:url({$author.profile_image}) center center / cover no-repeat;"></div>
+            {else}
+              <div class="author-thumbnail-img"></div>
+            {/if}
+          </div>
+
+          <div class="form-group">
+            <label class="form-group-event-label">自己紹介</label>
+            <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
+            <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
+                      placeholder="">{$author.introduction|default:''}</textarea>
+          </div>
+
+          <div class="form-btn tx-center">
+            <button class="btn btn-kinyu" type="button" id="save">保存する</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+
+    $('.thumbnail-img-block')
+        .uploader('/api/redactor/upload/image', {
+            success: function (response) {
+                var url = response.data.url;
+                $('#profile_image').val(url);
+                $('.thumbnail-img').css({
+                    'background-image': 'url(' + url + ')',
+                    'background-position': 'center center',
+                    'background-repeat': 'no-repeat',
+                    'background-size': 'cover'
+                });
+            }
+        });
+
+    $(function () {
+
+        $('#save').click(function () {
+            var url = "/api/authors/save";
+            var params = {
+                "position": $('#position').val(),
+                "name": $('#name').val(),
+                "profile_image": $('#profile_image').val(),
+                "introduction": $('#introduction').val()
+            };
+
+            if (params.position == "") {
+                ts.error("役職を入力してください");
+                return false;
+            }
+            if (params.name == "") {
+                ts.error("名前を入力してください");
+                return false;
+            }
+            if (params.profile_image == "") {
+                ts.error("プロフィール画像を入力してください");
+                return false;
+            }
+            if (params.introduction == "") {
+                ts.error("自己紹介を入力してください");
+                return false;
+            }
+
+            ajax.post(url, params, function (data) {
+                ts.success("更新が完了しました");
+            });
+        });
+    });
+</script>

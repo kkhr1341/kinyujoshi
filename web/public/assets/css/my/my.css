@@ -2402,6 +2402,62 @@ footer {
   padding-left: 10px;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  レポート投稿申請機能
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.admin-normal-main tr {
+width: 100%;
+font-size: 14px;
+background:#fff;
+border-bottom: 1px solid #dbf1ee;
+}
+
+.admin-normal-main td {
+  padding: 10px;
+}
+
+ .admin-normal-main tr:first-child{
+  border-bottom: none;
+}
+.admin-normal-main tr:last-child{
+ border-bottom: none;
+}
+
+.admin-normal-main .head-text {
+  background: #dbf1ee;
+}
+
+.member-blog-btn {
+    display: inline-block;
+    background: #8ddcd1;
+    width: 150px;
+    margin: 20px auto 40px;
+    text-align: center;
+    padding: 12px 20px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 12px;
+    transition: .5s;
+}
+
+.member-blog-title {
+  max-width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  オーサー設定（書いた人）
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.author-thumbnail-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 12px;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合

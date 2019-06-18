@@ -12,6 +12,44 @@ require_once(dirname(__FILE__) . "/base.php");
 class Authors extends Base
 {
 
+    protected static $_properties = array(
+        'id',
+        'code',
+        'username' => array(
+            'default' => ''
+        ),
+        'position' => array(
+            'default' => ''
+        ),
+        'name' => array(
+            'default' => ''
+        ),
+        'profile_image' => array(
+            'default' => ''
+        ),
+        'introduction' => array(
+            'default' => ''
+        ),
+        'deleted_at',
+        'created_at',
+        'updated_at',
+    );
+
+    protected static $_observers = array(
+        'Orm\Observer_CreatedAt' => array(
+            'events' => array(
+                'before_insert'
+            ),
+            'mysql_timestamp' => true
+        ),
+        'Orm\Observer_UpdatedAt' => array(
+            'events' => array(
+                'before_update'
+            ),
+            'mysql_timestamp' => true
+        )
+    );
+
     public static function validate()
     {
         $val = \Validation::forge();
@@ -34,7 +72,6 @@ class Authors extends Base
         return $val;
     }
 
-
     public static function lists()
     {
         return \DB::select(
@@ -44,6 +81,14 @@ class Authors extends Base
             ->as_array();
     }
 
+    public static function get_by_username($username)
+    {
+        return \DB::select(\DB::expr('authors.*'))
+            ->from('authors')
+            ->where('username', '=', $username)
+            ->execute()
+            ->current();
+    }
 
     public static function all($pagination_url, $page, $uri_segment = 3, $per_page = 5)
     {

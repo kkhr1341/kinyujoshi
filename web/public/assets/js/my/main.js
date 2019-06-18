@@ -39,7 +39,7 @@ $(function() {
   $(window).load(function() {
     setTimeout(function() {
       $(".left-pos").animate({left: '-10px' }, {queue:false,duration:2000});
-      $(".right-pos").animate({right: '-10px' }, {queue:false,duration:2000}); 
+      $(".right-pos").animate({right: '-10px' }, {queue:false,duration:2000});
     },3000); //扉部分
   });
 
