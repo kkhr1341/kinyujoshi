@@ -2442,10 +2442,74 @@ border-bottom: 1px solid #dbf1ee;
 }
 
 .member-blog-title {
-  max-width: 50%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.member-blog-date {
+}
+
+.member-blog-status {
+  position: absolute;
+  color: #fff;
+  top: 15px;
+  right: 15px;
+  padding: 2px 9px;
+  font-size: 11px;
+}
+
+.status0 {
+  background: rgb(101, 116, 199);
+}
+.status1 {
+  background: rgb(86, 199, 121);
+}
+.status2 {
+  background: rgb(101, 116, 199);
+}
+.status3 {
+  background: rgb(177, 193, 87);
+}
+.status4 {
+  background: rgb(226, 100, 100);
+}
+
+.member-blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.member-blog-list li {
+  vertical-align: top;
+  background: #fff;
+  width: 48.5%;
+  margin-bottom: 3%;
+  box-sizing: border-box;
+  /* box-shadow: 0px 0px 6px 0px rgba(0,0,0,.1); */
+  position: relative;
+  transition: .5s;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.menber-blog-img-box {
+  min-height: 180px;
+}
+
+.member-blog-info {
+  padding: 20px 15px;
+  position: relative;
+}
+
+.member-blog-info-title {
+  font-size: 11px;
+  font-weight: bold;
+  color: #8ddcd1;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -2457,7 +2521,6 @@ border-bottom: 1px solid #dbf1ee;
     border-radius: 50%;
     margin: 12px;
 }
-
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合

@@ -13,39 +13,6 @@
 
 
         <table>
-          <tr class="head-text">
-            <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
-            <td class="member-blog-thumbnail-img">画像</td>
-            <td class="member-blog-status">ステータス</td>
-            <td class="member-blog-date">作成日時</td>
-          </tr>
-        <tr>
-          <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
-          <td class="member-blog-thumbnail-img">画像</td>
-          <td class="member-blog-status">ステータス</td>
-          <td class="member-blog-date">作成日時</td>
-        </tr>
-
-        <tr>
-          <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
-          <td class="member-blog-thumbnail-img">画像</td>
-          <td class="member-blog-status">ステータス</td>
-          <td class="member-blog-date">作成日時</td>
-        </tr>
-        <tr>
-          <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
-          <td class="member-blog-thumbnail-img">画像</td>
-          <td class="member-blog-status">ステータス</td>
-          <td class="member-blog-date">作成日時</td>
-        </tr>
-        <tr>
-          <td class="member-blog-title">タイトルああああああああああああああああああああああああああああああああ</td>
-          <td class="member-blog-thumbnail-img">画像</td>
-          <td class="member-blog-status">ステータス</td>
-          <td class="member-blog-date">作成日時</td>
-        </tr>
-
-
           {foreach from=$blogs item=blog name=loopname}
           <tr onclick="location.href='/my/userblogs/edit/{$blog.code}'">
             <td>{$blog.title}</td>
@@ -61,6 +28,71 @@
           </tr>
           {/foreach}
         </table>
+
+      <ul class="member-blog-list">
+        <li>
+          <a href="#">
+            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
+          <div class="member-blog-info">
+            <p class="member-blog-status status1">公開中</p>
+            <p class="member-blog-info-title">作成日時</p>
+            <p class="member-blog-date">2019.6.21</p>
+            <p class="member-blog-info-title mt10">タイトル</p>
+            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
+          </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
+          <div class="member-blog-info">
+            <p class="member-blog-status status2">申請中</p>
+            <p class="member-blog-info-title">作成日時</p>
+            <p class="member-blog-date">2019.6.21</p>
+            <p class="member-blog-info-title mt10">タイトル</p>
+            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
+          </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
+          <div class="member-blog-info">
+            <p class="member-blog-status status3">更新依頼中</p>
+            <p class="member-blog-info-title">作成日時</p>
+            <p class="member-blog-date">2019.6.21</p>
+            <p class="member-blog-info-title mt10">タイトル</p>
+            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
+          </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
+          <div class="member-blog-info">
+            <p class="member-blog-status status4">削除依頼中</p>
+            <p class="member-blog-info-title">作成日時</p>
+            <p class="member-blog-date">2019.6.21</p>
+            <p class="member-blog-info-title mt10">タイトル</p>
+            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
+          </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
+          <div class="member-blog-info">
+            <p class="member-blog-status status0">下書き</p>
+            <p class="member-blog-info-title">作成日時</p>
+            <p class="member-blog-date">2019.6.21</p>
+            <p class="member-blog-info-title mt10">タイトル</p>
+            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
+          </div>
+          </a>
+        </li>
+
+
+      </ul>
 
 
 
