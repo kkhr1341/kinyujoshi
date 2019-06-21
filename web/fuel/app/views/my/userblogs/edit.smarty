@@ -32,7 +32,7 @@
             <textarea data-type="text" name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
           </div>
 
-          <a href="" class="author-edit-button">オーサー編集</a>
+          <a href="" class="author-edit-button">投稿者プロフィール編集</a>
 
           <div id="myModal" class="modal fade">
             <div class="modal-dialog">
@@ -42,7 +42,7 @@
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
 
 
-                  <p class="withdrawal-title">オーサー</p>
+                  <p class="withdrawal-title">投稿者プロフィール</p>
 
                   <div class="form-group">
                     <label class="form-group-event-label">役職</label>

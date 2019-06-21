@@ -572,9 +572,10 @@
 }
 
 .thumbnail-img {
-    width: 500px;
-    height: 300px;
-    margin-top: 12px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 200px;
 }
 
 footer {
@@ -2513,7 +2514,7 @@ border-bottom: 1px solid #dbf1ee;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  オーサー設定（書いた人）
+  投稿者プロフィール設定（書いた人）
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .author-thumbnail-img {
     width: 120px;

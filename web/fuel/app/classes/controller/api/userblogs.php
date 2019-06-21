@@ -20,7 +20,7 @@ class Controller_Api_Userblogs extends Controller_Base
             return $this->error($message);
         }
         if (!Authors::get_by_username($username)) {
-            return $this->error("オーサーの登録がされておりません。");
+            return $this->error("投稿者のプロフィールが登録されておりません。");
         }
         $params = $val->validated();
         try {
@@ -46,7 +46,7 @@ class Controller_Api_Userblogs extends Controller_Base
         $params = $val->validated();
 
         if (!Authors::get_by_username($username)) {
-            return $this->error("オーサーの登録がされておりません。");
+            return $this->error("投稿者のプロフィールが登録されておりません。");
         }
 
         try {

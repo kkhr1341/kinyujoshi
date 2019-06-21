@@ -15,7 +15,7 @@ class Controller_My_Userblogs extends Controller_Mybase
 //
 //        $username = \Auth::get('username');
 //        if (!Authors::get_by_username($username)) {
-//            return $this->error("オーサーの登録がされておりません。");
+//            return $this->error("投稿者プロフィールの登録がされておりません。");
 //        }
 //    }
 
