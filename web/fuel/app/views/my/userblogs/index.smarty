@@ -8,7 +8,6 @@
 
         <div class="form-btn tx-center">
           <button type="button" onclick="location.href='userblogs/create'" class="member-blog-btn ">新規作成</button>
-          <button type="button" onclick="location.href='/my/authors/edit'" class="member-blog-btn ">書いた人編集</button>
         </div>
 
 
