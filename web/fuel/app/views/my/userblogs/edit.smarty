@@ -67,7 +67,7 @@
                       <div class="author-thumbnail-img"
                            style="background:url({$author.profile_image}) center center / cover no-repeat;"></div>
                     {else}
-                      <div class="author-thumbnail-img"></div>
+                      <div class="author-thumbnail-img" style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"></div>
                     {/if}
                   </div>
 
