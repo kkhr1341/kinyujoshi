@@ -54,7 +54,6 @@
     <li><a href="/my/trend">トレンド</a></li>
     <li><a href="/my/account">アカウント設定</a></li>
     <li><a href="/my/userblogs">レポート申請</a></li>
-    <li><a href="/my/authors/edit">オーサー設定</a></li>
     <li><a href="/logout">ログアウト</a></li>
   </ul>
 </div>
