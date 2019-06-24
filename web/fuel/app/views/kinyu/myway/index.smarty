@@ -5,7 +5,7 @@
   <!-- <img class="main-logo" src="/images/myway/main-logo.png"> -->
 
   <div class="main-img-box-container">
-    
+
     <div class="pc main-img-box clear">
       <div class="main-img-box-left" style="background:url(/images/myway/bg/main-bg.png) 65% 0px / cover no-repeat;"></div>
       <div class="main-img-box-right">
@@ -30,9 +30,9 @@
       <h2 class="pc intoduction-title"><span>お金と向き合って決めた、わたしはこう生きる。</span></h2>
       <h2 class="sp intoduction-title"><span>お金と向き合って決めた、<br>わたしはこう生きる。</span></h2>
       <p class="pc">
-        きんゆう女子。が正式に発足して1年。<br>
+        きんゆう女子。コミュニティでは、<br>
         日々のお金の使い方、キャリアアップの方法、初めての投資、<br>
-        未来の年金のことまで幅広く勉強してきました。
+        未来の年金のことまで幅広く勉強しています。
         <span style="display: block;height: 12px;"></span>
         まだワカラナイこと、たくさん。<br>
         もしかしたら、全部は知らなくてもいいのかも…。
@@ -47,11 +47,11 @@
         そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。<br>
         本当の意味で無駄遣いがなくなるはず。
         <span style="display: block;height: 12px;"></span>
-        このページでは、「わたしを知ること」をテーマに情報を発信していきます。
+        このページでは、「わたしを知ること」をテーマに情報を発信しています。
       </p>
       <p class="sp">
-        きんゆう女子。が正式に発足して1年。<br>
-        日々のお金の使い方、キャリアアップの方法、初めての投資、未来の年金のことまで幅広く勉強してきました。
+        きんゆう女子。コミュニティでは、<br>
+        日々のお金の使い方、キャリアアップの方法、初めての投資、未来の年金のことまで幅広く勉強しています。
         <span style="display: block;height: 12px;"></span>
         まだワカラナイこと、たくさん。<br>
         もしかしたら、全部は知らなくてもいいのかも…。
@@ -66,7 +66,7 @@
         そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。
         本当の意味で無駄遣いがなくなるはず。
         <span style="display: block;height: 12px;"></span>
-        このページでは、「わたしを知ること」をテーマに情報を発信していきます。
+        このページでは、「わたしを知ること」をテーマに情報を発信しています。
       </p>
     </div>
     <!-- 画像 -->
@@ -78,7 +78,7 @@
 </div>
 
 <div class="myway-content-list">
-  
+
   <!-- くつ -->
   <div id="myway-shoes" class="myway-content-list-el clear">
     <div class="inner clear">
