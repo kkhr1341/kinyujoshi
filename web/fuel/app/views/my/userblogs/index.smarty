@@ -6,9 +6,7 @@
     <div class="admin-normal-main">
         <p class="withdrawal-title">投稿申請一覧</p>
 
-        <div class="form-btn tx-center">
-          <button type="button" onclick="location.href='userblogs/create'" class="member-blog-btn ">新規作成</button>
-        </div>
+        <a href="/my/userblogs/create" class="member-post-btn"><img src="/images/my/report/post-btn.png"></a>
 
 
         <table>
@@ -37,7 +35,7 @@
             <p class="member-blog-info-title">作成日時</p>
             <p class="member-blog-date">2019.6.21</p>
             <p class="member-blog-info-title mt10">タイトル</p>
-            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
+            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。旅行先の支払いをすべてキャッシュレスにしてみました。旅行先の支払いをすべてキャッシュレスにしてみました。</p>
           </div>
           </a>
         </li>

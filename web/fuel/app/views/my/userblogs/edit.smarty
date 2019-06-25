@@ -32,7 +32,9 @@
             <textarea data-type="text" name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
           </div>
 
-          <a href="" class="author-edit-button">投稿者プロフィール編集</a>
+
+          <label class="regist-add-form-edit-title">投稿者プロフィール</label>
+          <a href="" class="author-edit-button">投稿者プロフィールを編集する</a>
 
           <div id="myModal" class="modal fade">
             <div class="modal-dialog">

@@ -186,8 +186,12 @@
 .btn {
   font-size: 12px;
   line-height: inherit;
-  padding: 10px 30px;
   font-weight: 400;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 20px;
+  margin-bottom: 20px;
 }
 
 .my-container {
@@ -1022,6 +1026,27 @@
 }
 .trend-link-utilization-notes .notes-main-title {
   font-weight: 400;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  レポート投稿申請機能
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.member-blog-list {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.member-blog-list li {
+  width: 100%;
+}
+
+#save_closed {
+  margin-right: 00px;
+}
+
+.thumbnail-img {
+    min-height: 200px;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
