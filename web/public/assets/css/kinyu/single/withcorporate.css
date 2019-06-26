@@ -19,17 +19,52 @@ footer,
 	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 .withcorporate-block-el {
-	padding: 80px 0px;
+	padding: 100px 0px;
 }
 .withcorporate-inner {
 	width: 1200px;
 	margin: 0 auto;
+	position: relative;
 }
 .bg-lightblue {
 	background: #f9fbfc; /* Old browsers */
   background: -moz-linear-gradient(-45deg, #f9fbfc 0%, #eff8fa 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #f9fbfc 0%,#eff8fa 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #f9fbfc 0%,#eff8fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.withcorporate-block-el .message-main {
+	font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+.withcorporate-block-el .message-main span {
+  display: block;
+  font-size: 20px;
+  padding-bottom: 6px;
+}
+.while-bg-img {
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+.while-bg-img .title-story {
+	width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -50px;
+	z-index:1001;
+}
+.while-bg-img:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:999;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -86,9 +121,6 @@ footer,
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   メッセージ部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.message-block {
-
-}
 .message-block .main-copy {
 	width: 500px;
 	margin: 0 auto;
@@ -106,6 +138,14 @@ footer,
 
 .message-main-area .message-main-area-el {
 	width: 50%;
+}
+.message-main-area .title-insight {
+	width: 220px;
+  position: absolute;
+  top: -90px;
+  left: -50px;
+  transform: rotate(-7deg);
+  opacity: .5;
 }
 .message-main-area-el .text-block {
 }
@@ -152,7 +192,7 @@ footer,
   キャッシュレス
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .cashless-description {
-	padding: 100px 0px 80px;
+	/*padding: 100px 0px 80px;*/
 }
 .withcorporate-cashless-block {
 	width: 800px;
@@ -184,7 +224,16 @@ footer,
 	width: 800px;
 	margin: 0 auto;
 	padding:40px 50px;
-	margin-top: 50px;
+	margin-top: 60px;
+	position: relative;
+}
+.withcorporate-cashlessgraph-block .title-issue {
+  width: 140px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  transform: rotate(-7deg);
+  opacity: .5;
 }
 .withcorporate-cashlessgraph-block .graph-question {
 	padding-left: 55px;
@@ -237,7 +286,16 @@ footer,
 .withcorporate-cashlesslife-block {
 	width: 1020px;
 	margin: 0 auto;
-	margin-top: 80px;
+	margin-top: 90px;
+	position: relative;
+}
+.withcorporate-cashlesslife-block .title-challenge {
+    width: 220px;
+    position: absolute;
+    top: -0px;
+    left: -22px;
+    transform: rotate(-7deg);
+    opacity: .5;
 }
 .withcorporate-cashlesslife-title {
 	width: 450px;
@@ -311,12 +369,71 @@ footer,
 
 .page-announce {
 	text-align: center;
-	margin-bottom: 50px;
+	margin: 70px 0px;
 }
 .page-announce p {
 	font-size: 10px;
 	line-height: 15px;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  twitter
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.twitter-block {
+	width: 900px;
+	margin: 0 auto;
+	display: flex;
+	padding: 50px;
+	background: #f9fbfc;
+  background: -moz-linear-gradient(-45deg, #f9fbfc 0%, #eff8fa 100%);
+  background: -webkit-linear-gradient(-45deg, #f9fbfc 0%,#eff8fa 100%);
+  background: linear-gradient(135deg, #f9fbfc 0%,#eff8fa 100%);
+}
+.twitter-left-img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+.twitter-left {
+	width: 50%;
+	text-align: center;
+}
+.twitter-left-accoount-link {
+	display: block;
+	font-size: 18px;
+	margin-top: 20px;
+	color: #389fde;
+}
+.twitter-left-tag {
+	width: 60%;
+	margin:  0 auto;
+	border-top: 1px solid #a8d6d9;
+	border-bottom: 1px solid #a8d6d9;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 12px 0px;
+}
+.twitter-link-block {
+	display: block;
+	width: 100px;
+	text-align: center;
+	background: #4AB3F4;
+	/*background: #a8d6d9;*/
+	color: #fff;
+	margin: 0 auto;
+	padding: 8px 50px;
+}
+.twitter-left-tag a {
+	display: block;
+}
+.twitter-right {
+	width: 50%;
+	text-align: center;
+}
+.twitter-block a {
+	transition: .5s;
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   モバイル
@@ -575,6 +692,7 @@ footer,
 }
 
 @media screen and (min-width: 897px) {
-.withcorporate-cashlessgraph-block .graph-sub a:hover {
+.withcorporate-cashlessgraph-block .graph-sub a:hover,
+.twitter-block a:hover {
 	opacity: .5;
 }
