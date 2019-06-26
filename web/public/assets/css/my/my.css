@@ -1147,6 +1147,16 @@ footer {
   line-height: 15px;
 }
 
+.official-member-badge {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
+
+.official-member-badge img{
+  width: 25px;
+}
+
 .admin-normal-side .menu-list li {
     text-align: center;
     margin-bottom: 8px;
@@ -2519,8 +2529,8 @@ a.author-edit-button {
 .member-post-btn {
   position: fixed;
   z-index: 99;
-  bottom: -25px;
-  right: -25px;
+  bottom: 10px;
+  right: 10px;
 }
 
 .member-post-btn img {
@@ -2620,4 +2630,23 @@ a.author-edit-button {
       color: #fff;
     }
 
+    .count-badge {
+      position: absolute;
+      top: 0;
+      left: 88%;
+      font-size: 9px;
+      line-height: 8px;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      background-color: #ff0000;
+      border: 4px solid #ff0000;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    padding: 0 10px;
 }

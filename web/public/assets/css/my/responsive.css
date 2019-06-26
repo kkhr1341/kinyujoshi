@@ -1028,7 +1028,16 @@
   font-weight: 400;
 }
 
+.member-post-btn {
+  position: fixed;
+  z-index: 99;
+  bottom: -25px;
+  right: -25px;
+}
 
+.official-member-badge {
+  display: block;
+}
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   レポート投稿申請機能
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/

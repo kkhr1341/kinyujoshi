@@ -4,12 +4,12 @@
 
     {$my_side}
 
-    
+
     <!-- プロフィール部分 -->
     <div class="my-profile-block-sp sp">
 
       <div class="side-profile-block">
-
+<div class="official-member-badge"><img src="/images/my/om-badge.png"></div>
         <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
 
         <!-- プロフィール画像 -->

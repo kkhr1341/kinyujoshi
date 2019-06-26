@@ -14,9 +14,9 @@
 	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
 	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
 
-    <li><a href="#tab5" data-toggle="tab"><span>{$apply_blogs|@count}</span>申請中</a></li>
-    <li><a href="#tab6" data-toggle="tab"><span>{$update_blogs|@count}</span>更新依頼中</a></li>
-	<li><a href="#tab7" data-toggle="tab"><span>{$delete_blogs|@count}</span>削除依頼中</a></li>
+    <li><a href="#tab5" data-toggle="tab"><span class="count-badge">{$apply_blogs|@count}</span>申請中</a></li>
+    <li><a href="#tab6" data-toggle="tab"><span class="count-badge">{$update_blogs|@count}</span>更新依頼中</a></li>
+	<li><a href="#tab7" data-toggle="tab"><span class="count-badge">{$delete_blogs|@count}</span>削除依頼中</a></li>
 
 </ul>
 <div class="tab-content">
