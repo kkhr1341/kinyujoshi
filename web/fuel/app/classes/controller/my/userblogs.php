@@ -9,15 +9,13 @@ use \Model\DiagnosticChartRouteTypeActionLists;
 class Controller_My_Userblogs extends Controller_Mybase
 {
 
-//    public function before()
-//    {
-//        parent::before();
-//
-//        $username = \Auth::get('username');
-//        if (!Authors::get_by_username($username)) {
-//            return $this->error("投稿者プロフィールの登録がされておりません。");
-//        }
-//    }
+    public function before()
+    {
+        parent::before();
+        if (!Auth::has_access('userblogs.read')) {
+            throw new HttpNoAccessException;
+        }
+    }
 
     public function action_index()
     {

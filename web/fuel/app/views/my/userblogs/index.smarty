@@ -6,93 +6,40 @@
     <div class="admin-normal-main">
         <p class="withdrawal-title">投稿申請一覧</p>
 
-        <a href="/my/userblogs/create" class="member-post-btn"><img src="/images/my/report/post-btn.png"></a>
+        {if (Auth::has_access('userblogs.create'))}
+          <a href="/my/userblogs/create" class="member-post-btn"><img src="/images/my/report/post-btn.png"></a>
+        {/if}
 
-
-        <table>
-          {foreach from=$blogs item=blog name=loopname}
-          <tr onclick="location.href='/my/userblogs/edit/{$blog.code}'">
-            <td>{$blog.title}</td>
-            <td><img width="100px" src="{$blog.main_image}" /></td>
-            <td>
-              {if $blog.status == 1}公開中{/if}
-              {if $blog.status == 0}下書き{/if}
-              {if $blog.status == 2}申請中{/if}
-              {if $blog.status == 3}更新依頼中{/if}
-              {if $blog.status == 4}削除依頼中{/if}
-            </td>
-            <td>{$blog.created_at}</td>
-          </tr>
-          {/foreach}
-        </table>
-
-      <ul class="member-blog-list">
-        <li>
-          <a href="#">
-            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
-          <div class="member-blog-info">
-            <p class="member-blog-status status1">公開中</p>
-            <p class="member-blog-info-title">作成日時</p>
-            <p class="member-blog-date">2019.6.21</p>
-            <p class="member-blog-info-title mt10">タイトル</p>
-            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。旅行先の支払いをすべてキャッシュレスにしてみました。旅行先の支払いをすべてキャッシュレスにしてみました。</p>
-          </div>
+        {if count($blogs) > 0}
+          <ul class="member-blog-list">
+            {foreach from=$blogs item=blog name=loopname}
+              <li>
+                <a href="/my/userblogs/edit/{$blog.code}">
+                  <div class="menber-blog-img-box" style="background: url({$blog.main_image}) center center / cover no-repeat;""></div>
+                <div class="member-blog-info">
+                  <p class="member-blog-status status{$blog.status}">
+                    {if $blog.status == 1}公開中{/if}
+                    {if $blog.status == 0}下書き{/if}
+                    {if $blog.status == 2}申請中{/if}
+                    {if $blog.status == 3}更新依頼中{/if}
+                    {if $blog.status == 4}削除依頼中{/if}
+                  </p>
+                  <p class="member-blog-info-title">作成日時</p>
+                  <p class="member-blog-date">{$blog.created_at}</p>
+                  <p class="member-blog-info-title mt10">{$blog.title}</p>
+                  <p class="member-blog-title">{$blog.content}</p>
+                </div>
+                </a>
+              </li>
+            {/foreach}
+          </ul>
+      {else}
+        <p>
+          <a href="/my/userblogs/create">
+            最初の投稿をしてみましょう！
           </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
-          <div class="member-blog-info">
-            <p class="member-blog-status status2">申請中</p>
-            <p class="member-blog-info-title">作成日時</p>
-            <p class="member-blog-date">2019.6.21</p>
-            <p class="member-blog-info-title mt10">タイトル</p>
-            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
-          </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
-          <div class="member-blog-info">
-            <p class="member-blog-status status3">更新依頼中</p>
-            <p class="member-blog-info-title">作成日時</p>
-            <p class="member-blog-date">2019.6.21</p>
-            <p class="member-blog-info-title mt10">タイトル</p>
-            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
-          </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
-          <div class="member-blog-info">
-            <p class="member-blog-status status4">削除依頼中</p>
-            <p class="member-blog-info-title">作成日時</p>
-            <p class="member-blog-date">2019.6.21</p>
-            <p class="member-blog-info-title mt10">タイトル</p>
-            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
-          </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="menber-blog-img-box" style="background: url(/images/kinyu-support.jpg) center center / cover no-repeat;""></div>
-          <div class="member-blog-info">
-            <p class="member-blog-status status0">下書き</p>
-            <p class="member-blog-info-title">作成日時</p>
-            <p class="member-blog-date">2019.6.21</p>
-            <p class="member-blog-info-title mt10">タイトル</p>
-            <p class="member-blog-title">旅行先の支払いをすべてキャッシュレスにしてみました。</p>
-          </div>
-          </a>
-        </li>
-
-
-      </ul>
-
-
-
+        </p>
+      {/if}
     </div>
   </div>
 </div>

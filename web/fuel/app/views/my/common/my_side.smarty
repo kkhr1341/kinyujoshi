@@ -7,7 +7,9 @@
 
     <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
 
+    {if (Auth::has_access('userblogs.create'))}
     <div class="official-member-badge"><img src="/images/my/om-badge.png"></div>
+    {/if}
 
     <!-- プロフィール画像 -->
     <div class="img-box"
@@ -42,7 +44,9 @@
 
   </div>
 
+  {if (Auth::has_access('userblogs.create'))}
   <a href="/my/userblogs"><img class="my-pagetitle" src="/images/my/userblogs-link-btn.png"></a>
+  {/if}
 
   <ul class="menu-list">
     {if in_array('admin', $roles) || in_array('editor', $roles)}
@@ -55,7 +59,6 @@
     <li><a href="/my/oshiete">教えて！きん女。</a></li>
     <li><a href="/my/trend">トレンド</a></li>
     <li><a href="/my/account">アカウント設定</a></li>
-    <li><a href="/my/userblogs">レポート申請</a></li>
     <li><a href="/logout">ログアウト</a></li>
   </ul>
 </div>
