@@ -18,7 +18,7 @@
 
 .my-pagetitle {
   display: block;
-  width: 160px;
+  width: 80%;
   margin: 0 auto;
   margin-bottom: 24px;
 }
@@ -1154,7 +1154,7 @@ footer {
 }
 
 .official-member-badge img{
-  width: 25px;
+  width: 35px;
 }
 
 .admin-normal-side .menu-list li {
@@ -2535,6 +2535,11 @@ a.author-edit-button {
 
 .member-post-btn img {
   width: 130px;
+}
+
+.member-post-btn img:hover {
+  transform:scale(1.1);
+  transition: .5s;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

@@ -3,8 +3,6 @@
 
 <div class="admin-normal-side">
 
-  <a href="/my"><img class="my-pagetitle" src="/images/my/mypage-title.png"></a>
-
   <div class="side-profile-block">
 
     <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
@@ -43,6 +41,8 @@
     {/if}
 
   </div>
+
+  <a href="/my/userblogs"><img class="my-pagetitle" src="/images/my/userblogs-link-btn.png"></a>
 
   <ul class="menu-list">
     {if in_array('admin', $roles) || in_array('editor', $roles)}
