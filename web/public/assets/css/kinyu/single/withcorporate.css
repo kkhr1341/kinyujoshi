@@ -514,7 +514,7 @@ footer,
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .withcorporate-cashless-block {
 	width: 88%;
-	padding: 32px;
+	padding: 24px;
 }
 .withcorporate-cashlessgraph-block {
 	width: 88%;
@@ -530,8 +530,8 @@ footer,
   margin-left: -125px;
 }
 .withcorporate-cashless-block p {
-  font-size: 13px;
-  line-height: 25px;
+  font-size: 12px;
+  line-height: 24px;
 }
 .withcorporate-cashlessgraph-title {
 	width: 100%;
@@ -610,10 +610,72 @@ footer,
   width: 88%;
   margin: 0 auto;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 .page-announce p {
 	font-size: 10px;
 	line-height: 15px;
+}
+.while-bg-img {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.while-bg-img .title-story {
+    width: 280px;
+    margin-left: -140px;
+    margin-top: -26px;
+}
+.withcorporate-block-el .message-main {
+  font-size: 12px;
+  line-height: 20px;
+  width: 84%;
+  margin: 0 auto;
+  text-align: left;
+}
+.withcorporate-block-el .message-main span {
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+.message-main-area .title-insight {
+  width: 220px;
+  position: absolute;
+  top: -111px;
+  left: -18px;
+  transform: rotate(-7deg);
+  opacity: .2;
+}
+.withcorporate-cashlesslife-block .title-challenge {
+	width: 220px;
+  position: absolute;
+  top: -28px;
+  left: -18px;
+  transform: rotate(-7deg);
+  opacity: .2;
+}
+.withcorporate-cashlessgraph-block .title-issue {
+  width: 120px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  transform: rotate(-7deg);
+  opacity: .2;
+}
+
+.twitter-block {
+	width: 84%;
+	display: block;
+	padding: 32px 24px;
+}
+.twitter-left,
+.twitter-right {
+	width: 100%;
+}
+.twitter-right {
+  margin-top: 24px;
+}
+.twitter-left-tag {
+	width: 80%;
 }
 
 }
@@ -688,6 +750,12 @@ footer,
     width: 150px;
     top: 26px;
     right: -40px;
+	}
+	.while-bg-img {
+		height: 300px;
+	}
+	.twitter-block {
+		width: 80%;
 	}
 }
 
