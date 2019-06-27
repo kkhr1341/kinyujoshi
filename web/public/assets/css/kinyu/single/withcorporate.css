@@ -1,0 +1,766 @@
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  リセット
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-header-top,
+footer,
+.navi_kinyu-submenu-copy,
+.kinyu-sp-header,
+.fix-header-sp {
+	display: none;
+}
+.kinyu-main {
+	padding-top: 0px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  メイン共通
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-container {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+.withcorporate-block-el {
+	padding: 100px 0px;
+}
+.withcorporate-inner {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.bg-lightblue {
+	background: #f9fbfc; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f9fbfc 0%, #eff8fa 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f9fbfc 0%,#eff8fa 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f9fbfc 0%,#eff8fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.withcorporate-block-el .message-main {
+	font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+.withcorporate-block-el .message-main span {
+  display: block;
+  font-size: 20px;
+  padding-bottom: 6px;
+}
+.while-bg-img {
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+.while-bg-img .title-story {
+	width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -50px;
+	z-index:1001;
+}
+.while-bg-img:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index:999;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  ヘッダー
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-main-logo {
+	padding: 16px 0px;
+	background: #fff;
+	text-align: center;
+}
+.withcorporate-main-logo img {
+	width: 200px;
+	margin: 0 auto;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  イントロダクション
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-intro {
+	height: 700px;
+	position: relative;
+}
+.withcorporate-intro .intro-title {
+	width: 800px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1000;
+	margin-top: -52.5px;
+	margin-left: -400px;
+}
+.withcorporate-intro .bg-area {
+	height: 100%;
+	display: flex;
+	opacity: .8;
+	z-index: 999;
+}
+.withcorporate-intro .bg-area-el {
+	height: 100%;
+	width: 25%;
+}
+.withcorporate-intro:after {
+	/*content: "";*/
+	width: 100%;
+	height: 100%;
+  background: linear-gradient(135deg, #eb4040 0%,#4bc4f0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	opacity: .05;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  メッセージ部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.message-block .main-copy {
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+.message-block .main-copy img {
+	width: 100%;
+}
+.message-main-area {
+	display: flex;
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 70px;
+}
+
+.message-main-area .message-main-area-el {
+	width: 50%;
+}
+.message-main-area .title-insight {
+	width: 220px;
+  position: absolute;
+  top: -90px;
+  left: -50px;
+  transform: rotate(-7deg);
+  opacity: .5;
+}
+.message-main-area-el .text-block {
+}
+.message-main-area-el .message-text {
+	font-size: 14px;
+	line-height: 24px;
+}
+.message-main-area-el .message-text span {
+	display: block;
+	font-size: 18px;
+	padding-bottom: 6px;
+}
+.message-main-area .img-block {
+	text-align: right;
+	position: relative;
+	padding-top: 30px;
+	opacity: .9;
+}
+.message-main-area .img-box {
+	width: 350px;
+	height: 450px;
+	display: inline-block;
+	position: relative;
+}
+.message-main-area .img-box:after {
+	content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #eb4040 0%,#4bc4f0 100%);
+    opacity: .05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.message-main-area .img-block .text-challenge {
+	position: absolute;
+	width: 200px;
+  top: 80px;
+  right: -80px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  キャッシュレス
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.cashless-description {
+	/*padding: 100px 0px 80px;*/
+}
+.withcorporate-cashless-block {
+	width: 800px;
+	border: 1px solid #a8d6d9;
+	position: relative;
+	margin: 0 auto;
+	padding: 50px;
+}
+.withcorporate-cashless-block .withcorporate-cashless-title {
+	position: absolute;
+	width: 350px;
+	top: -20px;
+	left: 50%;
+	margin-left: -175px;
+}
+.withcorporate-cashless-block .withcorporate-cashless-title img {
+	width: 100%;
+}
+.withcorporate-cashless-block p {
+	font-size: 15px;
+	line-height: 32px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  キャッシュレス・グラフ部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-cashlessgraph-block {
+	background: #f9f9f9;
+	width: 800px;
+	margin: 0 auto;
+	padding:40px 50px;
+	margin-top: 60px;
+	position: relative;
+}
+.withcorporate-cashlessgraph-block .title-issue {
+  width: 140px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  transform: rotate(-7deg);
+  opacity: .5;
+}
+.withcorporate-cashlessgraph-block .graph-question {
+	padding-left: 55px;
+	position: relative;
+	margin: 24px 0px;
+	font-size: 12px;
+}
+.withcorporate-cashlessgraph-block .graph-question:before {
+	content: "Q";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 20px;
+  background: #a8d6d9;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-top: -20px;
+  color: #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding-top: 7px;
+}
+.withcorporate-cashlessgraph-title {
+	width: 350px;
+	margin: 0 auto;
+}
+.withcorporate-cashlessgraph-title img {
+	width: 100%;
+}
+.withcorporate-cashlessgraph-block .cashless-graph-date {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.withcorporate-cashlessgraph-block .graph-sub {
+	text-align: center;
+	font-size: 11px;
+	margin-top: 24px;
+}
+.withcorporate-cashlessgraph-block .graph-sub a {
+	color: #1d97bb;
+	font-size: 11px;
+	transition: .5s;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  キャッシュレス・ライフ部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-cashlesslife-block {
+	width: 1020px;
+	margin: 0 auto;
+	margin-top: 90px;
+	position: relative;
+}
+.withcorporate-cashlesslife-block .title-challenge {
+    width: 220px;
+    position: absolute;
+    top: -0px;
+    left: -22px;
+    transform: rotate(-7deg);
+    opacity: .5;
+}
+.withcorporate-cashlesslife-title {
+	width: 450px;
+	margin: 0 auto;
+}
+.withcorporate-cashlesslife-title img {
+	width: 100%;
+}
+.cashless-life-content {
+	width: 100%;
+	margin-top: 30px;
+}
+.cashless-life-comingsoon {
+	display: block;
+	width: 280px;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  もっとキャッシュレスを知る
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-cashlessstudy-block {
+	width: 1000px;
+	margin: 0 auto;
+}
+.withcorporate-cashlessstudy-title {
+	width: 400px;
+	margin: 0 auto;
+}
+.withcorporate-cashlessstudy-title img {
+	width: 100%;
+}
+.withcorporate-cashlessstudy-list ul {
+	display: flex;
+	margin-top: 50px;
+}
+.withcorporate-cashlessstudy-list li {
+	width: 31.3%;
+	margin-right: 3%;
+	background: #fff;
+}
+.withcorporate-cashlessstudy-list li:nth-child(3n) {
+	margin-right: 0%;
+}
+.withcorporate-cashlessstudy-list li .img-box {
+	height: 180px;
+	width: 100%;
+}
+.withcorporate-cashlessstudy-list li .text-box {
+	padding: 20px;
+}
+.withcorporate-cashlessstudy-list li .text-box p {
+	font-size: 14px;
+	line-height: 28px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  もっとキャッシュレスを知る
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-footer {
+	display: block;
+	width: 100%;
+	background: #283248;
+}
+.withcorporate-footer p {
+	text-align: center;
+	padding: 24px 0px;
+	color: #fff;
+}
+
+.page-announce {
+	text-align: center;
+	margin: 70px 0px;
+}
+.page-announce p {
+	font-size: 10px;
+	line-height: 15px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  twitter
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.twitter-block {
+	width: 900px;
+	margin: 0 auto;
+	display: flex;
+	padding: 50px;
+	background: #f9fbfc;
+  background: -moz-linear-gradient(-45deg, #f9fbfc 0%, #eff8fa 100%);
+  background: -webkit-linear-gradient(-45deg, #f9fbfc 0%,#eff8fa 100%);
+  background: linear-gradient(135deg, #f9fbfc 0%,#eff8fa 100%);
+}
+.twitter-left-img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+.twitter-left {
+	width: 50%;
+	text-align: center;
+}
+.twitter-left-accoount-link {
+	display: block;
+	font-size: 18px;
+	margin-top: 20px;
+	color: #389fde;
+}
+.twitter-left-tag {
+	width: 60%;
+	margin:  0 auto;
+	border-top: 1px solid #a8d6d9;
+	border-bottom: 1px solid #a8d6d9;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 12px 0px;
+}
+.twitter-link-block {
+	display: block;
+	width: 100px;
+	text-align: center;
+	background: #4AB3F4;
+	/*background: #a8d6d9;*/
+	color: #fff;
+	margin: 0 auto;
+	padding: 8px 50px;
+}
+.twitter-left-tag a {
+	display: block;
+}
+.twitter-right {
+	width: 50%;
+	text-align: center;
+}
+.twitter-block a {
+	transition: .5s;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  モバイル
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 480px) {
+
+.fix-header-sp,.kinyu-sp-header {
+	display: none;
+}
+.kinyu-main {
+	padding-top: 0px;
+}
+.withcorporate-inner {
+	width: 92%;
+}
+.withcorporate-block-el {
+	padding: 60px 0px;
+}
+.message-block .main-copy {
+  width: 80%;
+}
+.withcorporate-intro {
+	height: 550px;
+}
+.withcorporate-intro .intro-title {
+	width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -31px;
+  margin-left: -160px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  イントロダクション
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-intro .bg-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.withcorporate-intro .bg-area-el {
+    height: 50%;
+		width: 50%;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  メッセージ部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.message-main-area {
+  display: block;
+  width: 92%;
+  margin-top: 30px;
+}
+.message-main-area .message-main-area-el {
+	width: 100%;
+}
+.message-main-area-el .message-text {
+  font-size: 12px;
+  line-height: 20px;
+}
+.message-main-area-el .message-text span {
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+.message-main-area .img-box {
+  width: 100%;
+  height: 200px;
+}
+.message-main-area .img-block .text-challenge {
+  width: 110px;
+  top: 50px;
+  right: -7%;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  キャッシュレスコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-cashless-block {
+	width: 88%;
+	padding: 24px;
+}
+.withcorporate-cashlessgraph-block {
+	width: 88%;
+	padding: 32px;
+}
+.withcorporate-cashlesslife-block {
+	width: 88%;
+}
+
+.withcorporate-cashless-block .withcorporate-cashless-title {
+  width: 250px;
+  top: -15px;
+  margin-left: -125px;
+}
+.withcorporate-cashless-block p {
+  font-size: 12px;
+  line-height: 24px;
+}
+.withcorporate-cashlessgraph-title {
+	width: 100%;
+}
+.withcorporate-cashlessgraph-block .graph-question:before {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 16px;
+}
+.withcorporate-cashlessgraph-block .graph-question {
+  padding-left: 0px;
+  margin: 24px 0px;
+  font-size: 12px;
+}
+.cashless-graph-date {
+	width: 100%;
+}
+.graph-sub {
+  font-size: 10px;
+  margin-top: 20px;
+  line-height: 15px;
+}
+.withcorporate-cashlesslife-title {
+  width: 100%;
+  margin: 0 auto;
+}
+.cashless-life-comingsoon {
+  width: 180px;
+  margin-top: 30px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  もっとキャッシュレスを知る
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.withcorporate-cashlessstudy-block {
+	width: 88%;
+}
+.withcorporate-cashlessstudy-title {
+  width: 84%;
+  margin: 0 auto;
+}
+.withcorporate-cashlessstudy-list ul {
+  display: block;
+  margin-top: 32px;
+}
+.withcorporate-cashlessstudy-list li {
+  width: 80%;
+  margin-right: 0%;
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+.withcorporate-cashlessstudy-list li:last-child {
+	margin-bottom: 0px;
+}
+.withcorporate-cashlessstudy-list li:nth-child(3n) {
+  margin-right: auto;
+}
+.withcorporate-cashlessstudy-list li .text-box {
+  padding: 16px;
+}
+.withcorporate-cashlessstudy-list li .text-box p {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.withcorporate-footer p {
+  text-align: center;
+  padding: 16px 0px;
+  color: #fff;
+  font-size: 10px;
+}
+.page-announce {
+	text-align: center;
+  width: 88%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.page-announce p {
+	font-size: 10px;
+	line-height: 15px;
+}
+.while-bg-img {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.while-bg-img .title-story {
+    width: 280px;
+    margin-left: -140px;
+    margin-top: -26px;
+}
+.withcorporate-block-el .message-main {
+  font-size: 12px;
+  line-height: 20px;
+  width: 84%;
+  margin: 0 auto;
+  text-align: left;
+}
+.withcorporate-block-el .message-main span {
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+.message-main-area .title-insight {
+  width: 220px;
+  position: absolute;
+  top: -111px;
+  left: -18px;
+  transform: rotate(-7deg);
+  opacity: .2;
+}
+.withcorporate-cashlesslife-block .title-challenge {
+	width: 220px;
+  position: absolute;
+  top: -28px;
+  left: -18px;
+  transform: rotate(-7deg);
+  opacity: .2;
+}
+.withcorporate-cashlessgraph-block .title-issue {
+  width: 120px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  transform: rotate(-7deg);
+  opacity: .2;
+}
+
+.twitter-block {
+	width: 84%;
+	display: block;
+	padding: 32px 24px;
+}
+.twitter-left,
+.twitter-right {
+	width: 100%;
+}
+.twitter-right {
+  margin-top: 24px;
+}
+.twitter-left-tag {
+	width: 80%;
+}
+
+}
+
+@media screen and (max-width: 896px) and (min-width: 481px) {
+	.withcorporate-intro .bg-area {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.withcorporate-intro .bg-area-el {
+		width: 50%;
+		height: 50%;
+	}
+	.withcorporate-intro {
+		height: 800px;
+	}
+	.withcorporate-intro .intro-title {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+		margin-top: -57px;
+    margin-left: -300px;
+	}
+	.withcorporate-inner {
+		width: 86%;
+	}
+	.message-main-area-el .message-text {
+    font-size: 12px;
+    line-height: 20px;
+	}
+	.message-main-area {
+		width: 100%;
+	}
+	.message-main-area .message-main-area-el.text-block {
+		width: 65%;
+	}
+	.message-main-area .message-main-area-el.img-block {
+		width: 35%;
+	}
+	.message-main-area-el .message-text span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 6px;
+	}
+	.message-main-area .img-block {
+		padding-top: 0;
+	}
+	.message-main-area .img-box {
+    width: 100%;
+    height: 350px;
+    padding-top: 20px;
+    display: inline-block;
+    position: relative;
+	}
+	.message-block .main-copy {
+		width: 400px;
+	}
+	.withcorporate-cashless-block {
+		width: 86%;
+	}
+	.withcorporate-cashlessgraph-block {
+		width: 86%;
+	}
+	.withcorporate-cashlesslife-block {
+		width: 88%;
+	}
+	.message-main-area .img-block .text-challenge {
+    position: absolute;
+    width: 150px;
+    top: 26px;
+    right: -40px;
+	}
+	.while-bg-img {
+		height: 300px;
+	}
+	.twitter-block {
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 897px) {
+.withcorporate-cashlessgraph-block .graph-sub a:hover,
+.twitter-block a:hover {
+	opacity: .5;
+}
