@@ -6,14 +6,14 @@ class Controller_Kinyu_Withcorporate extends Controller_Kinyubase
     public function action_paypay()
     {
 
-        switch (true) {
-            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-            case $_SERVER['PHP_AUTH_USER'] !== 'cashless2019':
-            case $_SERVER['PHP_AUTH_PW']   !== 'kinjo_paypay':
-            header('WWW-Authenticate: Basic realm="Enter username and password."');
-            header('Content-Type: text/plain; charset=utf-8');
-            die('このページを見るにはログインが必要です');
-        }
+        // switch (true) {
+        //     case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+        //     case $_SERVER['PHP_AUTH_USER'] !== 'cashless2019':
+        //     case $_SERVER['PHP_AUTH_PW']   !== 'kinjo_paypay':
+        //     header('WWW-Authenticate: Basic realm="Enter username and password."');
+        //     header('Content-Type: text/plain; charset=utf-8');
+        //     die('このページを見るにはログインが必要です');
+        // }
 
         $this->template->title = 'Say Farewell to Cash';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-cashless.png';
