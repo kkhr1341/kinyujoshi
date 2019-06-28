@@ -46,10 +46,10 @@
 
                   <p class="withdrawal-title">書いた人</p>
 
-                  <div class="form-group">
+                  <div class="form-group" style="display: none">
                     <label class="form-group-event-label">役職</label>
                     <input style="height: 40px;" type="text" id="position" class="form-control" placeholder=""
-                           value="{$author.position|default:''}">
+                           value="{$author.position|default:'オフィシャルメンバー'}">
                   </div>
 
                   <div class="form-group">
@@ -277,7 +277,7 @@
             }
 
             ajax.post(url, params, function (data) {
-                ts.success("オーサーの更新が完了しました");
+                ts.success("書いた人の更新が完了しました");
                 $modal.modal('hide');
             });
         });
