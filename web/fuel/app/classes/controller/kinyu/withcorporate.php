@@ -15,7 +15,7 @@ class Controller_Kinyu_Withcorporate extends Controller_Kinyubase
         //     die('このページを見るにはログインが必要です');
         // }
 
-        $this->template->title = 'Say Farewell to Cash';
+        $this->template->title = 'Say Farewell to Cash | 今日も、スマホだけ。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-cashless.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
 
