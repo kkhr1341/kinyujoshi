@@ -2473,6 +2473,12 @@ border-bottom: 1px solid #dbf1ee;
   background: rgb(226, 100, 100);
 }
 
+.delete-color {
+  background: rgb(226, 100, 100);
+  padding: 8px 20px;
+  margin: 20px 0 20px 20px;
+}
+
 .member-blog-list {
   display: flex;
   flex-wrap: wrap;

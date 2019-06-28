@@ -1038,6 +1038,14 @@
 .official-member-badge {
   display: block;
 }
+
+.my-pagetitle {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   レポート投稿申請機能
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -1056,6 +1064,13 @@
 
 .thumbnail-img {
     min-height: 200px;
+}
+
+.delete-color {
+  background: rgb(226, 100, 100);
+  padding: 8px 10px;
+  width: 40%;
+  margin: 20px 0;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
