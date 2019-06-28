@@ -129,6 +129,10 @@
 
         $('.thumbnail-img-block.post-thumbnail')
             .uploader('/api/redactor/upload/image', {
+                before: function () {
+                    //ローディングアニメーション
+                    $(".loader-block").fadeIn(500);
+                },
                 success: function (response) {
                     var url = response.data.url;
                     $('[name="main_image"]').val(url);
@@ -138,6 +142,11 @@
                         'background-repeat': 'no-repeat',
                         'background-size': 'cover'
                     });
+                    $(".loader-block").fadeOut(500);
+                },
+                error: function (error) {
+                    ts.error("アップロードに失敗しました");
+                    $(".loader-block").fadeOut(500);
                 }
             });
 
@@ -222,9 +231,14 @@
                 ts.error("本文を入力してください");
                 return false;
             }
+
+            $(".loader-block").fadeIn(500);
+
             ajax.post(url, params, function (data) {
                 ts.success("下書き保存が完了しました", function () {
                     location.href = "/my/userblogs";
+
+                    $(".loader-block").fadeOut(500);
                 });
             });
         });
