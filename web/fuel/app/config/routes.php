@@ -206,4 +206,9 @@ return array(
 
     'api/inquiryreplymails/send'   => 'api/inquiryreplymails/send',
     'api/inquiryreplymails/(:any)'   => 'api/inquiryreplymails/index/$1',
+
+
+    // chat
+    'chat'   => 'chat/top',
+
 );
