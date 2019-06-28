@@ -802,6 +802,7 @@
 .withdrawal-title {
   text-align: center;
   font-size: 18px;
+  line-height: 1.5;
   margin-bottom: 32px;
 }
 .checkbox-list-item {
