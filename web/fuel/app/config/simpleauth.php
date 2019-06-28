@@ -84,7 +84,7 @@ return array(
 		0    => array('name' => 'Guests', 'roles' => array()),
 		1    => array('name' => 'メンバー', 'roles' => array('user')),
 		30   => array('name' => '編集者', 'roles' => array('user', 'editor')),
-		40   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'editor', 'official_member')),
+		40   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'official_member')),
 //		50   => array('name' => 'モデレーター', 'roles' => array('user', 'moderator')),
 		100  => array('name' => '管理者', 'roles' => array('user', 'editor', 'official_member', 'admin')),
 	),
