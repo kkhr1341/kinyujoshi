@@ -98,9 +98,9 @@
                 <button id="apply" class="btn btn-kinyu" type="button" data-status="3" data-code="{$blog.code|default:''}">更新依頼する</button>
               {/if}
               {if $blog.blog_code|default:'' == ''}
-                <button id="delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除</button>
+                <button id="delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除する</button>
               {else}
-                <button id="apply_delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除依頼</button>
+                <button id="apply_delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除を依頼する</button>
               {/if}
             {else}
               <button id="save_closed" class="btn btn-kinyu" type="button" data-status="0" data-code="{$blog.code|default:''}">下書きする</button>
@@ -108,11 +108,6 @@
             {/if}
           </div>
         </div>
-
-
-
-
-
       </form>
     </div>
   </div>
