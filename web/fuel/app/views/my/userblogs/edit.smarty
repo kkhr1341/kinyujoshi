@@ -7,16 +7,16 @@
       <form name="form1">
         <div class="singlepage-form-block">
 
-          <p class="withdrawal-title">投稿申請</p>
+          <p class="withdrawal-title">どんなことをやったのか、<br>みんなに教えたいことを書いてね</p>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">タイトル</label>
+            <label class="regist-add-form-edit-title">一番心に残ったこと</label>
             <input type="text" name="title" class="form-control" value="{$blog.title|default:''}" />
           </div>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">投稿画像</label>
-            <a href="" class="thumbnail-img-block post-thumbnail">サムネイル画像を投稿 / 変更</a>
+            <label class="regist-add-form-edit-title">その時の写真</label>
+            <a href="" class="thumbnail-img-block post-thumbnail">画像を投稿 / 変更</a>
             <input type="hidden" name="main_image" value="{$blog.main_image|default:''}">
             {if $blog.main_image|default:''}
               <div class="thumbnail-img"
@@ -29,13 +29,12 @@
 
           <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">本文</label>
-            <p class="form-group-sub"><span style="color:red;">＊</span>どんなことをやったのか、みんなに教えたいことなどを書いてね</p>
             <textarea data-type="text" name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
           </div>
 
 
-          <label class="regist-add-form-edit-title">投稿者プロフィール</label>
-          <a href="" class="author-edit-button">投稿者プロフィールを編集する</a>
+          <label class="regist-add-form-edit-title">書いた人</label>
+          <a href="" class="author-edit-button">書いた人を編集する</a>
 
           <div id="myModal" class="modal fade">
             <div class="modal-dialog">
@@ -45,7 +44,7 @@
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
 
 
-                  <p class="withdrawal-title">投稿者プロフィール</p>
+                  <p class="withdrawal-title">書いた人</p>
 
                   <div class="form-group">
                     <label class="form-group-event-label">役職</label>
@@ -54,7 +53,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="form-group-event-label">名前</label>
+                    <label class="form-group-event-label">ニックネーム</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
                     <input style="height: 40px;" type="text" id="name" class="form-control" placeholder=""
                            value="{$author.name|default:''}">

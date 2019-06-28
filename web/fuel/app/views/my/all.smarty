@@ -43,7 +43,7 @@
           </div>
         {else}
           <div class="side-check-no-block">
-            <img class="check-no-title" src="/images/kinjo-check.png">
+            <!-- <img class="check-no-title" src="/images/kinjo-check.png"> -->
             <a href="/kinjo_check" target="_blank">
               <img class="check-no-link" src="/images/diagnosticchart/chart_main.jpg">
             </a>
