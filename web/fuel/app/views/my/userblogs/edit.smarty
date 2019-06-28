@@ -93,7 +93,7 @@
             {if $blog.code|default:'' != ''}
             {if $blog.status|default:'' == 0}
               <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
-<img class="post-illust" src="/images/my/report/post-illust.png">
+              <img class="post-illust sp" src="/images/my/report/post-illust.png">
             {else}
               <button id="apply" class="btn btn-kinyu" type="button" data-status="3" data-code="{$blog.code|default:''}">更新依頼する</button>
             {/if}
@@ -102,7 +102,6 @@
               {else}
                 <button id="apply_delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除依頼</button>
               {/if}
-
 
             {else}
               <button id="save_closed" class="btn btn-kinyu" type="button" data-status="0" data-code="{$blog.code|default:''}">下書きする</button>
@@ -135,10 +134,6 @@
 
         $('.thumbnail-img-block.post-thumbnail')
             .uploader('/api/redactor/upload/image', {
-                before: function () {
-                    //ローディングアニメーション
-                    $(".loader-block").fadeIn(500);
-                },
                 success: function (response) {
                     var url = response.data.url;
                     $('[name="main_image"]').val(url);
@@ -148,11 +143,6 @@
                         'background-repeat': 'no-repeat',
                         'background-size': 'cover'
                     });
-                    $(".loader-block").fadeOut(500);
-                },
-                error: function (error) {
-                    ts.error("アップロードに失敗しました");
-                    $(".loader-block").fadeOut(500);
                 }
             });
 
@@ -237,14 +227,9 @@
                 ts.error("本文を入力してください");
                 return false;
             }
-
-            $(".loader-block").fadeIn(500);
-
             ajax.post(url, params, function (data) {
                 ts.success("下書き保存が完了しました", function () {
                     location.href = "/my/userblogs";
-
-                    $(".loader-block").fadeOut(500);
                 });
             });
         });

@@ -2558,7 +2558,11 @@ a.author-edit-button {
 
 .member-blog-first-text img {
   max-width: 400px;
-      width: 100%;
+  width: 100%;
+}
+.post-illust {
+  max-width: 300px;
+  display: block;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
