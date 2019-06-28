@@ -37,7 +37,7 @@ footer,
   line-height: 30px;
   text-align: center;
 }
-.withcorporate-block-el .message-main span {
+.withcorporate-block-el .message-main .fs-plus {
   display: block;
   font-size: 20px;
   padding-bottom: 6px;
@@ -65,6 +65,19 @@ footer,
 	top: 0;
 	left: 0;
 	z-index:999;
+}
+.withcorporate-container .text-mark {
+	background: #fffed6;
+}
+.withcorporate-container .text-brackets {
+	/*padding-top: 20px;
+	display: block;*/
+}
+.withcorporate-container .text-brackets:before {
+	content: "「";
+}
+.withcorporate-container .text-brackets:after {
+	content: "」";
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -153,10 +166,13 @@ footer,
 	font-size: 14px;
 	line-height: 24px;
 }
-.message-main-area-el .message-text span {
+.message-main-area-el .message-text .fs-plus {
 	display: block;
 	font-size: 18px;
 	padding-bottom: 6px;
+}
+.withcorporate-block-el .message-text .fs-plus2 {
+	padding-bottom: 0px;
 }
 .message-main-area .img-block {
 	text-align: right;
@@ -495,9 +511,10 @@ footer,
   font-size: 12px;
   line-height: 20px;
 }
-.message-main-area-el .message-text span {
+.message-main-area-el .message-text .fs-plus {
   font-size: 16px;
-  padding-bottom: 6px;
+  padding-bottom: 0px;
+  display: initial;
 }
 .message-main-area .img-box {
   width: 100%;
@@ -633,7 +650,7 @@ footer,
   margin: 0 auto;
   text-align: left;
 }
-.withcorporate-block-el .message-main span {
+.withcorporate-block-el .message-main .fs-plus {
   font-size: 16px;
   padding-bottom: 6px;
 }
@@ -718,7 +735,7 @@ footer,
 	.message-main-area .message-main-area-el.img-block {
 		width: 35%;
 	}
-	.message-main-area-el .message-text span {
+	.message-main-area-el .message-text .fs-plus {
     display: block;
     font-size: 15px;
     padding-bottom: 6px;

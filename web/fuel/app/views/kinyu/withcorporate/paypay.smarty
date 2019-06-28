@@ -32,11 +32,11 @@
 	<div class="withcorporate-block-el cashless-description">
 		<p class="message-main cashless-animation1">
 			キャッシュレスが進む社会でも、女性たちの不安はなかなか消えない現状があります。<br><br>
-			こうした中で、コミュニティきんゆう女子。とPayPayは<br>
-			「女性にとって分かりやすい伝え方や機能などにもっと工夫が必要なのではないか?」<br>
+			こうした中で、コミュニティきんゆう女子。とPayPayは<br class="pc">
+			<span class="text-mark">「女性にとって分かりやすい伝え方や機能などにもっと工夫が必要なのではないか?」</span><br class="pc">
 			という同じ課題を抱えていました。<br><br>
-			また、便利で充実したキャッシュレスライフを提供するためには、<br>
-			実際にPayPayなどスマホアプリやQRコードで支払いをしている女性たちの声に耳を傾けて<br>サービスをブラッシュアップしていくことが大切なのでは?という共通の意識がありました。</p>
+			また、便利で充実したキャッシュレスライフを提供するためには、<br class="pc">
+			<span class="text-brackets">実際にPayPayなどスマホアプリやQRコードで支払いをしている<span class="text-mark">女性たちの声に耳を傾けて<br class="pc">サービスをブラッシュアップしていくことが大切なのでは?</span>という共通の意識がありました。</span></p>
 	
 		<div class="withcorporate-cashlessgraph-block cashless-animation1">
 			<img class="title-issue" src="/images/withcorporate/paypay/title-issue.png">
@@ -64,7 +64,7 @@
 						時代は現金がいらないキャッシュレス社会へ・・・<br><br>
 						女性たちがなかなかキャッシュレスに<br>
 						前向きになれないのは、なぜなのだろう<br><br>
-						<span>-たぶん、わたしたちは忙しすぎる。</span>
+						<span class="fs-plus">-たぶん、わたしたちは忙しすぎる。</span>
 						仕事に、家庭に、自分自身のケアも色々な役割を担って生きている。<br><br>
 						新しいことは、好きだし、変身願望はあるけれど<br>
 						思い切っていつもと違うことをするってやっぱり勇気がいる<br><br>
@@ -75,13 +75,13 @@
 						でも、お金や時間の余裕をつくることができて<br>
 						考えなくて済む分、今までできていなかったことや<br>
 						新しいことに頭を使えるなら、いいのかも？<br><br>
-						<span>キャッシュレスでできた余裕で、チャレンジしよう。</span>
+						<span class="fs-plus fs-plus2 text-mark">キャッシュレスでできた余裕で、チャレンジしよう。</span>
 					</p>
 				</div>
 
 				<div class="message-main-area-el img-block">
 					<div class="img-box message-animation3" style="background: url(/images/withcorporate/paypay/copy_img.png) left 20% center / cover no-repeat;"></div>
-					<img src="/images/withcorporate/paypay/challenge.png" class="text-challenge message-animation4">
+					<!-- <img src="/images/withcorporate/paypay/challenge.png" class="text-challenge message-animation4"> -->
 				</div>
 			</div>
 		</div>
@@ -92,15 +92,15 @@
 	<div class="withcorporate-block-el cashless-description">
 		
 		<p class="message-main cashless-animation1">
-			こういったキャッシュレスと女性の抱える課題の解決策を考えるべく、<br>
+			<span class="text-mark">こういったキャッシュレスと女性の抱える課題の解決策を考えるべく、</span><br>
 			きんゆう女子。 コミュニティから10名ほどのメンバーが集まりました。<br><br>
 			PayPayなどのスマホ決済を活用してキャッシュレスライフを体験し、課題解決のヒントを探ります。<br><br>
-			また、キャッシュレスでできたお金と時間のゆとりで、<br>
+			また、<span class="text-mark">キャッシュレスでできたお金と時間のゆとり<で、</span><br>
 			今までできなかったけれどやってみたかったこと、<br>
-			なかなか普段はできないことにチャレンジしてみたいと思います。<br><br>
-			<span>ーこれから必ずやってくるキャッシュレス社会。 </span>
+			なかなか<span class="text-mark">普段はできないことにチャレンジしてみたいと思います。</span><br><br>
+			<span class="fs-plus">ーこれから必ずやってくるキャッシュレス社会。 </span>
 			ちょっと不安だけど、新しい世界。<br>
-			ほとんど現金のいらない生活にみんなてですこしずつ慣れていきましょう。</p>
+			<span class="text-mark">ほとんど現金のいらない生活にみんなてですこしずつ慣れていきましょう。</span></p>
 
 		<div class="withcorporate-cashlesslife-block">
 			<img class="title-challenge cashless-animation1" src="/images/withcorporate/paypay/title-challenge.png">
@@ -159,6 +159,7 @@
 			<p class="twitter-left-tag">
 				<a  target="_blank" href="https://twitter.com/hashtag/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%AC%E3%82%B9%E3%81%A8%E7%A7%81?src=hash">#キャッシュレスと私</a>
 				<a  target="_blank" href="https://twitter.com/hashtag/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90?src=hash">#きんゆう女子</a>
+				<a  target="_blank" href="https://twitter.com/search?q=%23%E3%81%8D%E3%82%93%E5%A5%B3PayPay%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8&src=typd">#きん女PayPayチャレンジ</a>
 			</p>
 			<a class="twitter-link-block" href="https://twitter.com/kinjo_life" target="_blank">Twitterはこちら</a>
 		</div>
