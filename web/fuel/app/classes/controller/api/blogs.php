@@ -42,6 +42,8 @@ class Controller_Api_Blogs extends Controller_Base
             $blog_code = $params['code'];
             if ($user_blog_code = Input::post('user_blog_code', '')) {
                 UserBlogs::relate_blogs($blog_code, $user_blog_code);
+            } else {
+                $user_blog_code = UserBlogs::getCodeByBlogCode($blog_code);
             }
             if ($params['status'] == 0) {
                 UserBlogs::save(array(
@@ -79,6 +81,8 @@ class Controller_Api_Blogs extends Controller_Base
             $blog_code = $params['code'];
             if ($user_blog_code = Input::post('user_blog_code', '')) {
                 UserBlogs::relate_blogs($blog_code, $user_blog_code);
+            } else {
+                $user_blog_code = UserBlogs::getCodeByBlogCode($blog_code);
             }
             if ($params['status'] == 0) {
                 UserBlogs::save(array(
@@ -86,6 +90,7 @@ class Controller_Api_Blogs extends Controller_Base
                     'status' => 5,
                 ));
             } else {
+
                 UserBlogs::save(array(
                     'code' => $user_blog_code,
                     'status' => 1,

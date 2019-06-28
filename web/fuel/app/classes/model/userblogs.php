@@ -137,6 +137,23 @@ class UserBlogs extends Base
         return $result;
     }
 
+    public static function getCodeByBlogCode($blog_code)
+    {
+        $result = \DB::select(
+            \DB::expr('user_blogs.code')
+        )
+            ->from('user_blogs')
+            ->join('blog_user_blogs', 'left')
+            ->on('blog_user_blogs.user_blog_code', '=', 'user_blogs.code')
+            ->where('blog_user_blogs.blog_code', '=', $blog_code)
+            ->where('user_blogs.disable', '=', 0)
+            ->execute()->current();
+        if (empty($result)) {
+            return false;
+        }
+        return $result['code'];
+    }
+
     public static function findByCode($code)
     {
         $result = \DB::select(
