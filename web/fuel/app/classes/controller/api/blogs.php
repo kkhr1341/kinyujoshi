@@ -39,9 +39,16 @@ class Controller_Api_Blogs extends Controller_Base
             $params = Blogs::create($val->validated());
 
             // ユーザー投稿ブログテーブルとブログテーブルを関連づける
+            $blog_code = $params['code'];
             if ($user_blog_code = Input::post('user_blog_code', '')) {
-                $blog_code = $params['code'];
                 UserBlogs::relate_blogs($blog_code, $user_blog_code);
+            }
+            if ($params['status'] == 0) {
+                UserBlogs::save(array(
+                    'code' => $user_blog_code,
+                    'status' => 5,
+                ));
+            } else {
                 UserBlogs::save(array(
                     'code' => $user_blog_code,
                     'status' => 1,
@@ -69,9 +76,16 @@ class Controller_Api_Blogs extends Controller_Base
             $params = Blogs::save($val->validated());
 
             // ユーザー投稿ブログテーブルとブログテーブルを関連づける
+            $blog_code = $params['code'];
             if ($user_blog_code = Input::post('user_blog_code', '')) {
-                $blog_code = $params['code'];
                 UserBlogs::relate_blogs($blog_code, $user_blog_code);
+            }
+            if ($params['status'] == 0) {
+                UserBlogs::save(array(
+                    'code' => $user_blog_code,
+                    'status' => 5,
+                ));
+            } else {
                 UserBlogs::save(array(
                     'code' => $user_blog_code,
                     'status' => 1,

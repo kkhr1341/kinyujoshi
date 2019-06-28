@@ -2472,6 +2472,9 @@ border-bottom: 1px solid #dbf1ee;
 .status4 {
   background: rgb(226, 100, 100);
 }
+.status5 {
+    background: rgb(255, 100, 100);
+}
 
 .delete-color {
   background: rgb(226, 100, 100);

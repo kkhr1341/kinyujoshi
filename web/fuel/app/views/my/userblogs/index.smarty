@@ -23,6 +23,7 @@
                 {if $blog.status == 2}申請中{/if}
                 {if $blog.status == 3}更新依頼中{/if}
                 {if $blog.status == 4}削除依頼中{/if}
+                {if $blog.status == 5}確認中{/if}
               </p>
               <p class="member-blog-info-title">作成日時</p>
               <p class="member-blog-date">{$blog.created_at}</p>
