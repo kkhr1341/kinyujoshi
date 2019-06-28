@@ -92,18 +92,16 @@
           <div class="form-btn tx-center">
 
             {if $blog.code|default:'' != ''}
-            {if $blog.status|default:'' == 0}
-              <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
-            {else}
-              <button id="apply" class="btn btn-kinyu" type="button" data-status="3" data-code="{$blog.code|default:''}">更新依頼する</button>
-            {/if}
+              {if $blog.status|default:'' == 0 or $blog.blog_code|default:'' == ''}
+                <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
+              {else}
+                <button id="apply" class="btn btn-kinyu" type="button" data-status="3" data-code="{$blog.code|default:''}">更新依頼する</button>
+              {/if}
               {if $blog.blog_code|default:'' == ''}
                 <button id="delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除</button>
               {else}
                 <button id="apply_delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除依頼</button>
               {/if}
-
-
             {else}
               <button id="save_closed" class="btn btn-kinyu" type="button" data-status="0" data-code="{$blog.code|default:''}">下書きする</button>
               <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
