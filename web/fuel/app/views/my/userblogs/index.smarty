@@ -35,7 +35,7 @@
         {/foreach}
       </ul>
       {else}
-        <p>思ったことを書いてアウトプットしてみましょう♪</p>
+        <p class="member-blog-first-text"><img src="/images/my/report/first-illust.png"></p>
       {/if}
     </div>
   </div>

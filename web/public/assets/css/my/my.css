@@ -2473,7 +2473,7 @@ border-bottom: 1px solid #dbf1ee;
   background: rgb(226, 100, 100);
 }
 .status5 {
-    background: rgb(255, 100, 100);
+    background: rgb(164, 226, 117);
 }
 
 .delete-color {
@@ -2549,6 +2549,16 @@ a.author-edit-button {
 .member-post-btn img:hover {
   transform:scale(1.1);
   transition: .5s;
+}
+
+.member-blog-first-text {
+  text-align: center;
+  margin: 250px auto;
+}
+
+.member-blog-first-text img {
+  max-width: 400px;
+      width: 100%;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

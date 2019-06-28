@@ -1074,6 +1074,19 @@
   margin: 20px 0;
 }
 
+.member-blog-first-text {
+  text-align: center;
+  margin: 200px auto;
+}
+
+.post-illust {
+  width: 80%;
+}
+/*
+.post-illust img {
+  width: 80%;
+} */
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
