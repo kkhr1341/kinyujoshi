@@ -3,11 +3,13 @@
 
 <div class="admin-normal-side">
 
-  <a href="/my"><img class="my-pagetitle" src="/images/my/mypage-title.png"></a>
-
   <div class="side-profile-block">
 
     <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
+
+    {if (Auth::has_access('userblogs.create'))}
+    <div class="official-member-badge"><img src="/images/my/om-badge.png"></div>
+    {/if}
 
     <!-- プロフィール画像 -->
     <div class="img-box"
@@ -33,7 +35,7 @@
       </div>
     {else}
       <div class="side-check-no-block">
-        <img class="check-no-title" src="/images/kinjo-check.png">
+        <!-- <img class="check-no-title" src="/images/kinjo-check.png"> -->
         <a href="/kinjo_check" target="_blank">
           <img class="check-no-link" src="/images/diagnosticchart/chart_main.jpg">
         </a>
@@ -41,6 +43,10 @@
     {/if}
 
   </div>
+
+  {if (Auth::has_access('userblogs.create'))}
+  <a href="/my/userblogs"><img class="my-pagetitle" src="/images/my/userblogs-link-btn.png"></a>
+  {/if}
 
   <ul class="menu-list">
     {if in_array('admin', $roles) || in_array('editor', $roles)}

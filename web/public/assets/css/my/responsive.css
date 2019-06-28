@@ -186,8 +186,12 @@
 .btn {
   font-size: 12px;
   line-height: inherit;
-  padding: 10px 30px;
   font-weight: 400;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 20px;
+  margin-bottom: 20px;
 }
 
 .my-container {
@@ -1022,6 +1026,51 @@
 }
 .trend-link-utilization-notes .notes-main-title {
   font-weight: 400;
+}
+
+.member-post-btn {
+  position: fixed;
+  z-index: 99;
+  bottom: -25px;
+  right: -25px;
+}
+
+.official-member-badge {
+  display: block;
+}
+
+.my-pagetitle {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  レポート投稿申請機能
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.member-blog-list {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.member-blog-list li {
+  width: 100%;
+}
+
+#save_closed {
+  margin-right: 00px;
+}
+
+.thumbnail-img {
+    min-height: 200px;
+}
+
+.delete-color {
+  background: rgb(226, 100, 100);
+  padding: 8px 10px;
+  width: 40%;
+  margin: 20px 0;
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

@@ -84,8 +84,9 @@ return array(
 		0    => array('name' => 'Guests', 'roles' => array()),
 		1    => array('name' => 'メンバー', 'roles' => array('user')),
 		30   => array('name' => '編集者', 'roles' => array('user', 'editor')),
-		50   => array('name' => 'モデレーター', 'roles' => array('user', 'moderator')),
-		100  => array('name' => '管理者', 'roles' => array('user', 'moderator', 'admin')),
+		40   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'editor', 'official_member')),
+//		50   => array('name' => 'モデレーター', 'roles' => array('user', 'moderator')),
+		100  => array('name' => '管理者', 'roles' => array('user', 'editor', 'official_member', 'admin')),
 	),
 
 	/**
@@ -96,6 +97,7 @@ return array(
             'analysis' => array('read'),
             'applications' => array('read'),
             'authors' => array('read', 'create', 'edit', 'delete'),
+            'otherauthors' => array('read', 'create', 'edit', 'delete'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
             'applications' => array('read', 'create', 'edit', 'delete'),
@@ -104,12 +106,24 @@ return array(
             'registlist' => array('read', 'create'),
             'registreminder' => array('send'),
             'remindmailtemplates' => array('read', 'edit'),
+            'userblogs' => array('read', 'create', 'edit', 'delete'),
         ),
         'editor' => array(
             'analysis' => array('read'),
             'blogs' => array('read', 'create', 'edit', 'delete'),
             'events' => array('read', 'create', 'edit', 'delete'),
             'news' => array('read', 'create', 'edit', 'delete'),
+            'authors' => array('read', 'create', 'edit', 'delete'),
+            'userblogs' => array('read', 'create', 'edit', 'delete'),
+        ),
+
+        'official_member' => array(
+            'authors' => array('read', 'create', 'edit', 'delete'),
+            'userblogs' => array('read', 'create', 'edit', 'delete'),
+        ),
+
+        'user' => array(
+            'authors' => array('read', 'create', 'edit', 'delete'),
         ),
 		
 		/**

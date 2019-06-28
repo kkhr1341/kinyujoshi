@@ -16,7 +16,9 @@ class Controller_Api_Authors extends Controller_Base
             return $this->error($message);
         }
         try {
-            return $this->ok(Authors::create($val->validated()));
+            $params = $val->validated();
+            $params['username'] = \Auth::get('username');
+            return $this->ok(Authors::create($params));
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }
@@ -34,7 +36,16 @@ class Controller_Api_Authors extends Controller_Base
             return $this->error($message);
         }
         try {
-            return $this->ok(Authors::save($val->validated()));
+            $params = $val->validated();
+
+            if ($author = Authors::get_by_username(\Auth::get('username'))) {
+                $params['code'] = $author['code'];
+                return $this->ok(Authors::save($params));
+
+            } else {
+                $params['username'] = \Auth::get('username');
+                return $this->ok(Authors::create($params));
+            }
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }

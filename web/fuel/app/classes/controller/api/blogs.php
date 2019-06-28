@@ -1,6 +1,7 @@
 <?php
 
 use \Model\Blogs;
+use \Model\UserBlogs;
 
 class Controller_Api_Blogs extends Controller_Base
 {
@@ -35,7 +36,19 @@ class Controller_Api_Blogs extends Controller_Base
             return $this->error($message);
         }
         try {
-            return $this->ok(Blogs::create($val->validated()));
+            $params = Blogs::create($val->validated());
+
+            // ユーザー投稿ブログテーブルとブログテーブルを関連づける
+            if ($user_blog_code = Input::post('user_blog_code', '')) {
+                $blog_code = $params['code'];
+                UserBlogs::relate_blogs($blog_code, $user_blog_code);
+                UserBlogs::save(array(
+                    'code' => $user_blog_code,
+                    'status' => 1,
+                ));
+            }
+
+            return $this->ok($params);
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         }
@@ -53,9 +66,21 @@ class Controller_Api_Blogs extends Controller_Base
             return $this->error($message);
         }
         try {
-            return $this->ok(Blogs::save($val->validated()));
+            $params = Blogs::save($val->validated());
+
+            // ユーザー投稿ブログテーブルとブログテーブルを関連づける
+            if ($user_blog_code = Input::post('user_blog_code', '')) {
+                $blog_code = $params['code'];
+                UserBlogs::relate_blogs($blog_code, $user_blog_code);
+                UserBlogs::save(array(
+                    'code' => $user_blog_code,
+                    'status' => 1,
+                ));
+            }
+
+            return $this->ok($params);
         } catch(Exception $e) {
-            return $this->error("保存に失敗しました。");
+            return $this->error($e->getMessage());
         }
     }
 

@@ -73,9 +73,9 @@
                 <a href="/admin/mails">メールテンプレート一覧</a>
               </li>
 
-              {if (Auth::has_access('authors.read'))}
+              {if (Auth::has_access('otherauthors.read'))}
               <li>
-                <a href="/admin/authors">作成者の管理</a>
+                <a href="/admin/otherauthors">作成者の管理</a>
               </li>
               {/if}
               {if (in_array('admin', $roles) && $from_company==TRUE)}

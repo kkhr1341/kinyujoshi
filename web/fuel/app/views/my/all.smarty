@@ -4,12 +4,15 @@
 
     {$my_side}
 
-    
+
     <!-- プロフィール部分 -->
     <div class="my-profile-block-sp sp">
 
       <div class="side-profile-block">
 
+        {if (Auth::has_access('userblogs.create'))}
+        <div class="official-member-badge"><img src="/images/my/om-badge.png"></div>
+        {/if}
         <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
 
         <!-- プロフィール画像 -->
@@ -40,7 +43,7 @@
           </div>
         {else}
           <div class="side-check-no-block">
-            <img class="check-no-title" src="/images/kinjo-check.png">
+            <!-- <img class="check-no-title" src="/images/kinjo-check.png"> -->
             <a href="/kinjo_check" target="_blank">
               <img class="check-no-link" src="/images/diagnosticchart/chart_main.jpg">
             </a>
@@ -50,6 +53,7 @@
       </div>
     </div>
 
+    <a href="/my/userblogs"><img class="my-pagetitle" src="/images/my/userblogs-link-btn.png"></a>
 
     <div class="admin-normal-main my-top-content">
 

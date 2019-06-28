@@ -4,20 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<link type="image/x-icon" rel="shortcut icon" href="/images/favicon_my.png">
-	<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>{$title}</title>
+  <link type="image/x-icon" rel="shortcut icon" href="/images/favicon_my.png">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>{$title}</title>
   <link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet" />
-	{Asset::render('layout')}
-
-  <!-- 紙吹雪 -->
-  <!-- <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
-  <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script> -->
-
+  {Asset::render('layout')}
   {$ga}
 </head>
 <body class="drawer drawer--left">
-  <!-- <canvas id="canvas"></canvas> -->
 
 {$pc_header}
 
@@ -47,14 +41,6 @@
   <div class="admin-normal-navigation admin-normal-side">
     <p class="admin-menu-title">マイページ・メニュー</p>
     <ul class="menu-list">
-      <!-- <li class="item navi_kinyu-menu-li01"><a href="/my">マイページ・トップ</a></li>
-      <li class="item navi_kinyu-menu-li02"><a href="/my/kinjo">参加予定の女子会</a></li>
-      <li class="item navi_kinyu-menu-li03"><a href="/my/passport">きん女。パスポート</a></li>
-      <li class="item navi_kinyu-menu-li04"><a href="/my/member_joshikai">メンバー限定女子会</a></li>
-      <li class="item navi_kinyu-menu-li05"><a href="/my/report">チェックしたレポート</a></li>
-      <li class="item navi_kinyu-menu-li06"><a href="/my/profile">プロフィール編集</a></li>
-      <li class="item navi_kinyu-menu-li07"><a href="/my/account">アカウント情報</a></li>
-      <li class="item navi_kinyu-menu-li08"><a href="/logout">ログアウト</a></li> -->
 
       <li><a href="/my">マイページ・トップ</a></li>
       <li><a href="/my/member_report">メンバー限定レポート</a></li>
@@ -64,6 +50,9 @@
       <li><a href="/my/oshiete">教えて！きん女。</a></li>
       <li><a href="/my/trend">トレンド</a></li>
       <li><a href="/my/account">アカウント設定</a></li>
+      {if (Auth::has_access('userblogs.create'))}
+      <li><a href="/my/userblogs">レポート申請</a></li>
+      {/if}
       <li><a href="/logout">ログアウト</a></li>
 
     </ul>
