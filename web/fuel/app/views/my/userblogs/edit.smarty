@@ -46,7 +46,7 @@
 
                   <p class="withdrawal-title">書いた人</p>
 
-                  <div class="form-group">
+                  <div class="form-group" style="display: none">
                     <label class="form-group-event-label">役職</label>
                     <input style="height: 40px;" type="text" id="position" class="form-control" placeholder=""
                            value="{$author.position|default:''}">
