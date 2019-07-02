@@ -223,7 +223,7 @@
         <div class="special-content-wrapper">
           <h3 class="kinyu-top-main-title"><img class="special_title" src="/images/special_title.png"></h3>
           <p>スペシャルコンテンツ</p>
-          <div class="special-contents-banner"><a href="/contents/cashless"><img src="/images/og-cashless.png"></a></div>
+          <div class="special-contents-banner"><a href="/contents/cashless" target="_blank"><img src="/images/og-cashless.png"></a></div>
           <!-- <div class="video">
           <iframe class="special-content-video"src="https://player.vimeo.com/video/328099799"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
           </div> -->
