@@ -130,6 +130,9 @@ return array(
 	'daijoshikai2018' => 'kinyu/campaign/daijoshikai2018',
 	'school_jpx02' => 'kinyu/campaign/school_02',
 
+	//きんゆう女子。with コーポレート
+	'contents/cashless' => 'kinyu/withcorporate/paypay',
+
 	'blog/page/(:any)'   => 'kinyu/blog/page/index/$1',
 	'event/page/(:any)'   => 'kinyu/event/page/index/$1',
 	'project'   => 'kinyu/project/index',

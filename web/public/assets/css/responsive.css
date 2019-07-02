@@ -6745,7 +6745,7 @@ footer .navi_kinyu-submenu-el a {
   .navi_kinyu-submenu-copy {
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-bottom: 80px;
+    padding: 10px;
     background: #f9f9f9;
   }
 

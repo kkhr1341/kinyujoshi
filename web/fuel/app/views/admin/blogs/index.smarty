@@ -14,9 +14,9 @@
 	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
 	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
 
-    <li><a href="#tab5" data-toggle="tab"><span>{$apply_blogs|@count}</span>申請中</a></li>
-    <li><a href="#tab6" data-toggle="tab"><span>{$update_blogs|@count}</span>更新依頼中</a></li>
-	<li><a href="#tab7" data-toggle="tab"><span>{$delete_blogs|@count}</span>削除依頼中</a></li>
+    <li><a href="#tab5" data-toggle="tab"><span class="count-badge">{$apply_blogs|@count}</span>申請中</a></li>
+    <li><a href="#tab6" data-toggle="tab"><span class="count-badge">{$update_blogs|@count}</span>更新依頼中</a></li>
+	<li><a href="#tab7" data-toggle="tab"><span class="count-badge">{$delete_blogs|@count}</span>削除依頼中</a></li>
 
 </ul>
 <div class="tab-content">
@@ -81,6 +81,7 @@
 					{if $blogs_item.status == 2}申請中{/if}
 					{if $blogs_item.status == 3}更新依頼中{/if}
 					{if $blogs_item.status == 4}削除依頼中{/if}
+					{if $blogs_item.status == 5}確認中{/if}
 				</td>
 				<td>
 					{$blogs_item.section_code}
@@ -117,6 +118,7 @@
 					{if $blogs_item.status == 2}申請中{/if}
 					{if $blogs_item.status == 3}更新依頼中{/if}
 					{if $blogs_item.status == 4}削除依頼中{/if}
+					{if $blogs_item.status == 5}確認中{/if}
 				</td>
 				<td>
 					{$blogs_item.section_code}
@@ -153,6 +155,7 @@
 					{if $blogs_item.status == 2}申請中{/if}
 					{if $blogs_item.status == 3}更新依頼中{/if}
 					{if $blogs_item.status == 4}削除依頼中{/if}
+					{if $blogs_item.status == 5}確認中{/if}
 				</td>
 				<td>{$blogs_item.section_code}</td>
 				<td>{$blogs_item.title}</td>
@@ -183,6 +186,7 @@
 							{if $user_blogs_item.status == 2}申請中{/if}
 							{if $user_blogs_item.status == 3}更新依頼中{/if}
 							{if $user_blogs_item.status == 4}削除依頼中{/if}
+							{if $user_blogs_item.status == 5}確認中{/if}
 						</td>
 						<td>{$user_blogs_item.title}</td>
 						<td>{$user_blogs_item.created_at|date_format:"%Y/%m/%d"}</td>
@@ -215,6 +219,7 @@
 							{if $user_blogs_item.status == 2}申請中{/if}
 							{if $user_blogs_item.status == 3}更新依頼中{/if}
 							{if $user_blogs_item.status == 4}削除依頼中{/if}
+							{if $user_blogs_item.status == 5}確認中{/if}
 						</td>
 						<td>{$user_blogs_item.title}</td>
 						<td>{$user_blogs_item.created_at|date_format:"%Y/%m/%d"}</td>
@@ -245,6 +250,7 @@
 							{if $user_blogs_item.status == 2}申請中{/if}
 							{if $user_blogs_item.status == 3}更新依頼中{/if}
 							{if $user_blogs_item.status == 4}削除依頼中{/if}
+							{if $user_blogs_item.status == 5}確認中{/if}
 						</td>
 						<td>{$user_blogs_item.title}</td>
 						<td>{$user_blogs_item.created_at|date_format:"%Y/%m/%d"}</td>

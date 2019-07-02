@@ -26,7 +26,7 @@
           {foreach from=$events.datas key="key" item=event name=loopname}
           {$fooo = $event.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-          
+
           <li{if $event.pr == 1} class="pr"{/if}>
             {if $event.event_category == "女子会"}
               <div class="bg-joshikai"></div>
@@ -48,7 +48,7 @@
                   <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
                 {/if}
                 </div>
-                
+
                 {if $event.event_category == "女子会"}
                   <div class="kinyu-event-list-right">
                 {else if $event.event_category == "スペシャル"}
@@ -117,7 +117,7 @@
 
         {*
         <div class="joshikai-held-area">
-          <p class="joshikai-held-area-title">主に女子会を開催している場所</p>          
+          <p class="joshikai-held-area-title">主に女子会を開催している場所</p>
           <div class="joshikai-held-el-block">
             <div class="joshikai-held-el clear">
               <p class="joshikai-held-place-area kabutocho">ー 兜町 ー</p>
@@ -167,14 +167,14 @@
               <div class="text-area"><p>【伊東編】大江戸温泉できんゆう女子会。</p></div>
             </a>
           </li>
-          
+
           <li>
             <a href="/daijoshikai2018" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special9.jpg) center center / cover no-repeat"></div>
               <div class="text-area"><p>東証ひみつの大女子会♪ 2018</p></div>
             </a>
           </li>
-          
+
           <li>
             <a href="/school_jpx02" target="_blank">
               <div class="bg-area" style="background:url(/images/content/school_public/og-school_public02.jpg) left top / cover no-repeat"></div>
@@ -188,9 +188,9 @@
               <div class="text-area"><p>Kinjo1000 Celebration - メンバー1000名達成女子会♪</p></div>
             </a>
           </li>
-          
+
           <li>
-            <a href="http://ac.nikkeibp.co.jp/2017z1105finw/" target="_blank">
+            <a href="https://kinyu-joshi.jp/report/Qqc6pg" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special7.jpg) left center / cover no-repeat"></div>
               <div class="text-area"><p>お金と私をアップデート 2017 autumn</p></div>
             </a>
@@ -218,7 +218,7 @@
           </li>
 
           <li>
-            <a href="http://ac.nikkeibp.co.jp/2017x0422finw/" target="_blank">
+            <a href="https://kinyu-joshi.jp/report/zHrTTH" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special3.png) center center / cover no-repeat"></div>
               <div class="text-area"><p>お金と私をアップデート 2017 spring</p></div>
             </a>
@@ -243,5 +243,3 @@
     </div>
   </div>
 </div>
-
-

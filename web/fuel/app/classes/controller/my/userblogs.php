@@ -9,12 +9,17 @@ use \Model\DiagnosticChartRouteTypeActionLists;
 class Controller_My_Userblogs extends Controller_Mybase
 {
 
+    public function before()
+    {
+        parent::before();
+        if (!Auth::has_access('userblogs.read')) {
+            throw new HttpNoAccessException;
+        }
+    }
+
     public function action_index()
     {
         $username = \Auth::get('username');
-        if (!Authors::get_by_username($username)) {
-            return $this->error("オーサーの登録がされておりません。");
-        }
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
 
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
@@ -33,9 +38,11 @@ class Controller_My_Userblogs extends Controller_Mybase
 
     public function action_create()
     {
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $username = \Auth::get('username');
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+
+        $this->data['author'] = Authors::get_by_username($username);
 
         $this->template->title = 'お気に入り｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -48,10 +55,11 @@ class Controller_My_Userblogs extends Controller_Mybase
     }
     public function action_edit($code)
     {
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $username = \Auth::get('username');
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
 
+        $this->data['author'] = Authors::get_by_username($username);
         $this->data['blog'] = UserBlogs::getByCodeAndUserName($code, $username);
 
         $this->template->title = 'お気に入り｜きん女。マイページ';

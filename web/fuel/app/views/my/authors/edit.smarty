@@ -7,7 +7,7 @@
       <form name="form1">
         <div class="singlepage-form-block">
 
-          <p class="withdrawal-title">オーサー</p>
+          <p class="withdrawal-title">投稿者プロフィール</p>
 
           <div class="form-group">
             <label class="form-group-event-label">役職</label>

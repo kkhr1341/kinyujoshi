@@ -7,16 +7,16 @@
       <form name="form1">
         <div class="singlepage-form-block">
 
-          <p class="withdrawal-title">投稿申請</p>
+          <p class="withdrawal-title">どんなことをやったのか、<br>みんなに教えたいことを書いてね</p>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">タイトル</label>
+            <label class="regist-add-form-edit-title">一番心に残ったこと</label>
             <input type="text" name="title" class="form-control" value="{$blog.title|default:''}" />
           </div>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">投稿画像</label>
-            <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
+            <label class="regist-add-form-edit-title">その時の写真</label>
+            <a href="" class="thumbnail-img-block post-thumbnail">画像を投稿 / 変更</a>
             <input type="hidden" name="main_image" value="{$blog.main_image|default:''}">
             {if $blog.main_image|default:''}
               <div class="thumbnail-img"
@@ -32,27 +32,87 @@
             <textarea data-type="text" name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
           </div>
 
+
+          <label class="regist-add-form-edit-title">書いた人</label>
+          <a href="" class="author-edit-button">書いた人を編集する</a>
+
+          <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- dialog body -->
+                <div class="modal-body">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+                  <p class="withdrawal-title">書いた人</p>
+
+                  <div class="form-group" style="display: none">
+                    <label class="form-group-event-label">役職</label>
+                    <input style="height: 40px;" type="text" id="position" class="form-control" placeholder=""
+                           value="{$author.position|default:''}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-group-event-label">ニックネーム</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
+                    <input style="height: 40px;" type="text" id="name" class="form-control" placeholder=""
+                           value="{$author.name|default:''}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-group-event-label">プロフィール画像</label>
+                    <a href="" class="thumbnail-img-block author-thumbnail">サムネイル画像を投稿 / 変更</a>
+                    <input type="hidden" id="author-profile_image" value="{$author.profile_image|default:''}">
+
+                    <!-- サムネイル画像を投稿するとここに表示される！ -->
+                    {if $author.profile_image|default:''}
+                      <div class="author-thumbnail-img"
+                           style="background:url({$author.profile_image}) center center / cover no-repeat;"></div>
+                    {else}
+                      <div class="author-thumbnail-img" style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"></div>
+                    {/if}
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-group-event-label">自己紹介</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
+                    <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
+                              placeholder="">{$author.introduction|default:''}</textarea>
+                  </div>
+
+                  <div class="form-btn tx-center">
+                    <button class="btn btn-kinyu" type="button" id="author-save">保存する</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="form-btn tx-center">
-
             {if $blog.code|default:'' != ''}
-
+            {if $blog.status|default:'' == 0}
+              <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
+              <img class="post-illust sp" src="/images/my/report/post-illust.png">
+            {else}
+              <button id="apply" class="btn btn-kinyu" type="button" data-status="3" data-code="{$blog.code|default:''}">更新依頼する</button>
+            {/if}
               {if $blog.blog_code|default:'' == ''}
-                <button id="delete" class="btn btn-kinyu" type="button" data-status="4" data-code="{$blog.code|default:''}">削除</button>
+                <button id="delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除</button>
               {else}
-                <button id="apply_delete" class="btn btn-kinyu" type="button" data-status="4" data-code="{$blog.code|default:''}">削除依頼</button>
+                <button id="apply_delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除依頼</button>
               {/if}
 
-              {if $blog.status|default:'' == 0}
-                <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
-              {else}
-                <button id="apply" class="btn btn-kinyu" type="button" data-status="3" data-code="{$blog.code|default:''}">更新依頼する</button>
-              {/if}
             {else}
               <button id="save_closed" class="btn btn-kinyu" type="button" data-status="0" data-code="{$blog.code|default:''}">下書きする</button>
               <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">申請する</button>
             {/if}
           </div>
         </div>
+
+
+
+
       </form>
     </div>
   </div>
@@ -60,7 +120,19 @@
 
 <script>
     $(function () {
-        $('.thumbnail-img-block')
+
+        // メール一斉送信
+        var $modal = $("#myModal");
+        $(".author-edit-button").on("click", function (e) {
+            e.preventDefault();
+            $modal.modal({
+                "backdrop": "static",
+                "keyboard": true,
+                "show": true
+            });
+        })
+
+        $('.thumbnail-img-block.post-thumbnail')
             .uploader('/api/redactor/upload/image', {
                 success: function (response) {
                     var url = response.data.url;
@@ -161,5 +233,53 @@
                 });
             });
         });
+
+        $('.thumbnail-img-block.author-thumbnail')
+            .uploader('/api/redactor/upload/image', {
+                success: function (response) {
+                    var url = response.data.url;
+                    $('#author-profile_image').val(url);
+                    $('.author-thumbnail-img').css({
+                        'background-image': 'url(' + url + ')',
+                        'background-position': 'center center',
+                        'background-repeat': 'no-repeat',
+                        'background-size': 'cover'
+                    });
+                }
+            });
+
+        $('#author-save').click(function () {
+            var url = "/api/authors/save";
+            var params = {
+                "position": $('#position').val(),
+                "name": $('#name').val(),
+                "profile_image": $('#author-profile_image').val(),
+                "introduction": $('#introduction').val()
+            };
+
+            if (params.position == "") {
+                ts.error("役職を入力してください");
+                return false;
+            }
+            if (params.name == "") {
+                ts.error("名前を入力してください");
+                return false;
+            }
+            if (params.profile_image == "") {
+                ts.error("プロフィール画像を入力してください");
+                return false;
+            }
+            if (params.introduction == "") {
+                ts.error("自己紹介を入力してください");
+                return false;
+            }
+
+            ajax.post(url, params, function (data) {
+                ts.success("オーサーの更新が完了しました");
+                $modal.modal('hide');
+            });
+        });
+
+
     });
 </script>
