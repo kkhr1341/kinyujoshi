@@ -413,6 +413,7 @@ footer,
 .twitter-left {
 	width: 50%;
 	text-align: center;
+	padding-top: 40px;
 }
 .twitter-left-accoount-link {
 	display: block;
@@ -687,6 +688,7 @@ footer,
 .twitter-left,
 .twitter-right {
 	width: 100%;
+	padding-top: 0px;
 }
 .twitter-right {
   margin-top: 24px;
