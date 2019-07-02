@@ -1900,6 +1900,15 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   height: 100%;
 }
 
+.special-contents-banner img {
+  width: 100%;
+  margin-top: 30px;
+}
+.special-contents-banner a:hover {
+  transition: .5s;
+  opacity: .8; 
+}
+
 /* INSTAGRAM */
 .report-detail-sidebar-el .insta-el li {
   width: 33%;
