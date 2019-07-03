@@ -1024,11 +1024,10 @@
   　スペシャルコンテンツ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .special-content-wrapper {
-
+    padding: 40px 30px;
 }
-
 .special_title {
-  max-width: 200px;
+  max-width: 150px;
   padding-bottom: 5px;
   border-bottom: 1px solid #333;
   margin-bottom: 0px;
