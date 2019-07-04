@@ -86,12 +86,12 @@
                 <div class="form-group">
                     <label class="form-group-event-label">サムネイル画像</label>
                     <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
-                    <input type="hidden" id="main_image" value="{$blogs.main_image}">
+                    <input type="hidden" id="main_image" value="{$blogs.main_image|default:''}">
 
                     <!-- サムネイル画像を投稿するとここに表示される！ -->
-                    {if $blogs.main_image}
+                    {if $blogs.main_image|default:''}
                         <div class="thumbnail-img"
-                             style="background:url({$blogs.main_image}) center center / cover no-repeat;"></div>
+                             style="background:url({$blogs.main_image|default:''}) center center / cover no-repeat;"></div>
                     {else}
                         <div class="thumbnail-img"></div>
                     {/if}
