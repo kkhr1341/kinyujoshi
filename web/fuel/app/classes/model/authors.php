@@ -63,8 +63,7 @@ class Authors extends Base
         $val->add('name', '名前')
             ->add_rule('required');
 
-        $val->add('profile_image', 'プロフィール画像')
-            ->add_rule('required');
+        $val->add('profile_image', 'プロフィール画像');
 
         $val->add('introduction', '自己紹介')
             ->add_rule('required');
