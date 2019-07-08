@@ -276,7 +276,7 @@
             }
 
             ajax.post(url, params, function (data) {
-                ts.success("オーサーの更新が完了しました");
+                ts.success("プロフィールの更新が完了しました");
                 $modal.modal('hide');
             });
         });
