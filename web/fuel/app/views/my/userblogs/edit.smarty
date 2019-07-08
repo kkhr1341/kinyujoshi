@@ -10,7 +10,7 @@
           <p class="withdrawal-title">どんなことをやったのか、<br>みんなに教えたいことを書いてね</p>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">一番心に残ったこと</label>
+            <label class="regist-add-form-edit-title">一番心に残ったこと<span style="color:red;">*</span></label>
             <input type="text" name="title" class="form-control" value="{$blog.title|default:''}" />
           </div>
 
@@ -28,12 +28,12 @@
           </div>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">本文</label>
+            <label class="regist-add-form-edit-title">本文<span style="color:red;"></label>
             <textarea data-type="text" name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
           </div>
 
 
-          <label class="regist-add-form-edit-title">書いた人</label>
+          <label class="regist-add-form-edit-title">書いた人<span style="color:red;">*</span></label>
           <a href="" class="author-edit-button">書いた人を編集する</a>
 
           <div id="myModal" class="modal fade">
@@ -53,14 +53,14 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="form-group-event-label">ニックネーム</label>
+                    <label class="form-group-event-label">ニックネーム<span style="color:red;">*</span></label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
                     <input style="height: 40px;" type="text" id="name" class="form-control" placeholder=""
                            value="{$author.name|default:''}">
                   </div>
 
                   <div class="form-group">
-                    <label class="form-group-event-label">プロフィール画像</label>
+                    <label class="form-group-event-label">プロフィール画像<span style="color:red;">*</span></label>
                     <a href="" class="thumbnail-img-block author-thumbnail">サムネイル画像を投稿 / 変更</a>
                     <input type="hidden" id="author-profile_image" value="{$author.profile_image|default:''}">
 
@@ -74,7 +74,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="form-group-event-label">自己紹介</label>
+                    <label class="form-group-event-label">自己紹介<span style="color:red;">*</span></label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
                     <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
                               placeholder="">{$author.introduction|default:''}</textarea>
