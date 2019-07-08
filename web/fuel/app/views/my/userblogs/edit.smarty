@@ -28,7 +28,7 @@
           </div>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">本文<span style="color:red;"></label>
+            <label class="regist-add-form-edit-title">本文<span style="color:red;">*</span></label>
             <textarea data-type="text" name="content" class='form-control' rows="10">{$blog.content|default:''}</textarea>
           </div>
 
