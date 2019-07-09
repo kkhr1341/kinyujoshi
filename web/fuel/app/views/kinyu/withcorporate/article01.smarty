@@ -1,0 +1,74 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/withcorporate.css">
+<script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
+
+<div class="withcorporate-container">
+	
+	<div class="withcorporate-main-logo logo-animation" style="background:#283248;">
+		<img src="/images/withcorporate/paypay/logo_w.png">
+	</div>
+
+	<div class="article-bg">
+		<div class="article-bg-img fix-animation1" style="background:gray;"></div>
+		<div class="text-area">
+			<h2 class="article-maincopy article-animation-top-left">いつもとは違う、<br class="sp">女優メイクに挑戦</h2>
+			<p class="article-name article-animation-top-left2"><span>商品企画</span>木村 真紀</p>
+		</div>
+	</div>
+
+	<div class="article-contents-block">
+		
+
+		<div class="article-contents-title">
+			<img class="article-animation-episode" src="/images/withcorporate/paypay/article/episode1.png">
+			<p class="article-animation-episode2">“キャッシュレスで<br class="sp">心も体も身軽になった”</p>
+		</div>
+
+		<div class="article-contents-el clear">
+			<div class="img-box article-animation-left" style="background:#283248;"></div>
+			<div class="text-box">
+				<p class="article-contents-el-title article-animation-left1">普段はなかなか挑戦できない、<br>ちょっと背伸びしたメイクを。</p>
+				<p class="article-contents-el-description article-animation-left2">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el clear">
+			<div class="img-box article-animation-right" style="background:#283248;"></div>
+			<div class="text-box">
+				<p class="article-contents-el-title article-animation-right1">普段はなかなか挑戦できない、<br>ちょっと背伸びしたメイクを。</p>
+				<p class="article-contents-el-description article-animation-right2">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<div class="twitter-block cashless-animation1">
+		<div class="twitter-left">
+			<img class="twitter-left-img" src="https://pbs.twimg.com/profile_images/1140873966002692096/-5z-JGhm_400x400.jpg">
+			<a  target="_blank" class="twitter-left-accoount-link" href="https://twitter.com/kinjo_life">@kinjo_life</a>
+			<p class="twitter-left-tag">
+				<a  target="_blank" href="https://twitter.com/hashtag/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%AC%E3%82%B9%E3%81%A8%E7%A7%81?src=hash">#キャッシュレスと私</a>
+				<a  target="_blank" href="https://twitter.com/hashtag/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90?src=hash">#きんゆう女子</a>
+				<a  target="_blank" href="https://twitter.com/search?q=%23%E3%81%8D%E3%82%93%E5%A5%B3PayPay%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8&src=typd">#きん女PayPayチャレンジ</a>
+			</p>
+			<a class="twitter-link-block" href="https://twitter.com/kinjo_life" target="_blank">Twitterはこちら</a>
+		</div>
+		<div class="twitter-right">
+			<a class="twitter-timeline" width="350px" height="450px" href="https://twitter.com/kinjo_life?ref_src=twsrc%5Etfw">Tweets by kinjo_life</a>
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+
+	<div class="page-announce cashless-animation1">
+		<p>本サイトは、パートナーとともに、きんゆう女子。コミュニティが企画・制作しているページです。<br>
+			運営会社:TOE THE LINE（きんゆう女子。） https://toetheline.jp/<br>
+			パートナー:PayPay株式会社 https://paypay.ne.jp/
+		</p>
+	</div>
+	<footer class="withcorporate-footer">
+		<p>© TOE THE LINE Inc. 2019　All rights reserved.</p>
+	</footer>
+</div>
+
+<script type='text/javascript' src="/assets/js/kinyu/scrollanimation.js"></script>
