@@ -8,7 +8,15 @@
 	</div>
 
 	<div class="article-bg">
-		<div class="article-bg-img fix-animation1" style="background:gray;"></div>
+
+		<div class="article-bg-img fix-animation1">
+			<ul>
+				<li style="background: url(/images/withcorporate/paypay/article/article01_bg01.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article/article01_bg02.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article/article01_bg03.jpg) center center / cover no-repeat;"></li>
+			</ul>
+		</div>
+
 		<div class="text-area">
 			<h2 class="article-maincopy article-animation-top-left">いつもとは違う、<br class="sp">女優メイクに挑戦</h2>
 			<p class="article-name article-animation-top-left2"><span>商品企画</span>木村 真紀</p>
