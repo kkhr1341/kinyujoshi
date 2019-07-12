@@ -28,7 +28,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
         unset($params['page']);
 
         // 一般ユーザーのみを対象とする
-        $params['group'] = array(1);
+        $params['group'] = array(1, 40);
 
         $this->data['registlist'] = Regist::all('/admin/registlist/?' . http_build_query($params), Input::get('page', 1), 'page', 30, $params);
         $pagination = $this->data['registlist']['pagination'];
