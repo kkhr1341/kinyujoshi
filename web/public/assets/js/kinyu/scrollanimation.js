@@ -33,3 +33,23 @@ ScrollReveal().reveal('.article-animation-left2', { easing: 'ease', origin: 'top
 ScrollReveal().reveal('.article-animation-right', { easing: 'ease', origin: 'right', delay: 300, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.article-animation-right1', { easing: 'ease', origin: 'top', delay: 600, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.article-animation-right2', { easing: 'ease', origin: 'top', delay: 900, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+
+
+$(function(){
+	// 設定
+	var windowWidth = $(window).width();
+	var slideheight = $('.article-bg').height();
+	var $width = windowWidth; // 横幅
+	var $height = slideheight; // 高さ
+	var $interval = 4000; // 切り替わりの間隔（ミリ秒）
+	var $fade_speed = 3000; // フェード処理の早さ（ミリ秒）
+	$(".article-bg-img ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".article-bg-img ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".article-bg-img ul li:first").addClass("active").show();
+	setInterval(function(){
+	var $active = $(".article-bg-img ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".article-bg-img ul li:first");
+	$active.fadeOut($fade_speed).removeClass("active");
+	$next.fadeIn($fade_speed).addClass("active");
+	},$interval);
+});
