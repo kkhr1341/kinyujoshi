@@ -586,8 +586,8 @@ footer,
 	display: block;
 	width: 200px;
 	text-align: center;
-	display: flex;
 	display: -webkit-flex;
+	display: flex;
 	padding: 8px 12px;
 }
 .sns-share-block a img {
