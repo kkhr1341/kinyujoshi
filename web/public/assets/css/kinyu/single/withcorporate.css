@@ -434,8 +434,7 @@ footer,
 	display: block;
 	width: 100px;
 	text-align: center;
-	background: #4AB3F4;
-	/*background: #a8d6d9;*/
+	background: #87e1f9;;
 	color: #fff;
 	margin: 0 auto;
 	padding: 8px 50px;
@@ -558,6 +557,45 @@ footer,
 	float: left;
 	padding-left: 0px;
 	padding-right: 40px;
+}
+.kinjo-logo {
+	width: 250px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+.sns-share-container {
+	margin-top: 70px;
+}
+.sns-share-title {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 24px;
+}
+.kinjo-logo img {
+	width: 100%;
+}
+.sns-share-block {
+	text-align: center;
+}
+.sns-share-block li {
+	display: inline-block;
+
+}
+.sns-share-block a {
+	display: block;
+	width: 200px;
+	text-align: center;
+	display: flex;
+	padding: 8px 12px;
+}
+.sns-share-block a img {
+	width: 25px;
+}
+.sns-share-block p {
+	color: #fff;
+	margin-top: 4px;
+    padding-left: 10px;
 }
 
 
@@ -872,6 +910,26 @@ footer,
 	font-size: 11px;
 }
 
+.kinjo-logo {
+	width: 180px;
+	margin-top: 60px;
+}
+.sns-share-title {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+.sns-share-block li {
+    margin-bottom: 12px;
+}
+.sns-share-container {
+    margin-top: 60px;
+}
+
+
+}
+
+
 @media screen and (max-width: 896px) and (min-width: 481px) {
 	.withcorporate-intro .bg-area {
 		display: flex;
@@ -951,8 +1009,15 @@ footer,
 	}
 }
 
+.withcorporate-container a {
+	transition: .5s;
+}
+
 @media screen and (min-width: 897px) {
-.withcorporate-cashlessgraph-block .graph-sub a:hover,
+/*.withcorporate-cashlessgraph-block .graph-sub a:hover,
 .twitter-block a:hover {
+	opacity: .5;
+}*/
+.withcorporate-container a:hover {
 	opacity: .5;
 }

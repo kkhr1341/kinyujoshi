@@ -166,9 +166,28 @@
 			</p>
 			<a class="twitter-link-block" href="https://twitter.com/kinjo_life" target="_blank">Twitterはこちら</a>
 		</div>
+
 		<div class="twitter-right">
 			<a class="twitter-timeline" width="350px" height="450px" href="https://twitter.com/kinjo_life?ref_src=twsrc%5Etfw">Tweets by kinjo_life</a>
 			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+
+	<div class="sns-share-container cashless-animation1">
+		<p class="sns-share-title">＼ SNSでみんなにシェアしよう♪ ／</p>
+		<div class="sns-share-block">
+			<li>
+				<a style="background: #708fe5;" href="https://www.facebook.com/share.php?u=https://kinyu-joshi.jp/contents/cashless" rel="nofollow" target="_blank">
+					<img src="/images/social/facebook_white01.png">
+					<p>Facebookでシェア</p>
+				</a>
+			</li>
+			<li>
+				<a style="background: #87e1f9;" href="https://twitter.com/intent/tweet?url=https://kinyu-joshi.jp/contents/cashless">
+					<img src="/images/social/twitter_white01.png">
+					<p>Twitterでシェア</p>
+				</a>
+			</li>
 		</div>
 	</div>
 
@@ -177,6 +196,7 @@
 			運営会社:TOE THE LINE（きんゆう女子。） https://toetheline.jp/<br>
 			パートナー:PayPay株式会社 https://paypay.ne.jp/
 		</p>
+		<a class="kinjo-logo" href="/"><img src="/images/kinyu-logo-top.png"></a>
 	</div>
 	<footer class="withcorporate-footer">
 		<p>© TOE THE LINE Inc. 2019　All rights reserved.</p>
