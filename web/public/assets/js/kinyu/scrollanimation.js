@@ -25,6 +25,7 @@ ScrollReveal().reveal('.article-animation-top-left2', { easing: 'ease', origin: 
 
 ScrollReveal().reveal('.article-animation-episode', { easing: 'ease', origin: 'top', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.article-animation-episode2', { easing: 'ease', origin: 'top', delay: 1000, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.article-animation-episode3', { easing: 'ease', origin: 'top', delay: 1100, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 
 ScrollReveal().reveal('.article-animation-left', { easing: 'ease', origin: 'left', delay: 300, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.article-animation-left1', { easing: 'ease', origin: 'top', delay: 600, duration: 2500, distance: '30px', opacity: 0, scale: 1 });

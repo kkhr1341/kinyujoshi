@@ -449,10 +449,82 @@ footer,
 .twitter-block a {
 	transition: .5s;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  記事部分
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .article-bg {
 	height: 650px;
 	position: relative;
 	z-index: 999;
+}
+/* プロフィール部分 */
+.profile-block {
+	width: 800px;
+	padding: 36px 70px;
+	background: #f9fbfc;
+    background: -moz-linear-gradient(-45deg, #f9fbfc 0%, #eff8fa 100%);
+    background: -webkit-linear-gradient(-45deg, #f9fbfc 0%,#eff8fa 100%);
+    background: linear-gradient(135deg, #f9fbfc 0%,#eff8fa 100%);
+    background-image: linear-gradient(135deg, rgb(249, 251, 252) 0%, rgb(239, 248, 250) 100%);
+	margin: 0 auto;
+	margin-bottom: 80px;
+	box-shadow: 1px 1px 5px rgba(100, 107, 123, 0.2);
+}
+.profile-detail {
+	display: flex;
+}
+.profile-detail .profile-img {
+	width: 20%;
+}
+.profile-detail .profile-img img {
+	width: 100%;
+}
+.profile-detail .profile-textbox {
+	width: 80%;
+	padding-left: 50px;
+}
+.profile-detail .profile-textbox .case-name {
+	font-size: 18px;
+    line-height: 28px;
+   	margin-bottom: 20px;
+}
+.profile-detail .profile-textbox .case-description {
+	margin-bottom: 12px;
+}
+.profile-detail .profile-textbox .case-like {
+}
+
+/* h2.タイトル */
+.article-main-title {
+	font-style: italic;
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 32px;
+	padding-left: 16px;
+	border-left: 2px solid #283248;
+}
+.article-fix-text {
+	text-align: center;
+	margin-bottom: 80px;
+	padding-top: 40px;
+	position: relative;
+}
+.article-fix-text:before {
+	content: "";
+	width: 200px;
+	height: 1px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -100px;
+	background: #283248;
+}
+.date-text {
+	display: inline-block;
+  border-top: 1px solid #283248;
+  padding-top: 16px;
+  margin-bottom: 24px;
 }
 .article-bg-img {
 	width: 100%;
@@ -481,7 +553,7 @@ footer,
 }
 .text-area {
  	position: absolute;
-  top: 50%;
+  top: 42%;
   margin-left: 50px;
   transform: translateY(-50%);
   -webkit- transform: translateY(-50%);
@@ -490,7 +562,6 @@ footer,
 	font-size: 35px;
 	line-height: 35px;
 	letter-spacing: 4px;
-	margin-bottom: 50px;
 	color: #fff;
 	text-shadow: 0px 0px 4px #000;
 }
@@ -500,13 +571,14 @@ footer,
 	letter-spacing: 4px;
 	color: #fff;
 	text-shadow: 0px 0px 4px #000;
+	margin-bottom: 50px;
 }
 .text-area .article-name span {
 	font-size: 15px;
 	display: block;
 }
 .article-contents-block {
-	width: 1000px;
+	width: 900px;
 	margin: 0 auto;
 	margin-top: -50px;
 	z-index: 1001;
@@ -516,7 +588,7 @@ footer,
 }
 .article-contents-title {
 	text-align: center;
-	margin-bottom: 100px;
+	margin-bottom: 40px;
 }
 .article-contents-title img {
 	display: inline-block;
@@ -528,18 +600,30 @@ footer,
 	line-height: 28px;
 	letter-spacing: 4px;
 }
+.article-contents-title p span {
+	display: block;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 4px;
+	margin-top: 20px;
+	color: #a9a9a9;
+}
 .article-contents-el {
-	margin-bottom: 70px;
+	margin-bottom: 80px;
 }
 .article-contents-el .img-box {
-	width: 50%;
-	height: 350px;
+	width: 45%;
+	height: auto;
 	float: left;
 }
+.article-contents-el .img-box img {
+	width: 100%;
+}
 .article-contents-el .text-box {
-	width: 50%;
+	width: 55%;
 	float: right;
 	padding-left: 40px;
+	margin-top: 20px;
 }
 .article-contents-el-title {
 	font-size: 20px;
@@ -547,16 +631,32 @@ footer,
 	margin-bottom: 24px;
 }
 .article-contents-el-description {
-	font-size: 13px;
-	line-height: 22px;
+	font-size: 14px;
+	line-height: 24px;
 }
-.article-contents-el:nth-child(odd) .img-box {
+.article-contents-el.img-right .img-box {
 	float: right;
 }
-.article-contents-el:nth-child(odd) .text-box {
+.article-contents-el.img-right .text-box {
 	float: left;
 	padding-left: 0px;
 	padding-right: 40px;
+	margin-top: 20px;
+}
+.article-contents-el.img-right .text-box.top-no-img {
+	margin-top: 0px;
+}
+/* img-center */
+.article-contents-el.img-center .img-box {
+	width: 100%;
+	height: auto;
+	float: none;
+}
+.article-contents-el.img-center .text-box {
+	width: 100%;
+	float: none;
+	padding-left: 0px;
+	margin-top: 40px;
 }
 .kinjo-logo {
 	width: 250px;
@@ -598,6 +698,40 @@ footer,
 	color: #fff;
 	margin-top: 4px;
     padding-left: 10px;
+}
+
+.shop-list-block {
+	padding-top: 80px;
+	border-top: 1px solid #283248;
+}
+
+.shop-list-title {
+	font-style: italic;
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 12px;
+  padding-left: 16px;
+  border-left: 2px solid #283248;
+}
+.shop-list-sub-title {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 32px;
+  padding-left: 16px;
+}
+.shop-list-block ul li {
+	margin-bottom: 24px;
+}
+.shop-list-block ul li .shop-name {
+	font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+.shop-list-block ul li .shop-link {
+	color: #4da4e2;
+}
+.shop-list-block ul li .shop-sub-text {
+	color: gray;
 }
 
 
