@@ -330,6 +330,51 @@ footer,
 	margin: 0 auto;
 	margin-top: 40px;
 }
+.cashlesslife-list {
+	margin-top: 50px;
+}
+.cashlesslife-list li {
+	display: flex;
+}
+.cashlesslife-list .img-box {
+	width: 45%;
+	height: 350px;
+	opacity: .8;
+}
+.cashlesslife-list .text-box {
+	width: 55%;
+	text-align: center;
+	padding-top: 55px;
+	/*background: #f9f9f9;*/
+	background: linear-gradient(135deg, #f9fbfc 0%,#eff8fa 100%);
+}
+.cashlesslife-list .text-box .title-epsode {
+	width: 150px;
+}
+.cashlesslife-list .text-box p {
+	font-size: 26px;
+	line-height: 40px;
+	margin: 16px 0px 24px;
+}
+.cashlesslife-list .text-box p span {
+	display: block;
+	font-size: 15px;
+	line-height: 26px;
+	margin-top: 12px;
+}
+.cashlesslife-list .title-link {
+	width: 240px;
+	background: #283248;
+	color: #fff;
+	display: block;
+	font-size: 13px;
+	padding: 10px 0px;
+	margin: 0 auto;
+}
+.cashlesslife-list {
+	
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   もっとキャッシュレスを知る
