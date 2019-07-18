@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/withcorporate.css">
 <script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
 
-<div class="withcorporate-container">
+<div class="withcorporate-container article-container">
 	
 	<div class="withcorporate-main-logo logo-animation" style="background:#283248;">
 		<img src="/images/withcorporate/paypay/logo_w.png">
@@ -391,33 +391,33 @@
 				<li>
 					<p class="shop-name"><span style="color:#e04141;">＊</span>Český (チェスキー）</p>
 					<p class="shop-address">〒106-0045 東京都港区麻布十番3丁目3−4</p>
-					<a class="shop-link">https://www.cesky.jp/nihongo</a>
+					<a class="shop-link" href="https://www.cesky.jp/nihongo" target="_blank">https://www.cesky.jp/nihongo</a>
 				</li>
 				<li>
 					<p class="shop-name"><span style="color:#e04141;">＊</span>ほっぷしゅーくりーむ</p>
 					<p class="shop-address">〒106-0045 東京都港区麻布十番2丁目11−3</p>
-					<a class="shop-link">http://www.hop-shu-kuri-mu.com/</a>
+					<a class="shop-link" href="http://www.hop-shu-kuri-mu.com/" target="_blank">http://www.hop-shu-kuri-mu.com/</a>
 				</li>
 				<li>
 					<p class="shop-name"><span style="color:#e04141;">＊</span>万華鏡専門店カレイドスコープ昔館</p>
 					<p class="shop-address">〒106-0045 東京都港区麻布十番2丁目13−8 COCOハウス1F</p>
-					<a class="shop-link">https://www.brewster.co.jp/</a>
+					<a class="shop-link" href="https://www.brewster.co.jp/" target="_blank">https://www.brewster.co.jp/</a>
 				</li>
 				<li>
 					<p class="shop-name"><span style="color:#e04141;">＊</span>ポワンタージュ</p>
 					<p class="shop-address">〒106-0045 東京都港区麻布十番3丁目3−10</p>
-					<a class="shop-link">http://pointage-azabu10ban.com/</a>
+					<a class="shop-link" href="http://pointage-azabu10ban.com/" target="_blank">http://pointage-azabu10ban.com/</a>
 					<p class="shop-sub-text">現金のみ。使いたいお店として、リクエストしておきました！</p>
 				</li>
 				<li>
 					<p class="shop-name"><span style="color:#e04141;">＊</span>広尾のお菓子屋さん パティスリー メルシー</p>
 					<p class="shop-address">〒150-0012 東京都渋谷区広尾5丁目8−1</p>
-					<a class="shop-link">https://www.instagram.com/merci_yasuyo/</a>
+					<a class="shop-link" href="https://www.instagram.com/merci_yasuyo/" target="_blank">https://www.instagram.com/merci_yasuyo/</a>
 				</li>
 				<li>
 					<p class="shop-name"><span style="color:#e04141;">＊</span>The Little BAKERY Tokyo</p>
 					<p class="shop-address">〒150-0001 東京都渋谷区神宮前6丁目12−6 J-cube C-1F</p>
-					<a class="shop-link">https://www.instagram.com/thelittlebakerytokyo/</a>
+					<a class="shop-link" href="https://www.instagram.com/thelittlebakerytokyo/" target="_blank">https://www.instagram.com/thelittlebakerytokyo/</a>
 				</li>
 			</ul>
 

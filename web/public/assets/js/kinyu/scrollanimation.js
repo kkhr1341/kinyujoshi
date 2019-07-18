@@ -39,17 +39,36 @@ ScrollReveal().reveal('.article-animation-right2', { easing: 'ease', origin: 'to
 $(function(){
 	// 設定
 	var windowWidth = $(window).width();
-	var slideheight = $('.article-bg').height();
+	var slideheight = $('.article-container .article-bg').height();
 	var $width = windowWidth; // 横幅
 	var $height = slideheight; // 高さ
 	var $interval = 4000; // 切り替わりの間隔（ミリ秒）
 	var $fade_speed = 3000; // フェード処理の早さ（ミリ秒）
-	$(".article-bg-img ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
-	$(".article-bg-img ul li").hide().css({"position":"absolute","top":0,"left":0});
-	$(".article-bg-img ul li:first").addClass("active").show();
+	$(".article-container .article-bg-img ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".article-container .article-bg-img ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".article-container .article-bg-img ul li:first").addClass("active").show();
 	setInterval(function(){
-	var $active = $(".article-bg-img ul li.active");
-	var $next = $active.next("li").length?$active.next("li"):$(".article-bg-img ul li:first");
+	var $active = $(".article-container .article-bg-img ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".article-container .article-bg-img ul li:first");
+	$active.fadeOut($fade_speed).removeClass("active");
+	$next.fadeIn($fade_speed).addClass("active");
+	},$interval);
+});
+
+$(function(){
+	// 設定
+	var topWidth = $('.article-bg-img').width();
+	var topheight = $('.article-bg-img').height();
+	var $width = topWidth; // 横幅
+	var $height = topheight; // 高さ
+	var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+	var $fade_speed = 2000; // フェード処理の早さ（ミリ秒）
+	$(".cashlesslife-list .article-bg-img ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".cashlesslife-list .article-bg-img ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".cashlesslife-list .article-bg-img ul li:first").addClass("active").show();
+	setInterval(function(){
+	var $active = $(".cashlesslife-list .article-bg-img ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".cashlesslife-list .article-bg-img ul li:first");
 	$active.fadeOut($fade_speed).removeClass("active");
 	$next.fadeIn($fade_speed).addClass("active");
 	},$interval);
