@@ -458,7 +458,7 @@
                     params.pr = $("[name=pr]:checked").val();
                     params.display = $("[name=display]:checked").val();
                     params.display_past = $("[name=display_past]:checked").val();
-                    params.title = $('#title').val();
+                    params.title = '[コピー] ' + $('#title').val();
                     params.specific_link = $('#specific_link').val();
                     params.specific_application_link = $('#specific_application_link').val();
                     params.main_image = $('#main_image').val();

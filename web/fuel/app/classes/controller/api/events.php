@@ -26,7 +26,7 @@ class Controller_Api_Events extends Controller_Apibase
                 );
             }
 
-            return $this->ok();
+            return $this->ok($event);
         } catch(Exception $e) {
             return $this->error("保存に失敗しました。");
         } 
