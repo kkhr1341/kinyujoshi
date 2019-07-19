@@ -77,7 +77,7 @@ var $resArray02 = $resArray[1];
           {else if $event.full eq true}
             <div class="joinus-block joinus-block-finish">
               <div class="applicable-link">お申込みはこちら</div>
-              <div class="applicable-title"><span style="color:red;">＊</span>満席のため受付終了しました</div>
+              <div class="applicable-title"><span style="color:red;">＊</span>販売終了</div>
             </div>
           {else}
             <div class="joinus-block">
