@@ -19,7 +19,7 @@
 
 		<div class="text-area">
 			<p class="article-name article-animation-top-left">”キャッシュレスと私。</p>
-			<h2 class="article-maincopy article-animation-top-left2">土曜日の午後、<br class="sp">スマホひとつで身軽にお出かけ！</h2>
+			<h2 class="article-maincopy article-animation-top-left2">土曜日の午後、スマホひとつで身軽にお出かけ！</h2>
 		</div>
 	</div>
 
@@ -27,11 +27,10 @@
 		
 		<div class="article-contents-title">
 			<img class="article-animation-episode" src="/images/withcorporate/paypay/article/episode1.png">
-			<p class="article-animation-episode2">行ったことのない、<br class="sp">おいしいパン屋さん巡り。
-				<span>〜 麻布十番から渋谷までお散歩 〜</span></p>
+			<p class="article-animation-episode2">行ったことのない、<br class="sp">おいしいパン屋さん巡り。<span>〜 麻布十番から渋谷までお散歩 〜</span></p>
 		</div>
 
-		<p class="article-fix-text cashless-animation1">キャッシュレスライフにすることで生まれたゆとりで、新たな私を見つける！<br>日々のお金のやりとりをスムーズにしたら、時間とお金だけじゃなくて心にもゆとりができた！</p>
+		<p class="article-fix-text cashless-animation1">キャッシュレスライフにすることで生まれたゆとりで、新たな私を見つける！<br class="pc">日々のお金のやりとりをスムーズにしたら、時間とお金だけじゃなくて心にもゆとりができた！</p>
 
 		<div class="profile-block cashless-animation1">
 			<div class="profile-detail">
