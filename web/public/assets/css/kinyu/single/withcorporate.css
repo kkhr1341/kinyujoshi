@@ -537,7 +537,39 @@ footer,
 .profile-detail .profile-textbox .case-description {
 	margin-bottom: 12px;
 }
-.profile-detail .profile-textbox .case-like {
+.profile-detail .profile-textbox .case-description span {
+	font-weight: 600;
+  color: #c58282;
+}
+.profile-detail .profile-textbox .case-like span {
+	font-weight: 600;
+  color: #c58282;
+}
+.kinjo-member-wallet {
+	width: 800px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+.kinjo-member-wallet .title-block {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 12px;
+}
+.kinjo-member-wallet-titleimg {
+	width: 50px;
+	display: inline-block;
+}
+.kinjo-member-wallet .title-block p {
+	display: inline-block;
+	font-size: 16px;
+	vertical-align: top;
+	line-height: 50px;
+}
+.kinjo-member-wallet .img-block {
+	display: flex;
+}
+.kinjo-member-wallet .img-block img {
+	width: 50%;
 }
 
 /* h2.タイトル */
@@ -1131,6 +1163,7 @@ footer,
 .profile-block {
 	width: 88%;
 	padding: 32px;
+	margin-bottom: 60px;
 }
 .profile-detail {
 	display: block;
@@ -1153,6 +1186,23 @@ footer,
 .profile-detail .profile-textbox .case-description {
 	margin-bottom: 8px;
 	font-size: 11px;
+}
+.kinjo-member-wallet {
+	width: 88%;
+	margin-bottom: 60px;
+}
+.kinjo-member-wallet-titleimg {
+	width: 40px;
+}
+.kinjo-member-wallet .title-block p {
+	line-height: 40px;
+	font-size: 14px;
+}
+.kinjo-member-wallet .img-block {
+	display: block;
+}
+.kinjo-member-wallet .img-block img {
+	width: 100%;
 }
 .article-main-title {
   font-size: 16px;

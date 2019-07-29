@@ -40,13 +40,26 @@
 				</div>
 				<div class="profile-textbox">
 					<p class="case-name">member1：<span>しずかさん</span></p>
-					<p class="case-description">お仕事：個人事業主として新しい会社の「経理」をサポートするお仕事です。金融について関心があること：資産を管理することに関心があります。</p>
+					<p class="case-description">
+						<span>お仕事</span>：企業の経理・労務等をサポートするお仕事です<br>
+						<span>金融に関心のあること</span>：将来に向けた資産形成や現在の資産を守りながらも運用で増やしていくことに興味があります
+					</p>
 					<p class="case-like">
-						<span>好きなもの：</span>あんバター、田舎パンなどかためのものがすきです！<br>
-						<span>よく行く場所：</span>二子玉川、映画館<br>
+						<span>好きなもの：</span>和・洋のスイーツ（特にあんバター）、フランスパン等のハード系のパンが好きです<br>
+						<span>よく行く場所：</span>二子玉川、映画館、インテリアショップ<br>
 					</p>
 				</div>
-				</p>
+			</div>
+		</div>
+
+		<div class="kinjo-member-wallet">
+			<div class="title-block cashless-animation1">
+				<img class="kinjo-member-wallet-titleimg" src="/images/withcorporate/paypay/kinjo-member-wallet.png">
+				<p>「き」ょうの私のお財布の中身♪</p>
+			</div>
+			<div class="img-block">
+				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article/kinjo-member-wallet-img01.jpg">
+				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article/kinjo-member-wallet-img02.jpg">
 			</div>
 		</div>
 
