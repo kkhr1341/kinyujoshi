@@ -345,11 +345,24 @@ footer,
 	opacity: .8;
 }
 .cashlesslife-list .text-box {
+	position: relative;
 	width: 55%;
 	text-align: center;
 	padding-top: 55px;
 	/*background: #f9f9f9;*/
 	background: linear-gradient(135deg, #f9fbfc 0%,#eff8fa 100%);
+}
+.cashlesslife-list .text-box .illust1 {
+	position: absolute;
+  width: 110px;
+  right: 28px;
+  top: 22px;
+}
+.cashlesslife-list .text-box .illust2 {
+	position: absolute;
+  width: 180px;
+  left: -30px;
+  bottom: 6px;
 }
 .cashlesslife-list .text-box .title-epsode {
 	width: 150px;
