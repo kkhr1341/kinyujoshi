@@ -29,9 +29,10 @@
 		<div class="article-contents-title">
 			<img class="article-animation-episode" src="/images/withcorporate/paypay/article/episode1.png">
 			<p class="article-animation-episode2">行ったことのない、<br class="sp">おいしいパン屋さん巡り。<span>〜 麻布十番から渋谷までお散歩 〜</span></p>
+			<img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article/illust_01.png">
 		</div>
 
-		<p class="article-fix-text cashless-animation1">キャッシュレスライフにすることで生まれたゆとりで、新たな私を見つける！<br class="pc">日々のお金のやりとりをスムーズにしたら、時間とお金だけじゃなくて心にもゆとりができた！</p>
+		<p class="article-fix-text cashless-animation1"><span class="text-decoration">キャッシュレスライフにすることで生まれたゆとりで、新たな私を見つける！<br class="pc">日々のお金のやりとりをスムーズにしたら、時間とお金だけじゃなくて心にもゆとりができた！</span></p>
 
 		<div class="profile-block cashless-animation1">
 			<div class="profile-detail">
@@ -50,12 +51,13 @@
 					</p>
 				</div>
 			</div>
+			<img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article/illust_03.png">
 		</div>
 
 		<div class="kinjo-member-wallet">
 			<div class="title-block cashless-animation1">
 				<img class="kinjo-member-wallet-titleimg" src="/images/withcorporate/paypay/kinjo-member-wallet.png">
-				<p>「き」ょうの私のお財布の中身♪</p>
+				<p>この日の私のお財布の中身♪</p>
 			</div>
 			<div class="img-block">
 				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article/kinjo-member-wallet-img01.jpg">
@@ -77,9 +79,9 @@
 				<p class="article-contents-el-description article-animation-left2">
 					麻布十番って、素敵な街だってことは知っていたけれど、じっくり歩くのは初めて。<br>
 					週末って家のことしたり、友達と会ったり、予定を思い切りいれてしまっているけれど、今日は、贅沢に自分の好きなことに時間をつかってみようって思います。<br><br>
-					雨が降りそうだから、傘を持ってきました。でもそれ以外は、このポシェットだけ。<br><br>
+					雨が降りそうだから、傘を持ってきました。<span class="text-decoration">でもそれ以外は、このポシェットだけ。</span><br><br>
 					入れてきたのは、リップと鏡とスマホと、ハンカチ。一応、ミニ財布も持っているけど。<br>
-					今日は、身軽にスマホひとつで、パン屋さん巡りにくりだしてみよう♪<br>
+					<span class="text-decoration">今日は、身軽にスマホひとつで、パン屋さん巡りにくりだしてみよう♪</span><br>
 				</p>
 			</div>
 		</div>
@@ -94,13 +96,13 @@
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					スマホひとつで、パン屋さん巡りをするためには、計画も大事！行きたいお店をきちんと調べてみました。<br><br>
-					キャッシュレスな美味しいパン屋さんを探すためには、Yahoo!ロコとかRettyが便利！支払い方法が詳しく書かれていて。<br><br>
+					キャッシュレスな美味しいパン屋さんを探すためには、<span class="text-decoration">Yahoo!ロコとかRettyが便利！支払い方法が詳しく書かれていて。</span><br><br>
 					最初は雑誌で美味しいパン屋さんを探して、Yahoo!ロコとRettyで検索。
 					行った人の感想とか、お店の写真とかで選びました。
 					最初のお目当てのお店は麻布十番1番出口から5分ほど。<br><br>
 					向かう途中に、なんだかかわいいお店を発見！パンのようなドーナツのような？
 					通り過ぎそうになったけど、ちょっと気になったから、のぞいてみよう。
-					ここは、キャッシュレスできるのかな？
+					<span class="text-decoration">ここは、キャッシュレスできるのかな？</span>
 				</p>
 			</div>
 		</div>
@@ -122,9 +124,10 @@
 				<p class="article-contents-el-description article-animation-right2">
 					なんのお店だろうと思ったら、ドーナツとパンの間くらいのふわふわのロール生地に生クリームがたっぷり。「トゥルデルニーク」っていうお菓子の専門店！<br><br>
 					今年3月にできたばかりだとか。かわいい店内には、二人くらいが座れる椅子も。<br>
-					レジには、だいたいの支払い方法が揃ってました。<br><br>
+					<span class="text-decoration">レジには、だいたいの支払い方法が揃ってました。</span><br><br>
 					PayPayだけ、なかったので「使えますか？」と聞いたらQRコード出してくれた！笑顔が素敵なお兄さん。ロールに生クリームを入れてトッピングして、作ってくれました。</p>
 			</div>
+			<img class="illust-04 illust-animation2" src="/images/withcorporate/paypay/article/illust_04.png">
 		</div>
 
 		<!-- 2軒目のお店。ほっぷしゅうくりーむ 麻布十番店 -->
@@ -143,7 +146,7 @@
 					1軒目から、ちょっとボリュームたっぷりいただいちゃいました。<br><br>
 					ほおばりながら歩いてたらお目当のお店にたどり着きました。<br class="pc">
 					看板で確認しなくても、焼きたてのいい匂いで、すぐにこのお店だって分かりました。<br><br>
-					ちょうど、今焼けたんだ。早速、お店の中へ。
+					ちょうど、今、焼けたんだ。早速、お店の中へ。
 				</p>
 			</div>
 		</div>
@@ -159,7 +162,7 @@
 					買ったのは、手作りいちごジャムが入った食パン。<br class="pc">
 					まだあったかくて、ほんのり甘い。優しいパンはとろけそう。<br class="pc">
 					色々試したくて、お土産には、抹茶味、大納言入りを。<br><br>
-					ハード系のパンがすきな私だけど、ふわふわも大好き！
+					<span class="text-decoration">ハード系のパンがすきな私だけど、ふわふわも大好き！</span>
 				</p>
 			</div>
 		</div>
@@ -177,7 +180,7 @@
 					Saturday 14:40 p.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
-					ふわふわなパンに癒されたところで次のお店へ、とPayPayアプリの地図をみながら歩いていると。また面白いお店を見つけちゃった。<br><br>
+					ふわふわなパンに癒されたところで次のお店へ、と<span class="text-decoration">PayPayアプリの地図をみながら歩いていると。また面白いお店を見つけちゃった。</span><br><br>
 					地図には、「万華鏡専門店」って書いてる。<br>
 					これはのぞいてみるしかない・・・？！<br>
 					行ってみたら、店長がお出迎え。<br><br>
@@ -192,10 +195,10 @@
 				<img src="/images/withcorporate/paypay/article/article01_1440_02.jpg">
 			</div>
 			<div class="text-box">
-				<p class="article-contents-el-description article-animation-left2">宝石がキラキラ流れていって、同じ模様は二度と現れない。<br class="pc">
+				<p class="article-contents-el-description article-animation-left2"><span class="text-decoration">宝石がキラキラ流れていって、同じ模様は二度と現れない。</span><br class="pc">
 				繊細な空間を見せてくれる。<br><br>
 				今まで、万華鏡って子供のおもちゃだって思っていたけれど。<br class="pc">
-				大事な人に、贈りたいアイテムだなって！<br>
+				<span class="text-decoration">大事な人に、贈りたいアイテムだなって思った！</span><br>
 			</p>
 			</div>
 		</div>
@@ -206,7 +209,7 @@
 				<img src="/images/withcorporate/paypay/article/article01_1440_03.jpg">
 			</div>
 			<div class="text-box">
-				<p class="article-contents-el-description article-animation-right2">1万円代〜200万円相当の万華鏡まで。PayPayも使えるようです。<br>
+				<p class="article-contents-el-description article-animation-right2">1万円代〜200万円相当の万華鏡まで。<span class="text-decoration">PayPayも使えるようです。</span>（上限はあるみたい...）<br>
 			</p>
 			</div>
 		</div>
@@ -216,11 +219,14 @@
 				<img src="/images/withcorporate/paypay/article/article01_1440_04.jpg">
 			</div>
 			<div class="text-box">
-				<p class="article-contents-el-description article-animation-left2">
-					パン屋さんめぐりしてるって伝えたら、「ここを知らなかったら麻布十番のパン屋を知ったことにならないよ」って、1軒紹介してくれました。
+				<p class="article-contents-el-description article-animation-left2 illust-05-sp-text">
+					パン屋さんめぐりしてるって伝えたら、<span class="text-decoration">「ここを知らなかったら麻布十番のパン屋を知ったことにならないよ」って、1軒紹介してくれました。</span>
 					歩いて3分の場所に「ポワンタージュ」ってお店があるらしい。行ってみよう。
 				</p>
 			</div>
+			<img class="illust-05 illust-animation-dog1" src="/images/withcorporate/paypay/article/illust_05.png">
+			<img class="illust-06 illust-animation-dog2" src="/images/withcorporate/paypay/article/illust_06.png">
+			<img class="illust-07 illust-animation-dog3" src="/images/withcorporate/paypay/article/illust_07.png">
 		</div>
 
 		<div class="article-contents-el img-center clear">
@@ -241,12 +247,13 @@
 					<p>JULY 6th<br>
 					Saturday 15:20 p.m.</p>
 				</div>
-				<p class="article-contents-el-description article-animation-left2">
-					歩いて本当にすぐそこ。「pointage」見つけました。<br><br>
+				<p class="article-contents-el-description article-animation-left2 illust-06-sp-text">
+					歩いて本当にすぐそこ。<br class="sp">「pointage」見つけました。<br><br>
 					おすすめは、ミルクフランスとピーナッツバターフランス。<br class="pc">
 					どっちも、おやつにぴったりのサイズ。一人数量限定にするくらい、人気のパン。
 				</p>
 			</div>
+			<img class="illust-08 illust-animation1" src="/images/withcorporate/paypay/article/illust_08.png">
 		</div>
 
 		<div class="article-contents-el img-left clear">
@@ -256,9 +263,9 @@
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
 					ここは、現金が必要だったので、迷わず1万円をくずしちゃった・・！早速、ピーナッツバターフランスをパクリ。<br><br>
-					とまらない美味しさです。。<br>
+					<span class="text-decoration">とまらない美味しさです。。</span><br>
 					このフランスパンは柔らかい口当たり。<br class="pc">
-					そういえば、このお店も私がみたパン特集にも掲載されていたかも。
+					<span class="text-decoration">そういえば、このお店も私がみたパン特集にも掲載されていたかも。</span>
 				</p>
 			</div>
 		</div>
@@ -278,13 +285,13 @@
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					次は、タクシーで移動。<br class="pc">
-					タクシーも最近はキャッシュレス。<br><br>
+					<span class="text-decoration">タクシーも最近はキャッシュレス。</span><br><br>
 					アプリで読んで、アプリで決済。<br class="pc">
 					いろんな方法で移動がスムーズになってきています。<br><br>
 					普段はあんまりタクシーって乗らないけれど、こんなに決済が広がっているとは驚き。<br><br>
 					Suicaはもちろん、Quick Pay、iD以外にも、QRコード決済も。OrigamiとかLINE Payも。<br>
-					PayPay使うなら、連携しているタクシーアプリDiDiが良さそう。<br><br>
-					今回の移動は、Quick Payで。
+					<span class="text-decoration">PayPay使うなら、連携しているタクシーアプリDiDiが良さそう。</span><br><br>
+					<span class="text-decoration">今回の移動は、Quick Payで。</span>
 				</p>
 			</div>
 		</div>
@@ -297,8 +304,8 @@
 				<p class="article-contents-el-description article-animation-left2">
 					お菓子屋さんメルシーに到着。ここは、焼き菓子がメイン。<br><br>
 					パウンドケーキやクッキーなど、美味しそうなお菓子がズラリ。<br><br>
-					焼き菓子屋さんだけど、プリンが有名ということで、今日は、贅沢にプリンを大人買い。<br><br>
-					つまり、1本まるごと、です。<br>
+					焼き菓子屋さんだけど、プリンが有名ということで、<span class="text-decoration">今日は、贅沢にプリンを大人買い。</span><br><br>
+					<span class="text-decoration">つまり、1本まるごと、です。</span><br>
 					これを切り分けずに、スプーンでまるっとほおばりたい〜！<br class="pc">
 					このお弁当にくっついているようなカラメルソース、、美味しそう。
 			</p>
@@ -314,7 +321,7 @@
 				<p class="article-contents-el-description article-animation-right2">
 					支払いも、スムーズ。<br><br>
 					だんだんお土産のパンで両手が塞がってきたから、お財布を出さなくて、助かる。<br><br>
-					お店の人も手際がいい感じ。慣れてる。テキパキ。<br><br>
+					<span class="text-decoration">お店の人も手際がいい感じ。慣れてる。テキパキ。</span><br><br>
 					広尾って緑がいっぱいで気持ちい。<br class="pc">
 					パリに行ったような気分になれるところも、好き。
 				</p>
@@ -335,11 +342,11 @@
 					Saturday 16:15 p.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
-					パン屋さん巡り。ずっと行きたかったお店に一度にいける、贅沢な土曜日。<br><br>
+					<span class="text-decoration">パン屋さん巡り。ずっと行きたかったお店に一度にいける、贅沢な土曜日。</span><br><br>
 					そんなパン屋さん巡りの最後にふさわしい、渋谷のお店「the little bakery tokyo」へ。<br><br>
 					私、あんバターが一番好き。あんことバターを買ってきて家でもつくるくらい、好き。幸せの味がする。<br><br>
 					ここのパン屋さんのあんバターは、切ない恋の味。<br class="pc">
-					つまり、ちょっとしょっぱめです。私、好み。
+					つまり、ちょっとしょっぱめです。私の好み。
 				</p>
 			</div>
 		</div>
@@ -351,8 +358,8 @@
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
 					このお店では、どんな支払いができるのかレジには書いてありません。<br><br>
-					自分で「この支払い方法で」って言うと出してくれます。今回はPayPayで。<br class="pc">
-					QRコードを出してくれて、金額を入れてお支払い。<br><br>
+					<span class="text-decoration">自分で「この支払い方法で」って言うと出してくれます。今回はPayPayで。</span><br class="pc">
+					<span class="text-decoration">QRコードを出してくれて、金額を入れてお支払い。</span><br><br>
 					慣れない言葉に慣れない操作に最初はとまどったけれど、キャッシュレスな世界に少し慣れてきました。
 			</p>
 			</div>
@@ -366,7 +373,7 @@
 				<p class="article-contents-el-description article-animation-right2">
 					普段は、経理サポートの仕事をしているので、誰かの「お金」を管理する側にいる。<br><br>
 					たぶん、みんなより金融に近いところにいると思うのだけど、自分のこととなるとやっぱりワカラナイことたくさん。<br><br>
-					自分のお金の管理や資産づくり、しっかり考えていきたい。管理するために使っているアプリは、マネーフォワード ME。
+					自分のお金の管理や資産づくり、しっかり考えていきたい。今、<span class="text-decoration">管理するために使っているアプリは、マネーフォワード ME。</span>
 				</p>
 			</div>
 		</div>
@@ -377,19 +384,19 @@
 			</div>
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
-					そうそう、こないだ映画館に行った時、支払いがQRコードの列があって。<br class="pc">
-					映画が始まる5分まえだったけれど、スムーズだった。<br><br>
+					そうそう、<span class="text-decoration">こないだ映画館に行った時、支払いがQRコードの列があって。<br class="pc">
+					映画が始まる5分まえだったけれど、スムーズだった。</span><br><br>
 					あと、友達と、割り勘。<br>
-					現金じゃなくて、チャットで送りあった。<br><br>
-					時代は、確実に変わってきてる。<br><br>
+					<span class="text-decoration">現金じゃなくて、チャットで送りあった。</span><br><br>
+					<span class="text-decoration">時代は、確実に変わってきてる。</span><br><br>
 					私もまだ、学び途中だけれど、誰かに伝えることもしてみたい。<br class="pc">
 					自分が感じたこと、みんなへわかりやすくお届けしたいな。<br><br>
 					キャッシュレスライフも、時間の節約とかお得とかそういう観点だけじゃなくて、今回みたいにキャッシュレスしばりでパン屋さんを巡ってみたら、いつもと違う目線で時間を過ごすことができたから。<br><br>
 					事前に調べて計画通りに何かをして、お得になるのもいいけれど。<br class="pc">
 					こうやって新しい社会の流れに自分の身を任せてみて、見えてくる偶然とか、新しい発見ってけっこういいものかな？と思うんです。<br><br>
-					今回はちょっと、寄り道して使いすぎたけど、、お得になった分でカバーかな？<br class="pc">
+					<span class="text-decoration">今回はちょっと、寄り道して使いすぎたけど、、お得になった分でカバーかな？<br class="pc">
 					そう考えると使ったお金は結局、変わらないかも...？？<br><br>
-					でも、そこで得られた経験は忘れないものになったと思う。
+					でも、そこで得られた経験は忘れないものになったと思う。</span>
 				</p>
 			</div>
 		</div>
@@ -397,7 +404,7 @@
 
 		<div class="article-contents-el shop-list-block cashless-animation1">
 			<h2 class="shop-list-title">キャッシュレスライフ、素敵なお店リスト</h2>
-			<p class="shop-list-sub-title">PayPayアプリの地図で、キャッシュレスなパン屋さんを探すときには👜のアイコンをチェックしてみて。</p>
+			<p class="shop-list-sub-title"><span class="text-decoration">PayPayアプリの地図で、キャッシュレスなパン屋さんを探すときには👜のアイコンをチェックしてみて。</span></p>
 
 			<ul>
 				<li>

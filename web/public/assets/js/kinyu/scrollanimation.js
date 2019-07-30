@@ -35,6 +35,13 @@ ScrollReveal().reveal('.article-animation-right', { easing: 'ease', origin: 'rig
 ScrollReveal().reveal('.article-animation-right1', { easing: 'ease', origin: 'top', delay: 600, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.article-animation-right2', { easing: 'ease', origin: 'top', delay: 900, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 
+// illust
+ScrollReveal().reveal('.illust-animation1', { easing: 'ease', origin: 'right', delay: 800, duration: 3000, distance: '50px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.illust-animation2', { easing: 'ease', origin: 'left', delay: 800, duration: 3000, distance: '50px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.illust-animation-dog1', { easing: 'ease', delay: 1500, duration: 2000, distance: '10px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.illust-animation-dog2', { easing: 'ease', delay: 2500, duration: 2000, distance: '10px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.illust-animation-dog3', { easing: 'ease', delay: 3000, duration: 2000, distance: '10px', opacity: 0, scale: 1 });
+
 
 $(function(){
 	// 設定

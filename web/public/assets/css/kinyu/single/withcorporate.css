@@ -79,6 +79,9 @@ footer,
 .withcorporate-container .text-brackets:after {
 	content: "」";
 }
+.text-decoration {
+	border-bottom: 2px solid #f9dada;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   ヘッダー
@@ -505,6 +508,7 @@ footer,
 }
 /* プロフィール部分 */
 .profile-block {
+	position: relative;
 	width: 800px;
 	padding: 36px 70px;
 	background: #f9fbfc;
@@ -586,6 +590,8 @@ footer,
 	margin-bottom: 80px;
 	padding-top: 40px;
 	position: relative;
+	font-size: 14px;
+	line-height: 28px;
 }
 .article-fix-text:before {
 	content: "";
@@ -666,6 +672,7 @@ footer,
 .article-contents-title {
 	text-align: center;
 	margin-bottom: 40px;
+	position: relative;
 }
 .article-contents-title img {
 	display: inline-block;
@@ -687,6 +694,7 @@ footer,
 }
 .article-contents-el {
 	margin-bottom: 80px;
+	position: relative;
 }
 .article-contents-el .img-box {
 	width: 45%;
@@ -722,6 +730,7 @@ footer,
 }
 .article-contents-el.img-right .text-box.top-no-img {
 	margin-top: 0px;
+	position: relative;
 }
 /* img-center */
 .article-contents-el.img-center .img-box {
@@ -809,6 +818,53 @@ footer,
 }
 .shop-list-block ul li .shop-sub-text {
 	color: gray;
+}
+
+/* イラスト */
+.illust-01 {
+  position: absolute;
+  top: -40px;
+  right: 30px;
+}
+.illust-02 {
+}
+.illust-03 {
+	width: 130px;
+	position: absolute;
+  right: -50px;
+  bottom: -50px;
+}
+.illust-04 {
+	width: 130px;
+	position: absolute;
+  left: 50%;
+  bottom: 0px;
+  margin-left: -120px;
+}
+.illust-05 {
+	width: 40px;
+	position: absolute;
+  right: 16px;
+  bottom: 0;
+}
+.illust-06 {
+	width: 40px;
+	position: absolute;
+  right: -30px;
+  bottom: 30px;
+}
+.illust-07 {
+	width: 40px;
+	position: absolute;
+  right: 0;
+  bottom: 75px;
+}
+.illust-08 {
+	width: 90px;
+	position: absolute;
+  right: 25px;
+  bottom: 0;
+  transform: rotate(22deg);
 }
 
 
@@ -1078,6 +1134,20 @@ footer,
 	padding-left: 0px;
 	margin-top: 24px;
 }
+.article-contents-el.img-right .text-box {
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+    margin-top: 24px;
+}
+.article-contents-el.img-right .text-box.top-no-img {
+		margin-top: 24px;
+		padding-left: 0px;
+		padding-right: 0px;
+}
+.article-contents-el.img-right .img-box {
+	float: none;
+}
 .article-contents-el:nth-child(odd) .text-box {
 	padding-right: 0px;
 }
@@ -1266,6 +1336,55 @@ footer,
     width: 200px;
     font-size: 12px;
     padding: 8px 0px;
+}
+
+/* イラスト */
+.illust-01 {
+  top: -30px;
+  right: 5px;
+  width: 80px!important;
+}
+.illust-02 {
+}
+.illust-03 {
+  width: 100px;
+  right: -25px;
+  bottom: -40px;
+}
+.illust-04 {
+	width: 100px;
+  position: absolute;
+  left: 12px;
+  top: -89px;
+  margin-left: 0px;
+}
+.illust-05 {
+	width: 36px;
+	position: absolute;
+  right: 25px;
+  bottom: 0;
+}
+.illust-06 {
+	width: 36px;
+  right: -12px;
+  bottom: 30px;
+}
+.illust-07 {
+	width: 36px;
+  right: 12px;
+  bottom: 75px;
+}
+.illust-08 {
+	width: 72px;
+  right: 0px;
+  bottom: 0;
+  transform: rotate(22deg);
+}
+.illust-05-sp-text {
+	padding-right: 62px;
+}
+.illust-06-sp-text {
+	padding-right: 62px;
 }
 
 }
