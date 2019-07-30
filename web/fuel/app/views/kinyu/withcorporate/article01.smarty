@@ -4,7 +4,7 @@
 <div class="withcorporate-container article-container">
 	
 	<div class="withcorporate-main-logo logo-animation" style="background:#283248;">
-		<img src="/images/withcorporate/paypay/logo_w.png">
+		<a href="/contents/cashless"><img src="/images/withcorporate/paypay/logo_w.png"></a>
 	</div>
 
 	<div class="article-bg">
