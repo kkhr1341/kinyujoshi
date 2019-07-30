@@ -1340,10 +1340,10 @@ footer,
   padding: 32px 24px;
 }
 .cashlesslife-list .text-box .illust1 {
-	position: absolute;
-  width: 110px;
-  right: 28px;
-  top: 22px;
+  position: absolute;
+  width: 90px;
+  right: -12px;
+  top: 16px;
 }
 .cashlesslife-list .text-box .illust2 {
   position: absolute;
