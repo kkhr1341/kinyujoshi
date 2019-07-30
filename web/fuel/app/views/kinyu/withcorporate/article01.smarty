@@ -38,6 +38,7 @@
 			<div class="profile-detail">
 				<div class="profile-img">
 					<img src="/images/withcorporate/paypay/article/case1.png">
+					<img class="illust-flower" src="/images/withcorporate/paypay/article/flower.png">
 				</div>
 				<div class="profile-textbox">
 					<p class="case-name">member1：<span>しずかさん</span></p>

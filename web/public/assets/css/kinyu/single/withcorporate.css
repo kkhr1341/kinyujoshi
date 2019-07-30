@@ -525,9 +525,16 @@ footer,
 }
 .profile-detail .profile-img {
 	width: 20%;
+	position: relative;
 }
 .profile-detail .profile-img img {
 	width: 100%;
+}
+.profile-detail .illust-flower {
+	position: absolute;
+  top: -7px;
+  right: 105px;
+  width: 80px!important;
 }
 .profile-detail .profile-textbox {
 	width: 80%;
