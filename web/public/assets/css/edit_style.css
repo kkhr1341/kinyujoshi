@@ -26,6 +26,7 @@
 .kinyu-single-block,
 .kinyu-main-single-block {
   padding-top: 130px;
+  position: relative;
 }
 #canvas {
   position:fixed;
@@ -4654,7 +4655,7 @@ input::-webkit-input-placeholder {
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  メンバー登録・追加情報フォーム
+  メンバー登録・追加情報ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 #regist-form {
   margin-bottom: 0px;
@@ -4796,6 +4797,19 @@ input::-webkit-input-placeholder {
   border: none!important;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  ログインページ（/login_regist）
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.login-main-bg {
+  width: 100%;
+}
+.login-main-title {
+  width: 30%;
+  position: absolute;
+  top: 9%;
+  left: 5%;
+}
+
 /* メッセージ部分 */
 .login-message h2 {
   color: #77cbc0;
@@ -4824,10 +4838,6 @@ input::-webkit-input-placeholder {
   margin-bottom: 24px;
   font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
-/*.login-message .message-block .img-box {
-  width: 40%;
-  height: 300px;
-}*/
 .login-message a {
   display: block;
   padding: 14px 0px;

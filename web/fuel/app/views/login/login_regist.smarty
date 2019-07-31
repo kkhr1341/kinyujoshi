@@ -3,11 +3,13 @@
 
 <div class="kinyu-single-block">
 
+  <img class="login-main-bg" src="/images/login/login_main_bg.jpg">
+  <img class="login-main-title" src="/images/login/login_main_title.png">
+
   <div class="login-contents-block login-regist-block">
 
     <!-- ログイン部分 -->
     <a class="login-another-btn sp" href="/login">ログインへ</a>
-
     
     <div class="login-block-el login-message">
       <h2>わたしらしい 「ミライ」への解放</h2>
