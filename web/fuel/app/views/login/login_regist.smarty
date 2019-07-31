@@ -10,10 +10,27 @@
 
     
     <div class="login-block-el login-message">
-      <h2>ここにメッセージが入ります<br>ここにメッセージが入ります</h2>
+      <h2>わたしらしい 「ミライ」への解放</h2>
       <div class="message-block">
-        <p class="main-message">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div>
+        <p class="main-message">
+          <span class="">自由で等身大に生きる。</span>
+          はじめまして。「きんゆう女子。」編集部です。  <br><br>
+
+          「きんゆう女子。」は、2016年3月3日に生まれた、 <br>
+          20〜30代を中心とした金融ワカラナイ女子による、 <br>
+          ワカラナイ女子のためのコミュニティです。  <br><br>
+
+          「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」 <br>
+          をコンセプトに、身近な家計管理から世界経済、FinTech（フィンテック）、 <br>
+          ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。  <br><br>
+
+          ゆる〜く、楽しく。でもちょっと真面目に。  <br><br>
+
+          わたしたち編集部では、女性たちが、お金の漠然とした不安や焦りから解放され、 <br>
+          ワカラナイ・難しいから諦めていたことを行動に移し実現に近づけていく… <br>
+          そっと後押しするようなフォローをしていきたいと思っています。<br>
+        </p>
+        <!-- <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div> -->
       </div>
       <a href="#regist-form">メンバー登録はこちら</a>
     </div>
@@ -22,6 +39,8 @@
       <h2 class="login-contents-title"><span>きんゆう女子。にメンバー登録♪</span></h2><br>
     </div>
  -->
+
+    <div class=""></div>
 
     <div class="login-block-el about-member-contents">
       <h2 class="about-member-title">メンバーになると...？</h2>
