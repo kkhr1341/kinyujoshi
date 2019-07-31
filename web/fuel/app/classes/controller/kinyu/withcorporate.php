@@ -45,7 +45,7 @@ class Controller_Kinyu_Withcorporate extends Controller_Kinyubase
         // }
 
         $this->template->title = 'Say Farewell to Cash | 今日も、キャッシュレス。';
-        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-cashless.png';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/withcorporate/paypay/article/article1_og.jpg';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
 
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
