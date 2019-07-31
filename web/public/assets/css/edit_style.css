@@ -4831,7 +4831,7 @@ input::-webkit-input-placeholder {
   color: #77cbc0;
   font-size: 26px;
   line-height: 36px;
-  margin-bottom: 36px;
+  margin-bottom: 16px;
   font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
   letter-spacing: 3px;
 }
@@ -4841,16 +4841,23 @@ input::-webkit-input-placeholder {
   display: flex;
 }
 .login-message .message-block .main-message {
-  width: 60%;
+  width: 100%;
   font-size: 14px;
   line-height: 24px;
-  padding-right: 60px;
+  /*padding-right: 60px;*/
   padding-top: 20px;
+  text-align: center;
 }
-.login-message .message-block .img-box {
+.login-message .message-block .main-message span {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 24px;
+  font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+/*.login-message .message-block .img-box {
   width: 40%;
   height: 300px;
-}
+}*/
 .login-message a {
   display: block;
   padding: 14px 0px;
@@ -4858,14 +4865,14 @@ input::-webkit-input-placeholder {
   text-align: center;
   background: #8ddcd1;
   color: #fff;
-  width: 500px;
+  width: 300px;
   margin: 0 auto;
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 /* メンバーになると...？ */
 .about-member-contents {
-  width: 1000px;
+  width: 920px;
   margin: 0 auto;
   margin-bottom: 70px;
 }
@@ -4900,8 +4907,6 @@ input::-webkit-input-placeholder {
   font-style: italic;
   color: #77cbc0;
 }
-
-
 
 
 /* マイページでできること */
@@ -5417,9 +5422,9 @@ footer {
   background: none;
 }
 .login-contents-block {
-  background: rgba(0, 197, 170, 0.1);
+/*  background: rgba(0, 197, 170, 0.1);
   background: -webkit-linear-gradient(90deg, rgba(141, 220, 209, 0.3), rgba(195, 232, 226,0.3));
-  background: linear-gradient(90deg, rgba(141, 220, 209, 0.3), rgba(195, 232, 226,0.3));
+  background: linear-gradient(90deg, rgba(141, 220, 209, 0.3), rgba(195, 232, 226,0.3));*/
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
