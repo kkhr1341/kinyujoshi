@@ -8,7 +8,7 @@ use \Model\Projects;
 
 class Controller_Kinyu_Top extends Controller_Kinyubase
 {
-    const EVENT_DISPLAY_LIMIT = 3;
+    const EVENT_DISPLAY_LIMIT = 6;
 
     public function action_index($page = 1)
     {
