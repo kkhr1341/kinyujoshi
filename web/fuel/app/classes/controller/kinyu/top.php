@@ -8,24 +8,14 @@ use \Model\Projects;
 
 class Controller_Kinyu_Top extends Controller_Kinyubase
 {
-    const EVENT_DISPLAY_LIMIT = 9;
+    const EVENT_DISPLAY_LIMIT = 3;
 
     public function action_index($page = 1)
     {
-        // $this->data['projects'] = Projects::lists(1, 3, true, 'kinyu');
         $this->data['news'] = News::lists(1, 1, true);
-/*
-        if (Agent::is_mobiledevice()) {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 20);
-        } else {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60);
-        }
-        $pagination = $this->data['blogs']['pagination'];
-        $this->data['pagination'] = $pagination::instance('mypagination');
-*/
 
         $this->data['event_display_limit'] = self::EVENT_DISPLAY_LIMIT;
-        $this->data['events'] = Events::lists(1, self::EVENT_DISPLAY_LIMIT, true, 0, 'asc');
+        $this->data['events'] = Events::lists(1, null, true, 0, 'asc');
 
         $this->template->title = 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
