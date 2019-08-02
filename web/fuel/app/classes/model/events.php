@@ -152,7 +152,7 @@ class Events extends Base
         return $data['cnt'];
     }
 
-    public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc", $display=1, $username = null)
+    public static function lists($mode = null, $limit = null, $open = null, $secret = null, $sort="desc", $display=1, $username = null, $isend = null)
     {
         $select = '*, ';
         $select .= 'events.code, ';
@@ -198,7 +198,10 @@ class Events extends Base
             $datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
         }
 
-        $datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+        if ($isend === null) {
+            $datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+        }
+
         $datas = $datas->order_by('event_date', $sort);
 
         if ($limit === null) {
@@ -412,26 +415,26 @@ class Events extends Base
             ->execute();
     }
 
-    private static function get_main_image($params)
-    {
-
-        $content = $params['content'];
-        preg_match_all("/src=\"(.*?)\"/", $content, $result);
-        $url = "";
-        if (isset($result[1]) && isset($result[1][0])) {
-
-            $url = $result[1][0];
-            if (strpos($url, "youtube.com") !== false) {
-                preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $url, $matches);
-                if (isset($matches[2]) && $matches[2] != '') {
-                    $YoutubeCode = $matches[2];
-                }
-                $url = "//img.youtube.com/vi/{$YoutubeCode}/0.jpg";
-            }
-        }
-
-        return $url;
-    }
+//    private static function get_main_image($params)
+//    {
+//
+//        $content = $params['content'];
+//        preg_match_all("/src=\"(.*?)\"/", $content, $result);
+//        $url = "";
+//        if (isset($result[1]) && isset($result[1][0])) {
+//
+//            $url = $result[1][0];
+//            if (strpos($url, "youtube.com") !== false) {
+//                preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $url, $matches);
+//                if (isset($matches[2]) && $matches[2] != '') {
+//                    $YoutubeCode = $matches[2];
+//                }
+//                $url = "//img.youtube.com/vi/{$YoutubeCode}/0.jpg";
+//            }
+//        }
+//
+//        return $url;
+//    }
 
     /**
      * 過去イベントかどうか判定する
