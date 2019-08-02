@@ -107,7 +107,7 @@
                                 </span>
                               </p>
                               {if $event.applicable eq false}
-                                <p class="joshikai-applicable">＊受付終了</p>
+                                <p class="joshikai-applicable">＊終了しました</p>
                               {else if $event.full eq true}
                                 <p class="joshikai-applicable">＊満席</p>
                               {/if}
