@@ -60,7 +60,7 @@
                     <div class="regist-selectarea">
                         <select id="age1" class='form-control'>
                             <option>-</option>
-                            {section name=i start=1952 loop=2018}
+                            {section name=i start=1942 loop=$smarty.now|date_format:'%Y'-18}
                             <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
                             {/section}
                         </select>
