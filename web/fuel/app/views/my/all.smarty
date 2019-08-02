@@ -65,7 +65,7 @@
 
 
         <!-- メンバー限定女子会 -->
-        <div class="kinyu-event-list">
+        <div class="kinyu-event-list secret-event">
           <p class="kinyu-event-info-title">メンバー限定女子会</p>
           <ul>
             {foreach from=$secret_events key="key" item=event name=loopname}
