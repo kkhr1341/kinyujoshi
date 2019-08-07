@@ -197,6 +197,13 @@
           </div>
         </div>
 
+        <div class="kinyu-top-maincontent-block-el" style="text-align:center;">
+          <p style="margin-bottom: 10px; font-size: 14px;">＼ メディアパートナーして応援しています ／</p>
+              <a class="js-track" target="_blank" href="https://finsum.jp/ja/" data-category="pc-top-link" data-action="click" data-value="1">
+                <img style="width:92%; cursor:pointer;" class="" src="/images/banner/finsum2019.png">
+              </a>
+        </div>
+
         <div class="kinyu-top-maincontent-block-el">
           <div class="kinyu-top-banner-area">
             <ul class="clear">
