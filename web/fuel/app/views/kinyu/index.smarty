@@ -251,9 +251,12 @@
     $(function() {
         $(window).load(function(){
 
-            $('.kinyu-top-joshikai-list .btn-more-link a').click(function(e) {
+            $('.kinyu-top-joshikai-list .btn-more-link').click(function(e) {
                 e.preventDefault();
-                $('.more-kinyu-top-joshikai-list').slideDown();
+                var $btn = $(this);
+                $('.more-kinyu-top-joshikai-list').slideDown(function() {
+                    $btn.fadeOut("slow");
+                });
             })
         });
     });
