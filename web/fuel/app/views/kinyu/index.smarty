@@ -257,13 +257,10 @@
 <script>
     $(function() {
         $(window).load(function(){
-
             $('.kinyu-top-joshikai-list .btn-more-link').click(function(e) {
                 e.preventDefault();
-                var $btn = $(this);
-                $('.more-kinyu-top-joshikai-list').slideDown(function() {
-                    $btn.fadeOut("slow");
-                });
+                $(this).hide(); // ボタン自体を非表示
+                $('.more-kinyu-top-joshikai-list').slideDown();
             })
         });
     });
