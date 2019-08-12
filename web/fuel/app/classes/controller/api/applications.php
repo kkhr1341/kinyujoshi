@@ -47,11 +47,13 @@ class Controller_Api_Applications extends Controller_Apibase
 
         try {
 
+            // 女子会データ取得
             $event = Events::getByCode('events', $val->validated('event_code'));
 
             // ユーザーネーム
             $username = \Auth::get('username');
 
+            // 申し込みデータ作成
             $application = Applications::create(
                 $username,
                 $val->validated('event_code'),
@@ -65,15 +67,32 @@ class Controller_Api_Applications extends Controller_Apibase
             // 与信
             if ($application['amount'] > 0) {
                 \Config::load('payjp', true);
+
                 $payment = new PaymentPayjp(new Payjp(\Config::get('payjp.private_key')));
+
+                // payjp登録ユーザー
+                if (!$payment->getCustomer($username)) {
+                    $customer = $payment->createCreditCustomer($username, $val->validated('name'), $val->validated('email'));
+                } else {
+                    $customer = $payment->updateCreditCustomer($username, $val->validated('name'), $val->validated('email'));
+                }
+
+                // 登録カードID取得（新規登録の場合は登録後にカードIDを取得）
+                if ($val->validated('cardselect') === '0') {
+                    $card = $payment->registNewCreditCard($customer, $val->validated('token'), $username, $val->validated('name'));
+                    $cardselect = $card->id;
+                } else {
+                    $cardselect = $val->validated('cardselect');
+                }
+
+                // カード与信処理
                 $payment->charge(
-                    $username,
+                    $customer,
                     $val->validated('name'),
                     $val->validated('email'),
-                    $val->validated('token'),
                     $application['amount'],
                     $application['code'],
-                    $val->validated('cardselect')
+                    $cardselect
                 );
             }
 
