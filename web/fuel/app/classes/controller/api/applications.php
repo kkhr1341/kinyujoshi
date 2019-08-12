@@ -77,6 +77,8 @@ class Controller_Api_Applications extends Controller_Apibase
                 );
             }
 
+            $db->commit_transaction();
+
             // サンクスメール
             $mail = \Email::forge('jis');
             $mail->from("no-reply@kinyu-joshi.jp", ''); //送り元
@@ -91,12 +93,16 @@ class Controller_Api_Applications extends Controller_Apibase
             $mail->return_path('support@kinyu-joshi.jp');
             $mail->send();
 
-            $db->commit_transaction();
-
+            return $this->ok();
+        } catch(\EmailValidationFailedException $e) {
+            \Log::error($e->getMessage());
+            return $this->ok();
+        } catch(\EmailSendingFailedException $e) {
+            \Log::error($e->getMessage());
             return $this->ok();
         } catch (Exception $e) {
+            \Log::error($e->getMessage());
             $db->rollback_transaction();
-
             return $this->error($e->getMessage());
         }
     }
