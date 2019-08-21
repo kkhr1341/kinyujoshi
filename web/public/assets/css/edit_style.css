@@ -4870,13 +4870,17 @@ input::-webkit-input-placeholder {
 .about-activity-contents li .img-box {
   float: right;
   width: 30%;
-  height: 160px;
+  height: 200px;
 }
 .about-activity-contents li .text-block {
   float: left;
   width: 70%;
   padding-right: 40px;
   padding-top: 12px;
+}
+.about-activity-contents li .text-block p {
+  font-size: 13px;
+  line-height: 24px;
 }
 .about-activity-contents li .text-block .text-title {
   font-size: 18px;
@@ -4893,6 +4897,9 @@ input::-webkit-input-placeholder {
   color: #77cbc0;
   position: absolute;
   left: 0;
+}
+.about-member-contents p span.kana {
+  font-size: 20px;
 }
 .about-activity-contents li .text-block .text-title:after {
   content: "";
@@ -4921,7 +4928,7 @@ input::-webkit-input-placeholder {
 .login-message .message-block {
   width: 800px;
   margin: 0 auto;
-  display: flex;
+  text-align: center;
 }
 .login-message .message-block .main-message {
   width: 100%;
@@ -4936,7 +4943,15 @@ input::-webkit-input-placeholder {
   display: block;
   margin-bottom: 24px;
 }
-.login-message a {
+.login-message a.to-story-link {
+  display: inline-block;
+  font-size: 13px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+  border-bottom: 1px solid #8ddcd1;
+}
+.login-message a.to-member-link {
   display: block;
   padding: 14px 0px;
   font-size: 14px;
@@ -4984,6 +4999,36 @@ input::-webkit-input-placeholder {
   font-family: 'Cinzel', serif;
   font-style: italic;
   color: #77cbc0;
+}
+.oficial-member-block {
+  width: 800px;
+  border: 1px solid #77cbc0;
+  padding: 32px 50px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+.oficial-member-block p.oficial-member-title {
+  padding: 0px 0px;
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+.oficial-member-block p.oficial-member-title:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: #77cbc0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+}
+.oficial-member-block p.oficial-member-description {
+  padding: 0px 0px;
 }
 
 
