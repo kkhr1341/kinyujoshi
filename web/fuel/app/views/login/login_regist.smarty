@@ -34,7 +34,7 @@
           そっと後押しするようなフォローをしていきたいと思っています。<br>
         </p>
         <!-- <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div> -->
-        <a class="to-story-link" href="/about">もっとくわしく知る 〉</a>
+        <a class="to-story-link" href="/about_main">もっとくわしく知る 〉</a>
       </div>
       <a class="to-member-link" href="#regist-form">メンバー登録はこちら</a>
     </div>
@@ -52,7 +52,7 @@
             <div class="img-box" style="background: url(/images/login/activity01.jpg) center center / cover no-repeat;"></div>
             <div class="text-block">
               <p class="text-title fs-mincho"><span>01</span>みんなどうしてる？お金のことをシェア</p>
-              <p class="text-description">なかなか親しい仲だと話しにくいお金の話も、オープンに安心して話せる場所です。ひとりよりも、みんなで考えればよい知恵も情報も一度にシェアすることができます。一人一人が情報や経験を持ち寄ってコミュニティを作っています。でも残念ですがお金にも人生にも絶対という正解はないもの。違う意見を持っている人に出会うこともあるかもしれません。それを含め、さまざまな生き方や価値観を知ることで自分自身の判断軸を育てる場にしたいと思っています。まさに3人集まれば文殊の知恵です。</p>
+              <p class="text-description">なかなか親しい仲だと話しにくいお金の話も、オープンに安心して話せる場所です。ひとりよりも、みんなで考えればよい知恵や情報も一度にシェアすることができます。ひとりひとりが情報や経験を持ち寄ってコミュニティを作っています。でも残念ですがお金にも人生にも絶対という正解はないもの。違う意見を持っている人に出会うこともあるかもしれません。それを含め、さまざまな生き方や価値観を知ることで自分自身の判断軸を育てる場にしたいと思っています。まさに3人集まれば文殊の知恵です。</p>
             </div>
           </li>
           <li class="clear">
@@ -73,7 +73,7 @@
             <div class="img-box" style="background: url(/images/login/activity04.jpg) center center / cover no-repeat;"></div>
             <div class="text-block">
               <p class="text-title fs-mincho"><span>04</span>わたしたちの声を価値に変えることで運営</p>
-              <p class="text-description">私たちの声や価値観をレポートやアンケート、デザインという形に変えて企業の方へ提供することでコミュニティを運営しています。また、コミュニティ活動を通じて地域活経済活性化やスペースの有効活用にも貢献していきたいと考えています。メンバーのみなさんにはよりよいコミュニティや社会にしていくために、意思のある”声”や”気持ち”を届けていただけると嬉しいです。私たちの声が社会の役に立つことで、次なる挑戦への自信につながりますように…！</p>
+              <p class="text-description">私たちの声や価値観をレポートやアンケート、デザインという形に変えて企業の方に提供することでコミュニティを運営しています。また、コミュニティ活動を通じて地域経済活性化やスペースの有効活用にも貢献していきたいと考えています。メンバーのみなさんにはよりよいコミュニティや社会にしていくために、意思のある”声”や”気持ち”を届けていただけると嬉しいです。私たちの声が社会の役に立つことで、次なる挑戦への自信につながりますように…！</p>
             </div>
           </li>
         </ul>
