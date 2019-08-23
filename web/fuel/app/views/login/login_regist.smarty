@@ -81,33 +81,36 @@
     </div>
 
     <div class="login-block-el about-member-contents">
-      <h2 class="el-title">メンバーになると...？</h2>
-      <div class="about-member-contents-list">
-        <ul>
-          <li>
-            <div class="img-box" style="background: url(/images/login/member01.jpg) center center / cover no-repeat;"></div>
-            <p><span>01</span>メンバーによる活動日記や取材レポート等を読むことができます。</p>
-          </li>
-          <li>
-            <div class="img-box" style="background: url(/images/login/member02.jpg) top center / cover no-repeat;"></div>
-            <p><span>02</span>ちょっとお得に楽しく女子会やイベントに参加することができます。</p>
-          </li>
-          <li>
-            <div class="img-box" style="background: url(/images/login/member03.jpg) center center / cover no-repeat;"></div>
-            <p><span>03</span>アンケートやプロジェクトを通じてみなさんの声を届けることでお礼がもらえることも！</p>
-          </li>
-          <li>
-            <div class="img-box" style="background: url(/images/login/member04.jpg) center center / cover no-repeat;"></div>
-            <p><span class="kana">おまけ</span>メンバー限定で不定期にサプライズ…？(> <)があるかも♪</p>
-          </li>
-        </ul>
+      <div class="about-member-contents-inner">
+        <h2 class="el-title">メンバーになると...？</h2>
+        <div class="about-member-contents-list">
+          <ul>
+            <li>
+              <div class="img-box" style="background: url(/images/login/member01.jpg) left center / cover no-repeat;"></div>
+              <p><!-- <span>01</span> -->メンバーによる活動日記や取材レポート等を読むことができます。</p>
+            </li>
+            <li>
+              <div class="img-box" style="background: url(/images/login/member02.jpg) top center / cover no-repeat;"></div>
+              <p><!-- <span>02</span> -->ちょっとお得に楽しく女子会やイベントに参加することができます。</p>
+            </li>
+            <li>
+              <div class="img-box" style="background: url(/images/login/member03.jpg) center center / cover no-repeat;"></div>
+              <p><!-- <span>03</span> -->アンケートやプロジェクトを通じてみなさんの声を届けることでお礼がもらえることも！</p>
+            </li>
+            <li>
+              <div class="img-box" style="background: url(/images/login/member04.jpg) center center / cover no-repeat;"></div>
+              <p><span class="kana">おまけ</span>メンバー限定で不定期にサプライズ…？(> <)があるかも♪</p>
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
 
-      <!-- オフィシャルメンバーとは -->
-      <div class="oficial-member-block">
-        <p class="oficial-member-title fs-mincho">オフィシャルメンバーとは...？</p>
-        <p class="oficial-member-description">コミュニティの顔として企業と意見交換をしたりインタビューなどの取材を行ったり、主体的に活動するメンバーです。オフィシャルメンバーは、1年に1~2回募集いたします。6ヶ月〜1年間の活動を経て卒業となります。</p>
-      </div>
+    <!-- オフィシャルメンバーとは -->
+    <div class="oficial-member-block">
+      <p class="oficial-member-title fs-mincho">オフィシャルメンバーとは...？</p>
+      <p class="oficial-member-description">コミュニティの顔として企業と意見交換をしたりインタビューなどの取材を行ったり、主体的に活動するメンバーです。オフィシャルメンバーは、1年に1~2回募集いたします。6ヶ月〜1年間の活動を経て卒業となります。</p>
+      <img class="oficial-member-icon" src="/images/login/ofiucial-member.png">
     </div>
 
     <div id="regist-form" class="login-block-el login-contents-block-inner clear">
@@ -128,6 +131,10 @@
     </div>
 
   </div>
+</div>
+
+<div class="member-icon">
+  <a href="#regist-form"><img src="/images/login/member-icon.png"></a>
 </div>
 
 

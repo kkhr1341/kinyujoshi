@@ -4304,7 +4304,7 @@ input[type=checkbox]:checked + .checkbox:before {
 
 /* ログイン部分 */
 .login-contents-block {
-  padding: 80px 0px;
+  padding: 0px 0px 80px;
   position: relative;
   background: #d7f2ef;
 }
@@ -4664,7 +4664,7 @@ input::-webkit-input-placeholder {
   margin-bottom: 0px;
 }
 .login-block-el {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .login-block-el h2.el-title {
 /*  font-size: 22px;
@@ -4824,7 +4824,7 @@ input::-webkit-input-placeholder {
 .about-activity-contents {
   width: 920px;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .about-activity-contents li {
   padding: 32px 0px;
@@ -4887,6 +4887,10 @@ input::-webkit-input-placeholder {
 
 
 /* メッセージ部分 */
+.login-message {
+  background: #fff;
+  padding: 80px 0px;
+}
 .login-message .main-copy {
   color: #77cbc0;
   font-size: 26px;
@@ -4935,9 +4939,17 @@ input::-webkit-input-placeholder {
 
 /* メンバーになると...？ */
 .about-member-contents {
-  width: 920px;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 70px;
+  padding: 80px 0px;
+  background: gray;
+/*  background: url(/images/login/bg-member.jpg) center center / cover no-repeat;
+*/}
+.about-member-contents-inner {
+  width: 1000px;
+  margin: 0 auto;
+  background: rgba(255,255,255,.8);
+  padding: 50px;
 }
 .about-member-contents ul {
   display: -webkit-flex;
@@ -4949,25 +4961,24 @@ input::-webkit-input-placeholder {
   padding-top: 12px;
 }
 .about-member-contents li {
-  width: calc(31.3% - 20px);
-  margin-right: 55px;
-  margin-bottom: 24px;
+  width: calc(25% - 30px);
+  margin-right: 30px;
 }
-.about-member-contents li:nth-last-child(-n+3) {
+/*.about-member-contents li:nth-last-child(-n+3) {
   margin-bottom: 0px; 
-}
-.about-member-contents li:nth-child(3n) {
+}*/
+/*.about-member-contents li:nth-child(3n) {
   margin-right: 0px;
-}
+}*/
 .about-member-contents li:last-child {
   margin-right: 0px;
 }
 .about-member-contents li .img-box {
-  height: 250px;
+  height: 200px;
   border-radius: 50%;
 }
 .about-member-contents p {
-  padding: 24px;
+  padding: 24px 8px 0px;
   text-align: center;
 }
 .about-member-contents p span {
@@ -4981,16 +4992,18 @@ input::-webkit-input-placeholder {
 .oficial-member-block {
   width: 800px;
   border: 1px solid #77cbc0;
-  padding: 32px 50px;
+  padding: 42px 120px;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  position: relative;
 }
 .oficial-member-block p.oficial-member-title {
   padding: 0px 0px;
-  font-size: 18px;
+  font-size: 24px;
   position: relative;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
   text-align: center;
   position: relative;
 }
@@ -5008,7 +5021,20 @@ input::-webkit-input-placeholder {
 .oficial-member-block p.oficial-member-description {
   padding: 0px 0px;
 }
-
+.member-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.member-icon img {
+  width: 150px;
+}
+.oficial-member-icon {
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  width: 120px;
+}
 
 /* マイページでできること */
 .about-member-block {
