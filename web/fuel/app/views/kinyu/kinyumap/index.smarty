@@ -75,10 +75,9 @@
         if( getDevice == 'sp' ){
 
           var mapOptions = {
-              zoom: 6
-              ,
+              zoom: 7,
 
-              center: new google.maps.LatLng(35.617125,138.171108),
+              center: new google.maps.LatLng(36.21130021141535,137.7140554227559),
 
               styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#8ddcd1"}]}]
           };
@@ -90,9 +89,9 @@
 
         }else if( getDevice == 'tab' ){
           var mapOptions = {
-              zoom: 8,
+              zoom: 7,
 
-              center: new google.maps.LatLng(35.617125,138.171108),
+              center: new google.maps.LatLng(37.82414371431499,137.75114689455322),
 
               styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#8ddcd1"}]}]
           };
@@ -104,9 +103,9 @@
 
         }else if( getDevice == 'other' ){
           var mapOptions = {
-              zoom: 8,
+              zoom: 7,
 
-              center: new google.maps.LatLng(35.617125,138.171108),
+              center: new google.maps.LatLng(37.82414371431499,137.75114689455322),
 
               styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#8ddcd1"}]}]
           };
@@ -122,6 +121,12 @@
         var mapElement = document.getElementById('map');
 
         var map = new google.maps.Map(mapElement, mapOptions);
+
+
+        map.addListener('click', function(e) {
+            console.log(e.latLng);
+        });
+
 
         var animationZoom = function(target, delay, let, lng) {
             var countup = function(){
@@ -181,7 +186,7 @@
                 icon: pin,
             });
             var infoWindow3 = new google.maps.InfoWindow({
-                content: '<div class="sample map-point"><a href="https://kinyu-joshi.jp/report/LOJyjO" target="_blank"><img src="/images/kinyu_map/kinyu_sanpo_nagoya.jpg"><p class="map-el-title">きんゆう散歩@名古屋</p><p class="map-decription">名古屋で金運も気分も上がるお散歩スポットを紹介します(๑˃̵ᴗ˂̵)！名古屋にはしゃちほこ以外にも”金”にまつわるモノや場所がたくさんあるんです♪</p></a></div>'
+                content: '<div class="sample map-point"><a href="/report/LOJyjO" target="_blank"><img src="/images/kinyu_map/kinyu_sanpo_nagoya.jpg"><p class="map-el-title">きんゆう散歩@名古屋</p><p class="map-decription">名古屋で金運も気分も上がるお散歩スポットを紹介します(๑˃̵ᴗ˂̵)！名古屋にはしゃちほこ以外にも”金”にまつわるモノや場所がたくさんあるんです♪</p></a></div>'
             });
             marker3.addListener( "click", function ( argument ) {
                 infoWindow3.open(map, marker3);
@@ -195,12 +200,26 @@
                 icon: pin,
             });
             var infoWindow4 = new google.maps.InfoWindow({
-                content: '<div class="sample map-point"><a href="https://kinyu-joshi.jp/report/J8jKHz" target="_blank"><img src="/images/kinyu_map/kinyu_sanpo_gifu.jpg"><p class="map-el-title">きんゆう散歩@岐阜</p><p class="map-decription">岐阜県のお金にまつわるスポットや観光スポット、グルメ情報などをご紹介♪ 自然の中でココロもカラダもリフレッシュ♡</p></a></div>'
+                content: '<div class="sample map-point"><a href="/report/J8jKHz" target="_blank"><img src="/images/kinyu_map/kinyu_sanpo_gifu.jpg"><p class="map-el-title">きんゆう散歩@岐阜</p><p class="map-decription">岐阜県のお金にまつわるスポットや観光スポット、グルメ情報などをご紹介♪ 自然の中でココロもカラダもリフレッシュ♡</p></a></div>'
             });
             marker4.addListener( "click", function ( argument ) {
                 infoWindow4.open(map, marker4);
             } ) ;
             markers.push(marker4);
+
+            // きんゆう散歩@盛岡
+            var marker5 = new google.maps.Marker({
+                position: new google.maps.LatLng(39.7127522,141.1411638),
+                map: map,
+                icon: pin,
+            });
+            var infoWindow5 = new google.maps.InfoWindow({
+                content: '<div class="sample map-point"><a href="/report/y0xDQU" target="_blank"><img src="https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20190814114325image.jpg"><p class="map-el-title">【きんゆう散歩@盛岡】 レトロ建築めぐり♪</p><p class="map-decription">盛岡といえば冷麺！のイメージがありお腹が空きそうですが、実は金融にまつわるレトロな建築物がたくさんあるんです！今回はそんな盛岡市内の歴史情緒溢れるお散歩スポットを紹介します。</p></a></div>'
+            });
+            marker5.addListener( "click", function ( argument ) {
+                infoWindow5.open(map, marker5);
+            } ) ;
+            markers.push(marker5);
         }
 
         // 拡大状態に表示するマーカー
@@ -241,8 +260,6 @@
 
         var isShrink = false;
         google.maps.event.addListener(map, 'zoom_changed', function() {
-
-            console.log(map.getZoom());
             if (map.getZoom() >= 14 && isShrink == false) {
                 showExpansionZoomMarkers();
                 isShrink = true;
