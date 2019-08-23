@@ -123,6 +123,25 @@
 
         var map = new google.maps.Map(mapElement, mapOptions);
 
+        var animationZoom = function(target, delay, let, lng) {
+            var countup = function(){
+                if(map.getZoom() >= target) {
+                    return false;
+                }
+
+                var zoom = map.getZoom() + 1;
+
+                var opts = {
+                    zoom: zoom,
+                    center: new google.maps.LatLng(let, lng),
+                };
+                map.setOptions(opts);
+
+                setTimeout(countup, delay);
+            }
+            countup();
+        };
+
         // 縮小状態に表示するマーカー
         var showShrinkZoomMarkers = function() {
             // 表示中のマーカーをクリア
@@ -137,11 +156,7 @@
                 icon: pin,
             });
             marker1.addListener( "click", function ( argument ) {
-                var opts = {
-                    zoom: 14,
-                    center: new google.maps.LatLng(35.6815549, 139.769562),
-                };
-                map.setOptions(opts);
+                animationZoom(14, 150, 35.6815549, 139.769562);
             } ) ;
             markers.push(marker1);
 
