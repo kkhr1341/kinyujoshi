@@ -1,0 +1,44 @@
+{$fooo = $event.main_image}
+{$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
+<li{if $event.pr == 1} class="pr"{/if}{if $smarty.foreach.loopname.index > ($event_display_limit-1)} style="display: none"{/if}>
+    {if empty($event.specific_link)}
+    <a class="js-track" href="/joshikai/{$event.code}" data-category="pc-top-link" data-action="click" data-value="1">
+    {else}
+    <a class="js-track" href="{$event.specific_link}" data-category="pc-top-link" data-action="click" data-value="1" target="_blank">
+    {/if}
+        <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;">
+            {if $event.pr == 1}
+                <!-- PR用イメージ挿入箇所 -->
+                <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+            {/if}
+        </div>
+        <div class="text-box">
+            <div class="kinyu-top-list-kind kinyu-top-event-kind">
+                <p>
+                  <span class="date-box">
+                    {if $event.display_event_date}
+                        <span class="date">{$event.display_event_date}</span>
+                    {else}
+                      <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
+                    {/if}
+                  </span>
+                </p>
+                {if $event.applicable eq false}
+                    <p class="joshikai-applicable">＊受付終了</p>
+                {else if $event.full eq true}
+                    <p class="joshikai-applicable">＊満席</p>
+                {/if}
+            </div>
+            <h3 class="kinyu-top-list-title">{$event.title}</h3>
+            <div class="event-subbox">
+                {if $event.fee == 0}
+                    <p class="event-subbox-el">参加費：無料</p>
+                {else}
+                    <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                {/if}
+                <p class="event-subbox-el">場所：{$event.place}</p>
+            </div>
+        </div>
+    </a>
+</li>

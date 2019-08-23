@@ -17,45 +17,21 @@ class PaymentPayjp extends Base
     }
 
     public function charge(
-        $username,
+        $customer,
         $name,
         $email,
-        $token,
         $amount,
         $application_code,
         $cardselect='0'
     ) {
-        if ($cardselect === '0') {
-            if (!$new_customer = $this->getCustomer($username)) {
-                $new_customer = $this->createCreditCustomer($username, $name, $email);
-            } else {
-                $new_customer = $this->updateCreditCustomer($username, $name, $email);
-            }
-            $new_card = $this->registNewCreditCard(
-                $new_customer,
-                $token,
-                $username,
-                $name
-            );
-            $charge = $this->paymentByNewCreditCard(
-                $new_customer,
-                $new_card,
-                $amount,
-                $application_code,
-                $name,
-                $email
-            );
-        } else {
-            $customer = $this->updateCreditCustomer($username, $name, $email);
-            $charge = $this->paymentByRegistCreditCard(
-                $cardselect,
-                $customer,
-                $amount,
-                $application_code,
-                $name,
-                $email
-            );
-        }
+        $charge = $this->paymentByRegistCreditCard(
+            $cardselect,
+            $customer,
+            $amount,
+            $application_code,
+            $name,
+            $email
+        );
         // クレジット決済イベントデータ作成
         \DB::insert('application_credit_payments')->set(array(
             'application_code' => $application_code,

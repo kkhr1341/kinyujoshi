@@ -60,7 +60,7 @@
                     <div class="regist-selectarea">
                         <select id="age1" class='form-control'>
                             <option>-</option>
-                            {section name=i start=1952 loop=2018}
+                            {section name=i start=1942 loop=$smarty.now|date_format:'%Y'-18}
                             <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
                             {/section}
                         </select>
@@ -261,16 +261,22 @@
                         <input type="radio" value="先輩上司から" name="where_from" id="where_from6" class="form-radio" placeholder="">
                         <label for="where_from6">先輩上司から</label>
 
-                          </div>
-
-                        <p class="regist-add-form-edit-subtitle">他サイトで紹介されていた</p>
-                        <div class="othet_input">
-                            <input type="text" id="where_from_site" name="where_from_site" class="form-control" placeholder="良かったらサイト名を教えてください♪" style="margin-top:10px;">
+                            <div style="display: none;">
+                                <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="">
+                                <label for="where_from7">その他</label>
+                            </div>
                         </div>
 
-                        <p class="regist-add-form-edit-subtitle" style="margin-top:10px;">その他</p>
+                        <div style="margin-left: 20px;">
+                            <p class="regist-add-form-edit-subtitle">その他</p>
+                            <div class="othet_input">
+                                <input type="text" id="where_from_other" name="where_from_other" class="form-control" placeholder="その他の方はこちら" style="margin-top:10px;">
+                            </div>
+                        </div>
+
+                        <p class="regist-add-form-edit-subtitle" style="margin-top:30px;">他サイトで紹介されていた</p>
                         <div class="othet_input">
-                            <input type="text" id="where_from_other" name="where_from_other" class="form-control" placeholder="その他の方はこちら" style="margin-top:10px;">
+                            <input type="text" id="where_from_site" name="where_from_site" class="form-control" placeholder="良かったらサイト名を教えてください♪" style="margin-top:10px;">
                         </div>
 
                     </div>
@@ -408,6 +414,13 @@
 
         var padding_top = (title_frame_height / 2) - (page_title_height / 2);
         $('.page_title').css('padding-top', padding_top);
+
+        $("[name=where_from]").click(function() {
+            $('[name=where_from_other]').val('');
+        });
+        $("[name=where_from_other]").click(function() {
+            $('#where_from7').prop('checked', true);
+        });
 
         $('#save').click(function(){
             var url = "/api/regist/create";
