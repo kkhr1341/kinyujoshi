@@ -73,7 +73,7 @@ class Controller_Kinyu_Withcorporate extends Controller_Kinyubase
         //     die('このページを見るにはログインが必要です');
         // }
 
-        $this->template->title = '行ったことのない、おいしいパン屋さん巡り。〜 麻布十番から渋谷までお散歩 〜 | 今日も、キャッシュレス。';
+        $this->template->title = '行緑とアートに囲まれる、キャッシュレス旅。 | 今日も、キャッシュレス。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/withcorporate/paypay/article/article1_og.jpg';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
 
