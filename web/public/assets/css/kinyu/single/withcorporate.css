@@ -595,6 +595,9 @@ footer,
 .kinjo-member-wallet .img-block img {
 	width: 50%;
 }
+.kinjo-member-wallet .img-block.one-block img {
+	width: 100%;
+}
 
 /* h2.タイトル */
 .article-main-title {
