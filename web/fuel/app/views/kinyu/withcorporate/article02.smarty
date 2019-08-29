@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/withcorporate.css">
 <script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
 
-<div class="withcorporate-container article-container">
+<div class="withcorporate-container article-container article02-block">
 	
 	<div class="withcorporate-main-logo logo-animation" style="background:#283248;">
 		<a href="/contents/cashless"><img src="/images/withcorporate/paypay/logo_w.png"></a>
@@ -30,7 +30,7 @@
 			<img class="article-animation-episode" src="/images/withcorporate/paypay/article02/episode2.png">
 			<p class="article-animation-episode2">緑とアートに囲まれる、<br class="sp">キャッシュレス旅。<span>
 			〜 静岡三島・クレマチスの丘 〜</span></p>
-			<img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article/illust_01.png">
+			<img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article02/illust5.png">
 		</div>
 
 		<p class="article-fix-text cashless-animation1"><span class="text-decoration">キャッシュレスライフにすることで生まれたゆとりで、新たな私を見つける！<br class="pc">日々のお金のやりとりをスムーズにしたら、時間とお金だけじゃなくて心にもゆとりができた！</span></p>
@@ -55,7 +55,7 @@
 					</p>
 				</div>
 			</div>
-			<img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article/illust_03.png">
+			<img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article02/illust1.png">
 		</div>
 
 		<div class="kinjo-member-wallet">
@@ -81,7 +81,7 @@
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					名古屋で待ち合わせしたのは、前日に名古屋IREXPOというイベントに行っていたから。<br class="pc">
-					夜は桐谷さんとひみつの女子会をして株主優待についてより知識を深めたところ。<br><br>
+					夜は桐谷さんとひみつの女子会をして<span class="text-decoration">株主優待についてより知識を深めたところ。</span><br><br>
 
 					私は、数年前から投資信託を積み立てしていたり、少し株式投資をしたり。ちょっと経験をつんだかな〜？<br><br>
 
@@ -89,7 +89,7 @@
 					三島駅から30分ほど先にある「クレマチスの丘」に行ってみたかったから。<br><br>
 
 					この「クレマチスの丘」で大好きなミッフィーの展覧会が行われているんです。<br class="pc">
-					庭園と美術館と建築が混在し絶妙なバランスを作っているこのスポット。<br class="pc">
+					<span class="text-decoration">庭園と美術館と建築が混在し絶妙なバランスを作っているこのスポット。</span><br class="pc">
 					どんな場所かとても楽しみです♪<br><br>
 
 					クレマチスの丘が最終目的地だけど、三島の街も散策したいな。<br class="pc">
@@ -113,6 +113,7 @@
 					ちょっと厚めの生ハム、とっても美味しそう〜！
 				</p>
 			</div>
+			<img class="illust-04 illust-animation1" src="/images/withcorporate/paypay/article02/illust4.png">
 		</div>
 
 
@@ -146,7 +147,7 @@
 
 					歩いて行くと、街中にあるのは和菓子屋さんやレトロな雑貨屋さんがちらほら。<br class="pc">
 					結構キャッシュレス対応しているんですね。<br class="pc">
-					入り口に使えるキャッシュレスツールがわかるようになっています。
+					<span class="text-decoration">お店の入り口で使えるキャッシュレスツールがわかるようになっています。</span>
 				</p>
 			</div>
 		</div>
@@ -228,7 +229,7 @@
 					ひとつ、気に入ったカップがありました。こぶりのマグ。<br><br>
 
 					このお店にはどんな決済ツールが使えるか書いてありませんでした。<br class="pc">
-					キャッシュレス旅ですが、好きなものだったら現金でも買いたい。<br><br>
+					<span class="text-decoration">キャッシュレス旅ですが、好きなものだったら現金でも買いたい。</span><br><br>
 
 					だいたい15000円くらいはお財布に入っていると安心です。<br><br>
 
@@ -236,6 +237,7 @@
 					「何で買えますか？」
 				</p>
 			</div>
+			<img class="article02-illust-02 illust-animation1" src="/images/withcorporate/paypay/article02/illust3.png">
 		</div>
 
 		<div class="article-contents-el img-right clear">
@@ -247,12 +249,12 @@
 					お姉さんは、少しとまどだった様子で
 					「えっと、最近いろいろ導入したんです。」<br><br>
 
-					私は、思い切って「PayPayとかスマホ決済はできますか？」と聞いてみました。<br><br>
+					私は、思い切って「<span class="text-decoration">PayPayとかスマホ決済はできますか？</span>」と聞いてみました。<br><br>
 
 					「使えますよ！・・・・・たぶん。」<br>
 					たぶん？？（笑）<br><br>
 
-					お店の奥の方から取り出したのはPayPayキットのようなもの。
+					お店の奥の方から取り出したのは<span class="text-decoration">PayPayキット</span>のようなもの。
 					色々と準備し始めたお姉さん。<br><br>
 
 					「初めて使います。できるかな？？」<br><br>
@@ -296,7 +298,7 @@
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					歩いて5分ほどでついたお目当の場所、三嶋大社につきました。<br class="pc">
-					伊豆で一番、由緒正しき神社で商売繁盛、家内安全、交通安全、厄除けといったご利益があります。<br><br>
+					<span class="text-decoration">伊豆で一番、由緒正しき神社で商売繁盛、家内安全、交通安全、厄除けといったご利益があります。</span><br><br>
 
 					ご利益（ごりやく）って、自然と使っている単語ですがよく調べてみると<br class="pc">
 					「神仏が人間に与えるお恵み、幸運」という意味があるそうです。<br><br>
@@ -314,7 +316,7 @@
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
 					私は社会の先生をしているのですが、<br class="pc">
-					主に公民を担当していて、日本の歴史はもっと知りたいなと思います。<br><br>
+					主に公民を担当していて、<span class="text-decoration">日本の歴史はもっと知りたいなと思います。</span><br><br>
 				</p>
 			</div>
 		</div>
@@ -360,14 +362,14 @@
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
 					ここは、スマホ決済でOK。<br class="pc">
-					お店のレジにずらりとQRコードや決済ブランドのロゴが並んでいました。<br class="pc">
+					<span class="text-decoration">お店のレジにずらりとQRコードや決済ブランドのロゴが並んでいました。</span><br class="pc">
 					ここは、PayPayで。<br><br>
 
 					さて、いよいよ目的地のクレマチスの丘に向かいます。<br class="pc">
 					今回はタクシーで。<br><br>
 
 					三島だとなかなか流しのタクシーがきません。<br class="pc">
-					駅に戻るのは遠かったので、DiDiでタクシーを呼んで向かいます。
+					<span class="text-decoration">駅に戻るのは遠かったので、DiDiでタクシーを呼んで向かいます。</span>
 				</p>
 			</div>
 		</div>
@@ -405,8 +407,8 @@
 
 					クレマチスの丘は実は、きんゆうスポット。<br><br>
 
-					スルガ銀行の創業ファミリーの個人の持ち物で、<br class="pc">
-					美術館や庭園やレストランなどが集まった施設です。<br><br>
+					<span class="text-decoration">スルガ銀行の創業ファミリーの個人の持ち物で、<br class="pc">
+					美術館や庭園やレストランなどが集まった施設です。</span><br><br>
 
 					今回はその中でもこの展覧会を見にヴァンジ彫刻庭園美術館に足を運びます。<br class="pc">
 					「ミッフィーのたのしいお花畑　ディック・ブルーナが描くお花と絵本の世界展」 <br><br>
@@ -443,7 +445,7 @@
 					みる人にとってどんな風にでも受け取っても良いようにディックブルーナが考えた感情表現だったようです。<br><br>
 
 					だからこそ、少し顔が傾いていたり涙が流れたりしていると<br class="pc">
-					見ている人は敏感にミッフィーの感情を受け取ることができるのだと思います。
+					<span class="text-decoration">見ている人は敏感にミッフィーの感情を受け取ることができるのだと思います。</span>
 
 				</p>
 			</div>
@@ -474,7 +476,7 @@
 					ミッフィーの住む世界は、8色しかありません。<br class="pc">
 					その8つの色にはそれぞれ感情や環境を表すために意味がつけられています。
 
-					一番魅力的な「朱色」は幸せや喜びを表しています。<br><br>
+					<span class="text-decoration">一番魅力的な「朱色」は幸せや喜びを表しています。</span><br><br>
 
 					美術館の中に、ワークスペースがありそこで自分なりのミッフィーが描けるようになっていました。<br><br>
 
@@ -489,13 +491,13 @@
 			</div>
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
-					私自身のキャッシュレスの話ですが、実はついこの間まで現金派でした。<br class="pc">
+					私自身のキャッシュレスの話ですが、<span class="text-decoration">実はついこの間まで現金派でした。</span><br class="pc">
 
 					現金の方が、使っている「ありがたみ」を感じて使いすぎないからです。
 					もちろん、振込などでネットを使ったり電車に乗るときはSuicaなどを使いますので全てが現金というわけではないです。<br><br>
 
-					でも、お財布に常に現金を入れておき、
-					食費やお買い物でお金を使った時の感情を感じ取りながら使っていました。
+					<span class="text-decoration">でも、お財布に常に現金を入れておき、
+					食費やお買い物でお金を使った時の感情を感じ取りながら使っていました。</span>
 
 				</p>
 			</div>
@@ -510,7 +512,7 @@
 					そんな私ですが、時代の流れも感じつつ・・
 					スマホで支払いができることにもっと慣れておきたいと思うようになりました。<br><br>
 					どこにいくらくらいお金が入っているかわからなくなるとか、
-					お金がなくなってしまわないかとか、セキュリティが不安もありつつ、思い切って使い始めてみました。
+					<span class="text-decoration">お金がなくなってしまわないかとか、セキュリティが不安もありつつ、思い切って使い始めてみました。</span>
 				</p>
 			</div>
 		</div>
@@ -528,10 +530,10 @@
 					話題になっているサービスが中心です。<br><br>
 
 					使いすぎることは怖かったのですが、
-					どれも履歴が明確なので振り返ると「いつ・何に・いくら」使ったかがわかります。<br><br>
-
+					<span class="text-decoration">どれも履歴が明確なので振り返ると「いつ・何に・いくら」使ったかがわかります。</span><br><br>
 				</p>
 			</div>
+			<img class="article02-illust-03 illust-animation1" src="/images/withcorporate/paypay/article02/illust2.png">
 		</div>
 
 		<div class="article-contents-el img-center clear">
@@ -544,7 +546,7 @@
 					スマホでの支払いに慣れてくると「お釣り」がたくさん返ってくることが煩わしくなってきました。<br><br>
 
 					美術館内の庭園にあるカフェで、400円ほどのドリンクをオーダー。<br class="pc">
-					キャッシュレスライフを送っていると細かいお金を持たないことも多いので5000円を崩しました。<br><br>
+					<span class="text-decoration">キャッシュレスライフを送っていると細かいお金を持たないことも多い</span>ので5000円を崩しました。<br><br>
 
 					お釣りは4000円と数百円とばらばらと戻ってきました。<br class="pc">
 					お財布はすぐにパンパンになりました。<br><br>
@@ -557,7 +559,7 @@
 					便利、機能的、そんな超合理的な生活に慣れていくことって<br class="pc">
 					良いけれどちょっと寂しい気もします。<br><br>
 
-					やっぱり、バランス？なのでしょうか？
+					<span class="text-decoration">やっぱり、バランス？なのでしょうか？</span>
 				</p>
 			</div>
 		</div>
@@ -580,7 +582,7 @@
 					クレマチスの丘では、時短や効率化という言葉を忘れて<br class="pc">
 					アートを堪能し美味しい空気を吸ってリフレッシュになりました。<br><br>
 
-					帰りのタクシーでは、Quick Payを使うことができました。<br class="pc">
+					<span class="text-decoration">帰りのタクシーでは、Quick Payを使うことができました。</span><br class="pc">
 					心地よい揺れでうとうと・・・。
 				</p>
 			</div>
@@ -602,7 +604,7 @@
 					お酒はお水が命ですから、美味しそうです。
 					私はお酒は＊＊＊＊ですが・・・。<br><br>
 
-					海外からの観光客も多いのか、微信（WeChatPay）での支払いもOK。
+					<span class="text-decoration">海外からの観光客も多いのか、微信（WeChatPay）での支払いもOK。</span>
 				</p>
 			</div>
 		</div>
@@ -622,8 +624,8 @@
 
 					次回来るときは、もう少し時間を作って沼津まで足を伸ばして港で美味しい魚料理を嗜むのもいいな。<br><br>
 
-					完全キャッシュレスな旅とまではいかないけれど、<br class="pc">
-					支払いを通じてお店の方とのコミュニケーションを取ることができました。
+					<span class="text-decoration">完全キャッシュレスな旅とまではいかないけれど、<br class="pc">
+					支払いを通じてお店の方とのコミュニケーションを取ることができました。</span>
 				</p>
 			</div>
 		</div>

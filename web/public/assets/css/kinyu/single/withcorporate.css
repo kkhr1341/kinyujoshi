@@ -843,7 +843,7 @@ footer,
 	color: gray;
 }
 
-/* イラスト */
+/* イラスト - article1 */
 .illust-01 {
   position: absolute;
   top: -40px;
@@ -888,6 +888,32 @@ footer,
   right: 25px;
   bottom: 0;
   transform: rotate(22deg);
+}
+
+/* イラスト - article2 */
+.article02-block .illust-03 {
+  width: 85px;
+  right: -30px;
+  bottom: -20px;
+}
+.article02-block .illust-04 {
+	width: 150px;
+	left: auto;
+    margin-left: 0px;
+    right: 4%;
+}
+.article02-block .article02-illust-02 {
+	width: 130px;
+	position: absolute;
+  right: 0;
+  bottom: 0px;
+}
+.article02-block .article02-illust-03 {
+	width: 130px;
+	position: absolute;
+  left: 50%;
+  bottom: 0px;
+  margin-left: -120px;
 }
 
 
