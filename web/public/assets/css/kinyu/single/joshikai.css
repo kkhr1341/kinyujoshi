@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.inquiry-counter {
+  width: 900px;
+  margin: 0 auto;
+}
+.inquiry-counter .form-btn button {
+  background: #f79999;
+  padding: 12px 80px;
+}
+.inquiry-counter-title {
+  text-align: center;
+}
+.inquiry-counter-title .counter-sub-title {
+  font-size: 14px;
+  line-height: 24px;
+}
+.inquiry-counter-title .counter-main-title {
+  color: #77cbc0;
+  font-size: 26px;
+  line-height: 36px;
+}
+.inquiry-counter-el .inquiry-counter-el-description {
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.inquiry-counter-el {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.inquiry-counter-el ul {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inquiry-counter-el li {
+  width: calc(25.8% - 30px);
+  margin-right: 30px;
+}
+.inquiry-counter-el li:last-child {
+  margin-right: 0px;
+}
+.inquiry-counter-el li .img-box {
+  width: 100%;
+  height: 150px;
+}
+.inquiry-counter-el li p {
+  text-align: center;
+  margin-top: 8px;
+}
+.inquiry-counter .regist-add-form-edit-title {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スマートフォン
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 1024px) {
+
+
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  320px以下
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 768px) {
+
+
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  タブレットのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 480px) and (max-width:1024px) {
+
+
+}
