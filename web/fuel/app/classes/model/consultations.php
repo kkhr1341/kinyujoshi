@@ -34,7 +34,7 @@ class Consultations extends Base
         $email = \Email::forge('jis');
         $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
         $email->subject("[きんゆう女子。] お問合せ確認メール");
-        $email->html_body(\View::forge('email/consultation/body.smarty', array()));
+        $email->html_body(\View::forge('email/consultation/body', array()));
         $email->to($params['email']); //送り先
 
         $email->return_path('support@kinyu-joshi.jp');
