@@ -41,7 +41,7 @@
       <div class="regist-add-form-edit-el regist-add-form-edit-el02">
         <label class="regist-add-form-edit-title">どんなことがありましたか？<span style="color:red; font-weight: normal;">*</span></label>
         <p class="regist-add-form-edit-subtitle">もやもやしたこと、いやだったこと...少しでも気になったことがあれば教えてください。</p>
-        <textarea id="introduction" name="introduction" class="form-control" rows="10"></textarea>
+        <textarea id="message" name="message" class="form-control" rows="10"></textarea>
       </div>
 
       <div class="regist-add-form-edit-el">
@@ -60,3 +60,53 @@
 
   </div>
 </div>
+
+<script>
+	{literal}
+    $(function () {
+
+        $('#save').click(function (e) {
+            e.preventDefault();
+            var url = "/api/consultations/create";
+            var params = {};
+
+            params.name = $('#name').val();
+            params.message = $('#message').val();
+            params.email = $('#email').val();
+
+            if (params.name == "") {
+                ts.error("お名前を入力してください");
+                return false;
+            }
+            if (params.message == "") {
+                ts.error("お問合せ内容を入力してください");
+                return false;
+            }
+            if (params.email == "") {
+                ts.error("メールアドレスを入力してください");
+                return false;
+            }
+
+            bootbox.confirm("お問合せを送信しますか？", function (result) {
+                if (result) {
+                    //ローディングアニメーション
+                    $(".loader-block").fadeIn(200);
+                    ajax.post(url, params, function (data) {
+                        location.href = "/consultation/complete";
+                    })
+                        .done(function(data) {
+                            $(".loader-block").fadeOut(500);
+                        })
+                        .fail(function(error) {
+                            $(".loader-block").fadeOut(500);
+                        })
+                }
+                else {
+                    ts.info("キャンセルしました");
+                }
+            });
+
+        });
+    });
+	{/literal}
+</script>
