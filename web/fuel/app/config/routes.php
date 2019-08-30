@@ -81,8 +81,8 @@ return array(
 
 	//お守りページ & 相談窓口
 	'event_rule'   => 'kinyu/event/event_rule',
-	'inquiry_counter'   => 'kinyu/event/inquiry_counter',
-	'inquirycounter_complete'   => 'kinyu/event/inquiry_counter_complete',
+	'consultation'   => 'kinyu/consultation',
+	'consultation/complete'   => 'kinyu/consultation/complete',
 
 
 	//ニュース
