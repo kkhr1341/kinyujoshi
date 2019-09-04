@@ -80,7 +80,7 @@ return array(
 	'joshikai_complete'   => 'kinyu/event/complete',
 
 	//お守りページ & 相談窓口
-	'event_rule'   => 'kinyu/event/event_rule',
+	'policy'   => 'kinyu/consultation/joshikai_policy',
 	'consultation'   => 'kinyu/consultation',
 	'consultation/complete'   => 'kinyu/consultation/complete',
 
