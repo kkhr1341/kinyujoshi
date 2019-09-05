@@ -839,6 +839,9 @@ footer,
 .shop-list-block ul li .shop-link {
 	color: #4da4e2;
 }
+.article-contents-el.img-center .text-box a {
+    color: #4da4e2;
+}
 .shop-list-block ul li .shop-sub-text {
 	color: gray;
 }
