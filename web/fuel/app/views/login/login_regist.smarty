@@ -1,6 +1,3 @@
-<!-- <link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css?family=Rochester&display=swap" rel="stylesheet">
-
 <div class="kinyu-single-block">
 
   <div class="login-contents-block login-regist-block">
@@ -8,57 +5,14 @@
     <!-- ログイン部分 -->
     <a class="login-another-btn sp" href="/login">ログインへ</a>
 
-    
-    <div class="login-block-el login-message">
-      <h2>ここにメッセージが入ります<br>ここにメッセージが入ります</h2>
-      <div class="message-block">
-        <p class="main-message">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-        <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div>
-      </div>
-      <a href="#regist-form">メンバー登録はこちら</a>
-    </div>
-
-    <!-- <div class="login-contents-intro">
+    <div class="login-contents-intro">
       <h2 class="login-contents-title"><span>きんゆう女子。にメンバー登録♪</span></h2><br>
     </div>
- -->
 
-    <div class="login-block-el about-member-contents">
-      <h2 class="about-member-title">メンバーになると...？</h2>
-      <div class="about-member-contents-list">
-        <ul>
-          <li>
-            <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div>
-            <p><span>01</span>どこにも属さないポジションの場で情報交換ができます。</p>
-          </li>
-          <li>
-            <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div>
-            <p><span>02</span>いち早く女子会やイベントのおしらせが届きます。</p>
-          </li>
-          <li>
-            <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div>
-            <p><span>03</span>優先的に女子会に参加することができます。</p>
-          </li>
-          <li>
-            <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div>
-            <p><span>04</span>スタンプカードを発行、全部たまるとドリンクチケットと交換できます。</p>
-          </li>
-          <li>
-            <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div>
-            <p><span>05</span>メンバー限定で不定期にサプライズ..？(> <)があります。</p>
-          </li>
-          <li>
-            <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div>
-            <p><span>06</span>アンケートや取材レポート作成など参加型の活動もできます。</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="regist-form" class="login-block-el login-contents-block-inner clear">
+    <div class="login-contents-block-inner clear">
       <div class="login-contents-mainarea login-contents-regist">
-        <h2 class="">メンバー登録はこちら♪</h2>
         <div class="login-contents-form-area clear">
+
           <div class="regist-btn-list">
             <ul>
               <li class="email-login-bg"><a href="/regist_email">メールアドレスで登録に進む</a></li>
@@ -66,41 +20,70 @@
               <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
             </ul>
           </div>
+
           <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
-          <p class="regist-sub-description" style="margin-top: 10px;"><span style="color:#f3626c;">＊</span>メンバー登録は女性限定になります♪</p>
+          <p class="regist-sub-description" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
+
+          <!-- <div class="login-contents login-email-container">
+            <label class="title">ソーシャルアカウントで登録</label>
+            <ul>
+              <li class="email-login-bg"><a href="/">メールアドレスで登録に進む</a></li>
+            </ul>
+          </div>
+          <div class="login-contents login-btn-list">
+            <label class="title">ソーシャルアカウントで登録</label>
+            <ul>
+              <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
+              <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
+            </ul>
+            <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
+          </div> -->
         </div>
       </div>
     </div>
 
+    <div class="about-member-block">
+      <h2 class="about-member-title">メンバーになると...？</h2>
+      <div class="about-member-list">
+        <ul>
+          <li><span>01</span>どこにも属さないポジションの場で情報交換ができます。</li>
+          <li><span>02</span>いち早く女子会やイベントのおしらせが届きます。</li>
+          <li><span>03</span>優先的に女子会に参加することができます。</li>
+          <li><span>04</span>スタンプカードを発行、全部たまるとドリンクチケットと交換できます。</li>
+          <li><span>05</span>メンバー限定で不定期にサプライズ..？(> <)があります。</li>
+          <li><span>06</span>アンケートや取材レポート作成など参加型の活動もできます。</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
 
 <script>
-$(function(){
+    $(function(){
 
-    var registForm = $('#regist-email-form-block');
-	registForm.find('.login-btn').click(function(){
-		var url = "/api/auth/register";
-		var params = {};
-        var birthday_year = registForm.find('[name="birthday_year"]').val();
-        var birthday_month = registForm.find('[name="birthday_month"]').val();
-        var birthday_day = registForm.find('[name="birthday_day"]').val();
+        var registForm = $('#regist-email-form-block');
+        registForm.find('.login-btn').click(function(){
+            var url = "/api/auth/register";
+            var params = {};
+            var birthday_year = registForm.find('[name="birthday_year"]').val();
+            var birthday_month = registForm.find('[name="birthday_month"]').val();
+            var birthday_day = registForm.find('[name="birthday_day"]').val();
 
-		params.name = registForm.find('[name="name"]').val();
-		params.name_kana = registForm.find('[name="name_kana"]').val();
-		params.email = registForm.find('[name="email"]').val();
-		params.birthday = birthday_year + '-' + birthday_month + '-' + birthday_day;
-		params.password = registForm.find('[name="password"]').val();
-		params.confirm_password = registForm.find('[name="confirm_password"]').val();
+            params.name = registForm.find('[name="name"]').val();
+            params.name_kana = registForm.find('[name="name_kana"]').val();
+            params.email = registForm.find('[name="email"]').val();
+            params.birthday = birthday_year + '-' + birthday_month + '-' + birthday_day;
+            params.password = registForm.find('[name="password"]').val();
+            params.confirm_password = registForm.find('[name="confirm_password"]').val();
 
-		ajax.post(url, params, function(data){
-			ts.success("ログインが完了しました", function(){
-				location.href = "/my";
-			});
-		});
-	});
-});
+            ajax.post(url, params, function(data){
+                ts.success("ログインが完了しました", function(){
+                    location.href = "/my";
+                });
+            });
+        });
+    });
 </script>
 
 <style>
