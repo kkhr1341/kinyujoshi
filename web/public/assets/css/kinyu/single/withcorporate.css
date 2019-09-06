@@ -337,31 +337,58 @@ footer,
 	margin-top: 50px;
 }
 .cashlesslife-list li {
-	display: flex;
+	/*display: flex;*/
 }
 .cashlesslife-list .img-box {
+	float: left;
 	width: 45%;
 	height: 350px;
 	opacity: .8;
 }
 .cashlesslife-list .text-box {
+	float: right;
 	position: relative;
 	width: 55%;
+	height: 350px;
 	text-align: center;
 	padding-top: 55px;
 	/*background: #f9f9f9;*/
 	background: linear-gradient(135deg, #f9fbfc 0%,#eff8fa 100%);
 }
-.cashlesslife-list .text-box .illust1 {
+.cashlesslife-list li.clear {
+	margin-bottom: 50px;
+}
+.cashlesslife-list li.clear:last-child {
+	margin-bottom: 0px;
+}
+.cashlesslife-list li.clear:nth-child(odd) .img-box {
+	float: right;
+}
+.cashlesslife-list li.clear:nth-child(odd) .text-box {
+	float: left;
+}
+.cashlesslife-el01 .text-box .illust1 {
 	position: absolute;
   width: 110px;
   right: 28px;
   top: 22px;
 }
-.cashlesslife-list .text-box .illust2 {
+.cashlesslife-el01 .text-box .illust2 {
 	position: absolute;
   width: 180px;
   left: -30px;
+  bottom: 6px;
+}
+.cashlesslife-el02 .text-box .illust1 {
+	position: absolute;
+  width: 110px;
+  right: 28px;
+  top: 22px;
+}
+.cashlesslife-el02 .text-box .illust2 {
+  position: absolute;
+  width: 115px;
+  left: 12px;
   bottom: 6px;
 }
 .cashlesslife-list .text-box .title-epsode {
@@ -1370,19 +1397,34 @@ footer,
 .cashlesslife-list .text-box {
 	width: 100%;
   padding: 32px 24px;
+  height: auto;
 }
-.cashlesslife-list .text-box .illust1 {
-  position: absolute;
+.cashlesslife-el01 .text-box .illust1 {
+	position: absolute;
   width: 90px;
   right: -12px;
   top: 16px;
 }
-.cashlesslife-list .text-box .illust2 {
+.cashlesslife-el01 .text-box .illust2 {
   position: absolute;
   width: 120px;
   left: -39px;
   bottom: -17px;
 }
+.cashlesslife-el02 .text-box .illust1 {
+	position: absolute;
+  width: 90px;
+  right: -12px;
+  top: 16px;
+}
+.cashlesslife-el02 .text-box .illust2 {
+  position: absolute;
+  width: 90px;
+  left: -20px;
+  bottom: -17px;
+}
+
+
 .cashlesslife-list .text-box .title-epsode {
   width: 120px;
 }
@@ -1449,6 +1491,39 @@ footer,
 }
 .illust-06-sp-text {
 	padding-right: 62px;
+}
+.article02-block .illust-03 {
+  width: 65px;
+}
+.article02-block .illust-04 {
+	width: 120px;
+	right: -4%;
+	top: auto;
+	bottom: -56px;
+}
+.article-illust-fix-01 {
+	padding-right: 120px;
+}
+.article-illust-fix-02 {
+	padding-bottom: 70px;
+}
+.article-illust-fix-02 {
+	padding-left: 0px!important;
+	padding-bottom: 60px;
+}
+.article02-block .article02-illust-02 {
+  width: 110px;
+  position: absolute;
+  right: -20px;
+  bottom: -42px;
+}
+.article02-block .article02-illust-03 {
+  width: 110px;
+  position: absolute;
+  left: auto;
+  bottom: -60px;
+  margin-left: 0px;
+  right: 0px;
 }
 
 }
