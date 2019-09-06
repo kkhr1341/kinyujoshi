@@ -145,6 +145,7 @@
                 <div class="form-group">
                     <label class="form-group-event-label">女子会参加費</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>半角英数字のみでお願いします。"円"や、","はなしでお願いします。</p>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>内税で入力してください。</p>
                     <input type="text" id="fee" class="form-control" placeholder="(例)1000、2000、15000">
                 </div>
 

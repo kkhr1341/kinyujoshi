@@ -61,7 +61,7 @@ var $resArray02 = $resArray[1];
                 {if $event.fee == 0}
                   <p class="info-detail">無料</p>
                 {else}
-                  <p class="info-detail">{$event.fee|number_format}円</p>
+                  <p class="info-detail">{$event.fee|number_format}円（税込）</p>
                 {/if}
               {else}
               <p class="info-detail">{$event.fee}</p>
