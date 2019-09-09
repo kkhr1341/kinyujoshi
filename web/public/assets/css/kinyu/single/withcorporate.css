@@ -1337,6 +1337,9 @@ footer,
 	margin-bottom: 8px;
 	font-size: 11px;
 }
+.profile-detail .profile-textbox .case-like {
+	font-size: 11px;
+}
 .kinjo-member-wallet {
 	width: 88%;
 	margin-bottom: 60px;
