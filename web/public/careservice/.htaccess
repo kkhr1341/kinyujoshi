@@ -1,0 +1,4 @@
+AuthType     Basic
+AuthName     "Authentication Sample"
+AuthUserFile /var/www/dev_kinyujoshi/web/public/careservice/.htpasswd
+require valid-user

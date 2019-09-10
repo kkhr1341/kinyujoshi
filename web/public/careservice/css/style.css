@@ -1,0 +1,2175 @@
+@charset "UTF-8";
+/* normalize
+***************************************************** */
+html, body, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/*---------------------------------
+
+  初期設定
+
+---------------------------------*/
+.careservice-container ol,
+.careservice-container ul,
+.careservice-container li,
+.careservice-container p,
+.careservice-container h1,
+.careservice-container h2,
+.careservice-container h3,
+.careservice-container h4,
+.careservice-container th,
+.careservice-container td {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.careservice-container div {
+	box-sizing: border-box;
+}
+.clear:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  font-size:0;  
+  clear: both; 
+  visibility:hidden;
+}
+@font-face {
+  font-family: "careservice-font";
+  src: url("./logotypejp_corpmin.ttf");
+}
+@font-face {
+  font-family: "careservice-font-hime";
+  src: url("./logotypejp_himemin.otf");
+}
+.fc-hime {
+	font-family: "careservice-font-hime";
+}
+a {
+	text-decoration: none;
+}
+.sp {
+	display: none;
+}
+.tablet {
+	display: none;
+}
+
+/*---------------------------------
+
+  メインビジュアル / 共通
+
+---------------------------------*/
+.careservice-container {
+	font-size: 1.0rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "careservice-font";
+  position: relative;
+  color: #333333;
+  letter-spacing: 2px;
+  width: 1250px;
+  margin: 0 auto;
+  background: #fff;
+}
+.careservice-container p, 
+.careservice-container a {
+	font-size: 15px;
+	line-height: 22px;
+}
+h1.main-title {
+	display: block;
+	width: 400px;
+	margin: 0 auto;
+	padding: 50px 0px;
+}
+h1.main-title img {
+	width: 100%;
+}
+.careservice-mainvisual .img-area {
+	width: 100%;
+	height: 700px;
+	position: relative;
+}
+.careservice-mainvisual .img-area-title {
+	width: 800px;
+	position: absolute;
+  left: 6%;
+  top: 20%;
+}
+p.main-sub-title {
+	font-size: 22px;
+	line-height: 36px;
+	text-align: center;
+	margin: 50px 0px;
+}
+a.service-link {
+	display: block;
+	width: 550px;
+	padding: 20px 0px;
+	text-align: center;
+	margin: 0 auto;
+	color: #fff;
+}
+.careservice-details-el-inner {
+	padding: 0px 50px;
+}
+p.careservice-details-description {
+	font-size: 16px;
+	line-height: 26px;
+	margin-bottom: 70px;
+}
+/* WEB登録 */
+.web-regist-block {
+	margin-top: 100px;
+	position: relative;
+}
+p.web-regist-title {
+	font-size: 20px;
+	color: #fff;
+	background: gray;
+	display: inline-block;
+	width: 500px;
+	text-align: center;
+	padding: 12px 0px;
+	position: relative;
+	margin-bottom: 50px;
+}
+p.web-regist-title .web-regist-first {
+	position: absolute;
+	top: 50%;
+	left: -7px;
+	margin-top: -45px;
+	width: 90px;
+	height: 90px;
+	background: gray;
+	border-radius: 50%;
+	line-height: 90px;
+	transform: rotate(-5deg);
+}
+.regist-link-details {
+	margin-top: 24px;
+	padding: 24px 0px;
+	margin-bottom: 70px;
+}
+.regist-link-details .regist-link-details-el {
+	width: 45%;
+	float: left;
+}
+.regist-link-details-el .regist-link-title {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 12px;
+}
+.regist-link-details .regist-link-details-el .service-link {
+	width: 100%;
+	color: #fff;
+	font-size: 16px;
+}
+.regist-link-details .regist-link-details-sub-el {
+	width: 55%;
+	float: right;
+	padding-left: 40px;
+}
+.regist-link-sp {
+	margin-top: 24px;
+}
+.regist-link-sp-icon {
+	width: 110px;
+	height: 110px;
+	background: #e2f1f0;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 8px;
+	float: left;
+}
+.regist-link-sp-icon p {
+	margin-bottom: 5px;
+}
+.regist-link-sp-icon img {
+	width: 32px;
+}
+.regist-link-sp-qrarea {
+	float: left;
+	height: 110px;
+	padding: 12px 0px;
+	margin-left: 32px;
+}
+.regist-link-sp-qrarea p {
+	line-height: 26px;
+}
+.regist-link-sp-qrarea li {
+	display: inline-block;
+	vertical-align: middle;
+}
+.regist-link-sp-qrarea li img {
+	height: 100px;
+}
+.regist-link-login-details {
+	background: #f2e8a9;
+	padding: 16px 24px;
+}
+.regist-link-login-details ul {
+	letter-spacing: -40px;
+}
+.regist-link-login-details li {
+	display: inline-block;
+  vertical-align: middle;
+  letter-spacing: normal;
+}
+.regist-link-login-details li.img-box {
+	width: 15%;
+}
+.regist-link-login-details li.text-box {
+	width: 78%;
+}
+.regist-link-login-details li.text-box p {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 1px;
+}
+.regist-link-login-details li.text-box span {
+	display: block;
+	margin-top: 4px;
+	line-height: 22px;
+	color: #907d28;
+	font-size: 14px;
+	line-height: 20px;
+}
+.regist-link-login-details img {
+	width: 60%;
+}
+p.regist-link-login-sub-details {
+	color: #676868;
+	font-size: 14px;
+  line-height: 20px;
+  margin-top: 24px;
+}
+
+/*---------------------------------
+
+  サービス一覧
+
+---------------------------------*/
+.careservice-servicelist {
+	margin-bottom: 100px;
+	position: relative;
+}
+.careservice-servicelist ul {
+  position: relative;
+  padding: 50px 0px 0px;
+  text-align: center;
+  letter-spacing: -40px;
+}
+.careservice-servicelist:after {
+	content: "";
+	background: #f1f0da;
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+p.careservice-servicelist-title {
+	position: relative;
+	z-index: 1001;
+	padding-top: 50px;
+	font-size: 26px;
+	text-align: center;
+	color: #123468;
+}
+.careservice-servicelist li {
+	margin-right: 50px;
+	position: relative;
+	z-index: 1001;
+	display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+}
+.careservice-servicelist li:last-child {
+	margin-right: 0px;
+}
+.careservice-servicelist li .img-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.careservice-servicelist li .content-number {
+  position: absolute;
+  width: 60px;
+  left: -16px;
+  top: -16px;
+}
+.careservice-servicelist li p {
+	text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 24px;
+  font-family: "careservice-font-hime";
+}
+.careservice-servicelist li p span {
+  font-family: "careservice-font";
+}
+/* 文字色 */
+.careservice-servicelist li:nth-child(1) p {
+	color: #123468;
+}
+.careservice-servicelist li:nth-child(2) p {
+	color: #268e82;
+}
+.careservice-servicelist li:nth-child(3) p {
+	color: #47a1c2;
+}
+.careservice-servicelist li:nth-child(4) p {
+	color: #2a989e;
+}
+
+
+/* アイコン */
+.careservice-servicelist li .service-icon01 {
+  position: absolute;
+  width: 70px;
+  right: -19px;
+  bottom: -15px;
+}
+.careservice-servicelist li .service-icon02 {
+  position: absolute;
+  width: 55px;
+  right: -19px;
+  bottom: -15px;
+}
+.careservice-servicelist li .service-icon03 {
+  position: absolute;
+  width: 55px;
+  right: -19px;
+  bottom: -15px;
+}
+.careservice-servicelist li .service-icon04 {
+  position: absolute;
+  width: 70px;
+  right: -19px;
+  bottom: -15px;
+}
+
+
+/*---------------------------------
+
+  サービス詳細
+
+---------------------------------*/
+.careservice-details-el {
+	padding: 100px 0px 120px;
+	position: relative;
+}
+.careservice-details-el .border-01 {
+	content: "";
+	background: #375e97;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	top: 0;
+	z-index: 1001;
+}
+.careservice-details-el .border-02 {
+	content: "";
+	background: #375e97;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	top: 5px;
+	z-index: 1001;
+}
+.careservice-details-header {
+	position: relative;
+	z-index: 1001;
+}
+.careservice-details-header .premium-service-count {
+	width: 200px;
+	position: absolute;
+	left: 50px;
+  top: -20px;
+}
+.careservice-details-header p {
+	background: gray;
+	text-align: center;
+	padding: 12px 24px;
+	color: #fff;
+	position: absolute;
+  right: 50px;
+  top: -40px;
+}
+.careservice-details-box {
+	padding-top: 80px;
+}
+.careservice-details-title {
+	display: inline-block;
+	position: relative;
+	padding-right: 100px;
+	padding-left: 50px;
+	margin-bottom: 40px;
+}
+.careservice-details-title p {
+	font-size: 18px;
+  margin-bottom: 16px;
+}
+.careservice-details-title h2 {
+	font-size: 40px;
+	font-family: "careservice-font-hime";
+}
+.careservice-details-title h2 span {
+	font-family: "careservice-font";
+}
+
+/*---------------------------------
+
+  サービス詳細 - cluboff
+
+---------------------------------*/
+.cluboff-block .careservice-details-title h2 {
+	color: #123468;
+}
+.cluboff-block:after {
+	content: "";
+	background: #e6eef7;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+}
+.cluboff-block .careservice-details-header p {
+	background: #8fb3c4;
+}
+.cluboff-block .careservice-details-icon {
+	width: 80px;
+	position: absolute;
+	right: 0;
+	bottom: 0
+}
+.cluboff-list-block {
+	background: #f0dbd6;
+	position: relative;
+}
+.cluboff-list-title {
+	width: 700px;
+	margin: 0 auto;
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	margin-left: -350px;
+}
+.cluboff-list {
+	position: relative;
+}
+.cluboff-list ul {
+  position: relative;
+  padding: 50px 0px;
+  margin-top: 55px;
+  text-align: center;
+  letter-spacing: -40px;
+}
+.cluboff-list li {
+	width: 170px;
+	margin-right: 50px;
+  position: relative;
+  z-index: 1001;
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: normal;
+}
+.cluboff-list li:last-child {
+	margin-right: 0px;
+}
+.cluboff-list li .service-name {
+	width: 100%;
+	margin-bottom: 12px;
+}
+.cluboff-block .service-img {
+	width: 230px;
+	position: absolute;
+	right: 60px;
+	top: -188px;	
+}
+.cluboff-list li .img-box {
+	width: 100%;
+  height: 170px;
+  position: relative;
+}
+.cluboff-list li p {
+	text-align: center;
+	margin-top: 16px;
+	line-height: 24px;
+}
+.cluboff-list li p span {
+	font-size: 18px;
+}
+.cluboff-block .bg-icon-left {
+	width: 30px;
+	position: absolute;
+	bottom: -22px;
+	left: 0;
+}
+.cluboff-block .bg-icon-right {
+	width: 30px;
+	position: absolute;
+	bottom: -22px;
+	right: 0;
+}
+
+/* WEBかんたん登録 */
+.cluboff-block p.web-regist-title {
+	background: #355689;
+}
+.cluboff-block p.web-regist-title .web-regist-first {
+	background: #355689;
+}
+.cluboff-block .regist-link-details .regist-link-details-el .service-link {
+	background: #ec7663;
+}
+
+/* cluboffアプリ */
+.application-regist-block {
+	background: #e5edf6;
+	text-align: center;
+	padding: 50px 0px 40px;
+	position: relative;
+}
+.application-regist-block li {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+}
+.application-regist-block li.screen-img {
+	position: absolute;
+	bottom: 0;
+	left: 100px;
+}
+.application-regist-block li .screen-img-sp {
+	display: none;
+}
+.application-regist-block li.screen-img img {
+	width: 165px;
+}
+.application-regist-block li.screen-img img.free-icon {
+	width: 70px;
+	position: absolute;
+	top: -17px;
+	right: -12px;
+}
+.application-regist-block li.application-regist-description {
+	padding: 0px 40px 0px 200px;
+	text-align: left;
+}
+p.application-regist-description-sub {
+	font-size: 16px;
+	margin-bottom: 12px;	
+}
+p.application-regist-description-title {
+	font-size: 24px;
+	margin-bottom: 24px;
+}
+p.application-regist-description-title span {
+	color: #cf6267;
+}
+.application-regist-description-details p {
+	font-size: 16px;
+	margin-bottom: 12px;
+	background: url("../images/application-list-img.png")  left center / cover no-repeat;
+	background-size: 20px;
+	padding-left: 30px;
+}
+.application-regist-description-details p:last-child {
+	margin-bottom: 0px;
+}
+.application-regist-block li.download-img .download-el {
+	margin-bottom: 20px;
+}
+.application-regist-block li.download-img img {
+	width: 160px;
+}
+
+/* 過去の人気特典 */
+.benefits-list-block {
+	margin-top: 80px;
+}
+p.benefits-list-title {
+	font-size: 20px;
+}
+.benefits-list {
+	margin-top: 24px;
+}
+p.benefits-list-attention {
+	text-align: right;
+	margin-bottom: 40px;
+}
+.benefits-list ul {
+}
+.benefits-list li {
+	float: left;
+	width: 18%;
+	height: 230px;
+	position: relative;
+	margin-right: 2.5%;
+	margin-bottom: 2.5%;
+}
+.benefits-list li:nth-child(5n) {
+	margin-right: 0%;
+}
+.benefits-list li:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #e6eef7;
+	position: absolute;
+	top: 8px;
+	right: -10px;
+	z-index: 1000;
+}
+.benefits-list li .benefits-list-el {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #b9b9b9;
+	position: relative;
+	z-index: 1001;
+	background: #fff;
+}
+.benefits-list li .benefits-list-el-inner {
+	width: 90%;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+}
+.benefits-list li .benefits-list-el-inner p {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 28px;
+}
+.benefits-list li .benefits-list-el-inner p.small-text {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 12px;
+	line-height: 22px;
+	letter-spacing: 0;
+}
+.benefits-list li .benefits-list-el-inner p.small-text span {
+	font-size: 12px;
+}
+.benefits-list li .benefits-list-el-inner p span {
+	color: #cfa230;
+	font-size: 20px;
+}
+.benefits-list li .benefits-list-el-inner p span.fc-expansion {
+	font-size: 28px;
+}
+.benefits-list li .benefits-list-el .company-img {
+	width: 100%;
+}
+.benefits-list li .benefits-list-el .company-img-small {
+	width: 60%;
+}
+.cluboff-block .benefits-list-block .service-link {
+	background: #355689;
+}
+
+/*---------------------------------
+
+  サービス詳細 - メディカルサポート
+
+---------------------------------*/
+.medicalsupport-block .careservice-details-title h2 {
+	color: #268e82;
+}
+.medicalsupport-block:after {
+	content: "";
+	background: #e0efeb;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+}
+.medicalsupport-block .careservice-details-header p {
+	background: #81c6b8;
+}
+.medicalsupport-block .careservice-details-icon {
+  width: 60px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.medicalsupport-block .careservice-details-freeicon {
+	width: 70px;
+	position: absolute;
+	right: -90px;
+	bottom: 0
+}
+.medicalsupport-service-block {
+	border-top: 1px solid #28897e;
+	border-bottom: 1px solid #28897e;
+	position: relative;
+}
+.medicalsupport-service-block .service-img {
+  width: 200px;
+  position: absolute;
+  right: 60px;
+  top: -194px;
+}
+.medicalsupport-service-el {
+	width: 50%;
+	float: left;
+	margin: 24px 0px;
+	padding: 16px 40px;
+	text-align: center;
+}
+.medicalsupport-service-el:last-child {
+	border-left: 1px solid #28897e;
+}
+.medicalsupport-service-el .main-title {
+	line-height: 28px;
+	margin-bottom: 20px;
+	color: #268e82;
+}
+.medicalsupport-service-el .main-title span {
+	font-size: 24px;
+}
+
+/*---------------------------------
+
+  サービス詳細 - メンタルヘルスサービス
+
+---------------------------------*/
+.mentalhealth-block .careservice-details-title h2 {
+	color: #47a1c2;
+}
+.mentalhealth-block:after {
+	content: "";
+	background: #dfeef1;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+}
+.mentalhealth-block .careservice-details-header p {
+	background: #89c1ca;
+}
+.mentalhealth-block .careservice-details-icon {
+  width: 60px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.mentalhealth-block .careservice-details-freeicon {
+	width: 70px;
+	position: absolute;
+	right: -90px;
+	bottom: 0
+}
+.mentalhealth-list-icon {
+	width: 80px;
+	height: 80px;
+	border: 1px solid #47a9cc;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.mentalhealth-list-icon img {
+	width: 50%;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+}
+.mentalhealth-list-el {
+	position: relative;
+	padding-top: 16px;
+	margin-bottom: 70px;
+	position: relative;
+}
+.mentalhealth-list-el:last-child {
+	margin-bottom: 0px;
+}
+.mentalhealth-list-el-inner {
+	margin-left: 115px;
+	border-top: 1px solid #47a9cc;
+	padding-top: 32px;
+}
+.mentalhealth-block .service-img {
+	width: 240px;
+  position: absolute;
+  right: 40px;
+  top: -144px;
+}
+p.mentalhealth-list-title {
+	font-size: 24px;
+	color: #4698b7;
+	margin-bottom: 24px;
+}
+p.mentalhealth-list-description {
+	font-size: 15px;
+	line-height: 24px;
+	margin-bottom: 40px;
+}
+p.mentalhealth-list-description span {
+	color: #d06367;
+	font-size: 22px;
+}
+.mentalhealth-list table {
+	margin-bottom: 24px;
+	color: #333333;
+}
+.mentalhealth-list table th {
+	text-align: left;
+}
+.mentalhealth-list table th span {
+	font-family: "游ゴシック体","YuGothic",'mplus-1c-light','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+	color: #47a9cc;
+}
+.mentalhealth-list-el-attention {
+	background: #f5f5f5;
+	padding: 24px;
+}
+.service-link-block {
+	margin-bottom: 32px;
+}
+.service-link-block .service-link {
+	margin: inherit;
+	margin-top: 8px;
+}
+.map-block {
+	margin-bottom: 24px;
+	position: relative;
+}
+.map-block .map-img {
+	width: 260px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.mentalhealth-block .service-link {
+    background: #47a9cc;
+}
+
+/* こんな時にお電話ください */
+.medicalsupport-tell {
+	position: relative;
+	background: #f1f0da;
+	padding: 50px 0px;
+	margin-top: 120px;
+}
+.medicalsupport-tell .tell-title {
+  width: 700px;
+  margin: 0 auto;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  margin-left: -350px;
+}
+.medicalsupport-tell .tell-main {
+	display: block;
+	width: 92%;
+	margin: 0 auto;
+}
+.medicalsupport-tell .tell-person01 {
+	display: block;
+	width: 140px;
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+
+}
+.medicalsupport-tell .tell-person02 {
+	display: block;
+	width: 140px;
+	position: absolute;
+	bottom: 0;
+	right: 20px;
+}
+
+
+
+/*---------------------------------
+
+  サービス詳細 - Docters me
+
+---------------------------------*/
+.doctersme-block .careservice-details-title h2 {
+	color: #2a989e;
+}
+.doctersme-block:after {
+	content: "";
+	background: #e2f1f0;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+}
+.doctersme-block .careservice-details-header p {
+	background: #88c8c8;
+}
+.doctersme-block .careservice-details-icon {
+  width: 70px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.doctersme-block .careservice-details-freeicon {
+  width: 70px;
+  position: absolute;
+  right: -90px;
+  bottom: 0;
+}
+.doctersme-block .careservice-details-message {
+	color: #2a989e;
+	font-size: 24px;
+}
+
+/* WEBかんたん登録 */
+.doctersme-block p.web-regist-title {
+	background: #2a989e;
+}
+.doctersme-block p.web-regist-title .web-regist-first {
+	background: #2a989e;
+}
+.doctersme-block .regist-link-details .regist-link-details-el .service-link {
+	background: #ec7663;
+}
+.doctersme-block .service-img {
+  width: 140px;
+  position: absolute;
+  right: 40px;
+  top: -300px;
+}
+
+/* 相談・回答例 */
+.doctersme-consultration-inner {
+	position: relative;
+}
+.doctersme-consultration-chat {
+	float: left;
+	width: 55%;
+	background: #f1f0da;
+	padding: 50px 40px;
+}
+.doctersme-consultration-title {
+	width: 100%;
+}
+.doctersme-consultration-chat .chat-img01 {
+	width: 100%;
+	margin-bottom: 32px;
+}
+.doctersme-consultration-chat .chat-img02 {
+	width: 100%;
+}
+.doctersme-consultration-list {
+	float: right;
+	width: 45%;
+	text-align: center;
+	position: relative;
+	padding-top: 12px;
+}
+p.doctersme-consultration-list-title {
+	font-size: 20px;
+	line-height: 32px;
+	color: #2a989e;
+}
+.consultration-list {
+	text-align: center;
+	padding: 0px 40px;
+	letter-spacing: -40px;
+	margin-top: 32px;
+}
+.consultration-list li {
+	display: inline-block;
+	width: 31.333%;
+	letter-spacing: normal;
+	margin-right: 3%;
+	margin-bottom: 5%;
+}
+.consultration-list li:nth-child(3n) {
+	margin-right: 0px;
+}
+.consultration-list li img {
+	width: 92%;
+}
+.doctersme-consultration-inner .consult-count {
+	position: absolute;
+	bottom: 0;
+	right: 40px;
+	width: 350px;
+}
+
+/*---------------------------------
+
+  チューリッヒカスタマー
+
+---------------------------------*/
+.contact-block {
+	font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+	letter-spacing: 0;
+	padding: 0px 50px;
+}
+.panel-contactboxCTA {
+	width: 100%;
+  padding: 30px;
+  margin: 20px auto 50px auto;
+  background: #003399;
+}
+a.btn-estimate {
+    background: #F68E13;
+    border: 2px solid #F68E13;
+    color: #fff;
+    font-size: 1.4rem;
+    color: #FFF;
+    font-weight: bold;
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
+    padding: 54px 0 12px 0;
+}
+.fxb-col-12 {
+    float: left;
+    padding: 0 15px;
+    width: 100%;
+}
+.panel-contactboxCTA .fxb-col-12 {
+    font-size: 0;
+    letter-spacing: 0;
+}
+.fxb-col-6 {
+    float: left;
+    padding: 0 15px;
+    width: 50%;
+}
+.panel-contactboxCTA .l-customerCenterTel {
+    width: 53%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.panel-contactboxCTA .l-customerCenterImage {
+    width: 47%;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.panel-contactboxCTA a.btn-estimate {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    padding: 16px 16px 16px 76px;
+}
+a.btn-estimate {
+    background: #F68E13;
+    border: 2px solid #F68E13;
+    color: #fff;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
+    padding: 54px 0 12px 0;
+}
+.panel-contactboxCTA a.btn-document {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    padding: 24px 10px 24px 76px;
+    border: 2px solid #fff;
+}
+a.btn-document {
+    color: #F68E13;
+    border: 2px solid #fff;
+    background: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
+    padding: 54px 0 12px 0;
+}
+.panel-contactboxCTA h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFF;
+}
+.panel-contactboxCTA .text-tel {
+    font-family: 'Cabin', sans-serif;
+    font-size: 38px;
+    color: #fff;
+    letter-spacing: 3px;
+    margin: 6px 0 0 0;
+}
+._note {
+    font-size: 12px;
+    line-height: 24px;
+    margin: 14px 0 0 0;
+    color: #FFF;
+}
+.panel-contactboxCTA .l-customerCenterImage {
+    width: 47%;
+    display: inline-block;
+    overflow: hidden;
+}
+.panel-contactboxCTA ._outline {
+    font-size: 14px;
+    font-weight: bold;
+    color: #003399;
+    background: #C7D2E9;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    float: left;
+    width: 60%;
+    position: relative;
+}
+.panel-contactboxCTA ._outline:after {
+    content: "";
+    width: 0;
+    border-width: 0 23px 16px 0;
+    border-style: solid;
+    border-color: transparent transparent #C7D2E9 #C7D2E9;
+    position: absolute;
+    top: 50px;
+    right: -23px;
+    margin: auto;
+}
+.panel-contactboxCTA ._image {
+    float: right;
+    width: 120px;
+}
+.panel-contactboxCTA a.btn-estimate:before {
+    width: 48px;
+    height: 48px;
+    top: 0;
+    bottom: 0;
+    left: 18px;
+    right: auto;
+}
+.panel-contactboxCTA a.btn-document:before {
+    width: 48px;
+    height: 48px;
+    top: 0;
+    bottom: 0;
+    left: 18px;
+    right: auto;
+}
+a.btn-estimate:before {
+    content: "";
+    background: url(https://www.zurichlife.co.jp/common/images/icon_simulation.svg) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 42px;
+    height: 42px;
+    margin: auto;
+}
+a.btn-document:before {
+    content: "";
+    background: url(https://www.zurichlife.co.jp/common/images/icon_document.svg) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 42px;
+    height: 426px;
+    margin: auto;
+}
+.panel-contactboxCTA a.btn-estimate:after {
+    content: "";
+    background: url(https://www.zurichlife.co.jp/common/images/icon_chevron_right.svg) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+}
+.panel-contactboxCTA a.btn-document:after {
+    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojRjY4RTEzO308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl9jaGV2cm9uX3JpZ2h0PC90aXRsZT48cGF0aCBjbGFzcz0iYSIgZD0iTTExLjA4LDYuMTksMTcuNTQuMjUsNDIuNzUsMjQsMTcuNTQsNDcuNzVsLTYuNDUtNS45NEwzMC4wOCwyNFoiLz48L3N2Zz4=);
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 24px;
+    right: 10px;
+}
+.panel-contactboxCTA ._image img {
+    border-radius: 50%;
+}
+p._note {
+  font-size: 12px;
+  line-height: 24px;
+  margin: 14px 0 0 0;
+  color: #FFF;
+}
+._note span {
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 1px 3px;
+    margin: 0 4px;
+}
+.theme-desktop .panel-contactboxCTA .text-tel {
+    font-family: 'Cabin', sans-serif;
+    font-size: 38px;
+    color: #fff;
+    letter-spacing: 3px;
+    margin: 6px 0 0 0;
+}
+.panel-contactboxCTA .text-tel:before {
+  content: "";
+  background: url(https://www.zurichlife.co.jp/common/images/icon_telephone.svg);
+  background-size: contain;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin: 0 5px 0 0;
+  vertical-align: -4px;
+}
+
+/*  */
+.panel-contactbox {
+	background: #EBEBEB;
+	padding: 30px;
+	width: 100%;
+}
+.panel-contactbox h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 10px 0;
+}
+.panel-contactbox ._title {
+	font-size: 16px;
+	line-height: 1;
+	font-weight: bold;
+	color: #FFF;
+	background: #4066B3;
+	text-align: center;
+	padding: .3em;
+	margin: 0 0 5px 0;
+}
+.panel-contactbox h3 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #000;
+  margin: 20px 0px;
+}
+.panel-contactbox .text-tel {
+    font-family: 'Cabin', sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: #000066;
+    letter-spacing: 3px;
+    margin: 6px 0 0 0;
+}
+.panel-contactbox .text-tel:before {
+    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDA2O2ZpbGwtcnVsZTpldmVub2RkO308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl90ZWxlcGhvbmU8L3RpdGxlPjxwYXRoIGNsYXNzPSJhIiBkPSJNMjMuODEsMy4xMmEyMS41LDIxLjUsMCwxLDAsMjEuNSwyMS41QTIxLjUsMjEuNSwwLDAsMCwyMy44MSwzLjEyWm0xMi41MywzMy0xLjE5LDEuMTYsMCwwYTYuNzUsNi43NSwwLDAsMS0xLjcsMSw3LDcsMCwwLDEtMS43My40NGMtLjI3LDAtNi41Ni42Mi0xNC4zNi03LjE4LTUuNjQtNS42NC03LjcyLTkuOC03LjE3LTE0LjM1YTcuMDYsNy4wNiwwLDAsMSwuNDMtMS43Myw2Ljc3LDYuNzcsMCwwLDEsMS0xLjdsMCwwLDEuMTctMS4xOGEyLjE3LDIuMTcsMCwwLDEsMy4wNi0uMDZsNC4xNiw0LjE2YTIuMTcsMi4xNywwLDAsMS0uMDYsMy4wNmwtLjY5LjY5LTEuNDEsMS40LjIzLjRhMjEsMjEsMCwwLDAsMy42NSw1LDIwLjg0LDIwLjg0LDAsMCwwLDUsMy42NGwuNDEuMjNMMjkuMTgsMjlhMi4xNywyLjE3LDAsMCwxLDMuMDYtLjA2bDQuMTYsNC4xNkEyLjE3LDIuMTcsMCwwLDEsMzYuMzQsMzYuMTJaIi8+PC9zdmc+);
+    display: inline-block;
+    margin: 0 5px 0 0;
+    vertical-align: -4px;
+}
+.panel-contactbox ._note {
+    color: #333;
+}
+a._link-standard, a.link-blank, a.link-pdf {
+    text-decoration: underline;
+    color: #003399;
+    font-weight: bold;
+        position: relative;
+    display: inline-block;
+}
+a._link-standard {
+	margin-top: 20px;
+}
+a._link-standard:after {
+    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDM5O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl9jaGV2cm9uX3JpZ2h0PC90aXRsZT48cGF0aCBjbGFzcz0iYSIgZD0iTTExLjA4LDYuMTksMTcuNTQuMjUsNDIuNzUsMjQsMTcuNTQsNDcuNzVsLTYuNDUtNS45NEwzMC4wOCwyNFoiLz48L3N2Zz4=);
+    display: inline-block;
+    margin: 0 0 0 .5em;
+}
+.panel-contactbox ._note span {
+    border: 1px solid #737373;
+}
+
+/*---------------------------------
+
+  インフォメーション
+
+---------------------------------*/
+.information-block {
+	color: #5e5e5e;
+	margin-top: 50px;
+	padding: 0px 50px;
+}
+.information-block p {
+	font-size: 13px;
+}
+.information-el {
+	margin-bottom: 20px;
+}
+p.information-el-description {
+	font-size: 13px;
+	padding-left: 20px;
+}
+.information-el-list {
+	padding-left: 20px;
+}
+.information-el-list li {
+	position: relative;
+	padding-left: 16px;
+}
+.information-el-list li:before {
+	content: "・";
+	position: absolute;
+	left: 0;
+}
+.information-el-list p {
+	font-size: 13px;
+	display: inline-block;
+}
+
+
+
+/*---------------------------------
+
+  スマートフォン/タブレット対応
+
+---------------------------------*/
+@media screen and (max-width: 959px) {
+
+.pc {
+	display: none!important;
+}
+.sp {
+	display: block;
+}
+.careservice-container p {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/*---------------------------------
+  メインビジュアル / 共通
+---------------------------------*/
+.careservice-container {
+	width: 100%;
+}
+h1.main-title {
+  width: 50%;
+  padding: 24px 0px;
+}
+.careservice-mainvisual .img-area {
+	height: 300px;
+}
+.careservice-mainvisual .img-area-title {
+	width: 84%;
+  left: 5%;
+  top: 15%;
+}
+p.main-sub-title {
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  margin: 32px 0px;
+}
+.careservice-details-header .premium-service-count {
+  width: 130px;
+  left: 4%;
+  top: -14px;
+}
+.careservice-details-header p {
+  padding: 8px 16px;
+  color: #fff;
+  position: absolute;
+  right: 4%;
+  top: -32px;
+  font-size: 10px;
+  line-height: 16px;
+	letter-spacing: 0.5px;
+}
+.careservice-details-box {
+  padding-top: 60px;
+}
+.careservice-details-title {
+    padding-right: 4%;
+    padding-left: 4%;
+    margin-bottom: 40px;
+}
+.careservice-details-title p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.careservice-details-title h2 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+
+.careservice-details-el {
+  padding: 72px 0px;
+    position: relative;
+}
+
+.careservice-details-el-inner {
+  padding: 0px;
+  width: 92%;
+  margin: 0 auto;
+}
+
+a.service-link {
+  width: 100%;
+  padding: 14px 0px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* WEBかんたん登録 */
+.web-regist-block {
+  margin-top: 72px;
+}
+p.web-regist-title {
+	width: 88%;
+	font-size: 16px;
+	padding: 8px 0px;
+	margin-bottom: 40px;
+}
+p.web-regist-title .web-regist-first {
+    left: -7px;
+    margin-top: -35px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+}
+.regist-link-details {
+	margin-top: 0px;
+	margin-bottom: 24px;
+}
+.regist-link-details .regist-link-details-el {
+    width: 100%;
+    float: none;
+}
+.regist-link-details .regist-link-details-sub-el {
+    width: 100%;
+    float: none;
+    padding-left: 0px;
+}
+.regist-link-details-el .regist-link-title {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.regist-link-sp {
+  display: none;
+}
+.regist-link-login-details {
+	padding: 12px 20px;
+	margin-top: 32px;
+}
+.regist-link-login-details img {
+	width: 75%;
+}
+.regist-link-login-details li.text-box p {
+  font-size: 12px;
+  line-height: 18px;
+}
+.regist-link-login-details li.img-box {
+    width: 18%;
+}
+.regist-link-login-details li.text-box {
+    width: 82%;
+    letter-spacing: 1px;
+}
+.regist-link-login-details li.text-box span {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.regist-link-details .regist-link-details-el .service-link {
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 0px;
+}
+p.regist-link-login-sub-details {
+	font-size: 12px;
+  line-height: 18px;
+}
+
+
+/*---------------------------------
+  サービス一覧
+---------------------------------*/
+.careservice-servicelist ul {
+  padding: 32px 4% 0px 4%;
+}
+.careservice-servicelist {
+	margin-bottom: 60px;
+}
+.careservice-servicelist li {
+  width: 48%;
+  margin-right: 4%;
+  margin-bottom: 6%;
+}
+p.careservice-servicelist-title {
+  padding-top: 40px;
+  font-size: 18px;
+}
+.careservice-servicelist li:nth-last-child(-n+2) {
+	margin-bottom: 0%;
+}
+.careservice-servicelist li:nth-child(2n) {
+	margin-right: 0%;
+}
+.careservice-servicelist li .img-box {
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+.careservice-servicelist li .content-number {
+    position: absolute;
+    width: 50px;
+    left: -12px;
+    top: -10px;
+}
+.careservice-servicelist li p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+}
+.careservice-servicelist li .service-icon01 {
+    width: 50px;
+    right: -6px;
+    bottom: -6px;
+}
+.careservice-servicelist li .service-icon02 {
+    width: 37px;
+    right: -8px;
+    bottom: -6px;
+}
+.careservice-servicelist li .service-icon03 {
+    width: 36px;
+    right: -7px;
+    bottom: -6px;
+}
+.careservice-servicelist li .service-icon04 {
+    width: 41px;
+    right: -8px;
+    bottom: -8px;
+}
+
+
+/*---------------------------------
+  サービス詳細 - cluboff
+---------------------------------*/
+.cluboff-block:after {
+    height: 72px;
+}
+.cluboff-block .service-img {
+	display: none;
+}
+
+.cluboff-block .careservice-details-icon {
+  width: 150px;
+  position: absolute;
+  right: auto;
+  bottom: -24px;
+  left: 4%;
+  opacity: 0.1;
+}
+.cluboff-list-title {
+    display: block;
+    width: 92%;
+    margin: 0 auto;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -46%;
+}
+.cluboff-list {
+	width: 92%;
+	margin: 0 auto;
+}
+.cluboff-list ul {
+  padding: 50px 0px 32px;
+}
+.cluboff-list li {
+  width: 100%;
+  margin-right: 0%;
+  margin-bottom: 20px;
+  display: block;
+  letter-spacing: -40px;
+}
+.cluboff-list li .service-name {
+  margin-bottom: 8px;
+  width: 65%;
+}
+.cluboff-list li:last-child {
+    margin-bottom: 0px;
+}
+.cluboff-list li .img-box {
+	display: inline-block;
+	letter-spacing: normal;
+	width: 30%;
+	height: 100px;
+}
+.cluboff-list li p {
+	display: inline-block;
+	font-size: 13px;
+	margin-top: 12px;
+	letter-spacing: normal;
+	width: 70%;
+	vertical-align: top;
+	text-align: left;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+.cluboff-block .bg-icon-right {
+    width: 22px;
+    position: absolute;
+    bottom: -16px;
+    right: 0;
+}
+.cluboff-block .bg-icon-left {
+    width: 22px;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+}
+
+/* アプリ */
+.application-regist-block {
+	padding: 24px 24px 0px;
+}
+.application-regist-block li.screen-img {
+	display: none;
+}
+.application-regist-block li.application-regist-description {
+	padding: 0px;
+}
+p.application-regist-description-sub {
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 8px;
+}
+p.application-regist-description-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.application-regist-description-details p {
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+.application-regist-block ul {
+	letter-spacing: -40px;
+}
+.application-regist-block li {
+	letter-spacing: normal;
+}
+.application-regist-block li.download-img {
+	margin-top: 24px;
+}
+.application-regist-block li.download-img img {
+	width: 100%;
+}
+.application-regist-block li .screen-img-sp {
+	display: block;
+	float: left;
+	width: 50%;
+	position: relative;
+}
+.application-regist-block li.download-img .screen-img-sp img {
+	width: 100%;
+}
+.application-regist-block li.download-img .screen-img-sp img.free-icon {
+	width: 60px;
+	position: absolute;
+	top: -4px;
+	right: -4px;
+}
+.application-regist-block li .download-el-block {
+	float: right;
+	width: 45%;
+	padding-top: 38px;
+}
+
+/* 過去の人気特典サービス */
+.benefits-list-block {
+  margin-top: 50px;
+}
+.benefits-list {
+  margin-top: 16px;
+}
+.benefits-list li {
+  float: left;
+  width: 48%;
+  height: 210px;
+  position: relative;
+  margin-right: 4%;
+  margin-bottom: 4%;
+}
+.benefits-list li:nth-child(2n) {
+    margin-right: 0%;
+}
+.benefits-list li:nth-child(5n) {
+    margin-right: 3%;
+}
+.benefits-list li:nth-last-child(-n+4) {
+	display: none;
+}
+p.benefits-list-title {
+	font-size: 16px;
+  line-height: 20px;
+}
+.benefits-list li .benefits-list-el-inner p {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 28px;
+}
+.benefits-list li .benefits-list-el-inner p span {
+    color: #cfa230;
+    font-size: 16px;
+}
+.benefits-list li .benefits-list-el-inner p.small-text {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin-top: 12px;
+}
+.benefits-list li:after {
+	top: 5px;
+  right: -5px;
+}
+.benefits-list li .benefits-list-el-inner p span.fc-expansion {
+    font-size: 24px;
+}
+p.benefits-list-attention {
+	font-size: 11px;
+	line-height: 16px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+
+
+/*---------------------------------
+  サービス詳細 - メディカルサポート
+---------------------------------*/
+.medicalsupport-tell .tell-title {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -350px;
+}
+.medicalsupport-block:after {
+    height: 72px;
+}
+p.careservice-details-description {
+	margin-bottom: 50px;
+}
+.medicalsupport-block .careservice-details-icon {
+  width: 90px;
+  position: absolute;
+  right: auto;
+  bottom: -24px;
+  left: 4%;
+  opacity: 0.1;
+}
+.medicalsupport-block .careservice-details-freeicon {
+  width: 50px;
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+}
+.medicalsupport-service-block .service-img {
+	display: none;
+}
+.medicalsupport-service-el {
+    width: 100%;
+    float: none;
+    margin: 0px;
+    padding: 24px 4%;
+}
+.medicalsupport-service-el:last-child {
+    border-top: 1px solid #28897e;
+    border-left: none;
+}
+.medicalsupport-service-el .main-title span {
+    font-size: 20px;
+}
+.medicalsupport-tell {
+	padding: 50px 24px;
+	margin-top: 70px;
+}
+.medicalsupport-tell .tell-main {
+	display: none;
+}
+.medicalsupport-tell .tell-title {
+  display: block;
+  width: 82%;
+  margin: 0 auto;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -41%;
+}
+.medicalsupport-tell .tell-main01 { 
+	width: 100%;
+}
+.medicalsupport-tell .person-block01 {
+	padding-bottom: 24px;
+	border-bottom: 1px dotted #CACACA;
+	position: relative;
+}
+.medicalsupport-tell .person-block02 {
+	padding-top: 24px;
+	position: relative;
+}
+.medicalsupport-tell .tell-person01 {
+    display: block;
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+}
+.medicalsupport-tell .tell-person02 {
+    display: block;
+    width: 90px;
+    position: absolute;
+    bottom: -49px;
+    right: 0px;
+}
+
+
+
+/*---------------------------------
+  サービス詳細 - メンタルヘルスサービス
+---------------------------------*/
+.mentalhealth-block:after {
+    height: 72px;
+}
+.mentalhealth-block .careservice-details-icon {
+  width: 90px;
+  position: absolute;
+  right: auto;
+  bottom: -24px;
+  left: 4%;
+  opacity: 0.1;
+}
+.mentalhealth-block .careservice-details-freeicon {
+    width: 50px;
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+}
+.mentalhealth-block .service-img {
+	display: none;
+}
+.mentalhealth-list-el {
+	margin-bottom: 50px;
+}
+.mentalhealth-list-icon {
+	width: 50px;
+  height: 50px;
+}
+.mentalhealth-list-el-inner {
+	margin-left: 65px;
+}
+p.mentalhealth-list-title {
+	font-size: 20px;
+}
+.mentalhealth-list table p {
+	font-size: 12px;
+}
+.mentalhealth-list table th,
+.mentalhealth-list table td {
+	display: block;
+}
+.mentalhealth-list table th {
+	position: relative;
+	padding-left: 20px;
+}
+.mentalhealth-list table th:before {
+	content: "▼";
+	position: absolute;
+	left: 0;
+	top: 3px;
+	font-size: 13px;
+	color: #47a9cc;
+}
+p.mentalhealth-list-description {
+	margin-bottom: 24px;
+}
+.mentalhealth-list table th span {
+	display: none;
+}
+.mentalhealth-list-el-attention p {
+	font-size: 12px;
+}
+.mentalhealth-block .service-link {
+	width: 100%;
+}
+.map-block .map-img {
+	position: relative;
+}
+p.mentalhealth-list-description span {
+    color: #d06367;
+    font-size: 18px;
+}
+
+/*---------------------------------
+  サービス詳細 - Docters me
+---------------------------------*/
+.doctersme-block:after {
+    height: 72px;
+}
+.doctersme-block .careservice-details-icon {
+    width: 105px;
+    position: absolute;
+    right: auto;
+    bottom: -3px;
+    left: 4%;
+    opacity: 0.1;
+}
+.doctersme-block .careservice-details-freeicon {
+    width: 50px;
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+}
+.doctersme-block .service-img {
+	display: none;
+}
+.doctersme-block .careservice-details-message {
+	font-size: 18px;
+	line-height: 26px;
+}
+.doctersme-consultration-chat {
+	float: none;
+	width: 100%;
+	padding: 24px;
+}
+.doctersme-consultration-list {
+	float: none;
+	width: 100%;
+	padding-top: 32px;
+}
+p.doctersme-consultration-list-title {
+	font-size: 18px;
+	line-height: 26px;
+}
+.doctersme-consultration-inner .consult-count {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	right: auto;
+}
+.doctersme-block p.careservice-details-description {
+	margin-bottom: 24px;
+}
+
+
+/*---------------------------------
+  チューリッヒカスタマー
+---------------------------------*/
+.contact-block {
+	width: 92%;
+	margin:  0 auto;
+	padding: 0px;
+}
+.fxb-col-6 {
+	float: none;
+	width: 100%;
+	padding: 0px;
+}
+.fxb-col-12 {
+  float: none;
+  padding: 0px;
+  width: 100%;
+}
+.panel-contactboxCTA {
+	padding: 20px;
+}
+.panel-contactboxCTA a.btn-estimate {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+  padding: 8px 10px 8px 56px;
+  margin-bottom: 16px;
+}
+.panel-contactboxCTA .l-customerCenterTel {
+	width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.panel-contactboxCTA .l-customerCenterImage {
+	width: 100%;
+}
+.panel-contactboxCTA ._outline {
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 20px 0 0 0;
+  float: left;
+  width: 60%;
+}
+.panel-contactboxCTA ._image {
+  float: right;
+  width: 70px;
+  margin-top: 35px;
+}
+.panel-contactboxCTA ._image img {
+	width: 100%;
+}
+.panel-contactboxCTA h2 {
+  font-size: 18px;
+  margin-top: 24px;
+}
+.panel-contactboxCTA .text-tel {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin: 6px 0 0 0;
+    padding: 8px 0px;
+    text-align: center;
+    background: #000066;
+}
+.panel-contactboxCTA .text-tel:before {
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 0;
+    vertical-align: -7px;
+}
+p._note {
+    font-size: 12px;
+    line-height: 22px;
+}
+.panel-contactboxCTA a.btn-estimate:before {
+    width: 36px;
+    height: 36px;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: auto;
+}
+.panel-contactboxCTA a.btn-document {
+    font-size: 13px;
+    text-align: left;
+    padding: 14px 10px 14px 56px;
+}
+.panel-contactboxCTA a.btn-document:before {
+    width: 36px;
+    height: 36px;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: auto;
+}
+.panel-contactboxCTA a.btn-document:after {
+  top: 18px;
+}
+
+.panel-contactbox {
+	padding: 20px;
+}
+.panel-contactbox h2 {
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+.panel-contactbox .text-tel {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    margin: 6px 0 0 0;
+    padding: 8px 0px;
+    text-align: center;
+    background: #000066;
+    color: #fff;
+}
+.panel-contactbox .text-tel:before {
+	content: "";
+	background: url(https://www.zurichlife.co.jp/common/images/icon_telephone.svg);
+	    background-size: contain;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 0;
+    vertical-align: -7px;
+}
+
+.panel-contactbox ._title {
+    font-size: 12px;
+    line-height: 1;
+    padding: 8px 0px;
+}
+.panel-contactbox h3 {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 20px 0px;
+}
+
+a._link-standard {
+	font-size: 14px;
+	margin-top: 12px;
+	margin-bottom: 24px;
+}
+
+.information-block {
+	width: 92%;
+	margin: 0 auto;
+	margin-top: 32px;
+	padding: 0px;
+}
+.information-block p {
+	font-size: 12px;
+}
+
+}
+
+
+/*---------------------------------
+
+  タブレット対応
+
+---------------------------------*/
+
+@media screen and (min-width: 559px) and (max-width: 959px) {
+	.tablet {
+		display: block;
+	}
+
+}
