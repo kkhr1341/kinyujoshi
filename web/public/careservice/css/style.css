@@ -78,7 +78,7 @@ a {
   position: relative;
   color: #333333;
   letter-spacing: 2px;
-  width: 1250px;
+  max-width: 1250px;
   margin: 0 auto;
   background: #fff;
 }
@@ -128,6 +128,10 @@ p.careservice-details-description {
 	font-size: 16px;
 	line-height: 26px;
 	margin-bottom: 70px;
+}
+p.careservice-details-description span {
+    color: #d06367;
+    font-size: 22px;
 }
 /* WEB登録 */
 .web-regist-block {
@@ -297,6 +301,9 @@ p.careservice-servicelist-title {
   vertical-align: top;
   letter-spacing: normal;
 }
+.careservice-servicelist li a {
+	display: block;
+}
 .careservice-servicelist li:last-child {
 	margin-right: 0px;
 }
@@ -426,6 +433,16 @@ p.careservice-servicelist-title {
 .careservice-details-title h2 {
 	font-size: 40px;
 	font-family: "careservice-font-hime";
+	position: relative;
+}
+.careservice-details-title h2:after {
+	content: "";
+	height: 2px;
+	width: 100%;
+	background: #F7F19E;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 .careservice-details-title h2 span {
 	font-family: "careservice-font";
@@ -595,8 +612,16 @@ p.application-regist-description-title span {
 .application-regist-block li.download-img .download-el {
 	margin-bottom: 20px;
 }
+.application-regist-block li.download-img .download-el a {
+   position: relative;
+   top: -10px;
+}
 .application-regist-block li.download-img img {
 	width: 160px;
+}
+.application-regist-block li.download-img img.download-el-qr {
+	width: 70px;
+	margin-left: 12px;
 }
 
 /* 過去の人気特典 */
@@ -1431,9 +1456,8 @@ p.main-sub-title {
 .careservice-details-title h2 {
   font-size: 28px;
   line-height: 32px;
+  position: relative;
 }
-
-
 .careservice-details-el {
   padding: 72px 0px;
     position: relative;
@@ -2172,4 +2196,19 @@ a._link-standard {
 		display: block;
 	}
 
+}
+
+/*---------------------------------
+
+  PCのみ
+
+---------------------------------*/
+
+@media screen and (min-width: 960px) {
+	a {
+		transition: .5s!important;
+	}
+	a:hover {
+		opacity: .5!important;
+	}
 }
