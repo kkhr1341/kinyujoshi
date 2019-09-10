@@ -1,4 +1,7 @@
-AuthType     Basic
-AuthName     "Authentication Sample"
+<Files ~ "^\.(htaccess|htpasswd)$">
+Deny from all
+</Files>
+AuthType Basic
 AuthUserFile /var/www/dev_kinyujoshi/web/public/careservice/.htpasswd
-require valid-user
+AuthName "Please enter your ID and password"
+Require valid-user
