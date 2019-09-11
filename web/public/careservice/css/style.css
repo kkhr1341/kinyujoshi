@@ -305,8 +305,7 @@ p.regist-link-login-sub-details {
   position: relative;
   padding: 50px 0px 0px;
   text-align: center;
-  display: inline-block;
-  letter-spacing: -40px;
+  box-sizing: border-box;
 }
 .careservice-servicelist:after {
 	content: "";
@@ -326,13 +325,45 @@ p.careservice-servicelist-title {
 	text-align: center;
 	color: #123468;
 }
+
+
+	/*.careservice-servicelist {
+		text-align: center;
+	}
+	.careservice-servicelist ul {
+		width: 92%;
+	}
+	.careservice-servicelist li {
+		width: 25%;
+		margin-right: 0px;
+		padding: 0px 16px;
+		box-sizing: border-box;
+	}
+	.careservice-servicelist li .img-box {
+    width: 100%;
+    height: 150px;
+	}
+	.careservice-servicelist li p {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 24px;
+	}*/
+
+.careservice-servicelist {
+	text-align: center;
+}
+.careservice-servicelist ul {
+	/*width: 92%;*/
+	max-width: 1250px;
+	padding: 50px 8% 0px;
+}
 .careservice-servicelist li {
-	margin-right: 50px;
+	float: left;
+	width: 22%;
+	margin-right: 4%;
 	position: relative;
 	z-index: 1001;
-	display: inline-block;
   vertical-align: top;
-  letter-spacing: normal;
 }
 .careservice-servicelist li a {
 	display: block;
@@ -341,8 +372,8 @@ p.careservice-servicelist-title {
 	margin-right: 0px;
 }
 .careservice-servicelist li .img-box {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 220px;
   position: relative;
 }
 .careservice-servicelist li .content-number {
@@ -526,20 +557,19 @@ p.careservice-servicelist-title {
 	position: relative;
 }
 .cluboff-list ul {
+	max-width: 1250px;
   position: relative;
-  padding: 50px 0px;
+  padding: 50px 4%;
   margin-top: 55px;
   text-align: center;
-  letter-spacing: -40px;
+  box-sizing: border-box;
 }
 .cluboff-list li {
-	width: 170px;
-	margin-right: 50px;
+	float: left;
+	width: 16.8%;
+	margin-right: 4%;
   position: relative;
   z-index: 1001;
-  display: inline-block;
-  vertical-align: middle;
-  letter-spacing: normal;
 }
 .cluboff-list li:last-child {
 	margin-right: 0px;
@@ -610,7 +640,7 @@ p.careservice-servicelist-title {
 .application-regist-block li.screen-img {
 	position: absolute;
 	bottom: 0;
-	left: 100px;
+	left: 6%;
 }
 .application-regist-block li .screen-img-sp {
 	display: none;
@@ -789,10 +819,10 @@ p.benefits-list-attention {
 	position: relative;
 }
 .medicalsupport-service-block .service-img {
-  width: 200px;
+	width: 190px;
   position: absolute;
-  right: 60px;
-  top: -194px;
+  right: 16px;
+  top: -207px;
 }
 .medicalsupport-service-el {
 	width: 50%;
@@ -1074,15 +1104,12 @@ p.doctersme-consultration-list-title {
 	color: #2a989e;
 }
 .consultration-list {
-	text-align: center;
 	padding: 0px 40px;
-	letter-spacing: -40px;
 	margin-top: 32px;
 }
 .consultration-list li {
-	display: inline-block;
+	float: left;
 	width: 31.333%;
-	letter-spacing: normal;
 	margin-right: 3%;
 	margin-bottom: 5%;
 }
@@ -1177,7 +1204,8 @@ a.btn-estimate {
     font-size: 16px;
     line-height: 20px;
     text-align: left;
-    padding: 24px 10px 24px 76px;
+    /*padding: 24px 10px 24px 76px;*/
+    padding: 16px 16px 16px 76px;
     border: 2px solid #fff;
 }
 a.btn-document {
@@ -1579,6 +1607,7 @@ p.web-regist-title .web-regist-first {
 .regist-link-details .regist-link-details-el {
     width: 100%;
     float: none;
+    padding: 20px;
 }
 .regist-link-details .regist-link-details-el-second {
 	padding: 24px 0px 0px;
@@ -1725,13 +1754,13 @@ p.careservice-servicelist-title {
 }
 .cluboff-list ul {
   padding: 50px 0px 32px;
+  width: 100%;
 }
 .cluboff-list li {
   width: 100%;
   margin-right: 0%;
   margin-bottom: 20px;
   display: block;
-  letter-spacing: -40px;
 }
 .cluboff-list li .service-name {
   margin-bottom: 8px;
@@ -1741,21 +1770,19 @@ p.careservice-servicelist-title {
     margin-bottom: 0px;
 }
 .cluboff-list li .img-box {
-	display: inline-block;
-	letter-spacing: normal;
-	width: 30%;
+	float: left;
+	width: 25%;
 	height: 100px;
 }
 .cluboff-list li p {
-	display: inline-block;
+	float: right;
 	font-size: 13px;
 	margin-top: 12px;
-	letter-spacing: normal;
-	width: 70%;
-	vertical-align: top;
+	width: 75%;
 	text-align: left;
 	box-sizing: border-box;
 	padding-left: 20px;
+	letter-spacing: 1px;
 }
 .cluboff-block .bg-icon-right {
     width: 22px;
@@ -2061,8 +2088,6 @@ p.mentalhealth-list-description span {
     font-size: 18px;
 }
 .consultration-list ul {
-	letter-spacing: -40px;
-	display: inline-block;
 }
 
 /*---------------------------------
@@ -2307,21 +2332,14 @@ a._link-standard {
     width: 72%;
    	top: 14%;
 	}
-	.careservice-servicelist li .img-box {
-		width: 150px;
-   	height: 150px;
-	}
 	/* サービス一覧 */
 	.careservice-servicelist {
 		text-align: center;
 	}
 	.careservice-servicelist ul {
-		width: 92%;
+		width: 100%;
 	}
 	.careservice-servicelist li {
-		width: 25%;
-		margin-right: 0px;
-		padding: 0px 16px;
 		box-sizing: border-box;
 	}
 	.careservice-servicelist li .img-box {
@@ -2329,16 +2347,17 @@ a._link-standard {
     height: 150px;
 	}
 	.careservice-servicelist li p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
     margin-top: 24px;
+    letter-spacing: 0;
 	}
 
 	.cluboff-list {
 		text-align: center;
 	}
 	.cluboff-list ul {
-		width: 92%;
+		width: 100%;
 		margin: 0 auto;
 	}
 	.cluboff-list li {
@@ -2368,7 +2387,7 @@ a._link-standard {
 
 	/* アプリ */
 	.application-regist-block li.screen-img {
-		left: 6%;
+		left: 4%;
 	}
 	.application-regist-block li.application-regist-description {
 		padding: 0px 4% 0px 20%;
@@ -2528,6 +2547,21 @@ a._link-standard {
   }
   .medicalsupport-tell {
   	margin-top: 80px;
+  }
+
+  .information-block {
+  	padding: 100px 4% 72px;
+  }
+  .contact-block {
+  	padding:0px 4%; 
+  }
+  .panel-contactboxCTA .text-tel {
+    font-size: 24px;
+  	letter-spacing: 0;
+	}
+  .panel-contactbox .text-tel {
+  	font-size: 24px;
+  	letter-spacing: 0;
   }
 
 }
