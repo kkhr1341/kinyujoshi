@@ -81,6 +81,7 @@ a {
   max-width: 1250px;
   margin: 0 auto;
   background: #fff;
+  overflow: hidden;
 }
 .careservice-container p, 
 .careservice-container a {
