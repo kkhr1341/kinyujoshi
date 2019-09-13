@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* normalize
 ***************************************************** */
-html, body, div {
+html, body, div,  {
   margin: 0;
   padding: 0;
   border: 0;
@@ -2271,6 +2271,12 @@ p._note {
     background: #000066;
     color: #fff;
 }
+.panel-contactbox .text-tel a {
+		font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    color: #fff;
+}
 .panel-contactbox .text-tel:before {
 	content: "";
 	background: url(https://www.zurichlife.co.jp/common/images/icon_telephone.svg);
@@ -2321,7 +2327,7 @@ a._link-standard {
 ---------------------------------*/
 
 @media screen and (min-width: 559px) and (max-width: 959px) {
-	.careservice-container p, .careservice-container a {
+	.careservice-container p {
     font-size: 15px;
     line-height: 24px;
 	}
