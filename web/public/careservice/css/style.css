@@ -2615,12 +2615,20 @@ a._link-standard {
   	padding:0px 4%; 
   }
   .panel-contactboxCTA .text-tel {
-    font-size: 24px;
+    font-size: 30px;
   	letter-spacing: 0;
 	}
+	.panel-contactboxCTA .text-tel a {
+		font-size: 30px;
+		color: #fff;
+	}
   .panel-contactbox .text-tel {
-  	font-size: 24px;
+  	font-size: 30px;
   	letter-spacing: 0;
+  }
+  .panel-contactbox .text-tel a {
+  	font-size: 30px;
+  	color: #000066;
   }
   .panel-contactbox ._title {
   	font-size: 15px;
