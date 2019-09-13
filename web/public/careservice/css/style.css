@@ -205,7 +205,7 @@ p.web-regist-title .web-regist-first {
 	letter-spacing: -40px;
 }
 .regist-link-sp-icon-block {
-	width: 30%;
+	width: 25%;
 	display: inline-block;
 	letter-spacing: normal;
 	vertical-align: middle;
@@ -227,7 +227,7 @@ p.web-regist-title .web-regist-first {
 	box-shadow: 0px 0px 4px #ffffff63;
 }
 .regist-link-sp-qrarea {
-	width: 70%;
+	width: 75%;
 	height: 100px;
 	display: inline-block;
 	letter-spacing: normal;
@@ -235,22 +235,16 @@ p.web-regist-title .web-regist-first {
 }
 .regist-link-sp-qrarea .regist-link-sp-qrarea-text {
 	width: 70%;
-	padding: 0px 16px;
+	float: left;
+	padding: 10px 16px 0px;
 	box-sizing: border-box;
 }
 .regist-link-sp-qrarea .regist-link-sp-qrarea-img {
 	width: 30%;
+	float: right;
 }
 .regist-link-sp-qrarea p {
 	line-height: 26px;
-}
-.regist-link-sp-qrarea ul {
-	letter-spacing: -40px;
-}
-.regist-link-sp-qrarea li {
-	display: inline-block;
-	vertical-align: middle;
-	letter-spacing: normal;
 }
 .regist-link-sp-qrarea li img {
 	width: 100%;
