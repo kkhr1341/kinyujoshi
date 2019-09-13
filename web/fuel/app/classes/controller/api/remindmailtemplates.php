@@ -37,7 +37,15 @@ class Controller_Api_Remindmailtemplates extends Controller_Apibase
                 return $this->error($message);
             }
 
+            $event_time = '';
+            if ($val->validated('event_start_datetime') || $val->validated('event_end_datetime')) {
+                $event_time = $val->validated('event_start_datetime') . '〜' . $val->validated('event_end_datetime');
+            }
+
             EventRemindMailTestSends::send($val->validated('email'), $val->validated('subject'), $val->validated('body'), array(
+                'event_url' => $val->validated('event_code') ? \Uri::base(false) . 'joshikai/' . $val->validated('event_code') : '',
+                'event_date' => $val->validated('display_event_date') ? $val->validated('display_event_date') : Date::forge($val->validated('event_date'))->format("%m/%d/%Y", true),
+                'event_time' => $event_time,
                 'event_title' => $val->validated('event_title'),
                 'event_place' => $val->validated('event_place'),
                 'name' => 'てすと太郎',

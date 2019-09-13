@@ -12,6 +12,8 @@ class EventRemindMailTestSends extends Base
         $val = \Validation::forge();
         $val->add_callable('myvalidation');
 
+        $val->add('event_code');
+
         $val->add('event_title');
 
         $val->add('event_place');
@@ -21,6 +23,14 @@ class EventRemindMailTestSends extends Base
         $val->add('body');
 
         $val->add('email');
+
+        $val->add('event_date');
+
+        $val->add('display_event_date');
+
+        $val->add('event_start_datetime');
+
+        $val->add('event_end_datetime');
 
         return $val;
     }
@@ -32,6 +42,9 @@ class EventRemindMailTestSends extends Base
         $email->subject($subject);
 
         $options = array(
+            'event_url'   => !isset($options['event_url'])   ? '': $options['event_url'],
+            'event_date'  => !isset($options['event_date'])  ? '': $options['event_date'],
+            'event_time'  => !isset($options['event_time'])  ? '': $options['event_time'],
             'event_title' => !isset($options['event_title']) ? '': $options['event_title'],
             'event_place' => !isset($options['event_place']) ? '': $options['event_place'],
             'name'        => !isset($options['name'])        ? '': $options['name'],

@@ -84,12 +84,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-group-event-label">特定のリンク</label>
+                    <label class="form-group-event-label">特定のリンク（設定はサムネイルのみ）</label>
                     <input type="text" id="specific_link" class="form-control" placeholder="" value="{$events.specific_link|default:''}">
                 </div>
 
                 <div class="form-group">
-                    <label class="form-group-event-label">特定の申し込みリンク</label>
+                    <label class="form-group-event-label">特定の申し込みリンク（全部設定）</label>
                     <input type="text" id="specific_application_link" class="form-control" placeholder="" value="{$events.specific_application_link|default:''}">
                 </div>
 
@@ -197,6 +197,15 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="form-group-event-label">リマインドメール</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>イベントの前日正午に自動配信されます。</p>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>無記入の場合は送信されません。</p>
+                    <div>
+                        <a class="btn btn-primary remind-mail-open-btn" href="#" role="button">リマインドメール設定</a>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label class="form-group-event-label">認証ユーザー名</label>
                     <input type="text" id="authentication_user" class="form-control" placeholder="" value={$events.authentication_user|default:''}>
                 </div>
@@ -204,14 +213,6 @@
                 <div class="form-group">
                     <label class="form-group-event-label">認証パスワード</label>
                     <input type="text" id="authentication_password" class="form-control" placeholder="" value={$events.authentication_password|default:''}>
-                </div>
-
-
-                <div class="form-group">
-                    <label class="form-group-event-label">リマインドメール</label>
-                    <div>
-                        <a class="btn btn-primary remind-mail-open-btn" href="#" role="button">リマインドメール設定</a>
-                    </div>
                 </div>
 
             </div>
@@ -277,6 +278,8 @@
                         ◆{'{% name %}'|escape}: 氏名<br>
                         ◆{'{% event_title %}'|escape}: イベント名<br>
                         ◆{'{% event_place %}'|escape}: イベント開催場所<br>
+                        ◆{'{% event_date %}'|escape}: イベント開催日時<br>
+                        ◆{'{% event_url %}'|escape}: イベントURL<br>
                     </p>
                     <textarea name="body" style="border: 1px solid #d9d8d8; width: 100%; height: 200px;">{$remind_mail_template.body|default:''}</textarea>
                 </div>
@@ -631,11 +634,14 @@ $(function(){
         var url = "/api/remindmailtemplates/testmail";
 
         var params = {
+            event_code: code,
             event_title: $('#title').val(),
             event_place: $('#place').val(),
             subject: $modal.find("[name=subject]").val(),
             body: $modal.find("[name=body]").val(),
             email: $modal.find("[name=email]").val(),
+            event_date: $('#event_date').val(),
+            display_event_date: $('#display_event_date').val(),
         };
 
         if (params.event_title == "") {

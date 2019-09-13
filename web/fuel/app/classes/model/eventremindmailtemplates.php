@@ -56,4 +56,39 @@ class EventRemindMailTemplates extends Base
             ->execute()
             ->current();
     }
+
+    public static function send($mail, $name, $event_code)
+    {
+        $event = \DB::select()
+            ->from('events')
+            ->where('code', '=', $event_code)
+            ->execute()
+            ->current();
+
+        $template = self::getByEventCode($event_code);
+
+        $email = \Email::forge('jis');
+        $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
+        $email->subject($template['subject']);
+
+        $body = $template['body'];
+
+        $options = array(
+            'event_url' => \Uri::base(false) . 'joshikai/' . $event['code'],
+            'event_date' => $event['display_event_date'] ? $event['display_event_date'] : $event['event_date'],
+            'event_title' => $event['event_title'],
+            'event_place' => $event['event_place'],
+            'name'        => $name,
+        );
+
+        foreach ($options as $key => $value) {
+            $body = str_replace('{% ' . $key . ' %}', $value, $body);
+        }
+
+        $email->body($body);
+        $email->to($mail); //送り先
+
+        $email->return_path('support@kinyu-joshi.jp');
+        $email->send();
+    }
 }

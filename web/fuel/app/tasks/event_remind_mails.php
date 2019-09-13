@@ -2,6 +2,8 @@
 
 namespace Fuel\Tasks;
 
+use \Model\EventRemindMailTemplates;
+
 class Event_remind_mails {
 	
 	public static function run() {
@@ -11,8 +13,7 @@ class Event_remind_mails {
                   from
                     events
                   where
-                    event_date > now()
-                    and disable = 0
+                    disable = 0
                     and status = 1
                     and DATE_FORMAT(now(), "%Y-%m-%d") = DATE_FORMAT(event_date, "%Y-%m-%d") - INTERVAL 1 DAY';
 
@@ -21,7 +22,9 @@ class Event_remind_mails {
 
             $sql = 'select
                         applications.code,
-                        ifnull(users.email, applications.email) as email
+                        applications.event_code,
+                        ifnull(users.email, applications.email) as email,
+                        applications.name as name
                       from
                         applications
                         left join users on users.username = applications.username
@@ -36,7 +39,7 @@ class Event_remind_mails {
                             where
                               event_remind_mails.application_code = applications.code
                         )
-                        and event_code = "' . $event['code'] .'"';
+                        and applications.event_code = "' . $event['code'] .'"';
 
             $applications = \DB::query($sql)->execute();
             foreach($applications as $application) {
@@ -45,6 +48,8 @@ class Event_remind_mails {
                     'email' => $application['email'],
                     'created_at' => \DB::expr('now()'),
                 ))->execute();
+
+                EventRemindMailTemplates::send($application['email'], $application['name'], $application['event_code']);
             }
 		}
 	}
