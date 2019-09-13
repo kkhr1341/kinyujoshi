@@ -294,7 +294,7 @@ class Controller_Admin_Events extends Controller_Adminbase
      */
     private function get_default_thanks_mail_subject()
     {
-        return '女子会がいよいよ明日になりました';
+        return 'ご参加ありがとうございました♡';
     }
 
     /**

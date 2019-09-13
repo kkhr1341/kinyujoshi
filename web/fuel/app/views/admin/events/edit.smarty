@@ -693,7 +693,8 @@ $(function(){
 
 $(function(){
 
-    $(".remind-mail-open-btn").on("click", function () {
+    $(".remind-mail-open-btn").on("click", function (e) {
+        e.preventDefault();
         $remindModal.modal({
             "backdrop": "static",
             "keyboard": true,
@@ -771,7 +772,8 @@ $(function(){
 
 $(function(){
 
-    $(".thanks-mail-open-btn").on("click", function () {
+    $(".thanks-mail-open-btn").on("click", function (e) {
+        e.preventDefault();
         $thanksModal.modal({
             "backdrop": "static",
             "keyboard": true,
