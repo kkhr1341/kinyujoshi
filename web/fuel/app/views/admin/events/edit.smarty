@@ -215,6 +215,24 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="form-group-event-label">サンクスメール</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>イベントの翌日正午に自動配信されます。</p>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>無記入の場合は送信されません。</p>
+
+                    <div class="radio_box clear">
+                        <input type="radio" value="1" name="thanks_mail_template_status" id="thanks_mail_template_status01" class="form-radio" placeholder="" {if $thanks_mail_template.status|default:'' == "1"}checked{/if}>
+                        <label for="thanks_mail_template_status01" class="form-long">YES!</label>
+
+                        <input type="radio" value="0" name="thanks_mail_template_status" id="thanks_mail_template_status02" class="form-radio" placeholder="" {if $thanks_mail_template.status|default:'' == "0"}checked{/if}>
+                        <label for="thanks_mail_template_status02" class="form-long">NO!</label>
+                    </div>
+
+                    <div>
+                        <a class="btn btn-primary thanks-mail-open-btn" href="#" role="button">サンクスメール設定</a>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label class="form-group-event-label">認証ユーザー名</label>
                     <input type="text" id="authentication_user" class="form-control" placeholder="" value={$events.authentication_user|default:''}>
                 </div>
@@ -268,7 +286,7 @@
     </fieldset>
 </form>
 
-<div id="myModal" class="modal fade">
+<div id="remindMailModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <!-- dialog body -->
@@ -307,12 +325,54 @@
     </div>
 </div>
 
+<div id="thanksMailModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- dialog body -->
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">件名</label>
+                    <input type="text" name="subject" class="form-control" placeholder="" value="{$thanks_mail_template.subject|default:''}">
+                </div>
+
+                <div class="form-group upload_image_box">
+                    <label class="form-group-event-label">本文</label>
+                    <p>動的に変わる部分には以下を設定してください。</p>
+                    <p>
+                        ◆{'{% name %}'|escape}: 氏名<br>
+                        ◆{'{% event_title %}'|escape}: イベント名<br>
+                        ◆{'{% event_place %}'|escape}: イベント開催場所<br>
+                        ◆{'{% event_date %}'|escape}: イベント開催日時<br>
+                        ◆{'{% event_url %}'|escape}: イベントURL<br>
+                    </p>
+                    <textarea name="body" style="border: 1px solid #d9d8d8; width: 100%; height: 200px;">{$thanks_mail_template.body|default:''}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">テストメール送信先</label>
+                    <input type="text" name="email" class="form-control" placeholder="" value="">
+                </div>
+            </div>
+            <!-- dialog buttons -->
+            <div class="modal-footer">
+                <button type="button" class="btn send-btn btn-primary">テスト送信</button>
+                <button type="button" class="btn save-btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
 
 var code = "{$events.code|default:''}";
+
+var $remindModal = $("#remindMailModal");
+
+var $thanksModal = $("#thanksMailModal");
 $(function(){
 
-    var $modal = $("#myModal");
 
     $('.thumbnail-img-block')
         .uploader('/api/redactor/upload/image', {
@@ -372,8 +432,14 @@ $(function(){
 
                 params.remind_mail = {
                     status: $("[name=remind_mail_template_status]:checked").val(),
-                    subject: $modal.find('[name="subject"]').val(),
-                    body: $modal.find('[name="body"]').val(),
+                    subject: $remindModal.find('[name="subject"]').val(),
+                    body: $remindModal.find('[name="body"]').val(),
+                }
+
+                params.thanks_mail = {
+                    status: $("[name=thanks_mail_template_status]:checked").val(),
+                    subject: $thanksModal.find('[name="subject"]').val(),
+                    body: $thanksModal.find('[name="body"]').val(),
                 }
 
                 if (params.event_category == "") {
@@ -463,8 +529,14 @@ $(function(){
 
         params.remind_mail = {
             status: $("[name=remind_mail_template_status]:checked").val(),
-            subject: $modal.find('[name="subject"]').val(),
-            body: $modal.find('[name="body"]').val(),
+            subject: $remindModal.find('[name="subject"]').val(),
+            body: $remindModal.find('[name="body"]').val(),
+        }
+
+        params.thanks_mail = {
+            status: $("[name=thanks_mail_template_status]:checked").val(),
+            subject: $thanksModal.find('[name="subject"]').val(),
+            body: $thanksModal.find('[name="body"]').val(),
         }
 
         if (params.event_category == "") {
@@ -563,8 +635,14 @@ $(function(){
 
                 params.remind_mail = {
                     status: $("[name=remind_mail_template_status]:checked").val(),
-                    subject: $modal.find('[name="subject"]').val(),
-                    body: $modal.find('[name="body"]').val(),
+                    subject: $remindModal.find('[name="subject"]').val(),
+                    body: $remindModal.find('[name="body"]').val(),
+                }
+
+                params.thanks_mail = {
+                    status: $("[name=thanks_mail_template_status]:checked").val(),
+                    subject: $thanksModal.find('[name="subject"]').val(),
+                    body: $thanksModal.find('[name="body"]').val(),
                 }
 
                 if (params.event_category == "") {
@@ -611,47 +689,50 @@ $(function(){
             },
         }
     });
+});
+
+$(function(){
 
     $(".remind-mail-open-btn").on("click", function () {
-        $modal.modal({
+        $remindModal.modal({
             "backdrop": "static",
             "keyboard": true,
             "show": true
         });
     });
 
-    $modal.find('.save-btn').click(function(){
+    $remindModal.find('.save-btn').click(function(){
         var url = "/api/remindmailtemplates/save";
         if (code) {
 
             var params = {
                 event_code: code,
-                subject: $modal.find("[name=subject]").val(),
-                body: $modal.find("[name=body]").val(),
+                subject: $remindModal.find("[name=subject]").val(),
+                body: $remindModal.find("[name=body]").val(),
             };
 
             ajax.post(url, params, function(data){
                 ts.success("保存しました", function(){
-                    $modal.modal("hide");
+                    $remindModal.modal("hide");
                 });
             });
         } else {
             ts.success("保存しました", function(){
-                $modal.modal("hide");
+                $remindModal.modal("hide");
             });
         }
     });
 
-    $modal.find('.send-btn').click(function(){
+    $remindModal.find('.send-btn').click(function(){
         var url = "/api/remindmailtemplates/testmail";
 
         var params = {
             event_code: code,
             event_title: $('#title').val(),
             event_place: $('#place').val(),
-            subject: $modal.find("[name=subject]").val(),
-            body: $modal.find("[name=body]").val(),
-            email: $modal.find("[name=email]").val(),
+            subject: $remindModal.find("[name=subject]").val(),
+            body: $remindModal.find("[name=body]").val(),
+            email: $remindModal.find("[name=email]").val(),
             event_date: $('#event_date').val(),
             display_event_date: $('#display_event_date').val(),
             event_start_datetime: $('#event_start_datetime').val(),
@@ -685,9 +766,83 @@ $(function(){
             });
         });
     });
+});
 
 
+$(function(){
 
+    $(".thanks-mail-open-btn").on("click", function () {
+        $thanksModal.modal({
+            "backdrop": "static",
+            "keyboard": true,
+            "show": true
+        });
+    });
 
+    $thanksModal.find('.save-btn').click(function(){
+        var url = "/api/thanksmailtemplates/save";
+        if (code) {
+
+            var params = {
+                event_code: code,
+                subject: $thanksModal.find("[name=subject]").val(),
+                body: $thanksModal.find("[name=body]").val(),
+            };
+
+            ajax.post(url, params, function(data){
+                ts.success("保存しました", function(){
+                    $thanksModal.modal("hide");
+                });
+            });
+        } else {
+            ts.success("保存しました", function(){
+                $thanksModal.modal("hide");
+            });
+        }
+    });
+
+    $thanksModal.find('.send-btn').click(function(){
+        var url = "/api/thanksmailtemplates/testmail";
+
+        var params = {
+            event_code: code,
+            event_title: $('#title').val(),
+            event_place: $('#place').val(),
+            subject: $thanksModal.find("[name=subject]").val(),
+            body: $thanksModal.find("[name=body]").val(),
+            email: $thanksModal.find("[name=email]").val(),
+            event_date: $('#event_date').val(),
+            display_event_date: $('#display_event_date').val(),
+            event_start_datetime: $('#event_start_datetime').val(),
+            event_end_datetime: $('#event_end_datetime').val(),
+        };
+
+        if (params.event_title == "") {
+            ts.error("女子会のタイトルを入力してください");
+            return false;
+        }
+        if (params.event_place == "") {
+            ts.error("女子会の開催場所を入力してください");
+            return false;
+        }
+        if (params.subject == "") {
+            ts.error("件名を入力してください");
+            return false;
+        }
+        if (params.body == "") {
+            ts.error("本文を入力してください");
+            return false;
+        }
+        if (params.email == "") {
+            ts.error("テストメール送信先を入力してください");
+            return false;
+        }
+
+        ajax.post(url, params, function(data){
+            ts.success("送信しました", function(){
+                // location.href = "/admin/remindmailtemplates";
+            });
+        });
+    });
 });
 </script>

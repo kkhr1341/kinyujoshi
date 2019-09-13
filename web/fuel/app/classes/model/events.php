@@ -88,6 +88,11 @@ class Events extends Base
         $val->add('remind_mail.body', '女子会リマインドメール: 本文')
             ->add_rule('required_with', 'remind_mail.subject');
 
+        $val->add('thanks_mail.status', '女子会サンクスメール: 有効/無効');
+        $val->add('thanks_mail.subject', '女子会サンクスメール: 件名');
+        $val->add('thanks_mail.body', '女子会サンクスメール: 本文')
+            ->add_rule('required_with', 'thanks_mail.subject');
+
         if ($status == 1) {
 
             $val->field('event_category')
@@ -380,6 +385,20 @@ class Events extends Base
                 ->execute();
         }
 
+        // サンクスメール
+        $thanks_mail = $params['thanks_mail'];
+        if ($thanks_mail['subject'] && $thanks_mail['body']) {
+            \DB::insert('event_thanks_mail_templates')
+                ->set(array(
+                    'event_code' => $code,
+                    'subject'    => $thanks_mail['subject'],
+                    'body'       => $thanks_mail['body'],
+                    'status'     => $thanks_mail['status'],
+                    'created_at' => \DB::expr('now()'),
+                ))
+                ->execute();
+        }
+
         return $data;
     }
 
@@ -439,6 +458,34 @@ class Events extends Base
                         'subject'    => $remind_mail['subject'],
                         'body'       => $remind_mail['body'],
                         'status'     => $remind_mail['status'],
+                        'created_at' => \DB::expr('now()'),
+                    ))
+                    ->execute();
+            }
+        }
+
+        // サンクスメール
+        $thanks_mail = $params['thanks_mail'];
+        if (!$thanks_mail['subject'] || !$thanks_mail['body']) {
+            \DB::delete('event_thanks_mail_templates')->where('event_code', '=', $params['code'])->execute();
+        } else {
+            if(\DB::select()->from('event_thanks_mail_templates')->where('event_code', $params['code'])->execute()->current()) {
+                \DB::update('event_thanks_mail_templates')
+                    ->set(array(
+                        'subject'    => $thanks_mail['subject'],
+                        'body'       => $thanks_mail['body'],
+                        'status'     => $thanks_mail['status'],
+                        'updated_at' => \DB::expr('now()'),
+                    ))
+                    ->where('event_code', '=', $params['code'])
+                    ->execute();
+            } else {
+                \DB::insert('event_thanks_mail_templates')
+                    ->set(array(
+                        'event_code' => $params['code'],
+                        'subject'    => $thanks_mail['subject'],
+                        'body'       => $thanks_mail['body'],
+                        'status'     => $thanks_mail['status'],
                         'created_at' => \DB::expr('now()'),
                     ))
                     ->execute();

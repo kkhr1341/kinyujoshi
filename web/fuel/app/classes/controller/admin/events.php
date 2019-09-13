@@ -6,6 +6,7 @@ use \Model\EventDisplayTopPages;
 use \Model\Applications;
 use \Model\Sections;
 use \Model\EventRemindMailTemplates;
+use \Model\EventThanksMailTemplates;
 
 class Controller_Admin_Events extends Controller_Adminbase
 {
@@ -41,6 +42,12 @@ class Controller_Admin_Events extends Controller_Adminbase
             'body' => $this->get_default_remind_mail_body(),
         );
 
+        $this->data['thanks_mail_template'] = array(
+            'status' => 0,
+            'subject' => $this->get_default_thanks_mail_subject(),
+            'body' => $this->get_default_thanks_mail_body(),
+        );
+
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
 
@@ -65,6 +72,16 @@ class Controller_Admin_Events extends Controller_Adminbase
                 'status' => 0,
                 'subject' => $this->get_default_remind_mail_subject(),
                 'body' => $this->get_default_remind_mail_body(),
+            );
+        }
+
+        if ($event_thank_mail_template = EventThanksMailTemplates::getByEventCode($code)) {
+            $this->data['thanks_mail_template'] = $event_thank_mail_template;
+        } else {
+            $this->data['thanks_mail_template'] = array(
+                'status' => 0,
+                'subject' => $this->get_default_thanks_mail_subject(),
+                'body' => $this->get_default_thanks_mail_body(),
             );
         }
 
@@ -250,6 +267,59 @@ class Controller_Admin_Events extends Controller_Adminbase
 
 それではみなさまに明日お会いできることを楽しみにしています。
 どうぞよろしくお願いいたします。
+
+*--*--*--*--*--*--*--*--*--*--*--*--*--*
+
+きんゆう女子。編集部(support@kinyu-joshi.jp)
+
+
+〒103-0025
+東京都中央区日本橋茅場町1-5-8　東京証券会館　B-313
+運営会社：株式会社TOE THE LINE
+
+✧きんゆう女子。コミュニティ✧
+『お金に囚われず自由に等身大で生きる』
+公式サイト：https://kinyu-joshi.jp/
+
+✧Instagram✧@kinyu_joshi
+✧Twitter✧@kinyu_joshi
+✧Facebook✧きんゆう女子。
+';
+    }
+
+
+    /**
+     * 女子会サンクスメールの件名の初期値取得
+     * @return string
+     */
+    private function get_default_thanks_mail_subject()
+    {
+        return '女子会がいよいよ明日になりました';
+    }
+
+    /**
+     * 女子会サンクスメールの本文の初期値取得
+     * @return string
+     */
+    private function get_default_thanks_mail_body()
+    {
+        return '＊{% event_title %}に参加いただいたみなさんへ＊
+
+こんにちは！
+きんゆう女子。編集部です。
+
+昨日は女子会にお越しいただきましてありがとうございました！
+1つでも学びになることがありましたら嬉しいです。
+
+今後もさまざまなイベントを開催していきますので
+興味のあるイベントがありましたらぜひお越しくださいね。
+https://kinyu-joshi.jp/joshikai
+
+昨日の女子会の感想や、ご要望などありましたら
+support@kinyu-joshi.jp までとお知らせくださいませ。
+
+またお会いできる日を楽しみにしています。
+引き続き、きんゆう女子。をよろしくお願いいたします。
 
 *--*--*--*--*--*--*--*--*--*--*--*--*--*
 

@@ -144,6 +144,8 @@ return array(
         135 => '141_add_status_to_event_remind_mail_templates',
         136 => '141_create_consultation_reply_mails',
         137 => '141_create_event_user_events',
+        138 => '142_create_event_thanks_mail_templates',
+        139 => '143_create_event_thanks_mails',
       ),
     ),
     'module' => 
