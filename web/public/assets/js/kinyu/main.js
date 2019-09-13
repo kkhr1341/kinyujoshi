@@ -264,31 +264,31 @@ jQuery(function($) {
     $clone.remove();
   });
 
-  $('.kinyu-top-list-title').each(function() {
-    var $target = $(this);
-    // オリジナルの文章を取得する
-    var html = $target.html();
-    // 対象の要素を、高さにautoを指定し非表示で複製する
-    var $clone = $target.clone();
-    $clone
-      .css({
-        display: 'none',
-        position : 'absolute',
-        overflow : 'visible'
-      })
-      .width($target.width())
-      .height('auto');
-    // DOMを一旦追加
-    $target.after($clone);
-    // 指定した高さになるまで、1文字ずつ消去していく
-    while((html.length > 0) && ($clone.height() > $target.height())) {
-      html = html.substr(0, html.length - 1);
-      $clone.html(html + '...');
-    }
-    // 文章を入れ替えて、複製した要素を削除する
-    $target.html($clone.html());
-    $clone.remove();
-  });
+  // $('.kinyu-top-list-title').each(function() {
+  //   var $target = $(this);
+  //   // オリジナルの文章を取得する
+  //   var html = $target.html();
+  //   // 対象の要素を、高さにautoを指定し非表示で複製する
+  //   var $clone = $target.clone();
+  //   $clone
+  //     .css({
+  //       display: 'none',
+  //       position : 'absolute',
+  //       overflow : 'visible'
+  //     })
+  //     .width($target.width())
+  //     .height('auto');
+  //   // DOMを一旦追加
+  //   $target.after($clone);
+  //   // 指定した高さになるまで、1文字ずつ消去していく
+  //   while((html.length > 0) && ($clone.height() > $target.height())) {
+  //     html = html.substr(0, html.length - 1);
+  //     $clone.html(html + '...');
+  //   }
+  //   // 文章を入れ替えて、複製した要素を削除する
+  //   $target.html($clone.html());
+  //   $clone.remove();
+  // });
 
   $('.news-sp-block .text-area .news-title').each(function() {
     var $target = $(this);
@@ -440,37 +440,44 @@ jQuery(function($) {
     $clone.remove();
   });
 
-  var ua = navigator.userAgent.toUpperCase();
-  if(ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)) {
+  $('.kinyu-top-joshikai-list .kinyu-top-list-title').each(function() {
+    var $target = $(this);
+ 
+    // オリジナルの文章を取得する
+    var html = $target.html();
+ 
+    // 対象の要素を、高さにautoを指定し非表示で複製する
+    var $clone = $target.clone();
+    $clone
+      .css({
+        display: 'none',
+        position : 'absolute',
+        overflow : 'visible'
+      })
+      .width($target.width())
+      .height('auto');
+ 
+    // DOMを一旦追加
+    $target.after($clone);
+ 
+    // 指定した高さになるまで、1文字ずつ消去していく
+    while((html.length > 0) && ($clone.height() > $target.height())) {
+      html = html.substr(0, html.length - 1);
+      $clone.html(html + '...');
+    }
+    // 文章を入れ替えて、複製した要素を削除する
+    $target.html($clone.html());
+    $clone.remove();
+  });
   
-    // スマホ
-    $(".kinyu-top-list-title").each(function(){
-      var txt = $(this).text();
-      if(txt.length > 40){
-        txt = txt.substr(0, 40);
-        $(this).text(txt + "...");
-      }
-    });
-
-    } else {
-  
-    $(".kinyu-top-list-title").each(function(){
-      var txt = $(this).text();
-      if(txt.length > 32){
-        txt = txt.substr(0, 32);
-        $(this).text(txt + "...");
-      }
-    });
-
-  }
 });
 
 // // メニューの開閉ボタン
 // $(function() {//$(".header-menu").fadeIn(1000);
 
-// 	$('#toggle').click(function() {
-//    	 //$(this).toggleClass('activemenu');
-//    	$('#overlay').fadeIn(500);
+//  $('#toggle').click(function() {
+//       //$(this).toggleClass('activemenu');
+//      $('#overlay').fadeIn(500);
 //     if($('#hnave').hasClass('off')){
 //       $('#hnave').removeClass('off');
 //       $('#hnave').css('transform','translate3d(0px, 0px, 0px)');
@@ -481,7 +488,7 @@ jQuery(function($) {
 //       $('#hnave').css('transform','translate3d(-300px, 0px, 0px)');
 //       $('.body-el').css('position','relative');
 //     }
-// 	});
+//  });
 
 //   $('#hnavi-close').click(function() {
 //     $('#overlay').fadeOut(500);
@@ -559,7 +566,7 @@ $(function() {
       $(".page-top").fadeOut();
     }
 
-	});
+  });
   // $('.drawer').drawer();
 });
 
@@ -632,7 +639,7 @@ $(document).ready(function() {
     limit: 9, //取得する画像数を設定
     resolution: 'standard_resolution', //画像サイズを設定
     template: '<li><a href="{{link}}" target="_blank" style="background: url({{image}}) center center / cover no-repeat;"><p><span>❤︎ {{likes}}</span></p></a></li>',
-    accessToken: '3007140595.5185c52.5cd9a9c66771427cbb5e262168dcb54a' //アクセストークン(ローカル)
+    accessToken: '3007140595.1658276.04749d4b591a4a14a70b4ff0edef4b64' //アクセストークン(ローカル)
   });
   userFeed.run();
 });

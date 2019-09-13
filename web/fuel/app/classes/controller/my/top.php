@@ -1,7 +1,7 @@
 <?php
 
 use \Model\Blogs;
-use \Model\Blogstocks;
+use \Model\Events;
 use \Model\Applications;
 use \Model\DiagnosticChartTypeUsers;
 use \Model\DiagnosticChartRouteTypeHashTags;
@@ -15,6 +15,8 @@ class Controller_My_Top extends Controller_Mybase
         $username = \Auth::get('username');
         $this->data['applications'] = Applications::get_next_events_applications($username);
         $this->data['blogs'] = Blogs::lists(1, null, 1, null, null, true);
+        $this->data['secret_events'] = Events::lists(1, 4, null, 1, "desc", 1, null, true);
+
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->title = 'マイページ｜きんゆう女子。';
         $this->template->description = 'マイページ・トップ';
@@ -29,22 +31,25 @@ class Controller_My_Top extends Controller_Mybase
             $this->template->useful_content = View::forge('my/useful/useful_content.smarty', $this->data);
         }
 
-
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+
+        $hash_tags = DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']);
+        $action_list = DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']);
+
         $this->template->kinjo_check = View::forge('my/common/kinjo_check.smarty', array(
-            'user_type' => $user_type,
-            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
-            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+            'user_type'   => $user_type,
+            'hash_tags'   => $hash_tags,
+            'action_list' => $action_list,
         ));
         $this->template->my_side = View::forge('my/common/my_side.smarty', array(
-            'user_type' => $user_type,
-            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
-            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+            'user_type'   => $user_type,
+            'hash_tags'   => $hash_tags,
+            'action_list' => $action_list,
         ));
         $this->template->contents = View::forge('my/all.smarty', array(
-            'user_type' => $user_type,
-            'hash_tags' => DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']),
-            'action_list' => DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']),
+            'user_type'   => $user_type,
+            'hash_tags'   => $hash_tags,
+            'action_list' => $action_list,
         ));
 
     }

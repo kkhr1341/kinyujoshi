@@ -25,6 +25,7 @@ ScrollReveal().reveal('.article-animation-top-left2', { easing: 'ease', origin: 
 
 ScrollReveal().reveal('.article-animation-episode', { easing: 'ease', origin: 'top', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.article-animation-episode2', { easing: 'ease', origin: 'top', delay: 1000, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.article-animation-episode3', { easing: 'ease', origin: 'top', delay: 1100, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 
 ScrollReveal().reveal('.article-animation-left', { easing: 'ease', origin: 'left', delay: 300, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.article-animation-left1', { easing: 'ease', origin: 'top', delay: 600, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
@@ -34,21 +35,66 @@ ScrollReveal().reveal('.article-animation-right', { easing: 'ease', origin: 'rig
 ScrollReveal().reveal('.article-animation-right1', { easing: 'ease', origin: 'top', delay: 600, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.article-animation-right2', { easing: 'ease', origin: 'top', delay: 900, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
 
+// illust
+ScrollReveal().reveal('.illust-animation1', { easing: 'ease', origin: 'right', delay: 800, duration: 3000, distance: '50px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.illust-animation2', { easing: 'ease', origin: 'left', delay: 800, duration: 3000, distance: '50px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.illust-animation-dog1', { easing: 'ease', delay: 1500, duration: 2000, distance: '10px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.illust-animation-dog2', { easing: 'ease', delay: 2500, duration: 2000, distance: '10px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.illust-animation-dog3', { easing: 'ease', delay: 3000, duration: 2000, distance: '10px', opacity: 0, scale: 1 });
+
 
 $(function(){
 	// 設定
 	var windowWidth = $(window).width();
-	var slideheight = $('.article-bg').height();
+	var slideheight = $('.article-container .article-bg').height();
 	var $width = windowWidth; // 横幅
 	var $height = slideheight; // 高さ
 	var $interval = 4000; // 切り替わりの間隔（ミリ秒）
 	var $fade_speed = 3000; // フェード処理の早さ（ミリ秒）
-	$(".article-bg-img ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
-	$(".article-bg-img ul li").hide().css({"position":"absolute","top":0,"left":0});
-	$(".article-bg-img ul li:first").addClass("active").show();
+	$(".article-container .article-bg-img ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".article-container .article-bg-img ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".article-container .article-bg-img ul li:first").addClass("active").show();
 	setInterval(function(){
-	var $active = $(".article-bg-img ul li.active");
-	var $next = $active.next("li").length?$active.next("li"):$(".article-bg-img ul li:first");
+	var $active = $(".article-container .article-bg-img ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".article-container .article-bg-img ul li:first");
+	$active.fadeOut($fade_speed).removeClass("active");
+	$next.fadeIn($fade_speed).addClass("active");
+	},$interval);
+});
+
+$(function(){
+	// 設定
+	var topWidth = $('.article-bg-img1').width();
+	var topheight = $('.article-bg-img1').height();
+	var $width = topWidth; // 横幅
+	var $height = topheight; // 高さ
+	var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+	var $fade_speed = 2000; // フェード処理の早さ（ミリ秒）
+	$(".cashlesslife-list .article-bg-img1 ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".cashlesslife-list .article-bg-img1 ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".cashlesslife-list .article-bg-img1 ul li:first").addClass("active").show();
+	setInterval(function(){
+	var $active = $(".cashlesslife-list .article-bg-img1 ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".cashlesslife-list .article-bg-img1 ul li:first");
+	$active.fadeOut($fade_speed).removeClass("active");
+	$next.fadeIn($fade_speed).addClass("active");
+	},$interval);
+});
+
+$(function(){
+	// 設定
+	var topWidth = $('.article-bg-img2').width();
+	var topheight = $('.article-bg-img2').height();
+	var $width = topWidth; // 横幅
+	var $height = topheight; // 高さ
+	var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+	var $fade_speed = 2000; // フェード処理の早さ（ミリ秒）
+	$(".cashlesslife-list .article-bg-img2 ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".cashlesslife-list .article-bg-img2 ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".cashlesslife-list .article-bg-img2 ul li:first").addClass("active").show();
+	setInterval(function(){
+	var $active = $(".cashlesslife-list .article-bg-img2 ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".cashlesslife-list .article-bg-img2 ul li:first");
 	$active.fadeOut($fade_speed).removeClass("active");
 	$next.fadeIn($fade_speed).addClass("active");
 	},$interval);

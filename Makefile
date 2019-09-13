@@ -13,8 +13,13 @@ seed:
 	docker-compose run --rm web php oil r seed:all
 .PHONY: seed
 
-install: setup sleep10 migrate
+install: setup sleep10 migrate create_default_user
+	docker-compose run --rm web php oil r create_default_user
 .PHONY: install
+
+create_default_user:
+	docker-compose run --rm web php oil r create_default_user
+.PHONY: create_default_user
 
 setup:
 	docker-compose build
@@ -49,7 +54,7 @@ sleep10:
 	sleep 10
 .PHONY: sleep10
 
-reset: clean up sleep10 migrate seed
+reset: clean up sleep10 migrate seed create_default_user
 .PHONY: reset
 
 clean:

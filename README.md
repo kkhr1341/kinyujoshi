@@ -40,6 +40,13 @@ make
 make migrate
 ```
 
+# 初期管理ユーザー
+
+```
+email:    user@kinyu-joshi.jp
+password: 1234
+```
+
 # xdebug
 ```php/php.ini
 xdebug.remote_host = 10.0.75.1

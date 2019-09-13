@@ -139,6 +139,7 @@ return array(
 	//きんゆう女子。with コーポレート
 	'contents/cashless' => 'kinyu/withcorporate/paypay',
 	'contents/cashless/article01' => 'kinyu/withcorporate/article01',
+	'contents/cashless/article02' => 'kinyu/withcorporate/article02',
 
 	'blog/page/(:any)'   => 'kinyu/blog/page/index/$1',
 	'event/page/(:any)'   => 'kinyu/event/page/index/$1',

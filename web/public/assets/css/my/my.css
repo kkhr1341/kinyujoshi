@@ -39,6 +39,22 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   マイページ - メンバー限定女子会
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.secret-event li{
+  width: 46%;
+  margin: 2%;
+}
+
+.kinyu-event-list-right {
+  padding: 11px!important;
+  background: #f7f7f7;
+  position: relative;
+}
+
+.kinyu-event-list .kinyu-event-list-left {
+    height: 160px!important;
+}
+
 .my-member-report-block li {
   width: 100%;
   height: 136px;

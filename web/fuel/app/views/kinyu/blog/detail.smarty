@@ -61,9 +61,9 @@
       {else}
         <div style="text-align: center;" class="no-member-report-block">
           <p>
-            <span style="color:#ff8861;">＊</span>メンバー限定レポートについて<span style="color:#ff8861;">＊</span>
+            <span style="color:#ff8861;">＊</span>メンバー限定コンテンツについて<span style="color:#ff8861;">＊</span>
             <span style="display: block;height: 12px;"></span>
-            このレポートはメンバーさんのみ読むことができます。<br>ログインすると読むことができます。
+              このコンテンツはメンバーさん限定で見ることができます。<br>ログインすることで見ることができます。
             <span style="display: block;height: 12px;"></span>
           </p>
           <div class="button-block">

@@ -68,72 +68,23 @@
             <h3 class="kinyu-top-main-title">ワカラナイ…から卒業しよう♪</h3>
             <p class="kinyu-top-main-sub">女子会でみんなどうしてる？を知ったり勉強したり。<br>頼れるきん女。FPには、ワカラナイことを聞いてみよう</p>
             <ul class="clear">
-            {foreach from=$events key="key" item=event name=loopname}
-
-              {if $smarty.foreach.loopname.index == 6}
-              </ul>
-                <div class="btn-more-link">
-                  <a class="js-track" href="/joshikai" data-category="sp-top-link" data-action="click" data-value="1">女子会をもっと見る ></a>
-                </div>
-              {break}
-              {/if}
-
-              {$fooo = $event.main_image}
-              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
-              <li{if $event.pr == 1} class="pr"{/if}>
-                {if empty($event.specific_link)}
-                <a class="js-track" href="/joshikai/{$event.code}" data-category="sp-top-link" data-action="click" data-value="1">
-                {else}
-                <a class="js-track" href="{$event.specific_link}" target="_blank" data-category="sp-top-link" data-action="click" data-value="1">
-                {/if}
-                  <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;">
-                    {if $event.pr == 1}
-                      <!-- PR用イメージ挿入箇所 -->
-                      <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
-                    {/if}
-                  </div>
-                  <div class="text-box">
-                    <!-- <div class="kinyu-top-list-kind">
-                      <p>
-                      <span>{$event.event_date|date_format:"%Y.%-m.%-e"}</span>
-                      {$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"} {$event.event_start_datetime}〜{$event.event_end_datetime}</p>
-                    </div> -->
-                    <div class="kinyu-top-list-kind kinyu-top-event-kind">
-                      <p>
-                      <span class="date-box">
-                        {if $event.display_event_date}
-                          <span class="date">{$event.display_event_date}</span>
-                        {else}
-                          <span class="date">{$event.event_date|date_format:"%-m.%-e"}</span>
-                          {$event.event_date|date_format:"(%a)"|replace:"Sun":">日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}
-                        {/if}
-                        </span>
-                      </p>
-                      {if $event.applicable eq false}
-                        <p class="joshikai-applicable">＊受付終了</p>
-                      {else if $event.full eq true}
-                        <p class="joshikai-applicable">＊満席</p>
-                      {/if}
-                    </div>
-                    <h3 class="kinyu-top-list-title">{$event.title}</h3>
-                    <div class="event-subbox">
-                      {if $event.fee == 0}
-                        <p class="event-subbox-el">参加費：無料</p>
-                      {else}
-                        <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
-                      {/if}
-                      <p class="event-subbox-el">場所：{$event.place}</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            {/foreach}
+              {foreach from=$events key="key" item=event name=loopname}
+                {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
+                {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+              {/foreach}
             </ul>
-          　{if count($events) > $event_display_limit}
-            <div class="primary-button">
-              <a style="background:#8ddcd1; color: #fff;" href="/joshikai">もっと見る</a>
-            </div>
+
+            {if count($events) > $event_display_limit}
+              <ul class="clear more-kinyu-top-joshikai-list" style="display: none">
+                {foreach from=$events key="key" item=event name=loopname}
+                  {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
+                    {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+                  {/if}
+                {/foreach}
+              </ul>
+              <div class="btn-more-link">
+                <a class="link-to js-track" href="" data-category="pc-top-link" data-action="click" data-value="1">女子会をもっと見る ></a>
+              </div>
             {/if}
             <div class="secondary-button">
               <a href="/joshikai_past">過去の女子会一覧へ</a>
@@ -246,6 +197,13 @@
           </div>
         </div>
 
+        <div class="kinyu-top-maincontent-block-el" style="text-align:center;">
+          <p style="margin-bottom: 10px; font-size: 14px;">＼ メディアパートナーとして応援しています ／</p>
+              <a class="js-track" target="_blank" href="https://finsum.jp/ja/" data-category="pc-top-link" data-action="click" data-value="1">
+                <img style="width:92%; cursor:pointer;" class="" src="/images/banner/finsum2019.png">
+              </a>
+        </div>
+
         <div class="kinyu-top-maincontent-block-el">
           <div class="kinyu-top-banner-area">
             <ul class="clear">
@@ -294,3 +252,16 @@
     </div>
   </div>
 </div>
+
+
+<script>
+    $(function() {
+        $(window).load(function(){
+            $('.kinyu-top-joshikai-list .btn-more-link').click(function(e) {
+                e.preventDefault();
+                $(this).hide(); // ボタン自体を非表示
+                $('.more-kinyu-top-joshikai-list').slideDown();
+            })
+        });
+    });
+</script>

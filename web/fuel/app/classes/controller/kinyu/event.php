@@ -61,9 +61,9 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_detail($code)
     {
-        if (Input::get('preview', '') != 1 && !$this->viewable($code)) {
-            throw new HttpNoAccessException;
-        }
+//        if (Input::get('preview', '') != 1 && !$this->viewable($code)) {
+//            throw new HttpNoAccessException;
+//        }
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
@@ -95,6 +95,8 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->template->description = $this->data['event']['title'];
         $this->template->urlcode = $this->data['event_row']['code'];
+        $this->data['viewable'] = $this->viewable($code);
+        $this->data['after_login_url'] = \Uri::base() . 'joshikai/' . $this->data['event']['code'];
 
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
