@@ -335,35 +335,10 @@ p.careservice-servicelist-title {
 	text-align: center;
 	color: #123468;
 }
-
-
-	/*.careservice-servicelist {
-		text-align: center;
-	}
-	.careservice-servicelist ul {
-		width: 92%;
-	}
-	.careservice-servicelist li {
-		width: 25%;
-		margin-right: 0px;
-		padding: 0px 16px;
-		box-sizing: border-box;
-	}
-	.careservice-servicelist li .img-box {
-    width: 100%;
-    height: 150px;
-	}
-	.careservice-servicelist li p {
-    font-size: 18px;
-    line-height: 26px;
-    margin-top: 24px;
-	}*/
-
 .careservice-servicelist {
 	text-align: center;
 }
 .careservice-servicelist ul {
-	/*width: 92%;*/
 	max-width: 1250px;
 	padding: 50px 8% 0px;
 }
@@ -415,8 +390,6 @@ p.careservice-servicelist-title {
 .careservice-servicelist li:nth-child(4) p {
 	color: #2a989e;
 }
-
-
 /* アイコン */
 .careservice-servicelist li .service-icon01 {
   position: absolute;
@@ -442,7 +415,6 @@ p.careservice-servicelist-title {
   right: -19px;
   bottom: -15px;
 }
-
 
 /*---------------------------------
 
@@ -509,15 +481,6 @@ p.careservice-servicelist-title {
 	font-family: "careservice-font-hime";
 	position: relative;
 }
-/*.careservice-details-title h2:after {
-	content: "";
-	height: 2px;
-	width: 100%;
-	background: #F7F19E;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-}*/
 .careservice-details-title h2 span {
 	border-bottom: 2px solid #F7F19E;
 	letter-spacing: 0px;
@@ -973,7 +936,7 @@ p.mentalhealth-list-description span {
 	margin-bottom: 12px;
 }
 .mentalhealth-block .service-link {
-    background: #47a9cc;
+  background: #47a9cc;
 }
 
 /* こんな時にお電話ください */
@@ -1011,8 +974,6 @@ p.mentalhealth-list-description span {
 	bottom: 0;
 	right: 20px;
 }
-
-
 
 /*---------------------------------
 
@@ -1156,204 +1117,204 @@ p.doctersme-consultration-list-title {
   background: #003399;
 }
 a.btn-estimate {
-    background: #F68E13;
-    border: 2px solid #F68E13;
-    color: #fff;
-    font-size: 1.4rem;
-    color: #FFF;
-    font-weight: bold;
-    display: block;
-    border-radius: 3px;
-    position: relative;
-    text-align: center;
-    padding: 54px 0 12px 0;
+  background: #F68E13;
+  border: 2px solid #F68E13;
+  color: #fff;
+  font-size: 1.4rem;
+  color: #FFF;
+  font-weight: bold;
+  display: block;
+  border-radius: 3px;
+  position: relative;
+  text-align: center;
+  padding: 54px 0 12px 0;
 }
 .fxb-col-12 {
-    float: left;
-    padding: 0 15px;
-    width: 100%;
+  float: left;
+  padding: 0 15px;
+  width: 100%;
 }
 .panel-contactboxCTA .fxb-col-12 {
-    font-size: 0;
-    letter-spacing: 0;
-    margin-top: 24px;
+  font-size: 0;
+  letter-spacing: 0;
+  margin-top: 24px;
 }
 .fxb-col-6 {
-    float: left;
-    padding: 0 15px;
-    width: 50%;
+  float: left;
+  padding: 0 15px;
+  width: 50%;
 }
 .panel-contactboxCTA .l-customerCenterTel {
-    width: 50%;
-    float: left;
-    box-sizing: border-box;
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
 }
 .panel-contactboxCTA .l-customerCenterImage {
-    width: 47%;
-    float: right;
-    overflow: hidden;
-    box-sizing: border-box;
+  width: 47%;
+  float: right;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .panel-contactboxCTA a.btn-estimate {
-    font-size: 16px;
-    line-height: 20px;
-    text-align: left;
-    padding: 16px 16px 16px 76px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  padding: 16px 16px 16px 76px;
 }
 a.btn-estimate {
-    background: #F68E13;
-    border: 2px solid #F68E13;
-    color: #fff;
-    font-size: 14px;
-    color: #FFF;
-    font-weight: bold;
-    display: block;
-    border-radius: 3px;
-    position: relative;
-    text-align: center;
-    padding: 54px 0 12px 0;
+  background: #F68E13;
+  border: 2px solid #F68E13;
+  color: #fff;
+  font-size: 14px;
+  color: #FFF;
+  font-weight: bold;
+  display: block;
+  border-radius: 3px;
+  position: relative;
+  text-align: center;
+  padding: 54px 0 12px 0;
 }
 .panel-contactboxCTA a.btn-document {
-    font-size: 16px;
-    line-height: 20px;
-    text-align: left;
-    padding: 26px 10px 26px 76px;
-    border: 2px solid #fff;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  padding: 26px 10px 26px 76px;
+  border: 2px solid #fff;
 }
 a.btn-document {
-    color: #F68E13;
-    border: 2px solid #fff;
-    background: #FFF;
-    font-size: 14px;
-    font-weight: bold;
-    display: block;
-    border-radius: 3px;
-    position: relative;
-    text-align: center;
-    padding: 54px 0 12px 0;
+  color: #F68E13;
+  border: 2px solid #fff;
+  background: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  border-radius: 3px;
+  position: relative;
+  text-align: center;
+  padding: 54px 0 12px 0;
 }
 .panel-contactboxCTA h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FFF;
 }
 .panel-contactboxCTA .text-tel {
-    font-family: 'Cabin', sans-serif;
-    font-size: 38px;
-    color: #fff;
-    letter-spacing: 3px;
-    margin: 6px 0 0 0;
+  font-family: 'Cabin', sans-serif;
+  font-size: 38px;
+  color: #fff;
+  letter-spacing: 3px;
+  margin: 6px 0 0 0;
 }
 .panel-contactboxCTA .text-tel a {
-		font-size: 38px;
-		color: #fff;
+	font-size: 38px;
+	color: #fff;
 }
 ._note {
-    font-size: 12px;
-    line-height: 24px;
-    margin: 14px 0 0 0;
-    color: #FFF;
+  font-size: 12px;
+  line-height: 24px;
+  margin: 14px 0 0 0;
+  color: #FFF;
 }
 .panel-contactboxCTA .l-customerCenterImage {
-    width: 47%;
-    display: inline-block;
-    overflow: hidden;
+  width: 47%;
+  display: inline-block;
+  overflow: hidden;
 }
 .panel-contactboxCTA ._outline {
-    font-size: 14px;
-    font-weight: bold;
-    color: #003399;
-    background: #C7D2E9;
-    border-radius: 6px;
-    padding: 10px;
-    margin: 20px 0 0 0;
-    float: left;
-    width: 60%;
-    position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  color: #003399;
+  background: #C7D2E9;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 20px 0 0 0;
+  float: left;
+  width: 60%;
+  position: relative;
 }
 .panel-contactboxCTA ._outline:after {
-    content: "";
-    width: 0;
-    border-width: 0 23px 16px 0;
-    border-style: solid;
-    border-color: transparent transparent #C7D2E9 #C7D2E9;
-    position: absolute;
-    top: 50px;
-    right: -23px;
-    margin: auto;
+  content: "";
+  width: 0;
+  border-width: 0 23px 16px 0;
+  border-style: solid;
+  border-color: transparent transparent #C7D2E9 #C7D2E9;
+  position: absolute;
+  top: 50px;
+  right: -23px;
+  margin: auto;
 }
 .panel-contactboxCTA ._image {
-    float: right;
-    width: 100px;
-    margin-top: 20px;
+  float: right;
+  width: 100px;
+  margin-top: 20px;
 }
 .panel-contactboxCTA a.btn-estimate:before {
-    width: 48px;
-    height: 48px;
-    top: 0;
-    bottom: 0;
-    left: 18px;
-    right: auto;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  bottom: 0;
+  left: 18px;
+  right: auto;
 }
 .panel-contactboxCTA a.btn-document:before {
-    width: 48px;
-    height: 48px;
-    top: 0;
-    bottom: 0;
-    left: 18px;
-    right: auto;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  bottom: 0;
+  left: 18px;
+  right: auto;
 }
 a.btn-estimate:before {
-    content: "";
-    background: url(https://www.zurichlife.co.jp/common/images/icon_simulation.svg) no-repeat;
-    background-size: contain;
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-    width: 42px;
-    height: 42px;
-    margin: auto;
+  content: "";
+  background: url(https://www.zurichlife.co.jp/common/images/icon_simulation.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: 42px;
+  height: 42px;
+  margin: auto;
 }
 a.btn-document:before {
-    content: "";
-    background: url(https://www.zurichlife.co.jp/common/images/icon_document.svg) no-repeat;
-    background-size: contain;
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-    width: 42px;
-    height: 426px;
-    margin: auto;
+  content: "";
+  background: url(https://www.zurichlife.co.jp/common/images/icon_document.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: 42px;
+  height: 426px;
+  margin: auto;
 }
 .panel-contactboxCTA a.btn-estimate:after {
-    content: "";
-    background: url(https://www.zurichlife.co.jp/common/images/icon_chevron_right.svg) no-repeat;
-    background-size: contain;
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 10px;
-    margin: auto;
+  content: "";
+  background: url(https://www.zurichlife.co.jp/common/images/icon_chevron_right.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto;
 }
 .panel-contactboxCTA a.btn-document:after {
-    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojRjY4RTEzO308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl9jaGV2cm9uX3JpZ2h0PC90aXRsZT48cGF0aCBjbGFzcz0iYSIgZD0iTTExLjA4LDYuMTksMTcuNTQuMjUsNDIuNzUsMjQsMTcuNTQsNDcuNzVsLTYuNDUtNS45NEwzMC4wOCwyNFoiLz48L3N2Zz4=);
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    top: 24px;
-    right: 10px;
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojRjY4RTEzO308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl9jaGV2cm9uX3JpZ2h0PC90aXRsZT48cGF0aCBjbGFzcz0iYSIgZD0iTTExLjA4LDYuMTksMTcuNTQuMjUsNDIuNzUsMjQsMTcuNTQsNDcuNzVsLTYuNDUtNS45NEwzMC4wOCwyNFoiLz48L3N2Zz4=);
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 24px;
+  right: 10px;
 }
 .panel-contactboxCTA ._image img {
-    border-radius: 50%;
-    width: 100%;
+  border-radius: 50%;
+  width: 100%;
 }
 p._note {
   font-size: 12px;
@@ -1362,17 +1323,17 @@ p._note {
   color: #FFF;
 }
 ._note span {
-    border: 1px solid #fff;
-    border-radius: 3px;
-    padding: 1px 3px;
-    margin: 0 4px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 1px 3px;
+  margin: 0 4px;
 }
 .theme-desktop .panel-contactboxCTA .text-tel {
-    font-family: 'Cabin', sans-serif;
-    font-size: 38px;
-    color: #fff;
-    letter-spacing: 3px;
-    margin: 6px 0 0 0;
+  font-family: 'Cabin', sans-serif;
+  font-size: 38px;
+  color: #fff;
+  letter-spacing: 3px;
+  margin: 6px 0 0 0;
 }
 .panel-contactboxCTA .text-tel:before {
   content: "";
@@ -1415,43 +1376,43 @@ p._note {
   margin: 20px 0px;
 }
 .panel-contactbox .text-tel {
-    font-family: 'Cabin', sans-serif;
-    font-size: 38px;
-    font-weight: bold;
-    color: #000066;
-    letter-spacing: 3px;
-    margin: 6px 0 0 0;
+  font-family: 'Cabin', sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  color: #000066;
+  letter-spacing: 3px;
+  margin: 6px 0 0 0;
 }
 .panel-contactbox .text-tel a {
-		font-size: 38px;
-		color: #000066;
+	font-size: 38px;
+	color: #000066;
 }
 .panel-contactbox .text-tel:before {
-    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDA2O2ZpbGwtcnVsZTpldmVub2RkO308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl90ZWxlcGhvbmU8L3RpdGxlPjxwYXRoIGNsYXNzPSJhIiBkPSJNMjMuODEsMy4xMmEyMS41LDIxLjUsMCwxLDAsMjEuNSwyMS41QTIxLjUsMjEuNSwwLDAsMCwyMy44MSwzLjEyWm0xMi41MywzMy0xLjE5LDEuMTYsMCwwYTYuNzUsNi43NSwwLDAsMS0xLjcsMSw3LDcsMCwwLDEtMS43My40NGMtLjI3LDAtNi41Ni42Mi0xNC4zNi03LjE4LTUuNjQtNS42NC03LjcyLTkuOC03LjE3LTE0LjM1YTcuMDYsNy4wNiwwLDAsMSwuNDMtMS43Myw2Ljc3LDYuNzcsMCwwLDEsMS0xLjdsMCwwLDEuMTctMS4xOGEyLjE3LDIuMTcsMCwwLDEsMy4wNi0uMDZsNC4xNiw0LjE2YTIuMTcsMi4xNywwLDAsMS0uMDYsMy4wNmwtLjY5LjY5LTEuNDEsMS40LjIzLjRhMjEsMjEsMCwwLDAsMy42NSw1LDIwLjg0LDIwLjg0LDAsMCwwLDUsMy42NGwuNDEuMjNMMjkuMTgsMjlhMi4xNywyLjE3LDAsMCwxLDMuMDYtLjA2bDQuMTYsNC4xNkEyLjE3LDIuMTcsMCwwLDEsMzYuMzQsMzYuMTJaIi8+PC9zdmc+);
-    display: inline-block;
-    margin: 0 5px 0 0;
-    vertical-align: -4px;
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDA2O2ZpbGwtcnVsZTpldmVub2RkO308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl90ZWxlcGhvbmU8L3RpdGxlPjxwYXRoIGNsYXNzPSJhIiBkPSJNMjMuODEsMy4xMmEyMS41LDIxLjUsMCwxLDAsMjEuNSwyMS41QTIxLjUsMjEuNSwwLDAsMCwyMy44MSwzLjEyWm0xMi41MywzMy0xLjE5LDEuMTYsMCwwYTYuNzUsNi43NSwwLDAsMS0xLjcsMSw3LDcsMCwwLDEtMS43My40NGMtLjI3LDAtNi41Ni42Mi0xNC4zNi03LjE4LTUuNjQtNS42NC03LjcyLTkuOC03LjE3LTE0LjM1YTcuMDYsNy4wNiwwLDAsMSwuNDMtMS43Myw2Ljc3LDYuNzcsMCwwLDEsMS0xLjdsMCwwLDEuMTctMS4xOGEyLjE3LDIuMTcsMCwwLDEsMy4wNi0uMDZsNC4xNiw0LjE2YTIuMTcsMi4xNywwLDAsMS0uMDYsMy4wNmwtLjY5LjY5LTEuNDEsMS40LjIzLjRhMjEsMjEsMCwwLDAsMy42NSw1LDIwLjg0LDIwLjg0LDAsMCwwLDUsMy42NGwuNDEuMjNMMjkuMTgsMjlhMi4xNywyLjE3LDAsMCwxLDMuMDYtLjA2bDQuMTYsNC4xNkEyLjE3LDIuMTcsMCwwLDEsMzYuMzQsMzYuMTJaIi8+PC9zdmc+);
+  display: inline-block;
+  margin: 0 5px 0 0;
+  vertical-align: -4px;
 }
 .panel-contactbox ._note {
-    color: #333;
+  color: #333;
 }
 a._link-standard, a.link-blank, a.link-pdf {
-    text-decoration: underline;
-    color: #003399;
-    font-weight: bold;
-        position: relative;
-    display: inline-block;
+  text-decoration: underline;
+  color: #003399;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
 }
 a._link-standard {
 	margin-top: 20px;
 }
 a._link-standard:after {
-    content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDM5O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl9jaGV2cm9uX3JpZ2h0PC90aXRsZT48cGF0aCBjbGFzcz0iYSIgZD0iTTExLjA4LDYuMTksMTcuNTQuMjUsNDIuNzUsMjQsMTcuNTQsNDcuNzVsLTYuNDUtNS45NEwzMC4wOCwyNFoiLz48L3N2Zz4=);
-    display: inline-block;
-    margin: 0 0 0 .5em;
+  content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMDM5O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbl9jaGV2cm9uX3JpZ2h0PC90aXRsZT48cGF0aCBjbGFzcz0iYSIgZD0iTTExLjA4LDYuMTksMTcuNTQuMjUsNDIuNzUsMjQsMTcuNTQsNDcuNzVsLTYuNDUtNS45NEwzMC4wOCwyNFoiLz48L3N2Zz4=);
+  display: inline-block;
+  margin: 0 0 0 .5em;
 }
 .panel-contactbox ._note span {
-    border: 1px solid #737373;
+  border: 1px solid #737373;
 }
 
 /*---------------------------------
@@ -1465,24 +1426,24 @@ a._link-standard:after {
 	position: relative;
 }
 .information-block .border-01 {
-    content: "";
-    background: #375e97;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1001;
+  content: "";
+  background: #375e97;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
 }
 .information-block .border-02 {
-    content: "";
-    background: #375e97;
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 5px;
-    left: 0;
-    z-index: 1001;
+  content: "";
+  background: #375e97;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  z-index: 1001;
 }
 .information-block p {
 	font-size: 13px;
@@ -1519,7 +1480,6 @@ p.information-el-description {
 
 ---------------------------------*/
 @media screen and (max-width: 559px) {
-
 .pc {
 	display: none!important;
 }
@@ -1574,13 +1534,13 @@ p.main-sub-title {
   padding-top: 60px;
 }
 .careservice-details-title {
-    padding-right: 4%;
-    padding-left: 4%;
-    margin-bottom: 40px;
+  padding-right: 4%;
+  padding-left: 4%;
+  margin-bottom: 40px;
 }
 .careservice-details-title p {
-    font-size: 14px;
-    margin-bottom: 4px;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 .careservice-details-title h2 {
   font-size: 28px;
@@ -1589,7 +1549,7 @@ p.main-sub-title {
 }
 .careservice-details-el {
   padding: 72px 0px;
-    position: relative;
+  position: relative;
 }
 
 .careservice-details-el-inner {
@@ -1616,31 +1576,31 @@ p.web-regist-title {
 	margin-bottom: 40px;
 }
 p.web-regist-title .web-regist-first {
-    left: -7px;
-    margin-top: -35px;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
+  left: -7px;
+  margin-top: -35px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
 }
 .regist-link-details {
 	margin-top: 0px;
 	margin-bottom: 24px;
 }
 .regist-link-details .regist-link-details-el {
-    width: 100%;
-    float: none;
-    padding: 20px;
+  width: 100%;
+  float: none;
+  padding: 20px;
 }
 .regist-link-details .regist-link-details-el-second {
 	padding: 24px 0px 0px;
 }
 p.regist-link-login-sub-details {
 	border-top: none;
-   	padding-top: 0px;
+  padding-top: 0px;
 }
 .regist-link-details-el .regist-link-title {
-    font-size: 14px;
-    margin-bottom: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 .regist-link-sp {
   display: none;
@@ -1657,16 +1617,16 @@ p.regist-link-login-sub-details {
   line-height: 18px;
 }
 .regist-link-login-details li.img-box {
-    width: 18%;
+  width: 18%;
 }
 .regist-link-login-details li.text-box {
-    width: 82%;
-    letter-spacing: 1px;
+  width: 82%;
+  letter-spacing: 1px;
 }
 .regist-link-login-details li.text-box span {
-    margin-top: 4px;
-    font-size: 12px;
-    line-height: 18px;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 18px;
 }
 .regist-link-details .regist-link-details-el .service-link {
   width: 100%;
@@ -1683,7 +1643,6 @@ p.regist-link-login-sub-details a {
   line-height: 18px;
   color: #676868;
 }
-
 
 /*---------------------------------
   サービス一覧
@@ -1710,49 +1669,48 @@ p.careservice-servicelist-title {
 	margin-right: 0%;
 }
 .careservice-servicelist li .img-box {
-    width: 100%;
-    height: 150px;
-    position: relative;
+  width: 100%;
+  height: 150px;
+  position: relative;
 }
 .careservice-servicelist li .content-number {
-    position: absolute;
-    width: 50px;
-    left: -12px;
-    top: -10px;
+  position: absolute;
+  width: 50px;
+  left: -12px;
+  top: -10px;
 }
 .careservice-servicelist li p {
-    text-align: center;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 16px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
 }
 .careservice-servicelist li .service-icon01 {
-    width: 50px;
-    right: -6px;
-    bottom: -6px;
+  width: 50px;
+  right: -6px;
+  bottom: -6px;
 }
 .careservice-servicelist li .service-icon02 {
-    width: 37px;
-    right: -8px;
-    bottom: -6px;
+  width: 37px;
+  right: -8px;
+  bottom: -6px;
 }
 .careservice-servicelist li .service-icon03 {
-    width: 36px;
-    right: -7px;
-    bottom: -6px;
+  width: 36px;
+  right: -7px;
+  bottom: -6px;
 }
 .careservice-servicelist li .service-icon04 {
-    width: 41px;
-    right: -8px;
-    bottom: -8px;
+  width: 41px;
+  right: -8px;
+  bottom: -8px;
 }
-
 
 /*---------------------------------
   サービス詳細 - cluboff
 ---------------------------------*/
 .cluboff-block:after {
-    height: 72px;
+  height: 72px;
 }
 .cluboff-block .service-img {
 	display: none;
@@ -1767,13 +1725,13 @@ p.careservice-servicelist-title {
   opacity: 0.1;
 }
 .cluboff-list-title {
-    display: block;
-    width: 92%;
-    margin: 0 auto;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    margin-left: -46%;
+  display: block;
+  width: 92%;
+  margin: 0 auto;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  margin-left: -46%;
 }
 .cluboff-list {
 	width: 92%;
@@ -1813,16 +1771,16 @@ p.careservice-servicelist-title {
 	letter-spacing: 1px;
 }
 .cluboff-block .bg-icon-right {
-    width: 22px;
-    position: absolute;
-    bottom: -16px;
-    right: 0;
+  width: 22px;
+  position: absolute;
+  bottom: -16px;
+  right: 0;
 }
 .cluboff-block .bg-icon-left {
-    width: 22px;
-    position: absolute;
-    bottom: -16px;
-    left: 0;
+  width: 22px;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
 }
 
 /* アプリ */
@@ -1841,9 +1799,9 @@ p.application-regist-description-sub {
 	margin-bottom: 8px;
 }
 p.application-regist-description-title {
-    font-size: 20px;
-    margin-bottom: 24px;
-    text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+  text-align: center;
 }
 .application-regist-description-details p {
 	font-size: 14px;
@@ -1901,10 +1859,10 @@ p.application-regist-description-title {
   margin-bottom: 4%;
 }
 .benefits-list li:nth-child(2n) {
-    margin-right: 0%;
+  margin-right: 0%;
 }
 .benefits-list li:nth-child(5n) {
-    margin-right: 3%;
+  margin-right: 3%;
 }
 .benefits-list li:nth-last-child(-n+4) {
 	display: none;
@@ -1914,27 +1872,27 @@ p.benefits-list-title {
   line-height: 20px;
 }
 .benefits-list li .benefits-list-el-inner p {
-    text-align: center;
-    margin-top: 16px;
-    font-size: 12px;
-    line-height: 28px;
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 28px;
 }
 .benefits-list li .benefits-list-el-inner p span {
-    color: #cfa230;
-    font-size: 16px;
+  color: #cfa230;
+  font-size: 16px;
 }
 .benefits-list li .benefits-list-el-inner p.small-text {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0;
-    margin-top: 12px;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+  margin-top: 12px;
 }
 .benefits-list li:after {
 	top: 5px;
   right: -5px;
 }
 .benefits-list li .benefits-list-el-inner p span.fc-expansion {
-    font-size: 24px;
+  font-size: 24px;
 }
 p.benefits-list-attention {
 	font-size: 11px;
@@ -1949,16 +1907,16 @@ p.benefits-list-attention {
   サービス詳細 - メディカルサポート
 ---------------------------------*/
 .medicalsupport-tell .tell-title {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    margin-left: -350px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  margin-left: -350px;
 }
 .medicalsupport-block:after {
-    height: 72px;
+  height: 72px;
 }
 p.careservice-details-description {
 	margin-bottom: 50px;
@@ -1981,17 +1939,17 @@ p.careservice-details-description {
 	display: none;
 }
 .medicalsupport-service-el {
-    width: 100%;
-    float: none;
-    margin: 0px;
-    padding: 24px 4%;
+  width: 100%;
+  float: none;
+  margin: 0px;
+  padding: 24px 4%;
 }
 .medicalsupport-service-el:last-child {
-    border-top: 1px solid #28897e;
-    border-left: none;
+  border-top: 1px solid #28897e;
+  border-left: none;
 }
 .medicalsupport-service-el .main-title span {
-    font-size: 20px;
+  font-size: 20px;
 }
 .medicalsupport-tell {
 	padding: 50px 24px;
@@ -2022,27 +1980,25 @@ p.careservice-details-description {
 	position: relative;
 }
 .medicalsupport-tell .tell-person01 {
-    display: block;
-    width: 80px;
-    position: absolute;
-    bottom: 0;
-    left: 2px;
+  display: block;
+  width: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 2px;
 }
 .medicalsupport-tell .tell-person02 {
-    display: block;
-    width: 90px;
-    position: absolute;
-    bottom: -49px;
-    right: 0px;
+  display: block;
+  width: 90px;
+  position: absolute;
+  bottom: -49px;
+  right: 0px;
 }
-
-
 
 /*---------------------------------
   サービス詳細 - メンタルヘルスサービス
 ---------------------------------*/
 .mentalhealth-block:after {
-    height: 72px;
+  height: 72px;
 }
 .mentalhealth-block .careservice-details-icon {
   width: 90px;
@@ -2053,10 +2009,10 @@ p.careservice-details-description {
   opacity: 0.1;
 }
 .mentalhealth-block .careservice-details-freeicon {
-    width: 50px;
-    position: absolute;
-    right: -40px;
-    bottom: 0;
+  width: 50px;
+  position: absolute;
+  right: -40px;
+  bottom: 0;
 }
 .mentalhealth-block .service-img {
 	display: none;
@@ -2094,7 +2050,7 @@ p.mentalhealth-list-title {
 	color: #47a9cc;
 }
 .map-block .map-list li {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 p.mentalhealth-list-description {
 	margin-bottom: 24px;
@@ -2112,31 +2068,29 @@ p.mentalhealth-list-description {
 	position: relative;
 }
 p.mentalhealth-list-description span {
-    color: #d06367;
-    font-size: 18px;
-}
-.consultration-list ul {
+  color: #d06367;
+  font-size: 18px;
 }
 
 /*---------------------------------
   サービス詳細 - Docters me
 ---------------------------------*/
 .doctersme-block:after {
-    height: 72px;
+  height: 72px;
 }
 .doctersme-block .careservice-details-icon {
-    width: 105px;
-    position: absolute;
-    right: auto;
-    bottom: -3px;
-    left: 4%;
-    opacity: 0.1;
+  width: 105px;
+  position: absolute;
+  right: auto;
+  bottom: -3px;
+  left: 4%;
+  opacity: 0.1;
 }
 .doctersme-block .careservice-details-freeicon {
-    width: 50px;
-    position: absolute;
-    right: -40px;
-    bottom: 0;
+  width: 50px;
+  position: absolute;
+  right: -40px;
+  bottom: 0;
 }
 .doctersme-block .service-img {
 	display: none;
@@ -2170,7 +2124,6 @@ p.doctersme-consultration-list-title {
 .doctersme-block p.careservice-details-description {
 	margin-bottom: 24px;
 }
-
 
 /*---------------------------------
   チューリッヒカスタマー
@@ -2229,51 +2182,51 @@ p.doctersme-consultration-list-title {
   margin-top: 24px;
 }
 .panel-contactboxCTA .text-tel {
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    margin: 6px 0 0 0;
-    padding: 8px 0px;
-    text-align: center;
-    background: #000066;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  margin: 6px 0 0 0;
+  padding: 8px 0px;
+  text-align: center;
+  background: #000066;
 }
 .panel-contactboxCTA .text-tel a {
-		font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    color: #fff;
+	font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: #fff;
 }
 .panel-contactboxCTA .text-tel:before {
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-    margin: 0 5px 0 0;
-    vertical-align: -7px;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px 0 0;
+  vertical-align: -7px;
 }
 p._note {
-    font-size: 12px;
-    line-height: 22px;
+  font-size: 12px;
+  line-height: 22px;
 }
 .panel-contactboxCTA a.btn-estimate:before {
-    width: 36px;
-    height: 36px;
-    top: 0;
-    bottom: 0;
-    left: 10px;
-    right: auto;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: auto;
 }
 .panel-contactboxCTA a.btn-document {
-    font-size: 13px;
-    text-align: left;
-    padding: 14px 10px 14px 56px;
+  font-size: 13px;
+  text-align: left;
+  padding: 14px 10px 14px 56px;
 }
 .panel-contactboxCTA a.btn-document:before {
-    width: 36px;
-    height: 36px;
-    top: 0;
-    bottom: 0;
-    left: 10px;
-    right: auto;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: auto;
 }
 .panel-contactboxCTA a.btn-document:after {
   top: 18px;
@@ -2283,52 +2236,49 @@ p._note {
 	padding: 20px;
 }
 .panel-contactbox h2 {
-    font-size: 18px;
-    margin: 0 0 10px 0;
+  font-size: 18px;
+  margin: 0 0 10px 0;
 }
 .panel-contactbox .text-tel {
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    margin: 6px 0 0 0;
-    padding: 8px 0px;
-    text-align: center;
-    background: #000066;
-    color: #fff;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  margin: 6px 0 0 0;
+  padding: 8px 0px;
+  text-align: center;
+  background: #000066;
+  color: #fff;
 }
 .panel-contactbox .text-tel a {
-		font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 1px;
-    color: #fff;
+	font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  color: #fff;
 }
 .panel-contactbox .text-tel:before {
 	content: "";
 	background: url(https://www.zurichlife.co.jp/common/images/icon_telephone.svg);
-	    background-size: contain;
-    width: 30px;
-    height: 30px;
-    margin: 0 5px 0 0;
-    vertical-align: -7px;
+	background-size: contain;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px 0 0;
+  vertical-align: -7px;
 }
-
 .panel-contactbox ._title {
-    font-size: 12px;
-    line-height: 1;
-    padding: 8px 0px;
+  font-size: 12px;
+  line-height: 1;
+  padding: 8px 0px;
 }
 .panel-contactbox h3 {
-    font-size: 18px;
-    line-height: 20px;
-    margin: 20px 0px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 20px 0px;
 }
-
 a._link-standard {
 	font-size: 14px;
 	margin-top: 12px;
 	margin-bottom: 24px;
 }
-
 .information-block {
 	width: 92%;
 	margin: 0 auto;
