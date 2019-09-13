@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* normalize
 ***************************************************** */
-html, body, div,  {
+html, body, div {
   margin: 0;
   padding: 0;
   border: 0;
@@ -1668,7 +1668,7 @@ p.regist-link-login-sub-details {
 p.regist-link-login-sub-details a {
 	font-size: 12px;
   line-height: 18px;
-  color: #333333;
+  color: #676868;
 }
 
 
@@ -1778,7 +1778,7 @@ p.careservice-servicelist-title {
 }
 .cluboff-list li .service-name {
   margin-bottom: 8px;
-  width: 65%;
+  width: 54%;
 }
 .cluboff-list li:last-child {
     margin-bottom: 0px;
@@ -1786,12 +1786,13 @@ p.careservice-servicelist-title {
 .cluboff-list li .img-box {
 	float: left;
 	width: 25%;
-	height: 100px;
+	height: 90px;
 }
 .cluboff-list li p {
 	float: right;
 	font-size: 13px;
-	margin-top: 12px;
+	line-height: 22px;
+	margin-top: 8px;
 	width: 75%;
 	text-align: left;
 	box-sizing: border-box;
