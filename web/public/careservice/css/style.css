@@ -24,7 +24,9 @@ html, body, div {
 .careservice-container h3,
 .careservice-container h4,
 .careservice-container th,
-.careservice-container td {
+.careservice-container td,
+.careservice-container a,
+.careservice-container p {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -55,8 +57,9 @@ html, body, div {
 .fc-hime {
 	font-family: "careservice-font-hime";
 }
-a {
+.careservice-container a {
 	text-decoration: none;
+	outline: none;
 }
 .sp {
 	display: none;
@@ -87,6 +90,7 @@ a {
 .careservice-container a {
 	font-size: 15px;
 	line-height: 22px;
+	word-spacing: -4px;
 }
 h1.main-title {
 	display: block;
@@ -511,6 +515,8 @@ p.careservice-servicelist-title {
 }*/
 .careservice-details-title h2 span {
 	border-bottom: 2px solid #F7F19E;
+	letter-spacing: 0px;
+  word-spacing: -10px;
 }
 .careservice-details-title h2 span.en-text {
 	font-family: "careservice-font";
@@ -820,10 +826,10 @@ p.benefits-list-attention {
 	position: relative;
 }
 .medicalsupport-service-block .service-img {
-	width: 190px;
+	width: 180px;
   position: absolute;
   right: 16px;
-  top: -207px;
+  top: -212px;
 }
 .medicalsupport-service-el {
 	width: 50%;
@@ -1165,6 +1171,7 @@ a.btn-estimate {
 .panel-contactboxCTA .fxb-col-12 {
     font-size: 0;
     letter-spacing: 0;
+    margin-top: 24px;
 }
 .fxb-col-6 {
     float: left;
@@ -1172,13 +1179,13 @@ a.btn-estimate {
     width: 50%;
 }
 .panel-contactboxCTA .l-customerCenterTel {
-    width: 53%;
-    display: inline-block;
+    width: 50%;
+    float: left;
     box-sizing: border-box;
 }
 .panel-contactboxCTA .l-customerCenterImage {
     width: 47%;
-    display: inline-block;
+    float: right;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -1205,8 +1212,7 @@ a.btn-estimate {
     font-size: 16px;
     line-height: 20px;
     text-align: left;
-    /*padding: 24px 10px 24px 76px;*/
-    padding: 16px 16px 16px 76px;
+    padding: 26px 10px 26px 76px;
     border: 2px solid #fff;
 }
 a.btn-document {
@@ -1222,7 +1228,7 @@ a.btn-document {
     padding: 54px 0 12px 0;
 }
 .panel-contactboxCTA h2 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: #FFF;
 }
@@ -1269,7 +1275,8 @@ a.btn-document {
 }
 .panel-contactboxCTA ._image {
     float: right;
-    width: 120px;
+    width: 100px;
+    margin-top: 20px;
 }
 .panel-contactboxCTA a.btn-estimate:before {
     width: 48px;
@@ -1337,6 +1344,7 @@ a.btn-document:before {
 }
 .panel-contactboxCTA ._image img {
     border-radius: 50%;
+    width: 100%;
 }
 p._note {
   font-size: 12px;
@@ -1618,7 +1626,7 @@ p.regist-link-login-sub-details {
    	padding-top: 0px;
 }
 .regist-link-details-el .regist-link-title {
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 8px;
 }
 .regist-link-sp {
@@ -2138,6 +2146,7 @@ p.doctersme-consultration-list-title {
 	margin: 0 auto;
 	width: 250px;
 	right: auto;
+	margin-top: 24px;
 }
 .doctersme-block p.careservice-details-description {
 	margin-bottom: 24px;
@@ -2299,6 +2308,9 @@ a._link-standard {
 .information-block p {
 	font-size: 12px;
 }
+.panel-contactbox .text-tel {
+	font-weight: normal;
+}
 
 }
 
@@ -2309,6 +2321,21 @@ a._link-standard {
 ---------------------------------*/
 
 @media screen and (min-width: 559px) and (max-width: 959px) {
+	.careservice-container p, .careservice-container a {
+    font-size: 15px;
+    line-height: 24px;
+	}
+	p.main-sub-title {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	p.careservice-servicelist-title {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	.cluboff-block p.web-regist-title {
+		font-size: 18px;
+	}
 	.careservice-details-el {
 		padding: 100px 0px;
 	}
@@ -2317,10 +2344,6 @@ a._link-standard {
 	}
 	.tablet {
 		display: block;
-	}
-	.careservice-container p, .careservice-container a {
-    font-size: 14px;
-    line-height: 22px;
 	}
 	h1.main-title {
     width: 300px;
@@ -2436,7 +2459,7 @@ a._link-standard {
 		padding: 24px 0px 24px 24px!important;
 	}
 	.regist-link-details-el .regist-link-title {
-		font-size: 16px;
+		font-size: 15px;
 		letter-spacing: 1px;
 	}
 	.doctersme-consultration-chat {
@@ -2550,6 +2573,10 @@ a._link-standard {
   	margin-top: 80px;
   }
 
+	/* パネル関連 */
+	.panel-contactbox {
+		padding: 24px;
+	}
   .information-block {
   	padding: 100px 4% 72px;
   }
@@ -2564,6 +2591,14 @@ a._link-standard {
   	font-size: 24px;
   	letter-spacing: 0;
   }
+  .panel-contactbox ._title {
+  	font-size: 15px;
+  	line-height: 24px;
+  }
+  .panel-contactboxCTA ._image {
+    width: 26%;
+    margin-top: 20%;
+	}
 
 }
 
