@@ -73,12 +73,18 @@ class EventRemindMailTemplates extends Base
 
         $body = $template['body'];
 
+
+        $event_time = '';
+        if ($event['event_start_datetime'] || $event['event_end_datetime']) {
+            $event_time = $event['event_start_datetime'] . '〜' . $event['event_end_datetime'];
+        }
+
         $options = array(
-            'event_url' => \Uri::base(false) . 'joshikai/' . $event['code'],
-            'event_date' => $event['display_event_date'] ? $event['display_event_date'] : $event['event_date'],
-            'event_title' => $event['event_title'],
-            'event_place' => $event['event_place'],
-            'name'        => $name,
+            'event_url'   => \Uri::base(false) . 'joshikai/' . $event['code'],
+            'event_date'  => $event['display_event_date']  ? $event['display_event_date']: \Date::forge(strtotime($event['event_date']))->format("%Y/%m/%d", true) . ' ' . $event_time,
+            'event_title' => $event['title'],
+            'event_place' => $event['place'],
+            'name'        => $name
         );
 
         foreach ($options as $key => $value) {

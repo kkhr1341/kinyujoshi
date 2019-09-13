@@ -83,6 +83,7 @@ class Events extends Base
         $val->add('authentication_password', '認証パスワード')
             ->add_rule('required_with', 'authentication_user');
 
+        $val->add('remind_mail.status', '女子会リマインドメール: 有効/無効');
         $val->add('remind_mail.subject', '女子会リマインドメール: 件名');
         $val->add('remind_mail.body', '女子会リマインドメール: 本文')
             ->add_rule('required_with', 'remind_mail.subject');
@@ -373,6 +374,7 @@ class Events extends Base
                     'event_code' => $code,
                     'subject'    => $remind_mail['subject'],
                     'body'       => $remind_mail['body'],
+                    'status'     => $remind_mail['status'],
                     'created_at' => \DB::expr('now()'),
                 ))
                 ->execute();
@@ -425,6 +427,7 @@ class Events extends Base
                     ->set(array(
                         'subject'    => $remind_mail['subject'],
                         'body'       => $remind_mail['body'],
+                        'status'     => $remind_mail['status'],
                         'updated_at' => \DB::expr('now()'),
                     ))
                     ->where('event_code', '=', $params['code'])
@@ -435,6 +438,7 @@ class Events extends Base
                         'event_code' => $params['code'],
                         'subject'    => $remind_mail['subject'],
                         'body'       => $remind_mail['body'],
+                        'status'     => $remind_mail['status'],
                         'created_at' => \DB::expr('now()'),
                     ))
                     ->execute();

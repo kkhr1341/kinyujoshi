@@ -15,6 +15,7 @@ class Drop_event_remind_mail_default_templates
             'id' => array('constraint' => 11, 'type' => 'int', 'auto_increment' => true, 'unsigned' => true),
             'subject' => array('constraint' => 255, 'type' => 'varchar'),
             'body' => array('type' => 'text'),
+            'body' => array('type' => 'text'),
             'created_at' => array('type' => 'datetime'),
             'updated_at' => array('type' => 'timestamp'),
         ), array('id'), true, 'InnoDB', null);

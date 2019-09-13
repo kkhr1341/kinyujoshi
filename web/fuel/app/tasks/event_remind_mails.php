@@ -9,13 +9,15 @@ class Event_remind_mails {
 	public static function run() {
 
 		$sql = 'select
-                    *
+                    events.*
                   from
                     events
+                    inner join event_remind_mail_templates on event_remind_mail_templates.event_code = events.code
                   where
-                    disable = 0
-                    and status = 1
-                    and DATE_FORMAT(now(), "%Y-%m-%d") = DATE_FORMAT(event_date, "%Y-%m-%d") - INTERVAL 1 DAY';
+                    events.disable = 0
+                    and events.status = 1
+                    and event_remind_mail_templates.status = 1
+                    and DATE_FORMAT(now(), "%Y-%m-%d") = DATE_FORMAT(events.event_date, "%Y-%m-%d") - INTERVAL 1 DAY';
 
 		$events = \DB::query($sql)->execute();
 		foreach($events as $event) {

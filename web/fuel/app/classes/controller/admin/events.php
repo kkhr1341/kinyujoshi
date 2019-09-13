@@ -35,6 +35,12 @@ class Controller_Admin_Events extends Controller_Adminbase
         $this->data['sections'] = Sections::lists();
 //        $this->data['remind_mail_templates'] = EventRemindMailTemplates::list01();
 
+        $this->data['remind_mail_template'] = array(
+            'status' => 0,
+            'subject' => $this->get_default_remind_mail_subject(),
+            'body' => $this->get_default_remind_mail_body(),
+        );
+
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
 
@@ -51,7 +57,16 @@ class Controller_Admin_Events extends Controller_Adminbase
         $this->data['events'] = Events::getByCode('events', $code);
         $this->data['past'] = Events::isPast($code);
         $this->data['sections'] = Sections::lists();
-        $this->data['remind_mail_template'] = EventRemindMailTemplates::getByEventCode($code);
+
+        if ($event_remind_mail_template = EventRemindMailTemplates::getByEventCode($code)) {
+            $this->data['remind_mail_template'] = $event_remind_mail_template;
+        } else {
+            $this->data['remind_mail_template'] = array(
+                'status' => 0,
+                'subject' => $this->get_default_remind_mail_subject(),
+                'body' => $this->get_default_remind_mail_body(),
+            );
+        }
 
         // 将来的に複数登録できるようにしたいが今はとりあえず1個だけしか登録できない仕様
         $coupons = EventCoupons::getRowsByEventCode($code);
@@ -198,5 +213,60 @@ class Controller_Admin_Events extends Controller_Adminbase
 <img src="/images/event/official_thumbnail.png"></p>
 <p><br></p>
 <p>主催：金融ワカラナイ女子のためのコミュニティ「きんゆう女子。」<br>お問い合わせ先：support@kinyu-joshi.jp<br>会場協力：<br>ゲスト協力：</p>';
+    }
+
+    /**
+     * 女子会リマインドメールの件名の初期値取得
+     * @return string
+     */
+    private function get_default_remind_mail_subject()
+    {
+        return '女子会がいよいよ明日になりました';
+    }
+
+    /**
+     * 女子会リマインドメールの本文の初期値取得
+     * @return string
+     */
+    private function get_default_remind_mail_body()
+    {
+        return '＊このメールは女子会にお申し込みのみなさんにお送りしています＊
+
+こんにちは。
+きんゆう女子。編集部です。
+
+この度は{% event_title %}に
+お申し込みをいただきましてありがとうございます。
+
+いよいよ明日になりましたのでご案内です。
+
+開催日：{% event_date %}
+会場：{% event_place %}
+
+予習：
+
+女子会の詳細はこちらのメージよりご覧ください
+{% event_url %}
+
+それではみなさまに明日お会いできることを楽しみにしています。
+どうぞよろしくお願いいたします。
+
+*--*--*--*--*--*--*--*--*--*--*--*--*--*
+
+きんゆう女子。編集部(support@kinyu-joshi.jp)
+
+
+〒103-0025
+東京都中央区日本橋茅場町1-5-8　東京証券会館　B-313
+運営会社：株式会社TOE THE LINE
+
+✧きんゆう女子。コミュニティ✧
+『お金に囚われず自由に等身大で生きる』
+公式サイト：https://kinyu-joshi.jp/
+
+✧Instagram✧@kinyu_joshi
+✧Twitter✧@kinyu_joshi
+✧Facebook✧きんゆう女子。
+';
     }
 }
