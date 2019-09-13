@@ -33,6 +33,15 @@
                        <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
            　　　{/if}
           　　 </div>
+              {if $blog.secret == 1}
+              <div class="ribbon_area pc">
+                  <span class="member-regist-label">メンバー限定</span>
+              </div>
+              <div class="ribbon_area-sp sp">
+                  <span class="member-regist-label-sp">メンバー限定</span>
+              </div>
+              {/if}
+              </div>
               <div class="text-box">
                 <div class="kinyu-top-list-kind">
                   {if $blog.kind == "女子会レポート"}

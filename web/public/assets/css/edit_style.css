@@ -963,7 +963,9 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   }
 }
 
-
+.kinyu-top-report-list .img-box {
+  position: relative;
+}
 
 /* .kinyu-top-report-list .img-box .member-regist-label {
   position: absolute;
@@ -1028,7 +1030,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
     top: 0px;
     right: 0px;
     overflow: hidden;
-  }
+}
 
 .member-regist-label-sp  {
   display: inline-block;
@@ -1045,8 +1047,6 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   letter-spacing: 0.05em;
   box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
 }
-
-
 
 /*-- 記事一覧部分 --*/
 .kinyu-list-block {
