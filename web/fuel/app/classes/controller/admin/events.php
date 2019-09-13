@@ -5,6 +5,7 @@ use \Model\EventCoupons;
 use \Model\EventDisplayTopPages;
 use \Model\Applications;
 use \Model\Sections;
+use \Model\EventRemindMailTemplates;
 
 class Controller_Admin_Events extends Controller_Adminbase
 {
@@ -32,12 +33,14 @@ class Controller_Admin_Events extends Controller_Adminbase
             throw new HttpNoAccessException;
         }
         $this->data['sections'] = Sections::lists();
+//        $this->data['remind_mail_templates'] = EventRemindMailTemplates::list01();
+
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
 
         $this->data['events']['content'] = $this->get_default_content();
 
-        $this->template->contents = View::forge('admin/events/create.smarty', $this->data);
+        $this->template->contents = View::forge('admin/events/edit.smarty', $this->data);
     }
 
     public function action_edit($code)
@@ -48,6 +51,7 @@ class Controller_Admin_Events extends Controller_Adminbase
         $this->data['events'] = Events::getByCode('events', $code);
         $this->data['past'] = Events::isPast($code);
         $this->data['sections'] = Sections::lists();
+        $this->data['remind_mail_template'] = EventRemindMailTemplates::getByEventCode($code);
 
         // 将来的に複数登録できるようにしたいが今はとりあえず1個だけしか登録できない仕様
         $coupons = EventCoupons::getRowsByEventCode($code);
