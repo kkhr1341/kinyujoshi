@@ -1665,6 +1665,11 @@ p.regist-link-login-sub-details {
 	font-size: 12px;
   line-height: 18px;
 }
+p.regist-link-login-sub-details a {
+	font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+}
 
 
 /*---------------------------------
@@ -2217,6 +2222,12 @@ p.doctersme-consultration-list-title {
     padding: 8px 0px;
     text-align: center;
     background: #000066;
+}
+.panel-contactboxCTA .text-tel a {
+		font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    color: #fff;
 }
 .panel-contactboxCTA .text-tel:before {
     background-size: contain;
