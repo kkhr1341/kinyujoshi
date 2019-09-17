@@ -99,30 +99,32 @@
       </div>
     </div>
 
-    <!-- オフィシャルメンバーとは -->
-    <div class="oficial-member-block">
-      <p class="oficial-member-title fs-mincho">オフィシャルメンバーとは...？</p>
-      <p class="oficial-member-description">コミュニティの顔として企業と意見交換をしたりインタビューなどの取材を行ったり、主体的に活動するメンバーです。オフィシャルメンバーは、1年に1~2回募集いたします。6ヶ月〜1年間の活動を経て卒業となります。</p>
-      <img class="oficial-member-icon" src="/images/login/ofiucial-member.png">
-    </div>
+    <div class="oficial-member-block-container">
+      <!-- オフィシャルメンバーとは -->
+      <div class="oficial-member-block">
+        <p class="oficial-member-title fs-mincho">オフィシャルメンバーとは...？</p>
+        <p class="oficial-member-description">コミュニティの顔として企業と意見交換をしたりインタビューなどの取材を行ったり、主体的に活動するメンバーです。オフィシャルメンバーは、1年に1~2回募集いたします。6ヶ月〜1年間の活動を経て卒業となります。</p>
+        <img class="oficial-member-icon" src="/images/login/ofiucial-member.png">
+      </div>
 
-    <div id="regist-form" class="login-block-el login-contents-block-inner clear">
-      <div class="login-contents-mainarea login-contents-regist">
-        <h2 class="el-title">メンバー登録はこちら♪</h2>
+      <div id="regist-form" class="login-block-el login-contents-block-inner clear">
+        <div class="login-contents-mainarea login-contents-regist">
+          <h2 class="el-title">メンバー登録はこちら♪</h2>
 
-        <div class="login-contents-form-area clear">
+          <div class="login-contents-form-area clear">
 
-          <div class="regist-btn-list">
-            <ul>
-              <li class="email-login-bg"><a href="/regist_email">メールアドレスで登録に進む</a></li>
-              <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
-              <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
-            </ul>
+            <div class="regist-btn-list">
+              <ul>
+                <li class="email-login-bg"><a href="/regist_email">メールアドレスで登録に進む</a></li>
+                <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
+                <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
+              </ul>
+            </div>
+
+            <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
+            <p class="regist-sub-description" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
+
           </div>
-
-          <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
-          <p class="regist-sub-description" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
-
         </div>
       </div>
     </div>
