@@ -2,7 +2,7 @@
 
 use \Model\Applications;
 use \Model\EventMails;
-use \Model\EventRemindMailTemplate;
+use \Model\EventRemindMailTemplates;
 
 class Controller_Api_Eventbroadcastmails extends Controller_Apibase
 {
@@ -19,7 +19,7 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
             $applications = Applications::get_applications_by_code(\Input::post('code'));
             foreach ($applications as $application) {
                 try {
-                    EventRemindMailTemplate::send(
+                    EventRemindMailTemplates::send(
                         $application['email'],
                         \Input::post('subject'),
                         \Input::post('body'),
@@ -41,7 +41,7 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
             }
 
             // 運営にも一通同じ内容で送信
-            EventRemindMailTemplate::send(
+            EventRemindMailTemplates::send(
                 'cs@kinyu-joshi.jp',
                 \Input::post('subject'),
                 \Input::post('body'),
@@ -49,9 +49,9 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
                 \Input::post('code')
             );
 
-            if($error_mails) {
-                EventRemindMailTemplate::notify($error_mails);
-            }
+//            if($error_mails) {
+//                EventRemindMailTemplates::notify($error_mails);
+//            }
 
             return $this->ok();
         } catch (\Exception $e) {
@@ -65,7 +65,7 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
             return $this->error('login');
         }
         try {
-            EventRemindMailTemplate::send(
+            EventRemindMailTemplates::send(
                 Input::post('email'),
                 \Input::post('subject'),
                 \Input::post('body'),

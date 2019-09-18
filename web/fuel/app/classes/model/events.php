@@ -74,6 +74,7 @@ class Events extends Base
         $val->add('incur_cancellation_fee_date', 'キャンセル料金発生日');
 
         $val->add('open_date', '公開設定')
+            ->add_rule('required')
             ->add_rule('valid_date');
 
         $val->add('authentication_user', '認証ユーザー名')
@@ -81,6 +82,16 @@ class Events extends Base
 
         $val->add('authentication_password', '認証パスワード')
             ->add_rule('required_with', 'authentication_user');
+
+        $val->add('remind_mail.status', '女子会リマインドメール: 有効/無効');
+        $val->add('remind_mail.subject', '女子会リマインドメール: 件名');
+        $val->add('remind_mail.body', '女子会リマインドメール: 本文')
+            ->add_rule('required_with', 'remind_mail.subject');
+
+        $val->add('thanks_mail.status', '女子会サンクスメール: 有効/無効');
+        $val->add('thanks_mail.subject', '女子会サンクスメール: 件名');
+        $val->add('thanks_mail.body', '女子会サンクスメール: 本文')
+            ->add_rule('required_with', 'thanks_mail.subject');
 
         if ($status == 1) {
 
@@ -360,6 +371,34 @@ class Events extends Base
         $data['created_at'] = \DB::expr('now()');
         \DB::insert('events')->set($data)->execute();
 
+        // リマインドメール
+        $remind_mail = $params['remind_mail'];
+        if ($remind_mail['subject'] && $remind_mail['body']) {
+            \DB::insert('event_remind_mail_templates')
+                ->set(array(
+                    'event_code' => $code,
+                    'subject'    => $remind_mail['subject'],
+                    'body'       => $remind_mail['body'],
+                    'status'     => $remind_mail['status'],
+                    'created_at' => \DB::expr('now()'),
+                ))
+                ->execute();
+        }
+
+        // サンクスメール
+        $thanks_mail = $params['thanks_mail'];
+        if ($thanks_mail['subject'] && $thanks_mail['body']) {
+            \DB::insert('event_thanks_mail_templates')
+                ->set(array(
+                    'event_code' => $code,
+                    'subject'    => $thanks_mail['subject'],
+                    'body'       => $thanks_mail['body'],
+                    'status'     => $thanks_mail['status'],
+                    'created_at' => \DB::expr('now()'),
+                ))
+                ->execute();
+        }
+
         return $data;
     }
 
@@ -397,6 +436,62 @@ class Events extends Base
 
         \DB::update('events')->set($data)->where('code', '=', $params['code'])->execute();
 
+        // リマインドメール
+        $remind_mail = $params['remind_mail'];
+        if (!$remind_mail['subject'] || !$remind_mail['body']) {
+            \DB::delete('event_remind_mail_templates')->where('event_code', '=', $params['code'])->execute();
+        } else {
+            if(\DB::select()->from('event_remind_mail_templates')->where('event_code', $params['code'])->execute()->current()) {
+                \DB::update('event_remind_mail_templates')
+                    ->set(array(
+                        'subject'    => $remind_mail['subject'],
+                        'body'       => $remind_mail['body'],
+                        'status'     => $remind_mail['status'],
+                        'updated_at' => \DB::expr('now()'),
+                    ))
+                    ->where('event_code', '=', $params['code'])
+                    ->execute();
+            } else {
+                \DB::insert('event_remind_mail_templates')
+                    ->set(array(
+                        'event_code' => $params['code'],
+                        'subject'    => $remind_mail['subject'],
+                        'body'       => $remind_mail['body'],
+                        'status'     => $remind_mail['status'],
+                        'created_at' => \DB::expr('now()'),
+                    ))
+                    ->execute();
+            }
+        }
+
+        // サンクスメール
+        $thanks_mail = $params['thanks_mail'];
+        if (!$thanks_mail['subject'] || !$thanks_mail['body']) {
+            \DB::delete('event_thanks_mail_templates')->where('event_code', '=', $params['code'])->execute();
+        } else {
+            if(\DB::select()->from('event_thanks_mail_templates')->where('event_code', $params['code'])->execute()->current()) {
+                \DB::update('event_thanks_mail_templates')
+                    ->set(array(
+                        'subject'    => $thanks_mail['subject'],
+                        'body'       => $thanks_mail['body'],
+                        'status'     => $thanks_mail['status'],
+                        'updated_at' => \DB::expr('now()'),
+                    ))
+                    ->where('event_code', '=', $params['code'])
+                    ->execute();
+            } else {
+                \DB::insert('event_thanks_mail_templates')
+                    ->set(array(
+                        'event_code' => $params['code'],
+                        'subject'    => $thanks_mail['subject'],
+                        'body'       => $thanks_mail['body'],
+                        'status'     => $thanks_mail['status'],
+                        'created_at' => \DB::expr('now()'),
+                    ))
+                    ->execute();
+            }
+        }
+
         return $data;
     }
 
@@ -414,27 +509,6 @@ class Events extends Base
             ->where('code', '=', $code)
             ->execute();
     }
-
-//    private static function get_main_image($params)
-//    {
-//
-//        $content = $params['content'];
-//        preg_match_all("/src=\"(.*?)\"/", $content, $result);
-//        $url = "";
-//        if (isset($result[1]) && isset($result[1][0])) {
-//
-//            $url = $result[1][0];
-//            if (strpos($url, "youtube.com") !== false) {
-//                preg_match('#(\.be/|/embed/|/v/|/watch\?v=)([A-Za-z0-9_-]{5,11})#', $url, $matches);
-//                if (isset($matches[2]) && $matches[2] != '') {
-//                    $YoutubeCode = $matches[2];
-//                }
-//                $url = "//img.youtube.com/vi/{$YoutubeCode}/0.jpg";
-//            }
-//        }
-//
-//        return $url;
-//    }
 
     /**
      * 過去イベントかどうか判定する

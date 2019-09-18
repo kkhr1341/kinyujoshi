@@ -45,33 +45,37 @@ class Controller_Api_Events extends Controller_Apibase
             return $this->error($message);
         }
 
-        // 将来的に複数登録できるようにしたいが今はとりあえず1個だけしか登録できない仕様
-        $coupons = EventCoupons::getRowsByEventCode($val->validated('code'));
-        $coupon = $coupons ? $coupons[0]: '';
+        try {
+            // 将来的に複数登録できるようにしたいが今はとりあえず1個だけしか登録できない仕様
+            $coupons = EventCoupons::getRowsByEventCode($val->validated('code'));
+            $coupon = $coupons ? $coupons[0] : '';
 
-        Events::save($val->validated());
-        if ($coupon) {
-            if ($val->validated('coupon_code')) {
-                EventCoupons::save(
-                    $coupon['code'],
+            Events::save($val->validated());
+            if ($coupon) {
+                if ($val->validated('coupon_code')) {
+                    EventCoupons::save(
+                        $coupon['code'],
+                        $val->validated('coupon_code'),
+                        $val->validated('discount')
+                    );
+                } else {
+                    EventCoupons::delete($coupon['code']);
+                }
+            } elseif ($val->validated('coupon_code')) {
+                EventCoupons::create(
                     $val->validated('coupon_code'),
+                    $val->validated('code'),
                     $val->validated('discount')
                 );
-            } else {
-                EventCoupons::delete($coupon['code']);
             }
-        } elseif($val->validated('coupon_code')) {
-            EventCoupons::create(
-                $val->validated('coupon_code'),
-                $val->validated('code'),
-                $val->validated('discount')
-            );
-        }
 
-        return $this->ok();
+            return $this->ok();
+        } catch (Exception $e) {
+            return $this->error("保存に失敗しました。");
+        }
     }
 
-    public function action_delete()
+        public function action_delete()
     {
         if (!Auth::has_access('events.delete')) {
             exit();
