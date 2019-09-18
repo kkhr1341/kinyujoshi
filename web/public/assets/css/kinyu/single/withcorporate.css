@@ -391,6 +391,20 @@ footer,
   left: 12px;
   bottom: 6px;
 }
+.cashlesslife-el03 .text-box .illust1 {
+	position: absolute;
+  width: 110px;
+  right: 28px;
+  top: 22px;
+  opacity: .7;
+}
+.cashlesslife-el03 .text-box .illust2 {
+  position: absolute;
+  width: 115px;
+  left: 12px;
+  bottom: 6px;
+  opacity: .7;
+}
 .cashlesslife-list .text-box .title-epsode {
 	width: 150px;
 }
@@ -802,6 +816,7 @@ footer,
 	float: none;
 	padding-left: 0px;
 	margin-top: 40px;
+	position: relative;
 }
 .kinjo-logo {
 	width: 250px;
@@ -964,6 +979,40 @@ footer,
   left: 50%;
   bottom: 0px;
   margin-left: -120px;
+}
+
+/* イラスト - article3 */
+.article03-block .illust-01 {
+	opacity: .7;
+	width: 100px;
+}
+.article03-block .illust-03 {
+	opacity: .7;
+	width: 120px;
+	bottom: -33px;
+	right: -50px;
+	transform:rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+.article03-block .illust-04 {
+	width: 140px;
+	left: auto;
+    right: 0;
+}
+.article03-block .illust-05 {
+	width: 100px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
+.article03-block .illust-06 {
+	width: 140px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
 }
 
 
@@ -1512,6 +1561,8 @@ footer,
 .illust-06-sp-text {
 	padding-right: 62px;
 }
+
+/* イラスト - article02 */
 .article02-block .illust-03 {
   width: 65px;
 }
@@ -1521,6 +1572,28 @@ footer,
 	top: auto;
 	bottom: -56px;
 }
+
+/* イラスト - article03 */
+.article03-block .illust-01 {
+	width: 70px!important;
+}
+.article03-block .illust-03 {
+	width: 90px;
+    bottom: -26px;
+    right: -35px;
+}
+.article03-block .illust-04 {
+	top: auto;
+	bottom: -40px;
+	width: 90px;
+}
+.article03-block .illust-05 {
+    bottom: auto;
+    top: -18px;
+    width: 70px;
+}
+
+
 .article-illust-fix-01 {
 	padding-right: 120px;
 }
@@ -1544,6 +1617,14 @@ footer,
   bottom: -60px;
   margin-left: 0px;
   right: 0px;
+}
+.article03-block .illust-06 {
+	width: 110px;
+	right: -10px;
+	top: -5px;
+}
+.shop-list-block ul li.shop-list-heading p {
+	font-size: 14px;
 }
 
 }
