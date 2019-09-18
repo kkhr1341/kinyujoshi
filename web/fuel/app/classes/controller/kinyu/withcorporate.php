@@ -102,7 +102,7 @@ class Controller_Kinyu_Withcorporate extends Controller_Kinyubase
         //     die('このページを見るにはログインが必要です');
         // }
 
-        $this->template->title = '緑とアートに囲まれる、キャッシュレス旅。 | 今日も、キャッシュレス。';
+        $this->template->title = '都心から離れたひとり旅で復興について考える | 今日も、キャッシュレス。';
         $this->template->ogimg = '/images/withcorporate/paypay/article02/article2_og.jpg';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
 
