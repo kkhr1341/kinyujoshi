@@ -1,0 +1,450 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/withcorporate.css">
+<script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
+
+<div class="withcorporate-container article-container article02-block">
+	
+	<div class="withcorporate-main-logo logo-animation" style="background:#283248;">
+		<a href="/contents/cashless"><img src="/images/withcorporate/paypay/logo_w.png"></a>
+	</div>
+
+	<div class="article-bg">
+
+		<div class="article-bg-img fix-animation1">
+			<ul>
+				<li style="background: url(/images/withcorporate/paypay/article05/article01_bg01.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article05/article01_bg02.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article05/article01_bg03.jpg) center center / cover no-repeat;"></li>
+			</ul>
+		</div>
+
+		<div class="text-area">
+			<p class="article-name article-animation-top-left">キャッシュレスと私。</p>
+			<h2 class="article-maincopy article-animation-top-left2">生活のお買い物をもっと身軽に♪</h2>
+		</div>
+	</div>
+
+	<div class="article-contents-block">
+		
+		<div class="article-contents-title">
+			<img class="article-animation-episode" src="/images/withcorporate/paypay/article05/episode5.png">
+			<p class="article-animation-episode2">かわいくて作り置きOKな<br class="sp">お弁当作りにチャレンジ。<span>
+			〜 おうちごはんをつくるまで 〜</span></p>
+			<!-- <img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article02/illust5.png"> -->
+		</div>
+
+		<p class="article-fix-text cashless-animation1"><span class="text-decoration">
+			働くママは時間と両手が空くことが嬉しいこと。<br class="pc">
+			生活のお買い物をキャッシュレスにして、時間と両手と、お財布にもゆとりが生まれた♪</span>
+		</p>
+
+
+		<div class="profile-block cashless-animation1">
+			<div class="profile-detail">
+				<div class="profile-img">
+					<img src="/images/withcorporate/paypay/article05/member5.png">
+					<!-- <img class="illust-flower" src="/images/withcorporate/paypay/article/flower.png"> -->
+				</div>
+				<div class="profile-textbox">
+					<p class="case-name">member4：<span>まきさん</span></p>
+					<p class="case-description">
+						<span>お仕事</span>：若い会社でサポート業務をしています。<br>
+						<span>金融について関心のあること</span>：簿記の勉強に挑戦中！
+					</p>
+					<p class="case-like">
+						<span>好きなもの：</span>お弁当づくりとInstagramで色んなライフスタイル研究<br>
+						<span>よく行く場所：</span>人とお話するのが好きで色んなカフェにいきます<br>
+					</p>
+				</div>
+			</div>
+			<!-- <img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article02/illust1.png"> -->
+		</div>
+
+		<div class="kinjo-member-wallet">
+			<div class="title-block cashless-animation1">
+				<img class="kinjo-member-wallet-titleimg" src="/images/withcorporate/paypay/kinjo-member-wallet.png">
+				<p>この日の私のお財布の中身♪</p>
+			</div>
+			<div class="img-block">
+				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article05/kinjo-member-wallet-img01.jpg">
+				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article05/kinjo-member-wallet-img02.jpg">
+			</div>
+		</div>
+
+		<h2 class="article-main-title cashless-animation1">本屋さんで待ち合わせ</h2>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_01.jpg">
+			</div>
+			<div class="text-box">
+				<div class="date-text cashless-animation1">
+					<p>AUGUST 14th<br>
+				Wednesday 11:00 a.m.</p>
+				</div>
+				<p class="article-contents-el-description article-animation-left2">
+					このチャレンジにした理由は、働くママとして新しいことに挑戦してみたいと思ったから。<br><br>
+					お弁当を作るだけだったらいつもしていることだけど、<br class="pc">
+					キャッシュレスライフで挑戦してみたら新しい発見があるかもしれない。<br><br>
+
+					お弁当の味見をしてもらおうとメンバーのななみさんをお誘いしました。<br><br>
+
+					本屋さんで待ち合わせしたのは、新しいお料理の構想を練るため。
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-left clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_02.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					本屋さんに入ると、天井が広く開放感ある雰囲気。<br class="pc">
+					平日のお昼間だからか人も少なくて本が探しやすいです。<br><br>
+
+					お料理本コーナーにいくと、カラフルなおかずの写真がいっぱい。<br><br>
+					いつも作らないメニューに挑戦してみたいので、<br class="pc">
+					色々と本を探します。<br><br>
+
+					どれにしようかいろいろ考えたけれど、マイブームの「作り置き」の本に決定！
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-right clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_03.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					お支払いはPayPayで。<br class="pc">
+					ここの本屋さんはTポイントも貯まるので一緒に提示。<br><br>
+
+					PayPayのアプリからデジタルTカードを提示できるからスムーズ！
+				</p>
+			</div>
+		</div>
+
+		<h2 class="article-main-title cashless-animation1">お茶をしながら作るおかずを決定</h2>
+
+		<div class="article-contents-el img-center clear">
+			<div class="text-box">
+				<div class="date-text cashless-animation1">
+					<p>AUGUST 14th<br>
+				Wednesday 11:30 a.m.</p>
+				</div>
+				<p class="article-contents-el-description article-animation-left2">
+					本が決まったところで隣のカフェでゆっくりメニューを決めよう。<br><br>
+
+					このカフェではLINE Payで。<br class="pc">
+					チャージしてドリンクを注文。<br><br>
+
+					LINEカードでポイントもしっかりためます。
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_04.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					席に座ってパラパラと買った本をみてみる。<br class="pc">
+					どれも美味しそう。<br><br>
+
+					色々悩んだけど、作り置きできて野菜をたくさん取れるコールスローを作ることに。<br class="pc">
+					チンジャオロースーと卵焼きも入れて華やかにしよう。<br><br>
+
+					コールスローは材料にカッテージチーズが必要みたいだけどスーパーに置いてあるかな？
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-left clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_05.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					カフェからスーパーへの移動は車で。<br><br>
+
+					移動中は、ななみさんとクレジットカードを選ぶ基準をお互いシェアしながら。<br><br>
+
+					ポイントがたくさんつく、年会費が無料というのも魅力的だけど、<br class="pc">
+					カードを紛失したり不正利用されたりしたときとかのアフターケアが充実していることも重要。<br><br>
+
+					ちなみにそんな私は、セゾンのゴールドカードを愛用しています。
+				</p>
+			</div>
+		</div>
+
+
+		<h2 class="article-main-title cashless-animation1">スーパーに到着、お目当の材料をお買い物</h2>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_06.jpg">
+			</div>
+			<div class="text-box">
+				<div class="date-text cashless-animation1">
+					<p>AUGUST 14th<br>
+				Wednesday 12:15 p.m.</p>
+				</div>
+				<p class="article-contents-el-description article-animation-left2">
+					いつも行くスーパーへ。<br class="pc">
+					最近スーパーでスマホ決済ができるようになっていて、便利。<br><br>
+
+					レジも時代に合わせて変化しています。<br class="pc">
+					無人レジがあったり、スマホ決済ができるレジがあったり。<br class="pc">
+					人がいてもお釣りに間違いがないように自動化されていたり・・・！<br><br>
+
+					支払い表示があることで自分で決済を選んで並ぶレーンを決める。<br class="pc">
+					この一つ一つが自分の自信になっています。<br><br>
+
+					時々他のお店ではどんな決済が使えるかわからなくて、<br class="pc">
+					お店の人に聞くこともあるけれど、ちょっぴり勇気がいること。<br><br>
+
+					お店にわかりやすく表示されていて聞かなくてもわかるのは嬉しいです。<br><br>
+
+					料理本に書いてあった材料をカゴの中へ。<br class="pc">
+					気にしていたカッテージチーズも無事に見つけられました。
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-left clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_07.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					消費税が上がることは前から分かっていたけれど、<br class="pc">
+					いざとなるとちょっと心配。<br><br>
+					スーパーでの表示も変わると思うから<br class="pc">
+					今まで以上に賢くお買い物したいと思っています。
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_08.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					食材がそろったからレジへ。<br><br>
+
+					ここのお店は、クレジットカードは使えないけれどPayPayが使えるって不思議。<br class="pc">
+					ある意味、最先端！<br><br>
+
+					クレジットカードが使えなかったので、<br class="pc">
+					ここのスーパーでは、今まで支払いでポイントが貯まらなかったんです。<br><br>
+
+					でも、PayPayが使えるようになってからは少しだけどお得になるから嬉しい。<br><br>
+
+					支払いが終わってPayPayの画面をみると、<br class="pc">
+					戻ってくる金額がなんだか多い気がする・・・！？<br class="pc">
+					8月は、ランチタイムのキャンペーンだったから！<br><br>
+
+					スマホ決済では、こんなラッキーがあることが結構楽しい。<br class="pc">
+					今はセブンイレブンでのキャンペーン中。<br><br>
+
+					毎回当たるわけではないけれど、やっぱりこういったラッキーがあると<br class="pc">
+					お店を選ぶ基準になると思う。
+				</p>
+			</div>
+		</div>
+
+
+
+
+		<h2 class="article-main-title cashless-animation1">帰りはガソリンスタンド経由で</h2>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_09.jpg">
+			</div>
+			<div class="text-box">
+				<div class="date-text cashless-animation1">
+					<p>AUGUST 14th<br>
+				Wednesday 13:00 p.m.</p>
+				</div>
+				<p class="article-contents-el-description article-animation-left2">
+					車のガソリンが減ってきたから近くのガソリンスタンドに立ち寄ってから帰ろう。<br><br>
+
+					イマドキのスタンドは、無人です。<br class="pc">
+					自分でセットしてお支払いは、専用のキーホルダーをかざすだけ。<br><br>
+
+					あっという間に完了。<br><br>
+
+					キーホルダーは車の鍵と一緒に持ち歩いてスマートな支払いができる。<br class="pc">
+					クレジットカードやスイカなどの電子マネーでの支払いもいいけれど、<br class="pc">
+					キーホルダー形式のキャッシュレスもいい感じ。<br><br>
+
+					ガソリンも満タンで、さて、おうちに帰りましょう。
+				</p>
+			</div>
+		</div>
+
+		<h2 class="article-main-title cashless-animation1">家に到着、いよいよお弁当作りです</h2>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_10.jpg">
+			</div>
+			<div class="text-box">
+				<div class="date-text cashless-animation1">
+					<p>AUGUST 14th<br>
+				Wednesday 13:20 p.m.</p>
+				</div>
+				<p class="article-contents-el-description article-animation-left2">
+					家に到着。<br class="pc">
+					ピーチティーで一息ついてから、いよいよお料理タイム<br><br>
+
+					コールスローから作ります。<br class="pc">
+					キャベツと人参を千切りにして塩もみして、一手間加えて美味しくします。<br><br>
+
+					刻んだハムと、マスタード、はちみつとカッテージチーズを和えて出来上がり！
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-left clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_11.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					お弁当箱に詰めるのも一工夫します。<br><br>
+
+					お弁当を開けた時、楽しめるように<br class="pc">
+					カラフルなお弁当に詰めるのがマイルール！<br class="pc">
+					だから可愛いプチトマトは、欠かせません♪
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-right clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_12.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					できたコールスローを用意していたチンジャオロースと茄子とおくらの和え物、卵焼きと合わせてセット。<br><br>
+
+					残りは、冷蔵庫で次のお弁当や夜ご飯のおかずに。<br class="pc">
+					1〜2日くらいもつように保存方法も工夫します。<br><br>
+
+					ここでちょっとななみさんと味見♪
+				</p>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_13.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					できたお弁当を味見しながら、キャッシュレスについてななみさんとおしゃべり。<br><br>
+
+					そういえば、支払った時に出る、”PayPay♪”っていう音を小さくできることを家族に話したら、<br class="pc">
+					オフィスグリコで買い物がしやすくなったと喜ばれたんです。（笑）<br><br>
+
+					実際に使ってみても、知らない機能ってたくさんあるから<br class="pc">
+					友達とかと情報交換することって大事だと思います。<br><br>
+
+					ななみさんも、先日キャッシュレスでエシカルなお買い物に行ったとか。<br class="pc">
+					エシカルって言葉、私はあんまり知らなかったので勉強になりました。<br><br>
+
+					みんなそれぞれ、興味関心があることが違って面白いです。<br><br>
+
+					今日は、キャッシュレスライフを徹底して、<br class="pc">
+					1万円を崩さずに1日を過ごすことができて嬉しかったです。<br><br>
+
+					こんな小さいこと？と思うかもしれませんが、<br class="pc">
+					結構そういう積み重ねが自分の自信になったりするんですよね。
+				</p>
+			</div>
+		</div>
+
+
+			
+		<h2 class="article-main-title cashless-animation1">キャッシュレスで時間に余裕ができたら・・・</h2>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article05/article05_14.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					私は時間に余裕ができら、もう少し勉強する時間をとりたいです。<br class="pc">
+					お金に強くなるために、数ヶ月前からコツコツ簿記の勉強を始めています。<br><br>
+
+					新しいことをするってワクワクするし、嬉しいこと。<br class="pc">
+					これからも、もっといろんなことに挑戦をしていきたいと思っています。
+				</p>
+			</div>
+		</div>
+
+
+
+		<div class="article-contents-el shop-list-block cashless-animation1">
+			<h2 class="shop-list-title">キャッシュレス旅、素敵なお店リスト</h2>
+			<p class="shop-list-sub-title"><span class="text-decoration">キャッシュレスなお店を探すときには、PayPayアプリの地図で♪</span></p>
+			<ul>
+				<li>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>蔦屋書店</p>
+					<a class="shop-link" href="https://www.ccc.co.jp/showcase/sc_004033.html?cat=life" target="_blank">https://www.ccc.co.jp/showcase/sc_004033.html?cat=life</a>
+				</li>
+				<li>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>スターバックスコーヒー</p>
+					<a class="shop-link" href="https://www.starbucks.co.jp/" target="_blank">https://www.starbucks.co.jp/</a>
+				</li>
+				<li>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>食生活 ロピア</p>
+					<a class="shop-link" href="http://lopia.jp/" target="_blank">http://lopia.jp/</a>
+				</li>
+				<li>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>ENEOS</p>
+					<a class="shop-link" href="https://eneos-ss.com/search/ss/pc/top.php" target="_blank">https://eneos-ss.com/search/ss/pc/top.php</a>
+				</li>
+			</ul>
+
+			<p class="shop-alert"><span style="color:#e04141;">※</span>掲載内容は2019年8月14日（水）時点の情報に基づきます。
+			<br>情報は、変更になる場合がございますので、ご利用の際は事前にご確認ください。</p>
+
+		</div>
+
+	</div>
+
+	<div class="twitter-block cashless-animation1">
+		<div class="twitter-left">
+			<img class="twitter-left-img" src="https://pbs.twimg.com/profile_images/1140873966002692096/-5z-JGhm_400x400.jpg">
+			<a  target="_blank" class="twitter-left-accoount-link" href="https://twitter.com/kinjo_life">@kinjo_life</a>
+			<p class="twitter-left-tag">
+				<a  target="_blank" href="https://twitter.com/hashtag/%E3%82%AD%E3%83%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%AC%E3%82%B9%E3%81%A8%E7%A7%81?src=hash">#キャッシュレスと私</a>
+				<a  target="_blank" href="https://twitter.com/hashtag/%E3%81%8D%E3%82%93%E3%82%86%E3%81%86%E5%A5%B3%E5%AD%90?src=hash">#きんゆう女子</a>
+				<a  target="_blank" href="https://twitter.com/search?q=%23%E3%81%8D%E3%82%93%E5%A5%B3PayPay%E3%83%81%E3%83%A3%E3%83%AC%E3%83%B3%E3%82%B8&src=typd">#きん女PayPayチャレンジ</a>
+			</p>
+			<a class="twitter-link-block" href="https://twitter.com/kinjo_life" target="_blank">Twitterはこちら</a>
+		</div>
+		<div class="twitter-right">
+			<a class="twitter-timeline" width="350px" height="450px" href="https://twitter.com/kinjo_life?ref_src=twsrc%5Etfw">Tweets by kinjo_life</a>
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+
+	<div class="page-announce cashless-animation1">
+		<p>本サイトは、パートナーとともに、きんゆう女子。コミュニティが企画・制作しているページです。<br>
+			運営会社:TOE THE LINE（きんゆう女子。） https://toetheline.jp/<br>
+			パートナー:PayPay株式会社 https://paypay.ne.jp/
+		</p>
+	</div>
+	<footer class="withcorporate-footer">
+		<p>© TOE THE LINE Inc. 2019　All rights reserved.</p>
+	</footer>
+</div>
+
+<script type='text/javascript' src="/assets/js/kinyu/scrollanimation.js"></script>

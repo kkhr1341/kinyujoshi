@@ -625,6 +625,15 @@ footer,
 .kinjo-member-wallet .img-block.one-block img {
 	width: 100%;
 }
+.kinjo-member-wallet .wallet-description {
+	text-align: center;
+	border-right: 1px solid #283248;
+	border-left: 1px solid #283248;
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 32px;
+	padding: 12px 0px;
+}
 
 /* h2.タイトル */
 .article-main-title {
