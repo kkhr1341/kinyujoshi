@@ -11,10 +11,10 @@
 
 		<div class="article-bg-img fix-animation1">
 			<ul>
-				<li style="background: url(/images/withcorporate/paypay/article02/article01_bg01.jpg) center center / cover no-repeat;"></li>
-				<li style="background: url(/images/withcorporate/paypay/article02/article01_bg04.jpg) center center / cover no-repeat;"></li>
-				<li style="background: url(/images/withcorporate/paypay/article02/article01_bg02.jpg) center center / cover no-repeat;"></li>
-				<li style="background: url(/images/withcorporate/paypay/article02/article01_bg03.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article03/article01_bg01.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article03/article01_bg02.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article03/article01_bg03.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article03/article01_bg04.jpg) center center / cover no-repeat;"></li>
 			</ul>
 		</div>
 
@@ -27,10 +27,10 @@
 	<div class="article-contents-block">
 		
 		<div class="article-contents-title">
-			<img class="article-animation-episode" src="/images/withcorporate/paypay/article02/episode2.png">
+			<img class="article-animation-episode" src="/images/withcorporate/paypay/article03/episode3.png">
 			<p class="article-animation-episode2">都心から離れたひとり旅で<br class="sp">復興について考える<span>
 			〜 初めての国内ひとり旅[久慈] 〜</span></p>
-			<img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article02/illust5.png">
+			<!-- <img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article02/illust5.png"> -->
 		</div>
 
 		<p class="article-fix-text cashless-animation1"><span class="text-decoration">キャッシュレスライフにすることで生まれたゆとりで、新たな私を見つける！<br class="pc">日々のお金のやりとりをスムーズにしたら、時間とお金だけじゃなくて心にもゆとりができた！</span></p>
@@ -40,8 +40,8 @@
 		<div class="profile-block cashless-animation1">
 			<div class="profile-detail">
 				<div class="profile-img">
-					<img src="/images/withcorporate/paypay/article02/member2.png">
-					<img class="illust-flower" src="/images/withcorporate/paypay/article/flower.png">
+					<img src="/images/withcorporate/paypay/article03/member3.png">
+					<!-- <img class="illust-flower" src="/images/withcorporate/paypay/article/flower.png"> -->
 				</div>
 				<div class="profile-textbox">
 					<p class="case-name">member2：<span>すみれさん</span></p>
@@ -51,11 +51,11 @@
 					</p>
 					<p class="case-like">
 						<span>好きなもの：</span>47都道府県の美味しいものを食べること♪<br>
-						<span>よく行く場所：</span>美術館・カフェ・書店（図書館）<br>
+						<span>よく行く場所：</span>＊＊＊＊＊＊＊＊＊＊＊<br>
 					</p>
 				</div>
 			</div>
-			<img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article02/illust1.png">
+			<!-- <img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article02/illust1.png"> -->
 		</div>
 
 		<div class="kinjo-member-wallet">
@@ -63,8 +63,9 @@
 				<img class="kinjo-member-wallet-titleimg" src="/images/withcorporate/paypay/kinjo-member-wallet.png">
 				<p>この日の私のお財布の中身♪</p>
 			</div>
-			<div class="img-block one-block">
-				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article02/kinjo-member-wallet-img01.jpg">
+			<div class="img-block">
+				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article03/kinjo-member-wallet-img01.jpg">
+				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article03/kinjo-member-wallet-img02.jpg">
 			</div>
 		</div>
 
@@ -103,7 +104,7 @@
 			</div>
 			<div class="text-box">
 				<div class="date-text cashless-animation1">
-					<p>JULY 20th<br>
+					<p>AUGUST 3th<br>
 				Saturday 10:00 a.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
@@ -182,8 +183,8 @@
 			</div>
 			<div class="text-box">
 				<div class="date-text cashless-animation1">
-					<p>JULY 20th<br>
-				Saturday 9:00 a.m.</p>
+					<p>AUGUST 4th<br>
+				Sunday 9:00 a.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					翌朝、コンビニで買った朝ごはんを食べて街に繰り出します。<br>
@@ -209,8 +210,8 @@
 			</div>
 			<div class="text-box">
 				<div class="date-text cashless-animation1">
-					<p>JULY 20th<br>
-				Saturday about 11:00 a.m.</p>
+					<p>AUGUST 4th<br>
+				Sunday about 11:00 a.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					久慈駅から北限海女の里（小袖海岸）まではタクシーで移動です。<br><br>
@@ -320,8 +321,8 @@
 			</div>
 			<div class="text-box">
 				<div class="date-text cashless-animation1">
-					<p>JULY 20th<br>
-				Saturday about 13:20 a.m.</p>
+					<p>AUGUST 4th<br>
+				Sunday about 13:20 a.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					海女のはじまりは、明治時代の初頭くらいなんだそう。<br>
@@ -346,8 +347,8 @@
 			</div>
 			<div class="text-box">
 				<div class="date-text cashless-animation1">
-					<p>JULY 20th<br>
-				Saturday about 14:45 a.m.</p>
+					<p>AUGUST 4th<br>
+				Sunday about 14:45 a.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					夫婦岩は、小袖漁港にある海底火山が噴火してできた岩。<br>
@@ -382,8 +383,8 @@
 			</div>
 			<div class="text-box">
 				<div class="date-text cashless-animation1">
-					<p>JULY 20th<br>
-				Saturday about 14:45 a.m.</p>
+					<p>AUGUST 4th<br>
+				Sunday about 14:45 a.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					帰りは、久慈の景色を眺めながらのんびりバスで。
@@ -434,60 +435,41 @@
 		</div>
 
 		<div class="article-contents-el shop-list-block cashless-animation1">
-			<h2 class="shop-list-title">キャッシュレスライフ、素敵なお店/観光場所リスト</h2>
-			<!-- <p class="shop-list-sub-title"><span class="text-decoration">PayPayアプリの地図で、キャッシュレスなパン屋さんを探すときには👜のアイコンをチェックしてみて。</span></p> -->
+			<h2 class="shop-list-title">キャッシュレス旅、便利なお店リスト</h2>
+			<p class="shop-list-sub-title"><span class="text-decoration">旅行先でキャッシュレスなお店を探すときには、PayPayアプリの地図で♪</span></p>
 
 			<ul>
+				<li class="shop-list-heading"><p>旅の準備に。</p></li>
 				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>三島テラス</p>
-					<p class="shop-address">〒411-0841 静岡県三島市南本町1-2</p>
-					<a class="shop-link" href="http://mishimaterrace.jp/" target="_blank">http://mishimaterrace.jp/</a>
-					<p class="shop-sub-text">現金/カードのみ。使いたいお店として、リクエストしておきました！</p>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>ウェルシア</p>
+					<a class="shop-link" href="https://stores.welcia.co.jp/%E6%9D%B1%E4%BA%AC%E9%83%BD" target="_blank">https://stores.welcia.co.jp/</a>
 				</li>
 				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>兎月園（とげつえん）</p>
-					<p class="shop-address">〒411-0858 静岡県三島市中央町3-40</p>
-					<a class="shop-link" href="http://www.togetsuen.co.jp/" target="_blank">http://www.togetsuen.co.jp/</a>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>東京駅の駅弁「駅弁屋」</p>
+					<a class="shop-link" href="https://www.tokyoinfo.com/shop/mall/ekibenyamatsuri/ekibenyamatsuri.html/" target="_blank">https://www.tokyoinfo.com/shop/mall/ekibenyamatsuri/</a>
+				</li>
+				<li class="shop-list-heading"><p>次回はこんなのを試してみたい♪</p></li>
+				<li>
+					<p class="shop-name"><span style="color:#e04141;">＊</span> スマホで事前注文して受け取れるアプリ</p>
+					<a class="shop-link" href="https://ekibenya.oderapp.jp/#/" target="_blank">https://ekibenya.oderapp.jp/#/</a>
+				</li>
+				<li class="shop-list-heading"><p>お土産もキャッシュレスで！</p></li>
+				<li>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>二戸広域観光物産センター「カシオペアメッセ・なにゃーと」</p>
+					<a class="shop-link" href="https://nanyato-bussan.jp/" target="_blank">https://nanyato-bussan.jp/</a>
+				</li>
+				<li class="shop-list-heading"><p>移動もキャッシュレスでお釣り知らず。</p></li>
+				<li>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>岩手県北バスグループ</p>
+					<a class="shop-link" href="http://www.michinori.co.jp/group/index.html" target="_blank">http://www.michinori.co.jp/group/index.html</a>
 				</li>
 				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>日光陶器店</p>
-					<p class="shop-address">〒411-0853 三島市大社町18-4</p>
-					<a class="shop-link" href="https://f-koten.jp/shop/details/406" target="_blank">https://f-koten.jp/shop/details/406</a>
-				</li>
-				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>ギャラリー chigiri</p>
-					<p class="shop-address">〒411 0858 静岡県三島市中央町2-37</p>
-					<a class="shop-link" href="http://utuwa-chigiri.com/" target="_blank">http://utuwa-chigiri.com/</a>
-				</li>
-				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>三島大社</p>
-					<p class="shop-address">〒411-0035　静岡県三島市大宮町2-1-5</p>
-					<a class="shop-link" href="http://www.mishimataisha.or.jp/" target="_blank">http://www.mishimataisha.or.jp/</a>
-				</li>
-				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>大社の社（たいしゃのもり）</p>
-					<p class="shop-address">〒411-0853 静岡県三島市大社町18-52</p>
-					<a class="shop-link" href="http://www.taishanomori.jp/" target="_blank">http://www.taishanomori.jp/</a>
-				</li>
-				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>Buddy Cafe（バディカフェ）大社の杜店</p>
-					<p class="shop-address">〒411-0853 静岡県三島市大社町18-52</p>
-					<a class="shop-link" href="http://www.taishanomori.jp/shop/buddycafe.html" target="_blank">http://www.taishanomori.jp/shop/buddycafe.html</a>
-				</li>
-				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>クレマチスの丘</p>
-					<p class="shop-address">〒411-0931 静岡県駿東郡長泉町スルガ平347-1 クレマチスの丘</p>
-					<a class="shop-link" href="https://www.clematis-no-oka.co.jp/" target="_blank">https://www.clematis-no-oka.co.jp/</a>
-					<p class="shop-sub-text">現金/カードのみ。使いたいお店として、リクエストしておきました！</p>
-				</li>
-				<li>
-					<p class="shop-name"><span style="color:#e04141;">＊</span>三島駅 南口 伊豆コレクション</p>
-					<p class="shop-address">〒411-0036 三島市一番町15-28</p>
-					<a class="shop-link" href="http://www.izucolle.net/store/" target="_blank">http://www.izucolle.net/store/</a>
+					<p class="shop-name"><span style="color:#e04141;">＊</span>盛岡タクシー</p>
+					<a class="shop-link" href="https://morioka-taxi.com/news/paypay-start/" target="_blank">https://morioka-taxi.com/news/paypay-start/</a>
 				</li>
 			</ul>
 
-			<p class="shop-alert"><span style="color:#e04141;">※</span>掲載内容は2019年7月6日（土）時点の情報に基づきます。
+			<p class="shop-alert"><span style="color:#e04141;">※</span>掲載内容は2019年8月4日（日）時点の情報に基づきます。
 			<br>情報は、変更になる場合がございますので、ご利用の際は事前にご確認ください。</p>
 
 		</div>
