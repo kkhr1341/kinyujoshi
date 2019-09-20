@@ -146,6 +146,7 @@ return array(
         137 => '141_create_event_user_events',
         138 => '142_create_event_thanks_mail_templates',
         139 => '143_create_event_thanks_mails',
+        140 => '144_delete_cancel_from_applications',
       ),
     ),
     'module' => 
