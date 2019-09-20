@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/withcorporate.css">
 <script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
 
-<div class="withcorporate-container article-container article02-block">
+<div class="withcorporate-container article-container article04-block">
 	
 	<div class="withcorporate-main-logo logo-animation" style="background:#283248;">
 		<a href="/contents/cashless"><img src="/images/withcorporate/paypay/logo_w.png"></a>
@@ -28,9 +28,9 @@
 		
 		<div class="article-contents-title">
 			<img class="article-animation-episode" src="/images/withcorporate/paypay/article04/episode4.png">
-			<p class="article-animation-episode2">エシカルをテーマに<br class="sp">吉祥寺と国分寺でショッピング。<span>
-			〜 ファッションと、ごはんと、カフェ 〜</span></p>
-			<!-- <img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article02/illust5.png"> -->
+			<p class="article-animation-episode2">どんな風に作られたか考えながら、丁寧にものを選び買う。<span>
+			〜 吉祥寺と国分寺を巡る 〜</span></p>
+			<img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article04/illust1.png">
 		</div>
 
 		<p class="article-fix-text cashless-animation1"><span class="text-decoration">キャッシュレスライフにすることで生まれたゆとりで、新たな私を見つける！<br class="pc">日々のお金のやりとりをスムーズにしたら、時間とお金だけじゃなくて心にもゆとりができた！</span></p>
@@ -41,7 +41,7 @@
 			<div class="profile-detail">
 				<div class="profile-img">
 					<img src="/images/withcorporate/paypay/article04/member4.png">
-					<!-- <img class="illust-flower" src="/images/withcorporate/paypay/article/flower.png"> -->
+					<img class="illust-flower" src="/images/withcorporate/paypay/article/flower.png">
 				</div>
 				<div class="profile-textbox">
 					<p class="case-name">member4：<span>ななみさん</span></p>
@@ -55,7 +55,7 @@
 					</p>
 				</div>
 			</div>
-			<!-- <img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article02/illust1.png"> -->
+			<img class="illust-02 illust-animation1" src="/images/withcorporate/paypay/article04/illust2.png">
 		</div>
 
 		<div class="kinjo-member-wallet">
@@ -68,14 +68,14 @@
 				<img class="kinjo-member-wallet-img cashless-animation1" src="/images/withcorporate/paypay/article04/kinjo-member-wallet-img02.jpg">
 			</div>
 			<p class="wallet-description cashless-animation1">
-				<span class="text-decoration">たくさん歩くからバッグは小さめのショルダータイプに。</span><br>
+				<span class="text-decoration">たくさん歩くからバッグは小さめのショルダータイプに。</span><br class="pc">
 				このバッグは最近買ったお気に入り♪<br><br>
 
-				いろんな人から褒められます。<br>
-				バッグの中には、折りたたみのお財布と、<br>
+				いろんな人から褒められます。<br class="pc">
+				バッグの中には、折りたたみのお財布と、<br class="pc">
 				汗対策のルースパウダーとスマートフォンだけ。<br><br>
 
-				<span class="text-decoration">お財布は、小銭が重いから置いてきました。<br>
+				<span class="text-decoration">お財布は、小銭が重いから置いてきました。<br class="pc">
 				今日使う金額を予想して、PayPayの残高チャージもして準備もバッチリです。</span>
 			</p>
 		</div>
@@ -121,13 +121,20 @@
 		<div class="article-contents-el img-center clear">
 			<div class="img-box cashless-animation1">
 				<img src="/images/withcorporate/paypay/article04/article04_02.jpg">
-				<img src="/images/withcorporate/paypay/article04/article04_03.jpg">
 			</div>
 			<div class="text-box">
 				<div class="date-text cashless-animation1">
 					<p>AUGUST 8th<br>
-				Thursday 10:00 a.m.</p>
+				Thursday 11:00 a.m.</p>
 				</div>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-left clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article04/article04_03.jpg">
+			</div>
+			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
 					最初に目的にしていた古着屋さんに到着。<br>
 					カラフルな店内にわくわくします。<br><br>
@@ -135,12 +142,12 @@
 					靴やアクセサリーもいっぱい！<br><br>
 
 					古着は、誰とも被らず個性的なファッションを楽しめるから大好きです♡<br>
-					<span class="text-decoration">捨てられるはずの服がリサイクルされることって環境のためにもなります。</span>
+					<span class="text-decoration">捨てられるはずの服がリサイクルされることは環境のためにもなります。</span>
 				</p>
 			</div>
 		</div>
 
-		<div class="article-contents-el img-left clear">
+		<div class="article-contents-el img-right clear">
 			<div class="img-box cashless-animation1">
 				<img src="/images/withcorporate/paypay/article04/article04_04.jpg">
 			</div>
@@ -160,6 +167,23 @@
 			</div>
 		</div>
 
+		<div class="article-contents-el img-left clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article04/article04_05.jpg">
+			</div>
+			<div class="text-box">
+				<p class="article-contents-el-description article-animation-left2">
+					そんなことを考えながらも、お買い物に夢中に。<br><br>
+
+					ここでは素敵なTシャツを発見しました。<br class="pc">
+					PayPayを使って簡単にお支払いできました♪<br><br>
+
+					ラッキーなことに、このとき1000円分のPayPay残高が当たりました！<br>
+					初めて当たったから嬉しい...♡
+				</p>
+				<img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article04/illust3.png">
+			</div>
+		</div>
 
 
 		<h2 class="article-main-title cashless-animation1">お昼はオーガニック野菜のプレートランチ</h2>
@@ -204,28 +228,34 @@
 			</div>
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
-					選べる5種類のおかずとお味噌汁のランチ。<br>
+					選べる5種類のおかずとお味噌汁のランチ。<br class="pc">
 					野菜たっぷり、お豆と小松菜のおひたしや混ぜご飯にメンチカツ。<br><br>
 					どれも美味しかったです。
 				</p>
 			</div>
 		</div>
 
-		<div class="article-contents-el img-center clear">
+		<div class="article-contents-el img-left clear">
 			<div class="img-box cashless-animation1">
 				<img src="/images/withcorporate/paypay/article04/article04_10.jpg">
+			</div>
+			<img class="illust-04 illust-animation1" src="/images/withcorporate/paypay/article04/illust4.png">
+		</div>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
 				<img src="/images/withcorporate/paypay/article04/article04_11.jpg">
 			</div>
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
 					ご飯を食べながら今読んでいる本をちょっと紹介します。<br><br>
 
-					<span class="text-decoration">これは「未来のファッション業界の課題と新しい解決策」がテーマ。</span><br><br>
+					<span class="text-decoration">「未来のファッション業界の課題と新しい解決策」をテーマにした本です。</span><br><br>
 
-					クローゼットに眠っている服や売れなくて残ってしまった在庫をどうしていくか？<br>
+					クローゼットに眠っている服や売れなくて残ってしまった在庫をどうしていくか？<br class="pc">
 					買う人が本当に求めているライフスタイルに寄り添った衣類そのものやファッション体験を提供するには？<br><br>
 
-					ITの力で、誰でも古着を気軽にスマホで出品できて、海外商品をネットで買うのも簡単。<br>
+					ITの力で、誰でも古着を気軽にスマホで出品できて、海外商品をネットで買うのも簡単。<br class="pc">
 					靴のオーダーメイドだってネットでできます。みんなが使うようになりました。<br><br>
 
 					<span class="text-decoration">金融よりももっと生活に紐づいてリアルな体験が欠かせないファッション。</span><br>
@@ -242,7 +272,7 @@
 			</div>
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
-					ここのランチのお支払いはPayPayで。<br>
+					ここのランチのお支払いはPayPayで。<br class="pc">
 					小銭を受け取らずに済むから、バッグの中身も軽いまま。<br><br>
 
 					午後もまだまだ歩けそうです♪
@@ -256,17 +286,24 @@
 		<div class="article-contents-el img-center clear">
 			<div class="img-box cashless-animation1">
 				<img src="/images/withcorporate/paypay/article04/article04_13.jpg">
-				<img src="/images/withcorporate/paypay/article04/article04_14.jpg">
 			</div>
 			<div class="text-box">
 				<div class="date-text cashless-animation1">
 					<p>AUGUST 8th<br>
 				Thursday 14:00 p.m.</p>
 				</div>
+			</div>
+		</div>
+
+		<div class="article-contents-el img-center clear">
+			<div class="img-box cashless-animation1">
+				<img src="/images/withcorporate/paypay/article04/article04_14.jpg">
+			</div>
+			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
 					ランチの後、吉祥寺に戻って入ったのはフェアトレード商品を扱うショップ「vote for」。<br><br>
 
-					<span class="text-decoration">フェアトレードとは、その名の通り取引が公平であるという意味。<br>
+					<span class="text-decoration">フェアトレードとは、その名の通り取引が公平であるという意味。<br class="pc">
 					発展途上国の貧しい人々の労働環境や生活改善、自立をサポートする考え方・活動のことです。</span><br><br>
 
 					エシカルとも似ていますが、理念や思想よりももっと具体的な活動を意図するケースが多いようです。<br><br>
@@ -297,7 +334,7 @@
 				<p class="article-contents-el-description article-animation-left2">
 					私はここで家族のために香りのいいコーヒーを買いました。<br><br>
 
-					<span class="text-decoration">キャッシュレスはできなかったけれど、<br>
+					<span class="text-decoration">キャッシュレスはできなかったけれど、<br class="pc">
 					すごく気に入ったので、現金で。</span><br><br>
 
 					今日初めてお財布を出したけれど<br>
@@ -308,10 +345,11 @@
 			</div>
 		</div>
 
-		<div class="article-contents-el img-center clear">
+		<div class="article-contents-el img-left clear">
 			<div class="img-box cashless-animation1">
 				<img src="/images/withcorporate/paypay/article04/article04_17.jpg">
 			</div>
+			<img class="illust-05 illust-animation1" src="/images/withcorporate/paypay/article04/illust5.png">
 		</div>
 
 
@@ -329,10 +367,10 @@
 				<p class="article-contents-el-description article-animation-left2">
 					夏の強い日差してキラキラしている青と白の壁がすてきなこちらのカフェ。<br><br>
 
-					ここでは『フレッシュいちごとばななのシェイク』を注文♪<br>
+					ここでは『フレッシュいちごとばななのシェイク』を注文♪<br class="pc">
 					ひんやりしていておいしい。<br><br>
 
-					ビタミンを取って歩き回った疲れが癒される・・・！<br>
+					ビタミンを取って歩き回った疲れが癒される・・・！<br class="pc">
 					<span class="text-decoration">今日1日で色々と回ることができて達成感に浸りました。</span>
 				</p>
 			</div>
@@ -343,17 +381,15 @@
 				<img src="/images/withcorporate/paypay/article04/article04_19.jpg">
 			</div>
 			<div class="text-box">
-				<p class="article-contents-el-description article-animation-left2">
-					1日を通して、頭でっかちになっていたエシカル消費やフェアトレードについて<br>
-					<span class="text-decoration">お店に行ったり実際に買い物をしたりして実感することができました。</span><br><br>
+				<p class="article-contents-el-description article-animation-left2">							
+					<span class="text-decoration">1日を通して、頭でっかちになっていたエシカル消費やフェアトレードについて実感することができました。</span><br><br>
 
-					今まではその考え方は知っているけれど値段が高いから積極的に選ばなかった。<br><br>
+					今までは値段が高いから積極的にしなかったエシカルショッピング。<br><br>
 
-					でも実際に少し背伸びして買ってみると愛着が増して丁寧に洋服や食べ物を扱ったり、<br>
-					味わったりすることができた気がします。<br><br>
+					でも少し背伸びしてみると丁寧に洋服や食べ物を扱ったり愛着が増したりすることがわかりました。<br><br>
 
-					全てエシカルとフェアトレードな商品にするのは難しいかもしれませんが<br>
-					これからも、<span class="text-decoration">意識してエシカルなお買い物を通じて少しでも困っている人をサポートできたら嬉しいです。</span>
+					全てエシカルとフェアトレードな商品にするのは難しいかもしれませんが<br class="pc">
+					これからは<span class="text-decoration">エシカルなお買い物を通じて少しでも困っている人をサポートできたら嬉しいです。</span>
 				</p>
 			</div>
 		</div>
@@ -366,22 +402,22 @@
 				<p class="article-contents-el-description article-animation-left2">
 					ちょうど1ヶ月前からPayPayを使うようになって変わったこと。<br><br>
 
-					言い過ぎかもしれないけれど<br>
+					言い過ぎかもしれないけれど<br class="pc">
 					<span class="text-decoration">お得や時短でできたゆとりで、頭に新しいことを入れるスペースができた感じ。</span><br><br>
 
-					チャージや支払い方法の切り替えも自然とできるようになって<br>
+					チャージや支払い方法の切り替えも自然とできるようになって<br class="pc">
 					<span class="text-decoration">支払いの自分軸ができてきた感じがちょっとだけ誇らしい。</span><br><br>
 
-					数ヶ月前は現金のみのお店も先日行ったらQRコードで支払えるようになっていたり<br>
+					数ヶ月前は現金のみだったお店も先日行ったらQRコードで支払えるようになっていたり<br class="pc">
 					すごいスピードで変わっているんだな〜と驚きました。<br><br>
 
-					きっと来年・再来年にはキャッシュレスなお店がもっと増えると思います。<br>
+					きっと来年・再来年にはキャッシュレスなお店がもっと増えると思います。<br class="pc">
 					そうするとみんなも自然と現金を持たなくなっていくと思います。<br><br>
 
-					私の周りのお友達はスマホで支払いしている子はまだ少なくて<br>
+					私の周りのお友達はスマホで支払いしている子はまだ少なくて<br class="pc">
 					ご飯の割り勘は現金でやりとりです。<br><br>
 
-					セキュリティの知識や便利な使い方を学びながら<br>
+					セキュリティの知識や便利な使い方を学びながら<br class="pc">
 					誰もがアプリでお金を送りあえるくらいになってほしいな。<br><br>
 
 					<span class="text-decoration">みんなが無理のないキャッシュレス社会だといいですよね。</span>

@@ -122,17 +122,17 @@ class Controller_Kinyu_Withcorporate extends Controller_Kinyubase
     public function action_article04()
     {
 
-        switch (true) {
-            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-            case $_SERVER['PHP_AUTH_USER'] !== 'cashless':
-            case $_SERVER['PHP_AUTH_PW']   !== 'kinjo':
-            header('WWW-Authenticate: Basic realm="Enter username and password."');
-            header('Content-Type: text/plain; charset=utf-8');
-            die('このページを見るにはログインが必要です');
-        }
+        // switch (true) {
+        //     case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+        //     case $_SERVER['PHP_AUTH_USER'] !== 'cashless':
+        //     case $_SERVER['PHP_AUTH_PW']   !== 'kinjo':
+        //     header('WWW-Authenticate: Basic realm="Enter username and password."');
+        //     header('Content-Type: text/plain; charset=utf-8');
+        //     die('このページを見るにはログインが必要です');
+        // }
 
         $this->template->title = 'エシカルをテーマに吉祥寺と国分寺でショッピング。 | 今日も、キャッシュレス。';
-        $this->template->ogimg = '/images/withcorporate/paypay/article02/article2_og.jpg';
+        $this->template->ogimg = '/images/withcorporate/paypay/article05/article5_og.jpg';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
 
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
@@ -151,17 +151,17 @@ class Controller_Kinyu_Withcorporate extends Controller_Kinyubase
     public function action_article05()
     {
 
-        switch (true) {
-            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-            case $_SERVER['PHP_AUTH_USER'] !== 'cashless':
-            case $_SERVER['PHP_AUTH_PW']   !== 'kinjo':
-            header('WWW-Authenticate: Basic realm="Enter username and password."');
-            header('Content-Type: text/plain; charset=utf-8');
-            die('このページを見るにはログインが必要です');
-        }
+        // switch (true) {
+        //     case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+        //     case $_SERVER['PHP_AUTH_USER'] !== 'cashless':
+        //     case $_SERVER['PHP_AUTH_PW']   !== 'kinjo':
+        //     header('WWW-Authenticate: Basic realm="Enter username and password."');
+        //     header('Content-Type: text/plain; charset=utf-8');
+        //     die('このページを見るにはログインが必要です');
+        // }
 
         $this->template->title = 'かわいくて作り置きOKなお弁当作りにチャレンジ。 | 今日も、キャッシュレス。';
-        $this->template->ogimg = '/images/withcorporate/paypay/article02/article2_og.jpg';
+        $this->template->ogimg = '/images/withcorporate/paypay/article05/article5_og.jpg';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
 
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);

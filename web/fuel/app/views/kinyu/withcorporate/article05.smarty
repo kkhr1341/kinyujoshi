@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/single/withcorporate.css">
 <script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
 
-<div class="withcorporate-container article-container article02-block">
+<div class="withcorporate-container article-container article05-block">
 	
 	<div class="withcorporate-main-logo logo-animation" style="background:#283248;">
 		<a href="/contents/cashless"><img src="/images/withcorporate/paypay/logo_w.png"></a>
@@ -29,7 +29,7 @@
 			<img class="article-animation-episode" src="/images/withcorporate/paypay/article05/episode5.png">
 			<p class="article-animation-episode2">かわいくて作り置きOKな<br class="sp">お弁当作りにチャレンジ。<span>
 			〜 おうちごはんをつくるまで 〜</span></p>
-			<!-- <img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article02/illust5.png"> -->
+			<img class="illust-01 illust-animation1" src="/images/withcorporate/paypay/article05/illust1.png">
 		</div>
 
 		<p class="article-fix-text cashless-animation1"><span class="text-decoration">
@@ -42,7 +42,7 @@
 			<div class="profile-detail">
 				<div class="profile-img">
 					<img src="/images/withcorporate/paypay/article05/member5.png">
-					<!-- <img class="illust-flower" src="/images/withcorporate/paypay/article/flower.png"> -->
+					<img class="illust-flower" src="/images/withcorporate/paypay/article/flower.png">
 				</div>
 				<div class="profile-textbox">
 					<p class="case-name">member4：<span>まきさん</span></p>
@@ -56,7 +56,7 @@
 					</p>
 				</div>
 			</div>
-			<!-- <img class="illust-03 illust-animation1" src="/images/withcorporate/paypay/article02/illust1.png"> -->
+			<img class="illust-02 illust-animation1" src="/images/withcorporate/paypay/article05/illust6.png">
 		</div>
 
 		<div class="kinjo-member-wallet">
@@ -84,7 +84,7 @@
 				<p class="article-contents-el-description article-animation-left2">
 					このチャレンジにした理由は、<span class="text-decoration">働くママとして新しいことに挑戦してみたいと思ったから。</span><br><br>
 					お弁当を作るだけだったらいつもしていることだけど、<br class="pc">
-					<span class="text-decoration">キャッシュレスライフで挑戦してみたら新しい発見があるかもしれない。</span><br><br>
+					<span class="text-decoration">キャッシュレスしばりで挑戦してみたら新しい発見があるかもしれない。</span><br><br>
 
 					お弁当の味見をしてもらおうとメンバーのななみさんをお誘いしました。<br><br>
 
@@ -122,6 +122,7 @@
 
 					<span class="text-decoration">PayPayのアプリからデジタルTカードを提示できるからスムーズ！</span>
 				</p>
+				<img class="illust-03 illust-animation2" src="/images/withcorporate/paypay/article05/illust3.png">
 			</div>
 		</div>
 
@@ -134,7 +135,7 @@
 				Wednesday 11:30 a.m.</p>
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
-					本が決まったところで隣のカフェでゆっくりメニューを決めよう。<br><br>
+					本を買ったら隣のカフェでゆっくりメニューを決めよう。<br><br>
 
 					<span class="text-decoration">このカフェではLINE Payで。<br class="pc">
 					チャージしてドリンクを注文。</span><br><br>
@@ -171,7 +172,7 @@
 
 					移動中は、ななみさんとクレジットカードを選ぶ基準をお互いシェアしながら。<br><br>
 
-					<span class="text-decoration">ポイントがたくさんつく、年会費が無料というのも魅力的だけど、<br class="pc">
+					<span class="text-decoration">ポイントがたくさんつく年会費が無料というのも魅力的だけど、<br class="pc">
 					カードを紛失したり不正利用されたりしたときとかのアフターケアが充実していることも重要。</span><br><br>
 
 					ちなみにそんな私は、セゾンのゴールドカードを愛用しています。
@@ -199,8 +200,8 @@
 					無人レジがあったり、スマホ決済ができるレジがあったり。<br class="pc">
 					人がいてもお釣りに間違いがないように自動化されていたり・・・！</span><br><br>
 
-					支払い表示があることで自分で決済を選んで並ぶレーンを決める。<br class="pc">
-					この一つ一つが自分の自信になっています。<br><br>
+					支払いできるロゴ表示を見て決済方法を選んで並ぶ。<br class="pc">
+					この小さい決断一つ一つが自分の自信になっていきます。<br><br>
 
 					<span class="text-decoration">時々他のお店ではどんな決済が使えるかわからなくて、<br class="pc">
 					お店の人に聞くこともあるけれど、ちょっぴり勇気がいること。</span><br><br>
@@ -225,6 +226,7 @@
 					今まで以上に賢くお買い物したいと思っています。
 				</p>
 			</div>
+			<img class="illust-04 illust-animation1" src="/images/withcorporate/paypay/article05/illust4.png">
 		</div>
 
 		<div class="article-contents-el img-center clear">
@@ -233,13 +235,11 @@
 			</div>
 			<div class="text-box">
 				<p class="article-contents-el-description article-animation-left2">
-					食材がそろったからレジへ。<br><br>
-
 					<span class="text-decoration">ここのお店は、クレジットカードは使えないけれどPayPayが使えるって不思議。</span><br class="pc">
 					ある意味、最先端！<br><br>
 
 					クレジットカードが使えなかったので、<br class="pc">
-					ここのスーパーでは、今まで支払いでポイントが貯まらなかったんです。<br><br>
+					ここのスーパーでは今まで支払いでポイントが貯まらなかったんです。<br><br>
 
 					でも、PayPayが使えるようになってからは少しだけどお得になるから嬉しい。<br><br>
 
@@ -247,8 +247,7 @@
 					戻ってくる金額がなんだか多い気がする・・・！？<br class="pc">
 					<span class="text-decoration">8月は、ランチタイムのキャンペーンだったから！</span><br><br>
 
-					<span class="text-decoration">スマホ決済では、こんなラッキーがあることが結構楽しい。</span><br class="pc">
-					今はセブンイレブンでのキャンペーン中。<br><br>
+					<span class="text-decoration">スマホ決済では、こんなラッキーがあることが結構楽しい。</span><br><br>
 
 					毎回当たるわけではないけれど、やっぱりこういったラッキーがあると<br class="pc">
 					お店を選ぶ基準になると思う。
@@ -300,10 +299,10 @@
 				</div>
 				<p class="article-contents-el-description article-animation-left2">
 					家に到着。<br class="pc">
-					ピーチティーで一息ついてから、いよいよお料理タイム<br><br>
+					ピーチティーで一息ついてから、いよいよお料理タイム。<br><br>
 
 					コールスローから作ります。<br class="pc">
-					キャベツと人参を千切りにして塩もみして、一手間加えて美味しくします。<br><br>
+					キャベツと人参を塩もみして、一手間加えて美味しくします。<br><br>
 
 					刻んだハムと、マスタード、はちみつとカッテージチーズを和えて出来上がり！
 				</p>
@@ -318,10 +317,11 @@
 				<p class="article-contents-el-description article-animation-left2">
 					お弁当箱に詰めるのも一工夫します。<br><br>
 
-					<span class="text-decoration">お弁当を開けた時、楽しめるように<br class="pc">
+					<span class="text-decoration">蓋を開けた時に楽しめるように<br class="pc">
 					カラフルなお弁当に詰めるのがマイルール！</span><br class="pc">
 					だから可愛いプチトマトは、欠かせません♪
 				</p>
+				<img class="illust-05 illust-animation1" src="/images/withcorporate/paypay/article05/illust5.png">
 			</div>
 		</div>
 
@@ -336,7 +336,8 @@
 					残りは、冷蔵庫で次のお弁当や夜ご飯のおかずに。<br class="pc">
 					1〜2日くらいもつように保存方法も工夫します。<br><br>
 
-					ここでちょっとななみさんと味見♪
+					ここでちょっとななみさんと味見♪<br><br>
+					うん、なかなかおいしい...！
 				</p>
 			</div>
 		</div>
@@ -361,7 +362,7 @@
 					<span class="text-decoration">みんなそれぞれ、興味関心があることが違って面白いです。</span><br><br>
 
 					今日は、キャッシュレスライフを徹底して、<br class="pc">
-					1万円を崩さずに1日を過ごすことができて嬉しかったです。<br><br>
+					1万円を崩さずに1日過ごすことができて嬉しかったです。<br><br>
 
 					<span class="text-decoration">こんな小さいこと？と思うかもしれませんが、<br class="pc">
 					結構そういう積み重ねが自分の自信になったりするんですよね。</span>
@@ -391,7 +392,7 @@
 
 
 		<div class="article-contents-el shop-list-block cashless-animation1">
-			<h2 class="shop-list-title">キャッシュレス旅、素敵なお店リスト</h2>
+			<h2 class="shop-list-title">キャッシュレスライフ、便利なお店リスト</h2>
 			<p class="shop-list-sub-title"><span class="text-decoration">キャッシュレスなお店を探すときには、PayPayアプリの地図で♪</span></p>
 			<ul>
 				<li>
