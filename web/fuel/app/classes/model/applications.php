@@ -118,6 +118,7 @@ class Applications extends Base
         $select .= 'applications.*, ';
         $select .= 'application_credit_payments.charge_id, ';
         $select .= 'exists(select "x" from application_credit_payment_sales where applications.code = application_credit_payment_sales.application_code) as sale,';
+        $select .= 'exists(select "x" from application_cancels where applications.code = application_cancels.application_code) as cancel,';
         $select .= 'exists(select "x" from application_credit_payment_cancels where applications.code = application_credit_payment_cancels.application_code) as payment_cancel,';
         $select .= '(select acps.created_at from application_credit_payment_sales as acps where acps.application_code = applications.code) as payment_sale_at, ';
         $select .= '(select pa.created_at from participated_applications as pa where pa.application_code = applications.code) as participated, ';
@@ -357,7 +358,7 @@ class Applications extends Base
             // キャンセルする
             \DB::update('applications')->set(
                 array(
-                    'cancel' => 1,
+//                    'cancel' => 1,
                     'updated_at' => \DB::expr('now()'),
                 )
             )->where('code', '=', $code)->execute();
