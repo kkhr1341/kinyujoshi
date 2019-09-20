@@ -31,8 +31,8 @@ class Event_thanks_mails {
                         applications
                         left join users on users.username = applications.username
                       where
-                        disable = 0
-                        and cancel = 0
+                        applications.disable = 0
+                        and not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
                         and not exists(
                           select
                               *

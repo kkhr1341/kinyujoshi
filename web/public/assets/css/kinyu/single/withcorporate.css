@@ -1015,6 +1015,102 @@ footer,
     bottom: -12px;
 }
 
+/* イラスト - article4 */
+.article04-block .illust-01 {
+	opacity: .7;
+	width: 110px;
+	transform:rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+}
+.article04-block .illust-02 {
+	position: absolute;
+	opacity: .7;
+	width: 80px;
+    bottom: -27px;
+    right: -33px;
+	transform:rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+.article04-block .illust-03 {
+	opacity: .7;
+	width: 90px;
+    bottom: -27px;
+    right: -33px;
+	transform:rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+.article04-block .illust-04 {
+	opacity: .7;
+	width: 120px;
+	left: auto;
+    right: 0;
+}
+.article04-block .illust-05 {
+	opacity: .7;
+	width: 100px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
+.article04-block .illust-06 {
+	width: 120px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
+
+/* イラスト - article5 */
+.article05-block .illust-01 {
+	opacity: .7;
+	width: 90px;
+	transform:rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+.article05-block .illust-02 {
+	position: absolute;
+	opacity: .7;
+	width: 120px;
+    bottom: -27px;
+    right: -33px;
+}
+.article05-block .illust-03 {
+	opacity: .7;
+    width: 150px;
+    bottom: 0px;
+    right: auto;
+    left: 33%;
+	transform:rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+}
+.article05-block .illust-04 {
+	opacity: .7;
+	width: 150px;
+	left: auto;
+    right: 0;
+    bottom: -30px;
+}
+.article05-block .illust-05 {
+	opacity: .7;
+	width: 200px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   モバイル
@@ -1326,7 +1422,7 @@ footer,
 .article-fix-text {
   padding-top: 36px;
   font-size: 11px;
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 36px;
 }
@@ -1380,7 +1476,7 @@ footer,
   margin-left: -75px;
 }
 .profile-block {
-	width: 88%;
+	width: 100%;
 	padding: 32px;
 	margin-bottom: 60px;
 }
@@ -1410,7 +1506,7 @@ footer,
 	font-size: 11px;
 }
 .kinjo-member-wallet {
-	width: 88%;
+	width: 100%;
 	margin-bottom: 60px;
 }
 .kinjo-member-wallet-titleimg {
@@ -1597,6 +1693,68 @@ footer,
     width: 70px;
 }
 
+/* イラスト - article04 */
+.article04-block .illust-01 {
+	width: 70px!important;
+}
+.article04-block .illust-02 {
+	width: 60px;
+	bottom: -24px;
+    right: -7px;
+}
+.article04-block .illust-03 {
+    width: 80px;
+    bottom: -48px;
+    right: -19px;
+}
+.article04-block .illust-04 {
+    top: -81px;
+    bottom: auto;
+    width: 80px;
+}
+.article04-block .illust-05 {
+    bottom: auto;
+    top: -76px;
+    width: 70px;
+}
+
+/* イラスト - article05 */
+.article05-block .illust-01 {
+	width: 60px!important;
+	transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+}
+.article05-block .illust-02 {
+	width: 80px;
+	bottom: -45px;
+    right: -7px;
+}
+.article05-block .illust-03 {
+    width: 120px;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    top: -50px;
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+}
+.article05-block .illust-04 {
+    top: -53px;
+    bottom: auto;
+    width: 100px;
+}
+.article05-block .illust-05 {
+	bottom: auto;
+    top: -56px;
+    width: 120px;
+}
+
 
 .article-illust-fix-01 {
 	padding-right: 120px;
@@ -1629,6 +1787,14 @@ footer,
 }
 .shop-list-block ul li.shop-list-heading p {
 	font-size: 14px;
+}
+.kinjo-member-wallet .wallet-description {
+    text-align: left;
+    width: 92%;
+    margin-top: 24px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    font-size: 11px;
 }
 
 }
