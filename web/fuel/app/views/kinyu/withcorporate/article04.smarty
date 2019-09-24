@@ -11,10 +11,10 @@
 
 		<div class="article-bg-img fix-animation1">
 			<ul>
-				<li style="background: url(/images/withcorporate/paypay/article04/article01_bg01.jpg) center center / cover no-repeat;"></li>
-				<li style="background: url(/images/withcorporate/paypay/article04/article01_bg02.jpg) center center / cover no-repeat;"></li>
-				<li style="background: url(/images/withcorporate/paypay/article04/article01_bg03.jpg) center center / cover no-repeat;"></li>
-				<li style="background: url(/images/withcorporate/paypay/article04/article01_bg04.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article04/article04_bg01.jpg) center center / cover no-repeat;"></li
+				<li style="background: url(/images/withcorporate/paypay/article04/article04_bg02.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article04/article04_bg03.jpg) center center / cover no-repeat;"></li>
+				<li style="background: url(/images/withcorporate/paypay/article04/article04_bg04.jpg) center center / cover no-repeat;"></li>
 			</ul>
 		</div>
 

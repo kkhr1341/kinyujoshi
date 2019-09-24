@@ -391,6 +391,7 @@ footer,
   left: 12px;
   bottom: 6px;
 }
+/* content03 */
 .cashlesslife-el03 .text-box .illust1 {
 	position: absolute;
   width: 110px;
@@ -403,6 +404,23 @@ footer,
   width: 115px;
   left: 12px;
   bottom: 6px;
+  opacity: .7;
+}
+/* content04 */
+.cashlesslife-el04 .text-box .illust1 {
+	position: absolute;
+  width: 120px;
+	right: 20px;
+  top: 16px;
+  opacity: .7;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+}
+.cashlesslife-el04 .text-box .illust2 {
+  position: absolute;
+  width: 90px;
+  left: 38px;
+  bottom: 0px;
   opacity: .7;
 }
 .cashlesslife-list .text-box .title-epsode {
@@ -1591,6 +1609,32 @@ footer,
   width: 90px;
   left: -20px;
   bottom: -17px;
+}
+/* content3 */
+.cashlesslife-el03 .text-box .illust1 {
+	position: absolute;
+  width: 80px;
+  right: -12px;
+  top: 16px;
+}
+.cashlesslife-el03 .text-box .illust2 {
+  position: absolute;
+  width: 80px;
+  left: -20px;
+  bottom: -17px;
+}
+/* content4s */
+.cashlesslife-el04 .text-box .illust1 {
+	position: absolute;
+  width: 90px;
+  right: -12px;
+  top: 10px;
+}
+.cashlesslife-el04 .text-box .illust2 {
+  position: absolute;
+  width: 60px;
+  left: -7px;
+  bottom: -19px;
 }
 
 

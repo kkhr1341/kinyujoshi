@@ -1,4 +1,10 @@
 <!-- 女子会TOP表示 -->
+<div class="swiper-slide" style="background: url(/images/withcorporate/paypay/article04/article4_og.jpg) center center / cover no-repeat;">
+    <a class="js-track" href="/contents/cashless/article04" data-category="slide-link" data-action="click" data-value="3">
+      <div class="kinyu-top-list-kind"></div>
+    </a>
+</div>
+
 <div class="swiper-slide" style="background: url(/images/withcorporate/paypay/article03/article3_og.jpg) center center / cover no-repeat;">
     <a class="js-track" href="/contents/cashless/article03" data-category="slide-link" data-action="click" data-value="3">
       <div class="kinyu-top-list-kind"></div>
