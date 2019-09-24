@@ -151,14 +151,14 @@ class Controller_Kinyu_Withcorporate extends Controller_Kinyubase
     public function action_article05()
     {
 
-        // switch (true) {
-        //     case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-        //     case $_SERVER['PHP_AUTH_USER'] !== 'cashless':
-        //     case $_SERVER['PHP_AUTH_PW']   !== 'kinjo':
-        //     header('WWW-Authenticate: Basic realm="Enter username and password."');
-        //     header('Content-Type: text/plain; charset=utf-8');
-        //     die('このページを見るにはログインが必要です');
-        // }
+        switch (true) {
+            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+            case $_SERVER['PHP_AUTH_USER'] !== 'cashless':
+            case $_SERVER['PHP_AUTH_PW']   !== 'kinjo':
+            header('WWW-Authenticate: Basic realm="Enter username and password."');
+            header('Content-Type: text/plain; charset=utf-8');
+            die('このページを見るにはログインが必要です');
+        }
 
         $this->template->title = 'かわいくて作り置きOKなお弁当作りにチャレンジ。 | 今日も、キャッシュレス。';
         $this->template->ogimg = '/images/withcorporate/paypay/article05/article5_og.jpg';
