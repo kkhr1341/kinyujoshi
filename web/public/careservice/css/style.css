@@ -81,7 +81,7 @@ html, body, div {
   font-family: "メイリオ", Meiryo, "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic";
   position: relative;
   color: #333333;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   max-width: 1250px;
   margin: 0 auto;
   background: #fff;
@@ -515,13 +515,42 @@ p.careservice-servicelist-title {
 	background: #f0dbd6;
 	position: relative;
 }
-.cluboff-list-title {
-	width: 700px;
+.cluboff-list-block .fee-title {
+  width: 700px;
+  padding: 16px 24px;
+  margin: 0 auto;
+  color: #fff;
+  background:
+    linear-gradient(45deg,  transparent 8px, #355689 8px),
+    linear-gradient(135deg, transparent 8px, #355689 8px),
+    linear-gradient(225deg, transparent 8px, #355689 8px),
+    linear-gradient(315deg, transparent 8px, #355689 8px);
+  background-position: bottom left, top left, top right, bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
 	margin: 0 auto;
 	position: absolute;
 	top: -40px;
 	left: 50%;
 	margin-left: -350px;
+	text-align: center;
+}
+.cluboff-list-block .fee-title span {
+	color: #f2b8c3;
+}
+.cluboff-list-block .fee-title .triangle {
+	width: 20px;
+	border-top: 20px solid #355689;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  left: 50%;
+  bottom: -37px;
+  margin-left: -10px;
+}
+.cluboff-list-block .fee-title p { 
+	font-size: 18px;
 }
 .cluboff-list {
 	position: relative;
@@ -1775,6 +1804,9 @@ p.careservice-servicelist-title {
   bottom: -16px;
   left: 0;
 }
+.cluboff-list-block .fee-title {
+	width: 88%;
+}
 
 /* アプリ */
 .application-regist-block {
@@ -2285,6 +2317,12 @@ a._link-standard {
 .panel-contactbox .text-tel {
 	font-weight: normal;
 }
+.benefits-list li .benefits-list-el .company-img {
+	width: 100%;
+}
+.benefits-list li .benefits-list-el .company-img-small {
+	width: 60%;
+}
 
 }
 
@@ -2293,7 +2331,6 @@ a._link-standard {
   タブレット対応
 
 ---------------------------------*/
-
 @media screen and (min-width: 559px) and (max-width: 1024px) {
 	.careservice-container p {
     font-size: 15px;
