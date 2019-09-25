@@ -434,6 +434,7 @@ p.careservice-servicelist-title {
 	left: 50%;
 	margin-left: -350px;
 	text-align: center;
+	z-index: 1001;
 }
 .careservice-details-el .fee-title span {
 	color: #f2b8c3;
@@ -586,6 +587,7 @@ p.careservice-servicelist-title {
 	position: absolute;
 	right: 60px;
 	top: -188px;	
+	z-index: 999;
 }
 .cluboff-list li .img-box {
 	width: 100%;
@@ -2727,7 +2729,7 @@ a._link-standard {
   }
   .panel-contactboxCTA ._image {
     width: 26%;
-    margin-top: 20%;
+    margin-top: 6%;
 	}
 	.doctorsme-consultration-chat .chat-img01,
 	.doctorsme-consultration-chat .chat-img02 {
