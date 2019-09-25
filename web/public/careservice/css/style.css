@@ -94,16 +94,26 @@ img,div {
 .careservice-container a {
 	font-size: 14px;
 	line-height: 22px;
-	word-spacing: -4px;
 }
 h1.main-title {
-	display: block;
-	width: 400px;
-	margin: 0 auto;
+	font-size: 50px;
+	line-height: 65px;
+	text-align: center;
+	color: #123468;
+	letter-spacing: 2px;
 	padding: 50px 0px;
 }
+h1.main-title span {
+	display: block;
+	font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 16px;
+  color: #444444;
+}
+
+
 h1.main-title img {
-	width: 100%;
+	width: 400px;
 }
 .careservice-mainvisual .img-area {
 	width: 100%;
@@ -134,9 +144,9 @@ a.service-link {
 	padding: 0px 50px;
 }
 p.careservice-details-description {
-	font-size: 16px;
-	line-height: 26px;
-	margin-bottom: 70px;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 50px;
 }
 p.careservice-details-description span {
     color: #d06367;
@@ -148,7 +158,7 @@ p.careservice-details-description span {
 	position: relative;
 }
 p.web-regist-title {
-	font-size: 20px;
+	font-size: 18px;
 	color: #fff;
 	background: gray;
 	display: inline-block;
@@ -225,6 +235,7 @@ p.web-regist-title .web-regist-first {
 .regist-link-sp-icon p {
 	margin-bottom: 5px;
 	color: #fff;
+	font-size: 12px;
 }
 .regist-link-sp-icon img {
 	width: 32px;
@@ -413,6 +424,43 @@ p.careservice-servicelist-title {
   right: -19px;
   bottom: -15px;
 }
+.careservice-details-el .fee-title {
+  width: 700px;
+  padding: 16px 24px;
+  margin: 0 auto;
+  color: #fff;
+  background:
+    linear-gradient(45deg,  transparent 8px, #355689 8px),
+    linear-gradient(135deg, transparent 8px, #355689 8px),
+    linear-gradient(225deg, transparent 8px, #355689 8px),
+    linear-gradient(315deg, transparent 8px, #355689 8px);
+  background-position: bottom left, top left, top right, bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+	margin: 0 auto;
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	margin-left: -350px;
+	text-align: center;
+}
+.careservice-details-el .fee-title span {
+	color: #f2b8c3;
+}
+.careservice-details-el .fee-title .triangle {
+	width: 20px;
+	border-top: 20px solid #355689;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  left: 50%;
+  bottom: -37px;
+  margin-left: -10px;
+}
+.careservice-details-el .fee-title p { 
+	font-size: 18px;
+}
 
 /*---------------------------------
 
@@ -493,8 +541,8 @@ p.careservice-servicelist-title {
   サービス詳細 - cluboff
 
 ---------------------------------*/
-.cluboff-block .careservice-details-title h2 img {
-	width: 550px;
+.cluboff-block .careservice-details-title h2 {
+	color: #375e97;
 }
 .cluboff-block:after {
 	content: "";
@@ -517,43 +565,6 @@ p.careservice-servicelist-title {
 .cluboff-list-block {
 	background: #f0dbd6;
 	position: relative;
-}
-.cluboff-list-block .fee-title {
-  width: 700px;
-  padding: 16px 24px;
-  margin: 0 auto;
-  color: #fff;
-  background:
-    linear-gradient(45deg,  transparent 8px, #355689 8px),
-    linear-gradient(135deg, transparent 8px, #355689 8px),
-    linear-gradient(225deg, transparent 8px, #355689 8px),
-    linear-gradient(315deg, transparent 8px, #355689 8px);
-  background-position: bottom left, top left, top right, bottom right;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-	margin: 0 auto;
-	position: absolute;
-	top: -40px;
-	left: 50%;
-	margin-left: -350px;
-	text-align: center;
-}
-.cluboff-list-block .fee-title span {
-	color: #f2b8c3;
-}
-.cluboff-list-block .fee-title .triangle {
-	width: 20px;
-	border-top: 20px solid #355689;
-  border-right: 10px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 10px solid transparent;
-  position: absolute;
-  left: 50%;
-  bottom: -37px;
-  margin-left: -10px;
-}
-.cluboff-list-block .fee-title p { 
-	font-size: 18px;
 }
 .cluboff-list {
 	position: relative;
@@ -844,6 +855,32 @@ p.benefits-list-attention {
 .medicalsupport-service-el .main-title span {
 	font-size: 24px;
 }
+.careservice-details-el .medicalsupport-tell .fee-title {
+  width: 700px;
+  padding: 16px 24px;
+  margin: 0 auto;
+  color: #fff;
+  background:
+    linear-gradient(45deg,  transparent 8px, #81c6b8 8px),
+    linear-gradient(135deg, transparent 8px, #81c6b8 8px),
+    linear-gradient(225deg, transparent 8px, #81c6b8 8px),
+    linear-gradient(315deg, transparent 8px, #81c6b8 8px);
+  background-position: bottom left, top left, top right, bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+	margin: 0 auto;
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	margin-left: -350px;
+	text-align: center;
+}
+.careservice-details-el .fee-title .triangle {
+	border-top: 20px solid #81c6b8;
+}
+
+
+
 
 /*---------------------------------
 
@@ -886,7 +923,7 @@ p.benefits-list-attention {
 	left: 0;
 }
 .mentalhealth-list-icon img {
-	width: 50%;
+	width: 40px;
 	position: absolute;
   top: 50%;
   left: 50%;
@@ -919,8 +956,6 @@ p.mentalhealth-list-title {
 	margin-bottom: 24px;
 }
 p.mentalhealth-list-description {
-	font-size: 15px;
-	line-height: 26px;
 	margin-bottom: 40px;
 }
 p.mentalhealth-list-description span {
@@ -982,7 +1017,7 @@ p.mentalhealth-list-description span {
 }
 .medicalsupport-tell .tell-main {
 	display: block;
-	width: 92%;
+	width: 1050px;
 	margin: 0 auto;
 }
 .medicalsupport-tell .tell-person01 {
@@ -1003,13 +1038,13 @@ p.mentalhealth-list-description span {
 
 /*---------------------------------
 
-  サービス詳細 - Docters me
+  サービス詳細 - Docteos me
 
 ---------------------------------*/
-.doctersme-block .careservice-details-title h2 {
+.doctorsme-block .careservice-details-title h2 {
 	color: #2a989e;
 }
-.doctersme-block:after {
+.doctorsme-block:after {
 	content: "";
 	background: #e2f1f0;
 	width: 100%;
@@ -1018,52 +1053,52 @@ p.mentalhealth-list-description span {
 	top: 0;
 	z-index: 1000;
 }
-.doctersme-block .careservice-details-header p {
+.doctorsme-block .careservice-details-header p {
 	background: #88c8c8;
 }
-.doctersme-block .careservice-details-icon {
+.doctorsme-block .careservice-details-icon {
   width: 70px;
   position: absolute;
   right: 0;
   bottom: 0;
 }
-.doctersme-block .careservice-details-freeicon {
+.doctorsme-block .careservice-details-freeicon {
   width: 70px;
   position: absolute;
   right: -90px;
   bottom: 0;
 }
-.doctersme-block .careservice-details-message {
+.doctorsme-block .careservice-details-message {
 	color: #2a989e;
-	font-size: 24px;
+	font-size: 20px;
 }
 
 /* WEBかんたん登録 */
-.doctersme-block .regist-link-details .regist-link-details-el {
+.doctorsme-block .regist-link-details .regist-link-details-el {
 	background: #e2f1f0;
 }
-.doctersme-block .regist-link-details .regist-link-sp-icon {
+.doctorsme-block .regist-link-details .regist-link-sp-icon {
 	background: #2a989e;
 }
-.doctersme-block .regist-link-details-el-second .regist-link-sp-icon {
+.doctorsme-block .regist-link-details-el-second .regist-link-sp-icon {
 	background: #e2f1f0;
 }
-.doctersme-block p.web-regist-title {
+.doctorsme-block p.web-regist-title {
 	background: #2a989e;
 }
-.doctersme-block p.web-regist-title .web-regist-first {
+.doctorsme-block p.web-regist-title .web-regist-first {
 	background: #2a989e;
 }
-.doctersme-block .regist-link-details .regist-link-details-el .service-link {
+.doctorsme-block .regist-link-details .regist-link-details-el .service-link {
 	background: #ec7663;
 }
-.doctersme-block .regist-link-details .regist-link-details-el-second .service-link {
+.doctorsme-block .regist-link-details .regist-link-details-el-second .service-link {
 	background: #2a989e;
 }
-.doctersme-block .regist-link-details-el-second .regist-link-sp-icon p {
+.doctorsme-block .regist-link-details-el-second .regist-link-sp-icon p {
 	color: #2a989e;
 }
-.doctersme-block .service-img {
+.doctorsme-block .service-img {
   width: 140px;
   position: absolute;
   right: 40px;
@@ -1071,33 +1106,64 @@ p.mentalhealth-list-description span {
 }
 
 /* 相談・回答例 */
-.doctersme-consultration-inner {
+.doctorsme-consultration-inner {
 	position: relative;
 }
-.doctersme-consultration-chat {
+.doctorsme-consultration-chat {
 	float: left;
 	width: 55%;
 	background: #f1f0da;
 	padding: 50px 40px;
 }
-.doctersme-consultration-title {
+.doctorsme-consultration-chat li {
+	text-align: center;
+}
+.doctorsme-consultration-chat-title {
+
+}
+.doctorsme-consultration-chat-title-inner {
+	text-align: center;
+	line-height: 0;
+	position: relative;
+}
+.doctorsme-consultration-chat-title-inner p {
+	color: #2a989e;
+	font-size: 22px;
+	display: inline-block;
+	padding: 0px 50px;
+	background: #f1f0da;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1001;
+}
+.doctorsme-consultration-chat-title-inner:after {
+	content: "";
+	background: #2a989e;
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	top: 11px;
+	left: 0;
+	z-index: 999;
+}
+.doctorsme-consultration-title {
 	width: 100%;
 }
-.doctersme-consultration-chat .chat-img01 {
-	width: 100%;
+.doctorsme-consultration-chat .chat-img01 {
+	width: 520px;
 	margin-bottom: 32px;
 }
-.doctersme-consultration-chat .chat-img02 {
-	width: 100%;
+.doctorsme-consultration-chat .chat-img02 {
+	width: 520px;
 }
-.doctersme-consultration-list {
+.doctorsme-consultration-list {
 	float: right;
 	width: 45%;
 	text-align: center;
 	position: relative;
 	padding-top: 12px;
 }
-p.doctersme-consultration-list-title {
+p.doctorsme-consultration-list-title {
 	font-size: 20px;
 	line-height: 32px;
 	color: #2a989e;
@@ -1118,7 +1184,7 @@ p.doctersme-consultration-list-title {
 .consultration-list li img {
 	width: 92%;
 }
-.doctersme-consultration-inner .consult-count {
+.doctorsme-consultration-inner .consult-count {
 	position: absolute;
 	bottom: 0;
 	right: 40px;
@@ -1495,6 +1561,11 @@ p.information-el-description {
 .information-el-list p {
 	font-size: 13px;
 	display: inline-block;
+}
+p.control-number {
+	display: block;
+	text-align: right;
+	margin-top: 24px;
 }
 
 
@@ -2101,12 +2172,12 @@ p.mentalhealth-list-description span {
 }
 
 /*---------------------------------
-  サービス詳細 - Docters me
+  サービス詳細 - Doctors me
 ---------------------------------*/
-.doctersme-block:after {
+.doctorsme-block:after {
   height: 72px;
 }
-.doctersme-block .careservice-details-icon {
+.doctorsme-block .careservice-details-icon {
   width: 105px;
   position: absolute;
   right: auto;
@@ -2114,34 +2185,34 @@ p.mentalhealth-list-description span {
   left: 4%;
   opacity: 0.1;
 }
-.doctersme-block .careservice-details-freeicon {
+.doctorsme-block .careservice-details-freeicon {
   width: 50px;
   position: absolute;
   right: -40px;
   bottom: 0;
 }
-.doctersme-block .service-img {
+.doctorsme-block .service-img {
 	display: none;
 }
-.doctersme-block .careservice-details-message {
+.doctorsme-block .careservice-details-message {
 	font-size: 18px;
 	line-height: 26px;
 }
-.doctersme-consultration-chat {
+.doctorsme-consultration-chat {
 	float: none;
 	width: 100%;
 	padding: 24px;
 }
-.doctersme-consultration-list {
+.doctorsme-consultration-list {
 	float: none;
 	width: 100%;
 	padding-top: 32px;
 }
-p.doctersme-consultration-list-title {
+p.doctorsme-consultration-list-title {
 	font-size: 18px;
 	line-height: 26px;
 }
-.doctersme-consultration-inner .consult-count {
+.doctorsme-consultration-inner .consult-count {
 	position: relative;
 	display: block;
 	margin: 0 auto;
@@ -2149,7 +2220,7 @@ p.doctersme-consultration-list-title {
 	right: auto;
 	margin-top: 24px;
 }
-.doctersme-block p.careservice-details-description {
+.doctorsme-block p.careservice-details-description {
 	margin-bottom: 24px;
 }
 
@@ -2476,14 +2547,14 @@ a._link-standard {
 		font-size: 15px;
 		letter-spacing: 1px;
 	}
-	.doctersme-consultration-chat {
+	.doctorsme-consultration-chat {
 		padding: 40px 24px;
 	}
-	p.doctersme-consultration-list-title {
+	p.doctorsme-consultration-list-title {
 		font-size: 16px;
     line-height: 26px;
 	}
-	.doctersme-consultration-inner .consult-count {
+	.doctorsme-consultration-inner .consult-count {
     right: 0px;
     width: 35%;
 	}
@@ -2526,11 +2597,11 @@ a._link-standard {
 	.mentalhealth-block p.careservice-details-description {
 		padding-right: 30%;
 	}
-	.doctersme-block p.careservice-details-description {
+	.doctorsme-block p.careservice-details-description {
 		padding-right: 26%;
 		margin-bottom: 40px;
 	}
-	.doctersme-block .careservice-details-message {
+	.doctorsme-block .careservice-details-message {
     padding-right: 26%;
     font-size: 22px;
     line-height: 28px;
@@ -2554,7 +2625,7 @@ a._link-standard {
     width: 220px;
     right: 0px;
 	}
-	.doctersme-block .service-img {
+	.doctorsme-block .service-img {
     width: 120px;
     right: 0px;
 	}
