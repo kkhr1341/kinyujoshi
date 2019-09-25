@@ -9,6 +9,9 @@ html, body, div {
   font-size: 100%;
   vertical-align: baseline;
 }
+img,div {
+	-ms-interpolation-mode: bicubic; 
+}
 
 /*---------------------------------
 
