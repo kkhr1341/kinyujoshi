@@ -164,7 +164,7 @@
                     </div>
                     <h3 class="kinyu-top-list-title">
                       {$blog.title}
-                      {if $blog.secret == 1}<span>[鍵]</span>{/if}
+                      {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
                     </h3>
                   </div>
                 </a>
@@ -200,7 +200,7 @@
           </div>
           </div>
         </div>
-        
+
         <div class="kinyu-top-maincontent-block-el">
           <div class="kinyu-top-banner-area">
             <ul class="clear">
