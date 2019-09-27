@@ -22,9 +22,17 @@
           {$fooo = $blog.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-          <li>
+          <li{if $blog.pr == 1} class="pr"{/if}>
             <a href="/report/{$blog.code}">
               <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
+             　 {if $blog.new == true}
+           　　　  <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
+           　　　{/if}
+           　　　{if $blog.pr == 1}
+           　　　  <!-- PR用イメージ挿入箇所 -->
+                       <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+           　　　{/if}
+          　　 </div>
               {if $blog.secret == 1}
               <div class="ribbon_area pc">
                   <span class="member-regist-label">メンバー限定</span>
