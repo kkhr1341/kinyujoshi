@@ -55,7 +55,7 @@ class Event_remind_mails {
             }
 
             // no-reply宛てに1通送信
-            EventRemindMailTemplates::send("no-reply@kinyu-joshi.jp", "きんゆう女子。運営部", $event['code']);
+            EventRemindMailTemplates::send("cs@kinyu-joshi.jp", "きんゆう女子。運営部", $event['code']);
 		}
 	}
 }
