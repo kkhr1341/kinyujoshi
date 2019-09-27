@@ -16,9 +16,9 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     {
 
         if (Agent::is_mobiledevice()) {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 30);
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 30, null, null);
         } else {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60);
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60, null, null);
         }
         $pagination = $this->data['blogs']['pagination'];
         $this->template->title = 'レポート一覧｜きんゆう女子。';

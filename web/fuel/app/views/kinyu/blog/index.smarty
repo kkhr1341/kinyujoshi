@@ -53,7 +53,10 @@
                     <p>レポート</p>
                   {/if}
                 </div>
-                <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+                <h3 class="kinyu-top-list-title">
+                  {$blog.title}
+                  {if $blog.secret == 1}<span>[鍵]</span>{/if}
+                </h3>
               </div>
             </a>
           </li>
