@@ -190,6 +190,24 @@
 							<img class="illust2" src="/images/withcorporate/paypay/article04/illust2.png">
 						</div>
 					</li>
+					<li class="cashlesslife-el05 cashless-animation1 clear">
+						<div class="img-box">
+							<div class="article-bg-img5 article-bg-img fix-animation1">
+								<ul>
+									<li style="background: url(/images/withcorporate/paypay/article05/article05_bg01.jpg) center center / cover no-repeat;"></li>
+									<li style="background: url(/images/withcorporate/paypay/article05/article05_bg02.jpg) bottom center / cover no-repeat;"></li>
+									<li style="background: url(/images/withcorporate/paypay/article05/article05_bg03.jpg) center center / cover no-repeat;"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="text-box">
+							<img class="title-epsode" src="/images/withcorporate/paypay/article05/episode5.png">
+							<p>かわいくて作り置きOKな<br class="pc">お弁当作りにチャレンジ。<span>〜 いつもいく家の近くのお店へ 〜</span></p>
+							<a class="title-link" href="/contents/cashless/article05">詳細はこちら</a>
+							<img class="illust1" src="/images/withcorporate/paypay/article05/illust1.png">
+							<img class="illust2" src="/images/withcorporate/paypay/article05/illust5.png">
+						</div>
+					</li>
 				</ul>
 			</div>
 
