@@ -2775,6 +2775,24 @@ a._link-standard {
 
 /*---------------------------------
 
+  PC一部
+
+---------------------------------*/
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+	.benefits-list li .benefits-list-el .company-img {
+    width: 150px;
+	}
+	.benefits-list li .benefits-list-el .company-img-small {
+    width: 100px;
+	}
+	.benefits-list li .benefits-list-el-inner p.small-text {
+    font-size: 11px;
+    line-height: 20px;
+	}
+}
+
+/*---------------------------------
+
   PCのみ
 
 ---------------------------------*/
