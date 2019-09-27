@@ -56,7 +56,7 @@ class Event_thanks_mails {
             }
 
             // no-reply宛てに1通送信
-            EventThanksMailTemplates::send("no-reply@kinyu-joshi.jp", "きんゆう女子。運営部", $event['code']);
+            EventThanksMailTemplates::send("cs@kinyu-joshi.jp", "きんゆう女子。運営部", $event['code']);
 		}
 	}
 }
