@@ -22,8 +22,9 @@
           {$fooo = $blog.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-          <li{if $blog.pr == 1} class="pr"{/if}>
+          <li {if $blog.pr == 1} class="pr"{/if}>
             <a href="/report/{$blog.code}">
+
               <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
              　 {if $blog.new == true}
            　　　  <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
@@ -32,16 +33,18 @@
            　　　  <!-- PR用イメージ挿入箇所 -->
                        <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
            　　　{/if}
-          　　 </div>
+          　</div>
+
               {if $blog.secret == 1}
               <div class="ribbon_area pc">
                   <span class="member-regist-label">メンバー限定</span>
               </div>
-              <div class="ribbon_area-sp sp">
+
+              <div class="ribbon_area sp">
                   <span class="member-regist-label-sp">メンバー限定</span>
               </div>
               {/if}
-              </div>
+
               <div class="text-box">
                 <div class="kinyu-top-list-kind">
                   {if $blog.kind == "女子会レポート"}
@@ -67,6 +70,7 @@
         {/foreach}
       </ul>
     </div>
+
     <div class="blog-pagenation tx-center">
       {$pagination}
     </div>
@@ -94,8 +98,6 @@
         $('.kinyu-header-top').width(ggg);
       });
     </script>
-
-
 
   </div>
 </div>
