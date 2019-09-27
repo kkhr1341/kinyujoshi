@@ -53,6 +53,9 @@ class Event_remind_mails {
 
                 EventRemindMailTemplates::send($application['email'], $application['name'], $application['event_code']);
             }
+
+            // no-reply宛てに1通送信
+            EventRemindMailTemplates::send("no-reply@kinyu-joshi.jp", "きんゆう女子。運営部", $event['code']);
 		}
 	}
 }
