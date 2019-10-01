@@ -31,7 +31,6 @@
           ワカラナイ・難しいから諦めていたことを行動に移し実現に近づいていく… <br class="pc">
           そっと後押しするようなフォローをしていきたいと思っています。<br>
         </p>
-        <!-- <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20190711134940image.jpg) center center / cover no-repeat;"></div> -->
         <a class="to-story-link" href="/about_main">もっとくわしく知る 〉</a>
       </div>
       <a class="to-member-link" href="#regist-form">メンバー登録はこちら</a>
@@ -73,7 +72,7 @@
       </div>
     </div>
 
-    <div class="login-block-img-bg sp" style="background: url(/images/login/member01.jpg) left center / cover no-repeat;"></div>
+    <div class="login-block-img-bg sp" style="background: url(/images/login/member_bg1-sp.jpg) left center / cover no-repeat;"></div>
 
     <div class="login-block-el about-member-contents">
       <div class="about-member-contents-inner">
@@ -134,8 +133,15 @@
   </div>
 </div>
 
-<div class="member-icon">
+<div class="member-icon pc">
   <a href="#regist-form"><img src="/images/login/member-icon.png"></a>
+</div>
+
+<div class="member-icon sp">
+  <a href="#regist-form">
+    <p class="fs-mincho">メンバー登録はこちら</p>
+    <img class="kingyo-icon" src="/images/login/member-icon-sp.png">
+  </a>
 </div>
 
 

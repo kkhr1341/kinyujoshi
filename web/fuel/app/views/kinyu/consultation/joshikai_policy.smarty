@@ -2,41 +2,38 @@
 
 <div class="kinyu-single-block joshikai-main-block joshikai-main-detail">
   
-  <img class="login-main-bg pc" src="/images/login/login_main_bg.jpg">
-
   <div class="joshikai-policy">
 
-    <div class="joshikai-policy-container" style="background: #fff;">
+    <div class="joshikai-policy-container" style="background: #f9f9f9;">
       <div class="joshikai-policy-el">
     		<div class="inquiry-counter-title fs-mincho">
-    			<p class="counter-main-title">きんゆう女子。が大事にしていること</p>
+    			<p class="counter-main-title">きんゆう女子。が<br class="sp">大事にしていること</p>
     		</div>
         <p class="main-message">
-          <span class="fs-mincho">自由で等身大に生きる。</span>
-          はじめまして。「きんゆう女子。」編集部です。  <br><br>
-          「きんゆう女子。」は、2016年3月3日に生まれた、 <br class="pc">
-          20〜30代を中心とした金融ワカラナイ女子による、 <br class="pc">
-          ワカラナイ女子のためのコミュニティです。  <br><br>
-          「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」 <br class="pc">
-          をコンセプトに、身近な家計管理から世界経済、FinTech（フィンテック）、 <br class="pc">
-          ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。  <br><br>
-          ゆる〜く、楽しく。でもちょっと真面目に。  <br><br>
-          わたしたち編集部では、女性たちが、お金の漠然とした不安や焦りから解放され、 <br class="pc">
-          ワカラナイ・難しいから諦めていたことを行動に移し実現に近づいていく… <br class="pc">
-          そっと後押しするようなフォローをしていきたいと思っています。<br>
+          どんなゲストにも、ワカラナイ女子だからと狼(おおかみ)になることは<br class="pc">
+          絶対にしないと「お約束」いただいています。<br><br>
+
+          狼とは、勉強してワカッタツモリの女子や、<br class="pc">
+          興味のある女子を狙って手数料の高すぎる金融商品を勧めたり、
+          <br class="pc">待ち構えるような人のこと。<br><br>
+
+          風通しの良いコミュニティでいるために、メンバーにも「お約束」をお願いしています。<br><br>
+
+          そして、わたしたち編集部も「お約束」します。<br class="pc">
+          お互いの相互理解に貢献し適正な距離感を保つことで、両者のよきブリッジ役でいると。<br><br>
         </p>
       </div>
       <img class="kingyo-icon" src="/images/consultration/kingyo-icon.png">
     </div>
 
     <div class="joshikai-policy-container" style="background: #eef5f4;">
-      <div class="joshikai-policy-el">
+      <div class="joshikai-policy-el joshikai-policy-el-2">
         <div class="inquiry-counter-title fs-mincho">
           <p class="counter-main-title">女子会のお約束ごと</p>
         </div>
         <div class="promise-container">
 
-          <div class="img-box" style="background: #8caba6;">
+          <div class="img-box" style="background: url(/images/event/joshikai-policy-sp.jpg) center center / cover no-repeat;">
             
           </div>
 
@@ -58,21 +55,9 @@
                 <p class="promise-el-title fs-mincho"><span class="count">04</span>特定の企業の商品への勧誘はしていません。<span class="link-btn">〈</span></p>
                 <p class="description">きんゆう女子。では、特定の企業の商品の勧誘やアフィリエイトと呼ばれる成果報酬型の広告宣伝を行わないポリシーです。その代わりに女子会の参加費をいただいたり、みなさまの声や気持ちをアンケートなどで集約することで匿名で企業さまへ提供することがあります。真摯にサービス提供に取り組まれている企業を積極的に応援し、今後の経済や金融業界の発展に寄与することで、みなさまが安心して交流・勉強する場を提供しています。</p>
               </li>
-              <li>
-                <p class="promise-el-title fs-mincho"><span class="count">04</span>特定の企業の商品への勧誘はしていません。<span class="link-btn">〈</span></p>
-                <p class="description">きんゆう女子。では、特定の企業の商品の勧誘やアフィリエイトと呼ばれる成果報酬型の広告宣伝を行わないポリシーです。その代わりに女子会の参加費をいただいたり、みなさまの声や気持ちをアンケートなどで集約することで匿名で企業さまへ提供することがあります。真摯にサービス提供に取り組まれている企業を積極的に応援し、今後の経済や金融業界の発展に寄与することで、みなさまが安心して交流・勉強する場を提供しています。</p>
-              </li>
             </ul>
           </div>
         </div> 
-      </div>
-    </div>
-
-    <div class="joshikai-policy-container">
-      <div class="joshikai-policy-el">
-        <div class="inquiry-counter-title fs-mincho">
-          <p class="counter-main-title">さいごに...</p>
-        </div>
       </div>
     </div>
 

@@ -4,30 +4,8 @@
   <div class="kinyu-joshikai-detail-inner inquiry-counter">
   	
 		<div class="inquiry-counter-title fs-mincho">
-			<p class="counter-sub-title">もやもやすることがあった時に...</p>
 			<p class="counter-main-title">きん女。の相談窓口</p>
-		</div>
-
-		<div class="inquiry-counter-el">
-			<p class="inquiry-counter-el-description">＼ こんなことがあった時にご相談ください。／</p>
-			<ul>
-				<li>
-					<div class="img-box" style="background: url(http://localhost:9000/sunday-lunch/stock/anewuser/images/thumb_20190731181936image.jpg) center center / cover no-repeat;"></div>
-					<p>テキストテキストテキストテキストテキスト</p>
-				</li>
-				<li>
-					<div class="img-box" style="background: url(http://localhost:9000/sunday-lunch/stock/anewuser/images/thumb_20190731181936image.jpg) center center / cover no-repeat;"></div>
-					<p>テキストテキストテキストテキストテキスト</p>
-				</li>
-				<li>
-					<div class="img-box" style="background: url(http://localhost:9000/sunday-lunch/stock/anewuser/images/thumb_20190731181936image.jpg) center center / cover no-repeat;"></div>
-					<p>テキストテキストテキストテキストテキスト</p>
-				</li>
-				<li>
-					<div class="img-box" style="background: url(http://localhost:9000/sunday-lunch/stock/anewuser/images/thumb_20190731181936image.jpg) center center / cover no-repeat;"></div>
-					<p>テキストテキストテキストテキストテキスト</p>
-				</li>
-			</ul>
+      <p class="counter-sub-title"><span style="color:red;">＊</span>は必須です</p>
 		</div>
 
 		<!-- フォーム -->
@@ -38,23 +16,21 @@
         <input type="text" name="name" id="name" class="form-control" placeholder="" value="">
       </div>
 
+      <div class="regist-add-form-edit-el">
+        <label class="regist-add-form-edit-title">メールアドレス<span style="color:red; font-weight: normal;">*</span></label>
+        <input type="text" name="email" id="email" class="form-control" placeholder="" value="">
+      </div>
+
       <div class="regist-add-form-edit-el regist-add-form-edit-el02">
         <label class="regist-add-form-edit-title">どんなことがありましたか？<span style="color:red; font-weight: normal;">*</span></label>
         <p class="regist-add-form-edit-subtitle">もやもやしたこと、いやだったこと...少しでも気になったことがあれば教えてください。</p>
         <textarea id="message" name="message" class="form-control" rows="10"></textarea>
       </div>
 
-      <div class="regist-add-form-edit-el">
-        <label class="regist-add-form-edit-title">メールアドレス<span style="color:red; font-weight: normal;">*</span></label>
-        <input type="text" name="email" id="email" class="form-control" placeholder="" value="">
-      </div>
-
 			<!-- ボタンエリア -->
       <div class="form-btn tx-center">
-        <button class="btn btn-kinyu" type="button" id="save">編集部に報告する</button>
+        <button class="btn btn-kinyu" type="button" id="save">送信する</button>
       </div>
-      <p class="pc" style="margin-top:20px;text-align:center;"><span style="color:#f3626c;">※</span>新規会員登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。
-     	</p>
 
   	</div><!-- フォーム -->
 
@@ -74,10 +50,10 @@
             params.message = $('#message').val();
             params.email = $('#email').val();
 
-            if (params.name == "") {
-                ts.error("お名前を入力してください");
-                return false;
-            }
+            // if (params.name == "") {
+            //     ts.error("お名前を入力してください");
+            //     return false;
+            // }
             if (params.message == "") {
                 ts.error("お問合せ内容を入力してください");
                 return false;
