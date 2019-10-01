@@ -73,6 +73,8 @@
       </div>
     </div>
 
+    <div class="login-block-img-bg sp" style="background: url(/images/login/member01.jpg) left center / cover no-repeat;"></div>
+
     <div class="login-block-el about-member-contents">
       <div class="about-member-contents-inner">
         <h2 class="el-title">メンバーになると...？</h2>

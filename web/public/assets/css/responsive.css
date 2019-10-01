@@ -6233,9 +6233,12 @@ footer .navi_kinyu-submenu-el a {
     width: 72%;
     margin-top: 28px;
   }
+  .login-block-img-bg {
+    height: 200px;
+  } 
   .about-activity-contents {
     width: 88%;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
   .about-activity-contents li .img-box {
     float: none;
@@ -6246,6 +6249,13 @@ footer .navi_kinyu-submenu-el a {
     width: 100%;
     padding-right: 0px;
     padding-top: 20px;
+  }
+  .about-member-contents {
+    background: none;
+  }
+  .about-member-contents-inner {
+    width: 100%;
+    padding: 24px 50px;
   }
   .login-block-el h2.el-title {
     font-size: 18px;
@@ -6274,7 +6284,7 @@ footer .navi_kinyu-submenu-el a {
   .about-member-contents {
     width: 88%;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
   .about-member-contents li {
     width: 100%;
