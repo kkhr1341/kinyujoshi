@@ -1,15 +1,8 @@
 @charset "UTF-8";
 /* normalize
 ***************************************************** */
-html, body, div {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-img,div {
+.careservice-container img,
+.careservice-container div {
 	-ms-interpolation-mode: bicubic; 
 }
 
@@ -67,10 +60,6 @@ img,div {
 ---------------------------------*/
 .careservice-container {
 	font-size: 1.0rem;
-  /*-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;*/
-  /*font-family: "careservice-font";*/
-  /*font-family: "メイリオ", Meiryo, "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic";*/
   font-family: "Hiragino Kaku Gothic ProN", YuGothic, "Yu Gothic", "メイリオ", sans-serif;
   position: relative;
   color: #333333;
@@ -516,15 +505,11 @@ p.careservice-servicelist-title {
 }
 .careservice-details-title h2 {
 	font-size: 40px;
-	/*font-family: "careservice-font-hime";*/
 	position: relative;
 }
 .careservice-details-title h2 span {
 	border-bottom: 2px solid #F7F19E;
 	letter-spacing: 0px;
-}
-.careservice-details-title h2 span.en-text {
-	/*font-family: "careservice-font";*/
 }
 
 /*---------------------------------
