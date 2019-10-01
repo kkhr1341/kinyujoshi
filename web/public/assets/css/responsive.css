@@ -6201,6 +6201,32 @@ footer .navi_kinyu-submenu-el a {
   }
 
   /* 新規メンバー登録画面_201908 */
+  .member-icon {
+    background: #8ddcd1;
+    background: #eceab7;
+    width: 98%;
+    position: fixed;
+    left: 50%;
+    margin-left: -49%;
+    bottom: 54px;
+    z-index: 1004;
+  }
+  .member-icon a {
+    display: block;
+    padding: 12px 0px;
+    position: relative;
+  }
+  .member-icon a p {
+    text-align: center;
+    /*color: #fff;*/
+    font-size: 13px;
+  }
+  .member-icon a .kingyo-icon {
+    width: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
   .login-block-el {
     margin-bottom: 0px;
     padding: 50px 0px;
@@ -6259,7 +6285,8 @@ footer .navi_kinyu-submenu-el a {
   }
   .login-block-el h2.el-title {
     font-size: 18px;
-    line-height: 28px;
+    line-height: 24px;
+    margin-bottom: 16px;
   }
   .about-activity-contents li .text-block .text-title {
     font-size: 16px;
@@ -6286,9 +6313,16 @@ footer .navi_kinyu-submenu-el a {
     margin: 0 auto;
     margin-bottom: 0px;
   }
+  .about-member-contents:after {
+    content: none;
+  }
   .about-member-contents li {
     width: 100%;
     margin-right: 0px;
+    margin-bottom: 32px;
+  }
+  .about-member-contents p {
+    padding: 20px 8px 0px;
   }
   .about-member-contents li:nth-last-child(-n+3) {
     margin-bottom: 20px;

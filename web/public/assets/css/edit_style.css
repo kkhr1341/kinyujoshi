@@ -2,6 +2,9 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.modal-open .modal {
+  z-index: 1006;
+}
 .video-container iframe {
   width: 1000px;
   height: 565px;
