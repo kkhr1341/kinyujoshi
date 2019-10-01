@@ -2758,6 +2758,16 @@ a._link-standard {
 
 }
 
+/* 企業ロゴ調整 */
+@media screen and (min-width: 559px) and (max-width: 760px) {
+	.benefits-list li .benefits-list-el .company-img {
+		width: 140px;
+	}
+	.benefits-list li .benefits-list-el .company-img-small {
+    	width: 80px;
+	}
+}
+
 /*---------------------------------
 
   PC一部
