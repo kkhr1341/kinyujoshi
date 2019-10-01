@@ -4667,10 +4667,6 @@ input::-webkit-input-placeholder {
   margin-bottom: 80px;
 }
 .login-block-el h2.el-title {
-/*  font-size: 22px;
-  line-height: 32px;
-  margin-bottom: 28px;
-  text-align: center;*/
   color: #77cbc0;
   font-size: 24px;
   line-height: 32px;
@@ -4942,14 +4938,26 @@ input::-webkit-input-placeholder {
   width: 100%;
   margin: 0 auto;
   padding: 80px 0px;
-  background: gray;
-/*  background: url(/images/login/bg-member.jpg) center center / cover no-repeat;
-*/}
+  background: url(/images/login/member_bg1.jpg) center center / cover no-repeat;
+  position: relative;
+}
+.about-member-contents:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,.3);
+  z-index: 999;
+}
 .about-member-contents-inner {
   width: 1000px;
   margin: 0 auto;
   background: rgba(255,255,255,.8);
   padding: 50px;
+  position: relative;
+  z-index: 1001;
 }
 .about-member-contents ul {
   display: -webkit-flex;
