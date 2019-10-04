@@ -141,7 +141,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             $this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
         }
 
-        $this->template->meta = array(
+        $meta = array(
             array(
                 'name' => 'description',
                 'content' => $this->data['blog']['description'],
@@ -184,11 +184,11 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             ),
             array(
                 'property' => 'og:image:width',
-                'content' => '1200' 
+                'content' => '1200'
             ),
             array(
                 'property' => 'og:image:height',
-                'content' => '630' 
+                'content' => '630'
             ),
             array(
                 'property' => 'twitter:card',
@@ -199,6 +199,15 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
                 'content' => '@kinyu_joshi',
             ),
         );
+
+        if ($this->data['blog']['secret'] == 1) {
+            $meta[] = array(
+                'name' => 'robots',
+                'content' => 'noindex',
+            );
+        }
+
+        $this->template->meta = $meta;
 
         $this->template->canonical = \Uri::base() . 'report/' . $this->data['blog']['code'];
 
