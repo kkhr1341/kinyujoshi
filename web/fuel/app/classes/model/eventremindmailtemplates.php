@@ -115,7 +115,7 @@ class EventRemindMailTemplates extends Base
     {
         return '＊このメールは女子会にお申し込みのみなさんにお送りしています＊
 
-こんにちは。
+こんにちは！
 きんゆう女子。編集部です。
 
 この度は{% event_title %}に
@@ -126,25 +126,23 @@ class EventRemindMailTemplates extends Base
 開催日：{% event_date %}
 会場：{% event_place %}
 
-予習：
-
-女子会の詳細はこちらのメージよりご覧ください
+女子会の詳細はこちらのページよりご覧ください。
 {% event_url %}
 
+会場までお気をつけてお越しくださいね。
+
 それではみなさまに明日お会いできることを楽しみにしています。
-どうぞよろしくお願いいたします。
 
 *--*--*--*--*--*--*--*--*--*--*--*--*--*
 
 きんゆう女子。編集部(support@kinyu-joshi.jp)
-
 
 〒103-0025
 東京都中央区日本橋茅場町1-5-8　東京証券会館　B-313
 運営会社：株式会社TOE THE LINE
 
 ✧きんゆう女子。コミュニティ✧
-『お金に囚われず自由に等身大で生きる』
+『お金にとらわれず自由に等身大で生きる』
 公式サイト：https://kinyu-joshi.jp/
 
 ✧Instagram✧@kinyu_joshi

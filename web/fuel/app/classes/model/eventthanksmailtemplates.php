@@ -136,13 +136,12 @@ support@kinyu-joshi.jp までとお知らせくださいませ。
 
 きんゆう女子。編集部(support@kinyu-joshi.jp)
 
-
 〒103-0025
 東京都中央区日本橋茅場町1-5-8　東京証券会館　B-313
 運営会社：株式会社TOE THE LINE
 
 ✧きんゆう女子。コミュニティ✧
-『お金に囚われず自由に等身大で生きる』
+『お金にとらわれず自由に等身大で生きる』
 公式サイト：https://kinyu-joshi.jp/
 
 ✧Instagram✧@kinyu_joshi
