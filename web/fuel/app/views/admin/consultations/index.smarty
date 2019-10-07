@@ -1,0 +1,211 @@
+<p class="regist-list">相談内容リスト</p>
+<table id="tbl" class="sample_01 registlist-block-admin">
+  <thead>
+    <tr>
+      <th style="width:10%;">ID</th>
+      <th style="width:20%;">登録日</th>
+      <th style="width:20%;">名前</th>
+      <th style="width:30%;">本文</th>
+      <th style="width:10%;">返信件数</th>
+      <th style="width:10%;"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {foreach from=$consultations item=consultation name=loop}
+    <tr>
+      <td>{$consultation.id}</td>
+      <td>{$consultation.created_at|date_format:"Y.m.d H:i:s"}</td>
+      <td>{$consultation.name}</td>
+      <td>{$consultation.message|nl2br}</td>
+      <td>{$consultation.reply_num}</td>
+      <td>
+        <a class="admin-registlist-more js-open-send-modal" data-id="{$consultation.id}" data-name="{$consultation.name}" data-code="{$consultation.code}" href="#">送信</a>
+      </td>
+    </tr>
+    {/foreach}
+  </tbody>
+</table>
+
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <input type="hidden" name="code" value="">
+      <!-- dialog body -->
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <div class="form-group">
+            <label class="form-group-event-label">ID</label>
+            <p class="js-id"></p>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group-event-label">名前</label>
+            <p class="js-name"></p>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group-event-label">件名</label>
+            <div class='input-group'>
+                <input type='text' class="form-control" name="subject" value="" style="width: 500px;" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group-event-label">本文</label>
+            <div class='input-group date datetimepicker'>
+                <textarea name="body" style="border: 1px solid #d9d8d8; width: 500px; height: 200px;"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-group-event-label">履歴</label>
+            <div class='input-group js-main-reply-history'>
+            </div>
+        </div>
+
+      </div>
+      <!-- dialog buttons -->
+      <div class="modal-footer">
+        <button type="button" class="btn send-btn btn-primary">送信</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.sample_01{
+  width: 860px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.sample_01 tr {
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.sample_01 th{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 6px;
+  vertical-align: top;
+  color: #333;
+  background-color: #eee;
+  border: 1px solid #b9b9b9;
+}
+.sample_01 td{
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 6px;
+  line-height: 20px;
+  background-color: #fff;
+  border: 1px solid #b9b9b9;
+  word-break: break-word;
+}
+.registlist-block-admin td a {
+  transition: 0.5s;
+}
+.registlist-block-admin td a:hover {
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.admin-registlist-more {
+  padding: 8px 10px;
+  color: #fff;
+  background-color: #7CDCCE;
+}
+.regist-list {
+  display: inline-block;
+  font-size: 20px;
+  border-bottom: 4px solid #7CDCCE;
+  padding-bottom: 2px;
+}
+</style>
+
+<script>
+$(function () {
+    // メール一斉送信
+    var $modal = $("#myModal");
+    $(".js-open-send-modal").on("click", function (e) {
+        e.preventDefault();
+
+        var id   = $(this).data('id');
+        var name = $(this).data('name');
+        var code = $(this).data('code');
+        var url = "/api/consultationreplymails/" + code;
+
+        $modal.find('.js-main-reply-history').html('');
+        $.getJSON(url, function(data){
+            var list = data.data.map(function(value) {
+                var li = '<li>';
+                li += '<table class="sample_01" style="width: 100%;">';
+                li += '<tr>';
+                li += '<th>返信日時</th>';
+                li += '<td>' + value.created_at + '</td>';
+                li += '</tr>';
+                li += '<tr>';
+                li += '<th>件名</th>';
+                li += '<td>' + value.subject + '</td>';
+                li += '</tr>';
+                li += '<tr>';
+                li += '<th>本文</th>';
+                li += '<td>' + value.body.replace(/[\n\r]/g, "<br />") + '</td>';
+                li += '</tr>';
+                li += '<tr>';
+                li += '<th>送信元</th>';
+                li += '<td>' + value.reply_name + '</td>';
+                li += '</tr>';
+                li += '</table>';
+                li += '<hr />';
+                li += '</li>';
+                return li;
+            }).join('');
+            $modal.find('.js-main-reply-history').html('<ul>' + list + '</ul>');
+        });
+
+        $modal.find('.js-id').text(id);
+        $modal.find('.js-name').text(name);
+        $modal.find('[name="code"]').val(code);
+
+        $modal.modal({
+            "backdrop": "static",
+            "keyboard": true,
+            "show": true
+        });
+    })
+    $modal.find(".send-btn").on("click", function (e) {
+        var params = {};
+        params.code = $modal.find("[name='code']").val();
+        params.subject = $modal.find("[name='subject']").val();
+        params.body = $modal.find("[name='body']").val();
+
+        if (!params.subject) {
+            ts.error("件名が入力されておりません。");
+            return true;
+        }
+
+        if (!params.body) {
+            ts.error("本文が入力されておりません。");
+            return true;
+        }
+
+        if (!confirm('メールを送信します。よろしいですか？')) {
+            return true;
+        }
+
+        var url = "/api/consultationreplymails/send";
+
+        ajax.post(url, params, function (data) {
+            ts.success("送信完了しました", function () {
+                $modal.find("[name='code']").val('');
+                $modal.find("[name='subject']").val('');
+                $modal.find("[name='body']").val('');
+                $modal.find("[name='email']").val('');
+
+                $modal.modal('hide');
+            });
+        });
+    });
+});
+</script>

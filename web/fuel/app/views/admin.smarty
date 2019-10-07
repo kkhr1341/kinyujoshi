@@ -69,6 +69,12 @@
               </li>
               {/if}
 
+              {if (Auth::has_access('consultations.read'))}
+                <li>
+                  <a href="/admin/consultations">相談内容の管理</a>
+                </li>
+              {/if}
+
               <li>
                 <a href="/admin/mails">メールテンプレート一覧</a>
               </li>

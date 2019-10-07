@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.inquiry-counter {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.inquiry-counter .form-btn button {
+  background: #f79999;
+  padding: 12px 80px;
+}
+.inquiry-counter-title {
+  text-align: center;
+}
+.inquiry-counter-title .counter-sub-title {
+  font-size: 13px;
+  line-height: 24px;
+  padding: 12px 50px;
+}
+.inquiry-counter-title .counter-main-title {
+  color: #77cbc0;
+  font-size: 26px;
+  line-height: 36px;
+}
+.inquiry-counter-el .inquiry-counter-el-description {
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.inquiry-counter-el {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.inquiry-counter-el ul {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inquiry-counter-el li {
+  width: calc(25.8% - 30px);
+  margin-right: 30px;
+}
+.inquiry-counter-el li:last-child {
+  margin-right: 0px;
+}
+.inquiry-counter-el li .img-box {
+  width: 100%;
+  height: 150px;
+}
+.inquiry-counter-el li p {
+  text-align: center;
+  margin-top: 8px;
+}
+.inquiry-counter .regist-add-form-edit-title {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* きんゆう女子。が大事にしていること */
+.joshikai-policy {
+}
+.joshikai-policy-container {
+  position: relative;
+}
+.joshikai-policy-el {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 80px 0px;
+}
+.login-message .message-block .main-message {
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  padding-top: 20px;
+  text-align: center;
+}
+.joshikai-policy-el .main-message {
+  text-align: center;
+}
+.joshikai-policy-el .inquiry-counter-title {
+  margin-bottom: 32px;
+}
+.joshikai-policy-container .kingyo-icon {
+  position: absolute;
+  width: 250px;
+  right: 50px;
+  bottom: 0;
+}
+
+.promise-container {
+  display: flex;
+}
+.promise-container .img-box {
+  width: 30%;
+  height: 400px;
+  margin-right: 5%;
+}
+.promise-el {
+  width: 65%;
+}
+.promise-el-title {
+  font-size: 16px;
+  padding-bottom: 12px;
+  position: relative;
+  padding: 16px 16px 16px 72px;
+  background: #cfece5;
+  transition: .5s;
+}
+.promise-el li {
+  margin-bottom: 20px;
+}
+.promise-el li:last-child {
+  margin-bottom: 0px;
+}
+.promise-el .description{
+  display: none;
+  margin-bottom: 32px;
+  padding: 12px;
+}
+.promise-el-title span.count {
+  font-size: 28px;
+  line-height: 20px;
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  color: #77cbc0;
+  position: absolute;
+  left: 18px;
+}
+.promise-el-title span.link-btn {
+  font-size: 24px;
+  line-height: 14px;
+  font-family: 'Cinzel', serif;
+  color: #77cbc0;
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  transform: rotate(-90deg);
+}
+.active .promise-el-title span.link-btn {
+      bottom: 25px;
+  transform: rotate(-270deg);
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スマートフォン
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 1024px) {
+
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  320px以下
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 768px) {
+  .inquiry-counter {
+    width: 88%;
+    padding-top: 40px;
+  }
+  .inquiry-counter .regist-add-form-edit-title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .inquiry-counter-title .counter-main-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .form-control {
+    background: #f9f9f9;
+  }
+  .joshikai-policy-el {
+    width: 88%;
+    padding: 40px 0px 80px;
+  }
+  .joshikai-policy-el-2 {
+    padding: 40px 0px 50px;
+  }
+  .joshikai-policy-container .kingyo-icon {
+    position: absolute;
+    width: 110px;
+    right: 20px;
+    bottom: 0;
+  }
+  .promise-container {
+    display: block;
+  }
+  .promise-container .img-box {
+    width: 100%;
+    height: 200px;
+  }
+  .promise-el {
+    width: 100%;
+    margin-top: 32px;
+  }
+  .joshikai-policy-el .inquiry-counter-title {
+    margin-bottom: 24px;
+  }
+  .promise-el-title {
+    font-size: 12px;
+    padding-bottom: 12px;
+    position: relative;
+    padding: 12px 40px 12px 50px;
+    background: #cfece5;
+  }
+  .promise-el .description {
+    font-size: 11px;
+  }
+  .promise-el-title span.count {
+    font-size: 22px;
+    line-height: 20px;
+    font-family: 'Cinzel', serif;
+    font-style: italic;
+    color: #77cbc0;
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    margin-top: -10px;
+  }
+  .promise-el-title span.link-btn {
+    font-size: 18px;
+    height: 20px;
+    font-family: 'Cinzel', serif;
+    color: #77cbc0;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -4px;
+  }
+  .active .promise-el-title span.link-btn {
+    bottom: auto;
+    top: 50%;
+    right: 10px;
+    margin-top: -14px;
+  }
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  タブレットのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 480px) and (max-width:1024px) {
+
+
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  PCのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 1025px) {
+
+.promise-el-title:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+
+
+}
+
+
+

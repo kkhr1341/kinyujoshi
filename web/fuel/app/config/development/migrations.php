@@ -138,6 +138,8 @@ return array(
         129 => '137_add_username_to_authors',
         130 => '138_create_user_blogs',
         131 => '139_create_blog_user_blogs',
+        132 => '140_create_consultations',
+        133 => '141_create_consultation_reply_mails',
       ),
     ),
     'module' => 

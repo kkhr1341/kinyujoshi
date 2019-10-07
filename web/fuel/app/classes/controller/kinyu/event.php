@@ -61,9 +61,9 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
 
     public function action_detail($code)
     {
-        if (Input::get('preview', '') != 1 && !$this->viewable($code)) {
-            throw new HttpNoAccessException;
-        }
+//        if (Input::get('preview', '') != 1 && !$this->viewable($code)) {
+//            throw new HttpNoAccessException;
+//        }
         // 最新を取得
         $this->data['events'] = Events::all('kinyu', '/kinyu/event/', 1, 3, 5, 0);
         $this->data['event'] = Events::getByCode('events', $code);
@@ -95,6 +95,8 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->template->description = $this->data['event']['title'];
         $this->template->urlcode = $this->data['event_row']['code'];
+        $this->data['viewable'] = $this->viewable($code);
+        $this->data['after_login_url'] = \Uri::base() . 'joshikai/' . $this->data['event']['code'];
 
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -364,5 +366,27 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
             return false;
         }
         return true;
+    }
+
+        // お守りページ
+    public function action_event_rule()
+    {
+        $this->template->title = '女子会のお約束ごと｜きんゆう女子。';
+        $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
+        $this->template->today = date("Y年n月");
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->kinyu_event_notes = View::forge('kinyu/event/notes.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        } else {
+            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        }
+
+        $this->template->contents = View::forge('kinyu/event/event_rule.smarty', $this->data);
     }
 }

@@ -40,7 +40,7 @@
 	<script type="text/javascript" src="/assets/js/kinyu/swiper.min.js?1516966719"></script>
 	<script type="text/javascript" src="/assets/js/kinyu/jquery.bxslider.min.js?1516966719"></script>
 
-    <script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyCZqIv_Xh0iQ1XOI1n1Q821t94SNTf0oeQ"></script>
+    <script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyA4GboRExtWuyb6-2LomttKhak1A2qUkpM"></script>
     <script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
     <script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
     <meta name="google-site-verification" content="bt-Z1O8HWo_rQ3TlPedxm8q3q1xV9ky7hWlxAqisA2w" />

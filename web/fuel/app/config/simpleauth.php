@@ -102,6 +102,7 @@ return array(
             'events' => array('read', 'create', 'edit', 'delete'),
             'applications' => array('read', 'create', 'edit', 'delete'),
             'inquiries' => array('read'),
+            'consultations' => array('read'),
             'news' => array('read', 'create', 'edit', 'delete', 'publish'),
             'registlist' => array('read', 'create'),
             'registreminder' => array('send'),
