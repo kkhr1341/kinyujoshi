@@ -5036,6 +5036,7 @@ input::-webkit-input-placeholder {
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 1002;
 }
 .member-icon img {
   width: 150px;
