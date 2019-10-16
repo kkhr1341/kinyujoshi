@@ -2108,6 +2108,10 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 .joshikai-main-el {
   padding: 60px 0px;
 }
+.joshikai-main-el .kinyu-top-banner-area {
+  width: 720px;
+  margin-top: 40px;
+}
 .kinyu-event-list {
   border-bottom: 1px solid #e5e5e5;
 }
