@@ -40,24 +40,27 @@
           <div class="promise-el">
             <ul>
               <li>
-                <p class="promise-el-title fs-mincho"><span class="count">01</span>みんなが自分らしい生活を送れるようになることを目指しています。<span class="link-btn">〈</span></p>
+                <p class="promise-el-title"><span class="count">01</span>みんなが自分らしい生活を送れるようになることを目指しています。<span class="link-btn">〈</span></p>
                 <p class="description">きんゆう女子。のコンセプトは、「前向きに経済に関わることで、おかねにとらわれず自由で等身大に生きる」ことです。みなさま一人一人が「おかね」に関するリテラシーを向上させ、自分らしい生活を送れるようになることを目指したコミュニティです。</p>
               </li>
               <li>
-                <p class="promise-el-title fs-mincho"><span class="count">02</span>営業・勧誘行為はご遠慮ください。<span class="link-btn">〈</span></p>
+                <p class="promise-el-title"><span class="count">02</span>営業・勧誘行為はご遠慮ください。<span class="link-btn">〈</span></p>
                 <p class="description">どなたでも安心して女子会に参加することができるように、ゲストや参加者同士での営業・勧誘行為は固くお断りしております。</p>
               </li>
               <li>
-                <p class="promise-el-title fs-mincho"><span class="count">03</span>会社としての見学・視察はご遠慮ください。<span class="link-btn">〈</span></p>
+                <p class="promise-el-title"><span class="count">03</span>会社としての見学・視察はご遠慮ください。<span class="link-btn">〈</span></p>
                 <p class="description">きんゆう女子。会は、個人のための女子会です。企業としてのの見学・視察目的などでのご参加はご遠慮ください。</p>
               </li>
               <li>
-                <p class="promise-el-title fs-mincho"><span class="count">04</span>特定の企業の商品への勧誘はしていません。<span class="link-btn">〈</span></p>
+                <p class="promise-el-title"><span class="count">04</span>特定の企業の商品への勧誘はしていません。<span class="link-btn">〈</span></p>
                 <p class="description">きんゆう女子。では、特定の企業の商品の勧誘やアフィリエイトと呼ばれる成果報酬型の広告宣伝を行わないポリシーです。その代わりに女子会の参加費をいただいたり、みなさまの声や気持ちをアンケートなどで集約することで匿名で企業さまへ提供することがあります。真摯にサービス提供に取り組まれている企業を積極的に応援し、今後の経済や金融業界の発展に寄与することで、みなさまが安心して交流・勉強する場を提供しています。</p>
               </li>
             </ul>
           </div>
         </div> 
+        <div class="policy-link-block">
+        <a class="link-to" href="/consultation">もし嫌なことがあった時は...</a>
+      </div>
       </div>
     </div>
 

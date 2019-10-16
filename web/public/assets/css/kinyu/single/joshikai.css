@@ -103,7 +103,7 @@
   width: 65%;
 }
 .promise-el-title {
-  font-size: 16px;
+  font-size: 15px;
   padding-bottom: 12px;
   position: relative;
   padding: 16px 16px 16px 72px;
@@ -120,6 +120,8 @@
   display: none;
   margin-bottom: 32px;
   padding: 12px;
+  font-size: 13px;
+  line-height: 24px;
 }
 .promise-el-title span.count {
   font-size: 28px;
@@ -144,7 +146,30 @@
       bottom: 25px;
   transform: rotate(-270deg);
 }
-
+.policy-link-block {
+  width: 100%;
+  margin: 0;
+  font-weight: normal;
+  max-width: 400px;
+  background-color: #8ddcd1;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: .5s;
+}
+.policy-link-block a {
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+.policy-link-block a:after {
+  content: "〉";
+  position: absolute;
+  right: 4px;
+  font-size: 18px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマートフォン
@@ -163,7 +188,7 @@
     padding-top: 40px;
   }
   .inquiry-counter .regist-add-form-edit-title {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 22px;
   }
   .inquiry-counter-title .counter-main-title {
@@ -237,6 +262,17 @@
     right: 10px;
     margin-top: -14px;
   }
+  .policy-link-block {
+    max-width: 82%;
+    margin-top: 32px;
+  }
+  .policy-link-block a {
+    font-size: 12px;
+    padding: 12px 8px;
+  }
+  .policy-link-block a:after {
+    font-size: 13px;
+  }
 }
 
 
@@ -255,8 +291,8 @@
   PCのみ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (min-width: 1025px) {
-
-.promise-el-title:hover {
+.promise-el-title:hover,
+.policy-link-block:hover {
   opacity: .5;
   cursor: pointer;
 }
