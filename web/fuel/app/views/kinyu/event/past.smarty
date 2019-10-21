@@ -28,7 +28,7 @@
           {foreach from=$events.datas key="key" item=event name=loopname}
           {$fooo = $event.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-          
+
           <li>
             {if $event.event_category == "女子会"}
               <div class="bg-joshikai"></div>
@@ -41,7 +41,7 @@
               <a href="/joshikai/{$event.code}">
                 <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
                 </div>
-                
+
                 {if $event.event_category == "女子会"}
                   <div class="kinyu-event-list-right">
                 {else if $event.event_category == "スペシャル"}
@@ -98,10 +98,10 @@
             </div>
           </div>
         </div>
-        
+
         {*
         <div class="joshikai-held-area">
-          <p class="joshikai-held-area-title">ー 主に女子会を開催している場所 ー</p>          
+          <p class="joshikai-held-area-title">ー 主に女子会を開催している場所 ー</p>
           <div class="joshikai-held-el-block">
             <div class="joshikai-held-el sarvador-held clear">
               <div class="img-block" style="background:url(/images/event/joshikai-held-CAFE_SARVADOR_BUSINESS_SALON.jpg) center center / cover no-repeat"></div>
@@ -149,14 +149,14 @@
               <div class="text-area"><p>東証ひみつの大女子会♪ 2018</p></div>
             </a>
           </li>
-          
+
           <li>
             <a href="/school_jpx02" target="_blank">
               <div class="bg-area" style="background:url(/images/content/school_public/og-school_public02.jpg) left top / cover no-repeat"></div>
               <div class="text-area"><p>第2回 きんゆう女子。学院</p></div>
             </a>
           </li>
-          
+
           <li>
             <a href="http://ac.nikkeibp.co.jp/2017z1105finw/" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special7.jpg) left center / cover no-repeat"></div>
@@ -192,12 +192,12 @@
             </a>
           </li>
 
-          <li>
+          <!-- <li>
             <a href="/conference" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special1.png) center center / cover no-repeat"></div>
               <div class="text-area"><p>第1回 週末投資宣言♪</p></div>
             </a>
-          </li>
+          </li> -->
 
           <li>
             <a href="/school" target="_blank">
@@ -211,5 +211,3 @@
     </div>
   </div>
 </div>
-
-
