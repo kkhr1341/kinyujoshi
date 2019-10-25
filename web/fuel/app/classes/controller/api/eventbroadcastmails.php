@@ -2,7 +2,7 @@
 
 use \Model\Applications;
 use \Model\EventMails;
-use \Model\EventRemindMailTemplates;
+use \Model\Events;
 
 class Controller_Api_Eventbroadcastmails extends Controller_Apibase
 {
@@ -16,16 +16,15 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
             $error_mails = array();
 
             // 参加者に一斉送信
+            $event = Events::getByCode('events', \Input::post('code'));
             $applications = Applications::get_applications_by_code(\Input::post('code'));
             foreach ($applications as $application) {
                 try {
-                    EventRemindMailTemplates::send(
-                        $application['email'],
-                        \Input::post('subject'),
-                        \Input::post('body'),
-                        $application['name'],
-                        \Input::post('code')
-                    );
+                    $this->send($application['email'], \Input::post('subject'), \Input::post('body'), array(
+                        'event_title' => $event['title'],
+                        'event_place' => $event['place'],
+                        'name' => $application['name'],
+                    ));
                     EventMails::sended($application['code'], $application['email']);
                 }
                 catch(\EmailValidationFailedException $e)
@@ -40,18 +39,11 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
                 }
             }
 
-            // 運営にも一通同じ内容で送信
-            EventRemindMailTemplates::send(
-                'cs@kinyu-joshi.jp',
-                \Input::post('subject'),
-                \Input::post('body'),
-                'てすと太郎',
-                \Input::post('code')
-            );
-
-//            if($error_mails) {
-//                EventRemindMailTemplates::notify($error_mails);
-//            }
+            $this->send('cs@kinyu-joshi.jp', \Input::post('subject'), \Input::post('body'), array(
+                'event_title' => $event['title'],
+                'event_place' => $event['place'],
+                'name' => 'てすと太郎',
+            ));
 
             return $this->ok();
         } catch (\Exception $e) {
@@ -65,16 +57,30 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
             return $this->error('login');
         }
         try {
-            EventRemindMailTemplates::send(
-                Input::post('email'),
-                \Input::post('subject'),
-                \Input::post('body'),
-                'てすと太郎',
-                \Input::post('code')
-            );
+            $event = Events::getByCode('events', \Input::post('code'));
+            $this->send(Input::post('email'), \Input::post('subject'), \Input::post('body'), array(
+                'event_title' => $event['title'],
+                'event_place' => $event['place'],
+                'name' => 'てすと太郎',
+            ));
             return $this->ok();
         } catch (\Exception $e) {
             return $this->error('送信に失敗しました');
         }
+    }
+
+    private function send($mail, $subject, $body, $options=array())
+    {
+        $email = \Email::forge('jis');
+        $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
+        $email->subject($subject);
+
+        foreach ($options as $key => $value) {
+            $body = str_replace('{% ' . $key . ' %}', $value, $body);
+        }
+
+        $email->body($body);
+        $email->to($mail); //送り先
+        $email->send();
     }
 }
