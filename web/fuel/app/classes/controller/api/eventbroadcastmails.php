@@ -23,6 +23,7 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
                     $this->send($application['email'], \Input::post('subject'), \Input::post('body'), array(
                         'event_title' => $event['title'],
                         'event_place' => $event['place'],
+                        'event_url' => $event['code'] ? \Uri::base(false) . 'joshikai/' . $event['code'] : '',
                         'name' => $application['name'],
                     ));
                     EventMails::sended($application['code'], $application['email']);
@@ -42,6 +43,7 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
             $this->send('cs@kinyu-joshi.jp', \Input::post('subject'), \Input::post('body'), array(
                 'event_title' => $event['title'],
                 'event_place' => $event['place'],
+                'event_url' => $event['code'] ? \Uri::base(false) . 'joshikai/' . $event['code'] : '',
                 'name' => 'てすと太郎',
             ));
 
@@ -61,6 +63,7 @@ class Controller_Api_Eventbroadcastmails extends Controller_Apibase
             $this->send(Input::post('email'), \Input::post('subject'), \Input::post('body'), array(
                 'event_title' => $event['title'],
                 'event_place' => $event['place'],
+                'event_url' => $event['code'] ? \Uri::base(false) . 'joshikai/' . $event['code'] : '',
                 'name' => 'てすと太郎',
             ));
             return $this->ok();
