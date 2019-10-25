@@ -578,6 +578,7 @@ $(function(){
 
         ajax.post(url, params, function(data){
             ts.success("下書き保存しました");
+            location.href = "/admin/joshikai/edit/" + data.data.code;
         })
     });
 
