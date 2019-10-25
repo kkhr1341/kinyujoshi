@@ -54,6 +54,12 @@
                     {$blog.title}
                     {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
                 </h3>
+                <div class="kinyu-top-list-author">
+                  <img class="kinyu-top-list-author-thumbnail" src="https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/131057614037576/images/20190122145912image.jpg">
+                  <div class="kinyu-top-list-author-info">
+                    <div class="kinyu-top-list-author-info-name" style="">きんゆう女子。編集部</div>
+                  </div>
+                </div>
               </div>
             </a>
           </li>
