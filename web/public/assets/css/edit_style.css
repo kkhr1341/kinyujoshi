@@ -5065,6 +5065,7 @@ input::-webkit-input-placeholder {
   right: -40px;
   bottom: 0;
   width: 120px;
+  opacity: .8!important;
 }
 
 /* マイページでできること */
