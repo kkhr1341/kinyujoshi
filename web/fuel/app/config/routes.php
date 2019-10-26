@@ -140,6 +140,9 @@ return array(
 	'contents/cashless' => 'kinyu/withcorporate/paypay',
 	'contents/cashless/article01' => 'kinyu/withcorporate/article01',
 	'contents/cashless/article02' => 'kinyu/withcorporate/article02',
+	'contents/cashless/article03' => 'kinyu/withcorporate/article03',
+	'contents/cashless/article04' => 'kinyu/withcorporate/article04',
+	'contents/cashless/article05' => 'kinyu/withcorporate/article05',
 
 	'blog/page/(:any)'   => 'kinyu/blog/page/index/$1',
 	'event/page/(:any)'   => 'kinyu/event/page/index/$1',

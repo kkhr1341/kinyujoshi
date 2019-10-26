@@ -22,7 +22,7 @@
           {$fooo = $blog.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-          <li{if $blog.pr == 1} class="pr"{/if}>
+          <li {if $blog.pr == 1} class="pr"{/if}>
             <a href="/report/{$blog.code}">
               <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
              　 {if $blog.new == true}
@@ -30,9 +30,10 @@
            　　　{/if}
            　　　{if $blog.pr == 1}
            　　　  <!-- PR用イメージ挿入箇所 -->
-                       <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+                  <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
            　　　{/if}
-          　　 </div>
+          　  </div>
+
               <div class="text-box">
                 <div class="kinyu-top-list-kind">
                   {if $blog.kind == "女子会レポート"}
@@ -49,7 +50,10 @@
                     <p>レポート</p>
                   {/if}
                 </div>
-                <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+                <h3 class="kinyu-top-list-title">
+                    {$blog.title}
+                    {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+                </h3>
               </div>
             </a>
           </li>
@@ -58,6 +62,7 @@
         {/foreach}
       </ul>
     </div>
+
     <div class="blog-pagenation tx-center">
       {$pagination}
     </div>
@@ -85,8 +90,6 @@
         $('.kinyu-header-top').width(ggg);
       });
     </script>
-
-
 
   </div>
 </div>

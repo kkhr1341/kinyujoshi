@@ -11,6 +11,11 @@ use \Model\Payment\Payjp;
 
 class Controller_Kinyu_Event extends Controller_Kinyubase
 {
+
+    const AUTHENTICATION_USER = 'kinyu-event';
+
+    const AUTHENTICATION_PASSWORD = 'iYszQGhE';
+
     public function action_index($page = 1)
     {
         $this->data['events'] = Events::all('event', '/event/', $page, 2, 20, 0);
@@ -73,15 +78,18 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
             if ($this->data['event']['authentication_user'] && $this->data['event']['authentication_password']) {
                 $authentication_user     = $this->data['event']['authentication_user'];
                 $authentication_password = $this->data['event']['authentication_password'];
+            } else {
+                $authentication_user     = self::AUTHENTICATION_USER;
+                $authentication_password = self::AUTHENTICATION_PASSWORD;
+            }
 
-                switch (true) {
-                    case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-                    case $_SERVER['PHP_AUTH_USER'] !== $authentication_user:
-                    case $_SERVER['PHP_AUTH_PW'] !== $authentication_password:
-                        header('WWW-Authenticate: Basic realm="Enter username and password."');
-                        header('Content-Type: text/plain; charset=utf-8');
-                        die('このページを見るにはログインが必要です');
-                }
+            switch (true) {
+                case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+                case $_SERVER['PHP_AUTH_USER'] !== $authentication_user:
+                case $_SERVER['PHP_AUTH_PW'] !== $authentication_password:
+                    header('WWW-Authenticate: Basic realm="Enter username and password."');
+                    header('Content-Type: text/plain; charset=utf-8');
+                    die('このページを見るにはログインが必要です');
             }
         }
         $username = \Auth::get('username');
@@ -345,9 +353,9 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     private function viewable($code)
     {
         $event = Events::getByCode('events', $code);
-        if ($event['status'] == 0) {
-            return false;
-        }
+//        if ($event['status'] == 0) {
+//            return false;
+//        }
         if ($event['specific_link']) {
             return false;
         }

@@ -83,6 +83,16 @@ FUEL_ENV=production php oil refine regist_mails:resend_nomembers
 FUEL_ENV=production php oil refine regist_mails:send_member {ID}
 ```
 
+#### イベントのリマインドメールを送信
+```
+FUEL_ENV=production php oil refine event_remind_mails
+```
+
+#### イベントのサンクスメールを送信
+```
+FUEL_ENV=production php oil refine event_thanks_mails
+```
+
 ### ローカル
 
 #### パスワード送信してないユーザーにリマインドメールを送信 （送信済のメンバーには送らない）
@@ -95,9 +105,14 @@ docker-compose run --rm web php oil refine regist_mails:send_nomembers
 docker-compose run --rm web php oil refine regist_mails:resend_nomembers
 ```
 
-#### ユーザーIDを指定してリマインドメールを送信 
+#### イベントのリマインドメールを送信
 ```
-docker-compose run --rm web php oil refine regist_mails:send_member {ID}
+docker-compose run --rm web php oil refine event_remind_mails
+```
+
+#### イベントのサンクスメールを送信
+```
+docker-compose run --rm web php oil refine event_thanks_mails
 ```
 
 #### 管理者権限に変更するコマンド

@@ -391,6 +391,57 @@ footer,
   left: 12px;
   bottom: 6px;
 }
+/* content03 */
+.cashlesslife-el03 .text-box .illust1 {
+	position: absolute;
+  width: 110px;
+  right: 28px;
+  top: 22px;
+  opacity: .7;
+}
+.cashlesslife-el03 .text-box .illust2 {
+  position: absolute;
+  width: 115px;
+  left: 12px;
+  bottom: 6px;
+  opacity: .7;
+}
+/* content04 */
+.cashlesslife-el04 .text-box .illust1 {
+	position: absolute;
+  width: 120px;
+	right: 20px;
+  top: 16px;
+  opacity: .7;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+}
+.cashlesslife-el04 .text-box .illust2 {
+  position: absolute;
+  width: 90px;
+  left: 38px;
+  bottom: 0px;
+  opacity: .7;
+}
+/* content05 */
+.cashlesslife-el05 .text-box .illust1 {
+	position: absolute;
+  width: 100px;
+	right: 20px;
+  top: 16px;
+  opacity: .7;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+}
+.cashlesslife-el05 .text-box .illust2 {
+  position: absolute;
+  width: 170px;
+  left: 17px;
+  bottom: 11px;
+  opacity: .7;
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+}
 .cashlesslife-list .text-box .title-epsode {
 	width: 150px;
 }
@@ -625,6 +676,15 @@ footer,
 .kinjo-member-wallet .img-block.one-block img {
 	width: 100%;
 }
+.kinjo-member-wallet .wallet-description {
+	text-align: center;
+	border-right: 1px solid #283248;
+	border-left: 1px solid #283248;
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 32px;
+	padding: 12px 0px;
+}
 
 /* h2.タイトル */
 .article-main-title {
@@ -731,7 +791,7 @@ footer,
 }
 .article-contents-title p {
 	font-size: 28px;
-	line-height: 28px;
+	line-height: 40px;
 	letter-spacing: 4px;
 }
 .article-contents-title p span {
@@ -769,6 +829,10 @@ footer,
 	font-size: 14px;
 	line-height: 24px;
 }
+.article-contents-el-description a {
+	font-size: 14px;
+	line-height: 24px;
+}
 .article-contents-el.img-right .img-box {
 	float: right;
 }
@@ -793,6 +857,7 @@ footer,
 	float: none;
 	padding-left: 0px;
 	margin-top: 40px;
+	position: relative;
 }
 .kinjo-logo {
 	width: 250px;
@@ -857,6 +922,17 @@ footer,
 }
 .shop-list-block ul li {
 	margin-bottom: 24px;
+}
+.shop-list-block ul li.shop-list-heading {
+	display: inline-block;
+	border-top: 1px solid #9c9c9c;
+	margin-bottom: 16px;
+    margin-top: 16px;
+    padding-top: 12px;
+}
+.shop-list-block ul li.shop-list-heading p {
+	font-size: 16px;
+	color: #9c9c9c;
 }
 .shop-list-block ul li .shop-name {
 	font-size: 15px;
@@ -946,6 +1022,136 @@ footer,
   margin-left: -120px;
 }
 
+/* イラスト - article3 */
+.article03-block .illust-01 {
+	opacity: .7;
+	width: 100px;
+}
+.article03-block .illust-03 {
+	opacity: .7;
+	width: 120px;
+	bottom: -33px;
+	right: -50px;
+	transform:rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+.article03-block .illust-04 {
+	width: 140px;
+	left: auto;
+    right: 0;
+}
+.article03-block .illust-05 {
+	width: 100px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
+.article03-block .illust-06 {
+	width: 140px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
+
+/* イラスト - article4 */
+.article04-block .illust-01 {
+	opacity: .7;
+	width: 110px;
+	transform:rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+}
+.article04-block .illust-02 {
+	position: absolute;
+	opacity: .7;
+	width: 80px;
+    bottom: -27px;
+    right: -33px;
+	transform:rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+.article04-block .illust-03 {
+	opacity: .7;
+	width: 90px;
+    bottom: -27px;
+    right: -33px;
+	transform:rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+.article04-block .illust-04 {
+	opacity: .7;
+	width: 120px;
+	left: auto;
+    right: 0;
+}
+.article04-block .illust-05 {
+	opacity: .7;
+	width: 100px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
+.article04-block .illust-06 {
+	width: 120px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
+
+/* イラスト - article5 */
+.article05-block .illust-01 {
+	opacity: .7;
+	width: 90px;
+	transform:rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	-ms-transform: rotate(20deg);
+}
+.article05-block .illust-02 {
+	position: absolute;
+	opacity: .7;
+	width: 120px;
+    bottom: -27px;
+    right: -33px;
+}
+.article05-block .illust-03 {
+	opacity: .7;
+    width: 150px;
+    bottom: 0px;
+    right: auto;
+    left: 33%;
+	transform:rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+}
+.article05-block .illust-04 {
+	opacity: .7;
+	width: 150px;
+	left: auto;
+    right: 0;
+    bottom: -30px;
+}
+.article05-block .illust-05 {
+	opacity: .7;
+	width: 200px;
+	left: auto;
+    right: 0;
+    bottom: -12px;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   モバイル
@@ -1243,6 +1449,10 @@ footer,
   font-size: 12px;
   line-height: 20px;
 }
+.article-contents-el-description a {
+  font-size: 12px;
+  line-height: 20px;
+}
 .article-contents-el {
    margin-bottom: 50px;
 }
@@ -1257,7 +1467,7 @@ footer,
 .article-fix-text {
   padding-top: 36px;
   font-size: 11px;
-  width: 92%;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 36px;
 }
@@ -1311,7 +1521,7 @@ footer,
   margin-left: -75px;
 }
 .profile-block {
-	width: 88%;
+	width: 100%;
 	padding: 32px;
 	margin-bottom: 60px;
 }
@@ -1341,7 +1551,7 @@ footer,
 	font-size: 11px;
 }
 .kinjo-member-wallet {
-	width: 88%;
+	width: 100%;
 	margin-bottom: 60px;
 }
 .kinjo-member-wallet-titleimg {
@@ -1427,6 +1637,45 @@ footer,
   left: -20px;
   bottom: -17px;
 }
+/* content3 */
+.cashlesslife-el03 .text-box .illust1 {
+	position: absolute;
+  width: 80px;
+  right: -12px;
+  top: 16px;
+}
+.cashlesslife-el03 .text-box .illust2 {
+  position: absolute;
+  width: 80px;
+  left: -20px;
+  bottom: -17px;
+}
+/* content4 */
+.cashlesslife-el04 .text-box .illust1 {
+	position: absolute;
+  width: 90px;
+  right: -12px;
+  top: 10px;
+}
+.cashlesslife-el04 .text-box .illust2 {
+  position: absolute;
+  width: 60px;
+  left: -7px;
+  bottom: -19px;
+}
+/* content5 */
+.cashlesslife-el05 .text-box .illust1 {
+	position: absolute;
+  width: 70px;
+  right: -12px;
+  top: 0px;
+}
+.cashlesslife-el05 .text-box .illust2 {
+  position: absolute;
+	width: 120px;
+  left: -7px;
+  bottom: -10px;
+}
 
 
 .cashlesslife-list .text-box .title-epsode {
@@ -1496,6 +1745,8 @@ footer,
 .illust-06-sp-text {
 	padding-right: 62px;
 }
+
+/* イラスト - article02 */
 .article02-block .illust-03 {
   width: 65px;
 }
@@ -1505,6 +1756,90 @@ footer,
 	top: auto;
 	bottom: -56px;
 }
+
+/* イラスト - article03 */
+.article03-block .illust-01 {
+	width: 70px!important;
+}
+.article03-block .illust-03 {
+	width: 90px;
+    bottom: -26px;
+    right: -35px;
+}
+.article03-block .illust-04 {
+	top: auto;
+	bottom: -40px;
+	width: 90px;
+}
+.article03-block .illust-05 {
+    bottom: auto;
+    top: -18px;
+    width: 70px;
+}
+
+/* イラスト - article04 */
+.article04-block .illust-01 {
+	width: 70px!important;
+}
+.article04-block .illust-02 {
+	width: 60px;
+	bottom: -24px;
+    right: -7px;
+}
+.article04-block .illust-03 {
+    width: 80px;
+    bottom: -48px;
+    right: -19px;
+}
+.article04-block .illust-04 {
+    top: -81px;
+    bottom: auto;
+    width: 80px;
+}
+.article04-block .illust-05 {
+    bottom: auto;
+    top: -76px;
+    width: 70px;
+}
+
+/* イラスト - article05 */
+.article05-block .illust-01 {
+	width: 60px!important;
+	transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+}
+.article05-block .illust-02 {
+	width: 80px;
+	bottom: -45px;
+    right: -7px;
+}
+.article05-block .illust-03 {
+    width: 120px;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    top: -50px;
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+}
+.article05-block .illust-04 {
+    top: -53px;
+    bottom: auto;
+    width: 100px;
+}
+.article05-block .illust-05 {
+	bottom: auto;
+    top: -56px;
+    width: 120px;
+}
+
+
 .article-illust-fix-01 {
 	padding-right: 120px;
 }
@@ -1528,6 +1863,22 @@ footer,
   bottom: -60px;
   margin-left: 0px;
   right: 0px;
+}
+.article03-block .illust-06 {
+	width: 110px;
+	right: -10px;
+	top: -5px;
+}
+.shop-list-block ul li.shop-list-heading p {
+	font-size: 14px;
+}
+.kinjo-member-wallet .wallet-description {
+    text-align: left;
+    width: 92%;
+    margin-top: 24px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    font-size: 11px;
 }
 
 }

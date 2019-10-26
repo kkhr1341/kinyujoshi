@@ -17,19 +17,19 @@
 
                     <div class="radio_box clear">
                         <p class="form-group-sub"><span style="color:red;">＊</span>"女子会"は、『いつもの女子会』に。"その他"は、『スペシャル女子会』になります。</p>
-                        <input type="radio" value="いつもの女子会" name="event_category" id="event1" class="form-radio" placeholder="" {if $events.event_category == "いつもの女子会"}checked{/if}>
+                        <input type="radio" value="いつもの女子会" name="event_category" id="event1" class="form-radio" placeholder="" {if $events.event_category|default:'' == "いつもの女子会"}checked{/if}>
                         <label for="event1" class="form-long">いつもの女子会</label>
 
-                        <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="" {if $events.event_category == "スペシャル"}checked{/if}>
+                        <input type="radio" value="スペシャル" name="event_category" id="event2" class="form-radio" placeholder="" {if $events.event_category|default:'' == "スペシャル"}checked{/if}>
                         <label for="event2" class="form-long">スペシャル</label>
 
-                        <input type="radio" value="コラボ" name="event_category" id="event3" class="form-radio" placeholder="" {if $events.event_category == "コラボ"}checked{/if}>
+                        <input type="radio" value="コラボ" name="event_category" id="event3" class="form-radio" placeholder="" {if $events.event_category|default:'' == "コラボ"}checked{/if}>
                         <label for="event3" class="form-long">コラボ</label>
 
-                        <input type="radio" value="公立きん" name="event_category" id="event4" class="form-radio" placeholder="" {if $events.event_category == "公立きん"}checked{/if}>
+                        <input type="radio" value="公立きん" name="event_category" id="event4" class="form-radio" placeholder="" {if $events.event_category|default:'' == "公立きん"}checked{/if}>
                         <label for="event4" class="form-long">きん学院</label>
 
-                        <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="" {if $events.event_category == "私立きん"}checked{/if}>
+                        <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="" {if $events.event_category|default:'' == "私立きん"}checked{/if}>
                         <label for="event5" class="form-long">私:きん学院</label>
                     </div>
                 </div>
@@ -37,10 +37,10 @@
                 <div class="form-group mb50">
                     <label class="form-group-event-label">メンバー限定女子会</label>
                     <div class="radio_box clear">
-                        <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="" {if $events.secret == "1"}checked{/if}>
+                        <input type="radio" value="1" name="secret" id="secret01" class="form-radio" placeholder="" {if $events.secret|default:'' == "1"}checked{/if}>
                         <label for="secret01" class="form-long">YES!</label>
 
-                        <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" {if $events.secret == "0"}checked{/if}>
+                        <input type="radio" value="0" name="secret" id="secret02" class="form-radio" placeholder="" {if $events.secret|default:'' == "0"}checked{/if}>
                         <label for="secret02" class="form-long">NO!</label>
                     </div>
                 </div>
@@ -48,9 +48,9 @@
                 <div class="form-group mb50">
                     <label class="form-group-event-label">PR</label>
                     <div class="radio_box clear">
-                        <input type="radio" value="1" name="pr" id="pr01" class="form-radio" placeholder=""{if $events.pr== '1'} checked{/if}>
+                        <input type="radio" value="1" name="pr" id="pr01" class="form-radio" placeholder=""{if $events.pr|default:'' == '1'} checked{/if}>
                         <label for="pr01" class="form-long">YES!</label>
-                        <input type="radio" value="0" name="pr" id="pr02" class="form-radio" placeholder=""{if $events.pr== '0'} checked{/if}>
+                        <input type="radio" value="0" name="pr" id="pr02" class="form-radio" placeholder=""{if $events.pr|default:'' == '0'} checked{/if}>
                         <label for="pr02" class="form-long">NO!</label>
                     </div>
                 </div>
@@ -59,10 +59,10 @@
                     <label class="form-group-event-label">表示/非表示</label>
                     <p>女子会としては有効にしたいけど、TOP、女子会一覧に表示したくない場合は非表示に設定してください。</p>
                     <div class="radio_box clear">
-                        <input type="radio" value="1" name="display" id="display01" class="form-radio" placeholder="" {if $events.display == "1"}checked{/if}>
+                        <input type="radio" value="1" name="display" id="display01" class="form-radio" placeholder="" {if $events.display|default:'' == "1"}checked{/if}>
                         <label for="display01" class="form-long">YES!</label>
 
-                        <input type="radio" value="0" name="display" id="display02" class="form-radio" placeholder="" {if $events.display == "0"}checked{/if}>
+                        <input type="radio" value="0" name="display" id="display02" class="form-radio" placeholder="" {if $events.display|default:'' == "0"}checked{/if}>
                         <label for="display02" class="form-long">NO!</label>
                     </div>
                 </div>
@@ -70,37 +70,37 @@
                 <div class="form-group mb50">
                     <label class="form-group-event-label">過去の女子会への表示/非表示</label>
                     <div class="radio_box clear">
-                        <input type="radio" value="1" name="display_past" id="display_past01" class="form-radio" placeholder="" {if $events.display_past == "1"}checked{/if}>
+                        <input type="radio" value="1" name="display_past" id="display_past01" class="form-radio" placeholder="" {if $events.display_past|default:'' == "1"}checked{/if}>
                         <label for="display_past01" class="form-long">YES!</label>
 
-                        <input type="radio" value="0" name="display_past" id="display_past02" class="form-radio" placeholder="" {if $events.display_past == "0"}checked{/if}>
+                        <input type="radio" value="0" name="display_past" id="display_past02" class="form-radio" placeholder="" {if $events.display_past|default:'' == "0"}checked{/if}>
                         <label for="display_past02" class="form-long">NO!</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">女子会のタイトル</label>
-                    <input type="text" id="title" class="form-control" placeholder="" value="{$events.title}">
+                    <input type="text" id="title" class="form-control" placeholder="" value="{$events.title|default:''}">
                 </div>
 
                 <div class="form-group">
-                    <label class="form-group-event-label">特定のリンク</label>
-                    <input type="text" id="specific_link" class="form-control" placeholder="" value="{$events.specific_link}">
+                    <label class="form-group-event-label">特定のリンク（設定はサムネイルのみ）</label>
+                    <input type="text" id="specific_link" class="form-control" placeholder="" value="{$events.specific_link|default:''}">
                 </div>
 
                 <div class="form-group">
-                    <label class="form-group-event-label">特定の申し込みリンク</label>
-                    <input type="text" id="specific_application_link" class="form-control" placeholder="" value="{$events.specific_application_link}">
+                    <label class="form-group-event-label">特定の申し込みリンク（全部設定）</label>
+                    <input type="text" id="specific_application_link" class="form-control" placeholder="" value="{$events.specific_application_link|default:''}">
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">サムネイル画像</label>
                     <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
-                    <input type="hidden" id="main_image" value="{$events.main_image}">
+                    <input type="hidden" id="main_image" value="{$events.main_image|default:''}">
 
                     <!-- サムネイル画像を投稿するとここに表示される！ -->
-                    {if $events.main_image}
-                    <div class="thumbnail-img" style="background:url({$events.main_image}) center center / cover no-repeat;"></div>
+                    {if $events.main_image|default:''}
+                    <div class="thumbnail-img" style="background:url({$events.main_image|default:''}) center center / cover no-repeat;"></div>
                     {else}
                     <div class="thumbnail-img"></div>
                     {/if}
@@ -108,13 +108,13 @@
 
                 <div class="form-group upload_image_box">
                     <label class="form-group-event-label">女子会の詳細</label>
-                    <textarea id="content" name="content">{$events.content}</textarea>
+                    <textarea id="content" name="content">{$events.content|default:''}</textarea>
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">日付</label>
                     <div class='input-group date datetimepicker'>
-                        <input type='text' class="form-control" id="event_date" value="{$events.event_date|date_format:"%Y/%m/%d"}" />
+                        <input type='text' class="form-control" id="event_date" value="{$events.event_date|default:''|date_format:"%Y/%m/%d"}" />
                         <span class="input-group-addon">
 							<span class="glyphicon glyphicon-calendar"></span>
 						</span>
@@ -124,52 +124,52 @@
                 <div class="form-group">
                     <label class="form-group-event-label">表示用日付</label>
                     <p>日付の形式を変えたい、複数日付設定したい場合などに設定してください。</p>
-                    <input type='text' class="form-control" id="display_event_date" value="{$events.display_event_date}" />
+                    <input type='text' class="form-control" id="display_event_date" value="{$events.display_event_date|default:''}" />
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">開催時間</label>
                     <div class="event-datetime">
-                        <input type="text" id="event_start_datetime" class="form-control" placeholder="(例)19:30" value="{$events.event_start_datetime}">
+                        <input type="text" id="event_start_datetime" class="form-control" placeholder="(例)19:30" value="{$events.event_start_datetime|default:''}">
                         〜
-                        <input type="text" id="event_end_datetime" class="form-control" placeholder="(例)21:30" value="{$events.event_end_datetime}">
+                        <input type="text" id="event_end_datetime" class="form-control" placeholder="(例)21:30" value="{$events.event_end_datetime|default:''}">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">場所</label>
-                    <input type="text" id="place" class="form-control" placeholder="(例)カフェサルバドル、フィンゲート" value="{$events.place}">
-                    <input type="text" id="place_url" class="form-control" placeholder="場所のURL" value="{$events.place_url}">
+                    <input type="text" id="place" class="form-control" placeholder="(例)カフェサルバドル、フィンゲート" value="{$events.place|default:''}">
+                    <input type="text" id="place_url" class="form-control" placeholder="場所のURL" value="{$events.place_url|default:''}">
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">女子会参加費</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>半角英数字のみでお願いします。"円"や、","はなしでお願いします。</p>
                     <p class="form-group-sub"><span style="color:red;">＊</span>内税で入力してください。</p>
-                    <input type="text" id="fee" class="form-control" placeholder="(例)1000、2000、15000" value="{$events.fee}">
+                    <input type="text" id="fee" class="form-control" placeholder="(例)1000、2000、15000" value="{$events.fee|default:''}">
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">クーポンコード</label>
-                    <input type="text" id="coupon_code" class="form-control" placeholder="" value={$coupon.coupon_code}>
+                    <input type="text" id="coupon_code" class="form-control" placeholder="" value={$coupon.coupon_code|default:''}>
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">割引金額</label>
-                    <input type="text" id="discount" class="form-control" placeholder="" value={$coupon.discount}>
+                    <input type="text" id="discount" class="form-control" placeholder="" value={$coupon.discount|default:''}>
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">定員</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>半角英数字のみでお願いします。</p>
-                    <input type="text" id="limit" class="form-control" placeholder="(例)20、15、10、etc..." value="{$events.limit}">
+                    <input type="text" id="limit" class="form-control" placeholder="(例)20、15、10、etc..." value="{$events.limit|default:''}">
                 </div>
 
                 <div class="form-group mb50">
                     <label class="form-group-event-label">決済方法</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>クレジットカード払いのみか、現金払いもOKか選んでください。</p>
                     <div class="radio_box clear">
-                        <input type="radio" value="0" name="creditch" id="creditch02" class="form-radio" placeholder="" {if $events.creditch == 0}checked{/if}>
+                        <input type="radio" value="0" name="creditch" id="creditch02" class="form-radio" placeholder="" {if $events.creditch|default:'' == 0}checked{/if}>
                         <label for="creditch02" class="form-long">クレジットカードのみ</label>
                     </div>
                 </div>
@@ -178,7 +178,7 @@
                     <label class="form-group-event-label">キャンセル料金発生日<span class="label label-primary">任意</span></label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>基本的には3日前。それ以外の場合は記入をお願いします。</p>
                     <div class='input-group date datetimepicker'>
-                        <input type='text' class="form-control" id="incur_cancellation_fee_date" value="{$events.incur_cancellation_fee_date|date_format:"%Y/%m/%d %H:%M"}" />
+                        <input type='text' class="form-control" id="incur_cancellation_fee_date" value="{$events.incur_cancellation_fee_date|default:''|date_format:"%Y/%m/%d %H:%M"}" />
                         <span class="input-group-addon">
 							<span class="glyphicon glyphicon-calendar"></span>
 						</span>
@@ -189,7 +189,7 @@
                     <label class="form-group-event-label">公開設定</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>特に指定がなければそのままでOK!</p>
                     <div class='input-group date datetimepicker'>
-                        <input type='text' class="form-control" id="open_date" value="{$events.open_date|date_format:"%Y/%m/%d %H:%M"}" />
+                        <input type='text' class="form-control" id="open_date" value="{$events.open_date|default:''|date_format:"%Y/%m/%d %H:%M"}" />
                         <span class="input-group-addon">
 							<span class="glyphicon glyphicon-calendar"></span>
 						</span>
@@ -197,332 +197,655 @@
                 </div>
 
                 <div class="form-group">
+                    <label class="form-group-event-label">リマインドメール</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>イベントの前日正午に自動配信されます。</p>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>無記入の場合は送信されません。</p>
+
+                    <div class="radio_box clear">
+                        <input type="radio" value="1" name="remind_mail_template_status" id="remind_mail_template_status01" class="form-radio" placeholder="" {if $remind_mail_template.status|default:'' == "1"}checked{/if}>
+                        <label for="remind_mail_template_status01" class="form-long">YES!</label>
+
+                        <input type="radio" value="0" name="remind_mail_template_status" id="remind_mail_template_status02" class="form-radio" placeholder="" {if $remind_mail_template.status|default:'' == "0"}checked{/if}>
+                        <label for="remind_mail_template_status02" class="form-long">NO!</label>
+                    </div>
+
+                    <div>
+                        <a class="btn btn-primary remind-mail-open-btn" href="#" role="button">リマインドメール設定</a>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">サンクスメール</label>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>イベントの翌日正午に自動配信されます。</p>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>無記入の場合は送信されません。</p>
+
+                    <div class="radio_box clear">
+                        <input type="radio" value="1" name="thanks_mail_template_status" id="thanks_mail_template_status01" class="form-radio" placeholder="" {if $thanks_mail_template.status|default:'' == "1"}checked{/if}>
+                        <label for="thanks_mail_template_status01" class="form-long">YES!</label>
+
+                        <input type="radio" value="0" name="thanks_mail_template_status" id="thanks_mail_template_status02" class="form-radio" placeholder="" {if $thanks_mail_template.status|default:'' == "0"}checked{/if}>
+                        <label for="thanks_mail_template_status02" class="form-long">NO!</label>
+                    </div>
+
+                    <div>
+                        <a class="btn btn-primary thanks-mail-open-btn" href="#" role="button">サンクスメール設定</a>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label class="form-group-event-label">認証ユーザー名</label>
-                    <input type="text" id="authentication_user" class="form-control" placeholder="" value={$events.authentication_user}>
+                    <input type="text" id="authentication_user" class="form-control" placeholder="" value={$events.authentication_user|default:''}>
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">認証パスワード</label>
-                    <input type="text" id="authentication_password" class="form-control" placeholder="" value={$events.authentication_password}>
+                    <input type="text" id="authentication_password" class="form-control" placeholder="" value={$events.authentication_password|default:''}>
                 </div>
 
             </div>
 
             <div class="form-right">
                 <div class="edit-block-menu">
-                    {if in_array('admin', $roles)}
-                    <li>
-                        <button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button>
-                    </li>
+                    {if $events.code|default:'' eq ''}
+                        <!--<li><button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button></li>-->
+                        <li><button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button></li>
+                        <!--<li><button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button></li>-->
+                    {else}
+                        {if in_array('admin', $roles|default:'')}
+                            <li>
+                                <button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button>
+                            </li>
+                        {/if}
+                        {if in_array('admin', $roles|default:'')}
+                            <li>
+                                <button class="edit-block-menu-btn copy-btn" type="button" id="copy">複製</button>
+                            </li>
+                        {/if}
+                        {if in_array('admin', $roles|default:'') || in_array('editor', $roles|default:'')}
+                            <li>
+                                <button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button>
+                            </li>
+                        {/if}
+                        {if in_array('admin', $roles|default:'') || in_array('editor', $roles|default:'')}
+                            <li>
+                                <button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button>
+                            </li>
+                        {/if}
+                        {if in_array('admin', $roles|default:'')}
+                            <li>
+                                <button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button>
+                            </li>
+                        {/if}
                     {/if}
-                    {if in_array('admin', $roles)}
-                    <li>
-                        <button class="edit-block-menu-btn copy-btn" type="button" id="copy">複製</button>
-                    </li>
-                    {/if}
-                    {if in_array('admin', $roles) || in_array('editor', $roles)}
-                    <li>
-                        <button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button>
-                    </li>
-                    {/if}
-                    {if in_array('admin', $roles) || in_array('editor', $roles)}
-                    <li>
-                        <button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button>
-                    </li>
-                    {/if}
-                    {if in_array('admin', $roles)}
-                    <li>
-                        <button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button>
-                    </li>
-                    {/if}
+
+                    <p class="sub-description"><span style="red">※</span>公開する場合は、一度下書き保存してから公開してください。</p>
                 </div>
             </div>
         </div>
 
     </fieldset>
 </form>
+
+<div id="remindMailModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- dialog body -->
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">件名</label>
+                    <input type="text" name="subject" class="form-control" placeholder="" value="{$remind_mail_template.subject|default:''}">
+                </div>
+
+                <div class="form-group upload_image_box">
+                    <label class="form-group-event-label">本文</label>
+                    <p>動的に変わる部分には以下を設定してください。</p>
+                    <p>
+                        ◆{'{% name %}'|escape}: 氏名<br>
+                        ◆{'{% event_title %}'|escape}: イベント名<br>
+                        ◆{'{% event_place %}'|escape}: イベント開催場所<br>
+                        ◆{'{% event_date %}'|escape}: イベント開催日時<br>
+                        ◆{'{% event_url %}'|escape}: イベントURL<br>
+                    </p>
+                    <textarea name="body" style="border: 1px solid #d9d8d8; width: 100%; height: 200px;">{$remind_mail_template.body|default:''}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">テストメール送信先</label>
+                    <input type="text" name="email" class="form-control" placeholder="" value="">
+                </div>
+            </div>
+            <!-- dialog buttons -->
+            <div class="modal-footer">
+                <button type="button" class="btn send-btn btn-primary">テスト送信</button>
+                <button type="button" class="btn save-btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="thanksMailModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- dialog body -->
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">件名</label>
+                    <input type="text" name="subject" class="form-control" placeholder="" value="{$thanks_mail_template.subject|default:''}">
+                </div>
+
+                <div class="form-group upload_image_box">
+                    <label class="form-group-event-label">本文</label>
+                    <p>動的に変わる部分には以下を設定してください。</p>
+                    <p>
+                        ◆{'{% name %}'|escape}: 氏名<br>
+                        ◆{'{% event_title %}'|escape}: イベント名<br>
+                        ◆{'{% event_place %}'|escape}: イベント開催場所<br>
+                        ◆{'{% event_date %}'|escape}: イベント開催日時<br>
+                        ◆{'{% event_url %}'|escape}: イベントURL<br>
+                    </p>
+                    <textarea name="body" style="border: 1px solid #d9d8d8; width: 100%; height: 200px;">{$thanks_mail_template.body|default:''}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">テストメール送信先</label>
+                    <input type="text" name="email" class="form-control" placeholder="" value="">
+                </div>
+            </div>
+            <!-- dialog buttons -->
+            <div class="modal-footer">
+                <button type="button" class="btn send-btn btn-primary">テスト送信</button>
+                <button type="button" class="btn save-btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
 
-    var code = "{$events.code}";
-    $(function(){
-        $('.thumbnail-img-block')
-            .uploader('/api/redactor/upload/image', {
-                success: function (response) {
-                    var url = response.data.url;
-                    $('#main_image').val(url);
-                    $('.thumbnail-img').css({
-                        'background-image': 'url(' + url + ')',
-                        'background-position': 'center center',
-                        'background-repeat': 'no-repeat',
-                        'background-size': 'cover'
+var code = "{$events.code|default:''}";
+
+var $remindModal = $("#remindMailModal");
+
+var $thanksModal = $("#thanksMailModal");
+$(function(){
+
+
+    $('.thumbnail-img-block')
+        .uploader('/api/redactor/upload/image', {
+            success: function (response) {
+                var url = response.data.url;
+                $('#main_image').val(url);
+                $('.thumbnail-img').css({
+                    'background-image': 'url(' + url + ')',
+                    'background-position': 'center center',
+                    'background-repeat': 'no-repeat',
+                    'background-size': 'cover'
+                });
+            }
+        });
+
+    $('.datetimepicker').datetimepicker({
+        format : 'YYYY/MM/DD HH:mm'
+    });
+
+    $('#save').click(function(){
+
+        var confirmMsg = $(this).data('past') === true? '過去の女子会ですが更新しますか？': '更新します。よろしいですか？';
+
+        bootbox.confirm(confirmMsg, function(result) {
+            if (result) {
+
+                var url = code ? "/api/events/save" : "/api/events/create";
+                var params = {};
+                params.code = code;
+                params.section_code = "event";
+                params.event_category = $("[name=event_category]:checked").val() || '';
+                params.secret = $("[name=secret]:checked").val();
+                params.pr = $("[name=pr]:checked").val();
+                params.display = $("[name=display]:checked").val();
+                params.display_past = $("[name=display_past]:checked").val();
+                params.title = $('#title').val();
+                params.specific_link = $('#specific_link').val();
+                params.specific_application_link = $('#specific_application_link').val();
+                params.main_image = $('#main_image').val();
+                params.content = $('#content').val();
+                params.place = $('#place').val();
+                params.place_url = $('#place_url').val();
+                params.fee = $('#fee').val();
+                params.coupon_code = $('#coupon_code').val();
+                params.discount = $('#discount').val();
+                params.event_date = $('#event_date').val();
+                params.display_event_date = $('#display_event_date').val();
+                params.event_start_datetime = $('#event_start_datetime').val();
+                params.event_end_datetime = $('#event_end_datetime').val();
+                params.limit = $("#limit").val();
+                params.creditch = $("[name=creditch]:checked").val();
+                params.open_date = $('#open_date').val();
+                params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
+                params.status = 1;
+                params.authentication_user = $('#authentication_user').val();
+                params.authentication_password = $('#authentication_password').val();
+
+                params.remind_mail = {
+                    status: $("[name=remind_mail_template_status]:checked").val(),
+                    subject: $remindModal.find('[name="subject"]').val(),
+                    body: $remindModal.find('[name="body"]').val(),
+                }
+
+                params.thanks_mail = {
+                    status: $("[name=thanks_mail_template_status]:checked").val(),
+                    subject: $thanksModal.find('[name="subject"]').val(),
+                    body: $thanksModal.find('[name="body"]').val(),
+                }
+
+                if (params.event_category == "") {
+                    ts.error("女子会のカテゴリーを選択してください");
+                    return false;
+                }
+                if (params.secret == "") {
+                    ts.error("メンバー限定の女子会か選択してください");
+                    return false;
+                }
+                if (params.title == "") {
+                    ts.error("女子会のタイトルを入力してください");
+                    return false;
+                }
+                if (params.place == "") {
+                    ts.error("場所を入力してください");
+                    return false;
+                }
+                if (params.fee == "") {
+                    ts.error("参加費を入力してください");
+                    return false;
+                }
+                if (params.event_date == "") {
+                    ts.error("日付を入力してください");
+                    return false;
+                }
+                if (params.event_start_datetime == "") {
+                    ts.error("開始時間を入力してください");
+                    return false;
+                }
+                if (params.event_end_datetime == "") {
+                    ts.error("終了時間を入力してください");
+                    return false;
+                }
+                if (params.creditch == "") {
+                    ts.error("決済を選択してください");
+                    return false;
+                }
+
+                ajax.post(url, params, function(data){
+                    ts.success("公開しました", function(){
+                        // location.href = "/admin/joshikai";
                     });
-                }
-            });
-
-        $('.datetimepicker').datetimepicker({
-            format : 'YYYY/MM/DD HH:mm'
-        });
-
-        $('#save').click(function(){
-
-            var confirmMsg = $(this).data('past') === true? '過去の女子会ですが更新しますか？': '更新します。よろしいですか？';
-
-            bootbox.confirm(confirmMsg, function(result) {
-                if (result) {
-
-                    var url = "/api/events/save";
-                    var params = {};
-                    params.code = code;
-                    params.section_code = "event";
-                    params.event_category = $("[name=event_category]:checked").val() || '';
-                    params.secret = $("[name=secret]:checked").val();
-                    params.pr = $("[name=pr]:checked").val();
-                    params.display = $("[name=display]:checked").val();
-                    params.display_past = $("[name=display_past]:checked").val();
-                    params.title = $('#title').val();
-                    params.specific_link = $('#specific_link').val();
-                    params.specific_application_link = $('#specific_application_link').val();
-                    params.main_image = $('#main_image').val();
-                    params.content = $('#content').val();
-                    params.place = $('#place').val();
-                    params.place_url = $('#place_url').val();
-                    params.fee = $('#fee').val();
-                    params.coupon_code = $('#coupon_code').val();
-                    params.discount = $('#discount').val();
-                    params.event_date = $('#event_date').val();
-                    params.display_event_date = $('#display_event_date').val();
-                    params.event_start_datetime = $('#event_start_datetime').val();
-                    params.event_end_datetime = $('#event_end_datetime').val();
-                    params.limit = $("#limit").val();
-                    params.creditch = $("[name=creditch]:checked").val();
-                    params.open_date = $('#open_date').val();
-                    params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
-                    params.status = 1;
-                    params.authentication_user = $('#authentication_user').val();
-                    params.authentication_password = $('#authentication_password').val();
-
-                    if (params.event_category == "") {
-                        ts.error("女子会のカテゴリーを選択してください");
-                        return false;
-                    }
-                    if (params.secret == "") {
-                        ts.error("メンバー限定の女子会か選択してください");
-                        return false;
-                    }
-                    if (params.title == "") {
-                        ts.error("女子会のタイトルを入力してください");
-                        return false;
-                    }
-                    if (params.place == "") {
-                        ts.error("場所を入力してください");
-                        return false;
-                    }
-                    if (params.fee == "") {
-                        ts.error("参加費を入力してください");
-                        return false;
-                    }
-                    if (params.event_date == "") {
-                        ts.error("日付を入力してください");
-                        return false;
-                    }
-                    if (params.event_start_datetime == "") {
-                        ts.error("開始時間を入力してください");
-                        return false;
-                    }
-                    if (params.event_end_datetime == "") {
-                        ts.error("終了時間を入力してください");
-                        return false;
-                    }
-                    if (params.creditch == "") {
-                        ts.error("決済を選択してください");
-                        return false;
-                    }
-
-                    ajax.post(url, params, function(data){
-                        ts.success("公開しました", function(){
-                            // location.href = "/admin/joshikai";
-                        });
-                    });
-                }
-                else {
-                    ts.info("キャンセルしました");
-                }
-            });
-        });
-
-        $('#preview').click(function(){
-            window.open("/joshikai/"+code+"?preview=1");
-        });
-
-        $('#save_closed').click(function(){
-            var url = "/api/events/save";
-            var params = {};
-            params.code = code;
-            params.section_code = "event";
-            params.event_category = $("[name=event_category]:checked").val() || '';
-            params.secret = $("[name=secret]:checked").val();
-            params.pr = $("[name=pr]:checked").val();
-            params.display = $("[name=display]:checked").val();
-            params.display_past = $("[name=display_past]:checked").val();
-            params.title = $('#title').val();
-            params.specific_link = $('#specific_link').val();
-            params.specific_application_link = $('#specific_application_link').val();
-            params.main_image = $('#main_image').val();
-            params.content = $('#content').val();
-            params.place = $('#place').val();
-            params.place_url = $('#place_url').val();
-            params.fee = $('#fee').val();
-            params.coupon_code = $('#coupon_code').val();
-            params.discount = $('#discount').val();
-            params.event_date = $('#event_date').val();
-            params.display_event_date = $('#display_event_date').val();
-            params.event_start_datetime = $('#event_start_datetime').val();
-            params.event_end_datetime = $('#event_end_datetime').val();
-            params.creditch = $("[name=creditch]:checked").val();
-            params.limit = $("#limit").val();
-            params.open_date = $('#open_date').val();
-            params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
-            params.status = 0;
-            params.authentication_user = $('#authentication_user').val();
-            params.authentication_password = $('#authentication_password').val();
-
-            if (params.event_category == "") {
-                ts.error("女子会のカテゴリーを選択してください");
-                return false;
+                });
             }
-            if (params.secret == "") {
-                ts.error("メンバー限定の女子会か選択してください");
-                return false;
-            }
-            if (params.title == "") {
-                ts.error("女子会のタイトルを入力してください");
-                return false;
-            }
-            if (params.place == "") {
-                ts.error("場所を入力してください");
-                return false;
-            }
-            if (params.fee == "") {
-                ts.error("参加費を入力してください");
-                return false;
-            }
-            if (params.event_date == "") {
-                ts.error("日付を入力してください");
-                return false;
-            }
-            if (params.event_start_datetime == "") {
-                ts.error("開始時間を入力してください");
-                return false;
-            }
-            if (params.event_end_datetime == "") {
-                ts.error("終了時間を入力してください");
-                return false;
-            }
-            if (params.creditch == "") {
-                ts.error("決済方法を選択してください");
-                return false;
-            }
-
-            ajax.post(url, params, function(data){
-                ts.success("下書き保存しました");
-            })
-        });
-
-        $('#delete').click(function(){
-            var url = "/api/events/delete";
-            var params = {};
-            params.code = code;
-            bootbox.confirm("このイベントを削除しますか？", function(result) {
-                if (result) {
-                    ajax.post(url, params, function(data){
-                        ts.success("削除しました", function(){
-                            location.href = "/admin/joshikai";
-                        });
-                    });
-                }
-                else {
-                    ts.info("キャンセルしました");
-                }
-            });
-        });
-
-        $('#copy').click(function(){
-
-            bootbox.confirm("このイベントを複製します。よろしいですか？", function(result) {
-                if (result) {
-                    var url = "/api/events/create";
-                    var params = {};
-                    params.section_code = "event";
-                    params.event_category = $("[name=event_category]:checked").val() || '';
-                    params.secret = $("[name=secret]:checked").val();
-                    params.pr = $("[name=pr]:checked").val();
-                    params.display = $("[name=display]:checked").val();
-                    params.display_past = $("[name=display_past]:checked").val();
-                    params.title = '[コピー] ' + $('#title').val();
-                    params.specific_link = $('#specific_link').val();
-                    params.specific_application_link = $('#specific_application_link').val();
-                    params.main_image = $('#main_image').val();
-                    params.content = $('#content').val();
-                    params.place = $('#place').val();
-                    params.place_url = $('#place_url').val();
-                    params.fee = $('#fee').val();
-                    params.coupon_code = $('#coupon_code').val();
-                    params.discount = $('#discount').val();
-                    params.display_event_date = $('#display_event_date').val();
-                    params.event_date = $('#event_date').val();
-                    params.event_start_datetime = $('#event_start_datetime').val();
-                    params.event_end_datetime = $('#event_end_datetime').val();
-                    params.creditch = $("[name=creditch]:checked").val();
-                    params.limit = $("#limit").val();
-                    params.open_date = $('#open_date').val();
-                    params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
-                    params.status = 0;
-                    params.authentication_user = $('#authentication_user').val();
-                    params.authentication_password = $('#authentication_password').val();
-
-                    if (params.event_category == "") {
-                        ts.error("女子会のカテゴリーを選択してください");
-                        return false;
-                    }
-
-                    if (params.title == "") {
-                        params.title = "タイトル未設定";
-                    }
-                    if (params.event_date == "") {
-                        ts.error("日付を入力してください");
-                        return;
-                    }
-                    ajax.post(url, params, function(data){
-                        ts.success("複製しました", function(){
-                            location.href = "/admin/joshikai/edit/" + data.data.code;
-                        });
-                    });
-                }
-                else {
-                    ts.info("キャンセルしました");
-                }
-            });
-        });
-
-        $('#content').redactor({
-            focus: false,
-            lang: 'en',
-            plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
-            imageUpload: '/api/redactor/upload/image',
-            imageManagerJson: '/api/redactor/list/image',
-            fileUpload: '/api/redactor/upload/file',
-            fileManagerJson: '/api/redactor/list/file',
-            callbacks: {
-                imageUpload: function($img, json) {
-                    $img.attr('src', json.data.url);
-                },
-                fileUploadError: function(json) {
-                    alert(json.message);
-                },
-                imageUploadError: function(json) {
-                    alert(json.message);
-                },
+            else {
+                ts.info("キャンセルしました");
             }
         });
     });
+
+    $('#preview').click(function(){
+        window.open("/joshikai/"+code+"?preview=1");
+    });
+
+    $('#save_closed').click(function(){
+        var url = code ? "/api/events/save" : "/api/events/create";
+        var params = {};
+        params.code = code;
+        params.section_code = "event";
+        params.event_category = $("[name=event_category]:checked").val() || '';
+        params.secret = $("[name=secret]:checked").val();
+        params.pr = $("[name=pr]:checked").val();
+        params.display = $("[name=display]:checked").val();
+        params.display_past = $("[name=display_past]:checked").val();
+        params.title = $('#title').val();
+        params.specific_link = $('#specific_link').val();
+        params.specific_application_link = $('#specific_application_link').val();
+        params.main_image = $('#main_image').val();
+        params.content = $('#content').val();
+        params.place = $('#place').val();
+        params.place_url = $('#place_url').val();
+        params.fee = $('#fee').val();
+        params.coupon_code = $('#coupon_code').val();
+        params.discount = $('#discount').val();
+        params.event_date = $('#event_date').val();
+        params.display_event_date = $('#display_event_date').val();
+        params.event_start_datetime = $('#event_start_datetime').val();
+        params.event_end_datetime = $('#event_end_datetime').val();
+        params.creditch = $("[name=creditch]:checked").val();
+        params.limit = $("#limit").val();
+        params.open_date = $('#open_date').val();
+        params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
+        params.status = 0;
+        params.authentication_user = $('#authentication_user').val();
+        params.authentication_password = $('#authentication_password').val();
+
+        params.remind_mail = {
+            status: $("[name=remind_mail_template_status]:checked").val(),
+            subject: $remindModal.find('[name="subject"]').val(),
+            body: $remindModal.find('[name="body"]').val(),
+        }
+
+        params.thanks_mail = {
+            status: $("[name=thanks_mail_template_status]:checked").val(),
+            subject: $thanksModal.find('[name="subject"]').val(),
+            body: $thanksModal.find('[name="body"]').val(),
+        }
+
+        if (params.event_category == "") {
+            ts.error("女子会のカテゴリーを選択してください");
+            return false;
+        }
+        if (params.secret == "") {
+            ts.error("メンバー限定の女子会か選択してください");
+            return false;
+        }
+        if (params.title == "") {
+            ts.error("女子会のタイトルを入力してください");
+            return false;
+        }
+        if (params.place == "") {
+            ts.error("場所を入力してください");
+            return false;
+        }
+        if (params.fee == "") {
+            ts.error("参加費を入力してください");
+            return false;
+        }
+        if (params.event_date == "") {
+            ts.error("日付を入力してください");
+            return false;
+        }
+        if (params.event_start_datetime == "") {
+            ts.error("開始時間を入力してください");
+            return false;
+        }
+        if (params.event_end_datetime == "") {
+            ts.error("終了時間を入力してください");
+            return false;
+        }
+        if (params.creditch == "") {
+            ts.error("決済方法を選択してください");
+            return false;
+        }
+
+        ajax.post(url, params, function(data){
+            ts.success("下書き保存しました");
+            location.href = "/admin/joshikai/edit/" + data.data.code;
+        })
+    });
+
+    $('#delete').click(function(){
+        var url = "/api/events/delete";
+        var params = {};
+        params.code = code;
+        bootbox.confirm("このイベントを削除しますか？", function(result) {
+            if (result) {
+                ajax.post(url, params, function(data){
+                    ts.success("削除しました", function(){
+                        location.href = "/admin/joshikai";
+                    });
+                });
+            }
+            else {
+                ts.info("キャンセルしました");
+            }
+        });
+    });
+
+    $('#copy').click(function(){
+
+        bootbox.confirm("このイベントを複製します。よろしいですか？", function(result) {
+            if (result) {
+                var url = "/api/events/create";
+                var params = {};
+                params.section_code = "event";
+                params.event_category = $("[name=event_category]:checked").val() || '';
+                params.secret = $("[name=secret]:checked").val();
+                params.pr = $("[name=pr]:checked").val();
+                params.display = $("[name=display]:checked").val();
+                params.display_past = $("[name=display_past]:checked").val();
+                params.title = '[コピー] ' + $('#title').val();
+                params.specific_link = $('#specific_link').val();
+                params.specific_application_link = $('#specific_application_link').val();
+                params.main_image = $('#main_image').val();
+                params.content = $('#content').val();
+                params.place = $('#place').val();
+                params.place_url = $('#place_url').val();
+                params.fee = $('#fee').val();
+                params.coupon_code = $('#coupon_code').val();
+                params.discount = $('#discount').val();
+                params.display_event_date = $('#display_event_date').val();
+                params.event_date = $('#event_date').val();
+                params.event_start_datetime = $('#event_start_datetime').val();
+                params.event_end_datetime = $('#event_end_datetime').val();
+                params.creditch = $("[name=creditch]:checked").val();
+                params.limit = $("#limit").val();
+                params.open_date = $('#open_date').val();
+                params.incur_cancellation_fee_date = $('#incur_cancellation_fee_date').val();
+                params.status = 0;
+                params.authentication_user = $('#authentication_user').val();
+                params.authentication_password = $('#authentication_password').val();
+
+                params.remind_mail = {
+                    status: $("[name=remind_mail_template_status]:checked").val(),
+                    subject: $remindModal.find('[name="subject"]').val(),
+                    body: $remindModal.find('[name="body"]').val(),
+                }
+
+                params.thanks_mail = {
+                    status: $("[name=thanks_mail_template_status]:checked").val(),
+                    subject: $thanksModal.find('[name="subject"]').val(),
+                    body: $thanksModal.find('[name="body"]').val(),
+                }
+
+                if (params.event_category == "") {
+                    ts.error("女子会のカテゴリーを選択してください");
+                    return false;
+                }
+
+                if (params.title == "") {
+                    params.title = "タイトル未設定";
+                }
+                if (params.event_date == "") {
+                    ts.error("日付を入力してください");
+                    return;
+                }
+                ajax.post(url, params, function(data){
+                    ts.success("複製しました", function(){
+                        location.href = "/admin/joshikai/edit/" + data.data.code;
+                    });
+                });
+            }
+            else {
+                ts.info("キャンセルしました");
+            }
+        });
+    });
+
+    $('#content').redactor({
+        focus: false,
+        lang: 'en',
+        plugins: ['video', 'imagemanager', 'inlinestyle', 'source', 'table', 'filemanager', 'textdirection'],
+        imageUpload: '/api/redactor/upload/image',
+        imageManagerJson: '/api/redactor/list/image',
+        fileUpload: '/api/redactor/upload/file',
+        fileManagerJson: '/api/redactor/list/file',
+        callbacks: {
+            imageUpload: function($img, json) {
+                $img.attr('src', json.data.url);
+            },
+            fileUploadError: function(json) {
+                alert(json.message);
+            },
+            imageUploadError: function(json) {
+                alert(json.message);
+            },
+        }
+    });
+});
+
+$(function(){
+
+    $(".remind-mail-open-btn").on("click", function (e) {
+        e.preventDefault();
+        $remindModal.modal({
+            "backdrop": "static",
+            "keyboard": true,
+            "show": true
+        });
+    });
+
+    $remindModal.find('.save-btn').click(function(){
+        var url = "/api/remindmailtemplates/save";
+        if (code) {
+
+            var params = {
+                event_code: code,
+                subject: $remindModal.find("[name=subject]").val(),
+                body: $remindModal.find("[name=body]").val(),
+            };
+
+            ajax.post(url, params, function(data){
+                ts.success("保存しました", function(){
+                    $remindModal.modal("hide");
+                });
+            });
+        } else {
+            ts.success("保存しました", function(){
+                $remindModal.modal("hide");
+            });
+        }
+    });
+
+    $remindModal.find('.send-btn').click(function(){
+        var url = "/api/remindmailtemplates/testmail";
+
+        var params = {
+            event_code: code,
+            event_title: $('#title').val(),
+            event_place: $('#place').val(),
+            subject: $remindModal.find("[name=subject]").val(),
+            body: $remindModal.find("[name=body]").val(),
+            email: $remindModal.find("[name=email]").val(),
+            event_date: $('#event_date').val(),
+            display_event_date: $('#display_event_date').val(),
+            event_start_datetime: $('#event_start_datetime').val(),
+            event_end_datetime: $('#event_end_datetime').val(),
+        };
+
+        // if (params.event_title == "") {
+        //     ts.error("女子会のタイトルを入力してください");
+        //     return false;
+        // }
+        // if (params.event_place == "") {
+        //     ts.error("女子会の開催場所を入力してください");
+        //     return false;
+        // }
+        if (params.subject == "") {
+            ts.error("件名を入力してください");
+            return false;
+        }
+        if (params.body == "") {
+            ts.error("本文を入力してください");
+            return false;
+        }
+        if (params.email == "") {
+            ts.error("テストメール送信先を入力してください");
+            return false;
+        }
+
+        ajax.post(url, params, function(data){
+            ts.success("送信しました", function(){
+                // location.href = "/admin/remindmailtemplates";
+            });
+        });
+    });
+});
+
+
+$(function(){
+
+    $(".thanks-mail-open-btn").on("click", function (e) {
+        e.preventDefault();
+        $thanksModal.modal({
+            "backdrop": "static",
+            "keyboard": true,
+            "show": true
+        });
+    });
+
+    $thanksModal.find('.save-btn').click(function(){
+        var url = "/api/thanksmailtemplates/save";
+        if (code) {
+
+            var params = {
+                event_code: code,
+                subject: $thanksModal.find("[name=subject]").val(),
+                body: $thanksModal.find("[name=body]").val(),
+            };
+
+            ajax.post(url, params, function(data){
+                ts.success("保存しました", function(){
+                    $thanksModal.modal("hide");
+                });
+            });
+        } else {
+            ts.success("保存しました", function(){
+                $thanksModal.modal("hide");
+            });
+        }
+    });
+
+    $thanksModal.find('.send-btn').click(function(){
+        var url = "/api/thanksmailtemplates/testmail";
+
+        var params = {
+            event_code: code,
+            event_title: $('#title').val(),
+            event_place: $('#place').val(),
+            subject: $thanksModal.find("[name=subject]").val(),
+            body: $thanksModal.find("[name=body]").val(),
+            email: $thanksModal.find("[name=email]").val(),
+            event_date: $('#event_date').val(),
+            display_event_date: $('#display_event_date').val(),
+            event_start_datetime: $('#event_start_datetime').val(),
+            event_end_datetime: $('#event_end_datetime').val(),
+        };
+
+        // if (params.event_title == "") {
+        //     ts.error("女子会のタイトルを入力してください");
+        //     return false;
+        // }
+        // if (params.event_place == "") {
+        //     ts.error("女子会の開催場所を入力してください");
+        //     return false;
+        // }
+        if (params.subject == "") {
+            ts.error("件名を入力してください");
+            return false;
+        }
+        if (params.body == "") {
+            ts.error("本文を入力してください");
+            return false;
+        }
+        if (params.email == "") {
+            ts.error("テストメール送信先を入力してください");
+            return false;
+        }
+
+        ajax.post(url, params, function(data){
+            ts.success("送信しました", function(){
+                // location.href = "/admin/remindmailtemplates";
+            });
+        });
+    });
+});
 </script>

@@ -14,7 +14,7 @@
           {foreach from=$events.datas key="key" item=event name=loopname}
           {$fooo = $event.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-          
+
           <li>
             {if $event.event_category == "女子会"}
               <div class="bg-joshikai"></div>
@@ -27,7 +27,7 @@
               <a href="/joshikai/{$event.code}">
                 <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
                 </div>
-                
+
                 {if $event.event_category == "女子会"}
                   <div class="kinyu-event-list-right">
                 {else if $event.event_category == "スペシャル"}
@@ -87,7 +87,7 @@
 
         {*
         <div class="joshikai-held-area">
-          <p class="joshikai-held-area-title">主に女子会を開催している場所</p>          
+          <p class="joshikai-held-area-title">主に女子会を開催している場所</p>
           <div class="joshikai-held-el-block">
             <div class="joshikai-held-el clear">
               <p class="joshikai-held-place-area kabutocho">ー 兜町 ー</p>
@@ -123,21 +123,21 @@
       <div class="special-event-list joshikai-main-el">
         <p class="kinyu-event-info-title">過去の特別女子会。</p>
         <ul class="clear">
-          
+
           <li>
             <a href="/daijoshikai2018" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special9.jpg) center center / cover no-repeat"></div>
               <div class="text-area"><p>東証ひみつの大女子会♪ 2018</p></div>
             </a>
           </li>
-          
+
           <li>
             <a href="/school_jpx02" target="_blank">
               <div class="bg-area" style="background:url(/images/content/school_public/og-school_public02.jpg) left top / cover no-repeat"></div>
               <div class="text-area"><p>第2回 きんゆう女子。学院</p></div>
             </a>
           </li>
-          
+
           <li>
             <a href="http://ac.nikkeibp.co.jp/2017z1105finw/" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special7.jpg) left center / cover no-repeat"></div>
@@ -173,24 +173,15 @@
             </a>
           </li>
 
-          <li>
-            <a href="/conference" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-special1.png) center center / cover no-repeat"></div>
-              <div class="text-area"><p>第1回 週末投資宣言♪</p></div>
-            </a>
-          </li>
-
-          <li>
+          <!--<li>
             <a href="/school" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special2.png) center center / cover no-repeat"></div>
               <div class="text-area"><p>私立きんゆう女子。学院</p></div>
             </a>
-          </li>
+          </li> -->
 
         </ul>
       </div>
     </div>
   </div>
 </div>
-
-
