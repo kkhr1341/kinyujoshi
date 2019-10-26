@@ -1,3 +1,16 @@
+//共通
+ScrollReveal().reveal('.animation-top1', { easing: 'ease', origin: 'bottom', duration: 3000, distance: '50px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.animation-left-delay', { easing: 'ease', origin: 'left', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.animation-right-delay', { easing: 'ease', origin: 'right', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+
+/* [共通]リストアニメーション */
+ScrollReveal().reveal('.list-animation01-left-delay', { easing: 'ease', origin: 'left', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.list-animation01-right', { easing: 'ease', origin: 'right', duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.list-animation01-right-delay', { easing: 'ease', origin: 'right', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.list-animation01-left', { easing: 'ease', origin: 'left', duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+
+
+
 //TOP - 背景部分
 ScrollReveal().reveal('.logo-animation', { easing: 'ease', origin: 'bottom', duration: 3000, distance: '0px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.intro-bg1', { easing: 'ease', origin: 'bottom', delay: 300, duration: 2500, distance: '0px', opacity: 0, scale: 1 });

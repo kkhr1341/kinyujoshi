@@ -1,16 +1,18 @@
+<script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
+
 <div class="kinyu-single-block">
 
-  <img class="login-main-bg pc" src="/images/login/login_main_bg.jpg">
-  <img class="login-main-bg sp" src="/images/login/login_main_bg_sp.jpg">
-  <img class="login-main-title" src="/images/login/login_main_title.png">
+  <img class="login-main-bg animation-top1 pc" src="/images/login/login_main_bg.jpg">
+  <img class="login-main-bg animation-top1 sp" src="/images/login/login_main_bg_sp.jpg">
+  <img class="login-main-title animation-left-delay" src="/images/login/login_main_title.png">
 
   <div class="new-regist-block">
 
     <div class="login-block-el-container">
     
       <div class="login-block-el login-message">
-        <h2 class="main-copy fs-mincho">わたしらしい <br class="sp">「ミライ」への解放</h2>
-        <div class="message-block">
+        <h2 class="main-copy fs-mincho animation-top1">わたしらしい <br class="sp">「ミライ」への解放</h2>
+        <div class="message-block animation-top1">
           <p class="main-message">
             <span class="fs-mincho">自由で等身大に生きる。</span>
             はじめまして。「きんゆう女子。」編集部です。  <br><br>
@@ -31,45 +33,45 @@
           </p>
           <a class="to-story-link" href="/about_main">もっとくわしく知る 〉</a>
         </div>
-        <a class="to-member-link" href="#regist-form">メンバー登録はこちら</a>
+        <a class="to-member-link animation-top1" href="#regist-form">メンバー登録はこちら</a>
       </div>
 
       <div class="login-block-el about-activity-contents">
-        <h2 class="el-title">「きん女。」って何してるの？</h2>
+        <h2 class="el-title animation-top1">「きん女。」って何してるの？</h2>
         <div class="kinjo-activity-block">
           <ul>
             <li class="clear">
-              <div class="img-box">
+              <div class="img-box list-animation01-right-delay">
                 <img src="/images/login/activity1.png">
               </div>
-              <div class="text-block">
+              <div class="text-block list-animation01-left">
                 <p class="text-title fs-mincho"><span>01</span>みんなどうしてる？お金のことをシェア</p>
                 <p class="text-description">なかなか親しい仲だと話しにくいお金の話も、オープンに安心して話せる場所です。ひとりよりも、みんなで考えればよい知恵や情報も一度にシェアすることができます。ひとりひとりが情報や経験を持ち寄ってコミュニティを作っています。でも残念ですがお金にも人生にも絶対という正解はないもの。違う意見を持っている人に出会うこともあるかもしれません。それを含め、さまざまな生き方や価値観を知ることで自分自身の判断軸を育てる場にしたいと思っています。まさに3人集まれば文殊の知恵です。</p>
               </div>
             </li>
             <li class="clear">
-              <div class="img-box">
+              <div class="img-box list-animation01-left-delay">
                 <img src="/images/login/activity2.png">
               </div>
-              <div class="text-block">
+              <div class="text-block list-animation01-right">
                 <p class="text-title fs-mincho"><span>02</span>ゆるくたのしく、でも真面目に。等身大の学び</p>
                 <p class="text-description">“きんゆう”について気軽にゆるく話せる場を提供しています。同じ悩みをもったワカラナイ女子同士でおしゃべりしたり、ちょっと人生の先輩に聞いてみたり。金融業界の方や有識者をゲストに迎えた勉強会では甘口〜辛口など目指したいレベルによってプログラムが分かれています。基本少人数制。同世代や同じ目線の方々が、安心して話せる場所になるよう工夫しています。メンバーにならなくても女子会や勉強会はどなたでもご参加いただけます。</p>
               </div>
             </li>
             <li class="clear">
-              <div class="img-box">
+              <div class="img-box list-animation01-right-delay">
                 <img src="/images/login/activity3.png">
               </div>
-              <div class="text-block">
+              <div class="text-block list-animation01-left">
                 <p class="text-title fs-mincho"><span>03</span>社会見学や体験を通じて、もっと成長</p>
                 <p class="text-description">コミュニティが主体となり金融を学んだり自分たちのスキルアップや成長に役立つ社会見学や体験を提供しています。webサイトや女子会、勉強会だけでは見えてこない「リアル」を実感することを大切にコンセプトに共感している企業や団体とコラボレーションをして企画・実施しています。子供の頃に学んだことも、大人になってからは見える角度が変わるもの。「私にもできる！」と、一歩ふみだすステップや成長のきっかけになると思うのです。</p>
               </div>
             </li>
             <li class="clear">
-              <div class="img-box">
+              <div class="img-box list-animation01-left-delay">
                 <img src="/images/login/activity4.png">
               </div>
-              <div class="text-block">
+              <div class="text-block list-animation01-right">
                 <p class="text-title fs-mincho"><span>04</span>わたしたちの声を価値に変えることで運営</p>
                 <p class="text-description">私たちの声や価値観をレポートやアンケート、デザインという形に変えて企業の方に提供することでコミュニティを運営しています。また、コミュニティ活動を通じて地域経済活性化やスペースの有効活用にも貢献していきたいと考えています。メンバーのみなさんにはよりよいコミュニティや社会にしていくために、意思のある”声”や”気持ち”を届けていただけると嬉しいです。私たちの声が社会の役に立つことで、次なる挑戦への自信につながりますように…！</p>
               </div>
@@ -79,9 +81,9 @@
       </div>
     </div>
 
-    <div class="login-block-img-bg sp" style="background: url(/images/login/member_bg1-sp.jpg) left center / cover no-repeat;"></div>
+    <div class="login-block-img-bg sp animation-top1" style="background: url(/images/login/member_bg1-sp.jpg) left center / cover no-repeat;"></div>
 
-    <div class="login-block-el about-member-contents">
+    <div class="login-block-el about-member-contents animation-top1">
       <div class="about-member-contents-inner">
         <h2 class="el-title">メンバーになると...？</h2>
         <div class="about-member-contents-list">
@@ -111,19 +113,19 @@
 
       <div class="oficial-member-block-container">
         <!-- オフィシャルメンバーとは -->
-        <div class="login-block-el oficial-member-block">
+        <div class="login-block-el oficial-member-block animation-top1">
           <p class="oficial-member-title fs-mincho">オフィシャルメンバーとは...？</p>
           <p class="oficial-member-description">コミュニティの顔として企業と意見交換をしたりインタビューなどの取材を行ったり、主体的に活動するメンバーです。オフィシャルメンバーは、1年に1~2回募集いたします。6ヶ月〜1年間の活動を経て卒業となります。</p>
-          <img class="oficial-member-icon" src="/images/login/ofiucial-member.png">
+          <img class="oficial-member-icon animation-right-delay" src="/images/login/ofiucial-member.png">
         </div>
 
         <div id="regist-form" class="login-block-el login-contents-block-inner clear">
           <div class="login-contents-mainarea login-contents-regist">
-            <h2 class="el-title">メンバー登録はこちら♪</h2>
+            <h2 class="el-title animation-top1">メンバー登録はこちら♪</h2>
 
             <div class="login-contents-form-area clear">
 
-              <div class="regist-btn-list">
+              <div class="regist-btn-list animation-top1">
                 <ul>
                   <li class="email-login-bg"><a href="/regist_email">メールアドレスで登録に進む</a></li>
                   <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
@@ -131,8 +133,8 @@
                 </ul>
               </div>
 
-              <p class="regist-sub-description"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
-              <p class="regist-sub-description" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
+              <p class="regist-sub-description animation-top1"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
+              <p class="regist-sub-description animation-top1" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
 
             </div>
           </div>
@@ -142,11 +144,11 @@
   </div>
 </div>
 
-<div class="member-icon pc">
+<div class="member-icon pc animation-right-delay">
   <a href="#regist-form"><img src="/images/login/member-icon.png"></a>
 </div>
 
-<div class="member-icon sp">
+<div class="member-icon sp animation-right-delay">
   <a href="#regist-form">
     <p class="fs-mincho">メンバー登録はこちら</p>
     <img class="kingyo-icon" src="/images/login/member-icon-sp.png">
@@ -186,3 +188,5 @@
     background: #fff;
   }
 </style>
+
+<script type='text/javascript' src="/assets/js/kinyu/scrollanimation.js"></script>
