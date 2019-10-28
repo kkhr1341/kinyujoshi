@@ -1084,6 +1084,19 @@
   margin-bottom: 0px;
 }
 
+.special-contents-promotion-label {
+  padding: 5px 14px;
+  background: #fff;
+  position: absolute;
+  font-size:12px;
+  z-index: 5;
+  top: 42px;
+  left: 4%;
+}
+.special-contents-promotion-label p{
+  font-size:10px;
+}
+
 
   /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップ - インスタグラムリスト
