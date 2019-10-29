@@ -57,12 +57,14 @@
                   {$blog.title}
                   {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
                 </h3>
+                {if isset($blog.profile_image) && isset($blog.author_name)}
                 <div class="kinyu-top-list-author">
-                  <img class="kinyu-top-list-author-thumbnail" src="https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/131057614037576/images/20190122145912image.jpg">
+                  <img class="kinyu-top-list-author-thumbnail" src="{$blog.profile_image}">
                   <div class="kinyu-top-list-author-info">
-                    <div class="kinyu-top-list-author-info-name" style="">きんゆう女子。編集部</div>
+                    <div class="kinyu-top-list-author-info-name">{$blog.author_name}</div>
                   </div>
                 </div>
+                {/if}
               </div>
             </a>
           </li>
