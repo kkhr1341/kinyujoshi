@@ -118,15 +118,6 @@
             </div>
           </div>
         </div>
-        <div class="kinyu-top-banner-area kiinyu-top-mainarea-bottom">
-          <ul>
-            <li class="pc">
-              <a class="js-track" href="/policy" data-category="pc-top-link" data-action="click" data-value="1">
-                <img class="" src="/images/consultration/consultation-bunner.jpg">
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
 
       <div class="special-event-list joshikai-main-el">

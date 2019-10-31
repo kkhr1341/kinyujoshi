@@ -57,12 +57,6 @@
               </li>
               {/if}
 
-              {if (Auth::has_access('remindmailtemplates.read'))}
-              <li>
-                <a href="/admin/remindmailtemplates">リマインドメールの管理</a>
-              </li>
-              {/if}
-
               {if (Auth::has_access('inquiries.read'))}
               <li>
                 <a href="/admin/inquiries">お問い合わせの管理</a>

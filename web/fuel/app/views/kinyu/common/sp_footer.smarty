@@ -52,7 +52,7 @@
         <li><a class="js-track" href="/faq" data-category="pc-footer-link" data-action="click" data-value="1">よくあるご質問</a></li>
         <li><a class="js-track" href="/contact" data-category="pc-footer-link" data-action="click" data-value="1">お問い合わせ</a></li>
         <li><a class="js-track" href="/service" data-category="pc-footer-link" data-action="click" data-value="1">個人会員規約</a></li>
-        <li><a class="js-track" href="https://www.instagram.com/kinjo_policy/" data-category="pc-footer-link" data-action="click" data-value="1"target="_blank">コミュニティ運営ポリシー</a></li>
+        <li><a class="js-track" href="/policy" data-category="pc-footer-link" data-action="click" data-value="1">コミュニティ運営ポリシー</a></li>
 
       </ul>
       <ul>
@@ -77,7 +77,7 @@
         <li><a class="js-track" href="/joshikai_policy" data-category="sp-footer-link" data-action="click" data-value="1">女子会規約</a></li>
         <li><a class="js-track" href="/privacy" data-category="sp-footer-link" data-action="click" data-value="1">プライバシーポリシー</a></li>
         <li><a class="js-track" href="/link_policy" data-category="sp-footer-link" data-action="click" data-value="1">リンクポリシー</a></li>
-        <li><a class="js-track" href="https://www.instagram.com/kinjo_policy/" data-category="sp-footer-link" data-action="click" data-value="1">コミュニティ運営ポリシー</a></li>
+        <li><a class="js-track" href="/policy" data-category="sp-footer-link" data-action="click" data-value="1">コミュニティ運営ポリシー</a></li>
         <li><a class="js-track" href="/business" data-category="pc-footer-link" data-action="click" data-value="1">きんゆう女子。with コーポレート</a></li>
 
         <li><a class="js-track" href="/legal" data-category="sp-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>

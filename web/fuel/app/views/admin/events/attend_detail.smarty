@@ -81,8 +81,11 @@
           {/if}
         </td>
         <td class="subject4 link-area">
-          <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
-          {if $application.username != 'guest' && $from_company==TRUE}
+          {if $application.email != ''}
+            <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
+          {/if}
+
+          {if $application.username != 'guest' && $from_company==TRUE && $application.member_regist_code != ''}
             <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
 

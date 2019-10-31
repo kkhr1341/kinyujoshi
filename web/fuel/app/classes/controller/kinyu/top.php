@@ -21,8 +21,8 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         //template
-        $this->data['top_blogs'] = Blogs::lists(1, 9, true);
-        $this->data['top_blogs2'] = Blogs::lists02(1, 12, true);
+//        $this->data['top_blogs'] = Blogs::lists(1, 9, true, null, null, null);
+        $this->data['top_blogs2'] = Blogs::lists02(1, 12, true, null, null, null, null);
         $this->data['blogs_pick'] = Blogs::lists_picks(1, 5, true);
         $this->data['display_top_event'] = EventDisplayTopPages::get();
         $this->template->reload_animation = View::forge('kinyu/template/reload_animation.smarty', $this->data);

@@ -1,3 +1,16 @@
+//共通
+ScrollReveal().reveal('.animation-top1', { easing: 'ease', origin: 'bottom', duration: 3000, distance: '50px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.animation-left-delay', { easing: 'ease', origin: 'left', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.animation-right-delay', { easing: 'ease', origin: 'right', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+
+/* [共通]リストアニメーション */
+ScrollReveal().reveal('.list-animation01-left-delay', { easing: 'ease', origin: 'left', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.list-animation01-right', { easing: 'ease', origin: 'right', duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.list-animation01-right-delay', { easing: 'ease', origin: 'right', delay: 500, duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+ScrollReveal().reveal('.list-animation01-left', { easing: 'ease', origin: 'left', duration: 2500, distance: '30px', opacity: 0, scale: 1 });
+
+
+
 //TOP - 背景部分
 ScrollReveal().reveal('.logo-animation', { easing: 'ease', origin: 'bottom', duration: 3000, distance: '0px', opacity: 0, scale: 1 });
 ScrollReveal().reveal('.intro-bg1', { easing: 'ease', origin: 'bottom', delay: 300, duration: 2500, distance: '0px', opacity: 0, scale: 1 });
@@ -95,6 +108,63 @@ $(function(){
 	setInterval(function(){
 	var $active = $(".cashlesslife-list .article-bg-img2 ul li.active");
 	var $next = $active.next("li").length?$active.next("li"):$(".cashlesslife-list .article-bg-img2 ul li:first");
+	$active.fadeOut($fade_speed).removeClass("active");
+	$next.fadeIn($fade_speed).addClass("active");
+	},$interval);
+});
+
+$(function(){
+	// 設定
+	var topWidth = $('.article-bg-img3').width();
+	var topheight = $('.article-bg-img3').height();
+	var $width = topWidth; // 横幅
+	var $height = topheight; // 高さ
+	var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+	var $fade_speed = 2000; // フェード処理の早さ（ミリ秒）
+	$(".cashlesslife-list .article-bg-img3 ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".cashlesslife-list .article-bg-img3 ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".cashlesslife-list .article-bg-img3 ul li:first").addClass("active").show();
+	setInterval(function(){
+	var $active = $(".cashlesslife-list .article-bg-img3 ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".cashlesslife-list .article-bg-img3 ul li:first");
+	$active.fadeOut($fade_speed).removeClass("active");
+	$next.fadeIn($fade_speed).addClass("active");
+	},$interval);
+});
+
+$(function(){
+	// 設定
+	var topWidth = $('.article-bg-img4').width();
+	var topheight = $('.article-bg-img4').height();
+	var $width = topWidth; // 横幅
+	var $height = topheight; // 高さ
+	var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+	var $fade_speed = 2000; // フェード処理の早さ（ミリ秒）
+	$(".cashlesslife-list .article-bg-img4 ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".cashlesslife-list .article-bg-img4 ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".cashlesslife-list .article-bg-img4 ul li:first").addClass("active").show();
+	setInterval(function(){
+	var $active = $(".cashlesslife-list .article-bg-img4 ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".cashlesslife-list .article-bg-img4 ul li:first");
+	$active.fadeOut($fade_speed).removeClass("active");
+	$next.fadeIn($fade_speed).addClass("active");
+	},$interval);
+});
+
+$(function(){
+	// 設定
+	var topWidth = $('.article-bg-img5').width();
+	var topheight = $('.article-bg-img5').height();
+	var $width = topWidth; // 横幅
+	var $height = topheight; // 高さ
+	var $interval = 3000; // 切り替わりの間隔（ミリ秒）
+	var $fade_speed = 2000; // フェード処理の早さ（ミリ秒）
+	$(".cashlesslife-list .article-bg-img5 ul li").css({"position":"relative","overflow":"hidden","width":$width,"height":$height});
+	$(".cashlesslife-list .article-bg-img5 ul li").hide().css({"position":"absolute","top":0,"left":0});
+	$(".cashlesslife-list .article-bg-img5 ul li:first").addClass("active").show();
+	setInterval(function(){
+	var $active = $(".cashlesslife-list .article-bg-img5 ul li.active");
+	var $next = $active.next("li").length?$active.next("li"):$(".cashlesslife-list .article-bg-img5 ul li:first");
 	$active.fadeOut($fade_speed).removeClass("active");
 	$next.fadeIn($fade_speed).addClass("active");
 	},$interval);
