@@ -116,10 +116,11 @@
   margin-top: 8px;
 }
 .promise-el-title {
-  font-size: 18px;
-  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 4px;
   position: relative;
-  padding-left: 50px;
+  padding-left: 40px;
   transition: .5s;
 }
 .promise-el li {
@@ -133,7 +134,7 @@
 }
 .promise-el .description{
   margin-bottom: 32px;
-  padding-left: 50px;
+  padding-left: 40px;
   font-size: 12px;
   line-height: 20px;
   color: #737373;
@@ -146,6 +147,12 @@
   color: #77cbc0;
   position: absolute;
   left: 0;
+  top: 3px;
+}
+.promise-el-small-text {
+  font-size: 12px;
+  line-height: 20px;
+  padding-top: 20px;
 }
 /*.promise-el-title span.link-btn {
   font-size: 24px;
@@ -240,6 +247,11 @@
 }
 .joshikai-policy .form-control {
   background: #ecf3f2;
+}
+.btn-sub-text {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 12px;
 }
 
 
