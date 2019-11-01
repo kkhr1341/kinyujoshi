@@ -1182,8 +1182,12 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   line-height: 20px;
   height: 40px;
   width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
   transition: 0.5s;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .kinyu-top-joshikai-list .kinyu-top-list-title {
   margin-top: 4px;
