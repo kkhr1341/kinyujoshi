@@ -128,9 +128,13 @@
                 </div>
               {break}
               {/if}
+
+              {$fooo = $blog.main_image}
+              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+
               <li{if $blog.pr == 1} class="pr"{/if}>
                 <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
-                  <div class="img-box" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
+                  <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
                     {if $blog.new == true}
                       <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
                     {/if}
@@ -159,17 +163,9 @@
                       {/if}
                     </div>
                     <h3 class="kinyu-top-list-title">
-                      {$blog.title}
                       {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+                      {$blog.title}
                     </h3>
-                    {if isset($blog.profile_image) && isset($blog.author_name)}
-                      <div class="kinyu-top-list-author">
-                        <img class="kinyu-top-list-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
-                        <div class="kinyu-top-list-author-info">
-                          <div class="kinyu-top-list-author-info-name">{$blog.author_name}</div>
-                        </div>
-                      </div>
-                    {/if}
                   </div>
                 </a>
               </li>
@@ -184,7 +180,6 @@
           <p>スペシャルコンテンツ</p>
           <div class="special-contents-banner-wrapper">
             <div class="special-contents-banner">  <p class="special-contents-promotion-label">PROMOTION</p><a href="/contents/cashless" target="_blank"><img src="/images/cashless-banner.png"></a></div>
-
           </div>
         </div>
 

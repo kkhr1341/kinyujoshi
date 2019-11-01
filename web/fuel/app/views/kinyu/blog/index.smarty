@@ -50,8 +50,8 @@
                   {/if}
                 </div>
                 <h3 class="kinyu-top-list-title">
-                  {$blog.title}
                   {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+                  {$blog.title}
                 </h3>
                 {if isset($blog.profile_image) && isset($blog.author_name)}
                   <div class="kinyu-top-list-author">
