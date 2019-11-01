@@ -970,7 +970,9 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   }
 }
 
-
+.kinyu-top-report-list .img-box {
+  position: relative;
+}
 
 /* .kinyu-top-report-list .img-box .member-regist-label {
   position: absolute;
@@ -1021,22 +1023,18 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
     border-right: 4px solid transparent;
     bottom: -4px;
 }
-
 .member-regist-label:before{
     left: 22px;
 }
-
 .member-regist-label:after{
    right: 25px;
 }
-
 .ribbon_area-sp {
     position: absolute;
     top: 0px;
     right: 0px;
     overflow: hidden;
-  }
-
+}
 .member-regist-label-sp  {
   display: inline-block;
   position: absolute;
@@ -1052,9 +1050,17 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   letter-spacing: 0.05em;
   box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
 }
-
-
-
+.secret-icon:before {
+  content: '';/*何も入れない*/
+  display: inline-block;/*忘れずに！*/
+  width: 20px;/*画像の幅*/
+  height: 20px;/*画像の高さ*/
+  background-image: url(/images/icon/secret-icon.png);
+  background-size: contain;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
 /*-- 記事一覧部分 --*/
 .kinyu-list-block {
   background: #f9f9f9;
@@ -4996,15 +5002,6 @@ input::-webkit-input-placeholder {
 }
 .about-member-contents li:nth-child(2n) {
   margin-right: 0%; 
-}
-/*.about-member-contents li:nth-last-child(-n+3) {
-  margin-bottom: 0px; 
-}*/
-/*.about-member-contents li:nth-child(3n) {
-  margin-right: 0px;
-}*/
-.about-member-contents li:last-child {
-  margin-right: 0px;
 }
 .about-member-contents li .img-box {
   width: 26%;
