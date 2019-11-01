@@ -13,23 +13,23 @@
                 <div class="form-group">
                     <label class="form-group-event-label">役職</label>
                     <input style="height: 40px;" type="text" id="position" class="form-control" placeholder=""
-                           value="{$author.position}">
+                           value="{$author.position|default:''}">
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">名前</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
                     <input style="height: 40px;" type="text" id="name" class="form-control" placeholder=""
-                           value="{$author.name}">
+                           value="{$author.name|default:''}">
                 </div>
 
                 <div class="form-group">
                     <label class="form-group-event-label">サムネイル画像</label>
                     <a href="" class="thumbnail-img-block">サムネイル画像を投稿 / 変更</a>
-                    <input type="hidden" id="profile_image" value="{$author.profile_image}">
+                    <input type="hidden" id="profile_image" value="{$author.profile_image|default:''}">
 
                     <!-- サムネイル画像を投稿するとここに表示される！ -->
-                    {if $author.profile_image}
+                    {if $author.profile_image|default:''}
                     <div class="thumbnail-img"
                          style="background:url({$author.profile_image}) center center / cover no-repeat;"></div>
                     {else}
@@ -41,7 +41,7 @@
                     <label class="form-group-event-label">説明文</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
                     <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
-                              placeholder="">{$author.introduction}</textarea>
+                              placeholder="">{$author.introduction|default:''}</textarea>
                 </div>
             </div>
             <div class="form-right">
@@ -57,7 +57,7 @@
 
 <script>
 
-    var code = "{$author.code}";
+    var code = "{$author.code|default:''}";
 
     $('.thumbnail-img-block')
         .uploader('/api/redactor/upload/image', {
