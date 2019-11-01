@@ -60,7 +60,7 @@
     var code = "{$author.code|default:''}";
 
     $('.thumbnail-img-block')
-        .uploader('/api/redactor/upload/image', {
+        .uploader('/api/redactor/upload/image?crop_thumb=1&crop_width=50&crop_height=50', {
             success: function (response) {
                 var url = response.data.url;
                 $('#profile_image').val(url);
@@ -76,7 +76,7 @@
     $(function () {
 
         $('#save').click(function () {
-            var url = "/api/otherauthors/save";
+            var url = code ? "/api/otherauthors/save" : "/api/otherauthors/create";
             var params = {};
 
             params.code = code;
@@ -104,6 +104,7 @@
 
             ajax.post(url, params, function (data) {
                 ts.success("公開しました", function () {
+                    location.href = "/admin/otherauthors/edit/" + data.data.code;
                 });
             });
         });

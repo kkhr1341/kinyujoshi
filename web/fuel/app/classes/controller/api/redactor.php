@@ -17,7 +17,6 @@ class Controller_Api_Redactor extends Controller_Apibase
 
     private function upload($mode)
     {
-
         \Config::load('s3', true);
 
         $file_name = @$_FILES['file']['name'];
@@ -89,8 +88,7 @@ class Controller_Api_Redactor extends Controller_Apibase
                     $thumbImg->thumbnailImage(750, 0);
                     $thumbImg->writeImage($tmp_file_path);
 
-
-                    $thumbres = $s3->putObject(array(
+                    $s3->putObject(array(
                         'Bucket' => \Config::get('s3.bucket'),
                         'Key' => "stock/{$username}/images/thumb_{$updatedev}{$file_name}",
                         'Body' => fopen($tmp_file_path, 'r'),
@@ -98,9 +96,28 @@ class Controller_Api_Redactor extends Controller_Apibase
                         'ContentType' => $_FILES['file']['type'],
                     ));
 
-                    $thumb = $thumbres->get('ObjectURL');
                     $image->clear();
                     $thumbImg->clear();
+
+                    // cropしたサムネイル
+                    $image = new Imagick($_FILES['file']['tmp_name']);
+                    $tmp_file_path = "/tmp/crop_{$file_name}";
+
+                    $thumbImg = clone $image;
+                    $thumbImg->cropThumbnailImage(\Input::get("crop_width", 50), \Input::get("crop_height", 50));
+                    $thumbImg->writeImage($tmp_file_path);
+
+                    $s3->putObject(array(
+                        'Bucket' => \Config::get('s3.bucket'),
+                        'Key' => "stock/{$username}/images/crop_{$updatedev}{$file_name}",
+                        'Body' => fopen($tmp_file_path, 'r'),
+                        'ACL' => 'public-read',
+                        'ContentType' => $_FILES['file']['type'],
+                    ));
+
+                    $image->clear();
+                    $thumbImg->clear();
+
                     break;
                 default:
                     break;
@@ -112,10 +129,6 @@ class Controller_Api_Redactor extends Controller_Apibase
 
             $etag = $res->get('ETag');
             $etag = str_replace("\"", "", $etag);
-            $title = "";
-
-            Files::create($username, $mode, $etag, $title, $size, $url, $thumb, $file_name, $_FILES['file']['type']);
-
         } catch (S3Exception $e) {
             return $this->error('アップロード中に問題が発生しました。');
 //            //エラー処理
