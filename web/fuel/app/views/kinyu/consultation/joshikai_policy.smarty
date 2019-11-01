@@ -83,7 +83,7 @@
         </p>
 
         <!-- フォーム -->
-        <div class="singlepage-form-block animation-top1">
+        <div class="animation-top1">
           <div class="regist-add-form-edit-el">
             <label class="regist-add-form-edit-title">お名前</label>
             <p class="regist-add-form-edit-subtitle">あだ名でOK♪</p>

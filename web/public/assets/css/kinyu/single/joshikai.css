@@ -268,6 +268,12 @@
   320px以下
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (max-width: 768px) {
+  .joshikai-policy-container {
+    padding-bottom: 0px;
+  }
+  .joshikai-policy {
+    padding-top: 32px;
+  }
   .inquiry-counter {
     width: 88%;
     padding-top: 40px;
@@ -285,10 +291,7 @@
   }
   .joshikai-policy-el {
     width: 88%;
-    padding: 40px 0px 80px;
-  }
-  .joshikai-policy-el-2 {
-    padding: 40px 0px 50px;
+    padding-bottom: 50px;
   }
   .joshikai-policy-container .kingyo-icon {
     position: absolute;
@@ -298,6 +301,7 @@
   }
   .promise-container {
     display: block;
+    padding-top: 0px;
   }
   .promise-container .img-box {
     width: 100%;
@@ -311,25 +315,43 @@
     margin-bottom: 24px;
   }
   .promise-el-title {
-    font-size: 12px;
-    padding-bottom: 12px;
+    font-size: 13px;
+    line-height: 22px;
     position: relative;
-    padding: 12px 40px 12px 50px;
-    background: #cfece5;
+    padding-left: 24px;
   }
   .promise-el .description {
     font-size: 11px;
+    padding-left: 24px;
+  }
+  .promise-el-small-text {
+    font-size: 11px;
+    line-height: 18px;
+    padding-top: 12px;
+  }
+  .regist-add-form-edit-title {
+    font-size: 14px;
+  }
+  .joshikai-policy-container .btn {
+    font-size: 14px;
+  }
+  .btn-sub-text {
+    font-size: 11px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+  .joshikai-policy-el .inquiry-counter-title-sub {
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 11px;
   }
   .promise-el-title span.count {
-    font-size: 22px;
-    line-height: 20px;
-    font-family: 'Cinzel', serif;
-    font-style: italic;
-    color: #77cbc0;
-    position: absolute;
-    left: 7px;
-    top: 50%;
-    margin-top: -10px;
+    font-size: 18px;
+    line-height: 18px;
+    font-style: normal;
+    left: 0px;
+    top: 0px;
+    margin-top: 0px;
   }
   .promise-el-title span.link-btn {
     font-size: 18px;

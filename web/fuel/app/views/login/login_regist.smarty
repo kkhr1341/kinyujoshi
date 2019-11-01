@@ -4,7 +4,7 @@
 
   <img class="login-main-bg animation-top1 pc" src="/images/login/login_main_bg.jpg">
   <img class="login-main-bg animation-top1 sp" src="/images/login/login_main_bg_sp.jpg">
-  <img class="login-main-title animation-left-delay" src="/images/login/login_main_title.png">
+  <img class="login-main-title animation-left-delay" src="/images/login/login_main_title1.png">
 
   <div class="new-regist-block">
 
@@ -119,7 +119,7 @@
               </div>
             </li>
           </ul>
-          <p class="member-contents-subtext">＊そのほか、メンバーさんへのサービスが増えるよう頑張っています！</p>
+          <p class="member-contents-subtext">＊そのほか、メンバーさんへのサービスが増えるよう<br class="sp">頑張っています！</p>
         </div>
       </div>
     </div>
