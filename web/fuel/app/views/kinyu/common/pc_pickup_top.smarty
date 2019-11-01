@@ -23,32 +23,15 @@
 {foreach from=$blogs_pick item=blog name=loopname}
 
     {if $smarty.foreach.loopname.index == 0}
-      <div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20190611110540image.jpg) center center / cover no-repeat;">
-        <a class="js-track" href="https://kinyu-joshi.jp/joshikai/4BFNx6" data-category="slide-link" data-action="click" data-value="3">
+      <div class="swiper-slide" style="background: url(/images/slide/smbc.jpg) center center / cover no-repeat;">
+        <a class="js-track" href="https://kinyu-joshi.jp/report/SmYprG" data-category="slide-link" data-action="click" data-value="3">
           <div class="kinyu-top-list-kind"></div>
           <div class="kinyu-top-introlist-title">
-            <h3 class="kinyu-top-list-title">【5回セット♪】きんゆう女子。学院　2019年 〜秋〜 春よりちょっぴりレベルup!</h3>
+            <h3 class="kinyu-top-list-title">【前編】金融業界で働く女性たちに聞く！人生とおかねのリアル</h3>
           </div>
         </a>
       </div>
 
-      <div class="swiper-slide" style="background: url(/images/withcorporate/paypay/article04/article4_og.jpg) center center / cover no-repeat;">
-        <a class="js-track" href="/contents/cashless/article04" data-category="slide-link" data-action="click" data-value="3">
-          <div class="kinyu-top-list-kind"></div>
-        </a>
-      </div>
-
-      <div class="swiper-slide" style="background: url(/images/withcorporate/paypay/article03/article3_og.jpg) center center / cover no-repeat;">
-          <a class="js-track" href="/contents/cashless/article03" data-category="slide-link" data-action="click" data-value="3">
-            <div class="kinyu-top-list-kind"></div>
-          </a>
-      </div>
-
-      <div class="swiper-slide" style="background: url(/images/og-cashless.png) center center / cover no-repeat;">
-          <a class="js-track" href="/contents/cashless" data-category="slide-link" data-action="click" data-value="3">
-            <div class="kinyu-top-list-kind"></div>
-          </a>
-      </div>
     {/if}
 
     <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">
