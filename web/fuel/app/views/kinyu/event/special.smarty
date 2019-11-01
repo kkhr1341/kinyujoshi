@@ -15,13 +15,9 @@
         <p class="kinyu-event-list-subdescription"><span style="color:red;">＊</span>女子会予約ページを「Peatix」に変更いたしました。</p>
         <ul class="clear">
           {foreach from=$eventall key="key" item=event name=loopname}
-
-          {$fooo = $event.main_image}
-          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
           <li>
             <a class="clear" target="_blank" href="{$event.pay_url}">
-              <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
+              <div class="kinyu-event-list-left" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
               </div>
 
               <div class="kinyu-event-list-right">
