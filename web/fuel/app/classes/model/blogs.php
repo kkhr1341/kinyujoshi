@@ -128,7 +128,7 @@ class Blogs extends Base
             ->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
-            ->where('blogs.kind', '!=', 'わたしを知る')
+//            ->where('blogs.kind', '!=', 'わたしを知る')
             ->where('blogs.disable', '=', 0);
 
         if ($mode === null) {
@@ -185,7 +185,7 @@ class Blogs extends Base
             ->on('blogs.username', '=', 'profiles.username')
             ->join('authors', 'left')
             ->on('blogs.author_code', '=', 'authors.code')
-            ->where('blogs.kind', '!=', 'わたしを知る') ->where('blogs.status', 'in', array(1, 3, 4))
+//            ->where('blogs.kind', '!=', 'わたしを知る') ->where('blogs.status', 'in', array(1, 3, 4))
             ->where('blogs.disable', '=', 0);
 
         if ($username === null) {
@@ -424,7 +424,8 @@ class Blogs extends Base
             ->on('blogs.username', '=', 'profiles.username')
             ->join('authors', 'left')
             ->on('blogs.author_code', '=', 'authors.code')
-            ->where('blogs.kind', '!=', 'わたしを知る') ->where('blogs.status', 'in', array(1, 3, 4)) // 公開中, 更新依頼中, 削除依頼中
+//            ->where('blogs.kind', '!=', 'わたしを知る')
+            ->where('blogs.status', 'in', array(1, 3, 4)) // 公開中, 更新依頼中, 削除依頼中
             ->where('blogs.open_date', '<', \DB::expr('NOW()'))
             ->where('blogs.disable', '=', 0);
 
