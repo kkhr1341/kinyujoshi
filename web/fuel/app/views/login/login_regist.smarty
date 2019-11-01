@@ -11,29 +11,30 @@
     <div class="login-block-el-container">
     
       <div class="login-block-el login-message">
-        <h2 class="main-copy fs-mincho animation-top1">わたしらしい <br class="sp">「ミライ」への解放</h2>
+        <h2 class="main-copy fs-mincho animation-top1">おかねに囚われず<br class="sp">自由で等身大に生きる。</h2>
         <div class="message-block animation-top1">
           <p class="main-message">
-            <span class="fs-mincho">自由で等身大に生きる。</span>
+            <span class="fs-mincho">〜わたしらしい「ミライ」への解放〜</span>
             はじめまして。「きんゆう女子。」編集部です。  <br><br>
 
             「きんゆう女子。」は、2016年3月3日に生まれた、 <br class="pc">
             20〜30代を中心とした金融ワカラナイ女子による、 <br class="pc">
             ワカラナイ女子のためのコミュニティです。  <br><br>
 
-            「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」 <br class="pc">
-            をコンセプトに、身近な家計管理から世界経済、FinTech（フィンテック）、 <br class="pc">
-            ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。  <br><br>
+            コンセプトは「経済に前向きに関わることでおかねに囚われず、自由で等身大に生きる」こと。 <br>
+            身近な家計管理から世界経済、FinTech（フィンテック）、 <br class="pc">
+            ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。 <br><br>
 
             ゆる〜く、楽しく。でもちょっと真面目に。  <br><br>
 
             わたしたち編集部では、女性たちが、お金の漠然とした不安や焦りから解放され、 <br class="pc">
-            ワカラナイ・難しいから諦めていたことを行動に移し実現に近づいていく… <br class="pc">
-            そっと後押しするようなフォローをしていきたいと思っています。<br>
+            ワカラナイ・難しいから諦めていたことを行動に移し実現に近づいていく… <br><br>
+
+            そっと後押しするようなフォローをしていきたいと思っています。
           </p>
-          <a class="to-story-link" href="/about_main">もっとくわしく知る 〉</a>
+          <a class="to-story-link" href="/about_main">もっとストーリーをみる 〉</a>
         </div>
-        <a class="to-member-link animation-top1" href="#regist-form">メンバー登録はこちら</a>
+        <!-- <a class="to-member-link animation-top1" href="#regist-form">メンバー登録はこちら</a> -->
       </div>
 
       <div class="login-block-el about-activity-contents">
@@ -45,8 +46,8 @@
                 <img src="/images/login/activity1.png">
               </div>
               <div class="text-block list-animation01-left">
-                <p class="text-title fs-mincho"><span>01</span>みんなどうしてる？お金のことをシェア</p>
-                <p class="text-description">なかなか親しい仲だと話しにくいお金の話も、オープンに安心して話せる場所です。ひとりよりも、みんなで考えればよい知恵や情報も一度にシェアすることができます。ひとりひとりが情報や経験を持ち寄ってコミュニティを作っています。でも残念ですがお金にも人生にも絶対という正解はないもの。違う意見を持っている人に出会うこともあるかもしれません。それを含め、さまざまな生き方や価値観を知ることで自分自身の判断軸を育てる場にしたいと思っています。まさに3人集まれば文殊の知恵です。</p>
+                <p class="text-title fs-mincho"><span>01</span>何がワカラナイ？気づきを得る女子会</p>
+                <p class="text-description">漠然としたもやもやとワカラナイことが何か、気づきを得るための女子会を開催しています。ひとりよりも、みんなで考えるといろんな見方や情報、経験をシェアすることができます。まさに3人集まれば文殊の知恵！ですね。女子会はメンバーにならなくてもどなたでもご参加いただけます。</p>
               </div>
             </li>
             <li class="clear">
@@ -54,8 +55,8 @@
                 <img src="/images/login/activity2.png">
               </div>
               <div class="text-block list-animation01-right">
-                <p class="text-title fs-mincho"><span>02</span>ゆるくたのしく、でも真面目に。等身大の学び</p>
-                <p class="text-description">“きんゆう”について気軽にゆるく話せる場を提供しています。同じ悩みをもったワカラナイ女子同士でおしゃべりしたり、ちょっと人生の先輩に聞いてみたり。金融業界の方や有識者をゲストに迎えた勉強会では甘口〜辛口など目指したいレベルによってプログラムが分かれています。基本少人数制。同世代や同じ目線の方々が、安心して話せる場所になるよう工夫しています。メンバーにならなくても女子会や勉強会はどなたでもご参加いただけます。</p>
+                <p class="text-title fs-mincho"><span>02</span>ゆるくたのしく、でも真面目に。等身大の情報をお届け</p>
+                <p class="text-description">ミレニアル世代にとって必要な“きんゆう”をテーマに情報発信しています。Fintechサービスを使ってみたり気になる会社に訪問をしてみたり、ワカラナイ女子の目線からレポートにまとめています。私たちをそっと見守ってくれている会社さんと一緒に情報をお届けすることもあります。</p>
               </div>
             </li>
             <li class="clear">
@@ -63,11 +64,11 @@
                 <img src="/images/login/activity3.png">
               </div>
               <div class="text-block list-animation01-left">
-                <p class="text-title fs-mincho"><span>03</span>社会見学や体験を通じて、もっと成長</p>
-                <p class="text-description">コミュニティが主体となり金融を学んだり自分たちのスキルアップや成長に役立つ社会見学や体験を提供しています。webサイトや女子会、勉強会だけでは見えてこない「リアル」を実感することを大切にコンセプトに共感している企業や団体とコラボレーションをして企画・実施しています。子供の頃に学んだことも、大人になってからは見える角度が変わるもの。「私にもできる！」と、一歩ふみだすステップや成長のきっかけになると思うのです。</p>
+                <p class="text-title fs-mincho"><span>03</span>金融を親しみやすく分かりやすくするために声を届ける</p>
+                <p class="text-description">よりよいサービスにするためにはどうしたらいい？このサービス分かりやすい？どう思っている？など、私たちワカラナイ女子の本音や気持ちは金融業界にとって良いサービスをつくるためにほしい声。使う私たちから声をあげて、みんなが親しみをもてる金融サービスにしていきましょう。</p>
               </div>
             </li>
-            <li class="clear">
+            <!-- <li class="clear">
               <div class="img-box list-animation01-left-delay">
                 <img src="/images/login/activity4.png">
               </div>
@@ -75,7 +76,7 @@
                 <p class="text-title fs-mincho"><span>04</span>わたしたちの声を価値に変えることで運営</p>
                 <p class="text-description">私たちの声や価値観をレポートやアンケート、デザインという形に変えて企業の方に提供することでコミュニティを運営しています。また、コミュニティ活動を通じて地域経済活性化やスペースの有効活用にも貢献していきたいと考えています。メンバーのみなさんにはよりよいコミュニティや社会にしていくために、意思のある”声”や”気持ち”を届けていただけると嬉しいです。私たちの声が社会の役に立つことで、次なる挑戦への自信につながりますように…！</p>
               </div>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -88,55 +89,60 @@
         <h2 class="el-title">メンバーになると...？</h2>
         <div class="about-member-contents-list">
           <ul>
-            <li>
+            <li class="clear">
               <div class="img-box" style="background: url(/images/login/member01.jpg) left center / cover no-repeat;"></div>
-              <p><!-- <span>01</span> -->メンバーによる活動日記や取材レポート等を読むことができます。</p>
+              <div class="text-box">
+                <p class="member-contents-list-title">限定レポートが読める</p>
+                <p class="member-contents-list-description">女子会に参加していなくてもみんなどうしてる？が見えてきます。あと一歩踏み出せないときや勇気が出ない時に読んで励みにしてもらえたら嬉しいです。</p>
+              </div>
             </li>
-            <li>
+            <li class="clear">
               <div class="img-box" style="background: url(/images/login/member02.jpg) top center / cover no-repeat;"></div>
-              <p><!-- <span>02</span> -->ちょっとお得に楽しく女子会やイベントに参加することができます。</p>
+              <div class="text-box">
+                <p class="member-contents-list-title">お便りが届く</p>
+                <p class="member-contents-list-description">月に2くらいのお便りでは、皆さんにプラスになるようなことやお礼つきのアンケート、企業とのプロジェクトに関するお知らせをお届けします。</p>
+              </div>
             </li>
-            <li>
+            <li class="clear">
               <div class="img-box" style="background: url(/images/login/member03.jpg) center center / cover no-repeat;"></div>
-              <p><!-- <span>03</span> -->アンケートやプロジェクトを通じてみなさんの声を届けることでお礼がもらえることも！</p>
+              <div class="text-box">
+                <p class="member-contents-list-title">レポーターとして取材に行く機会がある</p>
+                <p class="member-contents-list-description">
+                  企業訪問やイベントの取材に一緒に行く機会があります。受け身ではなく自ら情報を取りに行く積極的な学びも楽しいですよ♪<span id="official-member">（副業や独立を考えている方は、オフィシャルメンバーという道も。）</span></p>
+              </div>
             </li>
-            <li>
+            <li class="clear">
               <div class="img-box" style="background: url(/images/login/member04.jpg) center center / cover no-repeat;"></div>
-              <p><span class="kana">おまけ</span>メンバー限定で不定期にサプライズ…？(> <)があるかも♪</p>
+              <div class="text-box">
+                <p class="member-contents-list-title">サプライズがある</p>
+                <p class="member-contents-list-description">積極的に活動してくれるメンバーさんへちょっとしたサプライズを用意しています。サプライズは、お楽しみ....♪</p>
+              </div>
             </li>
           </ul>
+          <p class="member-contents-subtext">＊そのほか、メンバーさんへのサービスが増えるよう頑張っています！</p>
         </div>
       </div>
     </div>
 
     <div class="login-block-el-container">
 
-      <div class="oficial-member-block-container">
-        <!-- オフィシャルメンバーとは -->
-        <div class="login-block-el oficial-member-block animation-top1">
-          <p class="oficial-member-title fs-mincho">オフィシャルメンバーとは...？</p>
-          <p class="oficial-member-description">コミュニティの顔として企業と意見交換をしたりインタビューなどの取材を行ったり、主体的に活動するメンバーです。オフィシャルメンバーは、1年に1~2回募集いたします。6ヶ月〜1年間の活動を経て卒業となります。</p>
-          <img class="oficial-member-icon animation-right-delay" src="/images/login/ofiucial-member.png">
-        </div>
+      <div id="regist-form" class="login-block-el login-contents-block-inner clear">
+        <div class="login-contents-mainarea login-contents-regist">
+          <h2 class="el-title animation-top1">メンバーになる♪</h2>
 
-        <div id="regist-form" class="login-block-el login-contents-block-inner clear">
-          <div class="login-contents-mainarea login-contents-regist">
-            <h2 class="el-title animation-top1">メンバー登録はこちら♪</h2>
+          <div class="login-contents-form-area clear">
 
-            <div class="login-contents-form-area clear">
-
-              <div class="regist-btn-list animation-top1">
-                <ul>
-                  <li class="email-login-bg"><a href="/regist_email">メールアドレスで登録に進む</a></li>
-                  <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
-                  <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
-                </ul>
-              </div>
-
-              <p class="regist-sub-description animation-top1"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
-              <p class="regist-sub-description animation-top1" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
-
+            <div class="regist-btn-list animation-top1">
+              <ul>
+                <li class="email-login-bg"><a href="/regist_email">メールアドレスで登録に進む</a></li>
+                <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookアカウントで登録に進む</a></li>
+                <li class="google-login-bg"><a href="/auth/oauth/google">Googleアカウントで登録に進む</a></li>
+              </ul>
             </div>
+
+            <p class="regist-sub-description animation-top1"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
+            <p class="regist-sub-description animation-top1" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
+
           </div>
         </div>
       </div>
@@ -148,11 +154,15 @@
   <a href="#regist-form"><img src="/images/login/member-icon.png"></a>
 </div>
 
-<div class="member-icon sp animation-right-delay">
-  <a href="#regist-form">
-    <p class="fs-mincho">メンバー登録はこちら</p>
-    <img class="kingyo-icon" src="/images/login/member-icon-sp.png">
-  </a>
+<!-- オフィシャルメンバーとは -->
+<div class="oficial-member-block-container">
+  <div class="oficial-member-block">
+    <p class="oficial-member-title fs-mincho">オフィシャルメンバーとは...？</p>
+    <p class="oficial-member-description">名刺を持って企業のプロジェクトに積極的に参画したり、女子会をコーディネートしたり、より主体的に活動します。オフィシャルメンバーは、独立や副業を考えている方を対象に1年に数回募集いたします。6ヶ月〜1年間の活動を経て卒業となります。コミュニティが経済的自立を応援します。</p>
+    <img class="oficial-member-icon" src="/images/login/ofiucial-member.png">
+    <p class="close-btn">×</p>
+  </div>
+  <div class="oficial-member-block-bg"></div>
 </div>
 
 
@@ -179,6 +189,13 @@
                     location.href = "/my";
                 });
             });
+        });
+
+        $("#official-member").click(function() {
+          $(".oficial-member-block-container").fadeIn(500);
+        });
+        $(".oficial-member-block .close-btn").click(function() {
+          $(".oficial-member-block-container").fadeOut(500);
         });
     });
 </script>
