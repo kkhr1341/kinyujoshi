@@ -410,13 +410,16 @@ class Blogs extends Base
         $datas['datas'] = \DB::select(
                 \DB::expr('blogs.*'),
                 \DB::expr('profiles.*'),
+                \DB::expr('authors.name AS author_name'),
+                \DB::expr('authors.profile_image'),
                 \DB::expr('blogs.code'),
                 \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
             )->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
-            ->where('blogs.kind', '!=', 'わたしを知る')
-            ->where('blogs.status', 'in', array(1, 3, 4)) // 公開中, 更新依頼中, 削除依頼中
+            ->join('authors', 'left')
+            ->on('blogs.author_code', '=', 'authors.code')
+            ->where('blogs.kind', '!=', 'わたしを知る') ->where('blogs.status', 'in', array(1, 3, 4)) // 公開中, 更新依頼中, 削除依頼中
             ->where('blogs.open_date', '<', \DB::expr('NOW()'))
             ->where('blogs.disable', '=', 0);
 
