@@ -2,11 +2,13 @@
     PCなど
 ---------------------------------- */
 @media screen and (min-width: 1025px) {
-  .kinyu-top-list .kinyu-top-list-author {
+  .kinyu-top-list .kinyu-top-list-author,
+  .kinyu-details-introdauction .kinyu-details-introdauction-author {
     padding: 8px 0px;
   }
 
-  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-thumbnail {
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-thumbnail,
+  .kinyu-details-introdauction .kinyu-details-introdauction-author .kinyu-details-introdauction-author-thumbnail {
     height: 32px;
     width: 32px;
     border-radius: 50%;
@@ -14,13 +16,22 @@
     vertical-align: top;
   }
 
-  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info {
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info,
+  .kinyu-details-introdauction .kinyu-details-introdauction-author .kinyu-details-introdauction-author-info {
     display: inline-block;
     height: 40px;
+  }
+
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info {
     padding: 7px 0px 7px 8px;
   }
 
-  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info .kinyu-top-list-author-info-name {
+  .kinyu-details-introdauction .kinyu-details-introdauction-author .kinyu-details-introdauction-author-info {
+    padding: 10px 0px 10px 8px;
+  }
+
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info .kinyu-top-list-author-info-name,
+  .kinyu-details-introdauction .kinyu-details-introdauction-author-info .kinyu-details-introdauction-author-info-name {
     color: #444444;
     font-size: 10px;
   }
@@ -930,12 +941,13 @@
     padding: 8px 0px 4px;
   }
 
-
-  .kinyu-top-list .kinyu-top-list-author {
+  .kinyu-top-list .kinyu-top-list-author,
+  .kinyu-details-introdauction .kinyu-details-introdauction-author {
     padding: 4px 0px;
   }
 
-  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-thumbnail {
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-thumbnail,
+  .kinyu-details-introdauction .kinyu-details-introdauction-author .kinyu-details-introdauction-author-thumbnail {
     height: 24px;
     width: 24px;
     border-radius: 50%;
@@ -943,16 +955,17 @@
     vertical-align: top;
   }
 
-  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info {
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info,
+  .kinyu-details-introdauction .kinyu-details-introdauction-author .kinyu-details-introdauction-author-info {
     display: inline-block;
     padding: 4px 0px 4px 8px;
   }
 
-  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info .kinyu-top-list-author-info-name {
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info .kinyu-top-list-author-info-name,
+  .kinyu-details-introdauction .kinyu-details-introdauction-author-info .kinyu-details-introdauction-author-info-name {
     color: #444444;
     font-size: 10px;
   }
-
 
   /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップ - きんゆう女子。のメンバー　部分
