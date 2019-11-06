@@ -33,7 +33,7 @@ class Consultations extends Base
 
         $email = \Email::forge('jis');
         $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
-        $email->subject("[きんゆう女子。] お問合せ確認メール");
+        $email->subject("[きんゆう女子。] 教えていただき、ありがとうございます！");
         $email->html_body(\View::forge('email/consultation/body', array()));
         $email->to($params['email']); //送り先
 
@@ -42,7 +42,7 @@ class Consultations extends Base
 
         $email02 = \Email::forge('jis');
         $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
-        $email02->subject("[きんゆう女子。] お問合せがありました");
+        $email02->subject("[きんゆう女子。]もやもやの入力がありました。");
         $name = $params['name'];
         $message = $params['message'];
         $email = $params['email'];
