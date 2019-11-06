@@ -40,7 +40,7 @@
       <table>
         <tr>
           <td>
-            <h3>きんゆう女子。にお問い合わせがありました。</h3>
+            <h3>[きんゆう女子。]もやもやの入力がありました。</h3>
             <p>以下、お問い合わせ内容です。</p>
 
             <div class="form-mail-p">
@@ -48,7 +48,7 @@
               <?php echo $name; ?><br>
             </div>
             <div class="form-mail-p">
-              <p>◼︎お問い合わせ内容</p>
+              <p>◼︎もやもやの内容</p>
               <?php echo nl2br($message); ?><br>
             </div>
             <div class="form-mail-p">

@@ -6400,6 +6400,8 @@ footer .navi_kinyu-submenu-el a {
   .oficial-member-block p.oficial-member-title {
     font-size: 18px;
     line-height: 28px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
   }
   .oficial-member-icon {
     right: -22px;

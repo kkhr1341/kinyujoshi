@@ -11,7 +11,7 @@
     <div class="login-block-el-container">
     
       <div class="login-block-el login-message">
-        <h2 class="main-copy fs-mincho animation-top1">おかねに囚われず<br class="sp">自由で等身大に生きる。</h2>
+        <h2 class="main-copy fs-mincho animation-top1">おかねにとらわれず<br class="sp">自由で等身大に生きる。</h2>
         <div class="message-block animation-top1">
           <p class="main-message">
             <span class="fs-mincho">〜わたしらしい「ミライ」への解放〜</span>
@@ -21,7 +21,7 @@
             20〜30代を中心とした金融ワカラナイ女子による、 <br class="pc">
             ワカラナイ女子のためのコミュニティです。  <br><br>
 
-            コンセプトは「経済に前向きに関わることでおかねに囚われず、自由で等身大に生きる」こと。 <br>
+            コンセプトは「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」こと。 <br>
             身近な家計管理から世界経済、FinTech（フィンテック）、 <br class="pc">
             ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。 <br><br>
 
@@ -100,7 +100,7 @@
               <div class="img-box" style="background: url(/images/login/member02.jpg) top center / cover no-repeat;"></div>
               <div class="text-box">
                 <p class="member-contents-list-title">お便りが届く</p>
-                <p class="member-contents-list-description">月に2くらいのお便りでは、皆さんにプラスになるようなことやお礼つきのアンケート、企業とのプロジェクトに関するお知らせをお届けします。</p>
+                <p class="member-contents-list-description">月に2回くらいのお便りでは、皆さんにプラスになるようなことやお礼つきのアンケート、企業とのプロジェクトに関するお知らせをお届けします。</p>
               </div>
             </li>
             <li class="clear">
@@ -141,7 +141,7 @@
             </div>
 
             <p class="regist-sub-description animation-top1"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
-            <p class="regist-sub-description animation-top1" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>メンバー登録は女性限定になります♪</p>
+            <p class="regist-sub-description animation-top1" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>このコミュニティは金融ワカラナイ女子に向けたサービスです♪</p>
 
           </div>
         </div>
