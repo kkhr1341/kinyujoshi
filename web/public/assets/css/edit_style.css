@@ -5095,11 +5095,13 @@ input::-webkit-input-placeholder {
   text-align: center;
 }
 .oficial-member-block .close-btn {
+  display: block;
   font-size: 30px;
   position: absolute;
   right: 10px;
   top: 20px;
   color: #989898;
+  transition: .5s;
 }
 .member-icon {
   position: fixed;
@@ -6192,6 +6194,10 @@ footer {
   opacity: .5;
 }
 .check-report-dummy p:hover {
+  cursor: pointer;
+  opacity: .5;
+}
+.oficial-member-block .close-btn:hover {
   cursor: pointer;
   opacity: .5;
 }
