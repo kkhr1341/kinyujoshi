@@ -34,6 +34,14 @@
                 {/if}
               </div>
               <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+              {if isset($author_info.profile_image) && isset($author_info.name)}
+                <div class="report-detail-sidebar-el-author">
+                  <img class="report-detail-sidebar-el-author-thumbnail" src="{to_thumb file=$author_info.profile_image type="crop"}">
+                  <div class="report-detail-sidebar-el-author-info">
+                    <div class="report-detail-sidebar-el-author-info-name">{$author_info.name}</div>
+                  </div>
+                </div>
+              {/if}
             </div>
           </a>
         </li>

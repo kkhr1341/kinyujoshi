@@ -86,6 +86,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
         if ($this->data['blog']['author_code']) {
             $author = Authors::getByCode('authors', $this->data['blog']['author_code']);
+            $this->data['author_info'] = $author;
             $this->template->author = View::forge('kinyu/common/author.smarty', $author);
         } else {
             $this->template->author = '';
