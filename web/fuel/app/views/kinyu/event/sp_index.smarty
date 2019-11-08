@@ -111,6 +111,16 @@
           <a class="sp link-to" href="#joshikai-list">今後の女子会の予定はこちら</a>
         </div>
 
+        <div class="kinyu-top-banner-area kiinyu-top-mainarea-bottom">
+          <ul>
+            <li class="sp">
+              <a class="js-track" href="/policy" data-category="pc-top-link" data-action="click" data-value="1">
+                <img class="" src="/images/consultration/consultation-bunner-sp.jpg">
+              </a>
+            </li>
+          </ul>
+        </div>
+
         {*
         <div class="joshikai-held-area">
           <p class="joshikai-held-area-title">主に女子会を開催している場所</p>

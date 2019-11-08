@@ -1,0 +1,187 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/single/joshikai.css">
+<script type='text/javascript' src="/assets/js/kinyu/scrollreveal.min.js"></script>
+
+<div class="kinyu-single-block joshikai-main-block joshikai-main-detail">
+  
+  <div class="joshikai-policy">
+
+    <!-- <h2 class="">コミュニティ運営ポリシー</h2> -->
+
+    <div class="joshikai-policy-container">
+      <div class="joshikai-policy-el">
+    		<div class="inquiry-counter-title fs-mincho">
+    			<p class="counter-main-title animation-top1">私たちが大事にしていること</p>
+    		</div>
+        <p class="main-message animation-top1">          
+          どんなゲストや金融機関にも、ワカラナイ女子だからと<br class="pc">
+          狼(おおかみ)になることは絶対にしないと「お約束」いただいています。<br><br>
+
+          狼とは、勉強してワカッタツモリの女子や、<br class="pc">
+          興味のある女子を狙って手数料やリスクの高すぎる金融商品を勧めたり、<br class="pc">
+          なんども待ち構えるような人のこと。<br><br>
+
+          風通しの良いコミュニティでいるために、メンバーにも「お約束」をお願いしています。<br class="pc">
+          そして、わたしたちコミュニティを運営する側も「お約束」します。<br><br>
+
+          金融リテラシーを高めるための相互理解に貢献し、<br class="pc">
+          適正で等間隔の距離感を保ちよきブリッジ役で在ることを。
+        </p>
+      </div>
+      <!-- <img class="kingyo-icon animation-right-delay" src="/images/consultration/kingyo-icon.png"> -->
+    </div>
+
+    <div class="joshikai-policy-container">
+      <div class="joshikai-policy-el joshikai-policy-el-2">
+        <div class="inquiry-counter-title fs-mincho">
+          <p class="counter-main-title animation-top1">女子会のお約束ごと</p>
+        </div>
+        <div class="promise-container">
+
+          <div class="img-box list-animation01-left" style="background: url(/images/event/joshikai-policy-sp.jpg) left 59% center / cover no-repeat;">
+            
+          </div>
+
+          <div class="promise-el">
+            <ul>
+              <li class="list-animation01-right-delay">
+                <p class="promise-el-title fs-mincho"><span class="count">＊</span>どの金融機関にも属さずワカラナイ女子目線で自由に！ワカラナイ女子のためのお守りになるような軸で発信・活動します。</p>
+              </li>
+              <li class="list-animation01-right-delay">
+                <p class="promise-el-title fs-mincho"><span class="count">＊</span>誰かの承認欲求を満たす場ではなく風通しのいいコミュニティにしていきます。ワカラナイと言えること、ワカラナイことに気づくことを大事にしてメンバーさんひとりひとりが主役になれる場にしていきます。</p>
+              </li>
+              <li class="list-animation01-right-delay">
+                <p class="promise-el-title fs-mincho"><span class="count">＊</span>コミュニティは特定の企業の商品を営業・勧誘、販売を目的にしません。また、女子会参加者やメンバーの個人情報をお渡しすることは決してありません。</p>
+              </li>
+              <li class="list-animation01-right-delay">
+                <p class="promise-el-title fs-mincho"><span class="count">＊</span>会費や皆さんから集まった「ワカラナイやもやもや」「こうだったらいいなという声」やそこから生まれた「デザイン・クリエイティブ」を企業に提供し運営していきます。</p>
+              </li>
+              <li class="list-animation01-right-delay">
+                <p class="promise-el-small-text">
+                <span style="color:#f56969;">＊</span>残念ながらわたしたちはすぐに儲けられる術や絶対的な答えを指南したり、目先のお金のピンチを救って差し上げることはできません。(ゴメンナサイ！) 豊かなオトナの女性になるため、人生の選択肢を増やすため、ライフイベントを迎える準備として、そして将来の不安を少しでも軽減するためにそっと役立つコミュニティの一つになれると嬉しいです。</p>
+              </li>
+            </ul>
+          </div>
+        </div> 
+        <!-- <div class="policy-link-block">
+          <a class="link-to" href="/consultation">もし嫌なことがあった時は...</a>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="joshikai-policy-container">
+      <div class="joshikai-policy-el joshikai-policy-el-2">
+        <div class="inquiry-counter-title fs-mincho">
+          <p class="counter-main-title animation-top1">もし嫌なことがあった時には...</p>
+        </div>
+
+        <p class="inquiry-counter-title-sub animation-top1">
+          ○△会社さんが、最初は優しかったのに今では「おおかみ」のように見えます。<br class="pc">
+          リスクの高すぎる商品を買いませんか？ここだけの話ですよ。と電話やメールがしつこいんです。<br><br>
+          など...<span>もやもや</span>したことがあったら教えてください。<br>
+          力になれることがあるかもしれません。
+        </p>
+
+        <!-- フォーム -->
+        <div class="animation-top1">
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">お名前</label>
+            <p class="regist-add-form-edit-subtitle">あだ名でOK♪</p>
+            <input type="text" name="name" id="name" class="form-control" placeholder="" value="">
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">メールアドレス</label>
+            <input type="text" name="email" id="email" class="form-control" placeholder="" value="">
+          </div>
+
+          <div class="regist-add-form-edit-el regist-add-form-edit-el02">
+            <label class="regist-add-form-edit-title">どんなことがありましたか？<span style="color:#f56969; font-weight: normal;">＊必須</span></label>
+            <p class="regist-add-form-edit-subtitle">なるべく詳しく書いてくださいね♪</p>
+            <textarea id="message" name="message" class="form-control" rows="10"></textarea>
+          </div>
+
+          <!-- ボタンエリア -->
+          <div class="form-btn tx-center">
+            <button class="btn btn-kinyu" type="button" id="save">もやもやを送る</button>
+            <p class="btn-sub-text"><span style="color:#f56969;">＊</span>内容によっては期待に添えない場合があります。<br>お力になれることにだけお返事させていただきます。</p>
+          </div>
+
+        </div><!-- フォーム -->
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal-consultations-block">
+  <div class="complete-message-block">
+    <div class="complete-message">
+      <h2>教えていただき、ありがとうございます！</h2>
+      <p>
+        編集部より土日祝日除く5営業日以内に回答いたします。<br>
+        もやもやが、すっきりするようにお手伝いします。<br><br>
+        内容によっては、ご回答できかねる場合がございますので、<br>
+        あらかじめご了承くださいませ。
+      </p>
+      <a href="/" class="message-top">トップページに戻る</a>
+    </div>
+    <img class="pop-img" src="/images/consultration/pop.png">
+  </div>
+  <div class="modal-consultations-block-bg"></div>
+</div>
+
+
+<script>
+  {literal}
+    $(function () {
+
+        $('#save').click(function (e) {
+            e.preventDefault();
+            var url = "/api/consultations/create";
+            var params = {};
+
+            params.name = $('#name').val();
+            params.message = $('#message').val();
+            params.email = $('#email').val();
+
+            // if (params.name == "") {
+            //     ts.error("お名前を入力してください");
+            //     return false;
+            // }
+            if (params.message == "") {
+                ts.error("「どんなことがありましたか？」を入力してください。");
+                return false;
+            }
+
+            bootbox.confirm("もやもやを送りますか？", function (result) {
+                if (result) {
+                    //ローディングアニメーション
+                    $(".loader-block").fadeIn(200);
+                    ajax.post(url, params, function (data) {
+                        // location.href = "/consultation/complete";
+
+                        $(".modal-consultations-block-bg").fadeIn(1500);
+                        setTimeout(function(){
+                          $(".complete-message-block").fadeIn(2000);
+                        },1000);
+
+                    })
+                        .done(function(data) {
+                            $(".loader-block").fadeOut(500);
+                        })
+                        .fail(function(error) {
+                            $(".loader-block").fadeOut(500);
+                        })
+                }
+                else {
+                    ts.info("キャンセルしました");
+                }
+            });
+
+        });
+    });
+  {/literal}
+</script>
+
+<script type='text/javascript' src="/assets/js/kinyu/scrollanimation.js"></script>
