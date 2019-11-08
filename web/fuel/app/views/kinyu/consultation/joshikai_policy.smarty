@@ -84,13 +84,13 @@
         <!-- フォーム -->
         <div class="animation-top1">
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">お名前</label>
+            <label class="regist-add-form-edit-title">お名前<span style="color:#f56969; font-weight: normal;">＊必須</span></label>
             <p class="regist-add-form-edit-subtitle">あだ名でOK♪</p>
             <input type="text" name="name" id="name" class="form-control" placeholder="" value="">
           </div>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">メールアドレス</label>
+            <label class="regist-add-form-edit-title">メールアドレス<span style="color:#f56969; font-weight: normal;">＊必須</span></label>
             <input type="text" name="email" id="email" class="form-control" placeholder="" value="">
           </div>
 
