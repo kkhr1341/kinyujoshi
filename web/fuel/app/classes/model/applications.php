@@ -248,12 +248,12 @@ class Applications extends Base
         $db->start_transaction();
         try {
             // キャンセルする
-            \DB::update('applications')->set(
-                array(
-                    'cancel' => 1,
-                    'updated_at' => \DB::expr('now()'),
-                )
-            )->where('code', '=', $code)->execute();
+//            \DB::update('applications')->set(
+//                array(
+//                    'cancel' => 1,
+//                    'updated_at' => \DB::expr('now()'),
+//                )
+//            )->where('code', '=', $code)->execute();
 
             // 申し込みキャンセルデータ作成
             \DB::insert('application_cancels')->set(array(
@@ -272,13 +272,13 @@ class Applications extends Base
             // クレジット決済の場合決済取り消し
             if ($charge_id = ApplicationCreditPayment::getChargeIdByApplicationCode($code)) {
                 // 決済データをキャンセル状態に
-                \DB::update('application_credit_payments')
-                    ->set(array(
-                        'cancel' => 1,
-                        'updated_at' => \DB::expr('now()'),
-                    ))
-                    ->where('application_code', '=', $code)
-                    ->execute();
+//                \DB::update('application_credit_payments')
+//                    ->set(array(
+//                        'cancel' => 1,
+//                        'updated_at' => \DB::expr('now()'),
+//                    ))
+//                    ->where('application_code', '=', $code)
+//                    ->execute();
 
                 // 決済キャンセルデータ作成
                 \DB::insert('application_credit_payment_cancels')->set(array(
@@ -355,13 +355,13 @@ class Applications extends Base
         $db->start_transaction();
         try {
 
-            // キャンセルする
-            \DB::update('applications')->set(
-                array(
-//                    'cancel' => 1,
-                    'updated_at' => \DB::expr('now()'),
-                )
-            )->where('code', '=', $code)->execute();
+//            // キャンセルする
+//            \DB::update('applications')->set(
+//                array(
+////                    'cancel' => 1,
+//                    'updated_at' => \DB::expr('now()'),
+//                )
+//            )->where('code', '=', $code)->execute();
 
             // 申し込みキャンセルデータ作成
             \DB::insert('application_cancels')->set(array(
