@@ -29,7 +29,7 @@ class Controller_Admin_Otherauthors extends Controller_Adminbase
         }
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・ブログ';
-        $this->template->contents = View::forge('admin/otherauthors/create.smarty', $this->data);
+        $this->template->contents = View::forge('admin/otherauthors/edit.smarty', $this->data);
     }
 
     public function action_edit($code)

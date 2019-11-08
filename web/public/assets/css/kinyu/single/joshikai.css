@@ -1,0 +1,424 @@
+@charset "UTF-8";
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.inquiry-counter {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.inquiry-counter .form-btn button {
+  background: #f79999;
+  padding: 12px 80px;
+}
+.inquiry-counter-title {
+  text-align: center;
+}
+.inquiry-counter-title .counter-sub-title {
+  font-size: 13px;
+  line-height: 24px;
+  padding: 12px 50px;
+}
+.inquiry-counter-title .counter-main-title {
+  color: #77cbc0;
+  font-size: 26px;
+  line-height: 36px;
+}
+.inquiry-counter-el .inquiry-counter-el-description {
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.inquiry-counter-el {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.inquiry-counter-el ul {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inquiry-counter-el li {
+  width: calc(25.8% - 30px);
+  margin-right: 30px;
+}
+.inquiry-counter-el li:last-child {
+  margin-right: 0px;
+}
+.inquiry-counter-el li .img-box {
+  width: 100%;
+  height: 150px;
+}
+.inquiry-counter-el li p {
+  text-align: center;
+  margin-top: 8px;
+}
+.inquiry-counter .regist-add-form-edit-title {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* きんゆう女子。が大事にしていること */
+.joshikai-policy {
+  padding-top: 80px;
+  background: linear-gradient(-225deg, #f2fbf8 0%, #fffafe 100%);
+}
+.joshikai-policy-container {
+  position: relative;
+  padding-bottom: 100px;
+}
+.joshikai-policy-el {
+  width: 1050px;
+  margin: 0 auto;
+}
+.login-message .message-block .main-message {
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  padding-top: 20px;
+  text-align: center;
+}
+.joshikai-policy-el .main-message {
+  text-align: center;
+}
+.joshikai-policy-el .inquiry-counter-title {
+  margin-bottom: 32px;
+}
+.joshikai-policy-el .inquiry-counter-title-sub {
+  margin-bottom: 32px;
+  text-align: center;
+  font-size: 12px;
+}
+.joshikai-policy-el .inquiry-counter-title-sub span {
+  font-weight: bold;
+  color: #ef8181;
+}
+.joshikai-policy-container .kingyo-icon {
+  position: absolute;
+  width: 240px;
+  right: 50px;
+  bottom: 30px;
+}
+
+.promise-container {
+  display: flex;
+  padding-top: 12px;
+}
+.promise-container .img-box {
+  width: 30%;
+  height: 450px;
+  margin-right: 4%;
+}
+.promise-el {
+  width: 66%;
+  margin-top: 8px;
+}
+.promise-el-title {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 40px;
+  transition: .5s;
+}
+.promise-el li {
+  margin-bottom: 20px;
+}
+.promise-el li:last-child {
+  margin-bottom: 0px;
+}
+.promise-el li:last-child .description {
+  margin-bottom: 0px;
+}
+.promise-el .description{
+  margin-bottom: 32px;
+  padding-left: 40px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #737373;
+}
+.promise-el-title span.count {
+  font-size: 28px;
+  line-height: 20px;
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  color: #77cbc0;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+.promise-el-small-text {
+  font-size: 12px;
+  line-height: 20px;
+  padding-top: 20px;
+}
+/*.promise-el-title span.link-btn {
+  font-size: 24px;
+  line-height: 14px;
+  font-family: 'Cinzel', serif;
+  color: #77cbc0;
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  transform: rotate(-90deg);
+}*/
+/*.active .promise-el-title span.link-btn {
+      bottom: 25px;
+  transform: rotate(-270deg);
+}*/
+.policy-link-block {
+  width: 100%;
+  margin: 0;
+  font-weight: normal;
+  max-width: 400px;
+  background-color: #8ddcd1;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: .5s;
+}
+.policy-link-block a {
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+.policy-link-block a:after {
+  content: "〉";
+  position: absolute;
+  right: 4px;
+  font-size: 18px;
+}
+.singlepage-form-block {
+  width: 840px;
+  margin: 0 auto;
+}
+.regist-add-form-edit-title {
+  font-size: 18px;
+  font-weight: normal;
+}
+.regist-add-form-edit-title span {
+  font-size: 11px;
+  line-height: 11px;
+}
+.joshikai-policy-container .btn {
+  font-size: 15px;
+  font-weight: normal;
+  padding: 16px 120px;
+}
+.modal-consultations-block {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.modal-consultations-block-bg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.85);
+  top: 0;
+  left: 0;
+  z-index: 1005;
+}
+.modal-consultations-block .complete-message-block {
+  display: none;
+  width: 600px;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  box-shadow: 0px 0px 10px 0px #eae9e9;
+  z-index: 1006;
+}
+.modal-consultations-block .complete-message {
+  background: linear-gradient(to bottom left, #fffaf8 0%, #f2f8fb 100%)!important;
+}
+.modal-consultations-block .pop-img {
+  width: 180px;
+  position: absolute;
+  bottom: -27px;
+  right: -30px;
+}
+.joshikai-policy .form-control {
+  background: #ecf3f2;
+}
+.btn-sub-text {
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 12px;
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スマートフォン
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 1024px) {
+
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  320px以下
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 768px) {
+  .joshikai-policy-container {
+    padding-bottom: 0px;
+  }
+  .joshikai-policy {
+    padding-top: 32px;
+  }
+  .inquiry-counter {
+    width: 88%;
+    padding-top: 40px;
+  }
+  .inquiry-counter .regist-add-form-edit-title {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .inquiry-counter-title .counter-main-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .form-control {
+    background: #f9f9f9;
+  }
+  .joshikai-policy-el {
+    width: 88%;
+    padding-bottom: 50px;
+  }
+  .joshikai-policy-container .kingyo-icon {
+    position: absolute;
+    width: 110px;
+    right: 20px;
+    bottom: 0;
+  }
+  .promise-container {
+    display: block;
+    padding-top: 0px;
+  }
+  .promise-container .img-box {
+    width: 100%;
+    height: 200px;
+  }
+  .promise-el {
+    width: 100%;
+    margin-top: 32px;
+  }
+  .joshikai-policy-el .inquiry-counter-title {
+    margin-bottom: 24px;
+  }
+  .promise-el-title {
+    font-size: 13px;
+    line-height: 22px;
+    position: relative;
+    padding-left: 24px;
+  }
+  .promise-el .description {
+    font-size: 11px;
+    padding-left: 24px;
+  }
+  .promise-el-small-text {
+    font-size: 11px;
+    line-height: 18px;
+    padding-top: 12px;
+  }
+  .regist-add-form-edit-title {
+    font-size: 14px;
+  }
+  .joshikai-policy-container .btn {
+    font-size: 14px;
+  }
+  .btn-sub-text {
+    font-size: 11px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+  .joshikai-policy-el .inquiry-counter-title-sub {
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 11px;
+  }
+  .promise-el-title span.count {
+    font-size: 18px;
+    line-height: 18px;
+    font-style: normal;
+    left: 0px;
+    top: 0px;
+    margin-top: 0px;
+  }
+  .promise-el-title span.link-btn {
+    font-size: 18px;
+    height: 20px;
+    font-family: 'Cinzel', serif;
+    color: #77cbc0;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -4px;
+  }
+  .active .promise-el-title span.link-btn {
+    bottom: auto;
+    top: 50%;
+    right: 10px;
+    margin-top: -14px;
+  }
+  .policy-link-block {
+    max-width: 82%;
+    margin-top: 32px;
+  }
+  .policy-link-block a {
+    font-size: 12px;
+    padding: 12px 8px;
+  }
+  .policy-link-block a:after {
+    font-size: 13px;
+  }
+  .modal-consultations-block .complete-message-block {
+    width: 92%;
+  }
+  .modal-consultations-block .complete-message {
+    width: 100%;
+  }
+  .modal-consultations-block .pop-img {
+    width: 120px;
+    position: absolute;
+    bottom: -12px;
+    right: -18px;
+  }
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  タブレットのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 480px) and (max-width:1024px) {
+
+
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  PCのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width: 1025px) {
+/*.promise-el-title:hover,
+.policy-link-block:hover {
+  opacity: .5;
+  cursor: pointer;
+}*/
+
+
+
+}
+
+
+

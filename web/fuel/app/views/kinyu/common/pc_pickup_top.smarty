@@ -1,15 +1,4 @@
 <!-- 女子会TOP表示 -->
-<div class="swiper-slide" style="background: url(/images/withcorporate/paypay/article03/article3_og.jpg) center center / cover no-repeat;">
-    <a class="js-track" href="/contents/cashless/article03" data-category="slide-link" data-action="click" data-value="3">
-      <div class="kinyu-top-list-kind"></div>
-    </a>
-</div>
-
-<div class="swiper-slide" style="background: url(/images/og-cashless.png) center center / cover no-repeat;">
-    <a class="js-track" href="/contents/cashless" data-category="slide-link" data-action="click" data-value="3">
-      <div class="kinyu-top-list-kind"></div>
-    </a>
-</div>
 
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
@@ -31,19 +20,18 @@
 </div>
 {/if}
 
-
 {foreach from=$blogs_pick item=blog name=loopname}
 
     {if $smarty.foreach.loopname.index == 0}
-        <!-- スライド広告枠↓ -->
-        <!-- <div class="swiper-slide" style="background: url(/images/advertisement/PC.png) center center / cover no-repeat;">
-            <a class="js-track js-slide-fundsi-pc" href="https://funds-i.jp/special/imadeki/?utm_source=kj&utm_campaign=imadeki" target="_blank" data-category="slide-link" data-action="click" data-value="2">
-            <div class="kinyu-top-list-kind"></div>
-            <div class="kinyu-top-promotion-label">
-                <img src="/images/pr_label_pc.png">
-            </div>
-            </a>
-        </div> -->
+      <div class="swiper-slide" style="background: url(/images/slide/smbc.jpg) center center / cover no-repeat;">
+        <a class="js-track" href="https://kinyu-joshi.jp/report/SmYprG" data-category="slide-link" data-action="click" data-value="3">
+          <div class="kinyu-top-list-kind"></div>
+          <div class="kinyu-top-introlist-title">
+            <h3 class="kinyu-top-list-title">【前編】金融業界で働く女性たちに聞く！人生とおかねのリアル</h3>
+          </div>
+        </a>
+      </div>
+
     {/if}
 
     <div class="swiper-slide" style="background: url({$blog.main_image}) center center / cover no-repeat;">

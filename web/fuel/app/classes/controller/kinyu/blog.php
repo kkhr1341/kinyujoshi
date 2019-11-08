@@ -16,9 +16,9 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     {
 
         if (Agent::is_mobiledevice()) {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 30);
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 30, null, null);
         } else {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60);
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60, null, null);
         }
         $pagination = $this->data['blogs']['pagination'];
         $this->template->title = 'レポート一覧｜きんゆう女子。';
@@ -49,9 +49,9 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     {
 
         if (Agent::is_mobiledevice()) {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 30, Input::get('search_text'));
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 30, Input::get('search_text'), null);
         } else {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 60, Input::get('search_text'));
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/search?search_text=' . Input::get('search_text'), Input::get('page', 1), 'page', 60, Input::get('search_text'), null);
         }
         $pagination = $this->data['blogs']['pagination'];
         $this->template->search_text = Input::get('search_text');
@@ -127,6 +127,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->data['top_blogs'] = Blogs::lists(1, 6, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
+        $this->data['after_login_url'] = \Uri::base() . 'report/' . $this->data['blog']['code'];
+
         $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data + array('title' => $this->data['blog']['title']));
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
@@ -139,7 +141,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             $this->template->contents = View::forge('kinyu/blog/detail.smarty', $this->data);
         }
 
-        $this->template->meta = array(
+        $meta = array(
             array(
                 'name' => 'description',
                 'content' => $this->data['blog']['description'],
@@ -182,11 +184,11 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             ),
             array(
                 'property' => 'og:image:width',
-                'content' => '1200' 
+                'content' => '1200'
             ),
             array(
                 'property' => 'og:image:height',
-                'content' => '630' 
+                'content' => '630'
             ),
             array(
                 'property' => 'twitter:card',
@@ -197,6 +199,15 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
                 'content' => '@kinyu_joshi',
             ),
         );
+
+        if ($this->data['blog']['secret'] == 1) {
+            $meta[] = array(
+                'name' => 'robots',
+                'content' => 'noindex',
+            );
+        }
+
+        $this->template->meta = $meta;
 
         $this->template->canonical = \Uri::base() . 'report/' . $this->data['blog']['code'];
 

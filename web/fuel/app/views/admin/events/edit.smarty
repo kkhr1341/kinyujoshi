@@ -578,6 +578,7 @@ $(function(){
 
         ajax.post(url, params, function(data){
             ts.success("下書き保存しました");
+            location.href = "/admin/joshikai/edit/" + data.data.code;
         })
     });
 
@@ -740,14 +741,14 @@ $(function(){
             event_end_datetime: $('#event_end_datetime').val(),
         };
 
-        if (params.event_title == "") {
-            ts.error("女子会のタイトルを入力してください");
-            return false;
-        }
-        if (params.event_place == "") {
-            ts.error("女子会の開催場所を入力してください");
-            return false;
-        }
+        // if (params.event_title == "") {
+        //     ts.error("女子会のタイトルを入力してください");
+        //     return false;
+        // }
+        // if (params.event_place == "") {
+        //     ts.error("女子会の開催場所を入力してください");
+        //     return false;
+        // }
         if (params.subject == "") {
             ts.error("件名を入力してください");
             return false;
@@ -819,14 +820,14 @@ $(function(){
             event_end_datetime: $('#event_end_datetime').val(),
         };
 
-        if (params.event_title == "") {
-            ts.error("女子会のタイトルを入力してください");
-            return false;
-        }
-        if (params.event_place == "") {
-            ts.error("女子会の開催場所を入力してください");
-            return false;
-        }
+        // if (params.event_title == "") {
+        //     ts.error("女子会のタイトルを入力してください");
+        //     return false;
+        // }
+        // if (params.event_place == "") {
+        //     ts.error("女子会の開催場所を入力してください");
+        //     return false;
+        // }
         if (params.subject == "") {
             ts.error("件名を入力してください");
             return false;

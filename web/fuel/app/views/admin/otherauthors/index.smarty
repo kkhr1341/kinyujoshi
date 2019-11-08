@@ -21,7 +21,7 @@
         </thead>
         {foreach from=$authors.datas item=author}
         <tr class="authors pointer" code="{$author.code}">
-            <td style="width:20%;"><img src="{$author.profile_image}" width="50" /></td>
+            <td style="width:20%;"><img src="{to_thumb file=$author.profile_image type="crop"}" width="50" /></td>
             <td style="width:15%;">{$author.position}</td>
             <td style="width:15%;">{$author.name}</td>
             <td style="width:25%;">{$author.created_at|date_format:"%Y/%m/%d %H:%M:%S"}</td>

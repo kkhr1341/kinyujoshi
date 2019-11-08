@@ -44,10 +44,8 @@
         {$author}
 
         <!-- ソーシャルシェア -->
-        {$fooo = $blog.main_image}
-        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
         <div class="report-detail-share clear">
-          <div class="report-detail-share-el report-detail-share-left" style="background:url({$thumb_filename}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+          <div class="report-detail-share-el report-detail-share-left" style="background:url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
           <div class="report-detail-share-el report-detail-share-right">
             <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
             <img class="share-this-page" src="/images/social/social-this-page.png">
@@ -67,8 +65,8 @@
             <span style="display: block;height: 12px;"></span>
           </p>
           <div class="button-block">
-            <button class="btn btn-kinyu" type="button" onClick="location.href='/login_regist'">メンバー登録</button>
-            <button class="btn btn-kinyu" type="button" onClick="location.href='/login'">ログイン</button>
+            <button class="btn btn-kinyu" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
+            <button class="btn btn-kinyu" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
           </div>
         </div>
       {/if}

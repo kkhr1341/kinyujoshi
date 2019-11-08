@@ -39,7 +39,7 @@ class ParticipatedApplications extends Base
             ->on('participated_applications.application_code', '=', 'applications.code')
             ->where('applications.username', '=', $username)
             ->where('applications.disable', '=', 0)
-            ->where('applications.cancel', '=', 0)
+            ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->order_by('events.event_date', 'asc')
             ->execute()
             ->as_array();

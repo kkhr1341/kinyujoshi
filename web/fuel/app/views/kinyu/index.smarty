@@ -128,21 +128,18 @@
                 </div>
               {break}
               {/if}
-
-              {$fooo = $blog.main_image}
-              {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
               <li{if $blog.pr == 1} class="pr"{/if}>
                 <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
-                <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
-                {if $blog.new == true}
-                  <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
-                {/if}
-                {if $blog.pr == 1}
-                  <!-- PR用イメージ挿入箇所 -->
-                  <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
-                {/if}
-                </div>
+                  <div class="img-box" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
+                    {if $blog.new == true}
+                      <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
+                    {/if}
+                    {if $blog.pr == 1}
+                      <!-- PR用イメージ挿入箇所 -->
+                      <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+                    {/if}
+                  </div>
+
                   <div class="text-box">
                     <div class="kinyu-top-list-kind">
                       {if $blog.kind == "女子会レポート"}
@@ -161,7 +158,18 @@
                         <p>レポート</p>
                       {/if}
                     </div>
-                    <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+                    <h3 class="kinyu-top-list-title">
+                      {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+                      {$blog.title}
+                    </h3>
+                    {if isset($blog.profile_image) && isset($blog.author_name)}
+                      <div class="kinyu-top-list-author">
+                        <img class="kinyu-top-list-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
+                        <div class="kinyu-top-list-author-info">
+                          <div class="kinyu-top-list-author-info-name">{$blog.author_name}</div>
+                        </div>
+                      </div>
+                    {/if}
                   </div>
                 </a>
               </li>
@@ -174,11 +182,9 @@
         <div class="special-content-wrapper">
           <h3 class="kinyu-top-main-title"><img class="special_title" src="/images/special_title.png"></h3>
           <p>スペシャルコンテンツ</p>
-          <div class="special-contents-banner"><a href="/contents/cashless" target="_blank"><img src="/images/cashless-banner.png"></a></div>
-          <p>きんゆう女子。with <span style="color:red;">PayPay</span></p>
-          <!-- <div class="video">
-          <iframe class="special-content-video"src="https://player.vimeo.com/video/328099799"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-          </div> -->
+          <div class="special-contents-banner-wrapper">
+            <div class="special-contents-banner">  <p class="special-contents-promotion-label">PROMOTION</p><a href="/contents/cashless" target="_blank"><img src="/images/cashless-banner.png"></a></div>
+          </div>
         </div>
 
         <div class="kinyu-top-maincontent-block-el">
@@ -195,13 +201,6 @@
             </div>
           </div>
           </div>
-        </div>
-
-        <div class="kinyu-top-maincontent-block-el" style="text-align:center;">
-          <p style="margin-bottom: 10px; font-size: 14px;">＼ メディアパートナーとして応援しています ／</p>
-              <a class="js-track" target="_blank" href="https://finsum.jp/ja/" data-category="pc-top-link" data-action="click" data-value="1">
-                <img style="width:92%; cursor:pointer;" class="" src="/images/banner/finsum2019.png">
-              </a>
         </div>
 
         <div class="kinyu-top-maincontent-block-el">

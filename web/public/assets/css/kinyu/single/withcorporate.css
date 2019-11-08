@@ -391,6 +391,7 @@ footer,
   left: 12px;
   bottom: 6px;
 }
+/* content03 */
 .cashlesslife-el03 .text-box .illust1 {
 	position: absolute;
   width: 110px;
@@ -404,6 +405,42 @@ footer,
   left: 12px;
   bottom: 6px;
   opacity: .7;
+}
+/* content04 */
+.cashlesslife-el04 .text-box .illust1 {
+	position: absolute;
+  width: 120px;
+	right: 20px;
+  top: 16px;
+  opacity: .7;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+}
+.cashlesslife-el04 .text-box .illust2 {
+  position: absolute;
+  width: 90px;
+  left: 38px;
+  bottom: 0px;
+  opacity: .7;
+}
+/* content05 */
+.cashlesslife-el05 .text-box .illust1 {
+	position: absolute;
+  width: 100px;
+	right: 20px;
+  top: 16px;
+  opacity: .7;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+}
+.cashlesslife-el05 .text-box .illust2 {
+  position: absolute;
+  width: 170px;
+  left: 17px;
+  bottom: 11px;
+  opacity: .7;
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
 }
 .cashlesslife-list .text-box .title-epsode {
 	width: 150px;
@@ -789,6 +826,10 @@ footer,
 	margin-bottom: 24px;
 }
 .article-contents-el-description {
+	font-size: 14px;
+	line-height: 24px;
+}
+.article-contents-el-description a {
 	font-size: 14px;
 	line-height: 24px;
 }
@@ -1408,6 +1449,10 @@ footer,
   font-size: 12px;
   line-height: 20px;
 }
+.article-contents-el-description a {
+  font-size: 12px;
+  line-height: 20px;
+}
 .article-contents-el {
    margin-bottom: 50px;
 }
@@ -1591,6 +1636,45 @@ footer,
   width: 90px;
   left: -20px;
   bottom: -17px;
+}
+/* content3 */
+.cashlesslife-el03 .text-box .illust1 {
+	position: absolute;
+  width: 80px;
+  right: -12px;
+  top: 16px;
+}
+.cashlesslife-el03 .text-box .illust2 {
+  position: absolute;
+  width: 80px;
+  left: -20px;
+  bottom: -17px;
+}
+/* content4 */
+.cashlesslife-el04 .text-box .illust1 {
+	position: absolute;
+  width: 90px;
+  right: -12px;
+  top: 10px;
+}
+.cashlesslife-el04 .text-box .illust2 {
+  position: absolute;
+  width: 60px;
+  left: -7px;
+  bottom: -19px;
+}
+/* content5 */
+.cashlesslife-el05 .text-box .illust1 {
+	position: absolute;
+  width: 70px;
+  right: -12px;
+  top: 0px;
+}
+.cashlesslife-el05 .text-box .illust2 {
+  position: absolute;
+	width: 120px;
+  left: -7px;
+  bottom: -10px;
 }
 
 

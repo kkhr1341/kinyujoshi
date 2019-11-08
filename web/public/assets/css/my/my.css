@@ -55,6 +55,13 @@
     height: 160px!important;
 }
 
+.kinyu-event-list li:nth-child(3n) {
+  margin-right: 2%;
+}
+
+.kinyu-event-list li:nth-last-child(-n+3) {
+  margin-bottom: 2%;
+}
 .my-member-report-block li {
   width: 100%;
   height: 136px;

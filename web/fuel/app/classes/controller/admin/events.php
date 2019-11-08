@@ -34,24 +34,23 @@ class Controller_Admin_Events extends Controller_Adminbase
             throw new HttpNoAccessException;
         }
         $this->data['sections'] = Sections::lists();
-//        $this->data['remind_mail_templates'] = EventRemindMailTemplates::list01();
 
         $this->data['remind_mail_template'] = array(
             'status' => 0,
-            'subject' => $this->get_default_remind_mail_subject(),
-            'body' => $this->get_default_remind_mail_body(),
+            'subject' => EventRemindMailTemplates::getDefaultSubject(),
+            'body' => EventRemindMailTemplates::getDefaultBody(),
         );
 
         $this->data['thanks_mail_template'] = array(
             'status' => 0,
-            'subject' => $this->get_default_thanks_mail_subject(),
-            'body' => $this->get_default_thanks_mail_body(),
+            'subject' => EventThanksMailTemplates::getDefaultSubject(),
+            'body' => EventThanksMailTemplates::getDefaultBody(),
         );
 
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
 
-        $this->data['events']['content'] = $this->get_default_content();
+        $this->data['events']['content'] = Events::getDefaultContent();
 
         $this->template->contents = View::forge('admin/events/edit.smarty', $this->data);
     }
@@ -70,8 +69,8 @@ class Controller_Admin_Events extends Controller_Adminbase
         } else {
             $this->data['remind_mail_template'] = array(
                 'status' => 0,
-                'subject' => $this->get_default_remind_mail_subject(),
-                'body' => $this->get_default_remind_mail_body(),
+                'subject' => EventRemindMailTemplates::getDefaultSubject(),
+                'body' => EventRemindMailTemplates::getDefaultBody(),
             );
         }
 
@@ -80,8 +79,8 @@ class Controller_Admin_Events extends Controller_Adminbase
         } else {
             $this->data['thanks_mail_template'] = array(
                 'status' => 0,
-                'subject' => $this->get_default_thanks_mail_subject(),
-                'body' => $this->get_default_thanks_mail_body(),
+                'subject' => EventThanksMailTemplates::getDefaultSubject(),
+                'body' => EventThanksMailTemplates::getDefaultBody(),
             );
         }
 
@@ -100,10 +99,7 @@ class Controller_Admin_Events extends Controller_Adminbase
             throw new HttpNoAccessException;
         }
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        // $this->data['events'] = Events::lists(1, 50, true);
-        // $this->data['sections'] = Sections::lists();
         $this->data['all_events'] = Events::lists02(null, null, null, null, null, null, "desc");
-       //  $this->data['closed_events'] = Events::lists(0);
         $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
@@ -184,159 +180,5 @@ class Controller_Admin_Events extends Controller_Adminbase
 
         // Response
         return $response;
-    }
-
-    /**
-     * 新規登録時のデフォルトの本文を取得
-     * @return string
-     */
-    private function get_default_content()
-    {
-        return '<p>金融ワカラナイ度：はじめてさん＆ゆる〜くお話したい方🌟🌟🌟🌟<br>スタイル：〜ゲストと交流しながらテーマについて考えるスタイル〜</p>
-<h2>どんなことを学ぶ？</h2>
-<p>100文字〜200文字
-</p>
-<p>＜写真＞</p>
-<h2>今回のゲストは？</h2>
-<p>200文字</p>
-<p>＜写真＞</p>
-<h2>一歩前に進むためには？</h2>
-<p>200文字</p>
-<p>＜写真＞</p>
-<h2>女子会概要</h2>
-<p>■日時<br>2019年9月12日（木）</p>
-<p><br></p>
-<p>■場所</p>
-<p>＜写真＞</p>
-<p><br></p>
-<p>■ゲスト</p>
-<p><br></p>
-<p>■人数</p>
-<p><br></p>
-<p>■参加費</p>
-<p><br></p>
-<p>メンバーさんの場合はギフトコードをマッチすることで（＊＊）円割引になります♪<br>マイページからギフトコードをチェックしてね。</p>
-<p><a href="https://kinyu-joshi.jp/my">メンバー向けページはこちら</a></p>
-<p><br></p>
-<p>■当日のスケジュール<br>19:00〜「きんゆう女子。」コミュニティのご紹介<br>19:10〜自己紹介<br>19:30〜ゲストのお話<br>20:00〜おしゃべり&ワーク<br>20:30〜感想とまとめ、自由解散<br>※スケジュールは予告なく変更になる場合がございます。予めご了承ください。</p>
-<p><br></p>
-<p>■持ち物</p>
-<p><br></p>
-<p>■遅刻・欠席について<br>ログインして<a href="https://kinyu-joshi.jp/my">マイページ</a>からまたは、<a href="https://kinyu-joshi.jp/contact">お問い合わせ</a>からお知らせください。</p>
-<p><br></p>
-<p>■編集部からのお約束<br>どの金融機関にも属さないポジションで、質の高いお金の情報を多角的にシェアできる場を提供します。<br>必要なことを必要なだけまとめた資料を用意、シェアいたします。女子会を通じた営業・勧誘はありません。また、ご参加いただく方同士でも営業・勧誘はお断りさせていただいております。マナーを守ってご参加いただければと思います。お困りのことがあれば編集部まで<a href="https://kinyu-joshi.jp/contact">お問い合わせ</a>ください。</p>
-<p><br></p>
-<p>＜公式サムネイル＞<br>
-<img src="/images/event/official_thumbnail.png"></p>
-<p><br></p>
-<p>主催：金融ワカラナイ女子のためのコミュニティ「きんゆう女子。」<br>お問い合わせ先：support@kinyu-joshi.jp<br>会場協力：<br>ゲスト協力：</p>';
-    }
-
-    /**
-     * 女子会リマインドメールの件名の初期値取得
-     * @return string
-     */
-    private function get_default_remind_mail_subject()
-    {
-        return '女子会がいよいよ明日になりました';
-    }
-
-    /**
-     * 女子会リマインドメールの本文の初期値取得
-     * @return string
-     */
-    private function get_default_remind_mail_body()
-    {
-        return '＊このメールは女子会にお申し込みのみなさんにお送りしています＊
-
-こんにちは。
-きんゆう女子。編集部です。
-
-この度は{% event_title %}に
-お申し込みをいただきましてありがとうございます。
-
-いよいよ明日になりましたのでご案内です。
-
-開催日：{% event_date %}
-会場：{% event_place %}
-
-予習：
-
-女子会の詳細はこちらのメージよりご覧ください
-{% event_url %}
-
-それではみなさまに明日お会いできることを楽しみにしています。
-どうぞよろしくお願いいたします。
-
-*--*--*--*--*--*--*--*--*--*--*--*--*--*
-
-きんゆう女子。編集部(support@kinyu-joshi.jp)
-
-
-〒103-0025
-東京都中央区日本橋茅場町1-5-8　東京証券会館　B-313
-運営会社：株式会社TOE THE LINE
-
-✧きんゆう女子。コミュニティ✧
-『お金に囚われず自由に等身大で生きる』
-公式サイト：https://kinyu-joshi.jp/
-
-✧Instagram✧@kinyu_joshi
-✧Twitter✧@kinyu_joshi
-✧Facebook✧きんゆう女子。
-';
-    }
-
-
-    /**
-     * 女子会サンクスメールの件名の初期値取得
-     * @return string
-     */
-    private function get_default_thanks_mail_subject()
-    {
-        return 'ご参加ありがとうございました♡';
-    }
-
-    /**
-     * 女子会サンクスメールの本文の初期値取得
-     * @return string
-     */
-    private function get_default_thanks_mail_body()
-    {
-        return '＊{% event_title %}に参加いただいたみなさんへ＊
-
-こんにちは！
-きんゆう女子。編集部です。
-
-昨日は女子会にお越しいただきましてありがとうございました！
-1つでも学びになることがありましたら嬉しいです。
-
-今後もさまざまなイベントを開催していきますので
-興味のあるイベントがありましたらぜひお越しくださいね。
-https://kinyu-joshi.jp/joshikai
-
-昨日の女子会の感想や、ご要望などありましたら
-support@kinyu-joshi.jp までとお知らせくださいませ。
-
-またお会いできる日を楽しみにしています。
-引き続き、きんゆう女子。をよろしくお願いいたします。
-
-*--*--*--*--*--*--*--*--*--*--*--*--*--*
-
-きんゆう女子。編集部(support@kinyu-joshi.jp)
-
-
-〒103-0025
-東京都中央区日本橋茅場町1-5-8　東京証券会館　B-313
-運営会社：株式会社TOE THE LINE
-
-✧きんゆう女子。コミュニティ✧
-『お金に囚われず自由に等身大で生きる』
-公式サイト：https://kinyu-joshi.jp/
-
-✧Instagram✧@kinyu_joshi
-✧Twitter✧@kinyu_joshi
-✧Facebook✧きんゆう女子。
-';
     }
 }

@@ -55,7 +55,7 @@
   display: none;
 }
 .kinyu-main-animation-title {
-  display: none; 
+  display: none;
 }
 .fixed {
   position: fixed;
@@ -186,10 +186,10 @@
 .kinyu-main-menu li.member .tool-chip:after {
   border-left-color: #ffdacb;
 }
-.kinyu-main-menu li.menu-open .tool-chip { 
+.kinyu-main-menu li.menu-open .tool-chip {
   border: 1px solid #7CDCCE;
 }
-.kinyu-main-menu li.about-link .tool-chip { 
+.kinyu-main-menu li.about-link .tool-chip {
   border: 2px solid #7CDCCE;
   background: #7CDCCE;
   color: #fff;
@@ -420,7 +420,7 @@
   position: relative;
 }
 .navi_menu {
-  
+
 }
 .navi_kinyu-menu-block {
   width: 100%;
@@ -915,6 +915,7 @@
   transition: 0.8s;
 }
 
+
 /* トップページ・レポート一覧上のバナー */
 .report-list-banner-top {
   width: 650px;
@@ -987,7 +988,7 @@
 /* 記事詳細 - サムネイル画像 */
 .report-detail-thunb-block {
   padding-bottom: 36px;
-  border-bottom: 1px solid #92b8b4; 
+  border-bottom: 1px solid #92b8b4;
 }
 .report-detail-thunb {
   width: 150px;
@@ -1041,7 +1042,7 @@
   background: rgba(247, 179, 179, 0.1);
 }
 .report-detail-keyword span.keyword02 {
-  border: 1px solid #64a6de; 
+  border: 1px solid #64a6de;
   background: rgba(100, 166, 222, 0.1);
 }
 .report-detail-keyword span.keyword03 {
@@ -1698,7 +1699,7 @@
   background: #708fe5;
 }
 .report-detail-share .social-list li .twitter {
-  background: #87e1f9; 
+  background: #87e1f9;
 }
 
 /* おすすめPick Up! */
@@ -1747,7 +1748,7 @@
   padding: 6px 24px;
   font-size: 20px;
   background: #eafffb;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 
 /* きんゆう女子。のメニュー */
@@ -2020,7 +2021,7 @@
 .company-details-block {
   width: 1000px;
   margin: 0 auto;
-  padding: 60px 0px; 
+  padding: 60px 0px;
 }
 .company-details-menu {
   width: 250px;
@@ -2043,7 +2044,7 @@
   display: block;
   color: #444444;
   text-align: center;
-  padding: 12px 0px; 
+  padding: 12px 0px;
   font-size: 13px;
 }
 .company-details {
@@ -2270,7 +2271,7 @@ footer .footer-menu {
 
 @media screen and (min-width: 640px) {
 .btn-kinyu:hover {
-  opacity: .5; 
+  opacity: .5;
 }
 .social-menu li:hover {
   opacity: .5;

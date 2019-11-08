@@ -14,8 +14,7 @@
 							{if $blog.main_image == ""}
 							    <div class="img-box" style="background: url(/images/submain.png) center center / cover no-repeat;"></div>
                             {else}
-                                {$thumb_filename = $blog.main_image|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-							    <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"></div>
+							    <div class="img-box" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"></div>
 							{/if}
                             <div class="text-box">
                                 <p class="date">{$blog.open_date|date_format:"%Y.%-m.%-d"}</p>

@@ -125,7 +125,7 @@ $(function() {
       ajax.post(url, params, function(data){
               ts.success("参加を取り消しました。");
               setTimeout(function() {
-                  location.href = '/my/joshikai';
+                  location.href = '/my';
               }, 1000)
           })
           .done(function(data) {
@@ -155,7 +155,7 @@ $(function() {
       $(".loader-block").fadeIn(500);
       ajax.post(url, params, function(data){
               ts.success("参加を取り消しました。");
-              location.href = '/my/joshikai';
+              location.href = '/my';
           })
           .done(function(data) {
               $(".loader-block").fadeOut(500);

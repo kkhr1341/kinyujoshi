@@ -1,8 +1,35 @@
 /* ----------------------------------
+    PCなど
+---------------------------------- */
+@media screen and (min-width: 1025px) {
+  .kinyu-top-list .kinyu-top-list-author {
+    padding: 8px 0px;
+  }
+
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-thumbnail {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    border: solid 1px #77cbc0;
+    vertical-align: top;
+  }
+
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info {
+    display: inline-block;
+    height: 40px;
+    padding: 7px 0px 7px 8px;
+  }
+
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info .kinyu-top-list-author-info-name {
+    color: #444444;
+    font-size: 10px;
+  }
+}
+
+/* ----------------------------------
     スマートフォン＆タブレット
 ---------------------------------- */
 @media screen and (max-width: 1024px) {
-
   .video-container iframe {
     width: 100%;
     height: 190px;
@@ -893,7 +920,7 @@
     float: right;
     width: 70%;
     height: 100%;
-    padding: 16px 4% 0px;
+    padding: 12px 4% 8px 4%;
     box-sizing: border-box;
   }
   .kinyu-top-report-list .kinyu-top-list-kind p {
@@ -902,6 +929,30 @@
   .kinyu-top-report-list .kinyu-top-list-title {
     padding: 8px 0px 4px;
   }
+
+
+  .kinyu-top-list .kinyu-top-list-author {
+    padding: 4px 0px;
+  }
+
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-thumbnail {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: solid 1px #77cbc0;
+    vertical-align: top;
+  }
+
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info {
+    display: inline-block;
+    padding: 4px 0px 4px 8px;
+  }
+
+  .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-info .kinyu-top-list-author-info-name {
+    color: #444444;
+    font-size: 10px;
+  }
+
 
   /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップ - きんゆう女子。のメンバー　部分
@@ -1031,6 +1082,19 @@
   padding-bottom: 5px;
   border-bottom: 1px solid #333;
   margin-bottom: 0px;
+}
+
+.special-contents-promotion-label {
+  padding: 5px 14px;
+  background: #fff;
+  position: absolute;
+  font-size:12px;
+  z-index: 5;
+  top: 42px;
+  left: 4%;
+}
+.special-contents-promotion-label p{
+  font-size:10px;
 }
 
 
@@ -1512,6 +1576,10 @@
   }
   .joshikai-main-el {
     padding: 36px 0px;
+  }
+  .joshikai-main-el .kinyu-top-banner-area {
+    width: 100%;
+    margin-top: 32px;
   }
   .joshikai-main-right {
     float: none;
@@ -4157,7 +4225,7 @@ footer .navi_kinyu-submenu-el a {
     　トップ - 記事リスト
   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
   .kinyu-top-report-list li {
-    height: 88px;
+    height: 120px;
     background-color: #f9f9f9;
   }
 
@@ -5261,6 +5329,7 @@ footer .navi_kinyu-submenu-el a {
     margin-bottom: 6%;
   }
 
+
   .kinyu-event-list li:last-child {
     margin-bottom: 0px;
   }
@@ -6097,7 +6166,7 @@ footer .navi_kinyu-submenu-el a {
   }
 
   .login-contents-block {
-    padding: 80px 0px 50px;
+    padding: 0px;
     font-size: 12px;
     background: #c5e9e4;
   }
@@ -6200,6 +6269,208 @@ footer .navi_kinyu-submenu-el a {
     color: #77cbc0;
   }
 
+  /* 新規メンバー登録画面_201908 */
+  .login-block-el-container {
+    padding-top: 0px;
+  }
+  .member-icon {
+    background: #8ddcd1;
+    background: #eceab7;
+    width: 98%;
+    position: fixed;
+    left: 50%;
+    margin-left: -49%;
+    bottom: 54px;
+    z-index: 1004;
+  }
+  .member-icon a {
+    display: block;
+    padding: 12px 0px;
+    position: relative;
+  }
+  .member-icon a p {
+    text-align: center;
+    /*color: #fff;*/
+    font-size: 13px;
+  }
+  .member-icon a .kingyo-icon {
+    width: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .login-block-el {
+    padding-bottom: 50px;
+  }
+  .login-message {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .login-regist-block {
+    background: #f9f9f9!important;
+  }
+  .login-message .main-copy {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .login-message .message-block {
+    width: 88%;
+  }
+  .login-message .message-block .main-message span {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .login-message .message-block .main-message {
+    font-size: 12px;
+    line-height: 20px;
+    padding-top: 8px;
+  }
+  .login-message a.to-story-link {
+    font-size: 12px;
+  }
+  .login-message a.to-member-link {
+    padding: 12px 0px;
+    font-size: 12px;
+    width: 72%;
+    margin-top: 28px;
+  }
+  .login-block-img-bg {
+    height: 200px;
+  } 
+  .about-activity-contents {
+    width: 88%;
+    margin-bottom: 0px;
+  }
+  .about-activity-contents li .img-box {
+    float: none;
+    width: 100%;
+  }
+  .about-activity-contents li .img-box img {
+    width: 70%;
+  }
+  .about-activity-contents li .text-block {
+    float: none;
+    width: 92%;
+    margin: 0 auto;
+    padding-right: 0px;
+    padding-top: 20px;
+  }
+  .about-activity-contents li:nth-child(even) .img-box {
+    float: none;
+  }
+  .about-activity-contents li:nth-child(even) .text-block {
+    float: none;
+    padding-left: 0px;
+  }
+  .about-member-contents {
+    background: none;
+  }
+  .about-member-contents-inner {
+    width: 100%;
+    padding: 0px;
+  }
+  .login-block-el h2.el-title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  .about-activity-contents li {
+    margin-bottom: 28px;
+  }
+  .about-activity-contents li .text-block .text-title {
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 45px;
+  }
+  .about-activity-contents li .text-block .text-title span {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .about-activity-contents li .text-block p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .about-activity-contents li {
+    border-bottom: none;
+  }
+  .about-activity-contents li:first-child {
+    padding: 0px;
+  }
+  #regist-form {
+    padding-top: 50px;
+  }
+  .oficial-member-block .close-btn {
+    font-size: 21px;
+    top: 12px;
+  }
+  .about-member-contents {
+    width: 88%;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 50px 0px;
+  }
+  .about-member-contents:after {
+    content: none;
+  }
+  .about-member-contents li {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .about-member-contents li .img-box {
+    height: 85px;
+  }
+  .member-contents-list-title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .member-contents-subtext {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .about-member-contents p {
+    /*padding: 20px 8px 0px;*/
+  }
+  .member-contents-list-description {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .about-member-contents li:nth-last-child(-n+3) {
+    margin-bottom: 20px;
+  }
+  .oficial-member-block-container {
+    background: #fff;
+    padding-top: 50px;
+  }
+  .oficial-member-block {
+    width: 88%;
+    padding: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .oficial-member-block p.oficial-member-title {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+  .oficial-member-icon {
+    right: -22px;
+    bottom: -1px;
+    width: 70px;
+  }
+  .oficial-member-block p.oficial-member-description {
+    font-size: 12px;
+    line-height: 20px;
+    padding-right: 0px;
+    padding: 0px 16px;
+  }
+  .login-main-title {
+    width: 190px;
+    position: absolute;
+    top: 32px;
+    left: 5%;
+  }
   .login-btn-list ul {
     padding: 0px;
   }
@@ -6218,42 +6489,8 @@ footer .navi_kinyu-submenu-el a {
     font-size: 11px;
   }
 
-  /* メンバーになると...？ */
-  .about-member-block {
-    width: 88%;
-    margin-top: 36px;
-    padding: 24px 36px 24px 28px;
-  }
+  .about-member-contents li .text-box {
 
-  .about-member-block .about-member-title {
-    font-size: 14px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #77cbc0;
-    font-weight: 400;
-  }
-
-  .about-member-list li {
-    font-size: 11px;
-    line-height: 18px;
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 24px;
-  }
-
-  .about-member-list li:last-child {
-    margin-bottom: 4px;
-  }
-
-  .about-member-list li span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 13px;
-    line-height: 15px;
-    margin-right: 12px;
-    padding-bottom: 2px;
-    margin-top: 1px;
   }
 
   .login-regist-block .about-member-block {
@@ -6915,7 +7152,7 @@ footer .navi_kinyu-submenu-el a {
 
   /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
       　お祝いメッセージ
-    *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
   .celebration-main-block {
     width: 92%;
     height: 380px;

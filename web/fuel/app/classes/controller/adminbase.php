@@ -111,6 +111,23 @@ class Controller_Adminbase extends Controller_Template
 //        set_exception_handler(function ($e) {
 //            $this->error($e->getMessage());
 //        });
+        \View_Smarty::parser()->registerPlugin('function', 'to_thumb', array($this,'smarty_function_to_thumb'));
+    }
+
+    public function smarty_function_to_thumb($params, $smarty)
+    {
+        $filepath = $params['file'];
+
+        $files = explode('/', $filepath);
+
+        $filename = array_pop($files);
+        $filename = preg_replace("/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/", $params['type'] . "_$1", $filename);
+
+        if (count($files) == 0) {
+            return $filename;
+        }
+        return implode('/', $files) . '/' . $filename;
+
     }
 
     public function after($response)

@@ -15,13 +15,9 @@
           </div>
           {break}
         {/if}
-
-        {$fooo = $blog.main_image}
-        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
         <li class="clear">
           <a href="/report/{$blog.code}">
-            <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+            <div class="img-box" style="background:url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"></div>
             <div class="text-box">
               <p class="title">{$blog.title}</p>
             </div>
@@ -45,17 +41,13 @@
           </div>
           {break}
         {/if}
-
-        {$fooo = $event.main_image}
-        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
         <li class="clear" data-code="{$event.code}">
           {if empty($event.specific_link)}
           <a href="/joshikai/{$event.code}">
           {else}
           <a href="{$event.specific_link}" target="_blank">
           {/if}
-            <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;"></div>
+            <div class="img-box" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat;"></div>
             <div class="text-box">
               <!-- <p class="date">{$event.event_date|date_format:"Y.m.d"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</p> -->
               <div class="kinyu-top-list-kind kinyu-top-event-kind">

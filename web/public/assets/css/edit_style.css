@@ -2,6 +2,9 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.modal-open .modal {
+  z-index: 1006;
+}
 .video-container iframe {
   width: 1000px;
   height: 565px;
@@ -26,6 +29,7 @@
 .kinyu-single-block,
 .kinyu-main-single-block {
   padding-top: 130px;
+  position: relative;
 }
 #canvas {
   position:fixed;
@@ -39,7 +43,10 @@
   display: none;
 }
 .modal-backdrop {
-  z-index: 1004;
+  z-index: 1005;
+}
+.fs-mincho {
+  font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 
 /**
@@ -963,7 +970,9 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   }
 }
 
-
+.kinyu-top-report-list .img-box {
+  position: relative;
+}
 
 /* .kinyu-top-report-list .img-box .member-regist-label {
   position: absolute;
@@ -1014,22 +1023,18 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
     border-right: 4px solid transparent;
     bottom: -4px;
 }
-
 .member-regist-label:before{
     left: 22px;
 }
-
 .member-regist-label:after{
    right: 25px;
 }
-
 .ribbon_area-sp {
     position: absolute;
     top: 0px;
     right: 0px;
     overflow: hidden;
-  }
-
+}
 .member-regist-label-sp  {
   display: inline-block;
   position: absolute;
@@ -1045,9 +1050,17 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   letter-spacing: 0.05em;
   box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
 }
-
-
-
+.secret-icon:before {
+  content: '';/*何も入れない*/
+  display: inline-block;/*忘れずに！*/
+  width: 20px;/*画像の幅*/
+  height: 20px;/*画像の高さ*/
+  background-image: url(/images/icon/secret-icon.png);
+  background-size: contain;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
 /*-- 記事一覧部分 --*/
 .kinyu-list-block {
   background: #f9f9f9;
@@ -1158,6 +1171,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   width: 100%;
   height: 180px;
 }
+
 .list-kind-img {
   position: absolute;
   left: 16px;
@@ -1169,8 +1183,12 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   line-height: 20px;
   height: 40px;
   width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
   transition: 0.5s;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .kinyu-top-joshikai-list .kinyu-top-list-title {
   margin-top: 4px;
@@ -2100,6 +2118,10 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 
 .joshikai-main-el {
   padding: 60px 0px;
+}
+.joshikai-main-el .kinyu-top-banner-area {
+  width: 720px;
+  margin-top: 40px;
 }
 .kinyu-event-list {
   border-bottom: 1px solid #e5e5e5;
@@ -4300,7 +4322,7 @@ input[type=checkbox]:checked + .checkbox:before {
 
 /* ログイン部分 */
 .login-contents-block {
-  padding: 80px 0px;
+  padding: 0px 0px 80px;
   position: relative;
   background: #d7f2ef;
 }
@@ -4422,8 +4444,8 @@ input::-webkit-input-placeholder {
 }
 .regist-btn-list li a {
   display: block;
-  padding: 14px 0px;
-  font-size: 14px;
+  padding: 16px 0px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -4654,19 +4676,25 @@ input::-webkit-input-placeholder {
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  メンバー登録・追加情報フォーム
+  メンバー登録・追加情報ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 #regist-form {
   margin-bottom: 0px;
 }
-.login-block-el {
-  margin-bottom: 80px;
+.login-block-el-container {
+  background: linear-gradient(-225deg, #f2fbf8 0%, #fffafe 100%);
 }
-.login-block-el h2 {
-  font-size: 22px;
+.login-block-el {
+  padding-bottom: 100px;
+}
+.login-block-el h2.el-title {
+  color: #77cbc0;
+  font-size: 24px;
   line-height: 32px;
-  margin-bottom: 28px;
+  font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  letter-spacing: 3px;
   text-align: center;
+  margin-bottom: 24px;
 }
 .login-add-contents-block {
   width: 800px;
@@ -4796,48 +4824,168 @@ input::-webkit-input-placeholder {
   border: none!important;
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  ログインページ（/login_regist）
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.login-main-bg {
+  width: 100%;
+}
+.login-main-title {
+  width: 30%;
+  position: absolute;
+  top: 210px;
+  left: 5%;
+}
+
+/* きんゆう女子。って何してるの？ */
+.about-activity-contents {
+  width: 1000px;
+  margin: 0 auto;
+}
+.about-activity-contents li {
+  margin-bottom: 40px;
+}
+.about-activity-contents li:first-child {
+  padding: 16px 0px 32px;
+}
+.about-activity-contents li:last-child {
+  padding: 32px 0px 0px;
+}
+.about-activity-contents li .img-box {
+  float: right;
+  width: 30%;
+  text-align: center;
+}
+.about-activity-contents li .img-box img {
+  width: 90%;
+}
+.about-activity-contents li .text-block {
+  float: left;
+  width: 70%;
+  padding-right: 40px;
+  padding-top: 24px;
+}
+.about-activity-contents li:nth-child(even) .img-box {
+  float: left;
+}
+.about-activity-contents li:nth-child(even) .text-block {
+  float: right;
+  padding-right: 0px;
+  padding-left: 40px;
+}
+.about-activity-contents li .text-block p {
+  font-size: 13px;
+  line-height: 24px;
+}
+.about-activity-contents li .text-block .text-title {
+  font-size: 18px;
+  padding-bottom: 12px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 52px;
+}
+.about-activity-contents li .text-block .text-title span {
+  font-size: 32px;
+  line-height: 14px;
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  color: #77cbc0;
+  position: absolute;
+  left: 0;
+}
+.about-member-contents p span.kana {
+  font-size: 16px;
+}
+.about-activity-contents li .text-block .text-title:after {
+  content: "";
+  width: 200px;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #77cbc0;
+}
+.about-activity-contents li {
+}
+
+
+
+
 /* メッセージ部分 */
-.login-message h2 {
+.login-message {
+  padding-top: 0px;
+}
+.login-message .main-copy {
   color: #77cbc0;
   font-size: 26px;
   line-height: 36px;
-  margin-bottom: 36px;
-  font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  margin-bottom: 16px;
   letter-spacing: 3px;
+  text-align: center;
 }
 .login-message .message-block {
   width: 800px;
   margin: 0 auto;
-  display: flex;
+  text-align: center;
 }
 .login-message .message-block .main-message {
-  width: 60%;
-  font-size: 14px;
-  line-height: 24px;
-  padding-right: 60px;
+  width: 100%;
+  font-size: 13px;
+  line-height: 22px;
+  /*padding-right: 60px;*/
   padding-top: 20px;
+  text-align: center;
 }
-.login-message .message-block .img-box {
-  width: 40%;
-  height: 300px;
+.login-message .message-block .main-message span {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 24px;
 }
-.login-message a {
+.login-message a.to-story-link {
+  display: inline-block;
+  font-size: 13px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 24px;
+  border-bottom: 1px solid #8ddcd1;
+}
+.login-message a.to-member-link {
   display: block;
   padding: 14px 0px;
   font-size: 14px;
   text-align: center;
   background: #8ddcd1;
   color: #fff;
-  width: 500px;
+  width: 400px;
   margin: 0 auto;
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 /* メンバーになると...？ */
 .about-member-contents {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
-  margin-bottom: 70px;
+  padding: 100px 0px;
+  background: url(/images/login/member_bg1.jpg) center center / cover no-repeat;
+  position: relative;
+}
+.about-member-contents:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,.3);
+  z-index: 999;
+}
+.about-member-contents-inner {
+  width: 1050px;
+  margin: 0 auto;
+  background: rgba(255,255,255,.8);
+  padding: 40px;
+  position: relative;
+  z-index: 1001;
 }
 .about-member-contents ul {
   display: -webkit-flex;
@@ -4845,34 +4993,130 @@ input::-webkit-input-placeholder {
   flex-wrap: wrap;
   justify-content: center;
 }
+.about-member-contents-list {
+  padding-top: 12px;
+}
 .about-member-contents li {
-  width: calc(33.3% - 30px);
-  margin-right: 30px;
-  margin-bottom: 20px;
+  width: 48.5%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+  padding: 24px;
+  box-sizing: border-box;
+  background: linear-gradient(-200deg, #f2fbf8 0%, #fffafe 100%);
+  box-shadow: 0px 0px 8px #e2e2e2;
 }
-.about-member-contents li:nth-last-child(-n+3) {
-  margin-bottom: 0px; 
-}
-.about-member-contents li:nth-child(3n) {
-  margin-right: 0px;
+.about-member-contents li:nth-child(2n) {
+  margin-right: 0%; 
 }
 .about-member-contents li .img-box {
-  height: 180px;
+  width: 26%;
+  height: 110px;
+  border-radius: 50%;
+  float: left;
 }
-.about-member-contents p {
-  padding: 16px 0px;
+.about-member-contents li .text-box {
+  width: 74%;
+  float: right;
+  padding-left: 24px;
 }
-.about-member-contents p span {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 8px;
-  font-family: 'Cinzel', serif;
-  font-style: italic;
+.member-contents-subtext {
+  font-size: 14px;
+  text-align: center;
+}
+.member-contents-list-title {
+  text-align: left;
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 10px;
   color: #77cbc0;
 }
-
-
-
+.member-contents-list-description {
+  text-align: left;
+  font-size: 12px;
+  line-height: 20px;
+}
+.member-contents-list-description #official-member {
+  border-bottom: 1px solid #77cbc0;
+  transition: .5s;
+}
+.login-block-el-container {
+  padding-top: 80px;
+}
+.oficial-member-block-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+.oficial-member-block-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.85);
+  top: 0;
+  left: 0;
+  z-index: 1005;
+}
+.oficial-member-block {
+  position: fixed;
+  width: 700px;
+  background: #fff;
+  padding: 70px 100px;
+  box-shadow: 0px 0px 10px 0px #d2cdcd;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  z-index: 1006;
+  background: linear-gradient(to bottom left, #fffaf8 0%, #f2f8fb 100%)!important;
+}
+.oficial-member-block p.oficial-member-title {
+  padding: 0px 0px;
+  font-size: 22px;
+  position: relative;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  text-align: center;
+  position: relative;
+}
+.oficial-member-block p.oficial-member-title:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: #77cbc0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+}
+.oficial-member-block p.oficial-member-description {
+  padding: 0px 0px;
+  text-align: center;
+}
+.oficial-member-block .close-btn {
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  color: #989898;
+}
+.member-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1002;
+}
+.member-icon img {
+  width: 150px;
+}
+.oficial-member-icon {
+  position: absolute;
+  right: -40px;
+  bottom: 0;
+  width: 120px;
+  opacity: .8!important;
+}
 
 /* マイページでできること */
 .about-member-block {
@@ -5387,9 +5631,9 @@ footer {
   background: none;
 }
 .login-contents-block {
-  background: rgba(0, 197, 170, 0.1);
+/*  background: rgba(0, 197, 170, 0.1);
   background: -webkit-linear-gradient(90deg, rgba(141, 220, 209, 0.3), rgba(195, 232, 226,0.3));
-  background: linear-gradient(90deg, rgba(141, 220, 209, 0.3), rgba(195, 232, 226,0.3));
+  background: linear-gradient(90deg, rgba(141, 220, 209, 0.3), rgba(195, 232, 226,0.3));*/
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -5854,6 +6098,10 @@ footer {
 }
 #joinus-open-close:hover,
 #pass-reissue-close:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.member-contents-list-description #official-member:hover {
   opacity: .5;
   cursor: pointer;
 }

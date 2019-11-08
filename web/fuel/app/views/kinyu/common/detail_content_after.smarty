@@ -15,11 +15,7 @@
     <ul class="clear">
       <!-- 女子会 -->
       {foreach from=$top_blogs key="key" item=blog name=loopname}
-
-        {$fooo = $blog.main_image}
-        {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
-      <li style="background: url({$thumb_filename}) center center / cover no-repeat;">
+      <li style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;">
         <a href="/report/{$blog.code}">
         <div class="kinyu-top-list-kind"></div>
         <h3 class="kinyu-top-list-title">{$blog.title}</h3>

@@ -18,21 +18,18 @@
     <div class="kinyu-top-list kinyu-top-report-list">
       <ul class="clear">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
-
-          {$fooo = $blog.main_image}
-          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
-          <li{if $blog.pr == 1} class="pr"{/if}>
+          <li {if $blog.pr == 1} class="pr"{/if}>
             <a href="/report/{$blog.code}">
-              <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;"">
+              <div class="img-box" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
              　 {if $blog.new == true}
            　　　  <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
            　　　{/if}
            　　　{if $blog.pr == 1}
            　　　  <!-- PR用イメージ挿入箇所 -->
-                       <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+                  <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
            　　　{/if}
-          　　 </div>
+          　  </div>
+
               <div class="text-box">
                 <div class="kinyu-top-list-kind">
                   {if $blog.kind == "女子会レポート"}
@@ -49,7 +46,18 @@
                     <p>レポート</p>
                   {/if}
                 </div>
-                <h3 class="kinyu-top-list-title">{$blog.title}</h3>
+                <h3 class="kinyu-top-list-title">
+                    {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+                    {$blog.title}
+                </h3>
+                {if isset($blog.profile_image) && isset($blog.author_name)}
+                <div class="kinyu-top-list-author">
+                  <img class="kinyu-top-list-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
+                  <div class="kinyu-top-list-author-info">
+                    <div class="kinyu-top-list-author-info-name">{$blog.author_name}</div>
+                  </div>
+                </div>
+                {/if}
               </div>
             </a>
           </li>
@@ -58,6 +66,7 @@
         {/foreach}
       </ul>
     </div>
+
     <div class="blog-pagenation tx-center">
       {$pagination}
     </div>
@@ -85,8 +94,6 @@
         $('.kinyu-header-top').width(ggg);
       });
     </script>
-
-
 
   </div>
 </div>

@@ -24,9 +24,6 @@
         <p class="kinyu-event-info-title">ワカラナイ…から卒業しよう♪</p>
         <ul>
           {foreach from=$events.datas key="key" item=event name=loopname}
-          {$fooo = $event.main_image}
-          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
           <li{if $event.pr == 1} class="pr"{/if}>
             {if $event.event_category == "女子会"}
               <div class="bg-joshikai"></div>
@@ -41,7 +38,7 @@
               {else}
               <a href="{$event.specific_link}" target="_blank">
               {/if}
-                <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
+                <div class="kinyu-event-list-left" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
                   {if $event.pr == 1}
                     <!-- PR用イメージ挿入箇所 -->
                     <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
