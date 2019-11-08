@@ -4908,7 +4908,7 @@ input::-webkit-input-placeholder {
 
 /* メッセージ部分 */
 .login-message {
-  padding-top: 80px;
+  padding-top: 0px;
 }
 .login-message .main-copy {
   color: #77cbc0;

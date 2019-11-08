@@ -380,6 +380,18 @@
   .policy-link-block a:after {
     font-size: 13px;
   }
+  .modal-consultations-block .complete-message-block {
+    width: 92%;
+  }
+  .modal-consultations-block .complete-message {
+    width: 100%;
+  }
+  .modal-consultations-block .pop-img {
+    width: 120px;
+    position: absolute;
+    bottom: -12px;
+    right: -18px;
+  }
 }
 
 
