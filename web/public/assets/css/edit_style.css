@@ -4322,7 +4322,7 @@ input[type=checkbox]:checked + .checkbox:before {
 
 /* ログイン部分 */
 .login-contents-block {
-  padding: 0px 0px 80px;
+  padding: 60px 0px 100px;
   position: relative;
   background: #d7f2ef;
 }
@@ -4330,7 +4330,6 @@ input[type=checkbox]:checked + .checkbox:before {
   background: #f9f9f9;
 }
 .login-contents-intro {
-  padding-top: 50px;
   text-align: center;
 }
 .login-contents-intro .caution {
