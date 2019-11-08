@@ -96,7 +96,7 @@
         <div class="kinyu-top-banner-area kiinyu-top-mainarea-bottom">
           <ul>
             <li>
-              <a class="js-track" href="/start" data-category="pc-top-link" data-action="click" data-value="1">
+              <a class="js-track" href="/login_regist" data-category="pc-top-link" data-action="click" data-value="1">
                 <img class="" src="/images/banner/firsttime_pc.jpg">
               </a>
             </li>

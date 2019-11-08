@@ -47,7 +47,7 @@
       <div class="kinyu-top-banner-area kinyu-top-banner-area">
         <ul class="clear">
           <li>
-            <a class="js-track" href="/start" data-category="sp-top-link" data-action="click" data-value="1">
+            <a class="js-track" href="/login_regist" data-category="sp-top-link" data-action="click" data-value="1">
               <img class="sp" src="/images/banner/firsttime_sp.jpg">
             </a>
           </li>
