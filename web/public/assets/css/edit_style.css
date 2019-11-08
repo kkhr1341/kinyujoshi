@@ -4330,7 +4330,7 @@ input[type=checkbox]:checked + .checkbox:before {
   background: #f9f9f9;
 }
 .login-contents-intro {
-  /*margin-bottom: 42px;*/
+  padding-top: 50px;
   text-align: center;
 }
 .login-contents-intro .caution {
