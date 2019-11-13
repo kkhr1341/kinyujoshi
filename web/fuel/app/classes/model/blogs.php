@@ -123,11 +123,15 @@ class Blogs extends Base
                 \DB::expr('profiles.*'),
                 \DB::expr('blogs.*'),
                 \DB::expr('blogs.code'),
-                \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new")
+                \DB::expr("IF(open_date <= now() and now() <= DATE_ADD(open_date, INTERVAL " . \Config::get('blog.new_expire') . " DAY), True, False) as new"),
+                \DB::expr('authors.name AS author_name'),
+                \DB::expr('authors.profile_image AS author_profile_image')
             )
             ->from('blogs')
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
+            ->join('authors', 'left')
+            ->on('blogs.author_code', '=', 'authors.code')
 //            ->where('blogs.kind', '!=', 'わたしを知る')
             ->where('blogs.disable', '=', 0);
 
