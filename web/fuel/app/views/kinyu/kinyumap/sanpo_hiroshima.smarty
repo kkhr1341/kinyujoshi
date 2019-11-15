@@ -1,0 +1,7 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
+
+<div class="kinyu-list-block kinyu-map-block-container">
+
+
+  {$map_last}
+</div>
