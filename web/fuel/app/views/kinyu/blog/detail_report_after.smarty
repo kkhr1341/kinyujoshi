@@ -21,6 +21,14 @@
             <div class="text-box">
               <p class="title">{$blog.title}</p>
             </div>
+            {if isset($blog.author_profile_image) && isset($blog.author_name)}
+              <div class="report-detail-sidebar-el-author">
+                <img class="report-detail-sidebar-el-author-thumbnail" src="{to_thumb file=$blog.author_profile_image type="crop"}">
+                <div class="report-detail-sidebar-el-author-info">
+                  <div class="report-detail-sidebar-el-author-info-name">{$blog.author_name}</div>
+                </div>
+              </div>
+            {/if}
           </a>
         </li>
         {/foreach}

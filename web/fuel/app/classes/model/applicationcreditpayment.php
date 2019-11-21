@@ -39,7 +39,6 @@ class ApplicationCreditPayment extends Base
 
             // 決済データを売り上げ状態に変更
             \DB::update('application_credit_payments')->set(array(
-                'sale' => 1,
                 'updated_at' => \DB::expr('now()'),
             ))
                 ->where('application_code', '=', $application_code)

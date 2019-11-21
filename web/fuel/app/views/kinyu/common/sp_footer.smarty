@@ -39,7 +39,7 @@
       <a href="/"><img src="/images/top-circle-logo.png"></a>
     </div>
     <div class="new_area">
-      <a class="js-track" href="/start" data-category="common-footer-link" data-action="click" data-value="1"><img src="/images/banner/firsttime_sp.jpg"></a>
+      <a class="js-track" href="/login_regist" data-category="common-footer-link" data-action="click" data-value="1"><img src="/images/banner/firsttime_sp.jpg"></a>
     </div>
 
     <div class="link-to-top sp">

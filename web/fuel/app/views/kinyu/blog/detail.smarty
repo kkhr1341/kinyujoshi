@@ -1,5 +1,4 @@
 <div class="kinyu-main-block kinyu-details-block">
-
   <div class="kinyu-details-introdauction">
     <div class="kinyu-details-introdauction-inner clear">
       <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;">
@@ -28,15 +27,21 @@
           <h2>{$blog.title}</h2>
           <p class="description">{$blog.description}</p>
           <p class="description-sub">{$blog.open_date|date_format:"%Y.%-m.%-d"}up!</p>
+          {if isset($author_info.profile_image) && isset($author_info.name)}
+            <div class="kinyu-details-introdauction-author">
+              <img class="kinyu-details-introdauction-author-thumbnail" src="{to_thumb file=$author_info.profile_image type="crop"}">
+              <div class="kinyu-details-introdauction-author-info">
+                <div class="kinyu-details-introdauction-author-info-name">{$author_info.name}</div>
+              </div>
+            </div>
+          {/if}
         </div>
       </div>
     </div>
   </div>
 
   <div class="inner clear">
-
     <div class="report-detail-main">
-
       {if $viewable == true}
         {$blog.content|nofilter}
 

@@ -73,7 +73,7 @@
                       <p class="joshikai-applicable">＊満席</p>
                     {/if}
                   </div>
-                  <h3 class="event-title">{$event.title}</h3>
+                  <h3 class="event-title">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
                   <div class="event-subbox">
                     {if $event.fee == 0}
                       <p class="event-subbox-el">参加費：無料</p>

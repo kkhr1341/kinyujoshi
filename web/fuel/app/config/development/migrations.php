@@ -138,8 +138,11 @@ return array(
         129 => '137_add_username_to_authors',
         130 => '138_create_user_blogs',
         131 => '139_create_blog_user_blogs',
-        132 => '140_create_consultations',
-        133 => '141_create_consultation_reply_mails',
+        132 => '140_drop_event_remind_mail_default_templates',
+        133 => '141_add_status_to_event_remind_mail_templates',
+        134 => '142_create_event_thanks_mail_templates',
+        135 => '143_create_event_thanks_mails',
+        136 => '144_delete_cancel_from_applications',
       ),
     ),
     'module' => 
