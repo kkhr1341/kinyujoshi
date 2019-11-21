@@ -583,7 +583,6 @@ class Events extends Base
             ->on('events.username', '=', 'profiles.username')
             ->where('status', '=', 1)
             ->where('display', '=', 1)
-            ->where('secret', '=', 0)
             ->where('events.disable', '=', 0);
 
         if ($past === null) {
