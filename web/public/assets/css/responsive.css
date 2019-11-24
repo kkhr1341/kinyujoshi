@@ -40,6 +40,11 @@
     color: #444444;
     font-size: 10px;
   }
+
+  .kinyu-event-list .kinyu-event-list-left {
+    width: 323px;
+    height: 323px;
+  }
 }
 
 /* ----------------------------------
@@ -1733,7 +1738,8 @@
     margin-bottom: 0px;
   }
   .kinyu-event-list .kinyu-event-list-left {
-    height: 160px;
+    height: 364px;
+    width: 364px;
   }
   .kinyu-event-list li .event-category {
     font-size: 11px;
