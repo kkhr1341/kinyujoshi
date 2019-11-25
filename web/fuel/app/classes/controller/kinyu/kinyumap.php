@@ -92,4 +92,24 @@ class Controller_Kinyu_Kinyumap extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/kinyumap/sanpo_nihonginko.smarty', $this->data);
     }
 
+    public function action_sanpo_hiroshima()
+    {
+
+        $this->template->title = 'きんゆう散歩＠広島｜きんゆう女子。';
+        $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu_map/og/og-main.jpg';
+        $this->template->description = '金運アップを目指して、広島県で私たちが気になるスポットをいくつか巡ってきました♪';
+        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        $this->template->map_last = View::forge('kinyu/kinyumap/map_last.smarty', $this->data);
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        }
+
+        $this->template->contents = View::forge('kinyu/kinyumap/sanpo_hiroshima.smarty', $this->data);
+    }
+
 }

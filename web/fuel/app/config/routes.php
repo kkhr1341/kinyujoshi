@@ -155,6 +155,7 @@ return array(
 	'map_ooedoito' => 'kinyu/kinyumap/ooedo_ito',
 	'map_kabuto' => 'kinyu/kinyumap/map_kabuto',
 	'sanpo_nihonginko' => 'kinyu/kinyumap/sanpo_nihonginko',
+	'sanpo_hiroshima' => 'kinyu/kinyumap/sanpo_hiroshima',
 
 	//マイページ - トップ
 	'my'   => 'my/top',

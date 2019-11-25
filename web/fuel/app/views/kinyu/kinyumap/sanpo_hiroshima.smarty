@@ -3,5 +3,7 @@
 <div class="kinyu-list-block kinyu-map-block-container">
 
 
+
+
   {$map_last}
 </div>
