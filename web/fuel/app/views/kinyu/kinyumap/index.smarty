@@ -75,7 +75,7 @@
         if( getDevice == 'sp' ){
 
           var mapOptions = {
-              zoom: 7,
+              zoom: 5,
 
               center: new google.maps.LatLng(36.21130021141535,137.7140554227559),
 
@@ -89,7 +89,7 @@
 
         }else if( getDevice == 'tab' ){
           var mapOptions = {
-              zoom: 7,
+              zoom: 6,
 
               center: new google.maps.LatLng(37.82414371431499,137.75114689455322),
 
@@ -103,7 +103,7 @@
 
         }else if( getDevice == 'other' ){
           var mapOptions = {
-              zoom: 7,
+              zoom: 6,
 
               center: new google.maps.LatLng(37.82414371431499,137.75114689455322),
 
