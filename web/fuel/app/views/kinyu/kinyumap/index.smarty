@@ -220,6 +220,20 @@
                 infoWindow5.open(map, marker5);
             } ) ;
             markers.push(marker5);
+
+            // きんゆう散歩@広島#1
+            var marker6 = new google.maps.Marker({
+                position: new google.maps.LatLng(34.3726424,132.3554568),
+                map: map,
+                icon: pin,
+            });
+            var infoWindow6 = new google.maps.InfoWindow({
+                content: '<div class="sample map-point"><a href="/report/JE8kkc" target="_blank"><img src="https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/USPhJ3BxWXsSKVLv/images/20191107174042image.jpg"><p class="map-el-title">きんゆう散歩＠広島 コイン通り商店街 ~金持稲荷大社編~</p><p class="map-decription">広島には、金運にまつわるスポットが多く集まる「コイン通り」という商店街があるそう。金運アップを目指して、私たちが気になるスポットをいくつか巡ってきました♪第1弾の今回は、「金持稲荷大社」をレポートします！</p></a></div>'
+            });
+            marker6.addListener( "click", function ( argument ) {
+                infoWindow6.open(map, marker6);
+            } ) ;
+            markers.push(marker6);
         }
 
         // 拡大状態に表示するマーカー
