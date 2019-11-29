@@ -45,6 +45,11 @@
     width: 323px;
     height: 323px;
   }
+
+  .kinyu-top-list .img-box {
+    width: 323px;
+    height: 323px;
+  }
 }
 
 /* ----------------------------------
@@ -5360,10 +5365,6 @@ footer .navi_kinyu-submenu-el a {
 
   .kinyu-event-list li:last-child {
     margin-bottom: 0px;
-  }
-
-  .kinyu-event-list .kinyu-event-list-left {
-    height: 160px;
   }
 
   .kinyu-event-list li .event-category {
