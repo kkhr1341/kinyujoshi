@@ -5617,7 +5617,7 @@ to {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　スクショ対策
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.report-detail-main figure {
+/* .report-detail-main figure {
   position: relative;
 }
 .report-detail-main figure:after {
@@ -5630,7 +5630,7 @@ to {
 }
 .report-detail-main figure.no-copy:after {
   content: none;
-}
+} */
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　紙吹雪の場合

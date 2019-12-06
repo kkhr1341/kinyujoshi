@@ -137,7 +137,7 @@
           <ul>
             {foreach from=$blogs item=blog name=loopname}
 
-            {if $smarty.foreach.loopname.index == 2}
+            {if $smarty.foreach.loopname.index == 8}
             </ul>
               <div class="my-more-link">
                 <a href="/my/member_report">もっと見る ></a>

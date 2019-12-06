@@ -6365,7 +6365,7 @@ footer .navi_kinyu-submenu-el a {
   }
   .login-block-img-bg {
     height: 200px;
-  } 
+  }
   .about-activity-contents {
     width: 88%;
     margin-bottom: 0px;
@@ -7009,8 +7009,8 @@ footer .navi_kinyu-submenu-el a {
 
   .navi_kinyu-submenu-copy {
     margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 10px;
+    margin-bottom: 50px;
+    padding: 0px 10px 30px 10px;
     background: #f9f9f9;
   }
 
