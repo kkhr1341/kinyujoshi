@@ -52,7 +52,8 @@
 }
 
 .kinyu-event-list .kinyu-event-list-left {
-    height: 160px!important;
+  width: 295px;
+  height: 295px;
 }
 
 .kinyu-event-list li:nth-child(3n) {
