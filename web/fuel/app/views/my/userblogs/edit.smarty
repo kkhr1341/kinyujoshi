@@ -43,7 +43,6 @@
                 <div class="modal-body">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-
                   <p class="withdrawal-title">書いた人</p>
 
                   <div class="form-group" style="display: none">
@@ -78,6 +77,23 @@
                     <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
                     <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
                               placeholder="">{$author.introduction|default:''}</textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-group-event-label">Webサイト</label>
+                    <input type="text" id="website" class="form-control" placeholder="https://kinyu-joshi.jp/" value="{$author.website|default:''}">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group-event-label">Instagram</label>
+                    <input type="text" id="instagram" class="form-control" placeholder="https://www.instagram.com/kinyujoshi" value="{$author.instagram|default:''}">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group-event-label">Twitter</label>
+                    <input type="text" id="twitter" class="form-control" placeholder="https://twitter.com/kinyujoshi" value="{$author.twitter|default:''}">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-group-event-label">Facebook</label>
+                    <input type="text" id="facebook" class="form-control" placeholder="https://www.facebook.com/kinyujoshi" value="{$author.facebook|default:''}">
                   </div>
 
                   <div class="form-btn tx-center">
@@ -255,7 +271,11 @@
                 "position": $('#position').val(),
                 "name": $('#name').val(),
                 "profile_image": $('#author-profile_image').val(),
-                "introduction": $('#introduction').val()
+                "introduction": $('#introduction').val(),
+                "website": $('#website').val(),
+                "instagram": $('#instagram').val(),
+                "twitter": $('#twitter').val(),
+                "facebook": $('#facebook').val()
             };
 
             if (params.position == "") {
