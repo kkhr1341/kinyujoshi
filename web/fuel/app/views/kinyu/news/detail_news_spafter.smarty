@@ -18,7 +18,7 @@
         <li class="clear">
           <a href="/news/{$news.code}">
 
-            {if $fooo == ""}
+            {if $news.main_image == ""}
               <div class="img-box" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
             {else}
               <div class="img-box" style="background:url({to_thumb file=$news.main_image type="thumb"}) center center / cover no-repeat;"></div>
