@@ -30,6 +30,18 @@ class Authors extends Base
         'introduction' => array(
             'default' => ''
         ),
+        'website' => array(
+            'default' => ''
+        ),
+        'instagram' => array(
+            'default' => ''
+        ),
+        'twitter' => array(
+            'default' => ''
+        ),
+        'facebook' => array(
+            'default' => ''
+        ),
         'deleted_at',
         'created_at',
         'updated_at',
@@ -67,6 +79,11 @@ class Authors extends Base
 
         $val->add('introduction', '自己紹介')
             ->add_rule('required');
+
+        $val->add('website', 'Webサイト');
+        $val->add('instagram', 'Instagram');
+        $val->add('twitter', 'Twitter');
+        $val->add('facebook', 'Facebook');
 
         return $val;
     }
