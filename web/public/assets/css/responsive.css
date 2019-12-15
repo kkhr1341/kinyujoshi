@@ -2,6 +2,14 @@
     PCなど
 ---------------------------------- */
 @media screen and (min-width: 1025px) {
+  .kinyu-top-list li {
+    margin-right: 1.5%;
+    margin-bottom: 7.0%;
+  }
+  .kinyu-top-list li:nth-child(3n) {
+    margin-right: 1.5%;
+  }
+
   .kinyu-top-list .kinyu-top-list-author,
   .kinyu-details-introdauction .kinyu-details-introdauction-author,
   .report-detail-sidebar-el .report-detail-sidebar-el-author {
@@ -47,8 +55,8 @@
   }
 
   .kinyu-top-list .img-box {
-    width: 364px;
-    height: 364px;
+    width: 330px;
+    height: 330px;
   }
 
   .report-sidebar-report-list li .img-box {
@@ -74,10 +82,12 @@
     スマートフォン＆タブレット
 ---------------------------------- */
 @media screen and (max-width: 1024px) {
+
   .author-footer-social-list {
     padding-top: 28px;
     text-align: center;
   }
+
   .author-footer-social-list ul li {
     display: inline-block;
     padding: 0px 4px;
@@ -1783,6 +1793,7 @@
     width: 330px;
     height: 330px;
   }
+
   .kinyu-event-list li .event-category {
     font-size: 11px;
     line-height: 11px;
