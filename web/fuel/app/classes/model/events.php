@@ -205,7 +205,11 @@ class Events extends Base
         }
 
         if ($open === null) {
-        } else {
+        }
+        elseif($open === 'enable_only') {
+            $datas = $datas->where('open_date', '>=', \DB::expr('NOW()'));
+        }
+        else {
             $datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
         }
 
