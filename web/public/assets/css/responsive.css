@@ -78,7 +78,6 @@
     padding-top: 28px;
     text-align: center;
   }
-
   .author-footer-social-list ul li {
     display: inline-block;
     padding: 0px 4px;
@@ -204,12 +203,17 @@
   .kinyu-main {
     padding-top: 45px;
   }
+
   .kinyu-top-list-block {
     margin-left: 0px;
     padding: 0px;
     width: 100%;
     height: 100%;
   }
+  .kinyu-top-list .img-box {
+    height: 330px;
+  }
+
   .kinyu-top-maincontent {
     padding-bottom: 36px;
     border-left: none;
@@ -1775,9 +1779,9 @@
   .kinyu-event-list li:last-child {
     margin-bottom: 0px;
   }
-  .kinyu-event-list .kinyu-event-list-left {
-    height: 364px !important;
-    width: 364px !important;
+  .kinyu-event-list.joshikai-past-list.joshikai-main-el .kinyu-event-list-left {
+    width: 330px;
+    height: 330px;
   }
   .kinyu-event-list li .event-category {
     font-size: 11px;
@@ -4183,6 +4187,16 @@ footer .navi_kinyu-submenu-el a {
     overflow: inherit;
     float: none;
   }
+  .kinyu-top-list.kinyu-top-joshikai-list li {
+    height: initial;
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 6%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    overflow: inherit;
+    float: none;
+  }
 
   .kinyu-top-list li:nth-child(3n) {
     margin-right: auto;
@@ -4305,9 +4319,9 @@ footer .navi_kinyu-submenu-el a {
 
   .kinyu-top-report-list li .text-box {
     float: right;
-    width: 70%;
+    width: 221px;
     height: 100%;
-    padding: 8px 4% 0px;
+    padding: 8px 5% 0px;
     box-sizing: border-box;
   }
 
@@ -4325,7 +4339,11 @@ footer .navi_kinyu-submenu-el a {
   .kinyu-top-member-list {
     height: auto;
   }
-
+  .kinyu-top-member-block .kinyu-top-member-list .img-box {
+    width: 100%;
+    float: none;
+    height: 330px;
+  }
   .kinyu-top-member-list .img-box {
     width: 100%;
     float: none;
@@ -4348,6 +4366,7 @@ footer .navi_kinyu-submenu-el a {
   .kinyu-top-member-list .text-box .link-to {
     font-size: 11px;
     font-weight: 400;
+    margin: 0 auto;
   }
 
   .kinyu-top-member-list .text-box .description {
@@ -4527,6 +4546,11 @@ footer .navi_kinyu-submenu-el a {
     float: none;
     height: 364px;
     width: 364px;
+  }
+  .kinyu-main-block.kinyu-details-block .kinyu-details-introdauction .img-box {
+    float: none;
+    height: 330px;
+    width: 330px;
   }
 
   .kinyu-details-introdauction .text-box {
