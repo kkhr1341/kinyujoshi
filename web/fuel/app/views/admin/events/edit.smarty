@@ -31,6 +31,9 @@
 
                         <input type="radio" value="私立きん" name="event_category" id="event5" class="form-radio" placeholder="" {if $events.event_category|default:'' == "私立きん"}checked{/if}>
                         <label for="event5" class="form-long">私:きん学院</label>
+
+                        <input type="radio" value="招待型" name="event_category" id="event6" class="form-radio" placeholder="" {if $events.event_category|default:'' == "招待型"}checked{/if}>
+                        <label for="event6" class="form-long">招待型</label>
                     </div>
                 </div>
 

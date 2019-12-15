@@ -60,7 +60,11 @@ var $resArray02 = $resArray[1];
                 <p class="info-title">参加費</p>
                 {if is_numeric($event.fee)}
                   {if $event.fee == 0}
-                    <p class="info-detail">無料</p>
+                    {if $event.event_category == '招待型'}
+                      <p class="info-detail">ご招待</p>
+                    {else}
+                      <p class="info-detail">無料</p>
+                    {/if}
                   {else}
                     <p class="info-detail">{$event.fee|number_format}円（税込）</p>
                   {/if}
