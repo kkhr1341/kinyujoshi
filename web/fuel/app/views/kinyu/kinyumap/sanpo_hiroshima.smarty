@@ -1,9 +1,166 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
 
-<div class="kinyu-list-block kinyu-map-block-container">
+<div class="kinyu-list-block kinyu-map-main-container">
+  <div class="kinyu-map-block">
+    <!-- <h2 class="kinyu-map-title"><img src="/images/kinyu_map/kinyu-map-title.png"></h2> -->
+    <h2 class="kinyu-map-title">
+      <img src="/images/kinyu_map/hiroshima/hiroshima_header.jpg" class="pc">
+      <img src="/images/kinyu_map/hiroshima/hiroshima_header_sp.jpg" class="sp">
+    </h2>
+    <div class="description-block">
+      <p class="main-map-description">きんゆう散歩@広島</p>
+      <p class="sub-map-description">
+			広島の金融に関わるスポットをめぐるきんゆう散歩をしてきました！
+			<span style="height: 12px;display: block;"></span>
+			今回、広島の中心になっている大きな銀行さんの一つ、<br>
+			広島銀行さんからレッサーパンダのひろくんにもゲストで来ていただきました！
+			<span style="height: 12px;display: block;"></span>
+			ひろくんと一緒に広島の金融スポットや魅力を6回に分けてお伝えします！
+      </p>
+      <img class="hirokun pc" src="/images/kinyu_map/hiroshima/hirokun.png">
+			<img class="hirokun-sp sp" src="/images/kinyu_map/hiroshima/hirokun.png">
+    </div>
 
+		<ul class="kinyu_sanpo_archives">
+			<li class="article1 fadeInUp">
+			<a href="https://kinyu-joshi.jp/report/JE8kkc"><img src="/images/kinyu_map/hiroshima/hiroshima1.jpg"></a>
+			<p><a href="https://kinyu-joshi.jp/report/JE8kkc">#1 コイン通り商店街 〜金持稲荷大社編〜</a></p>
+			</li>
+			<li class="article2 fadeInUp">
+			<a href="https://kinyu-joshi.jp/report/s0I8ZL"><img src="/images/kinyu_map/hiroshima/hiroshima2.jpg"></a>
+			<p><a href="https://kinyu-joshi.jp/report/s0I8ZL">#2 コイン通り商店街 〜食べ歩き、オブジェ編〜</a></p>
+			</li>
+			<li class="article3 fadeInUp">
+			<img src="/images/kinyu_map/hiroshima/comingsoon3.jpg">
+			<p>#3 造幣局 広島支店</p>
+			</li>
+			<li class="article4 fadeInUp">
+			<img src="/images/kinyu_map/hiroshima/comingsoon4.jpg">
+			<p>#4 広島市内の神社(蛭子神社・空鞘稲生神社）</p>
+			</li>
+			<li class="article5 fadeInUp">
+			<img src="/images/kinyu_map/hiroshima/comingsoon5.jpg">
+			<p>#5 旧日本銀行 広島支店</p>
+			</li>
+			<li class="article6 fadeInUp">
+			<img src="/images/kinyu_map/hiroshima/comingsoon6.jpg">
+			<p>#6 宮島（厳島神社）</p>
+			</li>
+		</ul>
 
-
+		<div class="banner-box">
+			<p>今回、広島にある金融スポットを教えてくれて、街のガイドもしていただいた広島銀行さんについてもっと知りたい方は、<br class="pc">
+		広島銀行さんのサイトも見てみてね。（外部サイトに遷移します）</p>
+			<a class="hirogin-banner" href="https://www.hirogin.co.jp/" target="_blank"><img src="/images/kinyu_map/hiroshima/hirogin_banner.jpg"></a>
+			<p style="font-size: 11px;">このレポートは、パートナーとともに、きんゆう女子。コミュニティが企画・制作しています。<br>
+		運営会社:<a style="font-size: 11px; color: #4C9BBF" href="https://toetheline.jp/">TOE THE LINE（きんゆう女子。）</a><br>
+		パートナー:<a style="font-size: 11px; color: #4C9BBF" href="https://www.hirogin.co.jp/">株式会社広島銀行</a></p>
+		</div>
 
   {$map_last}
+
+	</div>
 </div>
+
+<style>
+	.description-block {
+		position: relative;
+		border: none;
+	}
+	.hirokun {
+		position: absolute;
+		top: 0;
+		right: 0px;
+		max-width: 70px;
+	}
+	.hirokun-sp {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    max-width: 70px;
+}
+	.kinyu_sanpo_archives {
+		max-width: 1000px;
+		margin: 56px 0;
+		display:flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.kinyu_sanpo_archives li {
+		margin-bottom: 32px;
+	}
+	.kinyu_sanpo_archives li img{
+		max-width: 300px;
+		vertical-align: bottom;
+	}
+	.kinyu_sanpo_archives p {
+		margin-top: 8px;
+		text-align: center;
+	}
+	.kinyu_sanpo_archives a:hover {
+		opacity: .6;
+		transition: .5s;
+	}
+	.banner-box {
+		text-align: center;
+		margin-bottom: 56px;
+	}
+	.hirogin-banner img{
+		max-width: 380px;
+		margin: 16px 0;
+	}
+	.fadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 2s;
+}
+.map_last {
+    padding-bottom: 0px;
+    transition: .5s;
+}
+
+@media screen and (max-width: 768px) {
+.sub-map-description {
+    padding: 0px 24% 0px 20px;
+}
+.description-block {
+	position: relative;
+	border: none;
+	margin-bottom: 50px;
+}
+.banner-box {
+    text-align: center;
+    margin-bottom: 56px;
+    width: 92%;
+    margin: 0 auto;
+}
+.hirogin-banner img{
+	width: 90%;
+}
+
+}
+</style>
+
+<script>
+	$(function(){
+	  function animation(){
+	    $('.fadeInUp').each(function(){
+	      //ターゲットの位置を取得
+	      var target = $(this).offset().top;
+	      //スクロール量を取得
+	      var scroll = $(window).scrollTop();
+	      //ウィンドウの高さを取得
+	      var windowHeight = $(window).height();
+	      //ターゲットまでスクロールするとフェードインする
+	      if (scroll > target - windowHeight){
+	        $(this).css('opacity','1');
+	        $(this).css('transform','translateY(0)');
+	      }
+	    });
+	  }
+	  animation();
+	  $(window).scroll(function (){
+	    animation();
+	  });
+	});
+</script>
