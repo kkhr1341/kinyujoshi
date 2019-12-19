@@ -54,7 +54,7 @@
 			<a class="hirogin-banner" href="https://www.hirogin.co.jp/" target="_blank"><img src="/images/kinyu_map/hiroshima/hirogin_banner.jpg"></a>
 			<p style="font-size: 11px;">このレポートは、パートナーとともに、きんゆう女子。コミュニティが企画・制作しています。<br>
 		運営会社:<a style="font-size: 11px; color: #4C9BBF" href="https://toetheline.jp/">TOE THE LINE（きんゆう女子。）</a><br>
-		パートナー:<a style="font-size: 11px; color: #4C9BBF" href="https://www.hirogin.co.jp/">株式会社広島銀行</a></p>
+		パートナー:<a style="font-size: 11px; color: #4C9BBF" href="https://www.hirogin.co.jp/"target="_blank">株式会社広島銀行</a></p>
 		</div>
 
   {$map_last}
