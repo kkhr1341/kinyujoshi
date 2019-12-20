@@ -55,15 +55,8 @@ class Controller_Kinyu_News extends Controller_Kinyubase
                 $authentication_user     = self::AUTHENTICATION_USER;
                 $authentication_password = self::AUTHENTICATION_PASSWORD;
             }
-
-            switch (true) {
-                case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-                case $_SERVER['PHP_AUTH_USER'] !== $authentication_user:
-                case $_SERVER['PHP_AUTH_PW'] !== $authentication_password:
-                    header('WWW-Authenticate: Basic realm="Enter username and password."');
-                    header('Content-Type: text/plain; charset=utf-8');
-                    die('このページを見るにはログインが必要です');
-            }
+            // Basic認証
+            $this->set_basic_auth($authentication_user, $authentication_password);
         }
 
         $this->template->title = $this->data['news']['title'];

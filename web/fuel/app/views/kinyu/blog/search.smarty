@@ -50,14 +50,14 @@
                     {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
                     {$blog.title}
                 </h3>
-                {if isset($blog.profile_image) && isset($blog.author_name)}
                 <div class="kinyu-top-list-author">
+                  {if isset($blog.profile_image) && isset($blog.author_name)}
                   <img class="kinyu-top-list-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
                   <div class="kinyu-top-list-author-info">
                     <div class="kinyu-top-list-author-info-name">{$blog.author_name}</div>
                   </div>
+                  {/if}
                 </div>
-                {/if}
               </div>
             </a>
           </li>

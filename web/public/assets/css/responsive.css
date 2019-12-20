@@ -6,11 +6,19 @@
     width: 320px;
     height: 320px;
   }
+  .kinyu-top-list li {
+    margin-right: 1.5%;
+    margin-bottom: 7.0%;
+  }
+  .kinyu-top-list li:nth-child(3n) {
+    margin-right: 1.5%;
+  }
 
   .kinyu-top-list .kinyu-top-list-author,
   .kinyu-details-introdauction .kinyu-details-introdauction-author,
   .report-detail-sidebar-el .report-detail-sidebar-el-author {
     padding: 8px 0px;
+    height: 20px;
   }
 
   .kinyu-top-list .kinyu-top-list-author .kinyu-top-list-author-thumbnail,
@@ -52,8 +60,8 @@
   }
 
   .kinyu-top-list .img-box {
-    width: 323px;
-    height: 323px;
+    width: 330px;
+    height: 330px;
   }
 
   .report-sidebar-report-list li .img-box {
@@ -79,6 +87,7 @@
     スマートフォン＆タブレット
 ---------------------------------- */
 @media screen and (max-width: 1024px) {
+
   .author-footer-social-list {
     padding-top: 28px;
     text-align: center;
@@ -209,12 +218,17 @@
   .kinyu-main {
     padding-top: 45px;
   }
+
   .kinyu-top-list-block {
     margin-left: 0px;
     padding: 0px;
     width: 100%;
     height: 100%;
   }
+  .kinyu-top-list .img-box {
+    height: 330px;
+  }
+
   .kinyu-top-maincontent {
     padding-bottom: 36px;
     border-left: none;
@@ -1031,9 +1045,9 @@
     height: auto;
   }
   .kinyu-top-member-list .img-box {
-    width: 100%;
+    width: 364px;
+    height: 364px;
     float: none;
-    height: 180px;
   }
   .kinyu-top-member-list .text-box {
     width: 100%;
@@ -1780,10 +1794,11 @@
   .kinyu-event-list li:last-child {
     margin-bottom: 0px;
   }
-  .kinyu-event-list .kinyu-event-list-left {
-    height: 364px !important;
-    width: 364px !important;
+  .kinyu-event-list.joshikai-past-list.joshikai-main-el .kinyu-event-list-left {
+    width: 330px;
+    height: 330px;
   }
+
   .kinyu-event-list li .event-category {
     font-size: 11px;
     line-height: 11px;
@@ -2377,6 +2392,7 @@
   }
   .kinyu-news-list-el .img-box {
     height: 80px;
+    width: 80px;
   }
   .kinyu-news-list-el .text-box {
     padding: 16px 26px 0px 0px;
@@ -4178,6 +4194,17 @@ footer .navi_kinyu-submenu-el a {
   }
 
   .kinyu-top-list li {
+    height: 109px;
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 6%;
+    box-sizing: border-box;
+    border-radius: 2px;
+    overflow: inherit;
+    float: none;
+  }
+  .kinyu-top-list.kinyu-top-joshikai-list li {
+    height: initial;
     width: 100%;
     margin-right: 0%;
     margin-bottom: 6%;
@@ -4282,7 +4309,6 @@ footer .navi_kinyu-submenu-el a {
   .kinyu-top-list ul li:nth-last-child(-n+3) {
     margin-bottom: 6%;
     overflow: hidden;
-    height: 109.3px;
   }
 
   .kinyu-top-list ul li:last-child {
@@ -4303,15 +4329,15 @@ footer .navi_kinyu-submenu-el a {
 
   .kinyu-top-report-list .img-box {
     float: left;
-    width: 30%;
+    width: 109px;
     height: 100%;
   }
 
   .kinyu-top-report-list li .text-box {
     float: right;
-    width: 70%;
+    width: 221px;
     height: 100%;
-    padding: 8px 4% 0px;
+    padding: 8px 5% 0px;
     box-sizing: border-box;
   }
 
@@ -4329,7 +4355,11 @@ footer .navi_kinyu-submenu-el a {
   .kinyu-top-member-list {
     height: auto;
   }
-
+  .kinyu-top-member-block .kinyu-top-member-list .img-box {
+    width: 100%;
+    float: none;
+    height: 330px;
+  }
   .kinyu-top-member-list .img-box {
     width: 100%;
     float: none;
@@ -4352,6 +4382,7 @@ footer .navi_kinyu-submenu-el a {
   .kinyu-top-member-list .text-box .link-to {
     font-size: 11px;
     font-weight: 400;
+    margin: 0 auto;
   }
 
   .kinyu-top-member-list .text-box .description {
@@ -4531,6 +4562,11 @@ footer .navi_kinyu-submenu-el a {
     float: none;
     height: 364px;
     width: 364px;
+  }
+  .kinyu-main-block.kinyu-details-block .kinyu-details-introdauction .img-box {
+    float: none;
+    height: 330px;
+    width: 330px;
   }
 
   .kinyu-details-introdauction .text-box {
