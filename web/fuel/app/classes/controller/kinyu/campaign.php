@@ -61,15 +61,8 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
 
     public function action_conference()
     {
-
-        switch (true) {
-            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
-            case $_SERVER['PHP_AUTH_USER'] !== 'kinyu_conference':
-            case $_SERVER['PHP_AUTH_PW']   !== 'N8vJc4RD':
-            header('WWW-Authenticate: Basic realm="Enter username and password."');
-            header('Content-Type: text/plain; charset=utf-8');
-            die('このページを見るにはログインが必要です');
-        }
+        // Basic認証
+        $this->set_basic_auth('kinyu_conference', 'N8vJc4RD');
 
         $this->template->title = '第1回 週末投資宣言♪｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-conference.jpg';
