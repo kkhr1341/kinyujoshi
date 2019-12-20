@@ -5,6 +5,13 @@ up:
 	docker-compose up -d
 .PHONY: up
 
+down:
+	docker-compose down
+.PHONY: down
+
+restart: down up
+.PHONY: restart
+
 migrate:
 	docker-compose run --rm web php oil refine migrate:current
 .PHONY: migrate
@@ -45,10 +52,6 @@ console:
 composer:
 	docker-compose run --rm composer install
 .PHONY: composer
-
-down:
-	docker-compose down
-.PHONY: down
 
 sleep10:
 	sleep 10
