@@ -179,4 +179,16 @@ class Controller_Kinyubase extends Controller_Template
         echo json_encode($response);
         exit();
     }
+
+    protected function set_basic_auth($user, $password)
+    {
+        switch (true) {
+            case !isset($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']):
+            case $_SERVER['PHP_AUTH_USER'] !== $user:
+            case $_SERVER['PHP_AUTH_PW']   !== $password:
+                header('WWW-Authenticate: Basic realm="Enter username and password."');
+                header('Content-Type: text/plain; charset=utf-8');
+                die('このページを見るにはログインが必要です');
+        }
+    }
 }
