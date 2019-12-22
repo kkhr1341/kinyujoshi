@@ -30,7 +30,11 @@ var $resArray02 = $resArray[1];
 
         <div class="info-no-coupon">
           {if $event.fee == 0}
-            <p><span>参加費</span>：<span>無料</p>
+            {if $event.event_category == '招待型'}
+              <p>ご招待</p>
+            {else}
+              <p><span>参加費</span>：<span>無料</p>
+            {/if}
           {else}
             <p><span>参加費</span>：<span>{$event.fee|number_format}円</p>
           {/if}
