@@ -81,7 +81,7 @@ class Controller_Kinyu_Kinyumap extends Controller_Kinyubase
     public function action_sanpo_hiroshima()
     {
         // Basic認証
-        $this->set_basic_auth('kinjo', 'hirokun');
+        //$this->set_basic_auth('kinjo', 'hirokun');
 
         $this->template->title = 'きんゆう散歩＠広島｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu_map/og/og-main.jpg';
