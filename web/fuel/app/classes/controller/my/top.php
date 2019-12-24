@@ -15,7 +15,7 @@ class Controller_My_Top extends Controller_Mybase
         $username = \Auth::get('username');
         $this->data['applications'] = Applications::get_next_events_applications($username);
         $this->data['blogs'] = Blogs::lists(1, null, 1, null, null, true);
-        $this->data['secret_events'] = Events::lists(1, 4, null, 1, "desc", 1, null, true);
+        $this->data['secret_events'] = Events::lists(1, 4, 'enable_only', 1, "desc", 1, null, true);
 
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->template->title = 'マイページ｜きんゆう女子。';

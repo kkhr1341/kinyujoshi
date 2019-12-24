@@ -33,7 +33,11 @@
             <h3 class="kinyu-top-list-title">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
             <div class="event-subbox">
                 {if $event.fee == 0}
+                  {if $event.event_category == '招待型'}
+                    <p class="event-subbox-el">ご招待</p>
+                  {else}
                     <p class="event-subbox-el">参加費：無料</p>
+                  {/if}
                 {else}
                     <p class="event-subbox-el">参加費：{$event.fee|number_format}円（税込）</p>
                 {/if}

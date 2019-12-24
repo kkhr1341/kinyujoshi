@@ -2,6 +2,10 @@
     PCなど
 ---------------------------------- */
 @media screen and (min-width: 1025px) {
+  .admin-normal-main.my-top-content .kinyu-event-list-el .kinyu-event-list-left {
+    width: 320px;
+    height: 320px;
+  }
   .kinyu-top-list li {
     margin-right: 1.5%;
     margin-bottom: 7.0%;
