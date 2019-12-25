@@ -184,7 +184,6 @@
           <p>スペシャルコンテンツ</p>
           <div class="special-contents-banner-wrapper">
             <div class="special-contents-banner">
-              <!-- <p class="special-contents-promotion-label">PROMOTION</p> -->
               <a href="/sanpo_hiroshima" target="_blank"><img src="images/kinyu_map/hiroshima/hiroshima_header_sp.jpg"></a>
             </div>
           </div>
