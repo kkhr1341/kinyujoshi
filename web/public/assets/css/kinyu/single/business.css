@@ -810,6 +810,7 @@ display: none;
 		}
 		.business-works .caption a{
 			transition:.2s;
+			color:#fffed3;
 		}
 		.business-works .caption a:hover {
 			border-bottom: 1px solid #fffed3;
