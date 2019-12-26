@@ -183,7 +183,9 @@
           <h3 class="kinyu-top-main-title"><img class="special_title" src="/images/special_title.png"></h3>
           <p>スペシャルコンテンツ</p>
           <div class="special-contents-banner-wrapper">
-            <div class="special-contents-banner"><p class="special-contents-promotion-label">PROMOTION</p><a href="/contents/cashless" target="_blank"><img src="/images/cashless-banner.png"></a></div>
+            <div class="special-contents-banner">
+              <a href="/sanpo_hiroshima" target="_blank"><img src="images/kinyu_map/hiroshima/hiroshima_header_sp.jpg"></a>
+            </div>
           </div>
         </div>
 
