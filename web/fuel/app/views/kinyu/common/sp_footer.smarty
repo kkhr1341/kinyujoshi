@@ -28,7 +28,7 @@
     </div>
   </div>
   <p class="navi_kinyu-submenu-copy">
-    <span>© TOE THE LINE Inc. 2018　All rights reserved.</span>
+    <span>© TOE THE LINE Inc. {date ("Y")}  All rights reserved.</span>
     掲載の写真・記事・イラスト等の全てのコンテンツの無断転写・転載を禁じます。
   </p>
 </footer> -->
@@ -88,6 +88,6 @@
   </div>
 </footer>
 <p class="navi_kinyu-submenu-copy">
-  <span>© <a href="https://toetheline.jp/" style="font-size:11px;">TOE THE LINE Inc. 2019</a>　All rights reserved. No reproduction or republication without written permission.　
+  <span>© <a href="https://toetheline.jp/" style="font-size:11px;">TOE THE LINE Inc. {date ("Y")}</a> All rights reserved. No reproduction or republication without written permission.　
 <br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</span>
 </p>
