@@ -10,12 +10,8 @@ class Controller_Admin_Otherauthors extends Controller_Adminbase
         if (!Auth::has_access('otherauthors.read')) {
             throw new HttpNoAccessException;
         }
-        $params = Input::get();
 
-        $this->data['authors'] = Authors::all('/admin/otherauthors/?' . http_build_query($params), Input::get('page', 1), 'page', 30);
-
-        $pagination = $this->data['authors']['pagination'];
-        $this->data['pagination'] = $pagination::instance('mypagination');
+        $this->data['authors'] = Authors::lists();
 
         $this->template->contents = View::forge('admin/otherauthors/index.smarty', $this->data);
         $this->template->description = 'マイページ・ブログ';
