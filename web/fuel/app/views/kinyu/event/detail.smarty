@@ -73,29 +73,28 @@ var $resArray02 = $resArray[1];
                 {/if}
               </li>
             </ul>
-
             {if $event.applicable eq false}
               <div class="joinus-block joinus-block-finish">
-                <div class="applicable-link">お申込みはこちら</div>
-                <div class="applicable-title"><span style="color:red;">＊</span>お申込みの受付は終了しました</div>
+                <div class="applicable-link">{$event.fee == 0 && $event.event_category == '招待型' ? '応募する' : 'お申込みはこちら'}</div>
+                <div class="applicable-title"><span style="color:red;">＊</span>{$event.fee == 0 && $event.event_category == '招待型' ? '終了しました' : 'お申込みの受付は終了しました' }</div>
               </div>
             {else if $event.full eq true}
               <div class="joinus-block joinus-block-finish">
-                <div class="applicable-link">お申込みはこちら</div>
-                <div class="applicable-title"><span style="color:red;">＊</span>販売終了</div>
+                <div class="applicable-link">{$event.fee == 0 && $event.event_category == '招待型' ? '応募する' : 'お申込みはこちら'}</div>
+                <div class="applicable-title"><span style="color:red;">＊</span>{$event.fee == 0 && $event.event_category == '招待型' ? '終了しました' : '販売終了' }</div>
               </div>
             {else}
               <div class="joinus-block">
               {if $event.specific_application_link}
                 <!-- 特定の申し込みリンク -->
-                <a href="{$event.specific_application_link}" target="_blank">お申込みはこちら</a>
+                <a href="{$event.specific_application_link}" target="_blank">{$event.fee == 0 && $event.event_category == '招待型' ? '応募する' : 'お申込みはこちら'}</a>
               {else}
                 {if $authenticated eq 1}
                   <!-- ログインユーザー -->
-                  <a href="/joshikai_tickets/{$urlcode}">お申込みはこちら</a>
+                  <a href="/joshikai_tickets/{$urlcode}">{$event.fee == 0 && $event.event_category == '招待型' ? '応募する' : 'お申込みはこちら'}</a>
                 {else}
                   <!-- 非ログインユーザー -->
-                  <p id="joinus-open">お申込みはこちら</p>
+                  <p id="joinus-open">{$event.fee == 0 && $event.event_category == '招待型' ? '応募する' : 'お申込みはこちら'}</p>
                 {/if}
               {/if}
               </div>
