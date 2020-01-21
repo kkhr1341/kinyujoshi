@@ -73,29 +73,7 @@
 
 
 <!-- FOOTER -->
-<table class="footer-wrap">
-  <tr>
-    <td></td>
-    <td class="container">
-      
-        <!-- content -->
-        <div class="content">
-        <table>
-        <tr>
-          <td align="center">
-            <p>
-              <a href="https://kinyu-joshi.jp/">きんゆう女子。</a> |
-              <a href="https://kinyu-joshi.jp/company">運営会社</a>
-            </p>
-          </td>
-        </tr>
-      </table>
-        </div><!-- /content -->
-        
-    </td>
-    <td></td>
-  </tr>
-</table><!-- /FOOTER -->
+<?php echo $footer; ?>
 
 <style type="text/css">
 <!--

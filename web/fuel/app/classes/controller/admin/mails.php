@@ -53,6 +53,7 @@ class Controller_Admin_Mails extends Controller_Adminbase
         $view = 'email/' . $data['view'];
         $this->data = $data['params'];
 
+        $this->data["footer"] = View::forge('parts/email/footer.smarty', $this->data);
         return View::forge($view, $this->data);
     }
 }
