@@ -36,6 +36,11 @@
           <div class="kinyu-top-list-kind"></div>
         </a>
       </div>
+      <div class="swiper-slide" style="background: url(/images/cashless-banner.png) center center / cover no-repeat;">
+        <a class="js-track" href="https://kinyu-joshi.jp/contents/cashless" data-category="slide-link" data-action="click" data-value="3">
+          <div class="kinyu-top-list-kind"></div>
+        </a>
+      </div>
     {/if}
 
 
