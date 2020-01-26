@@ -1,7 +1,7 @@
 .home-screen-guide-bubble {
   position: fixed;
   margin: 0 auto;
-  bottom: 32px;
+  bottom: -22px;
   width: 250px;
   height: 70px;
   background: rgba(0, 0, 0, 0.7);
@@ -12,6 +12,7 @@
   display: none;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 .home-screen-guide-bubble:after {
