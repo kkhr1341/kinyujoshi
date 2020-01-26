@@ -1,4 +1,20 @@
 <script src="/assets/js/kinyu/topanimation.js"></script>
+<div class="home-screen-guide-bubble">
+  <div>
+    <img class="favicon" src="/images/favicon.png">
+    <div class="contents">
+      <div class="line1">
+        <span>
+          <img class="action-icon" src="/images/action-icon.png">ホーム画面に追加</span>
+      </div>
+      <div class="line2">
+        すると便利です
+      </div>
+    </div>
+    <div class="close-button">×</div>
+  </div>
+</div>
+
 <div id="kinyu-main-animation">
   <div id="kinyu-main-animation-inner">
     <img id="kinyu-main-animation-sub" src="/images/animation/animation-sub.png">
@@ -264,5 +280,36 @@
                 $('.more-kinyu-top-joshikai-list').slideDown();
             })
         });
+    });
+
+    $(function() {
+      var ua = navigator.userAgent;
+      var isIOS = ua.indexOf("iPhone") >= 0 ||
+        ua.indexOf("iPad") >= 0 ||
+        navigator.userAgent.indexOf("iPod") >= 0;
+
+      isIOS = true;
+      if (isIOS && !localStorage.getItem("disable-home-screen-guide")) {
+        $(".home-screen-guide-bubble").show();
+
+        $(".close-button").on("click", function() {
+          localStorage.setItem("disable-home-screen-guide", "1");
+          $('.home-screen-guide-bubble').remove();
+        });
+
+        var startPos = 0,
+          winScrollTop = 0;
+        $(window).on('scroll', function() {
+          var winScrollTop = $(this).scrollTop();
+          if (winScrollTop >= startPos) {
+            if (winScrollTop >= 120) {
+              $('.home-screen-guide-bubble').hide();
+            }
+          } else {
+            $('.home-screen-guide-bubble').show();
+          }
+          startPos = winScrollTop;
+        });
+      }
     });
 </script>
