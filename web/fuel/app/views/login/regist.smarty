@@ -357,7 +357,7 @@
 
                 <div class="regist-add-form-edit-el regist-add-form-edit-el02">
                     <label class="regist-add-form-edit-title">ぜひメンバーさんや編集部に向けて自己紹介をお願いいたします♪<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">トライしてみたいこと、夢や目標、知りたいことや、おかねの"もやもや"など<br>＊匿名でご紹介させていただく場合がございます！</p>
+                    <p class="regist-add-form-edit-subtitle">トライしてみたいこと、夢や目標、知りたいことや、おかねの"もやもや"など<br>＊匿名でご紹介させていただく場合がございます！<br>＊書いていただいた内容にあわせて、女子会や企業との企画にご招待する場合がございます♪</p>
                     <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
                 </div>
 
