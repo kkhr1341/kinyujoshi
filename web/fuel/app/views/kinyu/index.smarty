@@ -3,9 +3,8 @@
   <div>
     <img class="favicon" src="/images/favicon.png">
     <div class="contents">
-      <div class="line1">
-        <span>
-          <img class="action-icon" src="/images/action-icon.png">ホーム画面に追加</span>
+      <div class="line1" style="padding-bottom: 4px;">
+        <span>ホーム画面に追加</span>
       </div>
       <div class="line2">
         すると便利です
