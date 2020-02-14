@@ -68,9 +68,9 @@
                     </span>
                     </p>
                     {if $event.applicable eq false}
-                      <p class="joshikai-applicable">＊受付終了</p>
+                      <p class="joshikai-applicable">＊受付終了しました</p>
                     {else if $event.full eq true}
-                      <p class="joshikai-applicable">＊満席</p>
+                      <p class="joshikai-applicable">＊受付終了しました</p>
                     {/if}
                   </div>
                   <h3 class="event-title">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
