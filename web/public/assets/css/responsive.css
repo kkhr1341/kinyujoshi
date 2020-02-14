@@ -7303,7 +7303,25 @@ footer .navi_kinyu-submenu-el a {
     padding: 10px 0px;
     font-weight: 400;
   }
+}
 
+@media screen and (max-width: 768px) {
+  .kinyu-main .kinyu-details-introdauction .kinyu-details-introdauction-inner .img-box {
+    background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/32L6Ch7XSGRfBAAf/images/20200214125929image.jpg) center center no-repeat;
+    height: 220px;
+    width: 33%;
+    background-size: auto 220px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .kinyu-main .kinyu-details-introdauction .kinyu-details-introdauction-inner .img-box {
+    background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/32L6Ch7XSGRfBAAf/images/20200214125929image.jpg) center center no-repeat;
+    height: 220px;
+    background-size: auto 220px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 340px) {
