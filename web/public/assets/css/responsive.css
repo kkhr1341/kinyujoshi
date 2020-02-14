@@ -1,3 +1,70 @@
+.home-screen-guide-bubble {
+  position: fixed;
+  margin: 0 auto;
+  bottom: -22px;
+  width: 250px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: #fff;
+  display: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.home-screen-guide-bubble:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 12px 12px 0;
+  border-color: rgba(0, 0, 0, 0.7) transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  bottom: -12px;
+  left: 117px;
+}
+
+.home-screen-guide-bubble img.favicon {
+  width: 48px;
+  border-radius: 8px;
+  position: relative;
+  left: 16px;
+  top: 12px;
+}
+
+.home-screen-guide-bubble .contents {
+  display: inline-block;
+  padding-left: 24px;
+  font-size: 14px;
+}
+
+.home-screen-guide-bubble .contents .line1 span {
+  font-weight: bold;
+}
+
+.home-screen-guide-bubble .contents .action-icon {
+  width: 18px;
+  /* height: 18px; */
+  position: relative;
+  left: 0px;
+  top: 4px;
+  padding-right: 4px;
+  /* text-align: center; */
+}
+
+.home-screen-guide-bubble .close-button {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+
 /* ----------------------------------
     PCなど
 ---------------------------------- */
