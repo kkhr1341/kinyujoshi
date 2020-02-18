@@ -235,7 +235,7 @@
       <h3 class="kinyu-top-main-title">
         <img class="special_title" src="/images/special_title.png">
       </h3>
-      <p>スペシャルコンテンツ</p>
+      <p style="font-size:14px">スペシャルコンテンツ<br><span style="font-size:11px;">- Sponsored Contents -</span></p>
       <div class="special-contents-banner-wrapper">
         <ul class="special-contents-list">
           <li><a href="/sanpo_hiroshima" target="_blank"><img src="images/special_contents/hiroshima_header_sp.png"></a></li>
