@@ -1944,9 +1944,23 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   font-size:11px;
 }
 
-.special-contents-banner a:hover {
+.special-contents-list a:hover {
   transition: .5s;
+  cursor: pointer;
   opacity: .8;
+}
+
+.special-contents-list{
+  display:flex;
+  justify-content: center;
+  width: 100%;
+}
+.special-contents-list img{
+  width:90%;
+}
+
+.special-contents-list {
+  margin-top: 32px;
 }
 
 /* INSTAGRAM */
@@ -5915,7 +5929,6 @@ footer {
   width: 170px;
 }
 }
-
 
 @media screen and (min-width: 640px) {
 

@@ -147,9 +147,7 @@ return array(
         138 => '146_create_consultation_reply_mails',
         139 => '147_delete_cancel_from_application_credit_payments',
         140 => '148_delete_sale_from_application_credit_payments',
-        141 => '149_add_host_collaborate_sponsor_column_to_events',
-        142 => '150_add_hostprofileimage_to_events',
-        143 => '151_add_sns_links_to_authors',
+        141 => '151_add_sns_links_to_authors',
       ),
     ),
     'module' => 
