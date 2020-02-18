@@ -237,9 +237,10 @@
       </h3>
       <p>スペシャルコンテンツ</p>
       <div class="special-contents-banner-wrapper">
-        <div class="special-contents-banner">
-          <a href="/sanpo_hiroshima" target="_blank"><img src="images/kinyu_map/hiroshima/hiroshima_header_sp.jpg"></a>
-        </div>
+        <ul class="special-contents-list">
+          <li><a href="/sanpo_hiroshima" target="_blank"><img src="images/special_contents/hiroshima_header_sp.png"></a></li>
+          <li><a href="https://kinyu-joshi.jp/contents/cashless" target="_blank"><img src="images/special_contents/cashlesslife.png"></a></li>
+        </ul>
       </div>
     </div>
 
