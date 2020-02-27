@@ -264,7 +264,7 @@
                 icon: pin,
             });
             var infoWindow5 = new google.maps.InfoWindow({
-                content: '<div class="sample map-point"><a href="/map_kabuto" target="_blank"><img src="/images/map/map-thum.jpg"><p class="map-el-title">金融発症の地「兜町」を散策</p><p class="map-decription">レトロな金ゆうの町、日本橋兜町・茅場町。あまり知られていない隠れ家的なお店がいっぱい！</p></a></div>'
+                content: '<div class="sample map-point"><a href="/map_kabuto" target="_blank"><img src="/images/map/map-thum.jpg"><p class="map-el-title">金融発祥の地「兜町」を散策</p><p class="map-decription">レトロな金ゆうの町、日本橋兜町・茅場町。あまり知られていない隠れ家的なお店がいっぱい！</p></a></div>'
             });
             marker5.addListener( "click", function ( argument ) {
                 infoWindow5.open(map, marker5);
