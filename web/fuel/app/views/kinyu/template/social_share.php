@@ -1,6 +1,16 @@
 <?php
 
-$url = (empty($_SERVER["HTTPS"]) ? "http://" : "https://") . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+$url = "https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
+if( isset($author_code) && $posted_me ) {
+  $query = parse_url($url);
+  $_params = [];
+  if(isset($query['query'])) {
+    parse_str($query['query'], $_params);
+  }
+  // 現仕様では重複と複数値を受け付けない
+  $_params['c'] = $author_code;
+  $url = "https://" . $_SERVER["HTTP_HOST"] . $query['path'] . '?' . http_build_query($_params);
+}
 
 $title = isset($title) ? $title: '';
 
@@ -11,17 +21,9 @@ $title = isset($title) ? $title: '';
 $fbhref = 'https://www.facebook.com/sharer/sharer.php?u=' . rawurlencode( $url );
 $twhref = 'https://twitter.com/intent/tweet?url=' . rawurlencode( $url ) . '&via=kinyu_joshi';
 if ($title) {
-    $twhref .= '&text=' . rawurldecode($title);
+  $twhref .= '&text=' . rawurldecode($title);
 }
-$linehref = 'http://line.me/R/msg/text/?' . rawurlencode( $url );
-//twitter
-//$twtext = "Syncer 知識と感動を同期(Sync)するブログ" ;
-//$twencoded = rawurlencode( $twtext ) ;
-//echo $twencoded ;
-
-
-//$twhref = 'https://twitter.com/share?url=' . rawurlencode( $fburl )'&text=' . rawurlencode( $fburl );
-
+// $linehref = 'http://line.me/R/msg/text/?' . rawurlencode( $url );
 
 //Facebookを出力
 // echo '<div class="mct_jumboShare">';
@@ -33,7 +35,6 @@ $linehref = 'http://line.me/R/msg/text/?' . rawurlencode( $url );
 // echo '</div>';
 // echo '</div>';
 // echo '</div>';
-
 
 echo '<li><a <a href="' . $fbhref . '" target="_blank" class="facebook"><img class="social-logo" src="/images/social/facebook_white01.png"></a></li>';
 echo '<li><a href="' . $twhref . '" target="_blank" class="twitter"><img class="social-logo" src="/images/social/twitter_white01.png"></a></li>';

@@ -84,9 +84,11 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->data['blogs'] = Blogs::all('kinyu', '/kinyu/blog/', 1, 3, 5);
         $this->data['blog'] = Blogs::getByCodeWithProfile($code);
 
+        $this->data['posted_me'] = false;
         if ($this->data['blog']['author_code']) {
             $author = Authors::getByCode('authors', $this->data['blog']['author_code']);
             $this->data['author_info'] = $author;
+            $this->data['posted_me'] = \Auth::get('username') === $author["username"];
             $this->template->author = View::forge('kinyu/common/author.smarty', $author);
         } else {
             $this->template->author = '';
@@ -124,7 +126,11 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->data['after_login_url'] = \Uri::base() . 'report/' . $this->data['blog']['code'];
 
-        $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data + array('title' => $this->data['blog']['title']));
+        $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data + array(
+          'title'       => $this->data['blog']['title'],
+          'author_code' => $this->data['blog']['author_code'],
+          'posted_me'   => $this->data['posted_me']
+        ));
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
@@ -214,11 +220,29 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         }
     }
 
+    private function owner_codes()
+    {
+      $owner_codes = isset($_GET['c']) ? [$_GET['c']] : [];
+      // flatten
+      $v = [];
+      array_walk_recursive($owner_codes, function($e)use(&$v){$v[] = $e;});
+      return $v;
+    }
+
     private function viewable($code)
     {
         $blog = Blogs::getByCode('blogs', $code);
+
         if ($blog['secret'] == 0) {
             return true;
+        }
+        if ($blog['status'] == 1 && in_array($blog['author_code'], $this->owner_codes(), true)) {
+          $date = new DateTime($blog['updated_at'], new DateTimeZone('Asia/Tokyo'));
+          $date_unixtime = $date->format('U');
+          $past_time = $date_unixtime + 3 * 86400; // 3 days
+          if( time() <= $past_time ) {
+            return true;
+          }
         }
         if (Auth::check()) {
             return true;
