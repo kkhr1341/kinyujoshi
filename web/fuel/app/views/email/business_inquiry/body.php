@@ -61,7 +61,41 @@
 </table><!-- /BODY -->
 
 <!-- FOOTER -->
-<?php echo $footer; ?>
+<hr style="max-width: 600px; margin: 0 auto;">
+<table class="footer-wrap">
+  <tr>
+    <td></td>
+    <td class="container">
+      <div class="content">
+        <table>
+          <tr>
+            <td align="left">
+              <p>きんゆう女子。編集部</p>
+              <p></p>
+              <p>〒103-0025</p>
+              <p>東京都中央区日本橋茅場町1-5-8　東京証券会館　B-313</p>
+              <p>株式会社TOE THE LINE（きんゆう女子。）</p>
+              <p><a href="mailto:support@kinyu-joshi.jp?subject=問い合わせ">support@kinyu-joshi.jp</a></p>
+              <p><a href="https://kinyu-joshi.jp/"></a></p>
+              <p></p>
+              <p>『自らの金融リテラシーを上げ、お金に囚われず自由に等身大で生きる』</p>
+              <p>どの金融機関にも属さないポジションで、身近な家計管理から</p>
+              <p>世界経済まで広い金融をテーマに毎週イベントを開催しています。</p>
+              <p></p>
+              <p>✧Instagram✧</p>
+              <p><a href="https://www.instagram.com/kinyu_joshi/">https://www.instagram.com/kinyu_joshi/</a></p>
+              <p>✧Facebook✧</p>
+              <p><a href="https://www.facebook.com/kinyujyoshi/">https://www.facebook.com/kinyujyoshi/</a></p>
+              <p>✧Twitter✧</p>
+              <p><a href="https://twitter.com/@kinyu_joshi">https://twitter.com/@kinyu_joshi</a></p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td></td>
+  </tr>
+</table>
 
 <style type="text/css">
 <!--

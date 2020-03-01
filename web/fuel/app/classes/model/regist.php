@@ -218,11 +218,9 @@ class Regist extends Base
         $email->subject("【きんゆう女子。】メンバー登録ありがとうございます(*^^*)");
 
         $name = $params['name'];
-
-        $email->html_body(\View::forge('email/regist/body',
-            array(
-                'name' => $name
-            )));
+        $email->html_body(\View::forge('email/regist/body', array(
+          'name' => $name
+        )));
         $email->to($params['email']); //送り先
 
         $email->return_path('support@kinyu-joshi.jp');
