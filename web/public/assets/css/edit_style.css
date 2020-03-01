@@ -2216,6 +2216,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   padding: 16px;
   background: #f7f7f7;
   position: relative;
+  width: 320px;
 }
 .kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind {
   position: relative;
