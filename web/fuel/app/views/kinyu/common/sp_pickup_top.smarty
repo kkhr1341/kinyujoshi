@@ -25,15 +25,6 @@
 
     <!-- スライド広告枠↓ -->
     {if $smarty.foreach.loopname.index == 0}
-
-    <div class="swiper-slide" style="background: url(/images/slide/gakuin-1.jpg) center center / cover no-repeat;">
-      <a class="js-track" href="https://kinyu-joshi.jp/report/DxyFaS" data-category="slide-link" data-action="click" data-value="3">
-        <div class="kinyu-top-list-kind"></div>
-        <div class="kinyu-top-introlist-title">
-          <h3 class="kinyu-top-list-title">きんゆう女子。学院＊1日目 2019〜秋〜</h3>
-        </div>
-      </a>
-    </div>
     <div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/32L6Ch7XSGRfBAAf/images/20200214140611image.jpg) center center / cover no-repeat;">
       <a class="js-track" href="https://kinyu-joshi.jp/report/x1S2FI" data-category="slide-link" data-action="click" data-value="3">
         <div class="kinyu-top-list-kind"></div>
