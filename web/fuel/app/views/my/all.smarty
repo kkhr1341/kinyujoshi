@@ -60,15 +60,13 @@
       {*
       {$kinjo_check}
       *}
-
       <div class="inner">
-
-
         <!-- メンバー限定女子会 -->
         <div class="kinyu-event-list secret-event">
           <p class="kinyu-event-info-title">メンバー限定女子会</p>
           <ul>
             {foreach from=$secret_events key="key" item=event name=loopname}
+              {if $event.applicable === false || $event.full === true}{continue}{/if}
               {$fooo = $event.main_image}
               {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
@@ -83,42 +81,41 @@
                 <div class="kinyu-event-list-el">
                   {if empty($event.specific_link)}
                   <a href="/joshikai/{$event.code}">
-                    {else}
-                    <a href="{$event.specific_link}" target="_blank">
-                      {/if}
-                      <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat">
-                      </div>
+                  {else}
+                  <a href="{$event.specific_link}" target="_blank">
+                  {/if}
+                    <div class="kinyu-event-list-left" style="background:url({$thumb_filename}) center center / cover no-repeat"></div>
 
-                      {if $event.event_category == "女子会"}
-                      <div class="kinyu-event-list-right">
-                        {else if $event.event_category == "スペシャル"}
-                        <div class="kinyu-event-list-right special">
-                          {else}
-                          <div class="kinyu-event-list-right">
+                    {if $event.event_category == "女子会"}
+                    <div class="kinyu-event-list-right">
+                    {else if $event.event_category == "スペシャル"}
+                    <div class="kinyu-event-list-right special">
+                    {else}
+                    <div class="kinyu-event-list-right">
+                    {/if}
+                      <div class="kinyu-top-list-kind kinyu-top-event-kind">
+                        <p>
+                          <span class="date-box">
+                            {if $event.display_event_date}
+                              <span class="date">{$event.display_event_date}</span>
+                            {else}
+                              <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
                             {/if}
-                            <div class="kinyu-top-list-kind kinyu-top-event-kind">
-                              <p>
-                                <span class="date-box">
-                                  {if $event.display_event_date}
-                                    <span class="date">{$event.display_event_date}</span>
-                                  {else}
-                                    <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
-                                  {/if}
-                                </span>
-                              </p>
-                              {if $event.applicable eq false}
-                                <p class="joshikai-applicable">＊受付終了しました</p>
-                              {else if $event.full eq true}
-                                <p class="joshikai-applicable">＊受付終了しました</p>
-                              {/if}
-                            </div>
-                            <h3 class="event-title">{$event.title}</h3>
-                            <div class="event-subbox">
-                              <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
-                              <p class="event-subbox-el">場所：{$event.place}</p>
-                            </div>
-                          </div>
-                    </a>
+                          </span>
+                        </p>
+                        {if $event.applicable eq false}
+                          <p class="joshikai-applicable">＊受付終了しました</p>
+                        {else if $event.full eq true}
+                          <p class="joshikai-applicable">＊受付終了しました</p>
+                        {/if}
+                      </div>
+                      <h3 class="event-title">{$event.title}</h3>
+                      <div class="event-subbox">
+                        <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+                        <p class="event-subbox-el">場所：{$event.place}</p>
+                      </div>
+                    </div>
+                  </a>
                 </div>
               </li>
               {foreachelse}

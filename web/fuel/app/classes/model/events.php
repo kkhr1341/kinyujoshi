@@ -204,17 +204,12 @@ class Events extends Base
             $datas = $datas->where('status', '=', $mode);
         }
 
-        if ($open === null) {
-        }
-        elseif($open === 'enable_only') {
-            $datas = $datas->where('open_date', '>=', \DB::expr('NOW()'));
-        }
-        else {
-            $datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
+        if ($open !== null) {
+          $datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
         }
 
         if ($isend === null) {
-            $datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+          $datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
         }
 
         $datas = $datas->order_by('event_date', $sort);
