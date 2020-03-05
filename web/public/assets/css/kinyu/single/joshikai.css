@@ -116,12 +116,17 @@
   margin-top: 8px;
 }
 .promise-el-title {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 26px;
   margin-bottom: 4px;
   position: relative;
   padding-left: 40px;
   transition: .5s;
+}
+.promise-el-title a {
+  font-size: 15px;
+  line-height: 26px;
+  border-bottom: 1px solid #77cbc0;
 }
 .promise-el li {
   margin-bottom: 20px;
