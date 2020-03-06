@@ -5128,6 +5128,8 @@ button.close {
 }
 .modal-open {
   overflow: hidden;
+  z-index: 1007;
+  background-color: rgba(0,0,0,0.6);
 }
 .modal {
   position: fixed;

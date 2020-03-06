@@ -6,12 +6,13 @@
       <li><a class="js-track" href="/news" data-category="pc-header-link" data-action="click" data-value="1">お知らせ</a></li>
       <li><a class="js-track" href="/joshikai" data-category="pc-header-link" data-action="click" data-value="1">女子会</a></li>
       <li><a class="js-track" href="/report" data-category="pc-header-link" data-action="click" data-value="1">レポート</a></li>
+      <li><a class="projects" href="#" data-toggle="modal" data-target="#projectJoshikaiModal">comming soon</a></li>
       <li><a class="js-track" href="/kinyu_sanpo" data-category="pc-header-link" data-action="click" data-value="1">きんゆう散歩</a></li>
       <li><a class="js-track" href="/myway" data-category="pc-header-link" data-action="click" data-value="1">「わたし」を知る。</a></li>
       <li><a class="js-track" href="/kinjo_check" data-category="pc-header-link" data-action="click" data-value="1">きん女。診断</a></li>
-      <li><a class="js-track" href="/about_main" data-category="pc-header-link" data-action="click" data-value="1">きん女。って？</a></li>
     </ul>
   </nav>
+
   {if in_array('user', $roles) || in_array('admin', $roles)}
     <a href="/my">
       <div class="header-mypage-block">
@@ -58,6 +59,33 @@
 
 <div class="header-hover-content-block"></div>
 
+<!-- モーダル・ダイアログ -->
+<div class="modal fade" id="projectJoshikaiModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="border: none;">
+        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          このページは<br>
+          金融ワカラナイ女子のリテラシー向上を応援している<br>
+          ご協賛企業や団体と一緒に作っています。
+        </div>
+        <div style="font-size: 8px; margin-top: 8px;">
+          どの金融機関にも属さないポジションで、公正な情報発信及び表現を行ないます。<br>
+          どのコンテンツも金融リテラシーを上げることを目的に作られています。<br>
+          特定の金融商品を推奨・勧誘するものではありません。<br>
+        </div>
+      </div>
+      <div class="modal-footer" style="text-align: center; border: none;">
+        <a href="https://with.kinyu-joshi.jp/" class="btn btn-primary">理解したので、企業の部屋を見てみる♪</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script>
   $(function() {
     // $(".header-hover01").hover(
@@ -75,7 +103,12 @@
       $(".header-hover-content-block").fadeOut(500);
       }
     );
+
+    $('a.projects').click( function () {
+      $('#projectJoshikaiModal').modal();
+    });
   });
+
 </script>
 
 
