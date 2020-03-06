@@ -3,7 +3,7 @@
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .modal-open .modal {
-  z-index: 1006;
+  z-index: 1007;
 }
 .video-container iframe {
   width: 1000px;

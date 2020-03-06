@@ -41,6 +41,9 @@
             <a href="/report">レポート</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
+            <a class="projects" href="#">お楽しみ</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
             <a href="/kinyu_sanpo">きんゆう散歩</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
@@ -102,3 +105,38 @@
     </ul>
   </div>
 </div>
+<!-- モーダル・ダイアログ -->
+<div class="modal fade" id="projectJoshikaiModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="border: none;">
+        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+      </div>
+      <div class="modal-body">
+        <div>テキストテキストテキストテキストテキスト</div>
+        <div>プロジェクト女子会テキスト</div>
+      </div>
+      <div class="modal-footer" style="text-align: center; border: none;">
+        <a href="https://with.kinyu-joshi.jp/" class="btn btn-primary">プロジェクト女子会へ</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    $('a.projects').click( function () {
+      $('#projectJoshikaiModal').modal();
+    });
+    $('#projectJoshikaiModal').on('show.bs.modal', function (e) {
+      $('body').removeClass('modal-open');
+      $('.kinyu-container').addClass('modal-open');
+    });
+    $('#projectJoshikaiModal').on('hide.bs.modal', function (e) {
+      $('.kinyu-container').removeClass('modal-open');
+    });
+  });
+</script>
+
+
+
