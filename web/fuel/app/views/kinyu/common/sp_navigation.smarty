@@ -41,16 +41,13 @@
             <a href="/report">レポート</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a class="projects" href="#">お楽しみ</a>
+            <a class="projects" href="#">comming soon</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a href="/kinyu_sanpo">きんゆう散歩</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a class="fc-kinyu" href="/kinjo_check">きん女。診断</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a class="fc-kinyu" href="/about_main">きん女。って？</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a class="fc-kinyu" href="/faq">よくあるご質問</a>
@@ -113,11 +110,19 @@
         <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
       </div>
       <div class="modal-body">
-        <div>テキストテキストテキストテキストテキスト</div>
-        <div>プロジェクト女子会テキスト</div>
+        <div>
+          このページは<br>
+          金融ワカラナイ女子のリテラシー向上を応援している<br>
+          ご協賛企業や団体と一緒に作っています。
+        </div>
+        <div style="font-size: 12px; margin-top: 8px;">
+          どの金融機関にも属さないポジションで、公正な情報発信及び表現を行ないます。<br>
+          どのコンテンツも金融リテラシーを上げることを目的に作られています。<br>
+          特定の金融商品を推奨・勧誘するものではありません。<br>
+        </div>
       </div>
       <div class="modal-footer" style="text-align: center; border: none;">
-        <a href="https://with.kinyu-joshi.jp/" class="btn btn-primary">プロジェクト女子会へ</a>
+        <a href="https://with.kinyu-joshi.jp/" class="btn btn-primary">理解したので、企業の部屋を見てみる♪</a>
       </div>
     </div>
   </div>
