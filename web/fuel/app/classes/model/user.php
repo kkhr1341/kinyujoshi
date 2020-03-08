@@ -174,17 +174,14 @@ class User extends Base
             ->on('users.username', '=', 'profiles.username')
             ->where('users.id', '=', $id);
 
-        $datas = $datas->order_by('group', 'desc');
-        $datas = $datas->order_by('id', 'asc');
-
         $users = $datas->execute()->as_array();
-
         $groups = \Config::get('simpleauth.groups');
 
         foreach($users as $key => $user) {
           $group = $users[$key]['group'];
           $users[$key]['group_name'] = $groups[$group]['name'];
         }
+
         return $users[0];
     }
 }
