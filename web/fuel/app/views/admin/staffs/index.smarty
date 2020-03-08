@@ -17,26 +17,22 @@
     </thead>
     {foreach from=$staffs item=staff}
     <tr class="staffs pointer">
-        {var_dump($staff)}
-        <td>
-            {$staff.name}
-        </td>
-        <td>
-            {$staff.email}
-        </td>
-        <td>
-            {$staff.group_name}
-        </td>
-        <td>
-            {$staff.last_login|date_format:"%Y/%m/%d %H:%M"}
-        </td>
-        <td>
-          <a href="/admin/staffs/edit/{$staff.id}">編集</a>
-        </td>
+      <td>
+        {$staff.name}
+      </td>
+      <td>
+        {$staff.email}
+      </td>
+      <td>
+        {$staff.group_name}
+      </td>
+      <td>
+        {$staff.last_login|date_format:"%Y/%m/%d %H:%M"}
+      </td>
+      <td>
+        <a href="/admin/staffs/edit/{$staff.id}">編集</a>
+      </td>
     </tr>
     {/foreach}
   </table>
 </div>
-
-<script>
-</script>
