@@ -144,8 +144,7 @@ class User extends Base
             )
             ->from('users')
             ->join('profiles')
-            ->on('users.username', '=', 'profiles.username')
-            ->where('users.group', '>=', 1);
+            ->on('users.username', '=', 'profiles.username');
 
         $datas = $datas->order_by('group', 'desc');
         $datas = $datas->order_by('id', 'asc');
@@ -173,7 +172,6 @@ class User extends Base
             ->from('users')
             ->join('profiles')
             ->on('users.username', '=', 'profiles.username')
-            ->where('users.group', '>=', 1)
             ->where('users.id', '=', $id);
 
         $datas = $datas->order_by('group', 'desc');
