@@ -1,0 +1,65 @@
+<ol class="my-header-menu">
+  <li><a href="/">ホーム</a></li>
+  <li><a href="/admin">マイページ</a></li>
+  <li class="active">スタッフ詳細</li>
+</ol>
+
+<form>
+  <fieldset>
+    <div class="my-form-container clear">
+      <div class="form-left">
+        <div class="form-group">
+          <label class="form-group-event-label">名前</label>
+          <input style="height: 40px;" type="text" id="name" class="form-control" placeholder="" value="{$staff.name|default:''}" readonly>
+        </div>
+        <div class="form-group">
+          <label class="form-group-event-label">名前（よみがな）</label>
+          <input style="height: 40px;" type="text" id="name_kana" class="form-control" placeholder="" value="{$staff.name_kana|default:''}" readonly>
+        </div>
+        <div class="form-group">
+          <label class="form-group-event-label">email</label>
+          <input style="height: 40px;" type="text" id="email" class="form-control" placeholder="" value="{$staff.email|default:''}" readonly>
+        </div>
+        <div class="form-group">
+          <label class="form-group-event-label">権限</label>
+          <select id="group" class='form-control'>
+            <option value="">選択してください</option>
+            {foreach from=$grants item=grant}
+              <option value="{$grant['code']}" {if $grant['code'] == $staff.group}selected{/if}>{$grant['name']}</option>
+            {/foreach}
+          </select>
+        </div>
+        <input type="hidden" id="user_id" value="{$staff.id}">
+        <div class="form-right">
+            <div class="edit-block-menu">
+                <li>
+                    <button class="edit-block-menu-btn release-btn" type="button" id="save">保存</button>
+                </li>
+            </div>
+        </div>
+    </div>
+  </fieldset>
+</form>
+
+<script>
+  $(function () {
+    $('#save').click(function () {
+      var url = "/api/staffs/save";
+      var params = {};
+
+      params.user_id = $("#user_id").val();
+      params.group = $('#group').val();
+
+      if (params.group == "") {
+        ts.error("権限を選択してください");
+        return false;
+      }
+
+      ajax.post(url, params, function (data) {
+        ts.success("保存しました", function () {
+          location.href = "/admin/staffs/";
+        });
+      });
+    });
+  });
+</script>
