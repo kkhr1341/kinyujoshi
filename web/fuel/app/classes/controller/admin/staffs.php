@@ -35,7 +35,6 @@ class Controller_Admin_Staffs extends Controller_Adminbase
     $this->data['staff'] = User::staff_detail($user_id);
     $this->data['grants'] = array(
       array('code' => -1, 'name' => 'Banned'),
-      array('code' => 0, 'name' => 'Guests'),
       array('code' => 1, 'name' => 'メンバー'),
       array('code' => 30, 'name' => '編集者'),
       array('code' => 40, 'name' => 'オフィシャルメンバー'),
