@@ -923,6 +923,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   /*margin-left: 24%;*/
   padding: 130px 0px 0px;
   position: relative;
+  background:#fff;
 }
 .kinyu-top-list-block .inner {
   max-width: 1050px;
