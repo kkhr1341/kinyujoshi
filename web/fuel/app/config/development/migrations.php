@@ -145,6 +145,13 @@ return array(
         136 => '142_create_event_thanks_mail_templates',
         137 => '143_create_event_thanks_mails',
         138 => '144_delete_cancel_from_applications',
+        139 => '145_create_consultations',
+        140 => '146_create_consultation_reply_mails',
+        141 => '147_delete_cancel_from_application_credit_payments',
+        142 => '148_delete_sale_from_application_credit_payments',
+        143 => '149_add_host_collaborate_sponsor_column_to_events',
+        144 => '150_add_hostprofileimage_to_events',
+        145 => '151_add_sns_links_to_authors',
       ),
     ),
     'module' => 

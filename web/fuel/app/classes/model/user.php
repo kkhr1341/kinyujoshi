@@ -5,6 +5,19 @@ require_once(dirname(__FILE__) . "/base.php");
 
 class User extends Base
 {
+    public static function staff_edit_validate()
+    {
+      $val = \Validation::forge();
+      $val->add_callable('myvalidation');
+
+      $val->add('user_id', 'ID')
+          ->add_rule('required');
+
+      $val->add('group', '権限')
+          ->add_rule('required');
+
+      return $val;
+    }
 
     public static function validate($username)
     {
@@ -109,6 +122,17 @@ class User extends Base
         return true;
     }
 
+    public static function grant_update($params, $user_id)
+    {
+      \DB::update('users')->set(
+        array(
+          'group' => $params['group'],
+        )
+      )->where('id', '=', $user_id)->execute();
+      return true;
+    }
+
+
     public static function staff_list()
     {
         \Config::load('simpleauth', true);
@@ -120,8 +144,7 @@ class User extends Base
             )
             ->from('users')
             ->join('profiles')
-            ->on('users.username', '=', 'profiles.username')
-            ->where('users.group', '>=', 30);
+            ->on('users.username', '=', 'profiles.username');
 
         $datas = $datas->order_by('group', 'desc');
         $datas = $datas->order_by('id', 'asc');
@@ -135,5 +158,30 @@ class User extends Base
             $users[$key]['group_name'] = $groups[$group]['name'];
         }
         return $users;
+    }
+
+    public static function staff_detail($id)
+    {
+        \Config::load('simpleauth', true);
+
+        $datas = \DB::select(
+                \DB::expr('users.*'),
+                \DB::expr('profiles.name'),
+                \DB::expr('profiles.name_kana')
+            )
+            ->from('users')
+            ->join('profiles')
+            ->on('users.username', '=', 'profiles.username')
+            ->where('users.id', '=', $id);
+
+        $users = $datas->execute()->as_array();
+        $groups = \Config::get('simpleauth.groups');
+
+        foreach($users as $key => $user) {
+          $group = $users[$key]['group'];
+          $users[$key]['group_name'] = $groups[$group]['name'];
+        }
+
+        return $users[0];
     }
 }
