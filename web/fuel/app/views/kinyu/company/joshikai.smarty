@@ -212,7 +212,7 @@
 $(function(){
   var title_frame_height = $('#title_frame').height();
   var page_title_height = $('.page_title').height();
-  
+
   var padding_top = (title_frame_height / 2) - (page_title_height / 2);
   $('.page_title').css('padding-top', padding_top);
 });
