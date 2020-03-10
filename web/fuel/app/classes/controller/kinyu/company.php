@@ -104,11 +104,11 @@ class Controller_Kinyu_Company extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/company/legal.smarty', $this->data);
     }
 
-    // 女子会参加規約
+    // サービス参加規約
     public function action_joshikai()
     {
         $this->data['company'] = Companies::get();
-        $this->template->title = '女子会参加規約｜きんゆう女子。';
+        $this->template->title = 'サービス参加規約｜きんゆう女子。';
         $this->template->description = 'きんゆう女子。は、株式会社TOE THE LINEが運営しています。きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);

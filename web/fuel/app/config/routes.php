@@ -120,7 +120,7 @@ return array(
   //よくあるご質問
   'faq' => 'kinyu/company/faq',
 
-  //女子会参加規約
+  //サービス参加規約
   'joshikai_policy' => 'kinyu/company/joshikai',
 
   //企業用ページ
