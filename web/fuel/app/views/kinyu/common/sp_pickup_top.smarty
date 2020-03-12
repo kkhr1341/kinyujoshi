@@ -25,7 +25,7 @@
 
     <!-- スライド広告枠↓ -->
     {if $smarty.foreach.loopname.index == 0}
-    <div class="swiper-slide" style="background: url(/images/event/gakuin.png) center center / cover no-repeat;">
+    <div class="swiper-slide" style="background: url(/images/event/2020_s_gakuin.png) center center / cover no-repeat;">
       <a class="js-track" href="https://kinyu-joshi.jp/joshikai/2Z3s3K" data-category="slide-link" data-action="click" data-value="3">
         <div class="kinyu-top-list-kind"></div>
         <div class="kinyu-top-introlist-title">
