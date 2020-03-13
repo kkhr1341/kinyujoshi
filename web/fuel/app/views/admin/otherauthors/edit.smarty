@@ -43,6 +43,27 @@
                     <textarea style="height: 80px;" type="text" id="introduction" class="form-control"
                               placeholder="">{$author.introduction|default:''}</textarea>
                 </div>
+
+                <div class="form-group">
+                  <label class="form-group-event-label">Webサイト</label>
+                  <input type="text" id="website" class="form-control" placeholder="https://kinyu-joshi.jp/" value="{$author.website|default:''}">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group-event-label">Instagram</label>
+                  <input type="text" id="instagram" class="form-control" placeholder="https://www.instagram.com/kinyujoshi" value="{$author.instagram|default:''}">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group-event-label">Twitter</label>
+                  <input type="text" id="twitter" class="form-control" placeholder="https://twitter.com/kinyujoshi" value="{$author.twitter|default:''}">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-group-event-label">Facebook</label>
+                  <input type="text" id="facebook" class="form-control" placeholder="https://www.facebook.com/kinyujoshi" value="{$author.facebook|default:''}">
+                </div>
+
             </div>
             <div class="form-right">
                 <div class="edit-block-menu">
@@ -84,6 +105,10 @@
             params.name = $('#name').val();
             params.profile_image = $('#profile_image').val();
             params.introduction = $('#introduction').val();
+            params.website = $('#website').val();
+            params.instagram = $('#instagram').val();
+            params.twitter = $('#twitter').val();
+            params.facebook = $('#facebook').val();
 
             if (params.position == "") {
                 ts.error("役職を入力してください");
