@@ -313,6 +313,27 @@ opacity: .5;
   width: 100%;
 }
 
+/*coming soonのモダルウィンドウ*/
+.comingsoon-modal-title {
+  color: #77cbc0;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+}
+.comingsoon-modal-description {
+  margin-top: 24px;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: center;
+}
+.comingsoon-modal .modal-footer {
+  padding-bottom: 40px;
+}
+.comingsoon-modal .btn {
+  font-size: 13px;
+}
+
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
