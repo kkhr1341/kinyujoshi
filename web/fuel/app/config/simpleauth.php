@@ -83,11 +83,10 @@ return array(
     -1   => array('name' => 'Banned', 'roles' => array('banned')),
     0    => array('name' => 'Guests', 'roles' => array()),
     1    => array('name' => 'メンバー', 'roles' => array('user')),
-    30   => array('name' => '編集者', 'roles' => array('user', 'official_member')),
-    40   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'official_member')),
-    50   => array('name' => 'コミュニティスタッフ', 'roles' => array('user', 'joshikai_admin')),
-    80   => array('name' => '管理者', 'roles' => array('user', 'editor', 'official_member', 'manager')),
-    100  => array('name' => 'スーパー管理者', 'roles' => array('user', 'editor', 'official_member', 'admin')),
+    30   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'official_member')),
+    40   => array('name' => 'コミュニティスタッフ', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin')),
+    80   => array('name' => '管理者', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin', 'admin')),
+    100  => array('name' => 'スーパー管理者', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin', 'admin', 'super_admin')),
   ),
 
   /**
@@ -109,30 +108,16 @@ return array(
       'registreminder' => array('send'),
       'remindmailtemplates' => array('read', 'edit'),
       'userblogs' => array('read', 'create', 'edit', 'delete'),
+    ),
+    'super_admin' => array(
       'staffs' => array('read', 'edit'),
     ),
-    'manager' => array(
-      'analysis' => array('read'),
-      'applications' => array('read'),
-      'authors' => array('read', 'create', 'edit', 'delete'),
-      'otherauthors' => array('read', 'create', 'edit', 'delete'),
-      'blogs' => array('read', 'create', 'edit', 'delete'),
+    'joshikai_admin' => array(
       'events' => array('read', 'create', 'edit', 'delete'),
       'applications' => array('read', 'create', 'edit', 'delete'),
-      'inquiries' => array('read'),
-      'consultations' => array('read'),
-      'news' => array('read', 'create', 'edit', 'delete', 'publish'),
-      'registlist' => array('read', 'create'),
-      'registreminder' => array('send'),
-      'remindmailtemplates' => array('read', 'edit'),
-      'userblogs' => array('read', 'create', 'edit', 'delete'),
     ),
-    'joshikai_admin' => array(
-      'authors' => array('read', 'create', 'edit', 'delete'),
+    'report_admin' => array(
       'blogs' => array('read', 'create', 'edit', 'delete'),
-      'events' => array('read', 'create', 'edit', 'delete'),
-      'userblogs' => array('read', 'create', 'edit', 'delete'),
-      'registlist' => array('read'),
     ),
     'editor' => array(
       'authors' => array('read', 'create', 'edit', 'delete'),
