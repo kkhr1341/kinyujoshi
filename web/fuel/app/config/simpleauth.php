@@ -94,6 +94,7 @@ return array(
    */
   'roles' => array(
     'admin' => array(
+      'admin' => array('read'),
       'analysis' => array('read'),
       'applications' => array('read'),
       'authors' => array('read', 'create', 'edit', 'delete'),
@@ -113,10 +114,12 @@ return array(
       'staffs' => array('read', 'edit'),
     ),
     'joshikai_admin' => array(
+      'admin' => array('read'),
       'events' => array('read', 'create', 'edit', 'delete'),
       'applications' => array('read', 'create', 'edit', 'delete'),
     ),
     'report_admin' => array(
+      'admin' => array('read'),
       'blogs' => array('read', 'create', 'edit', 'delete'),
     ),
     'editor' => array(
