@@ -404,8 +404,9 @@ $(function () {
         });
     });
 });
-</script>
 {/if}
+</script>
+
 
 <!-- チャート関連 -->
 {literal}
