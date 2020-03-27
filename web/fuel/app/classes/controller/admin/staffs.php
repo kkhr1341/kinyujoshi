@@ -15,7 +15,7 @@ class Controller_Admin_Staffs extends Controller_Adminbase
 
   public function action_index()
   {
-    if (!in_array('admin', $this->data['roles'])) {
+    if (!in_array('super_admin', $this->data['roles'])) {
       throw new HttpNoAccessException;
     }
 
