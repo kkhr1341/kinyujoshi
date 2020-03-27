@@ -38,7 +38,7 @@ class Controller_Admin_Staffs extends Controller_Adminbase
       array('code' => 1, 'name' => 'メンバー'),
       array('code' => 30, 'name' => 'オフィシャルメンバー'),
       array('code' => 40, 'name' => 'コミュニティスタッフ'),
-      array('code' => 80, 'name' => '管理者')
+      array('code' => 80, 'name' => '管理者'),
       array('code' => 100, 'name' => 'スーパー管理者')
     );
     $this->template->contents = View::forge('admin/staffs/edit.smarty', $this->data);
