@@ -110,46 +110,47 @@
 		{/if}
 	</div>
 
-	<!-- TOPバナー設定 -->
-	<div class="tab-pane" id="tab4">
-		{if sizeof($all_events) == 0}
-		<div class="alert alert-warning mt20" role="alert">イベントはありません</div>
-		{else}
-
-        <div class="form-left">
-            <div class="form-group">
-                <table class="table table-hover mt20">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>日付</th>
-                            <th>カテゴリ</th>
-                            <th>タイトル</th>
-                        </tr>
-                    </thead>
-                    {foreach from=$all_events item=events_item}
-                    <tr code="{$events_item.code}">
-                        <td>
-                            <div class="radio_box clear">
-                                <input type="radio" value="{$events_item.code}" name="code" id="secret{$events_item.code}" class="form-radio" {if $events_item.code == $display_top_event.code}checked{/if}>
-                                <label for="secret{$events_item.code}" class="form-long">表示</label>
-                            </div>
-                        </td>
-                        <td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
-                        <td>{$events_item.section_code}</td>
-                        <td>{$events_item.title}</td>
+  <!-- TOPバナー設定 -->
+  {if in_array('admin', $roles)}
+  <div class="tab-pane" id="tab4">
+    {if sizeof($all_events) == 0}
+    <div class="alert alert-warning mt20" role="alert">イベントはありません</div>
+    {else}
+      <div class="form-left">
+        <div class="form-group">
+            <table class="table table-hover mt20">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>日付</th>
+                        <th>カテゴリ</th>
+                        <th>タイトル</th>
                     </tr>
-                    {/foreach}
-                </table>
-            </div>
-		</div>
-        <div class="form-right">
-            <div class="edit-block-menu">
-                <li><button class="edit-block-menu-btn release-btn" type="button" id="save-top-display-events">保存</button></li>
-            </div>
+                </thead>
+                {foreach from=$all_events item=events_item}
+                <tr code="{$events_item.code}">
+                    <td>
+                        <div class="radio_box clear">
+                            <input type="radio" value="{$events_item.code}" name="code" id="secret{$events_item.code}" class="form-radio" {if $events_item.code == $display_top_event.code}checked{/if}>
+                            <label for="secret{$events_item.code}" class="form-long">表示</label>
+                        </div>
+                    </td>
+                    <td>{$events_item.event_date|date_format:"%Y/%m/%d"}</td>
+                    <td>{$events_item.section_code}</td>
+                    <td>{$events_item.title}</td>
+                </tr>
+                {/foreach}
+            </table>
         </div>
-		{/if}
-	</div>
+      </div>
+      <div class="form-right">
+        <div class="edit-block-menu">
+          <li><button class="edit-block-menu-btn release-btn" type="button" id="save-top-display-events">保存</button></li>
+        </div>
+      </div>
+    {/if}
+  </div>
+  {/if}
 </div>
 
 
