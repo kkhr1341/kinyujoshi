@@ -27,12 +27,14 @@
     </div>
 
 
+    {if in_array('admin', $roles|default:'')}
     <div class="clearw float_right" style="margin-bottom: 24px;">
-    	<a class="btn btn-primary" id="broadcast_mail" href="#" role="button">メールを一斉送信する</a>
-    	{if $from_company==TRUE}
-    	<a class="btn btn-primary" id="download_csv" href="/admin/joshikai/memberlist/{$events.code}" role="button">CSVダウンロード</a>
-        {/if}
+      <a class="btn btn-primary" id="broadcast_mail" href="#" role="button">メールを一斉送信する</a>
+      {if $from_company==TRUE}
+      <a class="btn btn-primary" id="download_csv" href="/admin/joshikai/memberlist/{$events.code}" role="button">CSVダウンロード</a>
+      {/if}
     </div>
+    {/if}
 
     <table class="table joshikai-attend-detail-table">
 
@@ -40,11 +42,11 @@
       {foreach from=$applications item=application name=loopname}
       <tr>
         <td class="subject1 main-img">
-            {if $application.profile_image eq ""}
-                <div class="member-img" style="background:url(/images/my/non-profile-img.jpg) center center / cover no-repeat">
-            {else}
-                <div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat">
-            {/if}
+          {if $application.profile_image eq ""}
+            <div class="member-img" style="background:url(/images/my/non-profile-img.jpg) center center / cover no-repeat">
+          {else}
+            <div class="member-img" style="background:url({$application.profile_image}) center center / cover no-repeat">
+          {/if}
         </td>
         <td class="subject2">
             <p>
@@ -57,6 +59,7 @@
               <p>{$application.type}タイプ</p>
             {/if}
 
+            {if in_array('admin', $roles|default:'')}
             {if $application.message}
               <br/>
               <p style="font-size:9px;">お問い合わせ内容：<br/>{$application.message|nl2br}</p>
@@ -65,6 +68,7 @@
             {if $application.charge_id}
             <br>
             <p>PAYJP課金ID：<br>{$application.charge_id}</p>
+            {/if}
             {/if}
         </td>
         <td class="subject3">
@@ -81,14 +85,19 @@
           {/if}
         </td>
         <td class="subject4 link-area">
+          {if in_array('admin', $roles|default:'')}
           {if $application.email != ''}
             <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
           {/if}
+          {/if}
 
+          {if in_array('admin', $roles|default:'')}
           {if $application.username != 'guest' && $from_company==TRUE && $application.member_regist_code != ''}
             <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
+          {/if}
 
+          {if in_array('admin', $roles|default:'')}
           {if $application.amount gt '0'}
             {if $application.payment_cancel eq '1'}
               <p>決済取り消し</p>
@@ -97,6 +106,7 @@
             {else}
               <p>支払確定</p>
             {/if}
+          {/if}
           {/if}
 
           {if $application.cancel == 0}
@@ -146,10 +156,11 @@
             ({((date('Ymd') - ($application.birthday|replace:"-":""))/10000)|floor}歳)
           {/if}
           </p>
-
+          {if in_array('admin', $roles|default:'')}
           {if $application.charge_id}
           <br>
           <p>PAYJP課金ID：<br>{$application.charge_id}</p>
+          {/if}
           {/if}
         </td>
         <td class="subject3">
@@ -160,12 +171,14 @@
           {/if}
         </td>
         <td class="subject4 link-area">
+          {if in_array('admin', $roles|default:'')}
           <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
           {if $application.username != 'guest' && $from_company==TRUE}
           <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
           {/if}
           {if $application.sale neq '1' && $application.payment_cancel eq '0'}
             <a class="sales-link" href="#" data-application_code="{$application.code}">キャンセル料支払い確定</a>
+          {/if}
           {/if}
         </td>
       </tr>
@@ -206,27 +219,30 @@
                 <textarea name="body" style="border: 1px solid #d9d8d8; width: 500px; height: 200px;"></textarea>
             </div>
         </div>
-
+        {if in_array('admin', $roles|default:'')}
         <div class="form-group">
             <label class="form-group-event-label">テストメール送信先</label>
             <div class='input-group'>
                 <input type='text' class="form-control" name="email" value="" style="width: 500px;" />
             </div>
         </div>
+        {/if}
 
       </div>
       <!-- dialog buttons -->
+      {if in_array('admin', $roles|default:'')}
       <div class="modal-footer">
         <button type="button" class="btn test-btn btn-primary">テスト送信</button>
         <button type="button" class="btn send-btn btn-primary">送信</button>
       </div>
+      {/if}
     </div>
   </div>
 </div>
 
 <script>
 $(function () {
-
+    {if in_array('admin', $roles|default:'')}
     // 「支払い確定」ボタンクリック時の処理
     $('.sales-link').click(function () {
         self = this;
@@ -247,6 +263,7 @@ $(function () {
             }
         });
     });
+    {/if}
 
     // 「キャンセルする」ボタンクリック時の処理
     $('.cancel-link').click(function () {
@@ -310,6 +327,7 @@ $(function () {
     });
 });
 
+{if in_array('admin', $roles|default:'')}
 $(function () {
     // メール一斉送信
     var $modal = $("#myModal");
@@ -386,7 +404,9 @@ $(function () {
         });
     });
 });
+{/if}
 </script>
+
 
 <!-- チャート関連 -->
 {literal}
