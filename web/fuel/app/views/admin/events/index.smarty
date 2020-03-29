@@ -14,7 +14,9 @@
     <li class="active"><a href="#tab1" data-toggle="tab">公開</a></li>
     <li><a href="#tab2" data-toggle="tab">下書き</a></li>
     <li><a href="#tab3" data-toggle="tab">過去の女子会</a></li>
+    {if in_array('admin', $roles)}
     <li><a href="#tab4" data-toggle="tab">TOPバナー設定</a></li>
+    {/if}
 </ul>
 <div class="tab-content">
 
