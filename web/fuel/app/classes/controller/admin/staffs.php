@@ -15,7 +15,7 @@ class Controller_Admin_Staffs extends Controller_Adminbase
 
   public function action_index()
   {
-    if (!in_array('admin', $this->data['roles'])) {
+    if (!in_array('super_admin', $this->data['roles'])) {
       throw new HttpNoAccessException;
     }
 
@@ -36,9 +36,10 @@ class Controller_Admin_Staffs extends Controller_Adminbase
     $this->data['grants'] = array(
       array('code' => -1, 'name' => 'Banned'),
       array('code' => 1, 'name' => 'メンバー'),
-      array('code' => 30, 'name' => '編集者'),
-      array('code' => 40, 'name' => 'オフィシャルメンバー'),
-      array('code' => 100, 'name' => '管理者')
+      array('code' => 30, 'name' => 'オフィシャルメンバー'),
+      array('code' => 40, 'name' => 'コミュニティスタッフ'),
+      array('code' => 80, 'name' => '管理者'),
+      array('code' => 100, 'name' => 'スーパー管理者')
     );
     $this->template->contents = View::forge('admin/staffs/edit.smarty', $this->data);
     $this->template->description = '管理画面・スタッフ詳細';

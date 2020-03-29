@@ -157,7 +157,11 @@ class Controller_Adminbase extends Controller_Template
 
         switch(\Input::real_ip())
         {
+            // toetheline office ip
             case '202.241.184.23':
+                return true;
+            // kawaguchi vpn ip
+            case '117.102.204.225':
                 return true;
             default:
                 return false;
