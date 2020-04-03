@@ -96,14 +96,6 @@
 <div class="report-detail-sidebar2">
 
   <div class="report-detail-sidebar-inner">
-    <!-- 編集部へのコメント -->
-    <div class="report-detail-sidebar-el">
-      <p class="insta-hash-title">〜 #きんゆう女子 〜</p>
-      <div class="insta-el clear" id="instafeed"></div>
-      <div class="sidebar-more-link">
-        <a href="/event">もっと見る ></a>
-      </div>
-    </div>
 
     <div class="kinyu-top-banner-area">
       <ul class="clear">
