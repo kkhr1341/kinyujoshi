@@ -112,15 +112,6 @@
           data-show-posts="false">
         </div>
       </div>
-      <!--insta-->
-      <div class="kinyu-social-list-el">
-        <div class="instagram-block">
-          <p class="social-list-title"><img src="/images/main-title/insta-main-title.png"></p>
-          <div class="img-box" style="background:url(/images/favicon.png) center center / cover no-repeat;"></div>
-          <a target="_blank" class="kinyu-social-link" href="https://www.instagram.com/kinyu_joshi/">kinyu_joshi</a>
-          <a target="_blank" href="https://www.instagram.com/kinyu_joshi/" class="follow-link instagram">フォローする</a>
-        </div>
-      </div>
 
       <!--twitter-->
       <div class="kinyu-social-list-el">

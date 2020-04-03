@@ -244,28 +244,6 @@
       </div>
     </div>
 
-
-      <div class="kinyu-top-maincontent-block-el">
-        <div class="insta-block">
-        <div class="insta-block-inner">
-          <h3 class="kinyu-main-title" style="text-align: center;">
-            <a href="https://www.instagram.com/kinyu_joshi/ " target="_blank" onClick="ga('send', 'event', 'pc-top-link', 'click', 'instagram-tag', 1);">
-              ＼きんゆう女子。をフォロー／<br> ＠kinyu_joshi
-            </a>
-          </h3>
-          <div class="insta-el clear" id="instafeed"></div>
-          <!-- <div class="insta-link-block">
-            <a class="insta-link" href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagramページへ</a>
-          </div> -->
-          <div class="sidebar-more-link">
-            <a class="js-track" href="https://www.instagram.com/kinyu_joshi/" data-category="pc-top-link" data-action="click" data-value="1" target="_blank">Instagramページへ ></a>
-          </div>
-        </div>
-        </div>
-      </div>
-
-
-
       <div class="kinyu-top-maincontent-block-el">
         <div class="kinyu-top-banner-area">
           <ul class="clear">
