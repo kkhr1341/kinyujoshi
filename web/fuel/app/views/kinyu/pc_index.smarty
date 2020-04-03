@@ -244,7 +244,7 @@
       </div>
     </div>
 
-
+      {*
       <div class="kinyu-top-maincontent-block-el">
         <div class="insta-block">
         <div class="insta-block-inner">
@@ -263,6 +263,7 @@
         </div>
         </div>
       </div>
+      *}
 
 
 

@@ -60,6 +60,8 @@
         </div>
       </div>
       <!--insta-->
+
+      {*
       <div class="kinyu-social-list-el">
         <div class="instagram-block">
           <p class="social-list-title"><img src="/images/main-title/insta-main-title.png"></p>
@@ -68,6 +70,7 @@
           <a target="_blank" href="https://www.instagram.com/kinyu_joshi/" class="follow-link instagram">フォローする</a>
         </div>
       </div>
+      *}
 
       <!--twitter-->
       <div class="kinyu-social-list-el">
