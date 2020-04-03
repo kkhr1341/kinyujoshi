@@ -133,7 +133,7 @@ class Controller_Api_Applications extends Controller_Apibase
         }
 
         $group = Auth::group();
-        if (!in_array('admin', $group->get_roles())) {
+        if (!(in_array('admin', $group->get_roles()) || in_array('joshikai_admin', $group->get_roles()))) {
             return $this->error('no administrator');
         }
 

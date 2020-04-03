@@ -147,6 +147,9 @@ return array(
         138 => '144_delete_cancel_from_applications',
         139 => '145_create_consultations',
         140 => '146_create_consultation_reply_mails',
+        141 => '147_delete_cancel_from_application_credit_payments',
+        142 => '148_delete_sale_from_application_credit_payments',
+        143 => '151_add_sns_links_to_authors',
       ),
     ),
     'module' => 

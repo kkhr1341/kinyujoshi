@@ -49,9 +49,10 @@
   {/if}
 
   <ul class="menu-list">
-    {if in_array('admin', $roles)}
+    {if in_array('admin', $roles) || in_array('joshikai_admin', $roles) || in_array('report_admin', $roles) }
       <li class="main-li"><a href="/admin" target="_blank">＜＜管理画面＞＞</span></a></li>
     {/if}
+
     <li><a href="/my">マイページ・トップ</a></li>
     <li><a href="/my/member_report">メンバー限定レポート</a></li>
     <li><a href="/my/report">お気に入り</a></li>

@@ -1,8 +1,31 @@
 <div class="admin-main-el">
+  {if in_array('admin', $roles) }
   <p class="admin-main-el-title">現在のメンバー属性</p>
   <div style="text-align: center; padding: 50px 0px;">
-      <a class="btn btn-primary" href="https://datastudio.google.com/reporting/1qTJSb5CKHHwubXr-0YnZX15d8YpMBQnO/page/JCFa" target="_blank">
-          きんじょ。インサイトレポートはこちら
-      </a>
+    <a class="btn btn-primary" href="https://datastudio.google.com/reporting/1qTJSb5CKHHwubXr-0YnZX15d8YpMBQnO/page/JCFa" target="_blank">
+        きんじょ。インサイトレポートはこちら
+    </a>
   </div>
+  {/if}
+  {if in_array('joshikai_admin', $roles) }
+    <p class="admin-main-el-title">女子会の管理 / 参加者の管理</p>
+    <div style="text-align: center; padding: 24px 0px;">
+      <a class="btn btn-primary" href="/admin/joshikai">
+        女子会の管理
+      </a>
+    </div>
+    <div style="text-align: center; padding: 24px 0px;">
+      <a class="btn btn-primary" href="/admin/joshikai/attend">
+        女子会参加者の管理
+      </a>
+    </div>
+  {/if}
+  {if in_array('report_admin', $roles) }
+    <p class="admin-main-el-title">レポートの管理</p>
+    <div style="text-align: center; padding: 24px 0px;">
+      <a class="btn btn-primary" href="/admin/blogs">
+        レポートの管理
+      </a>
+    </div>
+  {/if}
 </div>
