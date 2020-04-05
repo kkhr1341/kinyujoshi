@@ -35,7 +35,6 @@
 	<script type="text/javascript" src="/assets/js/imagemanager.js?1516966719"></script>
 	<script type="text/javascript" src="/assets/js/filemanager.js?1516966719"></script>
 	<script type="text/javascript" src="/assets/js/kinyu/slick.min.js?1516966719"></script>
-	<script type="text/javascript" src="/assets/js/kinyu/instafeed.min.js?1516966719"></script>
 	<script type="text/javascript" src="/assets/js/kinyu/main.js?1516966719"></script>
 	<script type="text/javascript" src="/assets/js/kinyu/swiper.min.js?1516966719"></script>
 	<script type="text/javascript" src="/assets/js/kinyu/jquery.bxslider.min.js?1516966719"></script>
