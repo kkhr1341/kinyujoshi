@@ -142,9 +142,8 @@ class Controller_Auth extends Controller
     {
         if ($after_login_url = \Session::get('after_login_url')) {
             $url = $after_login_url;
-        } else if ($referrer = \Session::get('referrer')) {
-            $url = $referrer;
-        } else {
+        }
+        else {
             $url = '/my';
         }
         \Session::set('after_login_url', '');
