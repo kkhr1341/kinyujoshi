@@ -125,7 +125,6 @@ class Controller_Kinyubase extends Controller_Template
             // 必要
             //'kinyu/jquery.infinitescroll.min.js',
             'kinyu/slick.min.js',
-            'kinyu/instafeed.min.js',
             'kinyu/main.js',
             'kinyu/scrollreveal.min.js',
             // 必要
