@@ -9,18 +9,19 @@
 
 
 <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
-    <li><a href="#tab1" data-toggle="tab">公開</a></li>
-	<li><a href="#tab2" data-toggle="tab">下書き</a></li>
-	<li><a href="#tab3" data-toggle="tab">すべて</a></li>
-
-    <li><a href="#tab5" data-toggle="tab"><span class="count-badge">{$apply_blogs|@count}</span>申請中</a></li>
-    <li><a href="#tab6" data-toggle="tab"><span class="count-badge">{$update_blogs|@count}</span>更新依頼中</a></li>
-	<li><a href="#tab7" data-toggle="tab"><span class="count-badge">{$delete_blogs|@count}</span>削除依頼中</a></li>
-
+  {if in_array('report_admin', $roles) || in_array('admin', $roles)}
+  <li class="active"><a href="#tab4" data-toggle="tab">PICK!</a></li>
+  <li><a href="#tab1" data-toggle="tab">公開</a></li>
+  {/if}
+  <li><a href="#tab2" data-toggle="tab">下書き</a></li>
+  {if in_array('report_admin', $roles) || in_array('admin', $roles)}
+  <li><a href="#tab3" data-toggle="tab">すべて</a></li>
+  <li><a href="#tab5" data-toggle="tab"><span class="count-badge">{$apply_blogs|@count}</span>申請中</a></li>
+  <li><a href="#tab6" data-toggle="tab"><span class="count-badge">{$update_blogs|@count}</span>更新依頼中</a></li>
+  <li><a href="#tab7" data-toggle="tab"><span class="count-badge">{$delete_blogs|@count}</span>削除依頼中</a></li>
+  {/if}
 </ul>
 <div class="tab-content">
-
 	<div class="tab-pane" id="tab4">
 		{if sizeof($open_blogs) == 0}
 		<div class="alert alert-warning mt20" role="alert">公開中の記事はありません</div>

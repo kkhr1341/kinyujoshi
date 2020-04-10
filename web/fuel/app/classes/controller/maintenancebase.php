@@ -105,7 +105,6 @@ class Controller_Maintenancebase extends Controller_Template
             // 必要
             //'kinyu/jquery.infinitescroll.min.js',
             'kinyu/slick.min.js',
-            'kinyu/instafeed.min.js',
             'kinyu/main.js',
             // 必要
             'kinyu/swiper.min.js',
