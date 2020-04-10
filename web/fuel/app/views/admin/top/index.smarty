@@ -20,7 +20,16 @@
       </a>
     </div>
   {/if}
-  {if in_array('report_admin', $roles) }
+  {if in_array('joshikai_contribute', $roles) }
+    <p class="admin-main-el-title">女子会の管理</p>
+    <div style="text-align: center; padding: 24px 0px;">
+      <a class="btn btn-primary" href="/admin/joshikai">
+        女子会の管理
+      </a>
+    </div>
+  {/if}
+
+  {if in_array('report_admin', $roles) || in_array('report_contribute', $roles)}
     <p class="admin-main-el-title">レポートの管理</p>
     <div style="text-align: center; padding: 24px 0px;">
       <a class="btn btn-primary" href="/admin/blogs">
