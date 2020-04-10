@@ -83,7 +83,7 @@ return array(
     -1   => array('name' => 'Banned', 'roles' => array('banned')),
     0    => array('name' => 'Guests', 'roles' => array()),
     1    => array('name' => 'メンバー', 'roles' => array('user')),
-    30   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'official_member')),
+    30   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'official_member', 'joshikai_contribute', 'report_contribute')),
     40   => array('name' => 'コミュニティスタッフ', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin')),
     80   => array('name' => '管理者', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin', 'admin')),
     100  => array('name' => 'スーパー管理者', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin', 'admin', 'super_admin')),
@@ -125,6 +125,14 @@ return array(
     'editor' => array(
       'authors' => array('read', 'create', 'edit', 'delete'),
       'userblogs' => array('read', 'create', 'edit', 'delete'),
+    ),
+    'joshikai_contribute' => array(
+      'admin' => array('read'),
+      'events' => array('read', 'create', 'edit', 'delete'),
+    ),
+    'report_contribute' => array(
+      'admin' => array('read'),
+      'blogs' => array('read', 'create', 'edit', 'delete'),
     ),
     'official_member' => array(
       'authors' => array('read', 'create', 'edit', 'delete'),

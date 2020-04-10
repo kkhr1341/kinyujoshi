@@ -49,7 +49,7 @@
   {/if}
 
   <ul class="menu-list">
-    {if in_array('admin', $roles) || in_array('joshikai_admin', $roles) || in_array('report_admin', $roles) }
+    {if in_array('admin', $roles) || in_array('joshikai_admin', $roles) || in_array('report_admin', $roles) || in_array('joshikai_contribute', $roles) || in_array('report_contribute', $roles)}
       <li class="main-li"><a href="/admin" target="_blank">＜＜管理画面＞＞</span></a></li>
     {/if}
 
