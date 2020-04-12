@@ -20,6 +20,12 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         } else {
             $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60, null, null);
         }
+
+        foreach($this->data['blogs']['datas'] as &$blogs) {
+          $blogs['viewable'] = $this->viewable($blogs['code']);
+        }
+        unset($blogs);
+
         $pagination = $this->data['blogs']['pagination'];
         $this->template->title = 'レポート一覧｜きんゆう女子。';
         $this->template->description = 'きんゆう女子。は、なかなか聞けないお金の話。 先延ばしにしがちなお金の計画。 私には無関係と思っている金融の話など、お金に関する様々な情報を配信しています。';
@@ -229,23 +235,36 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
       return $v;
     }
 
+    private function calc_past_time($datetime_str, $offset)
+    {
+      $datetime = new DateTime($datetime_str, new DateTimeZone('Asia/Tokyo'));
+      $unix_timestamp = $datetime->format('U');
+      return $unix_timestamp + $offset;
+    }
+
     private function viewable($code)
     {
         $blog = Blogs::getByCode('blogs', $code);
 
-        if ($blog['secret'] == 0) {
-            return true;
+        // ログイン済み
+        if (Auth::check()) {
+          return true;
         }
+
+        // 限定公開URL経由
         if ($blog['status'] == 1 && in_array($blog['author_code'], $this->owner_codes(), true)) {
-          $date = new DateTime($blog['updated_at'], new DateTimeZone('Asia/Tokyo'));
-          $date_unixtime = $date->format('U');
-          $past_time = $date_unixtime + 3 * 86400; // 3 days
-          if( time() <= $past_time ) {
+          if( time() <= $this->calc_past_time($blog['open_date'], 3 * 86400) ) {
             return true;
           }
         }
-        if (Auth::check()) {
-            return true;
+
+        // 公開期限
+        if ($blog['secret'] == 0) {
+          // 公開中でも公開日より1ヶ月経過した場合、非公開にする
+          if( time() >= $this->calc_past_time($blog['open_date'], 30 * 86400) ) {
+            return false;
+          }
+          return true;
         }
         return false;
     }
