@@ -242,13 +242,13 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
         if ($blog['secret'] == 0) {
             // 公開中でも公開日より1ヶ月経過した場合、非公開にする
-            if( time() >= calc_past_time($blog['open_date'], 30 * 86400) ) {
+            if( time() >= $this->calc_past_time($blog['open_date'], 30 * 86400) ) {
               return false;
             }
             return true;
         }
         if ($blog['status'] == 1 && in_array($blog['author_code'], $this->owner_codes(), true)) {
-          if( time() <= calc_past_time($blog['open_date'], 3 * 86400) ) {
+          if( time() <= $this->calc_past_time($blog['open_date'], 3 * 86400) ) {
             return true;
           }
         }
