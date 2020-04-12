@@ -160,6 +160,9 @@ class Controller_Adminbase extends Controller_Template
             // toetheline office ip
             case '202.241.184.23':
                 return true;
+            // ttl interlink vpn ip
+            case '117.103.161.200':
+                return true;
             // kawaguchi vpn ip
             case '117.102.204.225':
                 return true;
