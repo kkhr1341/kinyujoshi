@@ -229,23 +229,32 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
       return $v;
     }
 
+    private function calc_past_time($datetime_str, $offset)
+    {
+      $datetime = new DateTime($datetime_str, new DateTimeZone('Asia/Tokyo'));
+      $unix_timestamp = $datetime->format('U');
+      return $unix_timestamp + $offset;
+    }
+
     private function viewable($code)
     {
         $blog = Blogs::getByCode('blogs', $code);
 
         if ($blog['secret'] == 0) {
+            // 公開中でも公開日より1ヶ月経過した場合、非公開にする
+            if( time() >= calc_past_time($blog['open_date'], 30 * 86400) ) {
+              return false;
+            }
             return true;
         }
         if ($blog['status'] == 1 && in_array($blog['author_code'], $this->owner_codes(), true)) {
-          $date = new DateTime($blog['updated_at'], new DateTimeZone('Asia/Tokyo'));
-          $date_unixtime = $date->format('U');
-          $past_time = $date_unixtime + 3 * 86400; // 3 days
-          if( time() <= $past_time ) {
+          if( time() <= calc_past_time($blog['open_date'], 3 * 86400) ) {
             return true;
           }
         }
+        // ログイン済み
         if (Auth::check()) {
-            return true;
+          return true;
         }
         return false;
     }
