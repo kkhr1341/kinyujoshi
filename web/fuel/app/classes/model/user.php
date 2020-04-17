@@ -74,6 +74,17 @@ class User extends Base
         return $result;
     }
 
+    public static function getByUserName($username)
+    {
+        $result = \DB::select('*')->from('users')
+            ->where('users.username', '=', $username)
+            ->execute()->current();
+        if (empty($result)) {
+            return false;
+        }
+        return $result[0];
+    }
+
     public static function save($params, $username, $current_email)
     {
         // メールアドレスの変更確認
