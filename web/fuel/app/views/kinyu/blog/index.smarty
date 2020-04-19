@@ -50,7 +50,7 @@
                   {/if}
                 </div>
                 <h3 class="kinyu-top-list-title">
-                  {if $blog.secret == 1 || $blog.viewable}<span class="secret-icon"></span>{/if}
+                  {if $blog.secret == 1 || $blog.viewable === false}<span class="secret-icon"></span>{/if}
                   {$blog.title}
                 </h3>
                 <div class="kinyu-top-list-author">
