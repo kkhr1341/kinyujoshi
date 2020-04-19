@@ -82,7 +82,7 @@ class User extends Base
         if (empty($result)) {
             return false;
         }
-        return $result[0];
+        return $result;
     }
 
     public static function save($params, $username, $current_email)
