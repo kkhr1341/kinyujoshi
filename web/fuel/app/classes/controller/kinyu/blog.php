@@ -135,7 +135,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
         $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data + array(
           'title'       => $this->data['blog']['title'],
-          'author_code' => $this->data['blog']['author_code'],
+          'user_code' => $username,
+          'auth_code' => $this->generateTemporaryLinkAuthCode($this->data['blog']['code'], $username),
           'posted_me'   => $this->data['posted_me']
         ));
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
@@ -227,6 +228,13 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         }
     }
 
+    private function generateTemporaryLinkAuthCode($blog_code, $user_code) {
+      $salt = 'WZ6xFt53uGP9SygA';
+      $str = $blog_code .':'. $user_code .':'. $salt;
+      return strtr(rtrim(base64_encode(pack('H*', hash('CRC32', $str))), '='), '+/', '-_');
+    }
+
+
     private function temporaryLinkShareableBy($user_code)
     {
       $user = User::getByUserName($user_code);
@@ -243,7 +251,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     private function viewable($code)
     {
         $blog = Blogs::getByCode('blogs', $code);
-        $user_code = isset($_GET['c']) ? $_GET['c'] : '';
+        $user_code = isset($_GET['u']) ? $_GET['u'] : '';
+        $auth_code = isset($_GET['k']) ? $_GET['k'] : '';
 
         // ログイン済み
         if (Auth::check()) {
@@ -251,7 +260,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         }
 
         // オフィシャルメンバー権限以上を持つユーザーのみ3日間の限定公開URLを発行できる
-        if ($blog['status'] == 1 && $this->temporaryLinkShareableBy($user_code)) {
+        if ($blog['status'] == 1 && $this->temporaryLinkShareableBy($user_code) && $auth_code === $this->generateTemporaryLinkAuthCode($code, $user_code) ) {
           if( time() <= $this->calc_past_time($blog['open_date'], 365 * 86400) ) {
             return true;
           }
