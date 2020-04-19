@@ -13,7 +13,12 @@ if( isset($user_code) && isset($auth_code) ) {
   $_params['k'] = $auth_code;
 }
 
-$url = "https://" . $_SERVER["HTTP_HOST"] . $query['path'] . '?' . http_build_query($_params);
+$url = "https://" . $_SERVER["HTTP_HOST"] . $query['path'];
+$query_params = http_build_query($_params);
+
+if(strlen($query_params) > 0) {
+  $url = $url .'?'. $query_params;
+}
 $title = isset($title) ? $title: '';
 
 // URLにリンクを貼る
