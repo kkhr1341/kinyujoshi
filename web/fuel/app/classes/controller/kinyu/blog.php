@@ -4,6 +4,7 @@ use \Model\Blogs;
 use \Model\Blogstocks;
 use \Model\Events;
 use \Model\Authors;
+use \Model\User;
 
 class Controller_Kinyu_Blog extends Controller_Kinyubase
 {
@@ -226,9 +227,9 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         }
     }
 
-    private function temporaryLinkShareableBy(user_code)
+    private function temporaryLinkShareableBy($user_code)
     {
-      $user = Users::getByUserName($user_code);
+      $user = User::getByUserName($user_code);
       return $user['group'] >= 30;
     }
 
@@ -242,11 +243,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     private function viewable($code)
     {
         $blog = Blogs::getByCode('blogs', $code);
-        $user_codes = isset($_GET['c']) ? [$_GET['c']] : [];
-        // flatten
-        $v = [];
-        array_walk_recursive($user_codes, function($e)use(&$v){$v[] = $e;});
-        $user_code = $v[0];
+        $user_code = isset($_GET['c']) ? $_GET['c'] : '';
 
         // ログイン済み
         if (Auth::check()) {
@@ -254,8 +251,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         }
 
         // オフィシャルメンバー権限以上を持つユーザーのみ3日間の限定公開URLを発行できる
-        if ($blog['status'] == 1 && temporaryLinkShareableBy($user_code)) {
-          if( time() <= $this->calc_past_time($blog['open_date'], 3 * 86400) ) {
+        if ($blog['status'] == 1 && $this->temporaryLinkShareableBy($user_code)) {
+          if( time() <= $this->calc_past_time($blog['open_date'], 365 * 86400) ) {
             return true;
           }
         }
