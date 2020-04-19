@@ -4,6 +4,7 @@ use \Model\Blogs;
 use \Model\Blogstocks;
 use \Model\Events;
 use \Model\Authors;
+use \Model\User;
 
 class Controller_Kinyu_Blog extends Controller_Kinyubase
 {
@@ -134,7 +135,8 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
         $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data + array(
           'title'       => $this->data['blog']['title'],
-          'author_code' => $this->data['blog']['author_code'],
+          'user_code' => $this->temporaryLinkShareableBy($username) ? $username : null,
+          'auth_code' => $this->generateTemporaryLinkAuthCode($this->data['blog']['code'], $username),
           'posted_me'   => $this->data['posted_me']
         ));
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
@@ -226,13 +228,16 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         }
     }
 
-    private function owner_codes()
+    private function generateTemporaryLinkAuthCode($blog_code, $user_code) {
+      $salt = 'WZ6xFt53uGP9SygA';
+      $str = $blog_code .':'. $user_code .':'. $salt;
+      return strtr(rtrim(base64_encode(pack('H*', hash('CRC32', $str))), '='), '+/', '-_');
+    }
+
+    private function temporaryLinkShareableBy($user_code)
     {
-      $owner_codes = isset($_GET['c']) ? [$_GET['c']] : [];
-      // flatten
-      $v = [];
-      array_walk_recursive($owner_codes, function($e)use(&$v){$v[] = $e;});
-      return $v;
+      $user = User::getByUserName($user_code);
+      return $user['group'] >= 30;
     }
 
     private function calc_past_time($datetime_str, $offset)
@@ -245,16 +250,21 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     private function viewable($code)
     {
         $blog = Blogs::getByCode('blogs', $code);
+        $user_code = isset($_GET['u']) ? $_GET['u'] : '';
+        $auth_code = isset($_GET['k']) ? $_GET['k'] : '';
 
         // ログイン済み
         if (Auth::check()) {
           return true;
         }
 
-        // 限定公開URL経由
-        if ($blog['status'] == 1 && in_array($blog['author_code'], $this->owner_codes(), true)) {
-          if( time() <= $this->calc_past_time($blog['open_date'], 3 * 86400) ) {
-            return true;
+        // オフィシャルメンバー権限以上を持つユーザーのみ7日間の限定公開URLを発行できる
+        if ($blog['status'] == 1 && $auth_code === $this->generateTemporaryLinkAuthCode($code, $user_code)) {
+          // 簡易負荷対策: 認証コードを通してからでないとDBへのアクセスをしない
+          if( $this->temporaryLinkShareableBy($user_code) ) {
+            if( time() <= $this->calc_past_time($blog['open_date'], 7 * 86400) ) {
+              return true;
+            }
           }
         }
 
