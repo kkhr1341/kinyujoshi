@@ -135,7 +135,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
         $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data + array(
           'title'       => $this->data['blog']['title'],
-          'user_code' => $username,
+          'user_code' => $this->temporaryLinkShareableBy($username) ? $username : null,
           'auth_code' => $this->generateTemporaryLinkAuthCode($this->data['blog']['code'], $username),
           'posted_me'   => $this->data['posted_me']
         ));
@@ -260,9 +260,12 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         }
 
         // オフィシャルメンバー権限以上を持つユーザーのみ3日間の限定公開URLを発行できる
-        if ($blog['status'] == 1 && $this->temporaryLinkShareableBy($user_code) && $auth_code === $this->generateTemporaryLinkAuthCode($code, $user_code) ) {
-          if( time() <= $this->calc_past_time($blog['open_date'], 365 * 86400) ) {
-            return true;
+        if ($blog['status'] == 1 && $auth_code === $this->generateTemporaryLinkAuthCode($code, $user_code)) {
+          // 簡易負荷対策: 認証コードを通してからでないとDBへのアクセスをしない
+          if( $this->temporaryLinkShareableBy($user_code) ) {
+            if( time() <= $this->calc_past_time($blog['open_date'], 365 * 86400) ) {
+              return true;
+            }
           }
         }
 
