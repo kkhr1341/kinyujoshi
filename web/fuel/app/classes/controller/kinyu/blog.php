@@ -258,7 +258,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
           return true;
         }
 
-        // オフィシャルメンバー権限以上を持つユーザーのみ3日間の限定公開URLを発行できる
+        // オフィシャルメンバー権限以上を持つユーザーのみ7日間の限定公開URLを発行できる
         if ($blog['status'] == 1 && $auth_code === $this->generateTemporaryLinkAuthCode($code, $user_code)) {
           // 簡易負荷対策: 認証コードを通してからでないとDBへのアクセスをしない
           if( $this->temporaryLinkShareableBy($user_code) ) {
