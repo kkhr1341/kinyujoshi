@@ -1,17 +1,24 @@
 <?php
 
 $url = "https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
-if( isset($author_code) && $posted_me ) {
-  $query = parse_url($url);
-  $_params = [];
-  if(isset($query['query'])) {
-    parse_str($query['query'], $_params);
-  }
-  // 現仕様では重複と複数値を受け付けない
-  $_params['c'] = $author_code;
-  $url = "https://" . $_SERVER["HTTP_HOST"] . $query['path'] . '?' . http_build_query($_params);
+
+$query = parse_url($url);
+$_params = [];
+if( isset($query['query']) ) {
+  parse_str($query['query'], $_params);
 }
 
+if( isset($user_code) && isset($auth_code) ) {
+  $_params['u'] = $user_code;
+  $_params['k'] = $auth_code;
+}
+
+$url = "https://" . $_SERVER["HTTP_HOST"] . $query['path'];
+$query_params = http_build_query($_params);
+
+if(strlen($query_params) > 0) {
+  $url = $url .'?'. $query_params;
+}
 $title = isset($title) ? $title: '';
 
 // URLにリンクを貼る

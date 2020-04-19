@@ -39,13 +39,6 @@
       </ul>
     </div>
   {/if}
-  <div class="kinyu-header-social-list">
-    <ul>
-      <li><a class="js-track" href="https://www.instagram.com/kinyu_joshi/" target="_blank" data-category="pc-header-link" data-action="click" data-value="1"><img src="/images/social/instagram_icon.png"></a></li>
-      <li><a class="js-track" href="https://twitter.com/kinyu_joshi" target="_blank" data-category="pc-header-link" data-action="click" data-value="1"><img src="/images/social/twitter_icon.png"></a></li>
-      <li><a class="js-track" href="https://www.facebook.com/kinyujyoshi/" target="_blank" data-category="pc-header-link" data-action="click" data-value="1"><img src="/images/social/fb_icon.png"></a></li>
-    </ul>
-  </div>
 
   <!-- レポート検索 -->
   <div class="kinyu-top-search pc">
