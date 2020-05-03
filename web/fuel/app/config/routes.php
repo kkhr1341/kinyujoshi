@@ -157,6 +157,10 @@ return array(
   'sanpo_nihonginko' => 'kinyu/kinyumap/sanpo_nihonginko',
   'sanpo_hiroshima' => 'kinyu/kinyumap/sanpo_hiroshima',
 
+  // 非ログイン時マイページ
+  // 'members'        => 'kinyu/members/index',
+  'members/(:any)' => 'kinyu/members/detail/$1',
+
   //マイページ - トップ
   'my'   => 'my/top',
   //マイページ - プロフィール、女子会リスト
