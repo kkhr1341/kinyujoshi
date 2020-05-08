@@ -62,7 +62,7 @@
       <ul>
         <li><a class="js-track" href="/legal" data-category="pc-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
         <li><a class="js-track" href="/company" data-category="pc-footer-link" data-action="click" data-value="1">運営会社</a></li>
-        <li><a class="js-track" href="https://www.with.kinyu-joshi.jp/about" data-category="pc-footer-link" data-action="click" data-value="1">企業の方はこちら</a></li>
+        <li><a class="js-track" href="https://with.kinyu-joshi.jp/about" data-category="pc-footer-link" data-action="click" data-value="1">企業の方はこちら</a></li>
       </ul>
     </div>
 
@@ -76,7 +76,7 @@
         <li><a class="js-track" href="/privacy" data-category="sp-footer-link" data-action="click" data-value="1">プライバシーポリシー</a></li>
         <li><a class="js-track" href="/link_policy" data-category="sp-footer-link" data-action="click" data-value="1">リンクポリシー</a></li>
         <li><a class="js-track" href="/policy" data-category="sp-footer-link" data-action="click" data-value="1">コミュニティ運営ポリシー</a></li>
-        <li><a class="js-track" href="https://www.with.kinyu-joshi.jp/about" data-category="pc-footer-link" data-action="click" data-value="1">企業の方はこちら</a></li>
+        <li><a class="js-track" href="https://with.kinyu-joshi.jp/about" data-category="pc-footer-link" data-action="click" data-value="1">企業の方はこちら</a></li>
 
         <li><a class="js-track" href="/legal" data-category="sp-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
         <li><a class="js-track" href="/company" data-category="sp-footer-link" data-action="click" data-value="1">運営会社</a></li>
