@@ -977,12 +977,12 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 
 .report-pr-label  {
   position: absolute;
-  top: 0px;
-  right: 10px;
+  top: 10px;
+  left: 10px;
 }
 
 .report-pr-label img {
-  width: 30px;
+  width: 110px;
 }
 
 @media screen and (max-width: 769px) {
