@@ -975,20 +975,23 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   position: relative;
 }
 
-.report-pr-label  {
+.with_ki-label  {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
 }
 
-.report-pr-label img {
-  width: 110px;
+.with_ki-label img {
+  width: 65px;
 }
 
 @media screen and (max-width: 769px) {
   /* PRアイコン */
-  .report-pr-label img {
-    width: 25px;
+  .with_ki-label{
+    top: 3px;
+  }
+  .with_ki-label img {
+    width: 35px;
   }
 }
 

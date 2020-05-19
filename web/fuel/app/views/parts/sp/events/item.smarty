@@ -10,7 +10,7 @@
         <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;">
             {if $event.pr == 1}
                 <!-- PR用イメージ挿入箇所 -->
-                <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+                <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
             {/if}
         </div>
         <div class="text-box">

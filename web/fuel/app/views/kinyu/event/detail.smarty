@@ -17,7 +17,7 @@ var $resArray02 = $resArray[1];
             <div class="main-image{if $event.pr == 1} pr{/if}" style="background: url({$event.main_image}) center center / cover no-repeat;">
               {if $event.pr == 1}
               <!-- PR用イメージ挿入箇所 -->
-              <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+              <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
             {/if}
             </div>
           </div>
