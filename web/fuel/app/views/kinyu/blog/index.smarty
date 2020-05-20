@@ -28,7 +28,7 @@
               {/if}
               {if $blog.pr == 1}
                 <!-- PR用イメージ挿入箇所 -->
-                <p class="report-pr-label"><img src="/images/report/report-pr-label.png"></p>
+                <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
               {/if}
               </div>
               <div class="text-box">
