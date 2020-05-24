@@ -21,6 +21,6 @@ jobs:
           REPO_NAME: 'kinyu-joshi.jp'
           BODY: 'プルリクエストが作成されました'
         run: |
-          git log --numstat -m -1 --date=iso --pretty='[%ad] %h %an : %s' > gitlog.txt
+          git log --numstat -m -1 --date=iso --pretty='%s' > gitlog.txt
           curl -s -X POST -H "X-ChatWorkToken: ${{secrets.CHATWORK_API_TOKEN}}" -d "body=[info][title]${REPO_NAME}[/title]`cat gitlog.txt`[/info]" "https://api.chatwork.com/v2/rooms/${ROOM_ID}/messages"
 
