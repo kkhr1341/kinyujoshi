@@ -262,7 +262,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         if ($blog['status'] == 1 && $auth_code === $this->generateTemporaryLinkAuthCode($code, $user_code)) {
           // 簡易負荷対策: 認証コードを通してからでないとDBへのアクセスをしない
           if( $this->temporaryLinkShareableBy($user_code) ) {
-            if( time() <= $this->calc_past_time($blog['open_date'], 7 * 86400) ) {
+            if( time() <= $this->calc_past_time($blog['open_date'], 30 * 86400) ) {
               return true;
             }
           }
