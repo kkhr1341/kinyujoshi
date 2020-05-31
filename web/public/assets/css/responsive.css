@@ -1,3 +1,4 @@
+/* 共通 */
 .home-screen-guide-bubble {
   position: fixed;
   margin: 0 auto;
@@ -64,6 +65,88 @@
   font-weight: lighter;
 }
 
+/* members */
+.kinyu-main-block.kinyu-members-detail {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  background-color: #EFEFEF;
+  margin-top: 124px;
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+.kinyu-main-block.kinyu-members-detail .container {
+  background-color: #fff;
+}
+.kinyu-main-block.kinyu-members-detail .introduction {
+  height: 480px;
+  background-color: #EFEFEF;
+  padding: 16px 16px;
+  margin-top: 22px;
+}
+
+.kinyu-main-block.kinyu-members-detail {
+  text-align: center;
+}
+.kinyu-main-block.kinyu-members-detail .profile {
+  padding: 16px 16px;
+  margin-top: 22px;
+}
+.kinyu-main-block.kinyu-members-detail .profile-img {
+  text-align: center;
+  padding-top: 36px;
+}
+.kinyu-main-block.kinyu-members-detail .profile-img img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 300px;
+}
+.kinyu-main-block.kinyu-members-detail .description {
+  background-color: #fff;
+  padding: 12px 8px;
+  margin-top: 24px;
+  font-size: small;
+  line-height: 1.6;
+  border: 1px solid #e6e6e6;
+}
+
+.kinyu-main-block.kinyu-members-detail .interest-joshikai .hr {
+  width: 200px;
+  height: 3px;
+  background-color: #8ddcd1;
+  margin: 14px 0;
+}
+.kinyu-main-block.kinyu-members-detail .joined-joshikai .hr {
+  width: 200px;
+  height: 3px;
+  background-color: #8ddcd1;
+  margin: 14px 0;
+}
+.list-content-wrapper {
+  background-color: #f8f8f8;
+}
+
+.kinyu-main-block.kinyu-members-detail li {
+  padding: 8px 0;
+}
+.kinyu-main-block.kinyu-members-detail li:first-child {
+  padding-top: 16px;
+}
+.kinyu-main-block.kinyu-members-detail li:last-child {
+  padding-bottom: 24px;
+}
+
+.kinyu-main-block.kinyu-members-detail li a .list-content-wrapper .img-box {
+  float: left;
+  width: 96px;
+  height: 96px;
+}
+.kinyu-main-block.kinyu-members-detail li a .list-content-wrapper .text-box {
+  padding: 12px 0px 0px 16px;
+  float: left;
+  /* margin-left: 12px; */
+}
 
 /* ----------------------------------
     PCなど
