@@ -7527,6 +7527,10 @@ footer .navi_kinyu-submenu-el a {
 }
 
 @media screen and (max-width: 512px) {
+  .kinyu-main-block.kinyu-members-detail {
+    margin-top: initial;
+  }
+
   .kinyu-details-introdauction-inner {
     text-align: center;
   }
