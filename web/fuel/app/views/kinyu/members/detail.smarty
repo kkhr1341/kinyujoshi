@@ -1,92 +1,148 @@
 <style>
-.kinyu-main-block .kinyu-members-detail {
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-}
-
-.kinyu-main-block .kinyu-members-detail .introduction {
-  height: 480px;
-  background-color: #EFEFEF;
-  padding: 16px 16px;
-  margin-top: 22px;
-}
-
-.profile-img {
-  text-align: center;
-  padding-top: 36px;
-}
-.profile-img img {
-  width: 128px;
-  height: 128px;
-  object-fit: cover;
-  border-radius: 300px;
-}
 
 </style>
 
-<div class="kinyu-main-block kinyu-members-detail container-fluid" style="text-align: center;">
-  <div class="profile" style="background-color: #EFEFEF; padding: 16px 16px; margin-top: 22px;">
-    <div class="profile-img">
-      <img src="https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20190809174328image.jpg">
-    </div>
-    <div class="username" style="padding-top: 18px; font-weight: bold; color: #888888;">
-      きん女　花子
-    </div>
-    <div class="type" style="padding-top: 6px; font-size: small; font-weight: bold; color: #888;">
-      診断タイプ: B
-    </div>
-    <div class="description" style="background-color: #fff; padding: 8px 12px; margin-top: 24px; font-size: small; line-height: 1.6;">
-      <div class="text">
-        メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録
+<div class="kinyu-main-block kinyu-members-detail container-fluid">
+  <div class="container">
+    <div class="profile">
+      <div class="profile-img">
+        <img src="https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20190809174328image.jpg">
       </div>
-      <div class="like" style="text-align: right;">
-        共感&nbsp;<i class="fa fa-heart" aria-hidden="true"></i>
+      <div class="username" style="padding-top: 18px; font-weight: bold; color: #888888;">
+        きん女　花子
       </div>
-    </div>
+      <div class="type" style="padding-top: 6px; font-size: small; font-weight: bold; color: #888;">
+        診断タイプ: B
+      </div>
+      <div class="description" style="background-color: #fff; padding: 8px 12px; margin-top: 24px; font-size: small; line-height: 1.6;">
+        <div class="text">
+          メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録
+        </div>
+        <!--
+        <div class="like" style="text-align: right;">
+          共感&nbsp;<i class="fa fa-heart" aria-hidden="true"></i>
+        </div>
+        -->
+      </div>
 
-    <div class="follow-btn btn" style="border-radius: 18px;width: 160px;font-size: 16px;margin: 0 auto;margin-top: 24px;background-color: #C6C6C6;border: 1px solid #C6C6C6;color: #fff;font-weight: bold;padding: 8px 14px;">
-      フォローする
-    </div>
-
-    <div style="margin-top: 24px; position: relative;">
-      <a href="#" class="invite-josikai" style="color: #888888; margin-top: 16px; display: block; font-weight: bold;">
+      <!--
+      <div class="follow-btn btn" style="border-radius: 18px;width: 160px;font-size: 16px;margin: 0 auto;margin-top: 24px;background-color: #C6C6C6;border: 1px solid #C6C6C6;color: #fff;font-weight: bold;padding: 8px 14px;">
+        フォローする
+      </div>
+      -->
+      <div style="margin-top: 24px; position: relative;">
+        <!--
+        <a href="#" class="invite-joshikai" style="color: #888888; margin-top: 16px; display: block; font-weight: bold;">
         女子会に誘う
-      </a>
-      <div class="sns-links" style="background-color: #fff; display: inline-block; position: absolute;right: 0;top: -4px; padding: 4px 0px;">
-        <ul>
-          <li style="padding: 0px 2px; display: inline-block;">
-            <a href="https://kinyu-joshi.jp/" target="_blank">
-              <img src="/images/social/web_icon.png" style="height: 18px; vertical-align:bottom;">
+        </a>
+        -->
+        <div class="sns-links" style="background-color: #fff; display: inline-block; position: absolute;right: 0;top: -4px; padding: 4px 0px;">
+          <ul>
+            <li style="padding: 0px 2px; display: inline-block;">
+              <a href="https://kinyu-joshi.jp/" target="_blank">
+                <img src="/images/social/web_icon.png" style="height: 18px; vertical-align:bottom;">
+              </a>
+            </li>
+            <li style="padding: 0px 2px; display: inline-block;">
+              <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">
+                <img src="/images/social/instagram_icon.png" style="height: 18px; vertical-align:bottom;">
+              </a>
+            </li>
+            <li style="padding: 0px 2px; display: inline-block;">
+              <a href="https://twitter.com/kinyu_joshi" target="_blank">
+                <img src="/images/social/twitter_icon.png" style="height: 18px; vertical-align:bottom;">
+              </a>
+            </li>
+            <li style="padding: 0px 2px; display: inline-block;">
+              <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">
+                <img src="/images/social/fb_icon.png" style="height: 18px; vertical-align:bottom;">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="interest-joshikai" style="text-align: left; margin-top: 32px;">
+        <div class="hr"></div>
+        <h4 style="font-weight: bold; color: #888888;">興味がある女子会（応援している女子会）</h4>
+        <ul class="interested_joshikai">
+          <li>
+            <a href="/news/oeRt8k">
+              <div class="list-content-wrapper clear">
+                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="date">2020.5.14</p>
+                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
+                </div>
+              </div>
             </a>
           </li>
-          <li style="padding: 0px 2px; display: inline-block;">
-            <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">
-              <img src="/images/social/instagram_icon.png" style="height: 18px; vertical-align:bottom;">
+          <li>
+            <a href="/news/oeRt8k">
+              <div class="list-content-wrapper clear">
+                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="date">2020.5.14</p>
+                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
+                </div>
+              </div>
             </a>
           </li>
-          <li style="padding: 0px 2px; display: inline-block;">
-            <a href="https://twitter.com/kinyu_joshi" target="_blank">
-              <img src="/images/social/twitter_icon.png" style="height: 18px; vertical-align:bottom;">
-            </a>
-          </li>
-          <li style="padding: 0px 2px; display: inline-block;">
-            <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">
-              <img src="/images/social/fb_icon.png" style="height: 18px; vertical-align:bottom;">
+          <li>
+            <a href="/news/oeRt8k">
+              <div class="list-content-wrapper clear">
+                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="date">2020.5.14</p>
+                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
+                </div>
+              </div>
             </a>
           </li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="interest-josikai" style="text-align: left; margin-top: 32px;">
-    <h4 style="font-weight: bold; color: #888888;">興味がある女子会（応援している女子会）</h4>
-    <div style="height: 48px;">
-    </div>
-  </div>
-  <div class="joined-josikai" style="text-align: left;">
-    <h4 style="font-weight: bold; color: #888888;">過去に参加した女子会</h4>
-    <div style="height: 48px;">
+    <div class="container">
+      <div class="joined-joshikai" style="text-align: left;">
+        <div class="hr"></div>
+        <h4 style="font-weight: bold; color: #888888;">過去に参加した女子会</h4>
+        <ul>
+          <li>
+            <a href="/news/oeRt8k">
+              <div class="list-content-wrapper clear">
+                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="date">2020.5.14</p>
+                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/news/oeRt8k">
+              <div class="list-content-wrapper clear">
+                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="date">2020.5.14</p>
+                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/news/oeRt8k">
+              <div class="list-content-wrapper clear">
+                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <p class="date">2020.5.14</p>
+                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
