@@ -41,7 +41,7 @@
             <a href="/report">レポート</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
-            <a class="projects" href="#">comming soon</a>
+            <a class="projects" href="#">with×き</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a href="/kinyu_sanpo">きんゆう散歩</a>
@@ -142,6 +142,3 @@
     });
   });
 </script>
-
-
-
