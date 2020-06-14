@@ -249,33 +249,34 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
     private function viewable($code)
     {
-        $blog = Blogs::getByCode('blogs', $code);
-        $user_code = isset($_GET['u']) ? $_GET['u'] : '';
-        $auth_code = isset($_GET['k']) ? $_GET['k'] : '';
+      $blog = Blogs::getByCode('blogs', $code);
+      $user_code = isset($_GET['u']) ? $_GET['u'] : '';
+      $auth_code = isset($_GET['k']) ? $_GET['k'] : '';
 
-        // ログイン済み
-        if (Auth::check()) {
-          return true;
-        }
+      // ログイン済み
+      if (Auth::check()) {
+        return true;
+      }
 
-        // オフィシャルメンバー権限以上を持つユーザーのみ7日間の限定公開URLを発行できる
-        if ($blog['status'] == 1 && $auth_code === $this->generateTemporaryLinkAuthCode($code, $user_code)) {
-          // 簡易負荷対策: 認証コードを通してからでないとDBへのアクセスをしない
-          if( $this->temporaryLinkShareableBy($user_code) ) {
-            if( time() <= $this->calc_past_time($blog['open_date'], 30 * 86400) ) {
-              return true;
-            }
+      // オフィシャルメンバー権限以上を持つユーザーのみ7日間の限定公開URLを発行できる
+      if ($blog['status'] == 1 && $auth_code === $this->generateTemporaryLinkAuthCode($code, $user_code)) {
+        // 簡易負荷対策: 認証コードを通してからでないとDBへのアクセスをしない
+        if( $this->temporaryLinkShareableBy($user_code) ) {
+          if( time() <= $this->calc_past_time($blog['open_date'], 30 * 86400) ) {
+            return true;
           }
         }
+      }
 
-        // 公開期限
-        if ($blog['secret'] == 0) {
-          // 公開中でも公開日より1ヶ月経過した場合、非公開にする
-          if( time() >= $this->calc_past_time($blog['open_date'], 30 * 86400) ) {
-            return false;
-          }
-          return true;
+      // 公開期限
+      if ($blog['secret'] == 0) {
+        // 公開中でも公開日より1ヶ月経過した場合、非公開にする
+        // 1ヶ月経過すると自動的に公開にし1ヶ月経過しないと非公開にする
+        if( time() < $this->calc_past_time($blog['open_date'], 30 * 86400) ) {
+          return false;
         }
-        return false;
+        return true;
+      }
+      return false;
     }
 }
