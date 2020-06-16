@@ -1,22 +1,20 @@
-<style>
-
-</style>
-
 <div class="kinyu-main-block kinyu-members-detail container-fluid">
   <div class="container">
     <div class="profile">
       <div class="profile-img">
-        <img src="https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20190809174328image.jpg">
+        <img src="{if $profile.profile_image}{$profile.profile_image}{else}/images/top-circle-logo.png{/if}">
       </div>
       <div class="username" style="padding-top: 18px; font-weight: bold; color: #888888;">
-        きん女　花子
+        {$profile.name}
       </div>
+      <!--
       <div class="type" style="padding-top: 6px; font-size: small; font-weight: bold; color: #888;">
         診断タイプ: B
       </div>
+      -->
       <div class="description" style="background-color: #fff; padding: 8px 12px; margin-top: 24px; font-size: small; line-height: 1.6;">
         <div class="text">
-          メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録メンバー登録
+          {$profile.introduction}
         </div>
         <!--
         <div class="like" style="text-align: right;">
@@ -38,30 +36,39 @@
         -->
         <div class="sns-links" style="background-color: #fff; display: inline-block; position: absolute;right: 0;top: -4px; padding: 4px 0px;">
           <ul>
+            {if false}
             <li style="padding: 0px 2px; display: inline-block;">
-              <a href="https://kinyu-joshi.jp/" target="_blank">
+              <a href="" target="_blank">
                 <img src="/images/social/web_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
+            {/if}
+            {if $profile.instaurl}
             <li style="padding: 0px 2px; display: inline-block;">
-              <a href="https://www.instagram.com/kinyu_joshi/" target="_blank">
+              <a href="{$profile.instaurl}" target="_blank">
                 <img src="/images/social/instagram_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
+            {/if}
+            {if $profile.twurl}
             <li style="padding: 0px 2px; display: inline-block;">
-              <a href="https://twitter.com/kinyu_joshi" target="_blank">
+              <a href="{$profile.twurl}" target="_blank">
                 <img src="/images/social/twitter_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
+            {/if}
+            {if $profile.fburl}
             <li style="padding: 0px 2px; display: inline-block;">
-              <a href="https://www.facebook.com/kinyujyoshi/" target="_blank">
+              <a href="{$profile.fburl}" target="_blank">
                 <img src="/images/social/fb_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
+            {/if}
           </ul>
         </div>
       </div>
     </div>
+    <!--
     <div class="container">
       <div class="interest-joshikai" style="text-align: left; margin-top: 32px;">
         <div class="hr"></div>
@@ -103,6 +110,9 @@
         </ul>
       </div>
     </div>
+    -->
+
+    <!--
     <div class="container">
       <div class="joined-joshikai" style="text-align: left;">
         <div class="hr"></div>
@@ -144,5 +154,7 @@
         </ul>
       </div>
     </div>
+    -->
+
   </div>
 </div>

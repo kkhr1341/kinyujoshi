@@ -1,8 +1,9 @@
 <?php
 
-use \Model\Users;
-use \Model\Blogs;
-use \Model\Events;
+use \Model\User;
+use \Model\Profiles;
+// use \Model\Blogs;
+// use \Model\Events;
 use \Model\Applications;
 
 class Controller_Kinyu_Members extends Controller_Kinyubase
@@ -24,18 +25,29 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
     if (Agent::is_mobiledevice()) {
-        $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+      $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     } else {
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+      $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     }
 
+    $user_id = $this->param('id');
+    // 不正な書式なら403
+
+    $user = User::getByUserId($user_id);
+    // 存在しないか公開設定をしていなければ404
+    // var_dump($user);
+
+    $profiles = Profiles::get($user['username']);
+
+    $this->data['profiles'] = $profiles;
+    $this->data['user'] = $user;
 
     $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     $this->template->my_side = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
-    // $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
+    // $user_type = DiagnosticChartTypeUser::getLastUserType($username);
 
     // $hash_tags = DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']);
     // $action_list = DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']);
