@@ -159,7 +159,7 @@ return array(
 
   // 非ログイン時マイページ
   // 'members'        => 'kinyu/members/index',
-  'members/(:any)' => 'kinyu/members/detail/$1',
+  'members/(:id)' => 'kinyu/members/detail/$1',
 
   //マイページ - トップ
   'my'   => 'my/top',
