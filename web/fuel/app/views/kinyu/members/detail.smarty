@@ -36,29 +36,29 @@
         -->
         <div class="sns-links" style="background-color: #fff; display: inline-block; position: absolute;right: 0;top: -4px; padding: 4px 0px;">
           <ul>
-            {if false}
-            <li style="padding: 0px 2px; display: inline-block;">
-              <a href="" target="_blank">
+            {if $profile.url}
+            <li class="website" style="padding: 0px 2px; display: inline-block;">
+              <a href=""{$profile.url} target="_blank">
                 <img src="/images/social/web_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
             {/if}
             {if $profile.instaurl}
-            <li style="padding: 0px 2px; display: inline-block;">
+            <li class="instagram" style="padding: 0px 2px; display: inline-block;">
               <a href="{$profile.instaurl}" target="_blank">
                 <img src="/images/social/instagram_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
             {/if}
             {if $profile.twurl}
-            <li style="padding: 0px 2px; display: inline-block;">
+            <li class="twitter" style="padding: 0px 2px; display: inline-block;">
               <a href="{$profile.twurl}" target="_blank">
                 <img src="/images/social/twitter_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
             {/if}
             {if $profile.fburl}
-            <li style="padding: 0px 2px; display: inline-block;">
+            <li class="facebook" style="padding: 0px 2px; display: inline-block;">
               <a href="{$profile.fburl}" target="_blank">
                 <img src="/images/social/fb_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
@@ -68,93 +68,53 @@
         </div>
       </div>
     </div>
-    <!--
+
+    {if count($joinable_events) > 0}
     <div class="container">
       <div class="interest-joshikai" style="text-align: left; margin-top: 32px;">
         <div class="hr"></div>
-        <h4 style="font-weight: bold; color: #888888;">興味がある女子会（応援している女子会）</h4>
+        <h4 style="font-weight: bold; color: #888888;">興味がある女子会</h4>
         <ul class="interested_joshikai">
+          {foreach $joinable_events as $joinable_event}
           <li>
-            <a href="/news/oeRt8k">
+            <a href="/joshikai/{$joinable_event.code}">
               <div class="list-content-wrapper clear">
-                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background: url({$joinable_event.main_image}) center center / cover no-repeat;"></div>
                 <div class="text-box">
-                  <p class="date">2020.5.14</p>
-                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
+                  <p class="date">{$joinable_event.event_date|date_format:"%Y.%m.%d"}</p>
+                  <h3 class="title">{$joinable_event.title}</h3>
                 </div>
               </div>
             </a>
           </li>
-          <li>
-            <a href="/news/oeRt8k">
-              <div class="list-content-wrapper clear">
-                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
-                <div class="text-box">
-                  <p class="date">2020.5.14</p>
-                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/news/oeRt8k">
-              <div class="list-content-wrapper clear">
-                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
-                <div class="text-box">
-                  <p class="date">2020.5.14</p>
-                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
-                </div>
-              </div>
-            </a>
-          </li>
+          {/foreach}
         </ul>
       </div>
     </div>
-    -->
+    {/if}
 
-    <!--
+    {if count($joined_events) > 0}
     <div class="container">
       <div class="joined-joshikai" style="text-align: left;">
         <div class="hr"></div>
         <h4 style="font-weight: bold; color: #888888;">過去に参加した女子会</h4>
         <ul>
+          {foreach $joined_events as $joined_event}
           <li>
-            <a href="/news/oeRt8k">
+            <a href="/joshikai/{$joined_event.code}">
               <div class="list-content-wrapper clear">
-                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
+                <div class="img-box" style="background: url({$joined_event.main_image}) center center / cover no-repeat;"></div>
                 <div class="text-box">
-                  <p class="date">2020.5.14</p>
-                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
+                  <p class="date">{$joined_event.event_date|date_format:"%Y.%m.%d"}</p>
+                  <h3 class="title">{$joined_event.title}</h3>
                 </div>
               </div>
             </a>
           </li>
-          <li>
-            <a href="/news/oeRt8k">
-              <div class="list-content-wrapper clear">
-                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
-                <div class="text-box">
-                  <p class="date">2020.5.14</p>
-                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/news/oeRt8k">
-              <div class="list-content-wrapper clear">
-                <div class="img-box" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/thumb_20200514115026image.jpg) center center / cover no-repeat;"></div>
-                <div class="text-box">
-                  <p class="date">2020.5.14</p>
-                  <h3 class="title">[LIVE配信] きんゆう女子学院2020春 6回セット</h3>
-                </div>
-              </div>
-            </a>
-          </li>
+          {/foreach}
         </ul>
       </div>
     </div>
-    -->
-
+    {/if}
   </div>
 </div>

@@ -152,6 +152,7 @@ return array(
         143 => '149_add_host_collaborate_sponsor_column_to_events',
         144 => '150_add_hostprofileimage_to_events',
         145 => '151_add_sns_links_to_authors',
+        146 => '152_add_profiles_to_publish',
       ),
     ),
     'module' => 
