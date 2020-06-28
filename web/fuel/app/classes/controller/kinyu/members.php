@@ -39,7 +39,7 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     }
 
     // 存在しないか公開設定をしていなければ404
-    if((int)$profile['disable'] == 1) {
+    if((int)$profile['disable'] == 1 || (int)$profile['publish'] == '0') {
       return Response::redirect('error/404');
     }
 
