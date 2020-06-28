@@ -120,7 +120,7 @@ class Events extends Base
 
         return $val;
     }
-   
+
     public static function getByCode($table, $code, $coupon_code='')
     {
         $event = parent::getByCode($table, $code);
@@ -149,6 +149,31 @@ class Events extends Base
         }
 
         return $event;
+    }
+
+    // args:
+    //   $username  User.username
+    //   $past_date True: 過去の女子会を対象にする, False: 開催中の女子会を対象にする
+    //   $limit     limit
+    public static function joinedEvents($username, $past_date = true, $limit = 5)
+    {
+      $events = \DB::select('*')
+        ->from('events')
+        ->where('disable', '=', 0)
+        ->where('username', '=', $username);
+
+      if($past_date) {
+        $events = $events->where('event_date', '<', time());
+      } else {
+        $events = $events->where('event_date', '>=', time());
+      }
+
+      $events = $events->order_by('event_date', 'asc')
+        ->limit($limit)
+        ->execute()
+        ->as_array();
+
+      return $events;
     }
 
     private static function get_application_num($code)

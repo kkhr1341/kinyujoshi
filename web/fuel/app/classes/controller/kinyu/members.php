@@ -2,9 +2,8 @@
 
 use \Model\User;
 use \Model\Profiles;
-// use \Model\Blogs;
-// use \Model\Events;
 use \Model\Applications;
+use \Model\Events;
 
 class Controller_Kinyu_Members extends Controller_Kinyubase
 {
@@ -20,7 +19,6 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
 
     $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
     $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-    $this->template->kinyu_event_notes = View::forge('kinyu/event/notes.smarty', $this->data);
     $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
     $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
@@ -32,25 +30,30 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     }
 
     $user_id = $this->param('id');
-    // 不正な書式なら403
-
     $user = User::getByUserId($user_id);
+    $profile = Profiles::get($user['username']);
+
+    // どちらも存在しないのはあり得ないので404
+    if(!(isset($user) && isset($profile))) {
+      return Response::redirect('error/404');
+    }
+
     // 存在しないか公開設定をしていなければ404
-    // var_dump($user);
+    if((int)$profile['disable'] == 1) {
+      return Response::redirect('error/404');
+    }
 
-    $profiles = Profiles::get($user['username']);
+    $joinable_events = Events::joinedEvents($user["username"], false);
+    $joined_events = Events::joinedEvents($user["username"], true);
 
-    $this->data['profiles'] = $profiles;
+    $this->data['profiles'] = $profile;
     $this->data['user'] = $user;
+    $this->data['joinable_events'] = $joinable_events;
+    $this->data['joined_events'] = $joined_events;
 
     $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     $this->template->my_side = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-
-    // $user_type = DiagnosticChartTypeUser::getLastUserType($username);
-
-    // $hash_tags = DiagnosticChartRouteTypeHashTags::getTagsByTypeCode($user_type['type_code']);
-    // $action_list = DiagnosticChartRouteTypeActionLists::getContentByTypeCode($user_type['type_code']);
 
     $this->template->contents = View::forge('kinyu/members/detail.smarty', $this->data);
   }
