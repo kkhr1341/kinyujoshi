@@ -1,58 +1,52 @@
 <div class="admin-normal-container my-profile-block">
   <div class="admin-normal-inner clear">
-    
     {$my_side}
-    
     <div class="admin-normal-main">
+      <div class="my-profile-edit-block">
+        <div class="img-box-block">
+          <div class="img-box"
+            {if $profile.profile_image == ''}
+              style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
+            {else}
+              style="background: url({$profile.profile_image}) center center / cover no-repeat;"
+            {/if}
+          >
+          </div>
+        </div>
+        <p class="profile-name">{$profile.nickname}</p>
+        <!-- <p class="profile-catchcopy">{$profile.catchcopy}</p> -->
+      </div>
 
-    	
+      <div class="profile-alert-block">
+        <p class="profile-alert">{$profile.catchcopy}</p>
+      </div>
 
-		<div class="my-profile-edit-block">
-	      <div class="img-box-block">
-	        <div class="img-box"
-	          {if $profile.profile_image == ''}
-	            style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
-	          {else}
-	            style="background:url({$profile.profile_image}) center center / cover no-repeat;"
-	          }
-	          {/if}
-	          >
-	        </div>
-	      </div>
-	      <p class="profile-name">{$profile.nickname}</p>
-	      <!-- <p class="profile-catchcopy">{$profile.catchcopy}</p> -->
-
-    	</div>
-    		<div class="profile-alert-block">
-				<p class="profile-alert">{$profile.catchcopy}</p>
-			</div>
-								
-			<table class="table admin-profile-table">
-				<tr>
-					<th class="active">表示名</th>
-					<td>{$profile.nickname}</td>
-				</tr>
-				<tr>
-					<th class="active">お名前</th>
-					<td>{$profile.name}</td>
-				</tr>
-				<tr>
-					<th class="active">自己紹介</th>
-					<td>{$profile.introduction|nl2br}</td>
-				</tr>
-			</table>
-
-			<div class="admin-normal-profile-btn">
-				<a href="/my/profile/edit" class='btn btn-primary'>プロフィールを編集する</a>
-			</div>
-		</div>
-	</div>
+      <table class="table admin-profile-table">
+        <tr>
+          <th class="active">表示名</th>
+          <td>{$profile.nickname}</td>
+        </tr>
+        <tr>
+          <th class="active">お名前</th>
+          <td>{$profile.name}</td>
+        </tr>
+        <tr>
+          <th class="active">自己紹介</th>
+          <td>{$profile.introduction|nl2br}</td>
+        </tr>
+        <tr>
+          <th class="active">プロフィール公開設定</th>
+          <td>{if $profile.publish == '1'}公開する{else}公開しない{/if}</td>
+        </tr>
+      </table>
+      <div class="admin-normal-profile-btn">
+        <a href="/my/profile/edit" class='btn btn-primary'>プロフィールを編集する</a>
+      </div>
+    </div>
+  </div>
 </div>
 
-		
 <script>
-$(function(){
-
-	
-});
+  $(function(){
+  });
 </script>
