@@ -33,13 +33,14 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $user = User::getByUserId($user_id);
     $profile = Profiles::get($user['username']);
 
-    // どちらも存在しないのはあり得ないので404
-    if(!isset($user) && !isset($profile)) {
-      return Response::redirect('error/404');
+    // どちらも存在しないのはあり得ない
+    if( !isset($user) && !isset($profile) ) {
+      return Response::redirect('/');
     }
 
     // 存在しないか公開設定をしていなければ404
-    if((int)$profile['disable'] == 1 || (int)$profile['publish'] == '0') {
+    if( (int)$profile['disable'] == 1 || (int)$profile['publish'] == 0 ) {
+      // TODO: メンバーが増えてきたらメンバー一覧にリダイレクトする
       return Response::redirect('error/404');
     }
 
