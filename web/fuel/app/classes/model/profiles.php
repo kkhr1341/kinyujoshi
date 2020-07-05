@@ -12,15 +12,17 @@ class Profiles extends Base
         $val->add_callable('myvalidation');
 
         $val->add('profile_image', 'プロフィール画像');
-
         $val->add('catchcopy', 'ひとことキャッピコピー');
-
         $val->add('nickname', '表示名');
 
         $val->add('name', 'お名前')
             ->add_rule('required');
 
         $val->add('url', '個人で発信しているブログなど');
+        $val->add('instaurl', 'Instagram');
+        $val->add('twurl', 'Twitter');
+        $val->add('fburl', 'Facebook');
+        $val->add('publish', 'プロフィールをマイページで公開する');
 
         $val->add('introduction', '自己紹介');
 
@@ -53,6 +55,10 @@ class Profiles extends Base
             'nickname' => $params['nickname'],
             'name' => $params['name'],
             'url' => $params['url'],
+            'twurl' => $params['twurl'],
+            'fburl' => $params['fburl'],
+            'instaurl' => $params['instaurl'],
+            'publish' => $params['publish'],
             'introduction' => $params['introduction'],
             'profile_image' => $params['profile_image']
         ))->where('username', '=', $username)->execute();

@@ -63,6 +63,17 @@ class User extends Base
         return $val;
     }
 
+    public static function getByUserId($user_id)
+    {
+      $result = \DB::select('*')->from('users')
+                                ->where('users.id', '=', $user_id)
+                                ->execute()->current();
+      if (empty($result)) {
+          return false;
+      }
+      return $result;
+    }
+
     public static function getByEmail($email)
     {
         $result = \DB::select('*')->from('users')

@@ -7,6 +7,7 @@
  */
 
 use \Model\Profiles;
+use \Model\User;
 
 class Controller_Mybase extends Controller_Template
 {
@@ -19,8 +20,12 @@ class Controller_Mybase extends Controller_Template
         if (Auth::check()) {
             // ログイン中なのでプロフィールを取得する
             $username = Auth::get('username');
+
+            $user = User::getByUserName($username);
             $profile = Profiles::get($username);
+
             $this->template->profile = $profile;
+            $this->template->user = $user;
         }
     }
 

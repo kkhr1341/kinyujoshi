@@ -11,6 +11,12 @@
                 <a class="admin-account-title" href="/my/profile">プロフィールの設定</a>
             </div>
 
+            {if $profile.publish == '1'}
+            <div class="admin-account-el">
+              <a class="admin-account-title" href="/members/{$user.id}" target="_blank">自分の公開プロフィールを見る</a>
+            </div>
+            {/if}
+
             <div class="admin-account-el">
                 <p class="admin-account-title admin-account-title1">使用したクレジットカードの管理</p>
                 <div class="admin-account-el-open admin-account-el-open1 credit-list-area" style="display: none;">

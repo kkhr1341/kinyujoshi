@@ -43,11 +43,34 @@
             <input type="text" id="url" class="form-control" placeholder="" value="{$profile.url}">
           </div>
 
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">Twitter</label>
+            <input type="text" id="twurl" class="form-control" placeholder="" value="{$profile.twurl}">
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">Facebook</label>
+            <input type="text" id="fburl" class="form-control" placeholder="" value="{$profile.fburl}">
+          </div>
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">Instagram</label>
+            <input type="text" id="instaurl" class="form-control" placeholder="" value="{$profile.instaurl}">
+          </div>
+
           <div class="regist-add-form-edit-el regist-add-form-edit-el02">
             <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。</label>
             <textarea id="introduction" name="introduction" class='form-control' rows="10">{$profile.introduction}</textarea>
           </div>
-          
+
+          <div class="regist-add-form-edit-el">
+            <label class="regist-add-form-edit-title">プロフィールをマイページで公開する</label>
+            <select id="publish" class="form-control">
+              <option value="0" {if $profile.publish == '0'}selected{/if}>公開しない</option>
+              <option value="1" {if $profile.publish == '1'}selected{/if}>公開する</option>
+            </select>
+          </div>
+
           <div class="form-btn tx-center">
             <button class="btn btn-kinyu" type="button" id="save">保存する</button>
           </div>
@@ -76,6 +99,10 @@ $(function(){
             "name": $('#name').val(),
             "catchcopy": $('#catchcopy').val(),
             "url": $('#url').val(),
+            "twurl": $('#twurl').val(),
+            "fburl": $('#fburl').val(),
+            "instaurl": $('#instaurl').val(),
+            "publish": $('#publish option:selected').val(),
             "introduction": $('#introduction').val(),
             "profile_image": $('#profile_image').val()
         };

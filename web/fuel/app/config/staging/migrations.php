@@ -150,6 +150,7 @@ return array(
         141 => '147_delete_cancel_from_application_credit_payments',
         142 => '148_delete_sale_from_application_credit_payments',
         143 => '151_add_sns_links_to_authors',
+        144 => '152_add_profiles_to_publish',
       ),
     ),
     'module' => 
