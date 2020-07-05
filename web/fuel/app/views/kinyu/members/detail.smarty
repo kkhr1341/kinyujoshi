@@ -2,7 +2,7 @@
   <div class="container">
     <div class="profile">
       <div class="profile-img">
-        <img src="{if $profile.profile_image}{$profile.profile_image}{else}/images/top-circle-logo.png{/if}">
+        <img src="{if $profile.profile_image}{$profile.profile_image}{else}/images/my/non-profile-img.jpg{/if}">
       </div>
       <div class="username" style="padding-top: 18px; font-weight: bold; color: #888888;">
         {$profile.name}

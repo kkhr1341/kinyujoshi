@@ -34,7 +34,7 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $profile = Profiles::get($user['username']);
 
     // どちらも存在しないのはあり得ないので404
-    if(!(isset($user) && isset($profile))) {
+    if(!isset($user) && !isset($profile)) {
       return Response::redirect('error/404');
     }
 
@@ -46,7 +46,7 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $joinable_events = Events::joinedEvents($user["username"], false);
     $joined_events = Events::joinedEvents($user["username"], true);
 
-    $this->data['profiles'] = $profile;
+    $this->data['profile'] = $profile;
     $this->data['user'] = $user;
     $this->data['joinable_events'] = $joinable_events;
     $this->data['joined_events'] = $joined_events;
