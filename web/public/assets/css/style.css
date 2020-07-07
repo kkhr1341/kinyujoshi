@@ -28,7 +28,9 @@
   overflow: hidden;
   opacity: 1;
 }
-
+a:hover {
+  text-decoration: none!important;
+}
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
