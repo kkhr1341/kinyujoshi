@@ -79,10 +79,6 @@ button :hover {
   cursor: pointer!important;
 }
 
-a:hover {
-  text-decoration: none!important;
-}
-
 p {
   font-size: 1.4rem;
   line-height: 2.2rem;
