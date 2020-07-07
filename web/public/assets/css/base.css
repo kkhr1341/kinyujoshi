@@ -27,7 +27,7 @@ time, audio, video {
 html {
   line-height: 1;
 }
-body {  
+body {
   color: #444444;
   font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "メイリオ", sans-serif;
   font-weight: 300;
@@ -72,6 +72,9 @@ a img {
 a {
   text-decoration: none;
 }
+a:hover {
+  text-decoration: none!important;
+}
 p, a {
   font-size: 13px;
   line-height: 20px;
@@ -110,11 +113,11 @@ input:focus {
 }
 
 .clear:after {
-  content: "."; 
-  display: block; 
-  height: 0; 
-  font-size:0;  
-  clear: both; 
+  content: ".";
+  display: block;
+  height: 0;
+  font-size:0;
+  clear: both;
   visibility:hidden;
 }
 
@@ -167,7 +170,7 @@ input:focus {
   color: #fff!important;
 }
 .color-kinyu-color {
-  color: #7CDCCE!important; 
+  color: #7CDCCE!important;
 }
 .color-kinyu-darkcolor {
   color: #82D8CF!important;
@@ -347,7 +350,7 @@ p, a {
   margin-bottom: 12px;
 }
 .form-btn {
-  margin-top: 20px;  
+  margin-top: 20px;
 }
 /*.btn-primary {
   margin-top: 20px;
@@ -372,5 +375,3 @@ button :hover {
 }
 
 }
-
-
