@@ -29,7 +29,7 @@ html {
   font-size: 62.5%;
 }
 
-body {  
+body {
   font-size: 1.0rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -79,6 +79,10 @@ button :hover {
   cursor: pointer!important;
 }
 
+a:hover {
+  text-decoration: none!important;
+}
+
 p {
   font-size: 1.4rem;
   line-height: 2.2rem;
@@ -117,11 +121,11 @@ input:focus {
 }
 
 .clear:after {
-  content: "."; 
-  display: block; 
-  height: 0; 
-  font-size:0;  
-  clear: both; 
+  content: ".";
+  display: block;
+  height: 0;
+  font-size:0;
+  clear: both;
   visibility:hidden;
 }
 
@@ -186,7 +190,7 @@ input:focus {
   color: #fff!important;
 }
 .color-kinyu-color {
-  color: #7CDCCE!important; 
+  color: #7CDCCE!important;
 }
 .color-kinyu-darkcolor {
   color: #82D8CF!important;
@@ -332,14 +336,10 @@ input:focus {
   margin-bottom: 12px;
 }
 .form-btn {
-  margin-top: 20px;  
+  margin-top: 20px;
 }
 /*.btn-primary {
   margin-top: 20px;
 }*/
 
 }
-
-
-
-
