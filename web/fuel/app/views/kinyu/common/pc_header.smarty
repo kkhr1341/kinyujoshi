@@ -53,7 +53,7 @@
 <div class="header-hover-content-block"></div>
 
 <!-- モーダル・ダイアログ -->
-<div class="modal comingsoon-modal fade" id="projectJoshikaiModal" tabindex="-1">
+<div class="modal comingsoon-modal withK-modal fade" id="projectJoshikaiModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="border: none;">
@@ -61,8 +61,8 @@
       </div>
       <div class="modal-body">
         <div class="comingsoon-modal-title">
-          このページは<br>
-          金融ワカラナイ女子のリテラシー向上を応援している<br>
+          このページは<br class="pc">
+          金融ワカラナイ女子のリテラシー向上を応援している<br class="pc">
           ご協賛企業や団体と一緒に作っています。
         </div>
         <div class="comingsoon-modal-description">
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="modal-footer" style="text-align: center; border: none;">
-        <a href="https://with.kinyu-joshi.jp/" class="btn btn-primary">理解したので、企業の部屋を見てみる♪</a>
+        <a href="https://with.kinyu-joshi.jp/" class="btn btn-primary" target="_blank">理解したので、企業の部屋を見てみる♪</a>
       </div>
     </div>
   </div>
