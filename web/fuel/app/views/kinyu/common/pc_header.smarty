@@ -53,7 +53,7 @@
 <div class="header-hover-content-block"></div>
 
 <!-- モーダル・ダイアログ -->
-<div class="modal comingsoon-modal withK-modal fade" id="projectJoshikaiModal" tabindex="-1">
+<div class="modal comingsoon-modal withk-modal fade" id="projectJoshikaiModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="border: none;">
@@ -61,8 +61,8 @@
       </div>
       <div class="modal-body">
         <div class="comingsoon-modal-title">
-          このページは<br class="pc">
-          金融ワカラナイ女子のリテラシー向上を応援している<br class="pc">
+          このページは<br>
+          金融ワカラナイ女子のリテラシー向上を応援している<br>
           ご協賛企業や団体と一緒に作っています。
         </div>
         <div class="comingsoon-modal-description">

@@ -333,20 +333,6 @@ opacity: .5;
   font-size: 13px;
 }
 
-/* withき モダルウィンドウ*/
-.withK-modal {
-  background: rgba(230, 230, 230, 0.9);
-  opacity: 1!important;
-}
-.withK-modal .modal-dialog {
-  margin-top: 120px;
-}
-.withK-modal .modal-footer a {
-  margin: 0 auto;
-}
-
-
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　アニメーション
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
