@@ -148,6 +148,19 @@
   /* margin-left: 12px; */
 }
 
+/* withき モダルウィンドウ*/
+.withk-modal {
+  background: rgba(230, 230, 230, 0.9);
+  opacity: 1!important;
+}
+.withk-modal .modal-dialog {
+  margin-top: 120px;
+}
+.withk-modal .modal-footer a {
+  margin: 0 auto;
+}
+
+
 /* ----------------------------------
     PCなど
 ---------------------------------- */

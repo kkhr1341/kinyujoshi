@@ -53,7 +53,7 @@
 <div class="header-hover-content-block"></div>
 
 <!-- モーダル・ダイアログ -->
-<div class="modal comingsoon-modal fade" id="projectJoshikaiModal" tabindex="-1">
+<div class="modal comingsoon-modal withk-modal fade" id="projectJoshikaiModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="border: none;">
@@ -72,7 +72,7 @@
         </div>
       </div>
       <div class="modal-footer" style="text-align: center; border: none;">
-        <a href="https://with.kinyu-joshi.jp/" class="btn btn-primary">理解したので、企業の部屋を見てみる♪</a>
+        <a href="https://with.kinyu-joshi.jp/" class="btn btn-primary" target="_blank">理解したので、企業の部屋を見てみる♪</a>
       </div>
     </div>
   </div>
