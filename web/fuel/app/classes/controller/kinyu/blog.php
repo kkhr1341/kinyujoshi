@@ -110,18 +110,21 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             Response::redirect('error/404');
         }
 
+        // 非公開設定の場合
         if ($this->data['blog']['status'] == 0) {
+          if ($this->data['blog']['authentication_user'] && $this->data['blog']['authentication_password']) {
+            $authentication_user     = $this->data['blog']['authentication_user'];
+            $authentication_password = $this->data['blog']['authentication_password'];
+          } else {
+            $authentication_user     = self::AUTHENTICATION_USER;
+            $authentication_password = self::AUTHENTICATION_PASSWORD;
+          }
 
-            if ($this->data['blog']['authentication_user'] && $this->data['blog']['authentication_password']) {
-                $authentication_user     = $this->data['blog']['authentication_user'];
-                $authentication_password = $this->data['blog']['authentication_password'];
-            } else {
-                $authentication_user     = self::AUTHENTICATION_USER;
-                $authentication_password = self::AUTHENTICATION_PASSWORD;
-            }
+          // Basic認証
+          $this->set_basic_auth($authentication_user, $authentication_password);
 
-            // Basic認証
-            $this->set_basic_auth($authentication_user, $authentication_password);
+          // 非公開設定の場合でBasic認証通ってる場合は、限定公開設定であったとしても強制的に閲覧できるようにする
+          $this->data['viewable'] = true;
         }
 
         $this->template->title = $this->data['blog']['title'];
@@ -139,6 +142,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
           'auth_code' => $this->generateTemporaryLinkAuthCode($this->data['blog']['code'], $username),
           'posted_me'   => $this->data['posted_me']
         ));
+
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
