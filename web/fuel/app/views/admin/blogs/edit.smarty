@@ -80,6 +80,19 @@
                     </div>
                 </div>
 
+                {if in_array('report_admin', $roles) || in_array('admin', $roles)}
+                <div class="form-group mb50">
+                  <label class="form-group-event-label">一般公開設定</label>
+                  <div class="radio_box clear">
+                    <input type="radio" value="1" name="publish" id="publish_on" class="form-radio" placeholder="" {if $blogs.publish == "1"}checked{/if}>
+                    <label for="publish_on" class="form-long">する</label>
+
+                    <input type="radio" value="0" name="publish" id="publish_off" class="form-radio" placeholder="" {if $blogs.publish == "0"}checked{/if}>
+                    <label for="publish_off" class="form-long">しない</label>
+                  </div>
+                </div>
+                {/if}
+
                 <div class="form-group">
                     <label class="form-group-event-label">タイトル</label>
                     <p class="form-group-sub"><span style="color:red;">＊</span>32文字以内でお願いします。</p>
@@ -211,6 +224,7 @@
             params.pickup = $("[name=pickup]:checked").val();
             params.pr = $("[name=pr]:checked").val();
             params.secret = $("[name=secret]:checked").val();
+            params.publish = $("[name=publish]:checked").val();
             params.title = $('#title').val();
             params.main_image = $('#main_image').val();
             params.description = $('#description').val();
@@ -268,6 +282,7 @@
             params.pickup = $("[name=pickup]:checked").val();
             params.pr = $("[name=pr]:checked").val();
             params.secret = $("[name=secret]:checked").val();
+            params.publish = $("[name=publish]:checked").val();
             params.title = $('#title').val();
             params.main_image = $('#main_image').val();
             params.description = $('#description').val();

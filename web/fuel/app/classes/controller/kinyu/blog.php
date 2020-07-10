@@ -253,6 +253,11 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
       $user_code = isset($_GET['u']) ? $_GET['u'] : '';
       $auth_code = isset($_GET['k']) ? $_GET['k'] : '';
 
+      // 一般公開設定をしているか
+      if ( $blog['publish'] == '1' ) {
+        return true;
+      }
+
       // ログイン済み
       if (Auth::check()) {
         return true;
