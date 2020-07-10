@@ -19,6 +19,7 @@ class Blogs extends Base
         $val->add('open_date');
         $val->add('pr', 'PR');
         $val->add('secret', 'メンバー限定レポート');
+        $val->add('publish', '一般公開設定');
         $val->add('title');
         $val->add('content');
         $val->add('main_image');
