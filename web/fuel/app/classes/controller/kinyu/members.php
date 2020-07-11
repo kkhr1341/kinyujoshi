@@ -57,5 +57,36 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $this->template->my_side = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
     $this->template->contents = View::forge('kinyu/members/detail.smarty', $this->data);
+
+    Asset::css(array(
+      //'kinyu/font.css',
+      //'kinyu/animate.css',
+      'kinyu/redactor.css',
+      'kinyu/font-awesome.min.css',
+      //'kinyu/bootstrap-datetimepicker.min.css',
+      'kinyu/toastr.css',
+      //'kinyu/bootstrap-select.min.css',
+      'kinyu/bootstrap01.css',
+      "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
+
+      // 'kinyu/base.css',
+      // 'kinyu/bg.css',
+      // 'kinyu/style.css',
+      // 'kinyu/layout.css',
+      // 'kinyu/responsive.css',
+      // 'kinyu/kuchikomi.css',
+
+      'kinyu/swiper.min.css',
+      //'kinyu/jumboShare.css',
+      //'kinyu/drawer.css',
+
+      'base.css',
+      'kinyu/bg.css',
+      //'style.css',
+      'edit_style.css',
+      'responsive.css',
+      'slick.css',
+      'tablet.css'
+    ), array(), 'layout', false);
   }
 }

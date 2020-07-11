@@ -73,8 +73,8 @@ class Controller_Kinyubase extends Controller_Template
             //'kinyu/bootstrap-datetimepicker.min.css',
             'kinyu/toastr.css',
             //'kinyu/bootstrap-select.min.css',
-            // 'kinyu/bootstrap01.css',
-            "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
+            'kinyu/bootstrap01.css',
+            // "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
 
             // 'kinyu/base.css',
             // 'kinyu/bg.css',
