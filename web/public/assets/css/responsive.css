@@ -1853,7 +1853,13 @@ padding-bottom :24px;
   .about-kinyu-header-contetns-list-el .title-box-inner p {
     background: #f9f9f9;
   }
-
+  .storybook_bnr {
+    text-align: center;   
+  }
+  .storybook_bnr img {
+    width: 100%;
+    max-width: 450px;
+  }
   /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会ページ - 女子会一覧
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
