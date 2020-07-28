@@ -269,6 +269,21 @@
     z-index: 1000;
     background-color: rgba(0,0,0,0.6);
   }
+  
+  /* スペシャルコンテンツ 追加調整 */
+  .special-contents-list {
+    flex-wrap: wrap;
+  }
+  .special-contents-list > li {
+    width: 50%;
+    list-style: none;
+    box-sizing: border-box;
+    margin-bottom:32px;
+  }
+  /*コンテンツ増えたら外す*/
+  .special-contents-list > li:last-child {
+    margin-bottom:0px;
+  }
 }
 
 /* ----------------------------------
