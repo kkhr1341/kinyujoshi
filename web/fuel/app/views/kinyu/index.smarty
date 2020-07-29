@@ -199,6 +199,7 @@
           <p>スペシャルコンテンツ</p>
           <div class="special-contents-banner-wrapper">
             <ul class="special-contents-list">
+              <li><a href="https://with.kinyu-joshi.jp/mysevenbk" target="_blank"><img src="images/special_contents/mysevenbk.png"></a></li>
               <li><a href="/sanpo_hiroshima" target="_blank"><img src="images/special_contents/hiroshima_header_sp.png"></a></li>
               <li><a href="https://kinyu-joshi.jp/contents/cashless" target="_blank"><img src="images/special_contents/cashlesslife.png"></a></li>
             </ul>
