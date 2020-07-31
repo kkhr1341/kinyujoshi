@@ -1,5 +1,10 @@
 <!-- 女子会TOP表示 -->
 
+<div class="swiper-slide" style="background: url(/images/banner/withk-sevenbk-top.jpg) center center / cover no-repeat;">
+    <a class="js-track" href="https://with.kinyu-joshi.jp/mysevenbk" data-category="slide-link" data-action="click" data-value="4" target="_blank">
+    </a>
+</div>
+
 {if $display_top_event}
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
     {if empty($display_top_event.specific_link)}
