@@ -21,7 +21,7 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
                 'loc'=>\Uri::base(false) . 'business',
                 'lastmod'=>$today,
                 'changefreq'=>'hourly',
-                'priority'=>0.9
+                'priority'=>0.5
             ),
              array(
                  'loc'=>\Uri::base(false) . 'news',
@@ -116,7 +116,7 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
          );
 
         // レポート
-        $blogs = Blogs::lists(1, 50, 1);
+        $blogs = Blogs::lists(1, null, 1);
         foreach ($blogs as $blog) {
             array_push($site_data, array(
                 'loc'=>'https://kinyu-joshi.jp/report/' . $blog['code'],
@@ -127,7 +127,7 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
         }
 
         // 女子会
-        $events = Events::lists(1, 50, 1);
+        $events = Events::lists(1, null, 1);
         foreach ($events as $event) {
             array_push($site_data, array(
                 'loc'=>'https://kinyu-joshi.jp/joshikai/' . $event['code'],

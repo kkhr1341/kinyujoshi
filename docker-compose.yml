@@ -1,6 +1,5 @@
 version: '3'
 services:
-
   db:
     build: ./mysql
     environment:
@@ -28,23 +27,23 @@ services:
       - db
       - smtp
 
-  chat:
-    build: ./chat
-    environment:
-      - TZ=Asia/Tokyo
-      - DB_HOST=db
-      - DB_NAME=kinyujoshi_development
-      - DB_USER=root
-      - DB_PASSWORD=pass
-      - COOKIE_DOMAIN=localhost
-    ports:
-      - '8080:80'
+#  chat:
+#    build: ./chat
+#    environment:
+#      - TZ=Asia/Tokyo
+#      - DB_HOST=db
+#      - DB_NAME=kinyujoshi_development
+#      - DB_USER=root
+#      - DB_PASSWORD=pass
+#      - COOKIE_DOMAIN=localhost
+#    ports:
+#      - '8080:80'
 #    volumes:
 #      - ./chat/app:/var/www/html
 #    working_dir: /var/www/html
 #    command: php bin/chat-server.php
-    depends_on:
-      - db
+#    depends_on:
+#      - db
 
   smtp:
     image: schickling/mailcatcher
@@ -53,29 +52,29 @@ services:
       - "1025:1025"
     environment:
       - TZ=Asia/Tokyo
-  composer:
-    image: composer/composer:php5
-    environment:
-      TZ: "Asia/Tokyo"
-    volumes:
-      - ~/.composer/auth.json:/root/composer/auth.json
-      - ./web:/app
-      - ./php/php.ini:/usr/local/etc/php/php.ini
-    working_dir: /app
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    environment:
-      - PMA_ARBITRARY=1
-      - PMA_HOST=db
-      - PMA_USER=root
-      - PMA_PASSWORD=pass
-    links:
-      - db
-    ports:
-       - 8888:80
-    volumes:
-       - /sessions
+#  composer:
+#    image: composer/composer:alpine
+#    environment:
+#      TZ: "Asia/Tokyo"
+#    volumes:
+#      - ~/.composer/auth.json:/root/composer/auth.json
+#      - ./web:/app
+#      - ./php/php.ini:/usr/local/etc/php/php.ini
+#    working_dir: /app
+#
+#  phpmyadmin:
+#    image: phpmyadmin/phpmyadmin
+#    environment:
+#      - PMA_ARBITRARY=1
+#      - PMA_HOST=db
+#      - PMA_USER=root
+#      - PMA_PASSWORD=pass
+#    links:
+#      - db
+#    ports:
+#       - 8888:80
+#    volumes:
+#       - /sessions
 
   oil:
     build: ./php
