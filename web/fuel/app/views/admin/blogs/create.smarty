@@ -181,6 +181,7 @@
             params.pickup = $("[name=pickup]:checked").val();
             params.pr = $("[name=pr]:checked").val();
             params.secret = $("[name=secret]:checked").val();
+            params.publish = 0;
             params.title = $('#title').val();
             params.main_image = $('#main_image').val();
             params.description = $('#description').val();
@@ -232,6 +233,7 @@
             params.pickup = $("[name=pickup]:checked").val();
             params.pr = $("[name=pr]:checked").val();
             params.secret = $("[name=secret]:checked").val();
+            params.publish = 0;
             params.title = $('#title').val();
             params.main_image = $('#main_image').val();
             params.description = $('#description').val();
