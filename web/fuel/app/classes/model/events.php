@@ -59,6 +59,7 @@ class Events extends Base
             ->add_rule('numeric_between', 0, 9999999);
 
         $val->add('coupon_code', 'クーポンコード')
+            ->add_rule('match_pattern', '/^[0-9A-Za-z\-]+$/')
             ->add_rule('required_with', 'discount');
 
         $val->add('discount', '割引金額')
