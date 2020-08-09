@@ -20,12 +20,14 @@ return array(
         'valid_date' => ':labelの形式が正しくありません。',
         'valid_time' => ':labelの形式はH:i（例：07:12）の形式で入力してください。',
         'numeric_between' => ':labelは:param:1以上:param:2以下で入力する必要があります',
-    
-        # 自作
+        'match_pattern' => ':labelは指定した形式で入力してください',
+
+        // 自作
 //        'num' => ':labelは数字で入力してください',
         'alphanum' => ':labelは英数字で入力してください',
         'unique'   => ':labelが既に使われています',
         'is_fullwidth_katakana'   => ':labelは全角カタカナで入力してください',
+
 
         'is_tel'   => ':labelを正しく入力してください',
         'is_zip'   => ':labelを正しく入力してください',
