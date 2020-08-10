@@ -158,7 +158,7 @@ return array(
   'sanpo_hiroshima' => 'kinyu/kinyumap/sanpo_hiroshima',
 
   // 非ログイン時マイページ
-  // 'members'        => 'kinyu/members/index',
+  'members'       => 'kinyu/members/index',
   'members/(:id)' => 'kinyu/members/detail/$1',
 
   //マイページ - トップ

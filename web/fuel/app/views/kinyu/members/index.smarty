@@ -1,0 +1,20 @@
+<div class="kinyu-main-block kinyu-members-index container-fluid">
+  <div class="container-fluid" style="background-color: blue; width:100%; height: 128px;"></div>
+  <div class="container">
+    <div class="row">
+      {foreach $users as $user}
+      <div class="profile card col-md-3 col-sm-4" style="width: 14rem;">
+        <a href="/members/{$user.id}">
+          <img class="profile-img card-img-top" src="{if $profile.profile_image}{$profile.profile_image}{else}/images/my/non-profile-img.jpg{/if}">
+          <div class="profile-body card-body">
+            <h5 class="card-title">{$user.name}</h5>
+          </div>
+        </a>
+      </div>
+      {/foreach}
+      <div class="blog-pagenation tx-center">
+        {$pagination}
+      </div>
+    </div>
+  </div>
+</div>

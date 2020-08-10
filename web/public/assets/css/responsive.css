@@ -66,18 +66,36 @@
 }
 
 /* members */
+/* member list */
+.kinyu-main-block.kinyu-members-index .profile.card {
+  width: 14rem;
+  border: none;
+}
+.kinyu-main-block.kinyu-members-index .profile.card .profile-img {
+  object-fit: cover;
+  border-radius: 300px;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+}
+.kinyu-main-block.kinyu-members-index .profile.card .profile-body {
+}
+
+.kinyu-main-block.kinyu-members-index,
 .kinyu-main-block.kinyu-members-detail {
   font-weight: bold;
   font-size: 16px;
   text-align: center;
   background-color: #EFEFEF;
-  margin-top: 124px;
+  /* margin-top: 124px; */
   padding-top: 16px;
   padding-bottom: 32px;
 }
+.kinyu-main-block.kinyu-members-index .container,
 .kinyu-main-block.kinyu-members-detail .container {
   background-color: #fff;
 }
+
 .kinyu-main-block.kinyu-members-detail .introduction {
   height: 480px;
   background-color: #EFEFEF;
@@ -92,6 +110,7 @@
   padding: 16px 16px;
   margin-top: 22px;
 }
+
 .kinyu-main-block.kinyu-members-detail .profile-img {
   text-align: center;
   padding-top: 36px;
