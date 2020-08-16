@@ -326,7 +326,7 @@
     z-index: 1000;
     background-color: rgba(0,0,0,0.6);
   }
-  
+
   /* スペシャルコンテンツ 追加調整 */
   .special-contents-list {
     flex-wrap: wrap;
@@ -342,7 +342,8 @@
     margin-bottom:0px;
   }
 
-  .kinyu-main-block.kinyu-members-index {
+  .kinyu-main-block.kinyu-members-index,
+  .kinyu-main-block.kinyu-members-detail {
     margin-top: 124px;
   }
 }
