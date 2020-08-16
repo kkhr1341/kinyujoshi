@@ -71,15 +71,16 @@
   font-weight: bold;
   font-size: 16px;
   text-align: center;
-  /* margin-top: 124px; */
   padding-top: 16px;
   padding-bottom: 32px;
+}
+.kinyu-main-block.kinyu-members-index .member-pagenation .pagination {
+  display: block;
 }
 .kinyu-main-block.kinyu-members-index h1 {
   font-size: 24px;
   color: #acacac;
 }
-
 .kinyu-main-block.kinyu-members-index .profile {
   align-self: center;
   text-align: center;
@@ -109,7 +110,7 @@
   margin-top: -15px;
   border: 15px solid transparent;
   margin-left: 4px;
-  border-right: 15px solid #e0edff;
+  border-right: 15px solid #efefef;
 }
 
 .kinyu-main-block.kinyu-members-index .member .profile .title {
