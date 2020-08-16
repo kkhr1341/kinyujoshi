@@ -91,8 +91,8 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
       return Response::redirect('error/404');
     }
 
-    $this->template->title = $user.name . 'さんのプロフィール ｜きんゆう女子。';
-    $this->template->description = $user.name . 'さんのプロフィール ｜きんゆう女子。';
+    $this->template->title = $user['username'] . 'さんのプロフィール ｜きんゆう女子。';
+    $this->template->description = $user['username'] . 'さんのプロフィール ｜きんゆう女子。';
 
     $joinable_events = Events::joinedEvents($user["username"], false);
     $joined_events = Events::joinedEvents($user["username"], true);
