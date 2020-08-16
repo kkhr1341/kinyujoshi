@@ -1,0 +1,23 @@
+<div class="kinyu-main-block kinyu-members-index container-fluid">
+  <div class="container">
+    <h1>メンバー一覧</h1>
+    <div class="member row">
+      {foreach $users as $user}
+        <div class="profile col-3">
+          <a href="/members/{$user.id}">
+            <img class="profile-img" src="{if $user.profile_image}{$user.profile_image}{else}/images/my/non-profile-img.jpg{/if}">
+            <div class="profile-body">
+              <h5 class="title">{$user.name}</h5>
+            </div>
+          </a>
+        </div>
+        <div class="introduce col-9">
+          {$user.introduction}
+        </div>
+      {/foreach}
+    </div>
+    <div class="member-pagenation">
+      {$pagination}
+    </div>
+  </div>
+</div>
