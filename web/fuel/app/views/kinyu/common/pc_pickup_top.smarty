@@ -1,5 +1,14 @@
 <!-- 女子会TOP表示 -->
 
+<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20200205175520image.jpg) center center / cover no-repeat;">
+    <a class="js-track" href="https://kinyu-joshi.jp/joshikai/QhcdOr" data-category="slide-link" data-action="click" data-value="4" target="_blank">
+        <div class="kinyu-top-list-kind"></div>
+       <div class="kinyu-top-introlist-title">
+          <h3 class="kinyu-top-list-title">温泉ときんゆう。ステップアップした投資♪リートを学ぶ！ with 大江戸温泉アセットマネジメントさん</h3>
+       </div>
+    </a>
+</div>
+
 <div class="swiper-slide" style="background: url(/images/banner/withk-sevenbk-top.jpg) center center / cover no-repeat;">
     <a class="js-track" href="https://with.kinyu-joshi.jp/mysevenbk" data-category="slide-link" data-action="click" data-value="4" target="_blank">
     </a>
