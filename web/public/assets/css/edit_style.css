@@ -981,7 +981,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 }
 
 .with_ki-label img {
-  width: 65px;
+  width: 120px;
 }
 
 @media screen and (max-width: 769px) {
