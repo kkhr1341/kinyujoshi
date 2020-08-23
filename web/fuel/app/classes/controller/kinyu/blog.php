@@ -213,15 +213,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
             ),
         );
 
-        if ($this->data['blog']['secret'] == 1) {
-            $meta[] = array(
-                'name' => 'robots',
-                'content' => 'noindex',
-            );
-        }
-
         $this->template->meta = $meta;
-
         $this->template->canonical = \Uri::base() . 'report/' . $this->data['blog']['code'];
 
         if (Agent::is_mobiledevice()) {
