@@ -127,7 +127,7 @@ class Controller_Kinyu_SiteMap extends Controller_Rssbase
         }
 
         // 女子会
-        $events = Events::lists(1, null, 1);
+        $events = Events::lists(1, null, null, null, "desc", 1, null, 1);
         foreach ($events as $event) {
             array_push($site_data, array(
                 'loc'=>'https://kinyu-joshi.jp/joshikai/' . $event['code'],
