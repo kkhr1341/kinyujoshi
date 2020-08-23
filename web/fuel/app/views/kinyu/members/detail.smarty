@@ -2,10 +2,10 @@
   <div class="container">
     <div class="profile">
       <div class="profile-img">
-        <img src="{if $profile.profile_image}{$profile.profile_image}{else}/images/my/non-profile-img.jpg{/if}">
+        <img src="{if $public_profile.profile_image}{$public_profile.profile_image}{else}/images/my/non-profile-img.jpg{/if}">
       </div>
       <div class="username" style="padding-top: 18px; font-weight: bold; color: #888888;">
-        {$profile.name}
+        {$public_profile.name}
       </div>
       <!--
       <div class="type" style="padding-top: 6px; font-size: small; font-weight: bold; color: #888;">
@@ -14,7 +14,7 @@
       -->
       <div class="description" style="background-color: #fff; padding: 8px 12px; margin-top: 24px; font-size: small; line-height: 1.6;">
         <div class="text">
-          {$profile.introduction}
+          {$public_profile.introduction}
         </div>
         <!--
         <div class="like" style="text-align: right;">
@@ -36,30 +36,30 @@
         -->
         <div class="sns-links" style="background-color: #fff; display: inline-block; position: absolute;right: 0;top: -4px; padding: 4px 0px;">
           <ul>
-            {if $profile.url}
+            {if $public_profile.url}
             <li class="website" style="padding: 0px 2px; display: inline-block;">
-              <a href="{$profile.url}" target="_blank">
+              <a href="{$public_profile.url}" target="_blank">
                 <img src="/images/social/web_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
             {/if}
-            {if $profile.instaurl}
+            {if $public_profile.instaurl}
             <li class="instagram" style="padding: 0px 2px; display: inline-block;">
-              <a href="{$profile.instaurl}" target="_blank">
+              <a href="{$public_profile.instaurl}" target="_blank">
                 <img src="/images/social/instagram_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
             {/if}
-            {if $profile.twurl}
+            {if $public_profile.twurl}
             <li class="twitter" style="padding: 0px 2px; display: inline-block;">
-              <a href="{$profile.twurl}" target="_blank">
+              <a href="{$public_profile.twurl}" target="_blank">
                 <img src="/images/social/twitter_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
             {/if}
-            {if $profile.fburl}
+            {if $public_profile.fburl}
             <li class="facebook" style="padding: 0px 2px; display: inline-block;">
-              <a href="{$profile.fburl}" target="_blank">
+              <a href="{$public_profile.fburl}" target="_blank">
                 <img src="/images/social/fb_icon.png" style="height: 18px; vertical-align:bottom;">
               </a>
             </li>
