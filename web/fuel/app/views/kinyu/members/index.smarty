@@ -7,7 +7,7 @@
           <a href="/members/{$user.id}">
             <img class="profile-img" src="{if $user.profile_image}{$user.profile_image}{else}/images/my/non-profile-img.jpg{/if}">
             <div class="profile-body">
-              <h5 class="title">{$user.name}</h5>
+              <h5 class="title">{$user.nickname}</h5>
             </div>
           </a>
         </div>

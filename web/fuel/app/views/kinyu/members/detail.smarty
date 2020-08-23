@@ -5,7 +5,7 @@
         <img src="{if $public_profile.profile_image}{$public_profile.profile_image}{else}/images/my/non-profile-img.jpg{/if}">
       </div>
       <div class="username" style="padding-top: 18px; font-weight: bold; color: #888888;">
-        {$public_profile.name}
+        {$public_profile.nickname}
       </div>
       <!--
       <div class="type" style="padding-top: 6px; font-size: small; font-weight: bold; color: #888;">
