@@ -97,8 +97,8 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
 
     $this->data['publish_profile'] = $publish_profile;
     $this->data['user'] = $user;
-    $this->data['joinable_events'] = $joinable_events;
-    $this->data['joined_events'] = $joined_events;
+    $this->data['joinable_events'] = [];
+    $this->data['joined_events'] = [];
 
     $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
