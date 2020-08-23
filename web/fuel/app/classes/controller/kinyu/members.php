@@ -77,25 +77,25 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
 
     $user_id = $this->param('id');
     $user = User::getByUserId($user_id);
-    $publish_profile = Profiles::get($user['username']);
+    $public_profile = Profiles::get($user['username']);
 
     // どちらも存在しないのはあり得ない
-    if( !isset($user) && !isset($publish_profile) ) {
+    if( !isset($user) && !isset($public_profile) ) {
       return Response::redirect('/members');
     }
 
     // 存在しないか公開設定をしていなければ404
-    if( (int)$publish_profile['disable'] == 1 || (int)$publish_profile['publish'] == 0 ) {
+    if( (int)$public_profile['disable'] == 1 || (int)$public_profile['publish'] == 0 ) {
       return Response::redirect('/members');
     }
 
-    $this->template->title = $publish_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。';
-    $this->template->description = $publish_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。';
+    $this->template->title = $public_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。';
+    $this->template->description = $public_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。';
 
-    $joinable_events = Events::joinedEvents($user["username"], false);
-    $joined_events = Events::joinedEvents($user["username"], true);
+    // $joinable_events = Events::joinedEvents($user["username"], false);
+    // $joined_events = Events::joinedEvents($user["username"], true);
 
-    $this->data['publish_profile'] = $publish_profile;
+    $this->data['public_profile'] = $public_profile;
     $this->data['user'] = $user;
     $this->data['joinable_events'] = [];
     $this->data['joined_events'] = [];
