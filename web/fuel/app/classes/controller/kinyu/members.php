@@ -50,7 +50,6 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
       $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     }
 
-
     $results = User::getPublishProfileUsers( '/members', Input::get('page', 1), 'page', 20 );
     $this->data['users'] = $results['users'];
 
@@ -78,29 +77,28 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
 
     $user_id = $this->param('id');
     $user = User::getByUserId($user_id);
-    $profile = Profiles::get($user['username']);
+    $public_profile = Profiles::get($user['username']);
 
     // どちらも存在しないのはあり得ない
-    if( !isset($user) && !isset($profile) ) {
-      return Response::redirect('/');
+    if( !isset($user) && !isset($public_profile) ) {
+      return Response::redirect('/members');
     }
 
     // 存在しないか公開設定をしていなければ404
-    if( (int)$profile['disable'] == 1 || (int)$profile['publish'] == 0 ) {
-      // TODO: メンバーが増えてきたらメンバー一覧にリダイレクトする
-      return Response::redirect('error/404');
+    if( (int)$public_profile['disable'] == 1 || (int)$public_profile['publish'] == 0 ) {
+      return Response::redirect('/members');
     }
 
-    $this->template->title = $profile['name'] . 'さんのプロフィール ｜きんゆう女子。';
-    $this->template->description = $profile['name'] . 'さんのプロフィール ｜きんゆう女子。';
+    $this->template->title = $public_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。';
+    $this->template->description = $public_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。';
 
-    $joinable_events = Events::joinedEvents($user["username"], false);
-    $joined_events = Events::joinedEvents($user["username"], true);
+    // $joinable_events = Events::joinedEvents($user["username"], false);
+    // $joined_events = Events::joinedEvents($user["username"], true);
 
-    $this->data['profile'] = $profile;
+    $this->data['public_profile'] = $public_profile;
     $this->data['user'] = $user;
-    $this->data['joinable_events'] = $joinable_events;
-    $this->data['joined_events'] = $joined_events;
+    $this->data['joinable_events'] = [];
+    $this->data['joined_events'] = [];
 
     $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
