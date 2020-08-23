@@ -89,6 +89,13 @@
   width: auto;
   max-height: 80px;
 }
+.kinyu-main-block.kinyu-members-index .profile img.profile-img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 300px;
+}
+
 .kinyu-main-block.kinyu-members-index .member .introduce {
   position: relative;
   display: inline-block;
