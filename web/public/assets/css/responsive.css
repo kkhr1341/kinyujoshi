@@ -1937,11 +1937,12 @@ padding-bottom :24px;
     background: #f9f9f9;
   }
   .storybook_bnr {
-    text-align: center;   
+    text-align: center;
   }
   .storybook_bnr img {
     width: 100%;
     max-width: 450px;
+    margin-top: 30px;
   }
   /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会ページ - 女子会一覧
