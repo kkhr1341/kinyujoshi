@@ -99,7 +99,7 @@ class User extends Base
     public static function getPublishProfileUsers( $pagination_url, $page, $uri_segment = 3, $per_page = 5 )
     {
       $total = \DB::select(\DB::expr('count(*) as cnt'))->from('users')
-                                                        ->join('profiles', 'left')
+                                                        ->join('profiles', 'inner')
                                                         ->on('profiles.username', '=', 'users.username')
                                                         ->where('profiles.publish', '=', 1)
                                                         ->where('profiles.disable', '=', 0)
@@ -115,8 +115,8 @@ class User extends Base
         'wrapper' => '<ul class="pagination">{pagination}</ul>',
       ));
 
-      $results = \DB::select('*')->from('users')
-                                 ->join('profiles', 'left')
+      $results = \DB::select_array(array('profiles.*', 'users.*'))->from('users')
+                                 ->join('profiles', 'inner')
                                  ->on('profiles.username', '=', 'users.username')
                                  ->where('profiles.publish', '=', 1)
                                  ->where('profiles.disable', '=', 0);
