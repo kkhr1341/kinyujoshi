@@ -4,6 +4,7 @@ use \Model\User;
 use \Model\Profiles;
 use \Model\Applications;
 use \Model\Events;
+use \Model\ParticipatedApplications;
 
 class Controller_Kinyu_Members extends Controller_Kinyubase
 {
@@ -53,6 +54,7 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $results = User::getPublishProfileUsers( '/members', Input::get('page', 1), 'page', 20 );
     $this->data['users'] = $results['users'];
 
+
     $this->template->contents = View::forge('kinyu/members/index.smarty', $this->data)
          ->set_safe('pagination', $results['pagination']);
   }
@@ -93,17 +95,63 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $this->template->description = $public_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。';
 
     // $joinable_events = Events::joinedEvents($user["username"], false);
-    // $joined_events = Events::joinedEvents($user["username"], true);
 
     $this->data['public_profile'] = $public_profile;
     $this->data['user'] = $user;
     $this->data['joinable_events'] = [];
-    $this->data['joined_events'] = [];
+    $this->data['joined_events'] = ParticipatedApplications::lists($user["username"]);
 
     $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     $this->template->my_side = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
+    $meta = array(
+      array(
+        'name' => 'description',
+        'content' => $public_profile['introduction']
+      ),
+      array(
+        'property' => 'og:locale',
+        'content' => 'ja_JP',
+      ),
+      array(
+        'property' => 'og:type',
+        'content' => 'article',
+      ),
+      array(
+        'property' => 'og:title',
+        'content' => $public_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。'
+      ),
+      array(
+        'property' => 'og:description',
+        'content' => $public_profile['nickname'] . 'さんのプロフィール ｜きんゆう女子。'
+      ),
+      array(
+        'property' => 'og:url',
+        'content' => Uri::current(),
+      ),
+      array(
+        'property' => 'og:site_name',
+        'content' => 'きんゆう女子。- 金融ワカラナイ女子のためのコミュニティ',
+      ),
+      array(
+        'property' => 'article:publisher',
+        'content' => 'https://www.facebook.com/kinyujyoshi/',
+      ),
+      array(
+        'property' => 'fb:app_id',
+        'content' => '831295686992946',
+      ),
+      array(
+        'property' => 'og:image',
+        'content' => "https://kinyu-joshi.jp/images/kinyu-logo_630x630.png"
+      ),
+      array(
+        'property' => 'twitter:site',
+        'content' => '@kinyu_joshi',
+      ),
+    );
+    $this->template->meta = $meta;
     $this->template->contents = View::forge('kinyu/members/detail.smarty', $this->data);
   }
 }
