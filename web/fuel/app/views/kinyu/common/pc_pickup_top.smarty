@@ -1,10 +1,19 @@
 <!-- 女子会TOP表示 -->
 
-<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20200205175520image.jpg) center center / cover no-repeat;">
-    <a class="js-track" href="https://kinyu-joshi.jp/joshikai/QhcdOr" data-category="slide-link" data-action="click" data-value="4" target="_blank">
+<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/Z6w6y52wfZc2WVfn/images/20200807163432image.jpg) center center / cover no-repeat">
+    <a class="js-track" href="https://kinyu-joshi.jp/report/jV9BCO" data-category="slide-link" data-action="click" data-value="4" target="_blank">
         <div class="kinyu-top-list-kind"></div>
        <div class="kinyu-top-introlist-title">
-          <h3 class="kinyu-top-list-title">温泉ときんゆう。ステップアップした投資♪リートを学ぶ！ with 大江戸温泉アセットマネジメントさん</h3>
+          <h3 class="kinyu-top-list-title">②みんなに優しい♡「auのiDeCo」で始める資産づくり。 〜おばあちゃんになった時も豊かでいるために〜</h3>
+       </div>
+    </a>
+</div>
+
+<div class="swiper-slide" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/USPhJ3BxWXsSKVLv/images/20200904223552image.jpg) center center / cover no-repeat;">
+    <a class="js-track" href="https://kinyu-joshi.jp/report/NstKVt" data-category="slide-link" data-action="click" data-value="4" target="_blank">
+        <div class="kinyu-top-list-kind"></div>
+       <div class="kinyu-top-introlist-title">
+          <h3 class="kinyu-top-list-title">コロナ禍によって休暇の過ごし方どう変わった？大江戸温泉アセットマネジメントさんに取材しました♪</h3>
        </div>
     </a>
 </div>
