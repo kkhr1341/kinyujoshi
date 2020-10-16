@@ -66,17 +66,83 @@
 }
 
 /* members */
+/* member list */
+.kinyu-main-block.kinyu-members-index {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+.kinyu-main-block.kinyu-members-index .member-pagenation .pagination {
+  display: block;
+}
+.kinyu-main-block.kinyu-members-index h1 {
+  font-size: 24px;
+  color: #acacac;
+}
+.kinyu-main-block.kinyu-members-index .profile {
+  align-self: center;
+  text-align: center;
+}
+.kinyu-main-block.kinyu-members-index .profile .profile-img {
+  width: auto;
+  max-height: 80px;
+}
+.kinyu-main-block.kinyu-members-index .profile img.profile-img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 300px;
+}
+
+.kinyu-main-block.kinyu-members-index .member .introduce {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 48px 24px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #acacac;
+  font-size: 0.9rem;
+  background-color: #efefef;
+  align-self: center;
+  text-align: left;
+}
+.kinyu-main-block.kinyu-members-index .member .introduce:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  margin-left: 4px;
+  border-right: 15px solid #efefef;
+}
+
+.kinyu-main-block.kinyu-members-index .member .profile .title {
+  color: #b4b4b4;
+}
+.kinyu-main-block.kinyu-members-index .member .profile .profile-img {
+  width: auto;
+  max-height: 80px;
+}
+.kinyu-main-block.kinyu-members-index .member .profile .profile-body {
+  width: 100%;
+  font-size: 0.5rem;
+}
+
+.kinyu-main-block.kinyu-members-index .container,
+.kinyu-main-block.kinyu-members-detail .container {
+  background-color: #fff;
+}
 .kinyu-main-block.kinyu-members-detail {
   font-weight: bold;
   font-size: 16px;
   text-align: center;
   background-color: #EFEFEF;
-  margin-top: 124px;
   padding-top: 16px;
   padding-bottom: 32px;
-}
-.kinyu-main-block.kinyu-members-detail .container {
-  background-color: #fff;
 }
 .kinyu-main-block.kinyu-members-detail .introduction {
   height: 480px;
@@ -84,7 +150,6 @@
   padding: 16px 16px;
   margin-top: 22px;
 }
-
 .kinyu-main-block.kinyu-members-detail {
   text-align: center;
 }
@@ -110,7 +175,6 @@
   line-height: 1.6;
   border: 1px solid #e6e6e6;
 }
-
 .kinyu-main-block.kinyu-members-detail .interest-joshikai .hr {
   width: 200px;
   height: 3px;
@@ -159,7 +223,6 @@
 .withk-modal .modal-footer a {
   margin: 0 auto;
 }
-
 
 /* ----------------------------------
     PCなど
@@ -269,7 +332,7 @@
     z-index: 1000;
     background-color: rgba(0,0,0,0.6);
   }
-  
+
   /* スペシャルコンテンツ 追加調整 */
   .special-contents-list {
     flex-wrap: wrap;
@@ -283,6 +346,11 @@
   /*コンテンツ増えたら外す*/
   .special-contents-list > li:last-child {
     margin-bottom:0px;
+  }
+
+  .kinyu-main-block.kinyu-members-index,
+  .kinyu-main-block.kinyu-members-detail {
+    margin-top: 124px;
   }
 }
 
@@ -1869,11 +1937,12 @@ padding-bottom :24px;
     background: #f9f9f9;
   }
   .storybook_bnr {
-    text-align: center;   
+    text-align: center;
   }
   .storybook_bnr img {
     width: 100%;
     max-width: 450px;
+    margin-top: 30px;
   }
   /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会ページ - 女子会一覧

@@ -96,6 +96,44 @@ class User extends Base
         return $result;
     }
 
+    public static function getPublishProfileUsers( $pagination_url, $page, $uri_segment = 3, $per_page = 5 )
+    {
+      $total = \DB::select(\DB::expr('count(*) as cnt'))->from('users')
+                                                        ->join('profiles', 'inner')
+                                                        ->on('profiles.username', '=', 'users.username')
+                                                        ->where('profiles.publish', '=', 1)
+                                                        ->where('profiles.disable', '=', 0)
+                                                        ->execute()->current();
+
+      $pagination = \Pagination::forge('mypagination', array(
+        'pagination_url' => $pagination_url,
+        'total_items' => $total['cnt'],
+        'per_page' => $per_page,
+        'uri_segment' => $uri_segment,
+        'current_page' => (int)$page,
+        'name' => 'bootstrap',
+        'wrapper' => '<ul class="pagination">{pagination}</ul>',
+      ));
+
+      $results = \DB::select_array(array('profiles.*', 'users.*'))->from('users')
+                                 ->join('profiles', 'inner')
+                                 ->on('profiles.username', '=', 'users.username')
+                                 ->where('profiles.publish', '=', 1)
+                                 ->where('profiles.disable', '=', 0);
+
+      $results = $results->limit($pagination->per_page)
+                         ->offset($pagination->offset)
+                         ->order_by('profiles.updated_at', 'desc')
+                         ->execute()
+                         ->as_array();
+
+      $datas = array();
+      $datas['users'] = $results;
+      $datas['pagination'] = $pagination;
+
+      return $datas;
+    }
+
     public static function save($params, $username, $current_email)
     {
         // メールアドレスの変更確認

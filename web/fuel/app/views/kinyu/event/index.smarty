@@ -126,7 +126,14 @@
         <ul class="clear">
 
           <li>
-            <a href="https://jpx-moneyschool.com/2018" target="_blank">
+            <a href="/document/moneyschool2019.pdf" target="_blank">
+              <div class="bg-area" style="background:url(/images/event/past-moneyschool2019.jpg) top center / cover no-repeat"></div>
+              <div class="text-area"><p>JPX＊マネースクール2019 - 今すぐ始める！マネーアクション宣言</p></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="/document/moneyschool2018.pdf" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-moneyschool2018.jpg) center center / cover no-repeat"></div>
               <div class="text-area"><p>JPX＊マネースクール2018 - 資産形成とわたしの未来</p></div>
             </a>
@@ -175,7 +182,7 @@
           </li>
 
           <li>
-            <a href="https://jpx-moneyschool.com/2017" target="_blank">
+            <a href="/document/moneyschool2017.pdf" target="_blank">
               <div class="bg-area" style="background:url(/images/event/past-special4.jpg) center center / cover no-repeat"></div>
               <div class="text-area"><p>JPX＊マネースクール - ロボアドとミライの資産形成</p></div>
             </a>
