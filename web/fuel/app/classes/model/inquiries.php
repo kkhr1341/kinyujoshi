@@ -39,7 +39,7 @@ class Inquiries extends Base
         \DB::insert('inquiries')->set($params)->execute();
 
         $email = \Email::forge('jis');
-        $email->from("no-reply@kinyu-joshi.jp", ''); //送り元
+        $email->from("info@kinyu-joshi.jp", ''); //送り元
         $email->subject("[きんゆう女子。] お問合せ確認メール");
         $email->html_body(\View::forge('email/inquiry/body.smarty', []));
         $email->to($params['email']); //送り先
@@ -48,7 +48,7 @@ class Inquiries extends Base
         $email->send();
 
         $email02 = \Email::forge('jis');
-        $email02->from("no-reply@kinyu-joshi.jp", ''); //送り元
+        $email02->from("info@kinyu-joshi.jp", ''); //送り元
         $email02->subject("[きんゆう女子。] お問合せがありました");
         $name = $params['name'];
         // $title = $params['title'];
