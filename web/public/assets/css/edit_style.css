@@ -5185,6 +5185,19 @@ input::-webkit-input-placeholder {
   width: 120px;
   opacity: .8!important;
 }
+.member-list-banner {
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.member-list-banner img{
+  width:100%;
+  max-width: 650px;
+}
+
+.member-list-banner img:hover {
+  opacity: .8;
+  transition: .5s;
+}
 
 /* マイページでできること */
 .about-member-block {
