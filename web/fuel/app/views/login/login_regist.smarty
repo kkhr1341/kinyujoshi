@@ -124,9 +124,6 @@
 
       <div id="regist-form" class="login-block-el login-contents-block-inner clear">
         <div class="login-contents-mainarea login-contents-regist">
-          <div class="member-list-banner animation-top1">
-            <a href="/members"><img src="/images/login/member_list_banner.png"></a>
-          </div>
           <h2 class="el-title animation-top1">メンバーになる♪</h2>
 
           <div class="login-contents-form-area clear">

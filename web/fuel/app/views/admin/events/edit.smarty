@@ -154,7 +154,7 @@
 
                 <div class="form-group">
                     <label class="form-group-event-label">クーポンコード</label>
-                    <p class="form-group-sub"><span style="color:red;">＊</span>半角英数字と-(ハイフン)のみでお願いします。</p>
+                    <p class="form-group-sub"><span style="color:red;">＊</span>半角英数字のみでお願いします。-(ハイフン)は使用しないでください。</p>
                     <input type="text" id="coupon_code" class="form-control" placeholder="" value={$coupon.coupon_code|couponcodesanitizer|default:''}>
                 </div>
 
