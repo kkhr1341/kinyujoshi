@@ -1,12 +1,4 @@
-<!-- リロード時アニメーション -->
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
-
-<div class="kinyu-main-animation">
-  <div class="kinyu-main-animation-inner">
-    <img style="width:100%;" class="kinyu-main-animation-sub" src="/images/map/kabuto-map-title1.png">
-    <img style="width:100%;" class="kinyu-main-animation-title" src="/images/map/kabuto-map-title2.png">
-  </div>
-</div>
 
 <div class="kinyu-list-block kinyu-map-block-container">
 
