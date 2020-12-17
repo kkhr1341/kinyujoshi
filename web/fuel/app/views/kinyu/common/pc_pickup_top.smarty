@@ -1,11 +1,6 @@
 <!-- 女子会TOP表示 -->
 {if $display_top_event}
 
-<div class="swiper-slide" style="background: url(/images/slide/top_ooedo_banner.png) center center / cover no-repeat;">
-  <a class="js-track" href="https://kinyu-joshi.jp/report/42qD9m" data-category="slide-link" data-action="click" data-value="3">
-    <div class="kinyu-top-list-kind"></div>
-  </a>
-</div>
 
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
     {if empty($display_top_event.specific_link)}
@@ -25,6 +20,13 @@
     {/if}
 </div>
 {/if}
+
+
+<div class="swiper-slide" style="background: url(/images/slide/top_ooedo_banner.png) center center / cover no-repeat;">
+  <a class="js-track" href="https://kinyu-joshi.jp/report/42qD9m" data-category="slide-link" data-action="click" data-value="3">
+    <div class="kinyu-top-list-kind"></div>
+  </a>
+</div>
 
 {foreach from=$blogs_pick item=blog name=loopname}
 
