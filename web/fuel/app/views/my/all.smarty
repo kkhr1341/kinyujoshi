@@ -205,6 +205,14 @@
           </ul>
         </div>
 
+        <!-- メンバー一覧ページ -->
+        <div class="my-maincontent-block my-maincontent-last">
+          <p class="my-content-title"><span>一部のメンバーを見てみる</span></p>
+          <div class="member-list-banner">
+            <a href="/members"><img src="/images/login/member_list_banner.png"></a>
+          </div>
+
+        </div>
         <!-- お役立ちコンテンツ -->
         <div class="my-maincontent-block my-maincontent-last">
           <p class="my-content-title"><span>お役立ちコンテンツ</span></p>
