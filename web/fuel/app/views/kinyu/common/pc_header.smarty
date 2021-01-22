@@ -13,32 +13,13 @@
     </ul>
   </nav>
 
-  {if in_array('user', $roles) || in_array('admin', $roles)}
-    <a href="/my">
-      <div class="header-mypage-block">
-        <div class="inner">
-          <div class="img-block"
-            {if $profile.profile_image == ''}
-              style="background: url(/images/my/non-profile-img.jpg) center center / cover no-repeat;"
-            {else}
-              style="background:url({$profile.profile_image}) center center / cover no-repeat;"
-            {/if}>
-          </div>
-          <div class="text-box">
-            <p>マイページへ</p>
-          </div>
-        </div>
-        </a>
-      </div>
-    </a>
-  {else}
+
     <div class="header-login-area">
       <ul>
-        <li><a class="js-track" href="/login_regist" data-category="pc-header-link" data-action="click" data-value="1">新規メンバー登録</a></li>
-        <li><a class="js-track" href="/login" data-category="pc-header-link" data-action="click" data-value="1">ログイン</a></li>
+        <li><a class="js-track" href="/my" data-category="pc-header-link" data-action="click" data-value="1">マイページへ</a></li>
       </ul>
     </div>
-  {/if}
+
 
   <!-- レポート検索 -->
   <div class="kinyu-top-search pc">
