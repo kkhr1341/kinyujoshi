@@ -7,7 +7,7 @@
         <li><a href="/admin/joshikai">参加女子会</a></li>
       </ul>
     </div>
-    
+
     <div class="admin-normal-main">
 
 			<div class="admin-normal-profile">
@@ -27,10 +27,10 @@
     	</div>
 
 			<!--<img src="{$profile.profile_image}" />-->
-								
+
 			<table class="table admin-profile-table">
 				<tr>
-					<th class="active">表示名</th>
+					<th class="active">ニックネーム</th>
 					<td>みくりん</td>
 				</tr>
 				<tr>
@@ -55,10 +55,10 @@
 	</div>
 </div>
 
-		
+
 <script>
 $(function(){
 
-	
+
 });
 </script>

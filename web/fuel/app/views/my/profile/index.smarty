@@ -23,7 +23,7 @@
 
       <table class="table admin-profile-table">
         <tr>
-          <th class="active">表示名</th>
+          <th class="active">ニックネーム</th>
           <td>{$profile.nickname}</td>
         </tr>
         <tr>

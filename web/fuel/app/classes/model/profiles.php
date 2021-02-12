@@ -13,7 +13,7 @@ class Profiles extends Base
 
         $val->add('profile_image', 'プロフィール画像');
         $val->add('catchcopy', 'ひとことキャッピコピー');
-        $val->add('nickname', '表示名');
+        $val->add('nickname', 'ニックネーム');
 
         $val->add('name', 'お名前')
             ->add_rule('required');
