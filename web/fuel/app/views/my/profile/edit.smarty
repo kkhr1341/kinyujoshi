@@ -29,7 +29,7 @@
           </div>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">表示名</label>
+            <label class="regist-add-form-edit-title">ニックネーム</label>
             <input type="text" id="nickname" class="form-control" placeholder="" value="{$profile.nickname}">
           </div>
 
@@ -112,7 +112,7 @@ $(function(){
         }
 
 		if (params.nickname == "") {
-			ts.error("表示名を入力してください");
+			ts.error("ニックネームを入力してください");
 			return false;
 		}
 

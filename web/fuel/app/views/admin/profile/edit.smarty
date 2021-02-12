@@ -7,7 +7,7 @@
         <li><a href="/admin/joshikai">参加女子会</a></li>
       </ul>
     </div>
-    
+
     <div class="admin-normal-main">
 
       <form name="form1">
@@ -34,7 +34,7 @@
           </div>
 
           <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">表示名</label>
+            <label class="regist-add-form-edit-title">ニックネーム<span style="color:red;">*<span/></label>
             <input type="text" id="name" class="form-control" placeholder="" value="{$profile.nickname}">
           </div>
 
@@ -56,10 +56,12 @@
 
 
           <div class="regist-add-form-edit-el regist-add-form-edit-el02">
-            <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。</label>
+            <label class="regist-add-form-edit-title">簡単な自己紹介をお願いいたします。<span style="color:red;">*<span/></label>
             <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
           </div>
-          
+
+          <p class="text-center" style="padding-bottom:30px"><span style="color:red;">*<span/>公開設定時に公開されます</p>
+
           <div class="form-btn tx-center">
             <button class="btn btn-kinyu" type="button" id="save">保存する</button>
           </div>
@@ -70,16 +72,16 @@
   </div>
 </div>
 
-		
+
 <script>
 $(function(){
 
 	$('.birthday').datetimepicker({
 		format : 'YYYY/MM/DD'
 	});
-	
+
 	$('#save').click(function(){
-		
+
 		var url = "/api/profiles/save";
 		var params = {};
 		params.code = $('#code').val();
@@ -99,7 +101,7 @@ $(function(){
 //		} else if ($('input[name=release_profile]:checked').val() === 'いいえ、したくないです。') {
 //			params.release_profile = 0;
 //		}
-		
+
 //		if (params.code == "") {
 //			ts.error("ユーザー名を入力してください");
 //			return false;
@@ -124,6 +126,6 @@ $(function(){
                 $('.edit-profile-img .img-box').css('background-image', 'url(' + url + ')');
             }
         });
-	
+
 });
 </script>
