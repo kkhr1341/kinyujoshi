@@ -300,9 +300,4 @@
         showShrinkZoomMarkers();
     }
 </script>
-
-<!-- 紙吹雪 -->
-<script type="text/javascript" src="/assets/js/kinyu/canvas.js"></script>
-<script type="text/javascript" src="/assets/js/kinyu/jquery.cookie.js"></script>
-
 {/literal}
