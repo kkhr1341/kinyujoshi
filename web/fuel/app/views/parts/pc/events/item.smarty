@@ -12,6 +12,11 @@
                 <!-- PR用イメージ挿入箇所 -->
                 <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
             {/if}
+            {if $event.applicable eq false}
+              <p class="joshikai-applicable">＊受付終了しました</p>
+            {else if $event.full eq true}
+              <p class="joshikai-applicable">＊受付終了しました</p>
+            {/if}
         </div>
         <div class="text-box">
             <div class="kinyu-top-list-kind kinyu-top-event-kind">
@@ -24,11 +29,6 @@
                     {/if}
                   </span>
                 </p>
-                {if $event.applicable eq false}
-                  <p class="joshikai-applicable">＊受付終了しました</p>
-                {else if $event.full eq true}
-                  <p class="joshikai-applicable">＊受付終了しました</p>
-                {/if}
             </div>
             <h3 class="kinyu-top-list-title">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
             <div class="event-subbox">
