@@ -989,9 +989,6 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   .with_ki-label{
     top: 3px;
   }
-  .with_ki-label img {
-    width: 35px;
-  }
 }
 
 .kinyu-top-report-list .img-box {
@@ -1207,16 +1204,16 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   line-height: 20px;
   height: 40px;
   width: 100%;
-  overflow: hidden;
   box-sizing: border-box;
   transition: 0.5s;
+  overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
 .kinyu-top-joshikai-list .kinyu-top-list-title {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 8px;
+  margin-bottom: 12px;
 }
 
 /* ページネーション */
@@ -1370,8 +1367,15 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   position: relative;
 }
 .kinyu-top-event-kind p {
-  line-height: 20px;
-  padding: 16px 0px 10px;
+  line-height: 28px;
+  height: 28px;
+  padding: 0px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-top: 16px;
+  margin-bottom: 12px;
 }
 .kinyu-top-event-kind p .date-box {
   border: 1px solid #8ddcd1;
@@ -1385,13 +1389,16 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   line-height: 13px;
   font-weight: bold;
 }
-.kinyu-top-event-kind p.joshikai-applicable {
+.kinyu-top-list .img-box .joshikai-applicable,
+.kinyu-event-list .joshikai-applicable {
   position: absolute;
-  right: 5px;
+  left: 0;
   top: 0;
-  font-size: 11px;
-  font-weight: normal;
+  font-size: 12px;
+  font-weight: bold;
   color: #f56e6e;
+  background-color: rgba(255,255,255,.85);
+  padding: 4px;
 }
 
 /* 本文 */
@@ -2240,13 +2247,15 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   padding: 16px;
   background: #f7f7f7;
   position: relative;
-  width: 320px;
+}
+.kinyu-event-list-el .kinyu-top-event-kind p {
+  margin-top: 0px;
+}
+.kinyu-event-list-el .event-subbox {
+  border-top: 1px solid #fff;
 }
 .kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind {
   position: relative;
-}
-.kinyu-event-list .kinyu-event-list-right .kinyu-top-event-kind p {
-  padding: 8px 0px 2px;
 }
 .kinyu-event-list .kinyu-event-list-right .joshikai-applicable {
   position: absolute;
@@ -2313,7 +2322,10 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   line-height: 22px;
   height: 44px;
   margin: 12px 0px 16px;
-  padding: 0px 1px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .event-subbox {
   border-top: 1px solid #f3f3f3;
@@ -2322,7 +2334,14 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 .event-subbox .event-subbox-el {
   font-size: 11px;
   line-height: 16px;
-  height: 18px;
+  height: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.event-subbox .event-subbox-el:first-child {
+  margin-bottom: 4px;
 }
 
 /* きんゆう女子会。って？ */

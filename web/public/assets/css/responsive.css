@@ -1623,9 +1623,6 @@ padding-bottom :24px;
     padding: 20px 0px 4px;
     font-size: 12px;
   }
-  .kinyu-top-event-kind p .date-box {
-    padding: 2px 2px 2px 4px;
-  }
   .kinyu-top-list-kind p span {
     font-weight: 400;
   }
@@ -4527,7 +4524,7 @@ footer .navi_kinyu-submenu-el a {
   }
 
   .kinyu-top-joshikai-list .kinyu-top-list-title {
-    padding: 12px 0px 12px;
+    padding: 0px;
   }
 
   .kinyu-top-joshikai-list .kinyu-top-list-fuki {
@@ -4955,7 +4952,7 @@ footer .navi_kinyu-submenu-el a {
   .kinyu-top-list-kind p {
     color: #77cbc0;
     font-size: 10px;
-    line-height: 12px;
+    line-height: 28px;
     padding: 16px 0px 0px;
     font-weight: normal;
   }
@@ -4980,12 +4977,15 @@ footer .navi_kinyu-submenu-el a {
 
   /* イベント部分のみ */
   .kinyu-top-event-kind p {
-    padding: 20px 0px 4px;
+    padding: 0px;
     font-size: 12px;
+    margin-top: 16px;
+    margin-bottom: 8px;
   }
 
   .kinyu-top-event-kind p .date-box {
-    padding: 2px 2px 2px 4px;
+    padding: 0px 0px 0px 2px;
+    margin-right: 0px;
   }
 
   .kinyu-top-list-kind p span {
@@ -4996,6 +4996,12 @@ footer .navi_kinyu-submenu-el a {
     font-size: 12px;
     line-height: 12px;
     font-weight: 400;
+  }
+
+  .kinyu-top-list .img-box .joshikai-applicable,
+  .kinyu-event-list .joshikai-applicable {
+    font-size: 11px;
+    font-weight: normal;
   }
 
   .kinyu-content-after .report-detail-comment p {

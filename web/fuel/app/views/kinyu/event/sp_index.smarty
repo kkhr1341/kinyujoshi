@@ -44,6 +44,11 @@
                   <!-- PR用イメージ挿入箇所 -->
                   <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
                 {/if}
+                {if $event.applicable eq false}
+                  <p class="joshikai-applicable">＊受付終了しました</p>
+                {else if $event.full eq true}
+                  <p class="joshikai-applicable">＊受付終了しました</p>
+                {/if}
                 </div>
 
                 {if $event.event_category == "女子会"}
