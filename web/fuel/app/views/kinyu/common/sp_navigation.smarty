@@ -44,6 +44,9 @@
             <a class="projects" href="#">with×き</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
+            <a href="/about">ストーリー</a>
+          </div>
+          <div class="navi_kinyu-menu-block-el">
             <a href="/kinyu_sanpo">きんゆう散歩</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
