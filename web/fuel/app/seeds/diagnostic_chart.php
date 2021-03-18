@@ -24,10 +24,10 @@ foreach ($seeds as $key => $seed) {
 //catch_copy → キャッチコピー
 //description → 説明文
 $seeds = array(
-    array('id' => '1', 'code' => 'RgKLhu', 'type' => 'A', 'character_name' => 'そろそろきちんとやらなきゃ！さん', 'catch_copy' => '人生100年って言われたけどどうすればいいの？', 'description' => "気づいたら何もワカラナイ・・・どうしよう（涙）きんゆう？何のこと？お菓子？そもそも、何がワカラナイかそれすらワカラナイ・・・。そもそもわたしってどういう人生を送っていきたいのかな？金融とか投資とか自分には関係ない？でも、そろそろきちんとやらなきゃ？！", 'character_image' => '/images/diagnosticchart/A.png', 'type_image' => '/images/diagnosticchart/typeA.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '2', 'code' => 'pttyS2', 'type' => 'B', 'character_name' => 'さきのばし…な、まよい子さん', 'catch_copy' => 'みんなのリアル、教えてほしい！', 'description' => "お金のこと大事ってわかったケド、何からはじめればいいのかな？みんなはどうしてるの？まだ、これからのこと迷っているからもう少し先でもいいかな。あれ、いつのまにか時間がたってる・・・。ふぅ。行動するのって大変だなぁ・・・。とりあえず、貯金は多少ある。", 'character_image' => '/images/diagnosticchart/B.png', 'type_image' => '/images/diagnosticchart/typeB.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '3', 'code' => 'pT8Xsz', 'type' => 'C', 'character_name' => 'ついついなんとかなる？子さん', 'catch_copy' => '自分への投資が欠かせない！『どうにかなるよね！！？（・・・なってない）』', 'description' => "実は、お金の管理、苦手。貯金あんまりないです・・・。もっとお金を作りたい！欲しいものたくさんあるし、がんばって働いてはいるけど、ついつい使ってしまう。汗あんまり考えてこなかったけど、このままで大丈夫かな？！ワタシ。", 'character_image' => '/images/diagnosticchart/C.png', 'type_image' => '/images/diagnosticchart/typeC.png', 'created_at' => \DB::expr('now()')),
-    array('id' => '4', 'code' => 'GT7f0Q', 'type' => 'D', 'character_name' => 'わくわく冒険したい子さん', 'catch_copy' => '人生もっと自由に楽しみたい！『夢は大きく！私、もっともっと幸せになる！』', 'description' => "金融に強くなって自分にもっと自信をつけたい！もちろん、迷ったり失敗したりすることはあるけれど、人生の自分の軸は見えてきた。だから、仕事もプライベートも、もっとレベルUPさせたいな。せっかくの1回の人生だから、思い切り楽しまなくちゃ♪", 'character_image' => '/images/diagnosticchart/D.png', 'type_image' => '/images/diagnosticchart/typeD.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '1', 'code' => 'RgKLhu', 'type' => 'A', 'character_name' => 'そろそろきちんとやらなきゃ！さん', 'catch_copy' => '人生100年って言われたけどどうすればいいの？', 'description' => "気づいたら何もワカラナイ・・・どうしよう（涙）きんゆう？何のこと？お菓子？そもそも、何がワカラナイかそれすらワカラナイ・・・。そもそもわたしってどういう人生を送っていきたいのかな？金融とか投資とか自分には関係ない？でも、そろそろきちんとやらなきゃ？！\nそろそろきちんとやらなきゃ！さんにおすすめしたい編集部セレクトブック！\n『夢をかなえる人の手帳』", 'character_image' => '/images/diagnosticchart/A.png', 'type_image' => '/images/diagnosticchart/typeA.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '2', 'code' => 'pttyS2', 'type' => 'B', 'character_name' => 'さきのばし…な、まよい子さん', 'catch_copy' => 'みんなのリアル、教えてほしい！', 'description' => "お金のこと大事ってわかったケド、何からはじめればいいのかな？みんなはどうしてるの？まだ、これからのこと迷っているからもう少し先でもいいかな。あれ、いつのまにか時間がたってる・・・。ふぅ。行動するのって大変だなぁ・・・。とりあえず、貯金は多少ある。\nさきのばし・・・な迷い子さんにおすすめしたい編集部セレクトブック！\n『TQ-心の安らぎを得る究極のタイムマネジメント』", 'character_image' => '/images/diagnosticchart/B.png', 'type_image' => '/images/diagnosticchart/typeB.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '3', 'code' => 'pT8Xsz', 'type' => 'C', 'character_name' => 'ついついなんとかなる？子さん', 'catch_copy' => '自分への投資が欠かせない！『どうにかなるよね！！？（・・・なってない）』', 'description' => "実は、お金の管理、苦手。貯金あんまりないです・・・。もっとお金を作りたい！欲しいものたくさんあるし、がんばって働いてはいるけど、ついつい使ってしまう。汗あんまり考えてこなかったけど、このままで大丈夫かな？！ワタシ。\nついついなんとかなる子？さんにおすすめしたい編集部セレクトブック！\n『「幸せをお金で買う」5つの授業 ―HAPPY MONEY』", 'character_image' => '/images/diagnosticchart/C.png', 'type_image' => '/images/diagnosticchart/typeC.png', 'created_at' => \DB::expr('now()')),
+    array('id' => '4', 'code' => 'GT7f0Q', 'type' => 'D', 'character_name' => 'わくわく冒険したい子さん', 'catch_copy' => '人生もっと自由に楽しみたい！『夢は大きく！私、もっともっと幸せになる！』', 'description' => "金融に強くなって自分にもっと自信をつけたい！もちろん、迷ったり失敗したりすることはあるけれど、人生の自分の軸は見えてきた。だから、仕事もプライベートも、もっとレベルUPさせたいな。せっかくの1回の人生だから、思い切り楽しまなくちゃ♪\nわくわく冒険したい子さんにおすすめしたい編集部セレクトブック！\n『自分で「始めた」女たち 「好き」を仕事にするための最良のアドバイス&インスピレーション』", 'character_image' => '/images/diagnosticchart/D.png', 'type_image' => '/images/diagnosticchart/typeD.png', 'created_at' => \DB::expr('now()')),
 );
 
 foreach ($seeds as $key => $seed) {
@@ -129,20 +129,18 @@ foreach ($seeds as $key => $seed) {
 $seeds = array(
     //A
     array('id' => '1', 'type_code' => 'RgKLhu', 'content' => "1.お金について考えてみる！と誰かに宣言してみよう\n2.おしゃべり女子会にお友達とゆるりと参加してみよう\n3.きん女。のゲストやFPとお財布を整理整頓しよう♪", 'created_at' => \DB::expr('now()')),
-    
+
     //B
     array('id' => '2', 'type_code' => 'pttyS2', 'content' => "1.みんなどうしているかレポートを読んでみよう\n2.finbeeやZaimをつかってお金のこと誰かとシェアしよう\n3.アクションする女子会でみんなと一緒に前に進もう", 'created_at' => \DB::expr('now()')),
-    
+
     //C
-    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "1.ラクサスXで眠っているバックを運用。投資の練習してみよう！\n2.キャッシュレスにしてお金の出入りを見えるようにしよう！Suica、デビットカード、pringなど♪\n3.貯まっているポイントでつみたて運用を始めてみる？", 'created_at' => \DB::expr('now()')),
-    
+    array('id' => '3', 'type_code' => 'pT8Xsz', 'content' => "1.時間やお金の使い道の優先度を考えよう。\n2.前払い式決済(チャージ式)の交通系電子マネー・QRコード決済や、すぐ引き落としされるデビットカードを使って、今あるお金でやりくりしよう。\n3.貯まっているポイントでつみたて運用を始めてみる？", 'created_at' => \DB::expr('now()')),
+
     //D
-    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "1.ニュースやアナリストの話に慣れるよう、きんゆう単語を学ぼう！\n2.つみたてNISAやNISAで、本当の投資にチャレンジ！\n3.現金派からキャッシュレス派に。カードやスマホ決済でミニマムライフ♪", 'created_at' => \DB::expr('now()')),
+    array('id' => '4', 'type_code' => 'GT7f0Q', 'content' => "1.ニュースやアナリストの話に慣れるよう、きんゆう単語を学ぼう！\n2.つみたてNISAやNISAで、本当の投資にチャレンジ！\n3.発信することで得られる学びも。これまで実践してきたことを、自分で発信してみよう！", 'created_at' => \DB::expr('now()')),
 );
 
 foreach ($seeds as $key => $seed) {
     \DB::delete('diagnostic_chart_type_action_lists')->where(array('id' => $seed['id']))->execute();
     \DB::insert('diagnostic_chart_type_action_lists')->set($seed)->execute();
 }
-
-

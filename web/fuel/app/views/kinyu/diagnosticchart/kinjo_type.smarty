@@ -2,9 +2,9 @@
 <link type="text/css" rel="stylesheet" href="/assets/css/kinyu/single/diagnosticchart.css" />
 <div class="kinyu-single-block joshikai-main-block kinjo_type">
   <div class="inner">
-		
+
 	  <div class="type-title"><img src="/images/diagnosticchart/4type_ttl.png"></div>
-		
+
 	  <ul class="type-wrapper">
 	      {foreach from=$chart_types item=type}
 		  <li class="{$type['type']}">
@@ -27,7 +27,7 @@
 		  </li>
 		  {/foreach}
 	  </ul>
-	  	
+
 	<div class="diagnosticchart-type-intro-image pc">
 		<a href="/kinjo_check">
 			<img class="kinjo-check-texticon" src="/images/kinjo-check.png">
@@ -41,7 +41,7 @@
 			<img class="kinjo-check-img" src="/images/diagnosticchart/chart_main_sp.jpg">
 		</a>
 	</div>
-		
+
     </div>
   </div>
 
