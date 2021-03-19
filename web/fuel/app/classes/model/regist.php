@@ -117,7 +117,7 @@ class Regist extends Base
                 'nickname' => $params['name'],
                 'birthday' => $params['birthday'],
                 'prefecture' => $params['prefecture'],
-                'url' => $params['url'],
+                'url' => isset($params['url']) ? $params['url']: '',
                 'introduction' => $params['introduction'],
 //              'gender' => $params['gender']
             );
@@ -156,14 +156,14 @@ class Regist extends Base
                 'ask' => '',
                 'email' => '',
                 'income' => '',
-                'url' => $params['url'],
-                'where_from' => $params['where_from'],
-                'where_from_site' => $params['where_from_site'],
-                'where_from_other' => $params['where_from_other'],
-                'want_to_something' => $params['want_to_something'],
-                'future' => $params['future'],
-                'transmission' => $params['transmission'],
-                'job_kind' => $params['job_kind'],
+                'url' => isset($params['url'])? $params['url']: '',
+                'where_from' => isset($params['where_from'])? $params['where_from']: '',
+                'where_from_site' => isset($params['where_from_site'])? $params['where_from_site']: '',
+                'where_from_other' => isset($params['where_from_other'])? $params['where_from_other']: '',
+                'want_to_something' => isset($params['want_to_something'])? $params['want_to_something']: '',
+                'future' => isset($params['future'])? $params['future']: '',
+                'transmission' => isset($params['transmission'])? $params['transmission']: '',
+                'job_kind' => isset($params['job_kind'])? $params['job_kind']: '',
                 'age' => $params['birthday'],
                 'edit_inner' => '',
                 'industry' => '',
@@ -173,7 +173,7 @@ class Regist extends Base
                 'user_agent' => @$_SERVER['HTTP_USER_AGENT'],
             ))->execute();
 
-            if ($params['want_to_learns']) {
+            if (isset($params['want_to_learns'])) {
                 foreach($params['want_to_learns'] as $value) {
                     \DB::insert('user_want_to_learns')->set(array(
                         'username' => $username,
@@ -183,7 +183,7 @@ class Regist extends Base
                 }
             }
 
-            if ($params['want_to_meets']) {
+            if (isset($params['want_to_meets'])) {
                 foreach($params['want_to_meets'] as $value) {
                     \DB::insert('user_want_to_meets')->set(array(
                         'username' => $username,
@@ -193,7 +193,7 @@ class Regist extends Base
                 }
             }
 
-            if ($params['regist_triggers']) {
+            if (isset($params['regist_triggers'])) {
                 foreach($params['regist_triggers'] as $value) {
                     \DB::insert('user_regist_triggers')->set(array(
                         'username' => $username,
