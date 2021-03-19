@@ -54,9 +54,9 @@ class Regist extends Base
 
         $val->add('not_know', 'きんゆうワカラナイ度')
             ->add_rule('required');
-
-        $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
-            ->add_rule('required');
+        //
+        // $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
+        //     ->add_rule('required');
 
 //        $val->add('income', '「3年後の自分の年収をどのくらいにしたいですか？」')
 //            ->add_rule('required');
@@ -68,8 +68,8 @@ class Regist extends Base
 
         $val->add('transmission', 'きんゆう女子。で情報発信したいですか？')
             ->add_rule('required');
-
-        $val->add('url', '「個人で発信しているブログなど」');
+        //
+        // $val->add('url', '「個人で発信しているブログなど」');
 
         $val->add('introduction', '自己紹介')
             ->add_rule('required');

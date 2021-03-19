@@ -45,14 +45,16 @@
 
                 <div class="regist-add-form-edit-el">
                     <label class="regist-add-form-edit-title">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">漢字フルネームで入力してください。</p>
+                    <p class="regist-add-form-edit-subtitle">漢字（姓 名）</p>
                     <input type="text" id="name" name="name" class="form-control" placeholder="" value="">
-                </div>
-
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">ふりがな（お名前）<span style="color:red; font-weight: normal;">*</span></label>
+                    <p class="regist-add-form-edit-subtitle" style="margin-top: 20px;">ふりがな（せい めい）</p>
                     <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="">
                 </div>
+
+                <!-- <div class="regist-add-form-edit-el">
+                    <label class="regist-add-form-edit-title">ふりがな（お名前）<span style="color:red; font-weight: normal;">*</span></label>
+                    <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="">
+                </div> -->
 
                 <div class="regist-add-form-edit-el select-area">
                     <label class="regist-add-form-edit-title">生年月日<span style="color:red; font-weight: normal;">*</span></label>
@@ -118,67 +120,6 @@
                 </div>
 
                 <div class="regist-add-form-edit-el form-radio-block">
-                    <label class="regist-add-form-edit-title">金融機関で働いていたり、仕事上金融に関わっていますか？<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">金融ワカラナイ女子のためのコミュニティなので、簡単すぎたらゴメンなさい...。(;_;)</p>
-                    <div class="radio_box_03 clear">
-                        <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
-                        <label for="job_kind1">はい</label>
-                        <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
-                        <label for="job_kind2">いいえ</label>
-                    </div>
-                </div>
-
-
-                <div class="regist-add-form-edit-el form_where_from">
-                    <label class="regist-add-form-edit-title">きんゆう女子。に最初に出会ったのはどこ？</label>
-                    <div class="radio_box_03 clear">
-                    <div class="clear">
-                        <input type="radio" value="検索して" name="where_from" id="where_from1" class="form-radio" placeholder="">
-                        <label for="where_from1">検索して</label>
-
-                        <input type="radio" value="新聞・雑誌の記事を見て" name="where_from" id="where_from9" class="form-radio" placeholder="">
-                        <label for="where_from9">新聞・雑誌の記事を見て</label>
-
-                        <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
-                        <label for="where_from3">Facebookを見て</label>
-
-                        <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
-                        <label for="where_from8">Instagramを見て</label>
-
-                        <input type="radio" value="Twitterを見て" name="where_from" id="where_from2" class="form-radio" placeholder="">
-                        <label for="where_from2">Twitterを見て</label>
-
-                        <input type="radio" value="お友達から" name="where_from" id="where_from4" class="form-radio" placeholder="">
-                        <label for="where_from4">お友達から</label>
-
-                        <input type="radio" value="お母さんから" name="where_from" id="where_from5" class="form-radio" placeholder="">
-                        <label for="where_from5">お母さんから</label>
-
-                        <input type="radio" value="先輩上司から" name="where_from" id="where_from6" class="form-radio" placeholder="">
-                        <label for="where_from6">先輩上司から</label>
-
-                            <div style="display: none;">
-                                <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="">
-                                <label for="where_from7">その他</label>
-                            </div>
-                        </div>
-
-                        <div style="margin-left: 20px;">
-                            <p class="regist-add-form-edit-subtitle">その他</p>
-                            <div class="othet_input">
-                                <input type="text" id="where_from_other" name="where_from_other" class="form-control" placeholder="その他の方はこちら" style="margin-top:10px;">
-                            </div>
-                        </div>
-
-                        <p class="regist-add-form-edit-subtitle" style="margin-top:30px;">他サイトで紹介されていた</p>
-                        <div class="othet_input">
-                            <input type="text" id="where_from_site" name="where_from_site" class="form-control" placeholder="良かったらサイト名を教えてください♪" style="margin-top:10px;">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el form-radio-block">
                     <label class="regist-add-form-edit-title">コミュニティを通じて、ご自身でも情報発信したいですか？<span style="color:red; font-weight: normal;">*</span></label>
                     <p class="regist-add-form-edit-subtitle">成長日記、寄稿、SNS、企業さんとタイアップ(企画・座談会・アンバサダー)など</p>
                     <div class="radio_box_02 clear">
@@ -191,16 +132,10 @@
                     </div>
                 </div>
 
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">個人で発信しているブログやSNSなど<span class="label label-primary">任意</span></label>
-                    <p class="regist-add-form-edit-subtitle">もしありましたら、ご入力をお願いします♪</p>
-                    <input type="text" id="url" name="url" class="form-control" placeholder="">
-                </div>
-
                 <div class="regist-add-form-edit-el regist-add-form-edit-el02">
                     <label class="regist-add-form-edit-title">ぜひメンバーさんや編集部に向けて自己紹介をお願いいたします♪<span style="color:red; font-weight: normal;">*</span></label>
                     <p class="regist-add-form-edit-subtitle">トライしてみたいこと、夢や目標、知りたいことや、おかねの"もやもや"など<br>＊匿名でご紹介させていただく場合がございます！<br>＊書いていただいた内容にあわせて、女子会や企業との企画にご招待する場合がございます♪</p>
-                    <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
+                    <textarea id="introduction" name="introduction" class='form-control' rows="4"></textarea>
                 </div>
 
                 <div class="form-btn tx-center">
