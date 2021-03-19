@@ -46,8 +46,7 @@
       <li><a href="/my/member_report">メンバー限定レポート</a></li>
       <li><a href="/my/report">お気に入り</a></li>
       <li><a href="/my/kinjo">参加予定の女子会</a></li>
-      <li><a href="/my/useful">お役立ちコンテンツ</a></li>
-      <li><a href="/my/oshiete">教えて！きん女。</a></li>
+      <li><a href="/my/profile">プロフィール設定</a></li>
       <li><a href="/my/account">アカウント設定</a></li>
       {if (Auth::has_access('userblogs.create'))}
       <li><a href="/my/userblogs">レポート申請</a></li>
