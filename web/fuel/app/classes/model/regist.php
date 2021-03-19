@@ -54,37 +54,22 @@ class Regist extends Base
 
         $val->add('not_know', 'きんゆうワカラナイ度')
             ->add_rule('required');
-
-        $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
-            ->add_rule('required');
-
-        $val->add('want_to_learns', 'きんゆう女子。コミュニティで何を学んだり知りたい？')
-            ->add_rule('required');
-
-        $val->add('want_to_meets', 'きんゆう女子。コミュニティではどんな発見や出会いがほしい？')
-            ->add_rule('required');
-
-        $val->add('want_to_something', '金融に向き合い学び、3年後には何がほしいですか？')
-            ->add_rule('required');
+        //
+        // $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
+        //     ->add_rule('required');
 
 //        $val->add('income', '「3年後の自分の年収をどのくらいにしたいですか？」')
 //            ->add_rule('required');
 
-        $val->add('where_from', '「きんゆう女子。に最初に出会ったのはどこ？」')
-            ->add_rule('required');
-        $val->add('where_from_site', '良かったらサイト名を教えてください♪');
-        $val->add('where_from_other', '「きんゆう女子。に最初に出会ったのはどこ？その他」');
-
-        $val->add('regist_triggers', 'メンバーになろうと思ったきっかけ')
-            ->add_rule('required');
-
-        $val->add('future', 'きんゆう女子。を通してどんな自分になりたい？')
-            ->add_rule('required');
+        // $val->add('where_from', '「きんゆう女子。に最初に出会ったのはどこ？」')
+        //     ->add_rule('required');
+        // $val->add('where_from_site', '良かったらサイト名を教えてください♪');
+        // $val->add('where_from_other', '「きんゆう女子。に最初に出会ったのはどこ？その他」');
 
         $val->add('transmission', 'きんゆう女子。で情報発信したいですか？')
             ->add_rule('required');
-
-        $val->add('url', '「個人で発信しているブログなど」');
+        //
+        // $val->add('url', '「個人で発信しているブログなど」');
 
         $val->add('introduction', '自己紹介')
             ->add_rule('required');

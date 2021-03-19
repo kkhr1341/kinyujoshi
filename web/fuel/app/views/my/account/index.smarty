@@ -7,18 +7,14 @@
 
             <p class="my-content-title"><span>アカウント設定</span></p>
 
-            <div class="admin-account-el">
-                <a class="admin-account-title" href="/my/profile">プロフィールの設定</a>
-            </div>
-
             {if $profile.publish == '1'}
             <div class="admin-account-el">
-              <a class="admin-account-title" href="/members/{$user.id}" target="_blank">自分の公開プロフィールを見る</a>
+              <a class="admin-account-title" href="/members/{$user.id}" target="_blank">わたしの公開プロフィールを確認する</a>
             </div>
             {/if}
 
             <div class="admin-account-el">
-                <p class="admin-account-title admin-account-title1">使用したクレジットカードの管理</p>
+                <p class="admin-account-title admin-account-title1">クレジットカード管理</p>
                 <div class="admin-account-el-open admin-account-el-open1 credit-list-area" style="display: none;">
                     <ul>
                         {foreach from=$cards key="key" item=card name=loopname}
@@ -36,7 +32,7 @@
 
             </div>
             <div class="admin-account-el edit-account-form">
-                <p class="admin-account-title admin-account-title3">ログイン情報の設定</p>
+                <p class="admin-account-title admin-account-title3">メールアドレス・パスワードの変更</p>
                 <div class="admin-account-el-open admin-account-el-open3 credit-list-area" style="display: none;">
 
                     <div class="login-edit-block">
@@ -61,7 +57,7 @@
             </div>
 
             <div class="admin-account-el">
-                <a class="admin-account-title" href="/my/account/withdrawal">メンバー退会について</a>
+                <a class="admin-account-title" href="/my/account/withdrawal">メンバー退会フォーム</a>
             </div>
 
         </div>

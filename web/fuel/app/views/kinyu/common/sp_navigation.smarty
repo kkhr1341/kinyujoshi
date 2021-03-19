@@ -32,9 +32,6 @@
             </div>
           {/if}
           <div class="navi_kinyu-menu-block-el">
-            <a href="/news">お知らせ</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
             <a href="/joshikai">女子会</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
@@ -42,9 +39,6 @@
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a class="projects" href="#">with×き</a>
-          </div>
-          <div class="navi_kinyu-menu-block-el">
-            <a href="/kinyu_sanpo">きんゆう散歩</a>
           </div>
           <div class="navi_kinyu-menu-block-el">
             <a class="fc-kinyu" href="/kinjo_check">きん女。診断</a>

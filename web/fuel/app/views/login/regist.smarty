@@ -45,18 +45,19 @@
 
                 <div class="regist-add-form-edit-el">
                     <label class="regist-add-form-edit-title">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">漢字フルネームで入力してください。</p>
+                    <p class="regist-add-form-edit-subtitle">漢字（姓 名）</p>
                     <input type="text" id="name" name="name" class="form-control" placeholder="" value="">
-                </div>
-
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">ふりがな（お名前）<span style="color:red; font-weight: normal;">*</span></label>
+                    <p class="regist-add-form-edit-subtitle" style="margin-top: 20px;">ふりがな（せい めい）</p>
                     <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="">
                 </div>
 
+                <!-- <div class="regist-add-form-edit-el">
+                    <label class="regist-add-form-edit-title">ふりがな（お名前）<span style="color:red; font-weight: normal;">*</span></label>
+                    <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="">
+                </div> -->
+
                 <div class="regist-add-form-edit-el select-area">
                     <label class="regist-add-form-edit-title">生年月日<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">ちょっとしたサプライズがあるかも？</p>
                     <div class="regist-selectarea">
                         <select id="age1" class='form-control'>
                             <option>-</option>
@@ -119,224 +120,6 @@
                 </div>
 
                 <div class="regist-add-form-edit-el form-radio-block">
-                    <label class="regist-add-form-edit-title">金融機関で働いていたり、仕事上金融に関わっていますか？<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">金融ワカラナイ女子のためのコミュニティなので、簡単すぎたらゴメンなさい...。(;_;)</p>
-                    <div class="radio_box_03 clear">
-                        <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
-                        <label for="job_kind1">はい</label>
-                        <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
-                        <label for="job_kind2">いいえ</label>
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">きんゆう女子。コミュニティで何を学んだり知りたい？(いくつか選択してもok)<span style="color:red; font-weight: normal;">*</span></label>
-                    <div class="checkbox-list">
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn1" value="お金のことみんなどうしてるの？が知りたい！">
-                            <label for="want_to_learn1" class="checkbox"></label>
-                            <span>お金のことみんなどうしてるの？が知りたい！</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn2" value="かしこいお金の管理や使い方の方法が気になる">
-                            <label for="want_to_learn2" class="checkbox"></label>
-                            <span>かしこいお金の管理や使い方の方法が気になる</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn3" value="豊かな人生にする計画をたてたい！">
-                            <label for="want_to_learn3" class="checkbox"></label>
-                            <span>豊かな人生にする計画をたてたい！</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn4" value="税金について (ふるさと納税・や消費税など）">
-                            <label for="want_to_learn4" class="checkbox"></label>
-                            <span>税金について (ふるさと納税・や消費税など）</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn5" value="制度について（NISA・つみたてNISA・iDeCo）">
-                            <label for="want_to_learn5" class="checkbox"></label>
-                            <span>制度について（NISA・つみたてNISA・iDeCo）</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn6" value="金融・経済そのものについて">
-                            <label for="want_to_learn6" class="checkbox"></label>
-                            <span>金融・経済そのものについて</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn7" value="新しい金融サービスについて（貯金アプリ・キャッシュレス）">
-                            <label for="want_to_learn7" class="checkbox"></label>
-                            <span>新しい金融サービスについて（貯金アプリ・キャッシュレス）</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn8" value="新しい働き方（副業・起業・個人事業主）">
-                            <label for="want_to_learn8" class="checkbox"></label>
-                            <span>新しい働き方（副業・起業・個人事業主）</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn9" value="色々な金融商品についての一般知識">
-                            <label for="want_to_learn9" class="checkbox"></label>
-                            <span>色々な金融商品についての一般知識</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_learns[]" id="want_to_learn10" value="悪い情報から自分の身を自分で守る方法">
-                            <label for="want_to_learn10" class="checkbox"></label>
-                            <span>悪い情報から自分の身を自分で守る方法</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="text" style="padding-top:10px;" name="want_to_learn_etc" class="form-control" placeholder="その他の方はこちら" value=""  style="margin-top:10px;">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">きんゆう女子。コミュニティではどんな発見や出会いがほしい？(いくつか選択してもok)<span style="color:red; font-weight: normal;">*</span></label>
-                    <div class="checkbox-list">
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_meets[]" id="want_to_meet1" value="お金について話せる大人のお友達が欲しい">
-                            <label for="want_to_meet1" class="checkbox"></label>
-                            <span>お金について話せる大人のお友達が欲しい</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_meets[]" id="want_to_meet2" value="人生について前向きに語れる仲間が欲しい">
-                            <label for="want_to_meet2" class="checkbox"></label>
-                            <span>人生について前向きに語れる仲間が欲しい</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_meets[]" id="want_to_meet3" value="共通点の多い人と出会って励まし合いたい">
-                            <label for="want_to_meet3" class="checkbox"></label>
-                            <span>共通点の多い人と出会って励まし合いたい</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_meets[]" id="want_to_meet4" value="自分が普段の生活では会うことのないような業種や世界の人たちと交流したい">
-                            <label for="want_to_meet4" class="checkbox"></label>
-                            <span>自分が普段の生活では会うことのないような業種や世界の人たちと交流したい</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_meets[]" id="want_to_meet5" value="お互い刺激し合える野心的な仲間と出会いたい">
-                            <label for="want_to_meet5" class="checkbox"></label>
-                            <span>お互い刺激し合える野心的な仲間と出会いたい</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="want_to_meets[]" id="want_to_meet6" value="ちょっと人生の先輩！的な人に会ってヒントを得たい">
-                            <label for="want_to_meet6" class="checkbox"></label>
-                            <span>ちょっと人生の先輩！的な人に会ってヒントを得たい</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="text" name="want_to_meet_etc" class="form-control" placeholder="その他の方はこちら" value="" style="margin-top: 10px;">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">金融に向き合い学び、3年後には何がほしいですか？<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">そこを目指して成長していきましょう♪</p>
-                    <input type="text" id="want_to_something" name="want_to_something" class="form-control form-control-income" placeholder="" style="width: 100%; max-width: 400px; display: inline-block;"> <span style="font-size:12px;"></span>
-                </div>
-
-                <div class="regist-add-form-edit-el form_where_from">
-                    <label class="regist-add-form-edit-title">きんゆう女子。に最初に出会ったのはどこ？<span style="color:red; font-weight: normal;">*</span></label>
-                    <div class="radio_box_03 clear">
-                    <div class="clear">
-                        <input type="radio" value="検索して" name="where_from" id="where_from1" class="form-radio" placeholder="">
-                        <label for="where_from1">検索して</label>
-
-                        <input type="radio" value="新聞・雑誌の記事を見て" name="where_from" id="where_from9" class="form-radio" placeholder="">
-                        <label for="where_from9">新聞・雑誌の記事を見て</label>
-
-                        <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
-                        <label for="where_from3">Facebookを見て</label>
-
-                        <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
-                        <label for="where_from8">Instagramを見て</label>
-
-                        <input type="radio" value="Twitterを見て" name="where_from" id="where_from2" class="form-radio" placeholder="">
-                        <label for="where_from2">Twitterを見て</label>
-
-                        <input type="radio" value="お友達から" name="where_from" id="where_from4" class="form-radio" placeholder="">
-                        <label for="where_from4">お友達から</label>
-
-                        <input type="radio" value="お母さんから" name="where_from" id="where_from5" class="form-radio" placeholder="">
-                        <label for="where_from5">お母さんから</label>
-
-                        <input type="radio" value="先輩上司から" name="where_from" id="where_from6" class="form-radio" placeholder="">
-                        <label for="where_from6">先輩上司から</label>
-
-                            <div style="display: none;">
-                                <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="">
-                                <label for="where_from7">その他</label>
-                            </div>
-                        </div>
-
-                        <div style="margin-left: 20px;">
-                            <p class="regist-add-form-edit-subtitle">その他</p>
-                            <div class="othet_input">
-                                <input type="text" id="where_from_other" name="where_from_other" class="form-control" placeholder="その他の方はこちら" style="margin-top:10px;">
-                            </div>
-                        </div>
-
-                        <p class="regist-add-form-edit-subtitle" style="margin-top:30px;">他サイトで紹介されていた</p>
-                        <div class="othet_input">
-                            <input type="text" id="where_from_site" name="where_from_site" class="form-control" placeholder="良かったらサイト名を教えてください♪" style="margin-top:10px;">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">メンバーになろうと思ったきっかけ(いくつか選択してもok)<span style="color:red; font-weight: normal;">*</span></label>
-                    <div class="checkbox-list">
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="regist_triggers[]" id="regist_trigger1" value="ゆるりと金融（お金）について学びたいと思ったから">
-                            <label for="regist_trigger1" class="checkbox"></label>
-                            <span>ゆるりと金融（お金）について学びたいと思ったから</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="regist_triggers[]" id="regist_trigger2" value="しっかり金融（お金）について学びたいと思ったから">
-                            <label for="regist_trigger2" class="checkbox"></label>
-                            <span>しっかり金融（お金）について学びたいと思ったから</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="regist_triggers[]" id="regist_trigger3" value="やりたい夢や目標に向かってお金の計画をしたいから">
-                            <label for="regist_trigger3" class="checkbox"></label>
-                            <span>やりたい夢や目標に向かってお金の計画をしたいから</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="regist_triggers[]" id="regist_trigger4" value="資産づくりを今のうちから始めたいから">
-                            <label for="regist_trigger4" class="checkbox"></label>
-                            <span>資産づくりを今のうちから始めたいから</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="regist_triggers[]" id="regist_trigger5" value="コミュニティそのものに興味があったから">
-                            <label for="regist_trigger5" class="checkbox"></label>
-                            <span>コミュニティそのものに興味があったから</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="regist_triggers[]" id="regist_trigger6" value="ライフスタイルが変わってor変わりそうで自分のお金と未来について考えたいから">
-                            <label for="regist_trigger6" class="checkbox"></label>
-                            <span>ライフスタイルが変わってor変わりそうで自分のお金と未来について考えたいから</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="regist_triggers[]" id="regist_trigger7" value="何に気をつけたり注意すればいいか、お金の守りの部分を知りたいから">
-                            <label for="regist_trigger7" class="checkbox"></label>
-                            <span>何に気をつけたり注意すればいいか、お金の守りの部分を知りたいから</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="checkbox" name="regist_triggers[]" id="regist_trigger8" value="将来が少し不安だし周りの同世代の女性がお金についてどんなことを考えているか知りたいから">
-                            <label for="regist_trigger8" class="checkbox"></label>
-                            <span>将来が少し不安だし周りの同世代の女性がお金についてどんなことを考えているか知りたいから</span>
-                        </div>
-                        <div class="checkbox-list-item">
-                            <input type="text" name="regist_trigger_etc" class="form-control" placeholder="その他の方はこちら" value="" style="margin-top:10px;">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">きんゆう女子。を通してどんな自分になりたい？<span style="color:red; font-weight: normal;">*</span></label>
-                    <input type="text" id="future" name="future" class="form-control" placeholder="">
-                </div>
-
-                <div class="regist-add-form-edit-el form-radio-block">
                     <label class="regist-add-form-edit-title">コミュニティを通じて、ご自身でも情報発信したいですか？<span style="color:red; font-weight: normal;">*</span></label>
                     <p class="regist-add-form-edit-subtitle">成長日記、寄稿、SNS、企業さんとタイアップ(企画・座談会・アンバサダー)など</p>
                     <div class="radio_box_02 clear">
@@ -349,16 +132,10 @@
                     </div>
                 </div>
 
-                <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">個人で発信しているブログやSNSなど<span class="label label-primary">任意</span></label>
-                    <p class="regist-add-form-edit-subtitle">もしありましたら、ご入力をお願いします♪</p>
-                    <input type="text" id="url" name="url" class="form-control" placeholder="">
-                </div>
-
                 <div class="regist-add-form-edit-el regist-add-form-edit-el02">
                     <label class="regist-add-form-edit-title">ぜひメンバーさんや編集部に向けて自己紹介をお願いいたします♪<span style="color:red; font-weight: normal;">*</span></label>
                     <p class="regist-add-form-edit-subtitle">トライしてみたいこと、夢や目標、知りたいことや、おかねの"もやもや"など<br>＊匿名でご紹介させていただく場合がございます！<br>＊書いていただいた内容にあわせて、女子会や企業との企画にご招待する場合がございます♪</p>
-                    <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
+                    <textarea id="introduction" name="introduction" class='form-control' rows="4"></textarea>
                 </div>
 
                 <div class="form-btn tx-center">
@@ -450,44 +227,6 @@
             params.prefecture = $('[name="prefecture"]').val(); //都道府県
             params.not_know = $('[name="not_know"]:checked').val(); //金融ワカラナイ度
             params.job_kind = $('[name="job_kind"]:checked').val();
-
-            // きんゆう女子。コミュニティで何を学んだり知りたい？
-            params.want_to_learns = $('[name="want_to_learns[]"]:checked').map(function(){
-              return $(this).val();
-            }).get();
-            var want_to_learn_etc = $('[name="want_to_learn_etc"]').val();
-            if (want_to_learn_etc) {
-                params.want_to_learns.push(want_to_learn_etc);
-            }
-
-            // きんゆう女子。コミュニティではどんな発見や出会いがほしい？
-            params.want_to_meets = $('[name="want_to_meets[]"]:checked').map(function(){
-              return $(this).val();
-            }).get();
-            var want_to_meet_etc = $('[name="want_to_meet_etc"]').val();
-            if (want_to_meet_etc) {
-                params.want_to_meets.push(want_to_meet_etc);
-            }
-
-            // 金融に向き合い学び、3年後には何がほしいですか？
-            params.want_to_something = $('[name="want_to_something"]').val();
-
-            // きんゆう女子。に最初に出会ったのはどこ？
-            params.where_from = $("[name=where_from]:checked").val();
-            params.where_from_site = $('[name=where_from_site]').val();
-            params.where_from_other = $('[name=where_from_other]').val();
-
-            // メンバーになろうと思ったきっかけ
-            params.regist_triggers = $('[name="regist_triggers[]"]:checked').map(function(){
-              return $(this).val();
-            }).get();
-            var regist_trigger_etc = $('[name="regist_trigger_etc"]').val();
-            if (regist_trigger_etc) {
-                params.regist_triggers.push(regist_trigger_etc);
-            }
-
-            // きんゆう女子。を通してどんな自分になりたい？
-            params.future = $('[name="future"]').val();
 
             // コミュニティを通じて、ご自身でも情報発信したいですか？
             params.transmission = $("[name=transmission]:checked").val();
