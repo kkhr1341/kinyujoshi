@@ -31,11 +31,11 @@
           <h2 class="about-member-title">マイページでできること</h2>
           <div class="about-member-list">
             <ul>
-              <li><span>01</span>いち早くWEBレポートをチェックできます。全てのレポートが、掲載後1カ月間はメンバー限定となります。<br>*それ以外にもメンバー限定レポートがあります。</li>
+              <li><span>01</span>いち早くWEBレポートをチェックできます。全てのレポートが、掲載後1カ月間はメンバー限定となります。<br>*その他にもメンバー限定レポートがあります。</li>
               <li><span>02</span>レポートをお気に入り登録して、見たいときにすぐ読み返すことができます。</li>
               <li><span>03</span>女子会参加履歴を見て、振り返りができます。</li>
               <li><span>04</span>一部のメンバーのプロフィールをみて、自分の判断軸を養うヒントにできます。</li>
-              <li><span>05</span>診断チャートで自分がどの<a href="https://kinyu-joshi.jp/kinjo_check">「きん女。タイプ」なのか診断することができます。</a></li>
+              <li><span>05</span><a href="https://kinyu-joshi.jp/kinjo_check">「きん女。診断」</a>で自分がどのきん女。タイプなのか診断することができます。</li>
             </ul>
           </div>
           <img class="login-illust" src="/images/login/login-mypage-illust.png">
