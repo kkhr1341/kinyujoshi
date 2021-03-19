@@ -7,12 +7,6 @@
 
             <p class="my-content-title"><span>アカウント設定</span></p>
 
-            {if $profile.publish == '1'}
-            <div class="admin-account-el">
-              <a class="admin-account-title" href="/members/{$user.id}" target="_blank">わたしの公開プロフィールを確認する</a>
-            </div>
-            {/if}
-
             <div class="admin-account-el">
                 <p class="admin-account-title admin-account-title1">クレジットカード管理</p>
                 <div class="admin-account-el-open admin-account-el-open1 credit-list-area" style="display: none;">
