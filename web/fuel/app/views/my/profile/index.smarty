@@ -42,6 +42,11 @@
       <div class="admin-normal-profile-btn">
         <a href="/my/profile/edit" class='btn btn-primary'>プロフィールを編集する</a>
       </div>
+      {if $profile.publish == '1'}
+      <div class="admin-account-el" style="margin-top:40px;">
+        <a class="admin-account-title" href="/members/{$user.id}" target="_blank">わたしの公開プロフィールを確認する</a>
+      </div>
+      {/if}
     </div>
   </div>
 </div>
