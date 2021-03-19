@@ -52,16 +52,16 @@ services:
       - "1025:1025"
     environment:
       - TZ=Asia/Tokyo
-#  composer:
-#    image: composer/composer:alpine
-#    environment:
-#      TZ: "Asia/Tokyo"
-#    volumes:
-#      - ~/.composer/auth.json:/root/composer/auth.json
-#      - ./web:/app
-#      - ./php/php.ini:/usr/local/etc/php/php.ini
-#    working_dir: /app
-#
+  composer:
+    image: composer:1.9.3
+    environment:
+      TZ: "Asia/Tokyo"
+    volumes:
+      - ~/.composer/auth.json:/root/composer/auth.json
+      - ./web:/app
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+    working_dir: /app
+
 #  phpmyadmin:
 #    image: phpmyadmin/phpmyadmin
 #    environment:
