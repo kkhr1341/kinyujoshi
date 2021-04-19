@@ -1,6 +1,10 @@
+<div class="swiper-slide" style="background: url(/images/event/crowdfunding.jpg) center center / cover no-repeat;">
+  <a class="js-track" href="https://readyfor.jp/projects/kinjo-challenge" data-category="slide-link" data-action="click" data-value="4">
+  </a>
+</div>
+
 <!-- 女子会TOP表示 -->
 {if $display_top_event}
-
 
 <div class="swiper-slide" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;">
     {if empty($display_top_event.specific_link)}
@@ -20,11 +24,6 @@
     {/if}
 </div>
 {/if}
-
-<div class="swiper-slide" style="background: url(/images/event/crowdfunding.jpg) center center / cover no-repeat;">
-  <a class="js-track" href="https://readyfor.jp/projects/kinjo-challenge" data-category="slide-link" data-action="click" data-value="4">
-  </a>
-</div>
 
 {foreach from=$blogs_pick item=blog name=loopname}
 
