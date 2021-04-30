@@ -1,8 +1,3 @@
-<div class="swiper-slide" style="background: url(/images/event/crowdfunding.jpg) center center / cover no-repeat;">
-  <a class="js-track" href="https://readyfor.jp/projects/kinjo-challenge" data-category="slide-link" data-action="click" data-value="4">
-  </a>
-</div>
-
 <!-- 女子会TOP表示 -->
 {if $display_top_event}
 
