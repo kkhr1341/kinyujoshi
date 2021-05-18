@@ -37,6 +37,10 @@
             <div class="kinyu-event-list-el">
               <a href="/joshikai/{$event.code}">
                 <div class="kinyu-event-list-left" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
+                  {if $event.pr == 1}
+                    <!-- PR用イメージ挿入箇所 -->
+                    <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
+                  {/if}
                 </div>
 
                 {if $event.event_category == "女子会"}
