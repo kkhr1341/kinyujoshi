@@ -990,6 +990,13 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   .with_ki-label{
     top: 3px;
   }
+  .kinyu-top-report-list .with_ki-label img {
+    width: 70px;
+  }
+  .kinyu-top-report-list .with_ki-label {
+    top: 2px;
+    right: 2px;
+  }
 }
 
 .kinyu-top-report-list .img-box {
