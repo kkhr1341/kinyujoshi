@@ -110,12 +110,12 @@ var $resArray02 = $resArray[1];
           <div class="js-free-payment-container"{if $event.fee > 0} style="display: none;"{/if}>
 
             <div class="fee-open-el">
-              <label>お名前（フルネーム）</label>
-              <input type="text" id="name" name="name" class="free-payment-input" placeholder="" value="{$user.name}">
+              <label>ニックネーム</label>
+              <input type="text" id="name" name="name" class="free-payment-input" placeholder="" value="">
             </div>
             <div class="fee-open-el mb30">
               <label>メールアドレス</label>
-              <input type="text" id="email" name="email" class="free-payment-input" placeholder="" value="{$user.email}">
+              <input type="text" id="email" name="email" class="free-payment-input" placeholder="" value="">
             </div>
 
             <div class="kinyu-joshikai-tickets-payment-list">
