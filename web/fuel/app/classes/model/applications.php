@@ -19,7 +19,7 @@ class Applications extends Base
 
         $val->add('cardselect');
 
-        $val->add('name', 'お名前（フルネーム）');
+        $val->add('name', 'ニックネーム');
 
         $val->add('email', 'メールアドレス');
 
@@ -376,7 +376,7 @@ class Applications extends Base
                 ->where('application_num', '>', 0)
                 ->where('code', '=', $application['event_code'])
                 ->execute();
-        
+
             $db->commit_transaction();
 
             // サンクスメール
