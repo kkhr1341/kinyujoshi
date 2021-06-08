@@ -110,11 +110,11 @@
           {/if}
 
           {if $application.cancel == 0}
-            <a class="cancel-link" href="javascript:void(0);" data-event_code={$events.code} data-application_code="{$application.code}">キャンセルする</a>
+            <a class="cancel-link" href="javascript:void(0);" data-event_code={$events.code} data-application_code="{$application.code}">キャンセルする（不要）</a>
           {/if}
 
           {if $application.participated eq ''}
-            <a class="participated-link" href="javascript:void(0);" data-application_code="{$application.code}">参加済み</a>
+            <a class="participated-link" href="javascript:void(0);" data-application_code="{$application.code}">参加済み（不要）</a>
           {else}
             <p>参加済み</p>
           {/if}
