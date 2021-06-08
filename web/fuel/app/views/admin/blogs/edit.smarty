@@ -159,7 +159,7 @@
             </div>
             <div class="form-right">
                 <div class="edit-block-menu">
-                    {if in_array('report_admin', $roles) || in_array('admin', $roles)}
+                    {if (Auth::has_access('blogs.publish'))}
                         <li>
                             <button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button>
                         </li>
@@ -171,9 +171,11 @@
                         <button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー
                         </button>
                     </li>
+                    {if (Auth::has_access('blogs.delete'))}
                     <li>
                         <button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button>
                     </li>
+                    {/if}
                 </div>
             </div>
         </div>

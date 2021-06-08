@@ -255,7 +255,7 @@
                       <li><button class="edit-block-menu-btn draft-btn" type="button" id="save_closed">下書き保存</button></li>
                       <!--<li><button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button></li>-->
                     {else}
-                      {if in_array('report_admin', $roles|default:'')}
+                      {if (Auth::has_access('events.publish'))}
                       <li>
                         <button class="edit-block-menu-btn release-btn" type="button" id="save">公開</button>
                       </li>
@@ -269,9 +269,11 @@
                       <li>
                         <button class="edit-block-menu-btn preview-btn preview-blog" type="button" id="preview">プレビュー</button>
                       </li>
+                      {if (Auth::has_access('events.delete'))}
                       <li>
                         <button class="edit-block-menu-btn delete-btn" type="button" id="delete">削除</button>
                       </li>
+                      {/if}
                     {/if}
 
                     <p class="sub-description"><span style="red">※</span>公開する場合は、一度下書き保存してから公開してください。</p>
