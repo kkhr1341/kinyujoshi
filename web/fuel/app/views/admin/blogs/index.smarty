@@ -17,7 +17,6 @@
   {if in_array('report_admin', $roles) || in_array('admin', $roles)}
   <li><a href="#tab3" data-toggle="tab">すべて</a></li>
   <li><a href="#tab5" data-toggle="tab"><span class="count-badge">{$apply_blogs|@count}</span>申請中</a></li>
-  <li><a href="#tab6" data-toggle="tab"><span class="count-badge">{$update_blogs|@count}</span>更新依頼中</a></li>
   <li><a href="#tab7" data-toggle="tab"><span class="count-badge">{$delete_blogs|@count}</span>削除依頼中</a></li>
   {/if}
 </ul>
@@ -183,39 +182,6 @@
 				{foreach from=$apply_blogs item=user_blogs_item}
 					<tr class="blogs pointer" code="{$user_blogs_item.code}" onclick="location.href='report/create?user_blog_code={$user_blogs_item.code}'">
 						<td>
-							{if $user_blogs_item.status == 0}下書き{/if}
-							{if $user_blogs_item.status == 2}申請中{/if}
-							{if $user_blogs_item.status == 3}更新依頼中{/if}
-							{if $user_blogs_item.status == 4}削除依頼中{/if}
-							{if $user_blogs_item.status == 5}確認中{/if}
-						</td>
-						<td>{$user_blogs_item.title}</td>
-						<td>{$user_blogs_item.created_at|date_format:"%Y/%m/%d"}</td>
-						<td>{$user_blogs_item.updated_at|date_format:"%Y/%m/%d"}</td>
-					</tr>
-				{/foreach}
-			</table>
-		{/if}
-	</div>
-
-	<div class="tab-pane" id="tab6">
-		{if sizeof($update_blogs) == 0}
-			<div class="alert alert-warning mt20" role="alert">記事はありません</div>
-		{else}
-			<table class="table table-hover mt20">
-				<thead>
-				<tr>
-					<th>状態</th>
-					<th>タイトル</th>
-					<th>作成日時</th>
-					<th>更新日時</th>
-				</tr>
-				</thead>
-				{foreach from=$update_blogs item=user_blogs_item}
-					<tr class="blogs pointer" code="{$user_blogs_item.code}" onclick="location.href='report/edit/{$user_blogs_item.blog_code}?user_blog_code={$user_blogs_item.code}'">
-						<td>
-							{if $user_blogs_item.status == 1 && strtotime($user_blogs_item.open_date) < time()}公開{/if}
-							{if $user_blogs_item.status == 1 && strtotime($user_blogs_item.open_date) > time()}公開待ち{/if}
 							{if $user_blogs_item.status == 0}下書き{/if}
 							{if $user_blogs_item.status == 2}申請中{/if}
 							{if $user_blogs_item.status == 3}更新依頼中{/if}
