@@ -26,15 +26,12 @@
       <div id="chart_div8" class="wide-chart-el"></div>
     </div>
 
-
-    {if in_array('admin', $roles|default:'')}
     <div class="clearw float_right" style="margin-bottom: 24px;">
       <a class="btn btn-primary" id="broadcast_mail" href="#" role="button">メールを一斉送信する</a>
-      {if $from_company==TRUE}
+      {if in_array('admin', $roles|default:'') and $from_company==TRUE}
       <a class="btn btn-primary" id="download_csv" href="/admin/joshikai/memberlist/{$events.code}" role="button">CSVダウンロード</a>
       {/if}
     </div>
-    {/if}
 
     <table class="table joshikai-attend-detail-table">
 
@@ -85,38 +82,34 @@
           {/if}
         </td>
         <td class="subject4 link-area">
-          {if in_array('admin', $roles|default:'')}
-          {if $application.email != ''}
-            <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
-          {/if}
-          {/if}
-
-          {if in_array('admin', $roles|default:'')}
-          {if $application.username != 'guest' && $from_company==TRUE && $application.member_regist_code != ''}
-            <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
-          {/if}
-          {/if}
-
-          {if in_array('admin', $roles|default:'')}
-          {if $application.amount gt '0'}
-            {if $application.payment_cancel eq '1'}
-              <p>決済取り消し</p>
-            {elseif $application.sale eq '0'}
-              <a class="sales-link" href="javascript:void(0);" data-application_code="{$application.code}">支払いを確定する</a>
-            {else}
-              <p>支払確定</p>
+          {if in_array('admin', $roles|default:'') && $from_company==TRUE}
+            {if $application.email != ''}
+              <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
             {/if}
-          {/if}
-          {/if}
 
-          {if $application.cancel == 0}
-            <a class="cancel-link" href="javascript:void(0);" data-event_code={$events.code} data-application_code="{$application.code}">キャンセルする（不要）</a>
-          {/if}
+            {if $application.username != 'guest' && $from_company==TRUE && $application.member_regist_code != ''}
+              <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
+            {/if}
 
-          {if $application.participated eq ''}
-            <a class="participated-link" href="javascript:void(0);" data-application_code="{$application.code}">参加済み（不要）</a>
-          {else}
-            <p>参加済み</p>
+            {if $application.amount gt '0'}
+              {if $application.payment_cancel eq '1'}
+                <p>決済取り消し</p>
+              {elseif $application.sale eq '0'}
+                <a class="sales-link" href="javascript:void(0);" data-application_code="{$application.code}">支払いを確定する</a>
+              {else}
+                <p>支払確定</p>
+              {/if}
+            {/if}
+
+            {if $application.cancel == 0}
+              <a class="cancel-link" href="javascript:void(0);" data-event_code={$events.code} data-application_code="{$application.code}">キャンセルする（不要）</a>
+            {/if}
+
+            {if $application.participated eq ''}
+              <a class="participated-link" href="javascript:void(0);" data-application_code="{$application.code}">参加済み（不要）</a>
+            {else}
+              <p>参加済み</p>
+            {/if}
           {/if}
         </td>
       </tr>
@@ -165,9 +158,9 @@
         </td>
         <td class="subject3">
           <p>申し込み日時：<br/>{$application.created_at}</p>
-          <p>キャンセル日時：<br/>{$application.cancel_at}</p> 
+          <p>キャンセル日時：<br/>{$application.cancel_at}</p>
           {if $application.payment_cancel_at}
-            <p>支払いキャンセル日時：<br/>{$application.payment_cancel_at}</p> 
+            <p>支払いキャンセル日時：<br/>{$application.payment_cancel_at}</p>
           {/if}
         </td>
         <td class="subject4 link-area">
