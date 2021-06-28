@@ -63,7 +63,7 @@
           </div>
           <div class="fee-open-el">
             <label>メールアドレス</label>
-            <input type="text" id="email" name="email" class="" placeholder="" value="">
+            <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
           </div>
         </div>
 
