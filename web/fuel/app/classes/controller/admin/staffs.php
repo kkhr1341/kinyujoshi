@@ -36,6 +36,7 @@ class Controller_Admin_Staffs extends Controller_Adminbase
     $this->data['grants'] = array(
       array('code' => -1, 'name' => 'Banned（削除）'),
       array('code' => 1, 'name' => 'メンバー'),
+      array('code' => 2, 'name' => '一般オフィシャルメンバー'),
       array('code' => 30, 'name' => '（旧）オフィシャルメンバー（削除）'),
       array('code' => 40, 'name' => '編集部'),
       array('code' => 41, 'name' => '(新）オフィシャルメンバー'),

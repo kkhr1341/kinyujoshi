@@ -87,6 +87,9 @@ return array(
     1    => array('name' => 'メンバー', 'roles' => array(
         'user'
     )),
+    2    => array('name' => '一般オフィシャルメンバー', 'roles' => array(
+        'general_official_member'
+    )),
     30   => array('name' => '（旧）オフィシャルメンバー', 'roles' => array(
         'user',
         'official_member',
@@ -186,6 +189,11 @@ return array(
     ),
     'user' => array(
       'authors' => array('read', 'create', 'edit', 'delete'),
+      'userblogs' => array('read', 'create', 'edit', 'delete'),
+    ),
+    'general_official_member' => array(
+      'authors' => array('read', 'create', 'edit', 'delete'),
+      'userblogs' => array('read', 'create', 'edit', 'delete'),
     ),
 
     /**
