@@ -76,3 +76,11 @@ change_administrator:
 bash:
 	docker-compose run --rm web bash
 .PHONY: bash
+
+ps:
+	docker-compose ps
+.PHONY: ps
+
+open:
+	open http:/localhost
+.PHONY: open

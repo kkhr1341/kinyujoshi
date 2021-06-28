@@ -9,7 +9,7 @@ RUN docker-php-ext-install mysql pdo_mysql mysqli gd iconv mcrypt mbstring zip
 # image magic
 RUN apt-get install -y libmagickwand-dev
 RUN pecl install imagick
-RUN docker-php-ext-enable imagick
+#RUN docker-php-ext-enable imagick
 
 RUN pecl install xdebug-2.4.0
 RUN docker-php-ext-enable xdebug
