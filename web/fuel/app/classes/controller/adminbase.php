@@ -111,7 +111,7 @@ class Controller_Adminbase extends Controller_Template
 //        set_exception_handler(function ($e) {
 //            $this->error($e->getMessage());
 //        });
-//        \View_Smarty::parser()->registerPlugin('function', 'to_thumb', array($this,'smarty_function_to_thumb'));
+        \View_Smarty::parser()->registerPlugin('function', 'to_thumb', array($this,'smarty_function_to_thumb'));
     }
 
     public function smarty_function_to_thumb($params, $smarty)
