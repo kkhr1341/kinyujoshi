@@ -190,11 +190,11 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['event'] = Events::getByCode('events', $code);
 
         $username = \Auth::get('username');
-        $profile = Profiles::get($username);
-//        $this->data['user'] = array(
+//        $profile = Profiles::get($username);
+        $this->data['user'] = array(
 //            'name' => $profile['name'],
-//            'email' => \Auth::get('email'),
-//        );
+            'email' => \Auth::get('email'),
+        );
 
         $this->template->title = 'イベント詳細｜きんゆう女子。';
         $this->data['join_status'] = Applications::join_status($code, $username);

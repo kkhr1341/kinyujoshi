@@ -115,7 +115,7 @@ var $resArray02 = $resArray[1];
             </div>
             <div class="fee-open-el mb30">
               <label>メールアドレス</label>
-              <input type="text" id="email" name="email" class="free-payment-input" placeholder="" value="">
+              <input type="text" id="email" name="email" class="free-payment-input" placeholder="" value="{$user.email}">
             </div>
 
             <div class="kinyu-joshikai-tickets-payment-list">
