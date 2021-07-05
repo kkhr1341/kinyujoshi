@@ -11,6 +11,8 @@
     <div class="official-member-badge"><img src="/images/my/om-badge.png"></div>
     {elseif in_array('general_official_member', $roles|default:'')}
     <div class="official-member-badge"><img src="/images/my/general-om-badge.png"></div>
+    {elseif in_array('editor', $roles|default:'')}
+    <div class="official-member-badge"><img src="/images/my/editor-badge.png"></div>
     {/if}
 
     <!-- プロフィール画像 -->
