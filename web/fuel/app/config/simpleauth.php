@@ -84,10 +84,10 @@ return array(
         'banned'
     )),
     0    => array('name' => 'Guests', 'roles' => array()),
-    1    => array('name' => 'メンバー', 'roles' => array(
+    1    => array('name' => '権限LV.6', 'roles' => array(
         'user'
     )),
-    2    => array('name' => '一般オフィシャルメンバー', 'roles' => array(
+    2    => array('name' => '権限LV.5', 'roles' => array(
         'general_official_member'
     )),
     30   => array('name' => '（旧）オフィシャルメンバー', 'roles' => array(
@@ -96,19 +96,19 @@ return array(
         'joshikai_contribute',
         'report_contribute'
     )),
-    40   => array('name' => '編集部', 'roles' => array(
+    40   => array('name' => '権限LV.2', 'roles' => array(
         'user',
         'editor',
         'joshikai_admin',
         'report_admin'
     )),
-    41   => array('name' => '(新）オフィシャルメンバー', 'roles' => array(
+    41   => array('name' => '権限LV.3', 'roles' => array(
         'user',
         'official_member',
         'joshikai_contribute',
         'report_contribute'
     )),
-    42   => array('name' => '法人', 'roles' => array(
+    42   => array('name' => '権限LV.4', 'roles' => array(
         'user',
         'corporate',
         'joshikai_contribute',
@@ -121,7 +121,7 @@ return array(
         'report_admin',
         'admin'
     )),
-    100  => array('name' => '社員・事務局', 'roles' => array(
+    100  => array('name' => '権限LV.1', 'roles' => array(
         'user',
         'official_member',
         'joshikai_admin',
