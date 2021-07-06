@@ -123,6 +123,7 @@
                 <p class="main-title">同世代で「きんゆう」についてゆる〜くおしゃべりしませんか？</p>
                 <p class="description">メンバーになると、特別女子会やミニツアーに参加できたり、新しいサービスをいち早く体験できたりします。私たち自ら情報を取りに行き、感想をシェアしながら自分の生きる道をみつけましょう。お金について語れるお友だちができるかも！</p>
                 <a class="link-to js-track" href="/login_regist" data-category="toppage-link" data-action="click" data-value="1">メンバー登録はこちら</a>
+                <a class="link-to official-member-regist js-track" href="https://official.kinyu-joshi.jp/" data-category="pc-top-link" data-action="click" data-value="1">オフィシャルメンバー登録はこちら</a>
               </div>
             </div>
           </div>
@@ -199,18 +200,6 @@
           <p>スペシャルコンテンツ</p>
           <div class="special-contents-banner-wrapper">
             <ul class="special-contents-list">
-              <li><a href="https://with.kinyu-joshi.jp/mysevenbk" target="_blank"><img src="images/special_contents/mysevenbk.png"></a></li>
-              <li><a href="/sanpo_hiroshima" target="_blank"><img src="images/special_contents/hiroshima_header_sp.png"></a></li>
-              <li><a href="https://kinyu-joshi.jp/contents/cashless" target="_blank"><img src="images/special_contents/cashlesslife.png"></a></li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="kinyu-top-maincontent-block-el">
-          <div class="kinyu-top-banner-area">
-            <ul class="clear">
-              <!-- 診断チャート -->
               <li>
                 <a class="js-track" target="_blank" href="/kinjo_check" data-category="sp-top-link" data-action="click" data-value="1">
                   <img class="" src="/images/diagnosticchart/og-main.jpg">
@@ -249,8 +238,6 @@
             </ul>
           </div>
         </div>
-
-
       </div>
     </div>
   </div>

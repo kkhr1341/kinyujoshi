@@ -1,50 +1,15 @@
-<!-- <footer class="singlepage-footer">
-  <img class="sp footer-icon" src="/images/new/footer-icon.png" class="footer-icon">
-  <div class="footer-logo">
-    <a class="js-track" href="/about" data-category="pc-top-link" data-action="click" data-value="1"><img src="/images/kinyu-logo-top.png"></a>
-  </div>
-  <a class="sp navi-link-top" href="/">トップページへ</a>
-  <div class="footer-menu">
-    <div class="navi_kinyu-submenu-el clear">
-      <a class="js-track" href="/company">運営会社</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a class="js-track" href="/faq">よくあるご質問</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a class="js-track" href="/privacy">プライバシーポリシー</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a class="js-track" href="/legal">特定商取引法に基づく表記</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a class="js-track" href="/service">会員規約</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a class="js-track" href="/link_policy">リンクポリシー</a>
-    </div>
-    <div class="navi_kinyu-submenu-el clear">
-      <a class="js-track" href="/contact">お問い合わせ</a>
-    </div>
-  </div>
-  <p class="navi_kinyu-submenu-copy">
-    <span>© TOE THE LINE Inc. {date ("Y")}  All rights reserved.</span>
-    掲載の写真・記事・イラスト等の全てのコンテンツの無断転写・転載を禁じます。
-  </p>
-</footer> -->
-
 <footer>
   <div class="footer-inner clear">
     <div class="footer-logo">
       <a href="/"><img src="/images/top-circle-logo.png"></a>
     </div>
-    <div class="new_area">
+    <!-- <div class="new_area">
       <a class="js-track" href="/login_regist" data-category="common-footer-link" data-action="click" data-value="1"><img src="/images/banner/firsttime_sp.jpg"></a>
-    </div>
+    </div> -->
 
-    <div class="link-to-top sp">
+    <!-- <div class="link-to-top sp">
       <a class="js-track" href="/" data-category="sp-footer-link" data-action="click" data-value="1">きんゆう女子。トップ</a>
-    </div>
+    </div> -->
 
     <div class="footer-menu pc">
       <p class="footer-menu-title"><span>きんゆう女子。について</span></p>
@@ -86,6 +51,5 @@
   </div>
 </footer>
 <p class="navi_kinyu-submenu-copy">
-  <span>© <a href="https://toetheline.jp/" style="font-size:11px;">TOE THE LINE Inc. {date ("Y")}</a> All rights reserved. No reproduction or republication without written permission.　
-<br>掲載の記事・写真・イラスト等のすべてのコンテンツの無断複写・転載を禁じます。</span>
+  <span>© <a href="https://toetheline.jp/" style="font-size:11px;">TOE THE LINE Inc. {date ("Y")}</a> All rights reserved.</span>
 </p>

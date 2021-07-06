@@ -6,22 +6,17 @@
   </div>
 </header>
 
+<div class="kinyu-sp-header-menu">
+  <img class="menu-trigger" src="/images/menu/menu.png">
+</div>
+
 <div class="kinyu-sp-header">
-  <div class="kinyu-sp-header-menu">
-    <img class="menu-trigger" src="/images/menu/menu.png">
-  </div>
   <div class="kinyu-sp-menu-block">
     <ul>
+      <li class="menu-block-el1"><a href="/login_regist#regist-form" onClick="ga('send', 'event', 'sp-header-link', 'click', 'joshikai', 1);"><img src="/images/menu/sp-navi-member.png"></a></li>
+      <li class="menu-block-el2"><a href="https://official.kinyu-joshi.jp/" onClick="ga('send', 'event', 'sp-header-link', 'click', 'report', 1);"><img src="/images/menu/sp-navi-officialmember.png"></a></li>
+      <li class="menu-block-el3"><a href="/report" onClick="ga('send', 'event', 'sp-header-link', 'click', 'report', 1);"><img src="/images/menu/sp-navi-support.png"></a></li>
       <!-- {if in_array('user', $roles) || in_array('admin', $roles)}
-        <li class="menu-block-el2"><a href="/joshikai" onClick="ga('send', 'event', 'sp-header-link', 'click', 'joshikai', 1);"><img src="/images/menu/under-menu-joshikai.png"></a></li>
-        <li class="menu-block-el3"><a href="/my" onClick="ga('send', 'event', 'sp-header-link', 'click', 'my', 1);"><img src="/images/menu/under-menu-my.png"></a></li>
-      {else}
-        <li class="menu-block-el1"><a href="/login_regist" onClick="ga('send', 'event', 'sp-header-link', 'click', 'login_regist', 1);"><img src="/images/menu/under-menu-member.png"></a></li>
-        <li class="menu-block-el2"><a href="/joshikai" onClick="ga('send', 'event', 'sp-header-link', 'click', 'joshikai', 1);"><img src="/images/menu/under-menu-joshikai.png"></a></li>
-        <li class="menu-block-el3"><a href="/my" onClick="ga('send', 'event', 'sp-header-link', 'click', 'my', 1);"><img src="/images/menu/under-menu-my.png"></a></li>
-      {/if} -->
-
-      {if in_array('user', $roles) || in_array('admin', $roles)}
         <li class="menu-block-el1"><a href="/joshikai" onClick="ga('send', 'event', 'sp-header-link', 'click', 'joshikai', 1);"><img src="/images/menu/joshikai1.png"></a></li>
         <li class="menu-block-el2"><a href="/report" onClick="ga('send', 'event', 'sp-header-link', 'click', 'report', 1);"><img src="/images/menu/report1.png"></a></li>
         <li class="menu-block-el3"><a href="/my" onClick="ga('send', 'event', 'sp-header-link', 'click', 'my', 1);"><img src="/images/menu/mypage1.png"></a></li>
@@ -29,7 +24,7 @@
         <li class="menu-block-el1"><a href="/joshikai" onClick="ga('send', 'event', 'sp-header-link', 'click', 'joshikai', 1);"><img src="/images/menu/joshikai1.png"></a></li>
         <li class="menu-block-el2"><a href="/login_regist" onClick="ga('send', 'event', 'sp-header-link', 'click', 'login_regist', 1);"><img src="/images/menu/member1.png"></a></li>
         <li class="menu-block-el3"><a href="/my" onClick="ga('send', 'event', 'sp-header-link', 'click', 'my', 1);"><img src="/images/menu/login1.png"></a></li>
-      {/if}
+      {/if} -->
     </ul>
   </div>
 </div>
