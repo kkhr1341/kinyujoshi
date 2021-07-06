@@ -606,6 +606,7 @@ opacity: .5;
   padding: 24px 0px 72px;
 }
 .kinyu-top-maincontent-block {
+  margin-bottom: 80px;
 }
 .kinyu-top-maincontent-block-el {
   padding: 72px 0px;
@@ -924,13 +925,22 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 .kinyu-top-member-list .text-box .link-to {
   display: block;
   background: #8ddcd1;
-  width: 200px;
+  width: 300px;
   text-align: center;
-  padding: 8px 20px;
+  padding: 10px 0px;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
   transition: .5s;
+}
+.kinyu-top-member-list .text-box .link-to.official-member-regist {
+  margin-top: 12px;
+  background: -moz-linear-gradient(top left, #EDFAF8, #FFF7F4);
+  background: -webkit-linear-gradient(top left, #EDFAF8, #FFF7F4);
+  background: linear-gradient(to bottom right, #EDFAF8, #FFF7F4);
+  border: 1px solid #b1b1b1;
+  color: #444;
+  font-weight: normal;
 }
 
 

@@ -1,3 +1,8 @@
+<div class="swiper-slide" style="background: url(/images/banner/oficcial-member.jpg) center center / cover no-repeat;">
+  <a class="js-track" href="https://official.kinyu-joshi.jp/" data-category="slide-link" data-action="click" data-value="4">
+  </a>
+</div>
+
 <!-- 女子会TOP表示 -->
 {if $display_top_event}
 
