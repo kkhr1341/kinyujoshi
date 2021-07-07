@@ -1,260 +1,161 @@
 <div class="registel-container">
-<form name="form1">
+    <form name="form1">
         <div class="singlepage-form-block">
-          <div class="form-group">
-            <label class="form-title">お名前 <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">フルネームで入力してください。</p>
-            <input type="text" id="name" class="form-control" placeholder="">
-          </div>
-          <div class="form-group">
-            <label class="form-title">ふりがな <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">お名前のふりがなを入力してください。</p>
-            <input type="text" id="name_kana" class="form-control" placeholder="">
-          </div>
-          <div class="form-group">
-            <label class="form-title">ご年齢 <span class="label label-danger">必須</span></label>
-            <input type="text" id="age" class="form-control" placeholder="">
-          </div>
-          <div class="form-group form-radio-block">
-            <label class="form-title">きんゆうワカラナイ度 <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">あなたのきんゆうワカラナイ度を教えてください(^ ^)!</p>
-            <div class="radio_box clear">
-              <input type="radio" value="軽度" name="not_know" id="not_know1" class="form-radio" placeholder="">
-              <label for="not_know1" class="form-long">軽度</label>
-              <input type="radio" value="中度" name="not_know" id="not_know2" class="form-radio" placeholder="">
-              <label for="not_know2" class="form-long">中度</label>
-              <input type="radio" value="重度" name="not_know" id="not_know3" class="form-radio" placeholder="">
-              <label for="not_know3" class="form-long">重度</label>
-              <input type="radio" value="それすらワカラナイ" name="not_know" id="not_know4" class="form-radio" placeholder="">
-              <label for="not_know4">それすらワカラナイ</label>
+
+            <div class="form-group">
+                <label class="form-title">メンバー登録日 <span class="label label-danger">必須</span></label>
+                <div class='input-group date datetimepicker'>
+                    <input type='text' class="form-control" id="created_at" value="{date('YY/mm/dd HH:ii')}"/>
+                    <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+                </div>
             </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-title">お金について知りたいこと・興味のあること <span class="label label-danger">必須</span></label>
-            <input type="text" id="interest" class="form-control" placeholder="(例)投資？個人事業主のこと？お年玉？">
-          </div>
-          <div class="form-group">
-            <label class="form-title">きんゆう女子。でどんな出会いや発見がほしいですか？ <span class="label label-danger">必須</span></label>
-            <input type="text" id="ask" class="form-control" placeholder="(例)お金について話せる仲間">
-          </div>
-          <div class="form-group">
-            <label class="form-title">メールアドレス <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">連絡がとりやすいアドレスを入力してください。</p>
-            <input type="text" id="email" class="form-control" placeholder="">
-          </div>
-          <div class="form-group">
-            <label class="form-title">3年後の自分の年収をどのくらいにしたいですか？ <span class="label label-danger">必須</span></label>
-            <input type="text" id="income" class="form-control" placeholder="">
-          </div>
-
-          <div class="form-group form_where_from">
-            <label class="form-title">どこで、きんゆう女子。を知りましたか？ <span class="label label-danger">必須</span></label>
-            <div class="radio_box_03 clear">
-              
-              <input type="radio" value="ホームページを見て" name="where_from" id="where_from1" class="form-radio" placeholder="">
-              <label for="where_from1" class="form-long">検索して</label>
-              
-              <!-- <input type="radio" value="雑誌を見て" name="where_from" id="where_from2" class="form-radio" placeholder="">
-              <label for="where_from2" class="form-long">雑誌を見て</label> -->
-
-              <input type="radio" value="Facebookを見て" name="where_from" id="where_from3" class="form-radio" placeholder="">
-              <label for="where_from3">Facebookを見て</label>
-
-              <input type="radio" value="Instagramを見て" name="where_from" id="where_from8" class="form-radio" placeholder="">
-              <label for="where_from8">Instagramを見て</label>
-              
-              <input type="radio" value="友人のご紹介" name="where_from" id="where_from4" class="form-radio" placeholder="">
-              <label for="where_from4" class="form-long">友人のご紹介</label>
-              
-              <input type="radio" value="他サイトで紹介されていた。" name="where_from" id="where_from6" class="form-radio" placeholder="">
-              <label for="where_from6">他サイトで紹介されていた。</label>
-
-              <input type="radio" value="その他" name="where_from" id="where_from7" class="form-radio" placeholder="">
-              <label for="where_from7">その他</label>
-              <div class="othet_input">
-                <input type="text" id="where_from_other" class="form-control" placeholder="その他の方はこちら">
-              </div>
-
+            <div class="form-group">
+                <label class="form-title">お名前 <span class="label label-danger">必須</span></label>
+                <p class="form-sub-title">フルネームで入力してください。</p>
+                <input type="text" id="name" class="form-control" placeholder="">
             </div>
-          </div>
-
-          <div class="form-group form-radio-block">
-            <label class="form-title">きんゆう女子。で情報発信したいですか？ <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">成長日記、記事寄稿、SNS、企業さんとコラボ(商品企画・モニター)など</p>
-            <div class="radio_box_02 clear">
-              <input type="radio" value="はい、ぜひしたいです。" name="transmission" id="transmission1" class="form-radio" placeholder="">
-              <label for="transmission1">はい、ぜひしたいです。</label>
-              <input type="radio" value="いいえ、したくないです。" name="transmission" id="transmission2" class="form-radio" placeholder="">
-              <label for="transmission2">いいえ、したくないです。</label>
+            <div class="form-group">
+                <label class="form-title">ふりがな <span class="label label-danger">必須</span></label>
+                <p class="form-sub-title">お名前のふりがなを入力してください。</p>
+                <input type="text" id="name_kana" class="form-control" placeholder="">
             </div>
-          </div>
-          <div class="form-group">
-            <label class="form-title">FacebookのURL <span class="label label-primary">任意</span></label>
-            <input type="text" id="facebook" class="form-control" placeholder="">
-          </div>
-
-          <div class="form-group form-radio-block">
-            <label class="form-title">金融機関で働いていますか？ <span class="label label-danger">必須</span></label>
-            <p class="form-sub-title">金融についてワカラナイ女性のためのコミュニティなのでご注意くださいませ( ´ ▽ ` )ﾉ</p>
-            <div class="radio_box_03 clear">
-              <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
-              <label for="job_kind1" class="form-long">はい</label>
-              <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
-              <label for="job_kind2" class="form-long">いいえ</label>
-              <input type="radio" value="不明" name="job_kind" id="job_kind3" class="form-radio" placeholder="">
-              <label for="job_kind3" class="form-long">不明</label>
+            <div class="form-group">
+                <label class="form-group-event-label">職業</label>
+                <select id="official_member_job" class='form-control'>
+                    <option value="">選択してください</option>
+                    {foreach from=$official_member_jobs key=k item=v}
+                        <option value="{$k}">{$v}</option>
+                    {/foreach}
+                </select>
             </div>
-          </div>
-
-          <div class="form-group">
-          <label class="form-title">メンバー登録日 <span class="label label-danger">必須</span></label>
-            <div class='input-group date datetimepicker'>
-              <input type='text' class="form-control" id="created_at" value="{date('YY/mm/dd HH:ii')}" />
-              <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-              </span>
+            <div class="form-group">
+                <label class="form-title">生年月日 <span class="label label-danger">必須</span></label>
+                <input type="date" id="birthday" class="form-control" placeholder="">
             </div>
-          </div>
 
+            <div class="form-group">
+                <label class="form-title">メールアドレス <span class="label label-danger">必須</span></label>
+                <p class="form-sub-title">連絡がとりやすいアドレスを入力してください。</p>
+                <input type="text" id="email" class="form-control" placeholder="">
+            </div>
 
-          <div class="form-group form-group02">
-            <label class="form-title">簡単な自己紹介をお願いいたします。 <span class="label label-danger">必須</span></label>
-            <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
-          </div>
+            <div class="form-group">
+                <label class="form-title">パスワード </label>
+                <input type="password" id="password" class="form-control" placeholder="" value="">
+            </div>
 
-          <div class="form-group form-group02">
-            <label class="form-title">編集部入力欄(備考)</label>
-            <textarea id="edit_inner" name="edit_inner" class='form-control' rows="10"></textarea>
-          </div>
-          
-          <div class="form-btn tx-center ">
-            <div class="">
-              <div class="">
-                <p><input type="checkbox" value="" name="editmember" id="" class="form-radio" value="修正を許可する">追加を許可する</p>
-                <button class="btn btn-kinyu" type="button" id="save">メンバー情報を追加する</button>
-              </div>
-          </div>
+            <div class="form-group">
+                <label class="form-title">個人で発信しているブログやSNSなど <span class="label label-primary">任意</span></label>
+                <input type="text" id="url" class="form-control" placeholder="" name="url" value="">
+            </div>
+
+            <div class="form-group form-group02">
+                <label class="form-title">簡単な自己紹介をお願いいたします。 <span class="label label-danger">必須</span></label>
+                <textarea id="introduction" name="introduction" class='form-control' rows="10"></textarea>
+            </div>
+
+            <div class="form-group form-group02">
+                <label class="form-title">編集部入力欄(備考)</label>
+                <textarea id="edit_inner" name="edit_inner" class='form-control' rows="10"></textarea>
+            </div>
+
+            <div class="form-btn tx-center ">
+                <div class="">
+                    <p class="admin-member-button-area">
+                        <input type="checkbox" value="" name="editmember" id="editmember">
+                        <label for="editmember" class="checkbox"></label>
+                        <span>修正を許可する</span>
+                    </p>
+                    <button class="btn btn-kinyu" type="button" id="save">メンバー情報を更新する</button>
+                </div>
+            </div>
         </div>
-      </form>
+    </form>
 </div>
 
 <style>
-.form-title {
-  font-size: 16px!important;
-  border-left: 5px solid #7CDCCE;
-  padding-left: 8px;
-  background: #f2f2f2;
-  display: block;
-  padding: 8px 0px 8px 8px;
-  margin-bottom: 16px!important;
-}
-.btn {
-  font-weight: bold;
-}
-.btn-delete {
-  background: #e65e5e;
-  color: #fff;
-  border-radius: 5px;
-  transition: .3s;
-}
-.form-group {
-  margin-bottom: 30px;
-}
-.label-danger {
-  font-size: 50%;
-}
+    .form-title {
+        font-size: 16px !important;
+        border-left: 5px solid #7CDCCE;
+        padding-left: 8px;
+        background: #f2f2f2;
+        display: block;
+        padding: 8px 0px 8px 8px;
+        margin-bottom: 16px !important;
+    }
+
+    .btn {
+        font-weight: bold;
+    }
+
+    .btn-delete {
+        background: #e65e5e;
+        color: #fff;
+        border-radius: 5px;
+        transition: .3s;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    .label-danger {
+        font-size: 50%;
+    }
 
 </style>
 
 <script>
 
-$(function(){ 
+  $(function () {
 
-  $('.datetimepicker').datetimepicker({
-    format : 'YYYY/MM/DD HH:mm'
-  });
-
-  $('#save').click(function(){
-    var url = "/api/registlist/create";
-    var params = {};
-
-    if ($("[name=editmember]:checked").val() == undefined) {
-      ts.error("『追加を許可する』をチェックしてください");
-      return false;
-    }
-    
-    params.name = $('#name').val();
-    params.name_kana = $('#name_kana').val();
-    params.age = $('#age').val();
-    params.not_know = $("[name=not_know]:checked").val();
-    params.interest = $('#interest').val();
-    params.ask = $('#ask').val();
-    params.income = $('#income').val();
-    params.where_from = $("[name=where_from]:checked").val();
-    params.where_from_other = $('#where_from_other').val();
-    params.transmission = $("[name=transmission]:checked").val();
-    params.email = $('#email').val();
-    params.facebook = $('#facebook').val();
-    params.other_sns = $('#other_sns').val();
-    params.job_kind = $("[name=job_kind]:checked").val();
-    params.created_at = $('#created_at').val();
-    params.introduction = $('#introduction').val();
-    params.edit_inner = $('#edit_inner').val();
-    
-    if (params.name == "") {
-      ts.error("お名前を入力してください");
-      return false;
-    }
-    if (params.age == "") {
-      ts.error("ご年齢を入力してください");
-      return false;
-    }
-    if ($("[name=not_know]:checked").val() == undefined) {
-      ts.error("きんゆうワカラナイ度を入力してください。");
-      return false;
-    }
-    if (params.interest == "") {
-      ts.error("「お金について知りたいこと・興味のあること」を入力してください");
-      return false;
-    }
-    if (params.ask == "") {
-      ts.error("「きんゆう女子。でどんな出会いや発見がほしいですか？」を入力してください");
-      return false;
-    }
-    if (params.email == "") {
-      ts.error("メールアドレスを入力してください。");
-      return false;
-    }
-    if ($("[name=transmission]:checked").val() == undefined) {
-      ts.error("「きんゆう女子。で情報発信したいですか？」を入力してください。");
-      return false;
-    }
-    if (params.introduction == "") {
-      ts.error("自己紹介を入力してください。");
-      return false;
-    }
-
-    // ajax.post(url, params, function(data){
-    //   ts.success("下書き保存しました");
-    //   setTimeout(function(){
-    //     location.href = "/admin/registlist";
-    //   },2000);
-    // });
-    bootbox.confirm("メンバーを追加しますか？", function(result) {
-      if (result) {
-        ajax.post(url, params, function(data){
-          ts.success("追加しました", function(){
-            location.href = "/admin/registlist";
-          });
-        });
-      }
-      else {
-        ts.info("キャンセルしました");
-      }
+    $('.datetimepicker').datetimepicker({
+      format: 'YYYY/MM/DD HH:mm'
     });
-  });
 
-});
+    $('#save').click(function () {
+      var url = "/api/registlist/create";
+      var params = {};
+
+      if ($("[name=editmember]:checked").val() == undefined) {
+        ts.error("『追加を許可する』をチェックしてください");
+        return false;
+      }
+
+      params.name = $('#name').val();
+      params.name_kana = $('#name_kana').val();
+      params.official_member_job = $('#official_member_job').val();
+      params.birthday = $('#birthday').val();
+      params.email = $('#email').val();
+      params.password = $('#password').val();
+      params.url = $('#url').val();
+      params.introduction = $('#introduction').val();
+      params.edit_inner = $('#edit_inner').val();
+
+      if (params.name == "") {
+        ts.error("お名前を入力してください");
+        return false;
+      }
+      if (params.email == "") {
+        ts.error("メールアドレスを入力してください。");
+        return false;
+      }
+
+      bootbox.confirm("メンバーを追加しますか？", function (result) {
+        if (result) {
+          ajax.post(url, params, function (data) {
+            ts.success("追加しました", function () {
+              location.href = "/admin/registlist";
+            });
+          });
+        } else {
+          ts.info("キャンセルしました");
+        }
+      });
+    });
+
+  });
 
 </script>

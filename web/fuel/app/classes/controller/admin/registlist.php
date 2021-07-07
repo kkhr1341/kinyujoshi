@@ -5,6 +5,7 @@ use \Model\Regist;
 use \Model\Registlist;
 use \Model\ParticipatedApplications;
 use \Model\UserRegistTriggers;
+use \Model\Officialmemberjobs;
 
 class Controller_Admin_Registlist extends Controller_Adminbase
 {
@@ -55,6 +56,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
         }
 
         $this->data['registlist'] = Regist::lists();
+        $this->data['official_member_jobs'] = Officialmemberjobs::lists();
 
         $username = Registlist::getUsername($code);
         if ($username) {
@@ -78,6 +80,7 @@ class Controller_Admin_Registlist extends Controller_Adminbase
         }
         $this->data['sections'] = Sections::lists();
         $this->data['registlist'] = Regist::lists();
+        $this->data['official_member_jobs'] = Officialmemberjobs::lists();
         $this->template->contents = View::forge('admin/registlist/create.smarty', $this->data);
         $this->template->description = 'マイページ・ブログ';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
