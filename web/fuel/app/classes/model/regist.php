@@ -89,7 +89,7 @@ class Regist extends Base
 //        $val->add('transmission', 'きんゆう女子。で情報発信したいですか？')
 //            ->add_rule('required');
 
-        // $val->add('url', '「個人で発信しているブログなど」');
+         $val->add('url', '「個人で発信しているブログなど」');
 
         $val->add('introduction', '自己紹介');
 
