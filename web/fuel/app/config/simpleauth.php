@@ -88,6 +88,7 @@ return array(
         'user'
     )),
     2    => array('name' => '権限LV.5', 'roles' => array(
+        'user',
         'general_official_member'
     )),
     30   => array('name' => '（旧）オフィシャルメンバー', 'roles' => array(
@@ -166,8 +167,6 @@ return array(
       'blogs' => array('read', 'create', 'edit', 'publish'),
     ),
     'editor' => array(
-      'authors' => array('read', 'create', 'edit', 'delete'),
-      'userblogs' => array('read', 'create', 'edit', 'delete'),
     ),
     'joshikai_contribute' => array(
       'admin' => array('read'),
@@ -180,20 +179,14 @@ return array(
       'blogs' => array('read', 'create', 'edit'),
     ),
     'official_member' => array(
-      'authors' => array('read', 'create', 'edit', 'delete'),
-      'userblogs' => array('read', 'create', 'edit', 'delete'),
     ),
     'corporate' => array(
-      'authors' => array('read', 'create', 'edit', 'delete'),
-      'userblogs' => array('read', 'create', 'edit', 'delete'),
     ),
     'user' => array(
       'authors' => array('read', 'create', 'edit', 'delete'),
       'userblogs' => array('read', 'create', 'edit', 'delete'),
     ),
     'general_official_member' => array(
-      'authors' => array('read', 'create', 'edit', 'delete'),
-      'userblogs' => array('read', 'create', 'edit', 'delete'),
     ),
 
     /**
