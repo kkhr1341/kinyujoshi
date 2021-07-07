@@ -51,91 +51,9 @@
                     <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="">
                 </div>
 
-                <!-- <div class="regist-add-form-edit-el">
-                    <label class="regist-add-form-edit-title">ふりがな（お名前）<span style="color:red; font-weight: normal;">*</span></label>
-                    <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="">
-                </div> -->
-
-                <div class="regist-add-form-edit-el select-area">
-                    <label class="regist-add-form-edit-title">生年月日<span style="color:red; font-weight: normal;">*</span></label>
-                    <div class="regist-selectarea">
-                        <select id="age1" class='form-control'>
-                            <option>-</option>
-                            {section name=i start=1942 loop=$smarty.now|date_format:'%Y'-18}
-                            <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
-                            {/section}
-                        </select>
-                        <p>年</p>
-                    </div>
-
-                    <div class="regist-selectarea">
-                        <select id="age2" class='form-control'>
-                            <option>-</option>
-                            {section name=i start=1 loop=13}
-                            <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
-                            {/section}
-                        </select>
-                        <p>月</p>
-                    </div>
-
-                    <div class="regist-selectarea">
-                        <select id="age3" class='form-control'>
-                            <option>-</option>
-                            {section name=i start=1 loop=32}
-                            <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
-                            {/section}
-                        </select>
-                        <p>日</p>
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el select-area">
-                    <label class="regist-add-form-edit-title">お住まいの地域を教えてください♪<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">あなたの街で女子会ができるかも!?</p>
-                    <div class="regist-selectarea">
-                        <select id="prefecture" name="prefecture" class='form-control'>
-                            <option>-</option>
-                            {foreach from=$prefectures key=k item=v}
-                            <option value="{$k}">{$v}</option>
-                            {/foreach}
-                        </select>
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el form-radio-block">
-                    <label class="regist-add-form-edit-title">きんゆうワカラナイ度<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">あなたのきんゆうワカラナイ度を教えてください(^ ^)!</p>
-                    <div class="radio_box clear">
-                        <input type="radio" value="軽度" name="not_know" id="not_know1" class="form-radio" placeholder="">
-                        <label for="not_know1">軽度</label>
-                        <input type="radio" value="中度" name="not_know" id="not_know2" class="form-radio" placeholder="">
-                        <label for="not_know2">中度</label>
-                        <input type="radio" value="重度" name="not_know" id="not_know3" class="form-radio" placeholder="">
-                        <label for="not_know3">重度</label>
-                        <input type="radio" value="それすらワカラナイ" name="not_know" id="not_know4" class="form-radio" placeholder="">
-                        <label for="not_know4">それすらワカラナイ</label>
-                        <input type="radio" value="プロレベル" name="not_know" id="not_know5" class="form-radio" placeholder="">
-                        <label for="not_know5">プロレベル</label>
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el form-radio-block">
-                    <label class="regist-add-form-edit-title">コミュニティを通じて、ご自身でも情報発信したいですか？<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">成長日記、寄稿、SNS、企業さんとタイアップ(企画・座談会・アンバサダー)など</p>
-                    <div class="radio_box_02 clear">
-                        <input type="radio" value="はい、ぜひしたいです。" name="transmission" id="transmission1" class="form-radio" placeholder="">
-                        <label for="transmission1">はい、ぜひしたいです。</label>
-                        <input type="radio" value="いいえ、したくないです。" name="transmission" id="transmission2" class="form-radio" placeholder="">
-                        <label for="transmission2">いいえ、したくないです。</label>
-                        <input type="radio" value="写真なしだったらok♪" name="transmission" id="transmission3" class="form-radio" placeholder="">
-                        <label for="transmission3">写真なしだったらok♪</label>
-                    </div>
-                </div>
-
-                <div class="regist-add-form-edit-el regist-add-form-edit-el02">
-                    <label class="regist-add-form-edit-title">ぜひメンバーさんや編集部に向けて自己紹介をお願いいたします♪<span style="color:red; font-weight: normal;">*</span></label>
-                    <p class="regist-add-form-edit-subtitle">トライしてみたいこと、夢や目標、知りたいことや、おかねの"もやもや"など<br>＊匿名でご紹介させていただく場合がございます！<br>＊書いていただいた内容にあわせて、女子会や企業との企画にご招待する場合がございます♪</p>
-                    <textarea id="introduction" name="introduction" class='form-control' rows="4"></textarea>
+                <div class="regist-add-form-edit-el">
+                    <label class="regist-add-form-edit-title">ニックネーム<span style="color:red; font-weight: normal;">*</span></label>
+                    <input type="text" id="nickname" name="nickname" class="form-control" placeholder="">
                 </div>
 
                 <div class="form-btn tx-center">
@@ -223,19 +141,20 @@
 
             params.name = $('[name="name"]').val(); //お名前
             params.name_kana = $('[name="name_kana"]').val(); //ふりがな
-            params.birthday = (age01+age02+age03); //生年月日
-            params.prefecture = $('[name="prefecture"]').val(); //都道府県
-            params.not_know = $('[name="not_know"]:checked').val(); //金融ワカラナイ度
-            params.job_kind = $('[name="job_kind"]:checked').val();
+            params.nickname = $('[name="nickname"]').val(); //ニックネーム
+            // params.birthday = (age01+age02+age03); //生年月日
+            // params.prefecture = $('[name="prefecture"]').val(); //都道府県
+            // params.not_know = $('[name="not_know"]:checked').val(); //金融ワカラナイ度
+            // params.job_kind = $('[name="job_kind"]:checked').val();
 
-            // コミュニティを通じて、ご自身でも情報発信したいですか？
-            params.transmission = $("[name=transmission]:checked").val();
-
-            // 個人で発信しているブログやSNSなど
-            params.url = $('[name="url"]').val();
-
-            // ぜひメンバーさんや編集部に向けて自己紹介をお願いいたします♪
-            params.introduction = $('[name="introduction"]').val();
+            // // コミュニティを通じて、ご自身でも情報発信したいですか？
+            // params.transmission = $("[name=transmission]:checked").val();
+            //
+            // // 個人で発信しているブログやSNSなど
+            // params.url = $('[name="url"]').val();
+            //
+            // // ぜひメンバーさんや編集部に向けて自己紹介をお願いいたします♪
+            // params.introduction = $('[name="introduction"]').val();
 
             if (params.email == "") {
                 ts.error("メールアドレスを入力してください。");
@@ -280,22 +199,22 @@
                 return false;
             }
 
-            if (age01 == "-") {
-                ts.error("生年月日の「年」を入力してください");
-                return false;
-            }
-            if (age02 == "-") {
-                ts.error("生年月日の「月」を入力してください");
-                return false;
-            }
-            if (age03 == "-") {
-                ts.error("生年月日の「日」を入力してください");
-                return false;
-            }
-            if (params.prefecture == "") {
-                ts.error("都道府県を入力してください");
-                return false;
-            }
+            // if (age01 == "-") {
+            //     ts.error("生年月日の「年」を入力してください");
+            //     return false;
+            // }
+            // if (age02 == "-") {
+            //     ts.error("生年月日の「月」を入力してください");
+            //     return false;
+            // }
+            // if (age03 == "-") {
+            //     ts.error("生年月日の「日」を入力してください");
+            //     return false;
+            // }
+            // if (params.prefecture == "") {
+            //     ts.error("都道府県を入力してください");
+            //     return false;
+            // }
 
             bootbox.confirm("入力内容を送信しますか？", function(result) {
                 if (result) {

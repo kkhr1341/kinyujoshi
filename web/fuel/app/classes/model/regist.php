@@ -34,12 +34,17 @@ class Regist extends Base
         $val->add('name_kana', 'ふりがな')
             ->add_rule('required');
 
+        $val->add('nickname', 'ニックネーム')
+            ->add_rule('required');
+
+        $val->add('official_member_job', 'オフィシャルメンバー職業');
+
         $val->add('birthday', '生年月日')
             ->add_rule('mb_convert_kana', 'a', 'utf-8')
             ->add_rule('valid_date');
 
-        $val->add('prefecture', '都道府県')
-            ->add_rule('required');
+//        $val->add('prefecture', '都道府県')
+//            ->add_rule('required');
 
         $val->add('profile_image', 'プロフィール画像');
 
@@ -52,8 +57,8 @@ class Regist extends Base
             ->add_rule('max_length', 255)
             ->add_rule('alphanum');
 
-        $val->add('not_know', 'きんゆうワカラナイ度')
-            ->add_rule('required');
+//        $val->add('not_know', 'きんゆうワカラナイ度')
+//            ->add_rule('required');
 
         // $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
         //     ->add_rule('required');
@@ -81,13 +86,12 @@ class Regist extends Base
         // $val->add('future', 'きんゆう女子。を通してどんな自分になりたい？')
         //     ->add_rule('required');
 
-        $val->add('transmission', 'きんゆう女子。で情報発信したいですか？')
-            ->add_rule('required');
+//        $val->add('transmission', 'きんゆう女子。で情報発信したいですか？')
+//            ->add_rule('required');
 
         // $val->add('url', '「個人で発信しているブログなど」');
 
-        $val->add('introduction', '自己紹介')
-            ->add_rule('required');
+        $val->add('introduction', '自己紹介');
 
         return $val;
     }
@@ -115,15 +119,21 @@ class Regist extends Base
                 'name' => $params['name'],
                 'name_kana' => $params['name_kana'],
                 'nickname' => $params['name'],
-                'birthday' => $params['birthday'],
-                'prefecture' => $params['prefecture'],
+                'prefecture' => '',
                 'url' => isset($params['url']) ? $params['url']: '',
-                'introduction' => $params['introduction'],
+                'introduction' => isset($params['introduction']) ? $params['introduction']: '',
+                'official_member_job' => isset($params['official_member_job']) ? $params['official_member_job']: '0',
 //              'gender' => $params['gender']
             );
 
             if (isset($params["profile_image"]) && $params["profile_image"]) {
                 $profile["profile_image"] = $params["profile_image"];
+            } else {
+                $profile["profile_image"] = '';
+            }
+
+            if (isset($params["birthday"]) && $params["birthday"]) {
+                $profile["birthday"] = $params["birthday"];
             } else {
                 $profile["profile_image"] = '';
             }
@@ -151,7 +161,7 @@ class Regist extends Base
                 'username' => $username,
                 'name' => $params['name'],
                 'name_kana' => $params['name_kana'],
-                'not_know' => $params['not_know'],
+                'not_know' => isset($params['not_know'])? $params['not_know']: '',
                 'interest' => '',
                 'ask' => '',
                 'email' => '',
@@ -168,7 +178,7 @@ class Regist extends Base
                 'edit_inner' => '',
                 'industry' => '',
                 'industry_other' => '',
-                'introduction' => $params['introduction'],
+                'introduction' => isset($params['introduction']) ? $params['introduction']: '',
                 'created_at' => \DB::expr('now()'),
                 'user_agent' => @$_SERVER['HTTP_USER_AGENT'],
             ))->execute();

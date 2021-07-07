@@ -247,4 +247,26 @@ class MyValidation
         }
         return false;
     }
+
+    /**
+     * Match specific other submitted field string value
+     * (must be both strings, check is type sensitive)
+     *
+     * @param
+     *            string
+     * @param
+     *            string
+     * @return bool
+     */
+    public static function _validation_check_allow_list($val, $allows)
+    {
+        if (!$val) {
+            return true;
+        }
+
+        if (in_array($val, $allows)) {
+            return true;
+        }
+        return false;
+    }
 }
