@@ -3274,7 +3274,12 @@ padding-bottom :24px;
     margin: 0 auto;
     margin-bottom: 32px;
   }
-  .footer-logo img {
+  .footer-content-list {
+    position: relative;
+    left: auto;
+    width: 84%;
+    margin: 0 auto;
+    margin-top: 40px;
   }
   .new_area {
     display: block;
