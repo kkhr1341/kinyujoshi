@@ -11,6 +11,14 @@
       <a class="js-track" href="/" data-category="sp-footer-link" data-action="click" data-value="1">きんゆう女子。トップ</a>
     </div> -->
 
+    <div class="footer-content-list">
+      <ul>
+        <li><div class="footer-content-list-el"><a href="https://www.instagram.com/kinyu_joshi/" class="instagram" target="_blank"><p class="text-innner">Instagram</p></a></div></li>
+        <li><div class="footer-content-list-el"><a href="https://twitter.com/kinyu_joshi" class="twitter" target="_blank"><p class="text-innner">Twitter</p></a></div></li>
+        <li><p>LINEで情報を受け取りたい方はこちら♪</p><div class="footer-content-list-el"><a href="https://lin.ee/OFHGpg7" class="line" target="_blank"><p class="text-innner"><img src="/images/social/line_text.svg"></p></a></div></li>
+      </ul>
+    </div>
+
     <div class="footer-menu pc">
       <p class="footer-menu-title"><span>きんゆう女子。について</span></p>
       <ul>
