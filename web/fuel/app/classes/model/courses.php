@@ -32,7 +32,7 @@ class Courses extends Base
         } else {
             $datas = $datas->limit($limit);
         }
-        $datas = $datas->execute()
+        $datas = $datas->execute('slave')
             ->as_array();
         return $datas;
     }
@@ -45,7 +45,7 @@ class Courses extends Base
             ->where('status', '=', 1)
             ->where('project_code', '=', $project_code)
             ->order_by('price', 'ASC')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
     }
@@ -157,7 +157,7 @@ class Courses extends Base
             $total = $total->where('section_code', '=', $section_code);
         }
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
 
         $config = array(
             'pagination_url' => $pagination_url,
@@ -182,7 +182,7 @@ class Courses extends Base
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
             ->order_by('open_date', 'desc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $datas['pagination'] = $pagination;

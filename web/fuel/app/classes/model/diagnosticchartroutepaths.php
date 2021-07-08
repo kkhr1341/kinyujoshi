@@ -12,7 +12,7 @@ class DiagnosticChartRoutePaths extends Base
             ->from('diagnostic_chart_route_paths')
             ->where('route_code', '=', $route_code)
             ->where('yes_no', '=', $yes_no)
-            ->execute()
+            ->execute('slave')
             ->current();
         if (empty($result)) {
             return false;

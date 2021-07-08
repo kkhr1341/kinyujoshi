@@ -46,7 +46,7 @@ class Registlist extends Base
             $select->where(\DB::expr('exists(select * from applications where applications.username = users.username and applications.event_code = "' .  $options['event_code']. '")'));
         }
 
-        if (!$row = $select->execute()->as_array()) {
+        if (!$row = $select->execute('slave')->as_array()) {
             return array();
         }
         return $row;
@@ -211,7 +211,7 @@ class Registlist extends Base
             ->where('code', '=', $code)
             ->join('users')
             ->on('member_regist.username', '=', 'users.username')
-            ->execute()
+            ->execute('slave')
             ->current();
         if (empty($result)) {
             return false;

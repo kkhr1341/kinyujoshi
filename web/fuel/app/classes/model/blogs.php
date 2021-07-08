@@ -97,7 +97,7 @@ class Blogs extends Base
         } else {
             $datas = $datas->limit($options['limit']);
         }
-        $datas = $datas->execute()
+        $datas = $datas->execute('slave')
             ->as_array();
         return $datas;
     }

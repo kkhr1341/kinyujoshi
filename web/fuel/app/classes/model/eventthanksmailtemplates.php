@@ -53,7 +53,7 @@ class EventThanksMailTemplates extends Base
         return \DB::select()
             ->from('event_thanks_mail_templates')
             ->where('event_code', '=', $event_code)
-            ->execute()
+            ->execute('slave')
             ->current();
     }
 

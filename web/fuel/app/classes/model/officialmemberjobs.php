@@ -18,7 +18,7 @@ class Officialmemberjobs extends Base
     public static function lists()
     {
         $values = \DB::select("*")->from('official_member_jobs')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $keys = array();

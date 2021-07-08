@@ -7,13 +7,24 @@
 
 
 return array(
-	'default' => array(
-    'charset' => 'utf8',
-		'connection'  => array(
-                        'dsn'        => 'mysql:host=db;dbname=kinyujoshi_development',
-                        'username'   => 'root',
-                        'password'   => 'pass',
-		),
-		'profiling' => true,
-	),
+    'default' => array(
+        'charset' => 'utf8',
+        'connection' => array(
+            'hostname' => 'db',
+            'database' => 'kinyujoshi_development',
+            'username' => 'root',
+            'password' => 'pass',
+        ),
+        'profiling' => true,
+    ),
+    'slave' => array(
+        'charset' => 'utf8',
+        'connection'  => array(
+            'hostname' => 'db',
+            'database' => 'kinyujoshi_development',
+            'username' => 'root',
+            'password' => 'pass',
+        ),
+        'profiling' => true,
+    ),
 );

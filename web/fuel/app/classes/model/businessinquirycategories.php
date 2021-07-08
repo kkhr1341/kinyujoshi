@@ -13,7 +13,7 @@ class Businessinquirycategories extends Base
             ->from('business_inquiry_categories')
             ->where('disable', '=', 0)
             ->order_by('sort', 'asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $keys = array();

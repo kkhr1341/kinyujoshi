@@ -59,7 +59,7 @@ class Consultationreplymails extends Base
             ->join('profiles', 'left')
             ->on('profiles.username', '=', 'users.username')
             ->where('consultation_reply_mails.consultation_code', '=', $consultation_code)
-            ->execute()
+            ->execute('slave')
             ->as_array();
     }
 }

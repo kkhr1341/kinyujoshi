@@ -31,7 +31,7 @@ class Blogstocks extends Base
             ->from('blog_stocks')
             ->where('blog_code', '=', $blog_code)
             ->where('username', '=', $username)
-            ->execute()
+            ->execute('slave')
             ->current();
         if (empty($result)) {
             return false;
@@ -48,7 +48,7 @@ class Blogstocks extends Base
             ->where('blog_stocks.username', '=', $username) //追加
             ->where('blogs.status', '=', 1)
             ->where('blogs.disable', '=', 0)
-            ->execute()
+            ->execute('slave')
             ->as_array();
     }
 
@@ -69,7 +69,7 @@ class Blogstocks extends Base
             $select->where('blog_stocks.created_at', '<=', $options['end_at'] . ' 23:59:59');
         }
 
-        if (!$row = $select->execute()->as_array()) {
+        if (!$row = $select->execute('slave')->as_array()) {
             return array();
         }
         return $row;

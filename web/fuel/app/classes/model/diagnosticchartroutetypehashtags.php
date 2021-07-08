@@ -11,7 +11,7 @@ class DiagnosticChartRouteTypeHashTags extends Base
         $result = \DB::select('*')
             ->from('diagnostic_chart_type_hash_tags')
             ->where('type_code', '=', $type_code)
-            ->execute();
+            ->execute('slave');
         if (empty($result)) {
             return false;
         }

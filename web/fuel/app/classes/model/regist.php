@@ -265,7 +265,7 @@ class Regist extends Base
             ->on('profiles.username', '=', 'member_regist.username')
             ->where('member_regist.disable', '=', 1);
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
         return $total['cnt'];
     }
     public static function all($pagination_url, $page, $uri_segment = 3, $per_page = 5, $params)
@@ -301,7 +301,7 @@ class Regist extends Base
                 ->and_where_close();
         }
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
         $datas['total'] = $total['cnt'];
 
         $config = array(
@@ -382,7 +382,7 @@ class Regist extends Base
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
             ->order_by('member_regist.created_at', 'desc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
         $datas['pagination'] = $pagination;
 

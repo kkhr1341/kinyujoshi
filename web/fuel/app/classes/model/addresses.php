@@ -8,7 +8,7 @@ class Addresses extends Base
 
     public static function lists($username)
     {
-        return \DB::select("*")->from('addresses')->where('disable', '=', 0)->where('username', '=', $username)->execute()->as_array();
+        return \DB::select("*")->from('addresses')->where('disable', '=', 0)->where('username', '=', $username)->execute('slave')->as_array();
     }
 
     public static function create($params)

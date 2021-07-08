@@ -56,7 +56,7 @@ class Top extends Base
         } else {
             $datas = $datas->limit($limit);
         }
-        $datas = $datas->execute()
+        $datas = $datas->execute('slave')
             ->as_array();
         return $datas;
     }
@@ -130,7 +130,7 @@ class Top extends Base
             $total = $total->where('section_code', '=', $section_code);
         }
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
 
         $config = array(
             'pagination_url' => $pagination_url,
@@ -157,7 +157,7 @@ class Top extends Base
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
             ->order_by('open_date', 'desc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $datas['pagination'] = $pagination;
@@ -171,7 +171,7 @@ class Top extends Base
             ->where('blogs.code', '=', $code)
             ->join('profiles', 'left')
             ->on('blogs.username', '=', 'profiles.username')
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }

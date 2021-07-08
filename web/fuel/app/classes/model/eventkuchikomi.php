@@ -76,7 +76,7 @@ class Eventkuchikomi extends Base
             $datas = $datas->limit($limit);
         }
 
-        $datas = $datas->execute()->as_array();
+        $datas = $datas->execute('slave')->as_array();
         return $datas;
     }
 
@@ -110,7 +110,7 @@ class Eventkuchikomi extends Base
         } else {
             $datas = $datas->limit($limit);
         }
-        $datas = $datas->execute()
+        $datas = $datas->execute('slave')
             ->as_array();
         return $datas;
     }

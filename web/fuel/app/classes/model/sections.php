@@ -12,7 +12,7 @@ class Sections extends Base
         $sections = \DB::select("*")->from('sections')
             ->where('disable', '=', 0)
             ->order_by('sort', 'asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $section_keys = [];

@@ -31,7 +31,7 @@ class ParticipatedApplications extends Base
 
     public static function lists($username)
     {
-        return\DB::select(\DB::expr('events.*'))
+        return \DB::select(\DB::expr('events.*'))
             ->from('events')
             ->join('applications')
             ->on('applications.event_code', '=', 'events.code')
@@ -41,7 +41,7 @@ class ParticipatedApplications extends Base
             ->where('applications.disable', '=', 0)
             ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->order_by('events.event_date', 'asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
     }
 }

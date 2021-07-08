@@ -42,7 +42,7 @@ class Profiles extends Base
     public static function get($username)
     {
 
-        return \DB::select('*')->from('profiles')->where('disable', '=', 0)->where('username', '=', $username)->execute()->current();
+        return \DB::select('*')->from('profiles')->where('disable', '=', 0)->where('username', '=', $username)->execute('slave')->current();
 
     }
 
@@ -99,7 +99,7 @@ class Profiles extends Base
         } else {
             $datas = $datas->limit($limit);
         }
-        $datas = $datas->execute()
+        $datas = $datas->execute('slave')
             ->as_array();
         return $datas;
     }

@@ -10,7 +10,7 @@ class Prefectures extends Base
     {
 
         $values = \DB::select("*")->from('prefectures')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $keys = array();

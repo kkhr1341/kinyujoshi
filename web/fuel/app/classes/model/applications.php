@@ -46,7 +46,7 @@ class Applications extends Base
         $application = \DB::select('*')->from('applications')
             ->where('code', '=', $code)
             ->where('disable', '=', 0)
-            ->execute()
+            ->execute('slave')
             ->current();
         return $application['event_code'];
     }
@@ -73,7 +73,7 @@ class Applications extends Base
             ->where('applications.disable', '=', 0)
             ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->order_by('event_date', 'asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         return $datas;
@@ -99,7 +99,7 @@ class Applications extends Base
             ->where('applications.disable', '=', 0)
             ->where(\DB::expr('not exists(select "x" from application_credit_payment_cancels where applications.code = application_credit_payment_cancels.application_code)'))
             ->order_by('event_date', 'asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         return $datas;
@@ -141,7 +141,7 @@ class Applications extends Base
             ->where('applications.disable', '=', 0)
             ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->order_by('applications.created_at','asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         return $datas;
@@ -177,7 +177,7 @@ class Applications extends Base
             ->where('applications.disable', '=', 0)
             ->where(\DB::expr('exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->order_by('applications.created_at','asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         return $datas;
@@ -196,7 +196,7 @@ class Applications extends Base
             ->where('applications.username', '=', $username)
             ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->where('applications.disable', '=', 0)
-            ->execute()
+            ->execute('slave')
             ->current();
 
         if (empty($data)) {
@@ -412,7 +412,7 @@ class Applications extends Base
                 ->where('applications.email', '=', $email)
                 ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
                 ->where('applications.disable', '=', 0)
-                ->execute()
+                ->execute('slave')
                 ->current();
         } else {
             // 既存のデータがないか確認
@@ -436,7 +436,7 @@ class Applications extends Base
             ->where('applications.event_code', '=', $event_code)
             ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->where('applications.disable', '=', 0)
-            ->execute();
+            ->execute('slave');
         $result_arr = $result->current();
         return $result_arr['count'];
     }
@@ -545,7 +545,7 @@ class Applications extends Base
             ->where('coupon_code', '=', $coupon_code)
             ->where('event_code', '=', $event_code);
 
-        $coupon = $total->execute()->current() ?: array();
+        $coupon = $total->execute('slave')->current() ?: array();
 
         return array_merge(array(
             'discount' => 0,

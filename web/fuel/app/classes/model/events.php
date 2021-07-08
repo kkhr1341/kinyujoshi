@@ -138,7 +138,7 @@ class Events extends Base
                 ->where('disable', '=', 0)
                 ->where('coupon_code', '=', $coupon_code)
                 ->where('event_code', '=', $code)
-                ->execute()
+                ->execute('slave')
                 ->current();
             if ($coupon) {
                 $event['fee'] = (int)$event['fee'] - (int)$coupon['discount'];
@@ -171,7 +171,7 @@ class Events extends Base
 
       $events = $events->order_by('event_date', 'asc')
         ->limit($limit)
-        ->execute()
+        ->execute('slave')
         ->as_array();
 
       return $events;
@@ -185,7 +185,7 @@ class Events extends Base
             ->where(\DB::expr('not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)'))
             ->where('disable', '=', 0);
 
-        $data = $total->execute()->current();
+        $data = $total->execute('slave')->current();
         return $data['cnt'];
     }
 
@@ -244,7 +244,7 @@ class Events extends Base
         } else {
             $datas = $datas->limit($limit);
         }
-        $datas = $datas->execute()
+        $datas = $datas->execute('slave')
             ->as_array();
         foreach($datas as $key => $data){
             $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
@@ -314,7 +314,7 @@ class Events extends Base
         } else {
             $datas = $datas->limit($limit);
         }
-        $datas = $datas->execute()
+        $datas = $datas->execute('slave')
             ->as_array();
         foreach($datas as $key => $data){
             $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
@@ -356,7 +356,7 @@ class Events extends Base
             ->on('events.username', '=', 'profiles.username')
             ->where('events.disable', '=', 0)
             ->order_by('event_date', 'asc')
-            ->execute();
+            ->execute('slave');
     }
 
     public static function create($params)
@@ -546,7 +546,7 @@ class Events extends Base
             ->from('events')
             ->where('events.code', '=', $code)
             ->where('event_date', '<', \DB::expr('NOW()'))
-            ->execute()
+            ->execute('slave')
             ->current();
         if (empty($result)) {
             return false;
@@ -576,7 +576,7 @@ class Events extends Base
             $total = $total->where('secret', '=', $secret);
         }
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
 
         $config = array(
             'pagination_url' => $pagination_url,
@@ -628,7 +628,7 @@ class Events extends Base
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
             ->order_by('event_date', $sort)
-            ->execute()
+            ->execute('slave')
             ->as_array();
         foreach($datas['datas'] as $key => $data){
             $datas['datas'][$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
@@ -646,7 +646,7 @@ class Events extends Base
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
             ->where('events.disable', '=', 0)
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }
@@ -669,9 +669,9 @@ class Events extends Base
         $applicableTime = strtotime(date('Y-m-d ' . $start_time . ':00', strtotime($event_date)));
         if (time() < $applicableTime) {
             return true;
-        } 
+        }
         return false;
-    } 
+    }
 
     /**
      * イベントキャンセルが可能か確認するメソッド

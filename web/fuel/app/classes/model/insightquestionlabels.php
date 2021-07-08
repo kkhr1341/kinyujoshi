@@ -11,7 +11,7 @@ class InsightQuestionLabels extends Base
             ->from('insight_question_labels')
             ->where('insight_question_id', '=', $insight_question_id)
             ->order_by('insight_question_labels.sort', 'asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
     }
 }

@@ -30,7 +30,7 @@ class EventDisplayTopPages extends Base
             ->on('events.code', '=', 'event_display_top_pages.event_code')
             ->where('events.status', '=', 1)
             ->where('events.disable', '=', 0)
-            ->execute()
+            ->execute('slave')
             ->current();
 
     }
