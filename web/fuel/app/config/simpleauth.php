@@ -91,7 +91,7 @@ return array(
         'user',
         'general_official_member'
     )),
-    30   => array('name' => '（旧）オフィシャルメンバー', 'roles' => array(
+    30   => array('name' => '（旧）オフィシャルメンバー（削除）', 'roles' => array(
         'user',
         'official_member',
         'joshikai_contribute',
