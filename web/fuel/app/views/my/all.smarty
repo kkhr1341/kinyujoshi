@@ -10,11 +10,11 @@
 
       <div class="side-profile-block">
         {if in_array('official_member', $roles|default:'')}
-        <div class="official-member-badge"><img src="/images/my/om-badge.png"></div>
+        <div class="official-member-badge"><img src="/images/my/authority_lv3.png"></div>
         {elseif in_array('general_official_member', $roles|default:'')}
-        <div class="official-member-badge"><img src="/images/my/general-om-badge.png"></div>
+        <div class="official-member-badge"><img src="/images/my/authority_lv5.png"></div>
         {elseif in_array('editor', $roles|default:'')}
-        <div class="official-member-badge"><img src="/images/my/editor-badge.png"></div>
+        <div class="official-member-badge"><img src="/images/my/authority_lv2.png"></div>
         {/if}
 
         <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
