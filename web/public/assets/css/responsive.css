@@ -3281,6 +3281,9 @@ padding-bottom :24px;
     margin: 0 auto;
     margin-top: 40px;
   }
+  .footer-content-list li:nth-child(3) {
+    width: 80%;
+  }
   .new_area {
     display: block;
     float: none;

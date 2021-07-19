@@ -238,6 +238,19 @@ opacity: .5;
 .header-login-area li a:hover {
   opacity: .5;
 }
+.header-login-area02 {
+  top: 60px;
+}
+.header-login-area02 li a {
+  background: -moz-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: -webkit-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: linear-gradient(to bottom right, #EDFAF8, #FFF7F4)!important;
+  border: 1px solid #b1b1b1;
+  color: #444!important;
+}
+
+
+
 
 /* ログインしている場合 */
 .header-mypage-block {
@@ -5572,39 +5585,40 @@ footer {
 }
 .footer-content-list {
   position: absolute;
-  left: 160px;
-  width: 330px;
+  left: 170px;
+  width: 280px;
 }
 .footer-content-list ul {
   text-align: center;
   margin-top: 6px;
 }
 .footer-content-list li {
-  width: 48%;
-  margin-right: 4%;
+  margin-right: 8%;
   display: inline-block;
   margin-bottom: 4%;
 }
 .footer-content-list li .footer-content-list-el {
-  background-color: #F4F4F4;
   box-sizing: border-box;
 }
 .footer-content-list li:nth-child(2n) {
   margin-right: 0;
 }
 .footer-content-list li:nth-child(3) {
-  width: 80%;
+  width: 100%;
   margin-right: 0;
   margin-top: 4px;
   margin-bottom: 0;
 }
 .footer-content-list li:nth-child(3) .footer-content-list-el {
-  background-color: #86D682;
+  /*background-color: #86D682;*/
   margin-bottom: 2px;
+}
+.footer-content-list li:nth-child(3) .footer-content-list-el img {
+  top: 4px;
+  position: relative;
 }
 .footer-content-list a {
   display: block;
-  padding: 10px;
 }
 .footer-content-list p.text-innner {
   background-position: left;
@@ -5612,15 +5626,15 @@ footer {
   background-size: contain;
   background-image: url(/images/social/instagram_icon.png);
   line-height: 25px;
-  padding-left: 30px;
-  text-align: center;
+  padding-left: 36px;
+  text-align: left;
 }
 .footer-content-list a.twitter p {
   background-image: url(/images/social/twitter_icon.png);
 }
 .footer-content-list a.line p {
   background-image: url(/images/social/line_icon.svg);
-  line-height: 30px;
+  line-height: 28px;
 }
 .new_area {
   display: inline-block;
