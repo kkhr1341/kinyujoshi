@@ -4851,6 +4851,16 @@ footer .navi_kinyu-submenu-el a {
   .kinyu-top-banner-area li img {
     width: 100%;
   }
+  .top-official-member-block {
+    width: 100%;
+    margin-top: 32px;
+  }
+  .top-official-member-block p {
+    font-size: 12px;
+  }
+  .top-official-member-block a {
+    padding: 16px;
+  }
 
   /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
       　記事詳細
@@ -6800,6 +6810,23 @@ footer .navi_kinyu-submenu-el a {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 16px;
+  }
+  .official-member-container {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .official-member-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .official-member-container a {
+    padding: 12px;
+  }
+  .official-member-container a img {
+    width: 80px;
+  }
+  .official-member-container a p {
+    font-size: 13px;
   }
   .about-activity-contents li {
     margin-bottom: 28px;

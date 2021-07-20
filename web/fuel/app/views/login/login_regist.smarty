@@ -55,7 +55,7 @@
                 <p class="text-description">ミレニアル世代にとって必要な“きんゆう”をテーマに情報発信しています。Fintechサービスを使ってみたり気になる会社に訪問をしてみたり、ワカラナイ女子の目線からレポートにまとめています。私たちをそっと見守ってくれている会社さんと一緒に情報をお届けすることもあります。</p>
               </div>
             </li>
-            <li class="clear">
+            <!-- <li class="clear">
               <div class="img-box list-animation01-right-delay">
                 <img src="/images/login/activity3.png">
               </div>
@@ -63,7 +63,7 @@
                 <p class="text-title fs-mincho"><span>03</span>金融を親しみやすく分かりやすくするために声を届ける</p>
                 <p class="text-description">よりよいサービスにするためにはどうしたらいい？このサービス分かりやすい？どう思っている？など、私たちワカラナイ女子の本音や気持ちは金融業界にとって良いサービスをつくるためにほしい声。使う私たちから声をあげて、みんなが親しみをもてる金融サービスにしていきましょう。</p>
               </div>
-            </li>
+            </li> -->
             <!-- <li class="clear">
               <div class="img-box list-animation01-left-delay">
                 <img src="/images/login/activity4.png">
@@ -99,7 +99,7 @@
                 <p class="member-contents-list-description">月に2回くらいのお便りでは、皆さんにプラスになるようなことやお礼つきのアンケート、企業とのプロジェクトに関するお知らせをお届けします。</p>
               </div>
             </li>
-            <li class="clear">
+            <!-- <li class="clear">
               <div class="img-box" style="background: url(/images/login/member03.jpg) center center / cover no-repeat;"></div>
               <div class="text-box">
                 <p class="member-contents-list-title">レポーターとして取材に行く機会がある</p>
@@ -113,9 +113,9 @@
                 <p class="member-contents-list-title">サプライズがある</p>
                 <p class="member-contents-list-description">積極的に活動してくれるメンバーさんへちょっとしたサプライズを用意しています。サプライズは、お楽しみ....♪</p>
               </div>
-            </li>
+            </li> -->
           </ul>
-          <p class="member-contents-subtext">＊そのほか、メンバーさんへのサービスが増えるよう<br class="sp">頑張っています！</p>
+          <!-- <p class="member-contents-subtext">＊そのほか、メンバーさんへのサービスが増えるよう<br class="sp">頑張っています！</p> -->
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@
 
       <div id="regist-form" class="login-block-el login-contents-block-inner clear">
         <div class="login-contents-mainarea login-contents-regist">
-          <h2 class="el-title animation-top1">メンバーになる♪</h2>
+          <h2 class="el-title animation-top1">無料メンバー登録</h2>
 
           <div class="login-contents-form-area clear">
 
@@ -139,6 +139,15 @@
             <p class="regist-sub-description animation-top1"><span style="color:#f3626c;">＊</span>新規メンバー登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
             <p class="regist-sub-description animation-top1" style="margin-top: 10px;"><span style="color:#f3626c;">*</span>このコミュニティは金融ワカラナイ女子に向けたサービスです♪</p>
 
+            <div class="official-member-container animation-top1">
+              <p class="official-member-title">積極的に活動！</p>
+              <a class="official-member-link" href="https://official.kinyu-joshi.jp/" target="_blank">
+                <div class="official-member-link-inner">
+                  <img src="/images/login/official-main-visual.jpg">
+                  <p>オフィシャルメンバー登録申請</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
