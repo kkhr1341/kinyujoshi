@@ -1279,6 +1279,26 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   width: 100%;
 }
 
+.top-official-member-block {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.top-official-member-block p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.top-official-member-block a {
+  display: block;
+  padding: 20px 50px;
+  background: -moz-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: -webkit-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: linear-gradient(to bottom right, #EDFAF8, #FFF7F4)!important;
+  line-height: inherit;
+  transition: .5s;
+}
 .introduction-list .kinyu-top-banner-area {
   text-align: center;
   width: 750px;
@@ -5158,6 +5178,44 @@ input::-webkit-input-placeholder {
 .login-block-el-container {
   padding-top: 80px;
 }
+
+.official-member-container {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.official-member-title {
+  font-size: 20px;
+  line-height: 32px;
+  font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.official-member-container a {
+  display: block;
+  padding: 20px;
+  background: -moz-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: -webkit-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: linear-gradient(to bottom right, #EDFAF8, #FFF7F4)!important;
+  border: 1px solid #b1b1b1;
+}
+.official-member-link-inner {
+  display: table;
+}
+.official-member-container a img {
+  display: table-cell;
+  width: 120px;
+}
+.official-member-container a p {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 18px;
+  padding-left: 20px;
+  width: 100%;
+  text-align: center;
+}
+
 .oficial-member-block-container {
   width: 100%;
   height: 100%;
@@ -6380,6 +6438,9 @@ footer {
 }
 .oficial-member-block .close-btn:hover {
   cursor: pointer;
+  opacity: .5;
+}
+.top-official-member-block a:hover {
   opacity: .5;
 }
 }
