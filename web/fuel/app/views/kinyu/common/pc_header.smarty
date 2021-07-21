@@ -32,7 +32,7 @@
 
     <div class="header-login-area">
       <ul>
-      <li><a class="js-track" href="/regist_email" data-category="pc-header-link" data-action="click" data-value="1">新規メンバー登録</a></li>
+      <li><a class="js-track" href="/regist_email" data-category="pc-header-link" data-action="click" data-value="1">メンバー登録</a></li>
       <li><a class="js-track" href="/login" data-category="pc-header-link" data-action="click" data-value="1">ログイン</a></li>
       </ul>
     </div>
