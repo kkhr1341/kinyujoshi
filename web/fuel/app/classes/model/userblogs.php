@@ -32,7 +32,7 @@ class UserBlogs extends Base
             ->on('blog_user_blogs.user_blog_code', '=', 'user_blogs.code')
             ->where('user_blogs.username', '=', $username)
             ->where('user_blogs.disable', '=', 0);
-        return $datas->execute()
+        return $datas->execute('slave')
             ->as_array();
     }
 
@@ -45,7 +45,7 @@ class UserBlogs extends Base
             ->where('user_blogs.status', '=', 2)
             ->where(\DB::expr('not exists(select "x" from blog_user_blogs where blog_user_blogs.user_blog_code = user_blogs.code)'))
             ->where('user_blogs.disable', '=', 0);
-        return $datas->execute()
+        return $datas->execute('slave')
             ->as_array();
     }
 
@@ -60,7 +60,7 @@ class UserBlogs extends Base
             ->on('blog_user_blogs.user_blog_code', '=', 'user_blogs.code')
             ->where('user_blogs.status', '=', 3)
             ->where('user_blogs.disable', '=', 0);
-        return $datas->execute()
+        return $datas->execute('slave')
             ->as_array();
     }
 
@@ -75,7 +75,7 @@ class UserBlogs extends Base
             ->on('blog_user_blogs.user_blog_code', '=', 'user_blogs.code')
             ->where('user_blogs.status', '=', 4)
             ->where('user_blogs.disable', '=', 0);
-        return $datas->execute()
+        return $datas->execute('slave')
             ->as_array();
     }
 
@@ -130,7 +130,7 @@ class UserBlogs extends Base
             ->where('user_blogs.code', '=', $code)
             ->where('user_blogs.username', '=', $username)
             ->where('user_blogs.disable', '=', 0)
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }
@@ -147,7 +147,7 @@ class UserBlogs extends Base
             ->on('blog_user_blogs.user_blog_code', '=', 'user_blogs.code')
             ->where('blog_user_blogs.blog_code', '=', $blog_code)
             ->where('user_blogs.disable', '=', 0)
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }
@@ -168,7 +168,7 @@ class UserBlogs extends Base
             ->on('blog_user_blogs.user_blog_code', '=', 'user_blogs.code')
             ->where('user_blogs.code', '=', $code)
             ->where('user_blogs.disable', '=', 0)
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }

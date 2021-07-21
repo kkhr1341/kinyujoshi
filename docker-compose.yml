@@ -57,7 +57,7 @@ services:
     environment:
       TZ: "Asia/Tokyo"
     volumes:
-      - ~/.composer/auth.json:/root/composer/auth.json
+#      - ~/.composer/auth.json:/root/composer/auth.json
       - ./web:/app
       - ./php/php.ini:/usr/local/etc/php/php.ini
     working_dir: /app
@@ -101,7 +101,7 @@ services:
     environment:
       MINIO_ACCESS_KEY: minio
       MINIO_SECRET_KEY: minio123
-    command: server /data 
+    command: server /data
 
   createbuckets:
     image: minio/mc

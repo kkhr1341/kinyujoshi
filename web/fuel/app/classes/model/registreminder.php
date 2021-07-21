@@ -16,7 +16,7 @@ class RegistReminder extends Base
         $result = \DB::select('*')->from('regist_reminders')
             ->where('access_token', '=', $access_token)
             ->where('expires', '>=', date('Y-m-d H:i:s'))
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }

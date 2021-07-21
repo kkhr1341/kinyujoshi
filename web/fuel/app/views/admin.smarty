@@ -80,7 +80,7 @@
 
                 {if (in_array('super_admin', $roles) && $from_company==TRUE)}
                 <li>
-                  <a href="/admin/staffs">スタッフ一覧</a>
+                  <a href="/admin/staffs">権限一覧</a>
                 </li>
                 {/if}
               </ul>

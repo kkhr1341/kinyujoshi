@@ -11,7 +11,7 @@ class Withdrawalreasons extends Base
 
         $reasons = \DB::select("*")->from('withdrawal_reasons')
             ->order_by('sort', 'asc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $keys = array();

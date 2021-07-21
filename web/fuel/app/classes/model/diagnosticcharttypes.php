@@ -15,7 +15,7 @@ class DiagnosticChartTypes extends Base
     {
         $result = \DB::select('*')
             ->from('diagnostic_chart_types')
-            ->execute();
+            ->execute('slave');
         if (empty($result)) {
             return false;
         }

@@ -16,7 +16,7 @@ class UserReminder extends Base
         $result = \DB::select('*')->from('users_reminders')
             ->where('access_token', '=', $access_token)
             ->where('expires', '>=', date('Y-m-d H:i:s'))
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }

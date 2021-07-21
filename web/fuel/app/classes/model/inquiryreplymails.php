@@ -59,7 +59,7 @@ class Inquiryreplymails extends Base
             ->join('profiles', 'left')
             ->on('profiles.username', '=', 'users.username')
             ->where('inquiry_reply_mails.inquiry_code', '=', $inquiry_code)
-            ->execute()
+            ->execute('slave')
             ->as_array();
     }
 }

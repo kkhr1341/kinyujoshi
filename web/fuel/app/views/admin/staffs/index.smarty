@@ -1,7 +1,7 @@
 <ol class="my-header-menu">
   <li><a href="/">ホーム</a></li>
   <li><a href="/admin">マイページ</a></li>
-  <li class="active">スタッフ一覧</li>
+  <li class="active">権限一覧</li>
 </ol>
 
 <div class="tab-content">

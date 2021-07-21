@@ -58,8 +58,8 @@
             </div>
           </div>
           <div class="fee-open-el">
-            <label>お名前（フルネーム）</label>
-            <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
+            <label>ニックネーム</label>
+            <input type="text" id="name" name="name" class="" placeholder="" value="">
           </div>
           <div class="fee-open-el">
             <label>メールアドレス</label>

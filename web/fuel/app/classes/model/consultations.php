@@ -65,7 +65,7 @@ class Consultations extends Base
             ->from('consultations')
             ->where('consultations.disable', '=', 0)
             ->order_by('consultations.created_at', 'desc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
     }
 
@@ -77,7 +77,7 @@ class Consultations extends Base
             ->from('consultations')
             ->where('consultations.code', '=', $code)
             ->where('consultations.disable', '=', 0)
-            ->execute()
+            ->execute('slave')
             ->current();
     }
 }

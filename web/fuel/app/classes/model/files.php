@@ -12,7 +12,7 @@ class Files extends Base
         $datas = \DB::select(\DB::expr('mode, name, type, size, url, thumb, etag'))->from('files')
             ->where('username', '=', $username)
             ->where('mode', '=', $mode)
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
 

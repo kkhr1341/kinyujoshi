@@ -9,10 +9,14 @@
     <div class="my-profile-block-sp sp">
 
       <div class="side-profile-block">
-
-        {if (Auth::has_access('userblogs.create'))}
-        <div class="official-member-badge"><img src="/images/my/om-badge.png"></div>
+        {if in_array('official_member', $roles|default:'')}
+        <div class="official-member-badge"><img src="/images/my/authority_lv3.png"></div>
+        {elseif in_array('general_official_member', $roles|default:'')}
+        <div class="official-member-badge"><img src="/images/my/authority_lv5.png"></div>
+        {elseif in_array('editor', $roles|default:'')}
+        <div class="official-member-badge"><img src="/images/my/authority_lv2.png"></div>
         {/if}
+
         <a class="my-side-edit" href="/my/profile/edit"><img src="/images/my/edit.png"></a>
 
         <!-- プロフィール画像 -->

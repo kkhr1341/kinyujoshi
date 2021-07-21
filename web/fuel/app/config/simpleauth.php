@@ -77,16 +77,59 @@ return array(
   ),
 
   /**
-   * Groups as id => array(name => <string>, roles => <array>)
+   * Groups as id => array(name => <string>, roles => <array>)report_contribute
    */
   'groups' => array(
-    -1   => array('name' => 'Banned', 'roles' => array('banned')),
+    -1   => array('name' => 'Banned（削除）', 'roles' => array(
+        'banned'
+    )),
     0    => array('name' => 'Guests', 'roles' => array()),
-    1    => array('name' => 'メンバー', 'roles' => array('user')),
-    30   => array('name' => 'オフィシャルメンバー', 'roles' => array('user', 'official_member', 'joshikai_contribute', 'report_contribute')),
-    40   => array('name' => 'コミュニティスタッフ', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin')),
-    80   => array('name' => '管理者', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin', 'admin')),
-    100  => array('name' => 'スーパー管理者', 'roles' => array('user', 'official_member', 'joshikai_admin', 'report_admin', 'admin', 'super_admin')),
+    1    => array('name' => '権限LV.6', 'roles' => array(
+        'user'
+    )),
+    2    => array('name' => '権限LV.5', 'roles' => array(
+        'user',
+        'general_official_member'
+    )),
+    30   => array('name' => '（旧）オフィシャルメンバー（削除）', 'roles' => array(
+        'user',
+        'official_member',
+        'joshikai_contribute',
+        'report_contribute'
+    )),
+    40   => array('name' => '権限LV.2', 'roles' => array(
+        'user',
+        'editor',
+        'joshikai_admin',
+        'report_admin'
+    )),
+    41   => array('name' => '権限LV.3', 'roles' => array(
+        'user',
+        'official_member',
+        'joshikai_contribute',
+        'report_contribute'
+    )),
+    42   => array('name' => '権限LV.4', 'roles' => array(
+        'user',
+        'corporate',
+        'joshikai_contribute',
+        'report_contribute'
+    )),
+    80   => array('name' => '管理者（削除）', 'roles' => array(
+        'user',
+        'official_member',
+        'joshikai_admin',
+        'report_admin',
+        'admin'
+    )),
+    100  => array('name' => '権限LV.1', 'roles' => array(
+        'user',
+        'official_member',
+        'joshikai_admin',
+        'report_admin',
+        'admin',
+        'super_admin'
+    )),
   ),
 
   /**
@@ -96,10 +139,10 @@ return array(
     'admin' => array(
       'admin' => array('read'),
       'analysis' => array('read'),
-      'applications' => array('read'),
+//      'applications' => array('read'),
       'authors' => array('read', 'create', 'edit', 'delete'),
       'otherauthors' => array('read', 'create', 'edit', 'delete'),
-      'blogs' => array('read', 'create', 'edit', 'delete'),
+      'blogs' => array('read', 'create', 'edit', 'delete', 'publish'),
       'events' => array('read', 'create', 'edit', 'delete'),
       'applications' => array('read', 'create', 'edit', 'delete'),
       'inquiries' => array('read'),
@@ -115,31 +158,35 @@ return array(
     ),
     'joshikai_admin' => array(
       'admin' => array('read'),
-      'events' => array('read', 'create', 'edit', 'delete'),
-      'applications' => array('read', 'create', 'edit', 'delete'),
+      'events' => array('read', 'create', 'edit', 'publish'),
+      'analysis' => array('read'),
+      'applications' => array('read'),
     ),
     'report_admin' => array(
       'admin' => array('read'),
-      'blogs' => array('read', 'create', 'edit', 'delete'),
+      'blogs' => array('read', 'create', 'edit', 'publish'),
     ),
     'editor' => array(
-      'authors' => array('read', 'create', 'edit', 'delete'),
-      'userblogs' => array('read', 'create', 'edit', 'delete'),
     ),
     'joshikai_contribute' => array(
       'admin' => array('read'),
-      'events' => array('read', 'create', 'edit', 'delete'),
+      'events' => array('read', 'create', 'edit'),
+      'analysis' => array('read'),
+      'applications' => array('read'),
     ),
     'report_contribute' => array(
       'admin' => array('read'),
-      'blogs' => array('read', 'create', 'edit', 'delete'),
+      'blogs' => array('read', 'create', 'edit'),
     ),
     'official_member' => array(
-      'authors' => array('read', 'create', 'edit', 'delete'),
-      'userblogs' => array('read', 'create', 'edit', 'delete'),
+    ),
+    'corporate' => array(
     ),
     'user' => array(
       'authors' => array('read', 'create', 'edit', 'delete'),
+      'userblogs' => array('read', 'create', 'edit', 'delete'),
+    ),
+    'general_official_member' => array(
     ),
 
     /**

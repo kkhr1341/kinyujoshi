@@ -46,7 +46,7 @@ class Registlist extends Base
             $select->where(\DB::expr('exists(select * from applications where applications.username = users.username and applications.event_code = "' .  $options['event_code']. '")'));
         }
 
-        if (!$row = $select->execute()->as_array()) {
+        if (!$row = $select->execute('slave')->as_array()) {
             return array();
         }
         return $row;
@@ -54,33 +54,141 @@ class Registlist extends Base
 
     public static function create($params)
     {
-        $code = self::getNewCode('member_regist');
-        $params['username'] = \Auth::get('username');
-        $params['code'] = $code;
-        $params['user_agent'] = @$_SERVER['HTTP_USER_AGENT'];
-        \DB::insert('member_regist')->set($params)->execute();
+        $db = \Database_Connection::instance();
+        $db->start_transaction();
+        try {
+            $username = \Str::random('alnum', 16);
+            $user_id = \Auth::create_user(
+                $username,
+                $params["password"],
+                $params["email"],
+                1
+            );
+
+            // プロフィール登録
+            $profile_code = Profiles::getNewCode('profiles', 6);
+
+            $profile = array(
+                'code' => $profile_code,
+                'username' => $username,
+                'name' => $params['name'],
+                'name_kana' => $params['name_kana'],
+                'nickname' => $params['name'],
+                'prefecture' => '',
+                'url' => isset($params['url']) ? $params['url']: '',
+                'introduction' => isset($params['introduction']) ? $params['introduction']: '',
+            );
+
+            if (isset($params["official_member_job"]) && $params["official_member_job"]) {
+                $profile["official_member_job"] = $params["official_member_job"];
+            }
+
+            if (isset($params["profile_image"]) && $params["profile_image"]) {
+                $profile["profile_image"] = $params["profile_image"];
+            } else {
+                $profile["profile_image"] = '';
+            }
+
+            if (isset($params["birthday"]) && $params["birthday"]) {
+                $profile["birthday"] = $params["birthday"];
+            } else {
+                $profile["birthday"] = '';
+            }
+
+            Profiles::create($profile);
+
+            // call Opauth to link the provider login with the local user
+            if (isset($params['provider']) && $params['provider']) {
+                $opauth = \Auth_Opauth::forge(false);
+                $opauth->link_provider(array(
+                    'parent_id' => $user_id,
+                    'provider' => $params['provider'],
+                    'uid' => $params['uid'],
+                    'access_token' => $params['provider'],
+//              'secret' => $params['provider'],
+                    'expires' => $params['provider'],
+//              'refresh_token' => $params['provider'],
+                    'created_at' => time()
+                ));
+            }
+
+            $code = self::getNewCode('member_regist');
+            \DB::insert('member_regist')->set(array(
+                'code' => $code,
+                'username' => $username,
+                'name' => $params['name'],
+                'name_kana' => $params['name_kana'],
+                'email' => '',
+                'url' => isset($params['url'])? $params['url']: '',
+                'age' => $params['birthday'],
+                'edit_inner' => isset($params['edit_inner']) ? $params['edit_inner']: '',
+                'introduction' => isset($params['introduction']) ? $params['introduction']: '',
+                'interest' => '',
+                'ask' => '',
+                'income' => '',
+                'industry' => '',
+                'industry_other' => '',
+                'created_at' => \DB::expr('now()'),
+                'user_agent' => @$_SERVER['HTTP_USER_AGENT'],
+            ))->execute();
+
+            $db->commit_transaction();
+
+        } catch (Exception $e) {
+            $db->rollback_transaction();
+            \Log::error('register error::' . $e->getMessage());
+            throw $e;
+        }
+
         return $params;
     }
 
     public static function save($params)
     {
-        \DB::update('member_regist')->set($params)->where('code', '=', $params['code'])->execute();
 
-        if ($username = self::getUsername($params['code'])) {
-            \DB::update('profiles')
-                ->set(array(
+        $db = \Database_Connection::instance();
+        $db->start_transaction();
+        try {
+
+            \DB::update('member_regist')->set(array(
+                'name' => $params['name'],
+                'name_kana' => $params['name_kana'],
+                'age' => $params['birthday'],
+                'url' => $params['url'],
+                'introduction' => $params['introduction'],
+                'edit_inner' => $params['edit_inner']
+            ))->where('code', '=', $params['code'])->execute();
+
+            if ($username = self::getUsername($params['code'])) {
+
+                $profile = array(
                     'name' => $params['name'],
                     'name_kana' => $params['name_kana'],
-                ))
-                ->where('username', '=', $username)
-                ->execute();
+                    'birthday' => $params['birthday'],
+                    'url' => $params['url'],
+                );
 
-            \DB::update('users')
-                ->set(array(
-                    'email' => $params['email'],
-                ))
-                ->where('username', '=', $username)
-                ->execute();
+                if (isset($params["official_member_job"]) && $params["official_member_job"]) {
+                    $profile["official_member_job"] = $params["official_member_job"];
+                }
+
+                \DB::update('profiles')
+                    ->set($profile)
+                    ->where('username', '=', $username)
+                    ->execute();
+
+                if ($params['password']) {
+                    $old_password = \Auth::reset_password($username);
+                    \Auth::change_password($old_password, $params['password'], $username);
+                }
+            }
+
+            $db->commit_transaction();
+
+        } catch (Exception $e) {
+            $db->rollback_transaction();
+            \Log::error('register error::' . $e->getMessage());
+            throw $e;
         }
 
         return $params;
@@ -103,7 +211,7 @@ class Registlist extends Base
             ->where('code', '=', $code)
             ->join('users')
             ->on('member_regist.username', '=', 'users.username')
-            ->execute()
+            ->execute('slave')
             ->current();
         if (empty($result)) {
             return false;

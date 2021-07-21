@@ -58,7 +58,7 @@ class News extends Base
         } else {
             $datas = $datas->limit($options['limit']);
         }
-        $datas = $datas->execute()
+        $datas = $datas->execute('slave')
             ->as_array();
         return $datas;
     }
@@ -148,7 +148,7 @@ class News extends Base
             $total = $total->where('section_code', '=', $section_code);
         }
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
 
         $config = array(
             'pagination_url' => $pagination_url,
@@ -177,7 +177,7 @@ class News extends Base
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
             ->order_by('open_date', 'desc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $datas['pagination'] = $pagination;
@@ -191,7 +191,7 @@ class News extends Base
             ->from('news')
             ->where('news.code', '=', $code)
             ->where('news.disable', '=', 0)
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }

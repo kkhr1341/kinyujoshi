@@ -79,7 +79,7 @@ class Inquiries extends Base
             ->from('inquiries')
             ->where('inquiries.disable', '=', 0)
             ->order_by('inquiries.created_at', 'desc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
     }
 
@@ -91,7 +91,7 @@ class Inquiries extends Base
             ->from('inquiries')
             ->where('inquiries.code', '=', $code)
             ->where('inquiries.disable', '=', 0)
-            ->execute()
+            ->execute('slave')
             ->current();
     }
 }

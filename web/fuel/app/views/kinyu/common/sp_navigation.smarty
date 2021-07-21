@@ -28,9 +28,12 @@
               <a href="/my">マイページへログイン</a>
             </div>
             <div class="navi_kinyu-menu-block-el main-area">
-              <a href="/login_regist">メンバー登録</a>
+              <a href="/regist_email">メンバー登録</a>
             </div>
           {/if}
+          <div class="navi_kinyu-menu-block-el main-area">
+            <a href="https://official.kinyu-joshi.jp/">オフィシャルメンバーズクラブ</a>
+          </div>
           <div class="navi_kinyu-menu-block-el">
             <a href="/joshikai">女子会</a>
           </div>

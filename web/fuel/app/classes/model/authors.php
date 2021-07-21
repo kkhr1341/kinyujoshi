@@ -102,7 +102,7 @@ class Authors extends Base
         return \DB::select(\DB::expr('authors.*'))
             ->from('authors')
             ->where('username', '=', $username)
-            ->execute()
+            ->execute('slave')
             ->current();
     }
 
@@ -111,7 +111,7 @@ class Authors extends Base
         $total = \DB::select(\DB::expr('count(*) as cnt'))
             ->from('authors');
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
 
         $config = array(
             'pagination_url' => $pagination_url,
@@ -132,7 +132,7 @@ class Authors extends Base
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
             ->order_by('created_at', 'desc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $datas['pagination'] = $pagination;

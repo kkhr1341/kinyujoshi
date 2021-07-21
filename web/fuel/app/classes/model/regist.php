@@ -34,12 +34,17 @@ class Regist extends Base
         $val->add('name_kana', 'ふりがな')
             ->add_rule('required');
 
+        $val->add('nickname', 'ニックネーム')
+            ->add_rule('required');
+
+        $val->add('official_member_job', 'オフィシャルメンバー職業');
+
         $val->add('birthday', '生年月日')
             ->add_rule('mb_convert_kana', 'a', 'utf-8')
             ->add_rule('valid_date');
 
-        $val->add('prefecture', '都道府県')
-            ->add_rule('required');
+//        $val->add('prefecture', '都道府県')
+//            ->add_rule('required');
 
         $val->add('profile_image', 'プロフィール画像');
 
@@ -52,8 +57,8 @@ class Regist extends Base
             ->add_rule('max_length', 255)
             ->add_rule('alphanum');
 
-        $val->add('not_know', 'きんゆうワカラナイ度')
-            ->add_rule('required');
+//        $val->add('not_know', 'きんゆうワカラナイ度')
+//            ->add_rule('required');
 
         // $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
         //     ->add_rule('required');
@@ -81,13 +86,12 @@ class Regist extends Base
         // $val->add('future', 'きんゆう女子。を通してどんな自分になりたい？')
         //     ->add_rule('required');
 
-        $val->add('transmission', 'きんゆう女子。で情報発信したいですか？')
-            ->add_rule('required');
+//        $val->add('transmission', 'きんゆう女子。で情報発信したいですか？')
+//            ->add_rule('required');
 
-        // $val->add('url', '「個人で発信しているブログなど」');
+         $val->add('url', '「個人で発信しているブログなど」');
 
-        $val->add('introduction', '自己紹介')
-            ->add_rule('required');
+        $val->add('introduction', '自己紹介');
 
         return $val;
     }
@@ -115,15 +119,21 @@ class Regist extends Base
                 'name' => $params['name'],
                 'name_kana' => $params['name_kana'],
                 'nickname' => $params['name'],
-                'birthday' => $params['birthday'],
-                'prefecture' => $params['prefecture'],
+                'prefecture' => '',
                 'url' => isset($params['url']) ? $params['url']: '',
-                'introduction' => $params['introduction'],
+                'introduction' => isset($params['introduction']) ? $params['introduction']: '',
+                'official_member_job' => isset($params['official_member_job']) ? $params['official_member_job']: '0',
 //              'gender' => $params['gender']
             );
 
             if (isset($params["profile_image"]) && $params["profile_image"]) {
                 $profile["profile_image"] = $params["profile_image"];
+            } else {
+                $profile["profile_image"] = '';
+            }
+
+            if (isset($params["birthday"]) && $params["birthday"]) {
+                $profile["birthday"] = $params["birthday"];
             } else {
                 $profile["profile_image"] = '';
             }
@@ -151,7 +161,7 @@ class Regist extends Base
                 'username' => $username,
                 'name' => $params['name'],
                 'name_kana' => $params['name_kana'],
-                'not_know' => $params['not_know'],
+                'not_know' => isset($params['not_know'])? $params['not_know']: '',
                 'interest' => '',
                 'ask' => '',
                 'email' => '',
@@ -168,7 +178,7 @@ class Regist extends Base
                 'edit_inner' => '',
                 'industry' => '',
                 'industry_other' => '',
-                'introduction' => $params['introduction'],
+                'introduction' => isset($params['introduction']) ? $params['introduction']: '',
                 'created_at' => \DB::expr('now()'),
                 'user_agent' => @$_SERVER['HTTP_USER_AGENT'],
             ))->execute();
@@ -255,7 +265,7 @@ class Regist extends Base
             ->on('profiles.username', '=', 'member_regist.username')
             ->where('member_regist.disable', '=', 1);
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
         return $total['cnt'];
     }
     public static function all($pagination_url, $page, $uri_segment = 3, $per_page = 5, $params)
@@ -291,7 +301,7 @@ class Regist extends Base
                 ->and_where_close();
         }
 
-        $total = $total->execute()->current();
+        $total = $total->execute('slave')->current();
         $datas['total'] = $total['cnt'];
 
         $config = array(
@@ -372,7 +382,7 @@ class Regist extends Base
         $datas['datas'] = $datas['datas']->limit($pagination->per_page)
             ->offset($pagination->offset)
             ->order_by('member_regist.created_at', 'desc')
-            ->execute()
+            ->execute('slave')
             ->as_array();
         $datas['pagination'] = $pagination;
 
@@ -387,44 +397,18 @@ class Regist extends Base
     {
         \DB::set_charset('utf8');
         $datas = \DB::select(
-            "member_regist.id",
             "member_regist.code",
-            "member_regist.username",
-            "member_regist.age",
-            "member_regist.not_know",
-//            "member_regist.interest",
-//            "member_regist.ask",
-//            "member_regist.income",
-            "member_regist.transmission",
+            "profiles.id",
+            "profiles.code",
+            "profiles.username",
             \DB::expr("ifnull(users.email, member_regist.email) as email"),
-            "member_regist.url",
-//            "member_regist.facebook",
-//            "member_regist.other_sns",
-//            "member_regist.url",
-            "member_regist.introduction",
-            "member_regist.user_agent",
-            "member_regist.where_from",
-            "member_regist.where_from_other",
-            "member_regist.where_from_site",
-            "member_regist.want_to_something",
-            "member_regist.future",
-            "member_regist.job_kind",
-            "member_regist.id_name",
-            "member_regist.disable",
+            "profiles.url",
+            "profiles.introduction",
             "member_regist.edit_inner",
-            "member_regist.industry",
-            "member_regist.industry_other",
-            "member_regist.created_at",
-            "member_regist.updated_at",
-            \DB::expr("exists(select * from users where users.username = member_regist.username) as is_user"),
-            \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
-            \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana"),
-            \DB::expr("prefectures.name as prefecture_name"),
-            \DB::expr("(select diagnostic_chart_types.type from diagnostic_chart_type_users inner join diagnostic_chart_types on diagnostic_chart_types.code = diagnostic_chart_type_users.type_code where diagnostic_chart_type_users.id = types.id) as type"),
-            \DB::expr("(select GROUP_CONCAT(uwm.value) from user_want_to_meets as uwm where uwm.username = users.username) as user_want_to_meet_values"),
-            \DB::expr("(select GROUP_CONCAT(uwl.value) from user_want_to_learns as uwl where uwl.username = users.username) as user_want_to_learn_values"),
-            \DB::expr("(select GROUP_CONCAT(urt.value) from user_regist_triggers as urt where urt.username = users.username) as user_regist_trigger_values"),
-            \DB::expr("(CASE WHEN member_regist.where_from THEN member_regist.where_from WHEN member_regist.where_from_other THEN member_regist.where_from_other WHEN member_regist.where_from_site THEN member_regist.where_from_site END) as where_from")
+            "profiles.official_member_job",
+            "profiles.created_at",
+            "profiles.updated_at",
+            \DB::expr("(select diagnostic_chart_types.type from diagnostic_chart_type_users inner join diagnostic_chart_types on diagnostic_chart_types.code = diagnostic_chart_type_users.type_code where diagnostic_chart_type_users.id = types.id) as type")
         )
             ->from('member_regist')
             ->join('users', 'LEFT')
@@ -453,35 +437,16 @@ class Regist extends Base
     public static function getByCodeWithurl($code)
     {
         $result = \DB::select(
-            "member_regist.id",
             "member_regist.code",
-            "member_regist.username",
-            "member_regist.age",
-            "member_regist.not_know",
-//            "member_regist.interest",
-//            "member_regist.ask",
-//            "member_regist.income",
-            "member_regist.transmission",
+            "profiles.username",
             \DB::expr("ifnull(users.email, member_regist.email) as email"),
-            "member_regist.url",
-//            "member_regist.facebook",
-//            "member_regist.other_sns",
-            "member_regist.introduction",
-            "member_regist.user_agent",
-            "member_regist.where_from",
-            "member_regist.where_from_site",
-            "member_regist.where_from_other",
-            "member_regist.future",
-            "member_regist.job_kind",
-            "member_regist.id_name",
-            "member_regist.disable",
+            "profiles.url",
+            "profiles.introduction",
             "member_regist.edit_inner",
-            "member_regist.industry",
-            "member_regist.industry_other",
-            "profiles.prefecture",
-            "member_regist.created_at",
-            "member_regist.updated_at",
-            \DB::expr("prefectures.name as prefecture_name"),
+            "profiles.official_member_job",
+            "profiles.birthday",
+            "profiles.created_at",
+            "profiles.updated_at",
             \DB::expr("ifnull(profiles.name, member_regist.name) as name"),
             \DB::expr("ifnull(profiles.name_kana, member_regist.name_kana) as name_kana")
             )

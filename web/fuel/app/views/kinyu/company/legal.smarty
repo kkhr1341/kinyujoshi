@@ -26,12 +26,12 @@
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> サービス名</h3>
-      <p class="description">「きんゆう女子。」</p>
+      <p class="description">「きんゆう女子。」<br>メンバー：無料プラン<br>オフィシャルメンバー：有料プラン<br>女子会：各種イベント</p>
     </div>
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 販売代金</h3>
-      <p class="description">各イベントごとに記載</p>
+      <p class="description">オフィシャルメンバー：登録料5,000円（税別）、月額1,000円（税別）<br>その他：イベントに参加する場合には、別途参加費が必要な場合がございます。</p>
     </div>
 
     <div class="company-details-el">
@@ -43,45 +43,42 @@
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払方法</h3>
       <p class="description">
         ・クレジット決済（VISA・MasterCard・JCB・American Express・Discover・Dinars Club INTARNATIONAL）<br>
-        ・当日現金払い<br>
-        ・一部Peatix Inc.が提供する決済システムを利用しておりますので、同社の定めるところに従います。（<a href="https://about.peatix.com/ja/legal-company.html" target="_blank">https://about.peatix.com/ja/legal-company.html</a>）
+        ・一部Kassai、Pay.jpが提供する決済システムを利用しておりますので、同社の定めるところに従ってイベント参加費を別途お支払いいただく場合がございます。
       </p>
     </div>
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> お申込みの有効期限</h3>
-      <p class="description">イベント実施1日前まで</p>
+      <p class="description">
+        ・有料プラン：特になし。お申し込みから1ヶ月ほど登録と審査にお時間をいただいています。審査後にサービスをご利用いただけます。<br><br>
+        ・イベント：原則実施1日前まで。イベントにより異なる場合がございますので、各募集ページをご確認ください。
+      </p>
     </div>
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> お支払い時期</h3>
       <p class="description">
         ・クレジット決済<br>
-        　各クレジットカード会社への請求は女子会翌日までに行います。<br>
-        ・当日現金払い<br>
-        　イベント当日、会場にて代金をお支払いください。<br>
-        ・一部Peatix Inc.が提供する決済システムを利用しておりますので、同社の定めるところに従います。（<a href="https://about.peatix.com/ja/legal-company.html" target="_blank">https://about.peatix.com/ja/legal-company.html</a>）
+        有料プラン：各クレジットカード会社への請求は、登録料は審査及び登録後、翌月に行います。月額費用は毎月10日に行います。<br><br>
+        ・一部Kassai、Pay.jpが提供する決済システムを利用しておりますので、同社の定めるところに従ってイベント参加費を別途お支払いいただく場合がございます。
       </p>
     </div>
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 商品の引渡し時期</h3>
-      <p class="description">お申込みのイベント開催日に、イベント開催をもって引渡しになります。</p>
+      <p class="description">オフィシャルメンバーズカードは審査及び登録後、1ヶ月以内に登録いただいた住所へお届けいたします。<br><br>お申込みのイベント開催日に、イベント開催をもって引渡しになります。</p>
     </div>
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 返品・キャンセル</h3>
       <p class="description">
         ・サービスの性質上、イベント実施後の返品・キャンセルはいたしかねます。<br>
-        ・弊社都合によりイベントを開催することができなかった場合は、全額を返金させていただきます。<br>
-        ・原則として、イベント開催の３日前まで、キャンセルを受け付けます。それ以降は100％のキャンセル料を頂戴いたします。キャンセルを希望される場合には、弊社（ support@kinyu-joshi.jp）までご連絡ください。<br>
-        ・イベントにより、キャンセルをお受けできない場合がございます。その場合には、各イベントのお申込みページに記載しておりますので、ご確認ください。
       </p>
     </div>
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員情報変更・退会について</h3>
-      <p class="description">会員情報変更は<a href="/my" target="_blank">マイページ</a>から行うことができます。退会は、退会フォームよりいつでも行うことが可能です。退会された方の個人情報は当社が定める<a href="/privacy" target="_blank">プライバシーポリシー</a>の定めに従い、適切に処理いたします。</p>
+      <p class="description">会員情報変更は<a href="/my" target="_blank">マイページ</a>から行うことができます。退会は、<a href="https://kinyu-joshi.jp/my/account/withdrawal">退会フォーム</a>よりいつでも行うことが可能です。退会された方の個人情報は当社が定める<a href="/privacy" target="_blank">プライバシーポリシー</a>の定めに従い、適切に処理いたします。</p>
     </div>
 
   </div>

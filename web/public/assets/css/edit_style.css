@@ -238,6 +238,19 @@ opacity: .5;
 .header-login-area li a:hover {
   opacity: .5;
 }
+.header-login-area02 {
+  top: 60px;
+}
+.header-login-area02 li a {
+  background: -moz-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: -webkit-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: linear-gradient(to bottom right, #EDFAF8, #FFF7F4)!important;
+  border: 1px solid #b1b1b1;
+  color: #444!important;
+}
+
+
+
 
 /* ログインしている場合 */
 .header-mypage-block {
@@ -606,6 +619,7 @@ opacity: .5;
   padding: 24px 0px 72px;
 }
 .kinyu-top-maincontent-block {
+  margin-bottom: 80px;
 }
 .kinyu-top-maincontent-block-el {
   padding: 72px 0px;
@@ -866,28 +880,46 @@ opacity: .5;
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・メンバー登録部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.kinyu-top-member-block {
-
-}
 .member-regist-title-text {
   width: 500px;
   display: inline-block;
   margin: 0 auto;
 }
-
 .after-regist-kinjo-check a {
   display: block;
   width: 100%;
    margin: 0 auto;
   margin-top: 8px;
 }
-
 .title-wrapper {
-background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209, 0.3)),url(/images/business/step3_img.jpeg);
- padding: 30px 0;
+ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209, 0.3)),url(/images/business/step3_img.jpeg);
+ padding: 120px 0px 80px;
  background-size: cover;
  background-position: 50% 47%;
  text-align: center;
+}
+.title-wrapper-inner {
+  width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.member-regist-icon {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+}
+.title-wrapper .email-regist-title {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 24px;
+  text-shadow: 0px 0px 8px #000;
+}
+.title-wrapper .email-regist-description {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0px 0px 8px #000;
+  line-height: 1.5;
 }
 .kinyu-top-member-list {
   height: 350px;
@@ -924,13 +956,22 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 .kinyu-top-member-list .text-box .link-to {
   display: block;
   background: #8ddcd1;
-  width: 200px;
+  width: 300px;
   text-align: center;
-  padding: 8px 20px;
+  padding: 10px 0px;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
   transition: .5s;
+}
+.kinyu-top-member-list .text-box .link-to.official-member-regist {
+  margin-top: 12px;
+  background: -moz-linear-gradient(top left, #EDFAF8, #FFF7F4);
+  background: -webkit-linear-gradient(top left, #EDFAF8, #FFF7F4);
+  background: linear-gradient(to bottom right, #EDFAF8, #FFF7F4);
+  border: 1px solid #b1b1b1;
+  color: #444;
+  font-weight: normal;
 }
 
 
@@ -1256,7 +1297,25 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
   width: 100%;
 }
 
-.introduction-list .kinyu-top-banner-area {
+.top-official-member-block {
+  width: 650px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.top-official-member-block p {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.top-official-member-block a {
+  display: block;
+  transition: .5s;
+}
+.top-official-member-block a img {
+  width: 100%;
+}
+.kinyu-top-banner-area {
   text-align: center;
   width: 750px;
   margin: 0 auto;
@@ -5135,6 +5194,44 @@ input::-webkit-input-placeholder {
 .login-block-el-container {
   padding-top: 80px;
 }
+
+.official-member-container {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.official-member-title {
+  font-size: 20px;
+  line-height: 32px;
+  font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.official-member-container a {
+  display: block;
+  padding: 20px;
+  background: -moz-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: -webkit-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
+  background: linear-gradient(to bottom right, #EDFAF8, #FFF7F4)!important;
+  border: 1px solid #b1b1b1;
+}
+.official-member-link-inner {
+  display: table;
+}
+.official-member-container a img {
+  display: table-cell;
+  width: 120px;
+}
+.official-member-container a p {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 18px;
+  padding-left: 20px;
+  width: 100%;
+  text-align: center;
+}
+
 .oficial-member-block-container {
   width: 100%;
   height: 100%;
@@ -5544,6 +5641,7 @@ footer {
   padding: 70px 0 50px;
   letter-spacing: -.4em;
   min-height: 1px;
+  position: relative;
 }
 .footer-logo {
   display: inline-block;
@@ -5555,10 +5653,63 @@ footer {
 .footer-logo img {
   width: 100%;
 }
-
 .footer-logo a:hover {
   opacity: 0.5;
   transition: 0.5s;
+}
+.footer-content-list {
+  position: absolute;
+  left: 170px;
+  width: 280px;
+  top: 130px;
+}
+.footer-content-list ul {
+  text-align: center;
+  margin-top: 6px;
+}
+.footer-content-list li {
+  margin-right: 8%;
+  display: inline-block;
+  margin-bottom: 4%;
+}
+.footer-content-list li .footer-content-list-el {
+  box-sizing: border-box;
+}
+.footer-content-list li:nth-child(2n) {
+  margin-right: 0;
+}
+.footer-content-list li:nth-child(3) {
+  width: 100%;
+  margin-right: 0;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.footer-content-list li:nth-child(3) .footer-content-list-el {
+  /*background-color: #86D682;*/
+  margin-bottom: 2px;
+}
+.footer-content-list li:nth-child(3) .footer-content-list-el img {
+  top: 4px;
+  position: relative;
+}
+.footer-content-list a {
+  display: block;
+}
+.footer-content-list p.text-innner {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/social/instagram_icon.png);
+  line-height: 25px;
+  padding-left: 36px;
+  text-align: left;
+}
+.footer-content-list a.twitter p {
+  background-image: url(/images/social/twitter_icon.png);
+}
+.footer-content-list a.line p {
+  background-image: url(/images/social/line_icon.svg);
+  line-height: 28px;
 }
 .new_area {
   display: inline-block;
@@ -6304,6 +6455,9 @@ footer {
 }
 .oficial-member-block .close-btn:hover {
   cursor: pointer;
+  opacity: .5;
+}
+.top-official-member-block a:hover {
   opacity: .5;
 }
 }

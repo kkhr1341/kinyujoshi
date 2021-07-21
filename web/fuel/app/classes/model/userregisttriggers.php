@@ -10,7 +10,7 @@ class UserRegistTriggers extends Base
         $user_regist_triggers = \DB::select(\DB::expr('user_regist_triggers.*'))
             ->from('user_regist_triggers')
             ->where('user_regist_triggers.username', '=', $username)
-            ->execute()
+            ->execute('slave')
             ->as_array();
 
         $array = array();

@@ -39,7 +39,7 @@ class Tsubuyaki extends Base
             $datas = $datas->limit($limit);
         }
 
-        $datas = $datas->execute()->as_array();
+        $datas = $datas->execute('slave')->as_array();
         return $datas;
     }
 

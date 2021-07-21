@@ -110,8 +110,6 @@
             {if $blog.status|default:'' == 0}
               <button id="apply" class="btn btn-kinyu" type="button" data-status="2" data-code="{$blog.code|default:''}">みんなに教える!</button>
               <img class="post-illust sp" src="/images/my/report/post-illust.png">
-            {else}
-              <button id="apply" class="btn btn-kinyu" type="button" data-status="3" data-code="{$blog.code|default:''}">更新依頼する</button>
             {/if}
               {if $blog.blog_code|default:'' == ''}
                 <button id="delete" class="btn btn-kinyu delete-color " type="button" data-status="4" data-code="{$blog.code|default:''}">削除</button>

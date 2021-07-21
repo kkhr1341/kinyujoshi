@@ -19,7 +19,7 @@ class DiagnosticChartTypeUsers extends Base
             ->order_by('diagnostic_chart_type_users.created_at', 'desc')
             ->limit(1);
 
-        if (!$row = $user->execute()->current()) {
+        if (!$row = $user->execute('slave')->current()) {
             return false;
         }
         return $row;
@@ -33,7 +33,7 @@ class DiagnosticChartTypeUsers extends Base
             ->from('diagnostic_chart_type_users')
             ->where('username', '=', $username);
 
-        if (!$total->execute()->current()) {
+        if (!$total->execute('slave')->current()) {
             return false;
         }
 
@@ -42,7 +42,7 @@ class DiagnosticChartTypeUsers extends Base
             ->where('username', '=', $username)
             ->where(\DB::expr('DATE_ADD(created_at, INTERVAL ' . self::EXPIRE . ' DAY) >= now()'));
 
-        return $total->execute()->current() ? true : false;
+        return $total->execute('slave')->current() ? true : false;
     }
 
     public static function get_reset_time($username)
@@ -52,7 +52,7 @@ class DiagnosticChartTypeUsers extends Base
             ->where('username', '=', $username)
             ->where(\DB::expr('DATE_ADD(created_at, INTERVAL ' . self::EXPIRE . ' DAY) >= now()'));
 
-        $row = $total->execute()->current();
+        $row = $total->execute('slave')->current();
         if (!$row) {
             return false;
         }
@@ -112,7 +112,7 @@ class DiagnosticChartTypeUsers extends Base
             $user->where(\DB::expr('exists(select * from applications where applications.username = users.username and applications.event_code = "' .  $options['event_code']. '")'));
         }
 
-        if (!$row = $user->execute()->as_array()) {
+        if (!$row = $user->execute('slave')->as_array()) {
             return array();
         }
         return $row;

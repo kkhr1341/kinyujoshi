@@ -32,11 +32,17 @@
 
     <div class="header-login-area">
       <ul>
-      <li><a class="js-track" href="/login_regist" data-category="pc-header-link" data-action="click" data-value="1">新規メンバー登録</a></li>
+      <li><a class="js-track" href="/regist_email" data-category="pc-header-link" data-action="click" data-value="1">メンバー登録</a></li>
       <li><a class="js-track" href="/login" data-category="pc-header-link" data-action="click" data-value="1">ログイン</a></li>
       </ul>
     </div>
     {/if}
+
+ <!--  <div class="header-login-area header-login-area02">
+      <ul>
+      <li><a class="js-track" href="https://official.kinyu-joshi.jp/" data-category="pc-header-link" data-action="click" data-value="1" target="_blank">オフィシャルメンバー登録</a></li>
+      </ul>
+    </div> -->
 
 
   <!-- レポート検索 -->
@@ -77,7 +83,6 @@
   </div>
 </div>
 
-
 <script>
   $(function() {
     // $(".header-hover01").hover(
@@ -100,5 +105,4 @@
       $('#projectJoshikaiModal').modal();
     });
   });
-
 </script>

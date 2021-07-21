@@ -11,7 +11,7 @@ class DiagnosticChartRouteTypeActionLists extends Base
         $result = \DB::select('*')
             ->from('diagnostic_chart_type_action_lists')
             ->where('type_code', '=', $type_code)
-            ->execute()
+            ->execute('slave')
             ->current();
         if (empty($result)) {
             return false;

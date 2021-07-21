@@ -10,7 +10,7 @@ class Usercreditcard extends Base
     {
         $rows = \DB::select("card_id")->from('user_credit_cards')
             ->where('user_credit_cards.username', '=', $username)
-            ->execute()
+            ->execute('slave')
             ->as_array();
         $ary = array();
         foreach ($rows as $row) {

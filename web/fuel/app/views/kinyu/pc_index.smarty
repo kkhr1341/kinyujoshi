@@ -93,7 +93,7 @@
             <a href="/about"><p><span>きんゆう女子。について</span></p></a>
           </li>
         </ul> -->
-        <div class="kinyu-top-banner-area kiinyu-top-mainarea-bottom">
+        <!-- <div class="kinyu-top-banner-area kiinyu-top-mainarea-bottom">
           <ul>
             <li>
               <a class="js-track" href="/login_regist" data-category="pc-top-link" data-action="click" data-value="1">
@@ -101,6 +101,11 @@
               </a>
             </li>
           </ul>
+        </div> -->
+
+        <div class="top-official-member-block">
+          <p>＼もっと楽しく学ぼう！限定プリカに福利厚生も♪／</p>
+          <a href="https://official.kinyu-joshi.jp/" target="_blank"><img class="w-100" src="/images/official-members-club.jpg"></a>
         </div>
 
       </div>
@@ -114,7 +119,7 @@
         <div class="kinyu-top-list kinyu-top-joshikai-list">
 
           <h3 class="kinyu-top-main-title"><img class="kinyu-top-list-fuki" src="/images/member_regist_fuki_pc.png">ワカラナイ…から卒業しよう♪</h3>
-          <p class="kinyu-top-main-sub">女子会でみんなどうしてる？を知ったり勉強したり。<br>頼れるきん女。FPには、ワカラナイことを聞いてみよう</p>
+          <p class="kinyu-top-main-sub">女子会でみんなどうしてる？を知ったり勉強したり。<br>ゲストには、気軽に質問をしてみよう！</p>
           <ul class="clear">
           {foreach from=$events key="key" item=event name=loopname}
             {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
@@ -141,7 +146,7 @@
       </div>
 
       <!-- メンバー登録 -->
-      <div class="kinyu-top-maincontent-block-el">
+      <!-- <div class="kinyu-top-maincontent-block-el">
         <div class="kinyu-top-member-block">
           <h3 class="kinyu-top-main-title">きんゆう女子。のメンバーになる</h3>
           <p class="kinyu-top-main-sub">「おかね」について楽しくお勉強♪<br></p>
@@ -155,11 +160,24 @@
               <div class="border-top"></div>
               <p class="main-title">同世代で「きんゆう」についてゆる〜くおしゃべりしませんか？</p>
               <p class="description">メンバーになると、特別女子会やミニツアーに参加できたり、新しいサービスをいち早く体験できたりします。私たち自ら情報を取りに行き、感想をシェアしながら自分の生きる道をみつけましょう。お金について語れるお友だちができるかも！</p>
-              <a class="link-to js-track" href="/login_regist" data-category="pc-top-link" data-action="click" data-value="1">メンバー登録はこちら</a>
+              <a class="link-to js-track" href="/regist_email" data-category="pc-top-link" data-action="click" data-value="1">メンバー登録はこちら</a>
+              <a class="link-to official-member-regist js-track" href="https://official.kinyu-joshi.jp/" data-category="pc-top-link" data-action="click" data-value="1">オフィシャルメンバー登録はこちら</a>
             </div>
           </div>
         </div>
+      </div> -->
+      <div class="kinyu-top-maincontent-block-el">
+        <div class="kinyu-top-banner-area kiinyu-top-mainarea-bottom">
+          <ul>
+            <li>
+              <a class="js-track" href="/login_regist" data-category="pc-top-link" data-action="click" data-value="1">
+                <img class="" src="/images/banner/firsttime_pc.jpg">
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
+
 
       <!-- レポート一覧 -->
       <div class="kinyu-top-maincontent-block-el">
@@ -238,57 +256,48 @@
       <p style="font-size:14px">スペシャルコンテンツ</p>
       <div class="special-contents-banner-wrapper">
         <ul class="special-contents-list">
-          <li><a href="https://with.kinyu-joshi.jp/mysevenbk" target="_blank"><img src="images/special_contents/mysevenbk.png"></a></li>
+          <!-- <li><a href="https://with.kinyu-joshi.jp/mysevenbk" target="_blank"><img src="images/special_contents/mysevenbk.png"></a></li>
           <li><a href="/sanpo_hiroshima" target="_blank"><img src="images/special_contents/hiroshima_header_sp.png"></a></li>
-          <li><a href="https://kinyu-joshi.jp/contents/cashless" target="_blank"><img src="images/special_contents/cashlesslife.png"></a></li>
+          <li><a href="https://kinyu-joshi.jp/contents/cashless" target="_blank"><img src="images/special_contents/cashlesslife.png"></a></li> -->
+          <!-- きん女。診断 -->
+          <li>
+            <a class="js-track" target="_blank" href="/kinjo_check" data-category="pc-top-link" data-action="click" data-value="1">
+              <img class="" src="/images/diagnosticchart/og-main.jpg">
+            </a>
+          </li>
+          <!-- きんゆう散歩 -->
+          <li>
+            <a class="js-track" target="_blank" href="/kinyu_sanpo" data-category="pc-top-link" data-action="click" data-value="1">
+              <img class="" src="/images/kinyu_map/og/og-main.jpg">
+            </a>
+          </li>
+          <!-- わたしを知る -->
+          <li>
+            <a class="js-track" target="_blank" href="/myway" data-category="pc-top-link" data-action="click" data-value="1">
+              <img class="" src="/images/myway/og_myway.jpg">
+            </a>
+          </li>
+          <!-- 朝日デジタル -->
+          <li>
+            <a class="js-track" target="_blank" href="https://www.asahi.com/and_w/seriese/kinyujoshi/" data-category="pc-top-link" data-action="click" data-value="1">
+              <img class="" src="/images/banner/asahi_&w_og.jpg">
+            </a>
+          </li>
+          <!-- かぶと町マップ -->
+          <li>
+            <a class="js-track" target="_blank" href="https://kinyu-joshi.jp/map_kabuto" data-category="pc-top-link" data-action="click" data-value="1">
+              <img class="" src="/images/banner/kabutochomap.jpg">
+            </a>
+          </li>
+          <!-- 桐谷さん相談所 -->
+          <li>
+            <a class="js-track" target="_blank" href="https://froggy.smbcnikko.co.jp/series-name/yutai-sodanjo/" data-category="pc-top-link" data-action="click" data-value="1">
+              <img class="" src="/images/banner/kiritanisan.png">
+            </a>
+          </li>
         </ul>
 
       </div>
-    </div>
-
-      <div class="kinyu-top-maincontent-block-el">
-        <div class="kinyu-top-banner-area">
-          <ul class="clear">
-            <!-- きん女。診断 -->
-            <li>
-              <a class="js-track" target="_blank" href="/kinjo_check" data-category="pc-top-link" data-action="click" data-value="1">
-                <img class="" src="/images/diagnosticchart/og-main.jpg">
-              </a>
-            </li>
-            <!-- きんゆう散歩 -->
-            <li>
-              <a class="js-track" target="_blank" href="/kinyu_sanpo" data-category="pc-top-link" data-action="click" data-value="1">
-                <img class="" src="/images/kinyu_map/og/og-main.jpg">
-              </a>
-            </li>
-            <!-- わたしを知る -->
-            <li>
-              <a class="js-track" target="_blank" href="/myway" data-category="pc-top-link" data-action="click" data-value="1">
-                <img class="" src="/images/myway/og_myway.jpg">
-              </a>
-            </li>
-            <!-- 朝日デジタル -->
-            <li>
-              <a class="js-track" target="_blank" href="https://www.asahi.com/and_w/seriese/kinyujoshi/" data-category="pc-top-link" data-action="click" data-value="1">
-                <img class="" src="/images/banner/asahi_&w_og.jpg">
-              </a>
-            </li>
-            <!-- かぶと町マップ -->
-            <li>
-              <a class="js-track" target="_blank" href="https://kinyu-joshi.jp/map_kabuto" data-category="pc-top-link" data-action="click" data-value="1">
-                <img class="" src="/images/banner/kabutochomap.jpg">
-              </a>
-            </li>
-            <!-- 桐谷さん相談所 -->
-            <li>
-              <a class="js-track" target="_blank" href="https://froggy.smbcnikko.co.jp/series-name/yutai-sodanjo/" data-category="pc-top-link" data-action="click" data-value="1">
-                <img class="" src="/images/banner/kiritanisan.png">
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>

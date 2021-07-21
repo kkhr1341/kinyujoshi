@@ -190,9 +190,9 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['event'] = Events::getByCode('events', $code);
 
         $username = \Auth::get('username');
-        $profile = Profiles::get($username);
+//        $profile = Profiles::get($username);
         $this->data['user'] = array(
-            'name' => $profile['name'],
+//            'name' => $profile['name'],
             'email' => \Auth::get('email'),
         );
 

@@ -67,7 +67,7 @@ class User extends Base
     {
       $result = \DB::select('*')->from('users')
                                 ->where('users.id', '=', $user_id)
-                                ->execute()->current();
+                                ->execute('slave')->current();
       if (empty($result)) {
           return false;
       }
@@ -78,7 +78,7 @@ class User extends Base
     {
         $result = \DB::select('*')->from('users')
             ->where('users.email', '=', $email)
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }
@@ -89,7 +89,7 @@ class User extends Base
     {
         $result = \DB::select('*')->from('users')
             ->where('users.username', '=', $username)
-            ->execute()->current();
+            ->execute('slave')->current();
         if (empty($result)) {
             return false;
         }
@@ -103,7 +103,7 @@ class User extends Base
                                                         ->on('profiles.username', '=', 'users.username')
                                                         ->where('profiles.publish', '=', 1)
                                                         ->where('profiles.disable', '=', 0)
-                                                        ->execute()->current();
+                                                        ->execute('slave')->current();
 
       $pagination = \Pagination::forge('mypagination', array(
         'pagination_url' => $pagination_url,
@@ -124,7 +124,7 @@ class User extends Base
       $results = $results->limit($pagination->per_page)
                          ->offset($pagination->offset)
                          ->order_by('profiles.updated_at', 'desc')
-                         ->execute()
+                         ->execute('slave')
                          ->as_array();
 
       $datas = array();
@@ -209,7 +209,7 @@ class User extends Base
         $datas = $datas->order_by('group', 'desc');
         $datas = $datas->order_by('id', 'asc');
 
-        $users = $datas->execute()->as_array();
+        $users = $datas->execute('slave')->as_array();
 
         $groups = \Config::get('simpleauth.groups');
 
@@ -234,7 +234,7 @@ class User extends Base
             ->on('users.username', '=', 'profiles.username')
             ->where('users.id', '=', $id);
 
-        $users = $datas->execute()->as_array();
+        $users = $datas->execute('slave')->as_array();
         $groups = \Config::get('simpleauth.groups');
 
         foreach($users as $key => $user) {

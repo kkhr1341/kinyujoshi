@@ -48,7 +48,7 @@ class EventCoupons extends Base
             ->where('disable', '=', 0)
             ->where('event_code', '=', $event_code);
 
-        return $total->execute()->as_array();
+        return $total->execute('slave')->as_array();
     }
 
 //    public static function getByEventCodeAndCouponCode($event_code, $coupon_code)
@@ -70,7 +70,7 @@ class EventCoupons extends Base
             ->where('coupon_code', '=', $coupon_code)
             ->where('event_code', '=', $event_code);
 
-        $data = $total->execute()->current();
+        $data = $total->execute('slave')->current();
         return $data['discount'];
     }
 }
