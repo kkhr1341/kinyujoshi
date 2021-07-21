@@ -15,7 +15,7 @@
       <ul>
         <li><div class="footer-content-list-el"><a href="https://www.instagram.com/kinyu_joshi/" class="instagram" target="_blank"><p class="text-innner">Instagram</p></a></div></li>
         <li><div class="footer-content-list-el"><a href="https://twitter.com/kinyu_joshi" class="twitter" target="_blank"><p class="text-innner">Twitter</p></a></div></li>
-        <li><p>LINEで情報を受け取りたい方はこちら♪</p><div class="footer-content-list-el"><a href="https://lin.ee/OFHGpg7" class="line" target="_blank"><p class="text-innner"><img src="/images/social/line_text.svg"></p></a></div></li>
+        <!-- <li><p>LINEで情報を受け取りたい方はこちら♪</p><div class="footer-content-list-el"><a href="https://lin.ee/OFHGpg7" class="line" target="_blank"><p class="text-innner"><img src="/images/social/line_text.svg"></p></a></div></li> -->
       </ul>
     </div>
 
@@ -31,6 +31,7 @@
         <li><a class="js-track" href="/joshikai_policy" data-category="pc-footer-link" data-action="click" data-value="1">サービス参加規約</a></li>
         <li><a class="js-track" href="/privacy" data-category="pc-footer-link" data-action="click" data-value="1">プライバシーポリシー</a></li>
         <li><a class="js-track" href="/link_policy" data-category="pc-footer-link" data-action="click" data-value="1">リンクポリシー</a></li>
+        <li><a class="js-track" href="https://kinjo02.nug-get.jp" data-category="pc-footer-link" data-action="click" data-value="1" target="_blank">サポーターの皆さんへ</a></li>
       </ul>
       <ul>
         <li><a class="js-track" href="/legal" data-category="pc-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
@@ -50,9 +51,9 @@
         <li><a class="js-track" href="/link_policy" data-category="sp-footer-link" data-action="click" data-value="1">リンクポリシー</a></li>
         <li><a class="js-track" href="/policy" data-category="sp-footer-link" data-action="click" data-value="1">コミュニティ運営ポリシー</a></li>
         <li><a class="js-track" href="https://with.kinyu-joshi.jp/about" data-category="pc-footer-link" data-action="click" data-value="1">企業の方はこちら</a></li>
-
         <li><a class="js-track" href="/legal" data-category="sp-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
         <li><a class="js-track" href="/company" data-category="sp-footer-link" data-action="click" data-value="1">運営会社</a></li>
+        <li><a class="js-track" href="https://kinjo02.nug-get.jp" data-category="pc-footer-link" data-action="click" data-value="1" target="_blank">サポーターの皆さんへ</a></li>
       </ul>
     </div>
 
