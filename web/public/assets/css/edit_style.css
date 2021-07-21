@@ -880,28 +880,46 @@ opacity: .5;
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　トップページ・メンバー登録部分
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.kinyu-top-member-block {
-
-}
 .member-regist-title-text {
   width: 500px;
   display: inline-block;
   margin: 0 auto;
 }
-
 .after-regist-kinjo-check a {
   display: block;
   width: 100%;
    margin: 0 auto;
   margin-top: 8px;
 }
-
 .title-wrapper {
-background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209, 0.3)),url(/images/business/step3_img.jpeg);
- padding: 30px 0;
+ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209, 0.3)),url(/images/business/step3_img.jpeg);
+ padding: 120px 0px 80px;
  background-size: cover;
  background-position: 50% 47%;
  text-align: center;
+}
+.title-wrapper-inner {
+  width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+.member-regist-icon {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+}
+.title-wrapper .email-regist-title {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 24px;
+  text-shadow: 0px 0px 8px #000;
+}
+.title-wrapper .email-regist-description {
+  font-size: 18px;
+  color: #fff;
+  text-shadow: 0px 0px 8px #000;
+  line-height: 1.5;
 }
 .kinyu-top-member-list {
   height: 350px;
@@ -1280,7 +1298,7 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 }
 
 .top-official-member-block {
-  width: 600px;
+  width: 650px;
   margin: 0 auto;
   margin-top: 50px;
 }
@@ -1292,14 +1310,12 @@ background: linear-gradient(-45deg, rgba(175, 243, 230, 0.7), rgba(255, 181, 209
 }
 .top-official-member-block a {
   display: block;
-  padding: 20px 50px;
-  background: -moz-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
-  background: -webkit-linear-gradient(top left, #EDFAF8, #FFF7F4)!important;
-  background: linear-gradient(to bottom right, #EDFAF8, #FFF7F4)!important;
-  line-height: inherit;
   transition: .5s;
 }
-.introduction-list .kinyu-top-banner-area {
+.top-official-member-block a img {
+  width: 100%;
+}
+.kinyu-top-banner-area {
   text-align: center;
   width: 750px;
   margin: 0 auto;
@@ -5645,6 +5661,7 @@ footer {
   position: absolute;
   left: 170px;
   width: 280px;
+  top: 130px;
 }
 .footer-content-list ul {
   text-align: center;

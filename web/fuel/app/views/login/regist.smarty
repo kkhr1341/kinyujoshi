@@ -1,7 +1,11 @@
 <div class="kinyu-single-block">
 
     <div class="title-wrapper">
-        <img  src="/images/member-regist/member_regist_title.png" class="member-regist-title-text">
+        <div class="title-wrapper-inner">
+            <img  src="/images/member-regist/member_regist_icon.png" class="member-regist-icon">
+            <p class="email-regist-title">限定メルマガや<br class="sp">レポートが読める！</p>
+            <p class="email-regist-description">家計管理から世界経済、未来のための資産作りや株式投資を学ぶ<br class="pc">きんゆう女子。コミュニティメンバーになろう！</p>
+        </div>
     </div>
 
 <p class="message" style="text-align:center; padding: 20px 0 0;">「<span style="color:red; padding-top: 10px; display:inline-block;">*</span>」は必須項目となります。</p>
@@ -57,7 +61,7 @@
                 </div>
 
                 <div class="form-btn tx-center">
-                    <button class="btn btn-kinyu" type="button" id="save">登録する！</button>
+                    <button class="btn btn-kinyu" type="button" id="save">送信する</button>
                 </div>
 
                 <p class="pc" style="margin-top:20px;text-align:center;"><span style="color:#f3626c;">※</span>新規会員登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
