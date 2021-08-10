@@ -161,6 +161,11 @@ class Registlist extends Base
 
             if ($username = self::getUsername($params['code'])) {
 
+                // メールアドレスの変更確認
+                \DB::update('users')->set(array(
+                    'email' => $params['email']
+                ))->where('username', '=', $username)->execute();
+
                 $profile = array(
                     'name' => $params['name'],
                     'name_kana' => $params['name_kana'],
