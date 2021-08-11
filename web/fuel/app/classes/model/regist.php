@@ -321,6 +321,7 @@ class Regist extends Base
                 "member_regist.code",
                 "member_regist.username",
                 "member_regist.age",
+                "profiles.birthday",
                 "member_regist.not_know",
 //                "member_regist.interest",
 //                "member_regist.ask",

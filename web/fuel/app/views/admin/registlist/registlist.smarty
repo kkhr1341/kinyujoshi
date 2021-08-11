@@ -61,16 +61,7 @@
       <td>{$email.username}</td>
       <td>{$email.type}</td>
       <td>{$email.email}</td>
-      <td>
-      {if $email.age > 1000}
-        {floor(($smarty.now|date_format:"Ymd"-$email.age)/10000)}</td>
-      {else if $email.age < 1000}
-        {$email.age}
-      {else if $email.age = ""}
-      {else}
-        {$email.age}
-      {/if}
-      </td>
+      <td>{$email.birthday}</td>
       <td>{$email.edit_inner}</td>
       <td><a class="admin-registlist-more" href="/admin/registlist/{$email.code}">編集</a></td>
       <td>

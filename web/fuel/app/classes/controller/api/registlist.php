@@ -14,12 +14,25 @@ class Controller_Api_Registlist extends Controller_Apibase
 
     public function action_create()
     {
-        return $this->ok(Registlist::create(\Input::all()));
+        $val = Registlist::validate();
+        if (!$val->run(\Input::post())) {
+            $error_messages = $val->error_message();
+            $message = reset($error_messages);
+            return $this->error($message);
+        }
+        return $this->ok(Registlist::create(\Input::post()));
     }
 
     public function action_save()
     {
-        return $this->ok(Registlist::save(\Input::all()));
+        $username = Registlist::getUsername(\Input::post('code'));
+        $val = Registlist::validate($username);
+        if (!$val->run(\Input::post())) {
+            $error_messages = $val->error_message();
+            $message = reset($error_messages);
+            return $this->error($message);
+        }
+        return $this->ok(Registlist::save(\Input::post()));
     }
 
     public function action_delete()

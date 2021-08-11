@@ -6,6 +6,65 @@ require_once(dirname(__FILE__) . "/base.php");
 class Registlist extends Base
 {
 
+    public static function validate($username="")
+    {
+        $val = \Validation::forge();
+        $val->add_callable('myvalidation');
+
+        $val->add('email', 'メールアドレス')
+            ->add_rule('required')
+            ->add_rule('valid_email')
+            ->add_rule( // login_validate
+                function($email) use ($username) {
+
+                    $select = \DB::select("email")
+                        ->where('email', '=', \Str::lower($email))
+                        ->from('users');
+                    if ($username) {
+                        $select->where('username', '<>', $username);
+                    }
+                    $result = $select->execute();
+
+                    if ($result->count() > 0) {
+                        \Validation::active()->set_message('closure', 'このメールアドレスですでにメンバー登録がされているようです。');
+                        return false;
+                    } else {
+                        return true;
+                    }
+                });
+
+        $val->add('name', 'お名前')
+            ->add_rule('required');
+
+        $val->add('name_kana', 'ふりがな')
+            ->add_rule('required');
+
+        $val->add('official_member_job', 'オフィシャルメンバー職業');
+
+        $val->add('birthday', '生年月日')
+            ->add_rule('required')
+            ->add_rule('mb_convert_kana', 'a', 'utf-8')
+            ->add_rule('valid_date');
+
+        $val->add('password', 'パスワード')
+            ->add_rule('trim')
+            ->add_rule('max_length', 255)
+            ->add_rule('alphanum');
+
+        if (!$username) {
+            $val->field('password')
+                ->add_rule('required');
+        }
+
+        $val->add('url', '「個人で発信しているブログなど」');
+
+        $val->add('introduction', '自己紹介');
+
+        $val->add('edit_inner', '編集部入力欄(備考)');
+
+        return $val;
+    }
+
     public static function member_attribute_count($attr, $options)
     {
         if ($attr == 'age') {
