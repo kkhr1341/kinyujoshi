@@ -31,7 +31,8 @@
 
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 販売代金</h3>
-      <p class="description">オフィシャルメンバー：登録料5,000円（税別）、月額1,000円（税別）<br>その他：イベントに参加する場合には、別途参加費が必要な場合がございます。</p>
+      <p class="description">オフィシャルメンバー：登録料5,000円（税込）、月額1,000円（税込）<br>その他：イベントに参加する場合には、別途参加費が必要な場合がございます。<br>
+      カードを発行しない場合は、登録料は不要です。</p>
     </div>
 
     <div class="company-details-el">
@@ -79,6 +80,10 @@
     <div class="company-details-el">
       <h3 class="title"><span style="color: #7CDCCE;">◆</span> 会員情報変更・退会について</h3>
       <p class="description">会員情報変更は<a href="/my" target="_blank">マイページ</a>から行うことができます。退会は、<a href="https://kinyu-joshi.jp/my/account/withdrawal">退会フォーム</a>よりいつでも行うことが可能です。退会された方の個人情報は当社が定める<a href="/privacy" target="_blank">プライバシーポリシー</a>の定めに従い、適切に処理いたします。</p>
+    </div>
+
+    <div class="company-details-el-last">
+      <p>2021年9月1日改定</p><br>
     </div>
 
   </div>
