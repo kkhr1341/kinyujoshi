@@ -13,7 +13,7 @@
                             <input type="text" name="email" placeholder="メールアドレス" value="">
                             <input type="password" name="password" placeholder="パスワード" value="">
                             <button class="login-btn" type="button" id="login">ログイン</button>
-                            <p>パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
+                            <p style="text-align: center;">パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
                         </form>
                     </div>
                     <div class="login-contents login-btn-list">

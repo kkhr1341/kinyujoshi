@@ -85,8 +85,7 @@ class Controller_Admin_Events extends Controller_Adminbase
         }
 
         // 将来的に複数登録できるようにしたいが今はとりあえず1個だけしか登録できない仕様
-        $coupons = EventCoupons::getRowsByEventCode($code);
-        $this->data['coupon'] = $coupons ? $coupons[0] : array('coupon_code' => '', 'discount' => '');
+        $this->data['coupons'] = EventCoupons::getRowsByEventCode($code);
 
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
