@@ -154,7 +154,7 @@
 
                 {for $i=0 to 4}
                 <div class="form-group">
-                    <label class="form-group-event-label">クーポン設定{$i}</label>
+                    <label class="form-group-event-label">クーポン設定{$i+1}</label>
                     <p>クーポンコード</p>
                     <input type="text" id="coupon_code_{$i}" class="form-control" placeholder="" value={$coupons[$i].coupon_code|couponcodesanitizer|default:''}>
                     <p>割引金額</p>
