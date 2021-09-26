@@ -58,13 +58,19 @@ class Events extends Base
             ->add_rule('valid_string','numeric')
             ->add_rule('numeric_between', 0, 9999999);
 
-        $val->add('coupon_code', 'クーポンコード')
-            ->add_rule('match_pattern', '/^[0-9A-Za-z\-]+$/')
-            ->add_rule('required_with', 'discount');
+//        $val->add('coupons', 'クーポンコード');
 
-        $val->add('discount', '割引金額')
-            ->add_rule('required_with', 'coupon_code')
-            ->add_rule('valid_string','numeric');
+        for ($i = 0; $i < 5; $i++) {
+//            $val->add("coupons.$i.event_coupon_code");
+
+            $val->add("coupons.$i.coupon_code", "クーポンコード$i")
+                ->add_rule('match_pattern', '/^[0-9A-Za-z\-]+$/')
+                ->add_rule('required_with', 'discount');
+
+            $val->add("coupons.$i.discount", "割引金額$i")
+                ->add_rule('required_with', 'coupon_code')
+                ->add_rule('valid_string','numeric');
+        }
 
         $val->add('limit', '定員')
             ->add_rule('valid_string', 'numeric')
