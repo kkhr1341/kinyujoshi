@@ -29,11 +29,19 @@ class EventCoupons extends Base
         ))->where('code', '=', $event_coupon_code)->execute();
     }
 
+    public static function deleteByEventCode($event_code)
+    {
+        \DB::update('event_coupons')->set(array(
+            'disable' => 1
+        ))->where('event_code', '=', $event_code)->execute();
+    }
+
     public static function save($event_coupon_code, $coupon_code, $discount)
     {
         $data = array();
         $data['coupon_code'] = $coupon_code;
         $data['discount'] = $discount;
+        $data['disable'] = 0;
         $data['updated_at'] = \DB::expr('now()');
 
         \DB::update('event_coupons')->set($data)->where('code', '=', $event_coupon_code)->execute();
@@ -49,6 +57,15 @@ class EventCoupons extends Base
             ->where('event_code', '=', $event_code);
 
         return $total->execute('slave')->as_array();
+    }
+
+    public static function getByCouponCode($coupon_code)
+    {
+        $total = \DB::select('*')
+            ->from('event_coupons')
+            ->where('coupon_code', '=', $coupon_code);
+
+        return $total->execute('slave')->current();
     }
 
 //    public static function getByEventCodeAndCouponCode($event_code, $coupon_code)

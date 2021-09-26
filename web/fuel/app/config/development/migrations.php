@@ -152,6 +152,7 @@ return array(
         143 => '153_add_blogs_to_publish',
         144 => '154_create_official_member_jobs',
         145 => '155_add_official_profile_to_profiles',
+        146 => '156_add_unique_key_coupon_code_to_event_coupons',
       ),
     ),
     'module' => 
