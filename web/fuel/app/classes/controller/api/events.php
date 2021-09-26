@@ -57,20 +57,20 @@ class Controller_Api_Events extends Controller_Apibase
             // 将来的に複数登録できるようにしたいが今はとりあえず1個だけしか登録できない仕様
             EventCoupons::deleteByEventCode($val->validated('code'));
 
-            foreach ($val->validated('coupons') as $coupon) {
-                if ($coupon['coupon_code']) {
-                    $a = EventCoupons::getByCouponCode($coupon['coupon_code']);
-                    if ($a) {
+            foreach ($val->validated('coupons') as $item) {
+                if ($item['coupon_code']) {
+                    $coupon = EventCoupons::getByCouponCode($val->validated('code'), $item['coupon_code']);
+                    if ($coupon) {
                         EventCoupons::save(
-                            $a['code'],
-                            $coupon['coupon_code'],
-                            $coupon['discount']
+                            $coupon['code'],
+                            $item['coupon_code'],
+                            $item['discount']
                         );
                     } else {
                         EventCoupons::create(
-                            $coupon['coupon_code'],
+                            $item['coupon_code'],
                             $val->validated('code'),
-                            $coupon['discount']
+                            $item['discount']
                         );
                     }
                 }
