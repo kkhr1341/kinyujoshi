@@ -57,13 +57,16 @@
               <input type="text" class="exp_year" name="exp_year" maxlength="2" placeholder="（年）＊20など2桁">
             </div>
           </div>
+        </div>
+
+        <div class="no-regist-el">
           <div class="fee-open-el">
-            <label>ニックネーム</label>
-            <input type="text" id="name" name="name" class="" placeholder="" value="">
+              <label>ニックネーム</label>
+              <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
           </div>
           <div class="fee-open-el">
-            <label>メールアドレス</label>
-            <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
+              <label>メールアドレス</label>
+              <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
           </div>
         </div>
 

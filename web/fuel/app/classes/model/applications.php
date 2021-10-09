@@ -31,10 +31,10 @@ class Applications extends Base
 
         // 新規カード登録 or 会員登録をせずに申し込みの場合は以下必須
         $val->field('name')
-            ->add_rule('required_with', 'cardselect');
+            ->add_rule('required');
 
         $val->field('email')
-            ->add_rule('required_with', 'cardselect');
+            ->add_rule('required');
 
         $val->field('token');
 
