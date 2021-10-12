@@ -121,8 +121,18 @@ class Controller_Admin_Events extends Controller_Adminbase
             throw new HttpNoAccessException;
         }
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->data['all_events'] = Events::lists02(null, null, null, null, null, null, "desc");
-        $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
+
+        $username = \Auth::get('username');
+
+        // 41: 権限LV.3
+        if (Auth::member(41)) {
+            $this->data['all_events'] = Events::lists02(null, null, null, null, null, null, "desc", $username);
+            $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null, $username);
+        } else {
+            $this->data['all_events'] = Events::lists02(null, null, null, null, null, null, "desc");
+            $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
+        }
+
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->contents = View::forge('admin/events/attend.smarty', $this->data);
@@ -134,6 +144,15 @@ class Controller_Admin_Events extends Controller_Adminbase
             throw new HttpNoAccessException;
         }
         $this->data['events'] = Events::getByCode('events', $code);
+
+        $username = \Auth::get('username');
+
+        // 41: 権限LV.3
+        // OMC権限（LV.3）は自分の書いた記事のみ表示
+        if (Auth::member(41) && $this->data['events']['username'] != $username) {
+            throw new HttpNoAccessException;
+        }
+
         $this->data['applications'] = Applications::get_applications_by_code($code);
         $this->data['cancel_applications'] = Applications::get_cancel_applications_by_code($code);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
@@ -147,6 +166,16 @@ class Controller_Admin_Events extends Controller_Adminbase
         if (!Auth::has_access('applications.read') || !$this->is_from_company()) {
             throw new HttpNoAccessException;
         }
+        $events = Events::getByCode('events', $code);
+
+        $username = \Auth::get('username');
+
+        // 41: 権限LV.3
+        // OMC権限（LV.3）は自分の書いた記事のみ表示
+        if (Auth::member(41) && $events['username'] != $username) {
+            throw new HttpNoAccessException;
+        }
+
         $csv_name = Date("Y-m-d") . '.csv';
         $response = new Response();
 
