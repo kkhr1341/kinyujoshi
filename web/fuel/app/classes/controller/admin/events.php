@@ -18,11 +18,24 @@ class Controller_Admin_Events extends Controller_Adminbase
         }
         $this->data['sections'] = Sections::lists();
 
-        $this->data['past_events'] = Events::lists02(null, null, null, null, null, null, "desc");
-        $this->data['closed_events'] = Events::lists(0, null, null, null, "desc", null);
-        $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
-        $this->data['all_events'] = Events::lists03();
-        $this->data['display_top_event'] = EventDisplayTopPages::get();
+        $username = \Auth::get('username');
+
+        // 41: 権限LV.3
+        if (Auth::member(41)) {
+            // OMC権限（LV.3）は自分の書いた記事のみ表示
+            $this->data['past_events'] = Events::lists02(null, null, null, null, null, null, "desc", $username);
+            $this->data['closed_events'] = Events::lists(0, null, null, null, "desc", null, $username);
+            $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null, $username);
+            $this->data['all_events'] = Events::lists03($username);
+            $this->data['display_top_event'] = array();
+        } else {
+            $this->data['past_events'] = Events::lists02(null, null, null, null, null, null, "desc");
+            $this->data['closed_events'] = Events::lists(0, null, null, null, "desc", null);
+            $this->data['open_events'] = Events::lists(1, null, null, null, "desc", null);
+            $this->data['all_events'] = Events::lists03();
+            $this->data['display_top_event'] = EventDisplayTopPages::get();
+        }
+
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'マイページ・イベント';
         $this->template->contents = View::forge('admin/events/index.smarty', $this->data);
@@ -60,7 +73,17 @@ class Controller_Admin_Events extends Controller_Adminbase
         if (!Auth::has_access('events.read')) {
             throw new HttpNoAccessException;
         }
+
         $this->data['events'] = Events::getByCode('events', $code);
+
+        $username = \Auth::get('username');
+
+        // 41: 権限LV.3
+        // OMC権限（LV.3）は自分の書いた記事のみ表示
+        if (Auth::member(41) && $this->data['events']['username'] != $username) {
+            throw new HttpNoAccessException;
+        }
+
         $this->data['past'] = Events::isPast($code);
         $this->data['sections'] = Sections::lists();
 
