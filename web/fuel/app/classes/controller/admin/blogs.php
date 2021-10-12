@@ -13,16 +13,35 @@ class Controller_Admin_Blogs extends Controller_Adminbase
         if (!Auth::has_access('blogs.read')) {
             throw new HttpNoAccessException;
         }
+
         $this->data['sections'] = Sections::lists();
-        $this->data['pick_blogs'] = Blogs::listspick(null, null, null, null, null, true);
-        $this->data['closed_blogs'] = Blogs::lists02(0, null, null, null, null, null, true);
-        $this->data['open_blogs'] = Blogs::lists02(1, null, null, null, null, null, true);
 
-        $this->data['apply_blogs'] = UserBlogs::applying_lists();
-        $this->data['update_blogs'] = UserBlogs::apply_update_lists();
-        $this->data['delete_blogs'] = UserBlogs::apply_delete_lists();
+        $username = \Auth::get('username');
 
-        $this->data['all_blogs'] = Blogs::lists02(null, null, null, null, null, null, true);
+        // 41: 権限LV.3
+        if (Auth::member(41)) {
+            // OMC権限（LV.3）は自分の書いた記事のみ表示
+            $this->data['pick_blogs'] = Blogs::listspick(null, null, null, null, null, true, $username);
+            $this->data['closed_blogs'] = Blogs::lists02(0, null, null, null, null, $username, true);
+            $this->data['open_blogs'] = Blogs::lists02(1, null, null, null, null, $username, true);
+
+            $this->data['apply_blogs'] = array();
+            $this->data['update_blogs'] = array();
+            $this->data['delete_blogs'] = array();
+
+            $this->data['all_blogs'] = Blogs::lists02(null, null, null, null, null, $username, true);
+        } else {
+            $this->data['pick_blogs'] = Blogs::listspick(null, null, null, null, null, true);
+            $this->data['closed_blogs'] = Blogs::lists02(0, null, null, null, null, null, true);
+            $this->data['open_blogs'] = Blogs::lists02(1, null, null, null, null, null, true);
+
+            $this->data['apply_blogs'] = UserBlogs::applying_lists();
+            $this->data['update_blogs'] = UserBlogs::apply_update_lists();
+            $this->data['delete_blogs'] = UserBlogs::apply_delete_lists();
+
+            $this->data['all_blogs'] = Blogs::lists02(null, null, null, null, null, null, true);
+        }
+
         $this->template->contents = View::forge('admin/blogs/index.smarty', $this->data);
         $this->template->description = 'マイページ・ブログ';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
@@ -58,9 +77,17 @@ class Controller_Admin_Blogs extends Controller_Adminbase
         if (!Auth::has_access('blogs.read')) {
             throw new HttpNoAccessException;
         }
-        $this->data['authors'] = Authors::lists();
-
         $this->data['blogs'] = Blogs::getByCode('blogs', $code);
+
+        $username = \Auth::get('username');
+
+        // 41: 権限LV.3
+        // OMC権限（LV.3）は自分の書いた記事のみ表示
+        if (Auth::member(41) && $this->data['blogs']['username'] != $username) {
+            throw new HttpNoAccessException;
+        }
+
+        $this->data['authors'] = Authors::lists();
 
         // ユーザー投稿内容で投稿情報を上書き
         if ($user_blog_code = Input::get('user_blog_code', '')) {
