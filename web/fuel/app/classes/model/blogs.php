@@ -233,7 +233,7 @@ class Blogs extends Base
         return $datas;
     }
 
-    public static function listspick($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $is_secret=false)
+    public static function listspick($mode = null, $limit = null, $open = null, $section_code = null, $project_code = null, $is_secret=false, $username = null)
     {
         \Config::load('blog', true);
 
@@ -271,6 +271,11 @@ class Blogs extends Base
 
         if ($is_secret === false) {
             $datas = $datas->where('secret', '=', 0);
+        }
+
+        if ($username === null) {
+        } else {
+            $datas = $datas->where('blogs.username', '=', $username);
         }
 
         $datas = $datas->order_by('blogs.id', 'desc');

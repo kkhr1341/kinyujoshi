@@ -271,7 +271,7 @@ class Events extends Base
      * @param null $sort
      * @return mixed
      */
-    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1, $sort="asc")
+    public static function lists02($mode = null, $limit = null, $open = null, $section_code = null, $secret = null, $display=1, $sort="asc", $username = null)
     {
         $select = '*, ';
         $select .= 'events.code, ';
@@ -308,6 +308,11 @@ class Events extends Base
             $datas = $datas->where('status', '=', $mode);
         }
 
+        if ($username === null) {
+        } else {
+            $datas = $datas->where('events.username', '=', $username);
+        }
+
 //        if ($open === null) {
 //        } else {
 ////            $datas = $datas->where('event_date', '<=', \DB::expr('NOW() - INTERVAL 1 DAY'));
@@ -340,7 +345,7 @@ class Events extends Base
      * @param int $display
      * @return mixed
      */
-    public static function lists03()
+    public static function lists03($username = null)
     {
         $select = '*, ';
         $select .= 'events.code, ';
@@ -356,13 +361,19 @@ class Events extends Base
                     not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
         ) as application_num';
 
-        return \DB::select(\DB::expr($select))
+        $datas = \DB::select(\DB::expr($select))
             ->from('events')
             ->join('profiles', 'left')
             ->on('events.username', '=', 'profiles.username')
             ->where('events.disable', '=', 0)
-            ->order_by('event_date', 'asc')
-            ->execute('slave');
+            ->order_by('event_date', 'asc');
+
+        if ($username === null) {
+        } else {
+            $datas = $datas->where('events.username', '=', $username);
+        }
+
+        return $datas->execute('slave');;
     }
 
     public static function create($params)
