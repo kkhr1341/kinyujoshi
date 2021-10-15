@@ -163,8 +163,8 @@ class Controller_Adminbase extends Controller_Template
             // ttl interlink vpn ip
             case '117.103.161.200':
                 return true;
-            // kawaguchi vpn ip
-            case '117.102.204.225':
+            // komori vpn ip
+            case '133.201.70.192':
                 return true;
             default:
                 return false;
