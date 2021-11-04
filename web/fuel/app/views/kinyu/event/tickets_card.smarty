@@ -1,5 +1,7 @@
-<div class="joshikai-payment-block">
-  <div class="day-card-open fee-open">
+<div class="event-detail event-application-fee">
+  <div class="day-card-open event-detail-inner container">
+<!-- <div class="joshikai-payment-block">
+  <div class="day-card-open fee-open"> -->
     <div class="inner">
       <form method="POST" action="/pay" id="charge-form">
         <input type="hidden" name="coupon_code" value="{$coupon_code}" />
@@ -21,8 +23,8 @@
           </ul>
         </div>
 
-        <div class="fee-open-el">
-          <label>カード番号</label>
+        <div class="event-application-open-el">
+          <label class="kinjo-color font-weight-bold">カード番号</label>
           {if $authenticated == true}
             <p class="select-before-title">・利用可能なクレジットカード</p>
             <select id="cardselect" name="cardselect">
@@ -32,7 +34,7 @@
               <option value="0">新しいカードで決済する</option>
             </select>
             <div class="newcards">
-              <p class="select-before-title">・新しいカード番号を入力してください</p>
+              <p class="select-before-title kinjo-color font-weight-bold">・新しいカード番号を入力してください</p>
               <input type="text" class="number" name="number" maxlength="16" placeholder="">
             </div>
           {else}
@@ -45,13 +47,13 @@
         </div>
 
         <div class="no-regist-el">
-          <div class="fee-open-el">
-            <label>セキュリティコード</label>
+          <div class="event-application-open-el">
+            <label class="kinjo-color font-weight-bold">セキュリティコード</label>
             <input type="text" class="cvc" name="cvc" maxlength="4" placeholder="">
           </div>
 
-          <div class="fee-open-el">
-            <label>有効期限</label>
+          <div class="event-application-open-el">
+            <label class="kinjo-color font-weight-bold">有効期限</label>
             <div class="exp-date-block">
               <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="（月）＊03、12など2桁">
               <input type="text" class="exp_year" name="exp_year" maxlength="2" placeholder="（年）＊20など2桁">
@@ -60,12 +62,12 @@
         </div>
 
         <div>
-          <div class="fee-open-el">
-              <label>ニックネーム</label>
+          <div class="event-application-open-el">
+              <label class="kinjo-color font-weight-bold">ニックネーム</label>
               <input type="text" id="name" name="name" class="" placeholder="" value="{$user.name}">
           </div>
-          <div class="fee-open-el">
-              <label>メールアドレス</label>
+          <div class="event-application-open-el">
+              <label class="kinjo-color font-weight-bold">メールアドレス</label>
               <input type="text" id="email" name="email" class="" placeholder="" value="{$user.email}">
           </div>
         </div>
@@ -75,11 +77,11 @@
             <p><span>参加費</span>：{$event.fee|number_format}円</p>
             <p><span>割引額</span>：<span class="discount-span" style="font-weight: normal;color: red;!important">{$event.discount|number_format}円</span></p>
           {else}
-            <p><span>参加費</span>：{$event.fee|number_format}円</p>
+            <p><span>お支払い金額</span>：{$event.fee|number_format}円</p>
           {/if}
         </div>
 
-        <button class="day-cash-submit" type="submit">お支払いする</button>
+        <button class="day-cash-submit font-weight-bold" type="submit">お支払いする</button>
       </form>
     </div>
   </div>

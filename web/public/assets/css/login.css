@@ -1,0 +1,557 @@
+@charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  メンバー登録ページ（メールアドレス）
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#regist-form {
+  margin-bottom: 0px;
+}
+.login-block-el-container {
+  background: linear-gradient(-225deg, #f2fbf8 0%, #fffafe 100%);
+}
+.login-block-el {
+  padding-bottom: 100px;
+}
+.login-block-el h2.el-title {
+  color: #77cbc0;
+  font-size: 2.4rem;
+  font-family: 游明朝体, "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.login-add-contents-block {
+  width: 800px;
+  margin: 0 auto;
+}
+.login-add-contents-block .main-title {
+  text-align: center;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 16px;
+  color: #77cbc0;
+}
+.login-add-contents-block .main-title span {
+  font-size: 15px;
+  line-height: 22px;
+}
+.login-add-contents-block .message {
+  text-align: center;
+  font-size: 13px;
+  line-height: 22px;
+  margin-bottom: 36px;
+}
+.login-add-contents-block .form-control {
+  border: 1px solid #e5e5e5;
+  line-height: normal;
+  border-radius: 0px;
+  font-size: 1.4rem;
+  padding: 10px;
+  height: auto;
+}
+.regist-add-form-edit-el {
+  margin-bottom: 32px;
+}
+.regist-add-form-edit-title {
+  font-size: 1.5rem;
+  color: #77cbc0;
+  margin-bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  padding-left: 8px;
+  margin-left: 2px;
+  border-left: 2px solid #8ddcd1;
+}
+.regist-add-form-edit-title2 {
+  font-size: 1.4rem;
+  color: #77cbc0;
+  margin-bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  padding-left: 8px;
+  margin-left: 2px;
+  margin-top: 24px;
+}
+.regist-add-form-edit-subtitle {
+  text-align: left;
+  font-size: 1.3rem;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: #6d6d6d;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.regist-add-form-edit-el select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: inline-block;
+  padding: 0px 8px;
+  background: #fff;
+  height: 36px;
+  font-size: 1.3rem;
+  background-image: url(/images/login/select-arrow.png);
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+}
+.regist-add-form-edit-el select#age1 {
+  width: 150px;
+}
+.regist-add-form-edit-el select#age2 {
+  width: 100px;
+}
+.regist-add-form-edit-el select#age3 {
+  width: 100px;
+}
+.regist-add-form-edit-el select#prefecture {
+  width: 100px;
+}
+.regist-add-form-edit-el .regist-selectarea p {
+  display: inline-block;
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: gray;
+  margin-top: 0px;
+  margin-right: 6px;
+  vertical-align: bottom;
+}
+.radio_box label, .radio_box_02 label, .radio_box_03 label {
+  padding: 12px 24px;
+  font-size: 12px;
+}
+.regist-add-form-table {
+  display: block;
+  padding: 24px 0px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.regist-add-form-table tr {
+  margin-bottom: 12px;
+  display: block;
+}
+.regist-add-form-table tr:last-child {
+  margin-bottom: 0px;
+}
+.regist-add-form-table th {
+  background-color: #8ddcd1!important;
+  color: #fff;
+  border: none!important;
+  width: 160px;
+  font-weight: bold;
+}
+.regist-add-form-table td {
+  border: none!important;
+}
+.login-add-contents-block textarea.form-control {
+  height: 250px;
+}
+.login-add-contents-block .submit-sub {
+  font-size: 1.3rem;
+  margin-top: 24px;
+}
+.login-add-contents-block .submit-sub a {
+  font-size: 1.3rem;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　ログイン関連
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/* ログイン部分 */
+.login-contents {
+}
+.login-contents-block {
+  padding: 100px 0px;
+  background-color: #F7F7F7;
+}
+.login-contents-intro {
+  text-align: center;
+}
+.login-contents-intro .caution {
+  font-size: 12px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 8px 24px;
+  background: #fff;
+  transition: .5s;
+}
+.login-contents-title {
+  display: inline-block;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+.login-contents-title span {
+  padding-bottom: 4px;
+}
+.login-contents-block-inner {
+  width: 900px;
+  margin: 0 auto;
+}
+.login-contents-sidearea {
+  box-sizing: content-box;
+  width: 226px;
+  float: left;
+  margin-right: 36px;
+  padding: 4px 0px;
+}
+.login-contents-sidearea li {
+  margin-bottom: 12px;
+}
+.login-contents-sidearea li a {
+  display: block;
+  text-align: center;
+  padding: 8px 0px;
+  opacity: .5;
+}
+.login-contents-sidearea li a.active {
+  background: #f0eeee;
+  opacity: 1;
+  font-weight: bold;
+}
+.login-contents-mainarea {
+  width: 100%;
+}
+.login-contents-form-area label.title {
+  font-size: 1.6rem;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  padding-left: 10px;
+  border-left: 2px solid #8ddcd1;
+  font-weight: normal;
+  margin-left: 2px;
+}
+.login-contents-form-area label {
+  font-size: 13px;
+  color: #77cbc0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.login-contents-form-area .email-form input {
+  width: 100%;
+  background: #fff;
+  padding: 12px;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  line-height: normal;
+}
+.login-contents-form-area .email-form p {
+  text-align: right;
+  margin-top: 12px;
+}
+.login-contents-form-area .email-form p #pass-reissue-btn {
+  transition: .5s;
+}
+.login-contents-form-area .login-btn {
+  display: block;
+  width: 200px;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 13px;
+  padding: 12px 0px;
+  background: #8ddcd1;
+  font-weight: bold;
+  transition: .5s;
+}
+
+/* 登録部分 */
+/*.regist-btn-list {
+  width: 650px;
+  margin: 0 auto;
+}
+.regist-btn-list li {
+  width: 100%;
+  margin-bottom: 16px;
+  transition: .5s;
+}
+.regist-btn-list li a {
+  display: block;
+  padding: 16px 0px;
+  font-size: 15px;
+  text-align: center;
+}*/
+.login-email-container {
+  padding-right: 32px;
+}
+.login-btn-list {
+  padding-left: 32px;
+  border-left: 1px solid #f1f1f1;
+}
+.login-btn-list li a {
+  padding:12px 0px;
+}
+.login-contents li.email-login-bg a {
+  background: #79cec1;
+}
+.login-contents li.email-login-bg p {
+  background: #79cec1;
+}
+.email-login-bg a {
+  background: #8ddcd1;
+  color: #fff;
+}
+.fb-login-bg a {
+  background: #7093d2;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.google-login-bg a {
+  background: #e68787;
+  color: #fff;
+}
+/* pass再発行 */
+#pass-reissue-btn {
+  color: #4eaedc;
+}
+#pass-reissue-open {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(151, 216, 207, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1006;
+}
+#pass-reissue-close {
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 12px;
+  width: 60px;
+  height: 60px;
+  transition: .5s;
+}
+#pass-reissue-close img {
+  width: 100%;
+  height: 100%;
+}
+#pass-reissue-open .inner {
+  width: 600px;
+  height: 300px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -300px;
+  display: table;
+  padding: 36px;
+}
+#pass-reissue-open .inner form {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+#pass-reissue-open .main-title {
+  font-size: 2.4rem;
+  padding-bottom: 2px;
+  display: inline-block;
+  border-bottom: 1px solid #8ddcd1;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+#pass-reissue-open .description {
+    font-size: 1.3rem;
+    line-height: 18px;
+    text-align: center;
+    color: #727070;
+    margin-bottom: 16px;
+}
+#pass-reissue-open .pass-reissue-form-el label {
+  font-size: 1.3rem;
+  color: #77cbc0;
+  margin-bottom: 8px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+#pass-reissue-open .pass-reissue-form-el input {
+  width: 100%;
+  background: #f7f7f7;
+  padding: 12px;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+.pass-reissue-submit {
+  background: #8ddcd1;
+  font-size: 1.4rem;
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 12px 0px;
+  color: #fff;
+  margin: 0 auto;
+  transition: .5s;
+}
+.regist-sub-description {
+  margin-top:20px;
+  text-align:center;
+  font-size: 1.3rem;
+}
+.regist-sub-description a {
+  font-size: 1.3rem;
+}
+/*メンバー登録部分のみ*/
+.login-contents-regist .login-btn-list {
+  margin-top: 0px;
+  margin-bottom: 24px;
+}
+.login-contents-regist .login-btn-list ul {
+  padding: 0px;
+}
+.login-contents-regist .email-form {
+  border-bottom: none;
+}
+.login-contents-regist .email-form p {
+  text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1rem;
+  color: #a0a0a0;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+.login-contents-regist .regist-selectarea,
+.login-contents-regist .regist-selectarea p {
+  display: inline-block;
+}
+.login-contents-regist .regist-selectarea select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: inline-block;
+  padding: 0px 8px;
+  background: #fff;
+  height: 36px;
+  font-size: 13px;
+  background-image: url(/images/login/select-arrow.png);
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+}
+.login-contents-regist .regist-selectarea select#age1 {
+  width: 100px;
+}
+.login-contents-regist .regist-selectarea select#age2 {
+  width: 80px;
+}
+.login-contents-regist .regist-selectarea select#age3 {
+  width: 80px;
+}
+.login-contents-regist .regist-email-form-el label {
+  margin-bottom: 6px;
+}
+.login-contents-regist .email-form input {
+  margin-bottom: 0px;
+}
+.login-contents-regist .regist-email-form-el {
+  margin-bottom: 12px;
+}
+.login-contents-regist .regist-email-label {
+  color: #444;
+  border-left: 2px solid #8ddcd1;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+/* 別のボタン */
+.login-another-btn {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #8ddcd1;
+  padding: 10px 24px;
+  color: #fff;
+  font-weight: bold;
+  transition: .5s;
+}
+
+/* マイページでできること */
+.about-member-block {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 42px;
+  padding: 42px 50px;
+  position: relative;
+  background: #fff;
+}
+.about-member-block .about-member-title {
+  font-size: 2.2rem;
+  margin-bottom: 28px;
+  text-align: center;
+  color: #77cbc0;
+}
+.about-member-list li {
+  font-size: 1.4rem;
+  margin-bottom: 24px;
+  position: relative;
+  padding: 4px 0px 0px 36px;
+}
+.about-member-list li:last-child {
+  margin-bottom: 4px;
+}
+.about-member-list li span {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-size: 1.8rem;
+  line-height:1;
+  border-bottom: 1px solid #8ddcd1;
+  vertical-align: bottom;
+  margin-right: 12px;
+  padding-bottom: 4px;
+  color: #77cbc0;
+}
+.about-member-block .login-illust {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 110px;
+}
+
+
+/* パスワード再設定 */
+.resetting-pass-block {
+  background: #f7f7f7;
+  padding: 36px 80px;
+}
+.resetting-pass-el {
+  margin-bottom: 0px;
+}
+.resetting-pass-el input:first-child {
+  margin-bottom: 12px;
+}
+.resetting-pass-block .username-area {
+  margin-bottom: 24px;
+  text-align: center;
+}
+.resetting-pass-block .username-area .name-title {
+  font-size: 15px;
+  margin-top: 0px;
+  font-weight: bold;
+}
+.resetting-pass-el-input1 {
+  margin-bottom: 8px;
+}
+.resetting-pass-block .form-btn {
+  margin-top: 20px;
+}

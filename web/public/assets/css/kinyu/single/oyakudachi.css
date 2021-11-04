@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  お役立ち - intoroduction
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.oyakudachi-contents {
+	background-color: #F0F5F5;
+}
+.omamori-img {
+	width: 250px;
+}
+.main-introduction-title {
+	background-color: #fff;
+	line-height: 0;
+	padding: 24px 0px;
+}
+.main-introduction-title img {
+	width: 550px;
+}
+.main-introduction-detail {
+	background-color: #CCEDE8;
+	padding: 50px;
+}
+.introduction-text-block p.main-title {
+	padding-left: 40px;
+	font-size: 2.4rem;
+	margin-bottom: 20px;
+}
+.introduction-text-block p.description {
+	padding-left: 40px;
+	font-size: 1.5rem;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  お役立ち - main
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.oyakudachi-contents-list {
+	margin-top: 100px;
+}
+.oyakudachi-contents-list-el {
+	padding-bottom: 80px;
+	margin-bottom: 80px;
+	border-bottom: 1px solid #d7d7d7;
+}
+.oyakudachi-contents-list-el:last-child {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	border-bottom: none;
+}
+.oyakudachi-contents-list-title {
+	margin-bottom: 40px;
+}
+.oyakudachi-contents-list-title .deco-text {
+	font-size: 7.0rem;
+	line-height: 1;
+	margin-bottom: 12px;
+}
+.oyakudachi-contents-list-el-intro .img-block {
+	height: 300px;
+}
+.oyakudachi-contents-list-el-intro .text-block {
+	padding-left: 40px;
+}
+.oyakudachi-contents-list-el-intro p.main-title {
+	font-size: 2.6rem;
+	margin-bottom: 32px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #8ddcd1;
+}
+.oyakudachi-contents-list-el-intro p.description {
+	font-size: 1.5rem;
+}
+
+.oyakudachi-contents-answer-list-el {
+	margin-top: 40px;
+}
+.oyakudachi-contents-answer-title .recommend-title {
+	font-size: 2.6rem;
+	padding-left: 12px;
+}
+.oyakudachi-contents-answer-contents .img-block {
+	height: 250px;
+}
+.oyakudachi-contents-answer-contents .text-block {
+	padding-left: 40px;
+}
+.oyakudachi-contents-answer-contents .text-block .main-title {
+	font-size: 2.2rem;
+	margin-bottom: 16px;
+}
+
+
+
+
+
+

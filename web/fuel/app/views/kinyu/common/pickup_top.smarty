@@ -1,0 +1,37 @@
+<div class="swiper-container pickup-top-slide">
+  <div class="swiper-wrapper swiper-main-slide">
+    <!-- 女子会TOP表示 -->
+    {if $display_top_event}
+      <div class="swiper-slide">
+        {if empty($display_top_event.specific_link)}
+        <a class="js-track" target="_blank" href="/joshikai/{$display_top_event.code}" data-category="slide-link" data-action="click" data-value="1">
+          <div class="swiper-main-img" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;"></div>
+          <div class="swiper-main-title">
+            <h3 class="text-white ff-mincho">{$display_top_event.title}</h3>
+          </div>
+        </a>
+        {else}
+        <a class="js-track" target="_blank" href="{$display_top_event.specific_link}" data-category="slide-link" data-action="click" data-value="1">
+          <div class="swiper-main-img" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;"></div>
+          <div class="swiper-main-title">
+            <h3 class="text-white ff-mincho">{$display_top_event.title}</h3>
+          </div>
+        </a>
+        {/if}
+      </div>
+    {/if}
+    {foreach from=$blogs_pick item=blog name=loopname}
+      {if $smarty.foreach.loopname.index == 0}
+
+      {/if}
+      <div class="swiper-slide">
+        <a class="js-track" href="/report/{$blog.code}" data-category="slide-link" data-action="click" data-value="4">
+          <div class="swiper-main-img" style="background: url({$blog.main_image}) center center / cover no-repeat;"></div>
+          <div class="swiper-main-title">
+            <h3 class="text-white ff-mincho">{$blog.title}</h3>
+          </div>
+        </a>
+      </div>
+    {/foreach}
+  </div>
+</div>

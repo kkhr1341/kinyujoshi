@@ -67,15 +67,14 @@ class Controller_Kinyubase extends Controller_Template
         Asset::add_path('assets/js', 'js');
         Asset::css(array(
             //'kinyu/font.css',
-            //'kinyu/animate.css',
+            'kinyu/animate.css',
             'kinyu/redactor.css',
             'kinyu/font-awesome.min.css',
             //'kinyu/bootstrap-datetimepicker.min.css',
-            'kinyu/toastr.css',
+            //'kinyu/bootstrap01.css',
+            "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
             //'kinyu/bootstrap-select.min.css',
-            'kinyu/bootstrap01.css',
-            // "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
-
+            'kinyu/toastr.css',
             // 'kinyu/base.css',
             // 'kinyu/bg.css',
             // 'kinyu/style.css',
@@ -88,12 +87,16 @@ class Controller_Kinyubase extends Controller_Template
             //'kinyu/drawer.css',
 
             'base.css',
-            'kinyu/bg.css',
+            // 'kinyu/bg.css',
             //'style.css',
-            'edit_style.css',
-            'responsive.css',
-            'slick.css',
-            'tablet.css'
+            //'edit_style.css',
+            // 'responsive.css',
+            // 'slick.css',
+            // 'tablet.css'
+            'common.css',
+            'header.css',
+            'footer.css',
+            'event_kessai.css'
         ), array(), 'layout', false);
 
         Asset::js(array(
@@ -129,7 +132,7 @@ class Controller_Kinyubase extends Controller_Template
             'kinyu/main.js',
             'kinyu/scrollreveal.min.js',
             // 必要
-            'kinyu/swiper.js',
+            'kinyu/slide.js',
             'kinyu/swiper.min.js',
             // ポップアップ広告
 //            'kinyu/popup.js',

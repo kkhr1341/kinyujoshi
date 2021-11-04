@@ -1,3 +1,6 @@
+.toast {
+  max-width: none;
+}
 .toast-title {
   font-weight: bold;
 }
@@ -90,7 +93,6 @@ button.toast-close-button {
   z-index: 999999;
   pointer-events: none;
   top: 10px;
-  /*overrides*/
 }
 #toast-container * {
   -moz-box-sizing: border-box;
@@ -147,14 +149,11 @@ button.toast-close-button {
   margin-left: auto;
   margin-right: auto;
 }
-.toast {
-  background-color: #030303;
-}
 .toast-success {
-  background-color: #8ddcd1;
+  background-color: #B0E2DB;
 }
 .toast-error {
-  background-color: rgba(239, 103, 103, 1);
+  background-color: rgb(245 154 154);
 }
 .toast-info {
   background-color: #2f96b4;

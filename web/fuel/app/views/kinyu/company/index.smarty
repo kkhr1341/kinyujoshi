@@ -1,7 +1,10 @@
-<div class="kinyu-main-single-block company-info-block">
+<link type="text/css" rel="stylesheet" href="/assets/css/company.css" />
+
+<div class="main-block company-contents">
+<div class="main-block-inner container">
 
 <div class="company-info-title">
-  <h2>運営会社</h2>
+  <h2 class="ff-mincho kinjo-color text-center">運営会社</h2>
 </div>
 
 <div class="company-details-block clear">
@@ -41,6 +44,7 @@
     </div>
 
   </div>
+</div>
 </div>
 </div>
 <script>

@@ -6,20 +6,20 @@ var $resArray = $result02.split("/");
 var $resArray02 = $resArray[1];
 </script>
 
-<div class="kinyu-single-block joshikai-main-block">
-  <div class="kinyu-joshikai-detail-inner">
+<div class="event-detail event-application">
+  <div class="event-detail-inner container">
 
-    <div class="kinyu-joshikai-tickets-block">
+    <div class="event-tickets-block">
       <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
 
-      <div class="kinyu-joshikai-tickets-main">
-        <div class="kinyu-joshikai-tickets-main-inner">
+      <div class="event-tickets-main">
+        <div class="event-tickets-main-inner">
           <div class="tickets-img" style="background:url({$event.main_image}) center center / cover no-repeat;"></div>
           <h2>{$event.title}</h2>
         </div>
       </div>
 
-      <div class="kinyu-joshikai-tickets-fee">
+      <div class="event-tickets-fee">
         <p class="info-detail">
         　{if $event.display_event_date}
           　<span>日時</span>：{$event.display_event_date}
@@ -46,7 +46,7 @@ var $resArray02 = $resArray[1];
         </div>
       </div>
 
-      <div class="kinyu-joshikai-tickets-payment">
+      <div class="event-tickets-payment">
 
 		<!--<button class="coupon-apply-btn">クーポンを適用</button>-->
 
@@ -56,7 +56,7 @@ var $resArray02 = $resArray[1];
 
         <div class="cancel-block">
 
-          <p class="cancel-title">女子会のお約束事</p>
+          <p class="cancel-title kinjo-color">女子会のお約束事</p>
 
           <ul class="cancel-block-list">
             <li>きんゆう女子。のコンセプトは、「前向きに経済に関わることで、おかねにとらわれず自由で等身大に生きる」ことです。みなさま一人一人が「おかね」に関するリテラシーを向上させ、自分らしい生活を送れるようになることを目指したコミュニティです。</li>
@@ -81,9 +81,9 @@ var $resArray02 = $resArray[1];
           </p>
         </div>
 
-        <form class="credit-payment-fm" action="/joshikai_payment_card/{$urlcode}" method="post">
+        <form class="credit-payment-fm" action="/event_payment_card/{$urlcode}" method="post">
 
-          <div class="kinyu-joshikai-tickets-fee">
+          <div class="event-tickets-fee">
             <div class="info-no-coupon">
               {if $event.fee == 0}
                 <p><span>参加費</span>：<span>無料</p>
@@ -97,12 +97,12 @@ var $resArray02 = $resArray[1];
               <p><span>ギフトコードがマッチしました☆</span>：<span class="amount" style="color: red;"></span></p>
             </div>
           </div>
-          <p class="ticket-title">ギフトコードを入力</p>
-          <p>ギフトコードを持っている場合は入力してね♪ コードがマッチした場合は、ほんの気持ちですが割引になります。</p>
+          <p class="gift-code-title kinjo-color font-weight-bold">ギフトコードを入力</p>
+          <p class="gift-code-description">ギフトコードを持っている場合は入力してね♪ コードがマッチした場合は、ほんの気持ちですが割引になります。</p>
           <input type="text" class="coupon_code" name="coupon_code" value="" placeholder="ギフトコード">
 
-          <div class="fee-open-el mb30">
-            <p class="ticket-title"><span style="color: #ec8787;">＊当日質問したいことや相談予約日時リクエスト、応援メッセージなどがありましたらご記入ください♪</span></p>
+          <div class="fee-open-el">
+            <p class="kinjo-color font-weight-bold">＊当日質問したいことや相談予約日時リクエスト、応援メッセージなどがありましたらご記入ください♪</p>
             <textarea name="message" class="request-textarea" rows="10" placeholder="" ></textarea>
           </div>
 
@@ -118,7 +118,7 @@ var $resArray02 = $resArray[1];
               <input type="text" id="email" name="email" class="free-payment-input" placeholder="" value="{$user.email}">
             </div>
 
-            <div class="kinyu-joshikai-tickets-payment-list">
+            <div class="event-tickets-payment-list">
               <a href="#" class="info-link fee-free day-card-btn">申し込む</a>
             </div>
           </div>
@@ -126,8 +126,8 @@ var $resArray02 = $resArray[1];
 
           <!-- クレジット決済の時に表示されるフォーム -->
           <div class="js-credit-payment-container"{if $event.fee == 0} style="display: none;"{/if}>
-            <p class="ticket-title">お支払い方法</p>
-            <div class="kinyu-joshikai-tickets-payment-list">
+            <!-- <p class="kinjo-color font-weight-bold">お支払い方法</p> -->
+            <div class="event-tickets-payment-list">
               <a href="javascript:void(0)" class="info-link fee-card day-card-btn">カードでお支払い</a>
             </div>
           </div>

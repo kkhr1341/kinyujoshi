@@ -1,10 +1,13 @@
-<div class="kinyu-main-single-block company-info-block">
+<link type="text/css" rel="stylesheet" href="/assets/css/company.css" />
+
+<div class="main-block company-contents">
+<div class="main-block-inner container">
 
 <div class="company-info-title">
-  <h2>メンバー規約</h2>
+  <h2 class="ff-mincho kinjo-color text-center">メンバー規約</h2>
 </div>
 
-<div class="company-details-block clear">
+<div class="company-details-block">
 
   <div class="company-details">
     <!-- <p class="company-details-service-title"><span style="color: #8ddcd1;">◆</span> きんゆう女子。メンバー規約</p> -->

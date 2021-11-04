@@ -1,26 +1,27 @@
 {$fooo = $event.main_image}
 {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
 
-<li{if $event.pr == 1} class="pr"{/if}{if $smarty.foreach.loopname.index > ($event_display_limit-1)} style="display: none"{/if}>
+<div class="swiper-slide">
+<div{if $event.pr == 1} class="pr"{/if}{if $smarty.foreach.loopname.index > ($event_display_limit-1)} style="display: none"{/if}>
     {if empty($event.specific_link)}
-    <a class="js-track" href="/joshikai/{$event.code}" data-category="sp-top-link" data-action="click" data-value="1">
+    <a class="js-track" href="/event/{$event.code}" data-category="sp-top-link" data-action="click" data-value="1">
     {else}
     <a class="js-track" href="{$event.specific_link}" target="_blank" data-category="sp-top-link" data-action="click" data-value="1">
     {/if}
-        <div class="img-box" style="background: url({$thumb_filename}) center center / cover no-repeat;">
+        <div class="img-box position-relative" style="background: url({$thumb_filename}) center center / cover no-repeat;">
             {if $event.pr == 1}
                 <!-- PR用イメージ挿入箇所 -->
-                <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
+                <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
             {/if}
             {if $event.applicable eq false}
-              <p class="joshikai-applicable">＊受付終了しました</p>
+              <p class="event-applicable">＊受付終了しました</p>
             {else if $event.full eq true}
-              <p class="joshikai-applicable">＊受付終了しました</p>
+              <p class="event-applicable">＊受付終了しました</p>
             {/if}
         </div>
         <div class="text-box">
-            <div class="kinyu-top-list-kind kinyu-top-event-kind">
-                <p>
+            <div class="kinyu-event-kind">
+                <p class="text-white">
                   <span class="date-box">
                     {if $event.display_event_date}
                         <span class="date">{$event.display_event_date}</span>
@@ -30,19 +31,20 @@
                   </span>
                 </p>
             </div>
-            <h3 class="kinyu-top-list-title">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
+            <h3 class="event-title ff-mincho text-newline">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
             <div class="event-subbox">
                 {if $event.fee == 0}
                   {if $event.event_category == '招待型'}
                     <p class="event-subbox-el">ご招待</p>
                   {else}
-                    <p class="event-subbox-el">参加費：無料</p>
+                    <p class="event-subbox-el text-newline">参加費：無料</p>
                   {/if}
                 {else}
-                    <p class="event-subbox-el">参加費：{$event.fee|number_format}円（税込）</p>
+                    <p class="event-subbox-el text-newline">参加費：{$event.fee|number_format}円<span>（税込）</span></p>
                 {/if}
                 <p class="event-subbox-el">場所：{$event.place}</p>
             </div>
         </div>
     </a>
-</li>
+</div>
+</div>

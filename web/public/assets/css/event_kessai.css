@@ -1,0 +1,480 @@
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　女子会決済ページ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.event-application .container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.event-tickets-block .ticket-title {
+  font-size: 1.4rem;
+  color: #77cbc0;
+  margin-bottom: 12px;
+}
+.event-tickets-fee span {
+  color: #77cbc0;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.event-tickets-fee p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.event-tickets-main {
+  padding-bottom: 32px;
+}
+.event-tickets-main-inner {
+  display: table;
+  height: 180px;
+}
+.event-tickets-main .tickets-img {
+  width: 200px;
+  height: 100%;
+  display: table-cell;
+}
+.event-tickets-main h2 {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 22px;
+  line-height: 34px;
+  padding-left: 24px;
+}
+.event-tickets-fee {
+  padding: 24px 0px;
+  background-color: #F7F7F7;
+}
+.event-tickets-payment {
+  padding-top: 32px;
+  transition: .5s;
+}
+.event-tickets-payment a {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  padding: 16px 0px;
+  font-size: 1.4rem;
+  text-align: center;
+  transition: .5s;
+}
+.event-tickets-payment a:nth-child(2) {
+  margin-bottom: 0px;
+}
+.event-tickets-payment .fee-card {
+  background: #8ddcd1;
+  color: #fff;
+  font-weight: bold;
+}
+.event-tickets-payment .fee-free {
+  background: #8ddcd1;
+  border: 1px solid #8ddcd1;
+  color: #fff;
+  font-weight: bold;
+}
+.event-tickets-payment .fee-cash {
+  background: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
+.coupon-apply-btn {
+	padding: 8px 10px;
+	display: inline-block;
+	font-size: 12px;
+    color: #444;
+	background: #eee;
+	margin-left: 15px;
+	transition: .5s;
+}
+.coupon-apply-btn:hover{
+    background:#8ddcd1;
+    color:#fff;
+}
+.coupon_code {
+    border: 1px solid #ccc;
+    margin-bottom: 24px;
+	display: inline-block;
+  box-sizing: border-box;
+  line-height: 20px;
+  border: 1px  solid #eee;
+  padding: 6px 12px;
+  font-size: 13px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.discount-span {
+	color: red!important;
+	font-weight: normal;
+}
+
+/* 決済画面 */
+.event-application-fee .container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.event-application-fee {
+  padding-top: 50px;
+}
+.event-application-fee .inner form {
+  width: 100%;
+  text-align: center;
+}
+.event-application-fee .inner form .main-title {
+  font-size: 22px;
+  padding-bottom: 4px;
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+.event-application-fee .inner form label {
+  font-size: 1.4rem;
+  border-left: 4px solid #8ddcd1;
+  margin-bottom: 8px;
+  margin-left: 1px;
+  padding-left: 6px;
+  font-weight: bold;
+  width: 100%;
+  text-align: left;
+}
+.event-application-fee .inner form .day-cash-open-form-el p {
+  text-align: left;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.1rem;
+  color: #a0a0a0;
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+.event-application-fee .inner form .description {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: #727070;
+  margin-bottom: 16px;
+}
+.event-application-fee .inner form .cancel-description {
+  border: 1px solid #efb1b1;
+  display: inline-block;
+  padding: 12px 16px;
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+.event-application-fee .inner form .cancel-description p {
+  font-size: 12px;
+  line-height: 18px;
+}
+.event-application-fee .inner form .cancel-description .cancel-description-title {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+
+}
+.event-application-fee . event-application-fee-el {
+  margin-bottom: 24px;
+}
+.event-application-fee .inner form input {
+  width: 100%;
+  background: #f7f7f7;
+  padding: 12px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+.event-application-fee .inner form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 13px;
+  background: #f5f5f5;
+}
+.event-application-fee .inner form .select-before-title {
+  text-align: left;
+  font-size: 12px;
+}
+.event-application-fee .inner form .newcards {
+  margin-top: 16px;
+}
+.login-btn-list li.email-login-bg a {
+  background: #79cec1;
+  color: #fff;
+  font-weight: bold;
+}
+.day-cash-submit {
+  background: #8ddcd1;
+  /*font-weight: bold;
+  font-size: 13px;
+  display: block;
+  width: 250px;
+  text-align: center;
+  padding: 16px 0px;*/
+  color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  padding: 16px 0px;
+  font-size: 1.4rem;
+  text-align: center;
+  transition: .5s;
+}
+.day-card-open .day-cash-submit {
+  margin-top: 12px;
+}
+.event-tickets-payment-list p {
+  font-size: 12px;
+  text-align: center;
+}
+.event-application-open-el {
+  margin-bottom: 24px;
+}
+
+/* カード払い */
+.day-card-open .exp-date-block {
+  font-size: 0px;
+  display: inline-block;
+  letter-spacing: -40em;
+  width: 100%;
+}
+.day-card-open .exp-date-block input {
+  width: 48%!important;
+  display: inline-block;
+  letter-spacing: normal;
+}
+.day-card-open .exp-date-block input:first-child {
+  margin-right: 4%;
+}
+
+/* 対応カードの部分 */
+.kinyu-credit-list-block {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  background-color: rgba(141, 220, 209, 0.5);
+  padding: 24px;
+}
+.credit-illust {
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.credit-illust img {
+  width: 100%;
+}
+.kinyu-credit-list {
+  letter-spacing: -40px;
+  font-size:0;
+}
+.kinyu-credit-list-block p {
+  font-size: 13px;
+  line-height: 13px;
+  margin-bottom: 8px;
+}
+.kinyu-credit-list-block p.sub-credit {
+  margin-bottom: 0px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #696969;
+}
+.kinyu-credit-list li {
+  width: 15%;
+  padding: 4px 2%;
+  box-sizing: border-box;
+  margin-right: 2%;
+  display: inline-block;
+  letter-spacing: normal;
+  background-color: #fff;
+}
+.kinyu-credit-list li:last-child {
+  margin-right: 0%;
+}
+.kinyu-credit-list li img {
+  width: 100%;
+}
+.event-application-fee button {
+  transition: .5s;
+}
+/* 決済画面 - 参加費の部分 */
+.kinyu-credit-fee-area p {
+  font-size: 13px;
+}
+.kinyu-credit-fee-area p span {
+  color: #77cbc0;
+  font-weight: bold;
+  font-size: 13px;
+}
+/* 決済画面 - キャンセルポリシー */
+.cancel-block {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 36px;
+  text-align: center;
+}
+.cancel-block .cancel-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 1.8rem;
+}
+.cancel-block .cancel-description {
+  font-size: 12px;
+}
+.cancel-button-area {
+  font-size: 1.4rem;
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f7f7f7;
+  margin-top: 12px;
+  transition: .5s;
+}
+.cancel-button-area input[type=checkbox] {
+  display: none;
+}
+.cancel-button-area.checked-input {
+  background: #e0f7f4;
+}
+.cancel-button-area label {
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+  background-color: #f6f7f8;
+  vertical-align: middle;
+  cursor: pointer;
+  width: auto!important;
+  padding-left: 0px!important;
+}
+.cancel-button-area label:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  display: block;
+  margin-top: -5px;
+  width: 4px;
+  height: 9px;
+  border-right: 2px solid #77cbc0;
+  border-bottom: 2px solid #77cbc0;
+  content: '';
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cancel-button-area label:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin-top: -7px;
+  left: 4px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #bbb;
+  content: '';
+}
+input[type=checkbox]:checked + .checkbox:after {
+  border-color: #77cbc0;
+}
+input[type=checkbox]:checked + .checkbox:before {
+  opacity: 1;
+}
+.cancel-block-list {
+  padding: 8px 0px;
+}
+.cancel-block-list li {
+  font-size: 1.3rem;
+  position: relative;
+  text-align: left;
+  padding-left: 15px;
+  margin-bottom: 12px;
+}
+.cancel-block-list li:last-child {
+  margin-bottom: 0px;
+}
+.cancel-block-list li:before {
+  content: "◆";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  color: #8ddcd1;
+  font-size: 10px;
+}
+.cancel-block-list li span {
+  color: #ff9595;
+  font-weight: bold;
+}
+.event-application-fee-el {
+    font-size: 13px;
+    padding: 6px 0;
+}
+.event-application-fee-el label{
+  display: block;
+  margin-bottom: 10px;
+}
+.event-application-fee-el input{
+  display: block;
+}
+.free-payment-input {
+    border: 1px solid #eee;
+    padding: 5px 8px;
+    width: 260px;
+    box-sizing: border-box;
+}
+.gift-code-title {
+  margin-top: 32px;
+}
+.gift-code-description {
+  font-size: 1.2rem;
+}
+.coupon_code {
+  margin-top: 6px;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 20px;
+  padding: 8px;
+  width: 300px;
+  font-size: 1.3rem;
+  color: #555;
+  background-color: #F7F7F7;
+  background-image: none;
+  border: none;
+  border-radius: 0px;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.request-textarea{
+   display: block;
+   width: 100%;
+   height: 100px;
+   max-height: 300px;
+   box-sizing: border-box;
+   line-height: 20px;
+   padding: 6px 12px;
+   font-size: 13px;
+   line-height: 1.42857143;
+   color: #555;
+   box-sizing: border-box;
+       background-color: #F7F7F7;
+   background-image: none;
+   border: none;
+   border-radius: 0px;
+ }
+ .js-credit-payment-container {
+  margin-top: 32px;
+ }

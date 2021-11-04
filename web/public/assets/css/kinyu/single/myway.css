@@ -13,7 +13,7 @@
 .main-img-box-container {
   height: 600px;
   position: relative;
-  margin-top: 130px;
+  /*margin-top: 130px;*/
 }
 .main-img-box-container .main-logo {
   width: 500px;
@@ -98,15 +98,14 @@
   text-align: center;
 }
 .myway-introduction .myway-description p {
-  font-size: 13px;
-  line-height: 26px;
+  font-size: 1.4rem;
   width: 800px;
   margin: 0 auto;
 }
 .intoduction-title {
-  font-size: 24px;
-  line-height: 36px;
-  margin-bottom: 36px;
+  font-size: 2.8rem;
+  line-height: 50px;
+  margin-bottom: 40px;
 }
 .intoduction-title span {
   border-bottom: 1px solid gray;
@@ -199,9 +198,7 @@
   margin: 0 auto;
 }
 .myway-content-list-el .text-box .text-box-title {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: bold;
+  font-size: 2.2rem;
   padding: 12px 0px;
   text-align: center;
 }
@@ -210,7 +207,7 @@
   line-height: 24px;
 }
 .myway-content-list-el .text-box .myway-to-link {
-  font-size: 13px;
+  font-size: 1.5rem;
   width: 360px;
   display: block;
   margin: 0 auto;
@@ -291,7 +288,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-report-content {
   width: 100%;
-  padding-top: 130px;
+  padding-top: 50px;
 }
 .myway-header-content {
 }
@@ -300,15 +297,15 @@
   padding: 24px 0px 40px;
 }
 .myway-header-content .main-tumb-block {
-  width: 1000px;
+  /*width: 1000px;*/
   margin: 0 auto;
   padding: 50px 0px;
   box-sizing: border-box;
   position: relative;
 }
 .myway-header-content .main-tumb-block .video-block {
-  float: left;
-  width: 620px;
+  /*float: left;
+  width: 620px;*/
   height: 340px;
   overflow: hidden;
   position: relative;
@@ -319,9 +316,9 @@
   position: absolute;
 }
 .myway-header-content .main-tumb-block .title-block {
-  float: right;
+  /*float: right;
   width: 380px;
-  padding: 0px 0px 0px 36px;
+  padding: 0px 0px 0px 36px;*/
   box-sizing: border-box;
   display: table;
   height: 340px;
@@ -342,8 +339,9 @@
   padding: 12px 0px 12px;
 }
 .myway-header-content .main-tumb-block .title-block p {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 1.4rem;
+  margin-top: 24px;
+  padding-left: 28px;
 }
 .myway-header-content .main-tumb-block .title-block img {
   width: 280px;
@@ -403,8 +401,6 @@
   width: 60%;
 }
 .myway-report-content .report-detail-main h2 {
-  font-size: 18px;
-  line-height: 26px;
   border-bottom: 1px solid #444;
 }
 .myway-report-content .report-detail-main h2:before {

@@ -1,39 +1,40 @@
-<div class="kinyu-main-single-block company-info-block">
+<link type="text/css" rel="stylesheet" href="/assets/css/company.css" />
 
-    <div class="company-info-title">
-        <h2>お問い合わせ</h2>
-    </div>
+<div class="main-block company-contents">
+<div class="main-block-inner container">
 
-    <div class="company-details-block clear">
+  <div class="company-info-title">
+    <h2 class="ff-mincho kinjo-color text-center">お問い合わせ</h2>
+  </div>
 
-        <div class="company-details company-contact">
-
+  <div class="company-details-block clear">
+    <div class="company-details company-contact">
             <div class="singlepage-block center">
                 <form>
                     <div class="singlepage-form-block">
                         <div class="form-group">
 
-                            <label class="form-title"><span class="color-kinyu-color">◆</span> お名前
+                            <label class="form-title"><span class="kinjo-color">◆</span> お名前
                                 <!-- <span class="label label-danger">必須</span> --></label>
                             <input type="text" id="name" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
 
 
-                            <label class="form-title"><span class="color-kinyu-color">◆</span> お名前(カナ)
+                            <label class="form-title"><span class="kinjo-color">◆</span> お名前(カナ)
                                 <!-- <span class="label label-danger">必須</span> --></label>
                             <input type="text" id="name_kana" class="form-control" placeholder="">
                         </div>
 
                         <div class="form-group">
 
-                            <label class="form-title"><span class="color-kinyu-color">◆</span> メールアドレス
+                            <label class="form-title"><span class="kinjo-color">◆</span> メールアドレス
                                 <!-- <span class="label label-danger">必須</span> --></label>
                             <input type="text" id="email" class="form-control" placeholder="">
                         </div>
 
                         <div class="form-group">
-                            <label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ種別
+                            <label class="form-title"><span class="kinjo-color">◆</span> お問い合わせ種別
                                 <!-- <span class="label label-danger">必須</span> --></label>
 
                             <select id="category_code" class='form-control'>
@@ -53,14 +54,14 @@
 
                         {*
                         <div class="form-group">
-                            <label class="form-title"><span class="color-kinyu-color">◆</span> 件名
+                            <label class="form-title"><span class="kinjo-color">◆</span> 件名
                                 <!-- <span class="label label-danger">必須</span> --></label>
                             <input type="text" id="title" class="form-control" placeholder="">
                         </div>
                         *}
 
                         <div class="form-group form-group02">
-                            <label class="form-title"><span class="color-kinyu-color">◆</span> お問い合わせ内容
+                            <label class="form-title"><span class="kinjo-color">◆</span> お問い合わせ内容
                                 <!-- <span class="label label-danger">必須</span> --></label>
                             <textarea id="message" name="message" class='form-control' rows="10"></textarea>
                         </div>
@@ -74,6 +75,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <script>

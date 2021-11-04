@@ -1,63 +1,71 @@
-<div class="kinyu-single-block">
-    <div class="login-contents-block">
-        <a class="login-another-btn sp" href="/login_regist">メンバー登録へ</a>
-        <div class="login-contents-intro">
-            <h2 class="login-contents-title"><span>マイページにログインする</span></h2><br>
-        </div>
-        <div class="login-contents-block-inner clear">
-            <div class="login-contents-mainarea">
-                <div class="login-contents-form-area">
-                    <div class="login-contents login-email-container">
-                        <label class="title">メールアドレスでログイン</label>
-                        <form class="email-form">
-                            <input type="text" name="email" placeholder="メールアドレス" value="">
-                            <input type="password" name="password" placeholder="パスワード" value="">
-                            <button class="login-btn" type="button" id="login">ログイン</button>
-                            <p style="text-align: center;">パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
-                        </form>
-                    </div>
-                    <div class="login-contents login-btn-list">
-                        <label class="title">ソーシャルアカウントでログイン</label>
-                        <ul>
-                            <li class="fb-login-bg"><a href="/auth/oauth/facebook">Facebookでログインする</a></li>
-                            <li class="google-login-bg"><a href="/auth/oauth/google">Googleでログインする</a></li>
-                        </ul>
-                    </div>
-                </div>
+<link type="text/css" rel="stylesheet" href="/assets/css/login.css" />
+
+<div class="main-block login-contents-block">
+  <div class="main-block-inner container">
+      <!-- <a class="login-another-btn sp" href="/regist_email">メンバー登録へ</a> -->
+      <div class="login-contents-intro">
+        <h2 class="login-contents-title ff-mincho"><span>マイページにログインする</span></h2><br>
+      </div>
+      <div class="login-contents-block-inner clear">
+        <div class="login-contents-mainarea">
+          <div class="login-contents-form-area">
+
+            <div class="row">
+
+              <div class="col-6 login-email-container">
+                <label class="title">メールアドレスでログイン</label>
+                <form class="email-form">
+                  <input type="text" name="email" placeholder="メールアドレス" value="">
+                  <input type="password" name="password" placeholder="パスワード" value="">
+                  <button class="login-btn" type="button" id="login">ログイン</button>
+                  <p style="text-align: center;">パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
+                </form>
+              </div>
+
+              <div class="col-6 login-btn-list">
+                <label class="title">ソーシャルアカウントでログイン</label>
+                <ul>
+                  <li class="fb-login-bg"><a class="d-block text-center text-white font-weight-bold" href="/auth/oauth/facebook">Facebookでログインする</a></li>
+                  <li class="google-login-bg"><a class="d-block text-center text-white font-weight-bold" href="/auth/oauth/google">Googleでログインする</a></li>
+                </ul>
+              </div>
+
             </div>
-        </div>
 
-        <div class="about-member-block">
-          <h2 class="about-member-title">マイページでできること</h2>
-          <div class="about-member-list">
-            <ul>
-              <li><span>01</span>いち早くWEBレポートをチェックできます。全てのレポートが、掲載後1カ月間はメンバー限定となります。<br>*その他にもメンバー限定レポートがあります。</li>
-              <li><span>02</span>レポートをお気に入り登録して、見たいときにすぐ読み返すことができます。</li>
-              <li><span>03</span>女子会参加履歴を見て、振り返りができます。</li>
-              <li><span>04</span>一部のメンバーのプロフィールをみて、自分の判断軸を養うヒントにできます。</li>
-              <li><span>05</span><a href="https://kinyu-joshi.jp/kinjo_check">「きん女。診断」</a>で自分がどのきん女。タイプなのか診断することができます。</li>
-            </ul>
           </div>
-          <img class="login-illust" src="/images/login/login-mypage-illust.png">
         </div>
+      </div>
 
+      <div class="about-member-block">
+        <h2 class="about-member-title ff-mincho">マイページでできること</h2>
+        <div class="about-member-list">
+          <ul>
+            <li><span>01</span>いち早くWEBレポートをチェックできます。全てのレポートが、掲載後1カ月間はメンバー限定となります。<br>＊その他にもメンバー限定レポートがあります。</li>
+            <li><span>02</span>レポートをお気に入り登録して、見たいときにすぐ読み返すことができます。</li>
+            <li><span>03</span>女子会参加履歴を見て、振り返りができます。</li>
+            <li><span>04</span>一部のメンバーのプロフィールをみて、自分の判断軸を養うヒントにできます。</li>
+            <li><span>05</span><a href="https://kinyu-joshi.jp/kinjo_check">「きん女。診断」</a>で自分がどのきん女。タイプなのか診断することができます。</li>
+          </ul>
+        </div>
+        <img class="login-illust" src="/images/login/login-mypage-illust.png">
+      </div>
     </div>
+
 </div>
 
-
 <div id="pass-reissue-open">
-    <div id="pass-reissue-close"><img src="/images/close-btn.png"></div>
-    <div class="inner">
-        <form class="reminder-form">
-            <p class="main-title">パスワード再発行</p>
-            <p class="description">再発行のお手続きメールをお送りいたします。</p>
-            <div class="pass-reissue-form-el">
-                <label>登録しているメールアドレス</label>
-                <input type="text" id="email" name="email" placeholder="">
-            </div>
-            <button class="pass-reissue-submit" type="button" id="submit">再発行</button>
-        </form>
-    </div>
+  <div id="pass-reissue-close"><img src="/images/close-btn.png"></div>
+  <div class="inner">
+    <form class="reminder-form">
+      <p class="main-title ff-mincho">パスワード再発行</p>
+      <p class="description">再発行のお手続きメールをお送りいたします。</p>
+      <div class="pass-reissue-form-el">
+        <label>登録しているメールアドレス</label>
+        <input type="text" id="email" name="email" placeholder="">
+      </div>
+      <button class="pass-reissue-submit" type="button" id="submit">再発行</button>
+    </form>
+  </div>
 </div>
 
 

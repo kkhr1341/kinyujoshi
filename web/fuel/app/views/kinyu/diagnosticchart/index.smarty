@@ -7,11 +7,11 @@
   <div class="inner">
 	<!--▼診断スタートページ▼-->
     <div class="diagnosticchart-intro-container">
-		<div class="diagnosticchart-intro-image pc"><img src="/images/diagnosticchart/chart_main.jpg"></div>
-		<div class="diagnosticchart-intro-image sp"><img src="/images/diagnosticchart/chart_main_sp.jpg"></div>
+		<div class="diagnosticchart-intro-image d-none d-md-block"><img src="/images/diagnosticchart/chart_main.jpg"></div>
+		<div class="diagnosticchart-intro-image d-block d-md-none"><img src="/images/diagnosticchart/chart_main_sp.jpg"></div>
 		<div class="diagnosticchart-intro-text">
-			<p class="diagnosticchart-intro-text-title"><img src="/images/diagnosticchart/type_ttl.png"></p>
-			<p class="diagnosticchart-intro-text-description">
+			<p class="diagnosticchart-intro-text-title ff-mincho text-center">わたしはどの「きん女。タイプ」？</p>
+			<p class="diagnosticchart-intro-text-description text-center">
                 豊かに生きるための第一歩は「自分を知ること」。<br>
                 わたしはどんな人になりたい？<br>
                 これから人生を送っていきたい？<br>
@@ -29,7 +29,7 @@
 
         <div class="diagnosticchart-intro-start">
             <button
-                class="btn btn-primary ripple"
+                class="link-generally ripple"
                 data-is_diagnosed="{$is_diagnosed}"
                 data-authenticated="{$authenticated}"
             >
@@ -48,9 +48,9 @@
 	<div class="diagnosticchart-intro-type-img"><img src="/images/diagnosticchart/4type.png"></div>
     
     {if in_array('user', $roles) || in_array('admin', $roles)}
-        <a href="/kinjo_type" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</a>
+        <a href="/kinjo_type" class="link-generally02">4つのタイプを見る</a>
     {else}
-        <p id="diagnosticchart-open" class="diagnosticchart-answer-to-link-top-typepage">4つのタイプを見る</p>
+        <p id="diagnosticchart-open" class="link-generally02">4つのタイプを見る</p>
     {/if}
 		
 	<!--▼ソーシャルシェア▼-->

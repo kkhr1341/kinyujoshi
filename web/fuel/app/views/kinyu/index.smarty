@@ -1,305 +1,162 @@
-<script src="/assets/js/kinyu/topanimation.js"></script>
-<div class="home-screen-guide-bubble">
-  <div>
-    <img class="favicon" src="/images/favicon.png">
-    <div class="contents">
-      <div class="line1" style="padding-bottom: 4px;">
-        <span>ホーム画面に追加</span>
-      </div>
-      <div class="line2">
-        すると便利です
-      </div>
-    </div>
-    <div class="close-button">×</div>
-  </div>
+<!-- メインビジュアル -->
+<div class="main-visual">
+	
 </div>
 
-<div id="kinyu-main-animation">
-  <div id="kinyu-main-animation-inner">
-    <img id="kinyu-main-animation-sub" src="/images/animation/animation-sub.png">
-    <img id="kinyu-main-animation-title" src="/images/animation/animation-title.png">
-  </div>
+<!-- pickup/introduction -->
+<div class="main-block pickup-content" id="pickup-area">
+	<div class="main-block-inner container">
+		<div class="row align-items-center">
+			<div class="col-4 kinjo-introduction text-center">
+				<p class="introduction-sub ff-mincho">わたしらしい「ミライ」への開放</p>
+				<p class="introduction-main ff-mincho">お金にとらわれず<br>自由で等身大に生きる</p>
+				<p class="introduction-description">ゆる〜く、楽しく。でもちょっと真面目に。<br>
+					身近な家計管理から世界経済、FinTech、<br>
+					ライフスタイルまで、幅広い”きんゆう”を学ぶ<br>
+					機会をつくっています。
+				</p>
+				<a class="kinjo-color" href="/about">きんゆう女子。って？</a>
+			</div>
+			<div class="col-8 kinjo-pickup">
+				<div class="kinjo-pickup-inner position-relative">
+					<p class="kinjo-pickup-deco-text ff-decoration font-italic kinjo-color">Pick up</p>
+					{$pickup_top}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-<!-- イントロダクションエリア -->
-<div class="kinyu-sp-main-block">
-
-  <!-- pickup -->
-  <div class="swiper-container02 kinyu-top-introlist-pickup">
-    <div class="swiper-wrapper">
-      {$pickup_top}
+<!-- join & lesson -->
+<div class="main-block event-content" id="event">
+	<div class="main-block-inner container">
+		<div class="single-title-block position-relative">
+      <p class="deco-text ff-decoration font-italic kinjo-color">Join & Learn</p>
+      <h2 class="main-title ff-mincho">– 参加して学ぶ</h2>
+      <p class="deco-text-sub">お金についての理解を深めよう</p>
+      <img class="report-fukidashi position-absolute" src="/images/fukidashi/report-fukidashi.svg">
     </div>
-    <div class="swiper-arrow swiper-button-next02"></div>
-    <div class="swiper-arrow swiper-button-prev02"></div>
-    <div class="swiper-pagination swiper-pagination02"></div>
-  </div>
-
-  <div class="kinyu-sp-introduction">
-    <h2><img class="main-title" src="/images/new/kinyu-top-list-title.png" alt="わたしらしい『ミライ』への解放"></h2>
-    <!-- <div class="main-title-border"></div> -->
-    <p>お金にとらわれず<br>自由で等身大に生きる。</p>
-    <a class="main-intro-link js-track" href="/about" data-category="sp-top-link" data-action="click" data-value="1">きん女。ストーリー</a>
-
-    <!-- news -->
-    <div class="kinyu-top-introlist-news">
-      {foreach from=$news item=new name=foo}
-      <a class="kinyu-top-introlist-news-link js-track" href="/news/{$new.code}" data-category="sp-top-link" data-action="click" data-value="1">
-        <div class="title-area">
-          <p>お知らせ</p>
-        </div>
-        <div class="text-area">
-          <p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
-          <p class="news-title">{$new.title}</p>
-        </div>
-      </a>
-      {/foreach}
-      <div class="sidebar-more-link">
-        <a class="js-track" href="/news" data-category="sp-top-link" data-action="click" data-value="1">お知らせをもっと見る ></a>
-      </div>
-    </div>
-
-    <!-- <div class="introduction-list">
-      <div class="kinyu-top-banner-area kinyu-top-banner-area">
-        <ul class="clear">
-          <li>
-            <a class="js-track" href="/login_regist" data-category="sp-top-link" data-action="click" data-value="1">
-              <img class="sp" src="/images/banner/firsttime_sp.jpg" alt="きんゆう女子。初めての方へのご案内">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div> -->
-    <div class="top-official-member-block animation-top1">
-      <p>＼自由で等身大に生きる仲間とつながろう♪／</p>
-      <a href="https://official.kinyu-joshi.jp/" target="_blank"><img class="w-100" src="/images/official-members-club.jpg"></a>
-    </div>
-
-  </div>
-
-
-  <div class="kinyu-top-list-block">
-    <div class="inner">
-      <div class="kinyu-top-maincontent-block">
-
-        <!-- きんゆう女子。会 -->
-        <div class="kinyu-top-maincontent-block-el">
-          <div class="kinyu-top-list kinyu-top-joshikai-list">
-          <img class="kinyu-top-list-fuki" src="/images/member_regist_fuki_sp.png" alt="">
-            <h3 class="kinyu-top-main-title">ワカラナイ…から卒業しよう♪</h3>
-            <p class="kinyu-top-main-sub">女子会でみんなどうしてる？を知ったり勉強したり。<br>ゲストには、気軽に質問をしてみよう！</p>
-            <ul class="clear">
-              {foreach from=$events key="key" item=event name=loopname}
-                {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
-                {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
-              {/foreach}
-            </ul>
-
-            {if count($events) > $event_display_limit}
-              <ul class="clear more-kinyu-top-joshikai-list" style="display: none">
-                {foreach from=$events key="key" item=event name=loopname}
-                  {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
-                    {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
-                  {/if}
-                {/foreach}
-              </ul>
-              <div class="btn-more-link">
-                <a class="link-to js-track" href="" data-category="pc-top-link" data-action="click" data-value="1">女子会をもっと見る ></a>
-              </div>
-            {/if}
-            <div class="secondary-button">
-              <a href="/joshikai_past">過去の女子会一覧へ</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- メンバー登録 -->
-        <!-- <div class="kinyu-top-maincontent-block-el">
-          <div class="kinyu-top-member-block">
-            <h3 class="kinyu-top-main-title">きんゆう女子。のメンバーになる</h3>
-            <p class="kinyu-top-main-sub">「おかね」について楽しくお勉強♪</p>
-
-            <div class="kinyu-top-member-list clear">
-
-              <div class="img-box" style="background: url(/images/member/member-thub.jpg) center center / cover no-repeat;">
-              </div>
-
-              <div class="text-box">
-                <div class="border-top"></div>
-                <p class="main-title">同世代で「きんゆう」についてゆる〜くおしゃべりしませんか？</p>
-                <p class="description">メンバーになると、特別女子会やミニツアーに参加できたり、新しいサービスをいち早く体験できたりします。私たち自ら情報を取りに行き、感想をシェアしながら自分の生きる道をみつけましょう。お金について語れるお友だちができるかも！</p>
-                <a class="link-to js-track" href="/regist_email" data-category="toppage-link" data-action="click" data-value="1">メンバー登録はこちら</a>
-                <a class="link-to official-member-regist js-track" href="https://official.kinyu-joshi.jp/" data-category="pc-top-link" data-action="click" data-value="1">オフィシャルメンバー登録はこちら</a>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <div class="kinyu-top-maincontent-block-el">
-          <div class="kinyu-top-banner-area kiinyu-top-mainarea-bottom">
-            <ul>
-              <li>
-                <a class="js-track" href="/login_regist" data-category="pc-top-link" data-action="click" data-value="1">
-                  <img class="" src="/images/banner/firsttime_sp.jpg">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- レポート一覧 -->
-        <div class="kinyu-top-maincontent-block-el">
-          <div class="kinyu-top-list kinyu-top-report-list">
-            <h3 class="kinyu-top-main-title">レポートを見る</h3>
-            <p class="kinyu-top-main-sub">きんゆう女子。の日々の活動報告♪</p>
-            <ul class="clear">
-            {foreach from=$top_blogs2 key="key" item=blog name=loopname}
-
-              {if $smarty.foreach.loopname.index == 10}
-              </ul>
-                <div class="btn-more-link">
-                  <a class="js-track" href="/report" data-category="sp-top-link" data-action="click" data-value="1">レポートをもっと見る</a>
-                </div>
-              {break}
-              {/if}
-              <li{if $blog.pr == 1} class="pr"{/if}>
-                <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
-                  <div class="img-box" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
-                    {if $blog.new == true}
-                      <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
-                    {/if}
-                    {if $blog.pr == 1}
-                      <!-- PR用イメージ挿入箇所 -->
-                      <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
-                    {/if}
-                  </div>
-
-                  <div class="text-box">
-                    <div class="kinyu-top-list-kind">
-                      {if $blog.kind == "女子会レポート"}
-                        <p>女子会レポート</p>
-                      {else if $blog.kind == "イベントレポート"}
-                        <p>イベントレポート</p>
-                      {else if $blog.kind == "取材レポート"}
-                        <p>取材レポート</p>
-                      {else if $blog.kind == "イベント告知"}
-                        <p>イベント告知</p>
-                      {else if $blog.kind == "コラム"}
-                        <p>コラム</p>
-                      {else if $blog.kind == "きんゆう散歩"}
-                        <p>きんゆう散歩</p>
-                      {else}
-                        <p>レポート</p>
-                      {/if}
-                    </div>
-                    <h3 class="kinyu-top-list-title">
-                      {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
-                      {$blog.title}
-                    </h3>
-                    <div class="kinyu-top-list-author">
-                      {if isset($blog.profile_image) && isset($blog.author_name)}
-                      <img class="kinyu-top-list-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
-                      <div class="kinyu-top-list-author-info">
-                        <div class="kinyu-top-list-author-info-name">{$blog.author_name}</div>
-                      </div>
-                      {/if}
-                    </div>
-                  </div>
-                </a>
-              </li>
-            {/foreach}
-            </ul>
-          </div>
-        </div>
-
-        <!-- SPECIAL CONTENT -->
-        <div class="special-content-wrapper">
-          <h3 class="kinyu-top-main-title"><img class="special_title" src="/images/special_title.png"></h3>
-          <p>スペシャルコンテンツ</p>
-          <div class="special-contents-banner-wrapper">
-            <ul class="special-contents-list">
-              <li>
-                <a class="js-track" target="_blank" href="/kinjo_check" data-category="sp-top-link" data-action="click" data-value="1">
-                  <img class="" src="/images/diagnosticchart/og-main.jpg">
-                </a>
-              </li>
-              <!-- きんゆう散歩 -->
-              <li>
-                <a class="js-track" target="_blank" href="/kinyu_sanpo" data-category="sp-top-link" data-action="click">
-                  <img class="" src="/images/kinyu_map/og/og-main.jpg">
-                </a>
-              </li>
-              <!-- わたしを知る -->
-              <li>
-                <a class="js-track" target="_blank" href="/myway" data-category="sp-top-link" data-action="click" data-value="1">
-                  <img class="" src="/images/myway/og_myway.jpg">
-                </a>
-              </li>
-              <!-- 朝日デジタル -->
-              <li>
-                <a class="js-track" target="_blank" href="https://www.asahi.com/and_w/seriese/kinyujoshi/"  data-category="sp-top-link" data-action="click" data-value="1">
-                  <img class="" src="/images/banner/asahi_&w_og.jpg">
-                </a>
-              </li>
-              <!-- かぶと町マップ -->
-              <li>
-                <a class="js-track" target="_blank" href="https://kinyu-joshi.jp/map_kabuto" data-category="pc-top-link" data-action="click" data-value="1">
-                  <img class="" src="/images/banner/kabutochomap.jpg">
-                </a>
-              </li>
-              <!-- 桐谷さん相談所 -->
-              <li>
-                <a class="js-track" target="_blank" href="https://froggy.smbcnikko.co.jp/series-name/yutai-sodanjo/" data-category="pc-top-link" data-action="click" data-value="1">
-                  <img class="" src="/images/banner/kiritanisan.png">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+		<div class="swiper-container event-top-slide">
+		  <div class="swiper-wrapper swiper-main-slide">
+		  	{foreach from=$events key="key" item=event name=loopname}
+		      {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
+		      {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+		    {/foreach}
+		    {if count($events) > $event_display_limit}
+		      {foreach from=$events key="key" item=event name=loopname}
+		        {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
+		          {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+		        {/if}
+		      {/foreach}
+		    {/if}
+		  </div>
+		</div>
+		<a class="event-past-link d-block mx-auto kinjo-color text-center" href="/event_past#past-event-list">〉過去のイベント（女子会）はこちら</a>
+	</div>
 </div>
 
 
-<script>
-    $(function() {
-        $(window).load(function(){
-            $('.kinyu-top-joshikai-list .btn-more-link').click(function(e) {
-                e.preventDefault();
-                $(this).hide(); // ボタン自体を非表示
-                $('.more-kinyu-top-joshikai-list').slideDown();
-            })
-        });
-    });
+<!-- find your way -->
+<div class="main-block report-content" id="report">
+	<div class="main-block-inner container">
 
-    $(function() {
-      var ua = navigator.userAgent;
-      var isIOS = ua.indexOf("iPhone") >= 0 ||
-        ua.indexOf("iPad") >= 0 ||
-        navigator.userAgent.indexOf("iPod") >= 0;
+		<div class="single-title-block position-relative">
+      <p class="deco-text ff-decoration font-italic kinjo-color">Find your way</p>
+      <h2 class="main-title ff-mincho">– 読んで学ぼう</h2>
+      <p class="deco-text-sub">きん女。の日々の活動日記</p>
+      <img class="report-fukidashi position-absolute" src="/images/fukidashi/report-fukidashi.svg">
+    </div>
 
-      isIOS = true;
-      if (isIOS && !localStorage.getItem("disable-home-screen-guide")) {
-        $(".home-screen-guide-bubble").show();
+    <div class="report-keywords-block">
+      <div class="row align-items-center">
+        <div class="col-8 report-keywords">
+          <p>よく検索されているキーワード</p>
+          <ul class="d-inline-flex flex-wrap">
+            <li><a class="link-color" href="">#つみたてNISA</a></li>
+            <li><a class="link-color" href="">#iDeCo</a></li>
+            <li><a class="link-color" href="">#貯金</a></li>
+            <li><a class="link-color" href="">#投資</a></li>
+            <li><a class="link-color" href="">#お金の管理</a></li>
+            <li><a class="link-color" href="">#家計簿</a></li>
+            <li><a class="link-color" href="">#withき</a></li>
+            <li><a class="link-color" href="">#ごきんじょさん</a></li>
+          </ul>
+        </div>
+        <div class="col-4 kinyu-top-search">
+          <form action="/report/search" method="get" class="d-flex">
+            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+            <button><img src="/images/search-btn.svg"></button>
+          </form>
+        </div>
+      </div>
+    </div>
 
-        $(".close-button").on("click", function() {
-          localStorage.setItem("disable-home-screen-guide", "1");
-          $('.home-screen-guide-bubble').remove();
-        });
 
-        var startPos = 0,
-          winScrollTop = 0;
-        $(window).on('scroll', function() {
-          var winScrollTop = $(this).scrollTop();
-          if (winScrollTop >= startPos) {
-            if (winScrollTop >= 120) {
-              $('.home-screen-guide-bubble').hide();
-            }
-          } else {
-            $('.home-screen-guide-bubble').show();
-          }
-          startPos = winScrollTop;
-        });
-      }
-    });
-</script>
+		<div class="report-list">
+			<ul class="row">
+				{foreach from=$top_blogs2 key="key" item=blog name=loopname}
+		      {if $smarty.foreach.loopname.index == 4} <!-- 10に変更 -->
+		      </ul>
+		        <div class="btn-more-link">
+		          <a class="js-track link-generally02" href="/report" data-category="sp-top-link" data-action="click" data-value="1">レポートをもっと見る</a>
+		        </div>
+		      {break}
+		      {/if}
+		      <li class="col-6" {if $blog.pr == 1} class="pr"{/if}>
+		        <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
+		        	<div class="report-list-el">
+			          <div class="img-box position-relative" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
+			            {if $blog.new == true}
+			              <p class="new-icon"><img class="w-100" src="/images/blog/new_icon.png"></p>
+			            {/if}
+			            {if $blog.pr == 1}
+			              <!-- PR用イメージ挿入箇所 -->
+			              <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
+			            {/if}
+			          </div>
+
+			          <div class="text-box">
+			            <div class="kinyu-report-kind">
+			              {if $blog.kind == "女子会レポート"}
+			                <p class="kinjo-color">女子会レポート</p>
+			              {else if $blog.kind == "イベントレポート"}
+			                <p class="kinjo-color">イベントレポート</p>
+			              {else if $blog.kind == "取材レポート"}
+			                <p class="kinjo-color">取材レポート</p>
+			              {else if $blog.kind == "イベント告知"}
+			                <p class="kinjo-color">イベント告知</p>
+			              {else if $blog.kind == "コラム"}
+			                <p class="kinjo-color">コラム</p>
+			              {else if $blog.kind == "きんゆう散歩"}
+			                <p class="kinjo-color">きんゆう散歩</p>
+			              {else}
+			                <p class="kinjo-color">レポート</p>
+			              {/if}
+			            </div>
+			            <h3 class="report-title ff-mincho text-newline">
+			              {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+			              {$blog.title}
+			            </h3>
+			            <div class="report-author">
+			              {if isset($blog.profile_image) && isset($blog.author_name)}
+			              <img class="report-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
+			              <div class="report-author-info">
+			                <div class="report-author-info-name">{$blog.author_name}</div>
+			              </div>
+			              {/if}
+			            </div>
+			          </div>
+			        </div>
+		        </a>
+		      </li>
+		    {/foreach}
+		  </ul>
+		</div>
+	</div>
+</div>
+
+{$contents_after}
+
+
+
+

@@ -7,7 +7,6 @@
   {$reporturl = $smarty.server.REQUEST_URI}
 
   {if $reporturl == "/report/FxKhYh"}
-    
     <!-- くつ編 -->
     <div id="myway-header-shoes" class="myway-header-content" style="background: #FBECE4;">
       <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
@@ -24,11 +23,8 @@
         </div>
       </div>
     </div>
-
   {elseif $reporturl == "/report/fMvmMk"}
-
     <!-- コスメ編 -->
-
     <div id="myway-header-cosmetics" class="myway-header-content" style="background: #EBFAFF;">
       <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
       <div class="main-tumb-block clear">
@@ -44,9 +40,7 @@
         </div>
       </div>
     </div>
-
   {elseif $reporturl == "/report/dtov0W"}
-
     <!-- オーラルケア編 -->
     <div id="myway-header-jewelry" class="myway-header-content" style="background: #ebf9f0;">
       <div class="main-tumb-block clear">
@@ -62,59 +56,69 @@
         </div>
       </div>
     </div>
-
-
   {else}
-
     <!-- その他 -->
     <div class="myway-header-content" style="background: #FBECE4;">
       <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
-      <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;">
-        <div class="title-block">
-          <div class="title-block-inner">
-            <img src="/images/myway/title/title-shoes.png">
-            <p>{$blog.description}</p>
+      <div class="main-tumb-block container" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;">
+        <div class="row">
+          <div class="col-5 title-block order-2">
+            <div class="title-block-inner">
+              <img src="/images/myway/title/title-shoes.png">
+              <p>{$blog.description}</p>
+            </div>
           </div>
-        </div>
-        <div class="video-block">
-          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
+          <div class="col-7 video-block order-1">
+            <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
+          </div>
         </div>
       </div>
     </div>
   {/if}
 
-  <div class="inner clear">
-
-    <div class="report-detail-main">
-      {$blog.content|nofilter}
-      <!-- ソーシャルシェア -->
-      <div class="report-detail-share clear">
-        <div class="report-detail-share-el report-detail-share-left" style="background:url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
-        <div class="report-detail-share-el report-detail-share-right">
-          <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
-          <img class="share-this-page" src="/images/social/social-this-page.png">
-          <div class="social-list">
-            <ul>
-              {$social_share}
-            </ul>
+  {if $viewable == true}
+    <div class="report-detail-block">
+      <!-- ログインしている場合 -->
+      <div class="report-detail-block-inner container">
+        <div class="report-detail-main">
+          {$blog.content|nofilter}
+          {$author}
+          <div class="report-share">
+            <div class="report-share-inner d-flex align-items-center">
+              <div class="report-share-imgblock" style="background:url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+              <div class="report-share-textblock text-center">
+                <p class="share-this-title ff-mincho">このレポートをみんなに教える</p>
+                <p class="share-this-page">Share this page!</p>
+                <div class="social-list">
+                  <ul>
+                    {$social_share}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="report-detail-sidebar">
+          {$sidebar}
         </div>
       </div>
     </div>
-  </div>
-  <div class="myway-list-block">
-    <img class="myway-list-title" src="/images/myway/title/main-title-border.png">
-    <div class="myway-list">
-      <ul>
-        <li class="myway-list-shoes"><a href="/report/FxKhYh"><img src="/images/myway/title/title-shoes.png"></a></li>
-        <li class="myway-list-cosmetics"><a href="/report/fMvmMk"><img src="/images/myway/title/title-cosmetics.png"></a></li>
-        <li class="myway-list-jewelry"><a href="/report/dtov0W"><img src="/images/myway/title/title-jewelry.png"></a></li>
-      </ul>
+    {$contents_after}
+  {else}
+    <!-- ログインしていない状態 -->
+    <div class="no-member-report-block">
+      <div class="no-member-report-block-inner mx-auto text-center">
+        <p class="no-member-title ff-mincho">こちらのコンテンツは、<br>メンバー限定コンテンツです♪</p>
+        <p class="no-member-description">メンバー登録がお済みの方はログイン、<br>まだの方はメンバー登録をするとレポートが閲覧可能になります。</p>
+        <div class="button-block">
+          <button class="btn el-button btn-kinyu-login kinjo-color font-weight-bold" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
+          <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="report-detail-sidebar">
-    {$detail_report_after}
-  </div>
+  {/if}
+
+
 </div>
 
 
