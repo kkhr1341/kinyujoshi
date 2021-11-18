@@ -75,11 +75,15 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         Asset::css(array('kinyu/font-awesome.min.css',), array(), 'layout', false);
     }
 
+    const EVENT_DISPLAY_LIMIT = 6;
+
     public function action_detail($code)
     {
         // 最新を取得
         $this->data['blogs'] = Blogs::all('kinyu', '/kinyu/blog/', 1, 3, 5);
         $this->data['blog'] = Blogs::getByCodeWithProfile($code);
+        $this->data['event_display_limit'] = self::EVENT_DISPLAY_LIMIT;
+        $this->data['events'] = Events::lists(1, null, true, null, 'asc');
 
         $this->data['posted_me'] = false;
         if ($this->data['blog']['author_code']) {
@@ -122,6 +126,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->template->ogimg = $this->data['blog']['main_image'];
         //template
         $this->data['top_blogs'] = Blogs::lists(1, 6, true);
+        $this->data['top_blogs02'] = Blogs::lists02(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->data['after_login_url'] = \Uri::base() . 'report/' . $this->data['blog']['code'];

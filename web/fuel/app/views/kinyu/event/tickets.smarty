@@ -13,18 +13,20 @@ var $resArray02 = $resArray[1];
       <input type="hidden" id="event_code" name="event_code" value="{$event.code}">
 
       <div class="event-tickets-main">
-        <div class="event-tickets-main-inner">
-          <div class="tickets-img" style="background:url({$event.main_image}) center center / cover no-repeat;"></div>
-          <h2>{$event.title}</h2>
+        <div class="event-tickets-main-inner row no-gutters align-items-center">
+          <div class="col-3 tickets-img" style="background:url({$event.main_image}) center center / cover no-repeat;"></div>
+          <div class="tickets-text col-9">
+            <h2 class="ff-mincho">{$event.title}</h2>
+          </div>
         </div>
       </div>
 
       <div class="event-tickets-fee">
         <p class="info-detail">
-        　{if $event.display_event_date}
-          　<span>日時</span>：{$event.display_event_date}
-        　{else}
-          　<span>日時</span>：{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）{$event.event_start_datetime}〜{$event.event_end_datetime}
+          {if $event.display_event_date}
+            <span class="kinjo-color">日時</span>：{$event.display_event_date}
+          {else}
+            <span class="kinjo-color">日時</span>：{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）{$event.event_start_datetime}〜{$event.event_end_datetime}
           {/if}
         </p>
 
@@ -33,15 +35,15 @@ var $resArray02 = $resArray[1];
             {if $event.event_category == '招待型'}
               <p>ご招待</p>
             {else}
-              <p><span>参加費</span>：<span>無料</p>
+              <p><span class="kinjo-color">参加費</span>：<span>無料</span></p>
             {/if}
           {else}
-            <p><span>参加費</span>：<span>{$event.fee|number_format}円</p>
+            <p><span class="kinjo-color">参加費</span>：<span>{$event.fee|number_format}</span>円</p>
           {/if}
         </div>
 
         <div class="info-coupon" style="display: none;">
-            <p><span>参加費</span>：<span class="fee"></span></p>
+            <p><span >参加費</span>：<span class="fee"></span></p>
             <p><span>ギフトコードがマッチしました☆</span>：<span class="amount" style="color: red;"></span></p>
         </div>
       </div>
@@ -56,20 +58,20 @@ var $resArray02 = $resArray[1];
 
         <div class="cancel-block">
 
-          <p class="cancel-title kinjo-color">女子会のお約束事</p>
+          <p class="cancel-title kinjo-color ff-mincho">イベントのお約束事</p>
 
           <ul class="cancel-block-list">
             <li>きんゆう女子。のコンセプトは、「前向きに経済に関わることで、おかねにとらわれず自由で等身大に生きる」ことです。みなさま一人一人が「おかね」に関するリテラシーを向上させ、自分らしい生活を送れるようになることを目指したコミュニティです。</li>
             <li>どなたでも安心して女子会に参加することができるように、ゲストや参加者同士での営業・勧誘行為は固くお断りしております。</li>
-            <li>きんゆう女子。会は、個人のための女子会です。企業としてのの見学・視察目的などでのご参加はご遠慮ください。</li>
+            <li>イベントは、個人のための女子会です。企業としてのの見学・視察目的などでのご参加はご遠慮ください。</li>
             <li>きんゆう女子。では、特定の企業の商品の勧誘やアフィリエイトと呼ばれる成果報酬型の広告宣伝を行わないポリシーです。その代わりに女子会の参加費をいただいたり、みなさまの声や気持ちをアンケートなどで集約することで匿名で企業さまへ提供することがあります。真摯にサービス提供に取り組まれている企業を積極的に応援し、今後の経済や金融業界の発展に寄与することで、みなさまが安心して交流・勉強する場を提供しています。</li>
-            <li>女子会の際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
+            <li>イベントの際に撮影したお写真は、きんゆう女子。のWEBサイト、SNS、女子会レポート、今後のイベントの告知などで使用させていただくことがあります。</li>
 
             {if $event.fee > 0}
               {if $event.incur_cancellation_fee_date && $event.incur_cancellation_fee_date != "0000-00-00 00:00:00"}
                 <li>お席や食事、ゲスト手配のため、<span>{$event.incur_cancellation_fee_date|date_format:"Y年m月d日"}</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
               {else}
-                <li>お席や食事、ゲスト手配のため、<span>女子会開催日の3日前</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
+                <li>お席や食事、ゲスト手配のため、<span>イベント開催日の3日前</span>よりお取消料が発生いたします。あらかじめご了承ください。</li>
               {/if}
             {/if}
           </ul>
@@ -77,7 +79,7 @@ var $resArray02 = $resArray[1];
           <p class="cancel-button-area">
             <input type="checkbox" name="cancel_check" id="cancel_check">
             <label for="cancel_check" class="checkbox"></label>
-            <span>女子会のお約束事に同意する。</span>
+            <span>イベントのお約束事に同意する。</span>
           </p>
         </div>
 
@@ -86,9 +88,9 @@ var $resArray02 = $resArray[1];
           <div class="event-tickets-fee">
             <div class="info-no-coupon">
               {if $event.fee == 0}
-                <p><span>参加費</span>：<span>無料</p>
+                <p><span class="kinjo-color">参加費</span class="kinjo-color">：<span>無料</p>
               {else}
-                <p><span>参加費</span>：<span>{$event.fee|number_format}円</p>
+                <p><span class="kinjo-color">参加費</span>：<span class="kinjo-color">{$event.fee|number_format}円</p>
               {/if}
             </div>
 

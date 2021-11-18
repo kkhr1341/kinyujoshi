@@ -1,31 +1,6 @@
 <!-- メインビジュアル -->
-<div class="main-visual">
-	
-</div>
-
-<!-- pickup/introduction -->
-<div class="main-block pickup-content" id="pickup-area">
-	<div class="main-block-inner container">
-		<div class="row align-items-center">
-			<div class="col-4 kinjo-introduction text-center">
-				<p class="introduction-sub ff-mincho">わたしらしい「ミライ」への開放</p>
-				<p class="introduction-main ff-mincho">お金にとらわれず<br>自由で等身大に生きる</p>
-				<p class="introduction-description">ゆる〜く、楽しく。でもちょっと真面目に。<br>
-					身近な家計管理から世界経済、FinTech、<br>
-					ライフスタイルまで、幅広い”きんゆう”を学ぶ<br>
-					機会をつくっています。
-				</p>
-				<a class="kinjo-color" href="/about">きんゆう女子。って？</a>
-			</div>
-			<div class="col-8 kinjo-pickup">
-				<div class="kinjo-pickup-inner position-relative">
-					<p class="kinjo-pickup-deco-text ff-decoration font-italic kinjo-color">Pick up</p>
-					{$pickup_top}
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+{$mainvisual}
+{$mainproject}
 
 <!-- join & lesson -->
 <div class="main-block event-content" id="event">
@@ -34,22 +9,26 @@
       <p class="deco-text ff-decoration font-italic kinjo-color">Join & Learn</p>
       <h2 class="main-title ff-mincho">– 参加して学ぶ</h2>
       <p class="deco-text-sub">お金についての理解を深めよう</p>
-      <img class="report-fukidashi position-absolute" src="/images/fukidashi/report-fukidashi.svg">
+      <img class="report-fukidashi position-absolute" src="/images/fukidashi/event-fukidashi.svg">
     </div>
-		<div class="swiper-container event-top-slide">
-		  <div class="swiper-wrapper swiper-main-slide">
-		  	{foreach from=$events key="key" item=event name=loopname}
-		      {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
-		      {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
-		    {/foreach}
-		    {if count($events) > $event_display_limit}
-		      {foreach from=$events key="key" item=event name=loopname}
-		        {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
-		          {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
-		        {/if}
-		      {/foreach}
-		    {/if}
-		  </div>
+    <div class="event-top-slide-container position-relative">
+			<div class="swiper-container event-top-slide">
+			  <div class="swiper-wrapper swiper-main-slide">
+			  	{foreach from=$events key="key" item=event name=loopname}
+			      {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
+			      {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+			    {/foreach}
+			    {if count($events) > $event_display_limit}
+			      {foreach from=$events key="key" item=event name=loopname}
+			        {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
+			          {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+			        {/if}
+			      {/foreach}
+			    {/if}
+			  </div>
+			</div>
+			<div class="swiper-button-prev d-none d-md-block"></div>
+	   	<div class="swiper-button-next d-none d-md-block"></div>
 		</div>
 		<a class="event-past-link d-block mx-auto kinjo-color text-center" href="/event_past#past-event-list">〉過去のイベント（女子会）はこちら</a>
 	</div>
@@ -69,24 +48,26 @@
 
     <div class="report-keywords-block">
       <div class="row align-items-center">
-        <div class="col-8 report-keywords">
+        <div class="col-12 col-lg-8 order-2 order-lg-1 report-keywords">
           <p>よく検索されているキーワード</p>
           <ul class="d-inline-flex flex-wrap">
-            <li><a class="link-color" href="">#つみたてNISA</a></li>
-            <li><a class="link-color" href="">#iDeCo</a></li>
-            <li><a class="link-color" href="">#貯金</a></li>
-            <li><a class="link-color" href="">#投資</a></li>
-            <li><a class="link-color" href="">#お金の管理</a></li>
-            <li><a class="link-color" href="">#家計簿</a></li>
-            <li><a class="link-color" href="">#withき</a></li>
-            <li><a class="link-color" href="">#ごきんじょさん</a></li>
+            <li><a class="link-color" href="/report/search?search_text=つみたてNISA">#つみたてNISA</a></li>
+            <li><a class="link-color" href="/report/search?search_text=iDeCo">#iDeCo</a></li>
+            <li><a class="link-color" href="/report/search?search_text=貯金">#貯金</a></li>
+            <li><a class="link-color" href="/report/search?search_text=投資">#投資</a></li>
+            <li><a class="link-color" href="/report/search?search_text=お金の管理">#お金の管理</a></li>
+            <li><a class="link-color" href="/report/search?search_text=家計簿">#家計簿</a></li>
+            <li><a class="link-color" href="/report/search?search_text=with×き">#withき</a></li>
+            <li><a class="link-color" href="/report/search?search_text=ごきんじょさん">#ごきんじょさん</a></li>
           </ul>
         </div>
-        <div class="col-4 kinyu-top-search">
-          <form action="/report/search" method="get" class="d-flex">
-            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
-            <button><img src="/images/search-btn.svg"></button>
-          </form>
+        <div class="col-12 col-lg-4 order-1 order-lg-2">
+        	<div class="kinyu-top-search">
+	          <form action="/report/search" method="get" class="d-flex">
+	            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+	            <button><img src="/images/search-btn.svg"></button>
+	          </form>
+	        </div>
         </div>
       </div>
     </div>
@@ -95,15 +76,15 @@
 		<div class="report-list">
 			<ul class="row">
 				{foreach from=$top_blogs2 key="key" item=blog name=loopname}
-		      {if $smarty.foreach.loopname.index == 4} <!-- 10に変更 -->
+		      {if $smarty.foreach.loopname.index == 10}
 		      </ul>
 		        <div class="btn-more-link">
 		          <a class="js-track link-generally02" href="/report" data-category="sp-top-link" data-action="click" data-value="1">レポートをもっと見る</a>
 		        </div>
 		      {break}
 		      {/if}
-		      <li class="col-6" {if $blog.pr == 1} class="pr"{/if}>
-		        <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
+		      <li class="col-12 col-md-6" {if $blog.pr == 1} class="pr"{/if}>
+		        <a class="d-block js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
 		        	<div class="report-list-el">
 			          <div class="img-box position-relative" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
 			            {if $blog.new == true}
@@ -156,6 +137,22 @@
 </div>
 
 {$contents_after}
+
+<script>
+// $(function () {
+// 	var $e = $('.event-top-slide-main');
+// 	var w1 = $e.width();
+// 	var w2 = $e.innerWidth();
+// 	var w3 = $e.outerWidth();
+// 	console.log(w1);
+// 	console.log(w2);
+// 	console.log(w3);
+// });
+let element = document.getElementById('event-top-slide-img');
+console.log(element.clientWidth);
+console.log(element.offsetWidth);
+console.log(element.scrollWidth);
+</script>
 
 
 

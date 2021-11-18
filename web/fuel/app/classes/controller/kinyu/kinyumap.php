@@ -24,6 +24,7 @@ class Controller_Kinyu_Kinyumap extends Controller_Kinyubase
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
+        $this->template->map_last = View::forge('kinyu/kinyumap/map_last.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/kinyumap/ooedo_ito.smarty', $this->data);
     }
 

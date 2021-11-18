@@ -58,6 +58,7 @@ class Controller_Mybase extends Controller_Template
         Asset::add_path('assets/js', 'js');
         Asset::css(array(
             //'kinyu/font.css',
+            "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css",
             'kinyu/bootstrap01.css',
             'kinyu/animate.css',
             'kinyu/redactor.css',
@@ -74,16 +75,20 @@ class Controller_Mybase extends Controller_Template
             //'kinyu/kuchikomi.css',
             'base.css',
             'slick.css',
-            'kinyu/bg.css',
+            //'kinyu/bg.css',
             //'style.css',
             'kinyu/swiper.min.css',
             //'kinyu/jumboShare.css',
             //'kinyu/drawer.css',
-            'edit_style.css',
-            'tablet.css',
-            'responsive.css',
+            // 'edit_style.css',
+            // 'tablet.css',
+            // 'responsive.css',
+            'common.css',
+            'header.css',
+            'footer.css',
             'my/my.css',
-            'my/responsive.css'
+            'my/responsive.css',
+            'my/my_new.css'
         ), array(), 'layout', false);
 
         Asset::js(array(
@@ -109,10 +114,15 @@ class Controller_Mybase extends Controller_Template
             'ja.js',
             'tool.js',
             'uploader.js',
-            'kinyu/drawer.min.js',
-            'kinyu/swiper.js',
-            'kinyu/swiper.min.js',
+            //'kinyu/drawer.min.js',
+            //'kinyu/swiper.js',
+            //'kinyu/swiper.min.js',
             // 'kinyu/main.js',
+            'kinyu/slick.min.js',
+            'kinyu/main.js',
+            'kinyu/scrollreveal.min.js',
+            'kinyu/slide.js',
+            'kinyu/swiper.min.js',
             'my/main.js'
         ), array(), 'layout', false);
 

@@ -21,7 +21,7 @@
     {if isset($canonical)}
     <link href="{$canonical}" rel="canonical" />
     {/if}
-    <link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet" /> -->
     {$ga}
 
     {Asset::render('layout')}
@@ -37,13 +37,23 @@
     <link rel="stylesheet" href="https://use.typekit.net/gip2egh.css">
   </head>
 
-  <body class="drawer drawer--left">
+  <body class="drawer drawer--right">
     {$header}
     <div class="kinyu-container">
       <div class="kinyu-main">
         {$contents}
       </div>
       {$footer}
+    </div>
+
+    <!-- loader animation -->
+    <div class="loader-block">
+      <div class="loader-block-inner">
+        <div class="loader-el">
+          <div class="loader loader-1"></div>
+          <p>送信中です...。</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>

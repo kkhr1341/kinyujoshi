@@ -4,74 +4,54 @@
     {$my_side}
     
     <div class="admin-normal-main">
-
-
       <div class="joshikailist-main join-joshikai-block">
-        
-        <!-- <div class="mypage-content-mainimg" style="background:url(/images/my/my_kinjo_img.jpg) center center / cover no-repeat;"><div class="white-modal"></div></div>
-         <h3 class="mypage-content-title"><span>参加予定の女子会</span></h3>
-         <p class="mypage-content-description pc">
-          このページでは、これから参加する女子会や、<br>
-          今までに参加した女子会などをチェックすることができます。
-         <p class="mypage-content-description sp">
-           このページでは、これから参加する女子会や、
-          今までに参加した女子会などをチェックすることができます。
-         </p> -->
-
-
         <div class="js-tab">
-
-          <div class="tab1 active">参加予定の女子会</div>
-          <div class="tab2">過去に参加した女子会</div>
-
+          <div class="tab1 active">参加予定のイベント</div>
+          <div class="tab2">過去に参加したイベント</div>
         </div>
-
-        <ul class="my-maincontent-block my-joshikai-join clear js-tab_content tab1 active">
-
-          {foreach from=$applications item=application name=loopname}
-
-          {$fooo = $application.main_image}
-          {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-          
-          <!-- 女子会 -->
-          <!-- 現状、全ての女子会を表示 -->
-          <li>  
-            <a href="/my/joshikai/{$application.application_code}" class="clear">
-              <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
-              <div class="text-box">
-                <div class="text-box-inner">
-                  <p class="date-text">
-                    {if $application.display_event_date}
-                      {$application.display_event_date}
-                    {else}
-                      {$application.event_date|date_format:"Y年m月d日"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
-                    {/if}
-                  </p>
-                  <p class="title-text">{$application.title}</p>
+        <div class="my-maincontent-block my-joshikai-join my-joshikai-join-details js-tab_content tab1 active">
+          <ul class="row">
+            {foreach from=$applications item=application name=loopname}
+            {$fooo = $application.main_image}
+            {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
+            <!-- 女子会 -->
+            <!-- 現状、全ての女子会を表示 -->
+            <li class="col-6">
+              <a href="/my/event/{$application.application_code}" class="clear" target="_blank">
+                <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
+                <div class="text-box">
+                  <div class="text-box-inner">
+                    <p class="date-text">
+                      {if $application.display_event_date}
+                        {$application.display_event_date}
+                      {else}
+                        {$application.event_date|date_format:"Y年m月d日"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+                      {/if}
+                    </p>
+                    <p class="title-text ff-mincho text-newline">{$application.title}</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </li>
+              </a>
+            </li>
+          {foreachelse}
+            <div class="non-message mx-auto">
+              <p class="joshikai-no">イベントのご参加いつでもお待ちしています♪</p>
+              <a href="/#event" class="to-link-joshikai">イベントの予定へ</a>
+            </div>
+          {/foreach}
+          </ul>
+        </div>
+      </div>
 
-        {foreachelse}
-          <div class="non-message">
-            <p class="joshikai-no">女子会のご参加いつでもお待ちしています♪</p>
-            <a href="/joshikai" class="to-link-joshikai">女子会の予定へ</a>
-          </div>
-        {/foreach}
-        </ul>
-
-        <ul class="my-maincontent-block my-joshikai-join clear js-tab_content tab2" style="display: none;">
-
+      <div class="my-maincontent-block my-joshikai-join my-joshikai-join-details js-tab_content tab2" style="display: none;">
+        <ul class="row">
           {foreach from=$prev_applications item=application name=loopname}
-
           {$fooo = $application.main_image}
           {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-
           <!-- 女子会 -->
           <!-- 現状、全ての女子会を表示 -->
-          <li>
-            <a href="/my/joshikai/{$application.application_code}" class="clear">
+          <li class="col-6">
+            <a href="/my/event/{$application.application_code}" class="clear" target="_blank">
               <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
               <div class="text-box">
                 <div class="text-box-inner">
@@ -82,16 +62,17 @@
                       {$application.event_date|date_format:"Y年m月d日"}（{$application.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
                     {/if}
                   </p>
-                  <p class="title-text">{$application.title}</p>
+                  <p class="title-text ff-mincho text-newline">{$application.title}</p>
                 </div>
               </div>
             </a>
           </li>
         {foreachelse}
           <!-- 参加女子会がない場合 -->
-          <li>
-            <a href="/joshikai" class="to-link-joshikai">女子会の予定はこちら</a>
-          </li>
+          <div class="non-message mx-auto">
+            <p class="joshikai-no">過去参加したイベントはありません。<br>いつでもご参加お待ちしています♪</p>
+            <a href="/#event" class="to-link-joshikai">イベントの予定へ</a>
+          </div>
         {/foreach}
         </ul>
       </div>

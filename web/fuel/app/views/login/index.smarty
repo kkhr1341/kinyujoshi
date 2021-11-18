@@ -12,7 +12,7 @@
 
             <div class="row">
 
-              <div class="col-6 login-email-container">
+              <div class="col-12 col-md-6 login-email-container">
                 <label class="title">メールアドレスでログイン</label>
                 <form class="email-form">
                   <input type="text" name="email" placeholder="メールアドレス" value="">
@@ -22,7 +22,7 @@
                 </form>
               </div>
 
-              <div class="col-6 login-btn-list">
+              <div class="col-12 col-md-6 login-btn-list">
                 <label class="title">ソーシャルアカウントでログイン</label>
                 <ul>
                   <li class="fb-login-bg"><a class="d-block text-center text-white font-weight-bold" href="/auth/oauth/facebook">Facebookでログインする</a></li>
@@ -40,11 +40,11 @@
         <h2 class="about-member-title ff-mincho">マイページでできること</h2>
         <div class="about-member-list">
           <ul>
-            <li><span>01</span>いち早くWEBレポートをチェックできます。全てのレポートが、掲載後1カ月間はメンバー限定となります。<br>＊その他にもメンバー限定レポートがあります。</li>
-            <li><span>02</span>レポートをお気に入り登録して、見たいときにすぐ読み返すことができます。</li>
-            <li><span>03</span>女子会参加履歴を見て、振り返りができます。</li>
-            <li><span>04</span>一部のメンバーのプロフィールをみて、自分の判断軸を養うヒントにできます。</li>
-            <li><span>05</span><a href="https://kinyu-joshi.jp/kinjo_check">「きん女。診断」</a>で自分がどのきん女。タイプなのか診断することができます。</li>
+            <li><span class="ff-decoration">01</span>いち早くWEBレポートをチェックできます。全てのレポートが、掲載後1カ月間はメンバー限定となります。<br>＊その他にもメンバー限定レポートがあります。</li>
+            <li><span class="ff-decoration">02</span>レポートをお気に入り登録して、見たいときにすぐ読み返すことができます。</li>
+            <li><span class="ff-decoration">03</span>女子会参加履歴を見て、振り返りができます。</li>
+            <li><span class="ff-decoration">04</span>一部のメンバーのプロフィールをみて、自分の判断軸を養うヒントにできます。</li>
+            <li><span class="ff-decoration">05</span><a href="https://kinyu-joshi.jp/kinjo_check">「きん女。診断」</a>で自分がどのきん女。タイプなのか診断することができます。</li>
           </ul>
         </div>
         <img class="login-illust" src="/images/login/login-mypage-illust.png">
@@ -128,10 +128,10 @@
                     });
                 })
                 .done(function(data) {
-                    $(".loader-block").fadeOut(500);
+                    $(".loader-block").fadeOut(1000);
                 })
                 .fail(function(error) {
-                    $(".loader-block").fadeOut(500);
+                    $(".loader-block").fadeOut(1000);
                 })
         });
     });

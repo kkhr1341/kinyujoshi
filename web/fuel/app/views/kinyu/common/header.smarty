@@ -1,10 +1,81 @@
 <header>
-	
-
-
-
-
-
-	<a href="/regist_email">〉メンバー登録</a>
-	<a href="/my">〉マイページ</a>
+	<h1 class="main-logo">
+		<a href="/"><img src="/images/main-logo.svg" alt="きんゆう女子。" class="w-100"></a>
+	</h1>
+	<div class="header-navigation-list d-none d-md-block">
+		<ul class="row align-items-center justify-content-end h-100">
+			<li><a class="regist-link d-block text-center text-white" href="/regist_email">〉メンバー登録</a></li>
+			<li><a class="mypage-link d-block text-center kinjo-color" href="/my">〉マイページ</a></li>
+			<li><a class="omc-link d-block text-center" href="https://official.kinyu-joshi.jp/" target="_blank">〉オフィシャルメンバーズクラブ</a></li>
+		</ul>
+	</div>
 </header>
+
+<div class="menu-trigger-container text-center open-navigation">
+	<div class="menu-trigger">
+		<!-- <span></span>
+		<span></span>
+		<span></span> -->
+		<img class="w-100" src="/images/menu/menu-img.svg">
+	</div>
+</div>
+
+<div class="main-navigation">
+	<img src="/images/menu/logo-ki.svg" class="logo-ki d-none d-lg-block">
+	<img src="/images/menu/logo-ki01.svg" class="logo-ki d-block d-md-none">
+	<div class="open-navigation" id="close-navigation"><img class="w-100" src="/images/menu/close-btn.svg"></div>
+	<div class="main-menu-list-container row justify-content-end position-relative">
+		<div class="main-menu-list-block">
+			<div class="menu-list-el">
+				<p class="deco-text ff-decoration kinjo-color">Menu</p>
+				<ul class="menu-list">
+					<li class="accent-list"><a href="/my">マイページ</a></li>
+					<li class="accent-list"><a href="/regist_email">メンバー登録</a></li>
+					<li class="accent-list"><a href="https://official.kinyu-joshi.jp/" target="_blank">オフィシャルメンバーズクラブ</a></li>
+					<li><a class="open-navigation" href="/#event">参加して学ぶ<span>-イベント</span></a></li>
+					<li><a class="open-navigation" href="/#report">読んで学ぶ<span>-レポート</span></a></li>
+				</ul>				
+			</div>
+			<div class="mypage-menu">
+				<div class="menu-list-el position-relative">
+					<p class="deco-text ff-decoration kinjo-color">Mypage<br><span class="ff-mincho">マイページ・メニュー</span></p>
+					<ul class="menu-list">
+						<li><a class="open-navigation" href="/my#meber-only-event">参加予定のイベント</a></li>
+						<li><a href="/my/member_report">メンバー限定レポート</a></li>
+						<li><a href="/my/report">お気に入り</a></li>
+						<li><a href="/members">メンバー一覧</a></li>
+					</ul>				
+				</div>
+			</div>
+
+			<div class="kinjo-social-list">
+	      <ul class="row justify-content-center">
+	        <li class="social-instagram"><a href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagram</a></li>
+	        <li class="social-twitter"><a href="https://twitter.com/kinyu_joshi" target="_blank">Twitter</a></li>
+	      </ul>
+	    </div>
+
+	    <div class="navigation-about-kinjo">
+		    <div class="footer-kinjo-block position-relative mx-auto">
+		      <div class="footer-logo">
+		        <img src="/images/common/logo_w.svg" alt="きんゆう女子。">
+		      </div>
+		      <div class="footer-kinjo-text">
+		        <p class="main-title text-center ff-mincho">20〜30代を中心とした金融ワカラナイ女子による、<br class="d-none d-md-block">ワカラナイ女子のための金融コミュニティ</p>
+		        <p class="description">身近な家計管理から世界経済まで、広い意味での「金融」をテーマに勉強する女子会を開催しています。女子会は、基本少人数制。同世代や同じ目線の方々が、安心して話せる場所になるよう工夫しています。「自分なりの判断基準」を見つけていくお手伝いをしています。    </p>
+		      </div>
+		    </div>
+		  </div>
+
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function() {
+  	$('.menu-trigger-container').hover(function() {
+    	$('.menu-trigger').toggleClass('active');
+    	return false;
+  	});
+	});
+</script>

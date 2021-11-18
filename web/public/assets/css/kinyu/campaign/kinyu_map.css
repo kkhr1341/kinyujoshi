@@ -5,6 +5,9 @@
 .kinyu-map-main-container {
   padding: 100px 0px 180px;
 }
+.kinyu-map-single-container {
+  padding: 0px 0px 150px;
+}
 .kinyu-map-block {
   line-height: 0;
   position: relative;
@@ -247,22 +250,26 @@
   font-size: 14px;
   margin-bottom: 12px;
 }
-.kinyu-map-block-container .kinyu-top-list ul {
+.kinyu-map-block-container .kinyu-top-list ul,
+.kinyu-map-single-container .kinyu-top-list ul {
   font-size:0;
   letter-spacing: -40px;
   text-align: center;
 }
-.kinyu-map-block-container .kinyu-top-list li {
+.kinyu-map-block-container .kinyu-top-list li,
+.kinyu-map-single-container .kinyu-top-list li {
   display: inline-block;
   float: none;
   letter-spacing: normal;
   margin-bottom: 0%;
   margin-right: 2%;
 }
-.kinyu-map-block-container .kinyu-top-list li:nth-child(even) {
+.kinyu-map-block-container .kinyu-top-list li:nth-child(even),
+.kinyu-map-single-container .kinyu-top-list li:nth-child(even) {
   margin-right: 0%;
 }
-.kinyu-map-block-container .kinyu-top-list-title {
+.kinyu-map-block-container .kinyu-top-list-title,
+.kinyu-map-single-container .kinyu-top-list-title {
   height: auto;
   font-size: 12px;
   line-height: 18px;
@@ -286,9 +293,92 @@
   position: absolute;
   right: 0;
 }
-.kinyu-map-block-container .kinyu-top-list:last-child .to-special-site {
+.kinyu-map-block-container .kinyu-top-list:last-child .to-special-site,
+.kinyu-map-single-container .kinyu-top-list:last-child .to-special-site {
   background: #f57d80;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  きんゆう散歩@広島
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  .description-block {
+    position: relative;
+    border: none;
+  }
+  .hirokun {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    max-width: 70px;
+  }
+  .hirokun-sp {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    max-width: 70px;
+}
+  .kinyu_sanpo_archives {
+    max-width: 1000px;
+    margin: 56px 0;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .kinyu_sanpo_archives li {
+    margin-bottom: 32px;
+  }
+  .kinyu_sanpo_archives li img{
+    max-width: 300px;
+    vertical-align: bottom;
+  }
+  .kinyu_sanpo_archives p {
+    margin-top: 8px;
+    text-align: center;
+  }
+  .kinyu_sanpo_archives a:hover {
+    opacity: .6;
+    transition: .5s;
+  }
+  .banner-box {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .hirogin-banner img{
+    max-width: 380px;
+    margin: 16px 0;
+  }
+  .fadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 2s;
+}
+.map_last {
+    padding-bottom: 0px;
+    transition: .5s;
+}
+
+@media screen and (max-width: 768px) {
+.sub-map-description {
+    padding: 0px 24% 0px 20px;
+}
+.description-block {
+  position: relative;
+  border: none;
+  margin-bottom: 50px;
+}
+.banner-box {
+    text-align: center;
+    margin-bottom: 56px;
+    width: 92%;
+    margin: 0 auto;
+}
+.hirogin-banner img{
+  width: 90%;
+}
+
+}
+
+
 
 /* ----------------------------------
     スマートフォン＆タブレット

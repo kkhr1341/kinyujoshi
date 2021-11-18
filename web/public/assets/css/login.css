@@ -3,6 +3,48 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   メンバー登録ページ（メールアドレス）
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.regist-contents {
+  background-color: #F7FAFA;
+}
+.regist-contents .container {
+  width: 1000px;
+}
+.regist-benefits-block {
+  margin-bottom: 50px;
+}
+.regist-contents-title {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+.regist-benefits-list {
+  margin-bottom: 50px;
+}
+.regist-benefits-list-el-inner {
+  padding: 16px 20px;
+  background-color: #ebf9f7;
+}
+.regist-benefits-list .img-block {
+  opacity: .6;
+}
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+.regist-benefits-list-el {
+  margin-bottom: 20px;
+}
+.regist-benefits-list-el:last-child {
+  margin-bottom: 0px;
+}
+.regist-benefits-list-el-title {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #B0E2DB;
+}
+.regist-benefits-list-el-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 12px;
+}
 #regist-form {
   margin-bottom: 0px;
 }
@@ -20,9 +62,9 @@
   text-align: center;
   margin-bottom: 24px;
 }
-.login-add-contents-block {
-  width: 800px;
-  margin: 0 auto;
+.regist-form-block {
+  padding: 50px 70px;
+  background-color: #fff;
 }
 .login-add-contents-block .main-title {
   text-align: center;
@@ -161,6 +203,49 @@
 }
 
 
+@media screen and (max-width: 959px) {
+  .regist-contents .container {
+    width: 100%;
+  }
+  .regist-form-block {
+    padding: 24px;
+  }
+  .regist-contents-title {
+    font-size: 2.0rem;
+  }
+  .regist-benefits-list-el-inner {
+    padding: 12px 16px;
+  }
+  .regist-benefits-list-el-title {
+    font-size: 1.6rem;
+  }
+  .regist-benefits-list-el-description {
+    font-size: 1.1rem;
+  }
+  .regist-benefits-list-el {
+    margin-bottom: 12px;
+  }
+  .regist-benefits-list .img-block {
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  .regist-add-form-edit-title {
+    font-size: 1.3rem;
+  }
+  .login-add-contents-block .form-control {
+    font-size: 1.2rem;
+  }
+  .login-add-contents-block .submit-sub,
+  .login-add-contents-block .submit-sub a {
+    font-size: 1.1rem;
+  }
+  .regist-form-block .message {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+}
+
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　ログイン関連
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -169,8 +254,9 @@
 .login-contents {
 }
 .login-contents-block {
-  padding: 100px 0px;
-  background-color: #F7F7F7;
+  margin-top: 120px;
+  padding: 80px 0px 120px;
+  background-color: #F7FAFA;
 }
 .login-contents-intro {
   text-align: center;
@@ -221,8 +307,8 @@
 }
 .login-contents-form-area label.title {
   font-size: 1.6rem;
-  color: #444;
   margin-bottom: 20px;
+  color: #707070!important;
   text-align: left;
   width: 100%;
   padding-left: 10px;
@@ -240,6 +326,7 @@
 .login-contents-form-area .email-form input {
   width: 100%;
   background: #fff;
+  color: #707070!important;
   padding: 12px;
   font-size: 1.4rem;
   margin-bottom: 16px;
@@ -258,29 +345,13 @@
   width: 200px;
   color: #fff;
   margin: 0 auto;
-  font-size: 13px;
+  font-size: 1.3rem;
   padding: 12px 0px;
   background: #8ddcd1;
   font-weight: bold;
   transition: .5s;
 }
 
-/* 登録部分 */
-/*.regist-btn-list {
-  width: 650px;
-  margin: 0 auto;
-}
-.regist-btn-list li {
-  width: 100%;
-  margin-bottom: 16px;
-  transition: .5s;
-}
-.regist-btn-list li a {
-  display: block;
-  padding: 16px 0px;
-  font-size: 15px;
-  text-align: center;
-}*/
 .login-email-container {
   padding-right: 32px;
 }
@@ -504,7 +575,7 @@
   font-size: 1.4rem;
   margin-bottom: 24px;
   position: relative;
-  padding: 4px 0px 0px 36px;
+  padding: 4px 0px 0px 50px;
 }
 .about-member-list li:last-child {
   margin-bottom: 4px;
@@ -513,7 +584,7 @@
   position: absolute;
   left: 0;
   top: 4px;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   line-height:1;
   border-bottom: 1px solid #8ddcd1;
   vertical-align: bottom;
@@ -526,6 +597,63 @@
   bottom: -12px;
   right: -12px;
   width: 110px;
+}
+
+@media screen and (max-width: 959px) {
+  .login-contents-block {
+    margin-top: 0px;
+    padding: 50px 0px;
+  }
+  .login-contents-block-inner {
+    width: 100%;
+  }
+  .login-contents-title {
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+  }
+  .login-email-container {
+    padding-right: 15px;
+  }
+  .login-contents-form-area label.title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  .login-contents-form-area .email-form input {
+    font-size: 1.2rem;
+  }
+  .login-btn-list {
+    padding-left: 15px;
+  }
+  .login-contents-form-area .email-form p {
+    font-size: 1.2rem;
+  }
+  .login-btn-list {
+    margin-top: 32px;
+  }
+  .about-member-block {
+    width: 100%;
+    padding: 32px 24px 32px;
+    margin-top: 50px;
+  }
+  .about-member-block .about-member-title {
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .about-member-list li {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+    padding: 4px 0px 0px 42px;
+  }
+  .about-member-list li span {
+    font-size: 2.2rem;
+  }
+  .about-member-block .login-illust {
+    bottom: auto;
+    top: -18px;
+    width: 65px;
+    right: -4px;
+  }
 }
 
 
@@ -554,4 +682,23 @@
 }
 .resetting-pass-block .form-btn {
   margin-top: 20px;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  complete message
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.regist-complete-block {
+  background-color: #F7FAFA;
+}
+.after-regist-kinjo-check {
+  width: 400px;
+  margin-top: 50px;
+}
+.kinjo-check-sub {
+  width: 300px;
+  margin-bottom: 16px;
+}
+.regist-complete-block .link-kinjo-sinple {
+  margin-top: 50px;
 }

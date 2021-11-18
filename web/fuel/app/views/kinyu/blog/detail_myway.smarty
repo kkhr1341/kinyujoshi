@@ -9,66 +9,73 @@
   {if $reporturl == "/report/FxKhYh"}
     <!-- くつ編 -->
     <div id="myway-header-shoes" class="myway-header-content" style="background: #FBECE4;">
-      <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
-      <div class="main-tumb-block clear" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;">
-        <div class="title-block">
-          <div class="title-block-inner">
-            <img src="/images/myway/title/title-shoes.png">
-            <p class="main-description">毎日を豊かにするために、<br>ちゃんと"靴"を選んでる…？</p>
-            <p>{$blog.description}</p>
+      <div class="main-tumb-block container" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;">
+        <img class="title-block-inner-title mx-auto d-block d-md-none" src="/images/myway/title/title-shoes.png">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-5 title-block order-2">
+            <div class="title-block-inner">
+              <img class="title-block-inner-title d-none d-md-block" src="/images/myway/title/title-shoes.png">
+              <h2 class="main-description ff-mincho">毎日を豊かにするために、<br class="d-none d-md-block">ちゃんと"靴"を選んでる…？</h2>
+              <p>{$blog.description}</p>
+            </div>
           </div>
-        </div>
-        <div class="video-block">
-          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
+          <div class="col-12 col-md-7 video-block order-1">
+            <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
+          </div>
         </div>
       </div>
     </div>
   {elseif $reporturl == "/report/fMvmMk"}
     <!-- コスメ編 -->
     <div id="myway-header-cosmetics" class="myway-header-content" style="background: #EBFAFF;">
-      <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
-      <div class="main-tumb-block clear">
-        <div class="title-block">
-          <div class="title-block-inner">
-            <img src="/images/myway/title/title-cosmetics.png">
-            <p class="main-description">コスメポーチや、おうちのメイクBOX<br>きれいになってる…？</p>
-            <p>{$blog.description}</p>
+      <div class="main-tumb-block container" style="border-top: 1px solid #a4d4e4;border-bottom: 1px solid #a4d4e4;">
+        <img class="title-block-inner-title mx-auto d-block d-md-none" src="/images/myway/title/title-cosmetics.png">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-5 title-block order-2">
+            <div class="title-block-inner">
+              <img class="title-block-inner-title d-none d-md-block" src="/images/myway/title/title-cosmetics.png">
+              <h2 class="main-description ff-mincho">コスメポーチや、おうちのメイクBOX<br class="d-none d-md-block">きれいになってる…？</h2>
+              <p>{$blog.description}</p>
+            </div>
           </div>
-        </div>
-        <div class="video-block">
-          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" ></video>
+          <div class="col-12 col-md-7 video-block order-1">
+            <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" ></video>
+          </div>
         </div>
       </div>
     </div>
   {elseif $reporturl == "/report/dtov0W"}
     <!-- オーラルケア編 -->
     <div id="myway-header-jewelry" class="myway-header-content" style="background: #ebf9f0;">
-      <div class="main-tumb-block clear">
-        <div class="title-block">
-          <div class="title-block-inner">
-            <img src="/images/myway/title/title-jewelry.png">
-            <p class="main-description">わたしらしい美しさは、<br>きれいな笑顔とジュエリーで完成する。</p>
-            <p>{$blog.description}</p>
+      <div class="main-tumb-block container" style="border-top: 1px solid #aad8bb;border-bottom: 1px solid #aad8bb;">
+        <img class="title-block-inner-title mx-auto d-block d-md-none" src="/images/myway/title/title-jewelry.png">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-5 title-block order-2">
+            <div class="title-block-inner">
+              <img class="title-block-inner-title d-none d-md-block" src="/images/myway/title/title-jewelry.png">
+              <h2 class="main-description ff-mincho">わたしらしい美しさは、<br class="d-none d-md-block">きれいな笑顔とジュエリーで完成する。</h2>
+              <p>{$blog.description}</p>
+            </div>
           </div>
-        </div>
-        <div class="video-block">
-          <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/1080p1.mp4" ></video>
+          <div class="col-12 col-md-7 video-block order-1">
+            <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/1080p1.mp4" ></video>
+          </div>
         </div>
       </div>
     </div>
   {else}
     <!-- その他 -->
     <div class="myway-header-content" style="background: #FBECE4;">
-      <!-- <h2><img src="/images/myway/title/main-title-report.png"></h2> -->
       <div class="main-tumb-block container" style="border-top: 1px solid #ecb9ae;border-bottom: 1px solid #ecb9ae;">
-        <div class="row">
-          <div class="col-5 title-block order-2">
+        <img class="title-block-inner-title mx-auto d-block d-md-none" src="/images/myway/title/title-shoes.png">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-5 title-block order-2">
             <div class="title-block-inner">
-              <img src="/images/myway/title/title-shoes.png">
+              <img class="title-block-inner-title d-none d-md-block" src="/images/myway/title/title-shoes.png">
               <p>{$blog.description}</p>
             </div>
           </div>
-          <div class="col-7 video-block order-1">
+          <div class="col-12 col-md-7 video-block order-1">
             <video muted autoplay playsinline loop><source src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" ></video>
           </div>
         </div>
@@ -82,7 +89,6 @@
       <div class="report-detail-block-inner container">
         <div class="report-detail-main">
           {$blog.content|nofilter}
-          {$author}
           <div class="report-share">
             <div class="report-share-inner d-flex align-items-center">
               <div class="report-share-imgblock" style="background:url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>

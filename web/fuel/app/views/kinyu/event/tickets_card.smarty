@@ -9,7 +9,7 @@
         <input type="hidden" name="event_code" value="{$event.code}" />
         <span class="charge-errors"></span>
 
-        <h2 class="main-title"><span style="color:#77cbc0;">＊</span> カードでお支払い <span style="color:#77cbc0;">＊</span></h2>
+        <h2 class="main-title ff-mincho"><span style="color:#77cbc0;">＊</span> カードでお支払い <span style="color:#77cbc0;">＊</span></h2>
 
         <div class="kinyu-credit-list-block">
           <p>- 対応カード -</p>
@@ -55,8 +55,8 @@
           <div class="event-application-open-el">
             <label class="kinjo-color font-weight-bold">有効期限</label>
             <div class="exp-date-block">
-              <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="（月）＊03、12など2桁">
-              <input type="text" class="exp_year" name="exp_year" maxlength="2" placeholder="（年）＊20など2桁">
+              <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月/ 01など2桁">
+              <input type="text" class="exp_year" name="exp_year" maxlength="2" placeholder="年/ 21など2桁">
             </div>
           </div>
         </div>
@@ -195,8 +195,8 @@
             $(".loader-block").fadeIn(200);
             promise
                 .then(function(data) {
-                    $(".loader-block").fadeOut(500);
-                    location.href = "/joshikai_complete";
+                    $(".loader-block").fadeOut(1000);
+                    location.href = "/event_complete";
                 })
                 .catch(function(error) {
                     $(".loader-block").fadeOut(500);

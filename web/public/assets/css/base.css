@@ -69,6 +69,7 @@ a img {
 }
 a {
   text-decoration: none;
+  color: #707070;
 }
 a:hover {
   text-decoration: none!important;
@@ -112,6 +113,15 @@ input:focus {
   clear: both;
   visibility:hidden;
 }
+
+@media screen and (max-width: 959px) {
+
+  /*html {
+    font-size: 52.5%;
+  }*/
+
+}
+
 
 /* ===========================================
   フォーム
@@ -241,9 +251,6 @@ body {
 }
 p, a {
   font-size: 1.3rem;
-  line-height: 1.5;
-  letter-spacing: 0.05em;
-  color: #444444;
 }
 .pc {
   display: none;

@@ -1,0 +1,38 @@
+<div class="main-block main-projext position-relative">
+	<div class="swiper-container main-project-slide">
+		<div class="swiper-wrapper swiper-main-slide">
+			<div class="swiper-slide">
+				<a href="">
+					<img class="w-100" src="./images/topics/event.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="">
+					<img class="w-100" src="./images/topics/event.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="">
+					<img class="w-100" src="./images/topics/event.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="">
+					<img class="w-100" src="./images/topics/event.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="">
+					<img class="w-100" src="./images/topics/event.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="">
+					<img class="w-100" src="./images/topics/event.jpg">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-button-prev d-none d-md-block"></div>
+	<div class="swiper-button-next d-none d-md-block"></div>
+</div>

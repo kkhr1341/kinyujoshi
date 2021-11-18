@@ -5,6 +5,8 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .company-contents {
 	padding: 80px 0px 120px;
+  margin-top: 120px;
+  background-color: #F7FAFA;
 }
 .company-contents .container {
 	width: 900px;

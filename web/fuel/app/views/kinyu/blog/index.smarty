@@ -10,7 +10,7 @@
 
     <div class="report-keywords-block">
       <div class="row align-items-center">
-        <div class="col-8 report-keywords">
+        <div class="col-12 col-lg-8 order-2 order-lg-1 report-keywords">
           <p>よく検索されているキーワード</p>
           <ul class="d-inline-flex flex-wrap">
             <li><a class="link-color" href="">#つみたてNISA</a></li>
@@ -23,11 +23,13 @@
             <li><a class="link-color" href="">#ごきんじょさん</a></li>
           </ul>
         </div>
-        <div class="col-4 kinyu-top-search">
-          <form action="/report/search" method="get" class="d-flex">
-            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
-            <button><img src="/images/search-btn.svg"></button>
-          </form>
+        <div class="col-12 col-lg-4 order-1 order-lg-2">
+          <div class="kinyu-top-search">
+            <form action="/report/search" method="get" class="d-flex">
+              <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+              <button><img src="/images/search-btn.svg"></button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -36,7 +38,7 @@
     <div class="report-list">
       <ul class="row">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
-          <li class="col-6" {if $blog.pr == 1} class="pr"{/if}>
+          <li class="col-12 col-md-6" {if $blog.pr == 1} class="pr"{/if}>
             <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
               <div class="report-list-el">
                 <div class="img-box position-relative" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
@@ -90,70 +92,6 @@
       {$pagination}
     </div>
 
-
-
-
-
-
-
-
-    {*
-    <div class="kinyu-top-list kinyu-top-report-list">
-      <ul class="clear">
-        {foreach from=$blogs.datas key="key" item=blog name=loopname}
-          <li{if $blog.pr == 1} class="pr"{/if}>
-            <a href="/report/{$blog.code}">
-              <div class="img-box" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
-              {if $blog.new == true}
-                <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
-              {/if}
-              {if $blog.pr == 1}
-                <!-- PR用イメージ挿入箇所 -->
-                <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
-              {/if}
-              </div>
-              <div class="text-box">
-                <div class="kinyu-top-list-kind">
-                  {if $blog.kind == "女子会レポート"}
-                    <p>女子会レポート</p>
-                  {else if $blog.kind == "イベントレポート"}
-                    <p>イベントレポート</p>
-                  {else if $blog.kind == "取材レポート"}
-                    <p>取材レポート</p>
-                  {else if $blog.kind == "イベント告知"}
-                    <p>イベント告知</p>
-                  {else if $blog.kind == "コラム"}
-                    <p>コラム</p>
-                  {else if $blog.kind == "きんゆう散歩"}
-                    <p>きんゆう散歩</p>
-                  {else}
-                    <p>レポート</p>
-                  {/if}
-                </div>
-                <h3 class="kinyu-top-list-title">
-                  {if $blog.secret == 1 || $blog.viewable === false}<span class="secret-icon"></span>{/if}
-                  {$blog.title}
-                </h3>
-                <div class="kinyu-top-list-author">
-                  {if isset($blog.profile_image) && isset($blog.author_name)}
-                  <img class="kinyu-top-list-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
-                  <div class="kinyu-top-list-author-info">
-                    <div class="kinyu-top-list-author-info-name">{$blog.author_name}</div>
-                  </div>
-                  {/if}
-                </div>
-              </div>
-            </a>
-          </li>
-        {/foreach}
-      </ul>
-    </div>
-    <div class="blog-pagenation tx-center">
-      {$pagination}
-    </div>
-    *}
-
-
     <script>
       $(function() {
 
@@ -176,8 +114,5 @@
         $('.kinyu-header-top').width(ggg);
       });
     </script>
-
-
-
   </div>
 </div>

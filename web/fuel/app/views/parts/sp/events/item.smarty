@@ -4,9 +4,9 @@
 <div class="swiper-slide">
 <div{if $event.pr == 1} class="pr"{/if}{if $smarty.foreach.loopname.index > ($event_display_limit-1)} style="display: none"{/if}>
     {if empty($event.specific_link)}
-    <a class="js-track" href="/event/{$event.code}" data-category="sp-top-link" data-action="click" data-value="1">
+    <a class="d-block js-track" href="/event/{$event.code}" data-category="sp-top-link" data-action="click" data-value="1">
     {else}
-    <a class="js-track" href="{$event.specific_link}" target="_blank" data-category="sp-top-link" data-action="click" data-value="1">
+    <a class="d-block js-track" href="{$event.specific_link}" target="_blank" data-category="sp-top-link" data-action="click" data-value="1">
     {/if}
         <div class="img-box position-relative" style="background: url({$thumb_filename}) center center / cover no-repeat;">
             {if $event.pr == 1}

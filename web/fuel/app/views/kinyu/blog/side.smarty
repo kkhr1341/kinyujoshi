@@ -1,1 +1,87 @@
-テスト
+<p class="sidebar-title ff-decoration-bold kinjo-color text-center">Writer<span class="d-block ff-mincho color-generally font-weight-normal">このレポートを書いた人</span></p>
+{$author}
+
+<div class="sidebar-report-list">
+  <p class="sidebar-title ff-decoration-bold kinjo-color">New Article<span class="d-block ff-mincho color-generally font-weight-normal">-新着レポート</span></p>
+  <ul>
+    {foreach from=$top_blogs02 key="key" item=blog name=loopname}
+    <li>
+      <a class="d-flex" href="/report/{$blog.code}">
+        <div class="img-block h-100" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"></div>
+        <div class="text-block">
+          {if $blog.kind == "女子会レポート"}
+            <p class="kinjo-color category"><span>女子会レポート</span></p>
+          {else if $blog.kind == "イベントレポート"}
+            <p class="kinjo-color category"><span>イベントレポート</span></p>
+          {else if $blog.kind == "取材レポート"}
+            <p class="kinjo-color category"><span>取材レポート</span></p>
+          {else if $blog.kind == "イベント告知"}
+            <p class="kinjo-color category"><span>イベント告知</span></p>
+          {else if $blog.kind == "コラム"}
+            <p class="kinjo-color category"><span>コラム</span></p>
+          {else if $blog.kind == "きんゆう散歩"}
+            <p class="kinjo-color category"><span>きんゆう散歩</span></p>
+          {else}
+            <p class="kinjo-color category"><span>レポート</span></p>
+          {/if}
+          <h3 class="kinyu-top-list-title ff-mincho">{$blog.title}</h3>
+        </div>
+      </a>
+    </li>
+    {/foreach}
+  </ul>
+  <a class="sidebar-report-link d-block text-center" href="/report">〉レポート一覧</a>
+</div>
+
+<!-- 人気キーワード -->
+<div class="sidebar-list-block02">
+  <p class="sidebar-title ff-decoration-bold kinjo-color text-center">Popular Keywords<span class="d-block ff-mincho color-generally font-weight-normal">人気キーワード</span></p>
+  <div class="sidebar-keywords-list">
+    <ul class="d-inline-flex flex-wrap">
+      <li><a class="link-color" href="">#つみたてNISA</a></li>
+      <li><a class="link-color" href="">#iDeCo</a></li>
+      <li><a class="link-color" href="">#貯金</a></li>
+      <li><a class="link-color" href="">#投資</a></li>
+      <li><a class="link-color" href="">#お金の管理</a></li>
+      <li><a class="link-color" href="">#家計簿</a></li>
+      <li><a class="link-color" href="">#withき</a></li>
+      <li><a class="link-color" href="">#ごきんじょさん</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- SNS -->
+<div class="sidebar-list-block02 sidebar-event-list">
+  <p class="sidebar-title ff-decoration-bold kinjo-color text-center">Join & Learn<span class="d-block ff-mincho color-generally font-weight-normal">参加しして学ぼう</span></p>
+  <div class="event-content">
+  <div class="swiper-container sidebar-event-slide">
+    <div class="swiper-wrapper swiper-main-slide">
+      {foreach from=$events key="key" item=event name=loopname}
+        {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
+        {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+      {/foreach}
+      {if count($events) > $event_display_limit}
+        {foreach from=$events key="key" item=event name=loopname}
+          {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
+            {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+          {/if}
+        {/foreach}
+      {/if}
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<!-- SNS -->
+<div class="sidebar-list-block02 sidebar-social-list-block">
+  <p class="sidebar-title ff-decoration-bold kinjo-color text-center">Follow Me!<span class="d-block ff-mincho color-generally font-weight-normal">SNSでも<br>情報発信しています♪</span></p>
+  <div class="sidebar-social-list">
+    <ul class="d-flex justify-content-center">
+      <li class="instagram"><a href=""><img class="w-100" src="/images/social/insta-icon-main.svg"></a></li>
+      <li class="twitter"><a href=""><img class="w-100" src="/images/social/twitter-icon-main.svg"></a></li>
+      <li class="line"><a href=""><img class="w-100" src="/images/social/line-icon-main.svg"></a></li>
+    </ul>
+  </div>
+</div>

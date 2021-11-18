@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
 
-<div class="kinyu-list-block kinyu-map-main-container">
+<div class="kinyu-list-block kinyu-map-single-container">
   <div class="kinyu-map-block">
     <!-- <h2 class="kinyu-map-title"><img src="/images/kinyu_map/kinyu-map-title.png"></h2> -->
     <h2 class="kinyu-map-title">
@@ -8,7 +8,7 @@
       <img src="/images/kinyu_map/hiroshima/hiroshima_header_sp.jpg" class="sp">
     </h2>
     <div class="description-block">
-      <p class="main-map-description">きんゆう散歩@広島</p>
+      <p class="main-map-description ff-mincho text-center">きんゆう散歩@広島</p>
       <p class="sub-map-description">
 			広島の金融に関わるスポットをめぐるきんゆう散歩をしてきました！
 			<span style="height: 12px;display: block;"></span>
@@ -21,6 +21,7 @@
 			<img class="hirokun-sp sp" src="/images/kinyu_map/hiroshima/hirokun.png">
     </div>
 
+    <div class="container">
 		<ul class="kinyu_sanpo_archives">
 			<li class="article1 fadeInUp">
 			<a href="https://kinyu-joshi.jp/report/JE8kkc"><img src="/images/kinyu_map/hiroshima/hiroshima1.jpg"></a>
@@ -80,8 +81,6 @@
     max-width: 70px;
 }
 	.kinyu_sanpo_archives {
-		max-width: 1000px;
-		margin: 56px 0;
 		display:flex;
 		justify-content: space-around;
 		flex-wrap: wrap;

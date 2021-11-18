@@ -2,61 +2,87 @@
 
 <div class="main-block regist-contents">
   <div class="main-block-inner container">
-    <div class="title-wrapper">
-      <div class="title-wrapper-inner">
-        <img  src="/images/member-regist/member_regist_icon.png" class="member-regist-icon">
-        <p class="email-regist-title">限定メルマガや<br class="sp">レポートが読める！</p>
-        <p class="email-regist-description">家計管理から世界経済、未来のための資産作りや株式投資を学ぶ<br class="pc">きんゆう女子。コミュニティメンバーになろう！</p>
-      </div>
-    </div>
-    <p class="message" style="text-align:center; padding: 20px 0 0;">「<span style="color:red; padding-top: 10px; display:inline-block;">*</span>」は必須項目となります。</p>
-    <div class="login-add-contents-block">
-      <form name="form1">
-        {if $userdata.uid}
-          <input type="hidden" name="uid" value="{$userdata.uid}">
-          <input type="hidden" name="password" value="{$userdata.uid}">
-          <input type="hidden" name="profile_image" value="{$userdata.image}">
-          <input type="hidden" name="provider" value="{$userdata.provider}">
-          <input type="hidden" name="access_token" value="{$userdata.access_token}">
-          <input type="hidden" name="expires" value="{$userdata.expires}">
-        {/if}
-        <input type="hidden" id="after_login_url" value="{$after_login_url}">
-        <div class="singlepage-form-block">
-          <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title kinjo-color">メールアドレス<span style="color:red; font-weight: normal;">*</span></label>
-            {if $userdata && isset($userdata.email)}
-              <input type="text" name="email" id="email" class="form-control" placeholder="" value="{$userdata.email}">
-            {else}
-              <input type="text" name="email" id="email" class="form-control" placeholder="" value="">
-            {/if}
+
+    <div class="regist-form-block">
+      <div class="regist-benefits-list">
+        <p class="regist-contents-title ff-mincho kinjo-color text-center">メンバーになると...？</p>
+        <div class="row row-eq-height">
+          <div class="col-12 col-md-5 img-block">
+            <div class="h-100" style="background:url(/images/business/step3_img.jpeg) center center / cover no-repeat;"></div>
           </div>
-          {if $userdata.uid eq ''}
-            <div class="regist-add-form-edit-el">
-              <label class="regist-add-form-edit-title kinjo-color">パスワード<span style="color:red; font-weight: normal;">*</span></label>
-              <p class="regist-add-form-edit-subtitle">半角英数字6文字以上で入力してください。</p>
-              <input type="password" name="password" id="password" class="form-control" placeholder="">
-              <input type="password" name="password_conf" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
+          <div class="col-12 col-md-7 regist-benefits-list-el-block">
+            <div class="regist-benefits-list-el">
+              <div class="regist-benefits-list-el-inner">
+                <p class="regist-benefits-list-el-title ff-mincho">限定レポートが読める</p>
+                <p class="regist-benefits-list-el-description">女子会に参加していなくてもみんなどうしてる？が見えてきます。あと一歩踏み出せないときや勇気が出ない時に読んで励みにしてもらえたら嬉しいです。</p>
+              </div>
             </div>
-          {/if}
-          <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title kinjo-color">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
-            <!-- <p class="regist-add-form-edit-subtitle">フルネーム</p> -->
-            <input type="text" id="name" name="name" class="form-control" placeholder="フルネーム" value="">
-            <!-- <p class="regist-add-form-edit-subtitle" style="margin-top: 20px;">ふりがな</p> -->
-            <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="ふりがな">
+            <div class="regist-benefits-list-el">
+              <div class="regist-benefits-list-el-inner">
+                <p class="regist-benefits-list-el-title ff-mincho">お便りが届く</p>
+                <p class="regist-benefits-list-el-description">月に2回くらいのお便りでは、皆さんにプラスになるようなお金に関する情報をお届けいたします。</p>
+              </div>
+            </div>
+            <div class="regist-benefits-list-el">
+              <div class="regist-benefits-list-el-inner">
+                <p class="regist-benefits-list-el-title ff-mincho">テキストテキストテキスト</p>
+                <p class="regist-benefits-list-el-description">月に2回くらいのお便りでは、皆さんにプラスになるようなお金に関する情報をお届けいたします。</p>
+              </div>
+            </div>
           </div>
-          <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title kinjo-color">ニックネーム<span style="color:red; font-weight: normal;">*</span></label>
-            <input type="text" id="nickname" name="nickname" class="form-control" placeholder="">
-          </div>
-          <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title kinjo-color">自己紹介</label>
-            <textarea type="text" id="introduction" name="introduction" class="form-control" placeholder="メンバー登録の理由や、今気になってること、趣味など自由にご記入ください♪"></textarea>
-          </div>
-          <button class="link-generally" type="button" id="save">送信する</button>
-          <p class="submit-sub text-center"><span style="color:#f3626c;">※</span>新規会員登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br class="pc"><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
         </div>
-      </form>
+      </div>
+      
+      <p class="regist-contents-title ff-mincho kinjo-color text-center">登録はこちらから♪</p>
+      <p class="message text-center">「<span style="color:red;display:inline-block;">*</span>」は必須項目となります。</p>
+      <div class="login-add-contents-block">
+        <form name="form1">
+          {if $userdata.uid}
+            <input type="hidden" name="uid" value="{$userdata.uid}">
+            <input type="hidden" name="password" value="{$userdata.uid}">
+            <input type="hidden" name="profile_image" value="{$userdata.image}">
+            <input type="hidden" name="provider" value="{$userdata.provider}">
+            <input type="hidden" name="access_token" value="{$userdata.access_token}">
+            <input type="hidden" name="expires" value="{$userdata.expires}">
+          {/if}
+          <input type="hidden" id="after_login_url" value="{$after_login_url}">
+          <div class="singlepage-form-block">
+            <div class="regist-add-form-edit-el">
+              <label class="regist-add-form-edit-title kinjo-color">メールアドレス<span style="color:red; font-weight: normal;">*</span></label>
+              {if $userdata && isset($userdata.email)}
+                <input type="text" name="email" id="email" class="form-control" placeholder="" value="{$userdata.email}">
+              {else}
+                <input type="text" name="email" id="email" class="form-control" placeholder="" value="">
+              {/if}
+            </div>
+            {if $userdata.uid eq ''}
+              <div class="regist-add-form-edit-el">
+                <label class="regist-add-form-edit-title kinjo-color">パスワード<span style="color:red; font-weight: normal;">*</span></label>
+                <p class="regist-add-form-edit-subtitle">半角英数字6文字以上で入力してください。</p>
+                <input type="password" name="password" id="password" class="form-control" placeholder="">
+                <input type="password" name="password_conf" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
+              </div>
+            {/if}
+            <div class="regist-add-form-edit-el">
+              <label class="regist-add-form-edit-title kinjo-color">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
+              <!-- <p class="regist-add-form-edit-subtitle">フルネーム</p> -->
+              <input type="text" id="name" name="name" class="form-control" placeholder="フルネーム" value="">
+              <!-- <p class="regist-add-form-edit-subtitle" style="margin-top: 20px;">ふりがな</p> -->
+              <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="ふりがな">
+            </div>
+            <div class="regist-add-form-edit-el">
+              <label class="regist-add-form-edit-title kinjo-color">ニックネーム<span style="color:red; font-weight: normal;">*</span></label>
+              <input type="text" id="nickname" name="nickname" class="form-control" placeholder="">
+            </div>
+            <div class="regist-add-form-edit-el">
+              <label class="regist-add-form-edit-title kinjo-color">自己紹介</label>
+              <textarea type="text" id="introduction" name="introduction" class="form-control" placeholder="メンバー登録の理由や、今気になってること、趣味など自由にご記入ください♪"></textarea>
+            </div>
+            <button class="link-generally font-weight-bold" type="button" id="save">送信する</button>
+            <p class="submit-sub text-center"><span style="color:#f3626c;">※</span>新規会員登録をすると、<a style="color:#4C9BBF;" href="/service">利用規約</a>、および<br class="pc"><a style="color:#4C9BBF;" href="/privacy">プライバシーポリシー</a>に同意したことになります。</p>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

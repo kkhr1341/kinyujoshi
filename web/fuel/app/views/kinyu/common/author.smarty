@@ -1,5 +1,5 @@
 <div class="report-writer">
-  <div class="report-writer-inner d-flex">
+  <div class="report-writer-inner">
     <div class="img-box">
       <div class="report-writer-img-wrapper" style="background-image: url({$profile_image}); background-position: center center; background-size: cover;"></div>
     </div>

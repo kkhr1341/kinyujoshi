@@ -1,0 +1,280 @@
+.loader-block {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1006;
+}
+header {
+	background-color: rgba(255,255,255,.8);
+}
+.my-menu-list li a {
+	padding: 12px 0px;
+	font-size: 1.3rem;
+}
+.my-top-content .event-content {
+	padding: 70px 80px 50px;
+}
+.mypage-main-title-block {
+	margin-bottom: 32px;
+}
+.secret-event .mypage-main-title-block {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+  -webkit- transform: translateX(-50%);
+  margin-bottom: 0px;
+}
+.mypage-main-title-block .mypage-deco-title {
+	font-size: 3.6rem;
+	line-height: 1;
+	margin-bottom: 8px;
+}
+.secret-event.event-content .img-box {
+	height: 220px;
+}
+.secret-event.event-content .text-box h3 {
+	font-size: 1.5rem;
+	line-height: 26px;
+	height: 78px;
+}
+.event-content .kinyu-event-kind p span.date-box {
+	font-size: 1.2rem;
+}
+.secret-event.event-content .event-subbox {
+	padding-top: 12px;
+}
+.secret-event.event-content .event-subbox p {
+	font-size: 1.2rem;
+}
+
+.my-member-report-block {
+	margin-top: 60px;
+}
+.my-joshikai-join {
+	margin-top: 70px;
+	background-color: #F7F7F7;
+}
+.my-joshikai-join .mypage-main-title-block {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit- transform: translateX(-50%);
+  margin-bottom: 0px;
+}
+.my-joshikai-join-area {
+	padding: 70px 50px 50px;
+}
+.my-member-list {
+	margin-top: 60px;
+}
+.admin-normal-container .report-list {
+	margin-top: 60px;
+}
+.admin-normal-container .report-list li {
+	padding-right: 15px;
+  margin-bottom: 48px;
+}
+.admin-normal-container .report-list li:nth-child(even) {
+	padding-left: 15px;
+}
+.admin-normal-container .kinyu-report-kind p {
+	font-size: 1.2rem;
+}
+.admin-normal-container .report-title {
+	font-size: 1.4rem;
+	line-height: 22px;
+	height: 66px;
+	margin: 4px 0px 8px;
+}
+.admin-normal-container .secret-icon:before {
+	content: none;
+}
+.admin-normal-container .report-author-thumbnail {
+	width: 30px;
+	height: 30px;
+}
+.admin-normal-container .report-author-info-name {
+	font-size: 1.1rem;
+}
+.admin-normal-container .report-list .img-box {
+	width: 40%;
+}
+.admin-normal-container .report-list .text-box {
+	width: 60%;
+	padding: 16px 20px;
+}
+.admin-normal-container .report-list-el {
+	height: 160px;
+}
+.my-report-block-index .report-list {
+	margin-top: 0px;
+}
+
+/* 参加予定の女子会 - 詳細 */
+.my-joshikai-join-details {
+  margin-top: 24px;
+}
+.my-joshikai-join-details .non-message {
+	padding: 50px 0px;
+}
+
+/* お気に入りレポート */
+.my-favorite-report .report-title {
+	font-size: 1.8rem;
+	line-height: 28px;
+	height: 56px;
+	-webkit-line-clamp: 2;
+  line-clamp: 2;
+  margin: 6px 0px 12px;
+}
+.my-favorite-report .report-description {
+	font-size: 1.2rem;
+	line-height: 18px;
+	height: 54px;
+	-webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+.my-favorite-report .report-list .img-box {
+	width: 30%;
+}
+.my-favorite-report .report-list .text-box {
+	padding: 24px;
+	width: 70%;
+}
+.my-favorite-report .report-list-el {
+		height: 200px;
+}
+.my-favorite-report .check-report-list .delete-button {
+  font-size: 21px;
+  position: absolute;
+  top: -6px;
+  right: 0px;
+  background: #cbcbcb;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: .5s;
+}
+.my-favorite-report .secret-icon:before {
+	content: none;
+}
+.my-favorite-report .check-report-list .delete-button:hover {
+	opacity: .5;
+}
+
+@media screen and (max-width: 959px) {
+
+	/* マイページ・TOP */
+	.official-member-badge {
+		top: 12px;
+		left: 12px;
+	}
+	.official-member-badge img {
+		width: 50px;
+	}
+
+	.my-top-content .event-content {
+		padding: 0px;
+		background-color: #fff;
+	}
+	.my-top-content .event-content .text-box {
+		background-color: #F7FAFA;
+	}
+	.secret-event .mypage-main-title-block {
+		top: auto;
+		left: auto;
+		transform: inherit;
+    -webkit- transform: inherit;
+		position: relative;
+		margin-bottom: 12px;
+	}
+	.mypage-main-title-block {
+		margin-bottom: 20px;
+	}
+	.mypage-main-title-block .mypage-deco-title {
+		font-size: 2.4rem;
+		margin-bottom: 4px;
+	}
+	.secret-event.event-content .text-box h3 {
+		font-size: 1.4rem;
+	}
+	.secret-event.event-content .event-subbox p {
+		font-size: 1.1rem;
+	}
+	.non-message {
+		background: none;
+	}
+	.my-joshikai-join-area {
+		padding: 50px 24px 24px;
+	}
+	.admin-normal-container .report-list-el {
+		height: 100px;
+	}
+	.admin-normal-container .report-list li {
+		padding-right: 15px;
+		margin-bottom: 24px;
+	}
+	.admin-normal-container .report-list li:nth-child(even) {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.admin-normal-container .report-list .text-box {
+		padding: 12px 12px 12px 16px;
+		width: 65%;
+	}
+	.admin-normal-container .report-list .img-box {
+		width: 35%;
+	}
+	.admin-normal-container .kinyu-report-kind p {
+		font-size: 1.1rem;
+	}
+	.admin-normal-container .report-title {
+    font-size: 1.3rem;
+    line-height: 16px;
+    height: 32px;
+    margin: 4px 0px 4px;
+    -webkit-line-clamp: 2;
+		line-clamp: 2;
+	}
+	.admin-normal-container .report-author-thumbnail {
+		width: 20px;
+		height: 20px;
+	}
+	.admin-normal-container .report-author-info-name {
+		font-size: 1.1rem;
+	}
+	.admin-normal-container .report-list .with_ki-label {
+		position: absolute;
+		width: 80px;
+		right: 8px;
+		top: 8px;
+	}
+	.my-joshikai-join .mypage-main-title-block {
+		top: -10px;
+	}
+	.my-joshikai-join-area {
+		padding: 60px 24px 24px;
+	}
+
+	/* プロフィール入力画面 */ 
+	.singlepage-form-block {
+		padding: 32px 24px;
+	}
+	.singlepage-form-block .form-control {
+		background-color: gray;
+	}
+
+	/* お気に入りレポート */
+	.my-favorite-report {
+		padding: 32px 24px;
+	}
+}
+
+

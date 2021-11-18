@@ -187,8 +187,8 @@
             $(".loader-block").fadeIn(200);
             promise
                 .then(function(data) {
-                    $(".loader-block").fadeOut(500);
-                    location.href = "/joshikai_complete";
+                    $(".loader-block").fadeOut(1000);
+                    location.href = "/event_complete";
                 })
                 .catch(function(error) {
                     $(".loader-block").fadeOut(500);

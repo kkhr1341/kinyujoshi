@@ -16,21 +16,20 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
       Response::redirect('/login?after_login_url=' . $after_login_url);
       exit();
     }
-    Asset::css(array(
-      'kinyu/redactor.css',
-      'kinyu/font-awesome.min.css',
-      'kinyu/toastr.css',
-      'kinyu/bootstrap01.css',
-      "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
-      'kinyu/swiper.min.css',
-      'base.css',
-      'kinyu/bg.css',
-      'edit_style.css',
-      'responsive.css',
-      'slick.css',
-      'tablet.css'
-    ), array(), 'layout', false);
-
+    // Asset::css(array(
+    //   'kinyu/redactor.css',
+    //   'kinyu/font-awesome.min.css',
+    //   'kinyu/toastr.css',
+    //   'kinyu/bootstrap01.css',
+    //   "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css",
+    //   //'kinyu/swiper.min.css',
+    //   //'base.css',
+    //   'kinyu/bg.css',
+    //   'edit_style.css',
+    //   'responsive.css',
+    //   'slick.css',
+    //   'tablet.css'
+    // ), array(), 'layout', false);
     parent::before();
   }
 

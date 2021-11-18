@@ -6,14 +6,12 @@ var $resArray = $result02.split("/");
 var $resArray02 = $resArray[1];
 </script>
 
-<div class="event-detail">
-  <div class="event-detail-inner container">
-
-    <div class="event-detail-el-block">
-      {if $viewable == true}
-
+{if $viewable == true}
+  <div class="event-detail">
+    <div class="event-detail-inner container">
+      <div class="event-detail-el-block">
         <div class="event-detail-introduction">
-          <div class="d-flex align-items-center">
+          <div class="event-detail-introduction-inner align-items-center">
             <div id="event-detail-mainimg" class="position-relative main-image{if $event.pr == 1} pr{/if}" style="background: url({$event.main_image}) center center / cover no-repeat;">
               {if $event.pr == 1}
               <!-- PR用イメージ挿入箇所 -->
@@ -35,15 +33,15 @@ var $resArray02 = $resArray[1];
 
         <div class="event-detail-main-block">
 
-          <div class="d-flex">
-            <div class="event-detail-main">
+          <div class="event-detail-main-block-inner row">
+            <div class="col-12 col-lg-8 order-2 order-lg-1 event-detail-main">
               <p class="info-title kinjo-color font-weight-bold">イベント詳細</p>
               <div class="event-detail-main-contents">
                 {$event.content|nofilter}
               </div>
             </div>
 
-            <div class="event-sidebar">
+            <div class="col-12 col-lg-4 order-1 order-lg-2 event-sidebar">
               <div class="event-sidebar-info">
                 <ul>
                   <!-- <li><h2 class="event-title">{$event.title}</h2></li> -->
@@ -113,24 +111,21 @@ var $resArray02 = $resArray[1];
             </div>
           </div>
         </div>
-
-      {else}
-        <div style="text-align: center;" class="no-member-report-block">
-          <p>
-            <span style="color:#ff8861;">＊</span>メンバー限定コンテンツについて<span style="color:#ff8861;">＊</span>
-            <span style="display: block;height: 12px;"></span>
-            このコンテンツはメンバーさん限定で見ることができます。<br>ログインすることで見ることができます。
-            <span style="display: block;height: 12px;"></span>
-          </p>
-          <div class="button-block">
-            <button class="btn btn-kinyu" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
-            <button class="btn btn-kinyu" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
-          </div>
-        </div>
-      {/if}
+      </div>
     </div>
   </div>
-</div>
+{else}
+  <div class="no-member-report-block">
+    <div class="no-member-report-block-inner mx-auto text-center">
+      <p class="no-member-title ff-mincho">こちらのイベントは、<br class="d-block d-md-none">メンバー限定です♪</p>
+      <p class="no-member-description">メンバー登録がお済みの方はログイン、<br class="d-none d-md-block">まだの方はメンバー登録をすると参加可能になります。</p>
+      <div class="button-block">
+        <button class="btn el-button btn-kinyu-login kinjo-color font-weight-bold" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
+        <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <!-- カード払い（メンバー登録なしのモーダル） -->
 <div id="joinus-open-block" class="joinus-open-block">
@@ -139,12 +134,15 @@ var $resArray02 = $resArray[1];
     <form method="POST" action="/pay" id="no-member-charge-form">
       <input type="hidden" name="event_code" value="{$event.code}" />
       <span class="charge-errors"></span>
-      <p class="main-title ff-mincho">メンバーになって参加すると<br class="pc">事前に質問をリクエストしたり、<br class="pc">ギフトコードが使えます♪</p>
+      <p class="main-title ff-mincho">
+        メンバーになって参加すると<br>
+        事前に質問をリクエストしたり、<br>
+        ギフトコードが使えます♪</p>
       <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
 
       <div class="login-block">
-        <a class="login" href="/login?after_login_url=/joshikai_tickets/{$urlcode}">メンバーの方はログインして参加</a>
-        <a class="login_regist" href="/login_regist?after_login_url=/joshikai_tickets/{$urlcode}">メンバーになって参加</a>
+        <a class="login" href="/login?after_login_url=/event_tickets/{$urlcode}">メンバーの方はログインして参加</a>
+        <a class="login_regist" href="/login_regist?after_login_url=/event_tickets/{$urlcode}">メンバーになって参加</a>
       </div>
 
       <div class="first-login-block">

@@ -1,23 +1,162 @@
-<div class="kinyu-main-block kinyu-members-index container-fluid">
+<link type="text/css" rel="stylesheet" href="/assets/css/member.css" />
+
+<div class="main-block member-list-block">
   <div class="container">
-    <h1>メンバー一覧</h1>
-    <div class="member row">
-      {foreach $users as $user}
-        <div class="profile col-3">
-          <a href="/members/{$user.id}">
-            <img class="profile-img" src="{if $user.profile_image}{$user.profile_image}{else}/images/my/non-profile-img.jpg{/if}">
-            <div class="profile-body">
-              <h5 class="title">{$user.nickname}</h5>
-            </div>
-          </a>
-        </div>
-        <div class="introduce col-9">
-          {$user.introduction}
-        </div>
-      {/foreach}
+
+
+
+    <div class="single-title-block position-relative text-center">
+      <p class="deco-text ff-decoration font-italic kinjo-color">Membe Profile</p>
+      <h2 class="main-title ff-mincho">メンバー & オフィシャルメンバー</h2>
+      <p class="deco-text-sub">＊プロフィールを「公開」に設定している方になります。</p>
     </div>
+
+    <!--タブ-->
+<ul class="tab-group">
+  <li class="tab is-active">
+    <div class="d-flex align-items-center justify-content-center">
+      <img src="/images/my/authority_lv5.png">
+      <span class="ff-mincho">メンバー</span>
+    </div>
+  </li>
+  <li class="tab">
+    <div class="d-flex align-items-center justify-content-center">
+      <img src="/images/my/authority_lv3.png">
+      <span class="ff-mincho">オフィシャルメンバー</span>
+    </div>
+  </li>
+</ul>
+
+<!--タブを切り替えて表示するコンテンツ-->
+<div class="panel-group">
+
+  <div class="member-list panel is-show">
+    {foreach $users as $user}
+      {if $user.group == 1}
+        <div class="member-list-el row no-gutters">
+          <div class="info-block col-4 col-md-3 text-center">
+            <div class="img-block" style="background: url({if $user.profile_image}{$user.profile_image}{else}/images/my/non-profile-img.jpg{/if}) center center / cover no-repeat;"></div>
+            <p class="member-name">{$user.nickname}</p>
+            <ul class="member-social-list d-flex justify-content-center align-items-center">
+              {if $user.url != '' }
+              <li class="website">
+                <a href="{$user.url}" target="_blank" class="d-block">
+                  <img src="/images/social/web_icon.svg">
+                </a>
+              </li>
+              {/if}
+              {if $user.instaurl != '' }
+              <li>
+                <a href="{$user.instaurl}" target="_blank" class="d-block">
+                  <img src="/images/social/instagram_icon.svg">
+                </a>
+              </li>
+              {/if}
+              {if $user.twurl != '' }
+              <li>
+                <a href="{$user.twurl}" target="_blank" class="d-block">
+                  <img src="/images/social/twitter_icon.svg">
+                </a>
+              </li>
+              {/if}
+              {if $user.fburl != '' }
+              <li>
+                <a href="{$user.fburl}" target="_blank" class="d-block">
+                  <img src="/images/social/fb_icon.svg">
+                </a>
+              </li>
+              {/if}
+            </ul>
+          </div>
+          <div class="col-8 col-md-9 text-block">
+            <p>{$user.introduction}<div class="triangle"></div></p>
+          </div>
+        </div>
+      {/if}
+    {/foreach}
     <div class="member-pagenation">
       {$pagination}
     </div>
+  </div>
+  <div class="member-list panel">
+    {foreach $users as $user}
+      {if $user.group == 41}
+        <div class="member-list-el row no-gutters">
+          <div class="info-block col-4 col-md-3 text-center">
+            <div class="img-block mx-auto" style="background: url({if $user.profile_image}{$user.profile_image}{else}/images/my/non-profile-img.jpg{/if}) center center / cover no-repeat;"></div>
+            <p class="member-name">{$user.nickname}</p>
+            <ul class="member-social-list d-flex justify-content-center align-items-center">
+              {if $user.url != '' }
+              <li class="website">
+                <a href="{$user.url}" target="_blank" class="d-block">
+                  <img src="/images/social/web_icon.svg">
+                </a>
+              </li>
+              {/if}
+              {if $user.instaurl != '' }
+              <li>
+                <a href="{$user.instaurl}" target="_blank" class="d-block">
+                  <img src="/images/social/instagram_icon.svg">
+                </a>
+              </li>
+              {/if}
+              {if $user.twurl != '' }
+              <li>
+                <a href="{$user.twurl}" target="_blank" class="d-block">
+                  <img src="/images/social/twitter_icon.svg">
+                </a>
+              </li>
+              {/if}
+              {if $user.fburl != '' }
+              <li>
+                <a href="{$user.fburl}" target="_blank" class="d-block">
+                  <img src="/images/social/fb_icon.svg">
+                </a>
+              </li>
+              {/if}
+            </ul>
+          </div>
+          <div class="col-8 col-md-9 text-block">
+            <p>{$user.introduction}<div class="triangle"></div></p>
+          </div>
+        </div>
+      {/if}
+    {/foreach}
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+<script>
+  jQuery(function($){
+    $('.tab').click(function(){
+      $('.is-active').removeClass('is-active');
+      $(this).addClass('is-active');
+      $('.is-show').removeClass('is-show');
+      // クリックしたタブからインデックス番号を取得
+      const index = $(this).index();
+      // クリックしたタブと同じインデックス番号をもつコンテンツを表
+      $('.panel').eq(index).addClass('is-show');
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
   </div>
 </div>

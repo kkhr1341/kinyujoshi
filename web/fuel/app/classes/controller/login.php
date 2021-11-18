@@ -183,6 +183,8 @@ class Controller_Login extends Controller_KinyuBase
         $this->template->description = '';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         //$this->template->today = date("Y年n月");
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);

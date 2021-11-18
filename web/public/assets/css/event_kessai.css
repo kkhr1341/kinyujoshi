@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　女子会決済ページ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -12,7 +14,6 @@
   margin-bottom: 12px;
 }
 .event-tickets-fee span {
-  color: #77cbc0;
   font-weight: bold;
   margin-bottom: 12px;
 }
@@ -24,24 +25,18 @@
   padding-bottom: 32px;
 }
 .event-tickets-main-inner {
-  display: table;
   height: 180px;
 }
 .event-tickets-main .tickets-img {
-  width: 200px;
   height: 100%;
-  display: table-cell;
 }
 .event-tickets-main h2 {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 22px;
-  line-height: 34px;
-  padding-left: 24px;
+  font-size: 2.2rem;
+  padding-left: 32px;
 }
 .event-tickets-fee {
   padding: 24px 0px;
-  background-color: #F7F7F7;
+  background-color: #F7FAFA;
 }
 .event-tickets-payment {
   padding-top: 32px;
@@ -88,8 +83,8 @@
     color:#fff;
 }
 .coupon_code {
-    border: 1px solid #ccc;
-    margin-bottom: 24px;
+  border: 1px solid #ccc;
+  margin-bottom: 24px;
 	display: inline-block;
   box-sizing: border-box;
   line-height: 20px;
@@ -107,11 +102,35 @@
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-
 .discount-span {
 	color: red!important;
 	font-weight: normal;
 }
+
+@media screen and (max-width: 959px) {
+  .event-application .container {
+    padding: 24px 24px 50px;
+    width: 100%;
+  }
+  .event-tickets-main-inner {
+    height: 90px;
+  }
+  .event-tickets-main h2 {
+    font-size: 1.3rem;
+    padding-left: 12px; 
+  }
+  .event-tickets-fee {
+    padding: 16px 0px;
+  }
+  .event-tickets-fee p {
+    font-size: 1.2rem;
+  }
+  .event-tickets-payment a {
+    font-size: 1.3rem;
+    padding: 12px 0px;
+  }
+}
+
 
 /* 決済画面 */
 .event-application-fee .container {
@@ -127,7 +146,7 @@
   text-align: center;
 }
 .event-application-fee .inner form .main-title {
-  font-size: 22px;
+  font-size: 2.2rem;
   padding-bottom: 4px;
   display: inline-block;
   margin: 0 auto;
@@ -177,7 +196,6 @@
   display: block;
   margin-bottom: 4px;
   font-weight: bold;
-
 }
 .event-application-fee . event-application-fee-el {
   margin-bottom: 24px;
@@ -186,7 +204,7 @@
   width: 100%;
   background: #f7f7f7;
   padding: 12px;
-  font-size: 13px;
+  font-size: 1.3rem;
   box-sizing: border-box;
 }
 .event-application-fee .inner form select {
@@ -200,7 +218,7 @@
   font-size: 12px;
 }
 .event-application-fee .inner form .newcards {
-  margin-top: 16px;
+  margin-top: 8px;
 }
 .login-btn-list li.email-login-bg a {
   background: #79cec1;
@@ -209,12 +227,6 @@
 }
 .day-cash-submit {
   background: #8ddcd1;
-  /*font-weight: bold;
-  font-size: 13px;
-  display: block;
-  width: 250px;
-  text-align: center;
-  padding: 16px 0px;*/
   color: #fff;
   margin: 0 auto;
   width: 100%;
@@ -234,6 +246,30 @@
 }
 .event-application-open-el {
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 959px) {
+  .event-application-fee {
+    padding-top: 0px; 
+  }
+  .event-application-fee .container {
+    padding: 24px 24px 50px;
+    width: 100%;
+  }
+  .event-application-fee .inner form .main-title {
+    font-size: 1.8rem;
+  }
+  .event-application-fee .inner form .newcards {
+    margin-top: 0px;
+  }
+  .event-application-fee .inner form label {
+    border-left: 3px solid #8ddcd1;
+    font-size: 1.3rem;
+  }
+  .day-cash-submit {
+    padding: 12px 0px;
+    font-size: 1.3rem;
+  }
 }
 
 /* カード払い */
@@ -275,7 +311,7 @@
   font-size:0;
 }
 .kinyu-credit-list-block p {
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 13px;
   margin-bottom: 8px;
 }
@@ -304,6 +340,26 @@
 .event-application-fee button {
   transition: .5s;
 }
+
+@media screen and (max-width: 959px) {
+  .credit-illust {
+    width: 250px;
+    margin-bottom: 24px;
+  }
+  .kinyu-credit-list-block {
+    margin-top: 0px;
+    padding: 16px;
+  }
+  .kinyu-credit-list li {
+    width: 22%;
+    padding: 6px;
+    margin: 4px;
+  }
+  .kinyu-credit-list li:last-child {
+    margin: 4px;
+  }
+}
+
 /* 決済画面 - 参加費の部分 */
 .kinyu-credit-fee-area p {
   font-size: 13px;
@@ -320,11 +376,14 @@
   margin-top: 24px;
   margin-bottom: 36px;
   text-align: center;
+  border-left: 1px solid #8ddcd1;
+  border-right: 1px solid #8ddcd1;
+  padding: 40px;
+  background-color: #F7FAFA;
 }
 .cancel-block .cancel-title {
-  font-weight: bold;
-  margin-bottom: 4px;
-  font-size: 1.8rem;
+  margin-bottom: 12px;
+  font-size: 2.2rem;
 }
 .cancel-block .cancel-description {
   font-size: 12px;
@@ -332,8 +391,8 @@
 .cancel-button-area {
   font-size: 1.4rem;
   display: inline-block;
-  padding: 6px 12px;
-  background: #f7f7f7;
+  padding: 8px 16px;
+  background: #fff;
   margin-top: 12px;
   transition: .5s;
 }
@@ -395,13 +454,14 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 .cancel-block-list {
   padding: 8px 0px;
+  border-
 }
 .cancel-block-list li {
   font-size: 1.3rem;
   position: relative;
   text-align: left;
   padding-left: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .cancel-block-list li:last-child {
   margin-bottom: 0px;
@@ -430,10 +490,10 @@ input[type=checkbox]:checked + .checkbox:before {
   display: block;
 }
 .free-payment-input {
-    border: 1px solid #eee;
-    padding: 5px 8px;
-    width: 260px;
-    box-sizing: border-box;
+  border: 1px solid #eee;
+  padding: 5px 8px;
+  width: 260px;
+  box-sizing: border-box;
 }
 .gift-code-title {
   margin-top: 32px;
@@ -470,7 +530,7 @@ input[type=checkbox]:checked + .checkbox:before {
    line-height: 1.42857143;
    color: #555;
    box-sizing: border-box;
-       background-color: #F7F7F7;
+   background-color: #F7F7F7;
    background-image: none;
    border: none;
    border-radius: 0px;
@@ -478,3 +538,32 @@ input[type=checkbox]:checked + .checkbox:before {
  .js-credit-payment-container {
   margin-top: 32px;
  }
+
+ @media screen and (max-width: 959px) {
+  .cancel-block {
+    padding: 24px;
+  }
+  .cancel-block .cancel-title {
+    font-size: 1.6rem;
+  }
+  .cancel-block-list li {
+    font-size: 1.2rem;
+  }
+  .cancel-button-area {
+    font-size: 1.3rem;
+  }
+} 
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　女子会決済ページ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.event-single-block {
+  background-color: #F7FAFA;
+}
+.event-single-block .link-kinjo-sinple {
+  margin-top: 32px;
+}
+
+
+

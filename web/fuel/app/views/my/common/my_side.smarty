@@ -24,8 +24,8 @@
       }
       {/if}
     ></div>
-    <p class="name">{$profile.nickname}</p>
     <p class="copy">{$profile.catchcopy}</p>
+    <p class="name">{$profile.nickname}</p>
 
     <!-- きん女。チェック部分 -->
     {if $user_type}
@@ -48,21 +48,22 @@
 
   </div>
 
-  {if (Auth::has_access('userblogs.create'))}
+  <!-- {if (Auth::has_access('userblogs.create'))}
   <a href="/my/userblogs"><img class="my-pagetitle" src="/images/my/userblogs-link-btn.png"></a>
-  {/if}
+  {/if} -->
 
-  <ul class="menu-list">
+  <ul class="my-menu-list">
     {if in_array('admin', $roles) || in_array('joshikai_admin', $roles) || in_array('report_admin', $roles) || in_array('joshikai_contribute', $roles) || in_array('report_contribute', $roles)}
-      <li class="main-li"><a href="/admin" target="_blank">＜＜管理画面＞＞</span></a></li>
+      <li class="main-li text-center"><a class="d-block" href="/admin" target="_blank">＜＜管理画面＞＞</span></a></li>
     {/if}
 
-    <li><a href="/my">マイページ・トップ</a></li>
-    <li><a href="/my/member_report">メンバー限定レポート</a></li>
-    <li><a href="/my/report">お気に入り</a></li>
-    <li><a href="/my/profile">プロフィール設定</a></li>
-    <li><a href="/my/account">アカウント設定</a></li>
-    <li><a href="/logout">ログアウト</a></li>
+    <li class="text-center"><a class="d-block" href="/my">マイページ・トップ</a></li>
+    <li class="text-center"><a class="d-block" href="/my/kinjo">参加予定のイベント</a></li>
+    <li class="text-center"><a class="d-block" href="/my/member_report">メンバー限定レポート</a></li>
+    <li class="text-center"><a class="d-block" href="/my/report">お気に入り</a></li>
+    <li class="text-center"><a class="d-block" href="/my/profile">プロフィール設定</a></li>
+    <li class="text-center"><a class="d-block" href="/my/account">アカウント設定</a></li>
+    <li class="text-center"><a class="d-block" href="/logout">ログアウト</a></li>
   </ul>
 </div>
 

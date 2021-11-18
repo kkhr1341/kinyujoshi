@@ -1,10 +1,10 @@
 <div class="kinyu-details-block">
   <div class="kinyu-details-introduction">
     <div class="kinyu-details-introduction-inner container">
-      <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;">
+      <div class="img-box position-relative" style="background:url({$blog.main_image}) center center / cover no-repeat;">
         {if $blog.pr == 1}
         <!-- PR用イメージ挿入箇所 -->
-        <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
+        <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
       {/if}
       </div>
       <div class="text-box">
@@ -47,13 +47,12 @@
       <div class="report-detail-block-inner container">
         <div class="report-detail-main">
           {$blog.content|nofilter}
-          {$author}
           <div class="report-share">
             <div class="report-share-inner d-flex align-items-center">
               <div class="report-share-imgblock" style="background:url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
               <div class="report-share-textblock text-center">
                 <p class="share-this-title ff-mincho">このレポートをみんなに教える</p>
-                <p class="share-this-page">Share this page!</p>
+                <p class="share-this-page ff-decoration font-italic">Share this page!</p>
                 <div class="social-list">
                   <ul>
                     {$social_share}
