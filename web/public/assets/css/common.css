@@ -173,11 +173,11 @@ html.is-fixed body {
 }
 /* picup */
 .swiper-main-img {
-	height: 380px;
-	width: 380px;
+	height: 350px;
+	width: 350px;
 }
 .kinjo-pickup-inner {
-	width: 380px;
+	width: 350px;
 	position: absolute;
 	top: 50%;
   left: 50%;
@@ -190,9 +190,10 @@ html.is-fixed body {
 }
 .pickup-top-slide .swiper-main-title h3 {
 	font-size: 1.8rem;
-	line-height: 32px;
-	height: 64px;
+	line-height: 28px;
+	height: 56px;
 	-webkit-line-clamp: 2;
+	line-clamp: 2;
 }
 .mainvisual .swiper-button-prev {
 	left: -50px;
@@ -427,11 +428,10 @@ html.is-fixed body {
   TOP - join & lesson
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .event-content {
-	background-color: #FAFAEC;
 	background-color: #F7FAFA;
 }
 .event-content .img-box {
-	height: 300px;
+	height: 320px;
 }
 .event-content .text-box {
 	background-color: #fff;
@@ -1184,18 +1184,23 @@ html.is-fixed body {
 .secret-icon:before {
   content: '';
   display: inline-block;
-	width: 18px;
-  height: 24px;
+	width: 16px;
+  height: 21px;
   background-image: url(/images/icon/secret-icon03.svg);
   background-size: contain;
   vertical-align: middle;
   position: relative;
   top: -1px;
+  margin-right: 6px;
 }
 .report-fukidashi {
 	width: 240px;
 	right: 0;
 	top: 20px;
+}
+.report-list-content {
+	background-color: #F7FAFA;
+	padding: 80px 0px 120px;
 }
 .report-list-content .single-title-block {
 	border-bottom: 1px solid #EDEDED;
@@ -1213,8 +1218,19 @@ html.is-fixed body {
 .report-keywords ul li a {
 	font-size: 1.5rem;
 }
+/* レポート一覧個別ページ */
+.report-list-single-content .kinyu-top-search {
+	background-color: #fff;
+}
+.report-list-single-content .report-list .text-box {
+	background-color: #fff;
+}
 
 @media screen and (max-width: 959px) {
+	.secret-icon:before {
+		width: 13px;
+    height: 17px;
+	}
 	.report-keywords-block {
 		margin-bottom: 40px;
 	}
@@ -1774,6 +1790,9 @@ html.is-fixed body {
 .kinyu-search-title span {
 	border-bottom: 2px solid #8ddcd1;
 	padding-bottom: 4px;
+}
+.none-hit-report p.ff-decoration {
+	font-size: 5.0rem;
 }
 
 

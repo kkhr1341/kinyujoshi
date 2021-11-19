@@ -1,5 +1,4 @@
 <!-- pickup/introduction -->
-<!-- <div class="main-block mainvisual" id="mainvisual"> -->
 <div class="mainvisual" id="mainvisual">
 	<div class="main-block-inner position-relative">
 		<div class="row no-gutters">
@@ -7,8 +6,8 @@
 				<div class="kinjo-pickup-inner position-relative">
 					<p class="kinjo-pickup-deco-text ff-decoration font-italic kinjo-color text-center"><span>Pick up Contents</span></p>
 					{$pickup_top}
-					<div class="swiper-button-prev"></div>
-	    		<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev pickup-top-prev"></div>
+	    		<div class="swiper-button-next pickup-top-next"></div>
 				</div>
 			</div>
 			<div class="col-12 col-lg-6 video-bg-conteiner order-1 order-lg-2">

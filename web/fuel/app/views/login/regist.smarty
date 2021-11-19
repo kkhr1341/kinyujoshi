@@ -47,6 +47,21 @@
           {/if}
           <input type="hidden" id="after_login_url" value="{$after_login_url}">
           <div class="singlepage-form-block">
+
+            <!-- あなたのお名前を入力してください。 -->
+            <div class="regist-add-form-edit-el">
+              <label class="regist-add-form-edit-title kinjo-color">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
+              <div class="regist-add-form-edit-el-harf">
+                <input type="text" id="name" name="name" class="form-control" placeholder="フルネーム" value="">
+                <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="ふりがな">
+              </div>
+            </div>
+
+
+            <div class="regist-add-form-edit-el">
+              <label class="regist-add-form-edit-title kinjo-color">ニックネーム<span style="color:red; font-weight: normal;">*</span></label>
+              <input type="text" id="nickname" name="nickname" class="form-control" placeholder="">
+            </div>
             <div class="regist-add-form-edit-el">
               <label class="regist-add-form-edit-title kinjo-color">メールアドレス<span style="color:red; font-weight: normal;">*</span></label>
               {if $userdata && isset($userdata.email)}
@@ -59,21 +74,13 @@
               <div class="regist-add-form-edit-el">
                 <label class="regist-add-form-edit-title kinjo-color">パスワード<span style="color:red; font-weight: normal;">*</span></label>
                 <p class="regist-add-form-edit-subtitle">半角英数字6文字以上で入力してください。</p>
-                <input type="password" name="password" id="password" class="form-control" placeholder="">
-                <input type="password" name="password_conf" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
+                <div class="regist-add-form-edit-el-harf">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="">
+                  <input type="password" name="password_conf" id="password_conf" class="form-control" placeholder="パスワード（確認用）">
+                </div>
               </div>
             {/if}
-            <div class="regist-add-form-edit-el">
-              <label class="regist-add-form-edit-title kinjo-color">あなたのお名前を入力してください。<span style="color:red; font-weight: normal;">*</span></label>
-              <!-- <p class="regist-add-form-edit-subtitle">フルネーム</p> -->
-              <input type="text" id="name" name="name" class="form-control" placeholder="フルネーム" value="">
-              <!-- <p class="regist-add-form-edit-subtitle" style="margin-top: 20px;">ふりがな</p> -->
-              <input type="text" id="name_kana" name="name_kana" class="form-control" placeholder="ふりがな">
-            </div>
-            <div class="regist-add-form-edit-el">
-              <label class="regist-add-form-edit-title kinjo-color">ニックネーム<span style="color:red; font-weight: normal;">*</span></label>
-              <input type="text" id="nickname" name="nickname" class="form-control" placeholder="">
-            </div>
+
             <div class="regist-add-form-edit-el">
               <label class="regist-add-form-edit-title kinjo-color">自己紹介</label>
               <textarea type="text" id="introduction" name="introduction" class="form-control" placeholder="メンバー登録の理由や、今気になってること、趣味など自由にご記入ください♪"></textarea>
@@ -145,12 +152,11 @@
             var password_conf = $("[name='password_conf']").val();
 
             // 生年月日入力チェック
-            var age01 = $("#age1").val();
-            var age02 = $("#age2").val();
-            var age03 = $("#age3").val();
+            //var age01 = $("#age1").val();
+            //var age02 = $("#age2").val();
+            //var age03 = $("#age3").val();
 
             var params = {};
-
             params.uid = $('[name="uid"]').val();
             params.profile_image = $('[name="profile_image"]').val();
             params.provider = $('[name="provider"]').val();
@@ -160,10 +166,10 @@
             params.name = $('[name="name"]').val(); //お名前
             params.name_kana = $('[name="name_kana"]').val(); //ふりがな
             params.nickname = $('[name="nickname"]').val(); //ニックネーム
-            // params.birthday = (age01+age02+age03); //生年月日
+            //params.birthday = (age01+age02+age03); //生年月日
             // params.prefecture = $('[name="prefecture"]').val(); //都道府県
             // params.not_know = $('[name="not_know"]:checked').val(); //金融ワカラナイ度
-            // params.job_kind = $('[name="job_kind"]:checked').val();
+            //params.job_kind = $('[name="job_kind"]:checked').val();
 
             // // コミュニティを通じて、ご自身でも情報発信したいですか？
             // params.transmission = $("[name=transmission]:checked").val();
@@ -174,6 +180,20 @@
             // ぜひメンバーさんや編集部に向けて自己紹介をお願いいたします♪
             params.introduction = $('[name="introduction"]').val();
 
+            if (params.name == "") {
+                ts.error("お名前を入力してください");
+                return false;
+            }
+            if (params.name_kana == "") {
+                ts.error("お名前（ふりがな）を入力してください");
+                return false;
+            }
+
+            if (params.nickname == "") {
+                ts.error("ニックネームを入力してください。");
+                return false;
+            }
+
             if (params.email == "") {
                 ts.error("メールアドレスを入力してください。");
                 return false;
@@ -182,6 +202,11 @@
             if(params.email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
             } else {
                 ts.error("メールアドレスに表記ミスがあるようです。再度ご確認をお願いいたします。");
+                return false;
+            }
+
+            if (params.job_kind == "-") {
+                ts.error("「金融機関にお勤めですか？」のチェックをお願いいたします。");
                 return false;
             }
 
@@ -204,20 +229,6 @@
                     ts.error("確認用のパスワードが違うようです...。再度ご入力をお願いいたします。");
                     return false;
                 }
-            }
-
-            if (params.name == "") {
-                ts.error("お名前を入力してください");
-                return false;
-            }
-            if (params.name_kana == "") {
-                ts.error("お名前（ふりがな）を入力してください");
-                return false;
-            }
-
-            if (params.nickname == "") {
-                ts.error("ニックネームを入力してください。");
-                return false;
             }
 
             // if (age01 == "-") {

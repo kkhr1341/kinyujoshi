@@ -10,30 +10,27 @@ $(function () {
     if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
       new Swiper('.pickup-top-slide', {
         slidesPerView: 1,
-        autoplay: 5000,
-        speed: 1500,
-        loop: true,
-        effect: "fade",
+        autoplay: false,
+        loop: false,
         pagination: false,
         spaceBetween: 0,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        nextButton: '.pickup-top-next',
+        prevButton: '.pickup-top-prev'
       });
 
      new Swiper('.sidebar-event-slide', {
         slidesPerView: 1,
-        autoplay: 5000,
-        speed: 1000,
+        autoplay: false,
         loop: false,
         pagination: false,
-        spaceBetween: 0,
+        spaceBetween: 10,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
       });
 
      new Swiper('.event-top-slide', {
         slidesPerView: 1.3,
-        speed: 1000,
+        autoplay: false,
         loop: false,
         pagination: false,
         spaceBetween: 28,
@@ -43,19 +40,18 @@ $(function () {
 
      new Swiper('.my-event-top-slide', {
         slidesPerView: 1.2,
-        speed: 1000,
+        autoplay: false,
         loop: false,
         pagination: false,
         spaceBetween: 24,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        nextButton: false,
+        prevButton: false
       });
 
      new Swiper('.main-project-slide', {
         slidesPerView: 2.2,
-        autoplay: 5000,
-        speed: 1000,
-        loop: true,
+        autoplay: false,
+        loop: false,
         pagination: false,
         spaceBetween: 20,
         nextButton: false,
@@ -72,8 +68,8 @@ $(function () {
         effect: "fade",
         pagination: false,
         spaceBetween: 0,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        nextButton: '.pickup-top-next',
+        prevButton: '.pickup-top-prev'
       });
 
      new Swiper('.sidebar-event-slide', {
@@ -93,8 +89,8 @@ $(function () {
         loop: false,
         pagination: false,
         spaceBetween: 28,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev'
+        nextButton: '.event-top-slide-next',
+        prevButton: '.event-top-slide-prev'
       });
 
      new Swiper('.my-event-top-slide', {
@@ -114,8 +110,8 @@ $(function () {
         loop: true,
         pagination: false,
         spaceBetween: 32,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        nextButton: '.main-projext-next',
+        prevButton: '.main-projext-prev'
       });
 
     //PC
@@ -128,8 +124,8 @@ $(function () {
         effect: "fade",
         pagination: false,
         spaceBetween: 0,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        nextButton: '.pickup-top-next',
+        prevButton: '.pickup-top-prev'
       });
 
      new Swiper('.sidebar-event-slide', {
@@ -139,8 +135,8 @@ $(function () {
         loop: false,
         pagination: false,
         spaceBetween: 0,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        nextButton: '.sidebar-event-next',
+        prevButton: '.sidebar-event-prev',
       });
 
      new Swiper('.event-top-slide', {
@@ -149,8 +145,8 @@ $(function () {
         loop: false,
         pagination: false,
         spaceBetween: 28,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev'
+        nextButton: '.event-top-slide-next',
+        prevButton: '.event-top-slide-prev'
       });
 
      new Swiper('.my-event-top-slide', {
@@ -159,8 +155,8 @@ $(function () {
         loop: false,
         pagination: false,
         spaceBetween: 24,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        nextButton: '.my-event-top-slide-next',
+        prevButton: '.my-event-top-slide-prev',
       });
 
      new Swiper('.main-project-slide', {
@@ -170,8 +166,8 @@ $(function () {
         loop: true,
         pagination: false,
         spaceBetween: 32,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
+        nextButton: '.main-projext-next',
+        prevButton: '.main-projext-prev'
       });
     }
 

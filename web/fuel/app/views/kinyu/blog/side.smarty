@@ -69,8 +69,8 @@
       {/if}
     </div>
   </div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev sidebar-event-prev"></div>
+  <div class="swiper-button-next sidebar-event-next"></div>
   </div>
 </div>
 
