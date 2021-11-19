@@ -218,9 +218,9 @@ class Blogs extends Base
             $datas = $datas->where('section_code', '=', $section_code);
         }
 
-        if ($is_secret === false) {
-            $datas = $datas->where('secret', '=', 0);
-        }
+        // if ($is_secret === false) {
+        //     $datas = $datas->where('secret', '=', 0);
+        // }
 
         $datas = $datas->order_by('blogs.open_date', 'desc');
 

@@ -6,126 +6,126 @@ var $resArray = $result02.split("/");
 var $resArray02 = $resArray[1];
 </script>
 
-<div class="kinyu-single-block joshikai-main-block joshikai-main-detail">
-  <div class="kinyu-joshikai-detail-inner">
-
-    <div class="kinyu-joshikai-detail-el-block clear">
-
-      {if $viewable == true}
-        <div class="kinyu-joshikai-detail-el">
-          <div class="kinyu-joshikai-detail-el-header">
-            <div class="main-image{if $event.pr == 1} pr{/if}" style="background: url({$event.main_image}) center center / cover no-repeat;">
+{if $viewable == true}
+  <div class="event-detail">
+    <div class="event-detail-inner container">
+      <div class="event-detail-el-block">
+        <div class="event-detail-introduction">
+          <div class="event-detail-introduction-inner align-items-center">
+            <div id="event-detail-mainimg" class="position-relative main-image{if $event.pr == 1} pr{/if}" style="background: url({$event.main_image}) center center / cover no-repeat;">
               {if $event.pr == 1}
               <!-- PR用イメージ挿入箇所 -->
-              <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
-            {/if}
-            </div>
-          </div>
-          <div class="pc joshikai-detail-el-content-box">
-            <p class="info-title">詳細</p>
-            <div class="kinyu-joshikai-detail-content img_area">
-              {$event.content|nofilter}
-            </div>
-          </div>
-        </div>
-
-        <div class="joshikai-sidebar">
-          <div class="joshikai-detail-el-info">
-            <ul>
-              <li>
-                <h2 class="event-title">{$event.title}</h2>
-              </li>
-              <li class="date">
-                <p class="info-title">日時</p>
-
-                <p class="info-detail">
-                  {if $event.display_event_date}
-                    {$event.display_event_date}
-                  {else}
-                    {$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
-                     <br>{$event.event_start_datetime}〜{$event.event_end_datetime}
-                  {/if}
-                </p>
-
-              </li>
-              <li class="place">
-                <p class="info-title">開催場所</p>
-                {if $event.place_url}
-                <p class="info-detail"><a href="{$event.place_url}" target="_blank">{$event.place}</a></p>
-                {else}
-                <p class="info-detail">{$event.place}</p>
-                {/if}
-              </li>
-              <li>
-                <p class="info-title">参加費</p>
-                {if is_numeric($event.fee)}
-                  {if $event.fee == 0}
-                    {if $event.event_category == '招待型'}
-                      <p class="info-detail">ご招待</p>
-                    {else}
-                      <p class="info-detail">無料</p>
-                    {/if}
-                  {else}
-                    <p class="info-detail">{$event.fee|number_format}円（税込）</p>
-                  {/if}
-                {else}
-                <p class="info-detail">{$event.fee}</p>
-                {/if}
-              </li>
-            </ul>
-            {if $event.applicable eq false}
-              <div class="joinus-block joinus-block-finish">
-                <div class="applicable-link">{if $event.fee == 0 && $event.event_category == "招待型"}応募する{else}お申込みはこちら{/if}</div>
-                <div class="applicable-title"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}お申込みの受付は終了しました{/if}</div>
-              </div>
-            {else if $event.full eq true}
-              <div class="joinus-block joinus-block-finish">
-                <div class="applicable-link">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</div>
-                <div class="applicable-title"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}販売終了{/if}</div>
-              </div>
-            {else}
-              <div class="joinus-block">
-              {if $event.specific_application_link}
-                <!-- 特定の申し込みリンク -->
-                <a href="{$event.specific_application_link}" target="_blank">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</a>
-              {else}
-                {if $authenticated eq 1}
-                  <!-- ログインユーザー -->
-                  <a href="/joshikai_tickets/{$urlcode}">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</a>
-                {else}
-                  <!-- 非ログインユーザー -->
-                  <p id="joinus-open">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</p>
-                {/if}
+                <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
               {/if}
-              </div>
-            {/if}
+            </div>
+            <div class="event-detail-introduction-info">
+              <p class="info-detail text-white d-inline-block font-weight-bold">
+                {if $event.display_event_date}
+                  {$event.display_event_date}
+                {else}
+                  {$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）{$event.event_start_datetime}〜{$event.event_end_datetime}
+                {/if}
+              </p>
+              <h2 class="event-title ff-mincho">{$event.title}</h2>
+            </div>
           </div>
         </div>
 
-        <!-- sp -->
-        <div class="sp joshikai-detail-el-content-box">
-          <p class="info-title">詳細</p>
-          <div class="kinyu-joshikai-detail-content img_area">
-            {$event.content|nofilter}
+        <div class="event-detail-main-block">
+
+          <div class="event-detail-main-block-inner row">
+            <div class="col-12 col-lg-8 order-2 order-lg-1 event-detail-main">
+              <p class="info-title kinjo-color font-weight-bold">イベント詳細</p>
+              <div class="event-detail-main-contents">
+                {$event.content|nofilter}
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4 order-1 order-lg-2 event-sidebar">
+              <div class="event-sidebar-info">
+                <ul>
+                  <!-- <li><h2 class="event-title">{$event.title}</h2></li> -->
+                  <li class="date">
+                    <p class="info-title kinjo-color font-weight-bold">日時</p>
+                    <p class="info-detail">
+                      {if $event.display_event_date}
+                        {$event.display_event_date}
+                      {else}
+                        {$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）
+                         <br>{$event.event_start_datetime}〜{$event.event_end_datetime}
+                      {/if}
+                    </p>
+                  </li>
+                  <li class="place">
+                    <p class="info-title kinjo-color font-weight-bold">開催場所</p>
+                    {if $event.place_url}
+                    <p class="info-detail"><a href="{$event.place_url}" target="_blank">{$event.place}</a></p>
+                    {else}
+                    <p class="info-detail">{$event.place}</p>
+                    {/if}
+                  </li>
+                  <li>
+                    <p class="info-title kinjo-color font-weight-bold">参加費</p>
+                    {if is_numeric($event.fee)}
+                      {if $event.fee == 0}
+                        {if $event.event_category == '招待型'}
+                          <p class="info-detail">ご招待</p>
+                        {else}
+                          <p class="info-detail">無料</p>
+                        {/if}
+                      {else}
+                        <p class="info-detail">{$event.fee|number_format}円（税込）</p>
+                      {/if}
+                    {else}
+                    <p class="info-detail">{$event.fee}</p>
+                    {/if}
+                  </li>
+                </ul>
+                {if $event.applicable eq false}
+                  <div class="joinus-block joinus-block-finish">
+                    <div class="applicable-link">{if $event.fee == 0 && $event.event_category == "招待型"}応募する{else}お申込みはこちら{/if}</div>
+                    <div class="applicable-title text-center"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}お申込みの受付は終了しました{/if}</div>
+                  </div>
+                {else if $event.full eq true}
+                  <div class="joinus-block joinus-block-finish">
+                    <div class="applicable-link">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</div>
+                    <div class="applicable-title text-center"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}販売終了{/if}</div>
+                  </div>
+                {else}
+                  <div class="joinus-block">
+                  {if $event.specific_application_link}
+                    <!-- 特定の申し込みリンク -->
+                    <a href="{$event.specific_application_link}" target="_blank">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</a>
+                  {else}
+                    {if $authenticated eq 1}
+                      <!-- ログインユーザー -->
+                      <a href="/event_tickets/{$urlcode}">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</a>
+                    {else}
+                      <!-- 非ログインユーザー -->
+                      <p id="joinus-open">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</p>
+                    {/if}
+                  {/if}
+                  </div>
+                {/if}
+              </div>
+            </div>
           </div>
         </div>
-      {else}
-        <div style="text-align: center;" class="no-member-report-block">
-          <p>
-            <span style="color:#ff8861;">＊</span>メンバー限定コンテンツについて<span style="color:#ff8861;">＊</span>
-            <span style="display: block;height: 12px;"></span>
-            このコンテンツはメンバーさん限定で見ることができます。<br>ログインすることで見ることができます。
-            <span style="display: block;height: 12px;"></span>
-          </p>
-          <div class="button-block">
-            <button class="btn btn-kinyu" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
-            <button class="btn btn-kinyu" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
-          </div>
-        </div>
-      {/if}
+      </div>
     </div>
   </div>
-</div>
+{else}
+  <div class="no-member-report-block">
+    <div class="no-member-report-block-inner mx-auto text-center">
+      <p class="no-member-title ff-mincho">こちらのイベントは、<br class="d-block d-md-none">メンバー限定です♪</p>
+      <p class="no-member-description">メンバー登録がお済みの方はログイン、<br class="d-none d-md-block">まだの方はメンバー登録をすると参加可能になります。</p>
+      <div class="button-block">
+        <button class="btn el-button btn-kinyu-login kinjo-color font-weight-bold" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
+        <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <!-- カード払い（メンバー登録なしのモーダル） -->
 <div id="joinus-open-block" class="joinus-open-block">
@@ -134,17 +134,20 @@ var $resArray02 = $resArray[1];
     <form method="POST" action="/pay" id="no-member-charge-form">
       <input type="hidden" name="event_code" value="{$event.code}" />
       <span class="charge-errors"></span>
-      <p class="main-title">メンバーになって参加すると<br>事前に質問をリクエストしたり、ギフトコードが使えます♪</p>
+      <p class="main-title ff-mincho">
+        メンバーになって参加すると<br>
+        事前に質問をリクエストしたり、<br>
+        ギフトコードが使えます♪</p>
       <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
 
       <div class="login-block">
-        <a class="login" href="/login?after_login_url=/joshikai_tickets/{$urlcode}">メンバーの方はログインして参加</a>
-        <a class="login_regist" href="/login_regist?after_login_url=/joshikai_tickets/{$urlcode}">メンバーになって参加</a>
+        <a class="login" href="/login?after_login_url=/event_tickets/{$urlcode}">メンバーの方はログインして参加</a>
+        <a class="login_regist" href="/login_regist?after_login_url=/event_tickets/{$urlcode}">メンバーになって参加</a>
       </div>
 
       <div class="first-login-block">
         <p>＼ まずは、雰囲気を見たい...という方へ ／</p>
-        <a href="/joshikai_tickets/{$urlcode}">気軽に参加（初回のみ）</a>
+        <a href="/event_tickets/{$urlcode}">気軽に参加（初回のみ）</a>
       </div>
     </form>
   </div>
@@ -172,3 +175,9 @@ var $resArray02 = $resArray[1];
   }
 }
 </style>
+
+<script>
+$(window).on('load resize', function() {
+  $('#event-detail-mainimg').css('height', $('#event-detail-mainimg').width());
+});
+</script>

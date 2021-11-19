@@ -13,7 +13,6 @@ class Controller_My_Mykinjo extends Controller_Mybase
 		public function action_index()
     {
         $username = \Auth::get('username');
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
         $this->data['events'] = Events::lists(1, 50, true);
         $this->data['sections'] = Sections::lists();
         $this->data['all_events'] = Events::lists02();
@@ -24,8 +23,9 @@ class Controller_My_Mykinjo extends Controller_Mybase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->title = '参加予定の女子会｜きん女。マイページ';
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->contents = View::forge('my/mykinjo/index.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
         $this->template->my_side = View::forge('my/common/my_side.smarty', array(
             'user_type' => $user_type,

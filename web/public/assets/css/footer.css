@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+footer {
+	/*background-color: #F7F7F7;*/
+	/*background-color: #f8fffe;*/
+	/*border-top: 3px solid #B0E2DB;*/
+	/*padding-top: 4px;*/
+	background-color: #ebf7f5;
+}
+.footer-inner {
+	/*border-top: 1px solid #B0E2DB;*/
+	padding: 160px 0px 50px;
+}
+.footer-kinjo-block {
+	width: 600px;
+	/*border-top: 1px solid #B0E2DB;
+	border-bottom: 1px solid #B0E2DB;*/
+	border-top: 1px solid #B0E2DB;
+	border-bottom: 1px solid #B0E2DB;
+	padding: 50px 0px 30px;
+}
+.footer-logo {
+	width: 240px;
+	padding: 0px 24px;
+	background-color: #ebf7f5;
+	position: absolute;
+	left: 50%;
+	margin-left: -120px;
+	top: -24px;
+}
+.footer-kinjo-text .main-title {
+	font-size: 1.6rem;
+	margin-bottom: 16px;
+}
+.footer-kinjo-text .description {
+	font-size: 1.2rem;
+}
+.kinjo-social-list {
+	margin-top: 50px;
+}
+.kinjo-social-list li {
+	padding: 0px 12px;
+}
+.kinjo-social-list li a {
+	font-size: 1.5rem;
+	padding: 4px 0px;
+	padding-left: 32px;
+	background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/images/social/instagram_icon.png);
+}
+.kinjo-social-list li.social-twitter a {
+  background-image: url(/images/social/twitter_icon.png);
+}
+.footer-list {
+	margin-top: 70px;
+	width: 720px;
+}
+.footer-list-title {
+	font-size: 1.5rem;
+	margin-bottom: 12px;
+}
+.footer-list-title span {
+	padding: 2px 14px 2px 12px;
+	border-left: 3px solid #B0E2DB;
+	border-right: 3px solid #B0E2DB;
+}
+.footer-list ul li {
+  padding: 0 10px 4px 0;
+}
+.footer-list ul li:before {
+  content: '|';
+  margin-right: 10px;
+}
+.footer-list ul li.footer-list-first:before {
+  content: none;
+  margin-right: 0px;
+}
+.footer-list ul li a {
+	font-size: 1.2rem;
+}
+.footer-copyright {
+	font-size: 1.2rem;
+	margin-top: 70px;
+}
+
+
+@media screen and (max-width: 959px) {
+	.footer-inner {
+		padding: 100px 40px 32px;
+	}
+	.footer-kinjo-block {
+		width: 100%;
+		padding: 40px 0px 24px;
+	}
+	.footer-kinjo-text .main-title {
+		font-size: 1.3rem;
+	}
+	.footer-kinjo-text .description {
+		font-size: 1.1rem;
+	}
+	.kinjo-social-list li a {
+		font-size: 1.3rem;
+	}
+	.footer-logo {
+		width: 180px;
+		padding: 0px 24px;
+    margin-left: -90px;
+    top: -18px;
+	}
+	.footer-list {
+		margin-top: 50px;
+		width: 100%;
+	}
+	.footer-list-title {
+		font-size: 1.3rem;
+	}
+	.footer-list ul li a {
+		font-size: 1.1rem;
+	}
+	.footer-copyright {
+		font-size: 1.0rem;
+		margin-top: 50px;
+	}
+
+
+}

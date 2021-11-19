@@ -17,9 +17,9 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
     {
 
         if (Agent::is_mobiledevice()) {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 30, null, null);
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 20, null, null);
         } else {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 60, null, null);
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 40, null, null);
         }
 
         foreach($this->data['blogs']['datas'] as &$blogs) {
@@ -35,21 +35,11 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
-        $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-
-        if (Agent::is_mobiledevice()) {
-            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-        }
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
         $this->template->contents = View::forge('kinyu/blog/index.smarty', $this->data)
             ->set_safe('pagination', $pagination);
-
-        Asset::css(array('kinyu/font-awesome.min.css',), array(), 'layout', false);
     }
 
     public function action_search($page = 1)
@@ -69,27 +59,31 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
-        $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
+        // $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
+        // $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
+        // $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        // $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
-        if (Agent::is_mobiledevice()) {
-            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-        }
+        // if (Agent::is_mobiledevice()) {
+        //     $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        // }
         $this->template->contents = View::forge('kinyu/blog/search.smarty', $this->data)
             ->set_safe('pagination', $pagination);
 
         Asset::css(array('kinyu/font-awesome.min.css',), array(), 'layout', false);
     }
 
+    const EVENT_DISPLAY_LIMIT = 6;
+
     public function action_detail($code)
     {
         // 最新を取得
         $this->data['blogs'] = Blogs::all('kinyu', '/kinyu/blog/', 1, 3, 5);
         $this->data['blog'] = Blogs::getByCodeWithProfile($code);
+        $this->data['event_display_limit'] = self::EVENT_DISPLAY_LIMIT;
+        $this->data['events'] = Events::lists(1, null, true, null, 'asc');
 
         $this->data['posted_me'] = false;
         if ($this->data['blog']['author_code']) {
@@ -132,6 +126,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->template->ogimg = $this->data['blog']['main_image'];
         //template
         $this->data['top_blogs'] = Blogs::lists(1, 6, true);
+        $this->data['top_blogs02'] = Blogs::lists02(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->data['after_login_url'] = \Uri::base() . 'report/' . $this->data['blog']['code'];
@@ -143,10 +138,14 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
           'posted_me'   => $this->data['posted_me']
         ));
 
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
+        $this->template->sidebar = View::forge('kinyu/blog/side.smarty', $this->data);
+        $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
+        // $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
+        // $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        // $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        // $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
         if ($this->data['blog']['kind'] == "わたしを知る") {
             $this->template->contents = View::forge('kinyu/blog/detail_myway.smarty', $this->data);
@@ -216,12 +215,14 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->template->meta = $meta;
         $this->template->canonical = \Uri::base() . 'report/' . $this->data['blog']['code'];
 
-        if (Agent::is_mobiledevice()) {
-            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-            $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_spafter.smarty', $this->data);
-        } else {
-            $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_after.smarty', $this->data);
-        }
+        $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_spafter.smarty', $this->data);
+
+        // if (Agent::is_mobiledevice()) {
+        //     $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        //     $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_spafter.smarty', $this->data);
+        // } else {
+        //     $this->template->detail_report_after = View::forge('kinyu/blog/detail_report_after.smarty', $this->data);
+        // }
     }
 
     private function generateTemporaryLinkAuthCode($blog_code, $user_code) {

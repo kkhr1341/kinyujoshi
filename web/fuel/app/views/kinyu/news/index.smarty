@@ -1,3 +1,47 @@
+<div class="main-block report-list-content news-list-content" id="news-list">
+  <div class="main-block-inner container">
+    <div class="single-title-block position-relative">
+      <p class="deco-text ff-decoration font-italic kinjo-color">News</p>
+      <h2 class="main-title ff-mincho">お知らせ</h2>
+    </div>
+    <div class="report-list">
+      <ul class="row">
+        {foreach from=$news.datas item=blog}
+          <li class="col-6">
+            <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
+              <div class="report-list-el">
+                {if $blog.main_image == ""}
+                  <div class="img-box position-relative" style="background: url(/images/submain.png) center center / cover no-repeat;"></div>
+                {else}
+                  <div class="img-box position-relative" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;""></div>
+                {/if}
+
+                <div class="text-box">
+                  <div class="kinyu-report-kind">
+                    <p>{$blog.open_date|date_format:"%Y.%-m.%-d"}</p>
+                  </div>
+                  <h3 class="report-title ff-mincho text-newline">
+                    {$blog.title}
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </li>
+        {/foreach}
+      </ul>
+    </div>
+    <div class="blog-pagenation text-center">
+      {$pagination}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+{*
 <div class="kinyu-list-block">
   <div class="inner">
     <h2 class="kinyu-top-main-title">お知らせ</h2>
@@ -53,3 +97,5 @@
 
 	</div>
 </div>
+
+*}

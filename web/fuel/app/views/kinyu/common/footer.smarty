@@ -1,0 +1,36 @@
+<footer>
+  <div class="footer-inner">
+    <div class="footer-kinjo-block position-relative mx-auto">
+      <div class="footer-logo">
+        <img src="/images/common/logo_w.svg" alt="きんゆう女子。">
+      </div>
+      <div class="footer-kinjo-text">
+        <p class="main-title text-center ff-mincho">20〜30代を中心とした金融ワカラナイ女子による、<br class="d-none d-md-block">ワカラナイ女子のための金融コミュニティ</p>
+        <p class="description">身近な家計管理から世界経済まで、広い意味での「金融」をテーマに勉強する女子会を開催しています。女子会は、基本少人数制。同世代や同じ目線の方々が、安心して話せる場所になるよう工夫しています。「自分なりの判断基準」を見つけていくお手伝いをしています。    </p>
+      </div>
+    </div>
+    <div class="kinjo-social-list">
+      <ul class="row justify-content-center">
+        <li class="social-instagram"><a href="https://www.instagram.com/kinyu_joshi/" target="_blank">Instagram</a></li>
+        <li class="social-twitter"><a href="https://twitter.com/kinyu_joshi" target="_blank">Twitter</a></li>
+      </ul>
+    </div>
+    <div class="footer-list text-center mx-auto">
+      <p class="footer-list-title ff-mincho"><span>きんゆう女子。に関する情報</span></p>
+      <ul class="row justify-content-center">
+        <li class="footer-list-first"><a class="js-track" href="https://with.kinyu-joshi.jp/about" data-category="pc-footer-link" data-action="click" data-value="1">企業の方はこちら</a></li>
+        <li><a class="js-track" href="/faq" data-category="sp-footer-link" data-action="click" data-value="1">よくあるご質問</a></li>
+        <li><a class="js-track" href="/contact" data-category="sp-footer-link" data-action="click" data-value="1">お問い合わせ</a></li>
+        <li><a class="js-track" href="/service" data-category="sp-footer-link" data-action="click" data-value="1">メンバー規約</a></li>
+        <li><a class="js-track" href="/joshikai_policy" data-category="sp-footer-link" data-action="click" data-value="1">サービス参加規約</a></li>
+        <li><a class="js-track" href="/privacy" data-category="sp-footer-link" data-action="click" data-value="1">プライバシーポリシー</a></li>
+        <li><a class="js-track" href="/link_policy" data-category="sp-footer-link" data-action="click" data-value="1">リンクポリシー</a></li>
+        <li><a class="js-track" href="/policy" data-category="sp-footer-link" data-action="click" data-value="1">コミュニティ運営ポリシー</a></li>
+        <li><a class="js-track" href="/legal" data-category="sp-footer-link" data-action="click" data-value="1">特定商取引法に基づく表記</a></li>
+        <li><a class="js-track" href="https://toetheline.jp/" data-category="sp-footer-link" data-action="click" data-value="1" target="_blank">運営会社</a></li>
+        <li><a class="js-track" href="https://kinjo02.nug-get.jp" data-category="pc-footer-link" data-action="click" data-value="1" target="_blank">サポーターの皆さんへ</a></li>
+      </ul>
+    </div>
+    <p class="footer-copyright text-center">© TOE THE LINE Inc. 2021 All rights reserved.</p>
+  </div>
+</footer>

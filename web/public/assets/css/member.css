@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+.member-list-block .container {
+	width: 1000px;
+}
+.tab-group{
+  display: flex;
+  justify-content: center;
+}
+.tab{
+  flex-grow: 1;
+  padding: 24px 0px 16px;
+  list-style:none;
+  text-align:center;
+  cursor:pointer;
+  font-size: 1.8rem;
+}
+.tab-group .tab img {
+	width: 50px;
+	margin-right: 12px;
+}
+.panel-group{
+  border-top:none;
+  background:#fff;
+}
+.panel{
+  display:none;
+}
+.tab.is-active{
+  background:#fff;
+  transition: all 0.2s ease-out;
+}
+.panel.is-show{
+  display:block;
+}
+
+.member-list-block {
+	background-color: #F7FAFA;
+	margin-top: 120px;
+}
+
+.member-list {
+	padding: 50px;
+}
+.member-list-el {
+	margin-bottom: 32px;
+}
+.member-list-el:last-child {
+	margin-bottom: 0px;
+}
+.member-list-el .info-block .member-name {
+	font-size: 1.6rem;
+	font-family: mitimasu, sans-serif;
+	margin-top: 12px;
+}
+.member-list-el .info-block .img-block {
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	margin: 0 auto;
+	box-shadow: 0px 0px 10px rgb(0 0 0 / 12%);
+}
+.member-list-el .info-block .member-social-list {
+	margin-top: 6px;
+}
+.member-list-el .info-block .member-social-list img {
+	height: 18px;
+}
+.member-list-el .info-block .member-social-list li {
+	padding: 0px 4px;
+}
+.member-list-el .info-block .member-social-list li.website img {
+	height: 14px;
+}
+.member-list-el .text-block {
+	background-color: #FAFAEC;
+	padding: 20px;
+	position: relative;
+}
+.member-list-el .text-block p {
+	font-size: 1.3rem;
+	font-family: mitimasu, sans-serif;
+}
+.member-list-el .text-block .triangle {
+  position: absolute;
+  top: 33px;
+	left: -25px;
+	width: 0;
+	height: 0;
+	border: none;
+	border-top: 25px solid transparent;
+	border-right: 25px solid #FAFAEC;
+	border-bottom: 25px solid transparent;
+}
+
+
+@media screen and (max-width: 959px) {
+	.member-list-block {
+		margin-top: 0px;
+	}
+	.member-list-block .container {
+		width: 100%;
+	}
+	.tab-group .tab img {
+		width: 30px;
+	}
+	.tab {
+		font-size: 1.3rem;
+		padding: 12px 0px;
+	}
+	.member-list {
+		padding: 20px;
+	}
+	.member-list-el .text-block {
+		padding: 12px;
+	}
+	.member-list-el .text-block p {
+		font-size: 1.0rem;
+	}
+	.member-list-el .info-block {
+		padding-right: 12px;
+	}
+	.member-list-el .info-block .img-block {
+		width: 70px;
+		height: 70px;
+	}
+	.member-list-el .text-block .triangle {
+		top: 20px;
+    left: -15px;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #FAFAEC;
+    border-bottom: 15px solid transparent;
+	}
+	.member-list-el .info-block .member-name {
+		font-size: 1.3rem;
+	}
+
+
+}
+
+
+
+
+
+

@@ -1,7 +1,10 @@
-<div class="kinyu-main-single-block company-info-block">
+<link type="text/css" rel="stylesheet" href="/assets/css/company.css" />
+
+<div class="main-block company-contents">
+<div class="main-block-inner container">
 
 <div class="company-info-title">
-  <h2>よくあるご質問</h2>
+  <h2 class="ff-mincho kinjo-color text-center">よくあるご質問</h2>
 </div>
 
 <div class="company-details-block clear">
@@ -10,7 +13,7 @@
     <ul>
 
     <li>
-      <p class="question-text">女子会に一人で参加してみたいのですが、不安です。</p>
+      <p class="question-text ff-mincho">女子会に一人で参加してみたいのですが、不安です。</p>
       <p class="answer-text">
       「きんゆう女子。会」では、はじめに自己紹介を行ったり女子会の終盤におしゃべりしたり交流する時間があるので、お一人で参加される場合でも楽しめる雰囲気づくりに努めています。<br><br>
       また、「きんゆうをゆるくでもちゃんと、安心して学びたい♪」「自立を目指してそろそろなんとかしなきゃ。」「みんなどうしているのか気軽に聞きたい！」という前向きで共通点のある女性たちの集まりなので、すぐに会話が弾んでいます。<br><br>
@@ -20,32 +23,32 @@
     </li>
 
     <li>
-      <p class="question-text">参加者は、20代〜30代前半の方が多いのでしょうか？</p>
+      <p class="question-text ff-mincho">参加者は、20代〜30代前半の方が多いのでしょうか？</p>
       <p class="answer-text">特に年齢制限をしているわけではありません。どなたでも気軽にご参加ください。</p>
     </li>
 
     <li>
-      <p class="question-text">金融について本当に何もわかりません。</p>
+      <p class="question-text ff-mincho">金融について本当に何もわかりません。</p>
       <p class="answer-text">きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。ワカラナイことを言えたり質問できたりする環境作りに努めています。お気軽にお越しください。金融に詳しい方でもご参加いただくことは可能ですが、物足りなく感じることがあるかもしれません。</p>
     </li>
 
     <li>
-      <p class="question-text">営業や勧誘されてしまいそうで怖いです。</p>
+      <p class="question-text ff-mincho">営業や勧誘されてしまいそうで怖いです。</p>
       <p class="answer-text">きんゆう女子。では、ゲストはもちろん、参加者同士の営業や勧誘を禁止しております。商品やサービスをご紹介することはありますが、口座獲得数に応じた報酬（成果報酬型）などの勧誘目的の広告は行いませんのでご安心ください。また、ご理解ある方のみご参加ください。</p>
     </li>
 
     <li>
-      <p class="question-text">メンバー登録はどこからできますか？</p>
+      <p class="question-text ff-mincho">メンバー登録はどこからできますか？</p>
       <p class="answer-text">「きんゆう女子。」メニュー内にある「<a href="/login_regist" target="_blank">メンバー登録</a>」より金融に興味があるけれどワカラナイ女性であれば、どなたでも登録することができます。</p>
     </li>
 
     <li>
-      <p class="question-text">メンバー登録に費用はかかりますか？</p>
+      <p class="question-text ff-mincho">メンバー登録に費用はかかりますか？</p>
       <p class="answer-text">いいえ。メンバー登録は無料で行うことができます。（2018年7月現在）</p>
     </li>
 
     <li>
-      <p class="question-text">メンバー登録後メールが届きません</p>
+      <p class="question-text ff-mincho">メンバー登録後メールが届きません</p>
       <p class="answer-text">
         迷惑メール対策でスマートフォンにてドメイン指定を行なっている場合、メールが受信できない可能性があります。（@kinyu-joshi.jp）の受信設定をお願いいたします。<br><br>
         ・ソフトバンクの場合<br>
@@ -59,7 +62,7 @@
     </li>
 
     <li>
-      <p class="question-text">女子会のキャンセルはどこからできますか？</p>
+      <p class="question-text ff-mincho">女子会のキャンセルはどこからできますか？</p>
       <p class="answer-text">
         ◆メンバー登録している場合<br>
         <a href="/my" target="_blank">マイページ</a>へログイン後、「参加予定の女子会」が表示されます。該当の女子会を押していただき「女子会をキャンセルする」より、参加を取り消すことができます。<br><br>
@@ -69,50 +72,50 @@
     </li>
 
     <li>
-      <p class="question-text">ログアウトはどこからできますか？</p>
+      <p class="question-text ff-mincho">ログアウトはどこからできますか？</p>
       <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「ログアウト」を押すと、マイページよりログアウトを行うことができます。「ログアウト」している状態だと、メンバー限定コンテンツなど一部非表示になります。</p>
     </li>
 
     <li>
-      <p class="question-text">登録したメールアドレスやパスワードを変更したいです。</p>
+      <p class="question-text ff-mincho">登録したメールアドレスやパスワードを変更したいです。</p>
       <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「ログイン情報の設定」より、変更することができます。<br>また、Facebook・Googleでご登録された方は、パスワードを設定することでメールアドレスでもログインすることできるようになります。
       </p>
     </li>
 
     <li>
-      <p class="question-text">パスワードの変更はどこからできますか？</p>
+      <p class="question-text ff-mincho">パスワードの変更はどこからできますか？</p>
       <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「ログイン情報の設定」より、変更することができます。</p>
     </li>
 
     <li>
-      <p class="question-text">パスワードを忘れてしまいました。</p>
+      <p class="question-text ff-mincho">パスワードを忘れてしまいました。</p>
       <p class="answer-text"><a href="/login" target="_blank">ログインページ</a>の「パスワードをお忘れの方はこちら」より変更することができます。<br>
       ※パスワードは、メールアドレスにてメンバー登録された方のみ有効となります。</p>
     </li>
 
     <li>
-      <p class="question-text">おたより（メールマガジン）の配信を停止したいです。</p>
+      <p class="question-text ff-mincho">おたより（メールマガジン）の配信を停止したいです。</p>
       <p class="answer-text">受信されたおたより（メールマガジン）内の一番下にある「配信停止」ボタンより行うことができます。「配信停止」ボタンが見つからない場合や編集部のメールより直接メールが届いた場合などは、お手数ですが「きんゆう女子。編集部」（support@kinyu-joshi.jp）まで配信停止の旨をご連絡ください。</p>
     </li>
 
     <li>
-      <p class="question-text">退会したいです。</p>
+      <p class="question-text ff-mincho">退会したいです。</p>
       <p class="answer-text"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「<a href="/my/account/withdrawal" target="_blank">メンバー退会</a>」より、退会を行うことができます。また、退会後の情報は<a href="/privacy" target="_blank">プライバシーポリシー</a>に従って管理・削除いたします。<br>2018年3月3日にマイページ機能ができました。それ以前にご登録いただいていた方はお手数おかけいたしますが、<a href="/contact" target="_blank">お問い合わせフォーム</a>または、きんゆう女子。編集部（support@kinyu-joshi.jp）までご連絡ください。</p>
     </li>
 
     <li>
-      <p class="question-text">プロフィール画像の変更はできますか？</p>
+      <p class="question-text ff-mincho">プロフィール画像の変更はできますか？</p>
       <p class="answer-text pc"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「<a href="/my/profile" target="_blank">プロフィールの設定</a>」→「プロフィールを編集する」より、イラスト部分（FacebookもしくはGoogleでご登録された方はそれぞれのアカウントにて設定されている画像が表示されます。）にカーソルを合わせると、「プロフィール画像を変更する」と表示されます。そのままイラスト部分を押していただき、変更したい画像をアップロードするとプロフィール画像を変更することができます。</p>
       <p class="answer-text sp"><a href="/my" target="_blank">マイページ</a>へログイン後「<a href="/my/account" target="_blank">アカウント設定</a>」→「<a href="/my/profile" target="_blank">プロフィールの設定</a>」→「プロフィールを編集する」より、イラスト部分（FacebookもしくはGoogleでご登録された方はそれぞれのアカウントにて設定されている画像が表示されます。）を押していただき、変更したい画像をアップロードするとプロフィール画像を変更することができます。</p>
     </li>
 
     <li>
-      <p class="question-text">勉強したいテーマや女子会の会場についてリクエストしたいです。</p>
+      <p class="question-text ff-mincho">勉強したいテーマや女子会の会場についてリクエストしたいです。</p>
       <p class="answer-text">リクエストやご意見がありましたら「きんゆう女子。編集部」（support@kinyu-joshi.jp）までお気軽にお問い合わせください。</p>
     </li>
 
     <li>
-      <p class="question-text">女子会タイアップやゲスト派遣をご希望の企業様へ</p>
+      <p class="question-text ff-mincho">女子会タイアップやゲスト派遣をご希望の企業様へ</p>
       <p class="answer-text">「きんゆう女子。」のコミュニティポリシーにご同意いただき審査を通過された企業様とは、タイアップや定期的なゲスト派遣依頼、プレスリリースの受付や匿名インサイトデータ提供、ユーザーテスト、サンプリング等の広報支援を行なっております。詳しくは、「きんゆう女子。クライアントサービス」（cs@kinyu-joshi.jp）までお問い合わせください。</p>
     </li>
 

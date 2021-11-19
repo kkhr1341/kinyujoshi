@@ -69,15 +69,15 @@ return array(
   //'welcome/event'   => 'kinyu/event/welcome',
 
   //イベント関連
-  'joshikai'   => 'kinyu/event/index',
+  // 'joshikai'   => 'kinyu/event/index',
   'event'   => 'kinyu/event/index',
-  'joshikai_past'   => 'kinyu/event/past',
-  'joshikai/(:any)'   => 'kinyu/event/detail/$1',
-  'joshikai_tickets/(:any)'   => 'kinyu/event/tickets/$1',
-  'joshikai_payment_premo/(:any)'   => 'kinyu/event/tickets_premo/$1',
-  'joshikai_payment_card/(:any)'   => 'kinyu/event/tickets_card/$1',
-  'joshikai_payment_cash/(:any)'   => 'kinyu/event/tickets_cash/$1',
-  'joshikai_complete'   => 'kinyu/event/complete',
+  'event_past'   => 'kinyu/event/past',
+  'event/(:any)'   => 'kinyu/event/detail/$1',
+  'event_tickets/(:any)'   => 'kinyu/event/tickets/$1',
+  'event_payment_premo/(:any)'   => 'kinyu/event/tickets_premo/$1',
+  'event_payment_card/(:any)'   => 'kinyu/event/tickets_card/$1',
+  'event_payment_cash/(:any)'   => 'kinyu/event/tickets_cash/$1',
+  'event_complete'   => 'kinyu/event/complete',
 
   //お守りページ & 相談窓口
   'policy'   => 'kinyu/consultation/joshikai_policy',
@@ -135,6 +135,7 @@ return array(
   'celebration' => 'kinyu/campaign/celebration_20171206',
   'daijoshikai2018' => 'kinyu/campaign/daijoshikai2018',
   'school_jpx02' => 'kinyu/campaign/school_02',
+  'oyakudachi' => 'kinyu/campaign/oyakudachi',
 
   //きんゆう女子。with コーポレート
   'contents/cashless' => 'kinyu/withcorporate/paypay',

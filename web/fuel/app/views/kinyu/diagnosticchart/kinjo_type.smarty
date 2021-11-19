@@ -28,14 +28,14 @@
 		  {/foreach}
 	  </ul>
 
-	<div class="diagnosticchart-type-intro-image pc">
+	<div class="diagnosticchart-type-intro-image d-none d-md-block">
 		<a href="/kinjo_check">
 			<img class="kinjo-check-texticon" src="/images/kinjo-check.png">
 			<img class="kinjo-check-img" src="/images/diagnosticchart/chart_main.jpg">
 		</a>
 	</div>
 
-	<div class="diagnosticchart-type-intro-image sp">
+	<div class="diagnosticchart-type-intro-image d-block d-md-none">
 		<a href="/kinjo_check">
 			<img class="kinjo-check-texticon" src="/images/kinjo-check.png">
 			<img class="kinjo-check-img" src="/images/diagnosticchart/chart_main_sp.jpg">

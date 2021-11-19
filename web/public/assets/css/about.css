@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  about - TOP
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.about-kinjo-title {
+	margin-bottom: 50px;
+}
+.about-kinjo-title h2 {
+	font-size: 2.4rem;
+}
+.about-kinjo-title p.ff-decoration {
+	font-size: 7.0rem;
+	line-height: 1;
+	margin-bottom: 12px;
+}
+
+/* イントロダクション */
+.about-introduction {
+	background-color: #F7F7F7;
+}
+.about-introduction .container {
+	max-width: 1250px;
+}
+.about-introduction .text-block {
+	padding: 12px 0px 12px 72px;
+}
+.about-introduction .about-kinjo-title {
+	margin-bottom: 24px;
+}
+.about-introduction .about-kinjo-title p {
+	font-size: 2.0rem;
+	margin-top: 16px;
+}
+.about-introduction .ff-decoration02 {
+	font-size: 60px;
+	line-height: 0.8;
+	transform: rotate(-5deg);
+	left: -25px;
+  top: -10px;
+}
+
+/* 「きん女。」って何しているの？ */
+.about-kinjo .container {
+	width: 1000px;
+}
+.about-kinjo-list .text-block .count-title {
+	font-size: 4.0rem;
+}
+.about-kinjo-list .text-block .main-title {
+	font-size: 2.4rem;
+	margin-bottom: 12px;
+}
+.about-kinjo .link-generally {
+	margin-top: 32px;
+}
+
+/* 編集部一覧 */
+.about-team {
+	background-color: #F7F7F7;
+}
+.about-team-list-el {
+	/*margin-bottom: 30px;*/
+	padding: 4px!important;
+}
+.about-team-list-el-inner {
+	background-color: #ebf9f7;
+	padding: 40px;
+}
+.about-team-main-title {
+	font-size: 2.2rem;
+	margin-bottom: 20px;
+}
+.about-team-list-el .team-logo {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 50px;
+}

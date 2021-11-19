@@ -1,65 +1,86 @@
-<div class="kinyu-list-block">
-  <div class="inner">
+<div class="main-block report-list-content" id="report-list">
+  <div class="main-block-inner container">
 
-    <h2 class="kinyu-top-main-title">レポート一覧</h2>
-    <p class="kinyu-top-main-sub">きんゆう女子。の日々の活動報告♪</p>
-
-    <!-- <div class="kinyu-top-search pc">
-        <form action="/report/search" method="get">
-            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
-            <button>&#xf002; </button>
-        </form>
-    </div> -->
-    <div class="kinyu-top-search sp">
-        <form action="/report/search" method="get">
-            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
-            <button>&#xf002; </button>
-        </form>
+    <div class="single-title-block position-relative">
+      <p class="deco-text ff-decoration font-italic kinjo-color">Find your way</p>
+      <h2 class="main-title ff-mincho">– 読んで学ぼう</h2>
+      <p class="deco-text-sub">きん女。の日々の活動日記</p>
+      <img class="report-fukidashi position-absolute" src="/images/fukidashi/report-fukidashi.svg">
     </div>
 
-    <div class="kinyu-top-list kinyu-top-report-list">
-      <ul class="clear">
+    <div class="report-keywords-block">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-8 order-2 order-lg-1 report-keywords">
+          <p>よく検索されているキーワード</p>
+          <ul class="d-inline-flex flex-wrap">
+            <li><a class="link-color" href="">#つみたてNISA</a></li>
+            <li><a class="link-color" href="">#iDeCo</a></li>
+            <li><a class="link-color" href="">#貯金</a></li>
+            <li><a class="link-color" href="">#投資</a></li>
+            <li><a class="link-color" href="">#お金の管理</a></li>
+            <li><a class="link-color" href="">#家計簿</a></li>
+            <li><a class="link-color" href="">#withき</a></li>
+            <li><a class="link-color" href="">#ごきんじょさん</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 order-1 order-lg-2">
+          <div class="kinyu-top-search">
+            <form action="/report/search" method="get" class="d-flex">
+              <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+              <button><img src="/images/search-btn.svg"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="report-list">
+      <ul class="row">
         {foreach from=$blogs.datas key="key" item=blog name=loopname}
-          <li{if $blog.pr == 1} class="pr"{/if}>
-            <a href="/report/{$blog.code}">
-              <div class="img-box" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
-              {if $blog.new == true}
-                <p class="new-icon"><img src="/images/blog/new_icon.png"></p>
-              {/if}
-              {if $blog.pr == 1}
-                <!-- PR用イメージ挿入箇所 -->
-                <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
-              {/if}
-              </div>
-              <div class="text-box">
-                <div class="kinyu-top-list-kind">
-                  {if $blog.kind == "女子会レポート"}
-                    <p>女子会レポート</p>
-                  {else if $blog.kind == "イベントレポート"}
-                    <p>イベントレポート</p>
-                  {else if $blog.kind == "取材レポート"}
-                    <p>取材レポート</p>
-                  {else if $blog.kind == "イベント告知"}
-                    <p>イベント告知</p>
-                  {else if $blog.kind == "コラム"}
-                    <p>コラム</p>
-                  {else if $blog.kind == "きんゆう散歩"}
-                    <p>きんゆう散歩</p>
-                  {else}
-                    <p>レポート</p>
+          <li class="col-12 col-md-6" {if $blog.pr == 1} class="pr"{/if}>
+            <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
+              <div class="report-list-el">
+                <div class="img-box position-relative" style="background: url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"">
+                  {if $blog.new == true}
+                    <p class="new-icon"><img class="w-100" src="/images/blog/new_icon.png"></p>
+                  {/if}
+                  {if $blog.pr == 1}
+                    <!-- PR用イメージ挿入箇所 -->
+                    <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
                   {/if}
                 </div>
-                <h3 class="kinyu-top-list-title">
-                  {if $blog.secret == 1 || $blog.viewable === false}<span class="secret-icon"></span>{/if}
-                  {$blog.title}
-                </h3>
-                <div class="kinyu-top-list-author">
-                  {if isset($blog.profile_image) && isset($blog.author_name)}
-                  <img class="kinyu-top-list-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
-                  <div class="kinyu-top-list-author-info">
-                    <div class="kinyu-top-list-author-info-name">{$blog.author_name}</div>
+
+                <div class="text-box">
+                  <div class="kinyu-report-kind">
+                    {if $blog.kind == "女子会レポート"}
+                      <p>女子会レポート</p>
+                    {else if $blog.kind == "イベントレポート"}
+                      <p>イベントレポート</p>
+                    {else if $blog.kind == "取材レポート"}
+                      <p>取材レポート</p>
+                    {else if $blog.kind == "イベント告知"}
+                      <p>イベント告知</p>
+                    {else if $blog.kind == "コラム"}
+                      <p>コラム</p>
+                    {else if $blog.kind == "きんゆう散歩"}
+                      <p>きんゆう散歩</p>
+                    {else}
+                      <p>レポート</p>
+                    {/if}
                   </div>
-                  {/if}
+                  <h3 class="report-title ff-mincho text-newline">
+                    {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+                    {$blog.title}
+                  </h3>
+                  <div class="report-author">
+                    {if isset($blog.profile_image) && isset($blog.author_name)}
+                    <img class="report-author-thumbnail" src="{to_thumb file=$blog.profile_image type="crop"}">
+                    <div class="report-author-info">
+                      <div class="report-author-info-name">{$blog.author_name}</div>
+                    </div>
+                    {/if}
+                  </div>
                 </div>
               </div>
             </a>
@@ -67,10 +88,9 @@
         {/foreach}
       </ul>
     </div>
-    <div class="blog-pagenation tx-center">
+    <div class="blog-pagenation text-center">
       {$pagination}
     </div>
-
 
     <script>
       $(function() {
@@ -94,8 +114,5 @@
         $('.kinyu-header-top').width(ggg);
       });
     </script>
-
-
-
   </div>
 </div>

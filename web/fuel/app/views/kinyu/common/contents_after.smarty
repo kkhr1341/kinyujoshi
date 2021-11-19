@@ -1,0 +1,184 @@
+<!-- OMC -->
+<div class="main-block omc-content position-relative" id="omc-link">
+	<div class="single-title-block text-center">
+		<p class="deco-text ff-decoration font-italic kinjo-color text-center mx-auto">Let’s share with Us!</p>
+    <h2 class="main-title ff-mincho text-center">オフィシャルメンバーとして<br>アクティブに活動しよう♪</h2>
+   </div>
+	<div class="main-block-inner container position-relative">
+		<div class="omc-contentsafter-list mx-auto">
+			<div class="omc-contentsafter-list-el">
+				<div class="row align-items-center">
+					<div class="col-4 col-md-4 img-block order-1">
+						<img class="w-100" src="/images/omc/omc01.svg">
+					</div>
+					<div class="col-8 col-md-8 text-block order-2">
+						<p class="main-title ff-mincho">自分の感じていることを素直に表現しよう。</p>
+						<p class="description d-none d-md-block">毎月メルマガでアンケートをお送りします。アンケートに回答することで、みなさんの金融や経済に関する声を届けてください。コミュニティだけでなく社会にも貢献しましょう。</p>
+					</div>
+				</div>
+			</div>
+			<div class="omc-contentsafter-list-el">
+				<div class="row align-items-center">
+					<div class="col-4 col-md-4 img-block order-2">
+						<img class="w-100" src="/images/omc/omc02.svg">
+					</div>
+					<div class="col-8 col-md-8 text-block order-1">
+						<p class="main-title ff-mincho">自分の体験や生活の工夫を発信しよう（女子会や記事で）</p>
+						<p class="description d-none d-md-block">お金テーマ×あなたの得意なこと・好きなことをテーマに女子会や教室を主催したり、編集部に体験談を寄稿することができます。金融・経済だけでなく、日々の生活をちょっと豊かにする考え方や工夫などもお待ちしています。</p>
+					</div>
+				</div>
+			</div>
+			<div class="omc-contentsafter-list-el">
+				<div class="row align-items-center">
+					<div class="col-4 col-md-4 img-block order-1">
+						<img class="w-100" src="/images/omc/omc03.svg">
+					</div>
+					<div class="col-8 col-md-8 text-block order-2">
+						<p class="main-title ff-mincho">限定オープンチャットで語り合おう、支え合おう</p>
+						<p class="description d-none d-md-block">オフィシャルメンバー限定オープンチャットでは、メンバー同士がオープンに会話ができます。誰かが疑問に思ったことはみんなで解決！寄せられたギモンやモヤモヤ・お悩みは、月に1度、コミュニティメンバーや信頼できる金融のプロに質問して解決しよう！様々なポジションの方からの意見が聞けるのがポイント！チャットはマナーを守って参加してくださいね。</p>
+					</div>
+				</div>
+			</div>
+			<div class="omc-contentsafter-list-el">
+				<div class="row align-items-center">
+					<div class="col-4 col-md-4 img-block order-2">
+						<img class="w-100" src="/images/omc/omc04.svg">
+					</div>
+					<div class="col-8 col-md-8 text-block order-1">
+						<p class="main-title ff-mincho">オリジナルプリカにオンラインチャージされた「お礼」を有意義に使おう。</p>
+						<p class="description d-none d-md-block">活動の頑張りに応じて、時々「お礼」をオフィシャルメンバーズカードに「オンラインチャージ」いたします。コミュニティが活性化していくことで一人一人にパワーチャージできる仕組みです。（カード発行しない方には今まで通りAmazonギフトをお届けします）</p>
+					</div>
+				</div>
+			</div>
+			<div class="omc-contentsafter-list-other-el">
+				<div class="omc-contentsafter-list-other-el-inner position-relative">
+					<img class="omc-fukidashi02" src="/images/omc/omc-fukidashi02.svg">
+					<p class="ff-mincho">定期女子会の参加がフリー！アーカイブ音声や資料もシェアします。</p>
+					<p class="ff-mincho">前向きに活動する女性たちを応援したい企業や団体・サービスからの限定イベントや福利厚生を用意。</p>
+				</div>
+				<div class="omc-contentsafter-list-link">
+					<img class="d-block omc-link-title mx-auto" src="/images/omc/omc-link-title.svg">
+					<a class="kinjo-link d-block mx-auto position-relative" href="">〉オフィシャルメンバーズクラブ<img class="omc-link-after" src="/images/omc/omc-link-after.png"></div></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- OMC -->
+<div class="main-block special-contents" id="special-contents">
+	<div class="main-block-inner container">
+		<div class="single-title-block position-relative text-center">
+      <p class="deco-text ff-decoration font-italic kinjo-color">Special Contents</p>
+      <h2 class="main-title ff-mincho">スペシャルコンテンツ</h2>
+    </div>
+		<div class="special-contents-list mx-auto row">
+			<div class="special-contents-list-el">
+				<div class="row align-items-center">
+					<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-shindan.svg"></div>
+					<div class="text-box col-6">
+						<p class="special-contents-title ff-mincho">きん女。診断</p>
+						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<a class="d-block kinjo-color font-weight-bold" href="/kinjo_check">〉ページはこちら</a>
+					</div>
+				</div>
+			</div>
+			<div class="special-contents-list-el">
+				<div class="row align-items-center">
+					<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-myway.svg"></div>
+					<div class="text-box col-6 order-1 order-md-2">
+						<p class="special-contents-title ff-mincho">「わたし」を知る</p>
+						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<a class="d-block kinjo-color font-weight-bold" href="/myway">〉ページはこちら</a>
+					</div>
+				</div>
+			</div>
+			<div class="special-contents-list-el">
+				<div class="row align-items-center">
+					<div class="img-box col-6"><img class="w-100" src="/images/oyakudachi/oyakudachi-thum.jpg"></div>
+					<div class="text-box col-6">
+						<p class="special-contents-title ff-mincho">金融のお役立ち情報</p>
+						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<a class="d-block kinjo-color font-weight-bold" href="/oyakudachi">〉ページはこちら</a>
+					</div>
+				</div>
+			</div>
+			<div class="special-contents-list-el">
+				<div class="row align-items-center">
+					<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-sanpo.svg"></div>
+					<div class="text-box col-6 order-1 order-md-2">
+						<p class="special-contents-title ff-mincho">きんゆう散歩</p>
+						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<a class="d-block kinjo-color font-weight-bold" href="/kinyu_sanpo">〉ページはこちら</a>
+					</div>
+				</div>
+			</div>
+			<div class="special-contents-list-el">
+				<div class="row align-items-center">
+					<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-map.svg"></div>
+					<div class="text-box col-6">
+						<p class="special-contents-title ff-mincho">かぶと町マップ</p>
+						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<a class="d-block kinjo-color font-weight-bold" href="/map_kabuto">〉ページはこちら</a>
+					</div>
+				</div>
+			</div>
+			<div class="special-contents-list-el">
+				<div class="row align-items-center">
+					<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-withk.svg"></div>
+					<div class="text-box col-6 order-1 order-md-2">
+						<p class="special-contents-title-img ff-mincho">
+							<img class="w-100" src="/images/special_contents/withk-title.svg">
+						</p>
+						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<a class="d-block kinjo-color font-weight-bold" href="/map_kabuto">〉ページはこちら</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- banner -->
+<div class="banner-contents" id="banner-contents">
+	<div class="main-block-inner container">
+		<ul class="banner-list mx-auto">
+			
+			<li>
+				<a href="">
+					<img src="/images/banner/line.svg">
+				</a>
+			</li>
+
+			<li>
+				<a href="">
+					<img src="/images/banner/kinjo-shop.svg">
+				</a>
+			</li>
+
+			<li>
+				<a href="">
+					<img src="/images/banner/line.svg">
+				</a>
+			</li>
+
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+header {
+	height: 120px;
+	background-color: rgba(255,255,255,.9);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1001;
+}
+header .main-logo {
+	width: 200px;
+	position: absolute;
+	left: 32px;
+	top: 50%;
+	transform: translateY(-50%);
+  -webkit- transform: translateY(-50%);
+}
+.header-navigation-list {
+	margin-right: 140px;
+	height: 120px;
+}
+.header-navigation-list li {
+	margin-left: 20px;
+}
+.header-navigation-list li a {
+	padding: 12px 16px;
+	font-size: 1.3rem;
+	background-color: #8ddcd1;
+}
+.header-navigation-list li a.mypage-link {
+	background-color: #F7FAFA;
+	box-sizing: border-box;
+}
+.header-navigation-list li a.omc-link {
+	background: linear-gradient(to bottom right, #FFF7F4, #EDFAF8);
+}
+
+@media screen and (max-width: 959px) {
+
+	header {
+		height: 50px;
+		background-color: rgba(255,255,255,.9);
+	}
+	header .main-logo {
+		width: 126px;
+		left: 12px;
+		line-height: 0;
+	}
+
+	header .main-logo a {
+		line-height: 0;
+	}
+
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  MENU
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.menu-trigger-container {
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	right: 32px;
+	top: 22px;
+	z-index: 1002;
+	cursor: pointer;
+}
+.menu-trigger-container img {
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 959px) {
+	.menu-trigger-container {
+		width: 50px;
+		height: 50px;
+		right: 0px;
+    top: 0px;
+    border-radius: 0px;
+	}
+	.menu-trigger-container img {
+		border-radius: 0px;
+	}
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  Navigation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.main-navigation {
+	display: none;
+	position: fixed;
+	background-color: #B0E2DB;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	overflow-y: scroll;
+  overflow-x: hidden;
+}
+#close-navigation {
+	width: 74px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	right: 32px;
+	top: 22px;
+	z-index: 1002;
+}
+#close-navigation img {
+	border-radius: 50%;
+}
+.main-menu-list-container {
+	z-index: 1001;
+}
+.main-menu-list-block {
+	background-color: #ecfbf9;
+	width: 600px;
+	height: 100%;
+	margin-right: 180px;
+	padding: 60px 0px;
+}
+.main-navigation .logo-ki {
+	height: 100%;
+	position: fixed;
+	left: 0;
+	opacity: .3;
+	z-index: 1000;
+}
+.menu-list-el {
+	padding: 0px 50px;
+}
+.menu-list {
+	padding-left: 16px;
+}
+.menu-list li {
+	padding: 10px 0px 10px 12px;
+}
+.menu-list li.accent-list {
+	border-left: 2px solid #8ddcd1;
+}
+.menu-list li a {
+	font-size: 1.6rem;
+}
+.menu-list li a span  {
+	font-size: 1.2rem;
+	padding-left: 10px;
+	color: #b5b5b5;
+}
+.menu-list-el .deco-text {
+	font-size: 3.8rem;
+}
+.menu-list-el .deco-text span {
+	font-size: 1.5rem;
+}
+
+@media screen and (max-width: 959px) {
+	.main-menu-list-block {
+		padding: 50px 0px;
+	}
+	.menu-list-el .deco-text {
+		font-size: 3.2rem;
+	}
+	.menu-list li a {
+		font-size: 1.3rem;
+	}
+	.menu-list li a span {
+		font-size: 1.1rem;
+	}
+}
+
+/* マイページ・メニュー */
+.main-navigation .mypage-menu {
+	background-color: #FAFAEC;
+	margin-top: 60px;
+	padding-bottom: 40px;
+}
+.main-navigation .mypage-menu .deco-text {
+	position: absolute;
+	left: 50px;
+	top: -18px;
+	line-height: 0.8;
+}
+.main-navigation .mypage-menu .menu-list {
+	padding-top: 60px;
+}
+.main-navigation .navigation-about-kinjo {
+	padding: 0px 100px;
+	margin-top: 80px;
+}
+.main-navigation .footer-kinjo-block {
+	width: 100%;
+	border-top: 1px solid #8ddcd1;
+	border-bottom: 1px solid #8ddcd1;
+}
+.main-navigation .footer-logo {
+	background-color: #ecfbf9;
+}
+.kinyu-container.sssss {
+  opacity: .5;
+  transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+}
+
+@media screen and (max-width: 959px) {
+	.menu-list-el {
+		padding: 0px 32px;
+	}
+	.main-navigation {
+		background-color: #fff;
+	}
+	.main-navigation .mypage-menu {
+		margin-top: 50px;
+    padding-bottom: 30px;
+	}
+	#close-navigation {
+		width: 50px;
+		right: 0px;
+    top: 0px;
+	}
+	#close-navigation img {
+		border-radius: 0px;
+	}
+	.main-menu-list-block {
+		background-color: inherit;
+		width: 100%;
+		margin-right: 0px;
+    padding: 24px 0px;
+	}
+	.main-navigation .logo-ki {
+		width: 50%;
+		height: auto;
+		left: auto;
+		right: 0;
+		top: 0;
+		opacity: .1;
+	}
+	.main-navigation .navigation-about-kinjo {
+		padding: 0px 50px;
+	}
+	.main-navigation .footer-kinjo-block {
+		    padding: 40px 0px 24px;
+	}
+	.main-navigation .footer-logo {
+		background-color: #fff;
+		margin-left: -90px;
+		top: -18px;
+	}
+	.main-navigation .mypage-menu .menu-list {
+		padding-top: 50px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

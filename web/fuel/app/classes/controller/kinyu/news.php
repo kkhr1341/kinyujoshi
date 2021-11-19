@@ -2,6 +2,7 @@
 
 use \Model\News;
 use \Model\Blogs;
+use \Model\Blogstocks;
 use \Model\Events;
 
 class Controller_Kinyu_News extends Controller_Kinyubase
@@ -22,12 +23,8 @@ class Controller_Kinyu_News extends Controller_Kinyubase
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
 
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->pc_side = View::forge('kinyu/common/pc_side.smarty', $this->data);
-        $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -37,11 +34,18 @@ class Controller_Kinyu_News extends Controller_Kinyubase
             ->set_safe('pagination', $pagination);
     }
 
+    const EVENT_DISPLAY_LIMIT = 6;
+
     public function action_detail($code)
     {
         $this->data['news'] = News::findByCode($code);
         $this->data['top_events'] = Events::lists(1, 7, true, 0);
 
+        $this->data['event_display_limit'] = self::EVENT_DISPLAY_LIMIT;
+        $this->data['events'] = Events::lists(1, null, true, null, 'asc');
+
+        $this->data['top_blogs02'] = Blogs::lists02(1, 5, true);
+        
         if ($this->data['news'] === false) {
             Response::redirect('error/404');
         }
@@ -75,20 +79,12 @@ class Controller_Kinyu_News extends Controller_Kinyubase
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->template->social_share = View::forge('kinyu/template/social_share.php', $this->data);
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->detail_news_after = View::forge('kinyu/news/detail_news_after.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/news/detail.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-
+        $this->template->sidebar = View::forge('kinyu/news/side.smarty', $this->data);
+        $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
         $this->template->canonical = \Uri::base() . 'news/' . $this->data['news']['code'];
 
-        if (Agent::is_mobiledevice()) {
-            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-            $this->template->detail_news_after = View::forge('kinyu/news/detail_news_spafter.smarty', $this->data);
-        } else {
-            $this->template->detail_news_after = View::forge('kinyu/news/detail_news_after.smarty', $this->data);
-        }
     }
 }

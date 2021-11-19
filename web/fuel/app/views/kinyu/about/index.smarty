@@ -1,74 +1,119 @@
-<div class="kinyu-single-block kinyu-about-block">
-  <div class="about-kinyu-container">
+<link type="text/css" rel="stylesheet" href="/assets/css/about.css" />
 
-    <h2 class="kinyu-top-main-title">きん女。ストーリー</h2>
-    <p class="kinyu-top-main-sub">「きんゆう女子。」のコンセプト、生まれたストーリー<br>わたしたちの想いをお伝えします。</p>
-
-    <div class="about-kinyu-top-container">
-
-      <div class="about-kinyu-el-block about-kinyu-el-block1">
-        <ul>
-          <li>
-            <a href="/about_history">
-              <div class="about-kinyu-el-img" style="background:url(/images/about/about-history.jpg) center center / cover no-repeat;"></div>
-              <div class="about-kinyu-el-inner">
-                <img src="/images/about/title_history.png">
-              </div>
-            </a>
-          </li>
-        </ul>
+<!-- <div class="about-mainvisual">
+  <div class="img-block" style="background: url(/images/about/login_main_bg.jpg) center center / cover no-repeat;">
+</div> -->
+<div class="main-block about-introduction">
+  <div class="main-block-inner container">
+    <div class="row">
+      <div class="col-6 img-block position-relative" style="background: url(/images/about/login_main_bg.jpg) center center / cover no-repeat;">
+        <p class="position-absolute kinjo-color ff-decoration02">Let's find<br>　my own future</p>
       </div>
+      <div class="col-6 text-block">
+        <div class="about-kinjo-title">
+          <h2 class="ff-mincho kinjo-color">おかねにとらわれず<br>自由で等身大に生きる。</h2>
+          <p class="ff-mincho">〜わたしらしい「ミライ」への解放〜</p>
+        </div>
+        <p class="about-introduction-description">
+          はじめまして。「きんゆう女子。」です。<br>
+          「きんゆう女子。」は、2016年3月3日に生まれた、<br class="sp">
+          20〜30代を中心とした金融ワカラナイ女子による、<br class="sp">
+          ワカラナイ女子のためのコミュニティです。<br><br>
 
-      <div class="about-kinyu-el-block about-kinyu-el-block2">
-        <ul class="clear">
-          <li>
-            <a href="/about_story">
-              <div class="about-kinyu-el-img" style="background:url(/images/about/about-story.jpg) center center / cover no-repeat;"></div>
-              <div class="about-kinyu-el-inner">
-                <img src="/images/about/title_story.png">
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/about_main">
-              <div class="about-kinyu-el-img" style="background:url(/images/about/about-index.jpg) center center / cover no-repeat;"></div>
-              <div class="about-kinyu-el-inner">
-                <img src="/images/about/title_index.png">
-              </div>
-            </a>
-          </li>
-        </ul>
+          コンセプトは、経済に前向きに関わることで<br class="sp">
+          「おかねにとらわれず、自由で等身大に生きる」こと。<br>
+          身近な家計管理から世界経済、FinTech（フィンテック）、<br class="sp">
+          ライフスタイルまで、幅広い”きんゆう”をテーマにした女子会を開催しています。<br><br>
+
+          ゆる〜く、楽しく。でもちょっと真面目に。<br><br>
+          わたしたちは、女性たちが、お金の漠然とした不安や焦りから解放され、<br class="sp">
+          ワカラナイ・難しいから諦めていたことを行動に移し実現に近づいていく…<br><br>
+
+          そっと後押しするようなフォローをしていきたいと思っています。
+        </p>
       </div>
-
-      <div class="about-kinyu-el-block about-kinyu-el-block3">
-        <ul class="clear">
-          <li>
-            <a href="/about_design">
-              <div class="about-kinyu-el-img" style="background:url(/images/about/about-design.jpg) center center / cover no-repeat;"></div>
-              <div class="about-kinyu-el-inner">
-                <img src="/images/about/title_design.png">
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/about_community">
-              <div class="about-kinyu-el-img" style="background:url(/images/about/about-community.jpg) center center / cover no-repeat;"></div>
-              <div class="about-kinyu-el-inner">
-                <img src="/images/about/title_community.png">
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/about_insight">
-              <div class="about-kinyu-el-img" style="background:url(/images/about/about-insight.jpg) center center / cover no-repeat;"></div>
-              <div class="about-kinyu-el-inner">
-                <img src="/images/about/title_insight.png">
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-
     </div>
   </div>
 </div>
+
+<div class="main-block about-kinjo">
+  <div class="main-block-inner container">
+    <div class="about-kinjo-title text-center">
+      <p class="ff-decoration kinjo-color font-italic">Kinjo Activities</p>
+      <h2 class="ff-mincho text-center">「きん女。」って何しているの？</h2>
+    </div>
+
+    <div class="about-kinjo-list">
+      <div class="about-kinjo-list-el">
+        <div class="row align-items-center">
+          <div class="col-4 img-block order-1">
+            <img class="w-100" src="/images/about/about-kinjo-list01.png">
+          </div>
+          <div class="col-8 text-block order-2">
+            <p class="count-title kinjo-color ff-decoration">01</p>
+            <p class="main-title ff-mincho">何がワカラナイ？気づきを得る女子会</p>
+            <p class="description">漠然としたもやもやとワカラナイことが何か、気づきを得るための女子会を開催しています。ひとりよりも、みんなで考えるといろんな見方や情報、経験をシェアすることができます。まさに3人集まれば文殊の知恵！ですね。女子会はメンバーにならなくてもどなたでもご参加いただけます。</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-kinjo-list-el">
+        <div class="row align-items-center">
+          <div class="col-4 img-block order-2">
+            <img class="w-100" src="/images/about/about-kinjo-list02.png">
+          </div>
+          <div class="col-8 text-block order-1">
+            <p class="count-title kinjo-color ff-decoration">02</p>
+            <p class="main-title ff-mincho">ゆるくたのしく、でも真面目に。等身大の情報をお届け</p>
+            <p class="description">ミレニアル世代にとって必要な“きんゆう”をテーマに情報発信しています。Fintechサービスを使ってみたり気になる会社に訪問をしてみたり、ワカラナイ女子の目線からレポートにまとめています。私たちをそっと見守ってくれている会社さんと一緒に情報をお届けすることもあります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="link-generally" href="/joshikai">開催予定のイベント一覧へ</a>
+  </div>
+</div>
+
+<div class="main-block about-team">
+  <div class="main-block-inner container">
+
+    <div class="about-kinjo-title text-center">
+      <p class="ff-decoration kinjo-color font-italic">About Us</p>
+      <h2 class="ff-mincho">コミュニティを<br>エンパワメントするひとたち</h2>
+    </div>
+    <div class="about-team-list">
+      <div class="row no-gutters">
+        <div class="col-6 about-team-list-el position-relative">
+          <img class="team-logo" src="/images/about/omc-logo.svg">
+          <div class="about-team-list-el-inner">
+            <p class="about-team-main-title ff-mincho text-center">オフィシャルメンバー</p>
+            <p class="about-team-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </div>
+        <div class="col-6 about-team-list-el">
+          <div class="about-team-list-el-inner">
+            <p class="about-team-main-title ff-mincho text-center">サポーターの皆さん</p>
+            <p class="about-team-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </div>
+        <div class="col-6 about-team-list-el position-relative">
+          <img class="team-logo" src="/images/about/editorial-logo.svg">
+          <div class="about-team-list-el-inner">
+            <p class="about-team-main-title ff-mincho text-center">編集部</p>
+            <p class="about-team-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </div>
+        <div class="col-6 about-team-list-el">
+          <div class="about-team-list-el-inner">
+            <p class="about-team-main-title ff-mincho text-center">事務局/本部</p>
+            <p class="about-team-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="omc-contentsafter-list-link">
+      <img class="d-block omc-link-title mx-auto" src="/images/omc/omc-link-title.svg">
+      <a class="kinjo-link d-block mx-auto position-relative" href="">〉オフィシャルメンバーズクラブ<img class="omc-link-after" src="/images/omc/omc-link-after.png"></a>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,48 @@
+<div class="kinyu-main-block kinyu-details-block">
+
+  <div class="kinyu-details-introdauction">
+    <div class="kinyu-details-introdauction-inner clear">
+
+      {if $news.main_image == ""}
+        <div class="img-box" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
+      {else}
+        <div class="img-box" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+      {/if}
+      <div class="text-box">
+        <div class="text-box-inner">
+          <h2>{$news.title}</h2>
+          <p class="description-sub">{$news.open_date|date_format:"%Y.%-m.%-d"}up!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="inner clear">
+
+    <div class="report-detail-main">
+      {$news.content|nofilter}
+
+      <div class="report-detail-share clear">
+        {if $news.main_image == ""}
+          <div class="report-detail-share-el report-detail-share-left" style="background:url(/images/submain.png) center center / cover no-repeat;"><div class="bg-white05"></div>
+        {else}
+          <div class="report-detail-share-el report-detail-share-left" style="background:url({to_thumb file=$news.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div>
+        {/if}
+      </div>
+
+      <div class="report-detail-share-el report-detail-share-right">
+        <img class="share-this-title" src="/images/detail-title/kinyu-share-news.png">
+        <img class="share-this-page" src="/images/social/social-this-page.png">
+        <div class="social-list">
+          <ul>
+            {$social_share}
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="report-detail-sidebar">
+    {$detail_news_after}
+  </div>
+</div>

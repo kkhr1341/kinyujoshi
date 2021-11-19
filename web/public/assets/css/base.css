@@ -21,16 +21,14 @@ time, audio, video {
   padding: 0;
   border: 0;
   font: inherit;
-  font-size: 100%;
   vertical-align: baseline;
 }
 html {
-  line-height: 1;
+  font-size: 62.5%;
 }
 body {
-  color: #444444;
+  color: #707070;
   font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "メイリオ", sans-serif;
-  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   position: relative;
 }
@@ -71,22 +69,17 @@ a img {
 }
 a {
   text-decoration: none;
+  color: #707070;
 }
 a:hover {
   text-decoration: none!important;
 }
-p, a {
-  font-size: 13px;
-  line-height: 20px;
+p, a, .btn {
+  font-size: 1.4rem;
+  line-height: 1.8;
   letter-spacing: 0.5px;
-  color: #444444;
+  color: #707070;
   word-break: normal;
-}
-h1,h2,h3,h4 {
-  word-break: normal;
-}
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
 }
 input,textarea,button,select {
   background: none;
@@ -96,22 +89,22 @@ input,textarea,button,select {
   margin: 0;
   padding: 0;
   outline: none;
+  color: #707070;
 }
-
+.btn {
+  border: none;
+  border-radius: 0px;
+}
 input[type="submit"] {
   -webkit-appearance: none;
 }
-
 input:focus,
 textarea:focus {
   outline: none;
-  /*background-color: #F0F4F8;*/
 }
-
 input:focus {
   background-color: #FFF9D4;
 }
-
 .clear:after {
   content: ".";
   display: block;
@@ -121,84 +114,25 @@ input:focus {
   visibility:hidden;
 }
 
-/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  共通部分
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.center {
-  margin: 0 auto;
+@media screen and (max-width: 959px) {
+
+  /*html {
+    font-size: 52.5%;
+  }*/
+
 }
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.tx-center {
-  text-align: center;
-}
-
-.tx-left {
-  text-align: left;
-}
-
-.tx-right {
-  text-align: right;
-}
-
-/* スクロールトップの指定 */
-.page-top {
-  display: none;
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 997;
-}
-
-.page-top img {
-  width: 100%;
-}
-
-/* ===========================================
- 文字色
-=========================================== */
-.color-white {
-  color: #fff!important;
-}
-.color-kinyu-color {
-  color: #7CDCCE!important;
-}
-.color-kinyu-darkcolor {
-  color: #82D8CF!important;
-}
-.fw-bold {
-  font-weight: bold;
-}
-
-/* ===========================================
- ボタン関連
-=========================================== */
-.btn-tiffany {
-  border: 2px solid #fff;
-  background-color: #7cdcce;
-  color: #fff;
-  transition: 0.5s;
-}
 
 /* ===========================================
   フォーム
 =========================================== */
 .btn {
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: inherit;
   padding: 15px 30px;
 }
 .form-block-title {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 28px;
   text-align: center;
   margin-bottom: 30px;
@@ -216,18 +150,18 @@ input:focus {
   margin-bottom: 36px;
 }
 .form-group .form-title {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin: 0px 0px 12px 0px;
 }
 .form-group .form-sub-title {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 18px;
   letter-spacing: 0.1rem;
   color: #a0a0a0;
   margin-bottom: 10px;
 }
 .form-group .form-sub-title02 {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 18px;
   letter-spacing: 0.1rem;
   color: #a0a0a0;
@@ -247,13 +181,11 @@ input:focus {
   display: block;
   float: left;
   cursor: pointer;
-  /*width: 80px;*/
   margin: 0;
   padding: 15px 20px;
-  /*border-right: 1px dotted #b3b3b3;*/
   background: #f0f0f0;
   color: #555e64;
-  font-size: 12px;
+  font-size: 1.2rem;
   text-align: center;
   line-height: 1;
   transition: .2s;
@@ -263,12 +195,6 @@ input:focus {
 .radio_box .form-long {
   padding: 12px 24px!important;
 }
-/*.radio_box label:last-of-type,
-.radio_box_02 label:last-of-type,
-.radio_box_03 label:last-of-type {
-  border-right: 0px;
-  border-radius: 0 3px 3px 0;
-}*/
 .form_where_from .radio_box {
   margin-top: 12px;
 }
@@ -287,16 +213,20 @@ input:focus {
   color: #fff;
   font-weight: bold;
 }
-
 .radio_box input[type="checkbox"]:checked + label {
   background-color: #8ddcd1;
   color: #fff;
   font-weight: bold;
 }
-
 .title_frame_inner {
   padding: 40px 0px;
   background-color: rgba(0,0,0,0.5);
+}
+.pc {
+  display: block;
+}
+.sp {
+  display: none;
 }
 
 
@@ -310,33 +240,26 @@ html {
   padding-bottom: constant(safe-area-inset-bottom);
   padding-left: constant(safe-area-inset-left);
   padding-right: constant(safe-area-inset-right);
-
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
 }
-
 body {
-  font-family: 'Noto Sans JP';
-  font-weight: 300;
+  /*font-family: 'Noto Sans JP';
+  font-weight: 300;*/
 }
-
 p, a {
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.05em;
-  color: #444444;
+  font-size: 1.3rem;
 }
-
-.page-top {
-    width: 50px;
-    height: 50px;
-  bottom: 10px;
-  right: 10px;
+.pc {
+  display: none;
+}
+.sp {
+  display: block;
 }
 .btn {
-  font-size: 12px;
+  font-size: 1.3rem;
   line-height: inherit;
   padding: 12px 35px;
   font-weight: 400;
@@ -345,18 +268,15 @@ p, a {
   margin-bottom: 12px;
 }
 .form-group .form-title {
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 20px;
   margin-bottom: 12px;
 }
 .form-btn {
   margin-top: 20px;
 }
-/*.btn-primary {
-  margin-top: 20px;
-}*/
 .form-group .form-sub-title {
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 16px;
   letter-spacing: 0;
 }
@@ -367,11 +287,6 @@ p, a {
 a :hover,
 button :hover {
   cursor: pointer;
-}
-.btn-tiffany:hover {
-  background-color: #fff;
-  color: #77C7BC;
-  border: 2px solid #7cdcce;
 }
 
 }
