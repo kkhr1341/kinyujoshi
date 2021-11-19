@@ -31,6 +31,39 @@
 	font-size: 1.5rem;
 }
 
+@media screen and (max-width: 959px) {
+
+.oyakudachi-contents {
+	padding: 40px 0px 60px;
+}
+.omamori-img {
+	width: 180px;
+}
+.main-introduction-title img {
+	width: 100%;
+}
+.main-introduction-title {
+	padding: 20px;
+}
+.main-introduction-detail {
+	padding: 24px;
+}
+.introduction-text-block {
+	margin-top: 20px;
+}
+.introduction-text-block p.main-title {
+	padding-left: 0px;
+	font-size: 2.0rem;
+	line-height: 1.5;
+	margin-bottom: 12px;
+}
+.introduction-text-block p.description {
+	padding-left: 0px;
+	font-size: 1.3rem;
+}
+
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   お役立ち - main
@@ -90,7 +123,56 @@
 	margin-bottom: 16px;
 }
 
+@media screen and (max-width: 959px) {
 
+	.oyakudachi-contents-list {
+		margin-top: 50px;
+	}
+	.oyakudachi-contents-list-title .deco-text {
+    font-size: 5.0rem;
+    line-height: 1;
+    margin-bottom: 8px;
+	}
+	.oyakudachi-contents-list-title {
+		margin-bottom: 24px;
+	}
+	.oyakudachi-contents-list-el-intro .img-block {
+		height: 200px;
+	}
+	.oyakudachi-contents-list-el-intro .text-block {
+		padding-left: 0px;
+		margin-top: 20px;
+	}
+	.oyakudachi-contents-list-el-intro p.description {
+		font-size: 1.3rem;
+	}
+	.oyakudachi-contents-answer-list-el {
+		margin-top: 24px;
+	}
+	.oyakudachi-contents-answer-title {
+		margin-bottom: 12px;
+	}
+	.oyakudachi-contents-answer-title .recommend-title {
+		font-size: 1.8rem;
+    padding-left: 0px;
+	}
+	.oyakudachi-contents-answer-title .main-title {
+		font-size: 1.8rem;
+	}
+	.oyakudachi-contents-answer-contents .img-block {
+		height: 150px;
+	}
+	.oyakudachi-contents-answer-contents .text-block {
+		padding-left: 20px;
+	}
+	.oyakudachi-contents-answer-contents .text-block .description {
+		font-size: 1.2rem;
+	}
+	.oyakudachi-contents-list-el {
+		padding-bottom: 50px;
+    margin-bottom: 50px;
+	}
+}
 
 
 

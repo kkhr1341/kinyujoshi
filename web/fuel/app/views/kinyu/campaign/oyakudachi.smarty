@@ -10,10 +10,10 @@
   				<img src="/images/oyakudachi/oyakudachi-title.svg">
   			</h2>
   			<div class="main-introduction-detail row no-gutters align-items-center">
-  				<div class="col-6 introduction-img-block">
+  				<div class="col-12 col-md-6 introduction-img-block">
   					<img class="w-100" src="/images/oyakudachi/oyakudachi-mainimg.jpg">
   				</div>
-  				<div class="col-6 introduction-text-block">
+  				<div class="col-12 col-md-6 introduction-text-block">
   					<p class="main-title ff-mincho">テキストテキストテキストテキストテキストテキスト</p>
   					<p class="description">金融に関する情報を集めていると不安に思ったり、相談したいことってありますよね。そんな時に役に立つ金融機関さんが発信している情報をまとめてみました。</p>
   				</div>
@@ -29,8 +29,8 @@
   			</h2>
   			<div class="oyakudachi-contents-list-el-intro">
   				<div class="row align-items-center no-gutters">
-  					<div class="col-6 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
-  					<div class="col-6 text-block">
+  					<div class="col-12 col-md-6 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+  					<div class="col-12 col-md-6 text-block">
   						<p class="main-title ff-mincho d-none d-md-block">○○○○○○な時？</p>
   						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
   					</div>
@@ -43,9 +43,9 @@
   						<p class="main-title ff-mincho d-block d-md-none">金融庁さんの○○○○を見てみよう♪</p>
   					</h2>
   					<div class="oyakudachi-contents-answer-contents">
-		  				<div class="row align-items-center no-gutters">
-		  					<div class="col-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
-		  					<div class="col-8 text-block">
+		  				<div class="row no-gutters">
+		  					<div class="col-5 col-md-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+		  					<div class="col-7 col-md-8 text-block">
 		  						<p class="main-title ff-mincho d-none d-md-block">金融庁さんの○○○○を見てみよう♪</p>
 		  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
 		  					</div>
@@ -58,9 +58,9 @@
   						<p class="main-title ff-mincho d-block d-md-none">金融庁さんの○○○○を見てみよう♪</p>
   					</h2>
   					<div class="oyakudachi-contents-answer-contents">
-		  				<div class="row align-items-center no-gutters">
-		  					<div class="col-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
-		  					<div class="col-8 text-block">
+		  				<div class="row no-gutters">
+		  					<div class="col-5 col-md-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+		  					<div class="col-7 col-md-8 text-block">
 		  						<p class="main-title ff-mincho d-none d-md-block">金融庁さんの○○○○を見てみよう♪</p>
 		  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
 		  					</div>
@@ -76,9 +76,9 @@
   				<p class="main-title ff-mincho d-block d-md-none">○○○○○○な時？</p>
   			</h2>
   			<div class="oyakudachi-contents-list-el-intro">
-  				<div class="row align-items-center no-gutters">
-  					<div class="col-6 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
-  					<div class="col-6 text-block">
+  				<div class="row no-gutters">
+  					<div class="col-12 col-md-6 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+  					<div class="col-12 col-md-6 text-block">
   						<p class="main-title ff-mincho d-none d-md-block">○○○○○○な時？</p>
   						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
   					</div>
@@ -91,9 +91,9 @@
   						<p class="main-title ff-mincho d-block d-md-none">金融庁さんの○○○○を見てみよう♪</p>
   					</h2>
   					<div class="oyakudachi-contents-answer-contents">
-		  				<div class="row align-items-center no-gutters">
-		  					<div class="col-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
-		  					<div class="col-8 text-block">
+		  				<div class="row no-gutters">
+		  					<div class="col-5 col-md-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+		  					<div class="col-7 col-md-8 text-block">
 		  						<p class="main-title ff-mincho d-none d-md-block">金融庁さんの○○○○を見てみよう♪</p>
 		  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
 		  					</div>
@@ -106,9 +106,9 @@
   						<p class="main-title ff-mincho d-block d-md-none">金融庁さんの○○○○を見てみよう♪</p>
   					</h2>
   					<div class="oyakudachi-contents-answer-contents">
-		  				<div class="row align-items-center no-gutters">
-		  					<div class="col-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
-		  					<div class="col-8 text-block">
+		  				<div class="row no-gutters">
+		  					<div class="col-5 col-md-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+		  					<div class="col-7 col-md-8 text-block">
 		  						<p class="main-title ff-mincho d-none d-md-block">金融庁さんの○○○○を見てみよう♪</p>
 		  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
 		  					</div>
