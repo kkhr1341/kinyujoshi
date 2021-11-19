@@ -32,7 +32,7 @@
 				</a>
 			</div>
 		</div>
+		<div class="swiper-button-prev main-projext-prev d-none d-md-block"></div>
+		<div class="swiper-button-next main-projext-next d-none d-md-block"></div>
 	</div>
-	<div class="swiper-button-prev d-none d-md-block"></div>
-	<div class="swiper-button-next d-none d-md-block"></div>
 </div>

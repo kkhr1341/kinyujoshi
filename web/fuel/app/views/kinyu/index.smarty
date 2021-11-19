@@ -27,8 +27,8 @@
 			    {/if}
 			  </div>
 			</div>
-			<div class="swiper-button-prev d-none d-md-block"></div>
-	   	<div class="swiper-button-next d-none d-md-block"></div>
+			<div class="swiper-button-prev event-top-slide-prev d-none d-md-block"></div>
+	   	<div class="swiper-button-next event-top-slide-next d-none d-md-block"></div>
 		</div>
 		<a class="event-past-link d-block mx-auto kinjo-color text-center" href="/event_past#past-event-list">〉過去のイベント（女子会）はこちら</a>
 	</div>
@@ -41,7 +41,7 @@
 
 		<div class="single-title-block position-relative">
       <p class="deco-text ff-decoration font-italic kinjo-color">Find your way</p>
-      <h2 class="main-title ff-mincho">– 読んで学ぼう</h2>
+      <h2 class="main-title ff-mincho">– 読んで学ぶ</h2>
       <p class="deco-text-sub">きん女。の日々の活動日記</p>
       <img class="report-fukidashi position-absolute" src="/images/fukidashi/report-fukidashi.svg">
     </div>
@@ -138,21 +138,15 @@
 
 {$contents_after}
 
-<script>
-// $(function () {
-// 	var $e = $('.event-top-slide-main');
-// 	var w1 = $e.width();
-// 	var w2 = $e.innerWidth();
-// 	var w3 = $e.outerWidth();
-// 	console.log(w1);
-// 	console.log(w2);
-// 	console.log(w3);
-// });
-let element = document.getElementById('event-top-slide-img');
-console.log(element.clientWidth);
-console.log(element.offsetWidth);
-console.log(element.scrollWidth);
-</script>
+<!-- <script>
+  $(function() {
+    var hh = $(".event-content .img-box").innerWidth();
+    var dd = (hh/3)-20;
+    console.log(hh);
+    console.log(dd);
+    $('.event-content .img-box').css('height',dd);
+  });
+</script> -->
 
 
 

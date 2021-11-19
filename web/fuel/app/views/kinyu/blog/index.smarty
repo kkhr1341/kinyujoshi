@@ -1,9 +1,9 @@
-<div class="main-block report-list-content" id="report-list">
+<div class="main-block report-list-content report-list-single-content" id="report-list">
   <div class="main-block-inner container">
 
     <div class="single-title-block position-relative">
       <p class="deco-text ff-decoration font-italic kinjo-color">Find your way</p>
-      <h2 class="main-title ff-mincho">– 読んで学ぼう</h2>
+      <h2 class="main-title ff-mincho">– 読んで学ぶ</h2>
       <p class="deco-text-sub">きん女。の日々の活動日記</p>
       <img class="report-fukidashi position-absolute" src="/images/fukidashi/report-fukidashi.svg">
     </div>
@@ -54,19 +54,19 @@
                 <div class="text-box">
                   <div class="kinyu-report-kind">
                     {if $blog.kind == "女子会レポート"}
-                      <p>女子会レポート</p>
+                      <p class="kinjo-color">女子会レポート</p>
                     {else if $blog.kind == "イベントレポート"}
-                      <p>イベントレポート</p>
+                      <p class="kinjo-color">イベントレポート</p>
                     {else if $blog.kind == "取材レポート"}
-                      <p>取材レポート</p>
+                      <p class="kinjo-color">取材レポート</p>
                     {else if $blog.kind == "イベント告知"}
-                      <p>イベント告知</p>
+                      <p class="kinjo-color">イベント告知</p>
                     {else if $blog.kind == "コラム"}
-                      <p>コラム</p>
+                      <p class="kinjo-color">コラム</p>
                     {else if $blog.kind == "きんゆう散歩"}
-                      <p>きんゆう散歩</p>
+                      <p class="kinjo-color">きんゆう散歩</p>
                     {else}
-                      <p>レポート</p>
+                      <p class="kinjo-color">レポート</p>
                     {/if}
                   </div>
                   <h3 class="report-title ff-mincho text-newline">

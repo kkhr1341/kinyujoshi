@@ -96,8 +96,8 @@
               {/if}
             </div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev my-event-top-slide-prev"></div>
+          <div class="swiper-button-next my-event-top-slide-next"></div>
         </div>
 
         <!-- メンバー限定レポート -->
