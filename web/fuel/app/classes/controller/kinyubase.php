@@ -82,7 +82,7 @@ class Controller_Kinyubase extends Controller_Template
             // 'kinyu/responsive.css',
             // 'kinyu/kuchikomi.css',
 
-            'kinyu/swiper.min.css',
+            //'kinyu/swiper.min.css',
             //'kinyu/jumboShare.css',
             //'kinyu/drawer.css',
 
