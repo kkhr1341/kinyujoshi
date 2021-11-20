@@ -88,7 +88,7 @@ footer {
 
 @media screen and (max-width: 959px) {
 	.footer-inner {
-		padding: 100px 40px 32px;
+		padding: 100px 40px 80px;
 	}
 	.footer-kinjo-block {
 		width: 100%;

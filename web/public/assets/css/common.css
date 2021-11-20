@@ -15,7 +15,7 @@ html.is-fixed body {
 
 @media screen and (max-width: 959px) {
 	.kinyu-main {
-		margin-top: 50px;
+		margin-top: 60px;
 	}
 }
 
@@ -864,7 +864,6 @@ html.is-fixed body {
 	font-size: 2.6rem;
 	margin-bottom: 16px;
 }
-/* 過去のイベント一覧 */
 .event-past-list-el {
   display: flex;
   justify-content: space-between;
@@ -917,6 +916,80 @@ html.is-fixed body {
 }
 .past-special-list .text-block {
 	margin-top: 12px;
+}
+
+@media screen and (max-width: 959px) {
+	.event-introduction {
+		padding: 40px 0px 50px;
+	}
+	.event-introduction .img-block .main-imb-block {
+		height: 200px;
+	}
+	.event-introduction .sub-imb-block-el li {
+		width: 70px;
+	}
+	.event-introduction .text-block {
+		padding-left: 15px;
+		margin-top: 40px;
+	}
+	.event-introduction .main-title {
+		font-size: 2.0rem;
+		text-align: center;
+	}
+	.event-introduction .description {
+		font-size: 1.2rem;
+	}
+	.event-introduction ul.sub-imb-block-el {
+    position: absolute;
+    right: -4px;
+    bottom: -25px;
+	}
+	#past-event-list {
+		padding: 50px 0px;
+	}
+	.event-main-title {
+		font-size: 2.0rem;
+		margin-bottom: 24px;
+	}
+	.event-past-list-el {
+		height: 150px;
+		margin-bottom: 16px;
+	}
+	.event-past-list-text {
+		padding: 16px 20px;
+	}
+	.event-past-list-img .with_ki-label {
+    position: absolute;
+    width: 100px;
+    right: 8px;
+    top: 8px;
+	}
+	.event-past-list-kind p span.date-box {
+		font-size: 1.2rem;
+		padding: 4px;
+	}
+	.event-past-title {
+    font-size: 1.4rem;
+    line-height: 22px;
+    height: 66px;
+    -webkit-line-clamp: 3;
+    margin: 6px 0px 4px;
+	}
+	.event-past-list .event-subbox p {
+		font-size: 1.1rem;
+	}
+	.event-past-list .link-generally {
+		margin-top: 10px;
+	}
+	.past-special-list {
+    padding: 0px 0px 60px;
+	}
+	.past-special-list .img-block {
+		height: 150px;
+	}
+	.past-special-list li {
+		margin-bottom: 20px;
+	}
 }
 
 /* イベント詳細 */
@@ -1227,6 +1300,9 @@ html.is-fixed body {
 }
 
 @media screen and (max-width: 959px) {
+	.report-list-content {
+		padding: 40px 0px 60px;
+	}
 	.secret-icon:before {
 		width: 13px;
     height: 17px;
@@ -1681,8 +1757,8 @@ html.is-fixed body {
   border-radius: 4px;
 }
 .pagination > li {
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   box-sizing: border-box;
   position: relative;
   display: inline-block;
@@ -1700,13 +1776,14 @@ html.is-fixed body {
   box-sizing: border-box;
   height: 100%;
   margin-left: -1px;
-  padding-top: 12px;
+  padding-top: 9px;
   line-height: 1.42857143;
   color: #7dd7cb;
   text-decoration: none;
   background-color: #fff;
-  /*border: 1px solid #7CDCCE;*/
-  font-size: 1.8rem;
+  font-family: kudryashev-d-excontrast-sans, sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
   transition: .8s;
   text-align: center;
 }
@@ -1793,6 +1870,18 @@ html.is-fixed body {
 }
 .none-hit-report p.ff-decoration {
 	font-size: 5.0rem;
+}
+
+@media screen and (max-width: 959px) {
+	.kinyu-search-title {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+	}
+	.none-hit-report p.ff-decoration {
+		font-size: 3.6rem;
+		line-height: 1;
+		margin-bottom: 20px;
+	}
 }
 
 

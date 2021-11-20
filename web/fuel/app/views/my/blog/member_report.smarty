@@ -1,7 +1,7 @@
 <div class="admin-normal-container">
   <div class="admin-normal-inner clear">
     {$my_side}
-    <div class="admin-normal-main my-report-block-index">
+    <div class="admin-normal-main my-report-block-index member-only-report">
       <div class="my-maincontent-block report-list">
           <div class="mypage-main-title-block text-left">
             <p class="mypage-deco-title ff-decoration font-italic kinjo-color">Member only Report</p>

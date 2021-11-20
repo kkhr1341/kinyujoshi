@@ -15,7 +15,7 @@
 	text-align: center;
 }
 .company-info-title h2 {
-	font-size: 30px;
+	font-size: 3.0rem;
 	margin-bottom: 40px;
 	display: inline-block;
 }
@@ -38,6 +38,28 @@
   margin-top: 10px;
   padding-left: 10px;
 }
+
+@media screen and (max-width: 959px) {
+  .company-info-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+  }
+  .company-contents {
+    padding: 40px 0px 60px;
+    margin-top: 0px;
+  }
+  .company-contents .container {
+    width: 100%;
+  }
+  .company-details p {
+    font-size: 1.1rem;
+  }
+  .company-details-el {
+    margin: 20px 0px;
+  }
+
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   CONTACT
@@ -101,6 +123,17 @@
   font-size: 1.6rem;
 }
 
+@media screen and (max-width: 959px) {
+  .company-contact .form-group .form-title {
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+  }
+  .company-contact .form-control {
+    font-size: 1.2rem;
+  }
+}
+
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   FAQ
@@ -143,4 +176,28 @@
   color:#5499d8;
   font-size: 14px;
   line-height: 25px;
+}
+
+@media screen and (max-width: 959px) {
+  .qa-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .qa-list .question-text {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  .qa-list .question-text:before {
+    width: 30px;
+    height: 30px;
+  }
+  .qa-list .answer-text a {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .qa-list .answer-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
 }

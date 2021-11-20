@@ -1,6 +1,6 @@
 <header>
 	<h1 class="main-logo">
-		<a href="/"><img src="/images/main-logo.svg" alt="きんゆう女子。" class="w-100"></a>
+		<a href="/"><img src="/images/top-circle-logo.png" alt="きんゆう女子。" class="w-100"></a>
 	</h1>
 	<div class="header-navigation-list d-none d-md-block">
 		<ul class="row align-items-center justify-content-end h-100">
@@ -16,7 +16,7 @@
 		<!-- <span></span>
 		<span></span>
 		<span></span> -->
-		<img class="w-100" src="/images/menu/menu-img.svg">
+		<img class="w-100" src="/images/menu/menu-img02.svg">
 	</div>
 </div>
 
@@ -33,17 +33,21 @@
 					<li class="accent-list"><a href="/regist_email">メンバー登録</a></li>
 					<li class="accent-list"><a href="https://official.kinyu-joshi.jp/" target="_blank">オフィシャルメンバーズクラブ</a></li>
 					<li><a class="open-navigation" href="/#event">参加して学ぶ<span>-イベント</span></a></li>
-					<li><a class="open-navigation" href="/#report">読んで学ぶ<span>-レポート</span></a></li>
+					<li><a class="open-navigation" href="/report">読んで学ぶ<span>-レポート</span></a></li>
 				</ul>				
 			</div>
 			<div class="mypage-menu">
 				<div class="menu-list-el position-relative">
 					<p class="deco-text ff-decoration kinjo-color">Mypage<br><span class="ff-mincho">マイページ・メニュー</span></p>
 					<ul class="menu-list">
-						<li><a class="open-navigation" href="/my#meber-only-event">参加予定のイベント</a></li>
+						<li><a href="/my">マイページ・トップ</a></li>
+						<li><a href="/my#meber-only-event">参加予定のイベント</a></li>
 						<li><a href="/my/member_report">メンバー限定レポート</a></li>
 						<li><a href="/my/report">お気に入り</a></li>
 						<li><a href="/members">メンバー一覧</a></li>
+						<li><a href="/my/profile">プロフィール設定</a></li>
+      			<li><a href="/my/account">アカウント設定</a></li>
+      			<li><a href="/logout">ログアウト</a></li>
 					</ul>				
 				</div>
 			</div>

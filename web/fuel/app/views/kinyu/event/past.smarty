@@ -2,19 +2,19 @@
   <div class="container">
     <div class="row align-items-center">
       
-      <div class="col-6 img-block position-relative">
+      <div class="col-12 col-md-6 img-block position-relative">
         <div class="main-imb-block" style="background:url(/images/event/event-introduction.jpg) center center / cover no-repeat"></div>
         <div class="sub-imb-block">
           <ul class="sub-imb-block-el d-flex">
             <li><img class="w-100" src="/images/event/event-introduction-sub01.jpg"></li>
-            <li><img class="w-100" src="/images/event/event-introduction-sub01.jpg"></li>
-            <li><img class="w-100" src="/images/event/event-introduction-sub01.jpg"></li>
+            <li><img class="w-100" src="/images/event/event-introduction-sub02.jpg"></li>
+            <li><img class="w-100" src="/images/event/event-introduction-sub03.jpg"></li>
           </ul>
         </div>
       </div>
 
-      <div class="col-6 text-block">
-        <p class="main-title ff-mincho">参加して学ぼう。</p>
+      <div class="col-12 col-md-6 text-block">
+        <p class="main-title ff-mincho">参加して学ぶ。</p>
         <p class="description">おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広い”きんゆう”をテーマに女子会をしています。<br><br>おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広い”きんゆう”をテーマに女子会をしています。</p>
       </div>
 
@@ -26,7 +26,7 @@
     <p class="event-main-title ff-mincho text-center">過去のイベント一覧</p>
     <ul class="row">
       {foreach from=$events.datas key="key" item=event name=loopname}
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/joshikai/{$event.code}">
           <div class="event-past-list-el">
             <div class="event-past-list-img position-relative" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
@@ -49,7 +49,6 @@
                 {else}
                 <p class="event-subbox-el">参加費：{$event.fee}</p>
                 {/if}
-                <p class="event-subbox-el">場所：{$event.place}</p>
               </div>
             </div>
           </div>
@@ -65,84 +64,84 @@
   <p class="event-main-title ff-mincho text-center">過去の特別女子会。</p>
   <div class="container">
     <ul class="row">
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/document/moneyschool2019.pdf" target="_blank">
           <div class="img-block" style="background:url(/images/event/past-moneyschool2019.jpg) top center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>JPX＊マネースクール2019 - 今すぐ始める！マネーアクション宣言</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/document/moneyschool2018.pdf" target="_blank">
           <div class="img-block" style="background:url(/images/event/past-moneyschool2018.jpg) center center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>JPX＊マネースクール2018 - 資産形成とわたしの未来</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/ooam-joshikai2018" target="_blank">
           <div class="img-block" style="background:url(/images/event/ooam-joshikai-ito.jpg) top center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>【伊東編】大江戸温泉できんゆう女子会。</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/daijoshikai2018" target="_blank">
           <div class="img-block" style="background:url(/images/event/past-special9.jpg) center center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>東証ひみつの大女子会♪ 2018</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/school_jpx02" target="_blank">
           <div class="img-block" style="background:url(/images/content/school_public/og-school_public02.jpg) left top / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>第2回 きんゆう女子。学院</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/celebration" target="_blank">
           <div class="img-block" style="background:url(/images/event/1000celebration.jpg) center center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>Kinjo1000 Celebration - メンバー1000名達成女子会♪</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="https://kinyu-joshi.jp/report/Qqc6pg" target="_blank">
           <div class="img-block" style="background:url(/images/event/past-special7.jpg) left center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>お金と私をアップデート 2017 autumn</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/oom-reit" target="_blank">
           <div class="img-block" style="background:url(/images/event/past-special5.jpg) center center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>大江戸温泉できんゆう女子会。</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/document/moneyschool2017.pdf" target="_blank">
           <div class="img-block" style="background:url(/images/event/past-special4.jpg) center center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>JPX＊マネースクール - ロボアドとミライの資産形成</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/school_jpx" target="_blank">
           <div class="img-block" style="background:url(/images/content/school_public/og-school_public.png) top center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>きんゆう女子。学院</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="https://kinyu-joshi.jp/report/zHrTTH" target="_blank">
           <div class="img-block" style="background:url(/images/event/past-special3.png) center center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>お金と私をアップデート 2017 spring</p></div>
         </a>
       </li>
 
-      <li class="col-6">
+      <li class="col-12 col-md-6">
         <a href="/school" target="_blank">
           <div class="img-block" style="background:url(/images/event/past-special2.png) center center / cover no-repeat"></div>
           <div class="text-block text-center ff-mincho"><p>私立きんゆう女子。学院</p></div>

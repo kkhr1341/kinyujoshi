@@ -27,7 +27,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  color: #707070;
+  color: #707070!important;
   font-family:"Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ ProN W3", "メイリオ", sans-serif;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -113,15 +113,6 @@ input:focus {
   clear: both;
   visibility:hidden;
 }
-
-@media screen and (max-width: 959px) {
-
-  /*html {
-    font-size: 52.5%;
-  }*/
-
-}
-
 
 /* ===========================================
   フォーム
@@ -227,6 +218,25 @@ input:focus {
 }
 .sp {
   display: none;
+}
+.form-control {
+  color: #707070!important;
+}
+/* for Webkit */
+.form-control::-webkit-input-placeholder{
+  color: #ababab;
+}
+/* for Firefox */
+.form-control::-moz-placeholder{
+  color: #ababab;
+}
+/* for Firefox 18以前 */
+.form-control:-moz-placeholder{
+  color: #ababab;
+}
+/* for Windows IE */
+.form-control:-ms-input-placeholder{
+  color: #ababab;
 }
 
 
