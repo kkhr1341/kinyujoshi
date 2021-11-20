@@ -1,7 +1,7 @@
 <div class="admin-normal-container my-profile-block">
   <div class="admin-normal-inner clear">
     {$my_side}
-    <div class="admin-normal-main">
+    <div class="admin-normal-main my-profile-block-inner">
       <div class="my-profile-edit-block">
         <div class="img-box-block">
           <div class="img-box"

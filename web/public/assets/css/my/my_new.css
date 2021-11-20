@@ -169,6 +169,80 @@ header {
 	opacity: .5;
 }
 
+/* 退会フォーム */
+.checkbox-list {
+    /*background: #ffffff;*/
+    padding: 10px;
+}
+
+.checkbox-list-item {
+    font-size: 12px;
+    /*display: inline-block;*/
+    padding: 4px;
+    /*background: #f7f7f7;*/
+    margin-top: 8px;
+    transition: .5s;
+}
+.checkbox-list-item input[type=checkbox] {
+    display: none;
+}
+.checkbox-list-item.checked-input {
+    background: #e0f7f4;
+}
+.checkbox-list-item label {
+    box-sizing: border-box;
+    -webkit-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    background-color: #f6f7f8;
+    vertical-align: middle;
+    cursor: pointer;
+    width: auto!important;
+    padding-left: 0px!important;
+}
+.checkbox-list-item label:before {
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    display: block;
+    margin-top: -9px;
+    width: 4px;
+    height: 9px;
+    border-right: 2px solid #77cbc0;
+    border-bottom: 2px solid #77cbc0;
+    content: '';
+    opacity: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox-list-item label:after {
+    -webkit-transition: border-color 0.2s linear;
+    transition: border-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -10px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #bbb;
+    content: '';
+}
+.checkbox-list-item span {
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+.regist-add-form-edit-el .checkbox-list {
+    padding: 0px;
+}
+input[type=checkbox]:checked + .checkbox:before {
+    opacity: 1;
+}
+
 @media screen and (max-width: 959px) {
 
 	/* マイページ・TOP */
@@ -268,11 +342,24 @@ header {
 		padding: 32px 24px;
 	}
 	.singlepage-form-block .form-control {
-		background-color: gray;
+		background-color: #F7FAFA;
+	}
+
+	/* メンバー限定レポート */
+	.member-only-report {
+		padding: 32px 24px;
 	}
 
 	/* お気に入りレポート */
 	.my-favorite-report {
+		padding: 32px 24px;
+	}
+
+	.my-profile-block-inner {
+		padding: 32px 24px;
+	}
+
+	.mypage-account-block .admin-normal-main {
 		padding: 32px 24px;
 	}
 }

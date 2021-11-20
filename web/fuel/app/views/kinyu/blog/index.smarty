@@ -13,14 +13,14 @@
         <div class="col-12 col-lg-8 order-2 order-lg-1 report-keywords">
           <p>よく検索されているキーワード</p>
           <ul class="d-inline-flex flex-wrap">
-            <li><a class="link-color" href="">#つみたてNISA</a></li>
-            <li><a class="link-color" href="">#iDeCo</a></li>
-            <li><a class="link-color" href="">#貯金</a></li>
-            <li><a class="link-color" href="">#投資</a></li>
-            <li><a class="link-color" href="">#お金の管理</a></li>
-            <li><a class="link-color" href="">#家計簿</a></li>
-            <li><a class="link-color" href="">#withき</a></li>
-            <li><a class="link-color" href="">#ごきんじょさん</a></li>
+            <li><a class="link-color" href="/report/search?search_text=つみたてNISA">#つみたてNISA</a></li>
+            <li><a class="link-color" href="/report/search?search_text=iDeCo">#iDeCo</a></li>
+            <li><a class="link-color" href="/report/search?search_text=貯金">#貯金</a></li>
+            <li><a class="link-color" href="/report/search?search_text=投資">#投資</a></li>
+            <li><a class="link-color" href="/report/search?search_text=お金の管理">#お金の管理</a></li>
+            <li><a class="link-color" href="/report/search?search_text=家計簿">#家計簿</a></li>
+            <li><a class="link-color" href="/report/search?search_text=with×き">#withき</a></li>
+            <li><a class="link-color" href="/report/search?search_text=ごきんじょさん">#ごきんじょさん</a></li>
           </ul>
         </div>
         <div class="col-12 col-lg-4 order-1 order-lg-2">

@@ -19,7 +19,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         if (Agent::is_mobiledevice()) {
             $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 20, null, null);
         } else {
-            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 40, null, null);
+            $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 20, null, null);
         }
 
         foreach($this->data['blogs']['datas'] as &$blogs) {
