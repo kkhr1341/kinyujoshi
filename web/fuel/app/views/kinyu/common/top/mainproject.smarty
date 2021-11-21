@@ -2,32 +2,32 @@
 	<div class="swiper-container main-project-slide">
 		<div class="swiper-wrapper swiper-main-slide">
 			<div class="swiper-slide">
-				<a href="">
+				<a class="d-block" href="">
 					<img class="w-100" src="./images/topics/event.jpg">
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<a href="">
+				<a class="d-block" href="">
 					<img class="w-100" src="./images/topics/event.jpg">
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<a href="">
+				<a class="d-block" href="">
 					<img class="w-100" src="./images/topics/event.jpg">
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<a href="">
+				<a class="d-block" href="">
 					<img class="w-100" src="./images/topics/event.jpg">
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<a href="">
+				<a class="d-block" href="">
 					<img class="w-100" src="./images/topics/event.jpg">
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<a href="">
+				<a class="d-block" href="">
 					<img class="w-100" src="./images/topics/event.jpg">
 				</a>
 			</div>

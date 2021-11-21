@@ -1,9 +1,9 @@
 <!-- メインビジュアル -->
 {$mainvisual}
-{*{$mainproject}*}
+{$mainproject}
 
 <!-- join & lesson -->
-{*<div class="main-block event-content" id="event">
+<div class="main-block event-content" id="event">
 	<div class="main-block-inner container">
 		<div class="single-title-block position-relative">
       <p class="deco-text ff-decoration font-italic kinjo-color">Join & Learn</p>
@@ -32,7 +32,7 @@
 		</div>
 		<a class="event-past-link d-block mx-auto kinjo-color text-center" href="/event_past#past-event-list">〉過去のイベント（女子会）はこちら</a>
 	</div>
-</div>*}
+</div>
 
 
 <!-- find your way -->
