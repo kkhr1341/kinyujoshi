@@ -9,8 +9,8 @@
 
     <div class="joshikai-policy-container">
       <div class="joshikai-policy-el">
-    		<div class="inquiry-counter-title fs-mincho">
-    			<p class="counter-main-title animation-top1">私たちが大事にしていること</p>
+    		<div class="inquiry-counter-title">
+    			<p class="counter-main-title ff-mincho animation-top1">私たちが大事にしていること</p>
     		</div>
         <p class="main-message animation-top1">          
           どんなゲストや金融機関にも、ワカラナイ女子だからと<br class="pc">
@@ -36,7 +36,7 @@
     <div class="joshikai-policy-container">
       <div class="joshikai-policy-el joshikai-policy-el-2">
         <div class="inquiry-counter-title fs-mincho">
-          <p class="counter-main-title animation-top1">お約束ごと</p>
+          <p class="counter-main-title ff-mincho animation-top1">お約束ごと</p>
         </div>
         <div class="promise-container">
 
@@ -76,7 +76,7 @@
     <div class="joshikai-policy-container">
       <div class="joshikai-policy-el joshikai-policy-el-2">
         <div class="inquiry-counter-title fs-mincho">
-          <p class="counter-main-title animation-top1">もし嫌なことがあった時には...</p>
+          <p class="counter-main-title ff-mincho animation-top1">もし嫌なことがあった時には...</p>
         </div>
 
         <p class="inquiry-counter-title-sub animation-top1">
@@ -87,28 +87,28 @@
         </p>
 
         <!-- フォーム -->
-        <div class="animation-top1">
-          <div class="regist-add-form-edit-el">
-            <label class="regist-add-form-edit-title">お名前</label>
-            <p class="regist-add-form-edit-subtitle">あだ名でOK♪</p>
+        <div class="joshikai-policy-form-block mx-auto animation-top1">
+          <div class="joshikai-policy-form-el">
+            <label class="regist-add-form-edit-title kinjo-color">お名前</label>
+            <p class="joshikai-policy-form-subtitle">あだ名でOK♪</p>
             <input type="text" name="name" id="name" class="form-control" placeholder="" value="">
           </div>
 
-          <div class="regist-add-form-edit-el">
+          <div class="joshikai-policy-form-el">
             <label class="regist-add-form-edit-title">メールアドレス</label>
             <input type="text" name="email" id="email" class="form-control" placeholder="" value="">
           </div>
 
-          <div class="regist-add-form-edit-el regist-add-form-edit-el02">
+          <div class="joshikai-policy-form-el">
             <label class="regist-add-form-edit-title">どんなことがありましたか？<span style="color:#f56969; font-weight: normal;">＊必須</span></label>
-            <p class="regist-add-form-edit-subtitle">なるべく詳しく書いてくださいね♪</p>
+            <p class="joshikai-policy-form-subtitle">なるべく詳しく書いてくださいね♪</p>
             <textarea id="message" name="message" class="form-control" rows="10"></textarea>
           </div>
 
           <!-- ボタンエリア -->
           <div class="form-btn tx-center">
-            <button class="btn btn-kinyu" type="button" id="save">もやもやを送る</button>
-            <p class="btn-sub-text"><span style="color:#f56969;">＊</span>内容によっては期待に添えない場合があります。<br>お力になれることにだけお返事させていただきます。</p>
+            <button class="link-generally" type="button" id="save">もやもやを送る</button>
+            <p class="text-center btn-sub-text"><span style="color:#f56969;">＊</span>内容によっては期待に添えない場合があります。<br>お力になれることにだけお返事させていただきます。</p>
           </div>
 
         </div><!-- フォーム -->
