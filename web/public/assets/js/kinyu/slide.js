@@ -9,7 +9,6 @@ $(function () {
     //スマホ
     if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
       new Swiper('.pickup-top-slide', {
-        slidesPerView: 1,
         autoplay: false,
         loop: false,
         pagination: false,
@@ -49,7 +48,6 @@ $(function () {
       });
 
      new Swiper('.main-project-slide', {
-        slidesPerView: 2.2,
         autoplay: false,
         loop: false,
         pagination: false,

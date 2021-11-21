@@ -30,8 +30,16 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->pickup_top = View::forge('kinyu/common/pickup_top.smarty', $this->data);
         $this->template->mainvisual = View::forge('kinyu/common/top/mainvisual.smarty', $this->data);
-        $this->template->mainproject = View::forge('kinyu/common/top/mainproject.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
+
+
+        if (Agent::is_mobiledevice()) {
+            $this->template->mainproject = View::forge('kinyu/common/top/mainproject_sp.smarty', $this->data);
+        } else {
+            $this->template->mainproject = View::forge('kinyu/common/top/mainproject.smarty', $this->data);
+        }
+
+
         $this->template->contents = View::forge('kinyu/index.smarty', $this->data);
 
         // if (Agent::is_smartphone()) {

@@ -422,6 +422,10 @@ html.is-fixed body {
 	.main-projext {
 		padding: 40px 0px 40px 20px;
 	}
+	.main-project-slide .swiper-slide a {
+		display: block;
+		width: 150px;
+	}
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
