@@ -28,7 +28,7 @@ $(function () {
       });
 
      new Swiper('.event-top-slide', {
-        slidesPerView: 1.3,
+        slidesPerView: 1.2,
         autoplay: false,
         loop: false,
         pagination: false,

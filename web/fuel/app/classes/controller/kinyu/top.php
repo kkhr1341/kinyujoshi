@@ -28,7 +28,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->side = View::forge('kinyu/common/side.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
-        $this->template->pickup_top = View::forge('kinyu/common/pickup_top.smarty', $this->data);
+        $this->template->pickup_top = View::forge('kinyu/common/top/pickup_top.smarty', $this->data);
         $this->template->mainvisual = View::forge('kinyu/common/top/mainvisual.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
 

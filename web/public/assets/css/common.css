@@ -184,11 +184,11 @@ html.is-fixed body {
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
 }
-.pickup-top-slide .swiper-main-title {
+.mainvisual .swiper-main-title {
 	background-color: #8ddcd1;
 	padding: 20px;
 }
-.pickup-top-slide .swiper-main-title h3 {
+.mainvisual .swiper-main-title h3 {
 	font-size: 1.8rem;
 	line-height: 28px;
 	height: 56px;
@@ -401,6 +401,7 @@ html.is-fixed body {
 	}
 	.kinyu-top-news-list .news-title {
 		font-size: 1.2rem;
+		height: 12px;
 	}
 	.kinyu-top-news-list .news-more-link {
 		margin-top: 8px;
@@ -408,6 +409,50 @@ html.is-fixed body {
 	.kinyu-top-news-list .news-more-link a {
 		font-size: 1.2rem;
 	}
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スワイプ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 959px) {
+	.viewport {
+  	overflow: hidden;
+  	margin: 0 auto;
+  	-webkit-transform: translateZ(0);
+  }
+	.flipsnap {
+	  width: 1195px;
+	}
+	.flipsnap:after {
+	  content: '';
+	  display: block;
+	  clear: both;
+	  height: 0;
+	}
+	.item {
+	  width: 200px;
+	  text-align: center;
+	  float: left;
+	  color: #666;
+	}
+
+	/* PICK UP TOP */
+	#demo-pointmove .item {
+	  width: 250px;
+	}
+
+
+	/* TOPIC */
+	#demo-maxPoint .flipsnap {
+	  width: 2000px; /* 80px(item) * 10 */
+	  padding: 0;
+	}
+	#demo-maxPoint .item {
+	  width: 150px;
+	  padding-right: 12px;
+	}
+
 }
 
 
@@ -491,6 +536,10 @@ html.is-fixed body {
 	.event-content .event-past-link {
 		font-size: 1.3rem;
 		margin-top: 24px;
+	}
+	.event-top-slide .swiper-slide {
+		width: 280px;
+		max-width: 280px;
 	}
 /*	.event-top-slide {
 		width: 280px;

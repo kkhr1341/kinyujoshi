@@ -4,51 +4,30 @@
 
 
 
-<div class="viewport">
-    <div class="flipsnap">
-        <div class="item">1</div>
-        <div class="item">2</div>
-        <div class="item">3</div>
-    </div>
-</div>
+<section class="demo" id="demo-maxPoint">
+		<div class="viewport">
+			<div class="flipsnap flipsnap-topics">
+
+
+				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
+				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
+				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
+				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
+				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
+				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
+
+			</div>
+		</div>
+	</section>
 
 
 
-<style>
-	.viewport {
-    width: 320px;
-    overflow: hidden;
-    margin: 0 auto;
-    -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
-}
-
-.flipsnap {
-    width: 960px; /* 320px(item width) * 3(item count) */
-}
-
-.flipsnap:after {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-}
-
-.item {
-    float: left;
-    width: 150px;
-    font-size: 50px;
-    text-align: center;
-    padding: 50px 0;
-    background: #EFEFEF;
-    border: 5px solid #999;
-    color: #666;
-}
-</style>
-
-
-
-
-
+<script>
+Flipsnap('.flipsnap-topics', {
+    distance: 190, // 80px * 2
+    maxPoint: 3    // move able 3 times
+});
+</script>
 
 
 </div>
