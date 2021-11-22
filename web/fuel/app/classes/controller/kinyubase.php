@@ -132,12 +132,12 @@ class Controller_Kinyubase extends Controller_Template
             'kinyu/main.js',
             'kinyu/scrollreveal.min.js',
             // 必要
+            'kinyu/flipsnap.min.js',
             'kinyu/slide.js',
             'kinyu/swiper.min.js',
-            'kinyu/flipsnap.min.js',
             // ポップアップ広告
 //            'kinyu/popup.js',
-            'kinyu/jquery.bxslider.min.js',
+            //'kinyu/jquery.bxslider.min.js',
             //'https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js'
             //'kinyu/drawer.min.js'
         ), array(), 'layout', false);
