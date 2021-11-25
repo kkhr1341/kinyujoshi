@@ -46,15 +46,15 @@
 					</div>
 					<div class="col-8 col-md-8 text-block order-1">
 						<p class="main-title ff-mincho">オリジナルプリカにオンラインチャージされた「お礼」を有意義に使おう。</p>
-						<p class="description d-none d-md-block">活動の頑張りに応じて、時々「お礼」をオフィシャルメンバーズカードに「オンラインチャージ」いたします。コミュニティが活性化していくことで一人一人にパワーチャージできる仕組みです。（カード発行しない方には今まで通りAmazonギフトをお届けします）</p>
+						<p class="description d-none d-md-block">活動の頑張りに応じて、時々「お礼」をオフィシャルメンバーズカードに「オンラインチャージ」いたします。コミュニティが活性化していくことで一人一人にパワーチャージできる仕組みです。（カード発行しない方には今まで通りAmazonギフト等をお届けします）</p>
 					</div>
 				</div>
 			</div>
 			<div class="omc-contentsafter-list-other-el">
 				<div class="omc-contentsafter-list-other-el-inner position-relative">
 					<img class="omc-fukidashi02" src="/images/omc/omc-fukidashi02.svg">
-					<p class="ff-mincho">定期女子会の参加がフリー！アーカイブ音声や資料もシェアします。</p>
-					<p class="ff-mincho">前向きに活動する女性たちを応援したい企業や団体・サービスからの限定イベントや福利厚生を用意。</p>
+					<p class="ff-mincho">定期女子会の参加がフリーパス。アーカイブ資料や女子会の音声をシェアします。</p>
+					<p class="ff-mincho">そのほか、コミュニティを応援してくれる企業や団体、各サービスから限定イベントや福利厚生も用意しています。</p>
 				</div>
 				<div class="omc-contentsafter-list-link">
 					<img class="d-block omc-link-title mx-auto" src="/images/omc/omc-link-title.svg">
@@ -79,7 +79,7 @@
 					<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-shindan.svg"></div>
 					<div class="text-box col-6">
 						<p class="special-contents-title ff-mincho">きん女。診断</p>
-						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<p class="special-contents-description">豊かに生きるための第一歩は「自分を知ること」。わたしはどんな人になりたい？これから人生を送っていきたい？今のわたしはどんな人...？3〜6問の質問に答えて、あなた自身のことを知るヒントにしましょう♪</p>
 						<a class="d-block kinjo-color font-weight-bold" href="/kinjo_check">〉ページはこちら</a>
 					</div>
 				</div>
@@ -89,18 +89,19 @@
 					<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-myway.svg"></div>
 					<div class="text-box col-6 order-1 order-md-2">
 						<p class="special-contents-title ff-mincho">「わたし」を知る</p>
-						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<p class="special-contents-description">豊かに生きるための第一歩は「自分を知ること」。そこがわかってこそ、お金の使い方や自分の道も見えてくるはず。このページでは、「わたしを知ること」をテーマに情報を発信しています。</p>
 						<a class="d-block kinjo-color font-weight-bold" href="/myway">〉ページはこちら</a>
 					</div>
 				</div>
 			</div>
 			<div class="special-contents-list-el">
+				<div class="comingsoon-box"><p class="text-center ff-decoration font-italic">Coming soon！</p></div>
 				<div class="row align-items-center">
 					<div class="img-box col-6"><img class="w-100" src="/images/oyakudachi/oyakudachi-thum.jpg"></div>
 					<div class="text-box col-6">
 						<p class="special-contents-title ff-mincho">金融のお役立ち情報</p>
-						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-						<a class="d-block kinjo-color font-weight-bold" href="/oyakudachi">〉ページはこちら</a>
+						<p class="special-contents-description">金融に関する情報を集めていると不安に思ったり、相談したいことってありますよね。そんな時に役に立つ金融機関さんが発信している情報をまとめてみました。</p>
+						<!-- <a class="d-block kinjo-color font-weight-bold" href="/oyakudachi">〉ページはこちら</a> -->
 					</div>
 				</div>
 			</div>
@@ -109,7 +110,7 @@
 					<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-sanpo.svg"></div>
 					<div class="text-box col-6 order-1 order-md-2">
 						<p class="special-contents-title ff-mincho">きんゆう散歩</p>
-						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<p class="special-contents-description">金融や経済ってあまり目に見えないけれど、実は身の回りには金融・経済に関わることがたくさん。ゆるりと旅する感覚で、金融を見たり、触れたり、考えてみよう。世界にある金融が見えると、ぐっと金融が楽しくなるかも♪</p>
 						<a class="d-block kinjo-color font-weight-bold" href="/kinyu_sanpo">〉ページはこちら</a>
 					</div>
 				</div>
@@ -119,7 +120,7 @@
 					<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-map.svg"></div>
 					<div class="text-box col-6">
 						<p class="special-contents-title ff-mincho">かぶと町マップ</p>
-						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<p class="special-contents-description">レトロな街/金融の街、日本橋兜町・茅場町。あまり知られていないかくれ家的な店がいっぱい！きんゆう女子。おすすめのスポットを紹介しています。</p>
 						<a class="d-block kinjo-color font-weight-bold" href="/map_kabuto">〉ページはこちら</a>
 					</div>
 				</div>
@@ -131,7 +132,7 @@
 						<p class="special-contents-title-img ff-mincho">
 							<img class="w-100" src="/images/special_contents/withk-title.svg">
 						</p>
-						<p class="special-contents-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<p class="special-contents-description">このページは金融リテラシー向上を応援しているご協賛企業や団体と一緒に作っています。どのコンテンツも金融リテラシーを上げることを目的に作られており、特定の金融商品を推奨・勧誘するものではありません。</p>
 						<a class="d-block kinjo-color font-weight-bold" href="/map_kabuto">〉ページはこちら</a>
 					</div>
 				</div>
@@ -147,19 +148,7 @@
 		<ul class="banner-list mx-auto">
 			
 			<li>
-				<a href="">
-					<img src="/images/banner/line.svg">
-				</a>
-			</li>
-
-			<li>
-				<a href="">
-					<img src="/images/banner/kinjo-shop.svg">
-				</a>
-			</li>
-
-			<li>
-				<a href="">
+				<a href="https://lin.ee/OFHGpg7" target="_blank">
 					<img src="/images/banner/line.svg">
 				</a>
 			</li>
