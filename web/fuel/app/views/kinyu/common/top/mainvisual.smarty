@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<div class="col-12 col-lg-6 video-bg-conteiner order-1 order-lg-2">
-				<video class="d-none d-md-block img-block" src="/images/video_bg_main.mp4" poster="sample.png" autoplay="" loop="" muted="" playsinline=""></video>
+				<video class="img-block" src="/images/video_bg_main.mp4" poster="sample.png" autoplay="" loop="" muted="" playsinline=""></video>
 				<div class="title-block">
 					<p class="sub-title ff-mincho text-white">わたしらしい「ミライ」への解放</p>
 					<p class="main-title ff-mincho text-white">お金にとらわれず<br>自由で等身大に生きる</p>
