@@ -214,7 +214,7 @@
 }
 
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 960px) {
   .regist-contents {
     padding: 40px 0px 60px;
   }
@@ -275,12 +275,8 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 
 /* ログイン部分 */
-.login-contents {
-}
 .login-contents-block {
-  margin-top: 120px;
   padding: 80px 0px 120px;
-  background-color: #F7FAFA;
 }
 .login-contents-intro {
   text-align: center;
@@ -293,10 +289,14 @@
   background: #fff;
   transition: .5s;
 }
+.login-contents-intro img {
+  width: 100px;
+  margin-bottom: 40px;
+}
 .login-contents-title {
   display: inline-block;
   font-size: 2.4rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .login-contents-title span {
   padding-bottom: 4px;
@@ -346,7 +346,6 @@
   margin-bottom: 20px;
   width: 100%;
 }
-
 .login-contents-form-area .email-form input {
   width: 100%;
   background: #fff;
@@ -376,15 +375,9 @@
   transition: .5s;
 }
 
-.login-email-container {
-  padding-right: 32px;
-}
-.login-btn-list {
-  padding-left: 32px;
-  border-left: 1px solid #f1f1f1;
-}
 .login-btn-list li a {
-  padding:12px 0px;
+  padding:16px 0px;
+  border-radius: 30px;
 }
 .login-contents li.email-login-bg a {
   background: #79cec1;
@@ -399,7 +392,7 @@
 .fb-login-bg a {
   background: #7093d2;
   color: #fff;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 .google-login-bg a {
   background: #e68787;
@@ -623,20 +616,60 @@
   width: 110px;
 }
 
-@media screen and (max-width: 959px) {
+/* new */
+.login-contents-block-inner {
+  width: 550px;
+  background-color: #fff;
+  padding: 50px;
+}
+.login-email-container {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #EDEDED;
+}
+.login-email-container input {
+  padding: 16px 0px;
+  border: 1px solid #ededed;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  border-radius: 30px;
+}
+.login-email-container .link-generally {
+  width: 100%;
+  font-size: 1.4rem;
+  border-radius: 30px;
+}
+.login-email-container p {
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+.login-contents-sub-block {
+  width: 550px;
+  margin-top: 20px;
+}
+.login-contents-sub-block p,
+.login-contents-sub-block a {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 960px) {
   .login-contents-block {
     margin-top: 0px;
-    padding: 50px 0px;
+    padding: 40px 15px 50px;
   }
   .login-contents-block-inner {
     width: 100%;
+    padding: 50px 20px 40px;
+  }
+  .login-contents-intro img {
+    width: 80px;
+    margin-bottom: 30px;
   }
   .login-contents-title {
     font-size: 2.0rem;
     margin-bottom: 20px;
-  }
-  .login-email-container {
-    padding-right: 15px;
   }
   .login-contents-form-area label.title {
     font-size: 1.3rem;
@@ -644,9 +677,6 @@
   }
   .login-contents-form-area .email-form input {
     font-size: 1.2rem;
-  }
-  .login-btn-list {
-    padding-left: 15px;
   }
   .login-contents-form-area .email-form p {
     font-size: 1.2rem;
@@ -678,8 +708,10 @@
     width: 65px;
     right: -4px;
   }
+  .login-contents-sub-block {
+    width: 100%;
+  }
 }
-
 
 /* パスワード再設定 */
 .resetting-pass-block {

@@ -6,32 +6,43 @@
 <div class="main-block about-introduction">
   <div class="main-block-inner container">
     <div class="row">
-      <div class="col-6 img-block position-relative" style="background: url(/images/about/login_main_bg.jpg) center center / cover no-repeat;">
+      <div class="col-12 col-md-6 img-block position-relative" style="background: url(/images/about/login_main_bg.jpg) center center / cover no-repeat;">
         <p class="position-absolute kinjo-color ff-decoration02">Let's find<br>　my own future</p>
       </div>
-      <div class="col-6 text-block">
+      <div class="col-12 col-md-6 text-block">
         <div class="about-kinjo-title">
-          <h2 class="ff-mincho kinjo-color">おかねにとらわれず<br>自由で等身大に生きる。</h2>
-          <p class="ff-mincho">〜わたしらしい「ミライ」への解放〜</p>
+          <h2 class="ff-decoration kinjo-color font-italic">Message</h2>
         </div>
         <p class="about-introduction-description">
           はじめまして。「きんゆう女子。」です。<br>
-          「きんゆう女子。」は、2016年3月3日に生まれた、<br class="sp">
-          20〜30代を中心とした金融ワカラナイ女子による、<br class="sp">
+          「きんゆう女子。」は、2016年3月3日に生まれた、<br class="d-none d-md-block">
+          20〜30代を中心とした金融ワカラナイ女子による、<br class="d-none d-md-block">
           ワカラナイ女子のためのコミュニティです。<br><br>
 
-          コンセプトは、経済に前向きに関わることで<br class="sp">
+          コンセプトは、経済に前向きに関わることで<br class="d-none d-md-block">
           「おかねにとらわれず、自由で等身大に生きる」こと。<br>
-          身近な家計管理から世界経済、FinTech（フィンテック）、<br class="sp">
+          身近な家計管理から世界経済、FinTech（フィンテック）、<br class="d-none d-md-block">
           ライフスタイルまで、幅広い”きんゆう”をテーマにした女子会を開催しています。<br><br>
 
           ゆる〜く、楽しく。でもちょっと真面目に。<br><br>
-          わたしたちは、女性たちが、お金の漠然とした不安や焦りから解放され、<br class="sp">
+          わたしたちは、女性たちが、お金の漠然とした不安や焦りから解放され、<br class="d-none d-md-block">
           ワカラナイ・難しいから諦めていたことを行動に移し実現に近づいていく…<br><br>
 
           そっと後押しするようなフォローをしていきたいと思っています。
         </p>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-block about-mission">
+  <div class="main-block-inner container">
+    <div class="about-kinjo-title text-center">
+      <p class="ff-decoration kinjo-color font-italic">Mission</p>
+      <h2 class="ff-mincho text-center">私たちの目指す世界</h2>
+    </div>
+    <div class="about-mission-text">
+      <p class="text-center ff-mincho"><span class="kinjo-color">前向きに金融・経済に向き合うことで<br>おかねにとらわれず、自由で等身大に生きる</span><br>〜わたしらしい「ミライ」への解放〜</p>
     </div>
   </div>
 </div>
@@ -42,7 +53,6 @@
       <p class="ff-decoration kinjo-color font-italic">Kinjo Activities</p>
       <h2 class="ff-mincho text-center">「きん女。」って何しているの？</h2>
     </div>
-
     <div class="about-kinjo-list">
       <div class="about-kinjo-list-el">
         <div class="row align-items-center">
@@ -52,8 +62,9 @@
           <div class="col-8 text-block order-2">
             <p class="count-title kinjo-color ff-decoration">01</p>
             <p class="main-title ff-mincho">何がワカラナイ？気づきを得る女子会</p>
-            <p class="description">漠然としたもやもやとワカラナイことが何か、気づきを得るための女子会を開催しています。ひとりよりも、みんなで考えるといろんな見方や情報、経験をシェアすることができます。まさに3人集まれば文殊の知恵！ですね。女子会はメンバーにならなくてもどなたでもご参加いただけます。</p>
+            <p class="description d-none d-md-block">漠然としたもやもやとワカラナイことが何か、気づきを得るための女子会を開催しています。ひとりよりも、みんなで考えるといろんな見方や情報、経験をシェアすることができます。まさに3人集まれば文殊の知恵！ですね。＊一部メンバー・オフィシャルメンバー限定イベントがあります。</p>
           </div>
+          <p class="col-12 order-3 description d-block d-md-none">漠然としたもやもやとワカラナイことが何か、気づきを得るための女子会を開催しています。ひとりよりも、みんなで考えるといろんな見方や情報、経験をシェアすることができます。まさに3人集まれば文殊の知恵！ですね。＊一部メンバー・オフィシャルメンバー限定イベントがあります。</p>
         </div>
       </div>
       <div class="about-kinjo-list-el">
@@ -64,8 +75,22 @@
           <div class="col-8 text-block order-1">
             <p class="count-title kinjo-color ff-decoration">02</p>
             <p class="main-title ff-mincho">ゆるくたのしく、でも真面目に。等身大の情報をお届け</p>
-            <p class="description">ミレニアル世代にとって必要な“きんゆう”をテーマに情報発信しています。Fintechサービスを使ってみたり気になる会社に訪問をしてみたり、ワカラナイ女子の目線からレポートにまとめています。私たちをそっと見守ってくれている会社さんと一緒に情報をお届けすることもあります。</p>
+            <p class="description d-none d-md-block">ミレニアル世代にとって必要な“きんゆう”をテーマに情報発信しています。Fintechサービスを使ってみたり気になる会社に訪問をしてみたり、ワカラナイ女子の目線からレポートにまとめています。私たちをそっと見守ってくれている会社さんと一緒に情報をお届けすることもあります。</p>
           </div>
+          <p class="col-12 order-3 description d-block d-md-none">ミレニアル世代にとって必要な“きんゆう”をテーマに情報発信しています。Fintechサービスを使ってみたり気になる会社に訪問をしてみたり、ワカラナイ女子の目線からレポートにまとめています。私たちをそっと見守ってくれている会社さんと一緒に情報をお届けすることもあります。</p>
+        </div>
+      </div>
+      <div class="about-kinjo-list-el">
+        <div class="row align-items-center">
+          <div class="col-4 img-block order-1">
+            <img class="w-100" src="/images/about/about-kinjo-list03.png">
+          </div>
+          <div class="col-8 text-block order-2">
+            <p class="count-title kinjo-color ff-decoration">03</p>
+            <p class="main-title ff-mincho">私たちの声を企業や社会にお届け</p>
+            <p class="description d-none d-md-block">金融や経済を学ぶ中で、もっとこうだったらいいのになぁ、など新しい発見をすることも！そんな私たちの声を定期的にアンケートや座談会で集めて、企業や社会にお届けしています。活動を通じてインサイト調査やコンテンツ・デザイン制作を行い、金融サービス向上に貢献することで運営を継続しています。</p>
+          </div>
+          <p class="col-12 order-3 description d-block d-md-none">金融や経済を学ぶ中で、もっとこうだったらいいのになぁ、など新しい発見をすることも！そんな私たちの声を定期的にアンケートや座談会で集めて、企業や社会にお届けしています。活動を通じてインサイト調査やコンテンツ・デザイン制作を行い、金融サービス向上に貢献することで運営を継続しています。</p>
         </div>
       </div>
     </div>
@@ -80,40 +105,58 @@
       <p class="ff-decoration kinjo-color font-italic">About Us</p>
       <h2 class="ff-mincho">コミュニティを<br>エンパワメントするひとたち</h2>
     </div>
+    <div class="teams-map">
+      <img class="w-100 team-logo" src="/images/about/teams-map.jpg">
+    </div>
     <div class="about-team-list">
       <div class="row no-gutters">
-        <div class="col-6 about-team-list-el position-relative">
+        <div class="col-12 col-md-6 about-team-list-el position-relative">
+          <img class="team-logo" src="/images/about/member-logo.svg">
+          <div class="about-team-list-el-inner">
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">メンバー<br class="d-block d-md-block">（ごきんじょさん）</p>
+            <p class="about-team-description">コミュニティに関わっている皆さん。金融ワカラナイ女子。や、元ワカラナイ女子（金融ワカル女子）を中心とした、お金に前向きに向き合い自由で等身大に生きる女性たち。人生やお金のことをゆるくオープンに話せる仲間たち。</p>
+            <a class="link-color" href="/regist_email">メンバー登録はこちら</a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 about-team-list-el position-relative">
           <img class="team-logo" src="/images/about/omc-logo.svg">
           <div class="about-team-list-el-inner">
-            <p class="about-team-main-title ff-mincho text-center">オフィシャルメンバー</p>
-            <p class="about-team-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">オフィシャルメンバー</p>
+            <p class="about-team-description">月額会費という形でコミュニティの存続・繁栄を支えていただきつつ、体験や経験をコミュニティにシェアして貢献するミッションを持つチーム。日本の女性たちの金融リテラシー向上を一緒に目指します。マイページにオフィシャルバッチがつきます。</p>
+            <a class="link-color" href="https://official.kinyu-joshi.jp/">オフィシャルメンバー登録はこちら</a>
           </div>
         </div>
-        <div class="col-6 about-team-list-el">
-          <div class="about-team-list-el-inner">
-            <p class="about-team-main-title ff-mincho text-center">サポーターの皆さん</p>
-            <p class="about-team-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          </div>
-        </div>
-        <div class="col-6 about-team-list-el position-relative">
+        <div class="col-12 col-md-6 about-team-list-el position-relative">
           <img class="team-logo" src="/images/about/editorial-logo.svg">
           <div class="about-team-list-el-inner">
-            <p class="about-team-main-title ff-mincho text-center">編集部</p>
-            <p class="about-team-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">編集部</p>
+            <p class="about-team-description">プロボノとしてコミュニティを応援してくれる心強い皆さん。2021年に実施したクラウドファンディングでは男女問わず多くの方が多くのサポーターさんの支援を受け新しい運営体制になりました。</p>
           </div>
         </div>
-        <div class="col-6 about-team-list-el">
+        <div class="col-12 col-md-6 about-team-list-el">
           <div class="about-team-list-el-inner">
-            <p class="about-team-main-title ff-mincho text-center">事務局/本部</p>
-            <p class="about-team-description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">サポーターの皆さん</p>
+            <p class="about-team-description">コミュニティのエンパワメント役。メンバーさん同士の円滑なコミュニケーションのための女子会の企画や主催、広報などをリードするチーム。メンバーの皆さんの声を代弁する役目もあります。</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 about-team-list-el">
+          <div class="about-team-list-el-inner">
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">サポートデスク</p>
+            <p class="about-team-description">メンバーさんからのお問い合わせ対応や、モヤモヤのフォローアップをするチーム。お金のこと、もやもや、どこに聞いたらいいの？そんな時にも頼れる、サポート役です。</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 about-team-list-el">
+          <div class="about-team-list-el-inner">
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">事務局/本部</p>
+            <p class="about-team-description">事務的な手続き、webサイトやコミュニティの全体管理、マネジメントを行うチーム。福利厚生の整備、金融機関や法人との連携を担う。メンバーと企業や社会とのブリッジ役。</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="omc-contentsafter-list-link">
+    <!-- <div class="omc-contentsafter-list-link">
       <img class="d-block omc-link-title mx-auto" src="/images/omc/omc-link-title.svg">
       <a class="kinjo-link d-block mx-auto position-relative" href="">〉オフィシャルメンバーズクラブ<img class="omc-link-after" src="/images/omc/omc-link-after.png"></a>
-    </div>
+    </div> -->
   </div>
 </div>
 

@@ -1,20 +1,13 @@
 @charset "UTF-8";
 
 footer {
-	/*background-color: #F7F7F7;*/
-	/*background-color: #f8fffe;*/
-	/*border-top: 3px solid #B0E2DB;*/
-	/*padding-top: 4px;*/
 	background-color: #ebf7f5;
 }
 .footer-inner {
-	/*border-top: 1px solid #B0E2DB;*/
 	padding: 160px 0px 50px;
 }
 .footer-kinjo-block {
 	width: 600px;
-	/*border-top: 1px solid #B0E2DB;
-	border-bottom: 1px solid #B0E2DB;*/
 	border-top: 1px solid #B0E2DB;
 	border-bottom: 1px solid #B0E2DB;
 	padding: 50px 0px 30px;
@@ -55,27 +48,28 @@ footer {
 }
 .footer-list {
 	margin-top: 70px;
-	width: 720px;
+	width: 820px;
 }
 .footer-list-title {
 	font-size: 1.5rem;
 	margin-bottom: 12px;
 }
-.footer-list-title span {
+/*.footer-list-title span {
 	padding: 2px 14px 2px 12px;
 	border-left: 3px solid #B0E2DB;
 	border-right: 3px solid #B0E2DB;
-}
+}*/
 .footer-list ul li {
   padding: 0 10px 4px 0;
 }
-.footer-list ul li:before {
+/*.footer-list ul li:before {
   content: '|';
   margin-right: 10px;
-}
-.footer-list ul li.footer-list-first:before {
-  content: none;
-  margin-right: 0px;
+}*/
+.footer-list ul li:before {
+  content: "▶︎";
+  margin-right: 4px;
+  color: #7dd7cb;
 }
 .footer-list ul li a {
 	font-size: 1.2rem;

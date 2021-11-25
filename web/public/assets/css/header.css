@@ -76,7 +76,7 @@ header .main-logo a {
 	top: 22px;
 	z-index: 1002;
 	cursor: pointer;
-	border: 1px solid #7dd7cb;
+	/*border: 1px solid #7dd7cb;*/
 }
 .menu-trigger-container img {
 	border-radius: 50%;

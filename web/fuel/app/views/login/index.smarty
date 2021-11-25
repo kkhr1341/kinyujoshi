@@ -1,8 +1,64 @@
 <link type="text/css" rel="stylesheet" href="/assets/css/login.css" />
 
-<div class="main-block login-contents-block">
+<style>
+  body {
+    background-color: #F7FAFA;
+  }
+  .kinyu-main {
+    margin-top: 0px;
+  }
+  header {
+    display: none;
+  }
+  .menu-trigger-container {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+</style>
+
+
+<div class="login-contents-block">
+  <div class="login-contents-block-inner">
+    <div class="login-contents-intro">
+      <img class="d-block mx-auto" src="/images/top-circle-logo.png">
+      <h2 class="login-contents-title ff-mincho kinjo-color"><span>マイページにログイン</span></h2><br>
+    </div>
+    <div class="">
+      <div class="login-email-container">
+        <form class="email-form">
+          <input type="text" name="email" placeholder="メールアドレス" value="" class="w-100">
+          <input type="password" name="password" placeholder="パスワード" value="" class="w-100">
+          <button class="login-btn link-generally" type="button" id="login">ログイン</button>
+          <p class="text-right">パスワードをお忘れの方は<span class="link-color link-point" id="pass-reissue-btn">こちら</span></p>
+        </form>
+      </div>
+      <div class="login-btn-list">
+        <ul>
+          <li class="fb-login-bg"><a class="d-block text-center text-white font-weight-bold" href="/auth/oauth/facebook">Facebookでログインする</a></li>
+          <li class="google-login-bg"><a class="d-block text-center text-white font-weight-bold" href="/auth/oauth/google">Googleでログインする</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-contents-sub-block mx-auto">
+    <div class="row no-gutters">
+      <div class="col-12 col-md-6 mb-4 text-center text-md-left">
+        <p><a href="/regist_email" class="link-color">メンバー登録</a>がまだですか？</p>
+      </div>
+      <div class="col-12 col-md-6 text-center text-md-right">
+        <p><a href="https://official.kinyu-joshi.jp/" class="link-color">オフィシャルメンバーズクラブ</a>に<br>関心がありますか？</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{*<div class="main-block login-contents-block">
   <div class="main-block-inner container">
-      <!-- <a class="login-another-btn sp" href="/regist_email">メンバー登録へ</a> -->
       <div class="login-contents-intro">
         <h2 class="login-contents-title ff-mincho"><span>マイページにログインする</span></h2><br>
       </div>
@@ -18,7 +74,7 @@
                   <input type="text" name="email" placeholder="メールアドレス" value="">
                   <input type="password" name="password" placeholder="パスワード" value="">
                   <button class="login-btn" type="button" id="login">ログイン</button>
-                  <p style="text-align: center;">パスワードをお忘れの方は<span id="pass-reissue-btn">こちら</span></p>
+                  <p style="text-align: center;">パスワードをお忘れの方は<span class="link-color" id="pass-reissue-btn">こちら</span></p>
                 </form>
               </div>
 
@@ -50,8 +106,8 @@
         <img class="login-illust" src="/images/login/login-mypage-illust.png">
       </div>
     </div>
-
 </div>
+*}
 
 <div id="pass-reissue-open">
   <div id="pass-reissue-close"><img src="/images/close-btn.png"></div>
