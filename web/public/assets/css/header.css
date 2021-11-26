@@ -2,7 +2,6 @@
 
 header {
 	height: 120px;
-	background-color: rgba(255,255,255,.9);
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -45,7 +44,6 @@ header .main-logo a {
 
 	header {
 		height: 60px;
-		background-color: rgba(255,255,255,.9);
 	}
 	header .main-logo {
 		width: 50px;

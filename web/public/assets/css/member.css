@@ -36,7 +36,7 @@
 
 .member-list-block {
 	background-color: #F7FAFA;
-	margin-top: 120px;
+	padding: 160px 0px 120px;
 }
 
 .member-list {
@@ -97,6 +97,7 @@
 @media screen and (max-width: 959px) {
 	.member-list-block {
 		margin-top: 0px;
+		padding: 80px 0px 50px;
 	}
 	.member-list-block .container {
 		width: 100%;

@@ -10,12 +10,12 @@ html.is-fixed body {
 }
 
 .kinyu-main {
-	margin-top: 120px;
+	/*margin-top: 120px;*/
 }
 
 @media screen and (max-width: 959px) {
 	.kinyu-main {
-		margin-top: 60px;
+		
 	}
 }
 
@@ -258,7 +258,8 @@ html.is-fixed body {
 
 /* bg */
 .video-bg-conteiner {
-  height: calc(100vh - 120px);
+  /*height: calc(100vh - 120px);*/
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -277,10 +278,13 @@ html.is-fixed body {
 .video-bg-conteiner .title-block {
 	position: absolute;
 	z-index: 1000;
-	top: 80px;
+	top: 150px;
 	left: 50px;
 }
-.video-bg-conteiner .title-block .sub-title {
+.video-bg-conteiner .title-block img {
+	width: 580px;
+}
+/*.video-bg-conteiner .title-block .sub-title {
 	font-size: 2.0rem;
 	margin-bottom: 12px;
 	z-index: 999;
@@ -301,7 +305,7 @@ html.is-fixed body {
   transform: rotate(4deg);
   opacity: .3;
   z-index: 998;
-}
+}*/
 .main-block-inner .about-description-block {
 	position: absolute;
 	z-index: 1000;
@@ -330,8 +334,11 @@ html.is-fixed body {
 		height: 400px;
 	}
 	.video-bg-conteiner .title-block {
-		top: 50px;
-    left: 30px;
+		top: 80px;
+    left: 20px;
+	}
+	.video-bg-conteiner .title-block img {
+		width: 320px;
 	}
 	.video-bg-conteiner .title-block .sub-title {
 		font-size: 1.5rem;
@@ -804,7 +811,7 @@ html.is-fixed body {
 
 /* special-contents */
 .special-contents {
-	padding: 120px 0px 30px;
+	padding: 120px 0px;
 }
 .special-contents-list-el {
 	width: 50%;
@@ -1077,7 +1084,7 @@ html.is-fixed body {
 
 /* イベント詳細 */
 .event-detail {
-	padding: 80px 0px 120px;
+	padding: 160px 0px 120px;
 	background-color: #FAFAEC;
 }
 .event-detail-inner {
@@ -1356,7 +1363,7 @@ html.is-fixed body {
 }
 .report-list-content {
 	background-color: #F7FAFA;
-	padding: 80px 0px 120px;
+	padding: 160px 0px 120px;
 }
 .report-list-content .single-title-block {
 	border-bottom: 1px solid #EDEDED;
@@ -1384,7 +1391,7 @@ html.is-fixed body {
 
 @media screen and (max-width: 959px) {
 	.report-list-content {
-		padding: 40px 0px 60px;
+		padding: 80px 0px 60px;
 	}
 	.secret-icon:before {
 		width: 13px;
@@ -1472,8 +1479,7 @@ html.is-fixed body {
 /* 詳細ページ */
 .kinyu-details-introduction {
 	background-color: #F7FAFA;
-	padding: 80px 0px;
-	margin-top: 120px;
+	padding: 160px 0px 80px;
 }
 .kinyu-details-introduction-inner {
 	display: flex;
@@ -1689,10 +1695,10 @@ html.is-fixed body {
 }
 .report-chack-logo-img,
 .report-chack-logo-img-dummy {
-  width: 100%;
+  height: 100%;
 }
 #check-report.checked a {
-  background: rgba(141, 220, 209, 1.0);
+  background: #f7c3c3;
 }
 /* ログインしていない場合 */
 .no-member-report-block {
@@ -1716,8 +1722,7 @@ html.is-fixed body {
 
 @media screen and (max-width: 959px) {
 	.kinyu-details-introduction {
-		margin-top: 50px;
-		padding: 40px 0px;
+		padding: 80px 0px 40px;
 	}
 	.kinyu-details-introduction-inner {
 		display: block;
@@ -1753,7 +1758,7 @@ html.is-fixed body {
 		font-size: 1.2rem;
 	}
 	.no-member-report-block {
-		padding: 50px 0px;
+		padding: 80px 0px 50px;
 	}
 	.no-member-report-block-inner {
 		width: 92%;

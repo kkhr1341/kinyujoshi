@@ -41,10 +41,15 @@ footer {
 	background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url(/images/social/instagram_icon.png);
+  background-image: url(/images/social/instagram_icon.svg);
 }
 .kinjo-social-list li.social-twitter a {
-  background-image: url(/images/social/twitter_icon.png);
+  background-image: url(/images/social/twitter_icon.svg);
+  padding: 3px 0px;
+  padding-left: 32px;
+}
+.kinjo-social-list li.social-line a {
+  background-image: url(/images/social/line.svg);
 }
 .footer-list {
 	margin-top: 70px;

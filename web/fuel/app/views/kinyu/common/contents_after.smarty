@@ -134,7 +134,7 @@
 				</a>
 			</div>
 			<div class="special-contents-list-el">
-				<a href="/map_kabuto">
+				<a href="/report/search?search_text=[withき]">
 					<div class="row align-items-center">
 						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-withk.svg"></div>
 						<div class="text-box col-6 order-1 order-md-2">
@@ -153,7 +153,7 @@
 
 
 <!-- banner -->
-<div class="banner-contents" id="banner-contents">
+<!-- <div class="banner-contents" id="banner-contents">
 	<div class="main-block-inner container">
 		<ul class="banner-list mx-auto">
 			
@@ -165,7 +165,7 @@
 
 		</ul>
 	</div>
-</div>
+</div> -->
 
 
 

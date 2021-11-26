@@ -88,7 +88,7 @@
   <div id="check-report"{if $stocked === true} class="checked"{/if}>
     <img id="report-chack-img" src="/images/report-chack.png"{if $stocked === true} class="img-checked"{/if}>
     <a href="#" data-code="{$blog.code}">
-      <img class="report-chack-logo-img" src="/images/kinyu-logo-text.png">
+      <img class="report-chack-logo-img" src="/images/report/like.png">
     </a>
   </div>
 {else}

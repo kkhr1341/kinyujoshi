@@ -109,46 +109,51 @@
       <img class="w-100 team-logo" src="/images/about/teams-map.jpg">
     </div>
     <div class="about-team-list">
-      <div class="row no-gutters">
+      <div class="row no-gutters row-eq-height">
         <div class="col-12 col-md-6 about-team-list-el position-relative">
           <img class="team-logo" src="/images/about/member-logo.svg">
-          <div class="about-team-list-el-inner">
-            <p class="about-team-main-title ff-mincho text-center kinjo-color">メンバー<br class="d-block d-md-block">（ごきんじょさん）</p>
+          <div class="about-team-list-el-inner h-100">
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">メンバー<br class="d-block d-md-none">（ごきんじょさん）</p>
             <p class="about-team-description">コミュニティに関わっている皆さん。金融ワカラナイ女子。や、元ワカラナイ女子（金融ワカル女子）を中心とした、お金に前向きに向き合い自由で等身大に生きる女性たち。人生やお金のことをゆるくオープンに話せる仲間たち。</p>
-            <a class="link-color" href="/regist_email">メンバー登録はこちら</a>
+            <a class="link-color main-link" href="/regist_email">メンバー登録はこちら</a>
           </div>
         </div>
         <div class="col-12 col-md-6 about-team-list-el position-relative">
           <img class="team-logo" src="/images/about/omc-logo.svg">
-          <div class="about-team-list-el-inner">
-            <p class="about-team-main-title ff-mincho text-center kinjo-color">オフィシャルメンバー</p>
+          <div class="about-team-list-el-inner h-100">
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">オフィシャルメンバー<br class="d-block d-md-none">（OMC）</p>
             <p class="about-team-description">月額会費という形でコミュニティの存続・繁栄を支えていただきつつ、体験や経験をコミュニティにシェアして貢献するミッションを持つチーム。日本の女性たちの金融リテラシー向上を一緒に目指します。マイページにオフィシャルバッチがつきます。</p>
-            <a class="link-color" href="https://official.kinyu-joshi.jp/">オフィシャルメンバー登録はこちら</a>
+            <a class="link-color main-link" href="https://official.kinyu-joshi.jp/">オフィシャルメンバー登録はこちら</a>
           </div>
         </div>
+      </div>
+      <div class="row no-gutters row-eq-height">
         <div class="col-12 col-md-6 about-team-list-el position-relative">
           <img class="team-logo" src="/images/about/editorial-logo.svg">
-          <div class="about-team-list-el-inner">
+          <div class="about-team-list-el-inner h-100">
             <p class="about-team-main-title ff-mincho text-center kinjo-color">編集部</p>
-            <p class="about-team-description">プロボノとしてコミュニティを応援してくれる心強い皆さん。2021年に実施したクラウドファンディングでは男女問わず多くの方が多くのサポーターさんの支援を受け新しい運営体制になりました。</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 about-team-list-el">
-          <div class="about-team-list-el-inner">
-            <p class="about-team-main-title ff-mincho text-center kinjo-color">サポーターの皆さん</p>
             <p class="about-team-description">コミュニティのエンパワメント役。メンバーさん同士の円滑なコミュニケーションのための女子会の企画や主催、広報などをリードするチーム。メンバーの皆さんの声を代弁する役目もあります。</p>
+            <a class="link-color main-link" href="/regist_email">編集部について詳しくはこちら</a>
           </div>
         </div>
         <div class="col-12 col-md-6 about-team-list-el">
-          <div class="about-team-list-el-inner">
+          <div class="about-team-list-el-inner h-100">
+            <p class="about-team-main-title ff-mincho text-center kinjo-color">企業やサポーターのみなさん</p>
+            <p class="about-team-description">コミュニティを応援してくれる心強いみなさん。プロボノや相互連携、相互協力、コンテンツ共同企画・制作など様々な形で支えてくれています。<a href="https://readyfor.jp/projects/kinjo-challenge" target="_blank" class="link-color">クラウドファンディング</a>では男女問わず多くの方に支援していただきました。</p>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters row-eq-height">
+        <div class="col-12 col-md-6 about-team-list-el">
+          <div class="about-team-list-el-inner h-100">
             <p class="about-team-main-title ff-mincho text-center kinjo-color">サポートデスク</p>
-            <p class="about-team-description">メンバーさんからのお問い合わせ対応や、モヤモヤのフォローアップをするチーム。お金のこと、もやもや、どこに聞いたらいいの？そんな時にも頼れる、サポート役です。</p>
+            <p class="about-team-description">メンバーさんからのお問い合わせ対応や、モヤモヤのフォローアップをするチーム。お金のこと、もやもや、どこに聞いたらいいの？そんな時にも頼れる、サポート役です。何か気になることがあればご連絡ください♪（support@kinyu-joshi.jp）</p>
           </div>
         </div>
         <div class="col-12 col-md-6 about-team-list-el">
-          <div class="about-team-list-el-inner">
+          <div class="about-team-list-el-inner h-100">
             <p class="about-team-main-title ff-mincho text-center kinjo-color">事務局/本部</p>
-            <p class="about-team-description">事務的な手続き、webサイトやコミュニティの全体管理、マネジメントを行うチーム。福利厚生の整備、金融機関や法人との連携を担う。メンバーと企業や社会とのブリッジ役。</p>
+            <p class="about-team-description">webサイトのデザインやコミュニティの全体管理、マネジメントを行うチーム。福利厚生の整備、金融機関や法人との連携を担う。メンバーと企業や社会とのブリッジ役になります。</p>
           </div>
         </div>
       </div>

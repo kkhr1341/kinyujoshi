@@ -93,7 +93,7 @@
 }
 .diagnosticchart-intro-image img {
 	width: 100%;
-    margin-top: 50px
+  margin-top: 160px
 }
 	
 .btn-yes {
@@ -493,7 +493,7 @@
 
 @media screen and (max-width: 1024px) {
 	.diagnosticchart-intro-container {
-		padding-bottom: 50px;
+		padding: 80px 15px 50px;
 	}
 	.diagnosticchart-intro-type-img {
     	margin: 60px 0 20px;
