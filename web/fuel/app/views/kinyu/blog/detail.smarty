@@ -95,7 +95,7 @@
   <div class="check-report-dummy">
     <img class="report-chack-img-dummy" src="/images/report-chack.png">
     <p>
-      <img class="report-chack-logo-img-dummy" src="/images/kinyu-logo-text.png">
+      <img class="report-chack-logo-img-dummy" src="/images/like.png">
     </p>
   </div>
 {/if}
