@@ -6,7 +6,7 @@
 
   <div class="main-img-box-container">
 
-    <div class="pc main-img-box clear">
+    <div class="main-img-box d-none d-lg-block clear">
       <div class="main-img-box-left" style="background:url(/images/myway/bg/main-bg.png) 65% 0px / cover no-repeat;"></div>
       <div class="main-img-box-right">
         <div class="test-bg"></div>
@@ -18,54 +18,29 @@
         </ul>
       </div>
     </div>
-    <div class="sp main-img-box">
+    <div class="d-block d-lg-none main-img-box">
       <img style="width:100%;" src="/images/myway/bg/main-bg-sp.png">
       <img class="main-logo" src="/images/myway/title/main-title-sp.png">
     </div>
-    <img class="pc main-logo" src="/images/myway/title/main-title.png">
+    <img class="d-none d-lg-block main-logo" src="/images/myway/title/main-title.png">
   </div>
 
   <div class="myway-description">
     <div class="inner">
-      <h2 class="pc intoduction-title"><span>お金と向き合って決めた、わたしはこう生きる。</span></h2>
-      <h2 class="sp intoduction-title"><span>お金と向き合って決めた、<br>わたしはこう生きる。</span></h2>
-      <p class="pc">
-        きんゆう女子。コミュニティでは、<br>
-        日々のお金の使い方、キャリアアップの方法、初めての投資、<br>
-        未来の年金のことまで幅広く勉強しています。
-        <span style="display: block;height: 12px;"></span>
-        まだワカラナイこと、たくさん。<br>
-        もしかしたら、全部は知らなくてもいいのかも…。
-        <span style="display: block;height: 12px;"></span>
-        でも、金融にむきあっていくうちに気づきました。<br>
-        豊かに生きるための第一歩は「自分を知ること」。
-        <span style="display: block;height: 12px;"></span>
-        どんな風になりたい？<br>
-        どんな人生を送りたい？<br>
-        そして、わたしはどんな人なの？
-        <span style="display: block;height: 12px;"></span>
-        そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。<br>
-        本当の意味で無駄遣いがなくなるはず。
-        <span style="display: block;height: 12px;"></span>
-        このページでは、「わたしを知ること」をテーマに情報を発信しています。
-      </p>
-      <p class="sp">
-        きんゆう女子。コミュニティでは、<br>
-        日々のお金の使い方、キャリアアップの方法、初めての投資、未来の年金のことまで幅広く勉強しています。
-        <span style="display: block;height: 12px;"></span>
-        まだワカラナイこと、たくさん。<br>
-        もしかしたら、全部は知らなくてもいいのかも…。
-        <span style="display: block;height: 12px;"></span>
-        でも、金融にむきあっていくうちに気づきました。
-        豊かに生きるための第一歩は「自分を知ること」。
-        <span style="display: block;height: 12px;"></span>
-        どんな風になりたい？<br>
-        どんな人生を送りたい？<br>
-        そして、わたしはどんな人なの？
-        <span style="display: block;height: 12px;"></span>
-        そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。
-        本当の意味で無駄遣いがなくなるはず。
-        <span style="display: block;height: 12px;"></span>
+      <h2 class="intoduction-title ff-mincho"><span>お金と向き合って決めた、<br class="sp">わたしはこう生きる。</span></h2>
+      <p>
+        きんゆう女子。コミュニティでは、<br class="pc">
+        日々のお金の使い方、キャリアアップの方法、初めての投資、<br class="pc">
+        未来の年金のことまで幅広く勉強しています。<br><br>
+        まだワカラナイこと、たくさん。<br class="pc">
+        もしかしたら、全部は知らなくてもいいのかも…。<br><br>
+        でも、金融にむきあっていくうちに気づきました。<br class="pc">
+        豊かに生きるための第一歩は「自分を知ること」。<br><br>
+        どんな風になりたい？<br class="pc">
+        どんな人生を送りたい？<br class="pc">
+        そして、わたしはどんな人なの？<br><br>
+        そこがわかってこそ、お金の使い方や増やし方も見えてくるし、自分で選ぶこともできる。<br class="pc">
+        本当の意味で無駄遣いがなくなるはず。<br><br>
         このページでは、「わたしを知ること」をテーマに情報を発信しています。
       </p>
     </div>
@@ -82,15 +57,15 @@
   <!-- くつ -->
   <div id="myway-shoes" class="myway-content-list-el clear">
     <div class="inner clear">
-      <div class="sp edition"><img src="/images/myway/title/sp/title-shoes.png"></div>
+      <div class="d-block d-lg-none edition"><img src="/images/myway/title/sp/title-shoes.png"></div>
       <div class="img-box">
         <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/IMG_4553.mp4" playsinline muted autoplay loop></video>
         <div class="video-filter"></div>
       </div>
       <div class="text-box">
-        <div class="pc edition"><img src="/images/myway/title/title-shoes.png"></div>
-        <p class="pc text-box-title">毎日を豊かにするために、ちゃんと"靴"を選んでる…？</p>
-        <p class="sp text-box-title">毎日を豊かにするために、<br>ちゃんと"靴"を選んでる…？</p>
+        <div class="d-none d-lg-block edition"><img src="/images/myway/title/title-shoes.png"></div>
+        <p class="d-none d-lg-block text-box-title ff-mincho">毎日を豊かにするために、<br>ちゃんと"靴"を選んでる…？</p>
+        <p class="d-block d-lg-none text-box-title ff-mincho">毎日を豊かにするために、<br>ちゃんと"靴"を選んでる…？</p>
         <p class="description">朝、出かけるときにどんな靴を選びますか？ よく足元をみると、その人が分かると言われます。"靴"という細かい部分に気を配ることができているか、サイズはもちろん、時と所と場合に合わせて正しい靴を選んでいるか「きんゆう」の観点から考えてみました。また、今回そのヒントを探るべくお話を聞きに行ったのは「自分の足に合う靴がない」という女性の悩みを解決するオーダーメイドシューズブランド「KiBERA」の福谷社長です。</p>
         <a href="/report/FxKhYh" class="myway-to-link">くつ編のページはこちら</a>
       </div>
@@ -100,14 +75,14 @@
   <!-- コスメ編 -->
   <div id="myway-cosmetics" class="myway-content-list-el myway-content-list-el-even clear">
     <div class="inner clear">
-      <div class="sp edition"><img src="/images/myway/title/sp/title-cosmetics.png"></div>
+      <div class="d-block d-lg-none edition"><img src="/images/myway/title/sp/title-cosmetics.png"></div>
       <div class="img-box">
         <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/58399.mp4" playsinline muted autoplay loop></video>
       </div>
       <div class="text-box">
-        <div class="pc edition"><img src="/images/myway/title/title-cosmetics.png"></div>
-        <p class="pc text-box-title">コスメポーチや、おうちのメイクBOXきれいになってる…？</p>
-        <p class="sp text-box-title">コスメポーチや、おうちの<br>メイクBOXきれいになってる…？</p>
+        <div class="d-none d-lg-block edition"><img src="/images/myway/title/title-cosmetics.png"></div>
+        <p class="d-none d-lg-block text-box-title ff-mincho">コスメポーチや、<br>おうちのメイクBOXきれいになってる…？</p>
+        <p class="d-block d-lg-none text-box-title ff-mincho">コスメポーチや、おうちの<br>メイクBOXきれいになってる…？</p>
         <p class="description">鏡が曇っているシャドウやチーク、あんまり使っていない化粧品、どれぐらいお持ちですか？ 毎日、鏡で見て知ってるつもりの自分の顔。毎日、なんとなくやっているメイク方法。なりたい自分のイメージにあっていますか？改めてコスメやメイクを考える機会をつくってみませんか。このテーマでは、身近なコスメと「きんゆう」のつながりも探ってみたいと思います。きれいのお金、上手に使いましょう。</p>
         <a href="/report/fMvmMk" class="myway-to-link">コスメ編のページはこちら</a>
       </div>
@@ -117,14 +92,14 @@
   <!-- ジュエリー編 -->
   <div id="myway-jewelry" class="myway-content-list-el clear">
     <div class="inner clear">
-      <div class="sp edition"><img src="/images/myway/title/title-jewelry.png"></div>
+      <div class="d-block d-lg-none edition"><img src="/images/myway/title/title-jewelry.png"></div>
       <div class="img-box">
         <video src="https://s3-ap-northeast-1.amazonaws.com/kinyu-joshi/video/1080p1.mp4" playsinline muted autoplay loop></video>
         <div class="video-filter"></div>
       </div>
       <div class="text-box">
-        <div class="pc edition"><img src="/images/myway/title/title-jewelry.png"></div>
-        <p class="text-box-title">わたしらしい美しさは、<br>きれいな笑顔とジュエリーで完成する。</p>
+        <div class="d-none d-lg-block edition"><img src="/images/myway/title/title-jewelry.png"></div>
+        <p class="text-box-title ff-mincho">わたしらしい美しさは、<br>きれいな笑顔とジュエリーで完成する。</p>
         <p class="description">きれいな笑顔とジュエリーで「わたしの美しさ」を育てていきませんか？無駄な出費を抑えたら本物のジュエリーにも挑戦したい。でも素敵なジュエリーを持っていても笑顔がきれいじゃなかったら？がっかりしてしまうかも？今回の「わたしを知る」では、素敵な私でいるためにジュエリーとオーラルケアについて考えてみました。</p>
         <a href="/report/dtov0W" class="myway-to-link">ジュエリー編のページはこちら</a>
         {*<p class="myway-to-link not-open">ジュエリー編のページはこちら</p>

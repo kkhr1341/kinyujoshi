@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
 
-<div class="kinyu-list-block kinyu-map-block-container">
+<div class="kinyu-list-block kinyu-map-single-container kinyu-map-ooedo">
 	<div class="kinyu-map-block">
 
     <img class="kinyu-map-block-img pc" src="/images/kinyu_map/ooedo.jpg" usemap="#ImageMap" alt="" />
@@ -19,8 +19,7 @@
   </div> -->
   <div class="kinyu-map-joshikai-block">
     <div class="kinyu-top-list">
-      <h3 class="kinyu-top-main-title pc">大江戸温泉での女子会レポートはこちら♪</h3>
-      <h3 class="kinyu-top-main-title sp">大江戸温泉での<br>女子会レポートはこちら♪</h3>
+      <h3 class="kinyu-top-main-title ff-mincho kinjo-color">大江戸温泉での<br class="sp">女子会レポートはこちら♪</h3>
       <p class="list-title">【2回目(伊東編)】</p>
       <ul class="clear">
         <li>
@@ -71,6 +70,9 @@
 </div>
 
 <style>
+.kinyu-map-ooedo {
+  background-color: #fbf4f4;
+}
 .kinyu-map-block {
   line-height: 0;
   width: 1050px;

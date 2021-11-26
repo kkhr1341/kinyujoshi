@@ -13,7 +13,7 @@
 .main-img-box-container {
   height: 600px;
   position: relative;
-  margin-top: 130px;
+  /*margin-top: 130px;*/
 }
 .main-img-box-container .main-logo {
   width: 500px;
@@ -98,15 +98,14 @@
   text-align: center;
 }
 .myway-introduction .myway-description p {
-  font-size: 13px;
-  line-height: 26px;
+  font-size: 1.4rem;
   width: 800px;
   margin: 0 auto;
 }
 .intoduction-title {
-  font-size: 24px;
-  line-height: 36px;
-  margin-bottom: 36px;
+  font-size: 2.8rem;
+  line-height: 50px;
+  margin-bottom: 40px;
 }
 .intoduction-title span {
   border-bottom: 1px solid gray;
@@ -156,7 +155,6 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-content-list {
   margin: 0 auto;
-  background: #f9f9f9;
 }
 .myway-content-list-el .inner {
   width: 88%;
@@ -199,9 +197,7 @@
   margin: 0 auto;
 }
 .myway-content-list-el .text-box .text-box-title {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: bold;
+  font-size: 2.2rem;
   padding: 12px 0px;
   text-align: center;
 }
@@ -210,7 +206,7 @@
   line-height: 24px;
 }
 .myway-content-list-el .text-box .myway-to-link {
-  font-size: 13px;
+  font-size: 1.5rem;
   width: 360px;
   display: block;
   margin: 0 auto;
@@ -291,7 +287,7 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-report-content {
   width: 100%;
-  padding-top: 130px;
+  padding-top: 160px;
 }
 .myway-header-content {
 }
@@ -300,15 +296,15 @@
   padding: 24px 0px 40px;
 }
 .myway-header-content .main-tumb-block {
-  width: 1000px;
+  /*width: 1000px;*/
   margin: 0 auto;
   padding: 50px 0px;
   box-sizing: border-box;
   position: relative;
 }
 .myway-header-content .main-tumb-block .video-block {
-  float: left;
-  width: 620px;
+  /*float: left;
+  width: 620px;*/
   height: 340px;
   overflow: hidden;
   position: relative;
@@ -319,9 +315,9 @@
   position: absolute;
 }
 .myway-header-content .main-tumb-block .title-block {
-  float: right;
+  /*float: right;
   width: 380px;
-  padding: 0px 0px 0px 36px;
+  padding: 0px 0px 0px 36px;*/
   box-sizing: border-box;
   display: table;
   height: 340px;
@@ -332,18 +328,18 @@
   height: 100%;
 }
 .myway-header-content .main-tumb-block .title-block .main-description {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: bold;
-  padding: 4px 0px 12px;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 10px 0px 12px;
   text-align: center;
 }
 #myway-header-jewelry.myway-header-content .main-tumb-block .title-block .main-description {
   padding: 12px 0px 12px;
 }
 .myway-header-content .main-tumb-block .title-block p {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 1.3rem;
+  margin-top: 12px;
+  padding-left: 28px;
 }
 .myway-header-content .main-tumb-block .title-block img {
   width: 280px;
@@ -403,8 +399,6 @@
   width: 60%;
 }
 .myway-report-content .report-detail-main h2 {
-  font-size: 18px;
-  line-height: 26px;
   border-bottom: 1px solid #444;
 }
 .myway-report-content .report-detail-main h2:before {
@@ -660,7 +654,6 @@
 /* coming-soon */
 .coming-soon {
   margin-top: 24px;
-  margin-bottom: 52px;
 }
 .coming-soon li {
   font-size: 12px;
@@ -690,10 +683,10 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-report-content {
   width: 100%;
-  padding-top: 10px;
+  padding-top: 60px;
 }
 .myway-report-content-title {
-  width: 52%;
+  width: 68%;
   margin: 0 auto;
   padding: 16px 0px 24px;
 }
@@ -704,9 +697,9 @@
     width: 100%;
 }
 .myway-header-content {
-  width: 88%;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 0px;
+  padding: 0px 15px
 }
 .myway-header-content h2 {
   width: 60%;
@@ -733,15 +726,20 @@
   top: auto;
   right: auto;
   margin-top: 0px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   text-align: center;
   height: auto;
   float: none;
-  padding: 0px 0px;
+}
+.myway-header-content .title-block-inner-title {
+  width: 220px;
+  margin-bottom: 12px;
 }
 .myway-header-content .main-tumb-block .title-block p {
   font-size: 11px;
-  line-height: 18px;
+  line-height: 20px;
+  padding-left: 0px;
+  margin-top: 0px;
 }
 .myway-header-content .main-tumb-block .title-block img {
   width: 72%;
@@ -833,8 +831,11 @@
   margin-bottom: 12px;
 }
 .myway-header-content .main-tumb-block .title-block .main-description {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
+  width: 100%;
+  margin-bottom: 0px;
+  margin-top: 16px;
 }
 
 }

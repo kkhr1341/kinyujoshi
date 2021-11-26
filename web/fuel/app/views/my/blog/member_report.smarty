@@ -1,47 +1,71 @@
 <div class="admin-normal-container">
   <div class="admin-normal-inner clear">
-
     {$my_side}
+    <div class="admin-normal-main my-report-block-index member-only-report">
+      <div class="my-maincontent-block report-list">
+          <div class="mypage-main-title-block text-left">
+            <p class="mypage-deco-title ff-decoration font-italic kinjo-color">Member only Report</p>
+            <p class="mypage-main-title ff-mincho">メンバー限定レポート</p>
+          </div>
+          <ul class="row">
+            {foreach from=$top_blogs2 item=blog name=loopname}
+              <li class="col-12 col-md-6" {if $blog.pr == 1} class="pr"{/if}>
+                <a class="js-track" href="/report/{$blog.code}" data-category="sp-top-link" data-action="click" data-value="1">
+                  <div class="report-list-el">
+                    <div class="img-box position-relative" style="background: url({$blog.main_image}) center center / cover no-repeat;">
+                      {if $blog.new == true}
+                        <p class="new-icon"><img class="w-100" src="/images/blog/new_icon.png"></p>
+                      {/if}
+                      {if $blog.pr == 1}
+                        <!-- PR用イメージ挿入箇所 -->
+                        <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
+                      {/if}
+                    </div>
 
-    <div class="admin-normal-main">
-      <!-- メンバー限定レポート -->
-      <div class="my-maincontent-block my-member-report-block my-member-report-block-detail">
-        <p class="my-content-title"><span>メンバー限定レポート</span></p>
-        <ul>
-          {foreach from=$blogs item=blog name=loopname}
-
-          <li class="clear">
-            <a href="/report/{$blog.code}" class="clear" target="_blank">
-              <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
-              <div class="text-box">
-                <div class="category-text">
-                  {if $blog.kind == "女子会レポート"}
-                    <p>女子会レポート</p>
-                  {else if $blog.kind == "イベントレポート"}
-                    <p>イベントレポート</p>
-                  {else if $blog.kind == "取材レポート"}
-                    <p>取材レポート</p>
-                  {else if $blog.kind == "イベント告知"}
-                    <p>イベント告知</p>
-                  {else if $blog.kind == "コラム"}
-                    <p>コラム</p>
-                  {else if $blog.kind == "きんゆう散歩"}
-                    <p>きんゆう散歩</p>
-                  {else}
-                    <p>レポート</p>
-                  {/if}
-                </div>
-                <p class="title-text">{$blog.title}</p>
-                <p class="description-text">{$blog.description}</p>
-              </div>
-            </a>
-          </li>
-          {/foreach}
-        </ul>
-      </div>
+                    <div class="text-box">
+                      <div class="kinyu-report-kind">
+                        {if $blog.kind == "女子会レポート"}
+                          <p class="kinjo-color">女子会レポート</p>
+                        {else if $blog.kind == "イベントレポート"}
+                          <p class="kinjo-color">イベントレポート</p>
+                        {else if $blog.kind == "取材レポート"}
+                          <p class="kinjo-color">取材レポート</p>
+                        {else if $blog.kind == "イベント告知"}
+                          <p class="kinjo-color">イベント告知</p>
+                        {else if $blog.kind == "コラム"}
+                          <p class="kinjo-color">コラム</p>
+                        {else if $blog.kind == "きんゆう散歩"}
+                          <p class="kinjo-color">きんゆう散歩</p>
+                        {else}
+                          <p class="kinjo-color">レポート</p>
+                        {/if}
+                      </div>
+                      <h3 class="report-title ff-mincho text-newline">
+                        {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+                        {$blog.title}
+                      </h3>
+                      <div class="report-author">
+                        {if isset($blog.profile_image) && isset($blog.author_name)}
+                        <img class="report-author-thumbnail" src="{$blog.profile_image}">
+                        <div class="report-author-info">
+                          <div class="report-author-info-name">{$blog.author_name}</div>
+                        </div>
+                        {/if}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {/foreach}
+          </ul>
+        </div>
     </div>
   </div>
 </div>
+
+
+
+
 <script>
 $(function() {
 

@@ -62,7 +62,7 @@
 
 /* きんゆう女子。が大事にしていること */
 .joshikai-policy {
-  padding-top: 80px;
+  padding-top: 160px;
   background: linear-gradient(-225deg, #f2fbf8 0%, #fffafe 100%);
 }
 .joshikai-policy-container {
@@ -205,6 +205,25 @@
   font-size: 18px;
   font-weight: normal;
 }
+.joshikai-policy-form-block {
+  width: 800px;
+}
+.joshikai-policy-form-el {
+  margin-bottom: 32px;
+}
+.joshikai-policy-form-el label {
+  font-size: 1.6rem;
+  border-left: 4px solid #8ddcd1;
+  margin-bottom: 8px;
+  margin-left: 1px;
+  padding-left: 6px;
+  width: 100%;
+  text-align: left;
+}
+.joshikai-policy-form-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
 .regist-add-form-edit-title span {
   font-size: 11px;
   line-height: 11px;
@@ -252,6 +271,11 @@
 }
 .joshikai-policy .form-control {
   background: #ecf3f2;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.3rem;
+  box-sizing: border-box;
+  height: auto;
 }
 .btn-sub-text {
   font-size: 12px;
@@ -264,7 +288,7 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   スマートフォン
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 959px) {
 
 }
 
@@ -277,7 +301,7 @@
     padding-bottom: 0px;
   }
   .joshikai-policy {
-    padding-top: 32px;
+    padding-top: 80px;
   }
   .inquiry-counter {
     width: 88%;
@@ -396,6 +420,9 @@
     position: absolute;
     bottom: -12px;
     right: -18px;
+  }
+  .joshikai-policy-form-block {
+    width: 100%;
   }
 }
 

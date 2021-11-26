@@ -2,12 +2,15 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-map-main-container {
+  padding: 160px 0px 180px;
+}
+.kinyu-map-single-container {
+  padding: 0px 0px 150px;
+}
 .kinyu-map-block {
   line-height: 0;
-  width: 1000px;
-  margin: 0 auto;
   position: relative;
-  padding: 60px 0px 150px;
 }
 #map {
   height: 600px;
@@ -41,24 +44,21 @@
   width: 100%;
 }
 .description-block {
-  width: 650px;
+  width: 800px;
   margin: 0 auto;
   border-left: 1px solid #8ddcd1;
   border-right: 1px solid #8ddcd1;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding: 20px 0px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 .main-map-description {
-  text-align: center;
-  font-size: 18px;
-  line-height: 18px;
-  color: #77cbc0;
+  font-size: 2.4rem;
 }
 .sub-map-description {
   text-align: center;
   margin-top: 16px;
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 1.4rem;
 }
 .map-el-title {
   text-align: center;
@@ -87,7 +87,7 @@
 .map-container .map-illust01 {
 	position: absolute;
   top: 65px;
-  right: -109px;
+  right: -80px;
   width: 200px;
 	-webkit-animation-name: fadein;
   animation-name: mapillust;
@@ -134,9 +134,9 @@
 }
 .map-container .illust-sun {
   position: absolute;
-  top: -105px;
-  right: -109px;
-  width: 100px;
+  top: -150px;
+  right: -14px;
+  width: 120px;
 }
 .description-block .map-illust01 {
   display: none;
@@ -220,7 +220,7 @@
   width: 1200px;
   height: auto;
   margin: 0 auto;
-  padding: 80px 0px;
+  padding: 100px 0px;
 }
 .kabuto-map-block-inner img {
   width: 100%;
@@ -250,22 +250,26 @@
   font-size: 14px;
   margin-bottom: 12px;
 }
-.kinyu-map-block-container .kinyu-top-list ul {
+.kinyu-map-block-container .kinyu-top-list ul,
+.kinyu-map-single-container .kinyu-top-list ul {
   font-size:0;
   letter-spacing: -40px;
   text-align: center;
 }
-.kinyu-map-block-container .kinyu-top-list li {
+.kinyu-map-block-container .kinyu-top-list li,
+.kinyu-map-single-container .kinyu-top-list li {
   display: inline-block;
   float: none;
   letter-spacing: normal;
   margin-bottom: 0%;
   margin-right: 2%;
 }
-.kinyu-map-block-container .kinyu-top-list li:nth-child(even) {
+.kinyu-map-block-container .kinyu-top-list li:nth-child(even),
+.kinyu-map-single-container .kinyu-top-list li:nth-child(even) {
   margin-right: 0%;
 }
-.kinyu-map-block-container .kinyu-top-list-title {
+.kinyu-map-block-container .kinyu-top-list-title,
+.kinyu-map-single-container .kinyu-top-list-title {
   height: auto;
   font-size: 12px;
   line-height: 18px;
@@ -289,16 +293,99 @@
   position: absolute;
   right: 0;
 }
-.kinyu-map-block-container .kinyu-top-list:last-child .to-special-site {
+.kinyu-map-block-container .kinyu-top-list:last-child .to-special-site,
+.kinyu-map-single-container .kinyu-top-list:last-child .to-special-site {
   background: #f57d80;
 }
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  きんゆう散歩@広島
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+  .description-block {
+    position: relative;
+    border: none;
+  }
+  .hirokun {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    max-width: 70px;
+  }
+  .hirokun-sp {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    max-width: 70px;
+}
+  .kinyu_sanpo_archives {
+    max-width: 1000px;
+    margin: 56px 0;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .kinyu_sanpo_archives li {
+    margin-bottom: 32px;
+  }
+  .kinyu_sanpo_archives li img{
+    max-width: 300px;
+    vertical-align: bottom;
+  }
+  .kinyu_sanpo_archives p {
+    margin-top: 8px;
+    text-align: center;
+  }
+  .kinyu_sanpo_archives a:hover {
+    opacity: .6;
+    transition: .5s;
+  }
+  .banner-box {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .hirogin-banner img{
+    max-width: 380px;
+    margin: 16px 0;
+  }
+  .fadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 2s;
+}
+.map_last {
+    padding-bottom: 0px;
+    transition: .5s;
+}
+
+@media screen and (max-width: 768px) {
+.sub-map-description {
+    padding: 0px 24% 0px 20px;
+}
+.description-block {
+  position: relative;
+  border: none;
+  margin-bottom: 50px;
+}
+.banner-box {
+    text-align: center;
+    margin-bottom: 56px;
+    width: 92%;
+    margin: 0 auto;
+}
+.hirogin-banner img{
+  width: 90%;
+}
+
+}
+
+
 
 /* ----------------------------------
     スマートフォン＆タブレット
 ---------------------------------- */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 959px) {
 .kinyu-map-main-container {
-  padding: 0px 0% 50px!important;
+  padding: 0px 0% 100px!important;
 }
 .kinyu-map-main-container .kinyu-map-block {
   padding: 0px 0px 0px;
@@ -313,14 +400,14 @@
 .description-block {
   width: 92%;
   margin-top: 32px;
-  margin-bottom: 75px;
+  margin-bottom: 90px;
   position: relative;
   padding: 8px 0px;
 }
 .main-map-description {
   font-size: 16px;
   line-height: 16px;
-  padding: 0px 20% 0px 20px;
+  padding: 0px 20% 0px 8px;
   text-align: left;
 }
 .sub-map-description {
@@ -328,7 +415,7 @@
   margin-top: 12px;
   font-size: 10px;
   line-height: 20px;
-  padding: 0px 20% 0px 20px;
+  padding: 0px 27% 0px 8px;
   text-align: left;
 }
 #map {
@@ -336,11 +423,14 @@
 }
 .description-block .map-illust01 {
   display: block;
-  width: 145px;
+  width: 125px;
   position: absolute;
   right: -22px;
-  bottom: -10px;
+  bottom: -40px;
   transform: rotate(6deg);
+}
+.map-container .illust-sun {
+  display: none;
 }
 .map-container .map-illust01 {
   display: none;
@@ -426,6 +516,7 @@
   margin: 0 auto;
   padding-bottom: 0px;
   margin-top: 32px;
+  margin-bottom: 50px;
   transition: .5s;
 }
 .map_last img { 
@@ -488,7 +579,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 0px 0px 0px;
+  padding: 80px 0px 0px;
 }
 .kabuto-map-block-inner img {
   width: 100%;
@@ -515,6 +606,33 @@
 }
 
 
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  タブレットのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width:481px) and ( max-width:959px) {
+
+#map {
+  height: 500px;
+}
+.description-block {
+  width: 80%;
+}
+.main-map-description {
+  font-size: 20px;
+  line-height: 20px;
+}
+.sub-map-description {
+  font-size: 13px;
+}
+.description-block .map-illust01 {
+  width: 190px;
+  right: -50px;
+  bottom: -60px;
+}
+
+
+}
 
 
 

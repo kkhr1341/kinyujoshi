@@ -9,15 +9,9 @@ class Controller_Kinyu_Myway extends Controller_Kinyubase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/myway/og_myway.jpg';
         $this->template->description = 'わたしたち、きんゆう女子。は、金融にむきあっていくうちに気づきました。豊かに生きるための第一歩は「自分を知ること」。このページでは、「わたしを知ること」をテーマに情報を発信していきます。';
 
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-
-        if (Agent::is_mobiledevice()) {
-            $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
-            $this->template->sp_top_after = View::forge('kinyu/common/sp_top_after.smarty', $this->data);
-        }
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
+        $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/myway/index.smarty', $this->data);
     }
 }

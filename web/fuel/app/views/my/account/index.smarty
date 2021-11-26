@@ -5,7 +5,11 @@
 
         <div class="admin-normal-main">
 
-            <p class="my-content-title"><span>アカウント設定</span></p>
+            <!-- <p class="my-content-title"><span>アカウント設定</span></p> -->
+            <div class="mypage-main-title-block text-left">
+          <p class="mypage-deco-title ff-decoration font-italic kinjo-color">My Account</p>
+          <p class="mypage-main-title ff-mincho">マイアカウント</p>
+        </div>
 
             <div class="admin-account-el">
                 <p class="admin-account-title admin-account-title1">クレジットカード管理</p>

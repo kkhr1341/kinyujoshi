@@ -1,32 +1,20 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/kinyu/campaign/kinyu_map.css">
 
-<div class="kinyu-list-block kinyu-map-main-container">
-  <div class="kinyu-map-block">
-    <!-- <h2 class="kinyu-map-title"><img src="/images/kinyu_map/kinyu-map-title.png"></h2> -->
+<div class="kinyu-map-main-container">
+  <div class="kinyu-map-block container">
     <h2 class="kinyu-map-title">
-      <img src="/images/kinyu_map/main-img.jpg" class="pc">
-      <img src="/images/kinyu_map/main-img_sp.jpg" class="sp">
+      <img src="/images/kinyu_map/main-img.jpg" class="d-none d-md-block">
+      <img src="/images/kinyu_map/main-img_sp.jpg" class="d-block d-md-none">
     </h2>
     <div class="description-block">
-      <p class="main-map-description">きんゆう散歩って？</p>
-      <p class="sub-map-description pc">
-      金融や経済ってあまり目に見えないけれど、<br>実は身の回りには金融・経済に関わることがたくさん。
-      <span style="height: 12px;display: block;"></span>
-      ゆるりと旅する感覚で、金融を見たり、触れたり、考えてみよう。<br>
-      世界にある金融が見えると、ぐっと金融が楽しくなるかも♪
-      <span style="height: 12px;display: block;"></span>
-      このページでは、金融に関わるスポットを更新していきます。<br>
+      <p class="main-map-description ff-mincho kinjo-color text-lg-center">きんゆう散歩って？</p>
+      <p class="sub-map-description">
+      金融や経済ってあまり目に見えないけれど、<br class="pc">
+      実は身の回りには金融・経済に関わることがたくさん。<br><br>
+      ゆるりと旅する感覚で、金融を見たり、触れたり、考えてみよう。<br class="pc">
+      世界にある金融が見えると、ぐっと金融が楽しくなるかも♪<br><br>
+      このページでは、金融に関わるスポットを更新していきます。<br class="pc">
       あなたのオススメの金融・金運スポットがありましたら、ぜひ教えてください♪
-      </p>
-      <p class="sub-map-description sp">
-      金融や経済ってあまり目に見えないけれど、実は身の回りには金融・経済に関わることがたくさん。
-      <span style="height: 10px;display: block;"></span>
-      ゆるりと旅する感覚で、金融を見たり、触れたり、考えてみよう。世界にある金融が見えると、ぐっと金融が楽しくなるかも♪
-      <span style="height: 10px;display: block;"></span>
-      このページでは、金融に関わるスポットを<br>
-      更新していきます。あなたのオススメの<br>
-      金融・金運スポットがありましたら、<br>
-      ぜひ教えてください♪
       </p>
       <img class="map-illust01" src="/images/kinyu_map/map-01illust.png">
     </div>

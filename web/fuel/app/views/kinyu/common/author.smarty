@@ -1,42 +1,43 @@
-<div class="report-writer clear">
-  <h3 class="">このレポートを書いた人</h3>
-  <div class="left-box">
-    <div class="report-writer-img-wrapper" style="background-image: url({$profile_image}); background-position: center center; background-size: cover;"></div>
-  </div>
-  <div class="report-writer-profile-wrapper">
-    <p class="writer-profile-top"><span class="writer-position">{$position}</span><span class="writer-name">{$name}</span></p>
-    <p class="writer-profile-text">{$introduction|nl2br}</p>
-    <div class="author-footer-social-list" style="padding-top: 28px;">
-      <ul>
-        {if isset($website) && !empty($website)}
-        <li>
-          <a href="{$website}" target="_blank">
-            <img src="/images/social/web_icon.png">
-          </a>
-        </li>
-        {/if}
-        {if isset($instagram) && !empty($instagram)}
-        <li>
-          <a href="{$instagram}" target="_blank">
-            <img src="/images/social/instagram_icon.png">
-          </a>
-        </li>
-        {/if}
-        {if isset($twitter) && !empty($twitter)}
-        <li>
-          <a href="{$twitter}" target="_blank">
-            <img src="/images/social/twitter_icon.png">
-          </a>
-        </li>
-        {/if}
-        {if isset($facebook) && !empty($facebook)}
-        <li>
-          <a href="{$facebook}" target="_blank">
-            <img src="/images/social/fb_icon.png">
-          </a>
-        </li>
-        {/if}
-      </ul>
+<div class="report-writer">
+  <div class="report-writer-inner">
+    <div class="img-box">
+      <div class="report-writer-img-wrapper" style="background-image: url({$profile_image}); background-position: center center; background-size: cover;"></div>
+    </div>
+    <div class="report-writer-profile-wrapper">
+      <p class="writer-profile-top"><span class="writer-position">{$position}</span><span class="writer-name ff-mincho">{$name}</span></p>
+      <p class="writer-profile-text">{$introduction|nl2br}</p>
+      <div class="author-footer-social-list">
+        <ul class="d-flex align-items-center">
+          {if isset($website) && !empty($website)}
+          <li class="website">
+            <a href="{$website}" target="_blank" class="d-block">
+              <img src="/images/social/web_icon.svg">
+            </a>
+          </li>
+          {/if}
+          {if isset($instagram) && !empty($instagram)}
+          <li>
+            <a href="{$instagram}" target="_blank" class="d-block">
+              <img src="/images/social/instagram_icon.svg">
+            </a>
+          </li>
+          {/if}
+          {if isset($twitter) && !empty($twitter)}
+          <li>
+            <a href="{$twitter}" target="_blank" class="d-block">
+              <img src="/images/social/twitter_icon.svg">
+            </a>
+          </li>
+          {/if}
+          {if isset($facebook) && !empty($facebook)}
+          <li>
+            <a href="{$facebook}" target="_blank" class="d-block">
+              <img src="/images/social/fb_icon.svg">
+            </a>
+          </li>
+          {/if}
+        </ul>
+      </div>
     </div>
   </div>
 </div>

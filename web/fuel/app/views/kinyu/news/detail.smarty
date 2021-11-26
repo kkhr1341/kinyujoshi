@@ -1,49 +1,42 @@
-<div class="kinyu-main-block kinyu-details-block">
-
-  <div class="kinyu-details-introdauction">
-    <div class="kinyu-details-introdauction-inner clear">
-
-      {if $news.main_image == ""}
-        <div class="img-box" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
-      {else}
-        <div class="img-box" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
-      {/if}
+<div class="kinyu-details-block kinyu-news-details">
+  <div class="kinyu-details-introduction">
+    <div class="kinyu-details-introduction-inner container">
+      <div class="img-box" style="background:url({$news.main_image}) center center / cover no-repeat;">
+      </div>
       <div class="text-box">
         <div class="text-box-inner">
-          <h2>{$news.title}</h2>
+          <h2 class="ff-mincho">{$news.title}</h2>
           <p class="description-sub">{$news.open_date|date_format:"%Y.%-m.%-d"}up!</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="inner clear">
 
-    <div class="report-detail-main">
-      {$news.content|nofilter}
-
-      <!-- ソーシャルシェア -->
-      <div class="report-detail-share clear">
-        {if $news.main_image == ""}
-          <div class="report-detail-share-el report-detail-share-left" style="background:url(/images/submain.png) center center / cover no-repeat;"><div class="bg-white05"></div>
-        {else}
-          <div class="report-detail-share-el report-detail-share-left" style="background:url({to_thumb file=$news.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div>
-        {/if}
-      </div>
-
-      <div class="report-detail-share-el report-detail-share-right">
-        <img class="share-this-title" src="/images/detail-title/kinyu-share-news.png">
-        <img class="share-this-page" src="/images/social/social-this-page.png">
-        <div class="social-list">
-          <ul>
-            {$social_share}
-          </ul>
+  <div class="report-detail-block">
+    <!-- ログインしている場合 -->
+    <div class="report-detail-block-inner container">
+      <div class="report-detail-main">
+        {$news.content|nofilter}
+        <div class="report-share">
+          <div class="report-share-inner d-flex align-items-center">
+            <div class="report-share-imgblock" style="background:url({to_thumb file=$news.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+            <div class="report-share-textblock text-center">
+              <p class="share-this-title ff-mincho">このニュースをみんなに教える</p>
+              <p class="share-this-page ff-decoration">Share this page!</p>
+              <div class="social-list">
+                <ul>
+                  {$social_share}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="report-detail-sidebar">
+        {$sidebar}
+      </div>
     </div>
   </div>
-  <div class="report-detail-sidebar">
-    {$detail_news_after}
-  </div>
+  {$contents_after}
 </div>

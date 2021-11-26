@@ -1,0 +1,123 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/single/oyakudachi.css" />
+
+<div class="main-block oyakudachi-contents">
+  <div class="main-block-inner container">
+
+  	<div class="oyakudachi-introduction">
+  		<img class="omamori-img" src="/images/oyakudachi/omamori-img.svg">
+  		<div class="main-introduction">
+  			<h2 class="main-introduction-title text-center">
+  				<img src="/images/oyakudachi/oyakudachi-title.svg">
+  			</h2>
+  			<div class="main-introduction-detail row no-gutters align-items-center">
+  				<div class="col-12 col-md-6 introduction-img-block">
+  					<img class="w-100" src="/images/oyakudachi/oyakudachi-mainimg.jpg">
+  				</div>
+  				<div class="col-12 col-md-6 introduction-text-block">
+  					<p class="main-title ff-mincho">テキストテキストテキストテキストテキストテキスト</p>
+  					<p class="description">金融に関する情報を集めていると不安に思ったり、相談したいことってありますよね。そんな時に役に立つ金融機関さんが発信している情報をまとめてみました。</p>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+  	<div class="oyakudachi-contents-list">
+  		<div class="oyakudachi-contents-list-el">
+  			<h2 class="oyakudachi-contents-list-title text-center">
+  				<p class="deco-text ff-decoration font-italic kinjo-color">Case1</p>
+  				<p class="main-title ff-mincho d-block d-md-none">○○○○○○な時？</p>
+  			</h2>
+  			<div class="oyakudachi-contents-list-el-intro">
+  				<div class="row align-items-center no-gutters">
+  					<div class="col-12 col-md-6 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+  					<div class="col-12 col-md-6 text-block">
+  						<p class="main-title ff-mincho d-none d-md-block">○○○○○○な時？</p>
+  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="oyakudachi-contents-answer-list">	
+  				<div class="oyakudachi-contents-answer-list-el">
+  					<h2 class="oyakudachi-contents-answer-title">
+  						<p class="recommend-title kinjo-color ff-mincho">＼おすすめ①／</p>
+  						<p class="main-title ff-mincho d-block d-md-none">金融庁さんの○○○○を見てみよう♪</p>
+  					</h2>
+  					<div class="oyakudachi-contents-answer-contents">
+		  				<div class="row no-gutters">
+		  					<div class="col-5 col-md-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+		  					<div class="col-7 col-md-8 text-block">
+		  						<p class="main-title ff-mincho d-none d-md-block">金融庁さんの○○○○を見てみよう♪</p>
+		  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+		  					</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  		<div class="oyakudachi-contents-answer-list-el">
+  					<h2 class="oyakudachi-contents-answer-title">
+  						<p class="recommend-title kinjo-color ff-mincho">＼おすすめ②／</p>
+  						<p class="main-title ff-mincho d-block d-md-none">金融庁さんの○○○○を見てみよう♪</p>
+  					</h2>
+  					<div class="oyakudachi-contents-answer-contents">
+		  				<div class="row no-gutters">
+		  					<div class="col-5 col-md-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+		  					<div class="col-7 col-md-8 text-block">
+		  						<p class="main-title ff-mincho d-none d-md-block">金融庁さんの○○○○を見てみよう♪</p>
+		  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+		  					</div>
+		  				</div>
+		  			</div>
+		  		</div>
+  			</div>
+  		</div>
+
+  		<div class="oyakudachi-contents-list-el">
+  			<h2 class="oyakudachi-contents-list-title text-center">
+  				<p class="deco-text ff-decoration font-italic kinjo-color">Case2</p>
+  				<p class="main-title ff-mincho d-block d-md-none">○○○○○○な時？</p>
+  			</h2>
+  			<div class="oyakudachi-contents-list-el-intro">
+  				<div class="row no-gutters">
+  					<div class="col-12 col-md-6 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+  					<div class="col-12 col-md-6 text-block">
+  						<p class="main-title ff-mincho d-none d-md-block">○○○○○○な時？</p>
+  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="oyakudachi-contents-answer-list">	
+  				<div class="oyakudachi-contents-answer-list-el">
+  					<h2 class="oyakudachi-contents-answer-title">
+  						<p class="recommend-title kinjo-color ff-mincho">＼おすすめ①／</p>
+  						<p class="main-title ff-mincho d-block d-md-none">金融庁さんの○○○○を見てみよう♪</p>
+  					</h2>
+  					<div class="oyakudachi-contents-answer-contents">
+		  				<div class="row no-gutters">
+		  					<div class="col-5 col-md-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+		  					<div class="col-7 col-md-8 text-block">
+		  						<p class="main-title ff-mincho d-none d-md-block">金融庁さんの○○○○を見てみよう♪</p>
+		  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+		  					</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  		<div class="oyakudachi-contents-answer-list-el">
+  					<h2 class="oyakudachi-contents-answer-title">
+  						<p class="recommend-title kinjo-color ff-mincho">＼おすすめ②／</p>
+  						<p class="main-title ff-mincho d-block d-md-none">金融庁さんの○○○○を見てみよう♪</p>
+  					</h2>
+  					<div class="oyakudachi-contents-answer-contents">
+		  				<div class="row no-gutters">
+		  					<div class="col-5 col-md-4 img-block" style="background: url(/images/oyakudachi/oyakudachi-mainimg.jpg) center center / cover no-repeat";></div>
+		  					<div class="col-7 col-md-8 text-block">
+		  						<p class="main-title ff-mincho d-none d-md-block">金融庁さんの○○○○を見てみよう♪</p>
+		  						<p class="description">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+		  					</div>
+		  				</div>
+		  			</div>
+		  		</div>
+  			</div>
+  		</div>
+
+  	</div>
+  </div>
+</div>

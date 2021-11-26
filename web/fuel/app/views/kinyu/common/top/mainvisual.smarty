@@ -1,0 +1,51 @@
+<!-- pickup/introduction -->
+<div class="mainvisual" id="mainvisual">
+	<div class="main-block-inner position-relative">
+		<div class="row no-gutters">
+			<div class="col-12 col-lg-6 kinjo-pickup position-relative order-2 order-lg-1">
+				<div class="kinjo-pickup-inner position-relative">
+					<p class="kinjo-pickup-deco-text ff-decoration font-italic kinjo-color text-center"><span>Pick up Contents</span></p>
+					{$pickup_top}
+					<div class="swiper-button-prev pickup-top-prev"></div>
+	    		<div class="swiper-button-next pickup-top-next"></div>
+				</div>
+			</div>
+			<div class="col-12 col-lg-6 video-bg-conteiner order-1 order-lg-2">
+				<video class="img-block" src="/images/video_bg_main.mp4" poster="sample.png" autoplay="" loop="" muted="" playsinline=""></video>
+				<div class="title-block">
+					<!-- <p class="sub-title ff-mincho text-white">わたしらしい「ミライ」への解放</p>
+					<p class="main-title ff-mincho text-white">お金にとらわれず<br>自由で等身大に生きる</p>
+					<p class="deco-text kinjo-color ff-decoration02">Let's find<br>　my own future</p> -->
+					<img src="/images/main-title.svg">
+				</div>
+			</div>
+		</div>
+		<div class="about-description-block d-none d-lg-block">
+			<div class="about-description-block-inner">
+				<p class="main-title ff-mincho kinjo-color">きんゆう女子。って？</p>
+				<p class="description">ゆる〜く、楽しく。でもちょっと真面目に。身近な家計管理から世界経済、FinTech、ライフスタイルまで、幅広い”きんゆう”を学ぶ機会をつくっています。</p>
+				<a class="d-inline-block" href="/about">〉はじめての方はこちら</a>
+			</div>
+		</div>
+	</div>
+	<div class="kinyu-top-news-list container">
+		<div class="kinyu-top-news-list-inner row no-gutters align-items-center">
+			<div class="col-3 title-area">
+        <p class="ff-decoration font-italic kinjo-color text-center">News</p>
+      </div>
+      <div class="col-9 col-md-7 kinyu-top-news-el">
+	      {foreach from=$news item=new name=foo}
+	    	<a class="d-block js-track" href="/news/{$new.code}" data-category="sp-top-link" data-action="click" data-value="1">
+	      	<div class="text-area">
+	        	<p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
+	        	<p class="news-title text-newline">{$new.title}</p>
+	      	</div>
+	    	</a>
+	    	{/foreach}
+	    </div>
+    	<div class="col-12 col-md-2 news-more-link text-right">
+      	<a class="kinjo-color js-track ff-decoration" href="/news" data-category="sp-top-link" data-action="click" data-value="1">〉MORE</a>
+    	</div>
+    </div>
+  </div>
+</div>

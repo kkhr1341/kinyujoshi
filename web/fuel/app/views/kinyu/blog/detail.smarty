@@ -1,37 +1,37 @@
-<div class="kinyu-main-block kinyu-details-block">
-  <div class="kinyu-details-introdauction">
-    <div class="kinyu-details-introdauction-inner clear">
-      <div class="img-box" style="background:url({$blog.main_image}) center center / cover no-repeat;">
+<div class="kinyu-details-block">
+  <div class="kinyu-details-introduction">
+    <div class="kinyu-details-introduction-inner container">
+      <div class="img-box position-relative" style="background:url({$blog.main_image}) center center / cover no-repeat;">
         {if $blog.pr == 1}
         <!-- PR用イメージ挿入箇所 -->
-        <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
+        <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
       {/if}
       </div>
       <div class="text-box">
         <div class="text-box-inner">
           {if $blog.kind == "女子会レポート"}
-            <p class="category"><span>女子会レポート</span></p>
+            <p class="kinjo-color category font-weight-bold"><span>女子会レポート</span></p>
           {else if $blog.kind == "イベントレポート"}
-            <p class="category"><span>イベントレポート</span></p>
+            <p class="kinjo-color category font-weight-bold"><span>イベントレポート</span></p>
           {else if $blog.kind == "取材レポート"}
-            <p class="category"><span>取材レポート</span></p>
+            <p class="kinjo-color category font-weight-bold"><span>取材レポート</span></p>
           {else if $blog.kind == "イベント告知"}
-            <p class="category"><span>イベント告知</span></p>
+            <p class="kinjo-color category font-weight-bold"><span>イベント告知</span></p>
           {else if $blog.kind == "コラム"}
-            <p class="category"><span>コラム</span></p>
+            <p class="kinjo-color category font-weight-bold"><span>コラム</span></p>
           {else if $blog.kind == "きんゆう散歩"}
-            <p class="category"><span>きんゆう散歩</span></p>
+            <p class="kinjo-color category font-weight-bold"><span>きんゆう散歩</span></p>
           {else}
-            <p class="category"><span>レポート</span></p>
+            <p class="kinjo-color category font-weight-bold"><span>レポート</span></p>
           {/if}
-          <h2>{$blog.title}</h2>
+          <h2 class="ff-mincho">{$blog.title}</h2>
           <p class="description">{$blog.description}</p>
           <p class="description-sub">{$blog.open_date|date_format:"%Y.%-m.%-d"}up!</p>
           {if isset($author_info.profile_image) && isset($author_info.name)}
-            <div class="kinyu-details-introdauction-author">
-              <img class="kinyu-details-introdauction-author-thumbnail" src="{to_thumb file=$author_info.profile_image type="crop"}">
-              <div class="kinyu-details-introdauction-author-info">
-                <div class="kinyu-details-introdauction-author-info-name">{$author_info.name}</div>
+            <div class="report-author">
+              <img class="report-author-thumbnail" src="{to_thumb file=$author_info.profile_image type="crop"}">
+              <div class="report-author-info">
+                <div class="report-author-info-name">{$author_info.name}</div>
               </div>
             </div>
           {/if}
@@ -40,63 +40,62 @@
     </div>
   </div>
 
-  <div class="inner clear">
-    <div class="report-detail-main">
-      {if $viewable == true}
-        {$blog.content|nofilter}
 
-        <!-- このレポートを書いた人 -->
-        {$author}
-
-        <!-- ソーシャルシェア -->
-        <div class="report-detail-share clear">
-          <div class="report-detail-share-el report-detail-share-left" style="background:url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
-          <div class="report-detail-share-el report-detail-share-right">
-            <img class="share-this-title" src="/images/detail-title/kinyu-share-report.png">
-            <img class="share-this-page" src="/images/social/social-this-page.png">
-            <div class="social-list">
-              <ul>
-                {$social_share}
-              </ul>
+  {if $viewable == true}
+    <div class="report-detail-block">
+      <!-- ログインしている場合 -->
+      <div class="report-detail-block-inner container">
+        <div class="report-detail-main">
+          {$blog.content|nofilter}
+          <div class="report-share">
+            <div class="report-share-inner d-flex align-items-center">
+              <div class="report-share-imgblock" style="background:url({to_thumb file=$blog.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+              <div class="report-share-textblock text-center">
+                <p class="share-this-title ff-mincho">このレポートをみんなに教える</p>
+                <p class="share-this-page ff-decoration font-italic">Share this page!</p>
+                <div class="social-list">
+                  <ul>
+                    {$social_share}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      {else}
-        {$blog.content|nofilter|mb_strimwidth:0:1024:'...':'UTF-8'}
-        <br><br>
-        <hr>
-        <div style="text-align: center;" class="no-member-report-block">
-          <p>
-            <span style="color:#ff8861;">＊</span>メンバー限定コンテンツについて<span style="color:#ff8861;">＊</span>
-            <span style="display: block;height: 12px;"></span>
-              このコンテンツの全文はメンバーさん限定で見ることができます。<br>ログインすることで見ることができます。
-            <span style="display: block;height: 12px;"></span>
-          </p>
-          <div class="button-block">
-            <button class="btn btn-kinyu" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
-            <button class="btn btn-kinyu" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
-          </div>
+        <div class="report-detail-sidebar">
+          {$sidebar}
         </div>
-      {/if}
+      </div>
     </div>
-  </div>
-  <div class="report-detail-sidebar">
-    {$detail_report_after}
-  </div>
+    {$contents_after}
+  {else}
+    <!-- ログインしていない状態 -->
+    <div class="no-member-report-block">
+      <div class="no-member-report-block-inner mx-auto text-center">
+        <p class="no-member-title ff-mincho">こちらのコンテンツは、<br>メンバー限定コンテンツです♪</p>
+        <p class="no-member-description">メンバー登録がお済みの方はログイン、<br>まだの方はメンバー登録をするとレポートが閲覧可能になります。</p>
+        <div class="button-block">
+          <button class="btn el-button btn-kinyu-login kinjo-color font-weight-bold" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
+          <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
+        </div>
+      </div>
+    </div>
+  {/if}
+
 </div>
 
 {if in_array('user', $roles) || in_array('admin', $roles)}
   <div id="check-report"{if $stocked === true} class="checked"{/if}>
     <img id="report-chack-img" src="/images/report-chack.png"{if $stocked === true} class="img-checked"{/if}>
     <a href="#" data-code="{$blog.code}">
-      <img class="report-chack-logo-img" src="/images/kinyu-logo-text.png">
+      <img class="report-chack-logo-img" src="/images/report/like.png">
     </a>
   </div>
 {else}
   <div class="check-report-dummy">
     <img class="report-chack-img-dummy" src="/images/report-chack.png">
     <p>
-      <img class="report-chack-logo-img-dummy" src="/images/kinyu-logo-text.png">
+      <img class="report-chack-logo-img-dummy" src="/images/report/like.png">
     </p>
   </div>
 {/if}

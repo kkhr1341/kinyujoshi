@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  common
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.company-contents {
+	padding: 160px 0px 120px;
+  background-color: #F7FAFA;
+}
+.company-contents .container {
+	width: 900px;
+}
+.company-info-title {
+	text-align: center;
+}
+.company-info-title h2 {
+	font-size: 3.0rem;
+	margin-bottom: 40px;
+	display: inline-block;
+}
+.company-details p {
+	font-size: 1.3rem;
+}
+.company-details .first-description {
+  padding-bottom: 20px;
+}
+.company-details-el {
+  margin: 30px 0px;
+}
+.company-details-el .title {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+	font-size: 1.8rem;
+	border-bottom: 1px solid #8ddcd1;
+	padding: 6px 0px;
+}
+.company-details-el .description {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 959px) {
+  .company-info-title h2 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+  }
+  .company-contents {
+    padding: 80px 0px 60px;
+    margin-top: 0px;
+  }
+  .company-contents .container {
+    width: 100%;
+  }
+  .company-details p {
+    font-size: 1.1rem;
+  }
+  .company-details-el {
+    margin: 20px 0px;
+  }
+
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  CONTACT
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/* 完了画面 */
+.complete-message {
+  padding: 60px 0px;
+  text-align: center;
+  background: #f7f7f7;
+}
+.complete-message h2 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #77cbc0;
+}
+.complete-message p {
+  margin-top: 32px;
+}
+.complete-message .message-top {
+  display: block;
+  margin: 0 auto;
+  width: 220px;
+  font-size: 13px;
+  padding: 10px 0px;
+  text-align: center;
+  background: #8ddcd1;
+  color: #fff;
+  margin-top: 36px;
+  transition: .5s;
+  border: 1px solid #8ddcd1;
+}
+.complete-message .message-top02 {
+  margin-top: 12px!important;
+  border: 1px solid #8ddcd1;
+  background: #fff;
+  color: #77cbc0;
+}
+
+.company-contact .description {
+  text-align: center;
+}
+.kinyu-report-list h3.center-title p,
+.kinyu-news-list h3.center-title p {
+  line-height: 12px;
+  font-size: 18px;
+  padding: 0px 20px;
+  margin-left: 8px;
+  background: url(/images/new/kinyu-dots.png) center left / contain no-repeat;
+}
+.company-contact .form-control {
+  border: 1px solid #e5e5e5;
+  font-size: 1.4rem;
+  color: #707070;
+  border-radius: 0px;
+  padding: 8px;
+  height: auto;
+}
+.company-contact .form-group .form-title {
+  line-height: 20px;
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 959px) {
+  .company-contact .form-group .form-title {
+    line-height: 20px;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+  }
+  .company-contact .form-control {
+    font-size: 1.2rem;
+  }
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  FAQ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.qa-list li {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.qa-list li:last-child {
+  margin-bottom: 0px;
+  border-bottom: none;
+}
+.qa-list .question-text {
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 50px;
+  font-size: 2.0rem;
+}
+.qa-list .question-text:before {
+  content: "Ｑ";
+  width: 36px;
+  height: 36px;
+  background: #8ddcd1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+.qa-list .answer-text {
+  position: relative;
+  padding-left: 50px;
+  padding-top: 4px;
+  font-size: 1.4rem;
+}
+.qa-list .answer-text a {
+  color:#5499d8;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 959px) {
+  .qa-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .qa-list .question-text {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  .qa-list .question-text:before {
+    width: 30px;
+    height: 30px;
+  }
+  .qa-list .answer-text a {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .qa-list .answer-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+}

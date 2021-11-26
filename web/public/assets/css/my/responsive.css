@@ -29,7 +29,7 @@
 
 /* プロフィール部分 */
 .side-profile-block {
-  width: 88%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px 24px;
   margin-bottom: 32px;
@@ -55,7 +55,7 @@
   margin-bottom: 0px;
 }
 .admin-normal-main .inner {
-  padding: 0px;
+  padding: 24px;
   background: none;
 }
 .my-joshikai-join {
@@ -104,12 +104,14 @@
 
 /* メンバー限定レポート */
 .my-member-report-block li .text-box {
-  background: #fff;
   padding: 16px;
 }
 .my-member-report-block li .text-box .title-text {
   font-size: 12px;
   line-height: 18px;
+  height: 54px;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   margin-top: 8px;
 }
 .my-member-report-block li .text-box .description-text {
@@ -178,8 +180,7 @@
 
 /* non-メッセージ */
 .non-message {
-  padding: 20px 0px;
-  background: #fff;
+  padding: 0px;
 }
 .non-message p {
   font-size: 12px;
@@ -245,7 +246,7 @@
 }
 .admin-normal-container .admin-normal-inner {
   width: 100%;
-  padding: 36px 0px 50px;
+  padding: 36px 15px 50px;
   max-width: 100%;
   min-width: 100%;
 }
@@ -253,7 +254,7 @@
   display: none;
 }
 .admin-normal-main {
-  width: 88%;
+  width: 100%;
   float: none;
   margin: 0 auto;
   padding: 0px;
@@ -577,7 +578,7 @@
   border-top: 2px solid #fff;
 }
 .singlepage-form-block .form-control {
-  background: #fff;
+  background: #F7FAFA;
   box-shadow: none;
   font-size: 12px;
 }
@@ -656,8 +657,7 @@
   font-size: 12px;
   padding: 12px;
   font-weight: 400;
-  background-color: #efefef;
-  color: #444;
+  background-color: #8ddcd1;
 }
 .credit-list-area li {
   padding: 12px;

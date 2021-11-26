@@ -1,3 +1,54 @@
+<link type="text/css" rel="stylesheet" href="/assets/css/login.css" />
+
+<div class="main-block regist-complete-block">
+  <div class="container">
+
+
+
+    <div class="single-title-block position-relative text-center">
+      <p class="deco-text ff-decoration font-italic kinjo-color">Thanks you!</p>
+      <h2 class="main-title ff-mincho">メンバー登録ありがとうございます♪</h2>
+    </div>
+
+
+    <div class="regist-complete-message-block">
+
+      <p class="regist-complete-message text-center">
+        ご入力いただいたメールアドレス宛にご確認メールをお送りしました。  <br><br>
+        もしメールが届いてない場合は迷惑メールのフォルダにあるかもしれません...。<br>
+        ご確認の上、以下アドレスからのメールの許可をお願いできますと嬉しいです♪<br>
+        no-reply@kinyu-joshi.jp<br>
+        support@kinyu-joshi.jp
+        <br><br>
+        きんゆう女子。では、「おかね」について、ゆるく楽しく、<br>
+        でもしっかりとお勉強できる女子会を開催しています。<br>
+        気になる内容の女子会がありましたら、是非チェックしてみてください♪<br><br>
+        今後も編集部より、きんゆう女子。の女子会や活動について、<br>
+        定期的にメールをお送りさせていただきます。楽しみにお待ちくださいませ。
+      </p>
+
+      <div class="after-regist-kinjo-check mx-auto">
+        <img class="kinjo-check-sub d-block mx-auto" src="/images/kinjo-check.png">
+        <a href="/kinjo_check">
+          <img class="w-100 pc" src="/images/diagnosticchart/chart_main.jpg">
+          <img class="w-100 sp" src="/images/diagnosticchart/chart_main.jpg">
+        </a>
+      </div>
+
+      <div class="text-center">
+        <a href="/" class="link-kinjo-sinple kinjo-color mx-auto">〉マイページへ</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+{*
 <div class="kinyu-single-block">
   <div class="kinyu-joshikai-detail-el-block">
     <div class="complete-message">
@@ -39,3 +90,5 @@
     </div>
   </div>
 </div>
+
+*}

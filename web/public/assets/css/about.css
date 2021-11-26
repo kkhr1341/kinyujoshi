@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  about - TOP
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.about-kinjo-title {
+	margin-bottom: 50px;
+}
+.about-kinjo-title h2 {
+	font-size: 2.4rem;
+}
+.about-kinjo-title p.ff-decoration {
+	font-size: 7.0rem;
+	line-height: 1;
+	margin-bottom: 12px;
+}
+
+/* イントロダクション */
+.about-introduction {
+	background-color: #F7FAFA;
+	padding: 160px 0px 120px;
+}
+.about-introduction .container {
+	max-width: 1250px;
+}
+.about-introduction .about-kinjo-title h2 {
+	font-size: 4.0rem;
+}
+.about-introduction .text-block {
+	padding: 12px 0px 12px 72px;
+}
+.about-introduction .about-kinjo-title {
+	margin-bottom: 16px;
+}
+.about-introduction .about-kinjo-title p {
+	font-size: 2.0rem;
+	margin-top: 16px;
+}
+.about-introduction .ff-decoration02 {
+	font-size: 6.0rem;
+	line-height: 0.8;
+	transform: rotate(-5deg);
+	left: -25px;
+  top: -10px;
+}
+
+/* mission */
+.about-mission-text p {
+	font-size: 2.4rem;
+}
+
+/* 「きん女。」って何しているの？ */
+.about-kinjo {
+	background-color: #F7FAFA;
+}
+.about-kinjo .container {
+	width: 1000px;
+}
+.about-kinjo-list .text-block .count-title {
+	font-size: 4.0rem;
+}
+.about-kinjo-list .text-block .main-title {
+	font-size: 2.4rem;
+	margin-bottom: 12px;
+}
+.about-kinjo .link-generally {
+	margin-top: 50px;
+}
+
+/* 編集部一覧 */
+.about-team-list-el {
+	padding: 4px!important;
+}
+.about-team-list-el-inner {
+	background-color: #ebf9f7;
+	padding: 40px;
+}
+.about-team-list-el-inner a.main-link {
+	display: block;
+	margin-top: 8px;
+	font-size: 1.4rem;
+}
+.about-team-main-title {
+	font-size: 2.2rem;
+	margin-bottom: 20px;
+}
+.about-team-list-el .team-logo {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 50px;
+}
+.teams-map {
+	padding: 20px 200px 50px;
+}
+
+
+@media screen and (max-width: 959px) {
+
+	.about-introduction {
+		padding: 80px 15px 50px;
+	}
+	.about-introduction .img-block {
+		height: 200px;
+	}
+	.about-introduction .ff-decoration02 {
+		font-size: 3.2rem;
+		left: -10px;
+	}
+	.about-introduction .text-block {
+		padding: 20px 0px 0px;
+	}
+	.about-introduction .about-kinjo-title h2 {
+		font-size: 3.0rem;
+	}
+	.about-introduction-description {
+		font-size: 1.2rem;
+	}
+	.about-kinjo-title {
+		margin-bottom: 24px;
+	}
+	.about-kinjo-title p.ff-decoration {
+		font-size: 3.8rem;
+	}
+	.about-kinjo-title h2 {
+		font-size: 1.6rem;
+	}
+	.about-mission-text p {
+		font-size: 1.5rem;
+	}
+	.about-kinjo .container {
+		width: 100%;
+	}
+	.about-kinjo-list-el {
+		margin-bottom: 24px;
+	}
+	.about-kinjo-list-el .img-block {
+		padding-right: 0px;
+	}
+	.about-kinjo-list-el:nth-child(even) .img-block {
+		padding-right: 15px;
+		padding-left: 0px;
+	}
+	.about-kinjo-list-el .description {
+		font-size: 1.1rem;
+		margin-top: 8px;
+	}
+	.about-kinjo-list .text-block .count-title {
+		font-size: 2.2rem;
+		line-height: 1;
+		margin-bottom: 4px;
+	}
+	.about-kinjo-list .text-block .main-title {
+		font-size: 1.6rem;
+		margin-bottom: 0px;
+	}
+	.about-kinjo .link-generally {
+		margin-top: 32px;
+	}
+	.teams-map {
+		padding: 12px;
+		background-color: #F7FAFA;
+		margin-bottom: 20px;
+	}
+	.about-team-list-el-inner {
+		padding: 24px;
+	}
+	.about-team-main-title {
+		font-size: 1.8rem;
+		margin-bottom: 12px;
+		line-height: 1.5;
+	}
+	.about-team-description {
+		font-size: 1.1rem;
+	}
+	.about-team-list-el-inner a {
+		font-size: 1.2rem;
+	}
+	.about-team-list-el .team-logo {
+		left: 12px;
+    top: 12px;
+    width: 36px;
+	}
+
+
+}
+
+
+
+
+
+
+
+

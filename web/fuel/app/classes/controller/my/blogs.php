@@ -21,6 +21,8 @@ class Controller_My_Blogs extends Controller_Mybase
         $this->template->title = '参加予定の女子会｜きん女。マイページ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
     }
 	
     public function action_create()
@@ -30,6 +32,8 @@ class Controller_My_Blogs extends Controller_Mybase
         $this->template->description = 'マイページ・ブログ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->contents = View::forge('my/blogs/create.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
     }
 
     public function action_edit($code)
@@ -40,5 +44,7 @@ class Controller_My_Blogs extends Controller_Mybase
         $this->template->description = 'マイページ・ブログ';
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->contents = View::forge('my/blogs/edit.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
     }
 }

@@ -1,0 +1,43 @@
+<div class="main-block main-projext position-relative">
+	<div class="swiper-container main-project-slide">
+		<div class="swiper-wrapper swiper-main-slide">
+			<div class="swiper-slide">
+					<a class="d-block" href="https://www.fsa.go.jp/policy/nisa2/attention/04/04_04.html" target="_blank">
+						<img class="w-100" src="./images/topics/topics-project03.jpg">
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a class="d-block" href="https://readyfor.jp/projects/kinjo-challenge" target="_blank">
+						<img class="w-100" src="./images/topics/topics-project02.jpg">
+					</a>
+				</div>
+			<div class="swiper-slide">
+				<a class="d-block" href="https://kinyujoshi.thebase.in/">
+					<img class="w-100" src="./images/topics/topics-shop.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a class="d-block" href="/kinjo_check">
+					<img class="w-100" src="./images/topics/topic-shindan.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a class="d-block" href="/members">
+					<img class="w-100" src="./images/topics/topics-member.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a class="d-block" href="https://www.npb.go.jp/ja/sesquicentennial/project/index.php">
+					<img class="w-100" src="./images/topics/topics-project01.jpg">
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a class="d-block" href="/report/search?search_text=[withき]">
+					<img class="w-100" src="./images/topics/topics-withk.jpg">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="swiper-button-prev main-projext-prev d-none d-md-block"></div>
+	<div class="swiper-button-next main-projext-next d-none d-md-block"></div>
+</div>

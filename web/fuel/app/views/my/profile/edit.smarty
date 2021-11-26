@@ -69,12 +69,12 @@
               <option value="0" {if $profile.publish == '0'}selected{/if}>公開しない</option>
               <option value="1" {if $profile.publish == '1'}selected{/if}>公開する</option>
             </select>
+            <p class="profile-edit-sub-text"><span style="color: red;">＊</span> 公開するを選択した場合、他のメンバーさんにお名前以外のプロフィールが公開されます。</p>
           </div>
 
-          <p class="text-center" style="padding-bottom:30px"><span style="color: red;">*</span> 公開するを選択した場合、他のメンバーさんにお名前以外のプロフィールが公開されます。</p>
 
           <div class="form-btn tx-center">
-            <button class="btn btn-kinyu" type="button" id="save">保存する</button>
+            <button class="link-generally" type="button" id="save">保存する</button>
           </div>
 
         </div>
