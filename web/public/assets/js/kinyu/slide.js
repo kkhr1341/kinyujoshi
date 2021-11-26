@@ -82,13 +82,13 @@ $(function () {
       });
 
      new Swiper('.event-top-slide', {
-        slidesPerView: 3,
-        speed: 1000,
+        slidesPerView: 2.2,
+        autoplay: false,
         loop: false,
         pagination: false,
         spaceBetween: 28,
-        nextButton: '.event-top-slide-next',
-        prevButton: '.event-top-slide-prev'
+        nextButton: false,
+        prevButton: false
       });
 
      new Swiper('.my-event-top-slide', {

@@ -155,7 +155,6 @@
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .myway-content-list {
   margin: 0 auto;
-  background: #f9f9f9;
 }
 .myway-content-list-el .inner {
   width: 88%;
@@ -655,7 +654,6 @@
 /* coming-soon */
 .coming-soon {
   margin-top: 24px;
-  margin-bottom: 52px;
 }
 .coming-soon li {
   font-size: 12px;
