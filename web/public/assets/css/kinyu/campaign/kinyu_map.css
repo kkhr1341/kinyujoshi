@@ -3,7 +3,7 @@
   　共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .kinyu-map-main-container {
-  padding: 100px 0px 180px;
+  padding: 160px 0px 180px;
 }
 .kinyu-map-single-container {
   padding: 0px 0px 150px;
@@ -516,6 +516,7 @@
   margin: 0 auto;
   padding-bottom: 0px;
   margin-top: 32px;
+  margin-bottom: 50px;
   transition: .5s;
 }
 .map_last img { 
@@ -578,7 +579,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 0px 0px 0px;
+  padding: 80px 0px 0px;
 }
 .kabuto-map-block-inner img {
   width: 100%;

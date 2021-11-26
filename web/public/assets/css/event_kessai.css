@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 959px) {
   .event-application .container {
-    padding: 24px 24px 50px;
+    padding: 80px 24px 50px;
     width: 100%;
   }
   .event-tickets-main-inner {
@@ -139,7 +139,7 @@
   padding: 50px;
 }
 .event-application-fee {
-  padding-top: 50px;
+  padding-top: 160px;
 }
 .event-application-fee .inner form {
   width: 100%;
@@ -253,7 +253,7 @@
     padding-top: 0px; 
   }
   .event-application-fee .container {
-    padding: 24px 24px 50px;
+    padding: 80px 24px 50px;
     width: 100%;
   }
   .event-application-fee .inner form .main-title {
