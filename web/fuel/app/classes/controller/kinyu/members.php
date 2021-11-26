@@ -11,7 +11,7 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
   public function before()
   {
     if (!Auth::check()) {
-      $after_login_url = \Uri::current() ? \Uri::current() : '/my';
+      $after_login_url = \Uri::current() ? \Uri::current() : '/members';
       \Auth::logout();
       Response::redirect('/login?after_login_url=' . $after_login_url);
       exit();

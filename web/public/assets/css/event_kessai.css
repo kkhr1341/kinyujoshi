@@ -566,4 +566,26 @@ input[type=checkbox]:checked + .checkbox:before {
 }
 
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  タブレットのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width:481px) and ( max-width:959px) {
 
+.event-application .container {
+  width: 80%;
+  padding: 50px;
+}
+.event-application-fee {
+  padding: 50px 0px;
+}
+.event-application-fee .container {
+  width: 80%;
+  padding: 50px;
+}
+
+
+
+
+
+
+}

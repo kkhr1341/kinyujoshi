@@ -7,15 +7,41 @@
 <section class="demo" id="demo-maxPoint">
 		<div class="viewport">
 			<div class="flipsnap flipsnap-topics">
-
-
-				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
-				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
-				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
-				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
-				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
-				<div class="item"><a href=""><img class="w-100" src="./images/topics/event.jpg"></a></div>
-
+				<div class="item">
+					<a class="d-block" href="/#event">
+						<img class="w-100" src="./images/topics/topics-event.jpg">
+					</a>
+				</div>
+				<div class="item">
+					<a class="d-block" href="/report">
+						<img class="w-100" src="./images/topics/topics-report.jpg">
+					</a>
+				</div>
+				<div class="item">
+					<a class="d-block" href="https://kinyujoshi.thebase.in/">
+						<img class="w-100" src="./images/topics/topics-shop.jpg">
+					</a>
+				</div>
+				<div class="item">
+					<a class="d-block" href="/kinjo_check">
+						<img class="w-100" src="./images/topics/topic-shindan.jpg">
+					</a>
+				</div>
+				<div class="item">
+					<a class="d-block" href="/member">
+						<img class="w-100" src="./images/topics/topics-member.jpg">
+					</a>
+				</div>
+				<div class="item">
+					<a class="d-block" href="https://www.npb.go.jp/ja/sesquicentennial/project/index.php">
+						<img class="w-100" src="./images/topics/topics-project01.jpg">
+					</a>
+				</div>
+				<div class="item">
+					<a class="d-block" href="/report/search?search_text=[withき]">
+						<img class="w-100" src="./images/topics/topics-withk.jpg">
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -24,7 +50,7 @@
 
 <script>
 Flipsnap('.flipsnap-topics', {
-    distance: 190, // 80px * 2
+    distance: 240, // 80px * 2
     maxPoint: 3    // move able 3 times
 });
 </script>

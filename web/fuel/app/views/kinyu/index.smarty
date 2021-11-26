@@ -27,8 +27,8 @@
 			    {/if}
 			  </div>
 			</div>
-			<div class="swiper-button-prev event-top-slide-prev d-none d-md-block"></div>
-	   	<div class="swiper-button-next event-top-slide-next d-none d-md-block"></div>
+			<div class="swiper-button-prev event-top-slide-prev d-none d-lg-block"></div>
+	   	<div class="swiper-button-next event-top-slide-next d-none d-lg-block"></div>
 		</div>
 		<a class="event-past-link d-block mx-auto kinjo-color text-center" href="/event_past#past-event-list">〉過去のイベント（女子会）はこちら</a>
 	</div>
@@ -48,7 +48,7 @@
 
     <div class="report-keywords-block">
       <div class="row align-items-center">
-        <div class="col-12 col-lg-8 order-2 order-lg-1 report-keywords">
+        <div class="col-12 col-md-8 order-2 order-md-1 report-keywords">
           <p>よく検索されているキーワード</p>
           <ul class="d-inline-flex flex-wrap">
             <li><a class="link-color" href="/report/search?search_text=つみたてNISA">#つみたてNISA</a></li>
@@ -57,11 +57,11 @@
             <li><a class="link-color" href="/report/search?search_text=投資">#投資</a></li>
             <li><a class="link-color" href="/report/search?search_text=お金の管理">#お金の管理</a></li>
             <li><a class="link-color" href="/report/search?search_text=家計簿">#家計簿</a></li>
-            <li><a class="link-color" href="/report/search?search_text=with×き">#withき</a></li>
+            <li><a class="link-color" href="/report/search?search_text=[withき]">#withき</a></li>
             <li><a class="link-color" href="/report/search?search_text=ごきんじょさん">#ごきんじょさん</a></li>
           </ul>
         </div>
-        <div class="col-12 col-lg-4 order-1 order-lg-2">
+        <div class="col-12 col-md-4 order-1 order-md-2">
         	<div class="kinyu-top-search">
 	          <form action="/report/search" method="get" class="d-flex">
 	            <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">

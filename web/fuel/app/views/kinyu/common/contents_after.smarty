@@ -75,24 +75,28 @@
     </div>
 		<div class="special-contents-list mx-auto row">
 			<div class="special-contents-list-el">
-				<div class="row align-items-center">
-					<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-shindan.svg"></div>
-					<div class="text-box col-6">
-						<p class="special-contents-title ff-mincho">きん女。診断</p>
-						<p class="special-contents-description">豊かに生きるための第一歩は「自分を知ること」。わたしはどんな人になりたい？これから人生を送っていきたい？今のわたしはどんな人...？3〜6問の質問に答えて、あなた自身のことを知るヒントにしましょう♪</p>
-						<a class="d-block kinjo-color font-weight-bold" href="/kinjo_check">〉ページはこちら</a>
+				<a href="/kinjo_check">
+					<div class="row align-items-center">
+						<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-shindan.svg"></div>
+						<div class="text-box col-6">
+							<p class="special-contents-title ff-mincho">きん女。診断</p>
+							<p class="special-contents-description">わたしはどんな人になって、これからどういった人生を送っていきたい？今のわたしはどんな人...？3〜6問の質問に答えて、あなた自身のことを知るヒントにしましょう♪</p>
+							<p class="d-none d-md-block link-text kinjo-color font-weight-bold">〉ページはこちら</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="special-contents-list-el">
-				<div class="row align-items-center">
-					<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-myway.svg"></div>
-					<div class="text-box col-6 order-1 order-md-2">
-						<p class="special-contents-title ff-mincho">「わたし」を知る</p>
-						<p class="special-contents-description">豊かに生きるための第一歩は「自分を知ること」。そこがわかってこそ、お金の使い方や自分の道も見えてくるはず。このページでは、「わたしを知ること」をテーマに情報を発信しています。</p>
-						<a class="d-block kinjo-color font-weight-bold" href="/myway">〉ページはこちら</a>
+				<a href="/myway">
+					<div class="row align-items-center">
+						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-myway.svg"></div>
+						<div class="text-box col-6 order-1 order-md-2">
+							<p class="special-contents-title ff-mincho">「わたし」を知る</p>
+							<p class="special-contents-description">豊かに生きるための第一歩は「自分を知ること」。そこがわかってこそ、お金の使い方や自分の道も見えてくるはず。ここでは、「わたしを知ること」をテーマに情報を発信しています。</p>
+							<p class="d-none d-md-block link-text kinjo-color font-weight-bold">〉ページはこちら</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="special-contents-list-el">
 				<div class="comingsoon-box"><p class="text-center ff-decoration font-italic">Coming soon！</p></div>
@@ -106,36 +110,42 @@
 				</div>
 			</div>
 			<div class="special-contents-list-el">
-				<div class="row align-items-center">
-					<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-sanpo.svg"></div>
-					<div class="text-box col-6 order-1 order-md-2">
-						<p class="special-contents-title ff-mincho">きんゆう散歩</p>
-						<p class="special-contents-description">金融や経済ってあまり目に見えないけれど、実は身の回りには金融・経済に関わることがたくさん。ゆるりと旅する感覚で、金融を見たり、触れたり、考えてみよう。世界にある金融が見えると、ぐっと金融が楽しくなるかも♪</p>
-						<a class="d-block kinjo-color font-weight-bold" href="/kinyu_sanpo">〉ページはこちら</a>
+				<a href="/kinyu_sanpo">
+					<div class="row align-items-center">
+						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-sanpo.svg"></div>
+						<div class="text-box col-6 order-1 order-md-2">
+							<p class="special-contents-title ff-mincho">きんゆう散歩</p>
+							<p class="special-contents-description">金融や経済ってあまり目に見えないけれど、実は身の回りには金融・経済に関わることがたくさん。ゆるりと旅する感覚で、金融を見たり、触れたり、考えてみよう。</p>
+							<p class="d-none d-md-block link-text kinjo-color font-weight-bold">〉ページはこちら</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="special-contents-list-el">
-				<div class="row align-items-center">
-					<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-map.svg"></div>
-					<div class="text-box col-6">
-						<p class="special-contents-title ff-mincho">かぶと町マップ</p>
-						<p class="special-contents-description">レトロな街/金融の街、日本橋兜町・茅場町。あまり知られていないかくれ家的な店がいっぱい！きんゆう女子。おすすめのスポットを紹介しています。</p>
-						<a class="d-block kinjo-color font-weight-bold" href="/map_kabuto">〉ページはこちら</a>
+				<a href="/map_kabuto">
+					<div class="row align-items-center">
+						<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-map.svg"></div>
+						<div class="text-box col-6">
+							<p class="special-contents-title ff-mincho">かぶと町マップ</p>
+							<p class="special-contents-description">レトロな街/金融の街、日本橋兜町・茅場町。あまり知られていないかくれ家的な店がいっぱい！きんゆう女子。おすすめのスポットを紹介しています。</p>
+							<p class="d-none d-md-block link-text kinjo-color font-weight-bold">〉ページはこちら</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 			<div class="special-contents-list-el">
-				<div class="row align-items-center">
-					<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-withk.svg"></div>
-					<div class="text-box col-6 order-1 order-md-2">
-						<p class="special-contents-title-img ff-mincho">
-							<img class="w-100" src="/images/special_contents/withk-title.svg">
-						</p>
-						<p class="special-contents-description">このページは金融リテラシー向上を応援しているご協賛企業や団体と一緒に作っています。どのコンテンツも金融リテラシーを上げることを目的に作られており、特定の金融商品を推奨・勧誘するものではありません。</p>
-						<a class="d-block kinjo-color font-weight-bold" href="/map_kabuto">〉ページはこちら</a>
+				<a href="/map_kabuto">
+					<div class="row align-items-center">
+						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-withk.svg"></div>
+						<div class="text-box col-6 order-1 order-md-2">
+							<p class="special-contents-title-img ff-mincho">
+								<img class="w-100" src="/images/special_contents/withk-title.svg">
+							</p>
+							<p class="special-contents-description">このページは金融リテラシー向上を応援しているご協賛企業や団体と一緒に作っています。金融リテラシーを上げることを目的にしているので、特定の金融商品を紹介するものではありません。</p>
+							<p class="d-none d-md-block link-text kinjo-color font-weight-bold">〉ページはこちら</p>
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
