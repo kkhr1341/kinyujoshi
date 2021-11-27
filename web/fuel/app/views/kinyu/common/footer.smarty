@@ -18,7 +18,7 @@
     </div>
     <div class="footer-list text-center mx-auto">
       <!-- <p class="footer-list-title ff-mincho"><span>きんゆう女子。に関する情報</span></p> -->
-      <ul class="row">
+      <ul class="row no-gutters">
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/news" data-category="sp-footer-link" data-action="click" data-value="1">お知らせ</a>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/about" data-category="sp-footer-link" data-action="click" data-value="1">私たちについて</a></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/policy" data-category="sp-footer-link" data-action="click" data-value="1">大事にしていること</a></li>

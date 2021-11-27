@@ -99,7 +99,8 @@ header {
 	height: 30px;
 }
 .admin-normal-container .report-author-info-name {
-	font-size: 1.1rem;
+	font-size: 1.0rem;
+	padding-left: 26px;
 }
 .admin-normal-container .report-list .img-box {
 	width: 40%;

@@ -510,10 +510,12 @@ html.is-fixed body {
 	-webkit-line-clamp: 3;
 	margin: 16px 0px;
 }
-.event-content .kinyu-event-kind p span.date-box {
+.event-content .kinyu-event-kind p {
+	display: inline-block;
 	background-color: #8ddcd1;
-	padding: 6px 12px;
-	font-size: 1.5rem;
+	padding: 4px 8px;
+	font-size: 1.4rem;
+	line-height: 1.5;
 }
 .event-content .with_ki-label {
 	position: absolute;
@@ -551,12 +553,15 @@ html.is-fixed body {
 
 @media screen and (max-width: 959px) {
 	.event-content .event-past-link {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		margin-top: 24px;
 	}
 	.event-top-slide .swiper-slide {
 		width: 280px;
 		max-width: 280px;
+	}
+	.event-content .kinyu-event-kind p {
+		font-size: 1.2rem;
 	}
 /*	.event-top-slide {
 		width: 280px;
@@ -1197,6 +1202,10 @@ html.is-fixed body {
 		width: 100%;
 		padding: 20px 15px 0px; 
 	}
+	.event-detail-main-contents h2 {
+		font-size: 1.8rem;
+		margin: 32px 0px 16px;
+	}
 	.event-detail-main-block {
 		padding: 32px 15px 50px;
 	}
@@ -1218,7 +1227,10 @@ html.is-fixed body {
   	padding: 8px;
   }
   .event-detail-main .info-title {
-  	font-size: 1.4rem;
+  	font-size: 1.3rem;
+  }
+  .event-detail-main .info-detail {
+  	font-size: 1.2rem;
   }
   .event-sidebar-info .info-title {
   	font-size: 1.4rem;
@@ -1230,7 +1242,9 @@ html.is-fixed body {
 	  line-height: 13px;
 	  padding: 16px 0px;
 	}
-
+	.event-detail-main-contents p {
+		font-size: 1.2rem;
+	}
 }
 
 
@@ -1470,6 +1484,7 @@ html.is-fixed body {
 	}
 	.kinyu-top-search input.search {
 		height: 40px;
+		font-size: 1.2rem;
 	}
 	.kinyu-top-search button {
 		padding: 9px 0px 8px;
@@ -1745,7 +1760,7 @@ html.is-fixed body {
 		margin-bottom: 16px;
 	}
 	.kinyu-details-introduction-inner .text-box .description {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 	.kinyu-details-introduction-inner .text-box .description-sub {
 		font-size: 1.2rem;
@@ -1769,7 +1784,7 @@ html.is-fixed body {
 		margin-bottom: 16px;
 	}
 	.no-member-description {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 	.no-member-report-block .btn-kinyu-login {
 		margin-right: 12px;
@@ -1785,7 +1800,7 @@ html.is-fixed body {
 		width: 100%;
 	}
 	.report-detail-main p {
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 	}
 	.report-detail-main blockquote {
 		font-size: 1.1rem;
@@ -2013,7 +2028,7 @@ html.is-fixed body {
 /* writer */
 .report-detail-sidebar .report-writer {
 	margin-top: 0px;
-	padding: 24px;
+	padding: 24px 40px;
 	text-align: center;
 }
 .report-detail-sidebar .report-writer-inner {
@@ -2029,7 +2044,7 @@ html.is-fixed body {
 	margin-top: 12px;
 }
 .report-detail-sidebar .report-writer .writer-profile-text {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	text-align: left;
 }
 .report-detail-sidebar .report-writer .img-box {
@@ -2111,7 +2126,7 @@ html.is-fixed body {
 .sidebar-keywords-list li a {
 	padding: 4px 12px;
 	border-radius: 20px;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	background-color: #f3f3f3;
 	color: #707070;
 }
@@ -2256,7 +2271,7 @@ html.is-fixed body {
     margin-top: 12px;
 	}
 	.single-title-block .deco-text-sub {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 }
 
