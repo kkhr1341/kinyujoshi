@@ -2482,8 +2482,20 @@ to {
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-  PCのみ
+  hover関連
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+a:hover {
+	color: #707070;
+}
+a.kinjo-color:hover {
+	color: #7dd7cb;
+}
+a.text-white:hover {
+	color: #fff;
+}
+a.link-color:hover {
+	color: #6eb0df;
+}
 @media screen and (min-width: 960px) {
 a,
 button,
@@ -2501,15 +2513,6 @@ button:hover,
 .link-point:hover {
 	opacity: .3;
 	cursor: pointer;
-}
-a.kinjo-color:hover {
-	color: #7dd7cb;
-}
-a.text-white:hover {
-	color: #fff;
-}
-a.link-color:hover {
-	color: #6eb0df;
 }
 .pickup-top-slide:hover,
 .menu-trigger-container img:hover,
