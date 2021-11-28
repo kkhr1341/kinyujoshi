@@ -87,7 +87,7 @@ footer {
 
 @media screen and (max-width: 959px) {
 	.footer-inner {
-		padding: 100px 40px 80px;
+		padding: 100px 28px 80px;
 	}
 	.footer-kinjo-block {
 		width: 100%;
@@ -116,12 +116,30 @@ footer {
 		font-size: 1.3rem;
 	}
 	.footer-list ul li a {
-		font-size: 1.1rem;
+		font-size: 1.0rem;
 	}
 	.footer-copyright {
 		font-size: 1.0rem;
 		margin-top: 50px;
 	}
 
+	/* スマホ固定フッター */
+	.sp-fi-footer-block {
+		position: fixed;
+		height: 50px;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+	.sp-fi-footer-block a {
+		font-size: 1.1rem;
+		line-height: 50px;
+		background: linear-gradient(to bottom right, #FEEFE9, #E5FCF9);
+	}
+	.sp-fi-footer-block a.mypage-link {
+		background: #F7FAFA;
+		border-right: 2px solid #fff;
+	}
 
 }
