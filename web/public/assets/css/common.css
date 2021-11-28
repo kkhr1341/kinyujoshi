@@ -743,9 +743,10 @@ html.is-fixed body {
 	width: 320px;
 }
 .omc-contentsafter-list-link a {
-	background: linear-gradient(to bottom right, #D5FAF5, #FCDACD);
+	background: linear-gradient(to bottom right, #FEEFE9, #E5FCF9);
 	margin-top: 24px;
 	padding-left: 50px;
+	box-shadow: 0px 0px 10px #beddd9;
 }
 .omc-link-after {
 	position: absolute;

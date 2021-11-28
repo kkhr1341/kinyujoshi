@@ -36,3 +36,19 @@
     <p class="footer-copyright text-center">© TOE THE LINE Inc. 2021 All rights reserved.</p>
   </div>
 </footer>
+
+<!-- スマホ固定フッター -->
+<div class="d-block d-md-none sp-fi-footer-block">
+  <div class="sp-fi-footer-link h-100 row no-gutters">
+    <div class="sp-fi-footer-link-el h-100 col-5">
+      <a class="h-100 d-block text-center mypage-link" href="/my">〉マイページ</a>
+    </div>
+    <div class="sp-fi-footer-link-el h-100 col-7">
+      <a class="h-100 d-block text-center" href="https://official.kinyu-joshi.jp/" target="_blank">〉オフィシャルメンバーズクラブ</a>
+    </div>
+  </div>
+</div>
+
+
+
+

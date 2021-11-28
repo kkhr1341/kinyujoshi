@@ -123,5 +123,23 @@ footer {
 		margin-top: 50px;
 	}
 
+	/* スマホ固定フッター */
+	.sp-fi-footer-block {
+		position: fixed;
+		height: 40px;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+	.sp-fi-footer-block a {
+		font-size: 1.1rem;
+		line-height: 40px;
+		background: linear-gradient(to bottom right, #FEEFE9, #E5FCF9);
+	}
+	.sp-fi-footer-block a.mypage-link {
+		background: #F7FAFA;
+		border-right: 2px solid #fff;
+	}
 
 }

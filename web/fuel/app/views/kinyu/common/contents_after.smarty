@@ -9,7 +9,7 @@
 			<div class="omc-contentsafter-list-el">
 				<div class="row align-items-center">
 					<div class="col-4 col-md-4 img-block order-1">
-						<img class="w-100" src="/images/omc/omc01.svg">
+						<img class="w-100" src="/images/omc/omc01.png">
 					</div>
 					<div class="col-8 col-md-8 text-block order-2">
 						<p class="main-title ff-mincho">自分の感じていることを素直に表現しよう。</p>
@@ -20,7 +20,7 @@
 			<div class="omc-contentsafter-list-el">
 				<div class="row align-items-center">
 					<div class="col-4 col-md-4 img-block order-2">
-						<img class="w-100" src="/images/omc/omc02.svg">
+						<img class="w-100" src="/images/omc/omc02.png">
 					</div>
 					<div class="col-8 col-md-8 text-block order-1">
 						<p class="main-title ff-mincho">自分の体験や生活の工夫を発信しよう（女子会や記事で）</p>
@@ -31,7 +31,7 @@
 			<div class="omc-contentsafter-list-el">
 				<div class="row align-items-center">
 					<div class="col-4 col-md-4 img-block order-1">
-						<img class="w-100" src="/images/omc/omc03.svg">
+						<img class="w-100" src="/images/omc/omc03.png">
 					</div>
 					<div class="col-8 col-md-8 text-block order-2">
 						<p class="main-title ff-mincho">限定オープンチャットで語り合おう、支え合おう</p>
@@ -42,7 +42,7 @@
 			<div class="omc-contentsafter-list-el">
 				<div class="row align-items-center">
 					<div class="col-4 col-md-4 img-block order-2">
-						<img class="w-100" src="/images/omc/omc04.svg">
+						<img class="w-100" src="/images/omc/omc04.png">
 					</div>
 					<div class="col-8 col-md-8 text-block order-1">
 						<p class="main-title ff-mincho">オリジナルプリカにオンラインチャージされた「お礼」を有意義に使おう。</p>
@@ -77,7 +77,7 @@
 			<div class="special-contents-list-el">
 				<a href="/kinjo_check">
 					<div class="row align-items-center">
-						<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-shindan.svg"></div>
+						<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-shindan.jpg"></div>
 						<div class="text-box col-6">
 							<p class="special-contents-title ff-mincho">きん女。診断</p>
 							<p class="special-contents-description">わたしはどんな人になって、これからどういった人生を送っていきたい？今のわたしはどんな人...？3〜6問の質問に答えて、あなた自身のことを知るヒントにしましょう♪</p>
@@ -89,7 +89,7 @@
 			<div class="special-contents-list-el">
 				<a href="/myway">
 					<div class="row align-items-center">
-						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-myway.svg"></div>
+						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-myway.jpg"></div>
 						<div class="text-box col-6 order-1 order-md-2">
 							<p class="special-contents-title ff-mincho">「わたし」を知る</p>
 							<p class="special-contents-description">豊かに生きるための第一歩は「自分を知ること」。そこがわかってこそ、お金の使い方や自分の道も見えてくるはず。ここでは、「わたしを知ること」をテーマに情報を発信しています。</p>
@@ -112,7 +112,7 @@
 			<div class="special-contents-list-el">
 				<a href="/kinyu_sanpo">
 					<div class="row align-items-center">
-						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-sanpo.svg"></div>
+						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-sanpo.jpg"></div>
 						<div class="text-box col-6 order-1 order-md-2">
 							<p class="special-contents-title ff-mincho">きんゆう散歩</p>
 							<p class="special-contents-description">金融や経済ってあまり目に見えないけれど、実は身の回りには金融・経済に関わることがたくさん。ゆるりと旅する感覚で、金融を見たり、触れたり、考えてみよう。</p>
@@ -124,7 +124,7 @@
 			<div class="special-contents-list-el">
 				<a href="/map_kabuto">
 					<div class="row align-items-center">
-						<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-map.svg"></div>
+						<div class="img-box col-6"><img class="w-100" src="/images/special_contents/kinjo-map.jpg"></div>
 						<div class="text-box col-6">
 							<p class="special-contents-title ff-mincho">かぶと町マップ</p>
 							<p class="special-contents-description">レトロな街/金融の街、日本橋兜町・茅場町。あまり知られていないかくれ家的な店がいっぱい！きんゆう女子。おすすめのスポットを紹介しています。</p>
@@ -136,7 +136,7 @@
 			<div class="special-contents-list-el">
 				<a href="/report/search?search_text=[withき]">
 					<div class="row align-items-center">
-						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-withk.svg"></div>
+						<div class="img-box col-6 order-2 order-md-1"><img class="w-100" src="/images/special_contents/kinjo-withk.jpg"></div>
 						<div class="text-box col-6 order-1 order-md-2">
 							<p class="special-contents-title-img ff-mincho">
 								<img class="w-100" src="/images/special_contents/withk-title.svg">

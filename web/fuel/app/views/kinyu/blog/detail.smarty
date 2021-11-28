@@ -197,3 +197,8 @@ $(function() {
         })
 });
 </script>
+<style>
+  .sp-fi-footer-block {
+    display: none!important;
+  }
+</style>
