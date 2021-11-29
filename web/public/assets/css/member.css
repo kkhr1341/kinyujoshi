@@ -92,6 +92,13 @@
 	border-right: 25px solid #FAFAEC;
 	border-bottom: 25px solid transparent;
 }
+.member-list .comingsoon {
+	font-size: 2.8rem;
+	font-family: mitimasu, sans-serif;
+}
+.member-list .comingsoon span {
+	font-size: 1.8rem;
+}
 
 
 @media screen and (max-width: 959px) {
@@ -133,6 +140,13 @@
     border-bottom: 15px solid transparent;
 	}
 	.member-list-el .info-block .member-name {
+		font-size: 1.3rem;
+	}
+	.member-list .comingsoon {
+		font-size: 2.2rem;
+		font-family: mitimasu, sans-serif;
+	}
+	.member-list .comingsoon span {
 		font-size: 1.3rem;
 	}
 
