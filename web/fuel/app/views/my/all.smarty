@@ -98,6 +98,9 @@
           </div>
           <div class="swiper-button-prev my-event-top-slide-prev d-none d-lg-block"></div>
           <div class="swiper-button-next my-event-top-slide-next d-none d-lg-block"></div>
+          <div class="text-center">
+            <div class="swiper-pagination my-event-swiper-pagination"></div>
+          </div>
         </div>
 
         <!-- メンバー限定レポート -->

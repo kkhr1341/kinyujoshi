@@ -21,7 +21,7 @@ class Controller_My_Top extends Controller_Mybase
         $this->data['blogs'] = Blogs::lists(1, null, 1, null, null, true);
         $this->data['top_blogs2'] = Blogs::lists02(1, 12, true, null, null, null, null);
         $this->data['event_display_limit'] = self::EVENT_DISPLAY_LIMIT;
-        $this->data['secret_events'] = Events::lists(1, 4, 'enable_only', 1, "desc", 1, null, true);
+        $this->data['secret_events'] = Events::lists(1, 4, 'enable_only', 1, "desc", 1, null, null);
 
         $this->template->title = 'マイページ｜きんゆう女子。';
         $this->template->description = 'マイページ・トップ';
