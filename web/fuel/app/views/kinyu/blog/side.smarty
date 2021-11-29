@@ -54,23 +54,26 @@
 <div class="sidebar-list-block02 sidebar-event-list">
   <p class="sidebar-title ff-decoration-bold kinjo-color text-center">Join & Learn<span class="d-block ff-mincho color-generally font-weight-normal">参加しして学ぼう</span></p>
   <div class="event-content">
-  <div class="swiper-container sidebar-event-slide">
-    <div class="swiper-wrapper swiper-main-slide">
-      {foreach from=$events key="key" item=event name=loopname}
-        {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
-        {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
-      {/foreach}
-      {if count($events) > $event_display_limit}
+    <div class="swiper-container sidebar-event-slide">
+      <div class="swiper-wrapper swiper-main-slide">
         {foreach from=$events key="key" item=event name=loopname}
-          {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
-            {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
-          {/if}
+          {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
+          {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
         {/foreach}
-      {/if}
+        {if count($events) > $event_display_limit}
+          {foreach from=$events key="key" item=event name=loopname}
+            {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
+              {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
+            {/if}
+          {/foreach}
+        {/if}
+      </div>
     </div>
+    <div class="swiper-button-prev sidebar-event-prev"></div>
+    <div class="swiper-button-next sidebar-event-next"></div>
   </div>
-  <div class="swiper-button-prev sidebar-event-prev"></div>
-  <div class="swiper-button-next sidebar-event-next"></div>
+  <div class="text-center">
+    <div class="swiper-pagination sidebar-event-swiper-pagination"></div>
   </div>
 </div>
 
