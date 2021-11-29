@@ -4,31 +4,36 @@
 			<div class="swiper-slide">
 					<a class="d-block" href="https://www.fsa.go.jp/policy/nisa2/attention/04/04_04.html" target="_blank">
 						<img class="w-100" src="./images/topics/topics-project03.jpg">
+						<p class="text-center">＼金融庁に協力／<br>商品購入時の<br class="d-block d-md-none">ポイント（案）検討</p>
 					</a>
 				</div>
 				<div class="swiper-slide">
 					<a class="d-block" href="https://readyfor.jp/projects/kinjo-challenge" target="_blank">
 						<img class="w-100" src="./images/topics/topics-project02.jpg">
+						<p class="text-center">READY FORクラファン<br>131%達成！</p>
 					</a>
 				</div>
 			<div class="swiper-slide">
-				<a class="d-block" href="https://kinyujoshi.thebase.in/">
-					<img class="w-100" src="./images/topics/topics-shop.jpg">
-				</a>
-			</div>
-			<div class="swiper-slide">
-				<a class="d-block" href="/kinjo_check">
-					<img class="w-100" src="./images/topics/topic-shindan.jpg">
+				<a class="d-block" href="https://www.npb.go.jp/ja/sesquicentennial/project/index.php">
+					<img class="w-100" src="./images/topics/topics-project01.jpg">
+					<p class="text-center">＼国立印刷局に訪問／<br>150周年記念サイトを<br class="d-block d-md-none">チェック</p>
 				</a>
 			</div>
 			<div class="swiper-slide">
 				<a class="d-block" href="/members">
 					<img class="w-100" src="./images/topics/topics-member.jpg">
+					<p class="text-center"><span class="kinjo-color font-weight-bold">2901</span>名の仲間たち！<br>みんなも自己紹介してね♪</p>
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<a class="d-block" href="https://www.npb.go.jp/ja/sesquicentennial/project/index.php">
-					<img class="w-100" src="./images/topics/topics-project01.jpg">
+				<a class="d-block" href="/kinjo_check">
+					<img class="w-100" src="./images/topics/topic-shindan.jpg">
+					<p class="text-center"><span class="kinjo-color font-weight-bold">837</span>名が回答♪<br>あなたはどのタイプ？</p>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a class="d-block" href="https://kinyujoshi.thebase.in/">
+					<img class="w-100" src="./images/topics/topics-shop.jpg">
 				</a>
 			</div>
 			<div class="swiper-slide">

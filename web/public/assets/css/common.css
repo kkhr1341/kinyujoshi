@@ -182,8 +182,8 @@ html.is-fixed body {
 		margin-top: 16px;
 	}
 	.swiper-pagination-bullet {
-		width: 10px;
-		height: 10px;
+		width: 9px;
+		height: 9px;
 		margin: 0px 4px;
 	}
 }
@@ -470,16 +470,25 @@ html.is-fixed body {
 	padding: 60px 50px;
 }
 .main-projext .swiper-button-prev {
-	margin-top: -42px;
+	margin-top: -90px;
 	left: 4px;
 }
 .main-projext .swiper-button-next {
-	margin-top: -42px;
+	margin-top: -90px;
 	right: 4px;
 }
 .main-projext .swiper-slide {
 	max-width: 300px;
 }
+.main-projext .swiper-slide p {
+	border-left: 1px solid #EDEDED;
+	border-right: 1px solid #EDEDED;
+	margin: 0px 8px;
+	line-height: 1.6;
+	margin-top: 12px;
+	font-size: 1.3rem;
+}
+
 
 @media screen and (max-width: 959px) {
 	.main-projext {
@@ -488,6 +497,12 @@ html.is-fixed body {
 	.main-project-slide .swiper-slide a {
 		display: block;
 		width: 150px;
+	}
+	.main-projext .swiper-slide p {
+		font-size: 1.0rem;
+		margin: 0px 4px;
+		border-left: none;
+		border-right: none;
 	}
 }
 
@@ -2010,6 +2025,14 @@ html.is-fixed body {
 }
 .sidebar-title span {
 	font-size: 1.3rem;
+}
+.report-detail-sidebar .swiper-pagination {
+	margin-top: 12px;
+}
+.report-detail-sidebar .swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	margin: 0px 4px;
 }
 
 /* writer */

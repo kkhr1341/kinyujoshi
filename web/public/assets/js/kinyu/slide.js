@@ -26,7 +26,7 @@ $(function () {
         spaceBetween: 10,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        pagination: '.event-top-swiper-pagination',
+        pagination: '.sidebar-event-swiper-pagination',
         paginationClickable: true
       });
 
@@ -49,7 +49,9 @@ $(function () {
         pagination: false,
         spaceBetween: 24,
         nextButton: false,
-        prevButton: false
+        prevButton: false,
+        pagination: '.my-event-swiper-pagination',
+        paginationClickable: true
       });
 
      new Swiper('.main-project-slide', {
@@ -100,6 +102,8 @@ $(function () {
         nextButton: false,
         prevButton: false,
         pagination: '.event-top-swiper-pagination',
+        paginationClickable: true,
+        pagination: '.sidebar-event-swiper-pagination',
         paginationClickable: true
       });
 
@@ -111,13 +115,15 @@ $(function () {
         spaceBetween: 24,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+        pagination: '.my-event-swiper-pagination',
+        paginationClickable: true
       });
 
      new Swiper('.main-project-slide', {
         slidesPerView: 5,
         autoplay: 5000,
         speed: 1000,
-        loop: true,
+        loop: false,
         pagination: false,
         spaceBetween: 32,
         nextButton: '.main-projext-next',
@@ -151,6 +157,8 @@ $(function () {
         spaceBetween: 0,
         nextButton: '.sidebar-event-next',
         prevButton: '.sidebar-event-prev',
+        pagination: '.sidebar-event-swiper-pagination',
+        paginationClickable: true
       });
 
      new Swiper('.event-top-slide', {
@@ -181,7 +189,7 @@ $(function () {
         slidesPerView: 5,
         autoplay: 5000,
         speed: 1000,
-        loop: true,
+        loop: false,
         pagination: false,
         spaceBetween: 32,
         nextButton: '.main-projext-next',
