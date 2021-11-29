@@ -1,9 +1,4 @@
 <div class="main-block main-projext position-relative">
-
-
-
-
-
 <section class="demo" id="demo-maxPoint">
 		<div class="viewport">
 			<div class="flipsnap flipsnap-topics">
@@ -45,7 +40,6 @@
 			</div>
 		</div>
 	</section>
-
 
 
 <script>

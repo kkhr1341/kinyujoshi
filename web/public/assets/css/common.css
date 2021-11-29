@@ -104,6 +104,8 @@ html.is-fixed body {
 	background-color: #fff;
 	padding: 16px 50px;
 }
+
+/* スライド関連 */
 .swiper-button-prev {
 	background-image: url(/images/arrow/arrow-prev.svg);
 	position: absolute;
@@ -123,6 +125,20 @@ html.is-fixed body {
   -moz-background-size: 40px 65px;
   -webkit-background-size: 40px 65px;
   background-size: 40px 65px;
+}
+.swiper-pagination {
+	position: relative;
+	margin-top: 20px;
+}
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	margin: 0px 4px;
+	background-color: #8ddcd1;
+	opacity: .3;
+}
+.swiper-pagination-bullet-active {
+	opacity: 1;
 }
 
 
@@ -161,7 +177,15 @@ html.is-fixed body {
 	.link-kinjo-sinple {
 		font-size: 1.3rem;
 	}
-
+	/* スライド関連 */
+	.swiper-pagination {
+		margin-top: 16px;
+	}
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+		margin: 0px 4px;
+	}
 }
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -258,7 +282,6 @@ html.is-fixed body {
 
 /* bg */
 .video-bg-conteiner {
-  /*height: calc(100vh - 120px);*/
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -284,28 +307,6 @@ html.is-fixed body {
 .video-bg-conteiner .title-block img {
 	width: 580px;
 }
-/*.video-bg-conteiner .title-block .sub-title {
-	font-size: 2.0rem;
-	margin-bottom: 12px;
-	z-index: 999;
-	text-shadow: 0px 0px 10px rgb(0 0 0 / 38%);
-}
-.video-bg-conteiner .title-block .main-title {
-	font-size: 3.8rem;
-	line-height: 1.5;
-	z-index: 999;
-	text-shadow: 0px 0px 10px rgb(0 0 0 / 38%);
-}
-.mainvisual .deco-text {
-	position: absolute;
-  right: -90px;
-  top: 22px;
-  font-size: 5.0rem;
-  line-height: 1;
-  transform: rotate(4deg);
-  opacity: .3;
-  z-index: 998;
-}*/
 .main-block-inner .about-description-block {
 	position: absolute;
 	z-index: 1000;
@@ -1152,6 +1153,7 @@ html.is-fixed body {
 	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 	margin: 32px 0px 24px;
 	position: relative;
+	border-bottom: 2px solid #8ddcd1;
 }
 .event-detail-main-contents h2:before {
 	content: "● ";

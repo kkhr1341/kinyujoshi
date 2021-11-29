@@ -79,6 +79,7 @@
     </div>
   </div>
   <div class="member-list panel">
+    {*
     {foreach $users as $user}
       {if $user.group == 41}
         <div class="member-list-el row no-gutters">
@@ -122,6 +123,8 @@
         </div>
       {/if}
     {/foreach}
+    *}
+    <p class="comingsoon text-center">coming soon<span class="d-block">現在準備中です♪</span></p>
   </div>
 </div>
 

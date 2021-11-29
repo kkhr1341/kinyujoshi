@@ -11,10 +11,11 @@ $(function () {
       new Swiper('.pickup-top-slide', {
         autoplay: false,
         loop: false,
-        pagination: false,
         spaceBetween: 0,
         nextButton: '.pickup-top-next',
-        prevButton: '.pickup-top-prev'
+        prevButton: '.pickup-top-prev',
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
       });
 
      new Swiper('.sidebar-event-slide', {
@@ -25,6 +26,8 @@ $(function () {
         spaceBetween: 10,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+        pagination: '.event-top-swiper-pagination',
+        paginationClickable: true
       });
 
      new Swiper('.event-top-slide', {
@@ -34,7 +37,9 @@ $(function () {
         pagination: false,
         spaceBetween: 28,
         nextButton: false,
-        prevButton: false
+        prevButton: false,
+        pagination: '.event-top-swiper-pagination',
+        paginationClickable: true
       });
 
      new Swiper('.my-event-top-slide', {
@@ -48,12 +53,15 @@ $(function () {
       });
 
      new Swiper('.main-project-slide', {
+        slidesPerView: 2.2,
         autoplay: false,
         loop: false,
         pagination: false,
         spaceBetween: 20,
         nextButton: false,
-        prevButton: false
+        prevButton: false,
+        pagination: '.main-project-swiper-pagination',
+        paginationClickable: true
       });
 
     //タブレット
@@ -67,7 +75,9 @@ $(function () {
         pagination: false,
         spaceBetween: 0,
         nextButton: '.pickup-top-next',
-        prevButton: '.pickup-top-prev'
+        prevButton: '.pickup-top-prev',
+        pagination: '.pickup-top-swiper-pagination',
+        paginationClickable: true,
       });
 
      new Swiper('.sidebar-event-slide', {
@@ -88,7 +98,9 @@ $(function () {
         pagination: false,
         spaceBetween: 28,
         nextButton: false,
-        prevButton: false
+        prevButton: false,
+        pagination: '.event-top-swiper-pagination',
+        paginationClickable: true
       });
 
      new Swiper('.my-event-top-slide', {
@@ -109,7 +121,9 @@ $(function () {
         pagination: false,
         spaceBetween: 32,
         nextButton: '.main-projext-next',
-        prevButton: '.main-projext-prev'
+        prevButton: '.main-projext-prev',
+        pagination: '.main-project-swiper-pagination',
+        paginationClickable: true
       });
 
     //PC
@@ -123,7 +137,9 @@ $(function () {
         pagination: false,
         spaceBetween: 0,
         nextButton: '.pickup-top-next',
-        prevButton: '.pickup-top-prev'
+        prevButton: '.pickup-top-prev',
+        pagination: '.pickup-top-swiper-pagination',
+        paginationClickable: true,
       });
 
      new Swiper('.sidebar-event-slide', {
@@ -144,7 +160,9 @@ $(function () {
         pagination: false,
         spaceBetween: 28,
         nextButton: '.event-top-slide-next',
-        prevButton: '.event-top-slide-prev'
+        prevButton: '.event-top-slide-prev',
+        pagination: '.event-top-swiper-pagination',
+        paginationClickable: true
       });
 
      new Swiper('.my-event-top-slide', {
@@ -155,6 +173,8 @@ $(function () {
         spaceBetween: 24,
         nextButton: '.my-event-top-slide-next',
         prevButton: '.my-event-top-slide-prev',
+        pagination: '.my-event-swiper-pagination',
+        paginationClickable: true
       });
 
      new Swiper('.main-project-slide', {
@@ -165,7 +185,9 @@ $(function () {
         pagination: false,
         spaceBetween: 32,
         nextButton: '.main-projext-next',
-        prevButton: '.main-projext-prev'
+        prevButton: '.main-projext-prev',
+        pagination: '.main-project-swiper-pagination',
+        paginationClickable: true
       });
     }
 
