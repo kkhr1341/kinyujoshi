@@ -305,7 +305,7 @@ html.is-fixed body {
 	left: 50px;
 }
 .video-bg-conteiner .title-block img {
-	width: 580px;
+	width: 420px;
 }
 .main-block-inner .about-description-block {
 	position: absolute;
@@ -339,7 +339,7 @@ html.is-fixed body {
     left: 20px;
 	}
 	.video-bg-conteiner .title-block img {
-		width: 320px;
+		width: 240px;
 	}
 	.video-bg-conteiner .title-block .sub-title {
 		font-size: 1.5rem;
