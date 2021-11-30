@@ -1487,6 +1487,7 @@ html.is-fixed body {
 	}
 	.kinyu-top-search input.search {
 		height: 40px;
+		font-size: 1.2rem;
 	}
 	.kinyu-top-search button {
 		padding: 9px 0px 8px;
