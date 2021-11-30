@@ -16,7 +16,7 @@
 			<div class="col-12 col-lg-6 video-bg-conteiner order-1 order-lg-2">
 				<video class="img-block" src="/images/video_bg_main.mp4" poster="sample.png" autoplay="" loop="" muted="" playsinline=""></video>
 				<div class="title-block">
-					<img src="/images/main-title.svg">
+					<img src="/images/main-title.png">
 				</div>
 			</div>
 		</div>
