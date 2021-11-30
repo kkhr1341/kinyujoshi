@@ -10,6 +10,8 @@
 	</div>
 </header>
 
+<img id="top-search-open" class="header-search-icon link-point" src="/images/search-btn.png">
+
 <div class="menu-trigger-container text-center open-navigation">
 	<div class="menu-trigger">
 		<img class="w-100" src="/images/menu/menu-img02.svg">
@@ -66,11 +68,33 @@
 	</div>
 </div>
 
+<div class="kinyu-sp-header-search">
+  <div class="kinyu-top-search-block text-center">
+    <div class="close-block link-point">
+      <img class="w-100" src="/images/menu/close-btn.svg">
+    </div>
+    <img class="search-title" src="/images/search-title-white.png">
+    <div class="kinyu-top-search mx-auto">
+      <form action="/report/search" method="get" class="d-flex">
+        <input type="text" name="search_text" class="search" placeholder="気になるキーワード♪" autocomplete="off">
+        <button onClick="ga('send', 'event', 'sp-header-link', 'click', 'search', 1);"><img src="/images/search-btn.svg"></button>
+      </form>
+    </div>
+    <p class="sub-search-title"><span style="color: #f3626c;">＊</span>レポートページに移動します。</p>
+  </div>
+</div>
+
 <script>
 	$(function() {
   	$('.menu-trigger-container').hover(function() {
     	$('.menu-trigger').toggleClass('active');
     	return false;
+  	});
+  	$('#top-search-open').click(function() {
+  		$('.kinyu-sp-header-search').fadeIn();
+  	});
+  	$('.kinyu-sp-header-search .close-block').click(function() {
+  		$('.kinyu-sp-header-search').fadeOut();
   	});
 	});
 </script>

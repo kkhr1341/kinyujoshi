@@ -21,24 +21,21 @@ header .main-logo a {
 	line-height: 0;
 }
 .header-navigation-list {
-	margin-right: 140px;
+	margin-right: 190px;
 	height: 120px;
-}
-.header-navigation-list li {
-	margin-left: 20px;
 }
 .header-navigation-list li a {
 	padding: 12px 16px;
 	font-size: 1.3rem;
-	background-color: #8ddcd1;
+	/*background-color: #8ddcd1;*/
 }
 .header-navigation-list li a.mypage-link {
-	background-color: #F7FAFA;
+	/*background-color: #F7FAFA;*/
 	box-sizing: border-box;
 }
-.header-navigation-list li a.omc-link {
+/*.header-navigation-list li a.omc-link {
 	background: linear-gradient(to bottom right, #FFF7F4, #EDFAF8);
-}
+}*/
 
 @media screen and (max-width: 959px) {
 
@@ -60,13 +57,89 @@ header .main-logo a {
 
 }
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  search
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.kinyu-sp-header-search {
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: auto;
+	background: #8ddcd1;
+	z-index: 1003;
+}
+.kinyu-sp-header-search .search-title {
+	width: 320px;
+}
+.kinyu-sp-header-search .kinyu-top-search {
+	width: 500px;
+	margin-top: 20px;
+	margin-bottom: 12px;
+}
+.kinyu-sp-header-search .kinyu-top-search-block {
+	padding: 80px 0px 50px;
+}
+.kinyu-sp-header-search .close-block {
+	width: 70px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.header-search-icon {
+	width: 36px;
+  height: 36px;
+  position: fixed;
+  right: 112px;
+  top: 40px;
+  z-index: 1002;
+  cursor: pointer;
+}
+.kinyu-sp-header-search .kinyu-top-search button {
+	background-color: #F7FAFA;
+}
+
+@media screen and (max-width: 959px) {
+	.header-search-icon {
+    width: 28px;
+    height: 28px;
+    position: fixed;
+    right: 60px;
+    top: 16px;
+    z-index: 1002;
+    cursor: pointer;
+	}
+	.kinyu-sp-header-search .close-block {
+    width: 50px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+	}
+	.kinyu-sp-header-search {
+		width: 100%;
+	}
+	.kinyu-sp-header-search .search-title {
+		width: 250px;
+	}
+	.kinyu-sp-header-search .kinyu-top-search-block {
+		padding: 80px 15px 32px;
+	}
+	.kinyu-sp-header-search .kinyu-top-search {
+		width: 100%;
+		margin-top: 12px;
+		margin-bottom: 8px;
+	}
+	.kinyu-sp-header-search .sub-search-title {
+		font-size: 1.1rem;
+	}
+
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   MENU
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 .menu-trigger-container {
-	/*border-radius: 50%;*/
 	width: 70px;
 	height: 70px;
 	position: fixed;
@@ -74,7 +147,6 @@ header .main-logo a {
 	top: 22px;
 	z-index: 1002;
 	cursor: pointer;
-	/*border: 1px solid #7dd7cb;*/
 }
 .menu-trigger-container img {
 	border-radius: 50%;
