@@ -1,10 +1,30 @@
-<div class="kinyu-single-block">
-  <div class="login-add-contents-block">
+<link type="text/css" rel="stylesheet" href="/assets/css/login.css" />
 
-    
-    <p class="main-title">パスワード再設定</p>
+<style>
+  body {
+    background-color: #F7FAFA;
+  }
+  .kinyu-main {
+    margin-top: 0px;
+  }
+  header {
+    display: none;
+  }
+  .menu-trigger-container {
+    display: none;
+  }
+  .header-search-icon {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+</style>
+
+<div class="login-contents-block">
+  <div class="login-add-contents-block container">
+    <p class="main-title ff-mincho kinjo-color">パスワード再設定</p>
     <p class="message">以下項目のご入力をお願いします♪</p>
-
     <div class="resetting-pass-block">
       <div class="username-area">
         <p>- ユーザー名 -</p>
@@ -19,14 +39,12 @@
             <input type="password" id="password" class="form-control resetting-pass-el-input1" placeholder="" value="">
             <input type="password" id="password_confirm" class="form-control" placeholder="ご確認用" value="">
           </div>
-
           <div class="form-btn tx-center">
-            <button class="btn btn-kinyu" type="button" id="save">再設定する</button>
+            <button class="link-generally" type="button" id="save">再設定する</button>
           </div>
         </form>
       </div>
     </div>
-  
   </div>
 </div>
 
