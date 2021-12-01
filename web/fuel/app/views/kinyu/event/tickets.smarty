@@ -187,7 +187,7 @@ var $resArray02 = $resArray[1];
             $(".loader-block").fadeIn(200);
             return ajax.post(url, params, function(data) {
                     $(".loader-block").fadeOut(500);
-                    location.href = "/joshikai_complete";
+                    location.href = "/event_complete";
                 })
                 .done(function(data) {
                     $(".loader-block").fadeOut(500);
