@@ -40,10 +40,6 @@ class Controller_Login extends Controller_KinyuBase
             $this->template->description = 'きんゆう女子。のコンセプトは「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」こと。 身近な家計管理から世界経済、FinTech（フィンテック）、 ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。';
             $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
             $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
-            $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-            $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-            $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
             if (Agent::is_mobiledevice()) {
                 $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -104,10 +100,8 @@ class Controller_Login extends Controller_KinyuBase
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
             $this->template->title = 'メンバー登録｜きんゆう女子。';
             $this->template->description = 'ログイン｜きんゆう女子';
-            $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-            $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-            $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-            $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+            $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+            $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
             if (Agent::is_mobiledevice()) {
                 $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -132,10 +126,8 @@ class Controller_Login extends Controller_KinyuBase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->title = 'パスワード再発行｜きんゆう女子。';
         $this->template->description = 'パスワード再発行｜きんゆう女子';
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -165,10 +157,8 @@ class Controller_Login extends Controller_KinyuBase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->title = 'パスワード再発行｜きんゆう女子。';
         $this->template->description = 'パスワード再発行｜きんゆう女子';
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
@@ -185,10 +175,6 @@ class Controller_Login extends Controller_KinyuBase
         //$this->template->today = date("Y年n月");
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
-        $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
-        $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
-        $this->template->sp_navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
 
         if (Agent::is_mobiledevice()) {
             $this->template->navigation = View::forge('kinyu/common/sp_navigation.smarty', $this->data);
