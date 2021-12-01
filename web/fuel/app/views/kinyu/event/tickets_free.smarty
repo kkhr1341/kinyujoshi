@@ -1,5 +1,7 @@
-<div class="joshikai-payment-block">
-  <div class="day-card-open fee-open">
+<div class="event-detail event-application-fee">
+  <div class="day-card-open event-detail-inner container">
+<!-- <div class="joshikai-payment-block">
+  <div class="day-card-open fee-open"> -->
     <div class="inner">
       <form method="POST" action="/pay" id="charge-form">
         <input type="hidden" name="coupon_code" value="{$coupon_code}" />

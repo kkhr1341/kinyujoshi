@@ -13,6 +13,9 @@
   .menu-trigger-container {
     display: none;
   }
+  .header-search-icon {
+    display: none;
+  }
   footer {
     display: none;
   }
