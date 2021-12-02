@@ -11,7 +11,7 @@ return array(
   'maintenance'  => 'maintenance/top',
 
   //◆メンバー登録/ログイン部分
-  'regist'   => 'login/regist',
+  //'regist'   => 'login/regist',
   'login_regist'   => 'login/login_regist',
   'regist_email'   => 'login/regist_email',
   'regist_sns'   => 'login/regist_sns',
@@ -27,30 +27,30 @@ return array(
   'kinyu'   => 'kinyu/top',
 
   // はじめての方へ
-  'start'   => 'kinyu/start/index',
+  //'start'   => 'kinyu/start/index',
 
   // きんじょ。キャラクター
   'character'   => 'kinyu/character/index',
 
   //aboutページ
   'about' => 'kinyu/about/index',
-  'about_main' => 'kinyu/about/about_main',
-  'about_contents' => 'kinyu/about/about_contents',
-  'about_story' => 'kinyu/about/about_story',
-  'about_policy' => 'kinyu/about/about_policy',
-  'about_design' => 'kinyu/about/about_design',
-  'about_community' => 'kinyu/about/about_community',
-  'about_insight' => 'kinyu/about/about_insight',
-  'about_hensyubu' => 'kinyu/about/about_hensyubu',
-  'about_history' => 'kinyu/about/about_history',
+  'about_main' => 'kinyu/about/index',
+  //'about_contents' => 'kinyu/about/about_contents',
+  //'about_story' => 'kinyu/about/about_story',
+  //'about_policy' => 'kinyu/about/about_policy',
+  //'about_design' => 'kinyu/about/about_design',
+  //'about_community' => 'kinyu/about/about_community',
+  //'about_insight' => 'kinyu/about/about_insight',
+  //'about_hensyubu' => 'kinyu/about/about_hensyubu',
+  //'about_history' => 'kinyu/about/about_history',
 
   'report'   => 'kinyu/blog/index',
   'report/search'   => 'kinyu/blog/search',
   'report/(:num)'   => 'kinyu/blog/index/$1',
   'report/(:any)'   => 'kinyu/blog/detail/$1',
   'welcome/blog/(:any)'   => 'kinyu/blog/welcome/$1',
-  'rss'   => 'kinyu/rss/index',
-  'sitemap' => 'kinyu/sitemap/index',
+  //'rss'   => 'kinyu/rss/index',
+  //'sitemap' => 'kinyu/sitemap/index',
   //	'rss/(:num)'   => 'kinyu/rss/index/$1',
   //	'rss/(:any)'   => 'kinyu/rss/detail/$1',
 
