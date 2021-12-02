@@ -11,6 +11,9 @@ footer,
 .kinyu-main {
 	padding-top: 0px;
 }
+header {
+	z-index: 1002;
+}
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   メイン共通
@@ -571,12 +574,12 @@ footer,
 }
 .twitter-link-block {
 	display: block;
-	width: 110px;
+	width: 200px;
 	text-align: center;
 	background: #87e1f9;;
 	color: #fff;
 	margin: 0 auto;
-	padding: 8px 50px;
+	padding: 8px;
 }
 .twitter-left-tag a {
 	display: block;
