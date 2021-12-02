@@ -4,7 +4,7 @@
     {if $display_top_event}
       <div class="swiper-slide">
         {if empty($display_top_event.specific_link)}
-        <a class="js-track" target="_blank" href="/joshikai/{$display_top_event.code}" data-category="slide-link" data-action="click" data-value="1">
+        <a class="js-track" target="_blank" href="/event/{$display_top_event.code}" data-category="slide-link" data-action="click" data-value="1">
           <div class="swiper-main-img" style="background: url({$display_top_event.main_image}) center center / cover no-repeat;"></div>
           <div class="swiper-main-title">
             <h3 class="text-white ff-mincho text-newline">{$display_top_event.title}</h3>
