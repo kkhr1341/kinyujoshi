@@ -506,6 +506,12 @@ html.is-fixed body {
 	}
 }
 
+@media screen and (min-width:410px) and ( max-width:959px) {
+	.main-project-slide .swiper-slide a {
+		width: 168px;
+	}
+}
+
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   TOP - join & lesson
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
@@ -573,20 +579,22 @@ html.is-fixed body {
 		margin-top: 24px;
 	}
 	.event-top-slide .swiper-slide {
-		/*width: 280px;
-		max-width: 280px;*/
+		width: 282px;
+		max-width: 282px;
 	}
 	.event-content .kinyu-event-kind p {
 		font-size: 1.2rem;
 	}
-/*	.event-top-slide {
-		width: 280px;
-	}
-	.event-content .img-box {
-		width: 280px;
-		height: 280px;
-	}*/
 }
+
+@media screen and (min-width:410px) and ( max-width:959px) {
+	.event-top-slide .swiper-slide {
+		width: 315px;
+		max-width: 315px;
+	}
+}
+
+
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-

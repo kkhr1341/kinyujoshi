@@ -1,12 +1,12 @@
-<div class="kinyu-single-block">
-  <div class="complete-message-block">
-    <div class="complete-message">
-      <h2>お問い合わせありがとうございます</h2>
-      <p>
-        お問合せいただきありがとうございました。<br>
-        担当者より土日祝日除く5営業日以内に回答いたします。
-      </p>
-      <a href="/" class="message-top">トップページに戻る</a>
+<div class="main-block event-single-block">
+  <div class="container">
+    <div class="single-title-block position-relative text-center">
+      <h2 class="main-title ff-mincho">お問い合わせありがとうございます。</h2>
+    </div>
+    <div class="description-block text-center">
+      <p>お問合せいただきありがとうございました。<br>
+        担当者より土日祝日除く5営業日以内に回答いたします。</p>
+      <a href="/" class="link-kinjo-sinple kinjo-color">〉トップページに戻る</a>
     </div>
   </div>
 </div>
