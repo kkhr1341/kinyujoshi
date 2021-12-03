@@ -201,7 +201,7 @@
                 <!-- 参加女子会がない場合 -->
                 <div class="non-message">
                   <p class="joshikai-no">イベントのご参加いつでもお待ちしています♪</p>
-                  <a href="/event" class="to-link-joshikai">イベントの予定へ</a>
+                  <a href="/#event" class="to-link-joshikai">イベントの予定へ</a>
                 </div>
               {/foreach}
             </ul>
