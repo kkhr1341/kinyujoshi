@@ -573,8 +573,8 @@ html.is-fixed body {
 		margin-top: 24px;
 	}
 	.event-top-slide .swiper-slide {
-		width: 280px;
-		max-width: 280px;
+		/*width: 280px;
+		max-width: 280px;*/
 	}
 	.event-content .kinyu-event-kind p {
 		font-size: 1.2rem;
