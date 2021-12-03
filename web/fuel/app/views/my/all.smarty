@@ -180,8 +180,8 @@
               {foreach from=$applications item=application name=loopname}
                 {$fooo = $application.main_image}
                 {$thumb_filename = $fooo|regex_replace:"/(.+)\/(.+\.jpg|.+\.jpeg|.+\.JPG|.+\.png|.+\.gif)$/":"$1/thumb_$2"}
-                  <li class="col-6">
-                    <a href="/my/joshikai/{$application.application_code}" class="clear" target="_blank">
+                  <li class="col-12 col-md-6">
+                    <a href="/my/joshikai/{$application.application_code}" class="clear">
                       <div class="img-box" style="background:url({$thumb_filename}) center center / cover no-repeat;) center center / cover no-repeat;"></div>
                       <div class="text-box">
                         <div class="text-box-inner">

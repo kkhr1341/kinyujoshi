@@ -2033,7 +2033,7 @@
 }
 .my-joshikai-join li .text-box {
   padding: 20px 16px;
-  background-color: #F7FAFA;
+  background-color: #FFF;
 }
 .my-joshikai-join li .text-box .date-text {
   font-size: 12px;
@@ -2245,8 +2245,13 @@
     vertical-align: middle;
 }
 
+.joshikai-cancel-block .main-title {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
 .joshikai-cancel-block .description {
-    padding: 0px 20px;
+    font-size: 1.2rem;
     margin-top: 16px;
     margin-bottom: 0px !important;
 }
@@ -2278,7 +2283,7 @@
     font-weight: bold;
     font-size: 13px;
     display: block;
-    width: 150px;
+    width: 100%;
     text-align: center;
     padding: 12px 0px;
     color: #fff;

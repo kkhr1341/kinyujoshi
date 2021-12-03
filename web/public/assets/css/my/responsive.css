@@ -61,7 +61,7 @@
 .my-joshikai-join {
   margin-bottom: 32px;
 }
-.my-joshikai-join li {
+/*.my-joshikai-join li {
   width: 48.5%;
   margin-right: 3%;
   margin-bottom: 3%;
@@ -74,13 +74,13 @@
 }
 .my-joshikai-join li:nth-child(6n) {
   margin-right: 0%;
-}
+}*/
 .my-joshikai-join li .text-box {
   background: #fff;
   padding: 16px 12px;
 }
 .my-joshikai-join li .img-box {
-  height: 100px;
+  height: 200px;
 }
 .my-content-title {
   font-size: 13px;
@@ -97,9 +97,9 @@
   line-height: 11px;
 }
 .my-joshikai-join li .text-box .title-text {
-  font-size: 11px;
-  line-height: 16px;
-  height: 32px;
+  font-size: 13px;
+  line-height: 20px;
+  height: 40px;
 }
 
 /* メンバー限定レポート */
@@ -259,6 +259,10 @@
   margin: 0 auto;
   padding: 0px;
   border-left: none;
+}
+
+.my-event-details {
+  padding: 24px;
 }
 /* ヘッダー */
 .admin-normal-header {
