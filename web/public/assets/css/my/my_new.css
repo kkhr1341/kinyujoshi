@@ -56,7 +56,6 @@ header {
 }
 .my-joshikai-join {
 	margin-top: 70px;
-	background-color: #F7FAFA;
 }
 .my-joshikai-join .mypage-main-title-block {
   position: absolute;
@@ -68,6 +67,7 @@ header {
 }
 .my-joshikai-join-area {
 	padding: 70px 50px 50px;
+	background-color: #F7FAFA;
 }
 .my-member-list {
 	margin-top: 60px;
