@@ -23,7 +23,8 @@ class Controller_My_Events extends Controller_Mybase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->title = '参加予定の女子会｜きん女。マイページ';
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents = View::forge('my/events/joshikailist.smarty', $this->data);
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
         $this->template->my_side = View::forge('my/common/my_side.smarty', array(
@@ -53,7 +54,8 @@ class Controller_My_Events extends Controller_Mybase
         $this->data['sections'] = Sections::lists();
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents = View::forge('my/events/joshikaidetail.smarty', $this->data);
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
         $this->template->my_side = View::forge('my/common/my_side.smarty', array(
@@ -76,7 +78,8 @@ class Controller_My_Events extends Controller_Mybase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = '女子会リスト';
         $this->template->title = 'myきん女。｜きん女。マイページ';
-        $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents = View::forge('my/events/member_joshikai.smarty', $this->data);
         $user_type = DiagnosticChartTypeUsers::getLastUserType($username);
         $this->template->my_side = View::forge('my/common/my_side.smarty', array(
