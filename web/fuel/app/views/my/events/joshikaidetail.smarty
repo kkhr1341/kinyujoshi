@@ -2,7 +2,7 @@
   <div class="admin-normal-inner clear">
     {$my_side}
     
-    <div class="admin-normal-main">
+    <div class="admin-normal-main my-event-details">
 
 
       <div class="admin-joshikai-detail-el">
