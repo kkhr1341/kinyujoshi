@@ -9,6 +9,9 @@
       'custom_map': {
           'dimension1': 'clientId',
           'dimension2': 'secretBlog',
+      },
+      'linker': {
+          'domains': ['official.kinyu-joshi.jp'] 
       }
   });
   gtag('set', {'user_id': <?php echo $userid ?>});
