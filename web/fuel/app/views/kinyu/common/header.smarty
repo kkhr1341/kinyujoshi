@@ -1,10 +1,10 @@
+<h1 class="header-main-logo">
+	<a href="/"><img src="/images/top-circle-logo.png" alt="きんゆう女子。" class="w-100"></a>
+</h1>
 <header>
-	<h1 class="main-logo">
-		<a href="/"><img src="/images/top-circle-logo.png" alt="きんゆう女子。" class="w-100"></a>
-	</h1>
-	<div class="header-navigation-list d-none d-lg-block">
+	<div class="header-navigation-list" id="header-navigation-list">
 		<ul class="row align-items-center justify-content-end h-100">
-			<li><a class="mypage-link d-block text-center kinjo-color" href="/my">〉マイページ</a></li>
+			<li><a class="mypage-link d-block text-center" href="/my">〉マイページ</a></li>
 			<li><a class="omc-link d-block text-center" href="https://official.kinyu-joshi.jp/" target="_blank">〉オフィシャルメンバーズクラブ</a></li>
 		</ul>
 	</div>
@@ -96,5 +96,21 @@
   	$('.kinyu-sp-header-search .close-block').click(function() {
   		$('.kinyu-sp-header-search').fadeOut();
   	});
+	});
+	$(document).ready(function(){
+		fixed_menu = 0;
+		$(window).scroll(function(){
+			if( $(this).scrollTop() > 70 ){
+				if(fixed_menu==0){
+					$('#header-navigation-list').fadeIn();
+					fixed_menu=1;
+				}
+			} else {
+				if(fixed_menu){
+					$('#header-navigation-list').fadeOut();
+					fixed_menu=0;
+				}
+			}
+		});
 	});
 </script>

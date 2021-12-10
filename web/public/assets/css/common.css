@@ -1182,6 +1182,9 @@ html.is-fixed body {
 	content: "● ";
   color: #8ddcd1;
 }
+.event-detail-main-contents a {
+	color: #4C9BBF;
+}
 .event-sidebar .joinus-block {
   border-top: 1px solid #dedede;
   padding-top: 20px;

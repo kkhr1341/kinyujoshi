@@ -79,6 +79,7 @@ return array(
   'event_payment_cash/(:any)'   => 'kinyu/event/tickets_cash/$1',
   'event_complete'   => 'kinyu/event/complete',
 
+  'joshikai'   => 'kinyu/event/index',
   'joshikai/(:any)'   => 'kinyu/event/detail/$1',
 
   //お守りページ & 相談窓口
