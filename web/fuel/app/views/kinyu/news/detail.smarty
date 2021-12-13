@@ -1,8 +1,11 @@
 <div class="kinyu-details-block kinyu-news-details">
   <div class="kinyu-details-introduction">
     <div class="kinyu-details-introduction-inner container">
-      <div class="img-box" style="background:url({$news.main_image}) center center / cover no-repeat;">
-      </div>
+      {if $news.main_image == ""}
+        <div class="img-box" style="background:url(/images/submain.png) center center / cover no-repeat;"></div>
+      {else}
+        <div class="img-box" style="background:url({$news.main_image}) center center / cover no-repeat;"></div>
+      {/if}
       <div class="text-box">
         <div class="text-box-inner">
           <h2 class="ff-mincho">{$news.title}</h2>
@@ -20,7 +23,11 @@
         {$news.content|nofilter}
         <div class="report-share">
           <div class="report-share-inner d-flex align-items-center">
-            <div class="report-share-imgblock" style="background:url({to_thumb file=$news.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+            {if $news.main_image == ""}
+              <div class="report-share-imgblock" style="background:url(/images/submain.png) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+            {else}
+              <div class="report-share-imgblock" style="background:url({to_thumb file=$news.main_image type="thumb"}) center center / cover no-repeat;"><div class="bg-white05"></div></div>
+            {/if}
             <div class="report-share-textblock text-center">
               <p class="share-this-title ff-mincho">このニュースをみんなに教える</p>
               <p class="share-this-page ff-decoration">Share this page!</p>

@@ -137,25 +137,50 @@
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   FAQ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.qa-list li {
-  margin-bottom: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #f1f1f1;
+.qa-list .qa-list-el-col {
+  margin-bottom: 16px;
+  background-color: #fff;
+  padding: 12px 16px;
 }
-.qa-list li:last-child {
+.qa-list .qa-list-el-col:last-child {
   margin-bottom: 0px;
   border-bottom: none;
 }
+.contents-topics {
+  margin-bottom: 50px;
+}
+.contents-topics-title {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.contents-topics-list li a {
+  padding: 0px 16px;
+}
+.contents-topics-list li:after {
+  content: "|";
+}
+.contents-topics-list li:last-child:after {
+  content: "";
+}
+.qa-list-el {
+  margin-bottom: 60px;
+}
+.qa-list-el-title {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+  border-left: 1px solid #B0E2DB;
+  padding-left: 12px;
+  color: #b5b5b5;
+}
 .qa-list .question-text {
   position: relative;
-  margin-bottom: 16px;
-  padding-left: 50px;
-  font-size: 2.0rem;
+  padding-left: 40px;
+  font-size: 1.5rem;
 }
 .qa-list .question-text:before {
   content: "Ｑ";
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   background: #8ddcd1;
   display: flex;
   align-items: center;
@@ -166,15 +191,23 @@
   color: #fff;
 }
 .qa-list .answer-text {
+  display: none;
   position: relative;
-  padding-left: 50px;
-  padding-top: 4px;
-  font-size: 1.4rem;
+  padding: 20px 20px 20px 40px;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 .qa-list .answer-text a {
   color:#5499d8;
-  font-size: 14px;
-  line-height: 25px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+.qa-company-contents .question-text {
+  font-size: 2.0rem;
+  margin-bottom: 12px;
+}
+.qa-company-contents .answer-text {
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 959px) {
@@ -182,21 +215,50 @@
     margin-bottom: 20px;
     padding-bottom: 20px;
   }
+  .contents-topics {
+    margin-bottom: 32px;
+  }
+  .contents-topics-title {
+    font-size: 1.4rem;
+  }
+  .contents-topics-list {
+    display: block;
+  }
+  .contents-topics-list li:after {
+    content: "";
+  }
+  .contents-topics-list li a {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 4px 12px;
+  }
   .qa-list .question-text {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    padding-left: 32px;
+  }
+  .qa-list .qa-list-el-col {
+    padding: 10px 14px;
+    margin-bottom: 12px;
   }
   .qa-list .question-text:before {
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
   }
   .qa-list .answer-text a {
     font-size: 1.2rem;
     line-height: 1.5;
   }
   .qa-list .answer-text {
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 12px 0px 12px 0px;
+  }
+  .qa-list-el-title {
+    font-size: 1.3rem;
+    padding-left: 10px;
+    margin-bottom: 12px;
   }
 
 }
