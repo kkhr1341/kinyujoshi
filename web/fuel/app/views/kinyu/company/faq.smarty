@@ -67,7 +67,7 @@
 
            <div class="qa-list-el-col">
             <p class="question-text ff-mincho link-point">勉強したいテーマや女子会の会場についてリクエストしたいです。</p>
-            <p class="answer-text">リクエストやご意見がありましたら「きんゆう女子。編集部」（press@kinjo.in）までお気軽にご連絡ください。</p>
+            <p class="answer-text">リクエストやご意見がありましたら「きんゆう女子。編集部」（<a href="mailto:press@kinjo.in">press@kinjo.in</a>）までお気軽にご連絡ください。</p>
           </div>
 
           <div class="qa-list-el-col">

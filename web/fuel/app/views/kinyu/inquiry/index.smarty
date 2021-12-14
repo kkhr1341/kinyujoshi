@@ -7,6 +7,8 @@
       <h2 class="ff-mincho kinjo-color text-center">お問い合わせ</h2>
     </div>
 
+    <p class="text-center mb-4">もし困ったことや気になることがあれば、<br class="d-block d-lg-none">まずは<a class="link-color" href="/faq">よくあるご質問</a>をご確認ください♪</p>
+
     <div class="company-details-block clear">
       <div class="company-details company-contact">
         <div class="singlepage-block center">
