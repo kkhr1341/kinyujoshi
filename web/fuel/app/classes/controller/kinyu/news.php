@@ -4,6 +4,8 @@ use \Model\News;
 use \Model\Blogs;
 use \Model\Blogstocks;
 use \Model\Events;
+use \Model\Authors;
+use \Model\User;
 
 class Controller_Kinyu_News extends Controller_Kinyubase
 {
@@ -61,6 +63,8 @@ class Controller_Kinyu_News extends Controller_Kinyubase
             }
             // Basic認証
             $this->set_basic_auth($authentication_user, $authentication_password);
+
+            $this->data['viewable'] = true;
         }
 
         $this->template->title = $this->data['news']['title'];
