@@ -448,6 +448,7 @@ class Regist extends Base
             "profiles.url",
             "profiles.introduction",
             "member_regist.edit_inner",
+            "member_regist.job_kind",
             "profiles.official_member_job",
             "profiles.birthday",
             "profiles.created_at",
