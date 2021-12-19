@@ -55,8 +55,11 @@ class Regist extends Base
         $val->add('password', 'パスワード')
             ->add_rule('trim')
             ->add_rule('required')
+            ->add_rule('min_length', 6)
             ->add_rule('max_length', 255)
             ->add_rule('alphanum');
+
+        $val->add('password_conf', '確認用パスワード');
 
 //        $val->add('not_know', 'きんゆうワカラナイ度')
 //            ->add_rule('required');

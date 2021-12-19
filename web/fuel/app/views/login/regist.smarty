@@ -243,7 +243,7 @@
                 return false;
             }
 
-            if (params.uid == "") {
+            if (params.uid === undefined) {
                 if (params.password == "") {
                     ts.error("パスワードを入力してください。");
                     return false;
