@@ -64,8 +64,8 @@ class Regist extends Base
 //        $val->add('not_know', 'きんゆうワカラナイ度')
 //            ->add_rule('required');
 
-        // $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
-        //     ->add_rule('required');
+         $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
+             ->add_rule('required');
 
         // $val->add('want_to_learns', 'きんゆう女子。コミュニティで何を学んだり知りたい？')
         //     ->add_rule('required');

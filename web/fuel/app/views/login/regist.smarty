@@ -114,6 +114,17 @@
               </div>
             </div>
 
+            <div class="regist-add-form-edit-el form-radio-block">
+                <label class="regist-add-form-edit-title">金融機関で働いていたり、仕事上金融に関わっていますか？<span style="color:red; font-weight: normal;">*</span></label>
+                <p class="regist-add-form-edit-subtitle">金融ワカラナイ女子のためのコミュニティなので、簡単すぎたらゴメンなさい...。(;_;)</p>
+                <div class="radio_box_03 clear">
+                    <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
+                    <label for="job_kind1">はい</label>
+                    <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
+                    <label for="job_kind2">いいえ</label>
+                </div>
+            </div>
+
             <div class="regist-add-form-edit-el">
               <label class="regist-add-form-edit-title kinjo-color">自己紹介</label>
               <textarea type="text" id="introduction" name="introduction" class="form-control" placeholder="メンバー登録の理由や、今気になってること、趣味など自由にご記入ください♪"></textarea>
@@ -202,7 +213,7 @@
             params.birthday = (age01+age02+age03); //生年月日
             // params.prefecture = $('[name="prefecture"]').val(); //都道府県
             // params.not_know = $('[name="not_know"]:checked').val(); //金融ワカラナイ度
-            //params.job_kind = $('[name="job_kind"]:checked').val();
+            params.job_kind = $('[name="job_kind"]:checked').val();
 
             // // コミュニティを通じて、ご自身でも情報発信したいですか？
             // params.transmission = $("[name=transmission]:checked").val();
@@ -238,7 +249,7 @@
                 return false;
             }
 
-            if (params.job_kind == "-") {
+            if (params.job_kind === undefined) {
                 ts.error("「金融機関にお勤めですか？」のチェックをお願いいたします。");
                 return false;
             }
