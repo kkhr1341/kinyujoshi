@@ -41,7 +41,8 @@ class Regist extends Base
 
         $val->add('birthday', '生年月日')
             ->add_rule('mb_convert_kana', 'a', 'utf-8')
-            ->add_rule('valid_date');
+            ->add_rule('valid_date')
+            ->add_rule('required');
 
 //        $val->add('prefecture', '都道府県')
 //            ->add_rule('required');
