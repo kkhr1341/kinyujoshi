@@ -23,12 +23,12 @@
                 <p class="regist-benefits-list-el-description">月に2回くらいのお便りでは、皆さんにプラスになるようなお金に関する情報をお届けいたします。</p>
               </div>
             </div>
-            <div class="regist-benefits-list-el">
+            <!-- <div class="regist-benefits-list-el">
               <div class="regist-benefits-list-el-inner">
                 <p class="regist-benefits-list-el-title ff-mincho">テキストテキストテキスト</p>
                 <p class="regist-benefits-list-el-description">月に2回くらいのお便りでは、皆さんにプラスになるようなお金に関する情報をお届けいたします。</p>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -83,40 +83,42 @@
 
             <div class="regist-add-form-edit-el select-area">
               <label class="regist-add-form-edit-title">生年月日<span style="color:red; font-weight: normal;">*</span></label>
-              <div class="regist-selectarea">
-                  <select id="age1" class='form-control'>
-                      <option>-</option>
-                      {section name=i start=1942 loop=$smarty.now|date_format:'%Y'-18}
-                          <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
-                      {/section}
-                  </select>
-                  <p>年</p>
-              </div>
+              <div class="regist-selectarea-block">
+                <div class="regist-selectarea">
+                    <select id="age1" class='form-control'>
+                        <option>-</option>
+                        {section name=i start=1942 loop=$smarty.now|date_format:'%Y'-18}
+                            <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
+                        {/section}
+                    </select>
+                    <p>年</p>
+                </div>
 
-              <div class="regist-selectarea">
-                  <select id="age2" class='form-control'>
-                      <option>-</option>
-                      {section name=i start=1 loop=13}
-                          <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
-                      {/section}
-                  </select>
-                  <p>月</p>
-              </div>
+                <div class="regist-selectarea">
+                    <select id="age2" class='form-control'>
+                        <option>-</option>
+                        {section name=i start=1 loop=13}
+                            <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
+                        {/section}
+                    </select>
+                    <p>月</p>
+                </div>
 
-              <div class="regist-selectarea">
-                  <select id="age3" class='form-control'>
-                      <option>-</option>
-                      {section name=i start=1 loop=32}
-                          <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
-                      {/section}
-                  </select>
-                  <p>日</p>
+                <div class="regist-selectarea">
+                    <select id="age3" class='form-control'>
+                        <option>-</option>
+                        {section name=i start=1 loop=32}
+                            <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
+                        {/section}
+                    </select>
+                    <p>日</p>
+                </div>
               </div>
             </div>
 
             <div class="regist-add-form-edit-el form-radio-block">
                 <label class="regist-add-form-edit-title">金融機関で働いていたり、仕事上金融に関わっていますか？<span style="color:red; font-weight: normal;">*</span></label>
-                <p class="regist-add-form-edit-subtitle">金融ワカラナイ女子のためのコミュニティなので、簡単すぎたらゴメンなさい...。(;_;)</p>
+                <p class="regist-add-form-edit-subtitle">金融ワカラナイ女子のためのコミュニティなので、念のためのご確認です♪</p>
                 <div class="radio_box_03 clear">
                     <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
                     <label for="job_kind1">はい</label>
