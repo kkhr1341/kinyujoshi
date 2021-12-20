@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      
+
       <p class="regist-contents-title ff-mincho kinjo-color text-center">登録はこちらから♪</p>
       <p class="message text-center">「<span style="color:red;display:inline-block;">*</span>」は必須項目となります。</p>
       <div class="login-add-contents-block">
@@ -80,6 +80,50 @@
                 </div>
               </div>
             {/if}
+
+            <div class="regist-add-form-edit-el select-area">
+              <label class="regist-add-form-edit-title">生年月日<span style="color:red; font-weight: normal;">*</span></label>
+              <div class="regist-selectarea">
+                  <select id="age1" class='form-control'>
+                      <option>-</option>
+                      {section name=i start=1942 loop=$smarty.now|date_format:'%Y'-18}
+                          <option value="{$smarty.section.i.index}">{$smarty.section.i.index}</option>
+                      {/section}
+                  </select>
+                  <p>年</p>
+              </div>
+
+              <div class="regist-selectarea">
+                  <select id="age2" class='form-control'>
+                      <option>-</option>
+                      {section name=i start=1 loop=13}
+                          <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
+                      {/section}
+                  </select>
+                  <p>月</p>
+              </div>
+
+              <div class="regist-selectarea">
+                  <select id="age3" class='form-control'>
+                      <option>-</option>
+                      {section name=i start=1 loop=32}
+                          <option value="{$smarty.section.i.index|string_format:'%02d'}">{$smarty.section.i.index}</option>
+                      {/section}
+                  </select>
+                  <p>日</p>
+              </div>
+            </div>
+
+            <div class="regist-add-form-edit-el form-radio-block">
+                <label class="regist-add-form-edit-title">金融機関で働いていたり、仕事上金融に関わっていますか？<span style="color:red; font-weight: normal;">*</span></label>
+                <p class="regist-add-form-edit-subtitle">金融ワカラナイ女子のためのコミュニティなので、簡単すぎたらゴメンなさい...。(;_;)</p>
+                <div class="radio_box_03 clear">
+                    <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="">
+                    <label for="job_kind1">はい</label>
+                    <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="">
+                    <label for="job_kind2">いいえ</label>
+                </div>
+            </div>
 
             <div class="regist-add-form-edit-el">
               <label class="regist-add-form-edit-title kinjo-color">自己紹介</label>
@@ -152,9 +196,9 @@
             var password_conf = $("[name='password_conf']").val();
 
             // 生年月日入力チェック
-            //var age01 = $("#age1").val();
-            //var age02 = $("#age2").val();
-            //var age03 = $("#age3").val();
+            var age01 = $("#age1").val();
+            var age02 = $("#age2").val();
+            var age03 = $("#age3").val();
 
             var params = {};
             params.uid = $('[name="uid"]').val();
@@ -166,10 +210,10 @@
             params.name = $('[name="name"]').val(); //お名前
             params.name_kana = $('[name="name_kana"]').val(); //ふりがな
             params.nickname = $('[name="nickname"]').val(); //ニックネーム
-            //params.birthday = (age01+age02+age03); //生年月日
+            params.birthday = (age01+age02+age03); //生年月日
             // params.prefecture = $('[name="prefecture"]').val(); //都道府県
             // params.not_know = $('[name="not_know"]:checked').val(); //金融ワカラナイ度
-            //params.job_kind = $('[name="job_kind"]:checked').val();
+            params.job_kind = $('[name="job_kind"]:checked').val();
 
             // // コミュニティを通じて、ご自身でも情報発信したいですか？
             // params.transmission = $("[name=transmission]:checked").val();
@@ -205,12 +249,12 @@
                 return false;
             }
 
-            if (params.job_kind == "-") {
+            if (params.job_kind === undefined) {
                 ts.error("「金融機関にお勤めですか？」のチェックをお願いいたします。");
                 return false;
             }
 
-            if (params.uid == "") {
+            if (params.uid === undefined) {
                 if (params.password == "") {
                     ts.error("パスワードを入力してください。");
                     return false;
@@ -231,18 +275,18 @@
                 }
             }
 
-            // if (age01 == "-") {
-            //     ts.error("生年月日の「年」を入力してください");
-            //     return false;
-            // }
-            // if (age02 == "-") {
-            //     ts.error("生年月日の「月」を入力してください");
-            //     return false;
-            // }
-            // if (age03 == "-") {
-            //     ts.error("生年月日の「日」を入力してください");
-            //     return false;
-            // }
+            if (age01 == "-") {
+                ts.error("生年月日の「年」を入力してください");
+                return false;
+            }
+            if (age02 == "-") {
+                ts.error("生年月日の「月」を入力してください");
+                return false;
+            }
+            if (age03 == "-") {
+                ts.error("生年月日の「日」を入力してください");
+                return false;
+            }
             // if (params.prefecture == "") {
             //     ts.error("都道府県を入力してください");
             //     return false;
