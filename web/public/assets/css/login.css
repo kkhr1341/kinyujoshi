@@ -142,6 +142,12 @@
   background-position: right 8px center;
   background-repeat: no-repeat;
 }
+.regist-selectarea-block {
+  display: inline-block;
+}
+.regist-selectarea {
+  display: inline-block;
+}
 .regist-add-form-edit-el select#age1 {
   width: 150px;
 }
@@ -266,6 +272,15 @@
   }
   .regist-add-form-edit-subtitle {
     font-size: 1.1rem;
+  }
+  .regist-add-form-edit-el select#age1 {
+  width: 100px;
+  }
+  .regist-add-form-edit-el select#age2 {
+    width: 50px;
+  }
+  .regist-add-form-edit-el select#age3 {
+    width: 50px;
   }
 }
 

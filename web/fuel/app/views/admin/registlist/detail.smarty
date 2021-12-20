@@ -43,6 +43,19 @@
             <input type="text" id="url" class="form-control" placeholder="" name="url" value="{$registel.url}">
           </div>
 
+          <div class="form-group form-radio-block">
+            <label class="form-title">金融機関で働いていますか？ <span class="label label-danger">必須</span></label>
+            <p class="form-sub-title">金融についてワカラナイ女性のためのコミュニティなのでご注意くださいませ( ´ ▽ ` )ﾉ</p>
+            <div class="radio_box_03 clear">
+              <input type="radio" value="はい" name="job_kind" id="job_kind1" class="form-radio" placeholder="" {if $registel.job_kind == "はい"}checked{/if}>
+              <label for="job_kind1" class="form-long">はい</label>
+              <input type="radio" value="いいえ" name="job_kind" id="job_kind2" class="form-radio" placeholder="" {if $registel.job_kind == "いいえ"}checked{/if}>
+              <label for="job_kind2" class="form-long">いいえ</label>
+              <input type="radio" value="不明" name="job_kind" id="job_kind3" class="form-radio" placeholder="" {if $registel.job_kind == "不明"}checked{/if}>
+              <label for="job_kind3" class="form-long">不明</label>
+            </div>
+          </div>
+
           <div class="form-group form-group02">
             <label class="form-title">簡単な自己紹介をお願いいたします。 <span class="label label-danger">必須</span></label>
             <textarea id="introduction" name="introduction" class='form-control' rows="10">{$registel.introduction}</textarea>
@@ -141,6 +154,7 @@ $(function(){
     params.url = $('#url').val();
     params.introduction = $('#introduction').val();
     params.edit_inner = $('#edit_inner').val();
+    params.job_kind = $('[name="job_kind"]:checked').val();
 
     if (params.name == "") {
       ts.error("お名前を入力してください");

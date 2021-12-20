@@ -11,6 +11,9 @@ class Registlist extends Base
         $val = \Validation::forge();
         $val->add_callable('myvalidation');
 
+
+        $val->add('code', '会員コード');
+
         $val->add('email', 'メールアドレス')
             ->add_rule('required')
             ->add_rule('valid_email')
@@ -59,6 +62,8 @@ class Registlist extends Base
         $val->add('url', '「個人で発信しているブログなど」');
 
         $val->add('introduction', '自己紹介');
+
+        $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？');
 
         $val->add('edit_inner', '編集部入力欄(備考)');
 
@@ -215,7 +220,8 @@ class Registlist extends Base
                 'age' => $params['birthday'],
                 'url' => $params['url'],
                 'introduction' => $params['introduction'],
-                'edit_inner' => $params['edit_inner']
+                'edit_inner' => $params['edit_inner'],
+                'job_kind' => $params['job_kind'],
             ))->where('code', '=', $params['code'])->execute();
 
             if ($username = self::getUsername($params['code'])) {

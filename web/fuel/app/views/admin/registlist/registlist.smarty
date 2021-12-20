@@ -47,6 +47,7 @@
       <th>診断チャートタイプ</th>
       <th>Email</th>
       <th>年齢</th>
+      <th>金融機関勤務</th>
       <th>編集部記入欄</th>
       <th>詳細</th>
       <th>pass済</th>
@@ -62,6 +63,13 @@
       <td>{$email.type}</td>
       <td>{$email.email}</td>
       <td>{$email.birthday}</td>
+      <td>
+        {if $email.job_kind == "はい"}
+          ○
+        {elseif $email.job_kind == "いいえ"}
+        {else}
+        {/if}
+      </td>
       <td>{$email.edit_inner}</td>
       <td><a class="admin-registlist-more" href="/admin/registlist/{$email.code}">編集</a></td>
       <td>

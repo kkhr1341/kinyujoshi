@@ -41,7 +41,8 @@ class Regist extends Base
 
         $val->add('birthday', '生年月日')
             ->add_rule('mb_convert_kana', 'a', 'utf-8')
-            ->add_rule('valid_date');
+            ->add_rule('valid_date')
+            ->add_rule('required');
 
 //        $val->add('prefecture', '都道府県')
 //            ->add_rule('required');
@@ -54,14 +55,17 @@ class Regist extends Base
         $val->add('password', 'パスワード')
             ->add_rule('trim')
             ->add_rule('required')
+            ->add_rule('min_length', 6)
             ->add_rule('max_length', 255)
             ->add_rule('alphanum');
+
+        $val->add('password_conf', '確認用パスワード');
 
 //        $val->add('not_know', 'きんゆうワカラナイ度')
 //            ->add_rule('required');
 
-        // $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
-        //     ->add_rule('required');
+         $val->add('job_kind', '金融機関で働いていたり、仕事上金融に関わっていますか？')
+             ->add_rule('required');
 
         // $val->add('want_to_learns', 'きんゆう女子。コミュニティで何を学んだり知りたい？')
         //     ->add_rule('required');
@@ -444,6 +448,7 @@ class Regist extends Base
             "profiles.url",
             "profiles.introduction",
             "member_regist.edit_inner",
+            "member_regist.job_kind",
             "profiles.official_member_job",
             "profiles.birthday",
             "profiles.created_at",

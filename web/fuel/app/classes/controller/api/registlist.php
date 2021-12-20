@@ -32,7 +32,7 @@ class Controller_Api_Registlist extends Controller_Apibase
             $message = reset($error_messages);
             return $this->error($message);
         }
-        return $this->ok(Registlist::save(\Input::post()));
+        return $this->ok(Registlist::save($val->validated()));
     }
 
     public function action_delete()
