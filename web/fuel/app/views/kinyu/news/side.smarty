@@ -76,9 +76,9 @@
   <p class="sidebar-title ff-decoration-bold kinjo-color text-center">Follow Me!<span class="d-block ff-mincho color-generally font-weight-normal">SNSでも<br>情報発信しています♪</span></p>
   <div class="sidebar-social-list">
     <ul class="d-flex justify-content-center">
-      <li class="instagram"><a href=""><img class="w-100" src="/images/social/insta-icon-main.svg"></a></li>
-      <li class="twitter"><a href=""><img class="w-100" src="/images/social/twitter-icon-main.svg"></a></li>
-      <li class="line"><a href=""><img class="w-100" src="/images/social/line-icon-main.svg"></a></li>
+      <li class="instagram"><a href="https://www.instagram.com/kinyu_joshi/" target="_blank"><img class="w-100" src="/images/social/insta-icon-main.svg"></a></li>
+      <li class="twitter"><a href="https://twitter.com/kinyu_joshi" target="_blank"><img class="w-100" src="/images/social/twitter-icon-main.svg"></a></li>
+      <li class="line"><a href="https://lin.ee/OFHGpg7" target="_blank"><img class="w-100" src="/images/social/line-icon-main.svg"></a></li>
     </ul>
   </div>
 </div>
