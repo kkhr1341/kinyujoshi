@@ -94,6 +94,11 @@
 	padding: 20px 200px 50px;
 }
 
+/* ストーリーブック */
+.story-book-link a img {
+	width: 550px;
+}
+
 
 @media screen and (max-width: 959px) {
 
@@ -180,6 +185,11 @@
 		left: 12px;
     top: 12px;
     width: 36px;
+	}
+
+	/* ストーリーブック */
+	.story-book-link a img {
+		width: 80%;
 	}
 
 
