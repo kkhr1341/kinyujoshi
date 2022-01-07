@@ -162,6 +162,11 @@
       <img class="d-block omc-link-title mx-auto" src="/images/omc/omc-link-title.svg">
       <a class="kinjo-link d-block mx-auto position-relative" href="">〉オフィシャルメンバーズクラブ<img class="omc-link-after" src="/images/omc/omc-link-after.png"></a>
     </div> -->
+    <div class="main-block story-book-link text-center">
+      <a class="d-block" href="/images/storybook.pdf" target="_blank">
+        <img src="/images/about/storybook_bnr.png">
+      </a>
+    </div>
   </div>
 </div>
 
