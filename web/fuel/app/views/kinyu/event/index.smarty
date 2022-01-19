@@ -1,219 +1,63 @@
-<link type="text/css" rel="stylesheet" href="/assets/css/kinyu/singlepage.css" />
-
-<div class="kinyu-single-block joshikai-main-block">
-  <div class="joshikai-main clear">
-    <div class="joshikai-main-left">
-      <div class="img-box">
-        <div class="img-box-inner">
-          <img src="/images/event/joshikai-title.png">
-          <a class="about-joshikai-link" href="#about-joshikai">きんゆう女子。会って？</a>
+<div class="main-block event-introduction">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-12 col-md-6 img-block position-relative">
+        <div class="main-imb-block" style="background:url(/images/event/event-introduction.jpg) center center / cover no-repeat"></div>
+        <div class="sub-imb-block">
+          <ul class="sub-imb-block-el d-flex">
+            <li><img class="w-100" src="/images/event/event-introduction-sub01.jpg"></li>
+            <li><img class="w-100" src="/images/event/event-introduction-sub02.jpg"></li>
+            <li><img class="w-100" src="/images/event/event-introduction-sub03.jpg"></li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div class="joshikai-main-right">
-      <div class="white-bg"></div>
+
+      <div class="col-12 col-md-6 text-block">
+        <p class="main-title ff-mincho">参加して学ぶ。</p>
+        <p class="description">
+          おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広い”きんゆう”をテーマに女子会をしています。<br><br>金融の知恵をつけて、自由で等身大に生きて行こう。
+        </p>
+      </div>
+
     </div>
   </div>
-
-  <div class="inner">
-
-    <div id="kinyu-event-scroll-point" class="center">
-
-      <div id="joshikai-list" class="kinyu-event-list joshiakai-now-list joshikai-main-el">
-
-        <p class="kinyu-event-info-title">ワカラナイ…から卒業しよう♪</p>
-        <ul>
-          {foreach from=$events.datas key="key" item=event name=loopname}
-          <li{if $event.pr == 1} class="pr"{/if}>
-            {if $event.event_category == "女子会"}
-              <div class="bg-joshikai"></div>
-            {else if $event.event_category == "スペシャル"}
-              <div class="bg-special-joshikai"></div>
-            {else}
-              <div class="bg-joshikai"></div>
-            {/if}
-            <div class="kinyu-event-list-el">
-              {if empty($event.specific_link)}
-              <a href="/joshikai/{$event.code}">
-              {else}
-              <a href="{$event.specific_link}" target="_blank">
+</div>
+<div class="main-block" id="past-event-list">
+  <div class="event-single-list container mx-auto">
+    <p class="event-main-title ff-mincho text-center">女子会/イベント一覧</p>
+    <ul class="row">
+      {foreach from=$events.datas key="key" item=event name=loopname}
+      <li class="col-12 col-md-6">
+        <a class="d-block" href="/event/{$event.code}">
+          <div class="event-single-list-el">
+            <div class="event-single-list-img position-relative" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
+              {if $event.pr == 1}
+                <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
               {/if}
-                <div class="kinyu-event-list-left" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
-                  {if $event.pr == 1}
-                    <!-- PR用イメージ挿入箇所 -->
-                    <p class="with_ki-label"><img src="/images/report/with_ki-label.png"></p>
-                  {/if}
-                  {if $event.applicable eq false}
-                    <p class="joshikai-applicable">＊受付終了しました</p>
-                  {else if $event.full eq true}
-                    <p class="joshikai-applicable">＊受付終了しました</p>
-                  {/if}
-                </div>
-
-                {if $event.event_category == "女子会"}
-                  <div class="kinyu-event-list-right">
-                {else if $event.event_category == "スペシャル"}
-                  <div class="kinyu-event-list-right special">
+            </div>
+            <div class="event-single-list-text">
+              <div class="event-single-list-kind">
+                <p class="text-white">
+                <span class="date-box">
+                  <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
+                </span>
+                </p>
+              </div>
+              <h3 class="event-single-title text-newline ff-mincho">{$event.title}</h3>
+              <div class="event-subbox">
+                {if is_numeric($event.fee)}
+                <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
                 {else}
-                  <div class="kinyu-event-list-right">
+                <p class="event-subbox-el">参加費：{$event.fee}</p>
                 {/if}
-                  <!-- <p class="event-main-date">
-                    <span class="fw-bold">{$event.event_date|date_format:"%-m/%-e"}</span>
-                    <span class="fw-bold day_of_the_week">{$event.event_date|date_format:"(%a)"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}</span>
-                    <span class="timezone">{$event.event_start_datetime}〜{$event.event_end_datetime}</span>
-                  </p> -->
-                  <div class="kinyu-top-list-kind kinyu-top-event-kind">
-                    <p>
-                    <span class="date-box">
-                      {if $event.display_event_date}
-                        <span class="date">{$event.display_event_date}</span>
-                      {else}
-                        <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
-                      {/if}
-                    </span>
-                    </p>
-                  </div>
-                  <h3 class="event-title">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
-                  <div class="event-subbox">
-                    {if $event.fee == 0}
-                      {if $event.event_category == '招待型'}
-                        <p class="event-subbox-el">ご招待</p>
-                      {else}
-                        <p class="event-subbox-el">参加費：無料</p>
-                      {/if}
-                    {else}
-                      <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
-                    {/if}
-                    <p class="event-subbox-el">場所：{$event.place}</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </li>
-          {/foreach}
-        </ul>
-        <div class="link-to">
-          <a href="/joshikai_past">過去の女子会一覧へ</a>
-        </div>
-      </div>
-
-      <!-- きんゆう女子会。って？ -->
-      <div id="about-joshikai" class="joshikai-main-el about-joshikai">
-        <p class="kinyu-event-info-title">きんゆう女子。会って？</p>
-        <div class="about-joshikai-inner clear">
-          <div class="img-box">
-            <div class="white-bg2"></div>
-            <div class="img-box-el" style="background:url(/images/event/about-joshikai1.jpg) center center / cover no-repeat"></div>
-            <div class="img-box-el-three clear">
-              <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai2.jpg) center center / cover no-repeat"></div>
-              <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai3.jpg) center center / cover no-repeat"></div>
-              <div class="img-box-el-three-el" style="background:url(/images/event/about-joshikai4.jpg) center center / cover no-repeat"></div>
+              </div>
             </div>
           </div>
-          <div class="text-box">
-            <div class="text-box-inner">
-              <div class="border-top"></div>
-              <p class="main-title">おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広い"きんゆう"をテーマに女子会をしています。</p>
-              <p class="description">女子会は参加者同士のおしゃべりをする日や、ゲストを招いた学びの日など様々なスタイルがあります。
-              基本的に女子会は1日で完結しますが、不定期で連続型の女子会もあり学びをより深めていただく機会も用意しています。<br>
-              また、コミュニティ活動を通じて、まちづくりやスペースの有効活用にも貢献しています。オンライン開催も行っていますので、全国各地からお好きな場所で参加できます。
-              </p>
-              <a class="link-to" href="#joshikai-list">今後の女子会の予定はこちら</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="special-event-list joshikai-main-el">
-        <p class="kinyu-event-info-title">過去の特別女子会。</p>
-        <ul class="clear">
-
-          <li>
-            <a href="/document/moneyschool2019.pdf" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-moneyschool2019.jpg) top center / cover no-repeat"></div>
-              <div class="text-area"><p>JPX＊マネースクール2019 - 今すぐ始める！マネーアクション宣言</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/document/moneyschool2018.pdf" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-moneyschool2018.jpg) center center / cover no-repeat"></div>
-              <div class="text-area"><p>JPX＊マネースクール2018 - 資産形成とわたしの未来</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/ooam-joshikai2018" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/ooam-joshikai-ito.jpg) top center / cover no-repeat"></div>
-              <div class="text-area"><p>【伊東編】大江戸温泉できんゆう女子会。</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/daijoshikai2018" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-special9.jpg) center center / cover no-repeat"></div>
-              <div class="text-area"><p>東証ひみつの大女子会♪ 2018</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/school_jpx02" target="_blank">
-              <div class="bg-area" style="background:url(/images/content/school_public/og-school_public02.jpg) left top / cover no-repeat"></div>
-              <div class="text-area"><p>第2回 きんゆう女子。学院</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/celebration" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/1000celebration.jpg) center center / cover no-repeat"></div>
-              <div class="text-area"><p>Kinjo1000 Celebration - メンバー1000名達成女子会♪</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://kinyu-joshi.jp/report/Qqc6pg" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-special7.jpg) left center / cover no-repeat"></div>
-              <div class="text-area"><p>お金と私をアップデート 2017 autumn</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/oom-reit" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-special5.jpg) center center / cover no-repeat"></div>
-              <div class="text-area"><p>大江戸温泉できんゆう女子会。</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/document/moneyschool2017.pdf" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-special4.jpg) center center / cover no-repeat"></div>
-              <div class="text-area"><p>JPX＊マネースクール - ロボアドとミライの資産形成</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/school_jpx" target="_blank">
-              <div class="bg-area" style="background:url(/images/content/school_public/og-school_public.png) top center / cover no-repeat"></div>
-              <div class="text-area"><p>きんゆう女子。学院</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="https://kinyu-joshi.jp/report/zHrTTH" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-special3.png) center center / cover no-repeat"></div>
-              <div class="text-area"><p>お金と私をアップデート 2017 spring</p></div>
-            </a>
-          </li>
-
-          <li>
-            <a href="/school" target="_blank">
-              <div class="bg-area" style="background:url(/images/event/past-special2.png) center center / cover no-repeat"></div>
-              <div class="text-area"><p>私立きんゆう女子。学院</p></div>
-            </a>
-          </li>
-
-        </ul>
-      </div>
-    </div>
+        </a>
+      </li>
+      {/foreach}
+    </ul>
+    <a class="link-generally link-generally02" href="/event_past">過去の女子会/イベント一覧へ</a>
   </div>
 </div>
