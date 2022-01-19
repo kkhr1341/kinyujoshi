@@ -562,7 +562,7 @@ html.is-fixed body {
 	font-size: 1.3rem;
 	-webkit-line-clamp: 1;
 }
-.event-content .event-past-link {
+.event-content .event-single-link {
 	font-size: 1.6rem;
 	margin-top: 32px;
 }
@@ -574,7 +574,7 @@ html.is-fixed body {
 }
 
 @media screen and (max-width: 959px) {
-	.event-content .event-past-link {
+	.event-content .event-single-link {
 		font-size: 1.2rem;
 		margin-top: 24px;
 	}
@@ -963,7 +963,7 @@ html.is-fixed body {
 /* イントロダクション */
 .event-introduction {
 	background-color: #F7F7F7;
-	padding: 120px 0px 180px;
+	padding: 150px 0px 180px;
 }
 .event-introduction .img-block .main-imb-block {
 	height: 300px;
@@ -984,44 +984,47 @@ html.is-fixed body {
 	font-size: 2.6rem;
 	margin-bottom: 16px;
 }
-.event-past-list-el {
+.event-single-list li {
+	margin-bottom: 30px;
+}
+.event-single-list-el {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   height: 210px;
   background-color: #F7F7F7;
 }
-.event-past-list-img {
+.event-single-list-img {
 	width: 40%;
   height: 100%;
 }
-.event-past-list-text {
+.event-single-list-text {
   width: 60%;
   padding: 24px;
 }
-.event-past-list-img .with_ki-label {
+.event-single-list-img .with_ki-label {
   position: absolute;
   width: 130px;
   right: 12px;
   top: 12px;
 }
-.event-past-list-kind p span.date-box {
+.event-single-list-kind p span.date-box {
   background-color: #8ddcd1;
   padding: 6px 12px;
   font-size: 1.5rem;
 }
-.event-past-title {
+.event-single-title {
   font-size: 1.8rem;
   line-height: 28px;
   height: 84px;
   -webkit-line-clamp: 3;
   margin: 10px 0px;
 }
-.event-past-list .event-subbox p {
+.event-single-list .event-subbox p {
 	font-size: 1.2rem;
 	line-height: 1.5;
 }
-.event-past-list .link-generally {
+.event-single-list .link-generally {
 	margin-top: 40px;
 }
 /* 過去の特別女子会 */
@@ -1040,7 +1043,7 @@ html.is-fixed body {
 
 @media screen and (max-width: 959px) {
 	.event-introduction {
-		padding: 40px 0px 50px;
+		padding: 80px 0px 50px;
 	}
 	.event-introduction .img-block .main-imb-block {
 		height: 200px;
@@ -1071,34 +1074,37 @@ html.is-fixed body {
 		font-size: 2.0rem;
 		margin-bottom: 24px;
 	}
-	.event-past-list-el {
+	.event-single-list li {
+		margin-bottom: 0px;
+	}
+	.event-single-list-el {
 		height: 150px;
 		margin-bottom: 16px;
 	}
-	.event-past-list-text {
+	.event-single-list-text {
 		padding: 16px 20px;
 	}
-	.event-past-list-img .with_ki-label {
+	.event-single-list-img .with_ki-label {
     position: absolute;
     width: 100px;
     right: 8px;
     top: 8px;
 	}
-	.event-past-list-kind p span.date-box {
+	.event-single-list-kind p span.date-box {
 		font-size: 1.2rem;
 		padding: 4px;
 	}
-	.event-past-title {
+	.event-single-title {
     font-size: 1.4rem;
     line-height: 22px;
     height: 66px;
     -webkit-line-clamp: 3;
     margin: 6px 0px 4px;
 	}
-	.event-past-list .event-subbox p {
+	.event-single-list .event-subbox p {
 		font-size: 1.1rem;
 	}
-	.event-past-list .link-generally {
+	.event-single-list .link-generally {
 		margin-top: 10px;
 	}
 	.past-special-list {
