@@ -33,7 +33,7 @@
 				<div class="swiper-pagination event-top-swiper-pagination"></div>
 			</div>
 		</div>
-		<a class="event-past-link d-block mx-auto kinjo-color text-center" href="/event_past#past-event-list">〉過去のイベント（女子会）はこちら</a>
+		<a class="event-past-link d-block mx-auto kinjo-color text-right" href="/event">〉女子会/イベント一覧はこちら</a>
 	</div>
 </div>
 

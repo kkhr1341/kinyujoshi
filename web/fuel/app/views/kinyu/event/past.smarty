@@ -1,48 +1,25 @@
-<div class="main-block event-introduction">
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <div class="col-12 col-md-6 img-block position-relative">
-        <div class="main-imb-block" style="background:url(/images/event/event-introduction.jpg) center center / cover no-repeat"></div>
-        <div class="sub-imb-block">
-          <ul class="sub-imb-block-el d-flex">
-            <li><img class="w-100" src="/images/event/event-introduction-sub01.jpg"></li>
-            <li><img class="w-100" src="/images/event/event-introduction-sub02.jpg"></li>
-            <li><img class="w-100" src="/images/event/event-introduction-sub03.jpg"></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 text-block">
-        <p class="main-title ff-mincho">参加して学ぶ。</p>
-        <p class="description">おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広い”きんゆう”をテーマに女子会をしています。<br><br>おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広い”きんゆう”をテーマに女子会をしています。</p>
-      </div>
-
-    </div>
-  </div>
-</div>
 <div class="main-block" id="past-event-list">
-  <div class="event-past-list container mx-auto">
+  <div class="event-single-list container mx-auto">
     <p class="event-main-title ff-mincho text-center">過去のイベント一覧</p>
     <ul class="row">
       {foreach from=$events.datas key="key" item=event name=loopname}
       <li class="col-12 col-md-6">
-        <a href="/joshikai/{$event.code}">
-          <div class="event-past-list-el">
-            <div class="event-past-list-img position-relative" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
+        <a class="d-block" href="/event/{$event.code}">
+          <div class="event-single-list-el">
+            <div class="event-single-list-img position-relative" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
               {if $event.pr == 1}
                 <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
               {/if}
             </div>
-            <div class="event-past-list-text">
-              <div class="event-past-list-kind">
+            <div class="event-single-list-text">
+              <div class="event-single-list-kind">
                 <p class="text-white">
                 <span class="date-box">
                   <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
                 </span>
                 </p>
               </div>
-              <h3 class="event-past-title text-newline ff-mincho">{$event.title}</h3>
+              <h3 class="event-single-title text-newline ff-mincho">{$event.title}</h3>
               <div class="event-subbox">
                 {if is_numeric($event.fee)}
                 <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
@@ -56,7 +33,7 @@
       </li>
       {/foreach}
     </ul>
-    <a class="link-generally" href="/joshikai">開催予定のイベント一覧へ</a>
+    <a class="link-generally" href="/event">開催予定のイベント一覧へ</a>
   </div>
 </div>
 
