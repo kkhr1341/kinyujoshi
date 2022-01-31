@@ -124,4 +124,16 @@ class Controller_Kinyu_Campaign extends Controller_Kinyubase
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/campaign/oyakudachi.smarty', $this->data);
     }
+
+    public function action_with_bloomoibrillia()
+    {
+        $this->template->title = 'with×き -東京建物 Brillia Bloomoi-';
+        $this->template->ogimg = '/images/content/og-fb.jpg';
+        $this->template->description = '';
+
+        $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
+        $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
+        $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
+        $this->template->contents = View::forge('kinyu/campaign/with_bloomoibrillia.smarty', $this->data);
+    }
 }
