@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　共通
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+header,
+.header-main-logo,
+#top-search-open,
+.menu-trigger-container,
+footer {
+	display: none;
+}
+.withk-header {
+	height: 120px;
+	padding-top: 30px;
+}
+.withk-header a {
+	padding: 0px 20px;
+	line-height: 0;
+}
+.withk-header a img {
+	height: 60px;
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スマートフォン
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 959px) {
+
+
+
+
+}
+
+
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  タブレットのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width:481px) and ( max-width:959px) {
+
+
+}

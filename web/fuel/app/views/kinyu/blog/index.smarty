@@ -70,7 +70,7 @@
                     {/if}
                   </div>
                   <h3 class="report-title ff-mincho text-newline">
-                    {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+                    {if $blog.viewable == 0}<span class="secret-icon"></span>{/if}
                     {$blog.title}
                   </h3>
                   <div class="report-author">

@@ -56,12 +56,12 @@
               <p>{$application.type}タイプ</p>
             {/if}
 
-            {if in_array('admin', $roles|default:'')}
             {if $application.message}
               <br/>
               <p style="font-size:9px;">お問い合わせ内容：<br/>{$application.message|nl2br}</p>
             {/if}
 
+            {if in_array('admin', $roles|default:'')}
             {if $application.charge_id}
             <br>
             <p>PAYJP課金ID：<br>{$application.charge_id}</p>
@@ -82,7 +82,6 @@
           {/if}
         </td>
         <td class="subject4 link-area">
-          {if in_array('admin', $roles|default:'') && $from_company==TRUE}
             {if $application.email != ''}
               <a class="email-link" target="_blank" href="mailto:{$application.email}">個別メールを送る</a>
             {/if}
@@ -90,6 +89,8 @@
             {if $application.username != 'guest' && $from_company==TRUE && $application.member_regist_code != ''}
               <a class="profile-link" target="_blank" href="/admin/registlist/{$application.member_regist_code}">メンバー情報の詳細</a>
             {/if}
+
+            {if in_array('admin', $roles|default:'') && $from_company==TRUE}
 
             {if $application.amount gt '0'}
               {if $application.payment_cancel eq '1'}

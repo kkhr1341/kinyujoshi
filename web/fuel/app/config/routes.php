@@ -140,6 +140,9 @@ return array(
   'school_jpx02' => 'kinyu/campaign/school_02',
   'oyakudachi' => 'kinyu/campaign/oyakudachi',
 
+  //withき
+  'with_bloomoibrillia' => 'kinyu/withk/with_bloomoibrillia',
+
   //きんゆう女子。with コーポレート
   'contents/cashless' => 'kinyu/withcorporate/paypay',
   'contents/cashless/article01' => 'kinyu/withcorporate/article01',

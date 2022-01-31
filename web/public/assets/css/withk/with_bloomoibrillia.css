@@ -1,0 +1,363 @@
+@charset "UTF-8";
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　共通
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.with-bloomoibrillia {
+	background-color: #F8F6F7;
+}
+.with-bb-color {
+	color: #9F7F8E;
+}
+.with-bb-deco {
+	font-family: adobe-handwriting-ernie, sans-serif;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　イントロダクション
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+.with-bloomoibrillia .main-introduction {
+	height: 600px;
+	position: relative;
+}
+.with-bloomoibrillia .main-introduction .img-block {
+	height: 100%;
+}
+.main-introduction-filter {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(255,255,255,.3);
+}
+.main-introduction-border {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 0 0;
+  border: 40px solid #fff;
+  border-color: #fff;
+  box-sizing: border-box;
+  opacity: 0.5;
+  z-index: 1000;
+}
+.main-introduction-title {
+	width: 550px;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  　メインコンテンツ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/* メッセージ */
+.message-area {
+	margin-top: 92px;
+	padding: 0px 0px 100px;
+	position: relative;
+}
+p.message-area-title {
+	font-size: 2.4rem;
+	margin-bottom: 24px;
+}
+p.message-area-description {
+	font-size: 1.5rem;
+	line-height: 2.2;
+}
+.message-area .intro-illust {
+	width: 12%;
+	position: absolute;
+	top: -40px;
+	left: 2%;
+}
+.message-area .intro-img01 {
+	width: 15%;
+	position: absolute;
+	top: 0;
+	right: 2%;
+}
+.message-area .intro-img02 {
+	width: 15%;
+	position: absolute;
+	top: 140px;
+	right: -4%;
+}
+
+/* ページ情報 */
+.page-infomation {
+	margin-top: 88px;
+}
+.page-infomation-el {
+
+}
+.page-infomation-el-inner {
+	padding: 40px;
+	background-color: #fff;
+}
+.page-infomation .page-infomation-apartment {
+	position: relative;
+	padding-right: 30px;
+}
+.page-infomation .page-infomation-apartment .img-block {
+	height: 250px;
+	width: 85%;
+	position: relative;
+}
+.page-infomation .page-infomation-apartment .img-block .apartment-img {
+	height: 260px;
+	position: absolute;
+	right: -100px;
+	bottom: -10px;
+}
+.apartment-deco {
+	position: absolute;
+	right: 10px;
+	top: -10px;
+	width: 130px;
+}
+.infomation-apartment-title {
+	font-size: 2.2rem;
+	margin-bottom: 12px;
+}
+.page-infomation-el-decotitle {
+	font-size: 2.8rem;
+	position: absolute;
+	left: 50px;
+	top: -20px;
+}
+.adviser-img {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+}
+.adviser-title {
+	font-size: 1.3rem;
+	line-height: 1.2;
+	margin-top: 12px;
+}
+.adviser-name {
+	font-size: 2.0rem;
+	margin-bottom: 10px;
+}
+.adviser-name span {
+	font-size: 1.3rem;
+}
+.adviser-description {
+	font-size: 1.2rem;
+	line-height: 1.4;
+	text-align: left;
+}
+
+/* リンク */
+.link-area {
+	margin-top: 80px;
+}
+.link-area a {
+	position: relative;
+	width: 700px;
+	background-color: #C9B6BF;
+	padding: 20px 0px;
+}
+.link-area a p {
+	font-size: 1.8rem;
+}
+.link-area a .link-area-deco {
+	position: absolute;
+	right: -32px;
+  top: -36px;
+}
+.link-area-deco-text {
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+}
+.link-area-deco-text span {
+	font-size: 2.8rem;
+}
+.link-area a:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #C9B6BF;
+	right: -6px;
+	bottom: -6px;
+}
+
+/* voice */
+.voice-container {
+	margin-top: 120px;
+}
+.voice-block02 {
+	margin-top: 80px;
+	padding-top: 80px;
+	border-top: 1px solid #C9B6BF;
+}
+.voice-title {
+	margin-bottom: 32px;
+}
+.voice-title img {
+	/*width: 36%;*/
+}
+.voice-details-el {
+	margin-bottom: 30px;
+}
+.voice-details-el p {
+	padding: 32px;
+	background-color: #fff;
+}
+.adviser-comment {
+	width: 800px;
+	margin-top: 12px;
+}
+.adviser-comment-text {
+	padding: 32px 32px 24px 32px;
+	background-color: #fff;
+	position: relative;
+}
+.adviser-comment-text:before{
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: -8px;
+  transform: translateX(-50%);
+  border-top: 20px solid transparent;
+  border-right: 20px solid #fff;
+  border-bottom: 20px solid transparent;
+}
+.adviser-comment-img {
+	position: absolute;
+	top: -6px;
+	left: 32px;
+}
+
+/* アンケート */
+.questionnaire-block {
+	width: 900px;
+	border: 1px solid #C9B6BF;
+	padding: 60px;
+	margin-top: 100px;
+}
+.questionnaire-date-block {
+	width: 600px;
+}
+.questionnaire-date-block p {
+	font-size: 2.2rem;
+}
+.member-voice-list-el {
+	padding: 32px;
+	background-color: #fff;
+}
+.member-voice-block {
+	margin-top: 50px;
+}
+.member-voice-title {
+	
+}
+.member-voice-list-el {
+	position: relative;
+	margin-top: 40px;
+}
+.member-voice-list-title {
+	position: absolute;
+	top: -10px;
+	left: 32px;
+}
+
+/* レポートエリア */
+.with-bb-report-area {
+	background-color: #C9B6BF;
+	margin-top: 100px;
+	padding: 100px 0px;
+}
+.with-bb-report-title {
+	width: 300px;
+	margin-bottom: 40px;
+}
+.with-bb-report-contents {
+	width: 1000px;
+}
+.with-bb-report-contents-el {
+	padding-left: 24px;
+}
+.with-bb-report-contents-el:first-child {
+	padding-left: 0px;
+	padding-right: 24px;
+}
+.with-bb-report-contents-el .img-block {
+	height: 300px;
+}
+.with-bb-report-contents-el p {
+	font-size: 24px;
+	margin-bottom: 12px;
+}
+.with-bb-report-contents-el p span {
+	font-size: 18px;
+}
+.with-bb-report-contents-el a {
+	display: block;
+	position: relative;
+}
+.with-bb-report-contents-el a:before{
+	content: "";
+	position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.3);
+}
+.with-bb-report-contents-el a:after{
+	content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  right: -6px;
+  bottom: -6px;
+}
+
+/* フッター部分 */
+.with-bloomoibrillia .with-k-bb-footer {
+	padding: 120px 0px;
+}
+.with-bloomoibrillia .with-k-bb-footer .with-k-logo {
+	width: 220px;
+}
+.with-bloomoibrillia .with-k-bb-footer .with-k-description {
+	width: 500px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  スマートフォン
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (max-width: 959px) {
+
+
+
+
+}
+
+
+
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+  タブレットのみ
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@media screen and (min-width:481px) and ( max-width:959px) {
+
+
+}
