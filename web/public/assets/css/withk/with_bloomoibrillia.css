@@ -56,6 +56,12 @@
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
 }
+.main-introduction-title-deco {
+	position: absolute;
+  right: -20px;
+  top: -20px;
+	width: 120px;
+}
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -111,7 +117,7 @@ p.message-area-description {
 	padding-right: 30px;
 }
 .page-infomation .page-infomation-apartment .img-block {
-	height: 250px;
+	height: 280px;
 	width: 85%;
 	position: relative;
 }
@@ -137,27 +143,32 @@ p.message-area-description {
 	left: 50px;
 	top: -20px;
 }
-.adviser-img {
-	width: 130px;
-	height: 130px;
-	border-radius: 50%;
+.page-infomation-roomdesign .page-infomation-el-inner {
+	padding: 40px 32px;
 }
-.adviser-title {
-	font-size: 1.3rem;
-	line-height: 1.2;
-	margin-top: 12px;
+.room-design-text {
+	margin-bottom: 20px;
 }
-.adviser-name {
-	font-size: 2.0rem;
-	margin-bottom: 10px;
+.room-design-text p {
+	margin-bottom: 12px;
+	font-size: 1.5rem;
+	line-height: 1.6;
 }
-.adviser-name span {
-	font-size: 1.3rem;
+.room-design-report p {
+	margin-bottom: 8px;
 }
-.adviser-description {
-	font-size: 1.2rem;
-	line-height: 1.4;
-	text-align: left;
+.room-design-report ul {
+	padding-left: 16px!important;
+}
+.room-design-report ul li {
+	margin-bottom: 6px;
+}
+.room-design-report ul li:last-child {
+	margin-bottom: 0px;
+}
+.room-design-report ul li a {
+	display: block;
+	background-color: #F8F6F7;
 }
 
 /* リンク */
@@ -222,7 +233,7 @@ p.message-area-description {
 	margin-top: 12px;
 }
 .adviser-comment-text {
-	padding: 32px 32px 24px 32px;
+	padding: 32px 32px 24px 32px!important;
 	background-color: #fff;
 	position: relative;
 }
@@ -241,6 +252,25 @@ p.message-area-description {
 	top: -6px;
 	left: 32px;
 }
+.adviser-comment .adviser-img {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+}
+.adviser-comment .adviser-title {
+	font-size: 1.2rem;
+	line-height: 1.2;
+	margin-top: 12px;
+}
+.adviser-comment .adviser-name a {
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #C9B6BF;
+}
+.adviser-comment .adviser-name span {
+	font-size: 1.2rem;
+}
+
 
 /* アンケート */
 .questionnaire-block {
@@ -345,8 +375,212 @@ p.message-area-description {
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (max-width: 959px) {
 
-
-
+.withk-header {
+	height: 60px;
+	padding-top: 10px;
+}
+.withk-header a img {
+	height: 38px;	
+}
+.main-introduction-border {
+	border: 20px solid #fff;
+}
+.with-bloomoibrillia .main-introduction {
+	height: 250px;
+}
+.main-introduction-title {
+	width: 300px;
+}
+.main-introduction-title-deco {
+	width: 72px;
+}
+.message-area {
+	margin-top: 72px;
+	padding: 0px 0px 60px;
+}
+p.message-area-title {
+	font-size: 2.0rem;
+	line-height: 1.6;
+}
+p.message-area-description {
+	font-size: 1.2rem;
+	line-height: 1.8;
+}
+.message-area .intro-illust {
+	width: 30%;
+	opacity: .3;
+}
+.message-area .intro-img01 {
+    width: 16%;
+    top: -20px;
+    right: 7%;
+}
+.message-area .intro-img02 {
+    width: 15%;
+    top: 36px;
+    right: 0%;
+}
+.page-infomation {
+	margin-top: 50px;
+}
+.page-infomation-el-decotitle {
+	font-size: 2.4rem;
+}
+.apartment-deco {
+	width: 84px;
+}
+.page-infomation-el-inner {
+	padding: 26px;
+}
+.infomation-apartment-title {
+	font-size: 1.8rem;
+}
+.page-infomation .page-infomation-apartment {
+	padding-right: 15px;
+}
+.page-infomation .page-infomation-apartment .img-block {
+	height: 160px;
+	width: 88%;
+}
+.page-infomation .page-infomation-apartment .img-block .apartment-img {
+	height: 160px;
+	right: -55px;
+}
+.page-infomation .page-infomation-apartment {
+	margin-bottom: 32px;
+}
+.adviser-comment {
+	width: 100%;
+}
+.page-infomation-roomdesign .page-infomation-el-inner {
+	padding: 26px;
+}
+.link-area {
+	margin-top: 70px;
+}
+.link-area-deco-text {
+	font-size: 1.4rem;
+}
+.link-area-deco-text span {
+	font-size: 2.2rem;
+}
+.link-area a {
+	width: 92%;
+	padding: 14px 0px 10px;
+}
+.link-area a p {
+	font-size: 1.4rem;
+}
+.link-area a .link-area-deco {
+	width: 28px;
+  right: -22px;
+  top: -20px;
+}
+.voice-container {
+	margin-top: 72px; 
+}
+.voice-title img {
+	width: 68%;
+}
+.voice-details-el p {
+	padding: 20px;
+	line-height: 1.6;
+}
+.voice-details-el {
+	margin-bottom: 20px;
+}
+.voice-block02 {
+	margin-top: 60px;
+  padding-top: 60px;
+}
+.questionnaire-block {
+	width: 88%;
+	padding: 26px;
+	margin-top: 70px;
+}
+.questionnaire-title {
+	width: 48%;
+}
+.questionnaire-date-block {
+	width: 100%;
+	margin-top: 24px;
+}
+.with-bb-report-contents {
+	width: 80%;
+}
+.adviser-comment-text {
+	padding: 24px 20px!important;
+}
+.adviser-comment-text p {
+	font-size: 1.2rem;
+}
+.adviser-comment-img {
+	left: 20px;
+	width: 48%;
+}
+.adviser-comment .adviser-img {
+	width: 90px;
+	height: 90px;
+}
+.adviser-comment .adviser-title {
+	font-size: 1.1rem;
+}
+.adviser-comment .adviser-name a {
+	font-size: 1.5rem;
+}
+.adviser-comment .adviser-name span {
+  font-size: 1.1rem;
+}
+.member-voice-list-el {
+	padding: 24px 20px;
+}
+.member-voice-list-title {
+	left: 20px;
+}
+.questionnaire-date-block p {
+	font-size: 1.6rem;
+}
+.member-voice-title img {
+	width: 68%;
+}
+.with-bb-report-area {
+	margin-top: 70px;
+  padding: 70px 0px;
+}
+.with-bb-report-title {
+	width: 200px;
+	margin-bottom: 28px;
+}
+.with-bb-report-contents-el:first-child {
+	padding-right: 0px;
+	margin-bottom: 32px;
+}
+.with-bb-report-contents-el {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.with-bb-report-contents-el p {
+	font-size: 2.0rem;
+}
+.with-bb-report-contents-el p span {
+	font-size: 1.3rem;
+}
+.with-bb-report-contents-el .img-block {
+	height: 200px;
+}
+.with-bloomoibrillia .with-k-bb-footer {
+	padding: 80px 0px;
+}
+.with-bloomoibrillia .with-k-bb-footer .with-k-logo {
+	width: 180px;
+}
+.with-bloomoibrillia .with-k-bb-footer .with-k-description {
+	width: 80%;
+	font-size: 1.2rem;
+}
+.with-bloomoibrillia .with-k-bb-footer .copyright {
+	font-size: 1.1rem;
+}
 
 }
 

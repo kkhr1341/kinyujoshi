@@ -24,6 +24,7 @@
 			<div class="main-introduction-filter"></div>
 			<div class="main-introduction-border"></div>
 			<div class="main-introduction-title">
+				<img class="main-introduction-title-deco" src="/images/withcorporate/bloomoibrillia/main-introduction-title-deco.svg">
 				<h2><img class="w-100" src="/images/withcorporate/bloomoibrillia/page-title.svg"></h2>
 			</div>
 		</div>
@@ -34,12 +35,12 @@
 					
 				<!-- メッセージ -->
 				<div class="message-area">
-					<p class="message-area-title with-bb-color ff-mincho text-center">モデルルーム行ってきました♪</p>
+					<p class="message-area-title with-bb-color ff-mincho text-center">モデルルーム<br class="d-block d-md-none">行ってきました♪</p>
 					<p class="message-area-description ff-mincho text-center">
-						東京建物 Brillia Bloomoiさんと3回に渡って行った”住まいを見つめ直す企画会議”<br>
-						そこで出たアイディアを盛り込んだマンション「Brillia 四谷三丁目」が完成しました♪<br><br>
-						今回は、そのBrillia 四谷三丁目で、買う派なのか、借りる派なのか<br>
-						モデルツアーをしながら、メンバーさんと一緒に考えてみました！
+						東京建物 Brillia Bloomoiさんと3回に渡って行った<br class="d-block d-md-none">”住まいを見つめ直す企画会議”<br>
+						そこで出たアイディアを盛り込んだマンション<br class="d-block d-md-none">「Brillia 四谷三丁目」が完成しました♪<br><br>
+						今回は、そのBrillia 四谷三丁目で、<br class="d-block d-md-none">買う派なのか、借りる派なのか<br class="d-none d-md-block">
+						モデルツアーをしながら、<br class="d-block d-md-none">メンバーさんと一緒に考えてみました！
 					</p>
 					<img class="intro-illust" src="/images/withcorporate/bloomoibrillia/intro-illust.svg">
 					<img class="intro-img01" src="/images/withcorporate/bloomoibrillia/intro-img01.svg">
@@ -48,9 +49,9 @@
 
 				<!-- ページ情報 -->
 				<div class="page-infomation">
-					<div class="row">
-						<div class="col-8 page-infomation-el page-infomation-apartment">
-							<div class="page-infomation-el-inner">
+					<div class="row row-eq-height">
+						<div class="col-12 col-lg-8 page-infomation-el page-infomation-apartment">
+							<div class="page-infomation-el-inner h-100">
 								<p class="page-infomation-el-decotitle with-bb-deco with-bb-color">Apartment</p>
 								<img class="apartment-deco" src="/images/withcorporate/bloomoibrillia/apartment-deco.svg">
 								<p class="infomation-apartment-title ff-mincho">Brillia 四谷三丁目</p>
@@ -59,14 +60,27 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-4 page-infomation-el page-infomation-adviser">
-							<div class="page-infomation-el-inner">
-								<p class="page-infomation-el-decotitle with-bb-deco with-bb-color">Finance Advisor</p>
-								<div class="adviser-imfo ff-mincho text-center">
-									<img class="adviser-img" src="/images/withcorporate/bloomoibrillia/adviser-img.png">
-									<p class="adviser-title">FP事務所アイプランニング 代表<br>ファイナンシャルプランナー</p>
-									<p class="adviser-name">飯村久美<span>先生</span></p>
-									<p class="adviser-description">ライフプランを通じて家族が夢を持ち、1人ひとりが自分らしく生きることを目的に2006年FP事務所アイプランニングを開業。ファイナンシャルプランナー歴20年。</p>
+						<div class="col-12 col-lg-4 page-infomation-el page-infomation-roomdesign">
+							<div class="page-infomation-el-inner h-100">
+								<p class="page-infomation-el-decotitle with-bb-deco with-bb-color">Room Design</p>
+								<div class="room-design-info ff-mincho text-center">
+									<div class="room-design-text">
+										<p>2019年の座談会でマンションの<br>間取り企画に協力いたしました！</p>
+										<img class="w-100" src="https://yotsuya03.brillia.com/asset/img/top/sld_planning_01.jpg">
+									</div>
+									<div class="room-design-report">
+										<p>＼3回の座談会で模型まで作成！／</p>
+										<div class="room-design-report-details">
+											<div class="row no-gutters">
+												<div class="col-5" style="background: url(/images/withcorporate/bloomoibrillia/cg_ent_pc.png) center center / cover no-repeat;"></div>
+												<ul class="col-7">
+													<li><a href="https://kinyu-joshi.jp/report/8FkAGa" target="_blank">1回目のレポート</a></li>
+													<li><a href="https://kinyu-joshi.jp/report/uVIku7" target="_blank">2回目のレポート</a></li>
+													<li><a href="https://kinyu-joshi.jp/report/AYDfyY" target="_blank">3回目のレポート</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -76,7 +90,7 @@
 				<!-- リンク -->
 				<div class="link-area">
 					<p class="link-area-deco-text with-bb-color ff-mincho text-center"><span>＼ 3月中旬</span>までモデルルーム公開中！<span> ／</span></p>
-					<a class="d-block mx-auto" href="">
+					<a class="d-block mx-auto" href="https://secure.tatemono.com/Template/reserve/3254/dform_attendance_booking.aspx?aqusr=RTBC1.510258BB021B39143F" target="_blank">
 						<img class="link-area-deco" src="/images/withcorporate/bloomoibrillia/link-area-deco.svg">
 						<p class="ff-mincho text-center with-bb-color">〉気になったら見学してみよう♪</p>
 					</a>
@@ -92,18 +106,22 @@
 						</div>
 						<div class="voice-details">
 							<div class="row row-eq-height">
-								<div class="col-6 voice-details-el"><p class="ff-mincho h-100">朝を気持ちよく迎えられるようなスペースが欲しいというふわっとした意見が形になって感激しました！（3回目座談会）</p></div>
-								<div class="col-6 voice-details-el"><p class="ff-mincho h-100">ウォークスルークロゼットの中に秘密基地のような作業スペースがあり、玄関のシューズインクロゼットはアウトドア用品やお米などを収納できる広さなので希望通りでした！（3回目座談会）</p></div>
-								<div class="col-6 voice-details-el"><p class="ff-mincho h-100">お部屋が素敵で欲しくなりました！(既にマイホーム購入済みですが)ベランダやリモワしやすそうな台が特に良かったです。（モデルルームツアーアンケート）</p></div>
-								<div class="col-6 voice-details-el"><p class="ff-mincho h-100">モデルルーム、収納がいっぱいで、一人で購入する人もいて、とても素敵で贅沢だと思いました！（モデルルームツアーアンケート）</p></div>
+								<div class="col-12 col-md-6 voice-details-el"><p class="ff-mincho h-100">朝を気持ちよく迎えられるようなスペースが欲しいというふわっとした意見が形になって感激しました！（3回目座談会）</p></div>
+								<div class="col-12 col-md-6 voice-details-el"><p class="ff-mincho h-100">ウォークスルークロゼットの中に秘密基地のような作業スペースがあり、玄関のシューズインクロゼットはアウトドア用品やお米などを収納できる広さなので希望通りでした！（3回目座談会）</p></div>
+								<div class="col-12 col-md-6 voice-details-el"><p class="ff-mincho h-100">お部屋が素敵で欲しくなりました！(既にマイホーム購入済みですが)ベランダやリモワしやすそうな台が特に良かったです。（モデルルームツアーアンケート）</p></div>
+								<div class="col-12 col-md-6 voice-details-el"><p class="ff-mincho h-100">モデルルーム、収納がいっぱいで、一人で購入する人もいて、とても素敵で贅沢だと思いました！（モデルルームツアーアンケート）</p></div>
 							</div>
 						</div>
 						<div class="adviser-comment mx-auto">
-							<div class="row">
-								<div class="col-3 text-center">
+							<div class="row no-gutters">
+								<div class="col-4 col-md-3 text-center">
 									<img class="adviser-img" src="/images/withcorporate/bloomoibrillia/adviser-img.png">
+									<div class="adviser-info">
+										<p class="adviser-title ff-mincho">ファイナンシャル<br class="d-block d-md-none">プランナー</p>
+										<p class="adviser-name ff-mincho"><a href="https://www.fp-iimura.jp/" target="_blank">飯村久美<span>先生</span></a></p>
+									</div>
 								</div>
-								<div class="adviser-comment-text col-9">
+								<div class="adviser-comment-text col-8 col-md-9">
 									<img class="adviser-comment-img" src="/images/withcorporate/bloomoibrillia/adviser-comment.svg">
 									<p class="ff-mincho">おうちを買うときは、住宅ローンを組んで月々支払っていくのが一般的ですが、実際に今の家賃の支払いと比較して無理ない支出を考えてみることが大切です。主に、①自分が買える物件の目安を知る ②月々支払うのに無理のない返済額を知る。こちらの2点を考えてみましょう。</p>
 								</div>
@@ -118,18 +136,22 @@
 						</div>
 						<div class="voice-details">
 							<div class="row row-eq-height">
-								<div class="col-6 voice-details-el"><p class="ff-mincho">これまで賃貸マンションに何件か住んできてその都度気になることがありました。企画会議を通してその気になることが解消された部屋を形にしていただき嬉しかったです。（3回目座談会）</p></div>
-								<div class="col-6 voice-details-el"><p class="ff-mincho">これまで賃貸のコンパクトな間取りにウォークインクロゼットとカウンターキッチンが入らないと思っていました。今回の座談会でその理想が叶い賃貸マンションへの夢が広がりました。（3回目座談会）</p></div>
-								<div class="col-6 voice-details-el"><p class="ff-mincho">賃貸だとできるだけ家具を買いたくないなので、棚などの収納がすでに付いていると便利かも。（3回目座談会）</p></div>
-								<div class="col-6 voice-details-el"><p class="ff-mincho">一人暮らし用の間取りでもカウンターキッチンとウォークインクロゼットがある部屋が理想的。（3回目座談会）</p></div>
+								<div class="col-12 col-md-6 voice-details-el"><p class="ff-mincho">これまで賃貸マンションに何件か住んできてその都度気になることがありました。企画会議を通してその気になることが解消された部屋を形にしていただき嬉しかったです。（3回目座談会）</p></div>
+								<div class="col-12 col-md-6 voice-details-el"><p class="ff-mincho">これまで賃貸のコンパクトな間取りにウォークインクロゼットとカウンターキッチンが入らないと思っていました。今回の座談会でその理想が叶い賃貸マンションへの夢が広がりました。（3回目座談会）</p></div>
+								<div class="col-12 col-md-6 voice-details-el"><p class="ff-mincho">賃貸だとできるだけ家具を買いたくないなので、棚などの収納がすでに付いていると便利かも。（3回目座談会）</p></div>
+								<div class="col-12 col-md-6 voice-details-el"><p class="ff-mincho">一人暮らし用の間取りでもカウンターキッチンとウォークインクロゼットがある部屋が理想的。（3回目座談会）</p></div>
 							</div>
 						</div>
 						<div class="adviser-comment mx-auto">
-							<div class="row">
-								<div class="col-3 text-center">
+							<div class="row no-gutters">
+								<div class="col-4 col-md-3 text-center">
 									<img class="adviser-img" src="/images/withcorporate/bloomoibrillia/adviser-img.png">
+									<div class="adviser-info">
+										<p class="adviser-title ff-mincho">ファイナンシャル<br class="d-block d-md-none">プランナー</p>
+										<p class="adviser-name ff-mincho"><a href="https://www.fp-iimura.jp/" target="_blank">飯村久美<span>先生</span></a></p>
+									</div>
 								</div>
-								<div class="adviser-comment-text col-9">
+								<div class="adviser-comment-text col-8 col-md-9">
 									<img class="adviser-comment-img" src="/images/withcorporate/bloomoibrillia/adviser-comment.svg">
 									<p class="ff-mincho">良質な住宅であれば1,000万円まで、一般住宅は500万円までの金額が非課税になる制度があります。将来を見据えて買う方が良いのか、もしくは借りる方が良いのか。どちらの方が自分自身に合っているのか考えてみましょう。</p>
 								</div>
@@ -146,8 +168,8 @@
 					</p>
 					<div class="questionnaire-date-block mx-auto">
 						<div class="row align-items-center">
-							<img class="col-5" src="/images/withcorporate/bloomoibrillia/questionnaire-date.svg">
-							<p class="col-7 with-bb-color ff-mincho">買う派が57%の結果になりました♪</p>
+							<img class="col-5 col-md-5" src="/images/withcorporate/bloomoibrillia/questionnaire-date.svg">
+							<p class="col-7 col-md-7 with-bb-color ff-mincho">買う派が57%の結果になりました♪</p>
 						</div>
 					</div>
 
@@ -173,7 +195,7 @@
 				<!-- リンク -->
 				<div class="link-area">
 					<p class="link-area-deco-text with-bb-color ff-mincho text-center"><span>＼ 3月中旬</span>までモデルルーム公開中！<span> ／</span></p>
-					<a class="d-block mx-auto" href="">
+					<a class="d-block mx-auto" href="https://secure.tatemono.com/Template/reserve/3254/dform_attendance_booking.aspx?aqusr=RTBC1.510258BB021B39143F" target="_blank">
 						<img class="link-area-deco" src="/images/withcorporate/bloomoibrillia/link-area-deco.svg">
 						<p class="ff-mincho text-center with-bb-color">〉気になったら見学してみよう♪</p>
 					</a>
@@ -187,15 +209,15 @@
 						</p>
 						<div class="with-bb-report-contents mx-auto">
 							<div class="row">
-								<div class="col-6 with-bb-report-contents-el">
+								<div class="col-12 col-md-6 with-bb-report-contents-el">
 									<p class="ff-mincho text-center text-white">女子会<span>編</span></p>
-									<a href="" class="d-block">
+									<a href="https://kinyu-joshi.jp/report/KmLd9w" class="d-block" target="_blank">
 										<div class="img-block" style="background: url(/images/withcorporate/bloomoibrillia/report01.jpg) center center / cover no-repeat;"></div>
 									</a>
 								</div>
-								<div class="col-6 with-bb-report-contents-el">
+								<div class="col-12 col-md-6 with-bb-report-contents-el">
 									<p class="ff-mincho text-center text-white">ルームツアー<span>編</span></p>
-									<a href="" class="d-block">
+									<a href="https://kinyu-joshi.jp/report/IyO7J0" class="d-block" target="_blank">
 										<div class="img-block" style="background: url(/images/withcorporate/bloomoibrillia/report02.jpg) center center / cover no-repeat;"></div>
 									</a>
 								</div>
