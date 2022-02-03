@@ -334,6 +334,10 @@ p.message-area-description {
 	top: -10px;
 	left: 32px;
 }
+.voice-block-main-comment {
+	margin-top: 60px;
+	font-size: 2.2rem;
+}
 
 /* レポートエリア */
 .with-bb-report-area {
