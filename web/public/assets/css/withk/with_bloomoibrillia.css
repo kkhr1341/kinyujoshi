@@ -229,15 +229,38 @@ p.message-area-description {
 	background-color: #fff;
 }
 .adviser-comment {
-	width: 800px;
+	width: 700px;
 	margin-top: 12px;
+	padding: 16px;
+	background-color: #fff;
+}
+.adviser-comment-inner {
+	border: 1px solid #C9B6BF;
 }
 .adviser-comment-text {
 	padding: 32px 32px 24px 32px!important;
-	background-color: #fff;
 	position: relative;
 }
-.adviser-comment-text:before{
+.adviser-comment-maintext {
+	font-size: 2.0rem;
+	margin-bottom: 10px;
+	line-height: 1.6;
+}
+.adviser-comment-subtext {
+	font-size: 1.1rem;
+	line-height: 1.5;
+	margin-top: 12px;
+}
+.adviser-comment-subtext a {
+	font-size: 1.1rem;
+	line-height: 1.5;
+	text-decoration: underline;
+}
+.adviser-comment-text a.link-area {
+	display: inline-block;
+	margin-top: 20px;
+}
+/*.adviser-comment-text:before{
   content: '';
   position: absolute;
   top: 30px;
@@ -246,13 +269,15 @@ p.message-area-description {
   border-top: 20px solid transparent;
   border-right: 20px solid #fff;
   border-bottom: 20px solid transparent;
-}
+}*/
 .adviser-comment-img {
 	position: absolute;
-	top: -6px;
+	top: -16px;
+	padding: 0px 12px;
 	left: 32px;
+	background-color: #fff;
 }
-.adviser-comment .adviser-img {
+/*.adviser-comment .adviser-img {
 	width: 130px;
 	height: 130px;
 	border-radius: 50%;
@@ -269,7 +294,7 @@ p.message-area-description {
 }
 .adviser-comment .adviser-name span {
 	font-size: 1.2rem;
-}
+}*/
 
 
 /* アンケート */
@@ -281,6 +306,7 @@ p.message-area-description {
 }
 .questionnaire-date-block {
 	width: 600px;
+	margin-top: 40px;
 }
 .questionnaire-date-block p {
 	font-size: 2.2rem;
@@ -291,9 +317,13 @@ p.message-area-description {
 }
 .member-voice-block {
 	margin-top: 50px;
+	position: relative;
 }
-.member-voice-title {
-	
+.member-voice-block-img {
+	position: absolute;
+	width: 200px;
+	right: 0;
+	top: -100px;
 }
 .member-voice-list-el {
 	position: relative;

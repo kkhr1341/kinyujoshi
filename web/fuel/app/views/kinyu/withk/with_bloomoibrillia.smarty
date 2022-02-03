@@ -72,7 +72,7 @@
 										<p>＼3回の座談会で模型まで作成！／</p>
 										<div class="room-design-report-details">
 											<div class="row no-gutters">
-												<div class="col-5" style="background: url(/images/withcorporate/bloomoibrillia/cg_ent_pc.png) center center / cover no-repeat;"></div>
+												<div class="col-5" style="background: url(https://sunday-lunch.s3.ap-northeast-1.amazonaws.com/stock/10207192197536638/images/20191023112454IMG_9137.JPG) center center / cover no-repeat;"></div>
 												<ul class="col-7">
 													<li><a href="https://kinyu-joshi.jp/report/8FkAGa" target="_blank">1回目のレポート</a></li>
 													<li><a href="https://kinyu-joshi.jp/report/uVIku7" target="_blank">2回目のレポート</a></li>
@@ -113,17 +113,13 @@
 							</div>
 						</div>
 						<div class="adviser-comment mx-auto">
-							<div class="row no-gutters">
-								<div class="col-4 col-md-3 text-center">
-									<img class="adviser-img" src="/images/withcorporate/bloomoibrillia/adviser-img.png">
-									<div class="adviser-info">
-										<p class="adviser-title ff-mincho">ファイナンシャル<br class="d-block d-md-none">プランナー</p>
-										<p class="adviser-name ff-mincho"><a href="https://www.fp-iimura.jp/" target="_blank">飯村久美<span>先生</span></a></p>
-									</div>
-								</div>
-								<div class="adviser-comment-text col-8 col-md-9">
+							<div class="adviser-comment-inner">
+								<div class="adviser-comment-text">
 									<img class="adviser-comment-img" src="/images/withcorporate/bloomoibrillia/adviser-comment.svg">
-									<p class="ff-mincho">おうちを買うときは、住宅ローンを組んで月々支払っていくのが一般的ですが、実際に今の家賃の支払いと比較して無理ない支出を考えてみることが大切です。主に、①自分が買える物件の目安を知る ②月々支払うのに無理のない返済額を知る。こちらの2点を考えてみましょう。</p>
+									<p class="adviser-comment-maintext ff-mincho with-bb-color">贈与（ぞうよ）にも注目してみましょう！</p>
+									<p class="ff-mincho">もし、ご親族に援助をしてもらえそうなら、生前に住宅取得等資金の贈与の制度を使うと、税金が優遇されるので良いことも。良質な住宅であれば1,000万円まで、一般住宅は500万円までの金額が非課税になるようなので要チェック！</p>
+									<p class="adviser-comment-subtext ff-mincho">※注意※ 2023年12月31日までの贈与の場合。最新情報は、まだ更新されていませんが<a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/sozoku/4508.htm" target="_blank">国税庁のホームページ</a>を確認しましょう。</p>
+									<a class="link-area ff-mincho with-bb-color" href="https://kinyu-joshi.jp/report/KmLd9w" target="_blank">〉詳しくは女子会レポートへ</a>
 								</div>
 							</div>
 						</div>
@@ -143,23 +139,19 @@
 							</div>
 						</div>
 						<div class="adviser-comment mx-auto">
-							<div class="row no-gutters">
-								<div class="col-4 col-md-3 text-center">
-									<img class="adviser-img" src="/images/withcorporate/bloomoibrillia/adviser-img.png">
-									<div class="adviser-info">
-										<p class="adviser-title ff-mincho">ファイナンシャル<br class="d-block d-md-none">プランナー</p>
-										<p class="adviser-name ff-mincho"><a href="https://www.fp-iimura.jp/" target="_blank">飯村久美<span>先生</span></a></p>
-									</div>
-								</div>
-								<div class="adviser-comment-text col-8 col-md-9">
+							<div class="adviser-comment-inner">
+								<div class="adviser-comment-text">
 									<img class="adviser-comment-img" src="/images/withcorporate/bloomoibrillia/adviser-comment.svg">
-									<p class="ff-mincho">良質な住宅であれば1,000万円まで、一般住宅は500万円までの金額が非課税になる制度があります。将来を見据えて買う方が良いのか、もしくは借りる方が良いのか。どちらの方が自分自身に合っているのか考えてみましょう。</p>
+									<p class="adviser-comment-maintext ff-mincho with-bb-color">おうちを買うか借りるか考えるときは、主にこの2つのポイントをチェック！</p>
+									<p class="ff-mincho">①自分が買える物件の目安を知る<br>②月々支払うのに無理のない返済額を知る<br><br>ライフスタイルが変化する20~30代は、目利きできるようにいろんな家に賃貸で住んでみるのもいいかも？</p>
+									<a class="link-area ff-mincho with-bb-color" href="https://kinyu-joshi.jp/report/KmLd9w" target="_blank">〉詳しくは女子会レポートへ</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
+				<p class="voice-block-main-comment ff-mincho with-bb-color text-center">将来を見据えて買う方が良いのか、もしくは借りる方が良いのか？<br>どちらの方が自分自身に合っているのか考えてみましょう♪</p>
 
 				<!-- アンケート -->
 				<div class="questionnaire-block mx-auto">
@@ -174,6 +166,7 @@
 					</div>
 
 					<div class="member-voice-block">
+						<img class="member-voice-block-img" src="/images/withcorporate/bloomoibrillia/member-voice-block-img.jpg">
 						<p class="member-voice-title"><img class="" src="/images/withcorporate/bloomoibrillia/member-voice.svg"></p>
 						<div class="member-voice-list">
 							<div class="member-voice-list-el">
