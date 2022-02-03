@@ -304,9 +304,11 @@ p.message-area-description {
 	padding: 60px;
 	margin-top: 100px;
 }
+.questionnaire-block-title p {
+	font-size: 1.4rem;
+}
 .questionnaire-block p {
 	font-size: 1.4rem;
-	margin-top: 10px;
 }
 .questionnaire-date-block {
 	width: 650px;
@@ -523,6 +525,7 @@ p.message-area-description {
 .voice-details-el p {
 	padding: 20px;
 	line-height: 1.6;
+	font-size: 1.2rem;
 }
 .voice-details-el {
 	margin-bottom: 20px;
@@ -547,10 +550,13 @@ p.message-area-description {
 	width: 80%;
 }
 .adviser-comment-text {
-	padding: 24px 20px!important;
+	padding: 32px 20px 24px!important;
 }
 .adviser-comment-text p {
 	font-size: 1.2rem;
+}
+.adviser-comment-maintext {
+	font-size: 1.6rem!important;
 }
 .adviser-comment-img {
 	left: 20px;
@@ -618,6 +624,26 @@ p.message-area-description {
 }
 .with-bloomoibrillia .with-k-bb-footer .copyright {
 	font-size: 1.1rem;
+}
+.questionnaire-block-title p {
+	font-size: 1.2rem;
+	margin-top: 20px;
+}
+.member-voice-title img {
+	width: 120px;
+}
+.member-voice-block {
+	margin-top: 40px;
+}
+.member-voice-block-img {
+  width: 120px;
+  top: -20px;
+}
+.questionnaire-block p {
+	font-size: 1.2rem;
+}
+.adviser-comment-img {
+	width: 120px;
 }
 
 }

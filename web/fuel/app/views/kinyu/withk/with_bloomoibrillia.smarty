@@ -155,10 +155,10 @@
 
 				<!-- アンケート -->
 				<div class="questionnaire-block mx-auto">
-					<p class="text-center">
+					<div class="text-center questionnaire-block-title">
 						<img class="questionnaire-title" src="/images/withcorporate/bloomoibrillia/questionnaire-title.svg">
 						<p class="ff-mincho text-center">2021年12月18日 参加者14名の声</p>
-					</p>
+					</div>
 					<div class="questionnaire-date-block mx-auto">
 						<div class="row align-items-center">
 							<img class="col-5 col-md-5" src="/images/withcorporate/bloomoibrillia/questionnaire-date.svg">
@@ -168,7 +168,10 @@
 
 					<div class="member-voice-block">
 						<img class="member-voice-block-img" src="/images/withcorporate/bloomoibrillia/member-voice-block-img.svg">
-						<p class="member-voice-title"><img class="" src="/images/withcorporate/bloomoibrillia/member-voice.svg"></p>
+						<p class="member-voice-title">
+							<img class="d-none d-md-block" src="/images/withcorporate/bloomoibrillia/member-voice.svg">
+							<img class="d-block d-md-none" src="/images/withcorporate/bloomoibrillia/member-voice-sp.svg">
+						</p>
 						<div class="member-voice-list">
 							<div class="member-voice-list-el">
 								<img class="member-voice-list-title" src="/images/withcorporate/bloomoibrillia/condominium-voice02.svg">
