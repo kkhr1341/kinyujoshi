@@ -105,9 +105,6 @@ p.message-area-description {
 .page-infomation {
 	margin-top: 88px;
 }
-.page-infomation-el {
-
-}
 .page-infomation-el-inner {
 	padding: 40px;
 	background-color: #fff;
@@ -218,9 +215,6 @@ p.message-area-description {
 .voice-title {
 	margin-bottom: 32px;
 }
-.voice-title img {
-	/*width: 36%;*/
-}
 .voice-details-el {
 	margin-bottom: 30px;
 }
@@ -260,16 +254,6 @@ p.message-area-description {
 	display: inline-block;
 	margin-top: 20px;
 }
-/*.adviser-comment-text:before{
-  content: '';
-  position: absolute;
-  top: 30px;
-  left: -8px;
-  transform: translateX(-50%);
-  border-top: 20px solid transparent;
-  border-right: 20px solid #fff;
-  border-bottom: 20px solid transparent;
-}*/
 .adviser-comment-img {
 	position: absolute;
 	top: -16px;
@@ -277,25 +261,6 @@ p.message-area-description {
 	left: 32px;
 	background-color: #fff;
 }
-/*.adviser-comment .adviser-img {
-	width: 130px;
-	height: 130px;
-	border-radius: 50%;
-}
-.adviser-comment .adviser-title {
-	font-size: 1.2rem;
-	line-height: 1.2;
-	margin-top: 12px;
-}
-.adviser-comment .adviser-name a {
-	font-size: 1.8rem;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #C9B6BF;
-}
-.adviser-comment .adviser-name span {
-	font-size: 1.2rem;
-}*/
-
 
 /* アンケート */
 .questionnaire-block {
@@ -414,7 +379,6 @@ p.message-area-description {
   スマートフォン
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (max-width: 959px) {
-
 .withk-header {
 	height: 60px;
 	padding-top: 10px;
@@ -451,14 +415,14 @@ p.message-area-description {
 	opacity: .3;
 }
 .message-area .intro-img01 {
-    width: 16%;
-    top: -20px;
-    right: 7%;
+  width: 16%;
+  top: -20px;
+  right: 7%;
 }
 .message-area .intro-img02 {
-    width: 15%;
-    top: 36px;
-    right: 0%;
+  width: 15%;
+  top: 36px;
+  right: 0%;
 }
 .page-infomation {
 	margin-top: 50px;
@@ -649,14 +613,70 @@ p.message-area-description {
 }
 
 
-
-
-
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   タブレットのみ
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 @media screen and (min-width:481px) and ( max-width:959px) {
 
+.with-bb-report-contents-el:first-child {
+  padding-right: 20px;
+  margin-bottom: 32px;
+}
+.with-bb-report-contents-el {
+  padding-left: 20px;
+  padding-right: 0px;
+}
+.questionnaire-date-block {
+  width: 80%;
+}
+.questionnaire-block {
+	padding: 40px;
+}
+.member-voice-list-el {
+  padding: 32px 20px 24px;
+}
+.questionnaire-block p {
+	font-size: 1.6rem;
+}
+.member-voice-block-img {
+	width: 150px;
+	top: -80px;
+}
+.voice-title img {
+	width: 50%;
+}
+.page-infomation-roomdesign .page-infomation-el-inner {
+	padding: 50px;
+}
+.page-infomation-el-inner {
+	padding: 50px;
+}
+.with-bloomoibrillia .main-introduction {
+	height: 400px;
+}
+.main-introduction-title {
+	width: 450px;
+}
+.main-introduction-title-deco {
+	width: 100px;
+}
+.apartment-deco {
+	width: 100px;
+}
+.page-infomation .page-infomation-apartment .img-block {
+	height: 220px;
+}
+.page-infomation .page-infomation-apartment .img-block .apartment-img {
+	height: 220px;
+	right: -70px;
+}
+
+
 
 }
+
+
+
+
+
+
