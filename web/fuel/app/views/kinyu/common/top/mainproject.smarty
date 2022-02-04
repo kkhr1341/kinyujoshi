@@ -8,18 +8,6 @@
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<a class="d-block" href="/with_bloomoibrillia" target="_blank">
-					<img class="w-100" src="./images/topics/withk-bloomoibrillia.jpg">
-					<p class="text-center">企画会議で完成した部屋の<br>モデルルームツアーに♪</p>
-				</a>
-			</div>
-			<div class="swiper-slide">
-				<a class="d-block" href="/contents/cashless" target="_blank">
-					<img class="w-100" src="./images/topics/withk-paypay.jpg">
-					<p class="text-center">キャッシュレス挑戦プロジェクト<br>with Paypay</p>
-				</a>
-			</div>
-			<div class="swiper-slide">
 				<a class="d-block" href="https://readyfor.jp/projects/kinjo-challenge" target="_blank">
 					<img class="w-100" src="./images/topics/topics-project02.jpg">
 					<p class="text-center">READY FORクラファン<br>131%達成！</p>
@@ -32,6 +20,12 @@
 				</a>
 			</div>
 			<div class="swiper-slide">
+				<a class="d-block" href="/with_bloomoibrillia" target="_blank">
+					<img class="w-100" src="./images/topics/withk-bloomoibrillia.jpg">
+					<p class="text-center">企画会議で完成した部屋の<br>モデルルームツアーに♪</p>
+				</a>
+			</div>
+			<div class="swiper-slide">
 				<a class="d-block" href="/members">
 					<img class="w-100" src="./images/topics/topics-member.jpg">
 					<p class="text-center"><span class="kinjo-color font-weight-bold">2901</span>名の仲間たち！<br>みんなも自己紹介してね♪</p>
@@ -41,6 +35,12 @@
 				<a class="d-block" href="/kinjo_check">
 					<img class="w-100" src="./images/topics/topic-shindan.jpg">
 					<p class="text-center"><span class="kinjo-color font-weight-bold">837</span>名が回答♪<br>あなたはどのタイプ？</p>
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a class="d-block" href="/contents/cashless" target="_blank">
+					<img class="w-100" src="./images/topics/withk-paypay.jpg">
+					<p class="text-center">キャッシュレス挑戦プロジェクト<br>with Paypay</p>
 				</a>
 			</div>
 			<div class="swiper-slide">
