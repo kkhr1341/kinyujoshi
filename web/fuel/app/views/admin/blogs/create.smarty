@@ -1,70 +1,65 @@
 <ol class="breadcrumb">
-    <li><a href="/">ホーム</a></li>
-    <li><a href="/admin">マイページ</a></li>
-    <li><a href="/admin/report">記事の管理</a></li>
-    <li class="active">記事を書く</li>
+  <li><a href="/">ホーム</a></li>
+  <li><a href="/admin">マイページ</a></li>
+  <li><a href="/admin/report">記事の管理</a></li>
+  <li class="active">記事を書く</li>
 </ol>
 
 <form>
-    <fieldset>
-        <div class="my-form-container clear">
-            <div class="form-left">
+  <fieldset>
+    <div class="my-form-container clear">
+      <div class="form-left">
 
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">レポートの種類</label>
+        <!-- レポートの種類 -->
+        <div class="form-group mb50">
+          <label class="form-group-event-label">レポートの種類</label>
+          <div class="radio_box clear">
+            <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="">
+            <label for="kind1" class="form-long">女子会レポ</label>
 
-                    <div class="radio_box clear">
-                        <input type="radio" value="女子会レポート" name="kind" id="kind1" class="form-radio" placeholder="">
-                        <label for="kind1" class="form-long">女子会レポ</label>
+            <input type="radio" value="イベントレポート" name="kind" id="kind2" class="form-radio" placeholder="">
+            <label for="kind2" class="form-long">イベントレポ</label>
 
-                        <input type="radio" value="イベントレポート" name="kind" id="kind2" class="form-radio" placeholder="">
-                        <label for="kind2" class="form-long">イベントレポ</label>
+            <input type="radio" value="取材レポート" name="kind" id="kind3" class="form-radio" placeholder="">
+            <label for="kind3" class="form-long">取材レポ</label>
 
-                        <input type="radio" value="取材レポート" name="kind" id="kind3" class="form-radio" placeholder="">
-                        <label for="kind3" class="form-long">取材レポ</label>
+            <input type="radio" value="イベント告知" name="kind" id="kind4" class="form-radio" placeholder="">
+            <label for="kind4" class="form-long">イベント告知</label>
 
-                        <input type="radio" value="イベント告知" name="kind" id="kind4" class="form-radio" placeholder="">
-                        <label for="kind4" class="form-long">イベント告知</label>
+            <input type="radio" value="コラム" name="kind" id="kind5" class="form-radio" placeholder="">
+            <label for="kind5" class="form-long">コラム</label>
 
-                        <input type="radio" value="コラム" name="kind" id="kind5" class="form-radio" placeholder="">
-                        <label for="kind5" class="form-long">コラム</label>
+            <input type="radio" value="わたしを知る" name="kind" id="kind6" class="form-radio" placeholder="">
+            <label for="kind6" class="form-long" style="border:1px solid #89e2d1;box-sizing: border-box;">「わたし」を知る</label>
 
-                        <input type="radio" value="わたしを知る" name="kind" id="kind6" class="form-radio" placeholder="">
-                        <label for="kind6" class="form-long" style="border:1px solid #89e2d1;box-sizing: border-box;">「わたし」を知る</label>
+            <input type="radio" value="きんゆう散歩" name="kind" id="kind7" class="form-radio" placeholder="">
+            <label for="kind7" class="form-long">きんゆう散歩</label>
+          </div>
+        </div>
 
-                        <input type="radio" value="きんゆう散歩" name="kind" id="kind7" class="form-radio" placeholder="">
-                        <label for="kind7" class="form-long">きんゆう散歩</label>
+        <!-- ピックアップ -->
+        <div class="form-group mb50">
+          <label class="form-group-event-label">ピックアップ</label>
+          <div class="radio_box clear">
+            <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="">
+            <label for="pickup01" class="form-long">YES!</label>
+            <input type="radio" value="0" name="pickup" id="pickup02" class="form-radio" placeholder="" checked>
+            <label for="pickup02" class="form-long">NO!</label>
+          </div>
+        </div>
 
+        <!-- PR -->
+        <div class="form-group mb50">
+          <label class="form-group-event-label">PR</label>
+          <div class="radio_box clear">
+            <input type="radio" value="1" name="pr" id="pr01" class="form-radio" placeholder="">
+            <label for="pr01" class="form-long">YES!</label>
+            <input type="radio" value="0" name="pr" id="pr02" class="form-radio" placeholder="" checked>
+            <label for="pr02" class="form-long">NO!</label>
+          </div>
+        </div>
 
-                    </div>
-                </div>
-
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">ピックアップ</label>
-
-                    <div class="radio_box clear">
-                        <input type="radio" value="1" name="pickup" id="pickup01" class="form-radio" placeholder="">
-                        <label for="pickup01" class="form-long">YES!</label>
-
-                        <input type="radio" value="0" name="pickup" id="pickup02" class="form-radio" placeholder="" checked>
-                        <label for="pickup02" class="form-long">NO!</label>
-
-                    </div>
-                </div>
-
-                <div class="form-group mb50">
-                    <label class="form-group-event-label">PR</label>
-
-                    <div class="radio_box clear">
-                        <input type="radio" value="1" name="pr" id="pr01" class="form-radio" placeholder="">
-                        <label for="pr01" class="form-long">YES!</label>
-
-                        <input type="radio" value="0" name="pr" id="pr02" class="form-radio" placeholder="" checked>
-                        <label for="pr02" class="form-long">NO!</label>
-
-                    </div>
-                </div>
-
+        <!-- メンバー限定 -->
                 <div class="form-group mb50">
                     <label class="form-group-event-label">メンバー限定レポート</label>
                     <div class="radio_box clear">
@@ -102,6 +97,12 @@
                     <p class="form-group-sub"><span style="color:red;">＊</span>120文字程度でお願いします。</p>
                     <textarea style="height: 80px;" type="text" id="description" class="form-control"
                               placeholder=""></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-group-event-label">キーワード</label>
+                    <p class="form-group-sub" style="line-height: 1.4;"><span style="color:red;">＊</span>レポート内の重要なキーワードを3〜5つ入力してください♪<br>入力例）投資,つみたてNISA,iDeCo<br>それぞれの単語の間にコンマ（,）を入れてください。</p>
+                    <input type="text" id="keyword" class="form-control" placeholder="" value="{$blogs.keyword|default:''}">
                 </div>
 
                 <div class="form-group">
@@ -185,6 +186,7 @@
             params.title = $('#title').val();
             params.main_image = $('#main_image').val();
             params.description = $('#description').val();
+            params.keyword = $('#keyword').val();
             params.content = $('#content').val();
             params.author_code = $('#author_code').val();
             params.open_date = $('#open_date').val();
@@ -229,7 +231,6 @@
             var params = {};
             params.section_code = $("[name=section_code]:checked").val();
             params.kind = $("[name=kind]:checked").val();
-            //params.keyword = $("[name=keyword]:checked").val();
             params.pickup = $("[name=pickup]:checked").val();
             params.pr = $("[name=pr]:checked").val();
             params.secret = $("[name=secret]:checked").val();
@@ -237,6 +238,7 @@
             params.title = $('#title').val();
             params.main_image = $('#main_image').val();
             params.description = $('#description').val();
+            params.keyword = $('#keyword').val();
             params.content = $('#content').val();
             params.author_code = $('#author_code').val();
             params.open_date = $('#open_date').val();

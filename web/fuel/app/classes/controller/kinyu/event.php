@@ -23,6 +23,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '参加して学ぶ（女子会/イベント一覧）｜きんゆう女子。';
         $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
+        $this->template->keyword = 'きんゆう女子,お金,金融,女子会,イベント';
         $this->template->ogimg = '/images/event/thum-event.jpg';
         $this->template->today = date("Y年n月");
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
@@ -38,6 +39,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '過去の女子会｜きんゆう女子。';
         $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
+        $this->template->keyword = 'きんゆう女子,お金,金融,女子会,過去イベント';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->today = date("Y年n月");
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
@@ -95,6 +97,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->template->description = $this->data['event']['title'];
+        $this->template->keyword = 'きんゆう女子,お金,金融,女子会,イベント';
         $this->template->urlcode = $this->data['event_row']['code'];
 
         // $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
@@ -199,6 +202,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->template->description = $this->data['event']['title'];
+        $this->template->keyword = 'きんゆう女子,お金,金融,女子会,イベント';
         $this->template->urlcode = $this->data['event_row']['code'];
 
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
@@ -238,6 +242,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->template->description = $this->data['event']['title'];
+        $this->template->keyword = 'きんゆう女子,お金,金融,女子会,イベント';
 
         // 登録カード取得
         if ($username = \Auth::get('username')) {
@@ -280,6 +285,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
         $this->data['specials02'] = Blogs::lists02(1, 4, true, 'special');
         $this->template->description = $this->data['event']['title'];
+        $this->template->keyword = 'きんゆう女子,お金,金融,女子会,イベント';
         $this->template->urlcode = $this->data['event_row']['code'];
 
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
@@ -301,6 +307,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     {
         $this->template->title = '女子会のご予約ありがとうございます。｜きんゆう女子。';
         $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
+        $this->template->keyword = 'きんゆう女子,お金,金融,女子会,イベント';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->today = date("Y年n月");
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
@@ -366,6 +373,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     {
         $this->template->title = '女子会のお約束ごと｜きんゆう女子。';
         $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
+        $this->template->keyword = 'きんゆう女子,お金,金融,女子会,イベント';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->today = date("Y年n月");
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);

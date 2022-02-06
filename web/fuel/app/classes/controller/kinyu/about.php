@@ -13,6 +13,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = 'きんゆう女子。ストーリー｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -27,6 +28,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = 'きんゆう女子。コミュニティについて｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -41,6 +43,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = 'きんゆう女子。でできること｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -55,6 +58,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = '生まれたストーリー｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -70,6 +74,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = 'デザインコンセプト｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -85,6 +90,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = 'コミュニティマネジメント｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -100,6 +106,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = 'インサイトポリシー｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -115,6 +122,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = 'これまでの歩み｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -129,6 +137,7 @@ class Controller_Kinyu_About extends Controller_Kinyubase
         $this->template->title = 'きんゆう女子。コミュニティについて｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。Aboutページでは、きんゆう女子。についての説明をしています。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
         $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);

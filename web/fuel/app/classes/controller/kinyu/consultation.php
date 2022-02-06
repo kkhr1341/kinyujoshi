@@ -7,6 +7,7 @@ class Controller_Kinyu_Consultation extends Controller_Kinyubase
     {
         $this->template->title = 'コミュニティ運営ポリシー｜きんゆう女子。';
         $this->template->description = "おかねについて、ゆるりとおしゃべり。身近な家計管理から世界経済、FinTech（フィンテック）、ライフスタイルまで幅広いきんゆうをテーマに女子会をしています。";
+        $this->template->keyword = 'きんゆう女子,TOE THE LINE,コミュニティ運営ポリシー';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-top.png';
         $this->template->today = date("Y年n月");
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);

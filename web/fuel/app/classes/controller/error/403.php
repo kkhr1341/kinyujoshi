@@ -7,6 +7,7 @@ class Controller_Error_403 extends Controller_Kinyubase
     {
         $this->template->title = '大変申し訳ございません。お探しのページは存在しないようです。';
         $this->template->description = '大変申し訳ございません。お探しのページは存在しないようです。';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);

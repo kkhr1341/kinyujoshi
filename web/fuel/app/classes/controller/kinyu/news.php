@@ -20,6 +20,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
         $pagination = $this->data['news']['pagination'];
         $this->template->title = 'お知らせ｜きんゆう女子。';
         $this->template->description = "きんゆう女子。のニュースでは、きんゆう女子。に関する様々なニュースを配信しています。";
+        $this->template->keyword = 'きんゆう女子,お知らせ,ニュース,最新情報';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
         $this->data['specials'] = Blogs::lists(1, 5, true, 'special');
@@ -69,7 +70,7 @@ class Controller_Kinyu_News extends Controller_Kinyubase
 
         $this->template->title = $this->data['news']['title'];
         $this->template->description = $this->data['news']['title'];
-
+        $this->template->keyword = 'きんゆう女子,お知らせ,ニュース,最新情報';
 
         //$this->template->ogimg = $this->data['news']['main_image'];
 
