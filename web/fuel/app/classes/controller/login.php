@@ -16,6 +16,7 @@ class Controller_Login extends Controller_KinyuBase
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
             $this->template->title = 'ログイン｜きんゆう女子。';
             $this->template->description = 'きんゆう女子。のコンセプトは「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」こと。 身近な家計管理から世界経済、FinTech（フィンテック）、 ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。';
+            $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
             $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
             $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
@@ -38,6 +39,7 @@ class Controller_Login extends Controller_KinyuBase
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/login/ogp.jpg';
             $this->template->title = '新規メンバー登録｜きんゆう女子。';
             $this->template->description = 'きんゆう女子。のコンセプトは「経済に前向きに関わることでおかねにとらわれず、自由で等身大に生きる」こと。 身近な家計管理から世界経済、FinTech（フィンテック）、 ライフスタイルまで、幅広い"きんゆう"をテーマにした女子会を開催しています。';
+            $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
             $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
             $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
@@ -72,6 +74,7 @@ class Controller_Login extends Controller_KinyuBase
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
             $this->template->title = 'メンバー登録｜きんゆう女子。';
             $this->template->description = 'ログイン｜きんゆう女子';
+            $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
             $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
             $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
             $this->template->contents = View::forge('login/regist.smarty', $this->data);
@@ -100,6 +103,7 @@ class Controller_Login extends Controller_KinyuBase
             $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
             $this->template->title = 'メンバー登録｜きんゆう女子。';
             $this->template->description = 'ログイン｜きんゆう女子';
+            $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
             $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
             $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
@@ -126,6 +130,7 @@ class Controller_Login extends Controller_KinyuBase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->title = 'パスワード再発行｜きんゆう女子。';
         $this->template->description = 'パスワード再発行｜きんゆう女子';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
@@ -157,6 +162,7 @@ class Controller_Login extends Controller_KinyuBase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->title = 'パスワード再発行｜きんゆう女子。';
         $this->template->description = 'パスワード再発行｜きんゆう女子';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
 
@@ -171,6 +177,7 @@ class Controller_Login extends Controller_KinyuBase
     {
         $this->template->title = 'メンバー登録ありがとうございます！｜きんゆう女子。';
         $this->template->description = '';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         //$this->template->today = date("Y年n月");
         $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
