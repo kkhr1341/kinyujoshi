@@ -8,7 +8,7 @@ class Controller_Kinyu_Start extends Controller_Kinyubase
         $this->template->title = 'はじめての方へ｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/myway/og_myway.jpg';
         $this->template->description = 'わたしたち、きんゆう女子。は、金融にむきあっていくうちに気づきました。豊かに生きるための第一歩は「自分を知ること」。このページでは、「わたしを知ること」をテーマに情報を発信していきます。';
-
+        $this->template->keyword = 'はじめての方へ,お金,投資,初心者,貯金';
         $this->template->sp_header = View::forge('kinyu/common/sp_header.smarty', $this->data);
         $this->template->pc_header = View::forge('kinyu/common/pc_header.smarty', $this->data);
         $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);

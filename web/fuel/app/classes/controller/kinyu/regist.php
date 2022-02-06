@@ -11,6 +11,7 @@ class Controller_Kinyu_Regist extends Controller_Kinyubase
         $this->template->title = 'メンバー登録｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-regist.jpg';
         $this->template->description = "きんゆう女子の。の会員登録フォームです。積極的にコミュニティに参加したい！きんゆう女子。のメンバー登録フォームです。初めて女子会に参加する際にこちらを登録してください！";
+        $this->template->keyword = 'メンバー登録,お金,投資,初心者,貯金';
         $this->data['categories'] = Categories::lists();
 
         $this->data['userdata'] = \Session::get_flash('userdata');
@@ -39,6 +40,7 @@ class Controller_Kinyu_Regist extends Controller_Kinyubase
         $this->template->title = 'メンバー登録｜きんゆう女子。';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/og-regist.jpg';
         $this->template->description = "きんゆう女子の。の会員登録フォームです。積極的にコミュニティに参加したい！きんゆう女子。のメンバー登録フォームです。初めて女子会に参加する際にこちらを登録してください！";
+        $this->template->keyword = 'メンバー登録,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
 
         $this->template->singlepage_footer = View::forge('kinyu/template/singlepage_footer.smarty', $this->data);

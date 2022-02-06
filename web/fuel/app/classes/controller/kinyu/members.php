@@ -43,7 +43,7 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $this->template->title = 'メンバー一覧 ｜きんゆう女子。';
     $this->template->description = 'メンバー一覧';
     $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
-
+    $this->template->keyword = 'きんゆう女子,メンバー詳細,お金,投資,初心者';
     $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
     $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
     $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);
@@ -62,7 +62,7 @@ class Controller_Kinyu_Members extends Controller_Kinyubase
     $this->template->sp_footer = View::forge('kinyu/common/sp_footer.smarty', $this->data);
     $this->template->title = 'メンバー詳細 ｜きんゆう女子。';
     $this->template->description = 'メンバー詳細';
-
+    $this->template->keyword = 'きんゆう女子,メンバー詳細,お金,投資,初心者';
     $this->template->header = View::forge('kinyu/common/header.smarty', $this->data);
     $this->template->footer = View::forge('kinyu/common/footer.smarty', $this->data);
     $this->template->contents_after = View::forge('kinyu/common/contents_after.smarty', $this->data);

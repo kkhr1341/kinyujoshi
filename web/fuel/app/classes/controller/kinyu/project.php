@@ -18,6 +18,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->template->contents = View::forge('kinyu/project/index.smarty', $this->data)
             ->set_safe('pagination', $pagination);
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     }
 
@@ -28,6 +29,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->data['blogs'] = Blogs::lists(1, null, 1, null, $project_code);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/project/reports.smarty', $this->data);
@@ -39,6 +41,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->data['courses'] = Courses::get_courses($project_code);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/project/comments.smarty', $this->data);
@@ -51,6 +54,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->data['blog'] = Blogs::getByCode('blogs', $code);
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/project/report.smarty', $this->data);
@@ -63,6 +67,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/project/detail.smarty', $this->data);
@@ -77,6 +82,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->data['address_code'] = $address_code;
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->header = View::forge('kinyu/template/header-area.smarty', $this->data);
         $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/project/course.smarty', $this->data);
@@ -90,6 +96,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->template->footer = View::forge('kinyu/template/footer-area.smarty', $this->data);
         $this->template->contents = View::forge('kinyu/project/comp.smarty', $this->data);
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     }
 
@@ -99,6 +106,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $result = $wp->course_buy(Auth::get('username'), $project_code, $course_code, $address_code);
         Response::redirect("kinyu/project/course/comp/{$project_code}/{$course_code}");
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
     }
 
@@ -110,6 +118,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->data['address'] = Addresses::getByCode('addresses', $address_code);
         $this->data['address_code'] = $address_code;
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
         $wp = new Wp();
@@ -141,6 +150,7 @@ class Controller_Kinyu_Project extends Controller_Kinyubase
         $this->data['address_code'] = $address_code;
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
+        $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
         $customer = $wp->get_wpcustomer(Auth::get('username'));
         $active_card = [
             'exp_month' => @$customer->active_card->exp_month,

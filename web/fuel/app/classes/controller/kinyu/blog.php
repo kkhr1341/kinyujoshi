@@ -30,6 +30,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $pagination = $this->data['blogs']['pagination'];
         $this->template->title = 'レポート一覧｜きんゆう女子。';
         $this->template->description = 'きんゆう女子。は、なかなか聞けないお金の話。 先延ばしにしがちなお金の計画。 私には無関係と思っている金融の話など、お金に関する様々な情報を配信しています。';
+        $this->template->keyword = '記事,お金,投資,初心者,貯金';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -54,6 +55,7 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
         $this->template->search_text = Input::get('search_text');
         $this->template->title = Input::get('search_text') . 'を含むレポート｜きんゆう女子。';
         $this->template->description = 'きんゆう女子。は、なかなか聞けないお金の話。 先延ばしにしがちなお金の計画。 私には無関係と思っている金融の話など、お金に関する様々な情報を配信しています。';
+        $this->template->keyword = 'お金,資産運用,投資,初心者,貯金';
         $this->template->ogimg = 'https://kinyu-joshi.jp/images/kinyu-logo.png';
 
         $this->data['top_blogs'] = Blogs::lists(1, 5, true);
@@ -123,6 +125,11 @@ class Controller_Kinyu_Blog extends Controller_Kinyubase
 
         $this->template->title = $this->data['blog']['title'];
         $this->template->description = $this->data['blog']['description'];
+        if ($this->data['blog']['keyword'] == '') {
+            $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';
+        } else {
+            $this->template->keyword = $this->data['blog']['keyword'];
+        }
         $this->template->ogimg = $this->data['blog']['main_image'];
         //template
         $this->data['top_blogs'] = Blogs::lists(1, 6, true);
