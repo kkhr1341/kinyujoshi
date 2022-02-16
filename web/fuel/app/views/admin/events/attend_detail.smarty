@@ -213,23 +213,20 @@
                 <textarea name="body" style="border: 1px solid #d9d8d8; width: 500px; height: 200px;"></textarea>
             </div>
         </div>
-        {if in_array('admin', $roles|default:'')}
+
         <div class="form-group">
             <label class="form-group-event-label">テストメール送信先</label>
             <div class='input-group'>
                 <input type='text' class="form-control" name="email" value="" style="width: 500px;" />
             </div>
         </div>
-        {/if}
 
       </div>
       <!-- dialog buttons -->
-      {if in_array('admin', $roles|default:'')}
       <div class="modal-footer">
         <button type="button" class="btn test-btn btn-primary">テスト送信</button>
         <button type="button" class="btn send-btn btn-primary">送信</button>
       </div>
-      {/if}
     </div>
   </div>
 </div>
@@ -321,7 +318,6 @@ $(function () {
     });
 });
 
-{if in_array('admin', $roles|default:'')}
 $(function () {
     // メール一斉送信
     var $modal = $("#myModal");
@@ -398,7 +394,6 @@ $(function () {
         });
     });
 });
-{/if}
 </script>
 
 
