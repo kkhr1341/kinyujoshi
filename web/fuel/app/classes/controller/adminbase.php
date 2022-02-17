@@ -164,8 +164,8 @@ class Controller_Adminbase extends Controller_Template
             case '117.103.161.200':
                 return true;
             // komori vpn ip
-            // case '133.201.70.192':
-            //     return true;
+            case '133.201.70.192':
+                return true;
             default:
                 return false;
         }
