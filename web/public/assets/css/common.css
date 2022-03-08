@@ -1193,8 +1193,12 @@ html.is-fixed body {
 	color: #4C9BBF;
 }
 .event-sidebar .joinus-block {
-  border-top: 1px solid #dedede;
-  padding-top: 20px;
+  margin-top: 24px;
+  padding: 3px;
+  background: #FCB2A9;
+}
+.event-sidebar .joinus-block-inner {
+	border: 1px solid #fff;
 }
 .event-sidebar .joinus-block a,
 .event-sidebar .joinus-block p,
@@ -1203,13 +1207,12 @@ html.is-fixed body {
   font-size: 1.4rem;
   line-height: 14px;
   font-weight: bold;
-  background: #8ddcd1;
   color: #fff;
   text-align: center;
   padding: 16px 0px;
   transition: .5s;
 }
-.event-sidebar .joinus-block div.applicable-link {
+.event-sidebar .joinus-block.joinus-block-finish {
 	opacity: .4;
 }
 .applicable-title {
@@ -1276,10 +1279,39 @@ html.is-fixed body {
 	.event-sidebar .joinus-block div.applicable-link {
 	  font-size: 1.3rem;
 	  line-height: 13px;
-	  padding: 16px 0px;
+	  padding: 12px 0px;
 	}
 	.event-detail-main-contents p {
 		font-size: 1.2rem;
+	}
+	.applicable-title {
+		font-size: 1.2rem;
+		margin-top: 12px;
+	}
+	.event-link-bottomfix-block {
+		position: fixed;
+		bottom: 60px;
+		width:calc(100% - 30px);
+		z-index: 1000;
+		left: 15px;
+	}
+	.event-link-bottomfix {
+	  padding: 3px;
+	  background: #FCB2A9;
+	}
+	.event-link-bottomfix-inner {
+		border: 1px solid #fff;
+	}
+	.event-link-bottomfix a,
+	.event-link-bottomfix p {
+	  display: block;
+	  font-size: 1.3rem;
+	  line-height: 13px;
+	  font-weight: bold;
+	  color: #fff;
+	  text-align: center;
+	  padding: 12px 0px;
+	  transition: .5s;
 	}
 }
 
