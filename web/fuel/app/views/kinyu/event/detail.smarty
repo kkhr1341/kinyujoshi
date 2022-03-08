@@ -96,7 +96,7 @@ var $resArray02 = $resArray[1];
                   </div>
                   <div class="applicable-title text-center"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}申し訳ありません...。<br>お申込みの受付は終了しました{/if}</div>
                 {else}
-                  <div class="joinus-block">
+                  <div class="joinus-block d-none d-md-block">
                     <div class="joinus-block-inner">
                     {if $event.specific_application_link}
                       <!-- 特定の申し込みリンク -->
