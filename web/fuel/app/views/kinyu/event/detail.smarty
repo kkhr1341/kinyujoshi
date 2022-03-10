@@ -186,14 +186,12 @@ var $resArray02 = $resArray[1];
 
 <script>
   $(function() {
-
     $(".joinus-open").click(function() {
       $("#joinus-open-block").fadeIn(500);
     });
     $("#joinus-open-close").click(function() {
       $("#joinus-open-block").fadeOut(500);
     });
-
   });
 </script>
 
@@ -207,6 +205,9 @@ var $resArray02 = $resArray[1];
 @media screen and (max-width: 480px) {
   .footer-inner {
     padding: 100px 28px 120px;
+  }
+  .sp-fi-footer-block {
+    display: none;
   }
 }
 </style>
