@@ -24,9 +24,9 @@
                 <p class="text-white">
                   <span class="date-box">
                     {if $event.display_event_date}
-                        <span class="date">{$event.display_event_date}</span>
+                        <span class="date text-newline">{$event.display_event_date}</span>
                     {else}
-                      <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
+                      <span class="date text-newline">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
                     {/if}
                   </span>
                 </p>
@@ -42,7 +42,7 @@
                 {else}
                     <p class="event-subbox-el text-newline">参加費：{$event.fee|number_format}円<span>（税込）</span></p>
                 {/if}
-                <p class="event-subbox-el">場所：{$event.place}</p>
+                <p class="event-subbox-el text-newline">場所：{$event.place}</p>
             </div>
         </div>
     </a>

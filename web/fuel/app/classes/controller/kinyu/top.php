@@ -16,7 +16,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
 
         $this->data['event_display_limit'] = self::EVENT_DISPLAY_LIMIT;
         $this->data['events'] = Events::lists(1, null, true, null, 'asc');
-
+        $this->data['eventsnew'] = Events::listsnew(1, null, true, null, 'asc');
         $this->template->title = 'きんゆう女子。- 自由で等身大に生きる。どの金融機関に属さない中立コミュニティ';
         $this->template->description = 'きんゆう女子。は、金融ワカラナイ女子のためのコミュニティです。なかなか聞けない、お金の話。 先延ばしにしがちな、お金の計画。 私には無関係と思っている、金融の話。みんなのお金に関するあれこれをおしゃべりしましょう！';
         $this->template->keyword = 'きんゆう女子,お金,投資,初心者,貯金';

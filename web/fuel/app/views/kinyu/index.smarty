@@ -3,7 +3,7 @@
 {$mainproject}
 
 <!-- join & lesson -->
-<div class="main-block event-content" id="event">
+<div class="main-block event-top-content" id="event">
 	<div class="main-block-inner container">
 		<div class="single-title-block position-relative">
       <p class="deco-text ff-decoration font-italic kinjo-color">Join & Learn</p>
@@ -11,29 +11,97 @@
       <p class="deco-text-sub">お金についての理解を深めよう</p>
       <img class="report-fukidashi position-absolute" src="/images/fukidashi/event-fukidashi.svg">
     </div>
-    <div class="event-top-slide-container position-relative">
-			<div class="swiper-container event-top-slide">
-			  <div class="swiper-wrapper swiper-main-slide">
-			  	{foreach from=$events key="key" item=event name=loopname}
-			      {if $smarty.foreach.loopname.index > ($event_display_limit-1)}{break}{/if}
-			      {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
-			    {/foreach}
-			    {if count($events) > $event_display_limit}
-			      {foreach from=$events key="key" item=event name=loopname}
-			        {if $smarty.foreach.loopname.index > ($event_display_limit-1)}
-			          {View::forge('parts/sp/events/item.smarty', ["event" => $event])}
-			        {/if}
-			      {/foreach}
-			    {/if}
-			  </div>
-			</div>
-			<div class="swiper-button-prev event-top-slide-prev d-none d-lg-block"></div>
-	   	<div class="swiper-button-next event-top-slide-next d-none d-lg-block"></div>
-	   	<div class="text-center">
-				<div class="swiper-pagination event-top-swiper-pagination"></div>
-			</div>
-		</div>
-		<a class="event-past-link d-block mx-auto kinjo-color text-right" href="/event">〉女子会/イベント一覧はこちら</a>
+		<div class="event-single-list">
+	    <div class="tabs">
+	      <input id="all" type="radio" name="tab_item" checked>
+	      <label class="tab_item ff-mincho" for="all">日付順</label>
+	      <input id="programming" type="radio" name="tab_item">
+	      <label class="tab_item ff-mincho" for="programming">新着順</label>
+	      <!-- 日付順 -->
+	      <div class="tab_content" id="all_content">
+	        <div class="tab_content_description">
+	          <ul class="row">
+	            {foreach from=$events key="key" item=event name=loopname}
+	            <li class="col-12 col-md-6">
+	              <a class="d-block" href="/event/{$event.code}">
+	                <div class="event-single-list-el">
+	                  <div class="event-single-list-img position-relative" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
+	                    {if $event.pr == 1}
+	                      <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
+	                    {/if}
+	                  </div>
+	                  <div class="event-single-list-text">
+	                    <div class="event-single-list-kind">
+	                      <p class="text-white">
+	                      <span class="date-box">
+	                        {if $event.display_event_date}
+			                      <span class="date">{$event.display_event_date}</span>
+			                    {else}
+			                      <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
+			                    {/if}
+	                      </span>
+	                      </p>
+	                    </div>
+	                    <h3 class="event-single-title text-newline ff-mincho">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
+	                    <div class="event-subbox">
+	                      {if is_numeric($event.fee)}
+	                      <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+	                      {else}
+	                      <p class="event-subbox-el">参加費：{$event.fee}</p>
+	                      {/if}
+	                    </div>
+	                  </div>
+	                </div>
+	              </a>
+	            </li>
+	            {/foreach}
+	          </ul>
+	        </div>
+	      </div>
+	      <!-- 新着順 -->
+	      <div class="tab_content" id="programming_content">
+	        <div class="tab_content_description">
+	          <ul class="row">
+	            {foreach from=$eventsnew key="key" item=event name=loopname}
+	            <li class="col-12 col-md-6">
+	              <a class="d-block" href="/event/{$event.code}">
+	                <div class="event-single-list-el">
+	                  <div class="event-single-list-img position-relative" style="background:url({to_thumb file=$event.main_image type="thumb"}) center center / cover no-repeat">
+	                    {if $event.pr == 1}
+	                      <p class="with_ki-label"><img class="w-100" src="/images/report/with_ki-label.png"></p>
+	                    {/if}
+	                  </div>
+	                  <div class="event-single-list-text">
+	                    <div class="event-single-list-kind">
+	                      <p class="text-white">
+	                      <span class="date-box">
+	                        {if $event.display_event_date}
+			                      <span class="date">{$event.display_event_date}</span>
+			                    {else}
+			                      <span class="date">{$event.event_date|date_format:"Y年m月d日"}（{$event.event_date|date_format:"%a"|replace:"Sun":"日"|replace:"Mon":"月"|replace:"Tue":"火"|replace:"Wed":"水"|replace:"Thu":"木"|replace:"Fri":"金"|replace:"Sat":"土"}）</span>
+			                    {/if}
+	                      </span>
+	                      </p>
+	                    </div>
+	                    <h3 class="event-single-title text-newline ff-mincho">{if $event.secret == 1}<span class="secret-icon"></span>{/if}{$event.title}</h3>
+	                    <div class="event-subbox">
+	                      {if is_numeric($event.fee)}
+	                      <p class="event-subbox-el">参加費：{$event.fee|number_format}円</p>
+	                      {else}
+	                      <p class="event-subbox-el">参加費：{$event.fee}</p>
+	                      {/if}
+	                    </div>
+	                  </div>
+	                </div>
+	              </a>
+	            </li>
+	            {/foreach}
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	    <a class="link-generally link-generally02" href="/event">女子会/イベント一覧へ</a>
+	  </div>
 	</div>
 </div>
 

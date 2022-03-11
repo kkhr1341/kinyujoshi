@@ -19,6 +19,7 @@ class Controller_Kinyu_Event extends Controller_Kinyubase
     public function action_index($page = 1)
     {
         $this->data['events'] = Events::all('event', '/event/', $page, 2, 20);
+        $this->data['eventsnew'] = Events::listsnew(1, null, true, null, 'asc');
         $pagination = $this->data['events']['pagination'];
         $this->data['pagination'] = $pagination::instance('mypagination');
         $this->template->title = '参加して学ぶ（女子会/イベント一覧）｜きんゆう女子。';
