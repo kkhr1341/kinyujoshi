@@ -83,28 +83,34 @@ var $resArray02 = $resArray[1];
                 </ul>
                 {if $event.applicable eq false}
                   <div class="joinus-block joinus-block-finish">
-                    <div class="applicable-link">{if $event.fee == 0 && $event.event_category == "招待型"}応募する{else}お申込みはこちら{/if}</div>
-                    <div class="applicable-title text-center"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}お申込みの受付は終了しました{/if}</div>
+                    <div class="joinus-block-inner">
+                      <div class="applicable-link">{if $event.fee == 0 && $event.event_category == "招待型"}応募する{else}お申込みはこちら{/if}</div>
+                    </div>
                   </div>
+                  <div class="applicable-title text-center"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}申し訳ありません...。<br>お申込みの受付は終了しました{/if}</div>
                 {else if $event.full eq true}
                   <div class="joinus-block joinus-block-finish">
-                    <div class="applicable-link">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</div>
-                    <div class="applicable-title text-center"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}販売終了{/if}</div>
+                    <div class="joinus-block-inner">
+                      <div class="applicable-link">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</div>
+                    </div>
                   </div>
+                  <div class="applicable-title text-center"><span style="color:red;">＊</span>{if $event.fee == 0 && $event.event_category == '招待型'}終了しました{else}申し訳ありません...。<br>お申込みの受付は終了しました{/if}</div>
                 {else}
-                  <div class="joinus-block">
-                  {if $event.specific_application_link}
-                    <!-- 特定の申し込みリンク -->
-                    <a href="{$event.specific_application_link}" target="_blank">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</a>
-                  {else}
-                    {if $authenticated eq 1}
-                      <!-- ログインユーザー -->
-                      <a href="/event_tickets/{$urlcode}">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</a>
+                  <div class="joinus-block d-none d-md-block">
+                    <div class="joinus-block-inner">
+                    {if $event.specific_application_link}
+                      <!-- 特定の申し込みリンク -->
+                      <a href="{$event.specific_application_link}" target="_blank">{if $event.fee == 0 && $event.event_category == '招待型'}▶︎ 応募する{else}▶︎ お申込みはこちら{/if}</a>
                     {else}
-                      <!-- 非ログインユーザー -->
-                      <p id="joinus-open">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</p>
+                      {if $authenticated eq 1}
+                        <!-- ログインユーザー -->
+                        <a href="/event_tickets/{$urlcode}">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</a>
+                      {else}
+                        <!-- 非ログインユーザー -->
+                        <p class="joinus-open">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</p>
+                      {/if}
                     {/if}
-                  {/if}
+                    </div>
                   </div>
                 {/if}
               </div>
@@ -114,6 +120,31 @@ var $resArray02 = $resArray[1];
       </div>
     </div>
   </div>
+
+  <!-- SPのみ固定表示 / 女子会リンク -->
+  {if $event.applicable eq false}
+  {else if $event.full eq true}
+  {else}
+    <div class="event-link-bottomfix-block d-block d-md-none">
+      <div class="event-link-bottomfix">
+        <div class="event-link-bottomfix-inner">
+        {if $event.specific_application_link}
+          <!-- 特定の申し込みリンク -->
+          <a href="{$event.specific_application_link}" target="_blank">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</a>
+        {else}
+          {if $authenticated eq 1}
+            <!-- ログインユーザー -->
+            <a href="/event_tickets/{$urlcode}">{if $event.fee == 0 && $event.event_category == '招待型'}▶︎ 応募する{else}お申込みはこちら{/if}</a>
+          {else}
+            <!-- 非ログインユーザー -->
+            <p class="joinus-open">{if $event.fee == 0 && $event.event_category == '招待型'}応募する{else}お申込みはこちら{/if}</p>
+          {/if}
+        {/if}
+        </div>
+      </div>
+    </div>
+  {/if}
+
 {else}
   <div class="no-member-report-block">
     <div class="no-member-report-block-inner mx-auto text-center">
@@ -139,7 +170,6 @@ var $resArray02 = $resArray[1];
         事前に質問をリクエストしたり、<br>
         ギフトコードが使えます♪</p>
       <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
-
       <div class="login-block">
         <a class="login" href="/login?after_login_url=/event_tickets/{$urlcode}">メンバーの方はログインして参加</a>
         <a class="login_regist" href="/login_regist?after_login_url=/event_tickets/{$urlcode}">メンバーになって参加</a>
@@ -156,14 +186,12 @@ var $resArray02 = $resArray[1];
 
 <script>
   $(function() {
-
-    $("#joinus-open").click(function() {
+    $(".joinus-open").click(function() {
       $("#joinus-open-block").fadeIn(500);
     });
     $("#joinus-open-close").click(function() {
       $("#joinus-open-block").fadeOut(500);
     });
-
   });
 </script>
 
@@ -172,6 +200,14 @@ var $resArray02 = $resArray[1];
 @media screen and (max-width: 1024px) {
   .singlepage-footer {
     padding: 60px 0px 120px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer-inner {
+    padding: 100px 28px 100px;
+  }
+  .sp-fi-footer-block {
+    display: none!important;
   }
 }
 </style>
