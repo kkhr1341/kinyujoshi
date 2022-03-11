@@ -93,7 +93,6 @@ html.is-fixed body {
 	padding: 16px 0px;
 	text-align: center;
 	font-size: 1.6rem;
-	font-weight: bold;
 }
 .link-kinjo-sinple {
 	font-size: 1.6rem;
@@ -515,10 +514,16 @@ html.is-fixed body {
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
   TOP - join & lesson
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
-.event-content {
+.event-top-content {
 	background-color: #F7FAFA;
 }
-.event-content .img-box {
+.event-top-content .event-single-list-text {
+	background-color: #fff;
+}
+.event-top-content .tab_item {
+	background-color: #fff;
+}
+/*.event-content .img-box {
 	height: 320px;
 }
 .event-content .text-box {
@@ -592,9 +597,7 @@ html.is-fixed body {
 		width: 315px;
 		max-width: 315px;
 	}
-}
-
-
+}*/
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -986,6 +989,7 @@ html.is-fixed body {
 }
 .event-single-list li {
 	margin-bottom: 30px;
+	overflow: hidden;
 }
 .event-single-list-el {
   display: flex;
@@ -1010,8 +1014,10 @@ html.is-fixed body {
 }
 .event-single-list-kind p span.date-box {
   background-color: #8ddcd1;
-  padding: 6px 12px;
-  font-size: 1.5rem;
+  padding: 2px 8px;
+  font-size: 1.3rem;
+  display: inline-block;
+  line-height: 1.5;
 }
 .event-single-title {
   font-size: 1.8rem;
@@ -1027,6 +1033,44 @@ html.is-fixed body {
 .event-single-list .link-generally {
 	margin-top: 40px;
 }
+
+/* タブ箇所 */
+.tab_item {
+  width: 100px;
+  height: 40px;
+  background-color: #F7F7F7;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #565656;
+  display: block;
+  float: left;
+  text-align: center;
+  transition: all 0.2s ease;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+input[name="tab_item"] {
+  display: none;
+}
+.tab_content {
+  display: none;
+  clear: both;
+  overflow: hidden;
+}
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+  display: block;
+}
+.tabs input:checked + .tab_item {
+  background-color: #8ddcd1;
+  color: #fff;
+}
+
 /* 過去の特別女子会 */
 .past-special-list {
 	padding: 0px 0px 120px;
@@ -1045,7 +1089,6 @@ html.is-fixed body {
 	.event-introduction {
 		padding: 80px 0px 50px;
 	}
-	
 	.event-introduction .img-block .main-imb-block {
 		height: 200px;
 	}
@@ -1116,6 +1159,12 @@ html.is-fixed body {
 	}
 	.past-special-list li {
 		margin-bottom: 20px;
+	}
+	.tab_item {
+	  width: 80px;
+	  height: 32px;
+	  line-height: 32px;
+	  font-size: 12px;
 	}
 }
 
@@ -2229,10 +2278,14 @@ html.is-fixed body {
 }
 .sidebar-event-list .event-content .text-box {
 	background-color: #F7F7F7;
-	padding: 20px;
+	padding: 16px;
 }
 .sidebar-event-list .event-content .kinyu-event-kind p span.date-box {
-	font-size: 1.3rem;
+	font-size: 1.1rem;
+	line-height: 1.2;
+	display: inline-block;
+	padding: 4px;
+	background-color: #8ddcd1;
 }
 .sidebar-event-list .event-content .text-box h3 {
   font-size: 1.4rem;
@@ -2243,6 +2296,9 @@ html.is-fixed body {
 }
 .sidebar-event-list .event-content .event-subbox p {
 	font-size: 1.1rem;
+	line-height: 15px;
+  height: 15px;
+  -webkit-line-clamp: 1;
 }
 .sidebar-event-list .event-content .event-subbox {
 	padding-top: 10px;

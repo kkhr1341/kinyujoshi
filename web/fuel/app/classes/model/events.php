@@ -260,6 +260,71 @@ class Events extends Base
         return $datas;
     }
 
+    public static function listsnew($mode = null, $limit = null, $open = null, $secret = null, $sort="desc", $display=1, $username = null, $isend = null)
+    {
+        $select = '*, ';
+        $select .= 'events.code, ';
+        $select .= '(
+                select 
+                        count(*) 
+                    from 
+                        applications 
+                    where 
+                        applications.event_code = events.code and 
+                        applications.disable = 0 and 
+                        not exists(select "x" from application_cancels where applications.code = application_cancels.application_code)
+                    ) as application_num';
+
+        $datas = \DB::select(\DB::expr($select))
+            ->from('events')
+            ->join('profiles', 'left')
+            ->on('events.username', '=', 'profiles.username')
+            ->where('events.disable', '=', 0);
+
+        if ($username === null) {
+        } else {
+            $datas = $datas->where('events.username', '=', $username);
+        }
+
+        if ($display === null) {
+        } else {
+            $datas = $datas->where('display', '=', $display);
+        }
+
+        if ($secret === null) {
+        } else {
+            $datas = $datas->where('secret', '=', $secret);
+        }
+
+        if ($mode === null) {
+        } else {
+            $datas = $datas->where('status', '=', $mode);
+        }
+
+        if ($open !== null) {
+          $datas = $datas->where('open_date', '<', \DB::expr('NOW()'));
+        }
+
+        if ($isend === null) {
+          $datas = $datas->where('event_date', '>=', \DB::expr('NOW() - INTERVAL 1 DAY'));
+        }
+
+        $datas = $datas->order_by('open_date', $sort);
+
+        if ($limit === null) {
+        } else {
+            $datas = $datas->limit($limit);
+        }
+        $datas = $datas->execute('slave')
+            ->as_array();
+        foreach($datas as $key => $data){
+            $datas[$key]['applicable'] = self::is_applicable_by_event_date($data['event_date'], $data['event_start_datetime']);
+            $datas[$key]['full'] = $data['application_num'] >= $data['limit'] ? true: false;
+
+        }
+        return $datas;
+    }
+
     /**
      * 過去のイベント一覧取得
      * @param null $mode
