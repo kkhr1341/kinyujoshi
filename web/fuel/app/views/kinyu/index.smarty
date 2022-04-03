@@ -146,7 +146,7 @@
 
 		<div class="report-list">
 			<ul class="row">
-				{foreach from=$top_blogs2 key="key" item=blog name=loopname}
+				{foreach from=$blogs.datas key="key" item=blog name=loopname}
 		      {if $smarty.foreach.loopname.index == 10}
 		      </ul>
 		        <div class="btn-more-link">
@@ -186,7 +186,7 @@
 			              {/if}
 			            </div>
 			            <h3 class="report-title ff-mincho text-newline">
-			              {if $blog.secret == 1}<span class="secret-icon"></span>{/if}
+			              {if $blog.viewable == 0}<span class="secret-icon"></span>{/if}
 			              {$blog.title}
 			            </h3>
 			            <div class="report-author">
