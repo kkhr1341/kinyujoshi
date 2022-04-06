@@ -22,7 +22,7 @@
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/news" data-category="sp-footer-link" data-action="click" data-value="1">お知らせ</a>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/about" data-category="sp-footer-link" data-action="click" data-value="1">私たちについて</a></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/policy" data-category="sp-footer-link" data-action="click" data-value="1">大事にしていること</a></li>
-        <li class="col-6 col-md-3 text-left"><a class="js-track" href="https://toetheline.jp/" target="_blank" data-category="sp-footer-link" data-action="click" data-value="1">運営会社（採用情報）</a></li>
+        <li class="col-6 col-md-3 text-left"><p id="footer-company-open" class="link-point js-track" data-category="sp-footer-link" data-action="click" data-value="1">運営会社</p></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/faq" data-category="sp-footer-link" data-action="click" data-value="1">よくあるご質問　</a></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/contact" data-category="sp-footer-link" data-action="click" data-value="1">お問い合わせ</a></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/joshikai_policy" data-category="sp-footer-link" data-action="click" data-value="1">コミュニティ参加規約</a></li>
@@ -49,6 +49,41 @@
   </div>
 </div>
 
+<!-- 運営会社ポップ -->
+<div id="footer-company-block" class="footer-company-block">
+  <div id="footer-company-close" class="link-point"><img src="/images/close-btn.png"></div>
+  <div class="inner">
+    <table class="table-company center ff-mincho">
+      <tbody>
+        <tr>
+          <th class="active"><p>社名</p></th>
+          <td><p>運営：合同会社きんゆう女子。<br>管理：<a class="link-color" href="https://toetheline.jp/" target="_blank">株式会社TOE THE LINE</p></td>
+        </tr>
+        <tr>
+          <th class="active"><p>代表者</p></th>
+          <td><p>代表取締役　鈴木万梨子</p></td>
+        </tr>
+        <tr>
+          <th class="active"><p>設立</p></th>
+          <td><p>2016年3月3日</p></td>
+        </tr>
+        <tr>
+          <th class="active"><p>所在地</p></th>
+          <td><p>〒103-0025<br>東京都中央区日本橋茅場町1-5-8　東京証券会館B313
+          <a href="https://goo.gl/maps/b98oUUX6ixTMyBxz5" class="link-color" target="_blank">[map]</a></p></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-
-
+<script>
+  $(function() {
+    $("#footer-company-open").click(function() {
+      $("#footer-company-block").fadeIn(500);
+    });
+    $("#footer-company-close").click(function() {
+      $("#footer-company-block").fadeOut(500);
+    });
+  });
+</script>
