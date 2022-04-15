@@ -59,29 +59,82 @@ footer {
 	font-size: 1.5rem;
 	margin-bottom: 12px;
 }
-/*.footer-list-title span {
-	padding: 2px 14px 2px 12px;
-	border-left: 3px solid #B0E2DB;
-	border-right: 3px solid #B0E2DB;
-}*/
 .footer-list ul li {
   padding: 0 10px 4px 0;
 }
-/*.footer-list ul li:before {
-  content: '|';
-  margin-right: 10px;
-}*/
 .footer-list ul li:before {
   content: "▶︎";
   margin-right: 4px;
   color: #7dd7cb;
 }
-.footer-list ul li a {
+.footer-list ul li a,
+.footer-list ul li p {
 	font-size: 1.2rem;
+	display: inline-block;
 }
 .footer-copyright {
 	font-size: 1.2rem;
 	margin-top: 70px;
+}
+
+/* モダル */
+.footer-company-block {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.95);
+  z-index: 1002;
+}
+.footer-company-block .inner {
+  width: 800px;
+  height: auto;
+  background-color: #fff;
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit- transform: translateX(-50%);
+  padding: 50px;
+}
+#footer-company-close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 12px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  transition: .5s;
+}
+#footer-company-close img {
+  width: 100%;
+  height: 100%;
+}
+.footer-company-block .table-company {
+	width: 100%;
+}
+.footer-company-block .table-company tr {
+	border-bottom: 3px solid #fff;
+}
+.footer-company-block .table-company th {
+  width: 20%;
+  padding: 16px 10px 16px 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+  vertical-align: top;
+  color: #999;
+  font-size: 1.6rem;
+  background-color: #ebf7f5;
+}
+.footer-company-block .table-company td {
+  width: 80%;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  background-color: #F7FAFA;
 }
 
 
@@ -115,7 +168,8 @@ footer {
 	.footer-list-title {
 		font-size: 1.3rem;
 	}
-	.footer-list ul li a {
+	.footer-list ul li a,
+	.footer-list ul li p {
 		font-size: 1.0rem;
 	}
 	.footer-copyright {
@@ -140,6 +194,35 @@ footer {
 	.sp-fi-footer-block a.mypage-link {
 		background: #F7FAFA;
 		border-right: 2px solid #fff;
+	}
+
+	/* モダル */
+	#footer-company-close {
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+	}
+	.footer-company-block .inner {
+    width: 92%;
+    top: 70px;
+    padding: 24px;
+	}
+	.footer-company-block .table-company th {
+	  width: 25%;
+	  padding: 16px 10px 16px 16px;
+	  font-size: 1.2rem;
+	  background-color: #ebf7f5;
+	}
+	.footer-company-block .table-company td {
+	  width: 75%;
+	  padding: 16px;
+	  box-sizing: border-box;
+	  font-size: 1.2rem;
+	}
+	.footer-company-block .table-company p,
+	.footer-company-block .table-company p a {
+		font-size: 1.2rem!important;
 	}
 
 }
