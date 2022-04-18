@@ -520,84 +520,21 @@ html.is-fixed body {
 .event-top-content .event-single-list-text {
 	background-color: #fff;
 }
-.event-top-content .tab_item {
+.event-top-content .tab_item,
+.event-top-content .tab_item02 {
 	background-color: #fff;
 }
-/*.event-content .img-box {
-	height: 320px;
+.event-top-content .main-block-inner:last-child .single-title-block {
+	margin-bottom: 24px;
 }
-.event-content .text-box {
-	background-color: #fff;
-	padding: 24px;
+.event-top-content .main-block-inner:last-child .single-title-block .main-title {
+	margin-top: 50px;
 }
-.event-content .text-box h3 {
-	font-size: 1.8rem;
-	line-height: 32px;
-	height: 96px;
-	-webkit-line-clamp: 3;
-	margin: 16px 0px;
-}
-.event-content .kinyu-event-kind p {
-	display: inline-block;
-	background-color: #8ddcd1;
-	padding: 4px 8px;
-	font-size: 1.4rem;
-	line-height: 1.5;
-}
-.event-content .with_ki-label {
-	position: absolute;
-	width: 130px;
-	right: 12px;
-	top: 12px;
-}
-.event-content .event-applicable {
-	position: absolute;
-	bottom: 20px;
-	left: 24px;
-	background-color: rgba(255,255,255,.85);
-	font-size: 1.3rem;
-	padding: 2px 8px;
-	color: #e15e5e;
-}
-.event-content .event-subbox {
-	border-top: 1px solid #EDEDED;
-	padding-top: 18px;
-}
-.event-content .event-subbox p {
-	font-size: 1.3rem;
-	-webkit-line-clamp: 1;
-}
-.event-content .event-single-link {
-	font-size: 1.6rem;
-	margin-top: 32px;
-}
-.event-top-slide-container .swiper-button-prev {
-	left: -50px;
-}
-.event-top-slide-container .swiper-button-next {
-	right: -50px;
-}
-
 @media screen and (max-width: 959px) {
-	.event-content .event-single-link {
-		font-size: 1.2rem;
+	.event-top-content .main-block-inner:last-child .single-title-block .main-title {
 		margin-top: 24px;
 	}
-	.event-top-slide .swiper-slide {
-		width: 282px;
-		max-width: 282px;
-	}
-	.event-content .kinyu-event-kind p {
-		font-size: 1.2rem;
-	}
 }
-
-@media screen and (min-width:410px) and ( max-width:959px) {
-	.event-top-slide .swiper-slide {
-		width: 315px;
-		max-width: 315px;
-	}
-}*/
 
 
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
@@ -1033,14 +970,22 @@ html.is-fixed body {
 .event-single-list .link-generally {
 	margin-top: 40px;
 }
+.event-top-content h3.main-title02 {
+	font-size: 2.2rem;
+	margin-top: 24px;
+	margin-bottom: 20px;
+	padding-left: 18px;
+	border-left: 3px solid #B0E2DB;
+}
 
 /* タブ箇所 */
-.tab_item {
+.tab_item,
+.tab_item02 {
   width: 100px;
-  height: 40px;
+  height: 36px;
   background-color: #F7F7F7;
-  line-height: 40px;
-  font-size: 14px;
+  line-height: 36px;
+  font-size: 13px;
   text-align: center;
   color: #565656;
   display: block;
@@ -1050,10 +995,14 @@ html.is-fixed body {
   margin-right: 12px;
   margin-bottom: 12px;
 }
-.tab_item:hover {
+.tab_item:hover,
+.tab_item02:hover {
   opacity: 0.75;
 }
 input[name="tab_item"] {
+  display: none;
+}
+input[name="tab_item02"] {
   display: none;
 }
 .tab_content {
@@ -1061,12 +1010,19 @@ input[name="tab_item"] {
   clear: both;
   overflow: hidden;
 }
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
+.tab_content02 {
+  display: none;
+  clear: both;
+  overflow: hidden;
+}
+#tabs-day:checked ~ #tabs-day_content,
+#tabs-new:checked ~ #tabs-new_content,
+#tabs-activity-day:checked ~ #tabs-activity-day_content,
+#tabs-activity-new:checked ~ #tabs-activity-new_content {
   display: block;
 }
-.tabs input:checked + .tab_item {
+.tabs input:checked + .tab_item,
+.tabs02 input:checked + .tab_item02 {
   background-color: #8ddcd1;
   color: #fff;
 }
@@ -1134,6 +1090,13 @@ input[name="tab_item"] {
     right: 8px;
     top: 8px;
 	}
+	.event-top-content h3.main-title02 {
+		font-size: 1.8rem;
+		margin-top: 24px;
+		margin-bottom: 20px;
+		padding-left: 12px;
+		border-left: 3px solid #B0E2DB;
+	}
 	.event-single-list-kind p span.date-box {
 		font-size: 1.2rem;
 		padding: 4px;
@@ -1149,7 +1112,7 @@ input[name="tab_item"] {
 		font-size: 1.1rem;
 	}
 	.event-single-list .link-generally {
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 	.past-special-list {
     padding: 0px 0px 60px;
@@ -1160,7 +1123,8 @@ input[name="tab_item"] {
 	.past-special-list li {
 		margin-bottom: 20px;
 	}
-	.tab_item {
+	.tab_item,
+	.tab_item02 {
 	  width: 80px;
 	  height: 32px;
 	  line-height: 32px;
@@ -2381,7 +2345,7 @@ input[name="tab_item"] {
 	font-size: 7.0rem;
 	line-height: 1;
 }
-.single-title-block .main-title {
+.single-title-block h2.main-title {
 	font-size: 2.8rem;
 	margin-top: 24px;
 }
