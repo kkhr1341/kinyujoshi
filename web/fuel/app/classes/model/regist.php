@@ -79,10 +79,10 @@ class Regist extends Base
 //        $val->add('income', '「3年後の自分の年収をどのくらいにしたいですか？」')
 //            ->add_rule('required');
 
-        // $val->add('where_from', '「きんゆう女子。に最初に出会ったのはどこ？」')
-        //     ->add_rule('required');
+        $val->add('where_from', 'どこできんゆう女子。を知りましたか？')
+             ->add_rule('required');
         // $val->add('where_from_site', '良かったらサイト名を教えてください♪');
-        // $val->add('where_from_other', '「きんゆう女子。に最初に出会ったのはどこ？その他」');
+        $val->add('where_from_other', 'どこできんゆう女子。を知りましたか？その他');
 
         // $val->add('regist_triggers', 'メンバーになろうと思ったきっかけ')
         //     ->add_rule('required');

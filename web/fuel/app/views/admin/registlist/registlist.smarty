@@ -47,6 +47,7 @@
       <th>診断チャートタイプ</th>
       <th>Email</th>
       <th>年齢</th>
+      <th>where?</th>
       <th>金融機関勤務</th>
       <th>編集部記入欄</th>
       <th>詳細</th>
@@ -63,6 +64,34 @@
       <td>{$email.type}</td>
       <td>{$email.email}</td>
       <td>{$email.birthday}</td>
+      <td>
+        {if $email.where_from == ""}
+
+        {elseif $email.where_from == 01}
+          インターネット検索
+        {elseif $email.where_from == 02}
+          Instagram
+        {elseif $email.where_from == 03}
+          Twitter
+        {elseif $email.where_from == 04}
+          Youtube
+        {elseif $email.where_from == 05}
+          知人からの口コミ
+        {elseif $email.where_from == 06}
+          カフェサルバドルでチラシを見て
+        {elseif $email.where_from == 07}
+          イベント
+        {elseif $email.where_from == 08}
+          雑誌
+        {elseif $email.where_from == 09}
+          新聞
+        {elseif $email.where_from == 10}
+          プレスリリースなどのニュースサイト
+        {elseif $email.where_from == 20}
+          {$email.where_from_other}
+        {else}
+        {/if}
+      </td>
       <td>
         {if $email.job_kind == "はい"}
           ○

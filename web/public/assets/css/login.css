@@ -160,6 +160,12 @@
 .regist-add-form-edit-el select#prefecture {
   width: 100px;
 }
+.regist-add-form-edit-el select#where_from {
+  width: 350px;
+}
+.regist-add-form-edit-el input#where_from_other {
+  margin-top: 12px;
+}
 .regist-add-form-edit-el .regist-selectarea p {
   display: inline-block;
   text-align: left;
@@ -281,6 +287,9 @@
   }
   .regist-add-form-edit-el select#age3 {
     width: 50px;
+  }
+  .regist-add-form-edit-el select#where_from {
+    width: 280px;
   }
 }
 
