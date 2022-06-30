@@ -88,7 +88,7 @@
         {elseif $email.where_from == 10}
           プレスリリースなどのニュースサイト
         {elseif $email.where_from == 20}
-          {$email.where_from_other}
+          (その他){$email.where_from_other}
         {else}
         {/if}
       </td>
