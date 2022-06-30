@@ -127,6 +127,39 @@
                 </div>
             </div>
 
+            <div class="regist-add-form-edit-el select-area">
+              <label class="regist-add-form-edit-title">どこできんゆう女子。を知りましたか？<span style="color:red; font-weight: normal;">*</span></label>
+              <div class="regist-selectarea-block">
+                <div class="regist-selectarea">
+                    <select id="where_from" class='form-control' name="where_from">
+                        <option>-</option>
+                        <option value="01">インターネット検索</option>
+                        <option value="02">Instagram</option>
+                        <option value="03">Twitter</option>
+                        <option value="04">Youtube</option>
+                        <option value="05">知人からの口コミ</option>
+                        <option value="06">カフェサルバドルでチラシを見て</option>
+                        <option value="07">イベント</option>
+                        <option value="08">雑誌</option>
+                        <option value="09">新聞</option>
+                        <option value="10">プレスリリースなどのニュースサイト</option>
+                        <option value="20">その他(自由記載)</option>
+                    </select>
+                    <input type="text" name="where_from_other" id="where_from_other" class="form-control" placeholder="その他を選んだ方はこちらにご記入ください" value="" style="display: none;">
+                    <script type="text/javascript">
+                      $("#where_from").change(function() {
+                        var extraction_val = $("#where_from").val();
+                        if(extraction_val == "20") {
+                          $('#where_from_other').css('display', 'block');
+                        }else if(extraction_val != "20") {
+                          $('#where_from_other').css('display', 'none');
+                        }
+                      });
+                    </script>
+                </div>
+              </div>
+            </div>
+
             <div class="regist-add-form-edit-el">
               <label class="regist-add-form-edit-title kinjo-color">自己紹介</label>
               <textarea type="text" id="introduction" name="introduction" class="form-control" placeholder="メンバー登録の理由や、今気になってること、趣味など自由にご記入ください♪"></textarea>
@@ -202,6 +235,9 @@
             var age02 = $("#age2").val();
             var age03 = $("#age3").val();
 
+            var where_from = $("#where_from").val();
+            console.log(where_from);
+
             var params = {};
             params.uid = $('[name="uid"]').val();
             params.profile_image = $('[name="profile_image"]').val();
@@ -213,6 +249,8 @@
             params.name_kana = $('[name="name_kana"]').val(); //ふりがな
             params.nickname = $('[name="nickname"]').val(); //ニックネーム
             params.birthday = (age01+age02+age03); //生年月日
+            params.where_from = where_from;
+            params.where_from_other = $('[name="where_from_other"]').val();
             // params.prefecture = $('[name="prefecture"]').val(); //都道府県
             // params.not_know = $('[name="not_know"]:checked').val(); //金融ワカラナイ度
             params.job_kind = $('[name="job_kind"]:checked').val();
@@ -287,6 +325,10 @@
             }
             if (age03 == "-") {
                 ts.error("生年月日の「日」を入力してください");
+                return false;
+            }
+            if (where_from == "-") {
+                ts.error("「どこできんゆう女子。を知りましたか？」を入力してください");
                 return false;
             }
             // if (params.prefecture == "") {
