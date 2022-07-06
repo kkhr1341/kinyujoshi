@@ -2,7 +2,7 @@ all: install up
 .PHONY: all
 
 up:
-	docker-compose up -d
+	docker-compose up -d --force-recreate --remove-orphans
 .PHONY: up
 
 down:
@@ -20,7 +20,7 @@ seed:
 	docker-compose run --rm web php oil r seed:all
 .PHONY: seed
 
-install: setup sleep10 migrate create_default_user
+install: setup sleep migrate create_default_user
 	docker-compose run --rm web php oil r create_default_user
 .PHONY: install
 
@@ -34,7 +34,6 @@ setup:
 	docker-compose run --rm composer install
 	git submodule init
 	git submodule update
-	docker-compose run --rm createbuckets
 .PHONY: setup
 
 build:
@@ -53,11 +52,11 @@ composer:
 	docker-compose run --rm composer install
 .PHONY: composer
 
-sleep10:
-	sleep 10
-.PHONY: sleep10
+sleep:
+	sleep 20
+.PHONY: sleep
 
-reset: clean up sleep10 migrate seed create_default_user
+reset: clean up sleep migrate seed create_default_user
 .PHONY: reset
 
 clean:
