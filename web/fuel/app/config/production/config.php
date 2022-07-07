@@ -2,7 +2,7 @@
 
 return array(
 
-	'base_url'  => 'https://dev.kinyu-joshi.jp/',
+	'base_url'  => 'https://kinyu-joshi.jp/',
 
 	/**
 	 * Cookie settings
