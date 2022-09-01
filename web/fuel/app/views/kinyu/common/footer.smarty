@@ -22,7 +22,7 @@
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/news" data-category="sp-footer-link" data-action="click" data-value="1">お知らせ</a>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/about" data-category="sp-footer-link" data-action="click" data-value="1">私たちについて</a></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/policy" data-category="sp-footer-link" data-action="click" data-value="1">大事にしていること</a></li>
-        <li class="col-6 col-md-3 text-left"><p id="footer-company-open" class="link-point js-track" data-category="sp-footer-link" data-action="click" data-value="1">運営会社</p></li>
+        <li class="col-6 col-md-3 text-left"><p id="footer-company-open" class="link-point js-track" data-category="sp-footer-link" data-action="click" data-value="1">会社概要</p></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/faq" data-category="sp-footer-link" data-action="click" data-value="1">よくあるご質問　</a></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/contact" data-category="sp-footer-link" data-action="click" data-value="1">お問い合わせ</a></li>
         <li class="col-6 col-md-3 text-left"><a class="js-track" href="/joshikai_policy" data-category="sp-footer-link" data-action="click" data-value="1">コミュニティ参加規約</a></li>
@@ -57,20 +57,20 @@
       <tbody>
         <tr>
           <th class="active"><p>社名</p></th>
-          <td><p>合同会社きんゆう女子</td>
-        </tr>
-        <tr>
-          <th class="active"><p>代表社員</p></th>
-          <td><p><a class="link-color" href="https://toetheline.jp/" target="_blank">株式会社TOE THE LINE</a></p></td>
-        </tr>
-        <tr>
-          <th class="active"><p>設立</p></th>
-          <td><p>2022年3月14日</p></td>
+          <td><p>株式会社きんゆう女子</td>
         </tr>
         <tr>
           <th class="active"><p>所在地</p></th>
           <td><p>〒103-0025<br>東京都中央区日本橋茅場町1-5-8　東京証券会館B313
           <a href="https://goo.gl/maps/b98oUUX6ixTMyBxz5" class="link-color" target="_blank">[map]</a></p></td>
+        </tr>
+        <tr>
+          <th class="active"><p>創業日</p></th>
+          <td><p>2016年3月3日</p></td>
+        </tr>
+        <tr>
+          <th class="active"><p>代表取締役</p></th>
+          <td><p>鈴木 万梨子</p></td>
         </tr>
       </tbody>
     </table>
