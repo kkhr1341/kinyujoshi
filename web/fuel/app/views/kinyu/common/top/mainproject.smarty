@@ -8,6 +8,12 @@
 				</a>
 			</div>
 			<div class="swiper-slide">
+				<div class="link-point" id="select-goal-navi">
+					<img class="w-100" src="./images/topics/select-goalnavi.jpg">
+					<p class="text-center">＼金融初心者向けに優しい？／<br>資産運用サービス<br class="d-block d-md-none">Goal Navi</p>
+				</div>
+			</div>
+			<div class="swiper-slide">
 				<a class="d-block" href="https://readyfor.jp/projects/kinjo-challenge" target="_blank">
 					<img class="w-100" src="./images/topics/topics-project02.jpg">
 					<p class="text-center">READY FORクラファン<br>131%達成！</p>
@@ -61,3 +67,77 @@
 		<div class="swiper-pagination main-project-swiper-pagination"></div>
 	</div>
 </div>
+
+<!-- ポップ/kinjo-select -->
+<div class="kinjo-select-modal">
+	<img id="kinjo-select-close" src="/images/close-btn.png">
+	<div class="kinjo-select-modal-inner text-center">
+		<img class="kinjo-select-logo" src="/images/select/select-logo.png">
+		<p class="select-main-title ff-mincho">Kinjo Selectのページに移動します</p>
+		<p class="select-description ff-mincho">自由で等身大に生きるためのヒントを厳選してお届け。<br>
+		ご紹介したサービスを気に入ってご利用いただいた場合は、<br class="d-none d-md-block">本サイトに収益が発生する場合があります。</p>
+		<a class="ff-mincho" href="https://testselect.kinyu-joshi.jp/select/goalnavi.html" target="_blank">Goal Naviのページはこちら</a>
+	</div>
+</div>
+
+<style>
+.kinjo-select-modal {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: url(/images/select/select-bg.jpg)center center / cover no-repeat;
+	top: 0;
+	left: 0;
+	z-index: 10001;
+}
+#kinjo-select-close {
+	width: 60px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.kinjo-select-modal-inner {
+	width: 800px;
+	background-color: rgba(255,255,255,.8);
+	position: absolute;
+	top: 120px;
+	left: 50%;
+  transform: translateX(-50%);
+  -webkit- transform: translateX(-50%);
+  padding: 60px 40px;
+}
+.kinjo-select-logo {
+	width: 350px;
+	margin-bottom: 32px;
+}
+.select-main-title {
+	font-size: 2.2rem;
+	margin-bottom: 12px;
+}
+.select-description {
+	font-size: 1.5rem;
+	margin-bottom: 32px;
+}
+
+.kinjo-select-modal-inner a {
+	display: block;
+	background-color: #f2eaac;
+	width: 400px;
+	margin: 0 auto;
+	font-size: 1.6rem;
+	padding: 12px 0px;
+}
+</style>
+
+
+<script type="text/javascript">
+	$(function() {
+		$("#select-goal-navi").click(function() {
+			$(".kinjo-select-modal").fadeIn();
+		});
+		$("#kinjo-select-close").click(function() {
+			$(".kinjo-select-modal").fadeOut();
+		});
+	});
+</script>
