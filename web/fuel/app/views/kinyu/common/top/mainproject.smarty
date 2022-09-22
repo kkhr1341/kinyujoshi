@@ -73,7 +73,7 @@
 	<img id="kinjo-select-close" src="/images/close-btn.png">
 	<div class="kinjo-select-modal-inner text-center">
 		<img class="kinjo-select-logo" src="/images/select/select-logo.png">
-		<p class="select-description ff-mincho">KIN-JO Selectでは、自由で等身大に生きるためのヒントを厳選してお届け。<br>
+		<p class="select-description ff-mincho">KIN-JO Selectでは、自由で等身大に生きるためのヒントを厳選してお届け。<br class="d-none d-md-block">
 		ご紹介したサービスを気に入ってご利用いただいた場合は、<br class="d-none d-md-block">本サイトに収益が発生する場合があります。</p>
 		<a class="ff-mincho" href="https://testselect.kinyu-joshi.jp/select/goalnavi.html" target="_blank">
 			ニッセイアセットマネジメントが提供する<br>資産運用サービスGoal Navi<br>詳細はこちら
@@ -83,7 +83,7 @@
 
 <style>
 .kinjo-select-modal {
-	display: none;
+	/*display: none;*/
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -128,6 +128,31 @@
 	margin: 0 auto;
 	font-size: 1.6rem;
 	padding: 12px 0px;
+}
+
+@media screen and (max-width: 959px) {
+	#kinjo-select-close {
+    width: 40px;
+    top: 15px;
+    right: 15px;
+	}
+	.kinjo-select-modal-inner {
+		width: 90%;
+		padding: 40px 24px;
+		top: 80px;
+	}
+	.kinjo-select-logo {
+		width: 80%;
+		margin-bottom: 20px;
+	}
+	.select-description {
+		font-size: 1.2rem;
+		margin-bottom: 24px;
+	}
+	.kinjo-select-modal-inner a {
+		width: 100%;
+		font-size: 1.2rem;
+	}
 }
 </style>
 
