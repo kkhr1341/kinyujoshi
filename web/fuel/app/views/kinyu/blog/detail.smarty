@@ -76,7 +76,7 @@
         <p class="no-member-description">メンバー登録がお済みの方はログイン、<br>まだの方はメンバー登録をするとレポートが閲覧可能になります。</p>
         <div class="button-block">
           <button class="btn el-button btn-kinyu-login kinjo-color font-weight-bold" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
-          <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
+          <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/regist_email?after_login_url={$after_login_url}'">メンバー登録</button>
         </div>
       </div>
     </div>
@@ -108,7 +108,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <p class="main-title">お気に入りに追加するには<br>マイページへのログインが必要です。</p>
         <ul class="check-report-modal-dummy-ul">
-          <li><a href="/login_regist">新規メンバー登録</a></li>
+          <li><a href="/regist_email">新規メンバー登録</a></li>
           <li><a href="/my">マイページへログイン</a></li>
         </ul>
       </div>
