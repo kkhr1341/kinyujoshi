@@ -118,7 +118,7 @@
         <p class="no-member-description">メンバー登録がお済みの方はログイン、<br>まだの方はメンバー登録をするとレポートが閲覧可能になります。</p>
         <div class="button-block">
           <button class="btn el-button btn-kinyu-login kinjo-color font-weight-bold" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
-          <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
+          <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/regist_email?after_login_url={$after_login_url}'">メンバー登録</button>
         </div>
       </div>
     </div>

@@ -152,7 +152,7 @@ var $resArray02 = $resArray[1];
       <p class="no-member-description">メンバー登録がお済みの方はログイン、<br class="d-none d-md-block">まだの方はメンバー登録をすると参加可能になります。</p>
       <div class="button-block">
         <button class="btn el-button btn-kinyu-login kinjo-color font-weight-bold" type="button" onClick="location.href='/login?after_login_url={$after_login_url}'">ログイン</button>
-        <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/login_regist?after_login_url={$after_login_url}'">メンバー登録</button>
+        <button class="btn el-button btn-kinyu-regist bg-kinjo-color text-white font-weight-bold" type="button" onClick="location.href='/regist_email?after_login_url={$after_login_url}'">メンバー登録</button>
       </div>
     </div>
   </div>
@@ -172,7 +172,7 @@ var $resArray02 = $resArray[1];
       <!-- <p class="description">カード情報を入力してご決済をお願いします。</p> -->
       <div class="login-block">
         <a class="login" href="/login?after_login_url=/event_tickets/{$urlcode}">メンバーの方はログインして参加</a>
-        <a class="login_regist" href="/login_regist?after_login_url=/event_tickets/{$urlcode}">メンバーになって参加</a>
+        <a class="login_regist" href="/regist_email?after_login_url=/event_tickets/{$urlcode}">メンバーになって参加</a>
       </div>
 
       <div class="first-login-block">

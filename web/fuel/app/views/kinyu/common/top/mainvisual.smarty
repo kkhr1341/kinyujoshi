@@ -33,18 +33,20 @@
 			<div class="col-3 title-area">
         <p class="ff-decoration font-italic kinjo-color text-center">News</p>
       </div>
-      <div class="col-9 col-md-7 kinyu-top-news-el">
+      <div class="col-9 col-md-9 kinyu-top-news-el">
 	      {foreach from=$news item=new name=foo}
 	    	<a class="d-block js-track" href="/news/{$new.code}" data-category="sp-top-link" data-action="click" data-value="1">
 	      	<div class="text-area">
 	        	<p class="news-date">{$new.open_date|date_format:"Y.m.d"}</p>
-	        	<p class="news-title text-newline">{$new.title}</p>
+	        	<p class="news-title text-newline ff-mincho">{$new.title}</p>
 	      	</div>
 	    	</a>
 	    	{/foreach}
 	    </div>
-    	<div class="col-12 col-md-2 news-more-link text-right">
-      	<a class="kinjo-color js-track ff-decoration" href="/news" data-category="sp-top-link" data-action="click" data-value="1">〉MORE</a>
+    </div>
+    <div class="news-more-link row no-gutters">
+    	<div class="col-12 text-right">
+      	<a class="kinjo-color js-track" href="/news" data-category="sp-top-link" data-action="click" data-value="1">〉全てのお知らせをみる</a>
     	</div>
     </div>
   </div>

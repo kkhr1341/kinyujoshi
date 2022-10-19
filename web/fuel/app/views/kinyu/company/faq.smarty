@@ -83,7 +83,7 @@
 
           <div class="qa-list-el-col">
             <p class="question-text ff-mincho link-point">メンバー登録はどこからできますか？</p>
-            <p class="answer-text">「きんゆう女子。」メニュー内にある「<a href="/login_regist" target="_blank">メンバー登録</a>」より金融に興味があるけれどワカラナイ女性であれば、どなたでも登録することができます。</p>
+            <p class="answer-text">「きんゆう女子。」メニュー内にある「<a href="/regist_email" target="_blank">メンバー登録</a>」より金融に興味があるけれどワカラナイ女性であれば、どなたでも登録することができます。</p>
           </div>
 
           <div class="qa-list-el-col">
