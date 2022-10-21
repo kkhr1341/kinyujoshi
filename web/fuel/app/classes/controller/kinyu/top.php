@@ -27,7 +27,7 @@ class Controller_Kinyu_Top extends Controller_Kinyubase
         //template
         //$this->data['top_blogs2'] = Blogs::lists02(1, 12, true, null, null, null, null);
 
-        $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 20, null, null);
+        $this->data['blogs'] = Blogs::all('kinyu' + 'investment', '/report/', $page, 2, 40, null, null);
         foreach($this->data['blogs']['datas'] as &$blogs) {
           $blogs['viewable'] = $this->viewable($blogs['code']);
         }
