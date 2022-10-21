@@ -204,7 +204,7 @@
 	        </div>
 	      </div>
 	    </div>
-	    <a class="link-generally link-generally02" href="/event">女子会/イベント/部活一覧へ</a>
+	    <a class="link-generally link-generally02" href="/event_past">過去の女子会/イベント/部活一覧へ</a>
 	  </div>
 	</div>
 </div>
@@ -251,7 +251,7 @@
 		<div class="report-list">
 			<ul class="row">
 				{foreach from=$blogs.datas key="key" item=blog name=loopname}
-		      {if $smarty.foreach.loopname.index == 10}
+		      {if $smarty.foreach.loopname.index == 20}
 		      </ul>
 		        <div class="btn-more-link">
 		          <a class="js-track link-generally02" href="/report" data-category="sp-top-link" data-action="click" data-value="1">レポートをもっと見る</a>
