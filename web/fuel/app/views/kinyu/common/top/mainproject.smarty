@@ -20,10 +20,10 @@
 				</a>
 			</div>
 			<div class="swiper-slide">
-				<div class="link-point" id="select-goal-navi">
-					<img class="w-100" src="./images/topics/select-goalnavi.jpg">
-					<p class="text-center">[PR]ニッセイアセットマネジメント提供資産運用アプリ</p>
-				</div>
+				<a class="d-block" href="https://lifewithe.kinyu-joshi.jp/" target="_blank">
+					<img class="w-100" src="./images/topics/lifewithe.jpg">
+					<p class="text-center">Life with E<br>より良い未来に投資する<br>プロジェクト〜</p>
+				</a>
 			</div>
 			<div class="swiper-slide">
 				<a class="d-block" href="/with_bloomoibrillia" target="_blank">
@@ -69,7 +69,7 @@
 </div>
 
 <!-- ポップ/kinjo-select -->
-<div class="kinjo-select-modal">
+<!-- <div class="kinjo-select-modal">
 	<img id="kinjo-select-close" src="/images/close-btn.png">
 	<div class="kinjo-select-modal-inner text-center">
 		<img class="kinjo-select-logo" src="/images/select/select-logo.png">
@@ -79,7 +79,7 @@
 			ニッセイアセットマネジメントが提供する<br>資産運用サービスGoal Navi<br>詳細はこちら
 		</a>
 	</div>
-</div>
+</div> -->
 
 <style>
 .kinjo-select-modal {
