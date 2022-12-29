@@ -24,39 +24,29 @@
         </div>
 
         <div class="event-application-open-el">
-          <label class="kinjo-color font-weight-bold">カード番号</label>
-          {if $authenticated == true}
-            <p class="select-before-title">・利用可能なクレジットカード</p>
-            <select id="cardselect" name="cardselect">
-                {foreach from=$cards key="key" item=card name=loopname}
-                  <option value="{$card.id}">{$card.label}</option>
-                {/foreach}
-              <option value="0">新しいカードで決済する</option>
-            </select>
-            <div class="newcards">
-              <p class="select-before-title kinjo-color font-weight-bold">・新しいカード番号を入力してください</p>
-              <input type="text" class="number" name="number" maxlength="16" placeholder="">
+          <div class="payment-information">
+            <p class="payment-information-title">お支払い情報</p>
+            <div class="payment-information-list text-center">
+                <ul class="no-gutters align-items-center">
+                    <li><img class="img-visa" src="./assets/img/img_visa.svg"></li>
+                    <li><img class="img-master" src="./assets/img/img_master.svg"></li>
+                    <li><img class="img-jcb" src="./assets/img/img_jcb.svg"></li>
+                    <li><img class="img-ae" src="./assets/img/img_ae.svg"></li>
+                    <li><img class="img-dc" src="./assets/img/img_dc.svg"></li>
+                    <li><img class="img-dcv" src="./assets/img/img_dcv.svg"></li>
+                </ul>
             </div>
-          {else}
-            <input type="hidden" id="cardselect" name="cardselect" value="0">
-            <div class="newcards">
-              <p class="select-before-title">・カード番号を入力してください</p>
-              <input type="text" class="number" name="number" maxlength="16" placeholder="">
+            <div class="form-el">
+                <label class="form-label font-mincho"><span>■</span>カード番号</label>
+                <div id="number-form" class="payjs-outer font-mincho"></div>
             </div>
-          {/if}
-        </div>
-
-        <div class="no-regist-el">
-          <div class="event-application-open-el">
-            <label class="kinjo-color font-weight-bold">セキュリティコード</label>
-            <input type="text" class="cvc" name="cvc" maxlength="4" placeholder="">
-          </div>
-
-          <div class="event-application-open-el">
-            <label class="kinjo-color font-weight-bold">有効期限</label>
-            <div class="exp-date-block">
-              <input type="text" class="exp_month" name="exp_month" maxlength="2" placeholder="月/ 01など2桁">
-              <input type="text" class="exp_year" name="exp_year" maxlength="2" placeholder="年/ 21など2桁">
+            <div class="form-el">
+                <label class="form-label font-mincho"><span>■</span>有効期限</label>
+                <div id="expiry-form" class="payjs-outer font-mincho"></div>
+            </div>
+            <div class="form-el">
+                <label class="form-label font-mincho"><span>■</span>CVC</label>
+                <div id="cvc-form" class="payjs-outer font-mincho"></div>
             </div>
           </div>
         </div>
@@ -88,7 +78,7 @@
 
 </div>
 
-<script type="text/javascript" src="https://js.pay.jp/"></script>
+<script src="https://js.pay.jp/v2/pay.js"></script>
 <script type="text/javascript">Payjp.setPublicKey('{$payjp_public_key}');</script>
 <script>
     (function() {
